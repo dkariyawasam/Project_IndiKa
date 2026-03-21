@@ -64,6 +64,7 @@ SECTIONS {
         src/window_8bpp.o(.text);
         src/text.o(.text);
         src/sprite.o(.text);
+        src/sloopsvc.o(.text);
         src/string_util.o(.text);
         src/link.o(.text);
         src/multiboot.o(.text);
@@ -405,6 +406,7 @@ SECTIONS {
         src/text.o(.rodata);
         src/sprite.o(.rodata);
         src/bg_regs.o(.rodata);
+        src/sloopsvc.o(.rodata);
         src/string_util.o(.rodata);
         src/link.o(.rodata);
         src/main_menu.o(.rodata);
