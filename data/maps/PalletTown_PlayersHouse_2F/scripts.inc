@@ -17,6 +17,7 @@ PalletTown_PlayersHouse_2F_OnWarp::
 
 PalletTown_PlayersHouse_2F_FirstWarpIn::
 	turnobject LOCALID_PLAYER, DIR_NORTH
+	setflag FLAG_SYS_B_DASH
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 1
 	end
 
