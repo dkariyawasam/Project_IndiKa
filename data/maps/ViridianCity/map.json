@@ -46,20 +46,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": 11,
-      "y": 24,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
       "local_id": "LOCALID_VIRIDIAN_OLD_MAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
@@ -131,21 +117,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianCity_EventScript_Boy",
       "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_VIRIDIAN_BORDER_TREE",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": 18,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_12"
     },
     {
       "type": "object",
