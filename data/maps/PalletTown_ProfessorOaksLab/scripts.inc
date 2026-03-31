@@ -537,6 +537,12 @@ PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle::
 	walk_in_place_faster_right
 	delay_16
 	walk_in_place_faster_down
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_in_place_up
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight::
