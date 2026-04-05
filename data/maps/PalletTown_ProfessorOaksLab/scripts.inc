@@ -468,17 +468,12 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	special HealPlayerParty
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon
 	closemessage
-	playbgm MUS_RIVAL_EXIT, 0
-	call_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft
-	call_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid
-	call_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight
-	removeobject LOCALID_OAKS_LAB_RIVAL
-	playse SE_EXIT
-	fadedefaultbgm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1
 	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
-	goto PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
+	call_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft
+	call_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid
+	call_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight
 	releaseall
 	end
 
@@ -486,48 +481,43 @@ PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft
 	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
 	waitmovement LOCALID_OAKS_LAB_RIVAL
+	goto PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleMid
 	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
 	waitmovement LOCALID_OAKS_LAB_RIVAL
+	goto PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleRight
 	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight
 	waitmovement LOCALID_OAKS_LAB_RIVAL
+	goto PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	return
 
 PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft::
+	walk_up
+	walk_up
 	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_up
 	delay_8
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleRight::
+	walk_up
+	walk_up
 	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_up
 	delay_8
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleMid::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_left
-	walk_down
-	walk_down
+	walk_up
+	walk_up
+	walk_up
 	delay_8
 	step_end
 
@@ -540,9 +530,9 @@ PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle::
 	walk_up
 	walk_up
 	walk_up
-	walk_up
 	walk_left
-	walk_in_place_up
+	walk_left
+	walk_up
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight::
@@ -554,10 +544,9 @@ PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight::
 	walk_up
 	walk_up
 	walk_up
+	walk_left
+	walk_left
 	walk_up
-	walk_left
-	walk_left
-	walk_in_place_up
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_Rival::
@@ -611,19 +600,8 @@ PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
-	playbgm MUS_ENCOUNTER_RIVAL, 0
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalGramps
-	closemessage
-	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_DexSceneRivalEnterNorth
-	call_if_eq VAR_FACING, DIR_SOUTH, PalletTown_ProfessorOaksLab_EventScript_DexSceneRivalEnterSouth
-	call_if_eq VAR_FACING, DIR_EAST, PalletTown_ProfessorOaksLab_EventScript_DexSceneRivalEnterEastWest
-	call_if_eq VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_DexSceneRivalEnterEastWest
-	fadedefaultbgm
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor
-	closemessage
 	delay 30
 	playse SE_PIN
-	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_Delay48
 	waitmovement 0
@@ -660,6 +638,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
+	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
