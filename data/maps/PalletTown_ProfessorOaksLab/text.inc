@@ -7,13 +7,14 @@ PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting::
     .string "I'm fed up with waiting!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
-    .string "{RIVAL}: Hey! Gramps! No fair!\n"
-    .string "What about me?$"
+    .string "{RIVAL}: Are you done already?\p"
+    .string "If this is your big speech\n"
+    .string "before we leave, I think I get it.\p"
+    .string "We need POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
-    .string "{RIVAL}: Heh, I don't need to be\n"
-    .string "greedy like you. I'm mature!\p"
-    .string "Go ahead and choose, {PLAYER}!$"
+    .string "{RIVAL}: Go ahead!\p"
+    .string "Choose, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
     .string "{RIVAL}: I'll take this one, then!$"
@@ -42,59 +43,60 @@ Text_RivalVictory::
     .string "Am I great or what?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
-    .string "{RIVAL}: Okay! I'll make my\n"
-    .string "POKéMON battle to toughen it up!\p"
-    .string "{PLAYER}! Gramps!\n"
-    .string "Smell you later!$"
-
-PalletTown_ProfessorOaksLab_Text_RivalGramps::
-    .string "{RIVAL}: Gramps!$"
-
-PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor::
-    .string "{RIVAL}: I almost forgot!\n"
-    .string "What did you call me for?$"
+    .string "OAK: That’s enough.\n"
+    .string "Both of you, over here.\p"
+    .string "There’s something important\n"
+    .string "you need to hear before you go.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
-    .string "{RIVAL}: All right, Gramps!\n"
-    .string "Leave it all to me!$"
+    .string "{RIVAL}: Heh. Fine by me.\p"
+    .string "I’ll be finished learning\n"
+    .string "everything worth knowing before\l"
+    .string "you’ve even caught up.\p"
+    .string "Try not to fall too far behind.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
-    .string "{PLAYER}, I hate to say it, but you\n"
-    .string "won't be necessary for this.\p"
-    .string "I know! I'll borrow a TOWN MAP\n"
-    .string "from my sis!\p"
-    .string "I'll tell her not to lend you one,\n"
-    .string "{PLAYER}! Hahaha!\p"
-    .string "Don't bother coming around to\n"
-    .string "my place after this!$"
+    .string "OAK: We’ll see.\p"
+    .string "Power and understanding\n"
+    .string "rarely arrive at the same time.\p"
+    .string "Off you go, then.\p"
+    .string "Your expedition begins now.$"
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
-    .string "OAK: {RIVAL}?\n"
-    .string "Let me think…\p"
-    .string "Oh, that's right, I told you to\n"
-    .string "come! Just wait!\p"
-    .string "Here, {PLAYER}.\p"
-    .string "There are three POKéMON here.\p"
-    .string "Haha!\p"
-    .string "The POKéMON are held inside\n"
-    .string "these POKé BALLS.\p"
-    .string "When I was young, I was a serious\n"
-    .string "POKéMON TRAINER.\p"
-    .string "But now, in my old age, I have\n"
-    .string "only these three left.\p"
-    .string "You can have one.\n"
-    .string "Go on, choose!$"
+    .string "OAK: Ah, {RIVAL}!\p"
+    .string "Good, you're both here.\p"
+    .string "The KANTO region has changed a\n"
+    .string "great deal over the years, and\l"
+    .string "POKéMON have changed with it.\p"
+    .string "People still like to think\n"
+    .string "they can be neatly understood.\p"
+    .string "Caught, trained, and explained.\p"
+    .string "But the truth is more\n"
+    .string "complicated than that.\p"
+    .string "My work has never really\n"
+    .string "been about POKéMON in isolation.\p"
+    .string "I study the relationship\n"
+    .string "between POKéMON and the people\l"
+    .string "who live alongside them.\p"
+    .string "How they affect one another.\p"
+    .string "How they grow together.$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "OAK: Be patient, {RIVAL}.\n"
-    .string "You can have one, too!$"
+    .string "OAK: Yes you do, {RIVAL}.\p"
+    .string "And if the two of you are\n"
+    .string "going to leave PALLET TOWN\l"
+    .string "you'll have to do it properly.\p"
+    .string "These 3 were recently sent\n"
+    .string "to me by another researcher in ALOLA.\p"
+    .string "My cousin Samson Oak.\p"
+    .string "They're young, but they're\n"
+    .string "bright, adaptable, and well suited\l"
+    .string "for fieldwork.\p"
+    .string "Choose carefully.$"
+
 
 PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose::
-    .string "OAK: Now, {PLAYER}.\p"
-    .string "Inside those three POKé BALLS are\n"
-    .string "POKéMON.\p"
-    .string "Which one will you choose for\n"
-    .string "yourself?$"
+    .string "OAK: Make your choice.$"
 
 PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
     .string "OAK: Hey!\n"
@@ -137,35 +139,17 @@ PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
     .string "POKéMON by making it battle.\p"
     .string "It has to battle for it to grow.$"
 
-PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
-    .string "OAK: Oh, {PLAYER}!\n"
-    .string "How is my old POKéMON?\p"
-    .string "Well, it seems to be growing more\n"
-    .string "attached to you.\p"
-    .string "You must be talented as a POKéMON\n"
-    .string "TRAINER.\p"
-    .string "What's that?\n"
-    .string "You have something for me?$"
-
-PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
-    .string "{PLAYER} delivered OAK'S PARCEL.$"
-
-PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
-    .string "Ah! \n"
-    .string "It's the custom POKé BALL!\p"
-    .string "I had it on order.\n"
-    .string "Thank you!$"
-
 PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
-    .string "OAK: Oh, right!\n"
-    .string "I have a request for you two.$"
+    .string "OAK: I have a request for you two.$"
 
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
     .string "On the desk there is my invention,\n"
     .string "the POKéDEX!\p"
-    .string "It automatically records data on\n"
-    .string "POKéMON you've seen or caught.\p"
-    .string "It's a high-tech encyclopedia!$"
+    .string "It doesn’t just record\n"
+    .string "what a POKéMON is.\p"
+    .string "It helps us understand\n"
+    .string "how POKéMON live, behave,\l"
+    .string "and adapt to the world around them.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
     .string "OAK: {PLAYER} and {RIVAL}.\n"
@@ -176,36 +160,44 @@ PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
     .string "from PROF. OAK.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
-    .string "OAK: You can't get detailed data\n"
-    .string "on POKéMON by just seeing them.\p"
-    .string "You must catch them to obtain\n"
-    .string "complete data.\p"
-    .string "So, here are some tools for\n"
-    .string "catching wild POKéMON.$"
+    .string "OAK: The longer I’ve studied\n"
+    .string "POKéMON, the more certain I’ve\l"
+    .string "become of one thing.\p"
+    .string "They grow through trust,\n"
+    .string "through closeness, and through\l"
+    .string "the people they spend time with.\p"
+    .string "In some cases, I suspect\n"
+    .string "that bond may even shape the\l"
+    .string "way a POKéMON evolves.\p"
+    .string "If you want to see that for\n"
+    .string "yourself, pay attention to the\l"
+    .string "GYM LEADERS of this region.\p"
+    .string "They’re powerful trainers,\n"
+    .string "yes, but that isn’t the whole of it.\p"
+    .string "Each of them has built a\n"
+    .string "strong bond with their POKéMON.\p"
+    .string "There’s much to learn from that.\p"
+    .string "Of course, observation alone\n"
+    .string "won’t take you very far.\p"
+    .string "You have to catch POKéMON of your\n"
+    .string "own to really understand them.\p"
+    .string "Take these POKé BALLS with you.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
     .string "{PLAYER} received five POKé BALLS.$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "When a wild POKéMON appears,\n"
-    .string "it's fair game.\p"
-    .string "Just throw a POKé BALL at it and\n"
-    .string "try to catch it!\p"
-    .string "This won't always work, however.\p"
-    .string "A healthy POKéMON can escape.\n"
-    .string "You have to be lucky!$"
+    .string "OAK: I’m sending both of you out\n"
+    .string "to see KANTO as it truly is.\p"
+    .string "Not from behind the walls\n"
+    .string "of a LAB...$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
-    .string "To make a complete guide on all\n"
-    .string "the POKéMON in the world…\p"
-    .string "That was my dream!\p"
-    .string "But, I'm too old.\n"
-    .string "I can't get the job done.\p"
-    .string "So, I want you two to fulfill my\n"
-    .string "dream for me.\p"
-    .string "Get moving, you two.\p"
-    .string "This is a great undertaking in\n"
-    .string "POKéMON history!$"
+    .string "But out there, where people\n"
+    .string "and POKéMON actually live together.\p"
+    .string "Record what you find.\p"
+    .string "And come back with something\n"
+    .string "worth understanding.$"
 
 PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
     .string "POKéMON around the world wait for\n"
