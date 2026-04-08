@@ -30,6 +30,8 @@
 #include "constants/event_objects.h"
 #include "constants/maps.h"
 #include "constants/metatile_behaviors.h"
+#include "day_night.h"
+
 
 #define SIGNPOST_POKECENTER 0
 #define SIGNPOST_POKEMART 1
@@ -653,6 +655,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
     if (gQuestLogState == QL_STATE_PLAYBACK)
         return FALSE;
 
+    UpdateDayNightCycleStep();
     UpdateHappinessStepCounter();
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior))

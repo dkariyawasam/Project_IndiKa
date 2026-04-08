@@ -1,0 +1,9 @@
+#ifndef GUARD_CONSTANTS_TIME_H
+#define GUARD_CONSTANTS_TIME_H
+
+#define TIME_DAY   0
+#define TIME_NIGHT 1
+
+#define DAY_NIGHT_STEP_THRESHOLD 256
+
+#endif
