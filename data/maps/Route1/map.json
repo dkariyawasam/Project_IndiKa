@@ -71,7 +71,7 @@
       "x": 5,
       "y": 7,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
+      "item": "ITEM_SUN_STONE",
       "flag": "FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL",
       "quantity": 1,
       "underfoot": false
