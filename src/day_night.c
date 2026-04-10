@@ -13,6 +13,10 @@
 
 static EWRAM_DATA u16 sBaseMapPalettes[NUM_PALS_TOTAL * 16];
 static EWRAM_DATA bool8 sBaseMapPalettesValid;
+static EWRAM_DATA bool8 sTimeTransitionActive;
+static EWRAM_DATA u8 sTimeTransitionTimer;
+static EWRAM_DATA u8 sTimeTransitionStage;
+static EWRAM_DATA u8 sTimeTransitionTarget;
 
 void InitDayNightCycle(void)
 {
@@ -46,12 +50,13 @@ void UpdateDayNightCycleStep(void)
     {
         steps = 0;
 
+    if (!sTimeTransitionActive)
+        {
         if (VarGet(VAR_TIME_OF_DAY) == TIME_DAY)
-            VarSet(VAR_TIME_OF_DAY, TIME_NIGHT);
+            StartTimeOfDayTransition(TIME_NIGHT);
         else
-            VarSet(VAR_TIME_OF_DAY, TIME_DAY);
-        if (DoesCurrentMapUseNightPalette())
-        RefreshCurrentMapNightPalette();
+            StartTimeOfDayTransition(TIME_DAY);
+        }
     }
 
     VarSet(VAR_DAYNIGHT_STEP_COUNTER, steps);
@@ -140,4 +145,123 @@ void ApplyNightTintToTallGrassEffect(void)
         gPlttBufferFaded[base + i] = TintColorNight(gPlttBufferUnfaded[base + i]);
 
     CpuFastCopy(&gPlttBufferFaded[base], (void *)(OBJ_PLTT + base * sizeof(u16)), 16 * sizeof(u16));
+}
+
+static u16 BlendTowardNight(u16 dayColor, u8 blend, u8 maxBlend)
+{
+    u16 nightColor = TintColorNight(dayColor);
+
+    u8 dayR = dayColor & 0x1F;
+    u8 dayG = (dayColor >> 5) & 0x1F;
+    u8 dayB = (dayColor >> 10) & 0x1F;
+
+    u8 nightR = nightColor & 0x1F;
+    u8 nightG = (nightColor >> 5) & 0x1F;
+    u8 nightB = (nightColor >> 10) & 0x1F;
+
+    u8 r = dayR + (((s8)nightR - (s8)dayR) * blend) / maxBlend;
+    u8 g = dayG + (((s8)nightG - (s8)dayG) * blend) / maxBlend;
+    u8 b = dayB + (((s8)nightB - (s8)dayB) * blend) / maxBlend;
+
+    return RGB(r, g, b);
+}
+
+static void ApplyTimeBlendToCurrentMap(u8 blend, u8 maxBlend)
+{
+    int i;
+
+    if (!sBaseMapPalettesValid || !DoesCurrentMapUseNightPalette())
+        return;
+
+    for (i = 0; i < NUM_PALS_TOTAL * 16; i++)
+    {
+        u16 color = BlendTowardNight(sBaseMapPalettes[i], blend, maxBlend);
+        gPlttBufferUnfaded[i] = color;
+        gPlttBufferFaded[i] = color;
+    }
+
+    CpuFastCopy(gPlttBufferFaded, (void *)BG_PLTT, NUM_PALS_TOTAL * 16 * sizeof(u16));
+}
+
+static void ApplyTransitionStage(u8 stage, u8 targetTime)
+{
+    switch (targetTime)
+    {
+    case TIME_NIGHT:
+        switch (stage)
+        {
+        case 0:
+            ApplyTimeBlendToCurrentMap(0, 16);   // Day
+            break;
+        case 1:
+            ApplyTimeBlendToCurrentMap(5, 16);   // Tint 1
+            break;
+        case 2:
+            ApplyTimeBlendToCurrentMap(10, 16);  // Tint 2
+            break;
+        case 3:
+            ApplyTimeBlendToCurrentMap(16, 16);  // Night
+            break;
+        }
+        break;
+
+    case TIME_DAY:
+        switch (stage)
+        {
+        case 0:
+            ApplyTimeBlendToCurrentMap(16, 16);  // Night
+            break;
+        case 1:
+            ApplyTimeBlendToCurrentMap(10, 16);  // Tint 2
+            break;
+        case 2:
+            ApplyTimeBlendToCurrentMap(5, 16);   // Tint 1
+            break;
+        case 3:
+            ApplyTimeBlendToCurrentMap(0, 16);   // Day
+            break;
+        }
+        break;
+    }
+}
+
+void StartTimeOfDayTransition(u8 targetTime)
+{
+    if (!DoesCurrentMapUseNightPalette())
+    {
+        VarSet(VAR_TIME_OF_DAY, targetTime);
+        RefreshCurrentMapNightPalette();
+        return;
+    }
+
+    sTimeTransitionActive = TRUE;
+    sTimeTransitionTimer = 0;
+    sTimeTransitionStage = 0;
+    sTimeTransitionTarget = targetTime;
+
+    ApplyTransitionStage(0, targetTime);
+}
+
+void UpdateTimeOfDayTransition(void)
+{
+    if (!sTimeTransitionActive)
+        return;
+
+    sTimeTransitionTimer++;
+
+    if (sTimeTransitionTimer < 20)
+        return;
+
+    sTimeTransitionTimer = 0;
+    sTimeTransitionStage++;
+
+    if (sTimeTransitionStage >= 4)
+    {
+        sTimeTransitionActive = FALSE;
+        VarSet(VAR_TIME_OF_DAY, sTimeTransitionTarget);
+        RefreshCurrentMapNightPalette();
+        return;
+    }
+
+    ApplyTransitionStage(sTimeTransitionStage, sTimeTransitionTarget);
 }
