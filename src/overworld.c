@@ -53,6 +53,7 @@
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
+#include "day_night.h"
 
 #define PLAYER_LINK_STATE_IDLE 0x80
 #define PLAYER_LINK_STATE_BUSY 0x81
@@ -1958,6 +1959,7 @@ static bool32 ReturnToFieldLocal(u8 *state)
             (*state)++;
         break;
     case 4:
+        RefreshCurrentMapNightPalette();
         return TRUE;
     }
     return FALSE;
