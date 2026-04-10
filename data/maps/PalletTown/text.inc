@@ -65,3 +65,9 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+PalletTown_Text_DebugSign_ShowDay::
+    .string "It's daytime!$"
+
+PalletTown_Text_DebugSign_ShowNight::
+    .string "It's nighttime!$"
+
