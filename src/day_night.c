@@ -8,6 +8,8 @@
 #include "constants/region_map_sections.h"
 #include "gba/gba.h"
 #include "palette.h"
+#include "sprite.h"
+#include "field_effect.h"
 
 static EWRAM_DATA u16 sBaseMapPalettes[NUM_PALS_TOTAL * 16];
 static EWRAM_DATA bool8 sBaseMapPalettesValid;
@@ -48,6 +50,8 @@ void UpdateDayNightCycleStep(void)
             VarSet(VAR_TIME_OF_DAY, TIME_NIGHT);
         else
             VarSet(VAR_TIME_OF_DAY, TIME_DAY);
+        if (DoesCurrentMapUseNightPalette())
+        RefreshCurrentMapNightPalette();
     }
 
     VarSet(VAR_DAYNIGHT_STEP_COUNTER, steps);
@@ -119,4 +123,21 @@ void CacheCurrentMapBasePalettes(void)
 {
     CpuFastCopy(gPlttBufferUnfaded, sBaseMapPalettes, NUM_PALS_TOTAL * 16 * sizeof(u16));
     sBaseMapPalettesValid = TRUE;
+}
+
+void ApplyNightTintToTallGrassEffect(void)
+{
+    u8 slot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_GENERAL_1);
+    u16 base;
+    int i;
+
+    if (slot == 0xFF)
+        return;
+
+    base = OBJ_PLTT_ID(slot);
+
+    for (i = 0; i < 16; i++)
+        gPlttBufferFaded[base + i] = TintColorNight(gPlttBufferUnfaded[base + i]);
+
+    CpuFastCopy(&gPlttBufferFaded[base], (void *)(OBJ_PLTT + base * sizeof(u16)), 16 * sizeof(u16));
 }

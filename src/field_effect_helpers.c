@@ -10,6 +10,7 @@
 #include "constants/field_effects.h"
 #include "constants/event_objects.h"
 #include "constants/songs.h"
+#include "day_night.h"
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF // duplicate of define in event_object_movement.c
 
@@ -285,6 +286,8 @@ u32 FldEff_TallGrass(void)
         {
             SeekSpriteAnim(sprite, 4);
         }
+        if (IsNightTime())
+        ApplyNightTintToTallGrassEffect();
     }
     return 0;
 }
