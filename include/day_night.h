@@ -12,5 +12,6 @@ bool8 DoesCurrentMapUseNightPalette(void);
 void RefreshCurrentMapNightPalette(void);
 void RestoreDayPaletteForCurrentMap(void);
 void CacheCurrentMapBasePalettes(void);
+void ApplyNightTintToTallGrassEffect(void);
 
 #endif // GUARD_DAY_NIGHT_H
