@@ -5,6 +5,7 @@
 #include "new_menu_helpers.h"
 #include "quest_log.h"
 #include "fieldmap.h"
+#include "day_night.h"
 
 struct ConnectionFlags
 {
@@ -673,6 +674,7 @@ bool8 CameraMove(s32 x, s32 y)
         connection = GetIncomingConnection(direction, gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
         SetPositionFromConnection(connection, direction, x, y);
         LoadMapFromCameraTransition(connection->mapGroup, connection->mapNum);
+        RefreshCurrentMapNightPalette();
         gCamera.active = TRUE;
         gCamera.x = old_x - gSaveBlock1Ptr->pos.x;
         gCamera.y = old_y - gSaveBlock1Ptr->pos.y;
@@ -941,11 +943,14 @@ void CopyMapTilesetsToVram(struct MapLayout const *mapLayout)
     }
 }
 
-void LoadMapTilesetPalettes(struct MapLayout const *mapLayout)
+void LoadMapTilesetPalettes(const struct MapLayout *mapLayout)
 {
     if (mapLayout)
     {
         LoadPrimaryTilesetPalette(mapLayout);
         LoadSecondaryTilesetPalette(mapLayout);
+
+        CacheCurrentMapBasePalettes();
+        RefreshCurrentMapNightPalette();
     }
 }
