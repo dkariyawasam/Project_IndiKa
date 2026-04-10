@@ -112,19 +112,62 @@ void RefreshCurrentMapNightPalette(void)
         RestoreDayPaletteForCurrentMap();
 }
 
+struct DayNightMapEntry
+{
+    u8 mapGroup;
+    u8 mapNum;
+};
+
+static const struct DayNightMapEntry sDayNightMaps[] =
+{
+    { MAP_GROUP(MAP_PALLET_TOWN),  MAP_NUM(MAP_PALLET_TOWN)         },
+    { MAP_GROUP(MAP_LAVENDER_TOWN),MAP_NUM(MAP_LAVENDER_TOWN)       },
+    { MAP_GROUP(MAP_VIRIDIAN_CITY),MAP_NUM(MAP_VIRIDIAN_CITY)       },
+    { MAP_GROUP(MAP_PEWTER_CITY),  MAP_NUM(MAP_PEWTER_CITY)         },
+    { MAP_GROUP(MAP_CERULEAN_CITY),MAP_NUM(MAP_CERULEAN_CITY)       },
+    { MAP_GROUP(MAP_VERMILION_CITY),MAP_NUM(MAP_VERMILION_CITY)     },
+    { MAP_GROUP(MAP_CELADON_CITY),  MAP_NUM(MAP_CELADON_CITY)       },
+    { MAP_GROUP(MAP_FUCHSIA_CITY),  MAP_NUM(MAP_FUCHSIA_CITY)       },
+    { MAP_GROUP(MAP_CINNABAR_ISLAND),MAP_NUM(MAP_CINNABAR_ISLAND)   },
+    { MAP_GROUP(MAP_INDIGO_PLATEAU_EXTERIOR),MAP_NUM(MAP_INDIGO_PLATEAU_EXTERIOR)     },
+    { MAP_GROUP(MAP_SAFFRON_CITY),   MAP_NUM(MAP_SAFFRON_CITY)      },
+    { MAP_GROUP(MAP_ROUTE1),       MAP_NUM(MAP_ROUTE1)              },
+    { MAP_GROUP(MAP_ROUTE2),       MAP_NUM(MAP_ROUTE2)              },
+    { MAP_GROUP(MAP_ROUTE3),       MAP_NUM(MAP_ROUTE3)              },
+    { MAP_GROUP(MAP_ROUTE4),       MAP_NUM(MAP_ROUTE4)              },
+    { MAP_GROUP(MAP_ROUTE5),       MAP_NUM(MAP_ROUTE5)              },
+    { MAP_GROUP(MAP_ROUTE6),       MAP_NUM(MAP_ROUTE6)              },
+    { MAP_GROUP(MAP_ROUTE7),       MAP_NUM(MAP_ROUTE7)              },
+    { MAP_GROUP(MAP_ROUTE8),       MAP_NUM(MAP_ROUTE8)              },
+    { MAP_GROUP(MAP_ROUTE9),       MAP_NUM(MAP_ROUTE9)              },
+    { MAP_GROUP(MAP_ROUTE10),      MAP_NUM(MAP_ROUTE10)             },
+    { MAP_GROUP(MAP_ROUTE11),      MAP_NUM(MAP_ROUTE11)             },
+    { MAP_GROUP(MAP_ROUTE12),      MAP_NUM(MAP_ROUTE12)             },
+    { MAP_GROUP(MAP_ROUTE13),      MAP_NUM(MAP_ROUTE13)             },
+    { MAP_GROUP(MAP_ROUTE14),      MAP_NUM(MAP_ROUTE14)             },
+    { MAP_GROUP(MAP_ROUTE15),      MAP_NUM(MAP_ROUTE15)             },
+    { MAP_GROUP(MAP_ROUTE16),      MAP_NUM(MAP_ROUTE16)             },
+    { MAP_GROUP(MAP_ROUTE17),      MAP_NUM(MAP_ROUTE17)             },
+    { MAP_GROUP(MAP_ROUTE18),      MAP_NUM(MAP_ROUTE18)             },
+    { MAP_GROUP(MAP_ROUTE19),      MAP_NUM(MAP_ROUTE19)             },
+    { MAP_GROUP(MAP_ROUTE20),      MAP_NUM(MAP_ROUTE20)             },
+    { MAP_GROUP(MAP_ROUTE21_NORTH),MAP_NUM(MAP_ROUTE21_NORTH)       }, 
+    { MAP_GROUP(MAP_ROUTE21_SOUTH),MAP_NUM(MAP_ROUTE21_SOUTH)       },
+    { MAP_GROUP(MAP_ROUTE22),      MAP_NUM(MAP_ROUTE22)             },
+};
+
 bool8 DoesCurrentMapUseNightPalette(void)
 {
+    u32 i;
     u8 group = gSaveBlock1Ptr->location.mapGroup;
     u8 num   = gSaveBlock1Ptr->location.mapNum;
 
-    if (group == MAP_GROUP(MAP_PALLET_TOWN) && num == MAP_NUM(MAP_PALLET_TOWN))
-        return TRUE;
-
-    if (group == MAP_GROUP(MAP_ROUTE1) && num == MAP_NUM(MAP_ROUTE1))
-        return TRUE;
-
-    if (group == MAP_GROUP(MAP_VIRIDIAN_CITY) && num == MAP_NUM(MAP_VIRIDIAN_CITY))
-        return TRUE;
+    for (i = 0; i < ARRAY_COUNT(sDayNightMaps); i++)
+    {
+        if (group == sDayNightMaps[i].mapGroup
+         && num   == sDayNightMaps[i].mapNum)
+            return TRUE;
+    }
 
     return FALSE;
 }
