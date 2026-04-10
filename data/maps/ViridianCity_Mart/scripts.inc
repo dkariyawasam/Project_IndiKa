@@ -17,43 +17,14 @@ ViridianCity_Mart_OnFrame::
 	.2byte 0
 
 ViridianCity_Mart_EventScript_ParcelScene::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_VIRIDIAN_MART_CLERK, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	msgbox ViridianCity_Mart_Text_YouCameFromPallet
-	closemessage
-	applymovement LOCALID_VIRIDIAN_MART_CLERK, ViridianCity_Mart_Movement_FacePlayer
-	applymovement LOCALID_PLAYER, ViridianCity_Mart_Movement_ApproachCounter
-	waitmovement 0
-	msgbox ViridianCity_Mart_Text_TakeThisToProfOak
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1
-	giveitem_msg ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk, ITEM_OAKS_PARCEL, 1, MUS_OBTAIN_KEY_ITEM
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5
 	releaseall
 	end
 
-ViridianCity_Mart_Movement_ApproachCounter::
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_in_place_faster_left
-	step_end
-
-ViridianCity_Mart_Movement_FacePlayer::
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	walk_in_place_faster_right
-	step_end
-
 ViridianCity_Mart_EventScript_Clerk::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, ViridianCity_Mart_EventScript_SayHiToOak
-	goto_if_questlog EventScript_ReleaseEnd
 	message Text_MayIHelpYou
 	waitmessage
 	pokemart ViridianCity_Mart_Items
@@ -68,11 +39,6 @@ ViridianCity_Mart_Items::
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_NONE
-	release
-	end
-
-ViridianCity_Mart_EventScript_SayHiToOak::
-	msgbox ViridianCity_Mart_Text_SayHiToOakForMe
 	release
 	end
 
