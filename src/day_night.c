@@ -10,6 +10,7 @@
 #include "palette.h"
 #include "sprite.h"
 #include "field_effect.h"
+#include "constants/maps.h"
 
 static EWRAM_DATA u16 sBaseMapPalettes[NUM_PALS_TOTAL * 16];
 static EWRAM_DATA bool8 sBaseMapPalettesValid;
@@ -113,15 +114,19 @@ void RefreshCurrentMapNightPalette(void)
 
 bool8 DoesCurrentMapUseNightPalette(void)
 {
-    switch (gMapHeader.regionMapSectionId)
-    {
-    case MAPSEC_PALLET_TOWN:
-    case MAPSEC_ROUTE_1:
-    case MAPSEC_VIRIDIAN_CITY:
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    u8 num   = gSaveBlock1Ptr->location.mapNum;
+
+    if (group == MAP_GROUP(MAP_PALLET_TOWN) && num == MAP_NUM(MAP_PALLET_TOWN))
         return TRUE;
-    default:
-        return FALSE;
-    }
+
+    if (group == MAP_GROUP(MAP_ROUTE1) && num == MAP_NUM(MAP_ROUTE1))
+        return TRUE;
+
+    if (group == MAP_GROUP(MAP_VIRIDIAN_CITY) && num == MAP_NUM(MAP_VIRIDIAN_CITY))
+        return TRUE;
+
+    return FALSE;
 }
 
 void CacheCurrentMapBasePalettes(void)
