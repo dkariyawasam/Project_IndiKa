@@ -16,6 +16,7 @@
 #include "constants/maps.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
+#include "constants/time.h"
 
 #define MAX_ENCOUNTER_RATE 1600
 
@@ -43,6 +44,7 @@ static void ApplyCleanseTagEncounterRateMod(u32 *rate);
 static bool8 IsLeadMonHoldingCleanseTag(void);
 static u16 WildEncounterRandom(void);
 static void AddToWildEncounterRateBuff(u8 encouterRate);
+static bool8 IsItDayTime(void);
 
 #include "data/wild_encounters.h"
 
@@ -198,6 +200,16 @@ static u16 GetCurrentMapWildMonHeaderId(void)
 
             if (!UnlockedTanobyOrAreNotInTanoby())
                 break;
+            // If the next header is the same map too, treat it as Day/Night pair
+            if (gWildMonHeaders[i + 1].mapGroup == wildHeader->mapGroup
+             && gWildMonHeaders[i + 1].mapNum == wildHeader->mapNum)
+            {
+                if (IsItDayTime())
+                    return i;
+                else
+                    return i + 1;
+            }
+            
             return i;
         }
     }
@@ -781,4 +793,12 @@ static void AddToWildEncounterRateBuff(u8 encounterRate)
         sWildEncounterData.encounterRateBuff += encounterRate;
     else
         sWildEncounterData.encounterRateBuff = 0;
+}
+
+static bool8 IsItDayTime(void)
+{
+    if (VarGet(VAR_TIME_OF_DAY) == TIME_DAY)
+        return TRUE;
+    else
+        return FALSE;
 }
