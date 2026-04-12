@@ -5030,4 +5030,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = 2,
     },
+
+    [NATIONAL_DEX_BUNEARY] =
+    {
+        .categoryName = _("RABBIT"),
+        .height = 4,
+        .weight = 55,
+        .description = gBunearyPokedexText,
+        .unusedDescription = gBunearyPokedexTextUnused,
+        .pokemonScale = 479,
+        .pokemonOffset = 16,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+    [NATIONAL_DEX_LOPUNNY] =
+    {
+        .categoryName = _("RABBIT"),
+        .height = 12,
+        .weight = 333,
+        .description = gLopunnyPokedexText,
+        .unusedDescription = gLopunnyPokedexTextUnused,
+        .pokemonScale = 479,
+        .pokemonOffset = 16,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    }
 };
