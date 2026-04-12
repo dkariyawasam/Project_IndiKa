@@ -36,55 +36,11 @@ ViridianCity_Text_GoShoppingInPewterOccasionally::
     .string "I have to take the winding trail in\n"
     .string "VIRIDIAN FOREST when I go.$"
 
-ViridianCity_Text_ThisIsPrivateProperty::
-    .string "I absolutely forbid you from\n"
-    .string "going through here!\p"
-    .string "This is private property!$"
-
-ViridianCity_Text_ShowYouHowToCatchMons::
-    .string "Well, now, I've had my coffee, and\n"
-    .string "that's what I need to get going!\p"
-    .string "…You don't know how to catch\n"
-    .string "a POKéMON?\p"
-    .string "I suppose I had better show you\n"
-    .string "then!$"
-
-ViridianCity_Text_ThatWasEducationalTakeThis::
-    .string "Take this.$"
-
-ViridianCity_Text_WatchThatToLearnBasics::
-    .string "It will teach you about the basics\n"
-    .string "of being a POKéMON TRAINER.$"
-
-ViridianCity_Text_WeakenMonsFirstToCatch::
-    .string "Well, now, I've had my coffee, and\n"
-    .string "that's what I need to get going!\p"
-    .string "But I made it too strong.\n"
-    .string "It gave me a headache…\p"
-    .string "Incidentally, are you filling your\n"
-    .string "POKéDEX?\p"
-    .string "At first, focus on weakening the\n"
-    .string "POKéMON before trying to catch it.$"
-
-ViridianCity_Text_HowsTeachyTVHelping::
-    .string "Well, now, I've had my coffee, and\n"
-    .string "that's what I need to get going!\p"
-    .string "But I made it too strong.\n"
-    .string "It gave me a headache…\p"
-    .string "Incidentally, is my old TEACHY TV\n"
-    .string "helping you?$"
-
 ViridianCity_Text_MyGrandsonOnTheShow::
     .string "Wahaha!\n"
     .string "It's my grandson on the show!\p"
     .string "Since he's the one doing the\n"
     .string "teaching, you're bound to learn.$"
-
-ViridianCity_Text_TooBusyForTeachyTV::
-    .string "Hm… You're too busy to not even\n"
-    .string "have the time for TEACHY TV…\p"
-    .string "Time is money, and neither should\n"
-    .string "be ill spent…$"
 
 ViridianCity_Text_CitySign::
     .string "VIRIDIAN CITY \n"
