@@ -16434,7 +16434,7 @@
         },
         {
           "map": "MAP_ROUTE1",
-          "base_label": "sRoute1_FireRed",
+          "base_label": "sRoute1_Daytime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -16446,27 +16446,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_SENTRET"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
                 "species": "SPECIES_HOPPIP"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SUNKERN"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_HOPPIP"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SUNKERN"
               },
               {
                 "min_level": 18,
@@ -16479,19 +16459,39 @@
                 "species": "SPECIES_SKIPLOOM"
               },
               {
-                "min_level": 27,
-                "max_level": 30,
-                "species": "SPECIES_JUMPLUFF"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SUNKERN"
               },
               {
-                "min_level": 15,
-                "max_level": 18,
-                "species": "SPECIES_FURRET"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SUNKERN"
               },
               {
                 "min_level": 36,
                 "max_level": 39,
                 "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_JUMPLUFF"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SUNFLORA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SUNFLORA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SUNFLORA"
               },
               {
                 "min_level": 25,
@@ -16503,69 +16503,69 @@
         },
         {
           "map": "MAP_ROUTE1",
-          "base_label": "sRoute1_LeafGreen",
+          "base_label": "sRoute1_Nighttime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 3,
-                "max_level": 3,
+                "min_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 2,
-                "max_level": 2,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 2,
-                "max_level": 2,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 4,
-                "max_level": 4,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 4,
-                "max_level": 4,
-                "species": "SPECIES_RATTATA"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIDGEY"
+                "max_level": 8,
+                "species": "SPECIES_HOPPIP"
               },
               {
-                "min_level": 4,
-                "max_level": 4,
-                "species": "SPECIES_RATTATA"
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_SKIPLOOM"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 36,
+                "max_level": 39,
+                "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_JUMPLUFF"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_FURRET"
               }
             ]
           }
