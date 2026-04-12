@@ -411,4 +411,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_JIRACHI] = _("JIRACHI"),
     [SPECIES_DEOXYS] = _("DEOXYS"),
     [SPECIES_CHIMECHO] = _("CHIMECHO"),
+    [SPECIES_BUNEARY] = _("BUNEARY"),
+    [SPECIES_LOPUNNY] = _("LOPUNNY"),
 };

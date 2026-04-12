@@ -2718,3 +2718,16 @@ const u8 gDeoxysPokedexText[] = _(
     "altering its appearance.");
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
+
+const u8 gBunearyPokedexText[] = _(
+    "You can tell how it feels by\n"
+    "the way it rolls its ears. When\n"
+    "it's scared, both ears are rolled up.");
+
+const u8 gBunearyPokedexTextUnused[] = _("");
+
+const u8 gLopunnyPokedexText[] = _(
+    "It sheds its fur twice a year.\n"
+    "Its winter fur is soft and fluffy.");
+
+const u8 gLopunnyPokedexTextUnused[] = _("");
