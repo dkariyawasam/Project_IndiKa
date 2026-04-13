@@ -159,6 +159,11 @@ static const u16 sDexCategory_GrasslandPkmn_Page27[] = {
     SPECIES_SUICUNE,
 };
 
+static const u16 sDexCategory_GrasslandPkmn_Page28[] = {
+    SPECIES_BUNEARY,
+    SPECIES_LOPUNNY,
+};
+
 static const u16 sDexCategory_ForestPkmn_Page1[] = {
     SPECIES_CATERPIE,
     SPECIES_METAPOD,
@@ -843,6 +848,7 @@ static const struct PokedexCategoryPage sDexCategory_GrasslandPkmn[] = {
     DEX_CATEGORY(GrasslandPkmn_Page25),
     DEX_CATEGORY(GrasslandPkmn_Page26),
     DEX_CATEGORY(GrasslandPkmn_Page27),
+    DEX_CATEGORY(GrasslandPkmn_Page28),
 };
 
 static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
