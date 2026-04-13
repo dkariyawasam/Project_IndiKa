@@ -2200,5 +2200,15 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(32, 56),
         .y_offset = 6,
     },
+    [SPECIES_BUNEARY] =
+    {
+        .size = MON_COORDS_SIZE(48, 56),
+        .y_offset = 5,
+    },
+    [SPECIES_LOPUNNY] =
+    {
+        .size = MON_COORDS_SIZE(48, 56),
+        .y_offset = 5,
+    },
 };
 

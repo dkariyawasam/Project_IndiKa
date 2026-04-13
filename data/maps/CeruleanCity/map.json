@@ -357,14 +357,6 @@
       "script": "CeruleanCity_EventScript_BikeShopSign"
     },
     {
-      "type": "sign",
-      "x": 19,
-      "y": 32,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CeruleanCity_EventScript_TrainerTips"
-    },
-    {
       "type": "hidden_item",
       "x": 18,
       "y": 7,

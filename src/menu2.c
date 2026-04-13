@@ -428,6 +428,8 @@ static const u8 sMonPosAttributes[][PSA_MON_ATTR_COUNT] = {
     [SPECIES_DEOXYS          - 1] = {26,  9, 40, 26, 23},
 #endif
     [SPECIES_CHIMECHO        - 1] = {29, 12,  8, 28, 26},
+    [SPECIES_BUNEARY         - 1] = {30, 10, 48, 29, 21},
+    [SPECIES_LOPUNNY         - 1] = {31, 15, 48, 30, 29},
     [SPECIES_OLD_UNOWN_EMARK - 1] = {32, 33,  8, 32, 43},
     [SPECIES_OLD_UNOWN_QMARK - 1] = {32, 35,  8, 32, 45}
 };
