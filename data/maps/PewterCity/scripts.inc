@@ -7,54 +7,6 @@ PewterCity_OnTransition::
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 0
 	end
 
-@ Impossible to speak to this NPC from a facing dir != DIR_EAST normally, so they arent checked
-@ Additionally, no movement script exists for facing DIR_SOUTH, which would necessitate walking out of bounds
-PewterCity_EventScript_GymGuide::
-	lock
-	faceplayer
-	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe
-	closemessage
-	playbgm MUS_FOLLOW_ME, 0
-	call_if_eq VAR_FACING, DIR_EAST, PewterCity_EventScript_WalkToGymEast
-	msgbox PewterCity_Text_GoTakeOnBrock
-	closemessage
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GymGuideExit
-	waitmovement 0
-	fadedefaultbgm
-	removeobject LOCALID_PEWTER_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-	release
-	end
-
-PewterCity_EventScript_WalkToGymEast::
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWaitForGuideEast
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadEast
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymEast
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymEast
-	waitmovement 0
-	return
-
-@ Unused
-PewterCity_EventScript_WalkToGymWest::
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWaitForGuideWest
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadWest
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymWest
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymWest
-	waitmovement 0
-	return
-
-@ Unused
-PewterCity_EventScript_WalkToGymNorth::
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWaitForGuideNorth
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadNorth
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymNorth
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymNorth
-	waitmovement 0
-	return
-
 .macro walk_to_gym
 	walk_left
 	walk_left
@@ -252,82 +204,6 @@ PewterCity_Movement_GymGuideExit::
 	walk_left
 	walk_left
 	step_end
-
-PewterCity_EventScript_GymGuideTriggerTop::
-	lockall
-	setvar VAR_TEMP_1, 0
-	goto PewterCity_EventScript_GymGuideTrigger
-	end
-
-PewterCity_EventScript_GymGuideTriggerMid::
-	lockall
-	setvar VAR_TEMP_1, 1
-	goto PewterCity_EventScript_GymGuideTrigger
-	end
-
-PewterCity_EventScript_GymGuideTriggerBottom::
-	lockall
-	setvar VAR_TEMP_1, 2
-	goto PewterCity_EventScript_GymGuideTrigger
-	end
-
-@ This trigger is inaccessible and its corresponding movement script isnt linked
-PewterCity_EventScript_GymGuideTriggerRight::
-	lockall
-	setvar VAR_TEMP_1, 3
-	goto PewterCity_EventScript_GymGuideTrigger
-	end
-
-PewterCity_EventScript_GymGuideTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
-	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe
-	closemessage
-	playbgm MUS_FOLLOW_ME, 0
-	call_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_WalkToGymTop
-	call_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_WalkToGymMid
-	call_if_eq VAR_TEMP_1, 2, PewterCity_EventScript_WalkToGymBottom
-	msgbox PewterCity_Text_GoTakeOnBrock
-	closemessage
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GymGuideExit
-	waitmovement 0
-	fadedefaultbgm
-	removeobject LOCALID_PEWTER_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-	releaseall
-	end
-
-PewterCity_EventScript_WalkToGymTop::
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadTop
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymTop
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymTop
-	waitmovement 0
-	return
-
-PewterCity_EventScript_WalkToGymMid::
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadMid
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymMid
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymMid
-	waitmovement 0
-	return
-
-PewterCity_EventScript_WalkToGymBottom::
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadBottom
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymBottom
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymBottom
-	waitmovement 0
-	return
-
-@ Unused
-PewterCity_EventScript_WalkToGymRight::
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideApproachPlayerRight
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PewterCity_Movement_PlayerWalkToGymRight
-	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymRight
-	waitmovement 0
-	return
 
 PewterCity_Movement_PlayerWalkToGymTop::
 	walk_left
