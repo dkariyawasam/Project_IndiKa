@@ -1,27 +1,22 @@
 static const u16 sDexCategory_GrasslandPkmn_Page1[] = {
-    SPECIES_RATTATA,
-    SPECIES_RATICATE,
     SPECIES_SENTRET,
     SPECIES_FURRET,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page2[] = {
-    SPECIES_ZIGZAGOON,
-    SPECIES_LINOONE,
-    SPECIES_POOCHYENA,
-    SPECIES_MIGHTYENA,
+    SPECIES_SUNKERN,
+    SPECIES_SUNFLORA,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page3[] = {
-    SPECIES_NIDORAN_F,
-    SPECIES_NIDORINA,
-    SPECIES_NIDOQUEEN,
+    SPECIES_HOPPIP,
+    SPECIES_SKIPLOOM,
+    SPECIES_JUMPLUFF,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page4[] = {
-    SPECIES_NIDORAN_M,
-    SPECIES_NIDORINO,
-    SPECIES_NIDOKING,
+    SPECIES_BUNEARY,
+    SPECIES_LOPUNNY,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page5[] = {
@@ -34,14 +29,12 @@ static const u16 sDexCategory_GrasslandPkmn_Page5[] = {
 static const u16 sDexCategory_GrasslandPkmn_Page6[] = {
     SPECIES_TANGELA,
     SPECIES_ROSELIA,
-    SPECIES_SUNKERN,
-    SPECIES_SUNFLORA,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page7[] = {
-    SPECIES_HOPPIP,
-    SPECIES_SKIPLOOM,
-    SPECIES_JUMPLUFF,
+    SPECIES_NIDORAN_F,
+    SPECIES_NIDORINA,
+    SPECIES_NIDOQUEEN,
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page8[] = {
@@ -160,8 +153,9 @@ static const u16 sDexCategory_GrasslandPkmn_Page27[] = {
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page28[] = {
-    SPECIES_BUNEARY,
-    SPECIES_LOPUNNY,
+    SPECIES_NIDORAN_M,
+    SPECIES_NIDORINO,
+    SPECIES_NIDOKING,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page1[] = {
