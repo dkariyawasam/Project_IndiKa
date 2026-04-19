@@ -1342,7 +1342,7 @@ const u8 gText_QuestActive[] =_("active");
 
 //names
 const u8 gText_QuestTheNatureOfEvolutionName_1[] = _("The Nature of Evolution");
-const u8 gText_SideQuestName_2[] = _("Side Quest 2");
+const u8 gText_SideQuestName_2[] = _("Gym Leader Trials");
 const u8 gText_SideQuestName_3[] = _("Side Quest 3");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
@@ -1438,7 +1438,7 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 
 //map
 const u8 gText_QuestTheNatureOfEvolutionMap1[] = _("KANTO");
-const u8 gText_SideQuestMap2[] = _("Map 2");
+const u8 gText_SideQuestMap2[] = _("KANTO");
 const u8 gText_SideQuestMap3[] = _("Map 3");
 const u8 gText_SideQuestMap4[] = _("Map 4");
 const u8 gText_SideQuestMap5[] = _("Map 5");
@@ -1472,34 +1472,15 @@ const u8 gText_SideQuestMap30[] = _("Map 30");
 const u8 gText_SubQuest1_Name1[] = _("Evolution Through Bond");
 const u8 gText_SubQuest1_Name2[] = _("Evolution Through Instinct");
 const u8 gText_SubQuest1_Name3[] = _("Evolution Through Design");
-const u8 gText_SubQuest1_Name4[] = _("Part 4");
-const u8 gText_SubQuest1_Name5[] = _("Part 5");
-const u8 gText_SubQuest1_Name6[] = _("Part 6");
-const u8 gText_SubQuest1_Name7[] = _("Part 7");
-const u8 gText_SubQuest1_Name8[] = _("Part 8");
-const u8 gText_SubQuest1_Name9[] = _("Part 9");
-const u8 gText_SubQuest1_Name10[] = _("Part 10");
 
-const u8 gText_SubQuest2_Name1[] = _("Part 1");
-const u8 gText_SubQuest2_Name2[] = _("Part 2");
-const u8 gText_SubQuest2_Name3[] = _("Part 3");
-const u8 gText_SubQuest2_Name4[] = _("Part 4");
-const u8 gText_SubQuest2_Name5[] = _("Part 5");
-const u8 gText_SubQuest2_Name6[] = _("Part 6");
-const u8 gText_SubQuest2_Name7[] = _("Part 7");
-const u8 gText_SubQuest2_Name8[] = _("Part 8");
-const u8 gText_SubQuest2_Name9[] = _("Part 9");
-const u8 gText_SubQuest2_Name10[] = _("Part 10");
-const u8 gText_SubQuest2_Name11[] = _("Part 11");
-const u8 gText_SubQuest2_Name12[] = _("Part 12");
-const u8 gText_SubQuest2_Name13[] = _("Part 13");
-const u8 gText_SubQuest2_Name14[] = _("Part 14");
-const u8 gText_SubQuest2_Name15[] = _("Part 15");
-const u8 gText_SubQuest2_Name16[] = _("Part 16");
-const u8 gText_SubQuest2_Name17[] = _("Part 17");
-const u8 gText_SubQuest2_Name18[] = _("Part 18");
-const u8 gText_SubQuest2_Name19[] = _("Part 19");
-const u8 gText_SubQuest2_Name20[] = _("Part 20");
+const u8 gText_SubQuest2_Name1[] = _("Brock");
+const u8 gText_SubQuest2_Name2[] = _("Misty");
+const u8 gText_SubQuest2_Name3[] = _("Lt. Surge");
+const u8 gText_SubQuest2_Name4[] = _("Erika");
+const u8 gText_SubQuest2_Name5[] = _("Koga");
+const u8 gText_SubQuest2_Name6[] = _("Sabrina");
+const u8 gText_SubQuest2_Name7[] = _("Blaine");
+const u8 gText_SubQuest2_Name8[] = _("Giovanni");
 
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by bonds\nwith POKéMON.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution driven by instinct\nand  survival.");
