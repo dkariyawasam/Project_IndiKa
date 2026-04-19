@@ -1760,7 +1760,7 @@ void PrintQuestFlavorText(s32 questId)
 bool8 IsSubquestCompletedState(s32 questId)
 {
 	if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest,
-	                                  FLAG_GET_COMPLETED,
+	                                  FLAG_GET_UNLOCKED,
 	                                  questId))
 	{
 		return TRUE;
