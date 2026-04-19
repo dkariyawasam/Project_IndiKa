@@ -25,14 +25,14 @@
 #define SUB_QUEST_EVOLUTION_THROUGH_BOND        0
 #define SUB_QUEST_EVOLUTION_THROUGH_INSTINCT    1
 #define SUB_QUEST_EVOLUTION_THROUGH_DESIGN      2
-#define SUB_QUEST_4          3
-#define SUB_QUEST_5          4
-#define SUB_QUEST_6          5
-#define SUB_QUEST_7          6
-#define SUB_QUEST_8          7
-#define SUB_QUEST_9          8
-#define SUB_QUEST_10         9
-#define SUB_QUEST_11        10
+#define SUB_QUEST_BROCK                         3
+#define SUB_QUEST_MISTY                         4
+#define SUB_QUEST_LT_SURGE                      5
+#define SUB_QUEST_ERIKA                         6
+#define SUB_QUEST_KOGA                          7
+#define SUB_QUEST_SABRINA                       8
+#define SUB_QUEST_BLAINE                        9
+#define SUB_QUEST_GIOVANNI                      10
 #define SUB_QUEST_12        11
 #define SUB_QUEST_13        12
 #define SUB_QUEST_14        13
@@ -54,7 +54,7 @@
 #define SUB_QUEST_30        29
 
 #define QUEST_1_SUB_COUNT 3
-#define QUEST_2_SUB_COUNT 20
+#define QUEST_2_SUB_COUNT 8
 #define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT)
 
 #define QUEST_ARRAY_COUNT (SUB_QUEST_COUNT > QUEST_COUNT ? SUB_QUEST_COUNT : QUEST_COUNT)
