@@ -250,8 +250,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      0,
 	      gText_SubQuest1_Name1,
 	      gText_SubQuest1_Desc1,
-	      gText_SideQuestMap1,
-	      OBJ_EVENT_GFX_BLUE,
+	      gText_QuestTheNatureOfEvolutionMap1,
+	      OBJ_EVENT_GFX_PROF_OAK,
 	      OBJECT,
 	      sText_Found
 	),
@@ -260,8 +260,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      1,
 	      gText_SubQuest1_Name2,
 	      gText_SubQuest1_Desc2,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_BLUE,
+	      gText_QuestTheNatureOfEvolutionMap1,
+	      OBJ_EVENT_GFX_PROF_OAK,
 	      OBJECT,
 	      sText_Found
 	),
@@ -270,78 +270,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      2,
 	      gText_SubQuest1_Name3,
 	      gText_SubQuest1_Desc3,
-	      gText_SideQuestMap3,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      3,
-	      gText_SubQuest1_Name4,
-	      gText_SubQuest1_Desc4,
-	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      4,
-	      gText_SubQuest1_Name5,
-	      gText_SubQuest1_Desc5,
-	      gText_SideQuestMap5,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      5,
-	      gText_SubQuest1_Name6,
-	      gText_SubQuest1_Desc6,
-	      gText_SideQuestMap6,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      6,
-	      gText_SubQuest1_Name7,
-	      gText_SubQuest1_Desc7,
-	      gText_SideQuestMap7,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      7,
-	      gText_SubQuest1_Name8,
-	      gText_SubQuest1_Desc8,
-	      gText_SideQuestMap8,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      8,
-	      gText_SubQuest1_Name9,
-	      gText_SubQuest1_Desc9,
-	      gText_SideQuestMap9,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sText_Found
-	),
-
-	sub_quest(
-	      9,
-	      gText_SubQuest1_Name10,
-	      gText_SubQuest1_Desc10,
-	      gText_SideQuestMap10,
-	      OBJ_EVENT_GFX_BLUE,
+	      gText_QuestTheNatureOfEvolutionMap1,
+	      OBJ_EVENT_GFX_PROF_OAK,
 	      OBJECT,
 	      sText_Found
 	),
@@ -353,7 +283,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      10,
 	      gText_SubQuest2_Name1,
 	      gText_SubQuest2_Desc1,
-	      gText_SideQuestMap1,
+	      gText_QuestTheNatureOfEvolutionMap1,
 	      OBJ_EVENT_GFX_BLUE,
 	      OBJECT,
 	      sText_Found
@@ -563,14 +493,14 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
 {
 	side_quest(
-	      gText_SideQuestName_1,
-	      gText_SideQuestDesc_1,
-	      gText_SideQuestDoneDesc_1,
-	      gText_SideQuestMap1,
-	      OBJ_EVENT_GFX_BLUE,
+	      gText_QuestTheNatureOfEvolutionName_1,
+	      gText_QuestTheNatureOfEvolutionDesc_1,
+	      gText_QuestTheNatureOfEvolutionDoneDesc_1,
+	      gText_QuestTheNatureOfEvolutionMap1,
+	      OBJ_EVENT_GFX_PROF_OAK,
 	      OBJECT,
-	      NULL,
-	      0
+		  sSubQuests1,
+	      QUEST_1_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_2,
@@ -607,256 +537,6 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_5,
 	      gText_SideQuestDoneDesc_5,
 	      gText_SideQuestMap5,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_6,
-	      gText_SideQuestDesc_6,
-	      gText_SideQuestDoneDesc_6,
-	      gText_SideQuestMap6,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_7,
-	      gText_SideQuestDesc_7,
-	      gText_SideQuestDoneDesc_7,
-	      gText_SideQuestMap7,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_8,
-	      gText_SideQuestDesc_8,
-	      gText_SideQuestDoneDesc_8,
-	      gText_SideQuestMap8,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_9,
-	      gText_SideQuestDesc_9,
-	      gText_SideQuestDoneDesc_9,
-	      gText_SideQuestMap9,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_10,
-	      gText_SideQuestDesc_10,
-	      gText_SideQuestDoneDesc_10,
-	      gText_SideQuestMap10,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_11,
-	      gText_SideQuestDesc_11,
-	      gText_SideQuestDoneDesc_11,
-	      gText_SideQuestMap11,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_12,
-	      gText_SideQuestDesc_12,
-	      gText_SideQuestDoneDesc_12,
-	      gText_SideQuestMap12,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_13,
-	      gText_SideQuestDesc_13,
-	      gText_SideQuestDoneDesc_13,
-	      gText_SideQuestMap13,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_14,
-	      gText_SideQuestDesc_14,
-	      gText_SideQuestDoneDesc_14,
-	      gText_SideQuestMap14,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_15,
-	      gText_SideQuestDesc_15,
-	      gText_SideQuestDoneDesc_15,
-	      gText_SideQuestMap15,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_16,
-	      gText_SideQuestDesc_16,
-	      gText_SideQuestDoneDesc_16,
-	      gText_SideQuestMap16,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_17,
-	      gText_SideQuestDesc_17,
-	      gText_SideQuestDoneDesc_17,
-	      gText_SideQuestMap17,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_18,
-	      gText_SideQuestDesc_18,
-	      gText_SideQuestDoneDesc_18,
-	      gText_SideQuestMap18,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_19,
-	      gText_SideQuestDesc_19,
-	      gText_SideQuestDoneDesc_19,
-	      gText_SideQuestMap19,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_20,
-	      gText_SideQuestDesc_20,
-	      gText_SideQuestDoneDesc_20,
-	      gText_SideQuestMap20,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_21,
-	      gText_SideQuestDesc_21,
-	      gText_SideQuestDoneDesc_21,
-	      gText_SideQuestMap21,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_22,
-	      gText_SideQuestDesc_22,
-	      gText_SideQuestDoneDesc_22,
-	      gText_SideQuestMap22,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_23,
-	      gText_SideQuestDesc_23,
-	      gText_SideQuestDoneDesc_23,
-	      gText_SideQuestMap23,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_24,
-	      gText_SideQuestDesc_24,
-	      gText_SideQuestDoneDesc_24,
-	      gText_SideQuestMap24,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_25,
-	      gText_SideQuestDesc_25,
-	      gText_SideQuestDoneDesc_25,
-	      gText_SideQuestMap25,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_26,
-	      gText_SideQuestDesc_26,
-	      gText_SideQuestDoneDesc_26,
-	      gText_SideQuestMap26,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_27,
-	      gText_SideQuestDesc_27,
-	      gText_SideQuestDoneDesc_27,
-	      gText_SideQuestMap27,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_28,
-	      gText_SideQuestDesc_28,
-	      gText_SideQuestDoneDesc_28,
-	      gText_SideQuestMap28,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_29,
-	      gText_SideQuestDesc_29,
-	      gText_SideQuestDoneDesc_29,
-	      gText_SideQuestMap29,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_30,
-	      gText_SideQuestDesc_30,
-	      gText_SideQuestDoneDesc_30,
-	      gText_SideQuestMap30,
 	      OBJ_EVENT_GFX_BLUE,
 	      OBJECT,
 	      NULL,
@@ -1630,22 +1310,29 @@ static void AssignCancelNameAndId(u8 numRow)
 
 u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 {
+    u8 uniqueId = sSideQuests[quest].subquests[childQuest].id;
+    u8 index = uniqueId / 8;
+    u8 bit = uniqueId % 8;
+    u8 mask = 1 << bit;
 
-	u8 uniqueId = sSideQuests[quest].subquests[childQuest].id;
-	u8  index = uniqueId / 8; //8 bits per byte
-	u8	bit = uniqueId % 8;
-	u8	mask = 1 << bit;
+    switch (caseId)
+    {
+        case FLAG_GET_UNLOCKED:
+            return gSaveBlock2Ptr->unlockedSubquests[index] & mask;
 
-	switch (caseId)
-	{
-		case FLAG_GET_COMPLETED:
-			return gSaveBlock2Ptr->subQuests[index] & mask;
-		case FLAG_SET_COMPLETED:
-			gSaveBlock2Ptr->subQuests[index] |= mask;
-			return 1;
-	}
+        case FLAG_SET_UNLOCKED:
+            gSaveBlock2Ptr->unlockedSubquests[index] |= mask;
+            return 1;
 
-	return -1;
+        case FLAG_GET_COMPLETED:
+            return gSaveBlock2Ptr->subQuests[index] & mask;
+
+        case FLAG_SET_COMPLETED:
+            gSaveBlock2Ptr->subQuests[index] |= mask;
+            return 1;
+    }
+
+    return 0xFF;
 }
 
 u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
@@ -1904,15 +1591,17 @@ void PopulateQuestName(u8 countQuest)
 
 void PopulateSubquestName(u8 parentQuest, u8 countQuest)
 {
-	if (IsSubquestCompletedState(countQuest))
-	{
-		questNamePointer = StringAppend(questNamePointer,
-		                                sSideQuests[parentQuest].subquests[countQuest].name);
-	}
-	else
-	{
-		questNamePointer = StringAppend(questNamePointer, sText_Unk);
-	}
+    if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, countQuest))
+    {
+        questNamePointer = StringAppend(
+            questNamePointer,
+            sSideQuests[parentQuest].subquests[countQuest].name
+        );
+    }
+    else
+    {
+        questNamePointer = StringAppend(questNamePointer, sText_Unk);
+    }
 }
 
 u8 PopulateListRowNameAndId(u8 row, u8 countQuest)
@@ -2044,17 +1733,17 @@ void GenerateQuestFlavorText(s32 questId)
 		}
 	}
 	else
-	{
-		if (IsSubquestCompletedState(questId) == TRUE)
-		{
-			StringCopy(gStringVar1,
-			           sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc);
-		}
-		else
-		{
-			StringCopy(gStringVar1, sText_Empty);
-		}
-	}
+{
+    if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
+    {
+        StringCopy(gStringVar1,
+                   sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc);
+    }
+    else
+    {
+        StringCopy(gStringVar1, sText_Empty);
+    }
+}
 
 	StringExpandPlaceholders(gStringVar3, gStringVar1);
 }

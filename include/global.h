@@ -366,6 +366,7 @@ struct SaveBlock2
     //May overflow
     u8 questData[QUEST_FLAGS_COUNT * QUEST_STATES];
     u8 subQuests[SUB_FLAGS_COUNT];
+    u8 unlockedSubquests[(SUB_QUEST_COUNT + 7) / 8];
 }; // size: 0xF24
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;

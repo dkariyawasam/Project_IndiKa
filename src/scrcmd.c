@@ -2357,17 +2357,35 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
 
     switch (caseId)
     {
+        case QUEST_MENU_UNLOCK_QUEST:
+            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_UNLOCKED, childId);
+            break;
+
+        case QUEST_MENU_SET_ACTIVE:
+            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_ACTIVE, childId);
+            break;
+
         case QUEST_MENU_COMPLETE_QUEST:
-            QuestMenu_GetSetSubquestState(parentId ,FLAG_SET_COMPLETED,childId);
+            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_COMPLETED, childId);
             break;
+
+        case QUEST_MENU_CHECK_UNLOCKED:
+            gSpecialVar_Result =
+                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_UNLOCKED, childId) ? TRUE : FALSE;
+            break;
+
+        case QUEST_MENU_CHECK_ACTIVE:
+            gSpecialVar_Result =
+                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_ACTIVE, childId) ? TRUE : FALSE;
+            break;
+
         case QUEST_MENU_CHECK_COMPLETE:
-            if (QuestMenu_GetSetSubquestState(parentId ,FLAG_GET_COMPLETED,childId))
-                gSpecialVar_Result = TRUE;
-            else
-                gSpecialVar_Result = FALSE;
+            gSpecialVar_Result =
+                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_COMPLETED, childId) ? TRUE : FALSE;
             break;
+
         case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopySubquestName(gStringVar1,parentId,childId);
+            QuestMenu_CopySubquestName(gStringVar1, parentId, childId);
             break;
     }
 
