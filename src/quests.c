@@ -76,6 +76,7 @@ EWRAM_DATA static u8 **questNameArray = NULL;
 
 // This File's Functions
 void QuestMenu_Init(u8 a0, MainCallback callback);
+const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId);
 static void MainCB(void);
 static void VBlankCB(void);
 static void RunSetup(void);
@@ -150,7 +151,7 @@ static bool8 IsQuestActiveState(s32 questId);
 static bool8 IsQuestInactiveState(s32 questId);
 static bool8 IsQuestRewardState(s32 questId);
 static bool8 IsQuestCompletedState(s32 questId);
-static bool8 IsSubquestCompletedState(s32 questId);
+static bool8 IsSubquestUnlockedState(s32 questId);
 
 static void DetermineSpriteType(s32 questId);
 static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType);
@@ -1188,10 +1189,18 @@ static void AssignCancelNameAndId(u8 numRow)
 
 u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 {
-    u8 uniqueId = sSideQuests[quest].subquests[childQuest].id;
-    u8 index = uniqueId / 8;
-    u8 bit = uniqueId % 8;
-    u8 mask = 1 << bit;
+    u8 uniqueId;
+    u8 index;
+    u8 bit;
+    u8 mask;
+
+    if (childQuest >= sSideQuests[quest].numSubquests)
+        return 0;
+
+    uniqueId = sSideQuests[quest].subquests[childQuest].id;
+    index = uniqueId / 8;
+    bit = uniqueId % 8;
+    mask = 1 << bit;
 
     switch (caseId)
     {
@@ -1210,7 +1219,7 @@ u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
             return 1;
     }
 
-    return 0xFF;
+    return 0;
 }
 
 u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
@@ -1614,8 +1623,13 @@ void GenerateQuestFlavorText(s32 questId)
 {
     if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
     {
-        StringCopy(gStringVar1,
-                   sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc);
+        const u8 *desc = GetDynamicSubquestDesc(sStateDataPtr->parentQuest, questId);
+
+        if (desc != NULL)
+            StringCopy(gStringVar1, desc);
+        else
+            StringCopy(gStringVar1,
+                       sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc);
     }
     else
     {
@@ -1635,7 +1649,7 @@ void PrintQuestFlavorText(s32 questId)
 	                                      4);
 }
 
-bool8 IsSubquestCompletedState(s32 questId)
+bool8 IsSubquestUnlockedState(s32 questId)
 {
 	if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest,
 	                                  FLAG_GET_UNLOCKED,
@@ -1721,7 +1735,7 @@ void DetermineSpriteType(s32 questId)
 		QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
 		                       spriteType);
 	}
-	else if (IsSubquestCompletedState(questId) == TRUE)
+	else if (IsSubquestUnlockedState(questId) == TRUE)
 	{
 		spriteId =
 		      sSideQuests[sStateDataPtr->parentQuest].subquests[questId].sprite;
@@ -2376,4 +2390,76 @@ void QuestMenu_ResetMenuSaveData(void)
 	       sizeof(gSaveBlock2Ptr->questData));
 	memset(&gSaveBlock2Ptr->subQuests, 0,
 	       sizeof(gSaveBlock2Ptr->subQuests));
+}
+
+const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
+{
+    if (parentQuest == QUEST_GYM_LEADER_TRIALS)
+    {
+        switch (subquestId)
+        {
+            case SUB_QUEST_BROCK:
+                switch (VarGet(VAR_BROCK_TRIAL_STATE))
+                {
+                    case 1:
+                    default:
+                        return gText_BrockTrialPhase1;
+                    case 2:
+                        return gText_BrockTrialPhase2;
+                    case 3:
+                        return gText_BrockTrialPhase3;
+                    case 4:
+                        return gText_BrockTrialPhase4;
+                    case 5:
+                        return gText_BrockTrialPhase5;
+                }
+			case SUB_QUEST_MISTY:
+				switch (VarGet(VAR_MISTY_TRIAL_STATE))
+				{
+					case 1:
+					default:
+						return gText_MistyTrialPhase1;
+					case 2:
+						return gText_MistyTrialPhase2;
+					case 3:
+						return gText_MistyTrialPhase3;
+					case 4:
+						return gText_MistyTrialPhase4;
+					case 5:
+						return gText_MistyTrialPhase5;
+				}
+			case SUB_QUEST_LTSURGE:
+				switch (VarGet(VAR_LT_SURGE_TRIAL_STATE))
+				{
+					case 1:
+					default:
+						return gText_LtSurgeTrialPhase1;
+					case 2:
+						return gText_LtSurgeTrialPhase2;
+					case 3:
+						return gText_LtSurgeTrialPhase3;
+					case 4:
+						return gText_LtSurgeTrialPhase4;
+					case 5:
+						return gText_LtSurgeTrialPhase5;
+				}
+			case SUB_QUEST_ERIKA:
+				switch (VarGet(VAR_ERIKA_TRIAL_STATE))
+				{
+					case 1:
+					default:
+						return gText_ErikaTrialPhase1;
+					case 2:
+						return gText_ErikaTrialPhase2;
+					case 3:
+						return gText_ErikaTrialPhase3;
+					case 4:
+						return gText_ErikaTrialPhase4;
+					case 5:
+						return gText_ErikaTrialPhase5;
+				}
+        }
+    }
+
+    return NULL;
 }

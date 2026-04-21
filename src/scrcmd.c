@@ -2361,10 +2361,6 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
             QuestMenu_GetSetSubquestState(parentId, FLAG_SET_UNLOCKED, childId);
             break;
 
-        case QUEST_MENU_SET_ACTIVE:
-            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_ACTIVE, childId);
-            break;
-
         case QUEST_MENU_COMPLETE_QUEST:
             QuestMenu_GetSetSubquestState(parentId, FLAG_SET_COMPLETED, childId);
             break;
@@ -2375,8 +2371,7 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
             break;
 
         case QUEST_MENU_CHECK_ACTIVE:
-            gSpecialVar_Result =
-                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_ACTIVE, childId) ? TRUE : FALSE;
+            gSpecialVar_Result = FALSE;
             break;
 
         case QUEST_MENU_CHECK_COMPLETE:
