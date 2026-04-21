@@ -1482,6 +1482,30 @@ const u8 gText_SubQuest2_Name6[] = _("Sabrina");
 const u8 gText_SubQuest2_Name7[] = _("Blaine");
 const u8 gText_SubQuest2_Name8[] = _("Giovanni");
 
+const u8 gText_BrockTrialPhase1[] = _("Brock spoke of an\nancient Pokemon");
+const u8 gText_BrockTrialPhase2[] = _("Find the Pokemon\nfrom the ancient depths.");
+const u8 gText_BrockTrialPhase3[] = _("Return to Brock with\nthe ancient Pokemon.");
+const u8 gText_BrockTrialPhase4[] = _("Brock is ready to\ntrade");
+const u8 gText_BrockTrialPhase5[] = _("Brock's trade showed\nevolution through trading.");
+
+const u8 gText_MistyTrialPhase1[] = _("Misty spoke of a\nPokemon that evolves");
+const u8 gText_MistyTrialPhase2[] = _("Find the Pokemon\nthat evolves through water.");
+const u8 gText_MistyTrialPhase3[] = _("Return to Misty");
+const u8 gText_MistyTrialPhase4[] = _("Misty is ready to\ntrade");
+const u8 gText_MistyTrialPhase5[] = _("Misty's trade showed\nevolution through water.");
+
+const u8 gText_LtSurgeTrialPhase1[] = _("Lt. Surge spoke of a\nPokemon that evolves");
+const u8 gText_LtSurgeTrialPhase2[] = _("Find the Pokemon\nthat evolves through electricity.");
+const u8 gText_LtSurgeTrialPhase3[] = _("Return to Lt. Surge with the Pokemon that evolves through electricity.");
+const u8 gText_LtSurgeTrialPhase4[] = _("Lt. Surge is ready to\ntrade");
+const u8 gText_LtSurgeTrialPhase5[] = _("Lt. Surge's trade showed\nevolution through electricity.");
+
+const u8 gText_ErikaTrialPhase1[] = _("Erika spoke of a\nPokemon that evolves");
+const u8 gText_ErikaTrialPhase2[] = _("Find the Pokemon\nthat evolves through beauty.");
+const u8 gText_ErikaTrialPhase3[] = _("Return to Erika");
+const u8 gText_ErikaTrialPhase4[] = _("Erika is ready to\ntrade");
+const u8 gText_ErikaTrialPhase5[] = _("Erika's trade showed\nevolution through beauty.");
+
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by bonds\nwith POKéMON.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution driven by instinct\nand  survival.");
 const u8 gText_SubQuest1_Desc3[] = _("Study evolution created through\nhuman design.");

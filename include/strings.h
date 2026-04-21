@@ -1744,4 +1744,28 @@ extern const u8 gText_SubQuest2_Desc18[];
 extern const u8 gText_SubQuest2_Desc19[];
 extern const u8 gText_SubQuest2_Desc20[];
 
+extern const u8 gText_BrockTrialPhase1[];
+extern const u8 gText_BrockTrialPhase2[];
+extern const u8 gText_BrockTrialPhase3[];
+extern const u8 gText_BrockTrialPhase4[];
+extern const u8 gText_BrockTrialPhase5[];
+
+extern const u8 gText_MistyTrialPhase1[];
+extern const u8 gText_MistyTrialPhase2[];
+extern const u8 gText_MistyTrialPhase3[];
+extern const u8 gText_MistyTrialPhase4[];
+extern const u8 gText_MistyTrialPhase5[];
+
+extern const u8 gText_LtSurgeTrialPhase1[];
+extern const u8 gText_LtSurgeTrialPhase2[];
+extern const u8 gText_LtSurgeTrialPhase3[];
+extern const u8 gText_LtSurgeTrialPhase4[];
+extern const u8 gText_LtSurgeTrialPhase5[];
+
+extern const u8 gText_ErikaTrialPhase1[];
+extern const u8 gText_ErikaTrialPhase2[];
+extern const u8 gText_ErikaTrialPhase3[];
+extern const u8 gText_ErikaTrialPhase4[];
+extern const u8 gText_ErikaTrialPhase5[];
+
 #endif //GUARD_STRINGS_H
