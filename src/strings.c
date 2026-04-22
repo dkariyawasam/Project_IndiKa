@@ -1482,7 +1482,7 @@ const u8 gText_SubQuest2_Name6[] = _("Sabrina");
 const u8 gText_SubQuest2_Name7[] = _("Blaine");
 const u8 gText_SubQuest2_Name8[] = _("Giovanni");
 
-const u8 gText_BrockTrialPhase1[] = _("Brock spoke of an\nancient Pokemon");
+const u8 gText_BrockTrialPhase1[] = _("Brock spoke of an ancient Pokemon\nwho's never gone extinct dwelling\nin the depths of the sea.");
 const u8 gText_BrockTrialPhase2[] = _("Find the Pokemon\nfrom the ancient depths.");
 const u8 gText_BrockTrialPhase3[] = _("Return to Brock with\nthe ancient Pokemon.");
 const u8 gText_BrockTrialPhase4[] = _("Brock is ready to\ntrade");
