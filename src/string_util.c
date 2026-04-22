@@ -1,9 +1,9 @@
 #include "global.h"
 #include "gflib.h"
 
-EWRAM_DATA u8 gStringVar1[32] = {};
+EWRAM_DATA u8 gStringVar1[128] = {};
 EWRAM_DATA u8 gStringVar2[20] = {};
-EWRAM_DATA u8 gStringVar3[20] = {};
+EWRAM_DATA u8 gStringVar3[128] = {};
 EWRAM_DATA u8 gStringVar4[1000] = {};
 #if REVISION >= 0xA
 EWRAM_DATA u8 gUnknownStringVar[12] = {0};
