@@ -55,8 +55,8 @@ MtMoon_B2F_EventScript_DomeFossil::
 	faceplayer
 	msgbox MtMoon_B2F_Text_YouWantDomeFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
-	removeobject LOCALID_DOME_FOSSIL
-	giveitem_msg MtMoon_B2F_Text_ObtainedDomeFossil, ITEM_DOME_FOSSIL, 1, MUS_OBTAIN_KEY_ITEM
+	removeobject LOCALID_DOME_FOSSIL_SHARD
+	giveitem_msg MtMoon_B2F_Text_ObtainedDomeFossil, ITEM_DOME_FOSSIL_SHARD, 1, MUS_OBTAIN_KEY_ITEM
 	closemessage
 	special QuestLog_CutRecording
 	delay 10
@@ -68,7 +68,7 @@ MtMoon_B2F_EventScript_DomeFossil::
 	message MtMoon_B2F_Text_ThenThisFossilIsMine
 	waitmessage
 	waitfanfare
-	removeobject LOCALID_HELIX_FOSSIL
+	removeobject LOCALID_HELIX_FOSSIL_SHARD
 	setflag FLAG_GOT_DOME_FOSSIL
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
 	release
@@ -86,8 +86,8 @@ MtMoon_B2F_EventScript_HelixFossil::
 	faceplayer
 	msgbox MtMoon_B2F_Text_YouWantHelixFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
-	removeobject LOCALID_HELIX_FOSSIL
-	giveitem_msg MtMoon_B2F_Text_ObtainedHelixFossil, ITEM_HELIX_FOSSIL, 1, MUS_OBTAIN_KEY_ITEM
+	removeobject LOCALID_HELIX_FOSSIL_SHARD
+	giveitem_msg MtMoon_B2F_Text_ObtainedHelixFossil, ITEM_HELIX_FOSSIL_SHARD, 1, MUS_OBTAIN_KEY_ITEM
 	closemessage
 	special QuestLog_CutRecording
 	delay 10
@@ -99,7 +99,7 @@ MtMoon_B2F_EventScript_HelixFossil::
 	message MtMoon_B2F_Text_ThenThisFossilIsMine
 	waitmessage
 	waitfanfare
-	removeobject LOCALID_DOME_FOSSIL
+	removeobject LOCALID_DOME_FOSSIL_SHARD
 	setflag FLAG_GOT_HELIX_FOSSIL
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
 	release
