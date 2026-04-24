@@ -44,6 +44,26 @@ PewterCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_BROCK, PewterCity_Gym_EventScript_GymGuyPostVictory
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 0, PewterCity_Gym_EventScript_GymGuyBrockAwayFirstTime
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 1, PewterCity_Gym_EventScript_GymGuyBrockAwayRepeat
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 2, PewterCity_Gym_EventScript_GymGuyBrockAwayRepeat
+	goto PewterCity_Gym_EventScript_GymGuyNormal
+
+PewterCity_Gym_EventScript_GymGuyBrockAwayFirstTime::
+	msgbox PewterCity_Gym_Text_GymGuyBrockInMtMoon
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
+	setvar VAR_BROCK_TRIAL_STATE, 1
+	release
+	end
+
+PewterCity_Gym_EventScript_GymGuyBrockAwayRepeat::
+	msgbox PewterCity_Gym_Text_GymGuyBrockStillAway
+	release
+	end
+
+PewterCity_Gym_EventScript_GymGuyNormal::
 	msgbox PewterCity_Gym_Text_LetMeTakeYouToTheTop, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PewterCity_Gym_EventScript_GymGuyTakeMeToTop
 	goto_if_eq VAR_RESULT, NO, PewterCity_Gym_EventScript_GymGuyDontTakeMeToTop

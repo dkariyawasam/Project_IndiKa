@@ -79,6 +79,15 @@ PewterCity_Gym_Text_LiamPostBattle::
     .string "You're pretty hot.\n"
     .string "…But not as hot as BROCK!$"
 
+PewterCity_Gym_Text_GymGuyBrockInMtMoon:
+	.string "BROCK's out in MT. MOON right now,\n"
+	.string "searching for fossils! You should\l"
+	.string "go find him there.$"
+
+PewterCity_Gym_Text_GymGuyBrockStillAway:
+	.string "BROCK's still away from the GYM.\n"
+	.string "Try looking in MT. MOON.$"
+
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
     .string "Hiya!\n"
     .string "Do you want to dream big?\p"
