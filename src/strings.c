@@ -1482,11 +1482,12 @@ const u8 gText_SubQuest2_Name6[] = _("Sabrina");
 const u8 gText_SubQuest2_Name7[] = _("Blaine");
 const u8 gText_SubQuest2_Name8[] = _("Giovanni");
 
-const u8 gText_BrockTrialPhase1[] = _("Brock spoke of an ancient Pokemon\nwho's never gone extinct dwelling\nin the depths of the sea.");
-const u8 gText_BrockTrialPhase2[] = _("Find the Pokemon\nfrom the ancient depths.");
-const u8 gText_BrockTrialPhase3[] = _("Return to Brock with\nthe ancient Pokemon.");
-const u8 gText_BrockTrialPhase4[] = _("Brock is ready to\ntrade");
-const u8 gText_BrockTrialPhase5[] = _("Brock's trade showed\nevolution through trading.");
+const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
+const u8 gText_BrockTrialPhase2[] = _("BROCK asked to show him something\nof historical value...\nmaybe a fossil?\n");
+const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
+const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokemon from the\ndistant past who still dwells in\nthe depths of the sea.");
+const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwithness a trade evolution.");
+const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
 const u8 gText_MistyTrialPhase1[] = _("Misty spoke of a\nPokemon that evolves");
 const u8 gText_MistyTrialPhase2[] = _("Find the Pokemon\nthat evolves through water.");
