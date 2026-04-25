@@ -54,13 +54,13 @@ PewterCity_Gym_Text_BrockOfferTrade::
 	.string "Now watch closely.\p"
 	.string "Some evolution happens through\n"
 	.string "interaction between TRAINERS.\p"
-	.string "Will you trade your RELICANTH\n"
-	.string "for my GRAVELER?$"
+	.string "Will you trade your ancient\n"
+	.string "POKEMON for my GRAVELER?$"
 
 PewterCity_Gym_Text_BrockDeclineTrade::
 	.string "No rush.\p"
 	.string "When you're ready, bring\n"
-	.string "RELICANTH back to me.$"
+	.string "the ancient POKEMON back to me.$"
 
 PewterCity_Gym_Text_BrockTradeComplete::
 	.string "There it is...\n"
