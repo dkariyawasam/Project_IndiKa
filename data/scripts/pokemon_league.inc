@@ -23,7 +23,7 @@ PokemonLeague_EventScript_SetDoorOpen::
 
 PokemonLeague_EventScript_PreventExit::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox Text_VoiceRangOutDontRunAway
 	closemessage
 	applymovement LOCALID_PLAYER, PokemonLeague_Movement_ForcePlayerIn

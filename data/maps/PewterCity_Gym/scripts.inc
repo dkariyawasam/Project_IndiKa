@@ -16,7 +16,6 @@ PewterCity_Gym_EventScript_DefeatedBrock::
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
-	set_gym_trainers 1
 	goto PewterCity_Gym_EventScript_GiveTM39
 	end
 
@@ -33,11 +32,6 @@ PewterCity_Gym_EventScript_GiveTM39::
 PewterCity_Gym_EventScript_NoRoomForTM39::
 	msgbox PewterCity_Gym_Text_DontHaveRoomForThis
 	release
-	end
-
-PewterCity_Gym_EventScript_Liam::
-	trainerbattle_single TRAINER_CAMPER_LIAM, PewterCity_Gym_Text_LiamIntro, PewterCity_Gym_Text_LiamDefeat
-	msgbox PewterCity_Gym_Text_LiamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PewterCity_Gym_EventScript_GymGuy::

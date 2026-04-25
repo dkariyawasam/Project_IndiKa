@@ -17,7 +17,7 @@ FiveIsland_LostCave_Room10_OnFrame::
 
 FiveIsland_LostCave_Room10_EventScript_FindSelphyScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_LOST_CAVE_SELPHY, FiveIsland_LostCave_Room10_Movement_SelphyWander
 	waitmovement 0
 	delay 100
