@@ -190,7 +190,7 @@ static void DisplayItemMessageInCurrentContext(u8 taskId, bool8 inField, u8 font
 
 static void PrintNotTheTimeToUseThat(u8 taskId, bool8 inField)
 {
-    DisplayItemMessageInCurrentContext(taskId, inField, FONT_MALE, gText_OakForbidsUseOfItemHere);
+    DisplayItemMessageInCurrentContext(taskId, inField, FONT_NORMAL, gText_OakForbidsUseOfItemHere);
 }
 
 static void Task_ItemUse_CloseMessageBoxAndReturnToField(u8 taskId)

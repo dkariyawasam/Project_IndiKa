@@ -2596,7 +2596,7 @@ static void PartyMenu_Oak_PrintText(u8 windowId, const u8 *str)
 {
     StringExpandPlaceholders(gStringVar4, str);
     gTextFlags.canABSpeedUpPrint = TRUE;
-    AddTextPrinterParameterized2(windowId, FONT_MALE, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    AddTextPrinterParameterized2(windowId, FONT_NORMAL, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 }
 
 static bool8 FirstBattleEnterParty_CreateWindowAndMsg1Printer(void)

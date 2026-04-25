@@ -648,15 +648,12 @@ static const u8 *const sRivalNameChoices[] =
 {
 #if defined(FIRERED)
     gNameChoice_Green,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru
+    gNameChoice_Gary
 #elif defined(LEAFGREEN)
     gNameChoice_Red,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki
+    gNameChoice_Ash
 #endif
+    gNameChoice_Green
 };
 
 enum
@@ -1126,11 +1123,11 @@ static void Task_OakSpeech_Init(u8 taskId)
     if (str != gStringVar4)                                                                                                                                  \
     {                                                                                                                                                        \
         StringExpandPlaceholders(gStringVar4, str);                                                                                                          \
-        AddTextPrinterParameterized2(WIN_INTRO_TEXTBOX, FONT_MALE, gStringVar4, speed, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY); \
+        AddTextPrinterParameterized2(WIN_INTRO_TEXTBOX, FONT_NORMAL, gStringVar4, speed, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY); \
     }                                                                                                                                                        \
     else                                                                                                                                                     \
     {                                                                                                                                                        \
-        AddTextPrinterParameterized2(WIN_INTRO_TEXTBOX, FONT_MALE, str, speed, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);         \
+        AddTextPrinterParameterized2(WIN_INTRO_TEXTBOX, FONT_NORMAL, str, speed, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);         \
     }                                                                                                                                                        \
     CopyWindowToVram(WIN_INTRO_TEXTBOX, COPYWIN_FULL);                                                                                                       \
 })

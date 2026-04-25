@@ -1419,7 +1419,7 @@ static void Task_Pokedude_Run(u8 taskId)
         break;
     case 8:
         SetDescriptionWindowShade(1);
-        PrintMessageWithFollowupTask(taskId, FONT_MALE, gPokedudeText_TMTypes, NULL);
+        PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gPokedudeText_TMTypes, NULL);
         gTasks[taskId].func = Task_Pokedude_Run;
         tPokedudeState++;
         break;
@@ -1441,7 +1441,7 @@ static void Task_Pokedude_Run(u8 taskId)
         break;
     case 18:
         SetDescriptionWindowShade(1);
-        PrintMessageWithFollowupTask(taskId, FONT_MALE, gPokedudeText_ReadTMDescription, NULL);
+        PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gPokedudeText_ReadTMDescription, NULL);
         gTasks[taskId].func = Task_Pokedude_Run; // this function
         tPokedudeState++;
         break;

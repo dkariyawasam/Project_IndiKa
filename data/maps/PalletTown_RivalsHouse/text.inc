@@ -67,7 +67,7 @@ PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
     .string "{COLOR RED}DAISY: There you go! All done.\n"
 #else @ In the JP games, gender-based text used a different font instead of different colors.
     .string "{FONT_NORMAL}{STR_VAR_1} looks dreamily content…\p"
-    .string "{FONT_FEMALE}DAISY: There you go! All done.\n"
+    .string "DAISY: There you go! All done.\n"
 #endif
     .string "See? Doesn't it look nice?\p"
     .string "Giggle…\n"

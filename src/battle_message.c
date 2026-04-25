@@ -2689,7 +2689,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] = {
     },
     [B_WIN_OAK_OLD_MAN] = {
         .fillValue = PIXEL_FILL(0x1),
-        .fontId = FONT_MALE,
+        .fontId = FONT_NORMAL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
