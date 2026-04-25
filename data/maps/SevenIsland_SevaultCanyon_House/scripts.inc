@@ -46,7 +46,7 @@ SevenIsland_SevaultCanyon_House_EventScript_AlreadyDanced::
 	end
 
 SevenIsland_SevaultCanyon_House_EventScript_DeclineDance::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox SevenIsland_SevaultCanyon_House_Text_ComeOnDance
 	release
 	end

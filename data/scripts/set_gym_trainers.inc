@@ -1,6 +1,5 @@
 EventScript_SetGymTrainers::
 	switch VAR_0x8008
-	case 1, EventScript_SetPewterGymTrainers
 	case 2, EventScript_SetCeruleanGymTrainers
 	case 3, EventScript_SetVermilionGymTrainers
 	case 4, EventScript_SetCeladonGymTrainers
@@ -9,10 +8,6 @@ EventScript_SetGymTrainers::
 	case 7, EventScript_SetCinnabarGymTrainers
 	case 8, EventScript_SetViridianGymTrainers
 	end
-
-EventScript_SetPewterGymTrainers::
-	settrainerflag TRAINER_CAMPER_LIAM
-	return
 
 EventScript_SetCeruleanGymTrainers::
 	settrainerflag TRAINER_PICNICKER_DIANA

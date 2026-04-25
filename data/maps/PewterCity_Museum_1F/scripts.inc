@@ -56,7 +56,7 @@ PewterCity_Museum_1F_EventScript_EntranceTriggerRight::
 	end
 
 PewterCity_Museum_1F_EventScript_EntranceTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	showmoneybox 0, 0
 	msgbox PewterCity_Museum_1F_Text_Its50YForChildsTicket, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_TryPayForTicket

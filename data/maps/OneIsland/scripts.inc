@@ -13,7 +13,7 @@ OneIsland_OnFrame::
 
 OneIsland_EventScript_EnterOneIslandFirstTime::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, OneIsland_Movement_PlayerExitHarbor
 	waitmovement 0
 	msgbox OneIsland_Text_BillLetsGoSeeCelio

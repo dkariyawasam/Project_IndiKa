@@ -125,7 +125,7 @@ Route4_PokemonCenter_1F_EventScript_AlreadyBoughtMagikarp::
 	end
 
 Route4_PokemonCenter_1F_EventScript_NoRoomForMagikarp::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon
 	hidemoneybox
 	release
