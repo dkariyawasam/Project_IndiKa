@@ -35,7 +35,7 @@ Route24_EventScript_RocketTriggerRight::
 	end
 
 Route24_EventScript_RocketTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RocketApproachPlayer
 	call_if_eq VAR_TEMP_1, 1, Route24_EventScript_RocketMotionToPlayer
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight

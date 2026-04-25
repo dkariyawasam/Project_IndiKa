@@ -104,7 +104,7 @@ CableClub_EventScript_CloseLinkAndExitLinkRoom::
 	special HelpSystem_Enable
 	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
 	applymovement VAR_0x8007, Movement_AttendantFaceLeft
 	waitmovement 0
@@ -129,7 +129,7 @@ CableClub_EventScript_PlayerExitTradeCenter::
 	special HelpSystem_Enable
 	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
 	applymovement LOCALID_PLAYER, Movement_PlayerFaceAttendantRight
 	waitmovement 0
@@ -152,7 +152,7 @@ CableClub_EventScript_PlayerExitUnionRoom::
 	special HelpSystem_Enable
 	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
 	applymovement LOCALID_PLAYER, Movement_PlayerFaceAttendantRight
 	waitmovement 0
@@ -180,7 +180,7 @@ CableClub_EventScript_PlayerExitLinkRoom::
 
 CableClub_EventScript_Tutorial::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox CableClub_Text_FirstTimeRightThisWay

@@ -17,7 +17,7 @@ FiveIsland_ResortGorgeous_OnFrame::
 
 FiveIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow
 	closemessage
 	applymovement LOCALID_RESORT_GORGEOUS_SELPHY, Common_Movement_WalkInPlaceFasterUp

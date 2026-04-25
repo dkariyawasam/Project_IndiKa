@@ -24,7 +24,7 @@ Route6_NorthEntrance_EventScript_GuardTriggerRight::
 	end
 
 Route6_NorthEntrance_EventScript_GuardTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	goto_if_set FLAG_GOT_TEA, Route6_NorthEntrance_EventScript_GiveTea

@@ -39,7 +39,7 @@ CeladonCity_DepartmentStore_Roof_EventScript_AskGiveDrink::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	message CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink
 	waitmessage
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	switch VAR_TEMP_1
 	case 1, CeladonCity_DepartmentStore_Roof_EventScript_AskGiveFreshWater
 	case 2, CeladonCity_DepartmentStore_Roof_EventScript_AskGiveSodaPop

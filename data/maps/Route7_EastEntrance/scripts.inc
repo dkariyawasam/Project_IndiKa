@@ -24,7 +24,7 @@ Route7_EastEntrance_EventScript_GuardTriggerBottom::
 	end
 
 Route7_EastEntrance_EventScript_GuardTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	goto_if_set FLAG_GOT_TEA, Route7_EastEntrance_EventScript_GiveTea

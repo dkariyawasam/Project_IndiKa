@@ -73,7 +73,7 @@ TrainerTower_Lobby_EventScript_LostChallenge::
 	lock
 	faceplayer
 	applymovement LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TrainerTower_Lobby_Text_TooBadComeBackTryAgain
 	goto TrainerTower_Lobby_EventScript_ExitChallenge
 
@@ -82,7 +82,7 @@ TrainerTower_Lobby_EventScript_ExitChallengeSpeakToReceptionist::
 	lock
 	faceplayer
 	applymovement LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch
 TrainerTower_Lobby_EventScript_ExitChallenge::
 	closemessage
@@ -143,7 +143,7 @@ TrainerTower_Lobby_Mart_Items::
 TrainerTower_Lobby_EventScript_EntryTrigger::
 	lockall
 	applymovement LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist
-	textcolor NPC_TEXT_COLOR_FEMALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TrainerTower_Lobby_Text_WelcomeToTrainerTower
 	ttower_getnumfloors
 	goto_if_eq VAR_RESULT, FALSE, TrainerTower_Lobby_EventScript_AllFloorsUsed

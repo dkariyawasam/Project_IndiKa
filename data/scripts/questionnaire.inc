@@ -8,7 +8,7 @@ EventScript_Questionnaire::
 	lock
 	faceplayer
 	specialvar VAR_0x8008, GetMartClerkObjectId
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8004, 0, EventScript_EnableMysteryGift
 	goto_if_eq VAR_RESULT, 0, EventScript_DeclineQuestionnaire
 	goto_if_eq VAR_RESULT, 1, EventScript_TookQuestionnaire

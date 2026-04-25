@@ -19,7 +19,7 @@ SixIsland_PokemonCenter_1F_OnFrame::
 
 SixIsland_PokemonCenter_1F_EventScript_RivalScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_SIX_ISLAND_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_RIVAL, 0

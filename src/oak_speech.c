@@ -653,7 +653,6 @@ static const u8 *const sRivalNameChoices[] =
     gNameChoice_Red,
     gNameChoice_Ash
 #endif
-    gNameChoice_Green
 };
 
 enum

@@ -30,7 +30,7 @@ SilphCo_7F_EventScript_RivalTriggerBottom::
 	end
 
 SilphCo_7F_EventScript_RivalScene::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	applymovement LOCALID_SILPH_CO_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -158,7 +158,7 @@ SilphCo_7F_EventScript_LaprasTransferredToPC::
 	end
 
 SilphCo_7F_EventScript_EndReceiveLapras::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox SilphCo_7F_Text_ExplainLapras
 	setflag FLAG_GOT_LAPRAS_FROM_SILPH
 	release

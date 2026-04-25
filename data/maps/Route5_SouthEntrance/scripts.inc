@@ -24,7 +24,7 @@ Route5_SouthEntrance_EventScript_GuardTriggerRight::
 	end
 
 Route5_SouthEntrance_EventScript_GuardTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	goto_if_set FLAG_GOT_TEA, Route5_SouthEntrance_EventScript_GiveTea

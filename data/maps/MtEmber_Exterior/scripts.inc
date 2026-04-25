@@ -83,7 +83,7 @@ MtEmber_Exterior_EventScript_BattleGrunt2::
 
 MtEmber_Exterior_EventScript_RocketPasswordScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox MtEmber_Exterior_Text_PunchedThroughAtLast
 	message MtEmber_Exterior_Text_WhatsPasswordAgain
 	waitmessage

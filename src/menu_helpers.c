@@ -236,7 +236,7 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *quantity_p, u16 qmax)
 
 u8 GetDialogBoxFontId(void)
 {
-    if (ContextNpcGetTextColor() == NPC_TEXT_COLOR_MALE)
+    if (ContextNpcGetTextColor() == NPC_TEXT_COLOR_NEUTRAL)
         return FONT_NORMAL;
     else
         return FONT_NORMAL;

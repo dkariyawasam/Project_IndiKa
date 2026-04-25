@@ -45,7 +45,7 @@ PokemonLeague_ChampionsRoom_OnFrame::
 
 PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	setflag FLAG_TEMP_2
 	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerEnter
 	waitmovement 0
