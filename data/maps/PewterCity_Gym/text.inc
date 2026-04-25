@@ -25,7 +25,7 @@ PewterCity_Gym_Text_BrockDefeat::
     .string "LEAGUE BOULDERBADGE.\p"
     .string "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
     .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-    .string "{FONT_MALE}Just having the BOULDERBADGE makes\n"
+    .string "Just having the BOULDERBADGE makes\n"
     .string "your POKéMON more powerful.\p"
     .string "It also enables the use of the\n"
     .string "move FLASH outside of battle.\p"
@@ -64,20 +64,6 @@ PewterCity_Gym_Text_BrockPostBattle::
 
 PewterCity_Gym_Text_DontHaveRoomForThis::
     .string "You don't have room for this.$"
-
-PewterCity_Gym_Text_LiamIntro::
-    .string "Stop right there, kid!\p"
-    .string "You're ten thousand light-years \n"
-    .string "from facing BROCK!$"
-
-PewterCity_Gym_Text_LiamDefeat::
-    .string "Darn!\p"
-    .string "Light-years isn't time…\n"
-    .string "It measures distance!$"
-
-PewterCity_Gym_Text_LiamPostBattle::
-    .string "You're pretty hot.\n"
-    .string "…But not as hot as BROCK!$"
 
 PewterCity_Gym_Text_GymGuyBrockInMtMoon:
 	.string "BROCK's out in MT. MOON right now,\n"

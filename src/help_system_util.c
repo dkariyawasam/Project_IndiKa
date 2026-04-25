@@ -559,7 +559,7 @@ void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, stru
 {
     if (fontId == FONT_SMALL)
         DecompressGlyph_Small(glyph, FALSE);
-    else if (fontId == FONT_FEMALE)
+    else if (fontId == FONT_NORMAL)
         DecompressGlyph_Female(glyph, FALSE);
     else
         DecompressGlyph_Normal(glyph, FALSE);
