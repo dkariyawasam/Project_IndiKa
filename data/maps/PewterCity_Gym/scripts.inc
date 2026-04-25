@@ -4,7 +4,10 @@ PewterCity_Gym_MapScripts::
 PewterCity_Gym_EventScript_Brock::
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_BROCK, PewterCity_Gym_Text_BrockIntro, PewterCity_Gym_Text_BrockDefeat, PewterCity_Gym_EventScript_DefeatedBrock, NO_MUSIC
-	goto_if_unset FLAG_GOT_TM39_FROM_BROCK, PewterCity_Gym_EventScript_GiveTM39
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 3, PewterCity_Gym_EventScript_GiveBoulderBadge
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 4, PewterCity_Gym_EventScript_BrockRelicanthCheck
+	goto_if_eq VAR_BROCK_TRIAL_STATE, 5, PewterCity_Gym_EventScript_BrockRelicanthCheck
+	goto_if_ge VAR_BROCK_TRIAL_STATE, 6, PewterCity_Gym_EventScript_BrockTradeDone
 	msgbox PewterCity_Gym_Text_BrockPostBattle
 	release
 	end
@@ -15,22 +18,45 @@ PewterCity_Gym_EventScript_DefeatedBrock::
 	setflag FLAG_BADGE01_GET
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
-	goto PewterCity_Gym_EventScript_GiveTM39
+	goto PewterCity_Gym_EventScript_GiveBoulderBadge
 	end
 
-PewterCity_Gym_EventScript_GiveTM39::
+PewterCity_Gym_EventScript_GiveBoulderBadge::
 	msgbox PewterCity_Gym_Text_TakeThisWithYou
-	checkitemspace ITEM_TM39
-	goto_if_eq VAR_RESULT, FALSE, PewterCity_Gym_EventScript_NoRoomForTM39
-	giveitem_msg PewterCity_Gym_Text_ReceivedTM39FromBrock, ITEM_TM39
-	setflag FLAG_GOT_TM39_FROM_BROCK
-	msgbox PewterCity_Gym_Text_ExplainTM39
+	msgbox PewterCity_Gym_Text_ExplainBoulderBadge
+	setvar VAR_BROCK_TRIAL_STATE, 4
 	release
 	end
 
-PewterCity_Gym_EventScript_NoRoomForTM39::
-	msgbox PewterCity_Gym_Text_DontHaveRoomForThis
+PewterCity_Gym_EventScript_BrockRelicanthCheck::
+	setvar VAR_0x8008, INGAME_TRADE_BROCK_GRAVELER
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_BROCK_GRAVELER_TRADE, PewterCity_Gym_EventScript_BrockTradeDone
+	msgbox PewterCity_Gym_Text_BrockOfferTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PewterCity_Gym_EventScript_BrockDeclineTrade
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, PewterCity_Gym_EventScript_BrockDeclineTrade
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, PewterCity_Gym_EventScript_BrockNotRelicanth
+	call EventScript_DoInGameTrade
+	msgbox PewterCity_Gym_Text_BrockTradeComplete
+	setflag FLAG_DID_BROCK_GRAVELER_TRADE
+	setvar VAR_BROCK_TRIAL_STATE, 6
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
+	release
+	end
+
+PewterCity_Gym_EventScript_BrockDeclineTrade::
+	msgbox PewterCity_Gym_Text_BrockDeclineTrade
+	release
+	end
+PewterCity_Gym_EventScript_BrockNotRelicanth::
+	msgbox PewterCity_Gym_Text_BrockNotRelicanth
+	release
+	end
+
+PewterCity_Gym_EventScript_BrockTradeDone::
+	msgbox PewterCity_Gym_Text_BrockTradeDone
 	release
 	end
 
