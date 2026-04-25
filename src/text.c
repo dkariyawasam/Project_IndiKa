@@ -437,7 +437,7 @@ u16 FontFunc_Male(struct TextPrinter *textPrinter)
 
     if (subStruct->hasGlyphIdBeenSet == 0)
     {
-        textPrinter->subUnion.sub.glyphId = FONT_MALE;
+        textPrinter->subUnion.sub.glyphId = FONT_NORMAL;
         subStruct->hasGlyphIdBeenSet = 1;
     }
     return RenderText(textPrinter);
@@ -449,7 +449,7 @@ u16 FontFunc_Female(struct TextPrinter *textPrinter)
 
     if (subStruct->hasGlyphIdBeenSet == 0)
     {
-        textPrinter->subUnion.sub.glyphId = FONT_FEMALE;
+        textPrinter->subUnion.sub.glyphId = FONT_NORMAL;
         subStruct->hasGlyphIdBeenSet = 1;
     }
     return RenderText(textPrinter);

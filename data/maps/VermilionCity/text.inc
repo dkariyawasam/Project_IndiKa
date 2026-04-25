@@ -62,13 +62,13 @@ VermilionCity_Text_DoYouHaveATicket::
 
 VermilionCity_Text_FlashedSSTicket::
     .string "{FONT_NORMAL}{PLAYER} flashed the S.S. TICKET!\p"
-    .string "{FONT_MALE}Great!\n"
+    .string "Great!\n"
     .string "Welcome to the S.S. ANNE!$"
 
 VermilionCity_Text_DontHaveNeededSSTicket::
     .string "{FONT_NORMAL}{PLAYER} doesn't have the needed\n"
     .string "S.S. TICKET.\p"
-    .string "{FONT_MALE}Sorry!\p"
+    .string "Sorry!\p"
     .string "You need a ticket to get aboard.$"
 
 VermilionCity_Text_TheShipSetSail::
