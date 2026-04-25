@@ -17,7 +17,7 @@ PokemonLeague_HallOfFame_OnFrame::
 
 PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement LOCALID_PLAYER, PokemonLeague_HallOfFame_Movement_EnterRoom
 	waitmovement 0
 	applymovement LOCALID_HALL_OF_FAME_PROF_OAK, Common_Movement_WalkInPlaceFasterLeft
