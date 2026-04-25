@@ -1,87 +1,110 @@
 PewterCity_Gym_Text_BrockIntro::
-    .string "So, you're here. I'm BROCK.\n"
-    .string "I'm PEWTER's GYM LEADER.\p"
-    .string "My rock-hard willpower is evident\n"
-    .string "even in my POKéMON.\p"
-    .string "My POKéMON are all rock hard, and\n"
-    .string "have true-grit determination.\p"
-    .string "That's right - my POKéMON are all\n"
-    .string "the ROCK type!\p"
-    .string "Fuhaha! You're going to challenge\n"
-    .string "me knowing that you'll lose?\p"
-    .string "That's the TRAINER's honor that\n"
-    .string "compels you to challenge me.\p"
-    .string "Fine, then!\n"
-    .string "Show me your best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "So, we meet again.\p"
+    .string "Back in MT. MOON, I didn't\n"
+    .string "introduce myself properly.\p"
+    .string "I'm BROCK.\n"
+    .string "PEWTER CITY's GYM LEADER.\p"
+    .string "You showed a keen eye for\n"
+    .string "fossils out there.\p"
+    .string "But finding fragments is only\n"
+    .string "part of the story.\p"
+    .string "Understanding how they connect...\n"
+    .string "that's where true strength lies.\p"
+    .string "There's something I want to show\n"
+    .string "you about evolution.\p"
+    .string "But first--you'll have to\n"
+    .string "defeat me in battle.\p"
+    .string "Let's see what you've learned!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
-@ NOTE: This defeat text actually causes a buffer overflow. It's too long for the gDisplayedStringBattle
-@ buffer that it's put into, and it stomps all over the gBattleTextBuffs after, as well as the otherwise
-@ unused array after that, sFlickerArray. Perhaps that's the reason why said array exists.
 PewterCity_Gym_Text_BrockDefeat::
-    .string "I took you for granted, and so\n"
-    .string "I lost.\p"
-    .string "As proof of your victory, I confer\n"
-    .string "on you this…the official POKéMON\l"
-    .string "LEAGUE BOULDERBADGE.\p"
-    .string "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
-    .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-    .string "Just having the BOULDERBADGE makes\n"
-    .string "your POKéMON more powerful.\p"
-    .string "It also enables the use of the\n"
-    .string "move FLASH outside of battle.\p"
-    .string "Of course, a POKéMON must know the\n"
-    .string "move FLASH to use it.$"
+    .string "I took you for granted...\n"
+    .string "and I lost.\p"
+    .string "You understood more than\n"
+    .string "just the battle.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
-    .string "Wait!\n"
-    .string "Take this with you.$"
+    .string "Wait.\p"
+    .string "Take this--\n"
+    .string "the BOULDERBADGE.$"
 
-PewterCity_Gym_Text_ReceivedTM39FromBrock::
-    .string "{PLAYER} received TM39\n"
-    .string "from BROCK.$"
+PewterCity_Gym_Text_ExplainBoulderBadge::
+	.string "The BOULDERBADGE grants access\n"
+	.string "to the CINNABAR LAB.\p"
+	.string "That's where fossils are studied\n"
+	.string "and restored.\p"
+	.string "But fossils aren't the only way\n"
+	.string "to study the past.\p"
+	.string "Some POKEMON never vanished.\n"
+	.string "They still live... unchanged.\p"
+	.string "Deep in KANTO's waters,\n"
+	.string "there are POKEMON older than\n"
+	.string "anything we've restored.\p"
+	.string "Find one. Bring it to me.\p"
+	.string "Then I'll show you another kind\n"
+	.string "of evolution.$"
 
-PewterCity_Gym_Text_ExplainTM39::
-    .string "A TM, Technical Machine, contains a\n"
-    .string "technique for POKéMON.\p"
-    .string "Using a TM teaches the move it\n"
-    .string "contains to a POKéMON.\p"
-    .string "A TM is good for only one use.\p"
-    .string "So, when you use one, pick the\n"
-    .string "POKéMON carefully.\p"
-    .string "Anyways…\n"
-    .string "TM39 contains ROCK TOMB.\p"
-    .string "It hurls boulders at the foe and\n"
-    .string "lowers its SPEED.$"
+PewterCity_Gym_Text_BrockRelicanthReminder::
+	.string "Deep in KANTO's waters,\n"
+	.string "there are POKEMON that never\n"
+	.string "vanished from ancient times.\p"
+	.string "Find one and bring it to me.\n"
+	.string "Then I'll show you trade evolution.$"
+
+PewterCity_Gym_Text_BrockOfferTrade::
+	.string "Now watch closely.\p"
+	.string "Some evolution happens through\n"
+	.string "interaction between TRAINERS.\p"
+	.string "Will you trade your RELICANTH\n"
+	.string "for my GRAVELER?$"
+
+PewterCity_Gym_Text_BrockDeclineTrade::
+	.string "No rush.\p"
+	.string "When you're ready, bring\n"
+	.string "RELICANTH back to me.$"
+
+PewterCity_Gym_Text_BrockTradeComplete::
+	.string "There it is...\n"
+	.string "GOLEM.\p"
+	.string "That's trade evolution.\p"
+	.string "A change brought about by\n"
+	.string "exchange between TRAINERS.$"
+
+PewterCity_Gym_Text_BrockTradeDone::
+	.string "GOLEM is proof that evolution\n"
+	.string "can be shaped by connection.\p"
+	.string "Remember that as you continue\n"
+	.string "OAK's research.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-    .string "There are all kinds of TRAINERS in\n"
-    .string "this huge world of ours.\p"
-    .string "You appear to be very gifted as a\n"
-    .string "POKéMON TRAINER.\p"
-    .string "So let me make a suggestion.\p"
-    .string "Go to the GYM in CERULEAN and test\n"
-    .string "your abilities.$"
+	.string "Deep in KANTO's waters,\n"
+	.string "there are POKEMON that never\l"
+	.string "vanished from ancient times.\p"
+	.string "Find one and bring it to me.\n"
+	.string "Then I'll show you trade evolution.$"
 
-PewterCity_Gym_Text_DontHaveRoomForThis::
-    .string "You don't have room for this.$"
+PewterCity_Gym_Text_BrockNotRelicanth::
+	.string "That's not the POKEMON\n"
+	.string "I was hoping to study.\p"
+	.string "Look for one that has lived\n"
+	.string "unchanged since ancient times.$"
 
-PewterCity_Gym_Text_GymGuyBrockInMtMoon:
+// The text the gym guide says. He gives advice on how to beat Brock.
+
+PewterCity_Gym_Text_GymGuyBrockInMtMoon::
 	.string "BROCK's out in MT. MOON right now,\n"
 	.string "searching for fossils! You should\l"
 	.string "go find him there.$"
 
-PewterCity_Gym_Text_GymGuyBrockStillAway:
+PewterCity_Gym_Text_GymGuyBrockStillAway::
 	.string "BROCK's still away from the GYM.\n"
 	.string "Try looking in MT. MOON.$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
-    .string "Hiya!\n"
-    .string "Do you want to dream big?\p"
-    .string "Do you dare to dream of becoming\n"
-    .string "the POKéMON champ?\p"
-    .string "I'm no TRAINER, but I can advise\n"
-    .string "you on how to win.\p"
-    .string "Let me take you to the top!$"
+    .string "Ah, BROCK's back from MT. MOON!\p"
+    .string "Looks like your fossil hunting\n"
+    .string "gave him something to think about.\p"
+    .string "Want some advice before you\n"
+    .string "challenge him?$"
 
 PewterCity_Gym_Text_LetsGetHappening::
     .string "All right!\n"
@@ -97,11 +120,15 @@ PewterCity_Gym_Text_BrockTypeAdvice::
     .string "break through their defense.$"
 
 PewterCity_Gym_Text_ItsFreeLetsGetHappening::
-    .string "It's free advice, yknow!$"
+    .string "All right!\p"
+    .string "Then go show BROCK what you\n"
+    .string "learned in MT. MOON!$"
 
 PewterCity_Gym_Text_YoureChampMaterial::
     .string "Just as I thought!\n"
     .string "You're POKéMON champ material!$"
+
+// The text on the statue in the gym. It changes if the player has defeated Brock or not.
 
 PewterCity_Gym_Text_GymStatue::
     .string "PEWTER POKéMON GYM\n"

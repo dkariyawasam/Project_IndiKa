@@ -178,6 +178,22 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_PONYTA
+    },
+    [INGAME_TRADE_BROCK_GRAVELER] =
+    {
+        .nickname = _("GRAVELER"),
+        .species = SPECIES_GRAVELER,
+        .ivs = {22, 25, 18, 19, 22, 15},
+        .abilityNum = 0,
+        .otId = 01074,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_NONE,
+        .mailNum = 255,
+        .otName = _("BROCK"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_RELICANTH
     }
 };
 
