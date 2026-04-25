@@ -87,17 +87,17 @@ PewterCity_Gym_Text_LetsGetHappening::
     .string "All right!\n"
     .string "Let's get happening!$"
 
-PewterCity_Gym_Text_TryDifferentPartyOrders::
-    .string "The first POKéMON out in a match is\n"
-    .string "at the left of the POKéMON LIST.\p"
-    .string "By changing the order of POKéMON,\n"
-    .string "you may gain an advantage.\p"
-    .string "Try different orders to suit your\n"
-    .string "opponent's party.$"
+PewterCity_Gym_Text_BrockTypeAdvice::
+    .string "BROCK uses ROCK-type POKEMON.\p"
+    .string "They resist NORMAL and FIRE.\n"
+    .string "Don't rely on brute force.\p"
+    .string "WATER and GRASS moves are\n"
+    .string "especially effective.\p"
+    .string "GROUND moves can also\n"
+    .string "break through their defense.$"
 
 PewterCity_Gym_Text_ItsFreeLetsGetHappening::
-    .string "It's a free service!\n"
-    .string "Let's get happening!$"
+    .string "It's free advice, yknow!$"
 
 PewterCity_Gym_Text_YoureChampMaterial::
     .string "Just as I thought!\n"
