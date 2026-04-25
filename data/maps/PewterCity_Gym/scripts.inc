@@ -75,11 +75,11 @@ PewterCity_Gym_EventScript_GymGuyTakeMeToTop::
 
 PewterCity_Gym_EventScript_GymGuyDontTakeMeToTop::
 	msgbox PewterCity_Gym_Text_ItsFreeLetsGetHappening
-	goto PewterCity_Gym_EventScript_GymGuyAdvice
+	release
 	end
 
 PewterCity_Gym_EventScript_GymGuyAdvice::
-	msgbox PewterCity_Gym_Text_TryDifferentPartyOrders
+	msgbox PewterCity_Gym_Text_BrockTypeAdvice
 	release
 	end
 
