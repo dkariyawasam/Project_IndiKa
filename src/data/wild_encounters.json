@@ -20192,7 +20192,7 @@
                 "species": "SPECIES_SEADRA"
               },
               {
-                "min_level": 25,
+                "min_level": 5,
                 "max_level": 35,
                 "species": "SPECIES_RELICANTH"
               }

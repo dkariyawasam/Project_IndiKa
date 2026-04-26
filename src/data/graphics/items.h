@@ -550,8 +550,8 @@ const u32 gItemIconPalette_Itemfinder[] = INCBIN_U32("graphics/items/icon_palett
 const u32 gItemIcon_OldRod[] = INCBIN_U32("graphics/items/icons/old_rod.4bpp.lz");
 const u32 gItemIconPalette_OldRod[] = INCBIN_U32("graphics/items/icon_palettes/old_rod.gbapal.lz");
 
-const u32 gItemIcon_GoodRod[] = INCBIN_U32("graphics/items/icons/good_rod.4bpp.lz");
-const u32 gItemIconPalette_GoodRod[] = INCBIN_U32("graphics/items/icon_palettes/good_rod.gbapal.lz");
+const u32 gItemIcon_CascadeBoard[] = INCBIN_U32("graphics/items/icons/cascade_board.4bpp.lz");
+const u32 gItemIconPalette_CascadeBoard[] = INCBIN_U32("graphics/items/icon_palettes/cascade_board.gbapal.lz");
 
 const u32 gItemIcon_SuperRod[] = INCBIN_U32("graphics/items/icons/super_rod.4bpp.lz");
 const u32 gItemIconPalette_SuperRod[] = INCBIN_U32("graphics/items/icon_palettes/super_rod.gbapal.lz");
