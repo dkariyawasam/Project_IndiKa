@@ -2973,8 +2973,6 @@ static void UseSurfEffect_5(struct Task *task);
 
 static void (*const sUseSurfEffectFuncs[])(struct Task *) = {
     UseSurfEffect_1,
-    UseSurfEffect_2,
-    UseSurfEffect_3,
     UseSurfEffect_4,
     UseSurfEffect_5,
 };
@@ -3011,7 +3009,6 @@ static void UseSurfEffect_2(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
-        StartPlayerAvatarSummonMonForFieldMoveAnim();
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
         task->data[0]++;
     }
@@ -3024,7 +3021,6 @@ static void UseSurfEffect_3(struct Task *task)
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
         gFieldEffectArguments[0] = task->data[15] | 0x80000000;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->data[0]++;
     }
 }
