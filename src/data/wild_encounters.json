@@ -44,15 +44,15 @@
         {
           "type": "fishing_mons",
           "encounter_rates": [
-            70,
             30,
-            60,
             20,
-            20,
-            40,
-            40,
-            15,
+            10,
+            10,
+            10,
+            10,
             4,
+            4,
+            1,
             1
           ],
           "groups": {
@@ -20148,12 +20148,12 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_MAGIKARP"
               },
               {
@@ -20163,7 +20163,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 15,
+                "max_level": 8,
                 "species": "SPECIES_MAGIKARP"
               },
               {
@@ -20182,18 +20182,18 @@
                 "species": "SPECIES_HORSEA"
               },
               {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_GYARADOS"
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_RELICANTH"
               },
               {
                 "min_level": 25,
                 "max_level": 35,
-                "species": "SPECIES_SEADRA"
+                "species": "SPECIES_RELICANTH"
               },
               {
                 "min_level": 5,
-                "max_level": 35,
+                "max_level": 8,
                 "species": "SPECIES_RELICANTH"
               }
             ]
