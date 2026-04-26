@@ -69,6 +69,9 @@ static void UseFameCheckerFromBag(void);
 static void Task_UseFameCheckerFromField(u8 taskId);
 static void Task_BattleUse_StatBooster_DelayAndPrint(u8 taskId);
 static void Task_BattleUse_StatBooster_WaitButton_ReturnToBattle(u8 taskId);
+void FieldCallback_Surf(void);
+
+
 
 // unknown unused data.
 // It's curiously about the size of an array of values indexed by species (including padding),
@@ -922,4 +925,22 @@ void ItemUse_SetQuestLogEvent(u8 eventId, struct Pokemon *pokemon, u16 itemId, u
         data->species = 0xFFFF;
     SetQuestLogEvent(eventId, (void *)data);
     Free(data);
+}
+
+static void ItemUseOnFieldCB_CascadeBoard(u8 taskId)
+{
+    SetUpFieldMove_CascadeBoard();
+}
+
+void ItemUseOutOfBattle_CascadeBoard(u8 taskId)
+{
+    if (SetUpFieldMove_CascadeBoard() == TRUE)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_CascadeBoard;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
+    }
 }
