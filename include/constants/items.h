@@ -272,7 +272,7 @@
 #define ITEM_ITEMFINDER 261
 #define ITEM_OLD_ROD 262
 #define ITEM_GOOD_ROD 263
-#define ITEM_SUPER_ROD 264
+#define ITEM_FISHING_ROD 264
 #define ITEM_SS_TICKET 265
 #define ITEM_CONTEST_PASS 266
 #define ITEM_10B 267
@@ -458,7 +458,7 @@
 // Secondary IDs for rods
 #define OLD_ROD   0
 #define GOOD_ROD  1
-#define SUPER_ROD 2
+#define FISHING_ROD 2
 
 // Check if the item is one that can be used on a Pokemon.
 #define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX)

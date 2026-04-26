@@ -4225,8 +4225,8 @@
       "secondaryId": "GOOD_ROD"
     },
     {
-      "english": "SUPER ROD",
-      "itemId": "ITEM_SUPER_ROD",
+      "english": "FISHING ROD",
+      "itemId": "ITEM_FISHING_ROD",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -4238,7 +4238,7 @@
       "fieldUseFunc": "FieldUseFunc_Rod",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
-      "secondaryId": "SUPER_ROD"
+      "secondaryId": "FISHING_ROD"
     },
     {
       "english": "S.S. TICKET",

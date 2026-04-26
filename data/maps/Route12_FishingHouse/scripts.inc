@@ -4,7 +4,7 @@ Route12_FishingHouse_MapScripts::
 Route12_FishingHouse_EventScript_FishingGuruBrother::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_SUPER_ROD, Route12_FishingHouse_EventScript_CheckMagikarpRecord
+	goto_if_set FLAG_GOT_FISHING_ROD, Route12_FishingHouse_EventScript_CheckMagikarpRecord
 	msgbox Route12_FishingHouse_Text_DoYouLikeToFish, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route12_FishingHouse_EventScript_GiveSuperRod
 	msgbox Route12_FishingHouse_Text_OhThatsDisappointing
@@ -12,12 +12,12 @@ Route12_FishingHouse_EventScript_FishingGuruBrother::
 	end
 
 Route12_FishingHouse_EventScript_GiveSuperRod::
-	checkitemspace ITEM_SUPER_ROD
+	checkitemspace ITEM_FISHING_ROD
 	goto_if_eq VAR_RESULT, FALSE, Route12_FishingHouse_EventScript_NoRoomForSuperRod
-	additem ITEM_SUPER_ROD
+	additem ITEM_FISHING_ROD
 	msgbox Route12_FishingHouse_Text_TakeThisAndFish
-	msgreceiveditem Route12_FishingHouse_Text_ReceivedSuperRod, ITEM_SUPER_ROD
-	setflag FLAG_GOT_SUPER_ROD
+	msgreceiveditem Route12_FishingHouse_Text_ReceivedSuperRod, ITEM_FISHING_ROD
+	setflag FLAG_GOT_FISHING_ROD
 	msgbox Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe
 	release
 	end

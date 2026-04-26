@@ -602,7 +602,7 @@
 #define FLAG_GOT_BIKE_VOUCHER                            0x241
 #define FLAG_0x242                                       0x242
 #define FLAG_GOT_COIN_CASE                               0x243
-#define FLAG_GOT_GOOD_ROD                                0x244
+#define FLAG_0x244                                       0x244
 #define FLAG_GOT_TM29_FROM_MR_PSYCHIC                    0x245
 #define FLAG_GOT_LAPRAS_FROM_SILPH                       0x246
 #define FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL       0x247
@@ -619,7 +619,7 @@
 #define FLAG_GOT_ITEMFINDER                              0x252
 #define FLAG_WOKE_UP_ROUTE_12_SNORLAX                    0x253
 #define FLAG_0x254                                       0x254
-#define FLAG_GOT_SUPER_ROD                               0x255
+#define FLAG_GOT_FISHING_ROD                               0x255
 #define FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE                0x256
 #define FLAG_DID_MARC_TRADE                              0x257
 #define FLAG_BEAT_RIVAL_IN_OAKS_LAB                      0x258
