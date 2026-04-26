@@ -398,6 +398,8 @@ static void ItemUseCB_ReplaceMoveWithTMHM(u8 taskId, TaskFunc func);
 static void Task_ReplaceMoveWithTMHM(u8 taskId);
 static void CB2_UseEvolutionStone(void);
 static bool8 MonCanEvolve(void);
+bool8 SetUpFieldMove_CascadeBoard(void);
+
 
 static EWRAM_DATA struct PartyMenuInternal *sPartyMenuInternal = NULL;
 EWRAM_DATA struct PartyMenu gPartyMenu = {0};
@@ -6339,4 +6341,25 @@ static void Task_PartyMenuWaitForFade(u8 taskId)
         UnlockPlayerFieldControls();
         ScriptContext_Enable();
     }
+}
+
+static void FieldCallback_CascadeBoard(void)
+{
+    gFieldEffectArguments[0] = PARTY_SIZE;
+    FieldEffectStart(FLDEFF_USE_SURF);
+}
+
+bool8 SetUpFieldMove_CascadeBoard(void)
+{
+    s16 x, y;
+
+    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    if (MetatileBehavior_IsFastWater(MapGridGetMetatileBehaviorAt(x, y)) != TRUE
+     && IsPlayerFacingSurfableFishableWater() == TRUE)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_CascadeBoard;
+        return TRUE;
+    }
+    return FALSE;
 }
