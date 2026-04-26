@@ -37,7 +37,7 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
 	.string "Some POKEMON never vanished.\n"
 	.string "They still live... unchanged.\p"
 	.string "Deep in KANTO's waters,\n"
-	.string "there are POKEMON older than\n"
+	.string "there are POKEMON older than\l"
 	.string "anything we've restored.\p"
 	.string "Find one. Bring it to me.\p"
 	.string "Then I'll show you another kind\n"
