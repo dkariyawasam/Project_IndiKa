@@ -45,7 +45,7 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
 
 PewterCity_Gym_Text_BrockRelicanthReminder::
 	.string "Deep in KANTO's waters,\n"
-	.string "there are POKEMON that never\n"
+	.string "there are POKEMON that never\l"
 	.string "vanished from ancient times.\p"
 	.string "Find one and bring it to me.\n"
 	.string "Then I'll show you trade evolution.$"
