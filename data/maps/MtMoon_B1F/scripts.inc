@@ -32,31 +32,55 @@ MtMoon_BrockWaitingForShard::
 MtMoon_BrockSawHelixShard::
 	msgbox MtMoon_Text_BrockSawHelixShard
 	giveitem_msg MtMoon_Text_BrockGaveDartShard, ITEM_DART_FOSSIL_SHARD, 1
+	msgbox MtMoon_Text_BrockReturnToGym
+	closemessage
 	setvar VAR_BROCK_TRIAL_STATE, 3
-	call MtMoon_BrockLeavesForGym
-	release
+	goto_if_eq VAR_FACING, DIR_NORTH, MtMoon_BrockLeavesNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, MtMoon_BrockLeavesWestSouthEast
+	goto_if_eq VAR_FACING, DIR_WEST, MtMoon_BrockLeavesNorth
+	goto_if_eq VAR_FACING, DIR_EAST, MtMoon_BrockLeavesNorth
 	end
 
 MtMoon_BrockSawDomeShard::
 	msgbox MtMoon_Text_BrockSawDomeShard
 	giveitem_msg MtMoon_Text_BrockGaveHasteShard, ITEM_HASTE_FOSSIL_SHARD, 1
-	setvar VAR_BROCK_TRIAL_STATE, 3
-	call MtMoon_BrockLeavesForGym
-	release
-	end
-
-MtMoon_BrockLeavesForGym::
 	msgbox MtMoon_Text_BrockReturnToGym
 	closemessage
-	applymovement LOCALID_MTMOON_BROCK, MtMoon_Movement_BrockLeave
+	setvar VAR_BROCK_TRIAL_STATE, 3
+	goto_if_eq VAR_FACING, DIR_NORTH, MtMoon_BrockLeavesNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, MtMoon_BrockLeavesWestSouthEast
+	goto_if_eq VAR_FACING, DIR_WEST, MtMoon_BrockLeavesNorth
+	goto_if_eq VAR_FACING, DIR_EAST, MtMoon_BrockLeavesNorth
+	end
+
+MtMoon_BrockLeavesNorth::
+	applymovement LOCALID_MTMOON_BROCK, MtMoon_Movement_BrockLeaveNorth
 	waitmovement 0
+	goto MtMoon_BrockFinishLeave
+
+MtMoon_BrockLeavesWestSouthEast::
+	applymovement LOCALID_MTMOON_BROCK, MtMoon_Movement_BrockLeaveWestSouthEast
+	waitmovement 0
+	goto MtMoon_BrockFinishLeave
+
+MtMoon_BrockFinishLeave::
 	setvar VAR_BROCK_TRIAL_STATE, 3
 	clearflag FLAG_HIDE_PEWTER_CITY_GYM_BROCK
 	setflag FLAG_HIDE_MT_MOON_BROCK
 	removeobject LOCALID_MTMOON_BROCK
 	return
 
-MtMoon_Movement_BrockLeave:
+MtMoon_Movement_BrockLeaveNorth::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MtMoon_Movement_BrockLeaveWestSouthEast::
+	walk_left
 	walk_up
 	walk_up
 	walk_up

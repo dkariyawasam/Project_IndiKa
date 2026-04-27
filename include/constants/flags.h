@@ -619,7 +619,7 @@
 #define FLAG_GOT_ITEMFINDER                              0x252
 #define FLAG_WOKE_UP_ROUTE_12_SNORLAX                    0x253
 #define FLAG_0x254                                       0x254
-#define FLAG_GOT_FISHING_ROD                               0x255
+#define FLAG_GOT_FISHING_ROD                             0x255
 #define FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE                0x256
 #define FLAG_DID_MARC_TRADE                              0x257
 #define FLAG_BEAT_RIVAL_IN_OAKS_LAB                      0x258
@@ -629,7 +629,7 @@
 #define FLAG_0x25C                                       0x25C
 #define FLAG_0x25D                                       0x25D
 #define FLAG_GOT_OLD_AMBER                               0x25E
-#define FLAG_DID_BROCK_GRAVELER_TRADE                                       0x25F
+#define FLAG_DID_BROCK_GRAVELER_TRADE                    0x25F
 #define FLAG_0x260                                       0x260
 #define FLAG_0x261                                       0x261
 #define FLAG_0x262                                       0x262

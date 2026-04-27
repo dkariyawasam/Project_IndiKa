@@ -815,7 +815,7 @@ Text_WouldYouLikeToMixRecords::
 
 @ Unused
 Text_WeHopeToSeeYouAgain2::
-	.string "We hope to see you again!$"
+	.string "Have a great day!$"
 
 	.include "data/text/pc.inc"
 
@@ -896,7 +896,7 @@ Text_TakeYourPkmnForFewSeconds::
 	.string "few seconds.$"
 
 Text_WeHopeToSeeYouAgain::
-	.string "We hope to see you again!$"
+	.string "Have a great day!$"
 
 Text_RestoredPkmnToFullHealth::
 	.string "Thank you for waiting.\n"
