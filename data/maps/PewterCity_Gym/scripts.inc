@@ -3,7 +3,7 @@ PewterCity_Gym_MapScripts::
 
 PewterCity_Gym_EventScript_Brock::
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
-	trainerbattle_single TRAINER_LEADER_BROCK, PewterCity_Gym_Text_BrockIntro, PewterCity_Gym_Text_BrockDefeat, PewterCity_Gym_EventScript_DefeatedBrock, NO_MUSIC
+	trainerbattle_single TRAINER_LEADER_BROCK_1, PewterCity_Gym_Text_BrockIntro, PewterCity_Gym_Text_BrockDefeat, PewterCity_Gym_EventScript_DefeatedBrock, NO_MUSIC
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 3, PewterCity_Gym_EventScript_GiveBoulderBadge
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 4, PewterCity_Gym_EventScript_BrockRelicanthCheck
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 5, PewterCity_Gym_EventScript_BrockRelicanthCheck
