@@ -93,21 +93,21 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 46,
-      "y": 2,
+      "x": 37,
+      "y": 3,
       "elevation": 0,
-      "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM",
+      "item": "ITEM_DOME_FOSSIL_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD_2",
       "quantity": 1,
       "underfoot": false
     },
     {
       "type": "hidden_item",
-      "x": 26,
-      "y": 2,
+      "x": 24,
+      "y": 35,
       "elevation": 0,
-      "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2",
+      "item": "ITEM_DOME_FOSSIL_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD",
       "quantity": 1,
       "underfoot": false
     },
@@ -123,11 +123,11 @@
     },
     {
       "type": "hidden_item",
-      "x": 24,
-      "y": 35,
+      "x": 16,
+      "y": 3,
       "elevation": 0,
-      "item": "ITEM_BIG_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM",
+      "item": "ITEM_HELIX_FOSSIL_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2",
       "quantity": 1,
       "underfoot": false
     },
@@ -136,8 +136,8 @@
       "x": 6,
       "y": 12,
       "elevation": 0,
-      "item": "ITEM_BIG_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2",
+      "item": "ITEM_HELIX_FOSSIL_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD",
       "quantity": 1,
       "underfoot": false
     },
