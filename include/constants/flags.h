@@ -584,7 +584,7 @@
 #define STORY_FLAGS_START 0x230
 #define FLAG_GOT_POTION_ON_ROUTE_1                       0x230
 #define FLAG_GOT_TM34_FROM_SURGE                         0x231
-#define FLAG_GOT_FOSSIL_FROM_MT_MOON                     0x232
+#define FLAG_0x232                                       0x232
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE                  0x233
 #define FLAG_GOT_SS_TICKET                               0x234
 #define FLAG_GOT_SS_TICKET_DUP                           0x235
@@ -648,8 +648,8 @@
 #define FLAG_GOT_20_COINS_FROM_GAMBLER                   0x26F
 #define FLAG_GOT_20_COINS_FROM_GAMBLER_2                 0x270
 #define FLAG_GOT_BICYCLE                                 0x271
-#define FLAG_GOT_DOME_FOSSIL                             0x272
-#define FLAG_GOT_HELIX_FOSSIL                            0x273
+#define FLAG_0x272                                       0x272
+#define FLAG_0x273                                       0x273
 #define FLAG_DID_ESPHERE_TRADE                           0x274
 #define FLAG_DID_TANGENY_TRADE                           0x275
 #define FLAG_DID_SEELOR_TRADE                            0x276
