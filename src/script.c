@@ -581,3 +581,18 @@ void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize)
         scriptSize = sizeof(gSaveBlock1Ptr->ramScript.data.script);
     InitRamScript(script, scriptSize, MAP_GROUP(MAP_UNDEFINED), MAP_NUM(MAP_UNDEFINED), 0xFF);
 }
+
+u8 GetBadgeCount(void)
+{
+    u8 count = 0;
+
+    if (FlagGet(FLAG_BADGE01_GET))  count++;
+    if (FlagGet(FLAG_BADGE02_GET))  count++;
+    if (FlagGet(FLAG_BADGE03_GET))  count++;
+    if (FlagGet(FLAG_BADGE04_GET))  count++;
+    if (FlagGet(FLAG_BADGE05_GET))  count++;
+    if (FlagGet(FLAG_BADGE06_GET))  count++;
+    if (FlagGet(FLAG_BADGE07_GET))  count++;
+
+    gSpecialVar_Result = count;
+}
