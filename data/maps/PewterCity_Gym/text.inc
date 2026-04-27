@@ -16,6 +16,13 @@ PewterCity_Gym_Text_BrockIntro::
     .string "defeat me in battle.\p"
     .string "Let's see what you've learned!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
+PewterCity_Gym_Text_BrockNotEnoughPokemon::
+    .string "So, we meet again.\p"
+    .string "Wait, you don't have enough POKEMON\n"
+    .string "to battle me.\p"
+    .string "Come back when you have\n"
+    .string "more POKEMON in your party.$"
+
 PewterCity_Gym_Text_BrockDefeat::
     .string "I took you for granted...\n"
     .string "and I lost.\p"
