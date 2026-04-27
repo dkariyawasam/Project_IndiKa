@@ -5601,18 +5601,193 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock1[] = {
     {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
+        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
     },
     {
         .iv = 0,
-        .lvl = 14,
-        .species = SPECIES_ONIX,
-        .moves = {MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_NONE},
+        .lvl = 18,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_LEER, MOVE_SANDSTORM, MOVE_SCREECH},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock2[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_LEER, MOVE_SANDSTORM, MOVE_SCREECH},
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+    },
+        {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_CONSTRICT, MOVE_WITHDRAW, MOVE_WRAP, MOVE_ENCORE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock3[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_CONSTRICT, MOVE_WITHDRAW, MOVE_WRAP, MOVE_ENCORE},
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+    },
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_SCREECH},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock4[] = {
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_SCREECH},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_BIDE, MOVE_SAFEGUARD, MOVE_WRAP, MOVE_ENCORE},
+    },
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_KABUTO,
+        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_SAND_ATTACK, MOVE_HARDEN},
+    }
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock5[] = {
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_KABUTO,
+        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_SAND_ATTACK, MOVE_HARDEN},
+    },
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_OMANYTE,
+        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_WITHDRAW, MOVE_PROTECT},
+    },
+    {
+        .iv = 0,
+        .lvl = 35,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_BIDE, MOVE_SAFEGUARD, MOVE_WRAP, MOVE_ENCORE},
+    },
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_ROCK_BLAST, MOVE_ROCK_THROW},
+    },
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock6[] = {
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_ROCK_BLAST, MOVE_ROCK_THROW},
+    },
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_LARVITAR,
+        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+    },
+    {
+        .iv = 0,
+        .lvl = 40,
+        .species = SPECIES_OMASTAR,
+        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_SPIKE_CANNON, MOVE_PROTECT},
+    },
+    {
+        .iv = 0,
+        .lvl = 40,
+        .species = SPECIES_KABUTOPS,
+        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_FURY_CUTTER, MOVE_SLASH},
+    },
+    {
+        .iv = 0,
+        .lvl = 44,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_BIDE, MOVE_REST, MOVE_WRAP, MOVE_ENCORE},
+    },
+
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock7[] = {
+    {
+        .iv = 0,
+        .lvl = 44,
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_BIDE, MOVE_REST, MOVE_WRAP, MOVE_ENCORE},
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_AERODACTYL,
+        .moves = {MOVE_TAKE_DOWN, MOVE_ANCIENT_POWER, MOVE_WING_ATTACK, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_OMASTAR,
+        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_SPIKE_CANNON, MOVE_PROTECT},
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_KABUTOPS,
+        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_FURY_CUTTER, MOVE_SLASH},
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_PUPITAR,
+        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+    },
+    {
+        .iv = 0,
+        .lvl = 46,
+        .species = SPECIES_GOLEM,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROLLOUT, MOVE_MAGNITUDE},
     },
 };
 
