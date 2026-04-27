@@ -1426,7 +1426,7 @@ CableClub_Text_TrainerCardDataOverwritten::
 	.string "be overwritten.$"
 
 CableClub_Text_HopeToSeeYouAgain::
-	.string "I hope to see you again!$"
+	.string "Have a great day!$"
 
 CableClub_Text_NotSetUpForFarAwayRegion::
 	.string "I'm awfully sorry.\p"
