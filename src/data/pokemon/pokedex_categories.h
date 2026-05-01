@@ -15,138 +15,37 @@ static const u16 sDexCategory_GrasslandPkmn_Page3[] = {
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page4[] = {
+    SPECIES_PIDGEY,
+    SPECIES_PIDGEOTTO,
+    SPECIES_PIDGEOT,
+};
+
+static const u16 sDexCategory_GrasslandPkmn_Page5[] = {
+    SPECIES_VULPIX,
+    SPECIES_NINETALES,
+};
+
+static const u16 sDexCategory_GrasslandPkmn_Page6[] = {
+    SPECIES_DROWZEE,
+    SPECIES_HYPNO,
+};
+
+static const u16 sDexCategory_GrasslandPkmn_Page7[] = {
     SPECIES_BUNEARY,
     SPECIES_LOPUNNY,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page5[] = {
-    SPECIES_DODUO,
-    SPECIES_DODRIO,
-    SPECIES_TAILLOW,
-    SPECIES_SWELLOW,
+static const u16 sDexCategory_GrasslandPkmn_Page8[] = {
+    SPECIES_AIPOM,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page6[] = {
-    SPECIES_TANGELA,
-    SPECIES_ROSELIA,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page7[] = {
+static const u16 sDexCategory_GrasslandPkmn_Page9[] = {
     SPECIES_NIDORAN_F,
     SPECIES_NIDORINA,
     SPECIES_NIDOQUEEN,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page8[] = {
-    SPECIES_ODDISH,
-    SPECIES_GLOOM,
-    SPECIES_VILEPLUME,
-    SPECIES_BELLOSSOM,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page9[] = {
-    SPECIES_EKANS,
-    SPECIES_ARBOK,
-};
-
 static const u16 sDexCategory_GrasslandPkmn_Page10[] = {
-    SPECIES_IGGLYBUFF,
-    SPECIES_JIGGLYPUFF,
-    SPECIES_WIGGLYTUFF,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page11[] = {
-    SPECIES_MAREEP,
-    SPECIES_FLAAFFY,
-    SPECIES_AMPHAROS,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page12[] = {
-    SPECIES_FARFETCHD,
-    SPECIES_LICKITUNG,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page13[] = {
-    SPECIES_SCYTHER,
-    SPECIES_SCIZOR,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page14[] = {
-    SPECIES_DROWZEE,
-    SPECIES_HYPNO,
-    SPECIES_GULPIN,
-    SPECIES_SWALOT,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page15[] = {
-    SPECIES_KANGASKHAN,
-    SPECIES_GIRAFARIG,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page16[] = {
-    SPECIES_TAUROS,
-    SPECIES_MILTANK,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page17[] = {
-    SPECIES_VULPIX,
-    SPECIES_NINETALES,
-    SPECIES_PONYTA,
-    SPECIES_RAPIDASH,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page18[] = {
-    SPECIES_ELEKID,
-    SPECIES_ELECTABUZZ,
-    SPECIES_ELECTRIKE,
-    SPECIES_MANECTRIC,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page19[] = {
-    SPECIES_ZANGOOSE,
-    SPECIES_SEVIPER,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page20[] = {
-    SPECIES_PLUSLE,
-    SPECIES_MINUN,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page21[] = {
-    SPECIES_GROWLITHE,
-    SPECIES_ARCANINE,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page22[] = {
-    SPECIES_CASTFORM,
-    SPECIES_CHIMECHO,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page23[] = {
-    SPECIES_CHIKORITA,
-    SPECIES_BAYLEEF,
-    SPECIES_MEGANIUM,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page24[] = {
-    SPECIES_CYNDAQUIL,
-    SPECIES_QUILAVA,
-    SPECIES_TYPHLOSION,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page25[] = {
-    SPECIES_TORCHIC,
-    SPECIES_COMBUSKEN,
-    SPECIES_BLAZIKEN,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page26[] = {
-    SPECIES_RAIKOU,
-    SPECIES_ENTEI,
-    SPECIES_SUICUNE,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page27[] = {
     SPECIES_NIDORAN_M,
     SPECIES_NIDORINO,
     SPECIES_NIDOKING,
@@ -829,23 +728,6 @@ static const struct PokedexCategoryPage sDexCategory_GrasslandPkmn[] = {
     DEX_CATEGORY(GrasslandPkmn_Page8),
     DEX_CATEGORY(GrasslandPkmn_Page9),
     DEX_CATEGORY(GrasslandPkmn_Page10),
-    DEX_CATEGORY(GrasslandPkmn_Page11),
-    DEX_CATEGORY(GrasslandPkmn_Page12),
-    DEX_CATEGORY(GrasslandPkmn_Page13),
-    DEX_CATEGORY(GrasslandPkmn_Page14),
-    DEX_CATEGORY(GrasslandPkmn_Page15),
-    DEX_CATEGORY(GrasslandPkmn_Page16),
-    DEX_CATEGORY(GrasslandPkmn_Page17),
-    DEX_CATEGORY(GrasslandPkmn_Page18),
-    DEX_CATEGORY(GrasslandPkmn_Page19),
-    DEX_CATEGORY(GrasslandPkmn_Page20),
-    DEX_CATEGORY(GrasslandPkmn_Page21),
-    DEX_CATEGORY(GrasslandPkmn_Page22),
-    DEX_CATEGORY(GrasslandPkmn_Page23),
-    DEX_CATEGORY(GrasslandPkmn_Page24),
-    DEX_CATEGORY(GrasslandPkmn_Page25),
-    DEX_CATEGORY(GrasslandPkmn_Page26),
-    DEX_CATEGORY(GrasslandPkmn_Page27),
 };
 
 static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
