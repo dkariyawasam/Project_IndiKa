@@ -25,7 +25,7 @@
 #define MULTICHOICE_YES_NO_INFO_2                              18
 #define MULTICHOICE_CHALLENGE_INFO_EXIT                        19
 #define MULTICHOICE_ROOFTOP_B1F                                20
-#define MULTICHOICE_HELIX                                      21
+#define MULTICHOICE_FOSSIL_RECONSTRUCTION                      21
 #define MULTICHOICE_DOME                                       22
 #define MULTICHOICE_AMBER                                      23
 #define MULTICHOICE_HELIX_AMBER                                24

@@ -2731,3 +2731,15 @@ const u8 gLopunnyPokedexText[] = _(
     "Its winter fur is soft and fluffy.");
 
 const u8 gLopunnyPokedexTextUnused[] = _("");
+
+const u8 gOmatoPokedexText[] = _(
+    "It is a POKéMON that was\n"
+    "regenerated from a fossil.");
+
+const u8 gOmatoPokedexTextUnused[] = _("");
+
+const u8 gOmatopsPokedexText[] = _(
+    "It is a POKéMON that was\n"
+    "regenerated from a fossil.");
+
+const u8 gOmatopsPokedexTextUnused[] = _("");

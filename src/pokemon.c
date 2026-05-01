@@ -932,6 +932,8 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(CHIMECHO),
     SPECIES_TO_NATIONAL(BUNEARY),
     SPECIES_TO_NATIONAL(LOPUNNY),
+    SPECIES_TO_NATIONAL(OMATO),
+    SPECIES_TO_NATIONAL(OMATOPS),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index

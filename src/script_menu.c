@@ -132,8 +132,11 @@ static const struct MenuAction sMultichoiceList_RooftopB1F[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_Helix[] = {
-    { gText_HelixFossil },
+static const struct MenuAction sMultichoiceList_FossilReconstruction[] = {
+    { gText_HelixHaste },
+    { gText_HelixDart },
+    { gText_DomeDart },
+    { gText_DomeHaste },
     { gOtherText_Exit }
 };
 
@@ -148,7 +151,6 @@ static const struct MenuAction sMultichoiceList_Amber[] = {
 };
 
 static const struct MenuAction sMultichoiceList_HelixAmber[] = {
-    { gText_HelixFossil },
     { gText_OldAmber },
     { gOtherText_Exit }
 };
@@ -524,7 +526,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_YES_NO_INFO_2]                              = MULTICHOICE(sMultichoiceList_YesNoInfo2),
     [MULTICHOICE_CHALLENGE_INFO_EXIT]                        = MULTICHOICE(sMultichoiceList_ChallengeInfoExit),
     [MULTICHOICE_ROOFTOP_B1F]                                = MULTICHOICE(sMultichoiceList_RooftopB1F),
-    [MULTICHOICE_HELIX]                                      = MULTICHOICE(sMultichoiceList_Helix),
+    [MULTICHOICE_FOSSIL_RECONSTRUCTION]                      = MULTICHOICE(sMultichoiceList_FossilReconstruction),
     [MULTICHOICE_DOME]                                       = MULTICHOICE(sMultichoiceList_Dome),
     [MULTICHOICE_AMBER]                                      = MULTICHOICE(sMultichoiceList_Amber),
     [MULTICHOICE_HELIX_AMBER]                                = MULTICHOICE(sMultichoiceList_HelixAmber),

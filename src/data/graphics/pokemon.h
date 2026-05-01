@@ -2735,6 +2735,20 @@ const u32 gMonShinyPalette_Lopunny[] = INCBIN_U32("graphics/pokemon/lopunny/shin
 const u8 gMonIcon_Lopunny[] = INCBIN_U8("graphics/pokemon/lopunny/icon.4bpp");
 const u8 gMonFootprint_Lopunny[] = INCBIN_U8("graphics/pokemon/lopunny/footprint.1bpp");
 
+const u32 gMonFrontPic_Omato[] = INCBIN_U32("graphics/pokemon/omato/front.4bpp.lz");
+const u32 gMonPalette_Omato[] = INCBIN_U32("graphics/pokemon/omato/normal.gbapal.lz");
+const u32 gMonBackPic_Omato[] = INCBIN_U32("graphics/pokemon/omato/back.4bpp.lz");
+const u32 gMonShinyPalette_Omato[] = INCBIN_U32("graphics/pokemon/omato/shiny.gbapal.lz");
+const u8 gMonIcon_Omato[] = INCBIN_U8("graphics/pokemon/omato/icon.4bpp");
+const u8 gMonFootprint_Omato[] = INCBIN_U8("graphics/pokemon/omato/footprint.1bpp");
+
+const u32 gMonFrontPic_Omatops[] = INCBIN_U32("graphics/pokemon/omatops/front.4bpp.lz");
+const u32 gMonPalette_Omatops[] = INCBIN_U32("graphics/pokemon/omatops/normal.gbapal.lz");
+const u32 gMonBackPic_Omatops[] = INCBIN_U32("graphics/pokemon/omatops/back.4bpp.lz");
+const u32 gMonShinyPalette_Omatops[] = INCBIN_U32("graphics/pokemon/omatops/shiny.gbapal.lz");
+const u8 gMonIcon_Omatops[] = INCBIN_U8("graphics/pokemon/omatops/icon.4bpp");
+const u8 gMonFootprint_Omatops[] = INCBIN_U8("graphics/pokemon/omatops/footprint.1bpp");
+
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 

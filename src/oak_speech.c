@@ -648,10 +648,10 @@ static const u8 *const sRivalNameChoices[] =
 {
 #if defined(FIRERED)
     gNameChoice_Green,
-    gNameChoice_Gary
+    gNameChoice_Gary,
 #elif defined(LEAFGREEN)
     gNameChoice_Red,
-    gNameChoice_Ash
+    gNameChoice_Ash,
 #endif
 };
 

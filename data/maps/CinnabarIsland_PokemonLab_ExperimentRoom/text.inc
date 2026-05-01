@@ -19,7 +19,7 @@ Text_MetronomeTaught::
     .string "It tweaks your POKéMON's brain into\n"
     .string "using moves it doesn't even know.$"
 
-CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe::
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_Intro::
     .string "Hiya!\p"
     .string "I am important doctor.\n"
     .string "Yes, very much so, indeed.\p"
@@ -32,11 +32,27 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_NoIsTooBad::
     .string "No!\n"
     .string "Is too bad!$"
 
-@ Unused
-CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalkJP::
-    .string "ちょっと　じかん　かかるよ！\p"
-    .string "そこらへんを　すこし\n"
-    .string "ブラブラ　してくると　よろしー！$"
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_Cancel::
+    .string "Come back when you're ready.$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success::
+    .string "Success!\n"
+    .string "Your fossil is now a living POKéMON!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingFossil::
+    .string "You don't have the right fragments.$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmanyte::
+    .string "OMANYTE, the cephalopod mollusk POKéMON!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmato::
+    .string "OMATO, the cephalopod crab POKéMON!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabuto::
+    .string "KABUTO, the horseshoe crab POKéMON!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabustar::
+    .string "KABUSTAR, the horseshoe mollusk POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
     .string "You late.\n"
