@@ -123,36 +123,30 @@ static const u16 sDexCategory_GrasslandPkmn_Page22[] = {
 };
 
 static const u16 sDexCategory_GrasslandPkmn_Page23[] = {
-    SPECIES_BULBASAUR,
-    SPECIES_IVYSAUR,
-    SPECIES_VENUSAUR,
-};
-
-static const u16 sDexCategory_GrasslandPkmn_Page24[] = {
     SPECIES_CHIKORITA,
     SPECIES_BAYLEEF,
     SPECIES_MEGANIUM,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page25[] = {
+static const u16 sDexCategory_GrasslandPkmn_Page24[] = {
     SPECIES_CYNDAQUIL,
     SPECIES_QUILAVA,
     SPECIES_TYPHLOSION,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page26[] = {
+static const u16 sDexCategory_GrasslandPkmn_Page25[] = {
     SPECIES_TORCHIC,
     SPECIES_COMBUSKEN,
     SPECIES_BLAZIKEN,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page27[] = {
+static const u16 sDexCategory_GrasslandPkmn_Page26[] = {
     SPECIES_RAIKOU,
     SPECIES_ENTEI,
     SPECIES_SUICUNE,
 };
 
-static const u16 sDexCategory_GrasslandPkmn_Page28[] = {
+static const u16 sDexCategory_GrasslandPkmn_Page27[] = {
     SPECIES_NIDORAN_M,
     SPECIES_NIDORINO,
     SPECIES_NIDOKING,
@@ -380,24 +374,18 @@ static const u16 sDexCategory_WatersEdgePkmn_Page12[] = {
 };
 
 static const u16 sDexCategory_WatersEdgePkmn_Page13[] = {
-    SPECIES_SQUIRTLE,
-    SPECIES_WARTORTLE,
-    SPECIES_BLASTOISE,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page14[] = {
     SPECIES_TOTODILE,
     SPECIES_CROCONAW,
     SPECIES_FERALIGATR,
 };
 
-static const u16 sDexCategory_WatersEdgePkmn_Page15[] = {
+static const u16 sDexCategory_WatersEdgePkmn_Page14[] = {
     SPECIES_MUDKIP,
     SPECIES_MARSHTOMP,
     SPECIES_SWAMPERT,
 };
 
-static const u16 sDexCategory_WatersEdgePkmn_Page16[] = {
+static const u16 sDexCategory_WatersEdgePkmn_Page15[] = {
     SPECIES_LATIAS,
     SPECIES_LATIOS,
 };
@@ -634,12 +622,6 @@ static const u16 sDexCategory_MountainPkmn_Page15[] = {
 };
 
 static const u16 sDexCategory_MountainPkmn_Page16[] = {
-    SPECIES_CHARMANDER,
-    SPECIES_CHARMELEON,
-    SPECIES_CHARIZARD,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page17[] = {
     SPECIES_JIRACHI,
 };
 
@@ -816,6 +798,24 @@ static const u16 sDexCategory_RarePkmn_Page9[] = {
     SPECIES_MEW,
 };
 
+static const u16 sDexCategory_RarePkmn_Page10[] = {
+    SPECIES_BULBASAUR,
+    SPECIES_IVYSAUR,
+    SPECIES_VENUSAUR,
+};
+
+static const u16 sDexCategory_RarePkmn_Page11[] = {
+    SPECIES_CHARMANDER,
+    SPECIES_CHARMELEON,
+    SPECIES_CHARIZARD,
+};
+
+static const u16 sDexCategory_RarePkmn_Page12[] = {
+    SPECIES_SQUIRTLE,
+    SPECIES_WARTORTLE,
+    SPECIES_BLASTOISE,
+};
+
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
 
 static const struct PokedexCategoryPage sDexCategory_GrasslandPkmn[] = {
@@ -846,7 +846,6 @@ static const struct PokedexCategoryPage sDexCategory_GrasslandPkmn[] = {
     DEX_CATEGORY(GrasslandPkmn_Page25),
     DEX_CATEGORY(GrasslandPkmn_Page26),
     DEX_CATEGORY(GrasslandPkmn_Page27),
-    DEX_CATEGORY(GrasslandPkmn_Page28),
 };
 
 static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
@@ -894,7 +893,6 @@ static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {
     DEX_CATEGORY(WatersEdgePkmn_Page13),
     DEX_CATEGORY(WatersEdgePkmn_Page14),
     DEX_CATEGORY(WatersEdgePkmn_Page15),
-    DEX_CATEGORY(WatersEdgePkmn_Page16),
 };
 
 static const struct PokedexCategoryPage sDexCategory_SeaPkmn[] = {
@@ -946,7 +944,6 @@ static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
     DEX_CATEGORY(MountainPkmn_Page14),
     DEX_CATEGORY(MountainPkmn_Page15),
     DEX_CATEGORY(MountainPkmn_Page16),
-    DEX_CATEGORY(MountainPkmn_Page17),
 };
 
 static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {
@@ -987,6 +984,10 @@ static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page6),
     DEX_CATEGORY(RarePkmn_Page7),
     DEX_CATEGORY(RarePkmn_Page8),
+    DEX_CATEGORY(RarePkmn_Page9),
+    DEX_CATEGORY(RarePkmn_Page10),
+    DEX_CATEGORY(RarePkmn_Page11),
+    DEX_CATEGORY(RarePkmn_Page12),
 };
 
 struct {
