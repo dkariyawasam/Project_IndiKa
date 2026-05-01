@@ -152,6 +152,8 @@ static const u8 sMonPosAttributes[][PSA_MON_ATTR_COUNT] = {
     [SPECIES_PORYGON         - 1] = {24, 18, 48, 16, 35},
     [SPECIES_OMANYTE         - 1] = {29, 29, 48, 28, 43},
     [SPECIES_OMASTAR         - 1] = {22, 26, 48, 25, 45},
+    [SPECIES_OMATO           - 1] = {22, 26, 48, 25, 45},
+    [SPECIES_OMATOPS         - 1] = {22, 26, 48, 25, 45},
     [SPECIES_KABUTO          - 1] = {27, 22, 48, 26, 39},
     [SPECIES_KABUTOPS        - 1] = {21, 17, 48, 21, 31},
     [SPECIES_AERODACTYL      - 1] = {19, 29,  0, 20, 48},
@@ -430,6 +432,8 @@ static const u8 sMonPosAttributes[][PSA_MON_ATTR_COUNT] = {
     [SPECIES_CHIMECHO        - 1] = {29, 12,  8, 28, 26},
     [SPECIES_BUNEARY         - 1] = {30, 10, 48, 29, 21},
     [SPECIES_LOPUNNY         - 1] = {31, 15, 48, 30, 29},
+    [SPECIES_OMATO           - 1] = {29, 17, 48, 27, 30},
+    [SPECIES_OMATOPS         - 1] = {28, 17, 48, 27, 30},
     [SPECIES_OLD_UNOWN_EMARK - 1] = {32, 33,  8, 32, 43},
     [SPECIES_OLD_UNOWN_QMARK - 1] = {32, 35,  8, 32, 45}
 };

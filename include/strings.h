@@ -773,7 +773,6 @@ extern const u8 gText_Pinsir_2500Coins[];
 extern const u8 gText_Dratini_4600Coins[];
 extern const u8 gText_Porygon_6500Coins[];
 extern const u8 gText_NoThanks_2[];
-extern const u8 gText_HelixFossil[];
 extern const u8 gText_DomeFossil[];
 extern const u8 gText_OldAmber[];
 extern const u8 gText_TradeCenter[];
@@ -1768,5 +1767,10 @@ extern const u8 gText_ErikaTrialPhase2[];
 extern const u8 gText_ErikaTrialPhase3[];
 extern const u8 gText_ErikaTrialPhase4[];
 extern const u8 gText_ErikaTrialPhase5[];
+
+extern const u8 gText_HelixHaste[];
+extern const u8 gText_HelixDart[];
+extern const u8 gText_DomeDart[];
+extern const u8 gText_DomeHaste[];
 
 #endif //GUARD_STRINGS_H
