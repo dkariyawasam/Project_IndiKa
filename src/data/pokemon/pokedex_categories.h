@@ -475,8 +475,6 @@ static const u16 sDexCategory_SeaPkmn_Page13[] = {
 };
 
 static const u16 sDexCategory_SeaPkmn_Page14[] = {
-    SPECIES_OMANYTE,
-    SPECIES_OMASTAR,
     SPECIES_KABUTO,
     SPECIES_KABUTOPS,
 };
@@ -779,36 +777,42 @@ static const u16 sDexCategory_UrbanPkmn_Page12[] = {
 };
 
 static const u16 sDexCategory_RarePkmn_Page1[] = {
+    SPECIES_OMANYTE,
+    SPECIES_OMASTAR,
+    SPECIES_OMATO,
+    SPECIES_OMATOPS,
+};
+static const u16 sDexCategory_RarePkmn_Page2[] = {
     SPECIES_UNOWN,
 };
 
-static const u16 sDexCategory_RarePkmn_Page2[] = {
+static const u16 sDexCategory_RarePkmn_Page3[] = {
     SPECIES_ARTICUNO,
     SPECIES_ZAPDOS,
     SPECIES_MOLTRES,
 };
 
-static const u16 sDexCategory_RarePkmn_Page3[] = {
+static const u16 sDexCategory_RarePkmn_Page4[] = {
     SPECIES_LUGIA,
 };
 
-static const u16 sDexCategory_RarePkmn_Page4[] = {
+static const u16 sDexCategory_RarePkmn_Page5[] = {
     SPECIES_HO_OH,
 };
 
-static const u16 sDexCategory_RarePkmn_Page5[] = {
+static const u16 sDexCategory_RarePkmn_Page6[] = {
     SPECIES_RAYQUAZA,
 };
 
-static const u16 sDexCategory_RarePkmn_Page6[] = {
+static const u16 sDexCategory_RarePkmn_Page7[] = {
     SPECIES_DEOXYS,
 };
 
-static const u16 sDexCategory_RarePkmn_Page7[] = {
+static const u16 sDexCategory_RarePkmn_Page8[] = {
     SPECIES_MEWTWO,
 };
 
-static const u16 sDexCategory_RarePkmn_Page8[] = {
+static const u16 sDexCategory_RarePkmn_Page9[] = {
     SPECIES_MEW,
 };
 
