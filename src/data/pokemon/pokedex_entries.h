@@ -5055,5 +5055,32 @@ const struct PokedexEntry gPokedexEntries[] =
         .pokemonOffset = 16,
         .trainerScale = 256,
         .trainerOffset = -2,
-    }
+    },
+
+    [NATIONAL_DEX_OMATO] =
+    {
+        .categoryName = _("TOMATO"),
+        .height = 1,
+        .weight = 1,
+        .description = gOmatoPokedexText,
+        .unusedDescription = gOmatoPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+    [NATIONAL_DEX_OMATOPS] =
+    {
+        .categoryName = _("TOMATO"),
+        .height = 1,
+        .weight = 1,
+        .description = gOmatopsPokedexText,
+        .unusedDescription = gOmatopsPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
 };

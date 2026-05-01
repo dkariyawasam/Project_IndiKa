@@ -414,6 +414,8 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
     SPECIES_SPRITE(CHIMECHO, gMonBackPic_Chimecho),
     SPECIES_SPRITE(BUNEARY, gMonBackPic_Buneary),
     SPECIES_SPRITE(LOPUNNY, gMonBackPic_Lopunny),
+    SPECIES_SPRITE(OMATO, gMonBackPic_DoubleQuestionMark),
+    SPECIES_SPRITE(OMATOPS, gMonBackPic_DoubleQuestionMark),
     SPECIES_SPRITE(EGG, gMonFrontPic_Egg),
     SPECIES_SPRITE(UNOWN_B, gMonBackPic_UnownB),
     SPECIES_SPRITE(UNOWN_C, gMonBackPic_UnownC),
