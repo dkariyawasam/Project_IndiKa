@@ -21830,69 +21830,69 @@
         },
         {
           "map": "MAP_ROUTE25",
-          "base_label": "sRoute25_FireRed",
+          "base_label": "sRoute25_Daytime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 8,
+                "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_WEEDLE"
+                "species": "SPECIES_BUNEARY"
               },
               {
-                "min_level": 8,
+                "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CATERPIE"
+                "species": "SPECIES_NIDORAN_F"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_BUNEARY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NIDORINA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_ODDISH"
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PIDGEOTTO"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_ODDISH"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_BUNEARY"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_ABRA"
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_NIDOQUEEN"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
+                "min_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_ODDISH"
+                "min_level": 36,
+                "max_level": 39,
+                "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_KAKUNA"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_ABRA"
-              },
-              {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_METAPOD"
-              },
-              {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_ABRA"
+                "min_level": 36,
+                "max_level": 39,
+                "species": "SPECIES_PIDGEOT"
               }
             ]
           },
@@ -21984,69 +21984,69 @@
         },
         {
           "map": "MAP_ROUTE25",
-          "base_label": "sRoute25_LeafGreen",
+          "base_label": "sRoute25_Nighttime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 8,
+                "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_WEEDLE"
+                "species": "SPECIES_AIPOM"
               },
               {
-                "min_level": 8,
+                "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CATERPIE"
+                "species": "SPECIES_NIDORAN_F"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_AIPOM"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NIDORINA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_BELLSPROUT"
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PIDGEOTTO"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_BELLSPROUT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_AIPOM"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_ABRA"
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_NIDOQUEEN"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
+                "min_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_BELLSPROUT"
+                "min_level": 36,
+                "max_level": 39,
+                "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_METAPOD"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_ABRA"
-              },
-              {
-                "min_level": 9,
-                "max_level": 9,
-                "species": "SPECIES_KAKUNA"
-              },
-              {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_ABRA"
+                "min_level": 36,
+                "max_level": 39,
+                "species": "SPECIES_PIDGEOT"
               }
             ]
           },
