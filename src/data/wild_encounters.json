@@ -21996,7 +21996,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_NIDORAN_F"
+                "species": "SPECIES_NIDORAN_M"
               },
               {
                 "min_level": 5,
@@ -22006,7 +22006,7 @@
               {
                 "min_level": 16,
                 "max_level": 19,
-                "species": "SPECIES_NIDORINA"
+                "species": "SPECIES_NIDORINO"
               },
               {
                 "min_level": 5,
@@ -22026,7 +22026,7 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_NIDOQUEEN"
+                "species": "SPECIES_NIDOKING"
               },
               {
                 "min_level": 5,
