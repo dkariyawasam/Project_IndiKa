@@ -462,7 +462,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_METEORITE                   0x1113
 #define OBJ_EVENT_PAL_TAG_SEAGALLOP                   0x1114
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                     0x1115
-#define OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER        0x1116
+#define OBJ_EVENT_PAL_TAG_BROCK                       0x1116
 #define OBJ_EVENT_PAL_TAG_RS_KYOGRE                   0x1117
 #define OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION        0x1118
 #define OBJ_EVENT_PAL_TAG_RS_GROUDON                  0x1119
@@ -497,6 +497,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Meteorite,               OBJ_EVENT_PAL_TAG_METEORITE},
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
+    {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };
 
@@ -514,17 +515,9 @@ static const u16 sUnusedPlayerReflectionPaletteTags[] = {
     OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION,
 };
 
-static const u16 sPlayerUnderwaterReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-};
-
 static const struct PairedPalettes gPlayerReflectionPaletteSets[] = {
     {OBJ_EVENT_PAL_TAG_PLAYER_RED,           sPlayerReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_PLAYER_GREEN,         sPlayerReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER, sPlayerUnderwaterReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_NONE, NULL},
 };
 
@@ -625,6 +618,7 @@ static const u16 sObjectPaletteTags0[] = {
     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
+    OBJ_EVENT_PAL_TAG_BROCK,
 };
 
 static const u16 sObjectPaletteTags1[] = {
@@ -638,6 +632,7 @@ static const u16 sObjectPaletteTags1[] = {
     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
+    OBJ_EVENT_PAL_TAG_BROCK,
 };
 
 static const u16 sObjectPaletteTags2[] = {
@@ -651,6 +646,7 @@ static const u16 sObjectPaletteTags2[] = {
     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
+    OBJ_EVENT_PAL_TAG_BROCK,
 };
 
 static const u16 sObjectPaletteTags3[] = {
@@ -664,6 +660,7 @@ static const u16 sObjectPaletteTags3[] = {
     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
+    OBJ_EVENT_PAL_TAG_BROCK,
 };
 
 static const u16 *const gObjectPaletteTagSets[] = {
