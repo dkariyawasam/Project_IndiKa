@@ -88,7 +88,7 @@ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
     .string "you'll have to do it properly.\p"
     .string "These 3 were recently sent\n"
     .string "to me by another researcher in ALOLA.\p"
-    .string "My cousin Samson Oak.\p"
+    .string "My cousin SAMSON OAK.\p"
     .string "They're young, but they're\n"
     .string "bright, adaptable, and well suited\l"
     .string "for fieldwork.\p"
