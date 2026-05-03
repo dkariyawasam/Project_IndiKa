@@ -42,6 +42,7 @@ const u16 gObjectEventPic_Daisy[] = INCBIN_U16("graphics/object_events/pics/peop
 const u16 gObjectEventPic_Lorelei[] = INCBIN_U16("graphics/object_events/pics/people/lorelei.4bpp");
 const u16 gObjectEventPic_Erika[] = INCBIN_U16("graphics/object_events/pics/people/erika.4bpp");
 const u16 gObjectEventPic_Koga[] = INCBIN_U16("graphics/object_events/pics/people/koga.4bpp");
+const u16 gObjectEventPal_Brock[] = INCBIN_U16("graphics/object_events/palettes/brock.gbapal");
 const u16 gObjectEventPic_Brock[] = INCBIN_U16("graphics/object_events/pics/people/brock.4bpp");
 const u16 gObjectEventPic_LtSurge[] = INCBIN_U16("graphics/object_events/pics/people/lt_surge.4bpp");
 const u16 gObjectEventPic_Bill[] = INCBIN_U16("graphics/object_events/pics/people/bill.4bpp");
