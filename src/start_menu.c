@@ -74,7 +74,7 @@ static u8 (*sSaveDialogCB)(void);
 static u8 sSaveDialogDelay;
 static bool8 sSaveDialogIsPrinting;
 
-static const u8 gText_MenuQuest[] = _("QUEST");
+static const u8 gText_MenuQuest[] = _("LOGBOOK");
 
 static bool8 StartMenuQuestCallback(void);
 static void SetUpStartMenu_Link(void);
