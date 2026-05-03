@@ -16,9 +16,6 @@
       "id": "MAPSEC_FALLARBOR_TOWN"
     },
     {
-      "id": "MAPSEC_VERDANTURF_TOWN"
-    },
-    {
       "id": "MAPSEC_PACIFIDLOG_TOWN"
     },
     {
@@ -47,12 +44,6 @@
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY"
-    },
-    {
-      "id": "MAPSEC_ROUTE_101"
-    },
-    {
-      "id": "MAPSEC_ROUTE_102"
     },
     {
       "id": "MAPSEC_ROUTE_103"
@@ -151,21 +142,6 @@
       "id": "MAPSEC_ROUTE_134"
     },
     {
-      "id": "MAPSEC_UNDERWATER_124"
-    },
-    {
-      "id": "MAPSEC_UNDERWATER_125"
-    },
-    {
-      "id": "MAPSEC_UNDERWATER_126"
-    },
-    {
-      "id": "MAPSEC_UNDERWATER_127"
-    },
-    {
-      "id": "MAPSEC_UNDERWATER_SOOTOPOLIS"
-    },
-    {
       "id": "MAPSEC_GRANITE_CAVE"
     },
     {
@@ -208,9 +184,6 @@
       "id": "MAPSEC_SEAFLOOR_CAVERN"
     },
     {
-      "id": "MAPSEC_UNDERWATER_128"
-    },
-    {
       "id": "MAPSEC_VICTORY_ROAD"
     },
     {
@@ -236,9 +209,6 @@
     },
     {
       "id": "MAPSEC_SEALED_CHAMBER"
-    },
-    {
-      "id": "MAPSEC_UNDERWATER_SEALED_CHAMBER"
     },
     {
       "id": "MAPSEC_SCORCHED_SLAB"
