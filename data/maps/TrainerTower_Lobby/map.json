@@ -3,7 +3,7 @@
   "name": "TrainerTower_Lobby",
   "layout": "LAYOUT_TRAINER_TOWER_LOBBY",
   "music": "MUS_TRAINER_TOWER",
-  "region_map_section": "MAPSEC_TRAINER_TOWER_2",
+  "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -94,7 +94,7 @@
   "warp_events": [
     {
       "x": 9,
-      "y": 2,
+      "y": 1,
       "elevation": 3,
       "dest_map": "MAP_TRAINER_TOWER_1F",
       "dest_warp_id": "1"
