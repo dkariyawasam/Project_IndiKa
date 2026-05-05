@@ -3341,7 +3341,7 @@
       "id": "LAYOUT_TRAINER_TOWER_LOBBY",
       "name": "TrainerTower_Lobby_Layout",
       "width": 19,
-      "height": 17,
+      "height": 19,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",

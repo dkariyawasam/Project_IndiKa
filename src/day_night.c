@@ -154,6 +154,9 @@ static const struct DayNightMapEntry sDayNightMaps[] =
     { MAP_GROUP(MAP_ROUTE21_NORTH),MAP_NUM(MAP_ROUTE21_NORTH)       }, 
     { MAP_GROUP(MAP_ROUTE21_SOUTH),MAP_NUM(MAP_ROUTE21_SOUTH)       },
     { MAP_GROUP(MAP_ROUTE22),      MAP_NUM(MAP_ROUTE22)             },
+    { MAP_GROUP(MAP_ROUTE23),      MAP_NUM(MAP_ROUTE23)             },
+    { MAP_GROUP(MAP_ROUTE24),      MAP_NUM(MAP_ROUTE24)             },
+    { MAP_GROUP(MAP_ROUTE25),      MAP_NUM(MAP_ROUTE25)             },
 };
 
 bool8 DoesCurrentMapUseNightPalette(void)
