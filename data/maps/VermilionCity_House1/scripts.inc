@@ -5,9 +5,9 @@ VermilionCity_House1_EventScript_FishingGuruBrother::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_FISHING_ROD, VermilionCity_House1_EventScript_CheckMagikarpRecord
-	msgbox Route12_FishingHouse_Text_DoYouLikeToFish, MSGBOX_YESNO
+	msgbox VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, VermilionCity_House1_EventScript_GiveSuperRod
-	msgbox Route12_FishingHouse_Text_OhThatsDisappointing
+	msgbox VermilionCity_House1_Text_OhThatsDisappointing
 	release
 	end
 
@@ -15,15 +15,15 @@ VermilionCity_House1_EventScript_GiveSuperRod::
 	checkitemspace ITEM_FISHING_ROD
 	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForSuperRod
 	additem ITEM_FISHING_ROD
-	msgbox Route12_FishingHouse_Text_TakeThisAndFish
-	msgreceiveditem Route12_FishingHouse_Text_ReceivedSuperRod, ITEM_FISHING_ROD
+	msgbox VermilionCity_House1_Text_TakeThisAndFish
+	msgreceiveditem VermilionCity_House1_Text_ReceivedSuperRod, ITEM_FISHING_ROD
 	setflag FLAG_GOT_FISHING_ROD
-	msgbox Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe
+	msgbox VermilionCity_House1_Text_IfYouCatchBigMagikarpShowMe
 	release
 	end
 
 VermilionCity_House1_EventScript_NoRoomForSuperRod::
-	msgbox Route12_FishingHouse_Text_NoRoomForGift
+	msgbox VermilionCity_House1_Text_NoRoomForGift
 	release
 	end
 
@@ -34,7 +34,7 @@ VermilionCity_House1_EventScript_CheckMagikarpRecord::
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoMagikarpInParty
 	special GetMagikarpSizeRecordInfo
-	msgbox Route12_FishingHouse_Text_OhMagikarpAllowMeToSee
+	msgbox VermilionCity_House1_Text_OhMagikarpAllowMeToSee
 	special ChoosePartyMon
 	waitstate
 	copyvar VAR_RESULT, VAR_0x8004
@@ -47,7 +47,7 @@ VermilionCity_House1_EventScript_CheckMagikarpRecord::
 	release
 	end
 VermilionCity_House1_EventScript_NoMagikarpInParty::
-	msgbox Route12_FishingHouse_Text_TryFishingBringMeMagikarp
+	msgbox VermilionCity_House1_Text_TryFishingBringMeMagikarp
 	release
 	end
 
@@ -56,44 +56,44 @@ VermilionCity_House1_EventScript_CancelShowMon::
 	end
 
 VermilionCity_House1_EventScript_NotMagikarp::
-	msgbox Route12_FishingHouse_Text_DoesntLookLikeMagikarp
+	msgbox VermilionCity_House1_Text_DoesntLookLikeMagikarp
 	release
 	end
 VermilionCity_House1_EventScript_NotRecordMagikarp::
 	goto_if_unset FLAG_GOT_RECORD_SETTING_MAGIKARP, VermilionCity_House1_EventScript_NewRecordMagikarp
-	msgbox Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp
+	msgbox VermilionCity_House1_Text_HmmXInchesDoesntMeasureUp
 	release
 	end
 
 VermilionCity_House1_EventScript_TieRecordMagikarp::
 	goto_if_unset FLAG_GOT_RECORD_SETTING_MAGIKARP, VermilionCity_House1_EventScript_NewRecordMagikarp
-	msgbox Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast
+	msgbox VermilionCity_House1_Text_HuhXInchesSameSizeAsLast
 	release
 	end
 
 VermilionCity_House1_EventScript_NewRecordMagikarp::
 	setflag FLAG_GOT_RECORD_SETTING_MAGIKARP
-	msgbox Route12_FishingHouse_Text_WhoaXInchesTakeThis
+	msgbox VermilionCity_House1_Text_WhoaXInchesTakeThis
 	giveitem ITEM_NET_BALL
 	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForNetBall
-	msgbox Route12_FishingHouse_Text_LookForwardToGreaterRecords
+	msgbox VermilionCity_House1_Text_LookForwardToGreaterRecords
 	release
 	end
 
 VermilionCity_House1_EventScript_NoRoomForNetBall::
-	msgbox Route12_FishingHouse_Text_NoRoomForGift
+	msgbox VermilionCity_House1_Text_NoRoomForGift
 	release
 	end
 
 VermilionCity_House1_EventScript_MagikarpRecordSign::
 	lockall
 	goto_if_set FLAG_GOT_RECORD_SETTING_MAGIKARP, VermilionCity_House1_EventScript_MagikarpRecordSignRecordSet
-	msgbox Route12_FishingHouse_Text_BlankChartOfSomeSort
+	msgbox VermilionCity_House1_Text_BlankChartOfSomeSort
 	releaseall
 	end
 
 VermilionCity_House1_EventScript_MagikarpRecordSignRecordSet::
 	special GetMagikarpSizeRecordInfo
-	msgbox Route12_FishingHouse_Text_MostGiganticMagikarpXInches
+	msgbox VermilionCity_House1_Text_MostGiganticMagikarpXInches
 	releaseall
 	end
