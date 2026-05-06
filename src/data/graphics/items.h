@@ -547,7 +547,7 @@ const u32 gItemIconPalette_CoinCase[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_Itemfinder[] = INCBIN_U32("graphics/items/icons/itemfinder.4bpp.lz");
 const u32 gItemIconPalette_Itemfinder[] = INCBIN_U32("graphics/items/icon_palettes/itemfinder.gbapal.lz");
 
-const u32 gItemIcon_OldRod[] = INCBIN_U32("graphics/items/icons/old_rod.4bpp.lz");
+const u32 gItemIcon_BoulderKey[] = INCBIN_U32("graphics/items/icons/boulder_key.4bpp.lz");
 const u32 gItemIconPalette_OldRod[] = INCBIN_U32("graphics/items/icon_palettes/old_rod.gbapal.lz");
 
 const u32 gItemIcon_CascadeBoard[] = INCBIN_U32("graphics/items/icons/cascade_board.4bpp.lz");

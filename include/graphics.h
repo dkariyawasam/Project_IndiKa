@@ -3191,7 +3191,7 @@ extern const u32 gItemIcon_CoinCase[];
 extern const u32 gItemIconPalette_CoinCase[];
 extern const u32 gItemIcon_Itemfinder[];
 extern const u32 gItemIconPalette_Itemfinder[];
-extern const u32 gItemIcon_OldRod[];
+extern const u32 gItemIcon_BoulderKey[];
 extern const u32 gItemIconPalette_OldRod[];
 extern const u32 gItemIcon_CascadeBoard[];
 extern const u32 gItemIconPalette_CascadeBoard[];

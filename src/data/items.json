@@ -4193,12 +4193,12 @@
       "secondaryId": 0
     },
     {
-      "english": "OLD ROD",
-      "itemId": "ITEM_OLD_ROD",
+      "english": "BOULDER KEY",
+      "itemId": "ITEM_BOULDER_KEY",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "An old and beat-up fishing rod.\\nUse it by any body of water to \\nfish for wild POKéMON.",
+      "description_english": "The BOULDERBADGE reconfigured into a\\nkey. Used to access the POKEMON LAB.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
@@ -4206,7 +4206,7 @@
       "fieldUseFunc": "FieldUseFunc_Rod",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
-      "secondaryId": "OLD_ROD"
+      "secondaryId": 0
     },
     {
       "english": "CASCADE BOARD",
