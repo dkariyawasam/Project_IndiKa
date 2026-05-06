@@ -32,16 +32,6 @@ Route16_EventScript_DontUsePokeFlute::
 	release
 	end
 
-Route16_EventScript_FoughtSnorlax::
-	msgbox Text_SnorlaxReturnedToMountains
-	release
-	end
-
-Route16_EventScript_SnorlaxNoPokeFlute::
-	msgbox Route16_Text_MonSprawledOutInSlumber
-	release
-	end
-
 Route16_EventScript_CyclingRoadSign::
 	msgbox Route16_Text_CyclingRoadSign, MSGBOX_SIGN
 	end
