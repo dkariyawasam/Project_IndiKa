@@ -2,15 +2,6 @@ Route12_Text_MonSprawledOutInSlumber::
     .string "A POKéMON is sprawled out in\n"
     .string "a deep and comfortable slumber.$"
 
-Text_SnorlaxWokeUp::
-    .string "SNORLAX woke up!\p"
-    .string "It attacked in a grumpy rage!$"
-
-Text_SnorlaxReturnedToMountains::
-    .string "SNORLAX calmed down.\n"
-    .string "It gave a huge yawn…\l"
-    .string "And returned to the mountains.$"
-
 Text_WantToUsePokeFlute::
     .string "Want to use the POKé FLUTE?$"
 

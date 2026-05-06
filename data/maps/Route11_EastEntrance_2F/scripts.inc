@@ -3,13 +3,6 @@
 Route11_EastEntrance_2F_MapScripts::
 	.byte 0
 
-Route11_EastEntrance_2F_EventScript_LeftBinoculars::
-	lockall
-	goto_if_set FLAG_WOKE_UP_ROUTE_12_SNORLAX, Route11_EastEntrance_2F_EventScript_LeftBinocularsSnorlaxGone
-	msgbox Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad
-	releaseall
-	end
-
 Route11_EastEntrance_2F_EventScript_LeftBinocularsSnorlaxGone::
 	msgbox Route11_EastEntrance_2F_Text_WhatABreathtakingView
 	releaseall
