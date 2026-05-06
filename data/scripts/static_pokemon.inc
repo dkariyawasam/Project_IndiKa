@@ -13,11 +13,3 @@ EventScript_MonFlewAway::
     msgbox Text_MonFlewAway
     release
     end
-
-EventScript_AwakenSnorlax::
-    message Text_PlayedPokeFlute
-    waitmessage
-    playfanfare MUS_POKE_FLUTE
-    waitfanfare
-    msgbox Text_SnorlaxWokeUp
-    return
