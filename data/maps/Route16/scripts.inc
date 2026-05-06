@@ -28,31 +28,6 @@ Route16_OnWarpCyclingRoad::
 	special ForcePlayerOntoBike
 	end
 
-Route16_EventScript_Snorlax::
-	lock
-	faceplayer
-	goto_if_unset FLAG_GOT_POKE_FLUTE, Route16_EventScript_SnorlaxNoPokeFlute
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
-	msgbox Text_WantToUsePokeFlute, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route16_EventScript_DontUsePokeFlute
-	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30
-	waitse
-	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setflag FLAG_HIDE_ROUTE_16_SNORLAX
-	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	dowildbattle
-	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route16_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route16_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route16_EventScript_FoughtSnorlax
-	release
-	end
-
 Route16_EventScript_DontUsePokeFlute::
 	release
 	end

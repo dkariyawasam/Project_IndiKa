@@ -97,7 +97,7 @@
 #define FLAG_HIDE_TOWER_RIVAL                              0x051
 #define FLAG_HIDE_MOLTRES                                  0x052
 #define FLAG_HIDE_SILPH_ROCKETS                            0x053
-#define FLAG_HIDE_ROUTE_12_SNORLAX                         0x054
+#define FLAG_0x054                                         0x054
 #define FLAG_HIDE_VIRIDIAN_GIOVANNI                        0x055
 #define FLAG_HIDE_OLD_AMBER                                0x056
 #define FLAG_HIDE_EEVEE_BALL                               0x057
@@ -141,7 +141,7 @@
 #define FLAG_HIDE_TWO_ISLAND_POKE_MANIAC                   0x07D
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0x07E
 #define FLAG_0x07F                                         0x07F
-#define FLAG_HIDE_ROUTE_16_SNORLAX                         0x080
+#define FLAG_0x080                                         0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
 #define FLAG_HIDE_TOWER_ROCKET_2                           0x083
@@ -617,7 +617,7 @@
 #define FLAG_GOT_MASTER_BALL_FROM_SILPH                  0x250
 #define FLAG_DID_NINA_TRADE                              0x251
 #define FLAG_GOT_ITEMFINDER                              0x252
-#define FLAG_WOKE_UP_ROUTE_12_SNORLAX                    0x253
+#define FLAG_0x253                                       0x253
 #define FLAG_0x254                                       0x254
 #define FLAG_GOT_FISHING_ROD                             0x255
 #define FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE                0x256
