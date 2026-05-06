@@ -1,22 +1,2 @@
 FuchsiaCity_House2_MapScripts::
 	.byte 0
-
-FuchsiaCity_House2_EventScript_FishingGurusBrother::
-	lock
-	faceplayer
-	msgbox FuchsiaCity_House2_Text_DoYouLikeToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FuchsiaCity_House2_EventScript_GiveGoodRod
-	msgbox FuchsiaCity_House2_Text_OhThatsDisappointing
-	release
-	end
-
-FuchsiaCity_House2_EventScript_GiveGoodRod::
-	msgbox FuchsiaCity_House2_Text_LikeYourStyleTakeThis
-	msgbox FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons
-	release
-	end
-
-FuchsiaCity_House2_EventScript_NoRoomForGoodRod::
-	msgbox FuchsiaCity_House2_Text_YouHaveNoRoomForGift
-	release
-	end

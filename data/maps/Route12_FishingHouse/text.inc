@@ -1,6 +1,5 @@
 Route12_FishingHouse_Text_DoYouLikeToFish::
-    .string "I'm the FISHING GURU's younger\n"
-    .string "brother.\p"
+    .string "I'm the FISHING GURU.\p"
     .string "I simply looove fishing!\n"
     .string "I can't bear to go without.\p"
     .string "Tell me, do you like to fish?$"
@@ -11,8 +10,8 @@ Route12_FishingHouse_Text_TakeThisAndFish::
     .string "Take this and fish, young friend!$"
 
 Route12_FishingHouse_Text_ReceivedSuperRod::
-    .string "{PLAYER} received a SUPER ROD from\n"
-    .string "the FISHING GURU's brother.$"
+    .string "{PLAYER} received a FISHING ROD from\n"
+    .string "the FISHING GURU.$"
 
 Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe::
     .string "Fishing is a way of life!\n"
@@ -32,7 +31,7 @@ Route12_FishingHouse_Text_OhThatsDisappointing::
 Route12_FishingHouse_Text_TryFishingBringMeMagikarp::
     .string "Hello there, {PLAYER}!\n"
     .string "Have you been fishing?\p"
-    .string "Try fishing with the SUPER ROD in\n"
+    .string "Try fishing with the FISHING ROD in\n"
     .string "any body of water.\p"
     .string "You'll find different POKéMON in\n"
     .string "different places.\p"
