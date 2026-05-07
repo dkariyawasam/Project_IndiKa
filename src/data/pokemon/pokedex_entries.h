@@ -1976,13 +1976,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
-    [NATIONAL_DEX_CHIKORITA] =
+    [NATIONAL_DEX_MAFIKARP] =
     {
-        .categoryName = _("LEAF"),
-        .height = 9,
-        .weight = 64,
-        .description = gChikoritaPokedexText,
-        .unusedDescription = gChikoritaPokedexTextUnused,
+        .categoryName = _("FIRE FISH"),
+        .height = 6,
+        .weight = 79,
+        .description = gMafikarpPokedexText,
+        .unusedDescription = gMafikarpPokedexTextUnused,
         .pokemonScale = 512,
         .pokemonOffset = 18,
         .trainerScale = 256,

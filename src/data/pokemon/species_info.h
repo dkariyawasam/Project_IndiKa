@@ -4472,7 +4472,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
-    [SPECIES_CHIKORITA] =
+    [SPECIES_MAFIKARP] =
     {
         .baseHP = 45,
         .baseAttack = 49,

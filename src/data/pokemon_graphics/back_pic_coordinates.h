@@ -760,10 +760,10 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 1,
     },
-    [SPECIES_CHIKORITA] =
+    [SPECIES_MAFIKARP] =
     {
-        .size = MON_COORDS_SIZE(40, 48),
-        .y_offset = 10,
+        .size = MON_COORDS_SIZE(56, 48),
+        .y_offset = 9,
     },
     [SPECIES_BAYLEEF] =
     {
