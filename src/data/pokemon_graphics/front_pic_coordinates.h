@@ -760,7 +760,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(56, 56),
         .y_offset = 13,
     },
-    [SPECIES_CHIKORITA] =
+    [SPECIES_MAFIKARP] =
     {
         .size = MON_COORDS_SIZE(56, 40),
         .y_offset = 13,
