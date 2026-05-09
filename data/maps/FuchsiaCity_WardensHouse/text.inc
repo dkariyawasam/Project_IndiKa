@@ -38,12 +38,12 @@ FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
     .string "Let me give you something for your\n"
     .string "trouble.$"
 
-FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
-    .string "{PLAYER} received HM04\n"
+FuchsiaCity_WardensHouse_Text_ReceivedTM54FromWarden::
+    .string "{PLAYER} received TM54\n"
     .string "from the WARDEN.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
-    .string "WARDEN: Inside HM04 you'll find\n"
+    .string "WARDEN: Inside TM54 you'll find\n"
     .string "STRENGTH.\p"
     .string "It lets POKéMON move boulders when\n"
     .string "you're outside of battle.\p"
