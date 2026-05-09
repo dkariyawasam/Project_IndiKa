@@ -2241,19 +2241,19 @@ static bool8 IsHelpSystemSubmenuEnabled(u8 id)
 
 static bool8 HasGottenAtLeastOneHM(void)
 {
-    if (FlagGet(FLAG_GOT_HM01) == TRUE)
+    if (FlagGet(FLAG_GOT_TM51) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_HM02) == TRUE)
+    if (FlagGet(FLAG_GOT_TM52) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_HM03) == TRUE)
+    if (FlagGet(FLAG_GOT_TM53) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_HM04) == TRUE)
+    if (FlagGet(FLAG_GOT_TM54) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_HM05) == TRUE)
+    if (FlagGet(FLAG_GOT_TM55) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_HM06) == TRUE)
+    if (FlagGet(FLAG_GOT_TM56) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07) == TRUE)
+    if (FlagGet(FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_TM57) == TRUE)
         return TRUE;
     return FALSE;
 }
