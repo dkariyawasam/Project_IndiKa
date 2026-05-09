@@ -514,7 +514,7 @@
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE                  0x1EE
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT                    0x1EF
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_ULTRA_BALL        0x1F0
-#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07              0x1F1
+#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_TM57              0x1F1
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_FULL_RESTORE     0x1F2
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_NEVER_MELT_ICE   0x1F3
 #define FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_BIG_PEARL        0x1F4
@@ -589,11 +589,11 @@
 #define FLAG_GOT_SS_TICKET                               0x234
 #define FLAG_GOT_SS_TICKET_DUP                           0x235
 #define FLAG_GOT_TM42_AT_MEMORIAL_PILLAR                 0x236
-#define FLAG_GOT_HM01                                    0x237
-#define FLAG_GOT_HM02                                    0x238
-#define FLAG_GOT_HM03                                    0x239
-#define FLAG_GOT_HM04                                    0x23A
-#define FLAG_GOT_HM05                                    0x23B
+#define FLAG_GOT_TM51                                    0x237
+#define FLAG_GOT_TM52                                    0x238
+#define FLAG_GOT_TM53                                    0x239
+#define FLAG_GOT_TM54                                    0x23A
+#define FLAG_GOT_TM55                                    0x23B
 #define FLAG_RESCUED_MR_FUJI                             0x23C
 #define FLAG_GOT_POKE_FLUTE                              0x23D
 #define FLAG_0x23E                                       0x23E
@@ -775,7 +775,7 @@
 #define FLAG_REVIVED_DOME                                0x2EC
 #define FLAG_REVIVED_HELIX                               0x2ED
 #define FLAG_REVIVED_AMBER                               0x2EE
-#define FLAG_GOT_HM06                                    0x2EF
+#define FLAG_GOT_TM56                                    0x2EF
 #define FLAG_SHOWN_MYSTIC_TICKET                         0x2F0
 #define FLAG_SHOWN_AURORA_TICKET                         0x2F1
 #define FLAG_FOUGHT_LUGIA                                0x2F2

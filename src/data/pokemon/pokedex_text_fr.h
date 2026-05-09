@@ -1062,17 +1062,12 @@ const u8 gMewPokedexText[] = _(
 
 const u8 gMewPokedexTextUnused[] = _("");
 
-const u8 gMafikarpPokedexText[] = _(
-#if REVISION == 0
-    "Its pleasantly aromatic leaves have the\n"
-    #else
-    "Its pleasantly aromatic leaf has the\n"
-    #endif
-    "ability to check the humidity and\n"
-    "temperature."
-);
+const u8 gThermikarpPokedexText[] = _(
+    "It has adapted to the volcanic\n"
+    "waters of CINNABAR VOLCANO giving it\n"
+    "the raging essence of fire.");
 
-const u8 gMafikarpPokedexTextUnused[] = _("");
+const u8 gThermikarpPokedexTextUnused[] = _("");
 
 const u8 gBayleefPokedexText[] = _(
     "A spicy aroma emanates from around its\n"
