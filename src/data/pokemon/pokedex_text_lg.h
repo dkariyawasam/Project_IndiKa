@@ -1065,12 +1065,12 @@ const u8 gMewPokedexText[] = _(
 
 const u8 gMewPokedexTextUnused[] = _("");
 
-const u8 gMafikarpPokedexText[] = _(
-    "A sweet aroma gently wafts from the leaf\n"
-    "on its head. It is docile and loves to\n"
-    "soak up the sun's rays.");
+const u8 gThermikarpPokedexText[] = _(
+    "It has adapted to the volcanic\n"
+    "waters of CINNABAR VOLCANO giving it\n"
+    "the raging essence of fire.");
 
-const u8 gMafikarpPokedexTextUnused[] = _("");
+const u8 gThermikarpPokedexTextUnused[] = _("");
 
 const u8 gBayleefPokedexText[] = _(
     "The scent of spices comes from around\n"

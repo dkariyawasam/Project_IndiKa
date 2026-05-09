@@ -5475,8 +5475,8 @@
       "moveId": "Overheat"
     },
     {
-      "english": "HM01",
-      "itemId": "ITEM_HM01",
+      "english": "TM51",
+      "itemId": "ITEM_TM51",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5492,8 +5492,8 @@
       "moveId": "Cut"
     },
     {
-      "english": "HM02",
-      "itemId": "ITEM_HM02",
+      "english": "TM52",
+      "itemId": "ITEM_TM52",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5509,8 +5509,8 @@
       "moveId": "Fly"
     },
     {
-      "english": "HM03",
-      "itemId": "ITEM_HM03",
+      "english": "TM53",
+      "itemId": "ITEM_TM53",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5526,8 +5526,8 @@
       "moveId": "Surf"
     },
     {
-      "english": "HM04",
-      "itemId": "ITEM_HM04",
+      "english": "TM54",
+      "itemId": "ITEM_TM54",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5543,8 +5543,8 @@
       "moveId": "Strength"
     },
     {
-      "english": "HM05",
-      "itemId": "ITEM_HM05",
+      "english": "TM55",
+      "itemId": "ITEM_TM55",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5560,8 +5560,8 @@
       "moveId": "Flash"
     },
     {
-      "english": "HM06",
-      "itemId": "ITEM_HM06",
+      "english": "TM56",
+      "itemId": "ITEM_TM56",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5577,8 +5577,8 @@
       "moveId": "RockSmash"
     },
     {
-      "english": "HM07",
-      "itemId": "ITEM_HM07",
+      "english": "TM57",
+      "itemId": "ITEM_TM57",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -5594,8 +5594,8 @@
       "moveId": "Waterfall"
     },
     {
-      "english": "HM08",
-      "itemId": "ITEM_HM08",
+      "english": "TM58",
+      "itemId": "ITEM_TM58",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,

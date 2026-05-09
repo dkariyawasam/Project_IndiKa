@@ -4,23 +4,23 @@ Route16_House_MapScripts::
 Route16_House_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_HM02, Route16_House_EventScript_AlreadyGotHM02
+	goto_if_set FLAG_GOT_TM52, Route16_House_EventScript_AlreadyGotTM52
 	msgbox Route16_House_Text_FoundMySecretRetreat
-	checkitemspace ITEM_HM02
-	goto_if_eq VAR_RESULT, FALSE, Route16_House_EventScript_NoRoomForHM02
-	giveitem_msg Route16_House_Text_ReceivedHM02FromGirl, ITEM_HM02
-	msgbox Route16_House_Text_ExplainHM02
-	setflag FLAG_GOT_HM02
+	checkitemspace ITEM_TM52
+	goto_if_eq VAR_RESULT, FALSE, Route16_House_EventScript_NoRoomForTM52
+	giveitem_msg Route16_House_Text_ReceivedTM52FromGirl, ITEM_TM52
+	msgbox Route16_House_Text_ExplainTM52
+	setflag FLAG_GOT_TM52
 	release
 	end
 
-Route16_House_EventScript_NoRoomForHM02::
+Route16_House_EventScript_NoRoomForTM52::
 	msgbox Route16_House_Text_DontHaveAnyRoomForThis
 	release
 	end
 
-Route16_House_EventScript_AlreadyGotHM02::
-	msgbox Route16_House_Text_ExplainHM02
+Route16_House_EventScript_AlreadyGotTM52::
+	msgbox Route16_House_Text_ExplainTM52
 	release
 	end
 

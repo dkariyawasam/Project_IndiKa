@@ -1104,14 +1104,14 @@ static const u16 *LoadEvent_UsedItem(const u16 *eventData)
         if (rItemParam != 0xFFFF)
         {
             StringCopy(gStringVar3, gMoveNames[rItemParam]);
-            if (rItemId >= ITEM_HM01)
+            if (rItemId >= ITEM_TM51)
                 StringExpandPlaceholders(gStringVar4, gText_QuestLog_MonReplacedMoveWithHM);
             else
                 StringExpandPlaceholders(gStringVar4, gText_QuestLog_MonReplacedMoveWithTM);
         }
         else
         {
-            if (rItemId >= ITEM_HM01)
+            if (rItemId >= ITEM_TM51)
                 StringExpandPlaceholders(gStringVar4, gText_QuestLog_MonLearnedMoveFromHM);
             else
                 StringExpandPlaceholders(gStringVar4, gText_QuestLog_MonLearnedMoveFromTM);

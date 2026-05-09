@@ -1976,13 +1976,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
-    [NATIONAL_DEX_MAFIKARP] =
+    [NATIONAL_DEX_THERMIKARP] =
     {
-        .categoryName = _("FIRE FISH"),
+        .categoryName = _("DRAGON"),
         .height = 6,
         .weight = 79,
-        .description = gMafikarpPokedexText,
-        .unusedDescription = gMafikarpPokedexTextUnused,
+        .description = gThermikarpPokedexText,
+        .unusedDescription = gThermikarpPokedexTextUnused,
         .pokemonScale = 512,
         .pokemonOffset = 18,
         .trainerScale = 256,

@@ -4472,7 +4472,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
-    [SPECIES_MAFIKARP] =
+    [SPECIES_THERMIKARP] =
     {
         .baseHP = 45,
         .baseAttack = 49,
@@ -4480,7 +4480,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed = 45,
         .baseSpAttack = 49,
         .baseSpDefense = 65,
-        .types = {TYPE_GRASS, TYPE_GRASS},
+        .types = {TYPE_DRAGON, TYPE_WATER},
         .catchRate = 45,
         .expYield = 64,
         .evYield_HP = 0,
@@ -4498,7 +4498,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = {EGG_GROUP_MONSTER, EGG_GROUP_GRASS},
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
     [SPECIES_BAYLEEF] =

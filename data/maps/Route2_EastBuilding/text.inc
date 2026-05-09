@@ -1,11 +1,11 @@
-Route2_EastBuilding_Text_GiveHM05IfSeen10Mons::
+Route2_EastBuilding_Text_GiveTM55IfSeen10Mons::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
     .string "If your POKéDEX has complete data\n"
     .string "on ten species, I'm supposed to\l"
     .string "give you a reward.\p"
     .string "PROF. OAK entrusted me with\n"
-    .string "HM05 for you.\p"
+    .string "TM55 for you.\p"
     .string "So, {PLAYER}, let me ask you.\p"
     .string "Have you gathered data on at least\n"
     .string "ten kinds of POKéMON?$"
@@ -16,12 +16,12 @@ Route2_EastBuilding_Text_GreatHereYouGo::
     .string "Congratulations!\n"
     .string "Here you go!$"
 
-Route2_EastBuilding_Text_ReceivedHM05FromAide::
-    .string "{PLAYER} received HM05\n"
+Route2_EastBuilding_Text_ReceivedTM55FromAide::
+    .string "{PLAYER} received TM55\n"
     .string "from the AIDE.$"
 
-Route2_EastBuilding_Text_ExplainHM05::
-    .string "HM05 contains the hidden move\n"
+Route2_EastBuilding_Text_ExplainTM55::
+    .string "TM55 contains the hidden move\n"
     .string "FLASH.\p"
     .string "FLASH lights up even the darkest\n"
     .string "of caves and dungeons.$"
