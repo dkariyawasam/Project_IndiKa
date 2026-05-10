@@ -16,10 +16,8 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "technique?\p"
     .string "I could show you my prized CUT\n"
     .string "technique if I weren't so ill…\p"
-    .string "I know! You can have this!\n"
-    .string "This TECHNICAL MACHINE!\p"
-    .string "Teach CUT to your POKéMON, and\n"
-    .string "watch its technique in battle!$"
+    .string "Maybe another time.\n"
+    .string "I should let the ship set sail.$"
 
 SSAnne_CaptainsOffice_Text_ObtainedTM51FromCaptain::
     .string "{PLAYER} obtained TM51\n"

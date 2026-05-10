@@ -744,6 +744,7 @@ extern const u8 gText_Tm24_4000Coins[];
 extern const u8 gText_Tm30_4500Coins[];
 extern const u8 gText_Tm35_4000Coins[];
 extern const u8 gText_Tm39_3500Coins[];
+extern const u8 gText_Tm51_1000Coins[];
 extern const u8 gText_1F_2[];
 extern const u8 gText_2F_2[];
 extern const u8 gText_3F_2[];
