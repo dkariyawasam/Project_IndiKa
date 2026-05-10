@@ -5643,22 +5643,6 @@
       "secondaryId": 0
     },
     {
-      "english": "OAK'S PARCEL",
-      "itemId": "ITEM_OAKS_PARCEL",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "A parcel to be delivered to PROF.\\nOAK from VIRIDIAN CITY's POKéMON\\nMART.",
-      "importance": 2,
-      "registrability": 0,
-      "pocket": "POCKET_KEY_ITEMS",
-      "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
-      "battleUsage": 0,
-      "battleUseFunc": "NULL",
-      "secondaryId": 0
-    },
-    {
       "english": "POK\u00e9 FLUTE",
       "itemId": "ITEM_POKE_FLUTE",
       "price": 0,
