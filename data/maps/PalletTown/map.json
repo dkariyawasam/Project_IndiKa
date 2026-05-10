@@ -27,21 +27,6 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_PALLET_SIGN_LADY",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 3,
-      "y": 10,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 4,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_EventScript_SignLady",
-      "flag": "0"
-    },
-    {
       "local_id": "LOCALID_PALLET_FAT_MAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
@@ -113,15 +98,6 @@
       "var": "VAR_MAP_SCENE_PALLET_TOWN_OAK",
       "var_value": "0",
       "script": "PalletTown_EventScript_OakTriggerRight"
-    },
-    {
-      "type": "trigger",
-      "x": 13,
-      "y": 2,
-      "elevation": 3,
-      "var": "VAR_TEMP_2",
-      "var_value": "1",
-      "script": "PalletTown_EventScript_SignLadyTrigger"
     }
   ],
   "bg_events": [
@@ -156,14 +132,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_EventScript_TownSign"
-    },
-    {
-      "type": "sign",
-      "x": 5,
-      "y": 14,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_TrainerTips"
     },
     {
       "type": "sign",
