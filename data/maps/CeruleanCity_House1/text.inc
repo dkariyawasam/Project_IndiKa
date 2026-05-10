@@ -25,9 +25,7 @@ CeruleanCity_House1_Text_ObeyLv30Cut::
     .string "That includes even outsiders you\n"
     .string "obtain in trades.\p"
     .string "POKéMON of higher levels will\n"
-    .string "be unruly in battle, however.\p"
-    .string "It also lets you use the move\n"
-    .string "CUT outside of battle.$"
+    .string "be unruly in battle, however.$"
 
 CeruleanCity_House1_Text_SpeedStatFly::
     .string "The SPEED stat of all your\n"
@@ -69,4 +67,3 @@ CeruleanCity_House1_Text_SpStatsWaterfall::
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
     .string "All POKéMON will obey you!$"
-

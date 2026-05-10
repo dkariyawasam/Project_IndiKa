@@ -5,10 +5,10 @@ Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests::
     .string "everywhere to get different kinds.$"
 
 Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees::
-    .string "Have you noticed the skinny trees\n"
-    .string "on the roadside?\p"
-    .string "They can be cut down by a special\n"
-    .string "POKéMON move, I hear.$"
+    .string "Have you noticed how many kinds\n"
+    .string "of trees grow around here?\p"
+    .string "Forests are full of little clues\n"
+    .string "about nearby POKéMON, I hear.$"
 
 Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution::
     .string "Do you know the evolution-cancel\n"
@@ -17,4 +17,3 @@ Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution::
     .string "can stop the process.\p"
     .string "It's a technique for raising\n"
     .string "POKéMON the way they are.$"
-

@@ -229,7 +229,6 @@ static const u8 sMenuActionIndices_UnionRoom[] = {ACTION_GIVE, ACTION_EXIT};
 
 static const struct YesNoFuncTable sYesNoFuncTable = {Task_PrintSaleConfirmedText, Task_SaleOfTMsCanceled};
 
-static const u8 sText_ClearTo18[] = _("{CLEAR_TO 18}");
 static const u8 sText_SingleSpace[] = _(" ");
 
 static ALIGNED(4) const u16 sPal3Override[] = {RGB(8, 8, 8), RGB(30, 16, 6)};
@@ -678,19 +677,9 @@ static void InitTMCaseListMenuItems(void)
 static void GetTMNumberAndMoveString(u8 * dest, u16 itemId)
 {
     StringCopy(gStringVar4, gText_FontSmall);
-    if (itemId >= ITEM_TM51)
-    {
-        StringAppend(gStringVar4, sText_ClearTo18);
-        StringAppend(gStringVar4, gText_NumberClear01);
-        ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM51 + 1, STR_CONV_MODE_LEADING_ZEROS, 1);
-        StringAppend(gStringVar4, gStringVar1);
-    }
-    else
-    {
-        StringAppend(gStringVar4, gText_NumberClear01);
-        ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
-        StringAppend(gStringVar4, gStringVar1);
-    }
+    StringAppend(gStringVar4, gText_NumberClear01);
+    ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
+    StringAppend(gStringVar4, gStringVar1);
     StringAppend(gStringVar4, sText_SingleSpace);
     StringAppend(gStringVar4, gText_FontNormal);
     StringAppend(gStringVar4, gMoveNames[ItemIdToBattleMoveId(itemId)]);

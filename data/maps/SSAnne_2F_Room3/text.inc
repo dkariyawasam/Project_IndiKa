@@ -3,10 +3,7 @@ SSAnne_2F_Room3_Text_SeenMonsFerryPeople::
     .string "ferry people across the water!$"
 
 SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown::
-    .string "Small trees can be chopped down\n"
-    .string "using the move CUT.\p"
-    .string "But remember this!\n"
-    .string "CUT is an HM technique.\p"
-    .string "Once learned, it is not so easily\n"
-    .string "discarded.$"
-
+    .string "CUT is a move with a short,\n"
+    .string "sharp strike.\p"
+    .string "It's simple, but plenty of\n"
+    .string "POKéMON can make use of it.$"
