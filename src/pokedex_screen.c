@@ -361,8 +361,6 @@ static const struct ListMenuTemplate sListMenuTemplate_KantoDexModeSelect = {
 };
 
 static const struct ListMenuItem sListMenuItems_NatDexModeSelect[] = {
-    {gText_PokemonList,                  LIST_HEADER},
-    {gText_NumericalModeNational,        DEX_MODE(NUMERICAL_NATIONAL)},
     {gText_PokemonHabitats,              LIST_HEADER},
     {gText_DexCategory_GrasslandPkmn,    DEX_CATEGORY_GRASSLAND},
     {gText_DexCategory_ForestPkmn,       DEX_CATEGORY_FOREST},
@@ -374,6 +372,7 @@ static const struct ListMenuItem sListMenuItems_NatDexModeSelect[] = {
     {gText_DexCategory_UrbanPkmn,        DEX_CATEGORY_URBAN},
     {gText_DexCategory_RarePkmn,         DEX_CATEGORY_RARE},
     {gText_Search,                       LIST_HEADER},
+    {gText_NumericalModeNational,        DEX_MODE(NUMERICAL_NATIONAL)},
     {gText_AToZMode,                     DEX_MODE(ATOZ)},
     {gText_TypeMode,                     DEX_MODE(TYPE)},
     {gText_LightestMode,                 DEX_MODE(LIGHTEST)},
@@ -1135,16 +1134,10 @@ static void DexScreen_InitGfxForTopMenu(void)
         listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
         sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
         FillWindowPixelBuffer(sPokedexScreenData->dexCountsWindowId, PIXEL_FILL(0));
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Seen, 0, 2, 0);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, 8, 13, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 52, 13, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_National, 8, 24, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 52, 24, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Owned, 0, 37, 0);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, 8, 48, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 52, 48, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_National, 8, 59, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 52, 59, 2);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Seen, 0, 0, 0);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numSeenNational, 52, 0, 2);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, 0, 16, 0);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedNational, 52, 16, 2);
     }
     else
     {
