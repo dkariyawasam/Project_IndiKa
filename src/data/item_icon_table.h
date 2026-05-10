@@ -49,8 +49,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_BERRY_JUICE]    = {gItemIcon_BerryJuice, gItemIconPalette_BerryJuice},
     [ITEM_SACRED_ASH]     = {gItemIcon_SacredAsh, gItemIconPalette_SacredAsh},
     // Collectibles
-    [ITEM_SHOAL_SALT]     = {gItemIcon_Powder, gItemIconPalette_ShoalSalt},
-    [ITEM_SHOAL_SHELL]    = {gItemIcon_ShoalShell, gItemIconPalette_Shell},
     [ITEM_RED_SHARD]      = {gItemIcon_Shard, gItemIconPalette_RedShard},
     [ITEM_BLUE_SHARD]     = {gItemIcon_Shard, gItemIconPalette_BlueShard},
     [ITEM_YELLOW_SHARD]   = {gItemIcon_Shard, gItemIconPalette_YellowShard},
@@ -273,11 +271,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_0FC]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0FD]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Contest hold items
-    [ITEM_RED_SCARF]      = {gItemIcon_Scarf, gItemIconPalette_RedScarf},
-    [ITEM_BLUE_SCARF]     = {gItemIcon_Scarf, gItemIconPalette_BlueScarf},
-    [ITEM_PINK_SCARF]     = {gItemIcon_Scarf, gItemIconPalette_PinkScarf},
-    [ITEM_GREEN_SCARF]    = {gItemIcon_Scarf, gItemIconPalette_GreenScarf},
-    [ITEM_YELLOW_SCARF]   = {gItemIcon_Scarf, gItemIconPalette_YellowScarf},
     // Key items
     [ITEM_MACH_BIKE]      = {gItemIcon_MachBike, gItemIconPalette_MachBike},
     [ITEM_COIN_CASE]      = {gItemIcon_CoinCase, gItemIconPalette_CoinCase},
