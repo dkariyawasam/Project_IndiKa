@@ -1489,24 +1489,24 @@ const u8 gText_SubQuest2_Name8[] = _("Giovanni");
 const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
 const u8 gText_BrockTrialPhase2[] = _("BROCK asked to show him something\nof historical value...\nmaybe a fossil?\n");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
-const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokemon from the\ndistant past who still dwells in\nthe depths of the sea.");
+const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokémon from the\ndistant past who still dwells in\nthe depths of the sea.");
 const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwithness a trade evolution.");
 const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
-const u8 gText_MistyTrialPhase1[] = _("Misty spoke of a\nPokemon that evolves");
-const u8 gText_MistyTrialPhase2[] = _("Find the Pokemon\nthat evolves through water.");
+const u8 gText_MistyTrialPhase1[] = _("Misty spoke of a\nPokémon that evolves");
+const u8 gText_MistyTrialPhase2[] = _("Find the Pokémon\nthat evolves through water.");
 const u8 gText_MistyTrialPhase3[] = _("Return to Misty");
 const u8 gText_MistyTrialPhase4[] = _("Misty is ready to\ntrade");
 const u8 gText_MistyTrialPhase5[] = _("Misty's trade showed\nevolution through water.");
 
-const u8 gText_LtSurgeTrialPhase1[] = _("Lt. Surge spoke of a\nPokemon that evolves");
-const u8 gText_LtSurgeTrialPhase2[] = _("Find the Pokemon\nthat evolves through electricity.");
-const u8 gText_LtSurgeTrialPhase3[] = _("Return to Lt. Surge with the Pokemon that evolves through electricity.");
+const u8 gText_LtSurgeTrialPhase1[] = _("Lt. Surge spoke of a\nPokémon that evolves");
+const u8 gText_LtSurgeTrialPhase2[] = _("Find the Pokémon\nthat evolves through electricity.");
+const u8 gText_LtSurgeTrialPhase3[] = _("Return to Lt. Surge with the Pokémon that evolves through electricity.");
 const u8 gText_LtSurgeTrialPhase4[] = _("Lt. Surge is ready to\ntrade");
 const u8 gText_LtSurgeTrialPhase5[] = _("Lt. Surge's trade showed\nevolution through electricity.");
 
-const u8 gText_ErikaTrialPhase1[] = _("Erika spoke of a\nPokemon that evolves");
-const u8 gText_ErikaTrialPhase2[] = _("Find the Pokemon\nthat evolves through beauty.");
+const u8 gText_ErikaTrialPhase1[] = _("Erika spoke of a\nPokémon that evolves");
+const u8 gText_ErikaTrialPhase2[] = _("Find the Pokémon\nthat evolves through beauty.");
 const u8 gText_ErikaTrialPhase3[] = _("Return to Erika");
 const u8 gText_ErikaTrialPhase4[] = _("Erika is ready to\ntrade");
 const u8 gText_ErikaTrialPhase5[] = _("Erika's trade showed\nevolution through beauty.");
