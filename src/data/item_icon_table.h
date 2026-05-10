@@ -295,8 +295,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ROOM_4_KEY]     = {gItemIcon_Room4Key, gItemIconPalette_Key},
     [ITEM_ROOM_6_KEY]     = {gItemIcon_Room6Key, gItemIconPalette_Key},
     [ITEM_STORAGE_KEY]    = {gItemIcon_StorageKey, gItemIconPalette_OldKey},
-    [ITEM_ROOT_FOSSIL]    = {gItemIcon_RootFossil, gItemIconPalette_HoennFossil},
-    [ITEM_CLAW_FOSSIL]    = {gItemIcon_ClawFossil, gItemIconPalette_HoennFossil},
     [ITEM_DEVON_SCOPE]    = {gItemIcon_DevonScope, gItemIconPalette_DevonScope},
     // TMs / HMs
     [ITEM_TM01]           = {gItemIcon_TMHM, gItemIconPalette_FightingTMHM},
@@ -361,7 +359,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_15B]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_15C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // FireRed/LeafGreen key items
-    [ITEM_OAKS_PARCEL]    = {gItemIcon_OaksParcel, gItemIconPalette_OaksParcel},
     [ITEM_POKE_FLUTE]     = {gItemIcon_PokeFlute, gItemIconPalette_PokeFlute},
     [ITEM_SECRET_KEY]     = {gItemIcon_SecretKey, gItemIconPalette_SecretKey},
     [ITEM_BIKE_VOUCHER]   = {gItemIcon_BikeVoucher, gItemIconPalette_BikeVoucher},

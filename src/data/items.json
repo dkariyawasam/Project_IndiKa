@@ -4401,38 +4401,6 @@
       "secondaryId": 0
     },
     {
-      "english": "ROOT FOSSIL",
-      "itemId": "ITEM_ROOT_FOSSIL",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "A fossil of an ancient, seafloor-\\ndwelling POKéMON. It appears to be\\npart of a plant root.",
-      "importance": 1,
-      "registrability": 0,
-      "pocket": "POCKET_KEY_ITEMS",
-      "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
-      "battleUsage": 0,
-      "battleUseFunc": "NULL",
-      "secondaryId": 0
-    },
-    {
-      "english": "CLAW FOSSIL",
-      "itemId": "ITEM_CLAW_FOSSIL",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "A fossil of an ancient, seafloor-\\ndwelling POKéMON. It appears to be\\npart of a claw.",
-      "importance": 1,
-      "registrability": 0,
-      "pocket": "POCKET_KEY_ITEMS",
-      "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
-      "battleUsage": 0,
-      "battleUseFunc": "NULL",
-      "secondaryId": 0
-    },
-    {
       "english": "DEVON SCOPE",
       "itemId": "ITEM_DEVON_SCOPE",
       "price": 0,
