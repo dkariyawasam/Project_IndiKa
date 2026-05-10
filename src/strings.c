@@ -438,6 +438,7 @@ const u8 gText_Tm23_3500Coins[] = _("TM23{CLEAR_TO 0x48}{FONT_SMALL}3,500 COINS"
 const u8 gText_Tm24_4000Coins[] = _("TM24{CLEAR_TO 0x48}{FONT_SMALL}4,000 COINS");
 const u8 gText_Tm30_4500Coins[] = _("TM30{CLEAR_TO 0x48}{FONT_SMALL}4,500 COINS");
 const u8 gText_Tm35_4000Coins[] = _("TM35{CLEAR_TO 0x48}{FONT_SMALL}4,000 COINS");
+const u8 gText_Tm39_3500Coins[] = _("TM39{CLEAR_TO 0x48}{FONT_SMALL}3,500 COINS");
 const u8 gText_1F_2[] = _("1F");
 const u8 gText_2F_2[] = _("2F");
 const u8 gText_3F_2[] = _("3F");
