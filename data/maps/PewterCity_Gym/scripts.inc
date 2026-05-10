@@ -59,6 +59,7 @@ PewterCity_Gym_EventScript_DefeatedBrock::
 
 PewterCity_Gym_EventScript_GiveBoulderBadge::
 	msgbox PewterCity_Gym_Text_TakeThisWithYou
+	giveitem_msg PewterCity_Gym_Text_ReceivedBoulderKeyFromBrock, ITEM_BOULDER_KEY, 1, MUS_OBTAIN_KEY_ITEM
 	msgbox PewterCity_Gym_Text_ExplainBoulderBadge
 	setvar VAR_BROCK_TRIAL_STATE, 4
 	release

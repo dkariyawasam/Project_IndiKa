@@ -32,7 +32,13 @@ PewterCity_Gym_Text_BrockDefeat::
 PewterCity_Gym_Text_TakeThisWithYou::
     .string "Wait.\p"
     .string "Take this--\n"
-    .string "the BOULDERBADGE.$"
+    .string "the BOULDERBADGE.\p"
+	.string "And with it, the key to\n"
+	.string "the CINNABAR LAB.$"
+
+PewterCity_Gym_Text_ReceivedBoulderKeyFromBrock::
+	.string "{PLAYER} received the BOULDER KEY\n"
+	.string "from BROCK.$"
 
 PewterCity_Gym_Text_ExplainBoulderBadge::
 	.string "The BOULDERBADGE grants access\n"
@@ -148,4 +154,3 @@ PewterCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: BROCK\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
-
