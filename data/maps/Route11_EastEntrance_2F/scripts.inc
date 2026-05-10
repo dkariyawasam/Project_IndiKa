@@ -3,11 +3,6 @@
 Route11_EastEntrance_2F_MapScripts::
 	.byte 0
 
-Route11_EastEntrance_2F_EventScript_LeftBinocularsSnorlaxGone::
-	msgbox Route11_EastEntrance_2F_Text_WhatABreathtakingView
-	releaseall
-	end
-
 Route11_EastEntrance_2F_EventScript_RightBinoculars::
 	msgbox Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender, MSGBOX_SIGN
 	end

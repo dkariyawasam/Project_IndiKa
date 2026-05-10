@@ -32,11 +32,6 @@ Route11_EastEntrance_2F_Text_ExplainItemfinder::
     .string "Use it to get your bearings, then\n"
     .string "search the suspect area by hand.$"
 
-Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "A big POKéMON is asleep on a road!$"
-
 Route11_EastEntrance_2F_Text_WhatABreathtakingView::
     .string "Let's see what the binoculars have\n"
     .string "to show…\p"
@@ -49,4 +44,3 @@ Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender::
     .string "CERULEAN CITY…\p"
     .string "ROCK TUNNEL appears to be a good\n"
     .string "route to take.$"
-
