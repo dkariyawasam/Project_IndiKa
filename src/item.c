@@ -568,8 +568,7 @@ u16 BagGetQuantityByItemId(u16 itemId)
 void TrySetObtainedItemQuestLogEvent(u16 itemId)
 {
     // Only some key items trigger this event
-    if (itemId == ITEM_OAKS_PARCEL
-     || itemId == ITEM_POKE_FLUTE
+    if (itemId == ITEM_POKE_FLUTE
      || itemId == ITEM_SECRET_KEY
      || itemId == ITEM_BIKE_VOUCHER
      || itemId == ITEM_GOLD_TEETH
