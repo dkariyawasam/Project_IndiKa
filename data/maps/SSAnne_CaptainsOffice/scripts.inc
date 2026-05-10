@@ -15,8 +15,6 @@ SSAnne_CaptainsOffice_EventScript_Captain::
 	applymovement LOCALID_SS_ANNE_CAPTAIN, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut
-	giveitem_msg SSAnne_CaptainsOffice_Text_ObtainedTM51FromCaptain, ITEM_TM51, 1, MUS_OBTAIN_TMHM
-	msgbox SSAnne_CaptainsOffice_Text_ExplainCut
 	setflag FLAG_GOT_TM51
 	setvar VAR_MAP_SCENE_VERMILION_CITY, 1
 	release
