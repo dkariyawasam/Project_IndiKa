@@ -16,11 +16,11 @@ SSAnne_Kitchen_Text_PeelSpudsEveryDay::
     .string "I peel spuds every day!\n"
     .string "Hum-hum…$"
 
-SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
-    .string "Did you hear about SNORLAX?\n"
-    .string "It's a glutton.\p"
-    .string "No other POKéMON eats and sleeps\n"
-    .string "the way SNORLAX can and does!$"
+SSAnne_Kitchen_Text_HearAboutBigPokemonItsAGlutton::
+    .string "Did you hear about big POKéMON?\n"
+    .string "Some are real gluttons.\p"
+    .string "Working in a kitchen makes me\n"
+    .string "understand that appetite!$"
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
     .string "Snivel… Sniff…\p"
@@ -45,4 +45,3 @@ SSAnne_Kitchen_Text_PrimeBeefsteak::
     .string "Prime Beefsteak!\p"
     .string "But, have I enough fillets du\n"
     .string "beef?$"
-

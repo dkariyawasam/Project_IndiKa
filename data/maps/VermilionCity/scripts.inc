@@ -246,10 +246,6 @@ VermilionCity_EventScript_CitySign::
 	msgbox VermilionCity_Text_CitySign, MSGBOX_SIGN
 	end
 
-VermilionCity_EventScript_SnorlaxNotice::
-	msgbox VermilionCity_Text_SnorlaxBlockingRoute12, MSGBOX_SIGN
-	end
-
 VermilionCity_EventScript_PokemonFanClubSign::
 	msgbox VermilionCity_Text_PokemonFanClubSign, MSGBOX_SIGN
 	end

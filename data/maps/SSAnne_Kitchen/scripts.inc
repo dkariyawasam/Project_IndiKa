@@ -42,7 +42,7 @@ SSAnne_Kitchen_EventScript_Chef5::
 	end
 
 SSAnne_Kitchen_EventScript_Chef6::
-	msgbox SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton, MSGBOX_NPC
+	msgbox SSAnne_Kitchen_Text_HearAboutBigPokemonItsAGlutton, MSGBOX_NPC
 	end
 
 SSAnne_Kitchen_EventScript_Chef7::

@@ -66,10 +66,6 @@ Route16_Text_RubenPostBattle::
     .string "They're great for startling people.\n"
     .string "And, they bite, too.$"
 
-Route16_Text_MonSprawledOutInSlumber::
-    .string "A POKéMON is sprawled out in\n"
-    .string "a deep and comfortable slumber.$"
-
 Route16_Text_CyclingRoadSign::
     .string "Enjoy the slope!\n"
     .string "CYCLING ROAD$"
