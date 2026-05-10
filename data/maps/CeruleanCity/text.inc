@@ -81,16 +81,14 @@ CeruleanCity_Text_TrainerLifeIsToughIsntIt::
     .string "It's a tough life, isn't it?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
-    .string "Did you know that you can CUT down\n"
-    .string "small trees?\p"
-    .string "Even that small tree in front of\n"
-    .string "the shop can be CUT down.\p"
-    .string "I think there's a way around it,\n"
-    .string "though.$"
+    .string "Did you know that some paths\n"
+    .string "through town are easy to miss?\p"
+    .string "Even if something looks blocked,\n"
+    .string "there may be another way around.$"
 
 CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
     .string "If that SLOWBRO wasn't there, you\n"
-    .string "could CUT down the small tree.\p"
+    .string "could take the path ahead.\p"
     .string "That way, you could get to the\n"
     .string "other side.\p"
     .string "I think there's a way around it,\n"
@@ -179,4 +177,3 @@ CeruleanCity_Text_GymSign::
     .string "CERULEAN CITY POKéMON GYM\n"
     .string "LEADER: MISTY\l"
     .string "The Tomboyish Mermaid!$"
-
