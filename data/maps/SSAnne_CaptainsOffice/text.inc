@@ -17,19 +17,19 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "I could show you my prized CUT\n"
     .string "technique if I weren't so ill…\p"
     .string "I know! You can have this!\n"
-    .string "This HIDDEN MACHINE!\p"
+    .string "This TECHNICAL MACHINE!\p"
     .string "Teach CUT to your POKéMON, and\n"
-    .string "you can see it CUT anytime!$"
+    .string "watch its technique in battle!$"
 
 SSAnne_CaptainsOffice_Text_ObtainedTM51FromCaptain::
     .string "{PLAYER} obtained TM51\n"
     .string "from the CAPTAIN!$"
 
 SSAnne_CaptainsOffice_Text_ExplainCut::
-    .string "Using CUT, you can chop down\n"
-    .string "small trees.\p"
-    .string "Why not try it with the trees\n"
-    .string "around VERMILION CITY?$"
+    .string "CUT is a quick NORMAL-type move\n"
+    .string "with sharp, slicing strikes.\p"
+    .string "Why not try it in your next\n"
+    .string "battle?$"
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
     .string "CAPTAIN: …Whew!\p"
@@ -50,4 +50,3 @@ SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked::
 SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
     .string "How to Conquer Seasickness…\n"
     .string "The CAPTAIN's reading this!$"
-
