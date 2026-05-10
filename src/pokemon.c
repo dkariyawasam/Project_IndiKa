@@ -1638,8 +1638,7 @@ static const s8 sFriendshipEventDeltas[][3] =
 
 static const u16 sHMMoves[] = 
 {
-    MOVE_CUT, MOVE_FLY, MOVE_SURF, MOVE_STRENGTH, MOVE_FLASH,
-    MOVE_ROCK_SMASH, MOVE_WATERFALL, MOVE_DIVE, HM_MOVES_END
+HM_MOVES_END
 };
 
 #if defined(FIRERED)
