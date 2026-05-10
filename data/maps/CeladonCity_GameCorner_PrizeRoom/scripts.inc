@@ -258,7 +258,8 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeTM::
 	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_TM30
 	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_TM35
 	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_TM39
-	case 6, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+	case 6, CeladonCity_GameCorner_PrizeRoom_EventScript_TM51
+	case 7, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
 
@@ -301,6 +302,13 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_TM39::
 	setvar VAR_TEMP_1, ITEM_TM39
 	setvar VAR_TEMP_2, 3500
 	buffermovename STR_VAR_2, MOVE_ROCK_TOMB
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM51::
+	setvar VAR_TEMP_1, ITEM_TM51
+	setvar VAR_TEMP_2, 1000
+	buffermovename STR_VAR_2, MOVE_CUT
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 
