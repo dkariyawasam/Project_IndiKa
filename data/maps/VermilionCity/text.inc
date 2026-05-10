@@ -33,14 +33,6 @@ VermilionCity_Text_CitySign::
     .string "VERMILION CITY\n"
     .string "The Port of Exquisite Sunsets$"
 
-VermilionCity_Text_SnorlaxBlockingRoute12::
-    .string "NOTICE!\p"
-    .string "ROUTE 12 may be blocked off by a\n"
-    .string "sleeping POKéMON.\p"
-    .string "Detour through ROCK TUNNEL to\n"
-    .string "LAVENDER TOWN.\p"
-    .string "VERMILION POLICE$"
-
 VermilionCity_Text_PokemonFanClubSign::
     .string "POKéMON FAN CLUB\n"
     .string "All POKéMON fans welcome!$"
@@ -128,4 +120,3 @@ VermilionCity_Text_Route2AideHasPackageForYou::
     .string "ROUTE 2, {PLAYER}.\p"
     .string "If you're in the ROUTE 2 area,\n"
     .string "please look for him.$"
-
