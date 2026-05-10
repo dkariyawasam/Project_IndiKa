@@ -7,7 +7,7 @@ MtMoon_Text_BrockFirstMeeting::
 	.string "You've got that look...\n"
 	.string "like you're searching for something.\p"
 	.string "This place is full of them-\n"
-	.string "fragments of ancient POKEMON.\p"
+	.string "fragments of ancient POKéMON.\p"
 	.string "One fragment on its own doesn't\n"
 	.string "tell you much...\l"
 	.string "but combine the right ones...\p"

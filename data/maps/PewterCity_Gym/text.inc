@@ -18,10 +18,10 @@ PewterCity_Gym_Text_BrockIntro::
 
 PewterCity_Gym_Text_BrockNotEnoughPokemon::
     .string "So, we meet again.\p"
-    .string "Wait, you don't have enough POKEMON\n"
+    .string "Wait, you don't have enough POKéMON\n"
     .string "to battle me.\p"
     .string "Come back when you have\n"
-    .string "more POKEMON in your party.$"
+    .string "more POKéMON in your party.$"
 
 PewterCity_Gym_Text_BrockDefeat::
     .string "I took you for granted...\n"
@@ -47,10 +47,10 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
 	.string "and restored.\p"
 	.string "But fossils aren't the only way\n"
 	.string "to study the past.\p"
-	.string "Some POKEMON never vanished.\n"
+	.string "Some POKéMON never vanished.\n"
 	.string "They still live... unchanged.\p"
 	.string "Deep in KANTO's waters,\n"
-	.string "there are POKEMON older than\l"
+	.string "there are POKéMON older than\l"
 	.string "anything we've restored.\p"
 	.string "Find one. Bring it to me.\p"
 	.string "Then I'll show you another kind\n"
@@ -58,7 +58,7 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
 
 PewterCity_Gym_Text_BrockRelicanthReminder::
 	.string "Deep in KANTO's waters,\n"
-	.string "there are POKEMON that never\l"
+	.string "there are POKéMON that never\l"
 	.string "vanished from ancient times.\p"
 	.string "Find one and bring it to me.\n"
 	.string "Then I'll show you trade evolution.$"
@@ -68,12 +68,12 @@ PewterCity_Gym_Text_BrockOfferTrade::
 	.string "Some evolution happens through\n"
 	.string "interaction between TRAINERS.\p"
 	.string "Will you trade your ancient\n"
-	.string "POKEMON for my GRAVELER?$"
+	.string "POKéMON for my GRAVELER?$"
 
 PewterCity_Gym_Text_BrockDeclineTrade::
 	.string "No rush.\p"
 	.string "When you're ready, bring\n"
-	.string "the ancient POKEMON back to me.$"
+	.string "the ancient POKéMON back to me.$"
 
 PewterCity_Gym_Text_BrockTradeComplete::
 	.string "There it is...\n"
@@ -90,13 +90,13 @@ PewterCity_Gym_Text_BrockTradeDone::
 
 PewterCity_Gym_Text_BrockPostBattle::
 	.string "Deep in KANTO's waters,\n"
-	.string "there are POKEMON that never\l"
+	.string "there are POKéMON that never\l"
 	.string "vanished from ancient times.\p"
 	.string "Find one and bring it to me.\n"
 	.string "Then I'll show you trade evolution.$"
 
 PewterCity_Gym_Text_BrockNotRelicanth::
-	.string "That's not the POKEMON\n"
+	.string "That's not the POKéMON\n"
 	.string "I was hoping to study.\p"
 	.string "Look for one that has lived\n"
 	.string "unchanged since ancient times.$"
@@ -124,7 +124,7 @@ PewterCity_Gym_Text_LetsGetHappening::
     .string "Let's get happening!$"
 
 PewterCity_Gym_Text_BrockTypeAdvice::
-    .string "BROCK uses ROCK-type POKEMON.\p"
+    .string "BROCK uses ROCK-type POKéMON.\p"
     .string "They resist NORMAL and FIRE.\n"
     .string "Don't rely on brute force.\p"
     .string "WATER and GRASS moves are\n"
