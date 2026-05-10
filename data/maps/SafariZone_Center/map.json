@@ -134,14 +134,6 @@
       "script": "SafariZone_Center_EventScript_RestHouseSign"
     },
     {
-      "type": "sign",
-      "x": 25,
-      "y": 27,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SafariZone_Center_EventScript_TrainerTips"
-    },
-    {
       "type": "hidden_item",
       "x": 27,
       "y": 15,
