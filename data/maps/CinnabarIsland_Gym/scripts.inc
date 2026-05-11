@@ -48,7 +48,6 @@ CinnabarIsland_Gym_OnLoadOpenDoor6::
 CinnabarIsland_Gym_EventScript_Blaine::
 	famechecker FAMECHECKER_BLAINE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_double TRAINER_LEADER_BLAINE, CinnabarIsland_Gym_Text_BlaineIntro, CinnabarIsland_Gym_Text_BlaineDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, CinnabarIsland_Gym_EventScript_DefeatedBlaine, NO_MUSIC
-	goto_if_unset FLAG_GOT_TM38_FROM_BLAINE, CinnabarIsland_Gym_EventScript_GiveTM38
 	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
 	release
 	end
@@ -61,21 +60,7 @@ CinnabarIsland_Gym_EventScript_DefeatedBlaine::
 	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
 	clearflag FLAG_HIDE_CINNABAR_BILL
 	set_gym_trainers 7
-	goto CinnabarIsland_Gym_EventScript_GiveTM38
-	end
-
-CinnabarIsland_Gym_EventScript_GiveTM38::
 	msgbox CinnabarIsland_Gym_Text_ExplainVolcanoBadge
-	checkitemspace ITEM_TM38
-	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_Gym_EventScript_NoRoomForTM38
-	giveitem_msg CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine, ITEM_TM38
-	setflag FLAG_GOT_TM38_FROM_BLAINE
-	msgbox CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove
-	release
-	end
-
-CinnabarIsland_Gym_EventScript_NoRoomForTM38::
-	msgbox CinnabarIsland_Gym_Text_MakeSpaceForThis
 	release
 	end
 

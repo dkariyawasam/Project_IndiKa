@@ -25,8 +25,8 @@ FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
     .string "that I said, not a one!\p"
     .string "I was too ashamed to show my face\n"
     .string "around the OFFICE, even.\p"
-    .string "Let me give you something for your\n"
-    .string "trouble.$"
+    .string "I'll never forget what you've done\n"
+    .string "for me.$"
 
 FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
     .string "WARDEN: Thank you, lassie!\n"
@@ -35,18 +35,14 @@ FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
     .string "that I said, not a one!\p"
     .string "I was too ashamed to show my face\n"
     .string "around the OFFICE, even.\p"
-    .string "Let me give you something for your\n"
-    .string "trouble.$"
+    .string "I'll never forget what you've done\n"
+    .string "for me.$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedTM54FromWarden::
     .string "{PLAYER} received TM54\n"
     .string "from the WARDEN.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
-    .string "WARDEN: Inside TM54 you'll find\n"
-    .string "STRENGTH.\p"
-    .string "It lets POKéMON move boulders when\n"
-    .string "you're outside of battle.\p"
     .string "Oh yes, did you find the SECRET\n"
     .string "HOUSE in the SAFARI ZONE?$"
 
@@ -62,4 +58,3 @@ FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
 FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
     .string "Old POKéMON merchandise is on\n"
     .string "display.$"
-

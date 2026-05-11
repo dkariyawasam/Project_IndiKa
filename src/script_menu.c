@@ -169,14 +169,109 @@ static const struct MenuAction sMultichoiceList_CeladonVendingMachine[] = {
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerTMPrizes[] = {
-    { gText_Tm13_4000Coins },
+    { gText_Tm01_4500Coins },
+    { gText_Tm02_5000Coins },
+    { gText_Tm03_3000Coins },
+    { gText_Tm04_3500Coins },
+    { gText_Tm05_1000Coins },
+    { gText_Tm06_4000Coins },
+    { gText_Tm07_1500Coins },
+    { gText_MorePrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes2[] = {
+    { gText_Tm08_3500Coins },
+    { gText_Tm09_1500Coins },
+    { gText_Tm10_3000Coins },
+    { gText_Tm11_2500Coins },
+    { gText_Tm12_2000Coins },
+    { gText_Tm13_5000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes3[] = {
+    { gText_Tm14_6000Coins },
+    { gText_Tm15_6500Coins },
+    { gText_Tm16_2500Coins },
+    { gText_Tm17_4000Coins },
+    { gText_Tm18_2500Coins },
+    { gText_Tm19_3500Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes4[] = {
+    { gText_Tm20_2500Coins },
+    { gText_Tm21_1000Coins },
+    { gText_Tm22_4500Coins },
     { gText_Tm23_3500Coins },
-    { gText_Tm24_4000Coins },
+    { gText_Tm24_5000Coins },
+    { gText_Tm25_6000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes5[] = {
+    { gText_Tm26_6500Coins },
+    { gText_Tm27_3500Coins },
+    { gText_Tm28_3000Coins },
+    { gText_Tm29_5000Coins },
     { gText_Tm30_4500Coins },
-    { gText_Tm35_4000Coins },
-    { gText_Tm39_3500Coins },
+    { gText_Tm31_4000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes6[] = {
+    { gText_Tm32_1500Coins },
+    { gText_Tm33_2500Coins },
+    { gText_Tm34_3000Coins },
+    { gText_Tm35_5000Coins },
+    { gText_Tm36_4500Coins },
+    { gText_Tm37_2000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes7[] = {
+    { gText_Tm38_6000Coins },
+    { gText_Tm39_2500Coins },
+    { gText_Tm40_3000Coins },
+    { gText_Tm41_1500Coins },
+    { gText_Tm42_3500Coins },
+    { gText_Tm43_2000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes8[] = {
+    { gText_Tm44_2500Coins },
+    { gText_Tm45_1500Coins },
+    { gText_Tm46_2000Coins },
+    { gText_Tm47_3000Coins },
+    { gText_Tm48_2000Coins },
+    { gText_Tm49_1500Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes9[] = {
+    { gText_Tm50_6000Coins },
     { gText_Tm51_1000Coins },
-    { gText_NoThanks_2 }
+    { gText_Tm52_4500Coins },
+    { gText_Tm53_5500Coins },
+    { gText_Tm54_3500Coins },
+    { gText_Tm55_1000Coins },
+    { gText_MorePrizes },
+    { gText_PreviousPrizes }
+};
+
+static const struct MenuAction sMultichoiceList_GameCornerTMPrizes10[] = {
+    { gText_Tm56_1500Coins },
+    { gText_Tm57_4500Coins },
+    { gText_Tm58_3500Coins },
+    { gText_PreviousPrizes }
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
@@ -538,6 +633,15 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_EXCELLENT_NOT_SO_BAD]                       = MULTICHOICE(sMultichoiceList_Excellent_NotSoBad),
     [MULTICHOICE_RIGHT_LEFT]                                 = MULTICHOICE(sMultichoiceList_RightLeft),
     [MULTICHOICE_GAME_CORNER_TMPRIZES]                       = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_2]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes2),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_3]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes3),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_4]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes4),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_5]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes5),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_6]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes6),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_7]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes7),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_8]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes8),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_9]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes9),
+    [MULTICHOICE_GAME_CORNER_TMPRIZES_10]                    = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes10),
     [MULTICHOICE_DEPT_STORE_ELEVATOR]                        = MULTICHOICE(sMultichoiceList_DeptStoreElevator),
     [MULTICHOICE_THIRSTY_GIRL_FRESH_WATER]                   = MULTICHOICE(sMultichoiceList_ThirstyGirlFreshWater),
     [MULTICHOICE_THIRSTY_GIRL_SODA_POP]                      = MULTICHOICE(sMultichoiceList_ThirstyGirlSodaPop),

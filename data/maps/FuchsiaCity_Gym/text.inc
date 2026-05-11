@@ -28,9 +28,7 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
     .string "Now that you have the SOULBADGE,\n"
     .string "the DEFENSE of your POKéMON rises.\p"
     .string "It also lets you SURF outside of\n"
-    .string "battle.\p"
-    .string "Ah!\n"
-    .string "Take this, too!$"
+    .string "battle.$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
     .string "{PLAYER} received TM06\n"
@@ -153,4 +151,3 @@ FuchsiaCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: KOGA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
-

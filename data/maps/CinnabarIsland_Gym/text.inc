@@ -21,18 +21,16 @@ CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
     .string "Hah!\p"
     .string "The VOLCANOBADGE heightens the\n"
-    .string "SPECIAL stats of your POKéMON.\p"
-    .string "Here, you can have this, too!$"
+    .string "SPECIAL stats of your POKéMON.$"
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
     .string "{PLAYER} received TM38\n"
     .string "from BLAINE.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
-    .string "TM38 contains FIRE BLAST.\n"
-    .string "Teach it to FIRE-type POKéMON.\p"
-    .string "VULPIX or CHARMELEON would be\n"
-    .string "ideal for that move.$"
+    .string "Fire is a living thing!\p"
+    .string "Treat it carelessly, and it will\n"
+    .string "burn you before your foes.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
@@ -187,4 +185,3 @@ CinnabarIsland_Gym_Text_CorrectGoOnThrough::
 CinnabarIsland_Gym_Text_SorryBadCall::
     .string "Sorry!\n"
     .string "Bad call!$"
-

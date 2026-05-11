@@ -15,8 +15,7 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
     .string "The CASCADEBADGE makes all\n"
     .string "POKéMON up to Lv. 30 obey.\p"
     .string "That includes even outsiders you\n"
-    .string "got in trades.\p"
-    .string "You can also have my favorite TM.$"
+    .string "got in trades.$"
 
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
     .string "{PLAYER} received TM03\n"

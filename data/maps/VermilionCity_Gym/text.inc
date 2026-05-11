@@ -20,8 +20,7 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "POKéMON's SPEED!\p"
     .string "It also lets your POKéMON FLY\n"
     .string "lightning-quick anytime, kid!\p"
-    .string "You're special, kid!\n"
-    .string "Take this!$"
+    .string "You're special, kid!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
     .string "{PLAYER} received TM34\n"
@@ -137,4 +136,3 @@ VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
     .string "There's only trash here.\p"
     .string "Hey!\n"
     .string "The electric locks were reset!$"
-

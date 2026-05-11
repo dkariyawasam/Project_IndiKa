@@ -27,8 +27,7 @@ SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "Stronger POKéMON will become wild,\n"
     .string "ignoring your orders in battle.\p"
     .string "Just don't raise your POKéMON too\n"
-    .string "much to avoid that problem.\p"
-    .string "Wait, please take this TM with you.$"
+    .string "much to avoid that problem.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
     .string "{PLAYER} received TM04 from\n"
@@ -157,4 +156,3 @@ SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
-
