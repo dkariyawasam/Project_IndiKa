@@ -68,7 +68,7 @@
 #define FLAG_HIDE_TOWER_FUJI                               0x034
 #define FLAG_HIDE_POKEHOUSE_FUJI                           0x035
 #define FLAG_HIDE_LIFT_KEY                                 0x036
-#define FLAG_HIDE_SILPH_SCOPE                              0x037
+#define FLAG_0x037                                        0x037
 #define FLAG_HIDE_HIDEOUT_GIOVANNI                         0x038
 #define FLAG_HIDE_TOWN_MAP                                 0x039
 #define FLAG_HIDE_POKEDEX                                  0x03A

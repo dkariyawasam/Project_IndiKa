@@ -28,20 +28,9 @@ RocketHideout_B4F_EventScript_Giovanni::
 	fadescreen FADE_TO_BLACK
 	closemessage
 	removeobject LOCALID_HIDEOUT_GIOVANNI
-	addobject LOCALID_SILPH_SCOPE
-	clearflag FLAG_HIDE_SILPH_SCOPE
 	setflag FLAG_HIDE_CELADON_ROCKETS
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	fadescreen FADE_FROM_BLACK
-	release
-	end
-
-RocketHideout_B4F_EventScript_SilphScope::
-	lock
-	faceplayer
-	removeobject LOCALID_SILPH_SCOPE
-	giveitem ITEM_SILPH_SCOPE
-	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
 	release
 	end
 

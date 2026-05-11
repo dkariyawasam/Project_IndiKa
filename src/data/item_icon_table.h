@@ -369,7 +369,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_DOME_FOSSIL_SHARD]    = {gItemIcon_DomeFossil, gItemIconPalette_KantoFossil},
     [ITEM_HASTE_FOSSIL_SHARD]   = {gItemIcon_HasteFossil, gItemIconPalette_KantoFossil},
     [ITEM_DART_FOSSIL_SHARD]   = {gItemIcon_DartFossil, gItemIconPalette_KantoFossil},
-    [ITEM_SILPH_SCOPE]    = {gItemIcon_SilphScope, gItemIconPalette_SilphScope},
     [ITEM_BICYCLE]        = {gItemIcon_Bicycle, gItemIconPalette_Bicycle},
     [ITEM_TOWN_MAP]       = {gItemIcon_TownMap, gItemIconPalette_TownMap},
     [ITEM_VS_SEEKER]      = {gItemIcon_VSSeeker, gItemIconPalette_VSSeeker},

@@ -28,8 +28,8 @@ RocketHideout_B1F_Text_Grunt3Defeat::
     .string "I can't do it!$"
 
 RocketHideout_B1F_Text_Grunt3PostBattle::
-    .string "SILPH SCOPE? Humph!\n"
-    .string "I don't know where it is.$"
+    .string "Humph!\n"
+    .string "I'm not telling you anything.$"
 
 RocketHideout_B1F_Text_Grunt4Intro::
     .string "Why did you come here?$"
@@ -50,4 +50,3 @@ RocketHideout_B1F_Text_Grunt5Defeat::
 RocketHideout_B1F_Text_Grunt5PostBattle::
     .string "Uh-oh, that ruckus somehow opened\n"
     .string "the door!$"
-

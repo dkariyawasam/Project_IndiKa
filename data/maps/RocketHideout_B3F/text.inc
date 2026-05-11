@@ -7,9 +7,9 @@ RocketHideout_B3F_Text_Grunt1Defeat::
     .string "Taken down!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
-    .string "SILPH SCOPE?\n"
-    .string "Oh, that machine the BOSS stole.\p"
-    .string "It's here somewhere.$"
+    .string "The BOSS has plans you wouldn't\n"
+    .string "understand.\p"
+    .string "Stay out of our way.$"
 
 RocketHideout_B3F_Text_Grunt2Intro::
     .string "We got word from upstairs that you\n"
@@ -23,4 +23,3 @@ RocketHideout_B3F_Text_Grunt2PostBattle::
     .string "Go ahead and go!\p"
     .string "But you can't run the elevator\n"
     .string "without the LIFT KEY.$"
-
