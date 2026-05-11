@@ -60,8 +60,8 @@
 #define FLAG_HIDE_OAK_IN_PALLET_TOWN                       0x02C
 #define FLAG_HIDE_RIVAL_IN_LAB                             0x02D
 #define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                    0x02E
-#define FLAG_HIDE_DOME_FOSSIL                              0x02F
-#define FLAG_HIDE_HELIX_FOSSIL                             0x030
+#define FLAG_0x02F                                         0x02F
+#define FLAG_0x030                                         0x030
 #define FLAG_HIDE_NUGGET_BRIDGE_ROCKET                     0x031
 #define FLAG_HIDE_BILL_CLEFAIRY                            0x032
 #define FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE                   0x033
