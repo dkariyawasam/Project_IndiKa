@@ -2703,8 +2703,8 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] = {
 
 static const u8 sNpcTextColorToFont[] = 
 {
-    [NPC_TEXT_COLOR_MALE]    = FONT_MALE, 
-    [NPC_TEXT_COLOR_FEMALE]  = FONT_FEMALE, 
+    [NPC_TEXT_COLOR_MALE]    = FONT_NORMAL, 
+    [NPC_TEXT_COLOR_FEMALE]  = FONT_NORMAL, 
     [NPC_TEXT_COLOR_MON]     = FONT_NORMAL, 
     [NPC_TEXT_COLOR_NEUTRAL] = FONT_NORMAL,
 };
