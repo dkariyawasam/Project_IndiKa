@@ -13,7 +13,6 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
-	set_gym_trainers 5
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
 	release
 	end
