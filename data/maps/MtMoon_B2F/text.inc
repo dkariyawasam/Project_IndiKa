@@ -1,19 +1,19 @@
 MtMoon_B2F_Text_MiguelIntro::
     .string "Hey, stop!\p"
-    .string "I found these fossils!\n"
-    .string "They're both mine!$"
+    .string "I'm busy checking every corner\n"
+    .string "of this cave!$"
 
 MtMoon_B2F_Text_MiguelDefeat::
     .string "Okay!\n"
-    .string "I'll share!$"
+    .string "I'll move along!$"
 
 MtMoon_B2F_Text_WellEachTakeAFossil::
-    .string "We'll each take a fossil!\n"
-    .string "No being greedy!$"
+    .string "There are old fragments scattered\n"
+    .string "all over MT. MOON.$"
 
 MtMoon_B2F_Text_ThenThisFossilIsMine::
     .string "All right.\n"
-    .string "Then this fossil is mine!$"
+    .string "I'll keep searching elsewhere!$"
 
 MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
     .string "Far away, on CINNABAR ISLAND,\n"
@@ -69,16 +69,3 @@ MtMoon_B2F_Text_Grunt4Defeat::
 MtMoon_B2F_Text_Grunt4PostBattle::
     .string "POKéMON lived here long before\n"
     .string "people came.$"
-
-MtMoon_B2F_Text_YouWantDomeFossil::
-    .string "Do you want the DOME FOSSIL?$"
-
-MtMoon_B2F_Text_YouWantHelixFossil::
-    .string "Do you want the HELIX FOSSIL?$"
-
-MtMoon_B2F_Text_ObtainedHelixFossil::
-    .string "Obtained the HELIX FOSSIL!$"
-
-MtMoon_B2F_Text_ObtainedDomeFossil::
-    .string "Obtained the DOME FOSSIL!$"
-
