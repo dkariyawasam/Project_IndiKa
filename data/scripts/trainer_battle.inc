@@ -49,6 +49,16 @@ EventScript_DoNoIntroTrainerBattle::
 	dotrainerbattle
 	gotopostbattlescript
 
+EventScript_DoNoIntroDoubleTrainerBattle::
+	applymovement VAR_LAST_TALKED, Movement_RevealTrainer
+	waitmovement 0
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, EventScript_NotEnoughMonsForDoubleBattle
+	special PlayTrainerEncounterMusic
+	goto_if_questlog EventScript_EndQuestLogBattle
+	dotrainerbattle
+	gotopostbattlescript
+
 EventScript_TryDoRematchBattle::
 	call EventScript_RevealTrainer
 	specialvar VAR_RESULT, IsTrainerReadyForRematch
@@ -92,6 +102,10 @@ EventScript_NotEnoughMonsForDoubleRematchBattle::
 	waitbuttonpress
 	release
 	end
+
+Common_Text_NeedTwoPokemonForDoubleBattle::
+	.string "You'll need two POKéMON with you\n"
+	.string "for a DOUBLE BATTLE.$"
 
 EventScript_EndQuestLogRematch::
 	releaseall
