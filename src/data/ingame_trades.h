@@ -1,8 +1,8 @@
 static const struct InGameTrade sInGameTrades[] = {
-    [INGAME_TRADE_MR_MIME] = 
+    [INGAME_TRADE_HAUNTER] = 
     {
-        .nickname = _("MIMIEN"),
-        .species = SPECIES_MR_MIME,
+        .nickname = _("HAUNTER"),
+        .species = SPECIES_HAUNTER,
         .ivs = {20, 15, 17, 24, 23, 22},
         .abilityNum = 0,
         .otId = 1985,
@@ -13,23 +13,23 @@ static const struct InGameTrade sInGameTrades[] = {
         .otName = _("REYLEY"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_ABRA
+        .requestedSpecies = SPECIES_KADABRA
     }, 
-    [INGAME_TRADE_JYNX] = 
+    [INGAME_TRADE_KADABRA] = 
     {
-        .nickname = _("ZYNX"),
-        .species = SPECIES_JYNX,
+        .nickname = _("KADABRA"),
+        .species = SPECIES_KADABRA,
         .ivs = {18, 17, 18, 22, 25, 21},
         .abilityNum = 0,
         .otId = 36728,
         .conditions = {5, 30, 5, 5, 5},
         .personality = 0x498a2e1d,
-        .heldItem = ITEM_FAB_MAIL,
-        .mailNum = 0,
+        .heldItem = ITEM_NONE,
+        .mailNum = 255,
         .otName = _("DONTAE"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_POLIWHIRL
+        .requestedSpecies = SPECIES_HAUNTER
     }, 
     [INGAME_TRADE_NIDORAN] = 
     {
