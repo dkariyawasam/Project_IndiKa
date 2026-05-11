@@ -561,7 +561,7 @@ static bool8 InQuestLogDisabledLocation(void)
          || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_7F)
          || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_8F)
          || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_ROOF)
-         || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_LOBBY)
+         || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY)
          || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_ELEVATOR)))
         return TRUE;
 

@@ -70,8 +70,8 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
         gSpecialVar_LastTalked = 1;
         warp->x = 4;
         warp->y = 11;
-        warp->mapGroup = MAP_GROUP(MAP_TRAINER_TOWER_LOBBY);
-        warp->mapNum = MAP_NUM(MAP_TRAINER_TOWER_LOBBY);
+        warp->mapGroup = MAP_GROUP(MAP_ROCKET_LEAGUE_LOBBY);
+        warp->mapNum = MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY);
         warp->warpId = 0xFF;
     }
     else
@@ -101,7 +101,7 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
             warp->x = 5;
             warp->y = 4;
         }
-        else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(MAP_TRAINER_TOWER_LOBBY) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(MAP_TRAINER_TOWER_LOBBY))
+        else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(MAP_ROCKET_LEAGUE_LOBBY) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY))
         {
             warp->x = 4;
             warp->y = 11;
