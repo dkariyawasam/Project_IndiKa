@@ -47,34 +47,6 @@ CeruleanCity_Text_RivalVictory::
     .string "なんたって！\n"
     .string "おれは　てんさい　だからよ！$"
 
-CeruleanCity_Text_GruntIntro::
-    .string "Hey! Stay out!\n"
-    .string "It's not your yard!\p"
-    .string "…Huh?\n"
-    .string "Me?\p"
-    .string "I'm an innocent bystander!\n"
-    .string "Don't you believe me?{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
-
-CeruleanCity_Text_GruntDefeat::
-    .string "GRUNT: Stop! I give up!\n"
-    .string "I'll leave quietly!$"
-
-CeruleanCity_Text_OkayIllReturnStolenTM::
-    .string "…Okay.\n"
-    .string "I'll return the TM I stole.$"
-
-CeruleanCity_Text_RecoveredTM28FromGrunt::
-    .string "{PLAYER} recovered TM28 from\n"
-    .string "the TEAM ROCKET GRUNT.$"
-
-CeruleanCity_Text_BetterGetMovingBye::
-    .string "I better get moving!\n"
-    .string "Bye!$"
-
-CeruleanCity_Text_MakeRoomForThisCantRun::
-    .string "Make room for this!\n"
-    .string "I can't run until I give it to you!$"
-
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
     .string "You're a TRAINER, too?\p"
     .string "Collecting, battling…\n"
@@ -99,11 +71,10 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
     .string "POKéMON? That sounds amusing.$"
 
 CeruleanCity_Text_PeopleHereWereRobbed::
-    .string "The people here were robbed.\p"
-    .string "It's obvious that TEAM ROCKET is\n"
-    .string "behind this most heinous crime!\p"
-    .string "Even our POLICE FORCE has\n"
-    .string "trouble with the ROCKETS!$"
+    .string "The people here had a bit of\n"
+    .string "trouble with their house.\p"
+    .string "We're keeping an eye on things\n"
+    .string "while they finish repairs.$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
     .string "Okay! SLOWBRO!\n"
