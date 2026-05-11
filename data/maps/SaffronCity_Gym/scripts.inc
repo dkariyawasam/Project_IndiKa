@@ -14,7 +14,6 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
-	set_gym_trainers 6
 	msgbox SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis
 	release
 	end

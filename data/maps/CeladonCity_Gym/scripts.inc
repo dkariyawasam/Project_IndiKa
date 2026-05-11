@@ -14,7 +14,6 @@ CeladonCity_Gym_EventScript_DefeatedErika::
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
-	set_gym_trainers 4
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
 	release
 	end
