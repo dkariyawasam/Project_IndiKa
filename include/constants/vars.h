@@ -336,8 +336,8 @@
 #define SPECIAL_VARS_END           0x8014
 
 // Text color ids for VAR_TEXT_COLOR / VAR_PREV_TEXT_COLOR
-#define NPC_TEXT_COLOR_MALE      0 // Blue, for male NPCs
-#define NPC_TEXT_COLOR_FEMALE    1 // Red, for female NPCs
+#define NPC_TEXT_COLOR_MALE      0 // Neutral, formerly blue for male NPCs
+#define NPC_TEXT_COLOR_FEMALE    1 // Neutral, formerly red for female NPCs
 #define NPC_TEXT_COLOR_MON       2 // Black, for Pokémon
 #define NPC_TEXT_COLOR_NEUTRAL   3 // Black, for inanimate objects and messages from the game
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
