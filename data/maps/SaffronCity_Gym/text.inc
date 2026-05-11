@@ -22,12 +22,10 @@ SaffronCity_Gym_Text_SabrinaPostBattle::
     .string "People just don't realize it.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
-    .string "The MARSHBADGE makes POKéMON up\n"
+    .string "With six BADGES, POKéMON up\n"
     .string "to Lv. 70 obey you.\p"
-    .string "Stronger POKéMON will become wild,\n"
-    .string "ignoring your orders in battle.\p"
-    .string "Just don't raise your POKéMON too\n"
-    .string "much to avoid that problem.$"
+    .string "Stronger outsider POKéMON may\n"
+    .string "ignore your orders in battle.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
     .string "{PLAYER} received TM04 from\n"
