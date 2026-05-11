@@ -34,15 +34,6 @@ CeladonCity_Text_GetLostOrIllPunchYou::
 CeladonCity_Text_KeepOutOfTeamRocketsWay::
     .string "Keep out of TEAM ROCKET's way!$"
 
-CeladonCity_Text_ExplainXAccuracyDireHit::
-    .string "TRAINER TIPS\p"
-    .string "X ACCURACY boosts the accuracy of\n"
-    .string "techniques.\p"
-    .string "DIRE HIT jacks up the likelihood\n"
-    .string "of critical hits.\p"
-    .string "Get your items at the CELADON\n"
-    .string "DEPT. STORE!$"
-
 CeladonCity_Text_CitySign::
     .string "CELADON CITY\n"
     .string "The City of Rainbow Dreams$"
@@ -57,14 +48,6 @@ CeladonCity_Text_MansionSign::
 
 CeladonCity_Text_DeptStoreSign::
     .string "Find what you need at the\n"
-    .string "CELADON DEPT. STORE!$"
-
-CeladonCity_Text_GuardSpecProtectsFromStatus::
-    .string "TRAINER TIPS\p"
-    .string "GUARD SPEC. protects POKéMON\n"
-    .string "from status-reduction moves during\l"
-    .string "battle.\p"
-    .string "Get your items at the\n"
     .string "CELADON DEPT. STORE!$"
 
 CeladonCity_Text_PrizeExchangeSign::
@@ -111,4 +94,3 @@ CeladonCity_Text_SomeoneStoleSilphScope::
     .string "I'm sure of it.\p"
     .string "But I lost sight of him!\n"
     .string "Where'd he go?$"
-

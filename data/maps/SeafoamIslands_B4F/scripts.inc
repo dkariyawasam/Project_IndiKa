@@ -187,10 +187,6 @@ SeafoamIslands_B4F_EventScript_RanFromArticuno::
 	goto EventScript_MonFlewAway
 	end
 
-SeafoamIslands_B4F_EventScript_BoulderHintSign::
-	msgbox SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow, MSGBOX_SIGN
-	end
-
 SeafoamIslands_B4F_EventScript_FastCurrentSign::
 	msgbox SeafoamIslands_B4F_Text_DangerFastCurrent, MSGBOX_SIGN
 	end
