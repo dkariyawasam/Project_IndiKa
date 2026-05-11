@@ -38,7 +38,7 @@ TrainerTower_Elevator_EventScript_ChooseFloor::
 
 TrainerTower_Elevator_EventScript_SelectLobby::
 	setvar VAR_0x8006, 3
-	setdynamicwarp MAP_TRAINER_TOWER_LOBBY, 17, 8
+	setdynamicwarp MAP_ROCKET_LEAGUE_LOBBY, 17, 8
 	goto_if_eq VAR_ELEVATOR_FLOOR, 3, TrainerTower_Elevator_EventScript_CloseFloorSelect
 	call TrainerTower_Elevator_EventScript_MoveElevator
 	setvar VAR_ELEVATOR_FLOOR, 3
@@ -46,7 +46,7 @@ TrainerTower_Elevator_EventScript_SelectLobby::
 	delay 25
 	applymovement LOCALID_PLAYER, TrainerTower_Elevator_Movement_ExitElevator
 	waitmovement 0
-	warp MAP_TRAINER_TOWER_LOBBY, 17, 8
+	warp MAP_ROCKET_LEAGUE_LOBBY, 17, 8
 	waitstate
 	releaseall
 	end

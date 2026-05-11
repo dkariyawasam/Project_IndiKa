@@ -1,45 +1,45 @@
-@ All Trainer Tower text (Lobby and Roof) is interleaved here
+@ All Rocket League text (Lobby and Roof) is interleaved here
 
-TrainerTower_Lobby_Text_WelcomeToTrainerTower::
+RocketLeague_Lobby_Text_WelcomeToRocketLeague::
     .string "Hello!\p"
-    .string "Welcome to TRAINER TOWER where\n"
+    .string "Welcome to ROCKET LEAGUE where\n"
     .string "TRAINERS gather from all over!$"
 
-TrainerTower_Lobby_Text_TrainersUpToFloorNum::
+RocketLeague_Lobby_Text_TrainersUpToFloorNum::
     .string "TRAINERS from all over the world\n"
     .string "gather here to battle.\p"
     .string "Let me see…\p"
     .string "Right now, there are TRAINERS only\n"
     .string "up to Floor {STR_VAR_1}.$"
 
-TrainerTower_Lobby_Text_TrainersUpEighthFloor::
+RocketLeague_Lobby_Text_TrainersUpEighthFloor::
     .string "TRAINERS are awaiting your\n"
     .string "challenge up to the eighth floor.$"
 
-TrainerTower_Lobby_Text_LikeToChallengeTrainers::
+RocketLeague_Lobby_Text_LikeToChallengeTrainers::
     .string "Would you like to challenge the\n"
     .string "waiting TRAINERS?$"
 
-TrainerTower_Lobby_Text_StartClockGetSetGo::
+RocketLeague_Lobby_Text_StartClockGetSetGo::
     .string "Okay, I'll get the clock started,\n"
     .string "so give it everything you have.\p"
     .string "On your marks…\p"
     .string "Get set…\p"
     .string "Go!$"
 
-TrainerTower_Lobby_Text_PleaseVisitUsAgain::
+RocketLeague_Lobby_Text_PleaseVisitUsAgain::
     .string "Please do visit us again!$"
 
-TrainerTower_Lobby_Text_TooBadComeBackTryAgain::
+RocketLeague_Lobby_Text_TooBadComeBackTryAgain::
     .string "That was too bad.\p"
     .string "I think you put in a tremendous\n"
     .string "effort in your battling.\p"
     .string "Please come back and try again!$"
 
-TrainerTower_Lobby_Text_GiveItYourBest::
+RocketLeague_Lobby_Text_GiveItYourBest::
     .string "I hope you give it your best.$"
 
-TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
+RocketLeague_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
     .string "When the TRAINERS switch places,\n"
     .string "the movement can be hectic.\p"
     .string "To avoid the stampede, we moved\n"
@@ -82,16 +82,16 @@ TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
 TrainerTower_Text_XMinYZSec::
     .string "{STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} sec.$"
 
-TrainerTower_Lobby_Text_HereAreTheResults::
+RocketLeague_Lobby_Text_HereAreTheResults::
     .string "せいせきひょうです$"
 
-TrainerTower_Lobby_Text_NeedTwoMonsForDouble::
+RocketLeague_Lobby_Text_NeedTwoMonsForDouble::
     .string "This is a two-on-two battle.\p"
     .string "You may not battle unless you have\n"
     .string "at least two POKéMON.$"
 
-TrainerTower_Lobby_Text_ExplainTrainerTower::
-    .string "Here at TRAINER TOWER, there is an\n"
+RocketLeague_Lobby_Text_ExplainRocketLeague::
+    .string "Here at ROCKET LEAGUE, there is an\n"
     .string "event called TIME ATTACK.\p"
     .string "You will be timed on how quickly\n"
     .string "you can get from the reception\l"
@@ -103,16 +103,16 @@ TrainerTower_Lobby_Text_ExplainTrainerTower::
     .string "You will not earn any EXP. Points\n"
     .string "or money by beating TRAINERS here.$"
 
-TrainerTower_Lobby_Text_ThanksForCompeting::
+RocketLeague_Lobby_Text_ThanksForCompeting::
     .string "Thank you for competing!$"
 
-TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers::
+RocketLeague_Lobby_Text_WonderWhatKindsOfTrainers::
     .string "I'm here to see how good I am.\p"
     .string "I wonder what kinds of TRAINERS\n"
     .string "are waiting for me?\p"
     .string "It's nerve-racking!$"
 
-TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
+RocketLeague_Lobby_Text_StairsTougherThanAnyBattle::
     .string "Gasp, gasp…\n"
     .string "Gasp…\p"
     .string "Never mind battling! These stairs…\n"

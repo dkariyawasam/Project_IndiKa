@@ -441,7 +441,7 @@ gSpecials::
 	def_special IsBadEggInParty
 	def_special ReadTrainerTowerAndValidate
 	def_special HasAllMons
-	def_special IsPlayerNotInTrainerTowerLobby
+	def_special IsPlayerNotInRocketLeagueLobby
 	def_special BrailleCursorToggle
 	def_special Script_ResetUnionRoomTrade
 	def_special PlayerPartyContainsSpeciesWithPlayerID
