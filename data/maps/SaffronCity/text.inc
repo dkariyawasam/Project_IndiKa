@@ -74,21 +74,6 @@ SaffronCity_Text_GymSign::
     .string "LEADER: SABRINA\l"
     .string "The Master of PSYCHIC POKéMON!$"
 
-SaffronCity_Text_FullHealCuresStatus::
-    .string "TRAINER TIPS\p"
-    .string "FULL HEAL cures all ailments like\n"
-    .string "burns, paralysis, poisoning,\l"
-    .string "freezing, and sleep.\p"
-    .string "It costs a bit more, but it's more\n"
-    .string "convenient than buying other items.$"
-
-SaffronCity_Text_GreatBallImprovedCatchRate::
-    .string "TRAINER TIPS\p"
-    .string "The new GREAT BALL offers improved\n"
-    .string "catching rates.\p"
-    .string "Try it on those hard-to-catch\n"
-    .string "POKéMON.$"
-
 SaffronCity_Text_SilphCoSign::
     .string "SILPH CO. OFFICE BUILDING$"
 
@@ -112,4 +97,3 @@ SaffronCity_Text_HowCanClubNotRecognizeLance::
     .string "He stands for justice!\n"
     .string "He's cool, and yet passionate!\l"
     .string "He's the greatest, LANCE!$"
-

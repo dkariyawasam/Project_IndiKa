@@ -162,13 +162,6 @@ CeruleanCity_Text_CitySign::
     .string "A Mysterious, Blue Aura Surrounds\l"
     .string "It$"
 
-CeruleanCity_Text_TrainerTipsHeldItems::
-    .string "TRAINER TIPS\p"
-    .string "A POKéMON can be made to hold\n"
-    .string "an item.\p"
-    .string "Some items can even be used by\n"
-    .string "the holding POKéMON in battle.$"
-
 CeruleanCity_Text_BikeShopSign::
     .string "Grass and caves handled easily!\n"
     .string "BIKE SHOP$"

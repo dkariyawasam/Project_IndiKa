@@ -504,10 +504,6 @@ PewterCity_EventScript_KnowWhatTheyreDoing::
 	release
 	end
 
-PewterCity_EventScript_TrainerTips::
-	msgbox PewterCity_Text_TrainerTipsEarningEXP, MSGBOX_SIGN
-	end
-
 PewterCity_EventScript_PoliceNotice::
 	msgbox PewterCity_Text_CallPoliceIfInfoOnThieves, MSGBOX_SIGN
 	end
