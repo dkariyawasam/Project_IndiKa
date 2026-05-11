@@ -425,7 +425,8 @@
 #define TRAINER_LEADER_BROCK_6                   419
 #define TRAINER_LEADER_BROCK_7                   420
 
-#define TRAINER_LEADER_MISTY                     421
+#define TRAINER_LEADER_MISTY_1                   421
+#define TRAINER_LEADER_MISTY                     TRAINER_LEADER_MISTY_1
 #define TRAINER_LEADER_LT_SURGE                  422
 #define TRAINER_LEADER_ERIKA                     423
 #define TRAINER_LEADER_KOGA                      424
@@ -753,12 +754,18 @@
 #define TRAINER_CHAMPION_REMATCH_BULBASAUR       746
 #define TRAINER_CHAMPION_REMATCH_CHARMANDER      747
 #define TRAINER_CUE_BALL_PAXTON                  748
+#define TRAINER_LEADER_MISTY_2                   749
+#define TRAINER_LEADER_MISTY_3                   750
+#define TRAINER_LEADER_MISTY_4                   751
+#define TRAINER_LEADER_MISTY_5                   752
+#define TRAINER_LEADER_MISTY_6                   753
+#define TRAINER_LEADER_MISTY_7                   754
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             749
+#define NUM_TRAINERS                             755
 #define MAX_TRAINERS_COUNT                       774
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

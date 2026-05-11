@@ -5614,18 +5614,164 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock7[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty1[] = {
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 13,
         .species = SPECIES_STARYU,
-        .moves = {MOVE_TACKLE, MOVE_HARDEN, MOVE_RECOVER, MOVE_WATER_PULSE},
     },
     {
         .iv = 0,
-        .lvl = 21,
+        .lvl = 16,
+        .species = SPECIES_CHINCHOU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty2[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CHINCHOU,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_POLIWHIRL,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_STARYU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty3[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_POLIWHIRL,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_LANTURN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty4[] = {
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_LANTURN,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_POLIWHIRL,
+    },
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_HORSEA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty5[] = {
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_HORSEA,
+    },
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_PSYDUCK,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_POLIWHIRL,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_LANTURN,
+    },
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_STARYU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty6[] = {
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 0,
+        .lvl = 39,
+        .species = SPECIES_GOLDUCK,
+    },
+    {
+        .iv = 0,
+        .lvl = 40,
+        .species = SPECIES_POLIWHIRL,
+    },
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_LANTURN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty7[] = {
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_LANTURN,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_GOLDUCK,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_POLITOED,
+    },
+    {
+        .iv = 0,
+        .lvl = 46,
         .species = SPECIES_STARMIE,
-        .moves = {MOVE_SWIFT, MOVE_RECOVER, MOVE_RAPID_SPIN, MOVE_WATER_PULSE},
+    },
+    {
+        .iv = 0,
+        .lvl = 47,
+        .species = SPECIES_KINGDRA,
     },
 };
 
