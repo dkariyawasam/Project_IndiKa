@@ -773,6 +773,8 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
+    CacheCurrentMapBasePalettes();
+    RefreshCurrentMapNightPalette();
     for (paletteIndex = 7; paletteIndex < 13; paletteIndex++)
         ApplyWeatherGammaShiftToPal(paletteIndex);
     InitSecondaryTilesetAnimation();
@@ -1699,6 +1701,7 @@ void CB2_ContinueSavedGame(void)
     LoadSaveblockObjEventScripts();
     UnfreezeObjectEvents();
     Overworld_ResetStateOnContinue();
+    InitDayNightCycle();
     InitMapFromSavedGame();
     PlayTimeCounter_Start();
     ScriptContext_Init();

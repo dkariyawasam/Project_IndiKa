@@ -9,6 +9,7 @@
 #include "task.h"
 #include "script.h"
 #include "cable_club.h"
+#include "day_night.h"
 #include "fieldmap.h"
 #include "metatile_behavior.h"
 #include "quest_log.h"
@@ -147,6 +148,7 @@ static void Task_ContinueScript(u8 taskId)
 {
     if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
     {
+        RefreshCurrentMapNightPalette();
         DestroyTask(taskId);
         ScriptContext_Enable();
     }
@@ -505,6 +507,7 @@ static void Task_SafariZoneRanOutOfBalls(u8 taskId)
 {
     if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
     {
+        RefreshCurrentMapNightPalette();
         UnlockPlayerFieldControls();
         DestroyTask(taskId);
         ClearPlayerHeldMovementAndUnfreezeObjectEvents();
