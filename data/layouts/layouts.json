@@ -2990,16 +2990,16 @@
       "blockdata_filepath": "data/layouts/FourIsland_IcefallCave_Back/map.bin"
     },
     {
-      "id": "LAYOUT_TRAINER_TOWER_LOBBY",
-      "name": "TrainerTower_Lobby_Layout",
+      "id": "LAYOUT_ROCKET_LEAGUE_LOBBY",
+      "name": "RocketLeague_Lobby_Layout",
       "width": 19,
-      "height": 19,
+      "height": 21,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_TrainerTower",
-      "border_filepath": "data/layouts/TrainerTower_Lobby/border.bin",
-      "blockdata_filepath": "data/layouts/TrainerTower_Lobby/map.bin"
+      "border_filepath": "data/layouts/RocketLeague_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/RocketLeague_Lobby/map.bin"
     },
     {
       "id": "LAYOUT_TRAINER_TOWER_1F",

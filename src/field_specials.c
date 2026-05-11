@@ -920,7 +920,7 @@ void GetElevatorFloor(void)
         case MAP_NUM(MAP_TRAINER_TOWER_ROOF):
             floor = 15;
             break;
-        case MAP_NUM(MAP_TRAINER_TOWER_LOBBY):
+        case MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY):
             floor = 3;
             break;
         }
@@ -1037,7 +1037,7 @@ u16 InitElevatorFloorSelectMenuPos(void)
             sElevatorScroll = 0;
             sElevatorCursorPos = 0;
             break;
-        case MAP_NUM(MAP_TRAINER_TOWER_LOBBY):
+        case MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY):
             sElevatorScroll = 0;
             sElevatorCursorPos = 1;
             break;
@@ -2467,9 +2467,9 @@ bool8 IsBadEggInParty(void)
     return FALSE;
 }
 
-bool8 IsPlayerNotInTrainerTowerLobby(void)
+bool8 IsPlayerNotInRocketLeagueLobby(void)
 {
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_TRAINER_TOWER_LOBBY) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TRAINER_TOWER_LOBBY))
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_LOBBY) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY))
         return FALSE;
     else
         return TRUE;
