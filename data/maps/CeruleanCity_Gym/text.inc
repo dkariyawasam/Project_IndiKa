@@ -12,8 +12,8 @@ CeruleanCity_Gym_Text_ExplainTM03::
     .string "Use it on an aquatic POKéMON!$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
-    .string "The CASCADEBADGE makes all\n"
-    .string "POKéMON up to Lv. 30 obey.\p"
+    .string "With two BADGES, POKéMON up\n"
+    .string "to Lv. 30 obey.\p"
     .string "That includes even outsiders you\n"
     .string "got in trades.$"
 
