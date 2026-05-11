@@ -2219,6 +2219,20 @@ const struct MonCoords gMonBackPicCoords[] =
     {
         .size = MON_COORDS_SIZE(64, 56),
         .y_offset = 7,
+    },
+    [SPECIES_STARLY] =
+    {
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 8,
+    },
+    [SPECIES_STARAVIA] =
+    {
+        .size = MON_COORDS_SIZE(64, 40),
+        .y_offset = 12,
+    },
+    [SPECIES_STARAPTOR] =
+    {
+        .size = MON_COORDS_SIZE(64, 56),
+        .y_offset = 6,
     }
 };
-

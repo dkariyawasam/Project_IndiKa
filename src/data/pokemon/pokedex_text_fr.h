@@ -2727,6 +2727,27 @@ const u8 gLopunnyPokedexText[] = _(
 
 const u8 gLopunnyPokedexTextUnused[] = _("");
 
+const u8 gStarlyPokedexText[] = _(
+    "They flock in great numbers.\n"
+    "Though small, they flap their wings\n"
+    "with impressive power.");
+
+const u8 gStarlyPokedexTextUnused[] = _("");
+
+const u8 gStaraviaPokedexText[] = _(
+    "It lives in forests and fields.\n"
+    "Squabbles over territory are a\n"
+    "daily occurrence.");
+
+const u8 gStaraviaPokedexTextUnused[] = _("");
+
+const u8 gStaraptorPokedexText[] = _(
+    "It has a savage nature. It will\n"
+    "courageously challenge foes much\n"
+    "larger than itself.");
+
+const u8 gStaraptorPokedexTextUnused[] = _("");
+
 const u8 gOmatoPokedexText[] = _(
     "It is a POKéMON that was\n"
     "regenerated from a fossil.");

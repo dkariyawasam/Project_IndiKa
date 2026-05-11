@@ -416,4 +416,7 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_LOPUNNY] = sLopunnyLevelUpLearnset,
     [SPECIES_OMATO] = sOmatoLevelUpLearnset,
     [SPECIES_OMATOPS] = sOmatopsLevelUpLearnset,
+    [SPECIES_STARLY] = sStarlyLevelUpLearnset,
+    [SPECIES_STARAVIA] = sStaraviaLevelUpLearnset,
+    [SPECIES_STARAPTOR] = sStaraptorLevelUpLearnset,
 };
