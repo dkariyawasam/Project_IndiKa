@@ -416,5 +416,8 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_LOPUNNY] = gMonFootprint_Lopunny,
     [SPECIES_OMATO] = gMonFootprint_Omato,
     [SPECIES_OMATOPS] = gMonFootprint_Omatops,
+    [SPECIES_STARLY] = gMonFootprint_Pidgey,
+    [SPECIES_STARAVIA] = gMonFootprint_Pidgeotto,
+    [SPECIES_STARAPTOR] = gMonFootprint_Pidgeot,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

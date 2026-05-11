@@ -584,6 +584,12 @@ static const u16 sDexCategory_RoughTerrainPkmn_Page11[] = {
     SPECIES_GROUDON,
 };
 
+static const u16 sDexCategory_RoughTerrainPkmn_Page12[] = {
+    SPECIES_STARLY,
+    SPECIES_STARAVIA,
+    SPECIES_STARAPTOR,
+};
+
 static const u16 sDexCategory_UrbanPkmn_Page1[] = {
     SPECIES_MEOWTH,
     SPECIES_PERSIAN,
@@ -840,6 +846,7 @@ static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {
     DEX_CATEGORY(RoughTerrainPkmn_Page9),
     DEX_CATEGORY(RoughTerrainPkmn_Page10),
     DEX_CATEGORY(RoughTerrainPkmn_Page11),
+    DEX_CATEGORY(RoughTerrainPkmn_Page12),
 };
 
 static const struct PokedexCategoryPage sDexCategory_UrbanPkmn[] = {
