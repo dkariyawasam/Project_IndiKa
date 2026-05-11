@@ -31,6 +31,7 @@
 #include "constants/field_weather.h"
 
 #define tItemCount data[1]
+#define tPremierBallBonusCount data[2]
 #define tItemId data[5]
 #define tListTaskId data[7]
 
@@ -130,6 +131,8 @@ static void CreateBuyMenuConfirmPurchaseWindow(u8 taskId);
 static void BuyMenuTryMakePurchase(u8 taskId);
 static void BuyMenuSubtractMoney(u8 taskId);
 static void Task_ReturnToItemListAfterItemPurchase(u8 taskId);
+static u16 GetPremierBallBonusCount(u16 itemId, u16 itemCount);
+static bool8 CheckBagHasSpaceForPremierBallBonus(u16 itemId, u16 itemCount);
 static void BuyMenuReturnToItemList(u8 taskId);
 static void ExitBuyMenu(u8 taskId);
 static void Task_ExitBuyMenu(u8 taskId);
@@ -980,8 +983,19 @@ static void BuyMenuTryMakePurchase(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     PutWindowTilemap(4);
+    tPremierBallBonusCount = GetPremierBallBonusCount(tItemId, tItemCount);
+
+    if (tPremierBallBonusCount != 0 && !CheckBagHasSpaceForPremierBallBonus(tItemId, tItemCount))
+    {
+        BuyMenuDisplayMessage(taskId, gText_NoMoreRoomForThis, BuyMenuReturnToItemList);
+        return;
+    }
+
     if (AddBagItem(tItemId, tItemCount) == TRUE)
     {
+        if (tPremierBallBonusCount != 0)
+            AddBagItem(ITEM_PREMIER_BALL, tPremierBallBonusCount);
+
         BuyMenuDisplayMessage(taskId, gText_HereYouGoThankYou, BuyMenuSubtractMoney);
         DebugFunc_PrintPurchaseDetails(taskId);
         RecordItemTransaction(tItemId, tItemCount, QL_EVENT_BOUGHT_ITEM - QL_EVENT_USED_POKEMART);
@@ -994,11 +1008,70 @@ static void BuyMenuTryMakePurchase(u8 taskId)
 
 static void BuyMenuSubtractMoney(u8 taskId)
 {
+    s16 *data = gTasks[taskId].data;
+
     IncrementGameStat(GAME_STAT_SHOPPED);
     RemoveMoney(&gSaveBlock1Ptr->money, sShopData.itemPrice);
     PlaySE(SE_SHOP);
     PrintMoneyAmountInMoneyBox(0, GetMoney(&gSaveBlock1Ptr->money), 0);
-    gTasks[taskId].func = Task_ReturnToItemListAfterItemPurchase;
+
+    if (tPremierBallBonusCount != 0)
+        BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, Task_ReturnToItemListAfterItemPurchase);
+    else
+        gTasks[taskId].func = Task_ReturnToItemListAfterItemPurchase;
+}
+
+static u16 GetPremierBallBonusCount(u16 itemId, u16 itemCount)
+{
+    if (itemId == ITEM_PREMIER_BALL || ItemId_GetPocket(itemId) != POCKET_POKE_BALLS)
+        return 0;
+
+    return itemCount / 10;
+}
+
+static bool8 CheckBagHasSpaceForPremierBallBonus(u16 itemId, u16 itemCount)
+{
+    u8 i;
+    u8 emptySlots = 0;
+    u16 premierBallBonusCount = GetPremierBallBonusCount(itemId, itemCount);
+    bool8 hasPurchasedBallSlot = FALSE;
+    bool8 hasPremierBallSlot = FALSE;
+    struct BagPocket *pocket = &gBagPockets[POCKET_POKE_BALLS - 1];
+
+    for (i = 0; i < pocket->capacity; i++)
+    {
+        u16 slotItemId = pocket->itemSlots[i].itemId;
+        u16 quantity = GetBagItemQuantity(&pocket->itemSlots[i].quantity);
+
+        if (slotItemId == ITEM_NONE)
+        {
+            emptySlots++;
+        }
+        else if (slotItemId == itemId)
+        {
+            if (quantity + itemCount > 999)
+                return FALSE;
+            hasPurchasedBallSlot = TRUE;
+        }
+        else if (slotItemId == ITEM_PREMIER_BALL)
+        {
+            if (quantity + premierBallBonusCount > 999)
+                return FALSE;
+            hasPremierBallSlot = TRUE;
+        }
+    }
+
+    if (!hasPurchasedBallSlot)
+    {
+        if (emptySlots == 0)
+            return FALSE;
+        emptySlots--;
+    }
+
+    if (!hasPremierBallSlot && emptySlots == 0)
+        return FALSE;
+
+    return TRUE;
 }
 
 static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
