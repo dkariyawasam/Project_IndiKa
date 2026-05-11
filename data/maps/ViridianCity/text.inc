@@ -24,23 +24,11 @@ ViridianCity_Text_ExplainCaterpieWeedle::
     .string "Watch that your POKéMON aren't\n"
     .string "stabbed by WEEDLE's POISON STING.$"
 
-ViridianCity_Text_GrandpaHasntHadCoffeeYet::
-    .string "Oh, Grandpa!\n"
-    .string "Don't be so mean!\p"
-    .string "I'm so sorry.\n"
-    .string "He hasn't had his coffee yet.$"
-
 ViridianCity_Text_GoShoppingInPewterOccasionally::
     .string "I go shopping in PEWTER CITY\n"
     .string "occasionally.\p"
     .string "I have to take the winding trail in\n"
     .string "VIRIDIAN FOREST when I go.$"
-
-ViridianCity_Text_MyGrandsonOnTheShow::
-    .string "Wahaha!\n"
-    .string "It's my grandson on the show!\p"
-    .string "Since he's the one doing the\n"
-    .string "teaching, you're bound to learn.$"
 
 ViridianCity_Text_CitySign::
     .string "VIRIDIAN CITY \n"

@@ -4,23 +4,8 @@ ViridianCity_MapScripts::
 
 ViridianCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_CITY
-	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad
-	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_SetOldManStandingByRoad
-	call_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_SetOldManNormal
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 0, ViridianCity_EventScript_TryUnlockGym
 	end
-
-ViridianCity_EventScript_SetOldManNormal::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
-	return
-
-ViridianCity_EventScript_SetOldManStandingByRoad::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
-	return
-
-ViridianCity_EventScript_SetOldManBlockingRoad::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN
-	return
 
 ViridianCity_EventScript_TryUnlockGym::
 	goto_if_unset FLAG_BADGE02_GET, EventScript_Return
@@ -65,7 +50,6 @@ ViridianCity_EventScript_Boy::
 	msgbox ViridianCity_Text_CanCarryMonsAnywhere, MSGBOX_NPC
 	end
 
-@ Other old man, not the tutorial old man
 ViridianCity_EventScript_OldMan::
 	lock
 	faceplayer
@@ -104,16 +88,7 @@ ViridianCity_EventScript_YoungsterDeclineExplanation::
 ViridianCity_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_WomanRoadBlocked
 	msgbox ViridianCity_Text_GoShoppingInPewterOccasionally
-	release
-	end
-
-ViridianCity_EventScript_WomanRoadBlocked::
-	msgbox ViridianCity_Text_GrandpaHasntHadCoffeeYet
-	closemessage
-	applymovement LOCALID_VIRIDIAN_WOMAN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
 	release
 	end
 
