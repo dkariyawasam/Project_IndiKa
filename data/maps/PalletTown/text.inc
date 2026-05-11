@@ -10,11 +10,6 @@ PalletTown_Text_OakGrassUnsafeNeedMon::
     .string "I know!\n"
     .string "Here, come with me!$"
 
-PalletTown_Text_RaisingMonsToo::
-    .string "I'm raising POKéMON, too.\p"
-    .string "When they get strong, they can\n"
-    .string "protect me.$"
-
 PalletTown_Text_CanStoreItemsAndMonsInPC::
     .string "Technology is incredible!\p"
     .string "You can now store and recall items\n"
@@ -70,4 +65,3 @@ PalletTown_Text_DebugSign_ShowDay::
 
 PalletTown_Text_DebugSign_ShowNight::
     .string "It's nighttime!$"
-

@@ -25,11 +25,6 @@ LavenderTown_Text_TownSign::
     .string "LAVENDER TOWN\n"
     .string "The Noble Purple Town$"
 
-LavenderTown_Text_SilphScopeNotice::
-    .string "New SILPH SCOPE!\n"
-    .string "Make the Invisible Plain to See!\p"
-    .string "SILPH CO.$"
-
 LavenderTown_Text_VolunteerPokemonHouse::
     .string "LAVENDER VOLUNTEER\n"
     .string "POKéMON HOUSE$"
@@ -37,4 +32,3 @@ LavenderTown_Text_VolunteerPokemonHouse::
 LavenderTown_Text_PokemonTowerSign::
     .string "POKéMON TOWER\n"
     .string "Becalm the Spirits of POKéMON$"
-

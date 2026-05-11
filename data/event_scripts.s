@@ -1335,7 +1335,6 @@ Text_TestMsg::
 
 	.include "data/scripts/fame_checker.inc"
 	.include "data/text/fame_checker.inc"
-	.include "data/text/sign_lady.inc"
 	.include "data/text/trainer_card.inc"
 	.include "data/scripts/trainer_card.inc"
 	.include "data/text/help_system.inc"

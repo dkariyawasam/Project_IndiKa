@@ -14,26 +14,6 @@ ViridianForest_EventScript_Boy::
 	msgbox ViridianForest_Text_RanOutOfPokeBalls, MSGBOX_NPC
 	end
 
-ViridianForest_EventScript_TrainerTips1::
-	msgbox ViridianForest_Text_AvoidGrassyAreasWhenWeak, MSGBOX_SIGN
-	end
-
-ViridianForest_EventScript_TrainerTips2::
-	msgbox ViridianForest_Text_UseAntidoteForPoison, MSGBOX_SIGN
-	end
-
-ViridianForest_EventScript_TrainerTips3::
-	msgbox ViridianForest_Text_ContactOakViaPCToRatePokedex, MSGBOX_SIGN
-	end
-
-ViridianForest_EventScript_TrainerTips4::
-	msgbox ViridianForest_Text_CantCatchOwnedMons, MSGBOX_SIGN
-	end
-
-ViridianForest_EventScript_TrainerTips5::
-	msgbox ViridianForest_Text_WeakenMonsBeforeCapture, MSGBOX_SIGN
-	end
-
 ViridianForest_EventScript_ExitSign::
 	msgbox ViridianForest_Text_LeavingViridianForest, MSGBOX_SIGN
 	end

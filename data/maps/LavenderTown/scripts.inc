@@ -34,10 +34,6 @@ LavenderTown_EventScript_TownSign::
 	msgbox LavenderTown_Text_TownSign, MSGBOX_SIGN
 	end
 
-LavenderTown_EventScript_SilphScopeNotice::
-	msgbox LavenderTown_Text_SilphScopeNotice, MSGBOX_SIGN
-	end
-
 LavenderTown_EventScript_VolunteerHouseSign::
 	msgbox LavenderTown_Text_VolunteerPokemonHouse, MSGBOX_SIGN
 	end

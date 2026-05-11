@@ -67,10 +67,6 @@ CeladonCity_EventScript_SilphCoScientist::
 	msgbox CeladonCity_Text_SomeoneStoleSilphScope, MSGBOX_NPC
 	end
 
-CeladonCity_EventScript_TrainerTips1::
-	msgbox CeladonCity_Text_ExplainXAccuracyDireHit, MSGBOX_SIGN
-	end
-
 CeladonCity_EventScript_CitySign::
 	msgbox CeladonCity_Text_CitySign, MSGBOX_SIGN
 	end
@@ -88,10 +84,6 @@ CeladonCity_EventScript_MansionSign::
 
 CeladonCity_EventScript_DeptStoreSign::
 	msgbox CeladonCity_Text_DeptStoreSign, MSGBOX_SIGN
-	end
-
-CeladonCity_EventScript_TrainerTips2::
-	msgbox CeladonCity_Text_GuardSpecProtectsFromStatus, MSGBOX_SIGN
 	end
 
 CeladonCity_EventScript_PrizeExchangeSign::

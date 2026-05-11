@@ -1165,13 +1165,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
-	call_if_set FLAG_OPENED_START_MENU, PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene
 	release
 	end
-
-PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene::
-	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
-	return
 
 PalletTown_ProfessorOaksLab_Movement_RivalWalksToCharmander::
 	walk_down
@@ -1274,20 +1269,4 @@ PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 
 PalletTown_ProfessorOaksLab_EventScript_Computer::
 	msgbox PalletTown_ProfessorOaksLab_Text_EmailMessage, MSGBOX_SIGN
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_LeftSign::
-	msgbox PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu, MSGBOX_SIGN
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_RightSign::
-	lockall
-	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, PalletTown_ProfessorOaksLab_EventScript_RightSignAlt
-	msgbox PalletTown_ProfessorOaksLab_Text_SaveOptionInMenu
-	releaseall
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_RightSignAlt::
-	msgbox PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints
-	releaseall
 	end

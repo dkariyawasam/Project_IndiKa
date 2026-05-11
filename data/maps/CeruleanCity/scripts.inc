@@ -342,10 +342,6 @@ CeruleanCity_EventScript_CitySign::
 	msgbox CeruleanCity_Text_CitySign, MSGBOX_SIGN
 	end
 
-CeruleanCity_EventScript_TrainerTips::
-	msgbox CeruleanCity_Text_TrainerTipsHeldItems, MSGBOX_SIGN
-	end
-
 CeruleanCity_EventScript_BikeShopSign::
 	msgbox CeruleanCity_Text_BikeShopSign, MSGBOX_SIGN
 	end
