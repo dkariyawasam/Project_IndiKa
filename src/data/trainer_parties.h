@@ -4066,19 +4066,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderGiovanni[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt5[] = {
-    {
-        .iv = 0,
-        .lvl = 17,
-        .species = SPECIES_MACHOP,
-    },
-    {
-        .iv = 0,
-        .lvl = 17,
-        .species = SPECIES_DROWZEE,
-    },
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt6[] = {
     {
         .iv = 0,

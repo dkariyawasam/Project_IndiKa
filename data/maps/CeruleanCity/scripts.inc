@@ -161,63 +161,6 @@ CeruleanCity_Movement_RivalExit::
 	walk_down
 	step_end
 
-CeruleanCity_EventScript_Grunt::
-	lock
-	faceplayer
-	goto_if_defeated TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_EventScript_GruntDefeated
-	message CeruleanCity_Text_GruntIntro
-	waitmessage
-	playbgm MUS_ENCOUNTER_ROCKET, 0
-	waitbuttonpress
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntDefeat
-	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
-	goto CeruleanCity_EventScript_GruntDefeated
-	end
-
-CeruleanCity_EventScript_GruntDefeated::
-	msgbox CeruleanCity_Text_BetterGetMovingBye
-	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_CERULEAN_GRUNT
-	fadescreen FADE_FROM_BLACK
-	setflag FLAG_GOT_TM28_FROM_ROCKET
-	release
-	end
-
-CeruleanCity_EventScript_NoRoomForTM28::
-	msgbox CeruleanCity_Text_BetterGetMovingBye
-	release
-	end
-
-CeruleanCity_EventScript_GruntTriggerTop::
-	lockall
-	setvar VAR_TEMP_1, 0
-	applymovement LOCALID_CERULEAN_GRUNT, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	goto CeruleanCity_EventScript_GruntTrigger
-	end
-
-CeruleanCity_EventScript_GruntTriggerBottom::
-	lockall
-	setvar VAR_TEMP_1, 1
-	applymovement LOCALID_CERULEAN_GRUNT, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	goto CeruleanCity_EventScript_GruntTrigger
-	end
-
-CeruleanCity_EventScript_GruntTrigger::
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox CeruleanCity_Text_GruntIntro
-	setvar VAR_LAST_TALKED, LOCALID_CERULEAN_GRUNT
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntDefeat
-	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
-	goto CeruleanCity_EventScript_GruntDefeated
-	end
-
 CeruleanCity_EventScript_Policeman::
 	lock
 	faceplayer

@@ -174,7 +174,7 @@
 #define VAR_0x407A                                                             0x407A
 #define VAR_MAP_SCENE_THREE_ISLAND                                             0x407B
 #define VAR_MAP_SCENE_POKEMON_CENTER_TEALA                                     0x407C
-#define VAR_MAP_SCENE_CERULEAN_CITY_ROCKET                                     0x407D
+#define VAR_UNUSED_0x407D                                                      0x407D
 #define VAR_MAP_SCENE_VERMILION_CITY                                           0x407E
 #define VAR_MAP_SCENE_MT_EMBER_EXTERIOR                                        0x407F
 #define VAR_MAP_SCENE_ICEFALL_CAVE_BACK                                        0x4080

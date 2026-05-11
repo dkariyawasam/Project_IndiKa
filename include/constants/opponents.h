@@ -358,7 +358,7 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_2              352
 #define TRAINER_TEAM_ROCKET_GRUNT_3              353
 #define TRAINER_TEAM_ROCKET_GRUNT_4              354
-#define TRAINER_TEAM_ROCKET_GRUNT_5              355
+#define TRAINER_UNUSED_355                       355
 #define TRAINER_TEAM_ROCKET_GRUNT_6              356
 #define TRAINER_TEAM_ROCKET_GRUNT_7              357
 #define TRAINER_TEAM_ROCKET_GRUNT_8              358

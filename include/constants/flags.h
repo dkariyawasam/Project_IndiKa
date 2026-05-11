@@ -72,7 +72,7 @@
 #define FLAG_HIDE_HIDEOUT_GIOVANNI                         0x038
 #define FLAG_HIDE_TOWN_MAP                                 0x039
 #define FLAG_HIDE_POKEDEX                                  0x03A
-#define FLAG_HIDE_CERULEAN_ROCKET                          0x03B
+#define FLAG_0x03B                                        0x03B
 #define FLAG_HIDE_CERULEAN_RIVAL                           0x03C
 #define FLAG_HIDE_SS_ANNE_RIVAL                            0x03D
 #define FLAG_HIDE_SAFFRON_ROCKETS                          0x03E
@@ -597,7 +597,7 @@
 #define FLAG_RESCUED_MR_FUJI                             0x23C
 #define FLAG_GOT_POKE_FLUTE                              0x23D
 #define FLAG_0x23E                                       0x23E
-#define FLAG_GOT_TM28_FROM_ROCKET                        0x23F
+#define FLAG_0x23F                                      0x23F
 #define FLAG_0x240                                       0x240
 #define FLAG_GOT_BIKE_VOUCHER                            0x241
 #define FLAG_0x242                                       0x242
