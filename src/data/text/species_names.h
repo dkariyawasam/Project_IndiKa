@@ -417,4 +417,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_LOPUNNY] = _("LOPUNNY"),
     [SPECIES_OMATO] = _("OMATO"),
     [SPECIES_OMATOPS] = _("OMATOPS"),
+    [SPECIES_STARLY] = _("STARLY"),
+    [SPECIES_STARAVIA] = _("STARAVIA"),
+    [SPECIES_STARAPTOR] = _("STARAPTOR"),
 };
