@@ -9,8 +9,7 @@ CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis::
     .string "Yay!\p"
     .string "FRESH WATER!\p"
-    .string "Thank you!\n"
-    .string "You can have this from me!$"
+    .string "Thank you!$"
 
 Text_ReceivedItemFromLittleGirl::
     .string "{PLAYER} received a {STR_VAR_2}\n"
@@ -24,8 +23,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
     .string "Yay!\p"
     .string "SODA POP!\p"
-    .string "Thank you!\n"
-    .string "You can have this from me!$"
+    .string "Thank you!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
     .string "TM20 contains SAFEGUARD.\p"
@@ -35,8 +33,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
     .string "Yay!\p"
     .string "LEMONADE!\p"
-    .string "Thank you!\n"
-    .string "You can have this from me!$"
+    .string "Thank you!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
     .string "TM33 contains REFLECT.\p"
@@ -79,4 +76,3 @@ CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff::
 
 CeladonCity_DepartmentStore_Roof_Text_NotThirsty::
     .string "Not thirsty!$"
-

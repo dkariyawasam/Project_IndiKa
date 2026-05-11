@@ -45,10 +45,9 @@ OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa::
     .string "I made it years ago.\p"
     .string "I hewed the pool right out of a\n"
     .string "gigantic boulder by hand.\p"
-    .string "I was using this at the time.\n"
-    .string "I suppose I can part with it.$"
+    .string "A good soak will put the strength\n"
+    .string "back in your bones.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_ExplainTM56::
     .string "That shatters boulders as if they\n"
     .string "were made of crackers.$"
-
