@@ -1,6 +1,3 @@
-CinnabarIsland_Text_DoorIsLocked::
-    .string "The door is locked…$"
-
 CinnabarIsland_Text_PokemonLabAccessDenied::
     .string "Access denied.\p"
     .string "A BOULDER KEY is required to enter\n"

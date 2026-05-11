@@ -5,7 +5,6 @@ CinnabarIsland_MapScripts::
 
 CinnabarIsland_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CINNABAR_ISLAND
-	call CinnabarIsland_EventScript_CheckUnlockGym
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND, 1, CinnabarIsland_EventScript_ReadyObjectsSailToOneIsland
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND, 3, CinnabarIsland_EventScript_ReadyObjectsReturnFromSeviiIslands
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND_2, 1, CinnabarIsland_EventScript_ReadyObjectsSailToOneIslandFromPokeCenter
@@ -35,14 +34,6 @@ CinnabarIsland_EventScript_MoveSeagallopDown::
 CinnabarIsland_EventScript_ReadyObjectsReturnFromSeviiIslands::
 	setobjectxyperm LOCALID_CINNABAR_BILL, 21, 8
 	setobjectmovementtype LOCALID_CINNABAR_BILL, MOVEMENT_TYPE_FACE_UP
-	return
-
-CinnabarIsland_EventScript_CheckUnlockGym::
-	goto_if_set FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY, CinnabarIsland_EventScript_UnlockGym
-	return
-
-CinnabarIsland_EventScript_UnlockGym::
-	setvar VAR_TEMP_1, 1
 	return
 
 CinnabarIsland_OnFrame::
@@ -325,19 +316,6 @@ CinnabarIsland_EventScript_PokemonLabAccessGranted::
 	closemessage
 	warp MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE, 1
 	waitstate
-	releaseall
-	end
-
-@ Triggered when VAR_TEMP_1 is 0
-CinnabarIsland_EventScript_GymDoorLocked::
-	lockall
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	delay 20
-	msgbox CinnabarIsland_Text_DoorIsLocked
-	closemessage
-	applymovement LOCALID_PLAYER, CinnabarIsland_Movement_ForcePlayerFromDoor
-	waitmovement 0
 	releaseall
 	end
 
