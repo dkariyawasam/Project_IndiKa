@@ -17,6 +17,15 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
     .string "That includes even outsiders you\n"
     .string "got in trades.$"
 
+CeruleanCity_Gym_Text_TakeThisWithYou::
+    .string "You can have the CASCADEBADGE.\p"
+    .string "And with it, take this board.\n"
+    .string "It will carry you across water.$"
+
+CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty::
+    .string "{PLAYER} received the CASCADE BOARD\n"
+    .string "from MISTY.$"
+
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
     .string "{PLAYER} received TM03\n"
     .string "from MISTY.$"

@@ -14,6 +14,13 @@ CeruleanCity_Gym_EventScript_MistyDefeated::
 	setflag FLAG_BADGE02_GET
 	setrespawn HEAL_LOCATION_CERULEAN_CITY
 	set_gym_trainers 2
+	goto CeruleanCity_Gym_EventScript_GiveCascadeBoard
+	end
+
+CeruleanCity_Gym_EventScript_GiveCascadeBoard::
+	msgbox CeruleanCity_Gym_Text_TakeThisWithYou
+	giveitem_msg CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty, ITEM_CASCADE_BOARD, 1, MUS_OBTAIN_KEY_ITEM
+	setflag FLAG_GOT_TM03_FROM_MISTY
 	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
 	release
 	end
