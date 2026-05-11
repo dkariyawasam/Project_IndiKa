@@ -99,14 +99,6 @@ SaffronCity_EventScript_GymSign::
 	releaseall
 	end
 
-SaffronCity_EventScript_TrainerTips1::
-	msgbox SaffronCity_Text_FullHealCuresStatus, MSGBOX_SIGN
-	end
-
-SaffronCity_EventScript_TrainerTips2::
-	msgbox SaffronCity_Text_GreatBallImprovedCatchRate, MSGBOX_SIGN
-	end
-
 SaffronCity_EventScript_SilphCoSign::
 	msgbox SaffronCity_Text_SilphCoSign, MSGBOX_SIGN
 	end
