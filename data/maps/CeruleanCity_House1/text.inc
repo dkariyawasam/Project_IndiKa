@@ -18,8 +18,8 @@ CeruleanCity_House1_Text_AttackStatFlash::
     .string "you defeated PEWTER GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv30Cut::
-    .string "POKéMON up to Lv. 30 will obey\n"
-    .string "you.\p"
+    .string "With two BADGES, POKéMON up\n"
+    .string "to Lv. 30 will obey you.\p"
     .string "That includes even outsiders you\n"
     .string "obtain in trades.\p"
     .string "POKéMON of higher levels will\n"
@@ -30,8 +30,8 @@ CeruleanCity_House1_Text_SpeedStatFly::
     .string "you defeated VERMILION GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
-    .string "POKéMON up to Lv. 50 will obey\n"
-    .string "you.\p"
+    .string "With four BADGES, POKéMON up\n"
+    .string "to Lv. 50 will obey you.\p"
     .string "That includes even outsiders you\n"
     .string "obtain in trades.\p"
     .string "POKéMON of higher levels will\n"
@@ -44,8 +44,8 @@ CeruleanCity_House1_Text_DefenseStatSurf::
     .string "you defeated FUCHSIA GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv70RockSmash::
-    .string "POKéMON up to Lv. 70 will obey\n"
-    .string "you.\p"
+    .string "With six BADGES, POKéMON up\n"
+    .string "to Lv. 70 will obey you.\p"
     .string "That includes even outsiders you\n"
     .string "obtain in trades.\p"
     .string "POKéMON of higher levels will\n"
@@ -58,4 +58,5 @@ CeruleanCity_House1_Text_SpStatsWaterfall::
     .string "you defeated CINNABAR GYM's LEADER.$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
-    .string "All POKéMON will obey you!$"
+    .string "With all eight BADGES, all\n"
+    .string "POKéMON will obey you!$"
