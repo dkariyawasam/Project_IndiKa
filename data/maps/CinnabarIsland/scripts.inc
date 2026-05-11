@@ -307,6 +307,27 @@ CinnabarIsland_Movement_PlayerBoardBoatFromShore::
 	set_invisible
 	step_end
 
+CinnabarIsland_EventScript_PokemonLabDoor::
+	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	checkitem ITEM_BOULDER_KEY
+	goto_if_eq VAR_RESULT, TRUE, CinnabarIsland_EventScript_PokemonLabAccessGranted
+	msgbox CinnabarIsland_Text_PokemonLabAccessDenied
+	closemessage
+	applymovement LOCALID_PLAYER, CinnabarIsland_Movement_ForcePlayerFromDoor
+	waitmovement 0
+	releaseall
+	end
+
+CinnabarIsland_EventScript_PokemonLabAccessGranted::
+	msgbox CinnabarIsland_Text_PokemonLabAccessGranted
+	closemessage
+	warp MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE, 1
+	waitstate
+	releaseall
+	end
+
 @ Triggered when VAR_TEMP_1 is 0
 CinnabarIsland_EventScript_GymDoorLocked::
 	lockall
