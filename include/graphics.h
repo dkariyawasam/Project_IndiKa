@@ -3271,8 +3271,6 @@ extern const u32 gItemIcon_HasteFossil[];
 extern const u32 gItemIconPalette_KantoFossil[];
 extern const u32 gItemIcon_DomeFossil[];
 extern const u32 gItemIcon_DartFossil[];
-extern const u32 gItemIcon_SilphScope[];
-extern const u32 gItemIconPalette_SilphScope[];
 extern const u32 gItemIcon_Bicycle[];
 extern const u32 gItemIconPalette_Bicycle[];
 extern const u32 gItemIcon_TownMap[];

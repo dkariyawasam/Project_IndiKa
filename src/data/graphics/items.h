@@ -662,9 +662,6 @@ const u32 gItemIconPalette_KantoFossil[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_DomeFossil[] = INCBIN_U32("graphics/items/icons/dome_fossil.4bpp.lz");
 const u32 gItemIcon_DartFossil[] = INCBIN_U32("graphics/items/icons/dart_fossil.4bpp.lz");
 
-const u32 gItemIcon_SilphScope[] = INCBIN_U32("graphics/items/icons/silph_scope.4bpp.lz");
-const u32 gItemIconPalette_SilphScope[] = INCBIN_U32("graphics/items/icon_palettes/silph_scope.gbapal.lz");
-
 const u32 gItemIcon_Bicycle[] = INCBIN_U32("graphics/items/icons/bicycle.4bpp.lz");
 const u32 gItemIconPalette_Bicycle[] = INCBIN_U32("graphics/items/icon_palettes/bicycle.gbapal.lz");
 
