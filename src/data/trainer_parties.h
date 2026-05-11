@@ -4066,63 +4066,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderGiovanni[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt[] = {
-    {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_RATTATA,
-    },
-    {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_ZUBAT,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt2[] = {
-    {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_SANDSHREW,
-    },
-    {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_RATTATA,
-    },
-    {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_ZUBAT,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt3[] = {
-    {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_ZUBAT,
-    },
-    {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_EKANS,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt4[] = {
-    {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_RATTATA,
-    },
-    {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_SANDSHREW,
-    },
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt5[] = {
     {
         .iv = 0,
