@@ -69,6 +69,15 @@
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_TRAINER_TOWER_MODE                         64
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_2                     65
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_3                     66
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_4                     67
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_5                     68
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_6                     69
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_7                     70
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_8                     71
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_9                     72
+#define MULTICHOICE_GAME_CORNER_TMPRIZES_10                    73
 
 #define MULTICHOICE_NONE                                      255
 

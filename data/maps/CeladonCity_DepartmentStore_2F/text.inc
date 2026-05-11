@@ -11,6 +11,9 @@ CeladonCity_DepartmentStore_2F_Text_FloorSign::
     .string "Top-Grade Items for TRAINERS!\p"
     .string "2F: TRAINER'S MARKET$"
 
+CeladonCity_DepartmentStore_2F_Text_TMCounterClosed::
+    .string "The TM counter is closed.$"
+
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
     .string "We have a customer, LANCE, who\n"
     .string "occasionally comes.\p"

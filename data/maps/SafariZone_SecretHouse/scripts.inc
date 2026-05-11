@@ -6,9 +6,6 @@ SafariZone_SecretHouse_EventScript_Attendant::
 	faceplayer
 	goto_if_set FLAG_GOT_TM53, SafariZone_SecretHouse_EventScript_ExplainSurf
 	msgbox SafariZone_SecretHouse_Text_CongratsYouveWon
-	checkitemspace ITEM_TM53
-	goto_if_eq VAR_RESULT, FALSE, SafariZone_SecretHouse_EventScript_NoRoomForTM53
-	giveitem_msg SafariZone_SecretHouse_Text_ReceivedTM53FromAttendant, ITEM_TM53
 	msgbox SafariZone_SecretHouse_Text_ExplainSurf
 	setflag FLAG_GOT_TM53
 	release

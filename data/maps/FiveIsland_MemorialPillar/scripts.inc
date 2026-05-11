@@ -23,10 +23,7 @@ FiveIsland_MemorialPillar_EventScript_AlreadyGotTM42::
 	end
 
 FiveIsland_MemorialPillar_EventScript_ReturnedForTM42::
-	msgbox FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks
-	giveitem ITEM_TM42
-	goto_if_eq VAR_RESULT, FALSE, FiveIsland_MemorialPillar_EventScript_NoRoomForTM42
-	call FiveIsland_MemorialPillar_EventScript_ReceivedTM42
+	msgbox FiveIsland_MemorialPillar_Text_ScrubScrubTectonix
 	release
 	end
 
@@ -58,9 +55,7 @@ FiveIsland_MemorialPillar_EventScript_PlaceLemonade::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis
-	giveitem ITEM_TM42
-	goto_if_eq VAR_RESULT, FALSE, FiveIsland_MemorialPillar_EventScript_NoRoomForTM42
+	msgbox FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo
 	call FiveIsland_MemorialPillar_EventScript_ReceivedTM42
 	releaseall
 	end
