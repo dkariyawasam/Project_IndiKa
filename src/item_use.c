@@ -929,7 +929,9 @@ void ItemUse_SetQuestLogEvent(u8 eventId, struct Pokemon *pokemon, u16 itemId, u
 
 static void ItemUseOnFieldCB_CascadeBoard(u8 taskId)
 {
-    SetUpFieldMove_CascadeBoard();
+    gFieldEffectArguments[0] = PARTY_SIZE;
+    FieldEffectStart(FLDEFF_USE_SURF);
+    DestroyTask(taskId);
 }
 
 void ItemUseOutOfBattle_CascadeBoard(u8 taskId)
