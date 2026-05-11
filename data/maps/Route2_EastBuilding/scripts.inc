@@ -16,11 +16,7 @@ Route2_EastBuilding_EventScript_Aide::
 	call Route2_EastBuilding_EventScript_GetAideRequestInfo
 	goto_if_lt VAR_0x8006, REQUIRED_SEEN_MONS, Aide_EventScript_HaventCaughtEnough
 	msgbox Route2_EastBuilding_Text_GreatHereYouGo
-	checkitemspace ITEM_TM55
-	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
-	giveitem_msg Route2_EastBuilding_Text_ReceivedTM55FromAide, ITEM_TM55
 	setflag FLAG_GOT_TM55
-	msgbox Route2_EastBuilding_Text_ExplainTM55
 	release
 	end
 
@@ -31,7 +27,6 @@ Route2_EastBuilding_EventScript_AlreadyGotTM55::
 
 Route2_EastBuilding_EventScript_GetAideRequestInfo::
 	buffernumberstring STR_VAR_1, REQUIRED_SEEN_MONS
-	bufferitemname STR_VAR_2, ITEM_TM55
 	return
 
 Route2_EastBuilding_EventScript_Rocker::
