@@ -1,6 +1,15 @@
 CinnabarIsland_Text_DoorIsLocked::
     .string "The door is locked…$"
 
+CinnabarIsland_Text_PokemonLabAccessDenied::
+    .string "Access denied.\p"
+    .string "A BOULDER KEY is required to enter\n"
+    .string "the POKéMON LAB.$"
+
+CinnabarIsland_Text_PokemonLabAccessGranted::
+    .string "Access granted using the\n"
+    .string "BOULDER KEY.$"
+
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
     .string "CINNABAR GYM's BLAINE is quite the\n"
     .string "odd fellow.\p"
@@ -72,4 +81,3 @@ CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "always take a ferry there from\l"
     .string "VERMILION PORT.\p"
     .string "All right, thanks for your company!$"
-
