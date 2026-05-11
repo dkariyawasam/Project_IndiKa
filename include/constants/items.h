@@ -406,7 +406,7 @@
 
 // FireRed/LeafGreen
 #define ITEM_POKE_FLUTE 336
-#define ITEM_SECRET_KEY 337
+#define ITEM_151 337
 #define ITEM_BIKE_VOUCHER 338
 #define ITEM_GOLD_TEETH 339
 #define ITEM_OLD_AMBER 340

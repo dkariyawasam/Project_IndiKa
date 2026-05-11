@@ -360,7 +360,6 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_15C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // FireRed/LeafGreen key items
     [ITEM_POKE_FLUTE]     = {gItemIcon_PokeFlute, gItemIconPalette_PokeFlute},
-    [ITEM_SECRET_KEY]     = {gItemIcon_SecretKey, gItemIconPalette_SecretKey},
     [ITEM_BIKE_VOUCHER]   = {gItemIcon_BikeVoucher, gItemIconPalette_BikeVoucher},
     [ITEM_GOLD_TEETH]     = {gItemIcon_GoldTeeth, gItemIconPalette_GoldTeeth},
     [ITEM_OLD_AMBER]      = {gItemIcon_OldAmber, gItemIconPalette_OldAmber},
