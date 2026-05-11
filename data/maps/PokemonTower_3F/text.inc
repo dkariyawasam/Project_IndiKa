@@ -7,8 +7,8 @@ PokemonTower_3F_Text_HopeDefeat::
     .string "I'm saved!$"
 
 PokemonTower_3F_Text_HopePostBattle::
-    .string "The ghosts can be identified by\n"
-    .string "the SILPH SCOPE.$"
+    .string "The ghosts can be identified\n"
+    .string "clearly now.$"
 
 PokemonTower_3F_Text_CarlyIntro::
     .string "Kekeke…\n"
@@ -33,4 +33,3 @@ PokemonTower_3F_Text_PatriciaDefeat::
 PokemonTower_3F_Text_PatriciaPostBattle::
     .string "The others above…\n"
     .string "They must have been possessed.$"
-

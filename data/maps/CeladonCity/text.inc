@@ -89,7 +89,7 @@ Text_SoftboiledTaught::
 
 CeladonCity_Text_SomeoneStoleSilphScope::
     .string "Oh, what am I to do…\p"
-    .string "Someone stole our SILPH SCOPE.\p"
+    .string "Someone broke into our building.\p"
     .string "The thief came running this way,\n"
     .string "I'm sure of it.\p"
     .string "But I lost sight of him!\n"

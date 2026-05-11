@@ -1262,7 +1262,7 @@ static void AnimGrudgeFlame(struct Sprite *sprite)
     }
 }
 
-// Used by the ghost Marowak when it hasn't been revealed by the Silph Scope.
+// Used by the ghost Marowak before its identity is revealed.
 // Animates a shimmering copy of the attacker (the ghost) accompanied by the 'Scary Face' graphics
 void AnimTask_GhostGetOut(u8 taskId)
 {
