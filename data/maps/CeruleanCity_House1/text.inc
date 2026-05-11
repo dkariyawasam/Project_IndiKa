@@ -14,10 +14,8 @@ CeruleanCity_House1_Text_ComeVisitAnytime::
     .string "Come visit me anytime you wish.$"
 
 CeruleanCity_House1_Text_AttackStatFlash::
-    .string "The ATTACK stat of all your\n"
-    .string "POKéMON increases a little bit.\p"
-    .string "It also lets you use the move\n"
-    .string "FLASH outside of battle.$"
+    .string "The BOULDERBADGE is proof that\n"
+    .string "you defeated PEWTER GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv30Cut::
     .string "POKéMON up to Lv. 30 will obey\n"
@@ -28,10 +26,8 @@ CeruleanCity_House1_Text_ObeyLv30Cut::
     .string "be unruly in battle, however.$"
 
 CeruleanCity_House1_Text_SpeedStatFly::
-    .string "The SPEED stat of all your\n"
-    .string "POKéMON increases a little bit.\p"
-    .string "It also lets you use the move\n"
-    .string "FLY outside of battle.$"
+    .string "The THUNDERBADGE is proof that\n"
+    .string "you defeated VERMILION GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
     .string "POKéMON up to Lv. 50 will obey\n"
@@ -44,10 +40,8 @@ CeruleanCity_House1_Text_ObeyLv50Strength::
     .string "STRENGTH outside of battle.$"
 
 CeruleanCity_House1_Text_DefenseStatSurf::
-    .string "The DEFENSE stat of all your\n"
-    .string "POKéMON increases a little bit.\p"
-    .string "It also lets you use the move\n"
-    .string "SURF outside of battle.$"
+    .string "The SOULBADGE is proof that\n"
+    .string "you defeated FUCHSIA GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv70RockSmash::
     .string "POKéMON up to Lv. 70 will obey\n"
@@ -60,10 +54,8 @@ CeruleanCity_House1_Text_ObeyLv70RockSmash::
     .string "ROCK SMASH outside of battle.$"
 
 CeruleanCity_House1_Text_SpStatsWaterfall::
-    .string "The SP. ATK and SP. DEF stats of\n"
-    .string "all your POKéMON rise a little bit.\p"
-    .string "It also lets you use the move\n"
-    .string "WATERFALL outside of battle.$"
+    .string "The VOLCANOBADGE is proof that\n"
+    .string "you defeated CINNABAR GYM's LEADER.$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
     .string "All POKéMON will obey you!$"
