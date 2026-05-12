@@ -39,6 +39,16 @@ RocketLeague_Lobby_Text_TooBadComeBackTryAgain::
 RocketLeague_Lobby_Text_GiveItYourBest::
     .string "I hope you give it your best.$"
 
+RocketLeague_Lobby_Text_ExplainEntry::
+    .string "ROCKET LEAGUE uses a single\n"
+    .string "battle format.\p"
+    .string "You will face TEAM ROCKET\n"
+    .string "members and win COINS.\p"
+    .string "Win four consecutive matches,\n"
+    .string "and you'll face the champion\l"
+    .string "of the league, GIOVANNI.\p"
+    .string "Would you like to enter?$"
+
 RocketLeague_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
     .string "When the TRAINERS switch places,\n"
     .string "the movement can be hectic.\p"
@@ -117,4 +127,3 @@ RocketLeague_Lobby_Text_StairsTougherThanAnyBattle::
     .string "Gasp…\p"
     .string "Never mind battling! These stairs…\n"
     .string "They're tougher than any battle…$"
-

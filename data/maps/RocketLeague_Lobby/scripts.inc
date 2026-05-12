@@ -103,41 +103,44 @@ RocketLeague_Lobby_EventScript_Nurse::
 RocketLeague_Lobby_EventScript_Receptionist::
 	lock
 	faceplayer
-	ttower_getbeatchallenge
-	goto_if_eq VAR_RESULT, TRUE, RocketLeague_Lobby_EventScript_ThanksForCompeting
-	msgbox RocketLeague_Lobby_Text_GiveItYourBest
-	goto RocketLeague_Lobby_EventScript_ReceptionistEnd
-
-RocketLeague_Lobby_EventScript_ThanksForCompeting::
-	msgbox RocketLeague_Lobby_Text_ThanksForCompeting
-RocketLeague_Lobby_EventScript_ReceptionistEnd::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Lobby_Text_ExplainEntry, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RocketLeague_Lobby_EventScript_EnterArena
 	release
+	end
+
+RocketLeague_Lobby_EventScript_EnterArena::
+	closemessage
+	warp MAP_ROCKET_LEAGUE_ARENA, 6, 11
+	waitstate
+	release
+	end
+
+RocketLeague_Lobby_EventScript_EntryPrompt::
+	lockall
+	applymovement LOCALID_TOWER_RECEPTIONIST, RocketLeague_Lobby_Movement_ReceptionistFacePlayer
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_FaceReceptionist
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Lobby_Text_ExplainEntry, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RocketLeague_Lobby_EventScript_EnterArenaFromPrompt
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_WalkDown
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Lobby_EventScript_EnterArenaFromPrompt::
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_WalkToArenaDoor
+	waitmovement 0
+	warp MAP_ROCKET_LEAGUE_ARENA, 6, 11
+	waitstate
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_MartClerk::
-	goto_if_questlog EventScript_ReleaseEnd
-	lock
-	faceplayer
-	message Text_MayIHelpYou
-	waitmessage
-	pokemart RocketLeague_Lobby_Mart_Items
-	msgbox Text_PleaseComeAgain
-	release
-	end
-
-	.align 2
-RocketLeague_Lobby_Mart_Items::
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_FULL_RESTORE
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_REVIVE
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_NONE
-	release
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs
 	end
 
 RocketLeague_Lobby_EventScript_EntryTrigger::
@@ -200,8 +203,21 @@ RocketLeague_Lobby_Movement_FaceReceptionist::
 	face_right
 	step_end
 
+RocketLeague_Lobby_Movement_ReceptionistFacePlayer::
+	face_left
+	step_end
+
 RocketLeague_Lobby_Movement_WalkDown::
 	walk_down
+	step_end
+
+RocketLeague_Lobby_Movement_WalkToArenaDoor::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 RocketLeague_Lobby_EventScript_ShowRecords::
