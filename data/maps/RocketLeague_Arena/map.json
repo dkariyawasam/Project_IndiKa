@@ -30,15 +30,53 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
+  "warp_events": [],
+  "coord_events": [
     {
+      "type": "trigger",
+      "x": 5,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReadyPrompt"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReadyPrompt"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReadyPrompt"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReadyPrompt"
+    },
+    {
+      "type": "trigger",
       "x": 6,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_ROCKET_LEAGUE_LOBBY",
-      "dest_warp_id": "0"
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReturnToLobby"
     }
   ],
-  "coord_events": [],
   "bg_events": []
 }
