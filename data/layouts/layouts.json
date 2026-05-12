@@ -2006,16 +2006,16 @@
       "blockdata_filepath": "data/layouts/PokemonLeague_BrunosRoom/map.bin"
     },
     {
-      "id": "LAYOUT_POKEMON_LEAGUE_AGATHAS_ROOM",
-      "name": "PokemonLeague_AgathasRoom_Layout",
+      "id": "LAYOUT_ROCKET_LEAGUE_ARENA",
+      "name": "RocketLeague_Arena_Layout",
       "width": 13,
       "height": 13,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_AgathasRoom/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_AgathasRoom/map.bin"
+      "border_filepath": "data/layouts/RocketLeague_Arena/border.bin",
+      "blockdata_filepath": "data/layouts/RocketLeague_Arena/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_LEAGUE_LANCES_ROOM",
@@ -2993,7 +2993,7 @@
       "id": "LAYOUT_ROCKET_LEAGUE_LOBBY",
       "name": "RocketLeague_Lobby_Layout",
       "width": 19,
-      "height": 21,
+      "height": 18,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
