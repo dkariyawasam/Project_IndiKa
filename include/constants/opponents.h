@@ -760,12 +760,16 @@
 #define TRAINER_LEADER_MISTY_5                   752
 #define TRAINER_LEADER_MISTY_6                   753
 #define TRAINER_LEADER_MISTY_7                   754
+#define TRAINER_ROCKET_ADMIN_PETREL              755
+#define TRAINER_ROCKET_ADMIN_ARCHER              756
+#define TRAINER_ROCKET_ADMIN_ARIANA              757
+#define TRAINER_ROCKET_ADMIN_PROTON              758
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             755
+#define NUM_TRAINERS                             759
 #define MAX_TRAINERS_COUNT                       774
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

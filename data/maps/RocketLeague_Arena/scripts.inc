@@ -1,0 +1,145 @@
+RocketLeague_Arena_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, RocketLeague_Arena_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, RocketLeague_Arena_OnResume
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, RocketLeague_Arena_OnWarp
+	.byte 0
+
+RocketLeague_Arena_OnTransition::
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	end
+
+RocketLeague_Arena_OnResume::
+	setvar VAR_0x8004, 2
+	call PokemonLeague_EventScript_DoLightingEffect
+	end
+
+RocketLeague_Arena_OnWarp::
+	map_script_2 VAR_TEMP_1, 0, RocketLeague_Arena_EventScript_TurnPlayerNorth
+	.2byte 0
+
+RocketLeague_Arena_EventScript_TurnPlayerNorth::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
+
+RocketLeague_Arena_EventScript_Official::
+	lock
+	faceplayer
+	msgbox RocketLeague_Arena_Text_Official
+	release
+	end
+
+RocketLeague_Arena_EventScript_Admin::
+	end
+
+RocketLeague_Arena_EventScript_ReturnToLobby::
+	warp MAP_ROCKET_LEAGUE_LOBBY, 9, 2
+	waitstate
+	end
+
+RocketLeague_Arena_EventScript_ReadyPrompt::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_AreYouReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RocketLeague_Arena_EventScript_StartRocketBattle
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Arena_EventScript_StartRocketBattle::
+	closemessage
+	random 4
+	goto_if_eq VAR_RESULT, 0, RocketLeague_Arena_EventScript_BattlePetrel
+	goto_if_eq VAR_RESULT, 1, RocketLeague_Arena_EventScript_BattleArcher
+	goto_if_eq VAR_RESULT, 2, RocketLeague_Arena_EventScript_BattleAriana
+	goto RocketLeague_Arena_EventScript_BattleProton
+
+RocketLeague_Arena_EventScript_BattlePetrel::
+	call RocketLeague_Arena_EventScript_AdminMEnter
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_PetrelIntro
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	cleartrainerflag TRAINER_ROCKET_ADMIN_PETREL
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_RocketDefeat
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleArcher::
+	call RocketLeague_Arena_EventScript_AdminMEnter
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ArcherIntro
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	cleartrainerflag TRAINER_ROCKET_ADMIN_ARCHER
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_RocketDefeat
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleAriana::
+	call RocketLeague_Arena_EventScript_AdminFEnter
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ArianaIntro
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	cleartrainerflag TRAINER_ROCKET_ADMIN_ARIANA
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_RocketDefeat
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleProton::
+	call RocketLeague_Arena_EventScript_AdminMEnter
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ProtonIntro
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	cleartrainerflag TRAINER_ROCKET_ADMIN_PROTON
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_RocketDefeat
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_AdminMEnter::
+	setobjectxyperm LOCALID_ROCKET_LEAGUE_ADMIN_M, 6, 1
+	addobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_M, RocketLeague_Arena_Movement_AdminEnter
+	waitmovement 0
+	return
+
+RocketLeague_Arena_EventScript_AdminFEnter::
+	setobjectxyperm LOCALID_ROCKET_LEAGUE_ADMIN_F, 6, 1
+	addobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminEnter
+	waitmovement 0
+	return
+
+RocketLeague_Arena_EventScript_GiveCoinReward::
+	checkcoins VAR_TEMP_1
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 250, RocketLeague_Arena_EventScript_CoinRewardFull
+	addcoins 250
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ReceivedCoins
+	playse SE_SHOP
+	waitse
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Arena_EventScript_CoinRewardFull::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_CoinCaseFull
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Arena_Movement_StepBackFromArena::
+	walk_down
+	step_end
+
+RocketLeague_Arena_Movement_AdminEnter::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end

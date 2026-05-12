@@ -29,7 +29,7 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	return
 
 EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom::
-	specialvar VAR_RESULT, IsPlayerNotInTrainerTowerLobby
+	specialvar VAR_RESULT, IsPlayerNotInRocketLeagueLobby
 	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_ReturnPkmn
 	specialvar VAR_RESULT, BufferUnionRoomPlayerName
 	copyvar VAR_0x8008, VAR_RESULT

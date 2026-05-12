@@ -88,7 +88,7 @@ TrainerTower_EventScript_EndEnterFloor:
 
 @ Never reached
 TrainerTower_EventScript_WarpToLobby::
-	warp MAP_TRAINER_TOWER_LOBBY, 9, 7
+	warp MAP_ROCKET_LEAGUE_LOBBY, 9, 7
 	waitstate
 
 
@@ -211,7 +211,7 @@ TrainerTower_EventScript_SetFloorCleared:
 TrainerTower_EventScript_WarpToLobbyLost::
 	special HealPlayerParty
 	ttower_setlost
-	warp MAP_TRAINER_TOWER_LOBBY, 9, 7
+	warp MAP_ROCKET_LEAGUE_LOBBY, 9, 7
 	waitstate
 
 
@@ -354,7 +354,7 @@ TrainerTower_EventScript_TriggerDoubleBattle:
 TrainerTower_EventScript_IneligibleForDoubleBattle::
 	lockall
 	playse SE_DING_DONG
-	msgbox TrainerTower_Lobby_Text_NeedTwoMonsForDouble
+	msgbox RocketLeague_Lobby_Text_NeedTwoMonsForDouble
 	closemessage
 	applymovement LOCALID_PLAYER, TrainerTower_Movement_PushPlayerBack
 	waitmovement 0
