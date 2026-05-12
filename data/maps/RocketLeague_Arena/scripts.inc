@@ -42,8 +42,33 @@ RocketLeague_Arena_EventScript_ReadyPrompt::
 RocketLeague_Arena_EventScript_StartRocketBattle::
 	closemessage
 	playbgm MUS_ENCOUNTER_ROCKET, 0
-	cleartrainerflag TRAINER_TEAM_ROCKET_GRUNT_6
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_6, RocketLeague_Arena_Text_RocketDefeat
+	random 4
+	goto_if_eq VAR_RESULT, 0, RocketLeague_Arena_EventScript_BattlePetrel
+	goto_if_eq VAR_RESULT, 1, RocketLeague_Arena_EventScript_BattleArcher
+	goto_if_eq VAR_RESULT, 2, RocketLeague_Arena_EventScript_BattleAriana
+	goto RocketLeague_Arena_EventScript_BattleProton
+
+RocketLeague_Arena_EventScript_BattlePetrel::
+	cleartrainerflag TRAINER_ROCKET_ADMIN_PETREL
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_RocketDefeat
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleArcher::
+	cleartrainerflag TRAINER_ROCKET_ADMIN_ARCHER
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_RocketDefeat
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleAriana::
+	cleartrainerflag TRAINER_ROCKET_ADMIN_ARIANA
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_RocketDefeat
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleProton::
+	cleartrainerflag TRAINER_ROCKET_ADMIN_PROTON
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_RocketDefeat
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_GiveCoinReward::
 	checkcoins VAR_TEMP_1
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 250, RocketLeague_Arena_EventScript_CoinRewardFull
 	addcoins 250
