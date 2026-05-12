@@ -5320,14 +5320,19 @@ static void Cmd_hitanimation(void)
 static void Cmd_getmoneyreward(void)
 {
     u32 i = 0;
-    u32 moneyReward;
+    u32 moneyReward = 0;
     u8 lastMonLevel = 0;
 
     const struct TrainerMonItemCustomMoves *party4; //This needs to be out here
 
     if (gBattleOutcome == B_OUTCOME_WON)
     {
-        if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_ARENA)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA))
+        {
+            moneyReward = 0;
+        }
+        else if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
         {
             moneyReward = gBattleResources->secretBase->party.levels[0] * 20 * gBattleStruct->moneyMultiplier;
         }
