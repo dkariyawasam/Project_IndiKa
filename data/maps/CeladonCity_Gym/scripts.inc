@@ -25,6 +25,7 @@ CeladonCity_Gym_EventScript_HideErika::
 CeladonCity_Gym_EventScript_GymGuideInterceptErikaAway::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
 	applymovement LOCALID_CELADON_GYM_GUIDE, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_CELADON_GYM_GUIDE, Common_Movement_Delay48

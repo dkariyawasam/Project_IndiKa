@@ -9,6 +9,7 @@ PewterCity_Gym_OnFrame::
 PewterCity_Gym_EventScript_GymGuyInterceptBrockAway::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
 	applymovement LOCALID_PEWTER_GYM_GUY, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_PEWTER_GYM_GUY, Common_Movement_Delay48
