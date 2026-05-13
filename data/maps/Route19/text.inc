@@ -117,6 +117,15 @@ Route19_Text_RouteSign::
     .string "SEA ROUTE 19\n"
     .string "FUCHSIA CITY - SEAFOAM ISLANDS$"
 
+Route19_Text_SeagallopSailorGreeting::
+    .string "Ahoy! Heading for SEAFOAM\n"
+    .string "ISLAND?\p"
+    .string "Want to sail there now?$"
+
+Route19_Text_SeagallopSailorAllAboard::
+    .string "Alright, all aboard!\n"
+    .string "We set sail!$"
+
 Route19_Text_LiaIntro::
     .string "LIA: I'm looking after my brother.\n"
     .string "He just became a TRAINER.$"
