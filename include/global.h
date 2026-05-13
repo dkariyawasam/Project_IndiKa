@@ -701,20 +701,6 @@ struct MysteryGiftSave
     u32 trainerIds[2][5]; // Saved ids for 10 trainers, 5 each for battles and trades 
 }; // 0x36C 0x348C
 
-struct TrainerTower
-{
-    u32 timer;
-    u32 bestTime;
-    u8 floorsCleared;
-    u8 unk9;
-    bool8 receivedPrize:1;
-    bool8 checkedFinalTime:1;
-    bool8 spokeToOwner:1;
-    bool8 hasLost:1;
-    bool8 unkA_4:1;
-    bool8 validated:1;
-};
-
 struct TrainerNameRecord
 {
     u32 trainerId;
@@ -828,8 +814,7 @@ struct SaveBlock1
     /*0x3BA8*/ struct TrainerNameRecord trainerNameRecords[20];
     /*0x3C98*/ struct DaycareMon route5DayCareMon;
     /*0x3D24*/ u8 unused_3D24[16];
-    /*0x3D34*/ u32 towerChallengeId;
-    /*0x3D38*/ struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
+    /*0x3D34*/ u8 unused_3D34[52];
 }; // size: 0x3D68
 
 struct MapPosition

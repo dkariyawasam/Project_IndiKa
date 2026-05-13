@@ -13,7 +13,7 @@ SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
     .string "I don't know where they all go,\n"
     .string "though.$"
 
-SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower::
-    .string "If you're confident, you should\n"
-    .string "check out TRAINER TOWER.$"
-
+SevenIsland_PokemonCenter_1F_Text_SevaultCanyon::
+    .string "SEVAULT CANYON is ahead.\p"
+    .string "Take care if you're headed\n"
+    .string "that way.$"

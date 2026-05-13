@@ -922,13 +922,6 @@ SixIsland_RuinValley_Text_HectorRematchIntro::
 	.string "I'm pretty familiar with the land\n"
 	.string "around these parts.$"
 
-SevenIsland_TrainerTower_Text_DarioRematchIntro::
-	.string "I sensed your approach.$"
-
-SevenIsland_TrainerTower_Text_RodetteRematchIntro::
-	.string "Somewhere on this island, peculiar\n"
-	.string "POKéMON are sleeping.$"
-
 SevenIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro::
 	.string "Kyahaha!\p"
 	.string "Coming back won't change a thing.\n"

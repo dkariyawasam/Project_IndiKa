@@ -15,7 +15,7 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	waitmessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
 	special SetUsedPkmnCenterQuestLogEvent
-	goto EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom
+	goto EventScript_PkmnCenterNurse_CheckRocketLeagueAndUnionRoom
 	end
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
@@ -28,7 +28,7 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	special HealPlayerParty
 	return
 
-EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom::
+EventScript_PkmnCenterNurse_CheckRocketLeagueAndUnionRoom::
 	specialvar VAR_RESULT, IsPlayerNotInRocketLeagueLobby
 	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_ReturnPkmn
 	specialvar VAR_RESULT, BufferUnionRoomPlayerName

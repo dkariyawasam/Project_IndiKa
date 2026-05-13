@@ -905,26 +905,6 @@ void GetElevatorFloor(void)
             break;
         }
     }
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_TRAINER_TOWER_1F))
-    {
-        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
-        {
-        case MAP_NUM(MAP_TRAINER_TOWER_1F):
-        case MAP_NUM(MAP_TRAINER_TOWER_2F):
-        case MAP_NUM(MAP_TRAINER_TOWER_3F):
-        case MAP_NUM(MAP_TRAINER_TOWER_4F):
-        case MAP_NUM(MAP_TRAINER_TOWER_5F):
-        case MAP_NUM(MAP_TRAINER_TOWER_6F):
-        case MAP_NUM(MAP_TRAINER_TOWER_7F):
-        case MAP_NUM(MAP_TRAINER_TOWER_8F):
-        case MAP_NUM(MAP_TRAINER_TOWER_ROOF):
-            floor = 15;
-            break;
-        case MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY):
-            floor = 3;
-            break;
-        }
-    }
     VarSet(VAR_ELEVATOR_FLOOR, floor);
 }
 
@@ -1018,28 +998,6 @@ u16 InitElevatorFloorSelectMenuPos(void)
         case MAP_NUM(MAP_CELADON_CITY_DEPARTMENT_STORE_1F):
             sElevatorScroll = 0;
             sElevatorCursorPos = 4;
-            break;
-        }
-    }
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_TRAINER_TOWER_1F))
-    {
-        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
-        {
-        case MAP_NUM(MAP_TRAINER_TOWER_1F):
-        case MAP_NUM(MAP_TRAINER_TOWER_2F):
-        case MAP_NUM(MAP_TRAINER_TOWER_3F):
-        case MAP_NUM(MAP_TRAINER_TOWER_4F):
-        case MAP_NUM(MAP_TRAINER_TOWER_5F):
-        case MAP_NUM(MAP_TRAINER_TOWER_6F):
-        case MAP_NUM(MAP_TRAINER_TOWER_7F):
-        case MAP_NUM(MAP_TRAINER_TOWER_8F):
-        case MAP_NUM(MAP_TRAINER_TOWER_ROOF):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 0;
-            break;
-        case MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 1;
             break;
         }
     }
@@ -1235,16 +1193,6 @@ void ListMenu(void)
         task->data[6] = 0;
         task->data[15] = taskId;
         break;
-    case LISTMENU_TRAINER_TOWER_FLOORS: // Mulitchoice used instead
-        task->data[0] = 3;
-        task->data[1] = 3;
-        task->data[2] = 1;
-        task->data[3] = 1;
-        task->data[4] = 8;
-        task->data[5] = 6;
-        task->data[6] = 0;
-        task->data[15] = taskId;
-        break;
     case 99:
         break;
     default:
@@ -1320,12 +1268,6 @@ static const u8 *const sListMenuLabels[][12] = {
         gText_PpUp_3000,
         gOtherText_Exit,
     }, 
-    [LISTMENU_TRAINER_TOWER_FLOORS] = // Unnecessary, MULTICHOICE_ROOFTOP_B1F is used instead
-    {
-        gText_Rooftop,
-        gText_B1F,
-        gOtherText_Exit,
-    }
 };
 
 static void Task_CreateScriptListMenu(u8 taskId)
