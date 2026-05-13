@@ -66,6 +66,7 @@
 #define MULTICHOICE_SEAGALLOP_VERMILION                        61
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
+#define MULTICHOICE_ROUTE21_FERRY                              64
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_2                     65
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_3                     66
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_4                     67
