@@ -5,13 +5,9 @@ SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections::
     .string "They are for you to discover on\n"
     .string "your own.$"
 
-SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
-    .string "Did you ride a SEAGALLOP ferry\n"
-    .string "to get here?\p"
-    .string "There are at least ten of those\n"
-    .string "high-speed ships.\p"
-    .string "I don't know where they all go,\n"
-    .string "though.$"
+SevenIsland_PokemonCenter_1F_Text_DidYouRideFerryHere::
+    .string "Did you ride the ferry\n"
+    .string "to get here?$"
 
 SevenIsland_PokemonCenter_1F_Text_SevaultCanyon::
     .string "SEVAULT CANYON is ahead.\p"

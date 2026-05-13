@@ -985,8 +985,6 @@ Text_FoundTMHMContainsMove::
 	.string "{PLAYER} found a {STR_VAR_2}!\n"
 	.string "It contains {STR_VAR_1}.$"
 
-	.include "data/text/seagallop.inc"
-
 @ Call for legendary bird trio
 Text_Gyaoo::
 	.string "Gyaoo!$"
@@ -1011,7 +1009,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CREDITS_RIVAL
 	setflag FLAG_HIDE_CREDITS_OAK
 	setflag FLAG_HIDE_CINNABAR_BILL
-	setflag FLAG_HIDE_CINNABAR_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SAILOR
 	setflag FLAG_HIDE_ROUTE20_SEAGALLOP
