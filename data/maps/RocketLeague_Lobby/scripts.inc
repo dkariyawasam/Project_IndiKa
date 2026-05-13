@@ -6,6 +6,7 @@ RocketLeague_Lobby_MapScripts::
 RocketLeague_Lobby_OnReturnToField::
 	addobject LOCALID_ROCKET_LEAGUE_NURSE
 	addobject LOCALID_ROCKET_LEAGUE_MART_CLERK
+	addobject LOCALID_ROCKET_LEAGUE_MON_CLERK
 	addobject LOCALID_ROCKET_LEAGUE_RECEPTIONIST
 	addobject LOCALID_ROCKET_LEAGUE_ROCKET_F
 	addobject LOCALID_ROCKET_LEAGUE_ROCKET_M
@@ -78,6 +79,10 @@ RocketLeague_Lobby_EventScript_EnterArenaFromPrompt::
 
 RocketLeague_Lobby_EventScript_MartClerk::
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs
+	end
+
+RocketLeague_Lobby_EventScript_MonClerk::
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons
 	end
 
 RocketLeague_Lobby_Movement_FaceReceptionist::
