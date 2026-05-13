@@ -1205,8 +1205,8 @@ static const struct SpriteFrameImage sPicTable_Clipboard[] = {
     overworld_frame(gObjectEventPic_Clipboard, 2, 2, 0),
 };
 
-static const struct SpriteFrameImage sPicTable_BirthIslandStone[] = {
-    overworld_frame(gObjectEventPic_BirthIslandStone, 4, 4, 0),
+static const struct SpriteFrameImage sPicTable_Meteorite[] = {
+    overworld_frame(gObjectEventPic_LaprasDoll, 4, 4, 0),
 };
 
 static const struct SpriteFrameImage sPicTable_LaprasDoll[] = {

@@ -28,7 +28,7 @@ static void IncrementCardStatForNewTrainer(u32 eventId, u32 trainerId, u32 *idsL
 static void ClearSavedTrainerIds(void);
 
 static const u16 sReceivedGiftFlags[] = {
-    FLAG_RECEIVED_AURORA_TICKET,
+    FLAG_WONDER_CARD_UNUSED_0,
     FLAG_RECEIVED_MYSTIC_TICKET,
     FLAG_RECEIVED_OLD_SEA_MAP, // Not used until Emerald
     FLAG_WONDER_CARD_UNUSED_1,

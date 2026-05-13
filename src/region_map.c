@@ -575,7 +575,7 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_ALTERING_CAVE,
         MAPSEC_TANOBY_CHAMBERS,
         MAPSEC_TANOBY_KEY,
-        MAPSEC_BIRTH_ISLAND,
+        MAPSEC_NONE,
         MAPSEC_MONEAN_CHAMBER,
         MAPSEC_LIPTOO_CHAMBER,
         MAPSEC_WEEPTH_CHAMBER,
@@ -917,7 +917,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_TANOBY_CHAMBERS     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_THREE_ISLE_PATH     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_TANOBY_KEY          - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_BIRTH_ISLAND        - KANTO_MAPSEC_START] = {MAP(MAP_BIRTH_ISLAND_EXTERIOR),                 HEAL_LOCATION_NONE},
     [MAPSEC_MONEAN_CHAMBER      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_LIPTOO_CHAMBER      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_WEEPTH_CHAMBER      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
@@ -1512,8 +1511,6 @@ static void BufferRegionMapBg(u8 bg, u16 *map)
         whichMap = sRegionMap->selectedRegion;
     if (whichMap == REGIONMAP_SEVII45 && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
         FillBgTilemapBufferRect_Palette0(0, 0x003, 13, 11, 3, 2);
-    if (whichMap == REGIONMAP_SEVII67 && !FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
-        FillBgTilemapBufferRect_Palette0(0, 0x003, 21, 16, 3, 3);
 }
 
 static bool8 GetRegionMapPermission(u8 attr)
@@ -2921,7 +2918,7 @@ static u16 GetMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, sMapCursor->y, sMapCursor->x);
-    if ((mapsec == MAPSEC_NAVEL_ROCK || mapsec == MAPSEC_BIRTH_ISLAND) && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
+    if (mapsec == MAPSEC_NAVEL_ROCK && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
@@ -3060,8 +3057,6 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_TANOBY_KEY:
         return FlagGet(FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_BIRTH_ISLAND:
-        return FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -3216,10 +3211,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
             sMapCursor->x = 15;
             sMapCursor->y = 6; // optimized out but required to match
         }
-        break;
-    case MAPSEC_BIRTH_ISLAND:
-        sMapCursor->x = 18;
-        sMapCursor->y = 13;
         break;
     case MAPSEC_NAVEL_ROCK:
         sMapCursor->x = 10;

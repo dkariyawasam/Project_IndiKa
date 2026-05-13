@@ -165,8 +165,6 @@
 #define FLAG_HIDE_SELPHYS_BUTLER                           0x096
 #define FLAG_HIDE_FOUR_ISLAND_RIVAL                        0x097
 #define FLAG_HIDE_SIX_ISLAND_POKECENTER_RIVAL              0x098
-#define FLAG_HIDE_DEOXYS                                   0x099
-#define FLAG_HIDE_BIRTH_ISLAND_METEORITE                   0x09A
 #define FLAG_HIDE_LUGIA                                    0x09B
 #define FLAG_HIDE_HO_OH                                    0x09C
 #define FLAG_HIDE_POSTGAME_GOSSIPERS                       0x09D
@@ -700,7 +698,7 @@
 #define FLAG_0x2A4                                       0x2A4
 #define FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT                 0x2A5
 #define FLAG_GOT_TEA                                     0x2A6
-#define FLAG_RECEIVED_AURORA_TICKET                      0x2A7
+#define FLAG_WONDER_CARD_UNUSED_0                        0x2A7
 #define FLAG_RECEIVED_MYSTIC_TICKET                      0x2A8
 #define FLAG_RECEIVED_OLD_SEA_MAP                        0x2A9
 #define FLAG_WONDER_CARD_UNUSED_1                        0x2AA
@@ -720,7 +718,7 @@
 #define FLAG_WONDER_CARD_UNUSED_15                       0x2B8
 #define FLAG_WONDER_CARD_UNUSED_16                       0x2B9
 #define FLAG_WONDER_CARD_UNUSED_17                       0x2BA
-#define NUM_WONDER_CARD_FLAGS                            (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_RECEIVED_AURORA_TICKET)
+#define NUM_WONDER_CARD_FLAGS                            (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_WONDER_CARD_UNUSED_0)
 
 #define FLAG_GOT_POWDER_JAR                              0x2BB
 #define FLAG_FOUGHT_MEWTWO                               0x2BC
@@ -761,7 +759,6 @@
 #define FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK             0x2E1
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
 #define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3
-#define FLAG_FOUGHT_DEOXYS                               0x2E4
 #define FLAG_0x2E5                                       0x2E5
 #define FLAG_0x2E6                                       0x2E6
 #define FLAG_0x2E7                                       0x2E7
@@ -774,13 +771,12 @@
 #define FLAG_REVIVED_AMBER                               0x2EE
 #define FLAG_GOT_TM56                                    0x2EF
 #define FLAG_SHOWN_MYSTIC_TICKET                         0x2F0
-#define FLAG_SHOWN_AURORA_TICKET                         0x2F1
+#define FLAG_0x2F1                                       0x2F1
 #define FLAG_FOUGHT_LUGIA                                0x2F2
 #define FLAG_FOUGHT_HO_OH                                0x2F3
 #define FLAG_OAK_SAW_DEX_COMPLETION                      0x2F4
 #define FLAG_LUGIA_FLEW_AWAY                             0x2F5
 #define FLAG_HO_OH_FLEW_AWAY                             0x2F6
-#define FLAG_DEOXYS_FLEW_AWAY                            0x2F7
 #define FLAG_TALKED_TO_TEA_LADY_AFTER_HOF                0x2F8
 #define FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION            0x2F9
 #define FLAG_GOT_EVERSTONE_FROM_OAKS_AIDE                0x2FA
@@ -1400,10 +1396,8 @@
 #define FLAG_SYS_SEVII_MAP_123                                      (SYS_FLAGS + 0x45)
 #define FLAG_SYS_SEVII_MAP_4567                                     (SYS_FLAGS + 0x46)
 #define FLAG_SYS_GOT_BERRY_POUCH                                    (SYS_FLAGS + 0x47)
-#define FLAG_SYS_DEOXYS_AWAKENED                                    (SYS_FLAGS + 0x48)
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              (SYS_FLAGS + 0x49)
 #define FLAG_ENABLE_SHIP_NAVEL_ROCK                                 (SYS_FLAGS + 0x4A)
-#define FLAG_ENABLE_SHIP_BIRTH_ISLAND                               (SYS_FLAGS + 0x4B)
 
 // World Map Flags
 #define FLAG_WORLD_MAP_PALLET_TOWN                                  (SYS_FLAGS + 0x90)
@@ -1456,7 +1450,6 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER     (SYS_FLAGS + 0xBF)
 #define FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL                (SYS_FLAGS + 0xC0)
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       (SYS_FLAGS + 0xC1)
-#define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        (SYS_FLAGS + 0xC2)
 
 #define FLAG_0x8C3                                                  (SYS_FLAGS + 0xC3)
 #define FLAG_0x8C4                                                  (SYS_FLAGS + 0xC4)
