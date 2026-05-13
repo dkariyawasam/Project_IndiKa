@@ -113,6 +113,10 @@ Route20_Text_MelissaPostBattle::
 Route20_Text_SeafoamIslands::
     .string "SEAFOAM ISLANDS$"
 
+Route20_Text_SeagallopSailorArrived::
+    .string "Here we are!\n"
+    .string "SEAFOAM ISLAND is close by.$"
+
 Route20_Text_MistyTrainsHere::
     .string "Strong TRAINERS and WATER POKéMON\n"
     .string "are common sights in these parts.\p"

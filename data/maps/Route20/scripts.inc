@@ -30,3 +30,11 @@ Route20_EventScript_ResetSeafoamBouldersForB4F::
 Route20_EventScript_SeafoamIslandsSign::
 	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN
 	end
+
+Route20_EventScript_SeagallopSailor::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox Route20_Text_SeagallopSailorArrived, MSGBOX_NPC
+	release
+	end
