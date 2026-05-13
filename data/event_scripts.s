@@ -985,8 +985,6 @@ Text_FoundTMHMContainsMove::
 	.string "{PLAYER} found a {STR_VAR_2}!\n"
 	.string "It contains {STR_VAR_1}.$"
 
-	.include "data/text/seagallop.inc"
-
 @ Call for legendary bird trio
 Text_Gyaoo::
 	.string "Gyaoo!$"
