@@ -1,5 +1,52 @@
 CeladonCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CeladonCity_Gym_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_Gym_OnTransition
 	.byte 0
+
+CeladonCity_Gym_OnFrame::
+	map_script_2 VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_GymGuideInterceptErikaAway
+	.2byte 0
+
+CeladonCity_Gym_OnTransition::
+	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_SetInitialGuideState
+	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	goto_if_lt VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_HideErika
+	clearflag FLAG_HIDE_CELADON_CITY_GYM_ERIKA
+	end
+
+CeladonCity_Gym_EventScript_SetInitialGuideState::
+	clearflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	goto CeladonCity_Gym_EventScript_HideErika
+
+CeladonCity_Gym_EventScript_HideErika::
+	setflag FLAG_HIDE_CELADON_CITY_GYM_ERIKA
+	end
+
+CeladonCity_Gym_EventScript_GymGuideInterceptErikaAway::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	applymovement LOCALID_CELADON_GYM_GUIDE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_CELADON_GYM_GUIDE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_CELADON_GYM_GUIDE, CeladonCity_Gym_Movement_GymGuideApproachEntrance
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox CeladonCity_Gym_Text_GymGuideErikaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	setvar VAR_ERIKA_TRIAL_STATE, 1
+	closemessage
+	applymovement LOCALID_PLAYER, CeladonCity_Gym_Movement_PlayerStepAsideForGuide
+	waitmovement 0
+	applymovement LOCALID_CELADON_GYM_GUIDE, CeladonCity_Gym_Movement_GymGuideLeave
+	waitmovement 0
+	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	removeobject LOCALID_CELADON_GYM_GUIDE
+	releaseall
+	end
 
 CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -14,7 +61,25 @@ CeladonCity_Gym_EventScript_DefeatedErika::
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
+	setvar VAR_ERIKA_TRIAL_STATE, 4
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
+	release
+	end
+
+CeladonCity_Gym_EventScript_GymGuide::
+	lock
+	faceplayer
+	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime
+	msgbox CeladonCity_Gym_Text_GymGuideErikaStillAway
+	release
+	end
+
+CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime::
+	msgbox CeladonCity_Gym_Text_GymGuideErikaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	setvar VAR_ERIKA_TRIAL_STATE, 1
 	release
 	end
 
@@ -66,3 +131,18 @@ CeladonCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox CeladonCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+CeladonCity_Gym_Movement_GymGuideApproachEntrance::
+	walk_left
+	walk_down
+	step_end
+
+CeladonCity_Gym_Movement_PlayerStepAsideForGuide::
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+CeladonCity_Gym_Movement_GymGuideLeave::
+	walk_down
+	walk_down
+	step_end
