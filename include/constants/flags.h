@@ -193,8 +193,8 @@
 #define FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE         0x0B2
 #define FLAG_HIDE_CELADON_CITY_GYM_ERIKA              0x0B3
 #define FLAG_HIDE_CELADON_CITY_GYM_GUIDE              0x0B4
-#define FLAG_0x0B5               0x0B5
-#define FLAG_0x0B6               0x0B6
+#define FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA               0x0B5
+#define FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE              0x0B6
 #define FLAG_0x0B7               0x0B7
 #define FLAG_0x0B8               0x0B8
 #define FLAG_0x0B9               0x0B9
