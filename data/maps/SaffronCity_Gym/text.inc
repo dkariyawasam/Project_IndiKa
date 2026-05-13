@@ -138,6 +138,20 @@ SaffronCity_Gym_Text_GymGuyAdvice::
     .string "They'll get destroyed before they\n"
     .string "can even aim a punch!$"
 
+SaffronCity_Gym_Text_GymGuideSabrinaAway::
+    .string "SABRINA left for POKéMON TOWER\n"
+    .string "after feeling a psychic pull\l"
+    .string "toward it.\p"
+    .string "She said it was likely the\n"
+    .string "gathering of a massive amount\l"
+    .string "of astral energy.\p"
+    .string "I'd better head there myself.$"
+
+SaffronCity_Gym_Text_GymGuideSabrinaStillAway::
+    .string "SABRINA is at POKéMON TOWER,\n"
+    .string "drawn there by astral energy.\p"
+    .string "I'd better hurry after her.$"
+
 SaffronCity_Gym_Text_GymGuyPostVictory::
     .string "Psychic power, huh?\p"
     .string "If I had that, I'd make a bundle\n"

@@ -191,7 +191,7 @@
 #define VAR_LT_SURGE_TRIAL_STATE   0x408E
 #define VAR_ERIKA_TRIAL_STATE      0x408F
 #define VAR_KOGA_TRIAL_STATE       0x4090
-#define VAR_0x4091                 0x4091
+#define VAR_SABRINA_TRIAL_STATE    0x4091
 #define VAR_0x4092                 0x4092
 #define VAR_0x4093                 0x4093
 #define VAR_0x4094                 0x4094

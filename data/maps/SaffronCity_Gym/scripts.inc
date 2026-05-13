@@ -1,5 +1,53 @@
 SaffronCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SaffronCity_Gym_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Gym_OnTransition
 	.byte 0
+
+SaffronCity_Gym_OnFrame::
+	map_script_2 VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_GymGuideInterceptSabrinaAway
+	.2byte 0
+
+SaffronCity_Gym_OnTransition::
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_SetInitialGuideState
+	setflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
+	goto_if_lt VAR_SABRINA_TRIAL_STATE, 3, SaffronCity_Gym_EventScript_HideSabrina
+	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
+	end
+
+SaffronCity_Gym_EventScript_SetInitialGuideState::
+	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
+	goto SaffronCity_Gym_EventScript_HideSabrina
+
+SaffronCity_Gym_EventScript_HideSabrina::
+	setflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
+	end
+
+SaffronCity_Gym_EventScript_GymGuideInterceptSabrinaAway::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
+	applymovement LOCALID_SAFFRON_GYM_GUY, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_SAFFRON_GYM_GUY, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_SAFFRON_GYM_GUY, SaffronCity_Gym_Movement_GymGuyApproachEntrance
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox SaffronCity_Gym_Text_GymGuideSabrinaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	setvar VAR_SABRINA_TRIAL_STATE, 1
+	closemessage
+	applymovement LOCALID_PLAYER, SaffronCity_Gym_Movement_PlayerStepAsideForGuide
+	waitmovement 0
+	applymovement LOCALID_SAFFRON_GYM_GUY, SaffronCity_Gym_Movement_GymGuyLeave
+	waitmovement 0
+	setflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
+	removeobject LOCALID_SAFFRON_GYM_GUY
+	releaseall
+	end
 
 SaffronCity_Gym_EventScript_Sabrina::
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -14,6 +62,7 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
+	setvar VAR_SABRINA_TRIAL_STATE, 4
 	msgbox SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis
 	release
 	end
@@ -57,8 +106,18 @@ SaffronCity_Gym_EventScript_Tasha::
 SaffronCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime
 	goto_if_set FLAG_DEFEATED_SABRINA, SaffronCity_Gym_EventScript_GymGuyPostVictory
-	msgbox SaffronCity_Gym_Text_GymGuyAdvice
+	msgbox SaffronCity_Gym_Text_GymGuideSabrinaStillAway
+	release
+	end
+
+SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime::
+	msgbox SaffronCity_Gym_Text_GymGuideSabrinaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	setvar VAR_SABRINA_TRIAL_STATE, 1
 	release
 	end
 
@@ -78,3 +137,18 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox SaffronCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+SaffronCity_Gym_Movement_GymGuyApproachEntrance::
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+SaffronCity_Gym_Movement_PlayerStepAsideForGuide::
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+SaffronCity_Gym_Movement_GymGuyLeave::
+	walk_down
+	step_end

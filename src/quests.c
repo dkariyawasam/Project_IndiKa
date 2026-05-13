@@ -2473,6 +2473,21 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 					case 5:
 						return gText_KogaTrialPhase5;
 				}
+			case SUB_QUEST_SABRINA:
+				switch (VarGet(VAR_SABRINA_TRIAL_STATE))
+				{
+					case 1:
+					default:
+						return gText_SabrinaTrialPhase1;
+					case 2:
+						return gText_SabrinaTrialPhase2;
+					case 3:
+						return gText_SabrinaTrialPhase3;
+					case 4:
+						return gText_SabrinaTrialPhase4;
+					case 5:
+						return gText_SabrinaTrialPhase5;
+				}
         }
     }
 
