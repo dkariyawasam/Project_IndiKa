@@ -68,6 +68,10 @@ CinnabarIsland_Text_MyPalsBoatArrived::
     .string "He sent it specially here to\n"
     .string "CINNABAR to pick me up.$"
 
+CinnabarIsland_Text_FerryNoLongerRuns::
+    .string "Looks like the ferry isn't\n"
+    .string "running anymore.$"
+
 CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "Hey, wasn't that a long cruise?\p"
     .string "My buddy CELIO seemed to enjoy\n"
