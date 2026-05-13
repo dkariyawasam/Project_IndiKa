@@ -88,6 +88,8 @@ CeruleanCity_Gym_EventScript_MistyDefeated::
 	famechecker FAMECHECKER_MISTY, 1
 	setflag FLAG_DEFEATED_MISTY
 	setflag FLAG_BADGE02_GET
+	setvar VAR_MISTY_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
 	setrespawn HEAL_LOCATION_CERULEAN_CITY
 	goto CeruleanCity_Gym_EventScript_GiveCascadeBoard
 	end
