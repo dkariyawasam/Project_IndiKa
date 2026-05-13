@@ -37,6 +37,7 @@ VermilionCity_Gym_EventScript_HideLtSurge::
 VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
 	applymovement LOCALID_VERMILION_GYM_GUY, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_VERMILION_GYM_GUY, Common_Movement_Delay48
