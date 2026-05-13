@@ -566,10 +566,18 @@ static const struct MenuAction sMultichoiceList_SeagallopVermilion[] = {
 
 static const u8 sText_SeafoamIsland[] = _("SEAFOAM ISLAND");
 static const u8 sText_PalletTown[] = _("PALLET TOWN");
+static const u8 sText_CinnabarIsland[] = _("CINNABAR ISLAND");
+static const u8 sText_FuchsiaCity[] = _("FUCHSIA CITY");
 
 static const struct MenuAction sMultichoiceList_Route21Ferry[] = {
-    { sText_SeafoamIsland },
     { sText_PalletTown },
+    { sText_SeafoamIsland },
+    { gOtherText_Exit }
+};
+
+static const struct MenuAction sMultichoiceList_Route20Ferry[] = {
+    { sText_CinnabarIsland },
+    { sText_FuchsiaCity },
     { gOtherText_Exit }
 };
 
@@ -662,6 +670,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_ROUTE21_FERRY]                              = MULTICHOICE(sMultichoiceList_Route21Ferry),
+    [MULTICHOICE_ROUTE20_FERRY]                              = MULTICHOICE(sMultichoiceList_Route20Ferry),
 };
 
 // From Cool to Berries goes unused
