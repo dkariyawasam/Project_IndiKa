@@ -151,15 +151,6 @@ FourIsland_Mart_EventScript_OldMan::
 	release
 	end
 
-FiveIsland_PokemonCenter_1F_EventScript_PokemonJournal::
-	lock
-	faceplayer
-	famechecker FAMECHECKER_LORELEI, 3
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureLorelei
-	release
-	end
-
 SaffronCity_PokemonTrainerFanClub_EventScript_PokemonJournalBruno::
 	lock
 	faceplayer
@@ -183,15 +174,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
 	famechecker FAMECHECKER_AGATHA, 1
 	famechecker FAMECHECKER_AGATHA, 2
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs
-	release
-	end
-
-SevenIsland_PokemonCenter_1F_EventScript_PokemonJournal::
-	lock
-	faceplayer
-	famechecker FAMECHECKER_AGATHA, 3
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureAgatha
 	release
 	end
 
