@@ -50,6 +50,33 @@ CeladonCity_Gym_EventScript_GymGuideInterceptErikaAway::
 	end
 
 CeladonCity_Gym_EventScript_Erika::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	goto_if_eq VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_ErikaReward
+	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_ErikaPostReward
+	msgbox CeladonCity_Gym_Text_ErikaWaitingForChallenge
+	release
+	end
+
+CeladonCity_Gym_EventScript_ErikaReward::
+	famechecker FAMECHECKER_ERIKA, 1
+	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	setflag FLAG_DEFEATED_ERIKA
+	setflag FLAG_BADGE04_GET
+	setvar VAR_ERIKA_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	msgbox CeladonCity_Gym_Text_ErikaReward
+	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
+	release
+	end
+
+CeladonCity_Gym_EventScript_ErikaPostReward::
+	msgbox CeladonCity_Gym_Text_ErikaPostBattle
+	release
+	end
+
+CeladonCity_Gym_EventScript_ErikaBattleFallback::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_double TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaIntro, CeladonCity_Gym_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, CeladonCity_Gym_EventScript_DefeatedErika, NO_MUSIC
 	famechecker FAMECHECKER_ERIKA, 4
@@ -62,7 +89,8 @@ CeladonCity_Gym_EventScript_DefeatedErika::
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
-	setvar VAR_ERIKA_TRIAL_STATE, 4
+	setvar VAR_ERIKA_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
 	release
 	end
