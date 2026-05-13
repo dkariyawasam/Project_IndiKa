@@ -52,6 +52,13 @@ Route21_South_Text_NolanPostBattle::
 	.string "Oh wait!\n"
 	.string "I got a bite! Yeah!$"
 
+Route21_South_Text_SeagallopSailorDestination::
+	.string "Where would you like to sail?$"
+
+Route21_South_Text_SeagallopSailorAllAboard::
+	.string "Alright, all aboard!\n"
+	.string "We set sail!$"
+
 Route21_North_Text_LilIntro::
 	.string "LIL: Huh? A battle?\n"
 	.string "IAN, can't you do it alone?$"

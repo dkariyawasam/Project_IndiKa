@@ -70,7 +70,10 @@ static const s8 sSeag[][4] = {
     [SEAGALLOP_SIX_ISLAND]      = {MAP(MAP_SIX_ISLAND_HARBOR),   0x08, 0x05},
     [SEAGALLOP_SEVEN_ISLAND]    = {MAP(MAP_SEVEN_ISLAND_HARBOR), 0x08, 0x05},
     [SEAGALLOP_CINNABAR_ISLAND] = {MAP(MAP_CINNABAR_ISLAND),     0x15, 0x07},
-    [SEAGALLOP_NAVEL_ROCK]      = {MAP(MAP_NAVEL_ROCK_HARBOR),   0x08, 0x05}
+    [SEAGALLOP_NAVEL_ROCK]      = {MAP(MAP_NAVEL_ROCK_HARBOR),   0x08, 0x05},
+    [SEAGALLOP_ROUTE21_NORTH]   = {MAP(MAP_ROUTE21_NORTH),        0x08, 0x08},
+    [SEAGALLOP_ROUTE21_SOUTH]   = {MAP(MAP_ROUTE21_SOUTH),        0x0d, 0x2e},
+    [SEAGALLOP_SEAFOAM_ISLANDS] = {MAP(MAP_ROUTE20),              0x44, 0x0f}
 };
 
 // Bitpacked array.  In the commented section, right-most bit is the
@@ -93,7 +96,10 @@ static const u16 sTravelDirectionMatrix[] = {
     [SEAGALLOP_SIX_ISLAND]      = 0x400, // 10000000000
     [SEAGALLOP_SEVEN_ISLAND]    = 0x440, // 10001000000
     [SEAGALLOP_CINNABAR_ISLAND] = 0x7ff, // 11111111111
-    [SEAGALLOP_NAVEL_ROCK]      = 0x6e0  // 11011100000
+    [SEAGALLOP_NAVEL_ROCK]      = 0x6e0, // 11011100000
+    [SEAGALLOP_ROUTE21_NORTH]   = 0x800,
+    [SEAGALLOP_ROUTE21_SOUTH]   = 0x1000,
+    [SEAGALLOP_SEAFOAM_ISLANDS] = 0x0000
 };
 
 static const union AnimCmd sSpriteAnims_Ferry_WB[] = {
