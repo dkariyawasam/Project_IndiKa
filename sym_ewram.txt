@@ -43,7 +43,6 @@
 	.include "src/pokemon_storage_system_data.o"
 	.include "src/pokemon_storage_system_misc.o"
 	.include "src/script_movement.o"
-	.include "src/fldeff_cut.o"
 	.include "src/item_menu_icons.o"
 	.include "src/item.o"
 	.include "src/shop.o"

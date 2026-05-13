@@ -609,7 +609,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_TEACH_WHICH_MON]        = gText_TeachWhichPokemon,
     [PARTY_MSG_USE_ON_WHICH_MON]       = gText_UseOnWhichPokemon,
     [PARTY_MSG_GIVE_TO_WHICH_MON]      = gText_GiveToWhichPokemon,
-    [PARTY_MSG_NOTHING_TO_CUT]         = gText_NothingToCut,
+    [PARTY_MSG_NOTHING_TO_CUT]         = gString_Dummy,
     [PARTY_MSG_CANT_SURF_HERE]         = gText_CantSurfHere,
     [PARTY_MSG_ALREADY_SURFING]        = gText_AlreadySurfing,
     [PARTY_MSG_CURRENT_TOO_FAST]       = gText_CurrentIsTooFast,
@@ -648,7 +648,7 @@ static const u8 *const sDescriptionStringTable[] =
 static const u8 *const sFieldMoveDescriptionTable[] =
 {
     [FIELD_MOVE_FLASH]       = gText_LightUpDarkness,
-    [FIELD_MOVE_CUT]         = gText_CutATreeOrGrass,
+    [FIELD_MOVE_CUT]         = gString_Dummy,
     [FIELD_MOVE_FLY]         = gText_FlyToAKnownTown,
     [FIELD_MOVE_STRENGTH]    = gText_MoveHeavyBoulders,
     [FIELD_MOVE_SURF]        = gText_TravelOnWater,
@@ -1077,7 +1077,6 @@ static struct
     [CURSOR_OPTION_TRADE1]                               = {gText_Trade4,                 CursorCB_Trade1   },
     [CURSOR_OPTION_TRADE2]                               = {gText_Trade4,                 CursorCB_Trade2   },
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_FLASH]       = {gMoveNames[MOVE_FLASH],       CursorCB_FieldMove},
-    [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_CUT]         = {gMoveNames[MOVE_CUT],         CursorCB_FieldMove},
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_FLY]         = {gMoveNames[MOVE_FLY],         CursorCB_FieldMove},
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_STRENGTH]    = {gMoveNames[MOVE_STRENGTH],    CursorCB_FieldMove},
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_SURF]        = {gMoveNames[MOVE_SURF],        CursorCB_FieldMove},
@@ -1168,7 +1167,7 @@ static struct
 } const sFieldMoveCursorCallbacks[] =
 {
     [FIELD_MOVE_FLASH]        = {SetUpFieldMove_Flash,       PARTY_MSG_CANT_USE_HERE},
-    [FIELD_MOVE_CUT]          = {SetUpFieldMove_Cut,         PARTY_MSG_NOTHING_TO_CUT},
+    [FIELD_MOVE_CUT]          = {NULL,                       PARTY_MSG_CANT_USE_HERE},
     [FIELD_MOVE_FLY]          = {SetUpFieldMove_Fly,         PARTY_MSG_CANT_USE_HERE},
     [FIELD_MOVE_STRENGTH]     = {SetUpFieldMove_Strength,    PARTY_MSG_CANT_USE_HERE},
     [FIELD_MOVE_SURF]         = {SetUpFieldMove_Surf,        PARTY_MSG_CANT_SURF_HERE},

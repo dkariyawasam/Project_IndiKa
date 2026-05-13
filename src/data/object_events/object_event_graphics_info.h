@@ -1214,7 +1214,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MGDeliveryman = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTowerDude = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketLeagueDude = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1229,7 +1229,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTowerDude =
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_TrainerTowerDude,
+    .images = sPicTable_RocketLeagueDude,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

@@ -207,8 +207,6 @@ extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 extern const struct SpritePalette gSpritePalette_GeneralFieldEffect1;
 extern const struct SpriteTemplate * const gFieldEffectObjectTemplatePointers[];
 extern const struct OamData gObjectEventBaseOam_32x32;
-extern const u16 gFieldEffectObjectPic_CutGrass[];
-extern const u16 gFieldEffectPal_CutGrass[];
 extern const u8 gReflectionEffectPaletteMap[];
 u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction);
 u8 GetGlideMovementAction(u32 direction);

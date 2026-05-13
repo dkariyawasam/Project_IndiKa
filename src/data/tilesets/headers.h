@@ -702,14 +702,14 @@ const struct Tileset gTileset_SeviiIslands67 =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_TrainerTower =
+const struct Tileset gTileset_RocketLeague =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TrainerTower,
-    .palettes = gTilesetPalettes_TrainerTower,
-    .metatiles = gMetatiles_TrainerTower,
-    .metatileAttributes = gMetatileAttributes_TrainerTower,
+    .tiles = gTilesetTiles_RocketLeague,
+    .palettes = gTilesetPalettes_RocketLeague,
+    .metatiles = gMetatiles_RocketLeague,
+    .metatileAttributes = gMetatileAttributes_RocketLeague,
     .callback = NULL,
 };
 

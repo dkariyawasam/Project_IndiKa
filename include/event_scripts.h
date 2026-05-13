@@ -1187,9 +1187,6 @@ extern const u8 Text_MonSentToBoxBillsBoxFull[];
 
 extern const u8 EventScript_BagItemCanBeRegistered[];
 
-// fldeff_cut
-extern const u8 EventScript_FldEffCut[];
-
 // cable_club
 extern const u8 CableClub_Text_WhenAllPlayersReadyAConfirmBCancel[];
 extern const u8 CableClub_Text_AwaitingLinkupBCancel[];

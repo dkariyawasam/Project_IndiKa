@@ -884,16 +884,16 @@ static const struct SpriteFrameImage sPicTable_MGDeliveryman[] = {
     overworld_frame(gObjectEventPic_MGDeliveryman, 2, 4, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_TrainerTowerDude[] = {
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 0),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 1),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 2),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 0),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 0),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 1),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 1),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 2),
-    overworld_frame(gObjectEventPic_TrainerTowerDude, 2, 4, 2),
+static const struct SpriteFrameImage sPicTable_RocketLeagueDude[] = {
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RocketLeagueDude, 2, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_CableClubReceptionist[] = {
