@@ -190,8 +190,8 @@ const u32 gMetatileAttributes_SeviiIslands45[] = INCBIN_U32("data/tilesets/secon
 const u16 gMetatiles_SeviiIslands67[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67/metatiles.bin");
 const u32 gMetatileAttributes_SeviiIslands67[] = INCBIN_U32("data/tilesets/secondary/sevii_islands_67/metatile_attributes.bin");
 
-const u16 gMetatiles_TrainerTower[] = INCBIN_U16("data/tilesets/secondary/trainer_tower/metatiles.bin");
-const u32 gMetatileAttributes_TrainerTower[] = INCBIN_U32("data/tilesets/secondary/trainer_tower/metatile_attributes.bin");
+const u16 gMetatiles_RocketLeague[] = INCBIN_U16("data/tilesets/secondary/rocket_league/metatiles.bin");
+const u32 gMetatileAttributes_RocketLeague[] = INCBIN_U32("data/tilesets/secondary/rocket_league/metatile_attributes.bin");
 
 const u16 gMetatiles_IslandHarbor[] = INCBIN_U16("data/tilesets/secondary/island_harbor/metatiles.bin");
 const u32 gMetatileAttributes_IslandHarbor[] = INCBIN_U32("data/tilesets/secondary/island_harbor/metatile_attributes.bin");

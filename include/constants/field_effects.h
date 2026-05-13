@@ -2,8 +2,8 @@
 #define GUARD_CONSTANTS_FIELD_EFFECTS_H 
 
 #define FLDEFF_EXCLAMATION_MARK_ICON      0
-#define FLDEFF_USE_CUT_ON_GRASS           1
-#define FLDEFF_USE_CUT_ON_TREE            2
+#define FLDEFF_NOP_1                      1
+#define FLDEFF_NOP_2                      2
 #define FLDEFF_SHADOW                     3
 #define FLDEFF_TALL_GRASS                 4
 #define FLDEFF_RIPPLE                     5
@@ -59,7 +59,7 @@
 #define FLDEFF_SECRET_POWER_CAVE         55
 #define FLDEFF_SECRET_POWER_TREE         56
 #define FLDEFF_SECRET_POWER_SHRUB        57
-#define FLDEFF_CUT_GRASS                 58
+#define FLDEFF_NOP_58                    58
 #define FLDEFF_FIELD_MOVE_SHOW_MON_INIT  59
 #define FLDEFF_USE_FLY_ANCIENT_TOMB      60
 #define FLDEFF_PCTURN_ON                 61
