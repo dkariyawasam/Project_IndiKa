@@ -12,7 +12,6 @@
 #include "task.h"
 #include "strings.h"
 #include "util.h"
-#include "cereader_tool.h"
 #include "help_system.h"
 #include "constants/songs.h"
 
@@ -459,7 +458,7 @@ static void Task_EReader(u8 taskId)
         }
         break;
     case ER_STATE_VALIDATE_CARD:
-        data->status = ValidateTrainerTowerData((struct EReaderTrainerTowerSet *)gDecompressionBuffer);
+        data->status = FALSE;
         SetCloseLinkCallbackAndType(data->status);
         data->state = ER_STATE_WAIT_DISCONNECT;
         break;
@@ -473,14 +472,7 @@ static void Task_EReader(u8 taskId)
         }
         break;
     case ER_STATE_SAVE:
-        if (CEReaderTool_SaveTrainerTower((struct EReaderTrainerTowerSet *)gDecompressionBuffer))
-        {
-            AddTextPrinterToWindow1(gJPText_ConnectionComplete);
-            ResetTimer(&data->timer);
-            data->state = ER_STATE_SUCCESS_MSG;
-        }
-        else
-            data->state = ER_STATE_SAVE_FAILED;
+        data->state = ER_STATE_SAVE_FAILED;
         break;
     case ER_STATE_SUCCESS_MSG:
         if (UpdateTimer(&data->timer, 120))

@@ -412,7 +412,6 @@ gSpecials::
 	def_special DoSSAnneDepartureCutscene
 	def_special IsPokemonJumpSpeciesInParty
 	def_special IsNationalPokedexEnabled
-	def_special CallTrainerTowerFunc
 	def_special ShowPokemonJumpRecords
 	def_special BufferTMHMMoveName
 	def_special DaisyMassageServices
@@ -439,7 +438,6 @@ gSpecials::
 	def_special SetDeoxysTrianglePalette
 	def_special IsPlayerLeftOfVermilionSailor
 	def_special IsBadEggInParty
-	def_special ReadTrainerTowerAndValidate
 	def_special HasAllMons
 	def_special IsPlayerNotInRocketLeagueLobby
 	def_special BrailleCursorToggle

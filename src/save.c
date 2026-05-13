@@ -25,7 +25,7 @@ static u16 CalculateChecksum(void *data, u16 size);
  * Sectors 0 - 13:      Save Slot 1
  * Sectors 14 - 27:     Save Slot 2
  * Sectors 28 - 29:     Hall of Fame
- * Sectors 30 - 31:     Trainer Tower
+ * Sectors 30 - 31:     Special data
  *
  * There are two save slots for saving the player's game data. We alternate between
  * them each time the game is saved, so that if the current save slot is corrupt,
@@ -836,7 +836,7 @@ u32 TryReadSpecialSaveSector(u8 sectorId, u8 *dst)
     s32 size;
     u8 *savData;
 
-    if (sectorId != SECTOR_ID_TRAINER_TOWER_1 && sectorId != SECTOR_ID_TRAINER_TOWER_2)
+    if (sectorId != SECTOR_ID_SPECIAL_1 && sectorId != SECTOR_ID_SPECIAL_2)
         return SAVE_STATUS_ERROR;
 
     ReadFlash(sectorId, 0, (u8 *)&gSaveDataBuffer, SECTOR_SIZE);
@@ -860,7 +860,7 @@ u32 TryWriteSpecialSaveSector(u8 sector, u8 *src)
     u8 *savData;
     void *savDataBuffer;
 
-    if (sector != SECTOR_ID_TRAINER_TOWER_1 && sector != SECTOR_ID_TRAINER_TOWER_2)
+    if (sector != SECTOR_ID_SPECIAL_1 && sector != SECTOR_ID_SPECIAL_2)
         return SAVE_STATUS_ERROR;
 
     savDataBuffer = &gSaveDataBuffer;

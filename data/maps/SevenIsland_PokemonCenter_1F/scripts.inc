@@ -23,5 +23,5 @@ SevenIsland_PokemonCenter_1F_EventScript_Sailor::
 	end
 
 SevenIsland_PokemonCenter_1F_EventScript_Beauty::
-	msgbox SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower, MSGBOX_NPC
+	msgbox SevenIsland_PokemonCenter_1F_Text_SevaultCanyon, MSGBOX_NPC
 	end
