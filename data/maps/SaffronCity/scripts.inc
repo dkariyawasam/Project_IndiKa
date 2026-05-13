@@ -19,10 +19,6 @@ SaffronCity_EventScript_RocketGrunt2::
 	msgbox SaffronCity_Text_BossTakeTownForTeamRocket, MSGBOX_NPC
 	end
 
-SaffronCity_EventScript_RocketGrunt3::
-	msgbox SaffronCity_Text_DontGetDefiantOrIllHurtYou, MSGBOX_NPC
-	end
-
 SaffronCity_EventScript_RocketGrunt4::
 	msgbox SaffronCity_Text_SaffronBelongsToTeamRocket, MSGBOX_NPC
 	end

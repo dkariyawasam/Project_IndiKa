@@ -6,10 +6,6 @@ SaffronCity_Text_BossTakeTownForTeamRocket::
     .string "BOSS said he'll take this town\n"
     .string "in the name of TEAM ROCKET!$"
 
-SaffronCity_Text_DontGetDefiantOrIllHurtYou::
-    .string "Don't get defiant!\n"
-    .string "Or I'll have to hurt you!$"
-
 SaffronCity_Text_SaffronBelongsToTeamRocket::
     .string "SAFFRON belongs to TEAM ROCKET!$"
 
