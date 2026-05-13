@@ -1821,6 +1821,12 @@ extern const u8 gText_ErikaTrialPhase3[];
 extern const u8 gText_ErikaTrialPhase4[];
 extern const u8 gText_ErikaTrialPhase5[];
 
+extern const u8 gText_KogaTrialPhase1[];
+extern const u8 gText_KogaTrialPhase2[];
+extern const u8 gText_KogaTrialPhase3[];
+extern const u8 gText_KogaTrialPhase4[];
+extern const u8 gText_KogaTrialPhase5[];
+
 extern const u8 gText_HelixHaste[];
 extern const u8 gText_HelixDart[];
 extern const u8 gText_DomeDart[];
