@@ -68,7 +68,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnionRoomReception
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMaleReceptionist;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clerk;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MGDeliveryman;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTowerDude;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketLeagueDude;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bill;
@@ -223,7 +223,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_UNUSED_MALE_RECEPTIONIST] = &gObjectEventGraphicsInfo_UnusedMaleReceptionist,
     [OBJ_EVENT_GFX_CLERK]                    = &gObjectEventGraphicsInfo_Clerk,
     [OBJ_EVENT_GFX_MG_DELIVERYMAN]           = &gObjectEventGraphicsInfo_MGDeliveryman,
-    [OBJ_EVENT_GFX_TRAINER_TOWER_DUDE]       = &gObjectEventGraphicsInfo_TrainerTowerDude,
+    [OBJ_EVENT_GFX_ROCKET_LEAGUE_DUDE]       = &gObjectEventGraphicsInfo_RocketLeagueDude,
     [OBJ_EVENT_GFX_PROF_OAK]                 = &gObjectEventGraphicsInfo_ProfOak,
     [OBJ_EVENT_GFX_BLUE]                     = &gObjectEventGraphicsInfo_Blue,
     [OBJ_EVENT_GFX_BILL]                     = &gObjectEventGraphicsInfo_Bill,

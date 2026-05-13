@@ -18,9 +18,6 @@ u8 MapTransitionIsEnter(u8 mapType1, u8 mapType2);
 bool8 SetUpFieldMove_Flash(void);
 void CB2_DoChangeMap(void);
 
-// cut
-bool8 SetUpFieldMove_Cut(void);
-
 // dig
 bool8 SetUpFieldMove_Dig(void);
 bool8 FldEff_UseDig(void);

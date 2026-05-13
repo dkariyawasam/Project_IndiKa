@@ -343,7 +343,7 @@ gSongTable::
 	song mus_vs_legend, 0, 0
 	song mus_encounter_gym_leader, 0, 0
 	song mus_encounter_deoxys, 0, 0
-	song mus_trainer_tower, 0, 0
+	song mus_rocket_league, 0, 0
 	song mus_slow_pallet, 0, 0
 	song mus_teachy_tv_menu, 0, 0
 

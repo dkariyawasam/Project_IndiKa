@@ -144,7 +144,6 @@ SECTIONS {
         src/pokemon_storage_system_misc.o(.text);
         src/pokemon_icon.o(.text);
         src/script_movement.o(.text);
-        src/fldeff_cut.o(.text);
         src/mail_data.o(.text);
         src/map_name_popup.o(.text);
         src/item_menu_icons.o(.text);
@@ -463,7 +462,6 @@ SECTIONS {
         src/pokemon_storage_system_data.o(.rodata);
         src/pokemon_storage_system_misc.o(.rodata);
         src/pokemon_icon.o(.rodata);
-        src/fldeff_cut.o(.rodata);
         src/map_name_popup.o(.rodata);
         src/item_menu_icons.o(.rodata);
         src/battle_anim_mon_movement.o(.rodata);
@@ -958,7 +956,7 @@ SECTIONS {
         sound/songs/midi/mus_encounter_gym_leader.o(.rodata);
         sound/songs/midi/mus_encounter_deoxys.o(.rodata);
         sound/songs/midi/mus_slow_pallet.o(.rodata);
-        sound/songs/midi/mus_trainer_tower.o(.rodata);
+        sound/songs/midi/mus_rocket_league.o(.rodata);
         sound/songs/midi/mus_teachy_tv_menu.o(.rodata);
     } > ROM =0
 
