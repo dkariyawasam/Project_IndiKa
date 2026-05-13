@@ -1,18 +1,6 @@
 {
   "map_sections": [
     {
-      "id": "MAPSEC_LILYCOVE_CITY"
-    },
-    {
-      "id": "MAPSEC_ROUTE_111"
-    },
-    {
-      "id": "MAPSEC_ROUTE_112"
-    },
-    {
-      "id": "MAPSEC_ROUTE_113"
-    },
-    {
       "id": "MAPSEC_ROUTE_114"
     },
     {
@@ -68,21 +56,6 @@
     },
     {
       "id": "MAPSEC_ROUTE_132"
-    },
-    {
-      "id": "MAPSEC_SAFARI_ZONE"
-    },
-    {
-      "id": "MAPSEC_MT_PYRE"
-    },
-    {
-      "id": "MAPSEC_SEAFLOOR_CAVERN"
-    },
-    {
-      "id": "MAPSEC_VICTORY_ROAD"
-    },
-    {
-      "id": "MAPSEC_DYNAMIC"
     },
     {
       "id": "MAPSEC_PALLET_TOWN",
@@ -169,22 +142,6 @@
       "name": "SAFFRON CITY",
       "x": 14,
       "y": 6,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_4_POKECENTER",
-      "name": "ROUTE 4",
-      "x": 8,
-      "y": 3,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_10_POKECENTER",
-      "name": "ROUTE 10",
-      "x": 18,
-      "y": 3,
       "width": 1,
       "height": 1
     },
@@ -717,13 +674,6 @@
       "height": 2
     },
     {
-      "id": "MAPSEC_UNUSED_SEVII_TOWER",
-      "x": 5,
-      "y": 6,
-      "width": 1,
-      "height": 2
-    },
-    {
       "id": "MAPSEC_CANYON_ENTRANCE",
       "name": "CANYON ENTRANCE",
       "x": 5,
@@ -806,14 +756,6 @@
     {
       "id": "MAPSEC_ALTERING_CAVE",
       "name": "ALTERING CAVE",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_TANOBY_CHAMBERS",
-      "name": "TANOBY CHAMBERS",
       "x": 0,
       "y": 0,
       "width": 1,
