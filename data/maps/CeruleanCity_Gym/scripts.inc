@@ -19,6 +19,7 @@ CeruleanCity_Gym_EventScript_HideMisty::
 CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
 	applymovement LOCALID_CERULEAN_GYM_GUIDE, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_CERULEAN_GYM_GUIDE, Common_Movement_Delay48
