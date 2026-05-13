@@ -472,8 +472,6 @@
     "SevenIsland_House_Room1",
     "SevenIsland_House_Room2",
     "SevenIsland_Mart",
-    "SevenIsland_PokemonCenter_1F",
-    "SevenIsland_PokemonCenter_2F",
     "SevenIsland_UnusedHouse",
     "SevenIsland_Harbor"
   ],
@@ -487,14 +485,10 @@
   "gMapGroup_IndoorTwoIsland": [
     "TwoIsland_JoyfulGameCorner",
     "TwoIsland_House",
-    "TwoIsland_PokemonCenter_1F",
-    "TwoIsland_PokemonCenter_2F",
     "TwoIsland_Harbor"
   ],
   "gMapGroup_IndoorThreeIsland": [
     "ThreeIsland_House1",
-    "ThreeIsland_PokemonCenter_1F",
-    "ThreeIsland_PokemonCenter_2F",
     "ThreeIsland_Mart",
     "ThreeIsland_House2",
     "ThreeIsland_House3",
@@ -511,8 +505,6 @@
     "FourIsland_Mart"
   ],
   "gMapGroup_IndoorFiveIsland": [
-    "FiveIsland_PokemonCenter_1F",
-    "FiveIsland_PokemonCenter_2F",
     "FiveIsland_Harbor",
     "FiveIsland_House1",
     "FiveIsland_House2"
