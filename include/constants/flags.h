@@ -189,14 +189,14 @@
 // Unused?
 #define FLAG_HIDE_PEWTER_CITY_GYM_BROCK               0x0AF
 #define FLAG_HIDE_MT_MOON_BROCK                       0x0B0
-#define FLAG_0x0B1               0x0B1
-#define FLAG_0x0B2               0x0B2
-#define FLAG_0x0B3               0x0B3
-#define FLAG_0x0B4               0x0B4
-#define FLAG_0x0B5               0x0B5
-#define FLAG_0x0B6               0x0B6
-#define FLAG_0x0B7               0x0B7
-#define FLAG_0x0B8               0x0B8
+#define FLAG_HIDE_CERULEAN_CITY_GYM_MISTY             0x0B1
+#define FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE         0x0B2
+#define FLAG_HIDE_CELADON_CITY_GYM_ERIKA              0x0B3
+#define FLAG_HIDE_CELADON_CITY_GYM_GUIDE              0x0B4
+#define FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA               0x0B5
+#define FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE              0x0B6
+#define FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA            0x0B7
+#define FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE              0x0B8
 #define FLAG_0x0B9               0x0B9
 #define FLAG_0x0BA               0x0BA
 #define FLAG_0x0BB               0x0BB
@@ -631,7 +631,7 @@
 #define FLAG_0x261                                       0x261
 #define FLAG_0x262                                       0x262
 #define FLAG_GOT_EEVEE                                   0x263
-#define FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES           0x264
+#define FLAG_0x264                                       0x264
 #define FLAG_CINNABAR_GYM_QUIZ_1                         0x265
 #define FLAG_PENDING_DAYCARE_EGG                         0x266
 #define FLAG_CINNABAR_GYM_QUIZ_2                         0x267

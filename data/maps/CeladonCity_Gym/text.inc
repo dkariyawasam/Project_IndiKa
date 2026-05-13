@@ -33,6 +33,19 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "That includes even outsiders you\n"
     .string "got in trades.$"
 
+CeladonCity_Gym_Text_GymGuideErikaAway::
+    .string "Excuse me!\p"
+    .string "ERIKA is away from the GYM.\n"
+    .string "She's somewhere in VIRIDIAN\l"
+    .string "FOREST.\p"
+    .string "She's been gone for some time…\n"
+    .string "I should go find her.$"
+
+CeladonCity_Gym_Text_GymGuideErikaStillAway::
+    .string "ERIKA is still away from the GYM.\p"
+    .string "Please look for her in\n"
+    .string "VIRIDIAN FOREST.$"
+
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
     .string "{PLAYER} received TM19\n"
     .string "from ERIKA.$"

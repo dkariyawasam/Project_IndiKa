@@ -135,6 +135,21 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
     .string "You have to find gaps in the walls\n"
     .string "to reach him.$"
 
+FuchsiaCity_Gym_Text_GymGuideKogaAway::
+    .string "JANINE: My father KOGA disappeared\n"
+    .string "in a puff of smoke before my eyes!\p"
+    .string "Before he vanished, he spoke of\n"
+    .string "crafting new tools from volcanic\l"
+    .string "rock found in CINNABAR VOLCANO.\p"
+    .string "I had better hurry and help my\n"
+    .string "father, our clan leader!$"
+
+FuchsiaCity_Gym_Text_GymGuideKogaStillAway::
+    .string "KOGA is away searching for\n"
+    .string "volcanic rock in CINNABAR VOLCANO.\p"
+    .string "I should hurry after my father\n"
+    .string "and help our clan leader.$"
+
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "It's amazing how ninja can terrify,\n"
     .string "even now!$"

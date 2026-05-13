@@ -1,5 +1,53 @@
 FuchsiaCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FuchsiaCity_Gym_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_Gym_OnTransition
 	.byte 0
+
+FuchsiaCity_Gym_OnFrame::
+	map_script_2 VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_GymGuideInterceptKogaAway
+	.2byte 0
+
+FuchsiaCity_Gym_OnTransition::
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_SetInitialGuideState
+	setflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
+	goto_if_lt VAR_KOGA_TRIAL_STATE, 3, FuchsiaCity_Gym_EventScript_HideKoga
+	clearflag FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA
+	end
+
+FuchsiaCity_Gym_EventScript_SetInitialGuideState::
+	clearflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
+	goto FuchsiaCity_Gym_EventScript_HideKoga
+
+FuchsiaCity_Gym_EventScript_HideKoga::
+	setflag FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA
+	end
+
+FuchsiaCity_Gym_EventScript_GymGuideInterceptKogaAway::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playse SE_PIN
+	applymovement LOCALID_FUCHSIA_GYM_GUIDE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_FUCHSIA_GYM_GUIDE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_FUCHSIA_GYM_GUIDE, FuchsiaCity_Gym_Movement_GymGuideJumpOut
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox FuchsiaCity_Gym_Text_GymGuideKogaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	setvar VAR_KOGA_TRIAL_STATE, 1
+	closemessage
+	applymovement LOCALID_PLAYER, FuchsiaCity_Gym_Movement_PlayerStepAsideForGuide
+	waitmovement 0
+	applymovement LOCALID_FUCHSIA_GYM_GUIDE, FuchsiaCity_Gym_Movement_GymGuideLeave
+	waitmovement 0
+	setflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
+	removeobject LOCALID_FUCHSIA_GYM_GUIDE
+	releaseall
+	end
 
 FuchsiaCity_Gym_EventScript_Koga::
 	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -13,6 +61,7 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
+	setvar VAR_KOGA_TRIAL_STATE, 4
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
 	release
 	end
@@ -51,8 +100,18 @@ FuchsiaCity_Gym_EventScript_Nate::
 FuchsiaCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_GymGuideKogaAwayFirstTime
 	goto_if_set FLAG_DEFEATED_KOGA, FuchsiaCity_Gym_EventScript_GymGuyPostVictory
-	msgbox FuchsiaCity_Gym_Text_GymGuyAdvice
+	msgbox FuchsiaCity_Gym_Text_GymGuideKogaStillAway
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_GymGuideKogaAwayFirstTime::
+	msgbox FuchsiaCity_Gym_Text_GymGuideKogaAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	setvar VAR_KOGA_TRIAL_STATE, 1
 	release
 	end
 
@@ -72,3 +131,19 @@ FuchsiaCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox FuchsiaCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+FuchsiaCity_Gym_Movement_GymGuideJumpOut::
+	set_visible
+	jump_in_place_down
+	walk_down
+	step_end
+
+FuchsiaCity_Gym_Movement_PlayerStepAsideForGuide::
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+FuchsiaCity_Gym_Movement_GymGuideLeave::
+	walk_down
+	walk_down
+	step_end
