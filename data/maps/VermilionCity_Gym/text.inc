@@ -94,6 +94,16 @@ VermilionCity_Gym_Text_GymGuyAdvice::
     .string "He's locked himself in, so it won't\n"
     .string "be easy getting to him.$"
 
+VermilionCity_Gym_Text_GymGuySurgeAway::
+    .string "Hold it, kid!\p"
+    .string "LT. SURGE is away from the GYM.\n"
+    .string "He's training in DIGLETT'S CAVE.$"
+
+VermilionCity_Gym_Text_GymGuySurgeStillAway::
+    .string "LT. SURGE is still away from the\n"
+    .string "GYM.\p"
+    .string "Try looking in DIGLETT'S CAVE.$"
+
 VermilionCity_Gym_Text_GymGuyPostVictory::
     .string "Whew!\n"
     .string "That match was electric!$"
@@ -109,28 +119,3 @@ VermilionCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: LT. SURGE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
-
-VermilionCity_Gym_Text_NopeOnlyTrashHere::
-    .string "Nope!\n"
-    .string "There's only trash here.$"
-
-VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-    .string "Hey! There's a switch under the\n"
-    .string "trash! Turn it on!\p"
-    .string "The first electric lock opened!$"
-
-VermilionCity_Gym_Text_AnotherSwitchInTrash::
-    .string "ガサゴソ‥！\n"
-    .string "おっと！　ゴミばこの　そこに\l"
-    .string "また　スイッチが　あった！\l"
-    .string "おして　みよう！　‥　ポチッとな$"
-
-VermilionCity_Gym_Text_SecondLockOpened::
-    .string "The second electric lock opened!\n"
-    .string "The motorized door opened!$"
-
-VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
-    .string "Nope!\n"
-    .string "There's only trash here.\p"
-    .string "Hey!\n"
-    .string "The electric locks were reset!$"
