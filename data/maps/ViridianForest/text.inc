@@ -74,7 +74,7 @@ ViridianForest_Text_RanOutOfPokeBalls::
 ViridianForest_Text_ErikaLookingForRoot::
     .string "ERIKA: Oh, hello.\p"
     .string "I came to VIRIDIAN FOREST in\n"
-    .string "search of a BIG ROOT.\p"
+    .string "search of an ENERGY ROOT.\p"
     .string "A root grown in this forest is said\n"
     .string "to hold wonderful healing power.\p"
     .string "I am certain one can be found\n"
@@ -90,7 +90,7 @@ ViridianForest_Text_ErikaShownRoot::
 ViridianForest_Text_GymGuideFoundErika::
     .string "GYM GUIDE: ERIKA!\n"
     .string "I am so glad I found you!\p"
-    .string "And look, I found a BIG ROOT on\n"
+    .string "And look, I found an ENERGY ROOT\n"
     .string "the way here.$"
 
 ViridianForest_Text_ErikaChallenge::
