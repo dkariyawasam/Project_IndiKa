@@ -600,7 +600,6 @@ static void Debug_AddDaycareSteps(u16 numSteps)
 {
     gSaveBlock1Ptr->daycare.mons[0].steps += numSteps;
     gSaveBlock1Ptr->daycare.mons[1].steps += numSteps;
-    gSaveBlock1Ptr->route5DayCareMon.steps += numSteps;
 }
 
 u8 GetNumLevelsGainedFromDaycare(void)
@@ -1184,8 +1183,6 @@ static bool8 TryProduceOrHatchEgg(struct DayCare *daycare)
 
 bool8 ShouldEggHatch(void)
 {
-    if (GetBoxMonData(&gSaveBlock1Ptr->route5DayCareMon.mon, MON_DATA_SANITY_HAS_SPECIES))
-        gSaveBlock1Ptr->route5DayCareMon.steps++;
     return TryProduceOrHatchEgg(&gSaveBlock1Ptr->daycare);
 }
 
@@ -1556,38 +1553,6 @@ void ChooseSendDaycareMon(void)
 {
     ChooseMonForDaycare();
     gMain.savedCallback = CB2_ReturnToField;
-}
-
-// Route 5 Daycare
-
-void PutMonInRoute5Daycare(void)
-{
-    u8 monIdx = GetCursorSelectionMonId();
-    StorePokemonInDaycare(&gPlayerParty[monIdx], &gSaveBlock1Ptr->route5DayCareMon);
-}
-
-void GetCostToWithdrawRoute5DaycareMon(void)
-{
-    u16 cost = GetDaycareCostForSelectedMon(&gSaveBlock1Ptr->route5DayCareMon);
-    gSpecialVar_0x8005 = cost;
-}
-
-bool8 IsThereMonInRoute5Daycare(void)
-{
-    if (GetBoxMonData(&gSaveBlock1Ptr->route5DayCareMon.mon, MON_DATA_SPECIES) != SPECIES_NONE)
-        return TRUE;
-
-    return FALSE;
-}
-
-u8 GetNumLevelsGainedForRoute5DaycareMon(void)
-{
-    return GetNumLevelsGainedForDaycareMon(&gSaveBlock1Ptr->route5DayCareMon);
-}
-
-u16 TakePokemonFromRoute5Daycare(void)
-{
-    return TakeSelectedPokemonFromDaycare(&gSaveBlock1Ptr->route5DayCareMon);
 }
 
 static void CreatedHatchedMon(struct Pokemon *egg, struct Pokemon *temp)
