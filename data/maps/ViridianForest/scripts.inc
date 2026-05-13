@@ -4,6 +4,12 @@ ViridianForest_MapScripts::
 
 ViridianForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
+	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RemoveErika
+	end
+
+ViridianForest_EventScript_RemoveErika::
+	removeobject LOCALID_VIRIDIAN_FOREST_ERIKA
 	end
 
 ViridianForest_EventScript_Youngster::
@@ -14,9 +20,92 @@ ViridianForest_EventScript_Boy::
 	msgbox ViridianForest_Text_RanOutOfPokeBalls, MSGBOX_NPC
 	end
 
+ViridianForest_EventScript_Erika::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_ErikaReturnToGym
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	setvar VAR_ERIKA_TRIAL_STATE, 2
+	checkitem ITEM_ENERGY_ROOT, 1
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_ErikaHasRoot
+	msgbox ViridianForest_Text_ErikaLookingForRoot
+	release
+	end
+
+ViridianForest_EventScript_ErikaReturnToGym::
+	msgbox ViridianForest_Text_ErikaReturnToGym
+	release
+	end
+
+ViridianForest_EventScript_ErikaHasRoot::
+	msgbox ViridianForest_Text_ErikaShownRoot
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, ViridianForest_EventScript_NeedTwoPokemon
+	closemessage
+	applymovement LOCALID_PLAYER, ViridianForest_Movement_PlayerStepAsideForGuide
+	waitmovement 0
+	clearflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	addobject LOCALID_VIRIDIAN_FOREST_GYM_GUIDE
+	applymovement LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, ViridianForest_Movement_GymGuideArrive
+	waitmovement 0
+	msgbox ViridianForest_Text_GymGuideFoundErika
+	msgbox ViridianForest_Text_ErikaChallenge
+	trainerbattle_double TRAINER_LEADER_ERIKA, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_NeedTwoPokemon::
+	msgbox Common_Text_NeedTwoPokemonForDoubleBattle
+	release
+	end
+
+ViridianForest_EventScript_DefeatedErika::
+	famechecker FAMECHECKER_ERIKA, 1
+	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	setflag FLAG_DEFEATED_ERIKA
+	setvar VAR_ERIKA_TRIAL_STATE, 3
+	msgbox ViridianForest_Text_ErikaAfterBattle
+	closemessage
+	applymovement LOCALID_VIRIDIAN_FOREST_ERIKA, ViridianForest_Movement_ErikaLeave
+	applymovement LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, ViridianForest_Movement_GymGuideLeave
+	waitmovement 0
+	removeobject LOCALID_VIRIDIAN_FOREST_ERIKA
+	removeobject LOCALID_VIRIDIAN_FOREST_GYM_GUIDE
+	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	release
+	end
+
+ViridianForest_EventScript_GymGuide::
+	msgbox ViridianForest_Text_GymGuideFoundErika, MSGBOX_NPC
+	end
+
 ViridianForest_EventScript_ExitSign::
 	msgbox ViridianForest_Text_LeavingViridianForest, MSGBOX_SIGN
 	end
+
+ViridianForest_Movement_PlayerStepAsideForGuide::
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+ViridianForest_Movement_GymGuideArrive::
+	walk_up
+	walk_up
+	step_end
+
+ViridianForest_Movement_ErikaLeave::
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+ViridianForest_Movement_GymGuideLeave::
+	walk_down
+	walk_down
+	step_end
 
 ViridianForest_EventScript_Rick::
 	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat

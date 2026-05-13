@@ -27,6 +27,18 @@ CeladonCity_Gym_Text_ErikaPostBattle::
     .string "I would never collect POKéMON if\n"
     .string "they were unattractive.$"
 
+CeladonCity_Gym_Text_ErikaWaitingForChallenge::
+    .string "ERIKA is away from the GYM.\p"
+    .string "Please look for her in\n"
+    .string "VIRIDIAN FOREST.$"
+
+CeladonCity_Gym_Text_ErikaReward::
+    .string "ERIKA: Thank you for coming.\p"
+    .string "Your challenge in VIRIDIAN FOREST\n"
+    .string "was witnessed and official.\p"
+    .string "I must confer on you the\n"
+    .string "RAINBOWBADGE.$"
+
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "With four BADGES, POKéMON up\n"
     .string "to Lv. 50 obey.\p"

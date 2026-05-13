@@ -407,7 +407,7 @@ ThreeIsland_EventScript_ItemZinc::
 	end
 
 ViridianForest_EventScript_ItemPotion2::
-	finditem ITEM_POTION
+	finditem ITEM_ENERGY_ROOT
 	end
 
 MtMoon_B2F_EventScript_ItemRevive::

@@ -71,6 +71,55 @@ ViridianForest_Text_RanOutOfPokeBalls::
     .string "That's why you can never have too\n"
     .string "many POKé BALLS.$"
 
+ViridianForest_Text_ErikaLookingForRoot::
+    .string "ERIKA: Oh, hello.\p"
+    .string "I came to VIRIDIAN FOREST in\n"
+    .string "search of a BIG ROOT.\p"
+    .string "A root grown in this forest is said\n"
+    .string "to hold wonderful healing power.\p"
+    .string "I am certain one can be found\n"
+    .string "somewhere nearby.$"
+
+ViridianForest_Text_ErikaShownRoot::
+    .string "ERIKA: Oh!\n"
+    .string "That is just the root I had hoped\l"
+    .string "to study.\p"
+    .string "If I could find one of my own, I\n"
+    .string "would gladly return to the GYM.$"
+
+ViridianForest_Text_GymGuideFoundErika::
+    .string "GYM GUIDE: ERIKA!\n"
+    .string "I am so glad I found you!\p"
+    .string "And look, I found a BIG ROOT on\n"
+    .string "the way here.$"
+
+ViridianForest_Text_ErikaChallenge::
+    .string "ERIKA: How fortunate.\n"
+    .string "This is almost satisfying.\p"
+    .string "Before I return, may I ask you for\n"
+    .string "a proper GYM challenge?\p"
+    .string "With my GYM GUIDE present, the\n"
+    .string "match will be official.$"
+
+ViridianForest_Text_ErikaBattleIntro::
+    .string "Very well.\n"
+    .string "Let us begin.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
+
+ViridianForest_Text_ErikaDefeat::
+    .string "Oh!\n"
+    .string "I concede defeat.$"
+
+ViridianForest_Text_ErikaAfterBattle::
+    .string "ERIKA: You are remarkably strong.\p"
+    .string "This battle was witnessed, so it\n"
+    .string "shall stand as your GYM challenge.\p"
+    .string "Please come to CELADON GYM.\n"
+    .string "I will grant your reward there.$"
+
+ViridianForest_Text_ErikaReturnToGym::
+    .string "ERIKA has returned to\n"
+    .string "CELADON GYM.$"
+
 ViridianForest_Text_LeavingViridianForest::
     .string "LEAVING VIRIDIAN FOREST\n"
     .string "PEWTER CITY AHEAD$"
