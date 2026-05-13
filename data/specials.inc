@@ -382,11 +382,6 @@ gSpecials::
 	def_special SetFlavorTextFlagFromSpecialVars
 	def_special UpdatePickStateFromSpecialVar8005
 	def_special OverworldWhiteOutGetMoneyLoss
-	def_special PutMonInRoute5Daycare
-	def_special GetCostToWithdrawRoute5DaycareMon
-	def_special IsThereMonInRoute5Daycare
-	def_special GetNumLevelsGainedForRoute5DaycareMon
-	def_special TakePokemonFromRoute5Daycare
 	def_special DoSeagallopFerryScene
 	def_special DoesPlayerPartyContainSpecies
 	def_special Script_SetHelpContext
