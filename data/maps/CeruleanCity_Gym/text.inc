@@ -76,6 +76,18 @@ CeruleanCity_Gym_Text_GymGuyAdvice::
     .string "Or, you might use ELECTRIC-type\n"
     .string "POKéMON and zap them!$"
 
+CeruleanCity_Gym_Text_GymGuideMistyAway::
+    .string "Hold up!\p"
+    .string "MISTY's away from the GYM.\n"
+    .string "She's investigating the water\l"
+    .string "currents in and around the\l"
+    .string "POWER PLANT.$"
+
+CeruleanCity_Gym_Text_GymGuideMistyStillAway::
+    .string "MISTY's still away from the GYM.\p"
+    .string "Try checking the water currents\n"
+    .string "around the POWER PLANT.$"
+
 CeruleanCity_Gym_Text_WeMakePrettyGoodTeam::
     .string "You beat MISTY!\n"
     .string "See, what'd I tell ya?\p"
