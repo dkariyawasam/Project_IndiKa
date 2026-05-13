@@ -430,9 +430,6 @@ gSpecials::
 	def_special HasLearnedAllMovesFromCapeBrinkTutor
 	def_special DoCredits
 	def_special ShowDodrioBerryPickingRecords
-	def_special DrawSeagallopDestinationMenu
-	def_special GetSelectedSeagallopDestination
-	def_special GetSeagallopNumber
 	def_special GetPlayerFacingDirection
 	def_special IsPlayerLeftOfVermilionSailor
 	def_special IsBadEggInParty

@@ -19,7 +19,7 @@ SevenIsland_PokemonCenter_1F_EventScript_OldMan::
 	end
 
 SevenIsland_PokemonCenter_1F_EventScript_Sailor::
-	msgbox SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere, MSGBOX_NPC
+	msgbox SevenIsland_PokemonCenter_1F_Text_DidYouRideFerryHere, MSGBOX_NPC
 	end
 
 SevenIsland_PokemonCenter_1F_EventScript_Beauty::

@@ -61,16 +61,6 @@ static const struct BgTemplate sBGTemplates[] = {
 
 static const s8 sSeag[][4] = {
                                    // Map                     X     Y
-    [SEAGALLOP_VERMILION_CITY]  = {MAP(MAP_VERMILION_CITY),      0x17, 0x20},
-    [SEAGALLOP_ONE_ISLAND]      = {MAP(MAP_ONE_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_TWO_ISLAND]      = {MAP(MAP_TWO_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_THREE_ISLAND]    = {MAP(MAP_THREE_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_FOUR_ISLAND]     = {MAP(MAP_FOUR_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_FIVE_ISLAND]     = {MAP(MAP_FIVE_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_SIX_ISLAND]      = {MAP(MAP_SIX_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_SEVEN_ISLAND]    = {MAP(MAP_SEVEN_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_CINNABAR_ISLAND] = {MAP(MAP_CINNABAR_ISLAND),     0x15, 0x07},
-    [SEAGALLOP_NAVEL_ROCK]      = {MAP(MAP_NAVEL_ROCK_HARBOR),   0x08, 0x05},
     [SEAGALLOP_ROUTE21_NORTH]   = {MAP(MAP_ROUTE21_NORTH),        0x0e, 0x0a},
     [SEAGALLOP_ROUTE21_SOUTH]   = {MAP(MAP_ROUTE21_SOUTH),        0x0d, 0x2d},
     [SEAGALLOP_SEAFOAM_ISLANDS] = {MAP(MAP_ROUTE20),              0x48, 0x0b},
@@ -88,19 +78,9 @@ enum TravelDirections
 };
 
 static const u16 sTravelDirectionMatrix[] = {
-    [SEAGALLOP_VERMILION_CITY]  = 0x6fe, // 11011111110
-    [SEAGALLOP_ONE_ISLAND]      = 0x6fc, // 11011111100
-    [SEAGALLOP_TWO_ISLAND]      = 0x6f8, // 11011111000
-    [SEAGALLOP_THREE_ISLAND]    = 0x6f0, // 11011110000
-    [SEAGALLOP_FOUR_ISLAND]     = 0x6e0, // 11011100000
-    [SEAGALLOP_FIVE_ISLAND]     = 0x4c0, // 10011000000
-    [SEAGALLOP_SIX_ISLAND]      = 0x400, // 10000000000
-    [SEAGALLOP_SEVEN_ISLAND]    = 0x440, // 10001000000
-    [SEAGALLOP_CINNABAR_ISLAND] = 0x7ff, // 11111111111
-    [SEAGALLOP_NAVEL_ROCK]      = 0x6e0, // 11011100000
-    [SEAGALLOP_ROUTE21_NORTH]   = 0x800,
-    [SEAGALLOP_ROUTE21_SOUTH]   = 0x1000,
-    [SEAGALLOP_SEAFOAM_ISLANDS] = 0x2000,
+    [SEAGALLOP_ROUTE21_NORTH]   = 0x2,
+    [SEAGALLOP_ROUTE21_SOUTH]   = 0x4,
+    [SEAGALLOP_SEAFOAM_ISLANDS] = 0x8,
     [SEAGALLOP_ROUTE19_FUCHSIA_SHORE] = 0x0000
 };
 
@@ -454,46 +434,6 @@ static bool8 GetDirectionOfTravel(void)
         return DIRN_EASTBOUND;
     }
     return (sTravelDirectionMatrix[gSpecialVar_0x8004] >> gSpecialVar_0x8006) & 1;
-}
-
-// For "All aboard SEAGALLOP HI-SPEED ##" text
-u8 GetSeagallopNumber(void)
-{
-    u16 originId, destId;
-
-    originId = gSpecialVar_0x8004;
-    destId = gSpecialVar_0x8006;
-
-    if (originId == SEAGALLOP_CINNABAR_ISLAND || destId == SEAGALLOP_CINNABAR_ISLAND)
-        return 1;
-
-    if (originId == SEAGALLOP_VERMILION_CITY || destId == SEAGALLOP_VERMILION_CITY)
-        return 7;
-
-    if (originId == SEAGALLOP_NAVEL_ROCK || destId == SEAGALLOP_NAVEL_ROCK)
-        return 10;
-
-    if ((originId == SEAGALLOP_ONE_ISLAND 
-      || originId == SEAGALLOP_TWO_ISLAND 
-      || originId == SEAGALLOP_THREE_ISLAND) 
-      && (destId == SEAGALLOP_ONE_ISLAND 
-       || destId == SEAGALLOP_TWO_ISLAND 
-       || destId == SEAGALLOP_THREE_ISLAND))
-        return 2;
-
-    if ((originId == SEAGALLOP_FOUR_ISLAND 
-      || originId == SEAGALLOP_FIVE_ISLAND) 
-      && (destId == SEAGALLOP_FOUR_ISLAND 
-       || destId == SEAGALLOP_FIVE_ISLAND))
-        return 3;
-
-    if ((originId == SEAGALLOP_SIX_ISLAND 
-      || originId == SEAGALLOP_SEVEN_ISLAND) 
-      && (destId == SEAGALLOP_SIX_ISLAND 
-       || destId == SEAGALLOP_SEVEN_ISLAND))
-        return 5;
-
-    return 6;
 }
 
 bool8 IsPlayerLeftOfVermilionSailor(void)
