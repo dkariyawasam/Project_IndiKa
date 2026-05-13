@@ -1556,11 +1556,11 @@ const u8 gText_LtSurgeTrialPhase3[] = _("LT. SURGE returned to VERMILION\nGYM. C
 const u8 gText_LtSurgeTrialPhase4[] = _("LT. SURGE's GYM challenge is won.");
 const u8 gText_LtSurgeTrialPhase5[] = _("LT. SURGE's GYM trial is complete.");
 
-const u8 gText_ErikaTrialPhase1[] = _("Erika spoke of a\nPokémon that evolves");
-const u8 gText_ErikaTrialPhase2[] = _("Find the Pokémon\nthat evolves through beauty.");
-const u8 gText_ErikaTrialPhase3[] = _("Return to Erika");
-const u8 gText_ErikaTrialPhase4[] = _("Erika is ready to\ntrade");
-const u8 gText_ErikaTrialPhase5[] = _("Erika's trade showed\nevolution through beauty.");
+const u8 gText_ErikaTrialPhase1[] = _("Find Erika in\nViridian Forest.");
+const u8 gText_ErikaTrialPhase2[] = _("Show Erika a\nBIG ROOT.");
+const u8 gText_ErikaTrialPhase3[] = _("Return to\nCeladon Gym.");
+const u8 gText_ErikaTrialPhase4[] = _("Claim Erika's\nreward.");
+const u8 gText_ErikaTrialPhase5[] = _("Erika's challenge\nis complete.");
 
 const u8 gText_KogaTrialPhase1[] = _("KOGA went to CINNABAR VOLCANO\nfor volcanic rock.");
 const u8 gText_KogaTrialPhase2[] = _("Find KOGA in CINNABAR VOLCANO.");
