@@ -477,7 +477,6 @@ gStdScriptsEnd::
 	.include "data/maps/ThreeIsland_House3/scripts.inc"
 	.include "data/maps/ThreeIsland_House4/scripts.inc"
 	.include "data/maps/ThreeIsland_House5/scripts.inc"
-	.include "data/maps/FourIsland_PokemonDayCare/scripts.inc"
 	.include "data/maps/FourIsland_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/FourIsland_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/FourIsland_House1/scripts.inc"

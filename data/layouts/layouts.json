@@ -2738,18 +2738,6 @@
       "blockdata_filepath": "data/layouts/ViridianCity_House/map.bin"
     },
     {
-      "id": "LAYOUT_FOUR_ISLAND_POKEMON_DAY_CARE",
-      "name": "FourIsland_PokemonDayCare_Layout",
-      "width": 12,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_FanClubDaycare",
-      "border_filepath": "data/layouts/FourIsland_PokemonDayCare/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_PokemonDayCare/map.bin"
-    },
-    {
       "id": "LAYOUT_SEAFOAM_ISLANDS_B3F_CURRENT_STOPPED",
       "name": "SeafoamIslands_B3F_CurrentStopped_Layout",
       "width": 38,
