@@ -1,5 +1,42 @@
 CeruleanCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CeruleanCity_Gym_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_Gym_OnTransition
 	.byte 0
+
+CeruleanCity_Gym_OnFrame::
+	map_script_2 VAR_MISTY_TRIAL_STATE, 0, CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway
+	.2byte 0
+
+CeruleanCity_Gym_OnTransition::
+	goto_if_lt VAR_MISTY_TRIAL_STATE, 3, CeruleanCity_Gym_EventScript_HideMisty
+	clearflag FLAG_HIDE_CERULEAN_CITY_GYM_MISTY
+	end
+
+CeruleanCity_Gym_EventScript_HideMisty::
+	setflag FLAG_HIDE_CERULEAN_CITY_GYM_MISTY
+	end
+
+CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	applymovement LOCALID_CERULEAN_GYM_GUIDE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_CERULEAN_GYM_GUIDE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_CERULEAN_GYM_GUIDE, CeruleanCity_Gym_Movement_GymGuideApproachEntrance
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox CeruleanCity_Gym_Text_GymGuideMistyAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
+	setvar VAR_MISTY_TRIAL_STATE, 1
+	closemessage
+	applymovement LOCALID_CERULEAN_GYM_GUIDE, CeruleanCity_Gym_Movement_GymGuideReturnToSpot
+	waitmovement 0
+	releaseall
+	end
 
 CeruleanCity_Gym_EventScript_Misty::
 	famechecker FAMECHECKER_MISTY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -77,7 +114,24 @@ CeruleanCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_MISTY, CeruleanCity_Gym_EventScript_GymGuyPostVictory
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 0, CeruleanCity_Gym_EventScript_GymGuyMistyAwayFirstTime
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 1, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 2, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
 	msgbox CeruleanCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymGuyMistyAwayFirstTime::
+	msgbox CeruleanCity_Gym_Text_GymGuideMistyAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
+	setvar VAR_MISTY_TRIAL_STATE, 1
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat::
+	msgbox CeruleanCity_Gym_Text_GymGuideMistyStillAway
 	release
 	end
 
@@ -97,3 +151,14 @@ CeruleanCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox CeruleanCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+CeruleanCity_Gym_Movement_GymGuideApproachEntrance::
+	walk_right
+	walk_down
+	step_end
+
+CeruleanCity_Gym_Movement_GymGuideReturnToSpot::
+	walk_up
+	walk_left
+	walk_in_place_faster_down
+	step_end
