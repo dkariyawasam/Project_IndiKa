@@ -164,7 +164,7 @@
 #define FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY            0x095
 #define FLAG_HIDE_SELPHYS_BUTLER                           0x096
 #define FLAG_HIDE_FOUR_ISLAND_RIVAL                        0x097
-#define FLAG_HIDE_SIX_ISLAND_POKECENTER_RIVAL              0x098
+#define FLAG_0x098                                         0x098
 #define FLAG_HIDE_LUGIA                                    0x09B
 #define FLAG_HIDE_HO_OH                                    0x09C
 #define FLAG_HIDE_POSTGAME_GOSSIPERS                       0x09D
