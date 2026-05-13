@@ -21,7 +21,6 @@ bool8 CutMoveRuinValleyCheck(void);
 void CutMoveOpenDottedHoleDoor(void);
 void RunMassageCooldownStepCounter(void);
 void IncrementResortGorgeousStepCounter(void);
-void IncrementBirthIslandRockStepCount(void);
 void ResetCyclingRoadChallengeData(void);
 void ResetFieldTasksArgs(void);
 bool8 UsedPokemonCenterWarp(void);

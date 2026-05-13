@@ -177,7 +177,6 @@ const u16 gObjectEventPic_Sign[] = INCBIN_U16("graphics/object_events/pics/misc/
 const u16 gObjectEventPic_WoodenSign[] = INCBIN_U16("graphics/object_events/pics/misc/wooden_sign.4bpp");
 const u16 gObjectEventPic_Clipboard[] = INCBIN_U16("graphics/object_events/pics/misc/clipboard.4bpp");
 const u16 gObjectEventPal_Meteorite[] = INCBIN_U16("graphics/object_events/palettes/meteorite.gbapal");
-const u16 gObjectEventPic_BirthIslandStone[] = INCBIN_U16("graphics/object_events/pics/misc/birth_island_stone.4bpp");
 const u16 gObjectEventPic_LaprasDoll[] = INCBIN_U16("graphics/object_events/pics/misc/lapras_doll.4bpp");
 const u16 gObjectEventPal_Seagallop[] = INCBIN_U16("graphics/object_events/palettes/seagallop.gbapal");
 const u16 gObjectEventPic_Seagallop[] = INCBIN_U16("graphics/object_events/pics/misc/seagallop.4bpp");
