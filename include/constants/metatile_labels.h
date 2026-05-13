@@ -198,8 +198,6 @@
 // gTileset_SeviiIslands45
 #define METATILE_SeviiIslands45_DayCareDoor                   0x2B9
 #define METATILE_SeviiIslands45_Door                          0x29A
-#define METATILE_SeviiIslands45_RocketWarehouseDoor_Locked    0x30B
-#define METATILE_SeviiIslands45_RocketWarehouseDoor_Unlocked  0x2AF
 
 // gTileset_SeviiIslands67
 #define METATILE_SeviiIslands67_Door                   0x30C

@@ -56,10 +56,10 @@ MtEmber_Exterior_Text_PunchedThroughAtLast::
     .string "Let's go treasure hunting!$"
 
 MtEmber_Exterior_Text_WhatsPasswordAgain::
-    .string "Any treasure we find, we haul back\n"
-    .string "to the WAREHOUSE, understood?\p"
+    .string "Any treasure we find, we keep\n"
+    .string "for ourselves, understood?\p"
     .string "…Oh, and what're the passwords?\n"
-    .string "At the ROCKET WAREHOUSE, I mean.$"
+    .string "No, wait, forget I said that.$"
 
 MtEmber_Exterior_Text_FirstPasswordGoldeen::
     .string "What, you forgot the password?\n"
@@ -141,4 +141,3 @@ MtEmber_Exterior_Text_JocelynDefeat::
 MtEmber_Exterior_Text_JocelynPostBattle::
     .string "The way you battle, it reminds me\n"
     .string "of the guy who dumped me…$"
-
