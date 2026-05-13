@@ -37,6 +37,7 @@ RocketLeague_Lobby_OpenCounterBarrier::
 RocketLeague_Lobby_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY
 	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
+	setvar VAR_TEMP_3, 0
 	getplayerxy VAR_TEMP_D, VAR_RESULT
 	end
 
