@@ -4342,15 +4342,8 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_PlayerLeaf),
     },
-    [TRAINER_TEAM_ROCKET_GRUNT_42] = {
-        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
-        .trainerName = _("GRUNT"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt42),
+    [TRAINER_UNUSED_522] = {
+        .trainerName = _(""),
     },
     [TRAINER_PSYCHIC_JACLYN] = {
         .trainerClass = TRAINER_CLASS_PSYCHIC,
@@ -4592,55 +4585,20 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt46),
     },
-    [TRAINER_TEAM_ROCKET_GRUNT_47] = {
-        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt47),
+    [TRAINER_UNUSED_547] = {
+        .trainerName = _(""),
     },
-    [TRAINER_TEAM_ROCKET_GRUNT_48] = {
-        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt48),
+    [TRAINER_UNUSED_548] = {
+        .trainerName = _(""),
     },
-    [TRAINER_TEAM_ROCKET_ADMIN] = {
-        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
-        .trainerName = _("ADMIN"),
-        .items = {ITEM_HYPER_POTION},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_TeamRocketAdmin),
+    [TRAINER_UNUSED_549] = {
+        .trainerName = _(""),
     },
-    [TRAINER_TEAM_ROCKET_ADMIN_2] = {
-        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
-        .trainerName = _("ADMIN"),
-        .items = {ITEM_HYPER_POTION},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_TeamRocketAdmin2),
+    [TRAINER_UNUSED_550] = {
+        .trainerName = _(""),
     },
-    [TRAINER_SCIENTIST_GIDEON] = {
-        .trainerClass = TRAINER_CLASS_SCIENTIST,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_SCIENTIST,
-        .trainerName = _("GIDEON"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_ScientistGideon),
+    [TRAINER_UNUSED_551] = {
+        .trainerName = _(""),
     },
     [TRAINER_SWIMMER_FEMALE_AMARA] = {
         .trainerClass = TRAINER_CLASS_SWIMMER_F,

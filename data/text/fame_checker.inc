@@ -605,10 +605,8 @@ gFameCheckerFlavorText_Giovanni4:: @ 0x81B00A6
 
 gFameCheckerFlavorText_Giovanni5:: @ 0x81B0106
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not GIOVANNI's kid,\n"
-	.string "are you?\p"
-	.string "No, that can't be right.\n"
-	.string "GIOVANNI's kid has red hair.$"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No one knows where GIOVANNI\n"
+	.string "went after leaving VIRIDIAN GYM.$"
 
 
 gFameCheckerPersonName_ProfOak:: @ 0x81B0188
@@ -1083,7 +1081,7 @@ gFameCheckerFlavorTextOriginLocation_Giovanni4::
 	.string "VIRIDIAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni5::
-	.string "ROCKET WAREHOUSE$"
+	.string "VIRIDIAN GYM$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak0::
 	.string "SIGN$"
@@ -1371,7 +1369,7 @@ gFameCheckerFlavorTextOriginObjectName_Giovanni4::
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni5::
-	.string "GIDEON$"
+	.string "MAN$"
 
 PokemonJournal_Text_SpecialFeatureBrock::
 	.string "POKéMON JOURNAL\p"
