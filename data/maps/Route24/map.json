@@ -27,7 +27,7 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_ROUTE24_ROCKET",
+      "local_id": "LOCALID_ROUTE24_REWARD_GIVER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
       "x": 12,
@@ -38,8 +38,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route24_EventScript_Rocket",
-      "flag": "FLAG_HIDE_NUGGET_BRIDGE_ROCKET"
+      "script": "Route24_EventScript_RewardGiver",
+      "flag": "FLAG_HIDE_NUGGET_BRIDGE_REWARD_GIVER"
     },
     {
       "type": "object",
@@ -149,7 +149,7 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE24",
       "var_value": "0",
-      "script": "Route24_EventScript_RocketTriggerLeft"
+      "script": "Route24_EventScript_RewardGiverTriggerLeft"
     },
     {
       "type": "trigger",
@@ -158,7 +158,7 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE24",
       "var_value": "0",
-      "script": "Route24_EventScript_RocketTriggerRight"
+      "script": "Route24_EventScript_RewardGiverTriggerRight"
     }
   ],
   "bg_events": [

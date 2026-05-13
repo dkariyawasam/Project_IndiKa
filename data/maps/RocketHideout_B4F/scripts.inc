@@ -28,7 +28,7 @@ RocketHideout_B4F_EventScript_Giovanni::
 	fadescreen FADE_TO_BLACK
 	closemessage
 	removeobject LOCALID_HIDEOUT_GIOVANNI
-	setflag FLAG_HIDE_CELADON_ROCKETS
+	setflag FLAG_HIDE_CELADON_SILPH_SCIENTIST
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	fadescreen FADE_FROM_BLACK
 	release
