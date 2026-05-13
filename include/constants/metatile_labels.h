@@ -247,11 +247,11 @@
 #define METATILE_SilphCo_Wall_LeftEdge                  0x347
 #define METATILE_SilphCo_Wall_RightEdge                 0x346
 
-// gTileset_TrainerTower
-#define METATILE_TrainerTower_CounterBarrier         0x2B4
-#define METATILE_TrainerTower_Floor_ShadeBottomLeft  0x287
-#define METATILE_TrainerTower_LobbyElevatorDoor      0x2C3
-#define METATILE_TrainerTower_RoofElevatorDoor       0x356
+// gTileset_RocketLeague
+#define METATILE_RocketLeague_CounterBarrier         0x2B4
+#define METATILE_RocketLeague_Floor_ShadeBottomLeft  0x287
+#define METATILE_RocketLeague_LobbyElevatorDoor      0x2C3
+#define METATILE_RocketLeague_RoofElevatorDoor       0x356
 
 // gTileset_VermilionCity
 #define METATILE_VermilionCity_Door        0x29E

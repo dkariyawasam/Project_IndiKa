@@ -3,8 +3,8 @@
 	.align 2
 gFieldEffectScriptPointers::
 	.4byte gFldEffScript_ExclamationMarkIcon     @ FLDEFF_EXCLAMATION_MARK_ICON
-	.4byte gFldEffScript_UseCutOnGrass           @ FLDEFF_USE_CUT_ON_GRASS
-	.4byte gFldEffScript_UseCutOnTree            @ FLDEFF_USE_CUT_ON_TREE
+	.4byte gFldEffScript_Nop                     @ FLDEFF_NOP_1
+	.4byte gFldEffScript_Nop                     @ FLDEFF_NOP_2
 	.4byte gFldEffScript_Shadow                  @ FLDEFF_SHADOW
 	.4byte gFldEffScript_TallGrass               @ FLDEFF_TALL_GRASS
 	.4byte gFldEffScript_Ripple                  @ FLDEFF_RIPPLE
@@ -60,7 +60,7 @@ gFieldEffectScriptPointers::
 	.4byte gFldEffScript_SecretPowerCave         @ FLDEFF_SECRET_POWER_CAVE
 	.4byte gFldEffScript_SecretPowerTree         @ FLDEFF_SECRET_POWER_TREE
 	.4byte gFldEffScript_SecretPowerShrub        @ FLDEFF_SECRET_POWER_SHRUB
-	.4byte gFldEffScript_CutGrass                @ FLDEFF_CUT_GRASS
+	.4byte gFldEffScript_Nop                     @ FLDEFF_NOP_58
 	.4byte gFldEffScript_FieldMoveShowMonInit    @ FLDEFF_FIELD_MOVE_SHOW_MON_INIT
 	.4byte gFldEffScript_UseFlyAncientTomb       @ FLDEFF_USE_FLY_ANCIENT_TOMB
 	.4byte gFldEffScript_PcturnOn                @ FLDEFF_PCTURN_ON
@@ -73,14 +73,6 @@ gFieldEffectScriptPointers::
 
 gFldEffScript_ExclamationMarkIcon::
 	callnative FldEff_ExclamationMarkIcon1
-	end 
-
-gFldEffScript_UseCutOnGrass::
-	callnative FldEff_UseCutOnGrass
-	end 
-
-gFldEffScript_UseCutOnTree::
-	callnative FldEff_UseCutOnTree
 	end 
 
 gFldEffScript_Shadow::
@@ -258,6 +250,9 @@ gFldEffScript_XIcon::
 	callnative FldEff_XIcon
 	end 
 
+gFldEffScript_Nop::
+	end 
+
 gFldEffScript_Nop47::
 	end 
 
@@ -294,10 +289,6 @@ gFldEffScript_SecretPowerTree::
 	end 
 
 gFldEffScript_SecretPowerShrub::
-	end 
-
-gFldEffScript_CutGrass::
-	loadfadedpal_callnative gFldEffPalette_CutGrass, FldEff_CutGrass
 	end 
 
 gFldEffScript_FieldMoveShowMonInit::
