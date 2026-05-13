@@ -1568,6 +1568,12 @@ const u8 gText_KogaTrialPhase3[] = _("Return to KOGA.");
 const u8 gText_KogaTrialPhase4[] = _("KOGA is ready for your challenge.");
 const u8 gText_KogaTrialPhase5[] = _("KOGA recognized your skill.");
 
+const u8 gText_SabrinaTrialPhase1[] = _("SABRINA went to POKéMON TOWER\nafter sensing astral energy.");
+const u8 gText_SabrinaTrialPhase2[] = _("Find SABRINA at POKéMON TOWER.");
+const u8 gText_SabrinaTrialPhase3[] = _("Return to SABRINA.");
+const u8 gText_SabrinaTrialPhase4[] = _("SABRINA is ready for your challenge.");
+const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your power.");
+
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by bonds\nwith POKéMON.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution driven by instinct\nand  survival.");
 const u8 gText_SubQuest1_Desc3[] = _("Study evolution created through\nhuman design.");
