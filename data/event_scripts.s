@@ -261,9 +261,7 @@ gStdScriptsEnd::
 	.include "data/maps/NavelRock_BasePath_B11F/scripts.inc"
 	.include "data/maps/NavelRock_B1F/scripts.inc"
 	.include "data/maps/NavelRock_Fork/scripts.inc"
-	.include "data/maps/BirthIsland_Exterior/scripts.inc"
 	.include "data/maps/OneIsland_KindleRoad_EmberSpa/scripts.inc"
-	.include "data/maps/BirthIsland_Harbor/scripts.inc"
 	.include "data/maps/NavelRock_Harbor/scripts.inc"
 	.include "data/maps/PalletTown/scripts.inc"
 	.include "data/maps/ViridianCity/scripts.inc"
@@ -1032,7 +1030,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
 	setflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
 	setflag FLAG_HIDE_SELPHYS_BUTLER
-	setflag FLAG_HIDE_DEOXYS
 	setflag FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL
 	setflag FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL
 	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL

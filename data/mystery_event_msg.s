@@ -205,64 +205,6 @@ sText_MysteryGiftBattleCountCard_2:
 	.string "We hope you will be inspired to\n"
 	.string "battle some more.$"
 
-MysteryEventScript_AuroraTicket::
-	setvaddress MysteryEventScript_AuroraTicket
-	lock
-	faceplayer
-	vgoto_if_set FLAG_RECEIVED_AURORA_TICKET, AuroraTicket_Obtained
-	vgoto_if_set FLAG_FOUGHT_DEOXYS, AuroraTicket_Obtained
-	checkitem ITEM_AURORA_TICKET, 1
-	vgoto_if_eq VAR_RESULT, TRUE, AuroraTicket_Obtained
-	vmessage sText_AuroraTicket1
-	waitmessage
-	waitbuttonpress
-	checkitemspace ITEM_AURORA_TICKET, 1
-	vgoto_if_eq VAR_RESULT, FALSE, AuroraTicket_NoBagSpace
-	giveitem ITEM_AURORA_TICKET
-	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
-	setflag FLAG_RECEIVED_AURORA_TICKET
-	vmessage sText_AuroraTicket2
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-AuroraTicket_NoBagSpace:
-	vmessage sText_AuroraTicketNoPlace
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-AuroraTicket_Obtained:
-	vmessage sText_AuroraTicketGot
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-sText_AuroraTicket1:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
-
-sText_AuroraTicket2:
-	.string "It appears to be for use at the\n"
-	.string "VERMILION CITY port.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
-
-sText_AuroraTicketGot:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
-
-sText_AuroraTicketNoPlace:
-	.string "Oh, I'm sorry, {PLAYER}. Your BAG's\n"
-	.string "KEY ITEMS POCKET is full.\p"
-	.string "Please store something on your PC,\n"
-	.string "then come back for this.$"
-
 MysteryEventScript_MysticTicket::
 	setvaddress MysteryEventScript_MysticTicket
 	lock
