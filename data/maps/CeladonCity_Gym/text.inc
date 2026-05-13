@@ -50,6 +50,8 @@ CeladonCity_Gym_Text_GymGuideErikaAway::
     .string "ERIKA is away from the GYM.\n"
     .string "She's somewhere in VIRIDIAN\l"
     .string "FOREST.\p"
+    .string "She mentioned searching for an\n"
+    .string "ENERGY ROOT with healing properties.\p"
     .string "She's been gone for some time…\n"
     .string "I should go find her.$"
 
