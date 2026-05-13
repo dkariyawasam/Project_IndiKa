@@ -305,9 +305,7 @@ SECTIONS {
         src/ereader_helpers.o(.text);
         src/digit_obj_util.o(.text);
         src/ss_anne.o(.text);
-        src/cereader_tool.o(.text);
         src/renewable_hidden_items.o(.text);
-        src/trainer_tower.o(.text);
         src/berry_powder.o(.text);
         src/minigame_countdown.o(.text);
         src/berry_fix_program.o(.text);
@@ -599,13 +597,10 @@ SECTIONS {
         src/teachy_tv.o(.rodata);
         src/digit_obj_util.o(.rodata);
         src/ss_anne.o(.rodata);
-        src/cereader_tool.o(.rodata);
         src/renewable_hidden_items.o(.rodata);
-        src/trainer_tower.o(.rodata);
         src/minigame_countdown.o(.rodata);
         src/berry_fix_program.o(.rodata);
         src/keyboard_text.o(.rodata);
-        src/trainer_tower_sets.o(.rodata);
         src/move_descriptions.o(.rodata);
 
         /* These should not be moved to C files */
@@ -962,8 +957,8 @@ SECTIONS {
         sound/songs/midi/mus_vs_legend.o(.rodata);
         sound/songs/midi/mus_encounter_gym_leader.o(.rodata);
         sound/songs/midi/mus_encounter_deoxys.o(.rodata);
-        sound/songs/midi/mus_trainer_tower.o(.rodata);
         sound/songs/midi/mus_slow_pallet.o(.rodata);
+        sound/songs/midi/mus_trainer_tower.o(.rodata);
         sound/songs/midi/mus_teachy_tv_menu.o(.rodata);
     } > ROM =0
 

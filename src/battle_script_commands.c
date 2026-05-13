@@ -2609,12 +2609,6 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             case MOVE_EFFECT_STEAL_ITEM:
                 {
-                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_TOWER)
-                    {
-                        gBattlescriptCurrInstr++;
-                        break;
-                    }
-
                     side = GetBattlerSide(gBattlerAttacker);
                     if (GetBattlerSide(gBattlerAttacker) == B_SIDE_OPPONENT
                         && !(gBattleTypeFlags &
@@ -3127,7 +3121,6 @@ static void Cmd_getexp(void)
     case 0: // check if should receive exp at all
         if (GetBattlerSide(gBattlerFainted) != B_SIDE_OPPONENT || (gBattleTypeFlags &
              (BATTLE_TYPE_LINK
-              | BATTLE_TYPE_TRAINER_TOWER
               | BATTLE_TYPE_BATTLE_TOWER
               | BATTLE_TYPE_SAFARI
               | BATTLE_TYPE_EREADER_TRAINER)))
@@ -8803,8 +8796,7 @@ static void Cmd_trysethelpinghand(void)
 static void Cmd_tryswapitems(void)
 {
     // opponent can't swap items with player in regular battles
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_TOWER
-        || (GetBattlerSide(gBattlerAttacker) == B_SIDE_OPPONENT
+    if ((GetBattlerSide(gBattlerAttacker) == B_SIDE_OPPONENT
             && !(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_BATTLE_TOWER
                                   | BATTLE_TYPE_EREADER_TRAINER))
