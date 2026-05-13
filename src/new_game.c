@@ -29,6 +29,7 @@
 #include "pokemon_jump.h"
 #include "quests.h"
 #include "event_scripts.h"
+#include "constants/flags.h"
 
 // this file's functions
 static void ResetMiniGamesResults(void);
@@ -124,6 +125,7 @@ void NewGameInitData(void)
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
     InitEventData();
+    FlagSet(FLAG_SYS_CAN_LINK_WITH_RS);
     ResetFameChecker();
     SetMoney(&gSaveBlock1Ptr->money, 3000);
     ResetGameStats();
