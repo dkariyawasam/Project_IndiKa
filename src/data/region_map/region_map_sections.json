@@ -22,9 +22,6 @@
       "id": "MAPSEC_PETALBURG_CITY"
     },
     {
-      "id": "MAPSEC_SLATEPORT_CITY"
-    },
-    {
       "id": "MAPSEC_MAUVILLE_CITY"
     },
     {
@@ -32,9 +29,6 @@
     },
     {
       "id": "MAPSEC_MOSSDEEP_CITY"
-    },
-    {
-      "id": "MAPSEC_SOOTOPOLIS_CITY"
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY"
@@ -151,9 +145,6 @@
       "id": "MAPSEC_MIRAGE_ISLAND"
     },
     {
-      "id": "MAPSEC_SOUTHERN_ISLAND"
-    },
-    {
       "id": "MAPSEC_FIERY_PATH"
     },
     {
@@ -176,9 +167,6 @@
     },
     {
       "id": "MAPSEC_INSIDE_OF_TRUCK"
-    },
-    {
-      "id": "MAPSEC_SKY_PILLAR"
     },
     {
       "id": "MAPSEC_DYNAMIC"
