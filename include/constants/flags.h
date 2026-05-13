@@ -45,8 +45,8 @@
 
 #define FLAG_HIDE_ROUTE20_SEAGALLOP 0x020
 #define FLAG_HIDE_ROUTE20_SAILOR    0x021
-#define FLAG_0x022               0x022
-#define FLAG_0x023               0x023
+#define FLAG_HIDE_ROUTE19_SEAGALLOP 0x022
+#define FLAG_HIDE_ROUTE19_SAILOR    0x023
 #define FLAG_0x024               0x024
 #define FLAG_0x025               0x025
 #define FLAG_0x026               0x026
