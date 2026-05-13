@@ -36,6 +36,8 @@ Route21_South_EventScript_SailToSeafoam::
 	msgbox Route21_South_Text_SeagallopSailorAllAboard
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SAILOR
+	clearflag FLAG_HIDE_ROUTE20_SEAGALLOP
+	clearflag FLAG_HIDE_ROUTE20_SAILOR
 	setvar VAR_0x8004, SEAGALLOP_ROUTE21_SOUTH
 	setvar VAR_0x8006, SEAGALLOP_SEAFOAM_ISLANDS
 	goto EventScript_SetSail
