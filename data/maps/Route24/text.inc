@@ -3,35 +3,23 @@ Route24_Text_JustEarnedFabulousPrize::
     .string "five contest TRAINERS!\p"
     .string "You just earned a fabulous prize!$"
 
-Route24_Text_ReceivedNuggetFromMysteryTrainer::
+Route24_Text_ReceivedNuggetFromRewardGiver::
     .string "{PLAYER} received a NUGGET\n"
-    .string "from the mystery TRAINER!$"
+    .string "from the challenge host!$"
 
 Route24_Text_YouDontHaveAnyRoom::
     .string "You don't have any room!$"
 
-Route24_Text_JoinTeamRocket::
-    .string "By the way, how would you like to\n"
-    .string "join TEAM ROCKET?\p"
-    .string "We're a group of professional\n"
-    .string "criminals specializing in POKéMON!\p"
-    .string "Want to join?\p"
-    .string "Are you sure?\p"
-    .string "Come on, join us!\p"
-    .string "I'm telling you to join!\p"
-    .string "…Okay, you need convincing!\p"
-    .string "I'll make you an offer you can't\n"
-    .string "refuse!$"
+Route24_Text_KeepTraining::
+    .string "That was a fine run across\n"
+    .string "NUGGET BRIDGE.\p"
+    .string "Keep training, and keep that\n"
+    .string "momentum going!$"
 
-Route24_Text_RocketDefeat::
-    .string "Arrgh!\n"
-    .string "You are good!$"
-
-Route24_Text_YoudBecomeTopRocketLeader::
-    .string "With your ability, you'd become\n"
-    .string "a top leader in TEAM ROCKET.\p"
-    .string "Come on, think of the opportunity!\n"
-    .string "Don't let this chance go to waste.$"
+Route24_Text_YouAlreadyClaimedPrize::
+    .string "You've already claimed your\n"
+    .string "NUGGET BRIDGE prize.\p"
+    .string "Keep up the good work!$"
 
 Route24_Text_ShaneIntro::
     .string "I saw your feat from the grass!$"

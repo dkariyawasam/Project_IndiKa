@@ -27,13 +27,6 @@ CeladonCity_Text_MyTrustedPalPoliwrath::
 CeladonCity_Text_Poliwrath::
     .string "POLIWRATH: Ribi ribit!$"
 
-CeladonCity_Text_GetLostOrIllPunchYou::
-    .string "What are you staring at?\n"
-    .string "Get lost, or I'll punch you.$"
-
-CeladonCity_Text_KeepOutOfTeamRocketsWay::
-    .string "Keep out of TEAM ROCKET's way!$"
-
 CeladonCity_Text_CitySign::
     .string "CELADON CITY\n"
     .string "The City of Rainbow Dreams$"
@@ -55,7 +48,7 @@ CeladonCity_Text_PrizeExchangeSign::
     .string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
-    .string "ROCKET GAME CORNER\n"
+    .string "GAME CORNER\n"
     .string "The playground for grown-ups!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::

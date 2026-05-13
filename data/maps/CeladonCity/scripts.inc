@@ -51,14 +51,6 @@ CeladonCity_EventScript_Poliwrath::
 	release
 	end
 
-CeladonCity_EventScript_RocketGrunt1::
-	msgbox CeladonCity_Text_KeepOutOfTeamRocketsWay, MSGBOX_NPC
-	end
-
-CeladonCity_EventScript_RocketGrunt2::
-	msgbox CeladonCity_Text_GetLostOrIllPunchYou, MSGBOX_NPC
-	end
-
 CeladonCity_EventScript_Boy::
 	msgbox CeladonCity_Text_ScaldedTongueOnTea, MSGBOX_NPC
 	end

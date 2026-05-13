@@ -62,7 +62,7 @@
 #define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                    0x02E
 #define FLAG_0x02F                                         0x02F
 #define FLAG_0x030                                         0x030
-#define FLAG_HIDE_NUGGET_BRIDGE_ROCKET                     0x031
+#define FLAG_HIDE_NUGGET_BRIDGE_REWARD_GIVER              0x031
 #define FLAG_HIDE_BILL_CLEFAIRY                            0x032
 #define FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE                   0x033
 #define FLAG_HIDE_TOWER_FUJI                               0x034
@@ -106,8 +106,8 @@
 #define FLAG_HIDE_OAK_IN_CHAMP_ROOM                        0x05A
 #define FLAG_HIDE_GAME_CORNER_ROCKET                       0x05B
 #define FLAG_HIDE_ZAPDOS                                   0x05D
-#define FLAG_HIDE_TOWER_ROCKET_1                           0x05E
-#define FLAG_HIDE_CELADON_ROCKETS                          0x05F
+#define FLAG_UNUSED_0x05E                                  0x05E
+#define FLAG_HIDE_CELADON_SILPH_SCIENTIST                  0x05F
 #define FLAG_HIDE_DOJO_HITMONLEE_BALL                      0x060
 #define FLAG_HIDE_DOJO_HITMONCHAN_BALL                     0x061
 #define FLAG_HIDE_CINNABAR_BILL                            0x062
@@ -143,8 +143,8 @@
 #define FLAG_HIDE_ROUTE21_SOUTH_SAILOR                     0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
-#define FLAG_HIDE_TOWER_ROCKET_2                           0x083
-#define FLAG_HIDE_TOWER_ROCKET_3                           0x084
+#define FLAG_UNUSED_0x083                                  0x083
+#define FLAG_UNUSED_0x084                                  0x084
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_1                  0x085
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_2                  0x086
 #define FLAG_HIDE_SS_ANNE                                  0x087
