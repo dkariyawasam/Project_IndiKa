@@ -1,30 +1,16 @@
-.equ FOUND_FIRST_SWITCH, FLAG_TEMP_1
-.equ SWITCH1_ID,         VAR_0x8004
-.equ SWITCH2_ID,         VAR_0x8005
-.equ TRASH_CAN_ID,       VAR_0x8008
-
 VermilionCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, VermilionCity_Gym_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, VermilionCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, VermilionCity_Gym_OnTransition
 	.byte 0
 
-VermilionCity_Gym_OnLoad::
-	call_if_set FOUND_FIRST_SWITCH, VermilionCity_Gym_EventScript_SetOneBeamOff
-	call_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, VermilionCity_Gym_EventScript_SetBeamsOff
-	end
+VermilionCity_Gym_OnFrame::
+	map_script_2 VAR_LT_SURGE_TRIAL_STATE, 0, VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway
+	.2byte 0
 
-VermilionCity_Gym_EventScript_SetOneBeamOff::
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_HalfOn, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_HalfOn, 1
-	setmetatile 5, 6, METATILE_VermilionGym_Beam_MidTop_HalfOn, 1
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_HalfOn, 1
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_HalfOn, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_HalfOn, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_HalfOn, 1
-	setmetatile 5, 7, METATILE_VermilionGym_Beam_MidBottom_HalfOn, 1
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_HalfOn, 1
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_HalfOn, 1
-	return
+VermilionCity_Gym_OnLoad::
+	call VermilionCity_Gym_EventScript_SetBeamsOff
+	end
 
 VermilionCity_Gym_EventScript_SetBeamsOff::
 	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Off, 1
@@ -40,168 +26,35 @@ VermilionCity_Gym_EventScript_SetBeamsOff::
 	return
 
 VermilionCity_Gym_OnTransition::
-	call VermilionCity_Gym_EventScript_InitTrashCans
+	goto_if_lt VAR_LT_SURGE_TRIAL_STATE, 3, VermilionCity_Gym_EventScript_HideLtSurge
+	clearflag FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE
 	end
 
-VermilionCity_Gym_EventScript_InitTrashCans::
-	goto_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, EventScript_Return
-	special SetVermilionTrashCans
-	copyvar VAR_TEMP_0, SWITCH1_ID
-	copyvar VAR_TEMP_1, SWITCH2_ID
-	return
+VermilionCity_Gym_EventScript_HideLtSurge::
+	setflag FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE
+	end
 
-VermilionCity_Gym_EventScript_TrashCan1::
+VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway::
 	lockall
-	setvar TRASH_CAN_ID, 1
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan2::
-	lockall
-	setvar TRASH_CAN_ID, 2
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan3::
-	lockall
-	setvar TRASH_CAN_ID, 3
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan4::
-	lockall
-	setvar TRASH_CAN_ID, 4
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan5::
-	lockall
-	setvar TRASH_CAN_ID, 5
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan6::
-	lockall
-	setvar TRASH_CAN_ID, 6
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan7::
-	lockall
-	setvar TRASH_CAN_ID, 7
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan8::
-	lockall
-	setvar TRASH_CAN_ID, 8
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan9::
-	lockall
-	setvar TRASH_CAN_ID, 9
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan10::
-	lockall
-	setvar TRASH_CAN_ID, 10
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan11::
-	lockall
-	setvar TRASH_CAN_ID, 11
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan12::
-	lockall
-	setvar TRASH_CAN_ID, 12
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan13::
-	lockall
-	setvar TRASH_CAN_ID, 13
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan14::
-	lockall
-	setvar TRASH_CAN_ID, 14
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan15::
-	lockall
-	setvar TRASH_CAN_ID, 15
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
-	copyvar SWITCH1_ID, VAR_TEMP_0
-	copyvar SWITCH2_ID, VAR_TEMP_1
-	goto_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, VermilionCity_Gym_EventScript_LocksAlreadyOpen
-	goto_if_set FOUND_FIRST_SWITCH, VermilionCity_Gym_EventScript_TrySwitchTwo
-	goto_if_eq SWITCH1_ID, TRASH_CAN_ID, VermilionCity_Gym_EventScript_FoundSwitchOne
-	msgbox VermilionCity_Gym_Text_NopeOnlyTrashHere
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_FoundSwitchOne::
-	msgbox VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened
-	playse SE_PIN
-	waitse
-	call VermilionCity_Gym_EventScript_SetOneBeamOff
-	special DrawWholeMapView
-	setflag FOUND_FIRST_SWITCH
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_TrySwitchTwo::
-	goto_if_eq SWITCH2_ID, TRASH_CAN_ID, VermilionCity_Gym_EventScript_FoundSwitchTwo
-	msgbox VermilionCity_Gym_Text_OnlyTrashLocksWereReset
-	clearflag FOUND_FIRST_SWITCH
-	special SetVermilionTrashCans
-	copyvar VAR_TEMP_0, SWITCH1_ID
-	copyvar VAR_TEMP_1, SWITCH2_ID
-	call VermilionCity_Gym_EventScript_SetBeamsOn
-	special DrawWholeMapView
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_FoundSwitchTwo::
-	msgbox VermilionCity_Gym_Text_SecondLockOpened
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	applymovement LOCALID_VERMILION_GYM_GUY, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_VERMILION_GYM_GUY, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_VERMILION_GYM_GUY, VermilionCity_Gym_Movement_GymGuyApproachEntrance
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox VermilionCity_Gym_Text_GymGuySurgeAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	setvar VAR_LT_SURGE_TRIAL_STATE, 1
 	closemessage
-	call VermilionCity_Gym_EventScript_SetBeamsOff
-	special DrawWholeMapView
-	playse SE_UNLOCK
-	waitse
-	setflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES
+	applymovement LOCALID_VERMILION_GYM_GUY, VermilionCity_Gym_Movement_GymGuyReturnToSpot
+	waitmovement 0
 	releaseall
 	end
-
-VermilionCity_Gym_EventScript_LocksAlreadyOpen::
-	msgbox VermilionCity_Gym_Text_NopeOnlyTrashHere
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_SetBeamsOn::
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_On, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_On, 1
-	setmetatile 5, 6, METATILE_VermilionGym_Beam_MidTop, 1
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_On, 1
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_On, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_On, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_On, 1
-	setmetatile 5, 7, METATILE_VermilionGym_Beam_MidBottom, 1
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_On, 1
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_On, 1
-	return
 
 VermilionCity_Gym_EventScript_LtSurge::
 	famechecker FAMECHECKER_LTSURGE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -250,7 +103,24 @@ VermilionCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_LT_SURGE, VermilionCity_Gym_EventScript_GymGuyPostVictory
+	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 0, VermilionCity_Gym_EventScript_GymGuySurgeAwayFirstTime
+	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 1, VermilionCity_Gym_EventScript_GymGuySurgeAwayRepeat
+	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 2, VermilionCity_Gym_EventScript_GymGuySurgeAwayRepeat
 	msgbox VermilionCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+VermilionCity_Gym_EventScript_GymGuySurgeAwayFirstTime::
+	msgbox VermilionCity_Gym_Text_GymGuySurgeAway
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	setvar VAR_LT_SURGE_TRIAL_STATE, 1
+	release
+	end
+
+VermilionCity_Gym_EventScript_GymGuySurgeAwayRepeat::
+	msgbox VermilionCity_Gym_Text_GymGuySurgeStillAway
 	release
 	end
 
@@ -270,3 +140,14 @@ VermilionCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox VermilionCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+VermilionCity_Gym_Movement_GymGuyApproachEntrance::
+	walk_right
+	walk_down
+	step_end
+
+VermilionCity_Gym_Movement_GymGuyReturnToSpot::
+	walk_up
+	walk_left
+	walk_in_place_faster_down
+	step_end
