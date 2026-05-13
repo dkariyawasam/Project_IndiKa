@@ -68,7 +68,6 @@
 #define MULTICHOICE_SEAGALLOP_VERMILION                        61
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
-#define MULTICHOICE_TRAINER_TOWER_MODE                         64
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_2                     65
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_3                     66
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_4                     67
@@ -87,7 +86,6 @@
 #define LISTMENU_DEPT_STORE_FLOORS         3
 #define LISTMENU_WIRELESS_LECTURE_HEADERS  4
 #define LISTMENU_BERRY_POWDER              5
-#define LISTMENU_TRAINER_TOWER_FLOORS      6
 
 // Std String Ids
 #define STDSTRING_COOL              0

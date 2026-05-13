@@ -2,7 +2,7 @@
   "id": "MAP_ROCKET_LEAGUE_ARENA",
   "name": "RocketLeague_Arena",
   "layout": "LAYOUT_ROCKET_LEAGUE_ARENA",
-  "music": "MUS_TRAINER_TOWER",
+  "music": "MUS_ROCKET_HIDEOUT",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
