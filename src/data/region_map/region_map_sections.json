@@ -1,37 +1,7 @@
 {
   "map_sections": [
     {
-      "id": "MAPSEC_LITTLEROOT_TOWN"
-    },
-    {
-      "id": "MAPSEC_OLDALE_TOWN"
-    },
-    {
-      "id": "MAPSEC_DEWFORD_TOWN"
-    },
-    {
-      "id": "MAPSEC_LAVARIDGE_TOWN"
-    },
-    {
-      "id": "MAPSEC_FALLARBOR_TOWN"
-    },
-    {
-      "id": "MAPSEC_PACIFIDLOG_TOWN"
-    },
-    {
-      "id": "MAPSEC_PETALBURG_CITY"
-    },
-    {
-      "id": "MAPSEC_MAUVILLE_CITY"
-    },
-    {
       "id": "MAPSEC_LILYCOVE_CITY"
-    },
-    {
-      "id": "MAPSEC_MOSSDEEP_CITY"
-    },
-    {
-      "id": "MAPSEC_EVER_GRANDE_CITY"
     },
     {
       "id": "MAPSEC_ROUTE_111"
@@ -100,73 +70,16 @@
       "id": "MAPSEC_ROUTE_132"
     },
     {
-      "id": "MAPSEC_ROUTE_133"
-    },
-    {
-      "id": "MAPSEC_ROUTE_134"
-    },
-    {
-      "id": "MAPSEC_GRANITE_CAVE"
-    },
-    {
-      "id": "MAPSEC_MT_CHIMNEY"
-    },
-    {
       "id": "MAPSEC_SAFARI_ZONE"
     },
     {
-      "id": "MAPSEC_PETALBURG_WOODS"
-    },
-    {
-      "id": "MAPSEC_ABANDONED_SHIP"
-    },
-    {
-      "id": "MAPSEC_NEW_MAUVILLE"
-    },
-    {
-      "id": "MAPSEC_METEOR_FALLS"
-    },
-    {
-      "id": "MAPSEC_METEOR_FALLS2"
-    },
-    {
       "id": "MAPSEC_MT_PYRE"
-    },
-    {
-      "id": "MAPSEC_AQUA_HIDEOUT_OLD"
     },
     {
       "id": "MAPSEC_SEAFLOOR_CAVERN"
     },
     {
       "id": "MAPSEC_VICTORY_ROAD"
-    },
-    {
-      "id": "MAPSEC_MIRAGE_ISLAND"
-    },
-    {
-      "id": "MAPSEC_FIERY_PATH"
-    },
-    {
-      "id": "MAPSEC_FIERY_PATH2"
-    },
-    {
-      "id": "MAPSEC_JAGGED_PASS"
-    },
-    {
-      "id": "MAPSEC_JAGGED_PASS2"
-    },
-    {
-      "id": "MAPSEC_ISLAND_CAVE"
-    },
-    {
-      "id": "MAPSEC_DESERT_RUINS"
-    },
-    {
-      "id": "MAPSEC_ANCIENT_TOMB"
-    },
-    {
-      "id": "MAPSEC_INSIDE_OF_TRUCK"
     },
     {
       "id": "MAPSEC_DYNAMIC"
