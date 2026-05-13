@@ -15,20 +15,13 @@ CinnabarIsland_EventScript_ReadyObjectsSailToOneIslandFromPokeCenter::
 	setflag FLAG_TEMP_2
 	setobjectxyperm LOCALID_CINNABAR_BILL, 15, 12
 	setobjectmovementtype LOCALID_CINNABAR_BILL, MOVEMENT_TYPE_FACE_LEFT
-	setobjectxyperm LOCALID_CINNABAR_SEAGALLOP, 30, 12
 	return
 
 CinnabarIsland_EventScript_ReadyObjectsSailToOneIsland::
 	getplayerxy VAR_0x8004, VAR_0x8005
-	goto_if_ge VAR_0x8004, 18, CinnabarIsland_EventScript_MoveSeagallopDown
 	setflag FLAG_TEMP_2
 	setobjectxyperm LOCALID_CINNABAR_BILL, 18, 12
 	setobjectmovementtype LOCALID_CINNABAR_BILL, MOVEMENT_TYPE_FACE_UP
-	setobjectxyperm LOCALID_CINNABAR_SEAGALLOP, 30, 12
-	return
-
-CinnabarIsland_EventScript_MoveSeagallopDown::
-	setobjectxyperm LOCALID_CINNABAR_SEAGALLOP, 30, 8
 	return
 
 CinnabarIsland_EventScript_ReadyObjectsReturnFromSeviiIslands::
@@ -180,23 +173,9 @@ CinnabarIsland_Movement_BillReEnterPokeCenter::
 
 @ Can be triggered outside, or after talking to Bill in the poke center
 CinnabarIsland_EventScript_SailToOneIsland::
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_ApproachShore
-	addobject LOCALID_CINNABAR_SEAGALLOP
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BoatArrive
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BoatArriveExitedPokeCenter
-	msgbox CinnabarIsland_Text_MyPalsBoatArrived
-	closemessage
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BoardBoat
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BoardBoatExitedPokeCenter
+	msgbox CinnabarIsland_Text_FerryNoLongerRuns
 	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 2
-	removeobject LOCALID_CINNABAR_BILL
-	delay 40
-	setflag FLAG_HIDE_CINNABAR_SEAGALLOP
-	setvar VAR_MAP_SCENE_ONE_ISLAND_HARBOR, 1
-	setvar VAR_0x8004, SEAGALLOP_CINNABAR_ISLAND
-	setvar VAR_0x8006, SEAGALLOP_ONE_ISLAND
-	goto EventScript_SetSail
-	end
+	return
 
 CinnabarIsland_EventScript_ApproachShore::
 	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_ApproachShore
@@ -206,13 +185,10 @@ CinnabarIsland_EventScript_ApproachShore::
 
 CinnabarIsland_EventScript_BoatArrive::
 	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_BillFaceBoat
-	applymovement LOCALID_CINNABAR_SEAGALLOP, CinnabarIsland_Movement_BoatArrive
 	waitmovement 0
 	return
 
 CinnabarIsland_EventScript_BoatArriveExitedPokeCenter::
-	applymovement LOCALID_CINNABAR_SEAGALLOP, CinnabarIsland_Movement_BoatArrive
-	waitmovement 0
 	return
 
 CinnabarIsland_EventScript_BoardBoat::

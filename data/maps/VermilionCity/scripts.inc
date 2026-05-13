@@ -49,7 +49,7 @@ VermilionCity_EventScript_OldMan1SSAnneLeft::
 VermilionCity_EventScript_FerrySailor::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckSeagallopPresent
+	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckShipDeparted
 	msgbox VermilionCity_Text_WelcomeToTheSSAnne
 	release
 	end
@@ -61,61 +61,15 @@ VermilionCity_EventScript_CheckHasMysticTicket::
 	goto EventScript_SetResultTrue
 	end
 
-VermilionCity_EventScript_CheckSeagallopPresent::
-	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1, VermilionCity_EventScript_ChooseSeagallopDestTriPass
+VermilionCity_EventScript_CheckShipDeparted::
 	msgbox VermilionCity_Text_TheShipSetSail
 	release
-	end
-
-VermilionCity_EventScript_ChooseSeagallopDestRainbowPass::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
-	call VermilionCity_EventScript_CheckHasMysticTicket
-	goto_if_eq VAR_RESULT, TRUE, VermilionCity_EventScript_HasMysticTicket
-	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	message VermilionCity_Text_BoardSeagallopRainbowPass
-	waitmessage
-	goto EventScript_SeviiDestinationsPage1
-	end
-
-VermilionCity_EventScript_HasMysticTicket::
-	call_if_unset FLAG_SHOWN_MYSTIC_TICKET, VermilionCity_EventScript_ShowMysticTicket
-	message VermilionCity_Text_BoardSeagallopFerry
-	waitmessage
-	multichoice 17, 6, MULTICHOICE_SEVII_NAVEL, FALSE
-	switch VAR_RESULT
-	case 0, EventScript_SeviiDestinationsPage1
-	case 1, EventScript_SailToNavelRock
-	case 2, EventScript_CancelSail
-	case 127, EventScript_CancelSail
 	end
 
 VermilionCity_EventScript_ShowMysticTicket::
 	setflag FLAG_SHOWN_MYSTIC_TICKET
 	msgbox VermilionCity_Text_OhMysticTicketTakeYouToNavelRock
 	return
-
-EventScript_SailToNavelRock::
-	msgbox VermilionCity_Text_Seagallop10Departing
-	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	setvar VAR_0x8006, SEAGALLOP_NAVEL_ROCK
-	goto EventScript_SetSail
-	end
-
-VermilionCity_EventScript_ChooseSeagallopDestTriPass::
-	message VermilionCity_Text_BoardSeagallopTriPass
-	waitmessage
-	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	multichoice 19, 5, MULTICHOICE_SEAGALLOP_123, FALSE
-	switch VAR_RESULT
-	case 0, EventScript_SailToOneIsland2
-	case 1, EventScript_SailToTwoIsland2
-	case 2, EventScript_SailToThreeIsland2
-	case 3, EventScript_CancelSail
-	case 127, EventScript_CancelSail
-	end
 
 @ Unreachable
 Vermilion_EventScript_Unused::
@@ -143,7 +97,7 @@ VermilionCity_EventScript_CheckTicket::
 	applymovement LOCALID_VERMILION_FERRY_SAILOR, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckSeagallopPresentTrigger
+	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckShipDepartedTrigger
 	msgbox VermilionCity_Text_DoYouHaveATicket
 	goto_if_unset FLAG_GOT_SS_TICKET, VermilionCity_EventScript_DontHaveSSTicket
 	msgbox VermilionCity_Text_FlashedSSTicket
@@ -157,10 +111,19 @@ VermilionCity_EventScript_DontHaveSSTicket::
 	goto VermilionCity_EventScript_WalkUpPier
 	end
 
-VermilionCity_EventScript_CheckSeagallopPresentTrigger::
-	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1, VermilionCity_EventScript_ChooseSeagallopDestTriPass
+VermilionCity_EventScript_WalkUpPier::
+	closemessage
+	applymovement LOCALID_VERMILION_FERRY_SAILOR, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_PLAYER, VermilionCity_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+VermilionCity_Movement_WalkUp::
+	walk_up
+	step_end
+
+VermilionCity_EventScript_CheckShipDepartedTrigger::
 	msgbox VermilionCity_Text_TheShipSetSail
 	closemessage
 	goto VermilionCity_EventScript_WalkUpPier

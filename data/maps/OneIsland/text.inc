@@ -14,6 +14,10 @@ Text_WhereDoYouWantToSail::
     .string "Ahoy, there!\n"
     .string "Where do you want to sail?$"
 
+Text_FerryNotRunning::
+    .string "The ferry isn't running from\n"
+    .string "this port anymore.$"
+
 OneIsland_Text_LuckyToHaveCelioHere::
     .string "Here we are on an island smack in\n"
     .string "the middle of nowhere.\p"
@@ -59,4 +63,3 @@ OneIsland_Text_ReturnToCinnabar::
 OneIsland_Text_IsntWarmClimateHereGreat::
     .string "Hi, sight-seeing, are you?\n"
     .string "Isn't the warm climate here great?$"
-

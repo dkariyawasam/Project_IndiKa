@@ -59,11 +59,6 @@
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH                52
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK                      53
 #define MULTICHOICE_SEVII_NAVEL                                54
-#define MULTICHOICE_SEAGALLOP_123                              57
-#define MULTICHOICE_SEAGALLOP_V23                              58
-#define MULTICHOICE_SEAGALLOP_V13                              59
-#define MULTICHOICE_SEAGALLOP_V12                              60
-#define MULTICHOICE_SEAGALLOP_VERMILION                        61
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_ROUTE21_FERRY                              64
