@@ -1,5 +1,32 @@
 PewterCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PewterCity_Gym_OnFrame
 	.byte 0
+
+PewterCity_Gym_OnFrame::
+	map_script_2 VAR_BROCK_TRIAL_STATE, 0, PewterCity_Gym_EventScript_GymGuyInterceptBrockAway
+	.2byte 0
+
+PewterCity_Gym_EventScript_GymGuyInterceptBrockAway::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	applymovement LOCALID_PEWTER_GYM_GUY, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PEWTER_GYM_GUY, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PEWTER_GYM_GUY, PewterCity_Gym_Movement_GymGuyApproachEntrance
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox PewterCity_Gym_Text_GymGuyBrockInMtMoon
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
+	setvar VAR_BROCK_TRIAL_STATE, 1
+	closemessage
+	applymovement LOCALID_PEWTER_GYM_GUY, PewterCity_Gym_Movement_GymGuyReturnToSpot
+	waitmovement 0
+	releaseall
+	end
 
 PewterCity_Gym_EventScript_Brock::
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -157,3 +184,14 @@ PewterCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox PewterCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+PewterCity_Gym_Movement_GymGuyApproachEntrance::
+	walk_left
+	walk_down
+	step_end
+
+PewterCity_Gym_Movement_GymGuyReturnToSpot::
+	walk_up
+	walk_right
+	walk_in_place_faster_down
+	step_end
