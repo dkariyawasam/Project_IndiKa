@@ -622,22 +622,6 @@ FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
-FiveIsland_RocketWarehouse_EventScript_ItemBigPearl::
-	finditem ITEM_BIG_PEARL
-	end
-
-FiveIsland_RocketWarehouse_EventScript_ItemTM36::
-	finditem ITEM_TIMER_BALL
-	end
-
-FiveIsland_RocketWarehouse_EventScript_ItemPearl::
-	finditem ITEM_PEARL
-	end
-
-FiveIsland_RocketWarehouse_EventScript_ItemUpGrade::
-	finditem ITEM_UP_GRADE
-	end
-
 FiveIsland_LostCave_Room10_EventScript_ItemSilkScarf::
 	finditem ITEM_SILK_SCARF
 	end

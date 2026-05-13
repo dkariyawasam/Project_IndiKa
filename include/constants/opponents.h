@@ -527,7 +527,7 @@
 #define TRAINER_PLAYER_MAY                       519
 #define TRAINER_PLAYER_RED                       520
 #define TRAINER_PLAYER_LEAF                      521
-#define TRAINER_TEAM_ROCKET_GRUNT_42             522
+#define TRAINER_UNUSED_522                       522
 #define TRAINER_PSYCHIC_JACLYN                   523
 #define TRAINER_CRUSH_GIRL_SHARON                524
 #define TRAINER_TUBER_AMIRA                      525
@@ -552,11 +552,11 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_44             544
 #define TRAINER_TEAM_ROCKET_GRUNT_45             545
 #define TRAINER_TEAM_ROCKET_GRUNT_46             546
-#define TRAINER_TEAM_ROCKET_GRUNT_47             547
-#define TRAINER_TEAM_ROCKET_GRUNT_48             548
-#define TRAINER_TEAM_ROCKET_ADMIN                549
-#define TRAINER_TEAM_ROCKET_ADMIN_2              550
-#define TRAINER_SCIENTIST_GIDEON                 551
+#define TRAINER_UNUSED_547                       547
+#define TRAINER_UNUSED_548                       548
+#define TRAINER_UNUSED_549                       549
+#define TRAINER_UNUSED_550                       550
+#define TRAINER_UNUSED_551                       551
 #define TRAINER_SWIMMER_FEMALE_AMARA             552
 #define TRAINER_SWIMMER_FEMALE_MARIA             553
 #define TRAINER_SWIMMER_FEMALE_ABIGAIL           554

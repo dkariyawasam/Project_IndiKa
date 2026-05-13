@@ -2906,18 +2906,6 @@
       "blockdata_filepath": "data/layouts/MtEmber_RubyPath_B5F/map.bin"
     },
     {
-      "id": "LAYOUT_FIVE_ISLAND_ROCKET_WAREHOUSE",
-      "name": "FiveIsland_RocketWarehouse_Layout",
-      "width": 29,
-      "height": 27,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/FiveIsland_RocketWarehouse/border.bin",
-      "blockdata_filepath": "data/layouts/FiveIsland_RocketWarehouse/map.bin"
-    },
-    {
       "id": "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
       "name": "FourIsland_IcefallCave_Entrance_Layout",
       "width": 30,

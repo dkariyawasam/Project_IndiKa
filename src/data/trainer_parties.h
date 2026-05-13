@@ -7284,19 +7284,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PlayerMay[] = {DUMMY_TRA
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerRed[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {DUMMY_TRAINER_MON};
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt42[] = {
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_HOUNDOUR,
-    },
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_HOUNDOUR,
-    },
-};
-
 static const struct TrainerMonNoItemCustomMoves sParty_PsychicJaclyn[] = {
     {
         .iv = 100,
@@ -7656,79 +7643,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt46[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt47[] = {
-    {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_MACHOP,
-    },
-    {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_MACHOP,
-    },
-    {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_MACHOKE,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt48[] = {
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_HYPNO,
-    },
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_HYPNO,
-    },
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_TeamRocketAdmin[] = {
-    {
-        .iv = 150,
-        .lvl = 52,
-        .species = SPECIES_MUK,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SCREECH, MOVE_MINIMIZE, MOVE_ROCK_TOMB},
-    },
-    {
-        .iv = 150,
-        .lvl = 53,
-        .species = SPECIES_ARBOK,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_BITE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL},
-    },
-    {
-        .iv = 150,
-        .lvl = 54,
-        .species = SPECIES_VILEPLUME,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE},
-    },
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_TeamRocketAdmin2[] = {
-    {
-        .iv = 200,
-        .lvl = 53,
-        .species = SPECIES_GOLBAT,
-        .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_AIR_CUTTER, MOVE_SHADOW_BALL},
-    },
-    {
-        .iv = 200,
-        .lvl = 54,
-        .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_SHADOW_BALL},
-    },
-    {
-        .iv = 200,
-        .lvl = 55,
-        .species = SPECIES_HOUNDOOM,
-        .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_SHADOW_BALL},
-    },
-};
-
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminPetrel[] = {
     {
         .iv = 120,
@@ -7810,39 +7724,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminProton[] = {
         .lvl = 38,
         .species = SPECIES_CROBAT,
         .moves = {MOVE_CONFUSE_RAY, MOVE_AIR_CUTTER, MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL},
-    },
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_ScientistGideon[] = {
-    {
-        .iv = 0,
-        .lvl = 46,
-        .species = SPECIES_VOLTORB,
-        .moves = {MOVE_SWIFT, MOVE_SCREECH, MOVE_SPARK, MOVE_SONIC_BOOM},
-    },
-    {
-        .iv = 0,
-        .lvl = 46,
-        .species = SPECIES_ELECTRODE,
-        .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_CHARGE},
-    },
-    {
-        .iv = 0,
-        .lvl = 46,
-        .species = SPECIES_MAGNEMITE,
-        .moves = {MOVE_SCREECH, MOVE_SWIFT, MOVE_SPARK, MOVE_THUNDER_WAVE},
-    },
-    {
-        .iv = 0,
-        .lvl = 46,
-        .species = SPECIES_MAGNETON,
-        .moves = {MOVE_TRI_ATTACK, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM},
-    },
-    {
-        .iv = 0,
-        .lvl = 46,
-        .species = SPECIES_PORYGON,
-        .moves = {MOVE_TRI_ATTACK, MOVE_CONVERSION, MOVE_RECOVER, MOVE_PSYBEAM},
     },
 };
 

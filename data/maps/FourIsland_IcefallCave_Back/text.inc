@@ -55,13 +55,8 @@ FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou::
 FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
     .string "Wawaah! Okay!\n"
     .string "I'll talk!\p"
-    .string "The POKéMON are in the ROCKET\n"
-    .string "WAREHOUSE on FIVE ISLAND.\p"
     .string "There! I said it!\n"
-    .string "We'll be going now!\p"
-    .string "…But I doubt you'll ever make it\n"
-    .string "into the ROCKET WAREHOUSE!\p"
-    .string "Heheheheh!$"
+    .string "We'll be going now!$"
 
 FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
     .string "{PLAYER}, thank you.\n"
@@ -70,4 +65,3 @@ FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
     .string "these islands.\p"
     .string "I had no idea that those horrible\n"
     .string "criminals were loose here…$"
-

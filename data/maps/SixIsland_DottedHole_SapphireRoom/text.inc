@@ -14,11 +14,5 @@ SixIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword::
     .string "…D-don't glare at me like that!\p"
     .string "If you want it back, why don't you\n"
     .string "go get it after I sell it?\p"
-    .string "I'll even tell you one of the\n"
-    .string "passwords to TEAM ROCKET's\l"
-    .string "WAREHOUSE.\p"
-    .string "The WAREHOUSE password I know is\n"
-    .string "“Yes, nah, CHANSEY.”\p"
     .string "I'm done.\n"
     .string "Don't think badly of me!$"
-
