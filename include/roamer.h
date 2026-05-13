@@ -5,7 +5,6 @@
 
 void ClearRoamerData(void);
 void ClearRoamerLocationData(void);
-void InitRoamer(void);
 void UpdateLocationHistoryForRoamer(void);
 void RoamerMoveToOtherLocationSet(void);
 void RoamerMove(void);
