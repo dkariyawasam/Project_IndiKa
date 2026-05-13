@@ -191,8 +191,8 @@
 #define FLAG_HIDE_MT_MOON_BROCK                       0x0B0
 #define FLAG_HIDE_CERULEAN_CITY_GYM_MISTY             0x0B1
 #define FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE         0x0B2
-#define FLAG_0x0B3               0x0B3
-#define FLAG_0x0B4               0x0B4
+#define FLAG_HIDE_CELADON_CITY_GYM_ERIKA              0x0B3
+#define FLAG_HIDE_CELADON_CITY_GYM_GUIDE              0x0B4
 #define FLAG_0x0B5               0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7
