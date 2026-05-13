@@ -112,10 +112,41 @@ RocketLeague_Arena_EventScript_AdminFEnter::
 
 RocketLeague_Arena_EventScript_GiveCoinReward::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 250, RocketLeague_Arena_EventScript_CoinRewardFull
-	addcoins 250
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 1, RocketLeague_Arena_EventScript_GiveTierOneCoinReward
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 2, RocketLeague_Arena_EventScript_GiveTierTwoCoinReward
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 3, RocketLeague_Arena_EventScript_GiveTierThreeCoinReward
+	goto RocketLeague_Arena_EventScript_GiveBaseCoinReward
+
+RocketLeague_Arena_EventScript_GiveBaseCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1000, RocketLeague_Arena_EventScript_CoinRewardFull
+	addcoins 1000
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ReceivedCoins
+	goto RocketLeague_Arena_EventScript_FinishCoinReward
+
+RocketLeague_Arena_EventScript_GiveTierOneCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1500, RocketLeague_Arena_EventScript_CoinRewardFull
+	addcoins 1500
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ReceivedTierOneCoins
+	goto RocketLeague_Arena_EventScript_FinishCoinReward
+
+RocketLeague_Arena_EventScript_GiveTierTwoCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 2000, RocketLeague_Arena_EventScript_CoinRewardFull
+	addcoins 2000
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ReceivedTierTwoCoins
+	goto RocketLeague_Arena_EventScript_FinishCoinReward
+
+RocketLeague_Arena_EventScript_GiveTierThreeCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 3000, RocketLeague_Arena_EventScript_CoinRewardFull
+	addcoins 3000
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_ReceivedTierThreeCoins
+	goto RocketLeague_Arena_EventScript_FinishCoinReward
+
+RocketLeague_Arena_EventScript_FinishCoinReward::
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	playse SE_SHOP
 	waitse
 	closemessage
@@ -125,6 +156,7 @@ RocketLeague_Arena_EventScript_GiveCoinReward::
 	end
 
 RocketLeague_Arena_EventScript_CoinRewardFull::
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_CoinCaseFull
 	closemessage

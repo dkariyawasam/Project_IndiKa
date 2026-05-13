@@ -36,6 +36,7 @@ RocketLeague_Lobby_OpenCounterBarrier::
 
 RocketLeague_Lobby_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	getplayerxy VAR_TEMP_D, VAR_RESULT
 	end
 
@@ -221,12 +222,71 @@ RocketLeague_Lobby_Movement_WalkToArenaDoor::
 	step_end
 
 RocketLeague_Lobby_EventScript_ShowRecords::
-	lockall
-	fadescreen FADE_TO_BLACK
-	setvar VAR_0x8004, 1
-	special ShowBattleRecords
-	waitstate
-	releaseall
+	lock
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Lobby_Text_PrizeBoardIntro
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 0, RocketLeague_Lobby_EventScript_OfferPrizeTierOne
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 1, RocketLeague_Lobby_EventScript_OfferPrizeTierTwo
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 2, RocketLeague_Lobby_EventScript_OfferPrizeTierThree
+	msgbox RocketLeague_Lobby_Text_PrizeBoardMax
+	release
+	end
+
+RocketLeague_Lobby_EventScript_OfferPrizeTierOne::
+	msgbox RocketLeague_Lobby_Text_BetForTierOne, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RocketLeague_Lobby_EventScript_PrizeBoardEnd
+	goto RocketLeague_Lobby_EventScript_BetForTierOne
+
+RocketLeague_Lobby_EventScript_OfferPrizeTierTwo::
+	msgbox RocketLeague_Lobby_Text_BetForTierTwo, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RocketLeague_Lobby_EventScript_PrizeBoardEnd
+	goto RocketLeague_Lobby_EventScript_BetForTierTwo
+
+RocketLeague_Lobby_EventScript_OfferPrizeTierThree::
+	msgbox RocketLeague_Lobby_Text_BetForTierThree, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RocketLeague_Lobby_EventScript_PrizeBoardEnd
+	goto RocketLeague_Lobby_EventScript_BetForTierThree
+
+RocketLeague_Lobby_EventScript_BetForTierOne::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, 250, RocketLeague_Lobby_EventScript_NotEnoughCoinsForBet
+	removecoins 250
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 1
+	msgbox RocketLeague_Lobby_Text_PrizeTierOneSet
+	playse SE_SHOP
+	waitse
+	release
+	end
+
+RocketLeague_Lobby_EventScript_BetForTierTwo::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, 250, RocketLeague_Lobby_EventScript_NotEnoughCoinsForBet
+	removecoins 250
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 2
+	msgbox RocketLeague_Lobby_Text_PrizeTierTwoSet
+	playse SE_SHOP
+	waitse
+	release
+	end
+
+RocketLeague_Lobby_EventScript_BetForTierThree::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, 250, RocketLeague_Lobby_EventScript_NotEnoughCoinsForBet
+	removecoins 250
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 3
+	msgbox RocketLeague_Lobby_Text_PrizeTierThreeSet
+	playse SE_SHOP
+	waitse
+	release
+	end
+
+RocketLeague_Lobby_EventScript_NotEnoughCoinsForBet::
+	msgbox RocketLeague_Lobby_Text_NotEnoughCoinsForBet
+	release
+	end
+
+RocketLeague_Lobby_EventScript_PrizeBoardEnd::
+	release
 	end
 
 RocketLeague_Lobby_EventScript_CooltrainerF::
