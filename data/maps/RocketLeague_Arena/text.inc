@@ -34,7 +34,19 @@ RocketLeague_Arena_Text_RocketDefeat::
     .string "That one is yours.$"
 
 RocketLeague_Arena_Text_ReceivedCoins::
-    .string "{PLAYER} received 250 COINS\n"
+    .string "{PLAYER} received 1,000 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_Arena_Text_ReceivedTierOneCoins::
+    .string "{PLAYER} received 1,500 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_Arena_Text_ReceivedTierTwoCoins::
+    .string "{PLAYER} received 2,000 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_Arena_Text_ReceivedTierThreeCoins::
+    .string "{PLAYER} received 3,000 COINS\n"
     .string "as a ROCKET LEAGUE prize.$"
 
 RocketLeague_Arena_Text_CoinCaseFull::
