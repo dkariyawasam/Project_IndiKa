@@ -1,5 +1,22 @@
 Route21_South_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route21_South_OnFrame
 	.byte 0
+
+Route21_South_OnFrame::
+	map_script_2 VAR_MAP_SCENE_ROUTE21_SOUTH, 1, Route21_South_EventScript_PlayerStepOffFerry
+	.2byte 0
+
+Route21_South_EventScript_PlayerStepOffFerry::
+	lockall
+	applymovement LOCALID_PLAYER, Route21_South_Movement_PlayerStepOffFerry
+	waitmovement 0
+	setvar VAR_MAP_SCENE_ROUTE21_SOUTH, 0
+	releaseall
+	end
+
+Route21_South_Movement_PlayerStepOffFerry::
+	walk_down
+	step_end
 
 Route21_South_EventScript_SeagallopSailor::
 	lock

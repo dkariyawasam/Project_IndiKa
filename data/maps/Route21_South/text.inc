@@ -53,6 +53,8 @@ Route21_South_Text_NolanPostBattle::
 	.string "I got a bite! Yeah!$"
 
 Route21_South_Text_SeagallopSailorDestination::
+	.string "Ahoy! Leaving CINNABAR\n"
+	.string "ISLAND?\p"
 	.string "Where would you like to sail?$"
 
 Route21_South_Text_SeagallopSailorAllAboard::
