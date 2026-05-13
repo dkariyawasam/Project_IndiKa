@@ -26,19 +26,31 @@ RocketLeague_Lobby_EventScript_Nurse::
 	end
 
 RocketLeague_Lobby_EventScript_Receptionist::
-	lock
+	lockall
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Lobby_Text_ExplainEntry, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, RocketLeague_Lobby_EventScript_EnterArena
-	release
+	goto_if_eq VAR_RESULT, YES, RocketLeague_Lobby_EventScript_EnterArenaFromReceptionist
+	releaseall
 	end
 
-RocketLeague_Lobby_EventScript_EnterArena::
+RocketLeague_Lobby_EventScript_EnterArenaFromReceptionist::
 	closemessage
+	getplayerxy VAR_TEMP_D, VAR_RESULT
+	goto_if_eq VAR_TEMP_D, 10, RocketLeague_Lobby_EventScript_EnterArenaFromReceptionistBelow
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_WalkToArenaDoor
+	waitmovement 0
 	warp MAP_ROCKET_LEAGUE_ARENA, 6, 11
 	waitstate
-	release
+	releaseall
+	end
+
+RocketLeague_Lobby_EventScript_EnterArenaFromReceptionistBelow::
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_WalkToArenaDoorFromBelow
+	waitmovement 0
+	warp MAP_ROCKET_LEAGUE_ARENA, 6, 11
+	waitstate
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_EntryPrompt::
@@ -81,6 +93,17 @@ RocketLeague_Lobby_Movement_WalkDown::
 	step_end
 
 RocketLeague_Lobby_Movement_WalkToArenaDoor::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+RocketLeague_Lobby_Movement_WalkToArenaDoorFromBelow::
+	walk_left
+	walk_up
 	walk_up
 	walk_up
 	walk_up
