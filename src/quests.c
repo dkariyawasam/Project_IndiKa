@@ -1478,6 +1478,14 @@ void PopulateQuestName(u8 countQuest)
 
 void PopulateSubquestName(u8 parentQuest, u8 countQuest)
 {
+    if (parentQuest == QUEST_GYM_LEADER_TRIALS
+     && countQuest == SUB_QUEST_BROCK
+     && VarGet(VAR_BROCK_TRIAL_STATE) == 0)
+    {
+        questNamePointer = StringAppend(questNamePointer, sText_Unk);
+        return;
+    }
+
     if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, countQuest))
     {
         questNamePointer = StringAppend(
@@ -1621,7 +1629,13 @@ void GenerateQuestFlavorText(s32 questId)
 	}
 	else
 {
-    if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
+    if (sStateDataPtr->parentQuest == QUEST_GYM_LEADER_TRIALS
+     && questId == SUB_QUEST_BROCK
+     && VarGet(VAR_BROCK_TRIAL_STATE) == 0)
+    {
+        StringCopy(gStringVar1, sText_Empty);
+    }
+    else if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
     {
         const u8 *desc = GetDynamicSubquestDesc(sStateDataPtr->parentQuest, questId);
 
@@ -2390,6 +2404,8 @@ void QuestMenu_ResetMenuSaveData(void)
 	       sizeof(gSaveBlock2Ptr->questData));
 	memset(&gSaveBlock2Ptr->subQuests, 0,
 	       sizeof(gSaveBlock2Ptr->subQuests));
+	memset(&gSaveBlock2Ptr->unlockedSubquests, 0,
+	       sizeof(gSaveBlock2Ptr->unlockedSubquests));
 }
 
 const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
@@ -2401,8 +2417,9 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
             case SUB_QUEST_BROCK:
                 switch (VarGet(VAR_BROCK_TRIAL_STATE))
                 {
-                    case 1:
                     default:
+                        return sText_Empty;
+                    case 1:
                         return gText_BrockTrialPhase1;
                     case 2:
                         return gText_BrockTrialPhase2;
