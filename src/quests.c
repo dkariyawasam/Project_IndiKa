@@ -2458,6 +2458,21 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 					case 5:
 						return gText_ErikaTrialPhase5;
 				}
+			case SUB_QUEST_KOGA:
+				switch (VarGet(VAR_KOGA_TRIAL_STATE))
+				{
+					case 1:
+					default:
+						return gText_KogaTrialPhase1;
+					case 2:
+						return gText_KogaTrialPhase2;
+					case 3:
+						return gText_KogaTrialPhase3;
+					case 4:
+						return gText_KogaTrialPhase4;
+					case 5:
+						return gText_KogaTrialPhase5;
+				}
         }
     }
 
