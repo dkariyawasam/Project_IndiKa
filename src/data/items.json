@@ -5803,22 +5803,6 @@
       "secondaryId": 0
     },
     {
-      "english": "AURORATICKET",
-      "itemId": "ITEM_AURORA_TICKET",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "A ticket required to board the ship\\nto BIRTH ISLAND.\\nIt glows beautifully.",
-      "importance": 1,
-      "registrability": 1,
-      "pocket": "POCKET_KEY_ITEMS",
-      "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
-      "battleUsage": 0,
-      "battleUseFunc": "NULL",
-      "secondaryId": 0
-    },
-    {
       "english": "POWDER JAR",
       "itemId": "ITEM_POWDER_JAR",
       "price": 0,

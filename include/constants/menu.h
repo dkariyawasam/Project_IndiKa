@@ -59,8 +59,6 @@
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH                52
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK                      53
 #define MULTICHOICE_SEVII_NAVEL                                54
-#define MULTICHOICE_SEVII_BIRTH                                55
-#define MULTICHOICE_SEVII_NAVEL_BIRTH                          56
 #define MULTICHOICE_SEAGALLOP_123                              57
 #define MULTICHOICE_SEAGALLOP_V23                              58
 #define MULTICHOICE_SEAGALLOP_V13                              59

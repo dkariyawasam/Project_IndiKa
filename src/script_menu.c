@@ -531,19 +531,6 @@ static const struct MenuAction sMultichoiceList_SeviiNavel[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_SeviiBirth[] = {
-    { gText_SeviiIslands },
-    { gText_BirthIsland },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_SeviiNavelBirth[] = {
-    { gText_SeviiIslands },
-    { gText_NavelRock },
-    { gText_BirthIsland },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_Seagallop123[] = {
     { gText_OneIsland },
     { gText_TwoIsland },
@@ -658,8 +645,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH]                = MULTICHOICE(sMultichoiceList_TradeColosseumBlankCrush),
     [MULTICHOICE_TRADE_COLOSSEUM_BLANK]                      = MULTICHOICE(sMultichoiceList_TradeColosseumBlank),
     [MULTICHOICE_SEVII_NAVEL]                                = MULTICHOICE(sMultichoiceList_SeviiNavel),
-    [MULTICHOICE_SEVII_BIRTH]                                = MULTICHOICE(sMultichoiceList_SeviiBirth),
-    [MULTICHOICE_SEVII_NAVEL_BIRTH]                          = MULTICHOICE(sMultichoiceList_SeviiNavelBirth),
     [MULTICHOICE_SEAGALLOP_123]                              = MULTICHOICE(sMultichoiceList_Seagallop123),
     [MULTICHOICE_SEAGALLOP_V23]                              = MULTICHOICE(sMultichoiceList_SeagallopV23),
     [MULTICHOICE_SEAGALLOP_V13]                              = MULTICHOICE(sMultichoiceList_SeagallopV13),

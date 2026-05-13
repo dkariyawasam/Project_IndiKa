@@ -3386,18 +3386,6 @@
       "blockdata_filepath": "data/layouts/SevenIsland_SevaultCanyon_TanobyKey/map.bin"
     },
     {
-      "id": "LAYOUT_BIRTH_ISLAND_EXTERIOR",
-      "name": "BirthIsland_Exterior_Layout",
-      "width": 30,
-      "height": 30,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/BirthIsland_Exterior/border.bin",
-      "blockdata_filepath": "data/layouts/BirthIsland_Exterior/map.bin"
-    },
-    {
       "id": "LAYOUT_NAVEL_ROCK_EXTERIOR",
       "name": "NavelRock_Exterior_Layout",
       "width": 20,

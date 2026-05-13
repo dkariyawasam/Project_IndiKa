@@ -1305,7 +1305,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StrengthBoulder = 
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = gObjectEventSpriteOamTables_16x16,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_StrengthBoulder,
+    .images = sPicTable_Meteorite,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -2065,7 +2065,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meteorite = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = gObjectEventSpriteOamTables_32x32,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_BirthIslandStone,
+    .images = sPicTable_StrengthBoulder,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
