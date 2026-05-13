@@ -844,7 +844,7 @@
     {
       "id": "LAYOUT_VIRIDIAN_FOREST",
       "name": "ViridianForest_Layout",
-      "width": 54,
+      "width": 69,
       "height": 69,
       "border_width": 3,
       "border_height": 2,
@@ -2661,7 +2661,7 @@
       "border_width": 3,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BerryForest",
+      "secondary_tileset": "gTileset_ViridianForest",
       "border_filepath": "data/layouts/ThreeIsland_BerryForest/border.bin",
       "blockdata_filepath": "data/layouts/ThreeIsland_BerryForest/map.bin"
     },
