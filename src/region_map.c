@@ -555,7 +555,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_MEMORIAL_PILLAR,
         MAPSEC_NAVEL_ROCK,
         MAPSEC_ICEFALL_CAVE,
-        MAPSEC_ROCKET_WAREHOUSE,
         MAPSEC_LOST_CAVE,
         MAPSEC_NONE
     }, 
@@ -908,7 +907,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_MT_EMBER            - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_BERRY_FOREST        - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_ICEFALL_CAVE        - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_ROCKET_WAREHOUSE    - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_ROCKET_LEAGUE     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_DOTTED_HOLE         - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_LOST_CAVE           - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
@@ -3039,8 +3037,6 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_ICEFALL_CAVE:
         return FlagGet(FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_ROCKET_WAREHOUSE:
-        return FlagGet(FLAG_WORLD_MAP_FIVE_ISLAND_ROCKET_WAREHOUSE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_ROCKET_LEAGUE:
         return FlagGet(FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_DOTTED_HOLE:
@@ -3231,10 +3227,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_PATTERN_BUSH:
         sMapCursor->x = 17;
         sMapCursor->y = 3;
-        break;
-    case MAPSEC_ROCKET_WAREHOUSE:
-        sMapCursor->x = 17;
-        sMapCursor->y = 11;
         break;
     case MAPSEC_DILFORD_CHAMBER:
     case MAPSEC_LIPTOO_CHAMBER:
