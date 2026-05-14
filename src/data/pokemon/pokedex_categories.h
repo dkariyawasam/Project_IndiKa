@@ -200,6 +200,11 @@ static const u16 sDexCategory_ForestPkmn_Page26[] = {
     SPECIES_CELEBI,
 };
 
+static const u16 sDexCategory_ForestPkmn_Page27[] = {
+    SPECIES_TANGELA,
+    SPECIES_TANGROWTH,
+};
+
 static const u16 sDexCategory_WatersEdgePkmn_Page1[] = {
     SPECIES_GOLDEEN,
     SPECIES_SEAKING,
@@ -763,6 +768,7 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page24),
     DEX_CATEGORY(ForestPkmn_Page25),
     DEX_CATEGORY(ForestPkmn_Page26),
+    DEX_CATEGORY(ForestPkmn_Page27),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {

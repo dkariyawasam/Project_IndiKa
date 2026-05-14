@@ -203,7 +203,7 @@
 #define FLAG_HIDE_CINNABAR_VOLCANO_KOGA               0x0BC
 #define FLAG_HIDE_POKEMON_TOWER_SABRINA               0x0BD
 #define FLAG_HIDE_CINNABAR_VOLCANO_BLAINE             0x0BE
-#define FLAG_0x0BF                                    0x0BF
+#define FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH           0x0BF
 #define FLAG_0x0C0                                    0x0C0
 #define FLAG_0x0C1                                    0x0C1
 #define FLAG_0x0C2                                    0x0C2
@@ -745,7 +745,7 @@
 #define FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2              0x2D1
 #define FLAG_STOPPED_SEAFOAM_B3F_CURRENT                 0x2D2
 #define FLAG_STOPPED_SEAFOAM_B4F_CURRENT                 0x2D3
-#define FLAG_0x2D4                                       0x2D4
+#define FLAG_FOUGHT_TANGROWTH                            0x2D4
 #define FLAG_0x2D5                                       0x2D5
 #define FLAG_0x2D6                                       0x2D6
 #define FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR         0x2D7

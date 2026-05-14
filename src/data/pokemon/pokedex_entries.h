@@ -1495,6 +1495,19 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
+    [NATIONAL_DEX_TANGROWTH] =
+    {
+        .categoryName = _("VINE"),
+        .height = 20,
+        .weight = 1286,
+        .description = gTangrowthPokedexText,
+        .unusedDescription = gTangrowthPokedexTextUnused,
+        .pokemonScale = 275,
+        .pokemonOffset = 1,
+        .trainerScale = 298,
+        .trainerOffset = 2,
+    },
+
     [NATIONAL_DEX_KANGASKHAN] =
     {
         .categoryName = _("PARENT"),

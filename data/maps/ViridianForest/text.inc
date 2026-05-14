@@ -75,15 +75,22 @@ ViridianForest_Text_ErikaLookingForRoot::
     .string "ERIKA: Oh, hello.\p"
     .string "I came to VIRIDIAN FOREST in\n"
     .string "search of an ENERGY ROOT.\p"
-    .string "A root grown in this forest is said\n"
-    .string "to hold wonderful healing power.\p"
+    .string "Roots are quiet things, yet they\n"
+    .string "bind a whole garden together.\p"
+    .string "A root grown here is said to heal\n"
+    .string "because the forest shares its\l"
+    .string "strength as one family.\p"
     .string "I am certain one can be found\n"
     .string "somewhere nearby.$"
 
 ViridianForest_Text_ErikaShownRoot::
     .string "ERIKA: Oh!\n"
-    .string "That is just the root I had hoped\l"
-    .string "to study.\p"
+    .string "That ENERGY ROOT is splendid.\p"
+    .string "See how many tiny roots gather\n"
+    .string "into one strong whole?\p"
+    .string "It reminds me that families,\n"
+    .string "friends, and communities grow\l"
+    .string "best together.\p"
     .string "If I could find one of my own, I\n"
     .string "would gladly return to the GYM.$"
 
@@ -91,11 +98,14 @@ ViridianForest_Text_GymGuideFoundErika::
     .string "ERIKA!\n"
     .string "I am so glad I found you!\p"
     .string "And look, I found an ENERGY ROOT\n"
-    .string "the way here.$"
+    .string "on the way here.\p"
+    .string "It was tucked among other roots,\n"
+    .string "all holding the soil together.$"
 
 ViridianForest_Text_ErikaChallenge::
     .string "ERIKA: How fortunate.\n"
-    .string "This is almost satisfying.\p"
+    .string "That is just the lesson I hoped\l"
+    .string "this forest would offer.\p"
     .string "Before I return, may I ask you for\n"
     .string "a proper GYM challenge?\p"
     .string "With my GYM GUIDE present, the\n"
@@ -114,8 +124,13 @@ ViridianForest_Text_ErikaAfterBattle::
     .string "This battle was witnessed, so it\n"
     .string "shall stand as your GYM challenge.\p"
     .string "Please come to CELADON GYM.\n"
-    .string "I will grant your reward there.$"
+    .string "There, I will grant a reward for\l"
+    .string "the growth you have shown.$"
 
 ViridianForest_Text_LeavingViridianForest::
     .string "LEAVING VIRIDIAN FOREST\n"
     .string "PEWTER CITY AHEAD$"
+
+ViridianForest_Text_TangrowthVanished::
+    .string "TANGROWTH vanished into the\n"
+    .string "flowers!$"
