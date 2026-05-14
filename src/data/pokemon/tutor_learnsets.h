@@ -852,6 +852,12 @@ static const u16 sTutorLearnsets[] =
                       | TUTOR(MOVE_MIMIC)
                       | TUTOR(MOVE_SUBSTITUTE),
 
+    [SPECIES_TANGROWTH] = TUTOR(MOVE_SWORDS_DANCE)
+                        | TUTOR(MOVE_BODY_SLAM)
+                        | TUTOR(MOVE_DOUBLE_EDGE)
+                        | TUTOR(MOVE_MIMIC)
+                        | TUTOR(MOVE_SUBSTITUTE),
+
     [SPECIES_KANGASKHAN] = TUTOR(MOVE_MEGA_PUNCH)
                          | TUTOR(MOVE_MEGA_KICK)
                          | TUTOR(MOVE_BODY_SLAM)

@@ -1557,7 +1557,7 @@ const u8 gText_LtSurgeTrialPhase4[] = _("LT. SURGE's GYM challenge is won.");
 const u8 gText_LtSurgeTrialPhase5[] = _("LT. SURGE's GYM trial is complete.");
 
 const u8 gText_ErikaTrialPhase1[] = _("Find Erika in\nViridian Forest.");
-const u8 gText_ErikaTrialPhase2[] = _("Show Erika an\nENERGY ROOT.");
+const u8 gText_ErikaTrialPhase2[] = _("Bring Erika an\nENERGY ROOT.");
 const u8 gText_ErikaTrialPhase3[] = _("Return to\nCeladon Gym.");
 const u8 gText_ErikaTrialPhase4[] = _("Claim Erika's\nreward.");
 const u8 gText_ErikaTrialPhase5[] = _("Erika's challenge\nis complete.");

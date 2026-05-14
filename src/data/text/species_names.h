@@ -420,4 +420,5 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_STARLY] = _("STARLY"),
     [SPECIES_STARAVIA] = _("STARAVIA"),
     [SPECIES_STARAPTOR] = _("STARAPTOR"),
+    [SPECIES_TANGROWTH] = _("TANGROWTH"),
 };
