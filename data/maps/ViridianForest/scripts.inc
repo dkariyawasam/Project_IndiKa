@@ -6,9 +6,11 @@ ViridianForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RemoveErika
+	clearflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	end
 
 ViridianForest_EventScript_RemoveErika::
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	removeobject LOCALID_VIRIDIAN_FOREST_ERIKA
 	end
 
@@ -36,7 +38,8 @@ ViridianForest_EventScript_Erika::
 	end
 
 ViridianForest_EventScript_ErikaReturnToGym::
-	msgbox ViridianForest_Text_ErikaReturnToGym
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
+	removeobject LOCALID_VIRIDIAN_FOREST_ERIKA
 	release
 	end
 
@@ -74,6 +77,7 @@ ViridianForest_EventScript_DefeatedErika::
 	waitmovement 0
 	removeobject LOCALID_VIRIDIAN_FOREST_ERIKA
 	removeobject LOCALID_VIRIDIAN_FOREST_GYM_GUIDE
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
 	release
 	end
@@ -94,15 +98,32 @@ ViridianForest_Movement_PlayerStepAsideForGuide::
 ViridianForest_Movement_GymGuideArrive::
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 ViridianForest_Movement_ErikaLeave::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 ViridianForest_Movement_GymGuideLeave::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	step_end
