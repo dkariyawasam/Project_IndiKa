@@ -803,6 +803,13 @@ const u8 gTangelaPokedexText[] = _(
 
 const u8 gTangelaPokedexTextUnused[] = _("");
 
+const u8 gTangrowthPokedexText[] = _(
+    "Its vines grow so profusely that its\n"
+    "true appearance is hidden. The vines\n"
+    "snap off painlessly if grabbed.");
+
+const u8 gTangrowthPokedexTextUnused[] = _("");
+
 const u8 gKangaskhanPokedexText[] = _(
     "The female raises its offspring in a pouch\n"
     "on its belly. It is skilled at attacking\n"

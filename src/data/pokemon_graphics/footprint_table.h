@@ -419,5 +419,6 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_STARLY] = gMonFootprint_Pidgey,
     [SPECIES_STARAVIA] = gMonFootprint_Pidgeotto,
     [SPECIES_STARAPTOR] = gMonFootprint_Pidgeot,
+    [SPECIES_TANGROWTH] = gMonFootprint_Tangrowth,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

@@ -36,6 +36,10 @@ CeladonCity_Gym_Text_ErikaReward::
     .string "ERIKA: Thank you for coming.\p"
     .string "Your challenge in VIRIDIAN FOREST\n"
     .string "was witnessed and official.\p"
+    .string "That forest reminded me that\n"
+    .string "growth comes through friendship.\p"
+    .string "When people and POKéMON support\n"
+    .string "one another, all may bloom.\p"
     .string "I must confer on you the\n"
     .string "RAINBOWBADGE.$"
 
@@ -52,6 +56,8 @@ CeladonCity_Gym_Text_GymGuideErikaAway::
     .string "FOREST.\p"
     .string "She mentioned searching for an\n"
     .string "ENERGY ROOT with healing properties.\p"
+    .string "She said roots teach how living\n"
+    .string "things support each other.\p"
     .string "She's been gone for some time…\n"
     .string "I should go find her.$"
 
