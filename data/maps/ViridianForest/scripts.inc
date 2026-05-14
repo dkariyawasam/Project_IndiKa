@@ -1,13 +1,34 @@
 ViridianForest_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ViridianForest_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, ViridianForest_OnResume
 	.byte 0
+
+ViridianForest_OnResume::
+	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, ViridianForest_EventScript_TryRemoveTangrowth
+	end
+
+ViridianForest_EventScript_TryRemoveTangrowth::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EventScript_Return
+	removeobject VAR_LAST_TALKED
+	return
 
 ViridianForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	call_if_unset FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_ShowTangrowth
+	call_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_HideTangrowth
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RemoveErika
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	end
+
+ViridianForest_EventScript_ShowTangrowth::
+	clearflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	return
+
+ViridianForest_EventScript_HideTangrowth::
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	return
 
 ViridianForest_EventScript_RemoveErika::
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
@@ -88,6 +109,47 @@ ViridianForest_EventScript_GymGuide::
 
 ViridianForest_EventScript_ExitSign::
 	msgbox ViridianForest_Text_LeavingViridianForest, MSGBOX_SIGN
+	end
+
+ViridianForest_EventScript_Tangrowth::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_TANGROWTH, 50
+	waitse
+	playmoncry SPECIES_TANGROWTH, CRY_MODE_ENCOUNTER
+	message Text_Gyaoo
+	waitmessage
+	waitmoncry
+	delay 10
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
+	waitbuttonpress
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, ViridianForest_EventScript_DefeatedTangrowth
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, ViridianForest_EventScript_RanFromTangrowth
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ViridianForest_EventScript_RanFromTangrowth
+	setflag FLAG_FOUGHT_TANGROWTH
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	release
+	end
+
+ViridianForest_EventScript_DefeatedTangrowth::
+	setflag FLAG_FOUGHT_TANGROWTH
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	goto EventScript_RemoveStaticMon
+	end
+
+ViridianForest_EventScript_RanFromTangrowth::
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	msgbox ViridianForest_Text_TangrowthVanished
+	release
 	end
 
 ViridianForest_Movement_PlayerStepAsideForGuide::
