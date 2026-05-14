@@ -186,7 +186,7 @@
 #define FLAG_HIDE_MISC_KANTO_ROCKETS                       0x0AD
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
-// Unused?
+// Gym leader trial visibility
 #define FLAG_HIDE_PEWTER_CITY_GYM_BROCK               0x0AF
 #define FLAG_HIDE_MT_MOON_BROCK                       0x0B0
 #define FLAG_HIDE_CERULEAN_CITY_GYM_MISTY             0x0B1
@@ -198,16 +198,16 @@
 #define FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA            0x0B7
 #define FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE              0x0B8
 #define FLAG_HIDE_VIRIDIAN_FOREST_ERIKA               0x0B9
-#define FLAG_0x0BA               0x0BA
-#define FLAG_0x0BB               0x0BB
-#define FLAG_0x0BC               0x0BC
-#define FLAG_0x0BD               0x0BD
-#define FLAG_0x0BE               0x0BE
-#define FLAG_0x0BF               0x0BF
-#define FLAG_0x0C0               0x0C0
-#define FLAG_0x0C1               0x0C1
-#define FLAG_0x0C2               0x0C2
-#define FLAG_0x0C3               0x0C3
+#define FLAG_HIDE_POWER_PLANT_MISTY                   0x0BA
+#define FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE              0x0BB
+#define FLAG_HIDE_CINNABAR_VOLCANO_KOGA               0x0BC
+#define FLAG_HIDE_POKEMON_TOWER_SABRINA               0x0BD
+#define FLAG_HIDE_CINNABAR_VOLCANO_BLAINE             0x0BE
+#define FLAG_0x0BF                                    0x0BF
+#define FLAG_0x0C0                                    0x0C0
+#define FLAG_0x0C1                                    0x0C1
+#define FLAG_0x0C2                                    0x0C2
+#define FLAG_0x0C3                                    0x0C3
 #define FLAG_0x0C4               0x0C4
 #define FLAG_0x0C5               0x0C5
 #define FLAG_0x0C6               0x0C6
