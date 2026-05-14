@@ -88,7 +88,7 @@ ViridianForest_Text_ErikaShownRoot::
     .string "would gladly return to the GYM.$"
 
 ViridianForest_Text_GymGuideFoundErika::
-    .string "GYM GUIDE: ERIKA!\n"
+    .string "ERIKA!\n"
     .string "I am so glad I found you!\p"
     .string "And look, I found an ENERGY ROOT\n"
     .string "the way here.$"
@@ -115,10 +115,6 @@ ViridianForest_Text_ErikaAfterBattle::
     .string "shall stand as your GYM challenge.\p"
     .string "Please come to CELADON GYM.\n"
     .string "I will grant your reward there.$"
-
-ViridianForest_Text_ErikaReturnToGym::
-    .string "ERIKA has returned to\n"
-    .string "CELADON GYM.$"
 
 ViridianForest_Text_LeavingViridianForest::
     .string "LEAVING VIRIDIAN FOREST\n"
