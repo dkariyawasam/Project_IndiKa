@@ -112,61 +112,56 @@ static const u16 sDexCategory_ForestPkmn_Page11[] = {
 };
 
 static const u16 sDexCategory_ForestPkmn_Page12[] = {
-    SPECIES_AIPOM,
-    SPECIES_AMBIPOM,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page13[] = {
     SPECIES_WEEDLE,
     SPECIES_KAKUNA,
     SPECIES_BEEDRILL,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page14[] = {
+static const u16 sDexCategory_ForestPkmn_Page13[] = {
     SPECIES_COMBEE,
     SPECIES_VESPIQUEN,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page15[] = {
+static const u16 sDexCategory_ForestPkmn_Page14[] = {
     SPECIES_MURKROW,
     SPECIES_HONCHKROW,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page16[] = {
+static const u16 sDexCategory_ForestPkmn_Page15[] = {
     SPECIES_NATU,
     SPECIES_XATU,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page17[] = {
+static const u16 sDexCategory_ForestPkmn_Page16[] = {
     SPECIES_SLAKOTH,
     SPECIES_VIGOROTH,
     SPECIES_SLAKING,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page18[] = {
+static const u16 sDexCategory_ForestPkmn_Page17[] = {
     SPECIES_BELLSPROUT,
     SPECIES_WEEPINBELL,
     SPECIES_VICTREEBEL,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page19[] = {
+static const u16 sDexCategory_ForestPkmn_Page18[] = {
     SPECIES_ODDISH,
     SPECIES_GLOOM,
     SPECIES_VILEPLUME,
     SPECIES_BELLOSSOM,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page20[] = {
+static const u16 sDexCategory_ForestPkmn_Page19[] = {
     SPECIES_SPINARAK,
     SPECIES_ARIADOS,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page21[] = {
+static const u16 sDexCategory_ForestPkmn_Page20[] = {
     SPECIES_VENONAT,
     SPECIES_VENOMOTH,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page22[] = {
+static const u16 sDexCategory_ForestPkmn_Page21[] = {
     SPECIES_TANGELA,
     SPECIES_TANGROWTH,
 };
@@ -451,8 +446,6 @@ static const u16 sDexCategory_MountainPkmn_Page7[] = {
 
 static const u16 sDexCategory_MountainPkmn_Page8[] = {
     SPECIES_SHUCKLE,
-    SPECIES_TEDDIURSA,
-    SPECIES_URSARING,
     SPECIES_DELIBIRD,
 };
 
@@ -729,7 +722,6 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page19),
     DEX_CATEGORY(ForestPkmn_Page20),
     DEX_CATEGORY(ForestPkmn_Page21),
-    DEX_CATEGORY(ForestPkmn_Page22),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {
