@@ -401,91 +401,44 @@ static const u16 sDexCategory_CavePkmn_Page10[] = {
 };
 
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
-    SPECIES_GEODUDE,
-    SPECIES_GRAVELER,
-    SPECIES_GOLEM,
+    SPECIES_STARLY,
+    SPECIES_STARAVIA,
+    SPECIES_STARAPTOR,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page2[] = {
-    SPECIES_MANKEY,
-    SPECIES_PRIMEAPE,
-    SPECIES_SPOINK,
-    SPECIES_GRUMPIG,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page3[] = {
     SPECIES_MACHOP,
     SPECIES_MACHOKE,
     SPECIES_MACHAMP,
 };
 
+static const u16 sDexCategory_MountainPkmn_Page3[] = {
+    SPECIES_IGGLYBUFF,
+    SPECIES_JIGGLYPUFF,
+    SPECIES_WIGGLYTUFF,
+};
+
 static const u16 sDexCategory_MountainPkmn_Page4[] = {
-    SPECIES_CLEFFA,
-    SPECIES_CLEFAIRY,
-    SPECIES_CLEFABLE,
+    SPECIES_GEODUDE,
+    SPECIES_GRAVELER,
+    SPECIES_GOLEM,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page5[] = {
-    SPECIES_CUBONE,
-    SPECIES_MAROWAK,
+    SPECIES_MANKEY,
+    SPECIES_PRIMEAPE,
+    SPECIES_ANNIHILAPE,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page6[] = {
     SPECIES_SLUGMA,
     SPECIES_MAGCARGO,
-    SPECIES_NUMEL,
-    SPECIES_CAMERUPT,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page7[] = {
-    SPECIES_MAKUHITA,
-    SPECIES_HARIYAMA,
-    SPECIES_MEDITITE,
-    SPECIES_MEDICHAM,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page8[] = {
-    SPECIES_SHUCKLE,
-    SPECIES_DELIBIRD,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page9[] = {
-    SPECIES_GLIGAR,
-    SPECIES_SPINDA,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page10[] = {
     SPECIES_MAGBY,
     SPECIES_MAGMAR,
-    SPECIES_TORKOAL,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page11[] = {
-    SPECIES_ARON,
-    SPECIES_LAIRON,
-    SPECIES_AGGRON,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page12[] = {
-    SPECIES_LARVITAR,
-    SPECIES_PUPITAR,
-    SPECIES_TYRANITAR,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page13[] = {
-    SPECIES_SNORLAX,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page14[] = {
-    SPECIES_ABSOL,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page15[] = {
-    SPECIES_AERODACTYL,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page16[] = {
-    SPECIES_JIRACHI,
+    SPECIES_MAGMORTAR,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page1[] = {
@@ -546,12 +499,6 @@ static const u16 sDexCategory_RoughTerrainPkmn_Page10[] = {
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page11[] = {
     SPECIES_GROUDON,
-};
-
-static const u16 sDexCategory_RoughTerrainPkmn_Page12[] = {
-    SPECIES_STARLY,
-    SPECIES_STARAVIA,
-    SPECIES_STARAPTOR,
 };
 
 static const u16 sDexCategory_UrbanPkmn_Page1[] = {
@@ -782,15 +729,6 @@ static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
     DEX_CATEGORY(MountainPkmn_Page5),
     DEX_CATEGORY(MountainPkmn_Page6),
     DEX_CATEGORY(MountainPkmn_Page7),
-    DEX_CATEGORY(MountainPkmn_Page8),
-    DEX_CATEGORY(MountainPkmn_Page9),
-    DEX_CATEGORY(MountainPkmn_Page10),
-    DEX_CATEGORY(MountainPkmn_Page11),
-    DEX_CATEGORY(MountainPkmn_Page12),
-    DEX_CATEGORY(MountainPkmn_Page13),
-    DEX_CATEGORY(MountainPkmn_Page14),
-    DEX_CATEGORY(MountainPkmn_Page15),
-    DEX_CATEGORY(MountainPkmn_Page16),
 };
 
 static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {
@@ -805,7 +743,6 @@ static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {
     DEX_CATEGORY(RoughTerrainPkmn_Page9),
     DEX_CATEGORY(RoughTerrainPkmn_Page10),
     DEX_CATEGORY(RoughTerrainPkmn_Page11),
-    DEX_CATEGORY(RoughTerrainPkmn_Page12),
 };
 
 static const struct PokedexCategoryPage sDexCategory_UrbanPkmn[] = {
