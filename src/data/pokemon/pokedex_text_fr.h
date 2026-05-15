@@ -2766,3 +2766,9 @@ const u8 gOmatopsPokedexText[] = _(
     "regenerated from a fossil.");
 
 const u8 gOmatopsPokedexTextUnused[] = _("");
+
+const u8 gPlaceholderPokedexText[] = _(
+    "Detailed data on this POKéMON\n"
+    "is still being researched.");
+
+const u8 gPlaceholderPokedexTextUnused[] = _("");
