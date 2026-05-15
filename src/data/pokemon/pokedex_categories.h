@@ -74,11 +74,7 @@ static const u16 sDexCategory_ForestPkmn_Page4[] = {
     SPECIES_DUSTOX,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page5[] = {
-    SPECIES_PIDGEY,
-    SPECIES_PIDGEOTTO,
-    SPECIES_PIDGEOT,
-};
+
 
 static const u16 sDexCategory_ForestPkmn_Page6[] = {
     SPECIES_HOOTHOOT,
@@ -164,7 +160,6 @@ static const u16 sDexCategory_ForestPkmn_Page19[] = {
 };
 
 static const u16 sDexCategory_ForestPkmn_Page20[] = {
-    SPECIES_AIPOM,
     SPECIES_STANTLER,
     SPECIES_KECLEON,
 };
@@ -746,7 +741,6 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page2),
     DEX_CATEGORY(ForestPkmn_Page3),
     DEX_CATEGORY(ForestPkmn_Page4),
-    DEX_CATEGORY(ForestPkmn_Page5),
     DEX_CATEGORY(ForestPkmn_Page6),
     DEX_CATEGORY(ForestPkmn_Page7),
     DEX_CATEGORY(ForestPkmn_Page8),
