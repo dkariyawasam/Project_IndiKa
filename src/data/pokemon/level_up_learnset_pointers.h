@@ -485,4 +485,6 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_CURSOLA] = sPlaceholderLevelUpLearnset,
     [SPECIES_KOFFING_GALARIAN] = sPlaceholderLevelUpLearnset,
     [SPECIES_WEEZING_GALARIAN] = sPlaceholderLevelUpLearnset,
+    [SPECIES_KRICKETOT] = sPlaceholderLevelUpLearnset,
+    [SPECIES_KRICKETUNE] = sPlaceholderLevelUpLearnset,
 };
