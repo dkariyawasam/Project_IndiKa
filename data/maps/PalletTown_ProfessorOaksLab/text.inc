@@ -184,8 +184,7 @@ PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
     .string "Take these POKé BALLS with you.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
-    .string "{PLAYER} received five POKé BALLS\n"
-    .string "and a TEACHY TV!$"
+    .string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
     .string "OAK: I’m sending both of you out\n"
