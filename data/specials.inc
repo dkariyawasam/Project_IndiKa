@@ -221,6 +221,7 @@ gSpecials::
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
 	def_special GetPokedexCount
+	def_special CompletePokedex
 	def_special GetProfOaksRatingMessage
 	def_special AnimatePcTurnOn
 	def_special AnimatePcTurnOff

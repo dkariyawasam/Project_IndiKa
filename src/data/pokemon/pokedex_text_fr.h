@@ -2722,15 +2722,16 @@ const u8 gDeoxysPokedexText[] = _(
 const u8 gDeoxysPokedexTextUnused[] = _("");
 
 const u8 gBunearyPokedexText[] = _(
-    "You can tell how it feels by\n"
-    "the way it rolls its ears. When\n"
-    "it's scared, both ears are rolled up.");
+    "It sharply uncoils its rolled ears\n"
+    "to strike. The blow is strong enough\n"
+    "to make adults cry out in pain.");
 
 const u8 gBunearyPokedexTextUnused[] = _("");
 
 const u8 gLopunnyPokedexText[] = _(
-    "It sheds its fur twice a year.\n"
-    "Its winter fur is soft and fluffy.");
+    "It is extremely cautious.\n"
+    "When it senses danger, it cloaks\n"
+    "itself in its fluffy ear fur.");
 
 const u8 gLopunnyPokedexTextUnused[] = _("");
 

@@ -5064,9 +5064,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 333,
         .description = gLopunnyPokedexText,
         .unusedDescription = gLopunnyPokedexTextUnused,
-        .pokemonScale = 479,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
+        .pokemonScale = 288,
+        .pokemonOffset = 5,
+        .trainerScale = 272,
         .trainerOffset = -2,
     },
 

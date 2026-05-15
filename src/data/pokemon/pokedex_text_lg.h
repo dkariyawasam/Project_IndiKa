@@ -2722,3 +2722,17 @@ const u8 gPlaceholderPokedexText[] = _(
     "is still being researched.");
 
 const u8 gPlaceholderPokedexTextUnused[] = _("");
+
+const u8 gBunearyPokedexText[] = _(
+    "It sharply uncoils its rolled ears\n"
+    "to strike. The blow is strong enough\n"
+    "to make adults cry out in pain.");
+
+const u8 gBunearyPokedexTextUnused[] = _("");
+
+const u8 gLopunnyPokedexText[] = _(
+    "It is extremely cautious.\n"
+    "When it senses danger, it cloaks\n"
+    "itself in its fluffy ear fur.");
+
+const u8 gLopunnyPokedexTextUnused[] = _("");

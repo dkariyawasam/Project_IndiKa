@@ -51,6 +51,8 @@ static const u16 sDexCategory_GrasslandPkmn_Page10[] = {
     SPECIES_NIDOKING,
 };
 
+
+
 static const u16 sDexCategory_ForestPkmn_Page1[] = {
     SPECIES_CATERPIE,
     SPECIES_METAPOD,
@@ -58,144 +60,113 @@ static const u16 sDexCategory_ForestPkmn_Page1[] = {
 };
 
 static const u16 sDexCategory_ForestPkmn_Page2[] = {
-    SPECIES_WEEDLE,
-    SPECIES_KAKUNA,
-    SPECIES_BEEDRILL,
+    SPECIES_HOOTHOOT,
+    SPECIES_NOCTOWL,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page3[] = {
-    SPECIES_WURMPLE,
-    SPECIES_SILCOON,
-    SPECIES_BEAUTIFLY,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page4[] = {
-    SPECIES_CASCOON,
-    SPECIES_DUSTOX,
-};
-
-
-
-static const u16 sDexCategory_ForestPkmn_Page6[] = {
-    SPECIES_HOOTHOOT,
-    SPECIES_NOCTOWL,
-    SPECIES_NATU,
-    SPECIES_XATU,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page7[] = {
     SPECIES_PICHU,
     SPECIES_PIKACHU,
     SPECIES_RAICHU,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page8[] = {
-    SPECIES_BELLSPROUT,
-    SPECIES_WEEPINBELL,
-    SPECIES_VICTREEBEL,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page9[] = {
-    SPECIES_PARAS,
-    SPECIES_PARASECT,
-    SPECIES_SHROOMISH,
-    SPECIES_BRELOOM,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page10[] = {
+static const u16 sDexCategory_ForestPkmn_Page4[] = {
     SPECIES_SEEDOT,
     SPECIES_NUZLEAF,
     SPECIES_SHIFTRY,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page11[] = {
-    SPECIES_VENONAT,
-    SPECIES_VENOMOTH,
-    SPECIES_YANMA,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page12[] = {
+static const u16 sDexCategory_ForestPkmn_Page5[] = {
     SPECIES_LEDYBA,
     SPECIES_LEDIAN,
-    SPECIES_SPINARAK,
-    SPECIES_ARIADOS,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page13[] = {
-    SPECIES_NINCADA,
-    SPECIES_NINJASK,
-    SPECIES_SHEDINJA,
+static const u16 sDexCategory_ForestPkmn_Page6[] = {
+    SPECIES_EXEGGCUTE,
+    SPECIES_EXEGGUTOR,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page14[] = {
-    SPECIES_VOLBEAT,
-    SPECIES_ILLUMISE,
+static const u16 sDexCategory_ForestPkmn_Page7[] = {
+    SPECIES_WURMPLE,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page15[] = {
+static const u16 sDexCategory_ForestPkmn_Page8[] = {
+    SPECIES_SILCOON,
+    SPECIES_CASCOON,
+    SPECIES_BEAUTIFLY,
+    SPECIES_DUSTOX,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page9[] = {
     SPECIES_PINECO,
     SPECIES_FORRETRESS,
 };
 
+static const u16 sDexCategory_ForestPkmn_Page10[] = {
+    SPECIES_HERACROSS,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page11[] = {
+    SPECIES_TEDDIURSA,
+    SPECIES_URSARING,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page12[] = {
+    SPECIES_AIPOM,
+    SPECIES_AMBIPOM,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page13[] = {
+    SPECIES_WEEDLE,
+    SPECIES_KAKUNA,
+    SPECIES_BEEDRILL,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page14[] = {
+    SPECIES_COMBEE,
+    SPECIES_VESPIQUEN,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page15[] = {
+    SPECIES_MURKROW,
+    SPECIES_HONCHKROW,
+};
+
 static const u16 sDexCategory_ForestPkmn_Page16[] = {
+    SPECIES_NATU,
+    SPECIES_XATU,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page17[] = {
     SPECIES_SLAKOTH,
     SPECIES_VIGOROTH,
     SPECIES_SLAKING,
 };
 
-static const u16 sDexCategory_ForestPkmn_Page17[] = {
-    SPECIES_SKITTY,
-    SPECIES_DELCATTY,
-};
-
 static const u16 sDexCategory_ForestPkmn_Page18[] = {
-    SPECIES_MURKROW,
-    SPECIES_SNEASEL,
+    SPECIES_BELLSPROUT,
+    SPECIES_WEEPINBELL,
+    SPECIES_VICTREEBEL,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page19[] = {
-    SPECIES_EXEGGCUTE,
-    SPECIES_EXEGGUTOR,
-    SPECIES_SUDOWOODO,
+    SPECIES_ODDISH,
+    SPECIES_GLOOM,
+    SPECIES_VILEPLUME,
+    SPECIES_BELLOSSOM,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page20[] = {
-    SPECIES_STANTLER,
-    SPECIES_KECLEON,
+    SPECIES_SPINARAK,
+    SPECIES_ARIADOS,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page21[] = {
-    SPECIES_PINSIR,
-    SPECIES_HERACROSS,
+    SPECIES_VENONAT,
+    SPECIES_VENOMOTH,
 };
 
 static const u16 sDexCategory_ForestPkmn_Page22[] = {
-    SPECIES_SWABLU,
-    SPECIES_ALTARIA,
-    SPECIES_TROPIUS,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page23[] = {
-    SPECIES_DUSKULL,
-    SPECIES_DUSCLOPS,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page24[] = {
-    SPECIES_TOGEPI,
-    SPECIES_TOGETIC,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page25[] = {
-    SPECIES_TREECKO,
-    SPECIES_GROVYLE,
-    SPECIES_SCEPTILE,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page26[] = {
-    SPECIES_CELEBI,
-};
-
-static const u16 sDexCategory_ForestPkmn_Page27[] = {
     SPECIES_TANGELA,
     SPECIES_TANGROWTH,
 };
@@ -741,6 +712,7 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page2),
     DEX_CATEGORY(ForestPkmn_Page3),
     DEX_CATEGORY(ForestPkmn_Page4),
+    DEX_CATEGORY(ForestPkmn_Page5),
     DEX_CATEGORY(ForestPkmn_Page6),
     DEX_CATEGORY(ForestPkmn_Page7),
     DEX_CATEGORY(ForestPkmn_Page8),
@@ -758,11 +730,6 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page20),
     DEX_CATEGORY(ForestPkmn_Page21),
     DEX_CATEGORY(ForestPkmn_Page22),
-    DEX_CATEGORY(ForestPkmn_Page23),
-    DEX_CATEGORY(ForestPkmn_Page24),
-    DEX_CATEGORY(ForestPkmn_Page25),
-    DEX_CATEGORY(ForestPkmn_Page26),
-    DEX_CATEGORY(ForestPkmn_Page27),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {
