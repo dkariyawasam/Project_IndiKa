@@ -442,63 +442,58 @@ static const u16 sDexCategory_MountainPkmn_Page7[] = {
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page1[] = {
-    SPECIES_SPEAROW,
-    SPECIES_FEAROW,
+    SPECIES_PONYTA,
+    SPECIES_RAPIDASH,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page2[] = {
-    SPECIES_SANDSHREW,
-    SPECIES_SANDSLASH,
-    SPECIES_RHYHORN,
-    SPECIES_RHYDON,
-};
-
-static const u16 sDexCategory_RoughTerrainPkmn_Page3[] = {
-    SPECIES_MAGNEMITE,
-    SPECIES_MAGNETON,
-};
-
-static const u16 sDexCategory_RoughTerrainPkmn_Page4[] = {
-    SPECIES_HOUNDOUR,
-    SPECIES_HOUNDOOM,
     SPECIES_PHANPY,
     SPECIES_DONPHAN,
 };
 
+static const u16 sDexCategory_RoughTerrainPkmn_Page3[] = {
+    SPECIES_HOUNDOUR,
+    SPECIES_HOUNDOOM,
+};
+
+static const u16 sDexCategory_RoughTerrainPkmn_Page4[] = {
+    SPECIES_GROWLITHE,
+    SPECIES_ARCANINE,
+};
+
 static const u16 sDexCategory_RoughTerrainPkmn_Page5[] = {
-    SPECIES_CACNEA,
-    SPECIES_CACTURNE,
+    SPECIES_POOCHYENA,
+    SPECIES_MIGHTYENA,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page6[] = {
-    SPECIES_TRAPINCH,
-    SPECIES_VIBRAVA,
-    SPECIES_FLYGON,
+    SPECIES_KRICKETOT,
+    SPECIES_KRICKETUNE,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page7[] = {
-    SPECIES_SKARMORY,
+    SPECIES_SPEAROW,
+    SPECIES_FEAROW,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page8[] = {
-    SPECIES_BALTOY,
-    SPECIES_CLAYDOL,
+    SPECIES_EKANS,
+    SPECIES_ARBOK,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page9[] = {
-    SPECIES_BAGON,
-    SPECIES_SHELGON,
-    SPECIES_SALAMENCE,
+    SPECIES_RHYHORN,
+    SPECIES_RHYDON,
+    SPECIES_RHYPERIOR,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page10[] = {
-    SPECIES_BELDUM,
-    SPECIES_METANG,
-    SPECIES_METAGROSS,
+    SPECIES_KANGASKHAN,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page11[] = {
-    SPECIES_GROUDON,
+    SPECIES_BALTOY,
+    SPECIES_CLAYDOL,
 };
 
 static const u16 sDexCategory_UrbanPkmn_Page1[] = {
