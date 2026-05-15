@@ -60,8 +60,6 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
-PalletTown_Text_DebugSign_ShowDay::
-    .string "It's daytime!$"
-
-PalletTown_Text_DebugSign_ShowNight::
-    .string "It's nighttime!$"
+PalletTown_Text_DebugSign_CompletePokedex::
+    .string "POKéDEX seen and owned data\n"
+    .string "completed.$"
