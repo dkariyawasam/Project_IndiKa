@@ -5980,4 +5980,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
+    [NATIONAL_DEX_KRICKETOT] =
+    {
+        .categoryName = _("CRICKET"),
+        .height = 3,
+        .weight = 22,
+        .description = gKricketotPokedexText,
+        .unusedDescription = gKricketotPokedexTextUnused,
+        .pokemonScale = 465,
+        .pokemonOffset = 15,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+    [NATIONAL_DEX_KRICKETUNE] =
+    {
+        .categoryName = _("CRICKET"),
+        .height = 10,
+        .weight = 255,
+        .description = gKricketunePokedexText,
+        .unusedDescription = gKricketunePokedexTextUnused,
+        .pokemonScale = 305,
+        .pokemonOffset = 1,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
 };
