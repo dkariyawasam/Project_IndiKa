@@ -2717,6 +2717,20 @@ const u8 gDeoxysPokedexText[] = _(
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
 
+const u8 gKricketotPokedexText[] = _(
+    "It shakes its head back to front,\n"
+    "causing its antennae to hit each\n"
+    "other like a xylophone.");
+
+const u8 gKricketotPokedexTextUnused[] = _("");
+
+const u8 gKricketunePokedexText[] = _(
+    "It crosses its knifelike arms in\n"
+    "front of its chest when it cries.\n"
+    "It composes melodies ad lib.");
+
+const u8 gKricketunePokedexTextUnused[] = _("");
+
 const u8 gPlaceholderPokedexText[] = _(
     "Detailed data on this POKéMON\n"
     "is still being researched.");
