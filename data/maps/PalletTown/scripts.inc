@@ -320,16 +320,10 @@ PalletTown_EventScript_TownSign::
 
 PalletTown_Eventscript_DegbugDANSign::
 	lock
-	copyvar VAR_TEMP_0, VAR_DAYNIGHT_STEP_COUNTER
-	buffernumberstring 0, VAR_TEMP_0
-	compare VAR_TIME_OF_DAY, 0
-	goto_if_eq PalletTown_EventScript_DebugSign_ShowDay
-	msgbox PalletTown_Text_DebugSign_ShowNight, MSGBOX_DEFAULT
-	goto PalletTown_EventScript_DebugSign_End
-
-PalletTown_EventScript_DebugSign_ShowDay:
-	msgbox PalletTown_Text_DebugSign_ShowDay, MSGBOX_DEFAULT
-
-PalletTown_EventScript_DebugSign_End:
+	setflag FLAG_SYS_POKEDEX_GET
+	special EnableNationalPokedex
+	special SetUnlockedPokedexFlags
+	special CompletePokedex
+	msgbox PalletTown_Text_DebugSign_CompletePokedex, MSGBOX_DEFAULT
 	release
 	end

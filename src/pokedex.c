@@ -48,6 +48,19 @@ u16 GetNationalPokedexCount(u8 caseID)
     return count;
 }
 
+u16 CompletePokedex(void)
+{
+    u16 i;
+
+    for (i = 1; i <= NATIONAL_DEX_COUNT; i++)
+    {
+        GetSetPokedexFlag(i, FLAG_SET_SEEN);
+        GetSetPokedexFlag(i, FLAG_SET_CAUGHT);
+    }
+
+    return 0;
+}
+
 /*
 u16 GetHoennPokedexCount(u8 caseID)
 {
