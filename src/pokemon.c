@@ -1006,6 +1006,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(KRICKETOT),
     SPECIES_TO_NATIONAL(KRICKETUNE),
     SPECIES_TO_NATIONAL(HAPPINY),
+    SPECIES_TO_NATIONAL(LICKILICKY),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
