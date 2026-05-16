@@ -488,4 +488,5 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_KRICKETOT] = sPlaceholderLevelUpLearnset,
     [SPECIES_KRICKETUNE] = sPlaceholderLevelUpLearnset,
     [SPECIES_HAPPINY] = sHappinyLevelUpLearnset,
+    [SPECIES_LICKILICKY] = sLickitungLevelUpLearnset,
 };

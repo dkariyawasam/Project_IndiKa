@@ -2579,5 +2579,10 @@ const struct MonCoords gMonBackPicCoords[] =
     {
         .size = MON_COORDS_SIZE(32, 32),
         .y_offset = 16,
+    },
+    [SPECIES_LICKILICKY] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
     }
 };
