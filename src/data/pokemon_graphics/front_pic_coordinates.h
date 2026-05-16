@@ -2575,4 +2575,9 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(24, 40),
         .y_offset = 13,
     },
+    [SPECIES_HAPPINY] =
+    {
+        .size = MON_COORDS_SIZE(32, 32),
+        .y_offset = 16,
+    }
 };

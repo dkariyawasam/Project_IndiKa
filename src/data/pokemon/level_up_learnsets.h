@@ -1595,6 +1595,15 @@ static const u16 sRhydonLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const u16 sHappinyLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_MOVE(1, MOVE_CHARM),
+    LEVEL_UP_MOVE(5, MOVE_TAIL_WHIP),
+    LEVEL_UP_MOVE(9, MOVE_REFRESH),
+    LEVEL_UP_MOVE(12, MOVE_SWEET_KISS),
+    LEVEL_UP_END
+};
+
 static const u16 sChanseyLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_MOVE(1, MOVE_GROWL),
