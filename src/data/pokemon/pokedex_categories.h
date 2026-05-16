@@ -533,61 +533,65 @@ static const u16 sDexCategory_UrbanPkmn_Page16[] = {
 };
 
 static const u16 sDexCategory_RarePkmn_Page1[] = {
-    SPECIES_OMANYTE,
-    SPECIES_OMASTAR,
-    SPECIES_OMATO,
-    SPECIES_OMATOPS,
+    SPECIES_EEVEE,
+    SPECIES_VAPOREON,
+    SPECIES_JOLTEON,
+    SPECIES_FLAREON,
+    SPECIES_ESPEON,
+    SPECIES_UMBREON,
+    SPECIES_LEAFEON,
+    SPECIES_GLACEON,
+    SPECIES_SYLVEON,
 };
+
 static const u16 sDexCategory_RarePkmn_Page2[] = {
-    SPECIES_UNOWN,
+    SPECIES_TYNAMO,
+    SPECIES_EELEKTRIK,
+    SPECIES_EELEKTROSS,
 };
 
 static const u16 sDexCategory_RarePkmn_Page3[] = {
+    SPECIES_OMANYTE,
+    SPECIES_OMASTAR,
+};
+
+static const u16 sDexCategory_RarePkmn_Page4[] = {
+    SPECIES_OMATO,
+    SPECIES_OMATOPS,
+};
+
+static const u16 sDexCategory_RarePkmn_Page5[] = {
+    SPECIES_KABUTO,
+    SPECIES_KABUTOPS,
+};
+
+static const u16 sDexCategory_RarePkmn_Page6[] = {
+    SPECIES_KABUSTAR,
+    SPECIES_KABUKNIGHT,
+};
+
+static const u16 sDexCategory_RarePkmn_Page7[] = {
+    SPECIES_AERODACTYL,
+};
+
+static const u16 sDexCategory_RarePkmn_Page8[] = {
     SPECIES_ARTICUNO,
     SPECIES_ZAPDOS,
     SPECIES_MOLTRES,
 };
 
-static const u16 sDexCategory_RarePkmn_Page4[] = {
-    SPECIES_LUGIA,
-};
-
-static const u16 sDexCategory_RarePkmn_Page5[] = {
-    SPECIES_HO_OH,
-};
-
-static const u16 sDexCategory_RarePkmn_Page6[] = {
-    SPECIES_RAYQUAZA,
-};
-
-static const u16 sDexCategory_RarePkmn_Page7[] = {
-    SPECIES_DEOXYS,
-};
-
-static const u16 sDexCategory_RarePkmn_Page8[] = {
-    SPECIES_MEWTWO,
-};
-
 static const u16 sDexCategory_RarePkmn_Page9[] = {
-    SPECIES_MEW,
+    SPECIES_PORYGON,
+    SPECIES_PORYGON2,
+    SPECIES_PORYGON_Z,
 };
 
 static const u16 sDexCategory_RarePkmn_Page10[] = {
-    SPECIES_BULBASAUR,
-    SPECIES_IVYSAUR,
-    SPECIES_VENUSAUR,
+    SPECIES_MEWTWO,
 };
 
 static const u16 sDexCategory_RarePkmn_Page11[] = {
-    SPECIES_CHARMANDER,
-    SPECIES_CHARMELEON,
-    SPECIES_CHARIZARD,
-};
-
-static const u16 sDexCategory_RarePkmn_Page12[] = {
-    SPECIES_SQUIRTLE,
-    SPECIES_WARTORTLE,
-    SPECIES_BLASTOISE,
+    SPECIES_MEW,
 };
 
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
@@ -729,7 +733,6 @@ static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page9),
     DEX_CATEGORY(RarePkmn_Page10),
     DEX_CATEGORY(RarePkmn_Page11),
-    DEX_CATEGORY(RarePkmn_Page12),
 };
 
 struct {
