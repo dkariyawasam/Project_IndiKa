@@ -845,6 +845,10 @@
     },
     {
       "id": "MAPSEC_FUCHSIA_FOREST"
+    },
+    {
+      "id": "MAPSEC_VERMILION_BAY",
+      "name": "VERMILION BAY"
     }
   ]
 }
