@@ -1,12 +1,6 @@
 {
   "map_sections": [
     {
-      "id": "MAPSEC_ROUTE_114"
-    },
-    {
-      "id": "MAPSEC_ROUTE_115"
-    },
-    {
       "id": "MAPSEC_ROUTE_116"
     },
     {
@@ -848,6 +842,9 @@
       "y": 0,
       "width": 0,
       "height": 0
+    },
+    {
+      "id": "MAPSEC_FUCHSIA_FOREST"
     }
   ]
 }
