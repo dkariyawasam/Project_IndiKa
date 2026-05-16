@@ -488,5 +488,6 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_KRICKETOT] = gMonFootprint_QuestionMark,
     [SPECIES_KRICKETUNE] = gMonFootprint_QuestionMark,
     [SPECIES_HAPPINY] = gMonFootprint_Chansey,
+    [SPECIES_LICKILICKY] = gMonFootprint_QuestionMark,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

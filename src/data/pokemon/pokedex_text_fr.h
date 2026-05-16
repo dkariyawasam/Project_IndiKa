@@ -761,6 +761,13 @@ const u8 gLickitungPokedexText[] = _(
 
 const u8 gLickitungPokedexTextUnused[] = _("");
 
+const u8 gLickilickyPokedexText[] = _(
+    "It wraps things with its extensible\n"
+    "tongue. Getting too close to it\n"
+    "will leave you soaked with drool.");
+
+const u8 gLickilickyPokedexTextUnused[] = _("");
+
 const u8 gKoffingPokedexText[] = _(
     "Its thin, balloon-like body is inflated by\n"
     "horribly toxic gases. It reeks when it is\n"

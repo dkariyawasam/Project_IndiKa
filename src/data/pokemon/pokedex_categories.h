@@ -277,56 +277,78 @@ static const u16 sDexCategory_CavePkmn_Page1[] = {
 };
 
 static const u16 sDexCategory_CavePkmn_Page2[] = {
+    SPECIES_CLEFFA,
+    SPECIES_CLEFAIRY,
+    SPECIES_CLEFABLE,
+};
+
+static const u16 sDexCategory_CavePkmn_Page3[] = {
+    SPECIES_AMUNYTE,
+    SPECIES_KINKABUTO,
+};
+
+static const u16 sDexCategory_CavePkmn_Page4[] = {
     SPECIES_DIGLETT,
     SPECIES_DUGTRIO,
+};
+
+static const u16 sDexCategory_CavePkmn_Page5[] = {
+    SPECIES_PARAS,
+    SPECIES_PARASECT,
+};
+
+static const u16 sDexCategory_CavePkmn_Page6[] = {
+    SPECIES_MIME_JR,
+    SPECIES_MR_MIME,
+    SPECIES_MIME_SR,
+};
+
+static const u16 sDexCategory_CavePkmn_Page7[] = {
     SPECIES_ONIX,
     SPECIES_STEELIX,
 };
 
-static const u16 sDexCategory_CavePkmn_Page3[] = {
-    SPECIES_SWINUB,
-    SPECIES_PILOSWINE,
-    SPECIES_SNORUNT,
-    SPECIES_GLALIE,
+static const u16 sDexCategory_CavePkmn_Page8[] = {
+    SPECIES_SANDSHREW,
+    SPECIES_SANDSLASH,
 };
 
-static const u16 sDexCategory_CavePkmn_Page4[] = {
-    SPECIES_WHISMUR,
-    SPECIES_LOUDRED,
-    SPECIES_EXPLOUD,
+static const u16 sDexCategory_CavePkmn_Page9[] = {
+    SPECIES_LARVITAR,
+    SPECIES_PUPITAR,
+    SPECIES_TYRANITAR,
 };
 
-static const u16 sDexCategory_CavePkmn_Page5[] = {
-    SPECIES_MISDREAVUS,
-    SPECIES_DUNSPARCE,
-    SPECIES_NOSEPASS,
-};
-
-static const u16 sDexCategory_CavePkmn_Page6[] = {
-    SPECIES_SABLEYE,
+static const u16 sDexCategory_CavePkmn_Page10[] = {
     SPECIES_MAWILE,
 };
 
-static const u16 sDexCategory_CavePkmn_Page7[] = {
-    SPECIES_GASTLY,
-    SPECIES_HAUNTER,
-    SPECIES_GENGAR,
-};
-
-static const u16 sDexCategory_CavePkmn_Page8[] = {
+static const u16 sDexCategory_CavePkmn_Page11[] = {
     SPECIES_WYNAUT,
     SPECIES_WOBBUFFET,
 };
 
-static const u16 sDexCategory_CavePkmn_Page9[] = {
-    SPECIES_LUNATONE,
-    SPECIES_SOLROCK,
+static const u16 sDexCategory_CavePkmn_Page12[] = {
+    SPECIES_LICKITUNG,
+    SPECIES_LICKILICKY,
 };
 
-static const u16 sDexCategory_CavePkmn_Page10[] = {
-    SPECIES_REGIROCK,
-    SPECIES_REGICE,
-    SPECIES_REGISTEEL,
+static const u16 sDexCategory_CavePkmn_Page13[] = {
+    SPECIES_AEROPTERYX,
+};
+
+static const u16 sDexCategory_CavePkmn_Page14[] = {
+    SPECIES_SABLEYE,
+};
+
+static const u16 sDexCategory_CavePkmn_Page15[] = {
+    SPECIES_SNEASEL,
+    SPECIES_WEAVILE,
+};
+
+static const u16 sDexCategory_CavePkmn_Page16[] = {
+    SPECIES_SMOOCHUM,
+    SPECIES_JYNX,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
@@ -644,6 +666,12 @@ static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
     DEX_CATEGORY(CavePkmn_Page8),
     DEX_CATEGORY(CavePkmn_Page9),
     DEX_CATEGORY(CavePkmn_Page10),
+    DEX_CATEGORY(CavePkmn_Page11),
+    DEX_CATEGORY(CavePkmn_Page12),
+    DEX_CATEGORY(CavePkmn_Page13),
+    DEX_CATEGORY(CavePkmn_Page14),
+    DEX_CATEGORY(CavePkmn_Page15),
+    DEX_CATEGORY(CavePkmn_Page16),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
