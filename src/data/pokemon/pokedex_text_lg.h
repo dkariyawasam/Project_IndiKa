@@ -2731,6 +2731,13 @@ const u8 gKricketunePokedexText[] = _(
 
 const u8 gKricketunePokedexTextUnused[] = _("");
 
+const u8 gHappinyPokedexText[] = _(
+    "It carries a round, white rock\n"
+    "in its belly pouch and gives it\n"
+    "to those it likes.");
+
+const u8 gHappinyPokedexTextUnused[] = _("");
+
 const u8 gPlaceholderPokedexText[] = _(
     "Detailed data on this POKéMON\n"
     "is still being researched.");
