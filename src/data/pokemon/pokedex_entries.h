@@ -1469,6 +1469,32 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 3,
     },
 
+    [NATIONAL_DEX_HAPPINY] =
+    {
+        .categoryName = _("PLAYHOUSE"),
+        .height = 6,
+        .weight = 244,
+        .description = gHappinyPokedexText,
+        .unusedDescription = gHappinyPokedexTextUnused,
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+    [NATIONAL_DEX_LICKILICKY] =
+    {
+        .categoryName = _("LICKING"),
+        .height = 17,
+        .weight = 1400,
+        .description = gLickilickyPokedexText,
+        .unusedDescription = gLickilickyPokedexTextUnused,
+        .pokemonScale = 282,
+        .pokemonOffset = 1,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     [NATIONAL_DEX_CHANSEY] =
     {
         .categoryName = _("EGG"),

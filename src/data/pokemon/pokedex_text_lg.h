@@ -764,6 +764,13 @@ const u8 gLickitungPokedexText[] = _(
 
 const u8 gLickitungPokedexTextUnused[] = _("");
 
+const u8 gLickilickyPokedexText[] = _(
+    "It wraps things with its extensible\n"
+    "tongue. Getting too close to it\n"
+    "will leave you soaked with drool.");
+
+const u8 gLickilickyPokedexTextUnused[] = _("");
+
 const u8 gKoffingPokedexText[] = _(
     "Because it stores several kinds of toxic\n"
     "gases in its body, it is prone to\n"
@@ -2730,6 +2737,13 @@ const u8 gKricketunePokedexText[] = _(
     "It composes melodies ad lib.");
 
 const u8 gKricketunePokedexTextUnused[] = _("");
+
+const u8 gHappinyPokedexText[] = _(
+    "It carries a round, white rock\n"
+    "in its belly pouch and gives it\n"
+    "to those it likes.");
+
+const u8 gHappinyPokedexTextUnused[] = _("");
 
 const u8 gPlaceholderPokedexText[] = _(
     "Detailed data on this POKéMON\n"
