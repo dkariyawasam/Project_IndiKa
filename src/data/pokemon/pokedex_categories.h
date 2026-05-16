@@ -533,65 +533,230 @@ static const u16 sDexCategory_UrbanPkmn_Page16[] = {
 };
 
 static const u16 sDexCategory_RarePkmn_Page1[] = {
-    SPECIES_EEVEE,
-    SPECIES_VAPOREON,
-    SPECIES_JOLTEON,
-    SPECIES_FLAREON,
-    SPECIES_ESPEON,
-    SPECIES_UMBREON,
-    SPECIES_LEAFEON,
-    SPECIES_GLACEON,
-    SPECIES_SYLVEON,
-};
-
-static const u16 sDexCategory_RarePkmn_Page2[] = {
-    SPECIES_TYNAMO,
-    SPECIES_EELEKTRIK,
-    SPECIES_EELEKTROSS,
-};
-
-static const u16 sDexCategory_RarePkmn_Page3[] = {
     SPECIES_OMANYTE,
     SPECIES_OMASTAR,
-};
-
-static const u16 sDexCategory_RarePkmn_Page4[] = {
-    SPECIES_OMATO,
-    SPECIES_OMATOPS,
-};
-
-static const u16 sDexCategory_RarePkmn_Page5[] = {
-    SPECIES_KABUTO,
-    SPECIES_KABUTOPS,
-};
-
-static const u16 sDexCategory_RarePkmn_Page6[] = {
     SPECIES_KABUSTAR,
     SPECIES_KABUKNIGHT,
 };
 
-static const u16 sDexCategory_RarePkmn_Page7[] = {
+static const u16 sDexCategory_RarePkmn_Page2[] = {
+    SPECIES_KABUTO,
+    SPECIES_KABUTOPS,
+    SPECIES_OMATO,
+    SPECIES_OMATOPS,
+};
+
+static const u16 sDexCategory_RarePkmn_Page3[] = {
     SPECIES_AERODACTYL,
 };
 
-static const u16 sDexCategory_RarePkmn_Page8[] = {
+static const u16 sDexCategory_RarePkmn_Page4[] = {
     SPECIES_ARTICUNO,
     SPECIES_ZAPDOS,
     SPECIES_MOLTRES,
 };
 
-static const u16 sDexCategory_RarePkmn_Page9[] = {
+static const u16 sDexCategory_RarePkmn_Page5[] = {
     SPECIES_PORYGON,
     SPECIES_PORYGON2,
     SPECIES_PORYGON_Z,
 };
 
-static const u16 sDexCategory_RarePkmn_Page10[] = {
+static const u16 sDexCategory_RarePkmn_Page6[] = {
     SPECIES_MEWTWO,
 };
 
-static const u16 sDexCategory_RarePkmn_Page11[] = {
+static const u16 sDexCategory_RarePkmn_Page7[] = {
     SPECIES_MEW,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page1[] = {
+    SPECIES_EEVEE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page2[] = {
+    SPECIES_VAPOREON,
+    SPECIES_JOLTEON,
+    SPECIES_FLAREON,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page3[] = {
+    SPECIES_GLACEON,
+    SPECIES_LEAFEON,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page4[] = {
+    SPECIES_ESPEON,
+    SPECIES_UMBREON,
+    SPECIES_SYLVEON,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page5[] = {
+    SPECIES_TYNAMO,
+    SPECIES_EELEKTRIK,
+    SPECIES_EELEKTROSS,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page6[] = {
+    SPECIES_BUDEW,
+    SPECIES_ROSELIA,
+    SPECIES_ROSERADE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page7[] = {
+    SPECIES_PLUSLE,
+    SPECIES_MINUN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page8[] = {
+    SPECIES_CHINGLING,
+    SPECIES_CHIMECHO,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page9[] = {
+    SPECIES_BRONZOR,
+    SPECIES_BRONZONG,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page10[] = {
+    SPECIES_SPIRITOMB,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page11[] = {
+    SPECIES_DUSKULL,
+    SPECIES_DUSCLOPS,
+    SPECIES_DUSKNOIR,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page12[] = {
+    SPECIES_SHUCKLE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page13[] = {
+    SPECIES_SWINUB,
+    SPECIES_PILOSWINE,
+    SPECIES_MAMOSWINE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page14[] = {
+    SPECIES_SNORUNT,
+    SPECIES_GLALIE,
+    SPECIES_FROSLASS,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page15[] = {
+    SPECIES_NUMEL,
+    SPECIES_CAMERUPT,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page16[] = {
+    SPECIES_TYROGUE,
+    SPECIES_HITMONLEE,
+    SPECIES_HITMONCHAN,
+    SPECIES_HITMONTOP,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page17[] = {
+    SPECIES_FARFETCHD_GALARIAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page18[] = {
+    SPECIES_LAPRAS,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page19[] = {
+    SPECIES_DRATINI,
+    SPECIES_DRAGONAIR,
+    SPECIES_DRAGONITE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page20[] = {
+    SPECIES_BULBASAUR,
+    SPECIES_IVYSAUR,
+    SPECIES_VENUSAUR,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page21[] = {
+    SPECIES_CHARMANDER,
+    SPECIES_CHARMELEON,
+    SPECIES_CHARIZARD,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page22[] = {
+    SPECIES_SQUIRTLE,
+    SPECIES_WARTORTLE,
+    SPECIES_BLASTOISE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page23[] = {
+    SPECIES_RATTATA_ALOLAN,
+    SPECIES_RATICATE_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page24[] = {
+    SPECIES_PICHU_ALOLAN,
+    SPECIES_PIKACHU_ALOLAN,
+    SPECIES_RAICHU_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page25[] = {
+    SPECIES_SANDSHREW_ALOLAN,
+    SPECIES_SANDSLASH_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page26[] = {
+    SPECIES_DIGLETT_ALOLAN,
+    SPECIES_DUGTRIO_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page27[] = {
+    SPECIES_MEOWTH_ALOLAN,
+    SPECIES_PERSIAN_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page28[] = {
+    SPECIES_MEOWTH_GALARIAN,
+    SPECIES_PERRSERKER,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page29[] = {
+    SPECIES_GEODUDE_ALOLAN,
+    SPECIES_GRAVELER_ALOLAN,
+    SPECIES_GOLEM_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page30[] = {
+    SPECIES_GRIMER_ALOLAN,
+    SPECIES_MUK_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page31[] = {
+    SPECIES_VULPIX_ALOLAN,
+    SPECIES_NINETALES_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page32[] = {
+    SPECIES_EXEGGCUTE_ALOLAN,
+    SPECIES_EXEGGUTOR_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page33[] = {
+    SPECIES_CUBONE_ALOLAN,
+    SPECIES_MAROWAK_ALOLAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page34[] = {
+    SPECIES_CORSOLA_GALARIAN,
+    SPECIES_CURSOLA,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page35[] = {
+    SPECIES_KOFFING_GALARIAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page36[] = {
+    SPECIES_LUNATONE,
+    SPECIES_SOLROCK,
 };
 
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
@@ -721,6 +886,44 @@ static const struct PokedexCategoryPage sDexCategory_UrbanPkmn[] = {
     DEX_CATEGORY(UrbanPkmn_Page16),
 };
 
+static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
+    DEX_CATEGORY(NonNativePkmn_Page1),
+    DEX_CATEGORY(NonNativePkmn_Page2),
+    DEX_CATEGORY(NonNativePkmn_Page3),
+    DEX_CATEGORY(NonNativePkmn_Page4),
+    DEX_CATEGORY(NonNativePkmn_Page5),
+    DEX_CATEGORY(NonNativePkmn_Page6),
+    DEX_CATEGORY(NonNativePkmn_Page7),
+    DEX_CATEGORY(NonNativePkmn_Page8),
+    DEX_CATEGORY(NonNativePkmn_Page9),
+    DEX_CATEGORY(NonNativePkmn_Page10),
+    DEX_CATEGORY(NonNativePkmn_Page11),
+    DEX_CATEGORY(NonNativePkmn_Page12),
+    DEX_CATEGORY(NonNativePkmn_Page13),
+    DEX_CATEGORY(NonNativePkmn_Page14),
+    DEX_CATEGORY(NonNativePkmn_Page15),
+    DEX_CATEGORY(NonNativePkmn_Page16),
+    DEX_CATEGORY(NonNativePkmn_Page17),
+    DEX_CATEGORY(NonNativePkmn_Page18),
+    DEX_CATEGORY(NonNativePkmn_Page19),
+    DEX_CATEGORY(NonNativePkmn_Page20),
+    DEX_CATEGORY(NonNativePkmn_Page21),
+    DEX_CATEGORY(NonNativePkmn_Page22),
+    DEX_CATEGORY(NonNativePkmn_Page23),
+    DEX_CATEGORY(NonNativePkmn_Page24),
+    DEX_CATEGORY(NonNativePkmn_Page25),
+    DEX_CATEGORY(NonNativePkmn_Page26),
+    DEX_CATEGORY(NonNativePkmn_Page27),
+    DEX_CATEGORY(NonNativePkmn_Page28),
+    DEX_CATEGORY(NonNativePkmn_Page29),
+    DEX_CATEGORY(NonNativePkmn_Page30),
+    DEX_CATEGORY(NonNativePkmn_Page31),
+    DEX_CATEGORY(NonNativePkmn_Page32),
+    DEX_CATEGORY(NonNativePkmn_Page33),
+    DEX_CATEGORY(NonNativePkmn_Page34),
+    DEX_CATEGORY(NonNativePkmn_Page35),
+    DEX_CATEGORY(NonNativePkmn_Page36),
+};
 static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page1),
     DEX_CATEGORY(RarePkmn_Page2),
@@ -729,10 +932,6 @@ static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page5),
     DEX_CATEGORY(RarePkmn_Page6),
     DEX_CATEGORY(RarePkmn_Page7),
-    DEX_CATEGORY(RarePkmn_Page8),
-    DEX_CATEGORY(RarePkmn_Page9),
-    DEX_CATEGORY(RarePkmn_Page10),
-    DEX_CATEGORY(RarePkmn_Page11),
 };
 
 struct {
@@ -748,4 +947,5 @@ struct {
     DEX_CATEGORY(RoughTerrainPkmn),
     DEX_CATEGORY(UrbanPkmn),
     DEX_CATEGORY(RarePkmn),
+    DEX_CATEGORY(NonNativePkmn),
 };
