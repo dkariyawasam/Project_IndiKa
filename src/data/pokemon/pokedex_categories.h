@@ -167,92 +167,59 @@ static const u16 sDexCategory_ForestPkmn_Page21[] = {
 };
 
 static const u16 sDexCategory_WatersEdgePkmn_Page1[] = {
-    SPECIES_GOLDEEN,
-    SPECIES_SEAKING,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page2[] = {
-    SPECIES_MAGIKARP,
-    SPECIES_GYARADOS,
-    SPECIES_KRABBY,
-    SPECIES_KINGLER,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page3[] = {
-    SPECIES_CORPHISH,
-    SPECIES_CRAWDAUNT,
-    SPECIES_BARBOACH,
-    SPECIES_WHISCASH,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page4[] = {
-    SPECIES_LOTAD,
-    SPECIES_LOMBRE,
-    SPECIES_LUDICOLO,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page5[] = {
-    SPECIES_SURSKIT,
-    SPECIES_MASQUERAIN,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page6[] = {
-    SPECIES_PSYDUCK,
-    SPECIES_GOLDUCK,
     SPECIES_WOOPER,
     SPECIES_QUAGSIRE,
 };
 
-static const u16 sDexCategory_WatersEdgePkmn_Page7[] = {
+static const u16 sDexCategory_WatersEdgePkmn_Page2[] = {
     SPECIES_POLIWAG,
     SPECIES_POLIWHIRL,
     SPECIES_POLIWRATH,
     SPECIES_POLITOED,
 };
 
-static const u16 sDexCategory_WatersEdgePkmn_Page8[] = {
-    SPECIES_AZURILL,
-    SPECIES_MARILL,
-    SPECIES_AZUMARILL,
+static const u16 sDexCategory_WatersEdgePkmn_Page3[] = {
+    SPECIES_KRABBY,
+    SPECIES_KINGLER,
 };
 
-static const u16 sDexCategory_WatersEdgePkmn_Page9[] = {
+static const u16 sDexCategory_WatersEdgePkmn_Page4[] = {
+    SPECIES_PSYDUCK,
+    SPECIES_GOLDUCK,
+};
+
+static const u16 sDexCategory_WatersEdgePkmn_Page5[] = {
     SPECIES_SLOWPOKE,
     SPECIES_SLOWBRO,
     SPECIES_SLOWKING,
 };
 
+static const u16 sDexCategory_WatersEdgePkmn_Page6[] = {
+    SPECIES_SHELLDER,
+    SPECIES_CLOYSTER,
+};
+
+static const u16 sDexCategory_WatersEdgePkmn_Page7[] = {
+    SPECIES_SEEL,
+    SPECIES_DEWGONG,
+};
+
+static const u16 sDexCategory_WatersEdgePkmn_Page8[] = {
+    SPECIES_CORSOLA,
+};
+
+static const u16 sDexCategory_WatersEdgePkmn_Page9[] = {
+    SPECIES_WINGULL,
+    SPECIES_PELIPPER,
+};
+
 static const u16 sDexCategory_WatersEdgePkmn_Page10[] = {
-    SPECIES_FEEBAS,
-    SPECIES_MILOTIC,
+    SPECIES_STARYU,
+    SPECIES_STARMIE,
 };
 
 static const u16 sDexCategory_WatersEdgePkmn_Page11[] = {
-    SPECIES_ANORITH,
-    SPECIES_ARMALDO,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page12[] = {
-    SPECIES_DRATINI,
-    SPECIES_DRAGONAIR,
-    SPECIES_DRAGONITE,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page13[] = {
-    SPECIES_TOTODILE,
-    SPECIES_CROCONAW,
-    SPECIES_FERALIGATR,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page14[] = {
-    SPECIES_MUDKIP,
-    SPECIES_MARSHTOMP,
-    SPECIES_SWAMPERT,
-};
-
-static const u16 sDexCategory_WatersEdgePkmn_Page15[] = {
-    SPECIES_LATIAS,
-    SPECIES_LATIOS,
+    SPECIES_QWILFISH,
 };
 
 static const u16 sDexCategory_SeaPkmn_Page1[] = {
@@ -261,83 +228,64 @@ static const u16 sDexCategory_SeaPkmn_Page1[] = {
 };
 
 static const u16 sDexCategory_SeaPkmn_Page2[] = {
-    SPECIES_WINGULL,
-    SPECIES_PELIPPER,
-};
-
-static const u16 sDexCategory_SeaPkmn_Page3[] = {
-    SPECIES_STARYU,
-    SPECIES_STARMIE,
-};
-
-static const u16 sDexCategory_SeaPkmn_Page4[] = {
-    SPECIES_CHINCHOU,
-    SPECIES_LANTURN,
     SPECIES_REMORAID,
     SPECIES_OCTILLERY,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page5[] = {
-    SPECIES_SHELLDER,
-    SPECIES_CLOYSTER,
+static const u16 sDexCategory_SeaPkmn_Page3[] = {
+    SPECIES_CHINCHOU,
+    SPECIES_LANTURN,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page6[] = {
+static const u16 sDexCategory_SeaPkmn_Page4[] = {
     SPECIES_CLAMPERL,
     SPECIES_HUNTAIL,
     SPECIES_GOREBYSS,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page7[] = {
-    SPECIES_QWILFISH,
-    SPECIES_CORSOLA,
+static const u16 sDexCategory_SeaPkmn_Page5[] = {
     SPECIES_MANTINE,
     SPECIES_LUVDISC,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page8[] = {
-    SPECIES_SEEL,
-    SPECIES_DEWGONG,
-};
-
-static const u16 sDexCategory_SeaPkmn_Page9[] = {
+static const u16 sDexCategory_SeaPkmn_Page6[] = {
     SPECIES_SPHEAL,
     SPECIES_SEALEO,
     SPECIES_WALREIN,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page10[] = {
+static const u16 sDexCategory_SeaPkmn_Page7[] = {
     SPECIES_CARVANHA,
     SPECIES_SHARPEDO,
     SPECIES_WAILMER,
     SPECIES_WAILORD,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page11[] = {
+static const u16 sDexCategory_SeaPkmn_Page8[] = {
     SPECIES_HORSEA,
     SPECIES_SEADRA,
     SPECIES_KINGDRA,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page12[] = {
+static const u16 sDexCategory_SeaPkmn_Page9[] = {
     SPECIES_RELICANTH,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page13[] = {
+static const u16 sDexCategory_SeaPkmn_Page10[] = {
     SPECIES_LAPRAS,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page14[] = {
+static const u16 sDexCategory_SeaPkmn_Page11[] = {
     SPECIES_KABUTO,
     SPECIES_KABUTOPS,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page15[] = {
+static const u16 sDexCategory_SeaPkmn_Page12[] = {
     SPECIES_LILEEP,
     SPECIES_CRADILY,
 };
 
-static const u16 sDexCategory_SeaPkmn_Page16[] = {
+static const u16 sDexCategory_SeaPkmn_Page13[] = {
     SPECIES_KYOGRE,
 };
 
@@ -678,10 +626,6 @@ static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {
     DEX_CATEGORY(WatersEdgePkmn_Page9),
     DEX_CATEGORY(WatersEdgePkmn_Page10),
     DEX_CATEGORY(WatersEdgePkmn_Page11),
-    DEX_CATEGORY(WatersEdgePkmn_Page12),
-    DEX_CATEGORY(WatersEdgePkmn_Page13),
-    DEX_CATEGORY(WatersEdgePkmn_Page14),
-    DEX_CATEGORY(WatersEdgePkmn_Page15),
 };
 
 static const struct PokedexCategoryPage sDexCategory_SeaPkmn[] = {
@@ -698,9 +642,6 @@ static const struct PokedexCategoryPage sDexCategory_SeaPkmn[] = {
     DEX_CATEGORY(SeaPkmn_Page11),
     DEX_CATEGORY(SeaPkmn_Page12),
     DEX_CATEGORY(SeaPkmn_Page13),
-    DEX_CATEGORY(SeaPkmn_Page14),
-    DEX_CATEGORY(SeaPkmn_Page15),
-    DEX_CATEGORY(SeaPkmn_Page16),
 };
 
 static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
