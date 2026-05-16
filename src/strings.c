@@ -68,6 +68,7 @@ const u8 gText_DexCategory_MountainPkmn[] = _("Mountain POKéMON");
 const u8 gText_DexCategory_RoughTerrainPkmn[] = _("Rough-terrain POKéMON");
 const u8 gText_DexCategory_UrbanPkmn[] = _("Urban POKéMON");
 const u8 gText_DexCategory_RarePkmn[] = _("Rare POKéMON");
+const u8 gText_DexCategory_NonNativePkmn[] = _("Non-native POKéMON");
 const u8 gText_Search[] = _("{COLOR DYNAMIC_COLOR6}{SHADOW DYNAMIC_COLOR5}LISTS");
 const u8 gText_NumericalMode[] = _("NUMERICAL MODE");
 const u8 gText_AToZMode[] = _("Alphabetical");

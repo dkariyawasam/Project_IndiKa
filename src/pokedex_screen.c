@@ -330,6 +330,7 @@ static const struct ListMenuItem sListMenuItems_KantoDexModeSelect[] = {
     {gText_DexCategory_RoughTerrainPkmn, DEX_CATEGORY_ROUGH_TERRAIN},
     {gText_DexCategory_UrbanPkmn,        DEX_CATEGORY_URBAN},
     {gText_DexCategory_RarePkmn,         DEX_CATEGORY_RARE},
+    {gText_DexCategory_NonNativePkmn,    DEX_CATEGORY_NON_NATIVE},
     {gText_Search,                       LIST_HEADER},
     {gText_AToZMode,                     DEX_MODE(ATOZ)},
     {gText_TypeMode,                     DEX_MODE(TYPE)},
@@ -371,6 +372,7 @@ static const struct ListMenuItem sListMenuItems_NatDexModeSelect[] = {
     {gText_DexCategory_RoughTerrainPkmn, DEX_CATEGORY_ROUGH_TERRAIN},
     {gText_DexCategory_UrbanPkmn,        DEX_CATEGORY_URBAN},
     {gText_DexCategory_RarePkmn,         DEX_CATEGORY_RARE},
+    {gText_DexCategory_NonNativePkmn,    DEX_CATEGORY_NON_NATIVE},
     {gText_Search,                       LIST_HEADER},
     {gText_NumericalModeNational,        DEX_MODE(NUMERICAL_NATIONAL)},
     {gText_AToZMode,                     DEX_MODE(ATOZ)},
@@ -463,6 +465,10 @@ static const struct PokedexScreenWindowGfx sTopMenuSelectionIconGfxPtrs[] = {
         .pal   = sTopMenuIconPals_Urban
     },
     [DEX_CATEGORY_RARE] = {
+        .tiles = sTopMenuIconTiles_Rare,
+        .pal   = sTopMenuIconPals_Rare
+    },
+    [DEX_CATEGORY_NON_NATIVE] = {
         .tiles = sTopMenuIconTiles_Rare,
         .pal   = sTopMenuIconPals_Rare
     },
@@ -806,6 +812,7 @@ static const u8 *const sDexCategoryNamePtrs[] = {
     gText_DexCategory_RoughTerrainPkmn,
     gText_DexCategory_UrbanPkmn,
     gText_DexCategory_RarePkmn,
+    gText_DexCategory_NonNativePkmn,
 };
 
 const u16 sPalette_Silhouette[] = INCBIN_U16("graphics/pokedex/silhouette_sprite_pal.gbapal");
@@ -1050,6 +1057,7 @@ static void Task_PokedexScreen(u8 taskId)
             case DEX_CATEGORY_ROUGH_TERRAIN:
             case DEX_CATEGORY_URBAN:
             case DEX_CATEGORY_RARE:
+            case DEX_CATEGORY_NON_NATIVE:
                 if (DexScreen_IsCategoryUnlocked(sPokedexScreenData->modeSelectInput))
                 {
                     RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
