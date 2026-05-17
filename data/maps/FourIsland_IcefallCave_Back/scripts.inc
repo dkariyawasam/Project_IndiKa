@@ -80,7 +80,6 @@ FourIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	waitmovement 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful
-	setflag FLAG_HIDE_RUIN_VALLEY_SCIENTIST
 	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	setvar VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 1
 	releaseall
