@@ -66,6 +66,20 @@ CeladonCity_Gym_Text_GymGuideErikaStillAway::
     .string "Please look for her in\n"
     .string "VIRIDIAN FOREST.$"
 
+CeladonCity_Gym_Text_GymGuideErikaAdvice::
+    .string "ERIKA's POKéMON grow stronger\n"
+    .string "by supporting one another.\p"
+    .string "GRASS types dislike FIRE, ICE,\n"
+    .string "POISON, FLYING, and BUG moves.\p"
+    .string "Many of them spread sleep or\n"
+    .string "paralysis, too.\p"
+    .string "Bring status heals, and don't\n"
+    .string "let her garden take root!$"
+
+CeladonCity_Gym_Text_GymGuidePostVictory::
+    .string "You bloomed brilliantly against\n"
+    .string "ERIKA's garden of POKéMON.$"
+
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
     .string "{PLAYER} received TM19\n"
     .string "from ERIKA.$"
