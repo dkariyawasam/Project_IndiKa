@@ -532,7 +532,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_THREE_ISLAND,
         MAPSEC_KINDLE_ROAD,
         MAPSEC_TREASURE_BEACH,
-        MAPSEC_CAPE_BRINK,
         MAPSEC_BOND_BRIDGE,
         MAPSEC_THREE_ISLE_PORT,
         MAPSEC_MT_EMBER,
@@ -566,10 +565,8 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_GREEN_PATH,
         MAPSEC_WATER_PATH,
         MAPSEC_RUIN_VALLEY,
-        MAPSEC_CANYON_ENTRANCE,
         MAPSEC_SEVAULT_CANYON,
         MAPSEC_TANOBY_RUINS,
-        MAPSEC_DOTTED_HOLE,
         MAPSEC_PATTERN_BUSH,
         MAPSEC_ALTERING_CAVE,
         MAPSEC_TANOBY_KEY,
@@ -577,7 +574,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_MONEAN_CHAMBER,
         MAPSEC_LIPTOO_CHAMBER,
         MAPSEC_WEEPTH_CHAMBER,
-        MAPSEC_DILFORD_CHAMBER,
         MAPSEC_SCUFIB_CHAMBER,
         MAPSEC_RIXY_CHAMBER,
         MAPSEC_VIAPOIS_CHAMBER,
@@ -699,10 +695,6 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .id = MAPSEC_PATTERN_BUSH,
         .name = sMapsecName_PATTERN_BUSH,
         .desc = gText_RegionMap_AreaDesc_PatternBush
-    }, {
-        .id = MAPSEC_DOTTED_HOLE,
-        .name = sMapsecName_DOTTED_HOLE,
-        .desc = gText_RegionMap_AreaDesc_DottedHole
     }
 };
 
@@ -877,7 +869,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_SIX_ISLAND          - KANTO_MAPSEC_START] = {MAP(MAP_SIX_ISLAND),                            HEAL_LOCATION_NONE},
     [MAPSEC_KINDLE_ROAD         - KANTO_MAPSEC_START] = {MAP(MAP_ONE_ISLAND_KINDLE_ROAD),                HEAL_LOCATION_NONE},
     [MAPSEC_TREASURE_BEACH      - KANTO_MAPSEC_START] = {MAP(MAP_ONE_ISLAND_TREASURE_BEACH),             HEAL_LOCATION_NONE},
-    [MAPSEC_CAPE_BRINK          - KANTO_MAPSEC_START] = {MAP(MAP_TWO_ISLAND_CAPE_BRINK),                 HEAL_LOCATION_NONE},
+    [MAPSEC_CAPE_BRINK          - KANTO_MAPSEC_START] = {MAP(MAP_TWO_ISLAND),                            HEAL_LOCATION_NONE},
     [MAPSEC_BOND_BRIDGE         - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND_BOND_BRIDGE),              HEAL_LOCATION_NONE},
     [MAPSEC_THREE_ISLE_PORT     - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND_PORT),                     HEAL_LOCATION_NONE},
     [MAPSEC_SEVII_ISLE_6        - KANTO_MAPSEC_START] = {MAP(MAP_PROTOTYPE_SEVII_ISLE_6),                HEAL_LOCATION_NONE},
@@ -892,7 +884,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_GREEN_PATH          - KANTO_MAPSEC_START] = {MAP(MAP_SIX_ISLAND_GREEN_PATH),                 HEAL_LOCATION_NONE},
     [MAPSEC_WATER_PATH          - KANTO_MAPSEC_START] = {MAP(MAP_SIX_ISLAND_WATER_PATH),                 HEAL_LOCATION_NONE},
     [MAPSEC_RUIN_VALLEY         - KANTO_MAPSEC_START] = {MAP(MAP_SIX_ISLAND_RUIN_VALLEY),                HEAL_LOCATION_NONE},
-    [MAPSEC_CANYON_ENTRANCE     - KANTO_MAPSEC_START] = {MAP(MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE),  HEAL_LOCATION_NONE},
+    [MAPSEC_CANYON_ENTRANCE     - KANTO_MAPSEC_START] = {MAP(MAP_SEVEN_ISLAND),                          HEAL_LOCATION_NONE},
     [MAPSEC_SEVAULT_CANYON      - KANTO_MAPSEC_START] = {MAP(MAP_SEVEN_ISLAND_SEVAULT_CANYON),           HEAL_LOCATION_NONE},
     [MAPSEC_TANOBY_RUINS        - KANTO_MAPSEC_START] = {MAP(MAP_SEVEN_ISLAND_TANOBY_RUINS),             HEAL_LOCATION_NONE},
     [MAPSEC_NAVEL_ROCK          - KANTO_MAPSEC_START] = {MAP(MAP_NAVEL_ROCK_EXTERIOR),                   HEAL_LOCATION_NONE},
@@ -3016,8 +3008,6 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_ICEFALL_CAVE:
         return FlagGet(FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_DOTTED_HOLE:
-        return FlagGet(FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_LOST_CAVE:
         return FlagGet(FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_PATTERN_BUSH:
@@ -3199,7 +3189,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 17;
         sMapCursor->y = 3;
         break;
-    case MAPSEC_DILFORD_CHAMBER:
     case MAPSEC_LIPTOO_CHAMBER:
     case MAPSEC_MONEAN_CHAMBER:
     case MAPSEC_RIXY_CHAMBER:
@@ -3208,10 +3197,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_WEEPTH_CHAMBER:
         sMapCursor->x = 9;
         sMapCursor->y = 12;
-        break;
-    case MAPSEC_DOTTED_HOLE:
-        sMapCursor->x = 16;
-        sMapCursor->y = 8;
         break;
     case MAPSEC_VIRIDIAN_FOREST:
         sMapCursor->x = 4;

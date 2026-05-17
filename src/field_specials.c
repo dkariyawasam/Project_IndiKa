@@ -2127,29 +2127,6 @@ bool8 HasLearnedAllMovesFromCapeBrinkTutor(void)
         return FALSE;
 }
 
-bool8 CutMoveRuinValleyCheck(void)
-{
-    if (FlagGet(FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE) != TRUE
-     && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SIX_ISLAND_RUIN_VALLEY)
-     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SIX_ISLAND_RUIN_VALLEY)
-     && gSaveBlock1Ptr->pos.x == 24
-     && gSaveBlock1Ptr->pos.y == 25
-     && GetPlayerFacingDirection() == DIR_NORTH
-    )
-        return TRUE;
-    else
-        return FALSE;
-}
-
-void CutMoveOpenDottedHoleDoor(void)
-{
-    MapGridSetMetatileIdAt(31, 31, METATILE_SeviiIslands67_DottedHoleDoor_Open);
-    DrawWholeMapView();
-    PlaySE(SE_BANG);
-    FlagSet(FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE);
-    UnlockPlayerFieldControls();
-}
-
 bool8 IsBadEggInParty(void)
 {
     u8 partyCount = CalculatePlayerPartyCount();
