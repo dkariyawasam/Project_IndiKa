@@ -5796,7 +5796,56 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika1[] = {
+    {
+        .iv = 0,
+        .lvl = 13,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_ODDISH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika2[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_TANGELA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika3[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_WEEPINBELL,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_GLOOM,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_TANGELA,
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika4[] = {
     {
         .iv = 0,
         .lvl = 29,
@@ -5814,6 +5863,95 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika[] = {
         .lvl = 29,
         .species = SPECIES_VILEPLUME,
         .moves = {MOVE_SLEEP_POWDER, MOVE_ACID, MOVE_STUN_SPORE, MOVE_GIGA_DRAIN},
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika5[] = {
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_BELLOSSOM,
+    },
+    {
+        .iv = 0,
+        .lvl = 32,
+        .species = SPECIES_SUNFLORA,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_TANGELA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika6[] = {
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_EXEGGUTOR,
+    },
+    {
+        .iv = 0,
+        .lvl = 39,
+        .species = SPECIES_SHIFTRY,
+    },
+    {
+        .iv = 0,
+        .lvl = 40,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_TANGELA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika7[] = {
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_SHIFTRY,
+    },
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_EXEGGUTOR,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_BELLOSSOM,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 46,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 0,
+        .lvl = 47,
+        .species = SPECIES_TANGROWTH,
     },
 };
 

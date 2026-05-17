@@ -222,7 +222,7 @@
         },
         {
           "map": "MAP_MT_MOON_1F",
-          "base_label": "sMtMoon1F_FireRed",
+          "base_label": "sMtMoon1F_Daytime",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -277,21 +277,21 @@
                 "species": "SPECIES_KINKABUTO"
               },
               {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_CLEFABLE"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SOLROCK"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SOLROCK"
               }
             ]
           }
         },
         {
           "map": "MAP_MT_MOON_1F",
-          "base_label": "sMtMoon1F_LeafGreen",
+          "base_label": "sMtMoon1F_Nighttime",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -346,21 +346,21 @@
                 "species": "SPECIES_KINKABUTO"
               },
               {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_CLEFABLE"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_LUNATONE"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_LUNATONE"
               }
             ]
           }
         },
         {
           "map": "MAP_MT_MOON_B1F",
-          "base_label": "sMtMoonB1F_FireRed",
+          "base_label": "sMtMoonB1F_Daytime",
           "land_mons": {
             "encounter_rate": 5,
             "mons": [
@@ -417,19 +417,19 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_SOLROCK"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SOLROCK"
               }
             ]
           }
         },
         {
           "map": "MAP_MT_MOON_B1F",
-          "base_label": "sMtMoonB1F_LeafGreen",
+          "base_label": "sMtMoonB1F_Nighttime",
           "land_mons": {
             "encounter_rate": 5,
             "mons": [
@@ -486,19 +486,19 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_LUNATONE"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_LUNATONE"
               }
             ]
           }
         },
         {
           "map": "MAP_MT_MOON_B2F",
-          "base_label": "sMtMoonB2F_FireRed",
+          "base_label": "sMtMoonB2F_Daytime",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -555,19 +555,19 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_SOLROCK"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SOLROCK"
               }
             ]
           }
         },
         {
           "map": "MAP_MT_MOON_B2F",
-          "base_label": "sMtMoonB2F_LeafGreen",
+          "base_label": "sMtMoonB2F_Nighttime",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -624,12 +624,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_LUNATONE"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_LUNATONE"
               }
             ]
           }

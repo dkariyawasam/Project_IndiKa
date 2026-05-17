@@ -426,7 +426,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(ROSERADE, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(MAGNEZONE, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(ELECTIVIRE, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(AMBIPOM, gMonPalette_DoubleQuestionMark),
+    SPECIES_PAL(AMBIPOM, gMonPalette_Ambipom),
     SPECIES_PAL(ANNIHILAPE, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(HONCHKROW, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(CHINGLING, gMonPalette_DoubleQuestionMark),
