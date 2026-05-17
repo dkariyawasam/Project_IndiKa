@@ -177,7 +177,6 @@ static const s8 sAreaMarkers[][4] = {
     [DEX_AREA_LOST_CAVE]        = { MARKER_CIRCULAR,  54,  74 },
     [DEX_AREA_ALTERING_CAVE]    = { MARKER_CIRCULAR,  69,  73 },
     [DEX_AREA_PATTERN_BUSH]     = { MARKER_CIRCULAR,  76,  77 },
-    [DEX_AREA_DOTTED_HOLE]      = { MARKER_CIRCULAR,  73,  95 },
     [DEX_AREA_TANOBY_CHAMBER]   = { MARKER_MED_H,     96,  90 },
 };
 

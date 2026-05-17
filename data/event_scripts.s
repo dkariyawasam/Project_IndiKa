@@ -206,12 +206,6 @@ gStdScriptsEnd::
 	.include "data/maps/FourIsland_IcefallCave_1F/scripts.inc"
 	.include "data/maps/FourIsland_IcefallCave_B1F/scripts.inc"
 	.include "data/maps/FourIsland_IcefallCave_Back/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_1F/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_B1F/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_B2F/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_B3F/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_B4F/scripts.inc"
-	.include "data/maps/SixIsland_DottedHole_SapphireRoom/scripts.inc"
 	.include "data/maps/SixIsland_PatternBush/scripts.inc"
 	.include "data/maps/SixIsland_AlteringCave/scripts.inc"
 	.include "data/maps/NavelRock_Exterior/scripts.inc"
@@ -234,7 +228,6 @@ gStdScriptsEnd::
 	.include "data/maps/SevenIsland_TanobyRuins_MoneanChamber/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins_LiptooChamber/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins_WeepthChamber/scripts.inc"
-	.include "data/maps/SevenIsland_TanobyRuins_DilfordChamber/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins_ScufibChamber/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins_RixyChamber/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins_ViapoisChamber/scripts.inc"
@@ -309,7 +302,6 @@ gStdScriptsEnd::
 	.include "data/maps/Route25/scripts.inc"
 	.include "data/maps/OneIsland_KindleRoad/scripts.inc"
 	.include "data/maps/OneIsland_TreasureBeach/scripts.inc"
-	.include "data/maps/TwoIsland_CapeBrink/scripts.inc"
 	.include "data/maps/ThreeIsland_BondBridge/scripts.inc"
 	.include "data/maps/ThreeIsland_Port/scripts.inc"
 	.include "data/maps/Prototype_SeviiIsle_6/scripts.inc"
@@ -324,7 +316,6 @@ gStdScriptsEnd::
 	.include "data/maps/SixIsland_GreenPath/scripts.inc"
 	.include "data/maps/SixIsland_WaterPath/scripts.inc"
 	.include "data/maps/SixIsland_RuinValley/scripts.inc"
-	.include "data/maps/SevenIsland_SevaultCanyon_Entrance/scripts.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon/scripts.inc"
 	.include "data/maps/SevenIsland_TanobyRuins/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"
@@ -483,7 +474,6 @@ gStdScriptsEnd::
 	.include "data/maps/SixIsland_Mart/scripts.inc"
 	.include "data/maps/ThreeIsland_Harbor/scripts.inc"
 	.include "data/maps/FiveIsland_ResortGorgeous_House/scripts.inc"
-	.include "data/maps/TwoIsland_CapeBrink_House/scripts.inc"
 	.include "data/maps/SixIsland_WaterPath_House1/scripts.inc"
 	.include "data/maps/SixIsland_WaterPath_House2/scripts.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon_House/scripts.inc"
@@ -573,7 +563,6 @@ gStdScriptsEnd::
 	.include "data/maps/MtEmber_RubyPath_B3F/text.inc"
 	.include "data/maps/ThreeIsland_BerryForest/text.inc"
 	.include "data/maps/FourIsland_IcefallCave_Back/text.inc"
-	.include "data/maps/SixIsland_DottedHole_SapphireRoom/text.inc"
 	.include "data/maps/SixIsland_PatternBush/text.inc"
 	.include "data/maps/RocketLeague_Lobby/text.inc"
 	.include "data/maps/FiveIsland_LostCave_Room1/text.inc"
@@ -637,7 +626,6 @@ gStdScriptsEnd::
 	.include "data/maps/SixIsland_GreenPath/text.inc"
 	.include "data/maps/SixIsland_WaterPath/text.inc"
 	.include "data/maps/SixIsland_RuinValley/text.inc"
-	.include "data/maps/SevenIsland_SevaultCanyon_Entrance/text.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon/text.inc"
 	.include "data/maps/SevenIsland_TanobyRuins/text.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/text.inc"
@@ -766,7 +754,6 @@ gStdScriptsEnd::
 	.include "data/maps/SixIsland_House/text.inc"
 	.include "data/maps/SixIsland_Mart/text.inc"
 	.include "data/maps/FiveIsland_ResortGorgeous_House/text.inc"
-	.include "data/maps/TwoIsland_CapeBrink_House/text.inc"
 	.include "data/maps/SixIsland_WaterPath_House1/text.inc"
 	.include "data/maps/SixIsland_WaterPath_House2/text.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon_House/text.inc"
@@ -1011,7 +998,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
 	setflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
 	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
-	setflag FLAG_HIDE_DOTTED_HOLE_SCIENTIST
 	setflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
 	setflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
 	setflag FLAG_HIDE_SELPHYS_BUTLER

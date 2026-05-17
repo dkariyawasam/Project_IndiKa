@@ -18,11 +18,6 @@
       "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS",
       "offset": -48,
       "direction": "down"
-    },
-    {
-      "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
-      "offset": -20,
-      "direction": "left"
     }
   ],
   "object_events": [

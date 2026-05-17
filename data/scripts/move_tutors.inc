@@ -399,7 +399,7 @@ EventScript_BodySlamTaught::
 	release
 	end
 
-TwoIsland_CapeBrink_House_EventScript_StarterTutor::
+TwoIsland_House_EventScript_StarterTutor::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock

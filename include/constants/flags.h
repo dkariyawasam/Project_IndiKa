@@ -156,7 +156,6 @@
 #define FLAG_HIDE_ICEFALL_CAVE_ROCKETS                     0x08D
 #define FLAG_HIDE_RUIN_VALLEY_SCIENTIST                    0x08E
 #define FLAG_HIDE_SAPPHIRE                                 0x08F
-#define FLAG_HIDE_DOTTED_HOLE_SCIENTIST                    0x090
 #define FLAG_HIDE_THREE_ISLAND_LONE_BIKER                  0x091
 #define FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY            0x092
 #define FLAG_HIDE_LOST_CAVE_SELPHY                         0x093
@@ -758,7 +757,6 @@
 #define FLAG_TUTOR_HYDRO_CANNON                          0x2E0
 #define FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK             0x2E1
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
-#define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3
 #define FLAG_0x2E5                                       0x2E5
 #define FLAG_0x2E6                                       0x2E6
 #define FLAG_0x2E7                                       0x2E7
@@ -1443,7 +1441,6 @@
 #define FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE            (SYS_FLAGS + 0xB8)
 #define FLAG_SYS_0xB9                                             (SYS_FLAGS + 0xB9)
 #define FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY                          (SYS_FLAGS + 0xBA)
-#define FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F                    (SYS_FLAGS + 0xBB)
 #define FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE               (SYS_FLAGS + 0xBC)
 #define FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH                      (SYS_FLAGS + 0xBD)
 #define FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE                     (SYS_FLAGS + 0xBE)

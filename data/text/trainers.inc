@@ -922,31 +922,6 @@ SixIsland_RuinValley_Text_HectorRematchIntro::
 	.string "I'm pretty familiar with the land\n"
 	.string "around these parts.$"
 
-SevenIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro::
-	.string "Kyahaha!\p"
-	.string "Coming back won't change a thing.\n"
-	.string "I'll flick you away effortlessly!$"
-
-SevenIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro::
-	.string "Howdy! You're a member of my\n"
-	.string "fan club, isn't that right?$"
-
-SevenIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro::
-	.string "This island is too spread out…\n"
-	.string "Patrolling the place is a drag…$"
-
-SevenIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro::
-	.string "I don't forgive people who abuse\n"
-	.string "POKéMON!$"
-
-SevenIsland_SevaultCanyon_Entrance_Text_EveRematchIntro::
-	.string "EVE: I'll team up with JON and\n"
-	.string "battle together again.$"
-
-SevenIsland_SevaultCanyon_Entrance_Text_JonRematchIntro::
-	.string "JON: When I'm with EVE, it feels\n"
-	.string "like we could never lose, not ever.$"
-
 SevenIsland_SevaultCanyon_Text_CyndyRematchIntro::
 	.string "Let's have another battle.\n"
 	.string "My conditioning's in top form!$"
