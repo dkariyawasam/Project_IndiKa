@@ -558,18 +558,6 @@ SixIsland_WaterPath_EventScript_ItemDragonScale::
 	finditem ITEM_DRAGON_SCALE
 	end
 
-SixIsland_RuinValley_EventScript_ItemFullRestore::
-	finditem ITEM_FULL_RESTORE
-	end
-
-SixIsland_RuinValley_EventScript_ItemHPUp::
-	finditem ITEM_HP_UP
-	end
-
-SixIsland_RuinValley_EventScript_ItemSunStone::
-	finditem ITEM_SUN_STONE
-	end
-
 SevenIsland_SevaultCanyon_EventScript_ItemKingsRock::
 	finditem ITEM_KINGS_ROCK
 	end

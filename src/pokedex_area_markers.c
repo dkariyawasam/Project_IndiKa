@@ -167,7 +167,6 @@ static const s8 sAreaMarkers[][4] = {
     [DEX_AREA_OUTCAST_ISLAND]   = { MARKER_CIRCULAR,  72,  74 },
     [DEX_AREA_GREEN_PATH]       = { MARKER_SMALL_H,   72,  78 },
     [DEX_AREA_WATER_PATH]       = { MARKER_SMALL_V,   81,  80 },
-    [DEX_AREA_RUIN_VALLEY]      = { MARKER_CIRCULAR,  76,  92 },
     [DEX_AREA_CANYON_ENTRANCE]  = { MARKER_CIRCULAR, 104,  86 },
     [DEX_AREA_SEVAULT_CANYON]   = { MARKER_SMALL_V,  108,  83 },
     [DEX_AREA_TANOBY_RUINS]     = { MARKER_MED_H,     96,  90 },

@@ -901,27 +901,6 @@ SixIsland_WaterPath_Text_MiaRematchIntro::
 	.string "MIA: Hello, POKéMON!\n"
 	.string "It's time to battle again!$"
 
-SixIsland_RuinValley_Text_StanlyRematchIntro::
-	.string "There appear to be many secrets\n"
-	.string "still unsolved in this world.$"
-
-SixIsland_RuinValley_Text_FosterRematchIntro::
-	.string "Hi, didn't we meet before?\n"
-	.string "What compelled you to come back?$"
-
-SixIsland_RuinValley_Text_LarryRematchIntro::
-	.string "It's been said that there are\n"
-	.string "mysterious stones on this island.\p"
-	.string "Have you discovered anything since\n"
-	.string "we last met?$"
-
-SixIsland_RuinValley_Text_DarylRematchIntro::
-	.string "A rematch with you, so high up!$"
-
-SixIsland_RuinValley_Text_HectorRematchIntro::
-	.string "I'm pretty familiar with the land\n"
-	.string "around these parts.$"
-
 SevenIsland_SevaultCanyon_Text_CyndyRematchIntro::
 	.string "Let's have another battle.\n"
 	.string "My conditioning's in top form!$"
