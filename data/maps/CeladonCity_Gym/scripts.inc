@@ -9,8 +9,12 @@ CeladonCity_Gym_OnFrame::
 
 CeladonCity_Gym_OnTransition::
 	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_SetInitialGuideState
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_ShowErikaAndGuide
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
-	goto_if_lt VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_HideErika
+	goto CeladonCity_Gym_EventScript_HideErika
+
+CeladonCity_Gym_EventScript_ShowErikaAndGuide::
+	clearflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
 	clearflag FLAG_HIDE_CELADON_CITY_GYM_ERIKA
 	end
 
@@ -99,6 +103,7 @@ CeladonCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
 	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_GymGuideErikaReturned
 	msgbox CeladonCity_Gym_Text_GymGuideErikaStillAway
 	release
 	end
@@ -109,6 +114,17 @@ CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime::
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
 	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	setvar VAR_ERIKA_TRIAL_STATE, 1
+	release
+	end
+
+CeladonCity_Gym_EventScript_GymGuideErikaReturned::
+	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_GymGuidePostVictory
+	msgbox CeladonCity_Gym_Text_GymGuideErikaAdvice
+	release
+	end
+
+CeladonCity_Gym_EventScript_GymGuidePostVictory::
+	msgbox CeladonCity_Gym_Text_GymGuidePostVictory
 	release
 	end
 

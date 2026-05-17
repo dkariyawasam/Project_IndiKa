@@ -397,6 +397,7 @@ static void Task_ExitDoor(u8 taskId)
             task->data[0] = 4;
         break;
     case 4:
+        RefreshCurrentMapNightPalette();
         UnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         DestroyTask(taskId);
@@ -433,6 +434,7 @@ static void Task_ExitNonAnimDoor(u8 taskId)
         }
         break;
     case 3:
+        RefreshCurrentMapNightPalette();
         UnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         DestroyTask(taskId);
@@ -452,6 +454,7 @@ static void Task_ExitNonDoor(u8 taskId)
     case 1:
         if (FieldFadeTransitionBackgroundEffectIsFinished())
         {
+            RefreshCurrentMapNightPalette();
             UnfreezeObjectEvents();
             UnlockPlayerFieldControls();
             DestroyTask(taskId);
@@ -473,6 +476,7 @@ static void Task_TeleportWarpIn(u8 taskId)
     case 1:
         if (FieldFadeTransitionBackgroundEffectIsFinished() && WaitTeleportInPlayerAnim() != TRUE)
         {
+            RefreshCurrentMapNightPalette();
             UnfreezeObjectEvents();
             UnlockPlayerFieldControls();
             DestroyTask(taskId);
@@ -903,6 +907,7 @@ static void Task_ExitStairs(u8 taskId)
     default:
         if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
         {
+            RefreshCurrentMapNightPalette();
             CameraObjectReset1();
             UnlockPlayerFieldControls();
             DestroyTask(taskId);

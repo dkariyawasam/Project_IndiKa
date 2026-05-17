@@ -45,18 +45,22 @@ bool8 IsNightTime(void)
 void UpdateDayNightCycleStep(void)
 {
     u16 steps = VarGet(VAR_DAYNIGHT_STEP_COUNTER);
+
+    if (!DoesCurrentMapUseNightPalette())
+        return;
+
     steps++;
 
     if (steps >= DAY_NIGHT_STEP_THRESHOLD)
     {
         steps = 0;
 
-    if (!sTimeTransitionActive)
+        if (!sTimeTransitionActive)
         {
-        if (VarGet(VAR_TIME_OF_DAY) == TIME_DAY)
-            StartTimeOfDayTransition(TIME_NIGHT);
-        else
-            StartTimeOfDayTransition(TIME_DAY);
+            if (VarGet(VAR_TIME_OF_DAY) == TIME_DAY)
+                StartTimeOfDayTransition(TIME_NIGHT);
+            else
+                StartTimeOfDayTransition(TIME_DAY);
         }
     }
 
@@ -106,7 +110,10 @@ void RestoreDayPaletteForCurrentMap(void)
 void RefreshCurrentMapNightPalette(void)
 {
     if (!DoesCurrentMapUseNightPalette())
+    {
+        RestoreDayPaletteForCurrentMap();
         return;
+    }
 
     if (IsNightTime())
         ApplyNightPaletteToCurrentMap();
@@ -303,6 +310,14 @@ void UpdateTimeOfDayTransition(void)
 {
     if (!sTimeTransitionActive)
         return;
+
+    if (!DoesCurrentMapUseNightPalette())
+    {
+        sTimeTransitionActive = FALSE;
+        VarSet(VAR_TIME_OF_DAY, sTimeTransitionTarget);
+        RestoreDayPaletteForCurrentMap();
+        return;
+    }
 
     sTimeTransitionTimer++;
 
