@@ -197,7 +197,7 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .palptr = sMoneanChamberMapPreviewPalette
     },
     [MPS_BERRY_FOREST] = {
-        .mapsec = MAPSEC_BERRY_FOREST,
+        .mapsec = MAPSEC_FUCHSIA_FOREST,
         .type = MPS_TYPE_FOREST,
         .flagId = FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST,
         .tilesptr = sBerryForestMapPreviewTiles,

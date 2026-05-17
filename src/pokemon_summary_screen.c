@@ -5212,9 +5212,7 @@ static bool32 CurrentMonIsFromGBA(void)
 
 static bool32 MapSecIsInKantoOrSevii(u8 mapSec)
 {
-    if (mapSec >= KANTO_MAPSEC_START && mapSec < MAPSEC_NONE)
-        return TRUE;
-    return FALSE;
+    return TRUE;
 }
 
 // Unused
