@@ -427,12 +427,16 @@
 
 #define TRAINER_LEADER_MISTY_1                   421
 #define TRAINER_LEADER_MISTY                     TRAINER_LEADER_MISTY_1
-#define TRAINER_LEADER_LT_SURGE                  422
+#define TRAINER_LEADER_LT_SURGE_1                422
+#define TRAINER_LEADER_LT_SURGE                  TRAINER_LEADER_LT_SURGE_1
 #define TRAINER_LEADER_ERIKA_1                   423
 #define TRAINER_LEADER_ERIKA                     TRAINER_LEADER_ERIKA_1
-#define TRAINER_LEADER_KOGA                      424
-#define TRAINER_LEADER_BLAINE                    425
-#define TRAINER_LEADER_SABRINA                   426
+#define TRAINER_LEADER_KOGA_1                    424
+#define TRAINER_LEADER_KOGA                      TRAINER_LEADER_KOGA_1
+#define TRAINER_LEADER_BLAINE_1                  425
+#define TRAINER_LEADER_BLAINE                    TRAINER_LEADER_BLAINE_1
+#define TRAINER_LEADER_SABRINA_1                 426
+#define TRAINER_LEADER_SABRINA                   TRAINER_LEADER_SABRINA_1
 #define TRAINER_GENTLEMAN_THOMAS                 427
 #define TRAINER_GENTLEMAN_ARTHUR                 428
 #define TRAINER_GENTLEMAN_TUCKER                 429
@@ -771,6 +775,31 @@
 #define TRAINER_LEADER_ERIKA_5                   762
 #define TRAINER_LEADER_ERIKA_6                   763
 #define TRAINER_LEADER_ERIKA_7                   764
+
+#define TRAINER_LEADER_LT_SURGE_2                TRAINER_CHANNELER_1
+#define TRAINER_LEADER_LT_SURGE_3                TRAINER_CHANNELER_2
+#define TRAINER_LEADER_LT_SURGE_4                TRAINER_CHANNELER_3
+#define TRAINER_LEADER_LT_SURGE_5                TRAINER_CHANNELER_4
+#define TRAINER_LEADER_LT_SURGE_6                TRAINER_CHANNELER_5
+#define TRAINER_LEADER_LT_SURGE_7                TRAINER_CHANNELER_6
+#define TRAINER_LEADER_KOGA_2                    TRAINER_CHANNELER_7
+#define TRAINER_LEADER_KOGA_3                    TRAINER_CHANNELER_8
+#define TRAINER_LEADER_KOGA_4                    TRAINER_BUG_CATCHER_3
+#define TRAINER_LEADER_KOGA_5                    TRAINER_BUG_CATCHER_4
+#define TRAINER_LEADER_KOGA_6                    TRAINER_BUG_CATCHER_5
+#define TRAINER_LEADER_KOGA_7                    TRAINER_BUG_CATCHER_6
+#define TRAINER_LEADER_BLAINE_2                  TRAINER_BUG_CATCHER_7
+#define TRAINER_LEADER_BLAINE_3                  TRAINER_BUG_CATCHER_8
+#define TRAINER_LEADER_BLAINE_4                  TRAINER_UNUSED_522
+#define TRAINER_LEADER_BLAINE_5                  TRAINER_UNUSED_547
+#define TRAINER_LEADER_BLAINE_6                  TRAINER_UNUSED_548
+#define TRAINER_LEADER_BLAINE_7                  TRAINER_UNUSED_549
+#define TRAINER_LEADER_SABRINA_2                 TRAINER_UNUSED_550
+#define TRAINER_LEADER_SABRINA_3                 TRAINER_UNUSED_551
+#define TRAINER_LEADER_SABRINA_4                 TRAINER_PSYCHIC_DARIO
+#define TRAINER_LEADER_SABRINA_5                 TRAINER_PSYCHIC_RODETTE
+#define TRAINER_LEADER_SABRINA_6                 TRAINER_PSYCHIC_DARIO_2
+#define TRAINER_LEADER_SABRINA_7                 TRAINER_PSYCHIC_RODETTE_2
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.

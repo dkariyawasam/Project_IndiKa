@@ -106,13 +106,19 @@ ViridianForest_Text_ErikaChallenge::
     .string "ERIKA: How fortunate.\n"
     .string "That is just the lesson I hoped\l"
     .string "this forest would offer.\p"
+    .string "Some POKéMON bloom only when\n"
+    .string "friendship has taken root.\p"
+    .string "That kind of evolution is a bond,\n"
+    .string "not merely a change in form.\p"
     .string "Before I return, may I ask you for\n"
     .string "a proper GYM challenge?\p"
     .string "With my GYM GUIDE present, the\n"
     .string "match will be official.$"
 
 ViridianForest_Text_ErikaBattleIntro::
-    .string "Very well.\n"
+    .string "Very well.\p"
+    .string "Show me how friendship has helped\n"
+    .string "your POKéMON grow.\p"
     .string "Let us begin.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
 
 ViridianForest_Text_ErikaDefeat::
@@ -123,6 +129,11 @@ ViridianForest_Text_ErikaAfterBattle::
     .string "ERIKA: You are remarkably strong.\p"
     .string "This battle was witnessed, so it\n"
     .string "shall stand as your GYM challenge.\p"
+    .string "I saw trust in the way your\n"
+    .string "POKéMON stood with you.\p"
+    .string "Friendship can guide evolution\n"
+    .string "as surely as sunlight guides\l"
+    .string "a bud into bloom.\p"
     .string "Please come to CELADON GYM.\n"
     .string "There, I will grant a reward for\l"
     .string "the growth you have shown.$"

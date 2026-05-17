@@ -64,14 +64,61 @@ CeladonCity_Gym_EventScript_Erika::
 	end
 
 CeladonCity_Gym_EventScript_ErikaReward::
+	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_ErikaBudewGift
 	famechecker FAMECHECKER_ERIKA, 1
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
-	setvar VAR_ERIKA_TRIAL_STATE, 5
-	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	msgbox CeladonCity_Gym_Text_ErikaReward
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
+	goto CeladonCity_Gym_EventScript_ErikaBudewGift
+
+CeladonCity_Gym_EventScript_ErikaBudewGift::
+	goto_if_set FLAG_GOT_BUDEW_FROM_ERIKA, CeladonCity_Gym_EventScript_ErikaPostReward
+	msgbox CeladonCity_Gym_Text_ErikaGiftBudew
+	setvar VAR_TEMP_1, SPECIES_BUDEW
+	givemon SPECIES_BUDEW, 5
+	goto_if_eq VAR_RESULT, 0, CeladonCity_Gym_EventScript_ErikaReceiveBudewParty
+	goto_if_eq VAR_RESULT, 1, CeladonCity_Gym_EventScript_ErikaReceiveBudewPC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+CeladonCity_Gym_EventScript_ErikaReceiveBudewParty::
+	playfanfare MUS_LEVEL_UP
+	message CeladonCity_Gym_Text_ReceivedBudewFromErika
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_BUDEW
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_Gym_EventScript_ErikaSetGotBudew
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto CeladonCity_Gym_EventScript_ErikaSetGotBudew
+	end
+
+CeladonCity_Gym_EventScript_ErikaReceiveBudewPC::
+	playfanfare MUS_LEVEL_UP
+	message CeladonCity_Gym_Text_ReceivedBudewFromErika
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_BUDEW
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_Gym_EventScript_ErikaTransferBudewToPC
+	call EventScript_NameReceivedBoxMon
+	goto CeladonCity_Gym_EventScript_ErikaTransferBudewToPC
+	end
+
+CeladonCity_Gym_EventScript_ErikaTransferBudewToPC::
+	call EventScript_TransferredToPC
+	goto CeladonCity_Gym_EventScript_ErikaSetGotBudew
+	end
+
+CeladonCity_Gym_EventScript_ErikaSetGotBudew::
+	setflag FLAG_GOT_BUDEW_FROM_ERIKA
+	setvar VAR_ERIKA_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	msgbox CeladonCity_Gym_Text_ErikaBudewAdvice
 	release
 	end
 
@@ -119,7 +166,7 @@ CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime::
 
 CeladonCity_Gym_EventScript_GymGuideErikaReturned::
 	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_GymGuidePostVictory
-	msgbox CeladonCity_Gym_Text_GymGuideErikaAdvice
+	msgbox CeladonCity_Gym_Text_GymGuideErikaImpressed
 	release
 	end
 
