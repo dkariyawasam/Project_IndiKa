@@ -1,57 +1,6 @@
 {
   "map_sections": [
     {
-      "id": "MAPSEC_ROUTE_116"
-    },
-    {
-      "id": "MAPSEC_ROUTE_117"
-    },
-    {
-      "id": "MAPSEC_ROUTE_118"
-    },
-    {
-      "id": "MAPSEC_ROUTE_119"
-    },
-    {
-      "id": "MAPSEC_ROUTE_120"
-    },
-    {
-      "id": "MAPSEC_ROUTE_121"
-    },
-    {
-      "id": "MAPSEC_ROUTE_122"
-    },
-    {
-      "id": "MAPSEC_ROUTE_123"
-    },
-    {
-      "id": "MAPSEC_ROUTE_124"
-    },
-    {
-      "id": "MAPSEC_ROUTE_125"
-    },
-    {
-      "id": "MAPSEC_ROUTE_126"
-    },
-    {
-      "id": "MAPSEC_ROUTE_127"
-    },
-    {
-      "id": "MAPSEC_ROUTE_128"
-    },
-    {
-      "id": "MAPSEC_ROUTE_129"
-    },
-    {
-      "id": "MAPSEC_ROUTE_130"
-    },
-    {
-      "id": "MAPSEC_ROUTE_131"
-    },
-    {
-      "id": "MAPSEC_ROUTE_132"
-    },
-    {
       "id": "MAPSEC_PALLET_TOWN",
       "name": "PALLET TOWN",
       "x": 4,
@@ -548,14 +497,6 @@
       "height": 2
     },
     {
-      "id": "MAPSEC_CAPE_BRINK",
-      "name": "CAPE BRINK",
-      "x": 9,
-      "y": 7,
-      "width": 1,
-      "height": 2
-    },
-    {
       "id": "MAPSEC_BOND_BRIDGE",
       "name": "BOND BRIDGE",
       "x": 13,
@@ -668,14 +609,6 @@
       "height": 2
     },
     {
-      "id": "MAPSEC_CANYON_ENTRANCE",
-      "name": "CANYON ENTRANCE",
-      "x": 5,
-      "y": 9,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "MAPSEC_SEVAULT_CANYON",
       "name": "SEVAULT CANYON",
       "x": 6,
@@ -708,24 +641,8 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_BERRY_FOREST",
-      "name": "FUCHSIA FOREST",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "MAPSEC_ICEFALL_CAVE",
       "name": "ICEFALL CAVE",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_DOTTED_HOLE",
-      "name": "DOTTED HOLE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -790,14 +707,6 @@
     {
       "id": "MAPSEC_WEEPTH_CHAMBER",
       "name": "WEEPTH CHAMBER",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_DILFORD_CHAMBER",
-      "name": "DILFORD CHAMBER",
       "x": 0,
       "y": 0,
       "width": 1,
