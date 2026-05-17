@@ -2450,18 +2450,6 @@
       "blockdata_filepath": "data/layouts/SixIsland_WaterPath/map.bin"
     },
     {
-      "id": "LAYOUT_SIX_ISLAND_RUIN_VALLEY",
-      "name": "SixIsland_RuinValley_Layout",
-      "width": 48,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SixIsland_RuinValley/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_RuinValley/map.bin"
-    },
-    {
       "id": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON",
       "name": "SevenIsland_SevaultCanyon_Layout",
       "width": 24,

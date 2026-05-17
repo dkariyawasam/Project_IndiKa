@@ -362,7 +362,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_MANSION",
-      "name": "POKéMON MANSION",
+      "name": "POK\u00e9MON MANSION",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -402,7 +402,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_TOWER",
-      "name": "POKéMON TOWER",
+      "name": "POK\u00e9MON TOWER",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -601,14 +601,6 @@
       "height": 5
     },
     {
-      "id": "MAPSEC_RUIN_VALLEY",
-      "name": "RUIN VALLEY",
-      "x": 16,
-      "y": 7,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "MAPSEC_SEVAULT_CANYON",
       "name": "SEVAULT CANYON",
       "x": 6,
@@ -753,7 +745,8 @@
       "height": 0
     },
     {
-      "id": "MAPSEC_FUCHSIA_FOREST"
+      "id": "MAPSEC_FUCHSIA_FOREST",
+      "name": "FUCHSIA FOREST"
     },
     {
       "id": "MAPSEC_VERMILION_BAY",
