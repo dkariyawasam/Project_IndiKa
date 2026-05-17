@@ -77,7 +77,51 @@ ViridianForest_EventScript_ErikaHasRoot::
 	waitmovement 0
 	msgbox ViridianForest_Text_GymGuideFoundErika
 	msgbox ViridianForest_Text_ErikaChallenge
-	trainerbattle_double TRAINER_LEADER_ERIKA, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	goto ViridianForest_EventScript_ErikaBattlePicker
+	end
+
+ViridianForest_EventScript_ErikaBattlePicker::
+	special GetBadgeCount
+	goto_if_eq VAR_RESULT, 0, ViridianForest_EventScript_ErikaChallenge1
+	goto_if_eq VAR_RESULT, 1, ViridianForest_EventScript_ErikaChallenge2
+	goto_if_eq VAR_RESULT, 2, ViridianForest_EventScript_ErikaChallenge3
+	goto_if_eq VAR_RESULT, 3, ViridianForest_EventScript_ErikaChallenge4
+	goto_if_eq VAR_RESULT, 4, ViridianForest_EventScript_ErikaChallenge5
+	goto_if_eq VAR_RESULT, 5, ViridianForest_EventScript_ErikaChallenge6
+	goto ViridianForest_EventScript_ErikaChallenge7
+
+ViridianForest_EventScript_ErikaChallenge1::
+	trainerbattle_double TRAINER_LEADER_ERIKA_1, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge2::
+	trainerbattle_double TRAINER_LEADER_ERIKA_2, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge3::
+	trainerbattle_double TRAINER_LEADER_ERIKA_3, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge4::
+	trainerbattle_double TRAINER_LEADER_ERIKA_4, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge5::
+	trainerbattle_double TRAINER_LEADER_ERIKA_5, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge6::
+	trainerbattle_double TRAINER_LEADER_ERIKA_6, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
+	release
+	end
+
+ViridianForest_EventScript_ErikaChallenge7::
+	trainerbattle_double TRAINER_LEADER_ERIKA_7, ViridianForest_Text_ErikaBattleIntro, ViridianForest_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianForest_EventScript_DefeatedErika, NO_MUSIC
 	release
 	end
 

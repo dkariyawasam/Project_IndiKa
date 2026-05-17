@@ -351,6 +351,11 @@ static const u16 sDexCategory_CavePkmn_Page16[] = {
     SPECIES_JYNX,
 };
 
+static const u16 sDexCategory_CavePkmn_Page17[] = {
+    SPECIES_LUNATONE,
+    SPECIES_SOLROCK,
+};
+
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
     SPECIES_STARLY,
     SPECIES_STARAVIA,
@@ -754,11 +759,6 @@ static const u16 sDexCategory_NonNativePkmn_Page35[] = {
     SPECIES_KOFFING_GALARIAN,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page36[] = {
-    SPECIES_LUNATONE,
-    SPECIES_SOLROCK,
-};
-
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
 
 static const struct PokedexCategoryPage sDexCategory_GrasslandPkmn[] = {
@@ -841,6 +841,7 @@ static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
     DEX_CATEGORY(CavePkmn_Page14),
     DEX_CATEGORY(CavePkmn_Page15),
     DEX_CATEGORY(CavePkmn_Page16),
+    DEX_CATEGORY(CavePkmn_Page17),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
@@ -922,7 +923,6 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page33),
     DEX_CATEGORY(NonNativePkmn_Page34),
     DEX_CATEGORY(NonNativePkmn_Page35),
-    DEX_CATEGORY(NonNativePkmn_Page36),
 };
 static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page1),
