@@ -33,11 +33,14 @@ CeladonCity_Gym_Text_ErikaWaitingForChallenge::
     .string "VIRIDIAN FOREST.$"
 
 CeladonCity_Gym_Text_ErikaReward::
-    .string "ERIKA: Thank you for coming.\p"
+    .string "Thank you for coming.\p"
     .string "Your challenge in VIRIDIAN FOREST\n"
     .string "was witnessed and official.\p"
     .string "That forest reminded me that\n"
     .string "growth comes through friendship.\p"
+    .string "Some POKéMON even evolve when\n"
+    .string "that friendship is allowed to\l"
+    .string "flourish.\p"
     .string "When people and POKéMON support\n"
     .string "one another, all may bloom.\p"
     .string "I must confer on you the\n"
@@ -48,6 +51,21 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "to Lv. 50 obey.\p"
     .string "That includes even outsiders you\n"
     .string "got in trades.$"
+
+CeladonCity_Gym_Text_ErikaGiftBudew::
+    .string "Please also accept this BUDEW.\p"
+    .string "Raise it with kindness, and one\n"
+    .string "day friendship may help it bloom.$"
+
+CeladonCity_Gym_Text_ReceivedBudewFromErika::
+    .string "{PLAYER} received BUDEW\n"
+    .string "from ERIKA.$"
+
+CeladonCity_Gym_Text_ErikaBudewAdvice::
+    .string "BUDEW evolves through friendship\n"
+    .string "during the day.\p"
+    .string "Care for it well, and it will show\n"
+    .string "you how trust becomes growth.$"
 
 CeladonCity_Gym_Text_GymGuideErikaAway::
     .string "Excuse me!\p"
@@ -66,15 +84,13 @@ CeladonCity_Gym_Text_GymGuideErikaStillAway::
     .string "Please look for her in\n"
     .string "VIRIDIAN FOREST.$"
 
-CeladonCity_Gym_Text_GymGuideErikaAdvice::
-    .string "ERIKA's POKéMON grow stronger\n"
-    .string "by supporting one another.\p"
-    .string "GRASS types dislike FIRE, ICE,\n"
-    .string "POISON, FLYING, and BUG moves.\p"
-    .string "Many of them spread sleep or\n"
-    .string "paralysis, too.\p"
-    .string "Bring status heals, and don't\n"
-    .string "let her garden take root!$"
+CeladonCity_Gym_Text_GymGuideErikaImpressed::
+    .string "I was honored to witness your\n"
+    .string "battle with ERIKA.\p"
+    .string "You and your POKéMON supported\n"
+    .string "one another beautifully.\p"
+    .string "Please speak with ERIKA.\n"
+    .string "Your reward is waiting.$"
 
 CeladonCity_Gym_Text_GymGuidePostVictory::
     .string "You bloomed brilliantly against\n"
