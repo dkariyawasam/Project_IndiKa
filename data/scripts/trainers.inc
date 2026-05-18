@@ -215,14 +215,14 @@ Route25_EventScript_ChadRematch::
 	end
 
 Route25_EventScript_Kelsey::
-	trainerbattle_single TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyIntro, Route25_Text_KelseyDefeat
+	trainerbattle_single TRAINER_CAMPER_KYLE, Route25_Text_KelseyIntro, Route25_Text_KelseyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_KelseyRematch
 	msgbox Route25_Text_KelseyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_KelseyRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyRematchIntro, Route25_Text_KelseyDefeat
+	trainerbattle_rematch TRAINER_CAMPER_KYLE, Route25_Text_KelseyRematchIntro, Route25_Text_KelseyDefeat
 	msgbox Route25_Text_KelseyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -347,14 +347,14 @@ Route6_EventScript_NancyRematch::
 	end
 
 Route6_EventScript_Isabelle::
-	trainerbattle_single TRAINER_PICNICKER_ISABELLE, Route6_Text_IsabelleIntro, Route6_Text_IsabelleDefeat
+	trainerbattle_single TRAINER_CAMPER_ISAAC, Route6_Text_IsabelleIntro, Route6_Text_IsabelleDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_IsabelleRematch
 	msgbox Route6_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route6_EventScript_IsabelleRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_ISABELLE, Route6_Text_IsabelleRematchIntro, Route6_Text_IsabelleDefeat
+	trainerbattle_rematch TRAINER_CAMPER_ISAAC, Route6_Text_IsabelleRematchIntro, Route6_Text_IsabelleDefeat
 	msgbox Route6_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -2075,14 +2075,14 @@ OneIsland_KindleRoad_EventScript_BryceRematch::
 	end
 
 OneIsland_KindleRoad_EventScript_Claire::
-	trainerbattle_single TRAINER_PICNICKER_CLAIRE, OneIsland_KindleRoad_Text_ClaireIntro, OneIsland_KindleRoad_Text_ClaireDefeat
+	trainerbattle_single TRAINER_CAMPER_BLAKE, OneIsland_KindleRoad_Text_ClaireIntro, OneIsland_KindleRoad_Text_ClaireDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, OneIsland_KindleRoad_EventScript_ClaireRematch
 	msgbox OneIsland_KindleRoad_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 OneIsland_KindleRoad_EventScript_ClaireRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_CLAIRE, OneIsland_KindleRoad_Text_ClaireRematchIntro, OneIsland_KindleRoad_Text_ClaireDefeat
+	trainerbattle_rematch TRAINER_CAMPER_BLAKE, OneIsland_KindleRoad_Text_ClaireRematchIntro, OneIsland_KindleRoad_Text_ClaireDefeat
 	msgbox OneIsland_KindleRoad_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -2625,3 +2625,1003 @@ SevenIsland_TanobyRuins_EventScript_CliffordRematch::
 	trainerbattle_rematch TRAINER_GENTLEMAN_CLIFFORD, SevenIsland_TanobyRuins_Text_CliffordRematchIntro, SevenIsland_TanobyRuins_Text_CliffordDefeat
 	msgbox SevenIsland_TanobyRuins_Text_CliffordPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+@ Route trainer redistribution scripts
+EventScript_RouteTrainer_YOUNGSTER_BEN::
+	trainerbattle_single TRAINER_YOUNGSTER_BEN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_BENRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_BENRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_BEN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JANICE::
+	trainerbattle_single TRAINER_LASS_JANICE, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_JANICERematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JANICERematch::
+	trainerbattle_rematch TRAINER_LASS_JANICE, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_LIAM::
+	trainerbattle_single TRAINER_CAMPER_LIAM, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_LIAMRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_LIAMRematch::
+	trainerbattle_rematch TRAINER_CAMPER_LIAM, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_DIANA::
+	trainerbattle_single TRAINER_PICNICKER_DIANA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_DIANARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_DIANARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_DIANA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CALVIN::
+	trainerbattle_single TRAINER_YOUNGSTER_CALVIN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_CALVINRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CALVINRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_CALVIN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_SALLY::
+	trainerbattle_single TRAINER_LASS_SALLY, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_SALLYRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_SALLYRematch::
+	trainerbattle_rematch TRAINER_LASS_SALLY, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_SHANE::
+	trainerbattle_single TRAINER_CAMPER_SHANE, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_SHANERematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_SHANERematch::
+	trainerbattle_rematch TRAINER_CAMPER_SHANE, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_NANCY::
+	trainerbattle_single TRAINER_PICNICKER_NANCY, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_NANCYRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_NANCYRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_NANCY, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOSH::
+	trainerbattle_single TRAINER_YOUNGSTER_JOSH, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_JOSHRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOSHRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_JOSH, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ROBIN::
+	trainerbattle_single TRAINER_LASS_ROBIN, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_ROBINRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ROBINRematch::
+	trainerbattle_rematch TRAINER_LASS_ROBIN, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_ETHAN::
+	trainerbattle_single TRAINER_CAMPER_ETHAN, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_ETHANRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_ETHANRematch::
+	trainerbattle_rematch TRAINER_CAMPER_ETHAN, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ALICIA::
+	trainerbattle_single TRAINER_PICNICKER_ALICIA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_ALICIARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ALICIARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_ALICIA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_TIMMY::
+	trainerbattle_single TRAINER_YOUNGSTER_TIMMY, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_TIMMYRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_TIMMYRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_TIMMY, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_CRISSY::
+	trainerbattle_single TRAINER_LASS_CRISSY, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_CRISSYRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_CRISSYRematch::
+	trainerbattle_rematch TRAINER_LASS_CRISSY, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_RICKY::
+	trainerbattle_single TRAINER_CAMPER_RICKY, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_RICKYRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_RICKYRematch::
+	trainerbattle_rematch TRAINER_CAMPER_RICKY, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CAITLIN::
+	trainerbattle_single TRAINER_PICNICKER_CAITLIN, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_CAITLINRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CAITLINRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_CAITLIN, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOEY::
+	trainerbattle_single TRAINER_YOUNGSTER_JOEY, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_JOEYRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOEYRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_JOEY, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_MIRIAM::
+	trainerbattle_single TRAINER_LASS_MIRIAM, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_MIRIAMRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_MIRIAMRematch::
+	trainerbattle_rematch TRAINER_LASS_MIRIAM, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_JEFF::
+	trainerbattle_single TRAINER_CAMPER_JEFF, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_JEFFRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_JEFFRematch::
+	trainerbattle_rematch TRAINER_CAMPER_JEFF, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_HEIDI::
+	trainerbattle_single TRAINER_PICNICKER_HEIDI, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_HEIDIRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_HEIDIRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_HEIDI, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DAN::
+	trainerbattle_single TRAINER_YOUNGSTER_DAN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_DANRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DANRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_DAN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_IRIS::
+	trainerbattle_single TRAINER_LASS_IRIS, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_IRISRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_IRISRematch::
+	trainerbattle_rematch TRAINER_LASS_IRIS, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_MILO::
+	trainerbattle_single TRAINER_CAMPER_MILO, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_MILORematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_MILORematch::
+	trainerbattle_rematch TRAINER_CAMPER_MILO, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CAROL::
+	trainerbattle_single TRAINER_PICNICKER_CAROL, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_CAROLRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CAROLRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_CAROL, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CHAD::
+	trainerbattle_single TRAINER_YOUNGSTER_CHAD, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_CHADRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CHADRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_CHAD, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_RELI::
+	trainerbattle_single TRAINER_LASS_RELI, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_RELIRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_RELIRematch::
+	trainerbattle_rematch TRAINER_LASS_RELI, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_CHRIS::
+	trainerbattle_single TRAINER_CAMPER_CHRIS, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_CHRISRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_CHRISRematch::
+	trainerbattle_rematch TRAINER_CAMPER_CHRIS, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_SOFIA::
+	trainerbattle_single TRAINER_PICNICKER_SOFIA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_SOFIARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_SOFIARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_SOFIA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_TYLER::
+	trainerbattle_single TRAINER_YOUNGSTER_TYLER, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_TYLERRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_TYLERRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_TYLER, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ALI::
+	trainerbattle_single TRAINER_LASS_ALI, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_ALIRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ALIRematch::
+	trainerbattle_rematch TRAINER_LASS_ALI, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_DREW::
+	trainerbattle_single TRAINER_CAMPER_DREW, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_DREWRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_DREWRematch::
+	trainerbattle_rematch TRAINER_CAMPER_DREW, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_MARTHA::
+	trainerbattle_single TRAINER_PICNICKER_MARTHA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_MARTHARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_MARTHARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_MARTHA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_EDDIE::
+	trainerbattle_single TRAINER_YOUNGSTER_EDDIE, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_EDDIERematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_EDDIERematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_EDDIE, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_NORA::
+	trainerbattle_single TRAINER_LASS_NORA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_NORARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_NORARematch::
+	trainerbattle_rematch TRAINER_LASS_NORA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_ISAAC::
+	trainerbattle_single TRAINER_CAMPER_ISAAC, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_ISAACRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_ISAACRematch::
+	trainerbattle_rematch TRAINER_CAMPER_ISAAC, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ALMA::
+	trainerbattle_single TRAINER_PICNICKER_ALMA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_ALMARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ALMARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_ALMA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DILLON::
+	trainerbattle_single TRAINER_YOUNGSTER_DILLON, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_DILLONRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DILLONRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_DILLON, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_HALEY::
+	trainerbattle_single TRAINER_LASS_HALEY, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_HALEYRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_HALEYRematch::
+	trainerbattle_rematch TRAINER_LASS_HALEY, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_KYLE::
+	trainerbattle_single TRAINER_CAMPER_KYLE, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_KYLERematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_KYLERematch::
+	trainerbattle_rematch TRAINER_CAMPER_KYLE, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_SUSIE::
+	trainerbattle_single TRAINER_PICNICKER_SUSIE, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_SUSIERematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_SUSIERematch::
+	trainerbattle_rematch TRAINER_PICNICKER_SUSIE, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_YASU::
+	trainerbattle_single TRAINER_YOUNGSTER_YASU, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_YASURematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_YASURematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_YASU, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ANN::
+	trainerbattle_single TRAINER_LASS_ANN, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_ANNRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ANNRematch::
+	trainerbattle_rematch TRAINER_LASS_ANN, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_HUNTER::
+	trainerbattle_single TRAINER_CAMPER_HUNTER, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_HUNTERRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_HUNTERRematch::
+	trainerbattle_rematch TRAINER_CAMPER_HUNTER, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_VALERIE::
+	trainerbattle_single TRAINER_PICNICKER_VALERIE, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_VALERIERematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_VALERIERematch::
+	trainerbattle_rematch TRAINER_PICNICKER_VALERIE, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DAVE::
+	trainerbattle_single TRAINER_YOUNGSTER_DAVE, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_DAVERematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DAVERematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_DAVE, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_DAWN::
+	trainerbattle_single TRAINER_LASS_DAWN, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_DAWNRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_DAWNRematch::
+	trainerbattle_rematch TRAINER_LASS_DAWN, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_FLINT::
+	trainerbattle_single TRAINER_CAMPER_FLINT, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_FLINTRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_FLINTRematch::
+	trainerbattle_rematch TRAINER_CAMPER_FLINT, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_GWEN::
+	trainerbattle_single TRAINER_PICNICKER_GWEN, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_GWENRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_GWENRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_GWEN, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOHNSON::
+	trainerbattle_single TRAINER_YOUNGSTER_JOHNSON, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_JOHNSONRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_JOHNSONRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_JOHNSON, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_PAIGE::
+	trainerbattle_single TRAINER_LASS_PAIGE, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_PAIGERematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_PAIGERematch::
+	trainerbattle_rematch TRAINER_LASS_PAIGE, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_JUSTIN::
+	trainerbattle_single TRAINER_CAMPER_JUSTIN, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_JUSTINRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_JUSTINRematch::
+	trainerbattle_rematch TRAINER_CAMPER_JUSTIN, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_MISSY::
+	trainerbattle_single TRAINER_PICNICKER_MISSY, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_MISSYRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_MISSYRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_MISSY, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DESTIN::
+	trainerbattle_single TRAINER_YOUNGSTER_DESTIN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_DESTINRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_DESTINRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_DESTIN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ANDREA::
+	trainerbattle_single TRAINER_LASS_ANDREA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_ANDREARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_ANDREARematch::
+	trainerbattle_rematch TRAINER_LASS_ANDREA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_BRYCE::
+	trainerbattle_single TRAINER_CAMPER_BRYCE, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_BRYCERematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_BRYCERematch::
+	trainerbattle_rematch TRAINER_CAMPER_BRYCE, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_IRENE::
+	trainerbattle_single TRAINER_PICNICKER_IRENE, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_IRENERematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_IRENERematch::
+	trainerbattle_rematch TRAINER_PICNICKER_IRENE, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CORDELL::
+	trainerbattle_single TRAINER_YOUNGSTER_CORDELL, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_CORDELLRematch
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_YOUNGSTER_CORDELLRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_CORDELL, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_MEGAN::
+	trainerbattle_single TRAINER_LASS_MEGAN, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_MEGANRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_MEGANRematch::
+	trainerbattle_rematch TRAINER_LASS_MEGAN, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_DANA::
+	trainerbattle_single TRAINER_PICNICKER_DANA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_DANARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_DANARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_DANA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JULIA::
+	trainerbattle_single TRAINER_LASS_JULIA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_JULIARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JULIARematch::
+	trainerbattle_rematch TRAINER_LASS_JULIA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_BLAKE::
+	trainerbattle_single TRAINER_CAMPER_BLAKE, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_BLAKERematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_BLAKERematch::
+	trainerbattle_rematch TRAINER_CAMPER_BLAKE, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ARIANA::
+	trainerbattle_single TRAINER_PICNICKER_ARIANA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_ARIANARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_ARIANARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_ARIANA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_KAY::
+	trainerbattle_single TRAINER_LASS_KAY, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_KAYRematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_KAYRematch::
+	trainerbattle_rematch TRAINER_LASS_KAY, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_RILEY::
+	trainerbattle_single TRAINER_CAMPER_RILEY, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_RILEYRematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_RILEYRematch::
+	trainerbattle_rematch TRAINER_CAMPER_RILEY, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_LEAH::
+	trainerbattle_single TRAINER_PICNICKER_LEAH, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_LEAHRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_LEAHRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_LEAH, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_LISA::
+	trainerbattle_single TRAINER_LASS_LISA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_LISARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_LISARematch::
+	trainerbattle_rematch TRAINER_LASS_LISA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_MARCO::
+	trainerbattle_single TRAINER_CAMPER_MARCO, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_MARCORematch
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_CAMPER_MARCORematch::
+	trainerbattle_rematch TRAINER_CAMPER_MARCO, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_YAZMIN::
+	trainerbattle_single TRAINER_PICNICKER_YAZMIN, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_YAZMINRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_YAZMINRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_YAZMIN, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_NADIA::
+	trainerbattle_single TRAINER_LASS_NADIA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_NADIARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_NADIARematch::
+	trainerbattle_rematch TRAINER_LASS_NADIA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_KINDRA::
+	trainerbattle_single TRAINER_PICNICKER_KINDRA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_KINDRARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_KINDRARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_KINDRA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_BECKY::
+	trainerbattle_single TRAINER_PICNICKER_BECKY, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_BECKYRematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_BECKYRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_BECKY, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_DALIA::
+	trainerbattle_single TRAINER_LASS_DALIA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_DALIARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_DALIARematch::
+	trainerbattle_rematch TRAINER_LASS_DALIA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JOANA::
+	trainerbattle_single TRAINER_LASS_JOANA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_JOANARematch
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_LASS_JOANARematch::
+	trainerbattle_rematch TRAINER_LASS_JOANA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CELIA::
+	trainerbattle_single TRAINER_PICNICKER_CELIA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_CELIARematch
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PICNICKER_CELIARematch::
+	trainerbattle_rematch TRAINER_PICNICKER_CELIA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_TINA::
+	trainerbattle_single TRAINER_TUBER_TINA, RouteTrainer_Text_TuberIntro, RouteTrainer_Text_TuberDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_TUBER_TINARematch
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_TINARematch::
+	trainerbattle_rematch TRAINER_TUBER_TINA, RouteTrainer_Text_TuberRematchIntro, RouteTrainer_Text_TuberDefeat
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_AMIRA::
+	trainerbattle_single TRAINER_TUBER_AMIRA, RouteTrainer_Text_TuberIntro, RouteTrainer_Text_TuberDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_TUBER_AMIRARematch
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_AMIRARematch::
+	trainerbattle_rematch TRAINER_TUBER_AMIRA, RouteTrainer_Text_TuberRematchIntro, RouteTrainer_Text_TuberDefeat
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_ALEXIS::
+	trainerbattle_single TRAINER_TUBER_ALEXIS, RouteTrainer_Text_TuberIntro, RouteTrainer_Text_TuberDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_TUBER_ALEXISRematch
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_ALEXISRematch::
+	trainerbattle_rematch TRAINER_TUBER_ALEXIS, RouteTrainer_Text_TuberRematchIntro, RouteTrainer_Text_TuberDefeat
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+RouteTrainer_Text_CamperIntro::
+    .string "The trail is wide open.\n"
+    .string "Let me test your team!$"
+
+RouteTrainer_Text_CamperRematchIntro::
+    .string "Back on the trail?\n"
+    .string "Then let us battle again!$"
+
+RouteTrainer_Text_CamperDefeat::
+    .string "I lost my footing!$"
+
+RouteTrainer_Text_CamperPost::
+    .string "Every route has something new\n"
+    .string "if you keep your eyes open.$"
+
+RouteTrainer_Text_PicnickerIntro::
+    .string "A good walk always wakes up\n"
+    .string "my battling spirit!$"
+
+RouteTrainer_Text_PicnickerRematchIntro::
+    .string "I was hoping I would see you\n"
+    .string "on the road again!$"
+
+RouteTrainer_Text_PicnickerDefeat::
+    .string "That was a steep climb!$"
+
+RouteTrainer_Text_PicnickerPost::
+    .string "Taking the long way makes the\n"
+    .string "journey feel worthwhile.$"
+
+RouteTrainer_Text_YoungsterIntro::
+    .string "Hey, you are a TRAINER!\n"
+    .string "Let us battle!$"
+
+RouteTrainer_Text_YoungsterRematchIntro::
+    .string "I have been training since last\n"
+    .string "time. Let us go!$"
+
+RouteTrainer_Text_YoungsterDefeat::
+    .string "Whoa, you are strong!$"
+
+RouteTrainer_Text_YoungsterPost::
+    .string "Battling on the road is the best\n"
+    .string "way to get stronger.$"
+
+RouteTrainer_Text_LassIntro::
+    .string "We both came this far.\n"
+    .string "How about a battle?$"
+
+RouteTrainer_Text_LassRematchIntro::
+    .string "I remember you!\n"
+    .string "Let us see how far we have come.$"
+
+RouteTrainer_Text_LassDefeat::
+    .string "You walked right through me!$"
+
+RouteTrainer_Text_LassPost::
+    .string "A journey feels brighter after\n"
+    .string "a good battle.$"
+
+RouteTrainer_Text_TuberIntro::
+    .string "The shore is my favorite place\n"
+    .string "to battle!$"
+
+RouteTrainer_Text_TuberRematchIntro::
+    .string "The waves brought you back!\n"
+    .string "Let us battle again!$"
+
+RouteTrainer_Text_TuberDefeat::
+    .string "I got washed out!$"
+
+RouteTrainer_Text_TuberPost::
+    .string "The sea is huge, but every shore\n"
+    .string "has its own rhythm.$"
