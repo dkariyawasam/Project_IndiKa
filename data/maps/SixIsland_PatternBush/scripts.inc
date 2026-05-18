@@ -43,7 +43,7 @@ SixIsland_PatternBush_EventScript_Vance::
 	end
 
 SixIsland_PatternBush_EventScript_Nash::
-	trainerbattle_single TRAINER_YOUNGSTER_NASH, SixIsland_PatternBush_Text_NashIntro, SixIsland_PatternBush_Text_NashDefeat
+	trainerbattle_single TRAINER_LASS_NADIA, SixIsland_PatternBush_Text_NashIntro, SixIsland_PatternBush_Text_NashDefeat
 	msgbox SixIsland_PatternBush_Text_NashPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -68,7 +68,7 @@ SixIsland_PatternBush_EventScript_Riley::
 	end
 
 SixIsland_PatternBush_EventScript_Marcy::
-	trainerbattle_single TRAINER_PICNICKER_MARCY, SixIsland_PatternBush_Text_MarcyIntro, SixIsland_PatternBush_Text_MarcyDefeat
+	trainerbattle_single TRAINER_CAMPER_MARCO, SixIsland_PatternBush_Text_MarcyIntro, SixIsland_PatternBush_Text_MarcyDefeat
 	msgbox SixIsland_PatternBush_Text_MarcyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
