@@ -527,7 +527,7 @@
 #define TRAINER_LASS_JANICE_3                    514
 #define TRAINER_YOUNGSTER_CHAD_4                 515
 #define TRAINER_HIKER_FRANKLIN_2                 516
-#define TRAINER_PKMN_PROF_PROF_OAK               517
+#define TRAINER_UNUSED_517                       517
 #define TRAINER_PLAYER_BRENDAN                   518
 #define TRAINER_PLAYER_MAY                       519
 #define TRAINER_PLAYER_RED                       520
