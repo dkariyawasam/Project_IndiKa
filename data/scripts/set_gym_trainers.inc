@@ -10,7 +10,6 @@ EventScript_SetGymTrainers::
 	end
 
 EventScript_SetCeruleanGymTrainers::
-	settrainerflag TRAINER_PICNICKER_DIANA
 	settrainerflag TRAINER_SWIMMER_MALE_LUIS
 	return
 
@@ -21,9 +20,6 @@ EventScript_SetVermilionGymTrainers::
 	return
 
 EventScript_SetCeladonGymTrainers::
-	settrainerflag TRAINER_LASS_KAY
-	settrainerflag TRAINER_LASS_LISA
-	settrainerflag TRAINER_PICNICKER_TINA
 	settrainerflag TRAINER_BEAUTY_BRIDGET
 	settrainerflag TRAINER_BEAUTY_TAMIA
 	settrainerflag TRAINER_BEAUTY_LORI
