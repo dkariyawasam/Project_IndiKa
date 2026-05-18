@@ -1545,8 +1545,8 @@ const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokémon from the\ndista
 const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwithness a trade evolution.");
 const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
-const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents near the POWER PLANT.");
-const u8 gText_MistyTrialPhase2[] = _("Find MISTY near the POWER PLANT.");
+const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
+const u8 gText_MistyTrialPhase2[] = _("Find MISTY inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase3[] = _("MISTY returned to CERULEAN GYM.\nChallenge her.");
 const u8 gText_MistyTrialPhase4[] = _("MISTY gave you the CASCADE BOARD.");
 const u8 gText_MistyTrialPhase5[] = _("MISTY's GYM trial is complete.");
