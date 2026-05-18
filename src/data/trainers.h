@@ -4372,16 +4372,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_HikerFranklin2),
     },
-    [TRAINER_PKMN_PROF_PROF_OAK] = {
-        .trainerClass = TRAINER_CLASS_PKMN_PROF,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_PROFESSOR_OAK,
-        .trainerName = _("PROF. OAK"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_PkmnProfProfOak),
-    },
     [TRAINER_PLAYER_BRENDAN] = {
         .trainerClass = TRAINER_CLASS_PLAYER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
