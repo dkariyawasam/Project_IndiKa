@@ -2014,18 +2014,6 @@ OneIsland_KindleRoad_EventScript_GarrettRematch::
 	msgbox OneIsland_KindleRoad_Text_GarrettPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-OneIsland_KindleRoad_EventScript_Tommy::
-	trainerbattle_single TRAINER_FISHERMAN_TOMMY, OneIsland_KindleRoad_Text_TommyIntro, OneIsland_KindleRoad_Text_TommyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, OneIsland_KindleRoad_EventScript_TommyRematch
-	msgbox OneIsland_KindleRoad_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-OneIsland_KindleRoad_EventScript_TommyRematch::
-	trainerbattle_rematch TRAINER_FISHERMAN_TOMMY, OneIsland_KindleRoad_Text_TommyRematchIntro, OneIsland_KindleRoad_Text_TommyDefeat
-	msgbox OneIsland_KindleRoad_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 OneIsland_KindleRoad_EventScript_Sharon::
 	trainerbattle_single TRAINER_CRUSH_GIRL_SHARON, OneIsland_KindleRoad_Text_SharonIntro, OneIsland_KindleRoad_Text_SharonDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -2348,18 +2336,6 @@ FiveIsland_MemorialPillar_EventScript_Harold::
 FiveIsland_MemorialPillar_EventScript_HaroldRematch::
 	trainerbattle_rematch TRAINER_BIRD_KEEPER_HAROLD, FiveIsland_MemorialPillar_Text_HaroldRematchIntro, FiveIsland_MemorialPillar_Text_HaroldDefeat
 	msgbox FiveIsland_MemorialPillar_Text_HaroldPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SixIsland_OutcastIsland_EventScript_Tylor::
-	trainerbattle_single TRAINER_FISHERMAN_TYLOR, SixIsland_OutcastIsland_Text_TylorIntro, SixIsland_OutcastIsland_Text_TylorDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, SixIsland_OutcastIsland_EventScript_TylorRematch
-	msgbox SixIsland_OutcastIsland_Text_TylorPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SixIsland_OutcastIsland_EventScript_TylorRematch::
-	trainerbattle_rematch TRAINER_FISHERMAN_TYLOR, SixIsland_OutcastIsland_Text_TylorRematchIntro, SixIsland_OutcastIsland_Text_TylorDefeat
-	msgbox SixIsland_OutcastIsland_Text_TylorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 SixIsland_OutcastIsland_EventScript_Mymo::
