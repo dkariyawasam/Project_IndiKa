@@ -187,7 +187,7 @@ CeladonCity_Gym_EventScript_Lisa::
 	end
 
 CeladonCity_Gym_EventScript_Tina::
-	trainerbattle_single TRAINER_PICNICKER_TINA, CeladonCity_Gym_Text_TinaIntro, CeladonCity_Gym_Text_TinaDefeat
+	trainerbattle_single TRAINER_TUBER_TINA, CeladonCity_Gym_Text_TinaIntro, CeladonCity_Gym_Text_TinaDefeat
 	msgbox CeladonCity_Gym_Text_TinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
