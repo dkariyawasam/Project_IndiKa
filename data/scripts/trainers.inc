@@ -3551,6 +3551,18 @@ EventScript_RouteTrainer_TUBER_ALEXISRematch::
 	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
 	end
 
+EventScript_RouteTrainer_TUBER_NOAH::
+	trainerbattle_single TRAINER_TUBER_NOAH, RouteTrainer_Text_TuberIntro, RouteTrainer_Text_TuberDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_TUBER_NOAHRematch
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_TUBER_NOAHRematch::
+	trainerbattle_rematch TRAINER_TUBER_NOAH, RouteTrainer_Text_TuberRematchIntro, RouteTrainer_Text_TuberDefeat
+	msgbox RouteTrainer_Text_TuberPost, MSGBOX_AUTOCLOSE
+	end
+
 RouteTrainer_Text_CamperIntro::
     .string "The trail is wide open.\n"
     .string "Let me test your team!$"
