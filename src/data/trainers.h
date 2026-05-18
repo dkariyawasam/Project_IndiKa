@@ -4845,7 +4845,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TUBER_ALEXIS] = {
         .trainerClass = TRAINER_CLASS_TUBER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
+        .trainerPic = TRAINER_PIC_RS_TUBER_M,
         .trainerName = _("ALEXIS"),
         .items = {},
         .doubleBattle = FALSE,
@@ -6721,5 +6721,15 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_CUSTOM_MOVES(sParty_RocketAdminProton),
+    },
+    [TRAINER_TUBER_NOAH] = {
+        .trainerClass = TRAINER_CLASS_TUBER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_RS_TUBER_M,
+        .trainerName = _("NOAH"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_TuberNoah),
     },
 };
