@@ -5459,7 +5459,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock1[] = {
     },
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 16,
         .species = SPECIES_LARVITAR,
         .moves = {MOVE_BITE, MOVE_LEER, MOVE_SANDSTORM, MOVE_SCREECH},
     },
@@ -5480,7 +5480,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock2[] = {
     },
         {
         .iv = 0,
-        .lvl = 22,
+        .lvl = 23,
         .species = SPECIES_SHUCKLE,
         .moves = {MOVE_CONSTRICT, MOVE_WITHDRAW, MOVE_WRAP, MOVE_ENCORE},
     },
@@ -5501,7 +5501,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock3[] = {
     },
     {
         .iv = 0,
-        .lvl = 28,
+        .lvl = 27,
         .species = SPECIES_LARVITAR,
         .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_SCREECH},
     },
@@ -5594,7 +5594,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock6[] = {
     },
     {
         .iv = 0,
-        .lvl = 44,
+        .lvl = 42,
         .species = SPECIES_SHUCKLE,
         .moves = {MOVE_BIDE, MOVE_REST, MOVE_WRAP, MOVE_ENCORE},
     },
@@ -5634,7 +5634,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock7[] = {
     },
     {
         .iv = 0,
-        .lvl = 46,
+        .lvl = 47,
         .species = SPECIES_GOLEM,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROLLOUT, MOVE_MAGNITUDE},
     },
