@@ -775,6 +775,7 @@
 #define TRAINER_LEADER_ERIKA_5                   762
 #define TRAINER_LEADER_ERIKA_6                   763
 #define TRAINER_LEADER_ERIKA_7                   764
+#define TRAINER_TUBER_NOAH                       765
 
 #define TRAINER_LEADER_LT_SURGE_2                TRAINER_CHANNELER_1
 #define TRAINER_LEADER_LT_SURGE_3                TRAINER_CHANNELER_2
@@ -805,7 +806,7 @@
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             765
+#define NUM_TRAINERS                             766
 #define MAX_TRAINERS_COUNT                       774
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
