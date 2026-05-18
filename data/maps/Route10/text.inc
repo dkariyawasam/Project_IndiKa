@@ -83,4 +83,3 @@ Route10_Text_RockTunnel::
 
 Route10_Text_PowerPlant::
     .string "POWER PLANT$"
-

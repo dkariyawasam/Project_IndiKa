@@ -8,3 +8,37 @@ Route25_EventScript_SeaCottageSign::
 Route25_EventScript_Man::
 	msgbox Route25_Text_AreYouHereAlone, MSGBOX_NPC
 	end
+
+Route25_EventScript_FishermanTommy::
+	trainerbattle_single TRAINER_FISHERMAN_TOMMY, Route25_Text_FishermanTommyIntro, Route25_Text_FishermanTommyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanTommyRematch
+	msgbox Route25_Text_FishermanTommyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanTommyRematch::
+	trainerbattle_rematch TRAINER_FISHERMAN_TOMMY, Route25_Text_FishermanTommyRematchIntro, Route25_Text_FishermanTommyDefeat
+	msgbox Route25_Text_FishermanTommyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanTylor::
+	trainerbattle_single TRAINER_FISHERMAN_TYLOR, Route25_Text_FishermanTylorIntro, Route25_Text_FishermanTylorDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanTylorRematch
+	msgbox Route25_Text_FishermanTylorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanTylorRematch::
+	trainerbattle_rematch TRAINER_FISHERMAN_TYLOR, Route25_Text_FishermanTylorRematchIntro, Route25_Text_FishermanTylorDefeat
+	msgbox Route25_Text_FishermanTylorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_RunningTriathleteM::
+	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
+	msgbox Route25_Text_RunningTriathleteMPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_RunningTriathleteF::
+	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
+	msgbox Route25_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
+	end

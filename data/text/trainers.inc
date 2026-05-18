@@ -727,10 +727,6 @@ OneIsland_KindleRoad_Text_GarrettRematchIntro::
 	.string "I have this strong feeling that\n"
 	.string "I can win this time!$"
 
-OneIsland_KindleRoad_Text_TommyRematchIntro::
-	.string "Wait! Wait a second!\n"
-	.string "I'm sure I've hooked a big one!$"
-
 OneIsland_KindleRoad_Text_SharonRematchIntro::
 	.string "You'll help me out with my\n"
 	.string "training again?$"
@@ -844,10 +840,6 @@ FiveIsland_MemorialPillar_Text_HaroldRematchIntro::
 	.string "BROTHERS.\p"
 	.string "I love birds for their down.\n"
 	.string "I didn't think I'd see you again!$"
-
-SixIsland_OutcastIsland_Text_TylorRematchIntro::
-	.string "I'm still having no luck at all.\n"
-	.string "A battle'd be a change of pace!$"
 
 SixIsland_OutcastIsland_Text_MymoRematchIntro::
 	.string "Gasp… Gasp…\p"
