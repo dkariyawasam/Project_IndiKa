@@ -1977,6 +1977,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_EngineerBernie[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_RunningTriathleteM[] = {
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_DODUO,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_PONYTA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_RunningTriathleteF[] = {
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_PIDGEOTTO,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_BUNEARY,
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_FishermanDale[] = {
     {
         .iv = 0,

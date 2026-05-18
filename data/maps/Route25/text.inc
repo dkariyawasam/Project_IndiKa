@@ -117,3 +117,58 @@ Route25_Text_AreYouHereAlone::
     .string "If you're out at CERULEAN's cape…\n"
     .string "Well, it should be as a couple.$"
 
+Route25_Text_FishermanTommyIntro::
+    .string "A bridge over good water?\n"
+    .string "That's an invitation to cast!$"
+
+Route25_Text_FishermanTommyRematchIntro::
+    .string "Back for another cast?\n"
+    .string "Let's see what bites!$"
+
+Route25_Text_FishermanTommyDefeat::
+    .string "The current got me!$"
+
+Route25_Text_FishermanTommyPostBattle::
+    .string "Fish gather where the shore changes\n"
+    .string "shape.\p"
+    .string "A sandy bank like this is worth\n"
+    .string "checking twice.$"
+
+Route25_Text_FishermanTylorIntro::
+    .string "The sea breeze reaches all the way\n"
+    .string "up here now.$"
+
+Route25_Text_FishermanTylorRematchIntro::
+    .string "The tide's turned.\n"
+    .string "This one's mine!$"
+
+Route25_Text_FishermanTylorDefeat::
+    .string "Washed out!$"
+
+Route25_Text_FishermanTylorPostBattle::
+    .string "This bridge turned my quiet spot\n"
+    .string "into a proper route.\p"
+    .string "Can't complain when the bites are\n"
+    .string "this good.$"
+
+Route25_Text_RunningTriathleteMIntro::
+    .string "This bridge is perfect for interval\n"
+    .string "training! Keep up!$"
+
+Route25_Text_RunningTriathleteMDefeat::
+    .string "Outpaced!$"
+
+Route25_Text_RunningTriathleteMPostBattle::
+    .string "The best part of a long run is\n"
+    .string "feeling the wind over the water.$"
+
+Route25_Text_RunningTriathleteFIntro::
+    .string "No slowing down on the bridge!\n"
+    .string "Battle at full stride!$"
+
+Route25_Text_RunningTriathleteFDefeat::
+    .string "You found another gear!$"
+
+Route25_Text_RunningTriathleteFPostBattle::
+    .string "A straight path, sea air, and a\n"
+    .string "good battle. That's training.$"
