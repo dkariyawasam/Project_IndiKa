@@ -4,6 +4,73 @@
         .species = SPECIES_EKANS,   \
     }
 
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentRuinManiacA[] = {
+    { .iv = 60, .lvl = 31, .species = SPECIES_GEODUDE, },
+    { .iv = 60, .lvl = 33, .species = SPECIES_ONIX, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_RHYHORN, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentRuinManiacB[] = {
+    { .iv = 60, .lvl = 30, .species = SPECIES_SANDSLASH, },
+    { .iv = 60, .lvl = 32, .species = SPECIES_GRAVELER, },
+    { .iv = 60, .lvl = 34, .species = SPECIES_ONIX, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentRuinManiacC[] = {
+    { .iv = 70, .lvl = 32, .species = SPECIES_GRAVELER, },
+    { .iv = 70, .lvl = 34, .species = SPECIES_RHYHORN, },
+    { .iv = 70, .lvl = 35, .species = SPECIES_ONIX, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentEngineerA[] = {
+    { .iv = 60, .lvl = 31, .species = SPECIES_MAGNEMITE, },
+    { .iv = 60, .lvl = 33, .species = SPECIES_VOLTORB, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_MAGNETON, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentEngineerB[] = {
+    { .iv = 60, .lvl = 30, .species = SPECIES_VOLTORB, },
+    { .iv = 60, .lvl = 32, .species = SPECIES_ELECTABUZZ, },
+    { .iv = 60, .lvl = 34, .species = SPECIES_MAGNETON, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentAromaLadyA[] = {
+    { .iv = 60, .lvl = 31, .species = SPECIES_GLOOM, },
+    { .iv = 60, .lvl = 33, .species = SPECIES_WEEPINBELL, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_SUNFLORA, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentAromaLadyB[] = {
+    { .iv = 60, .lvl = 30, .species = SPECIES_ROSELIA, },
+    { .iv = 60, .lvl = 32, .species = SPECIES_GLOOM, },
+    { .iv = 60, .lvl = 34, .species = SPECIES_BELLOSSOM, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentNinjaBoyA[] = {
+    { .iv = 60, .lvl = 31, .species = SPECIES_KOFFING, },
+    { .iv = 60, .lvl = 33, .species = SPECIES_GOLBAT, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_ARBOK, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentNinjaBoyB[] = {
+    { .iv = 60, .lvl = 30, .species = SPECIES_GRIMER, },
+    { .iv = 60, .lvl = 32, .species = SPECIES_WEEZING, },
+    { .iv = 60, .lvl = 34, .species = SPECIES_GOLBAT, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentPsychicA[] = {
+    { .iv = 60, .lvl = 31, .species = SPECIES_KADABRA, },
+    { .iv = 60, .lvl = 33, .species = SPECIES_KADABRA, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_HYPNO, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAdjacentPsychicB[] = {
+    { .iv = 60, .lvl = 30, .species = SPECIES_DROWZEE, },
+    { .iv = 60, .lvl = 32, .species = SPECIES_KADABRA, },
+    { .iv = 60, .lvl = 34, .species = SPECIES_XATU, },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterBen[] = {
     {
         .iv = 0,
