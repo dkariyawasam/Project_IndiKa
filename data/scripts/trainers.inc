@@ -3637,3 +3637,112 @@ RouteTrainer_Text_TuberDefeat::
 RouteTrainer_Text_TuberPost::
     .string "The sea is huge, but every shore\n"
     .string "has its own rhythm.$"
+
+EventScript_GymAdjacent_ENGINEER_BAILY::
+	trainerbattle_single TRAINER_ENGINEER_BAILY, GymAdjacent_Text_EngineerIntro, GymAdjacent_Text_EngineerDefeat
+	msgbox GymAdjacent_Text_EngineerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_ENGINEER_BRAXTON::
+	trainerbattle_single TRAINER_ENGINEER_BRAXTON, GymAdjacent_Text_EngineerIntro, GymAdjacent_Text_EngineerDefeat
+	msgbox GymAdjacent_Text_EngineerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_ENGINEER_BERNIE::
+	trainerbattle_single TRAINER_ENGINEER_BERNIE, GymAdjacent_Text_EngineerIntro, GymAdjacent_Text_EngineerDefeat
+	msgbox GymAdjacent_Text_EngineerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_RUIN_MANIAC_STANLY::
+	trainerbattle_single TRAINER_RUIN_MANIAC_STANLY, GymAdjacent_Text_RuinIntro, GymAdjacent_Text_RuinDefeat
+	msgbox GymAdjacent_Text_RuinPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_RUIN_MANIAC_FOSTER::
+	trainerbattle_single TRAINER_RUIN_MANIAC_FOSTER, GymAdjacent_Text_RuinIntro, GymAdjacent_Text_RuinDefeat
+	msgbox GymAdjacent_Text_RuinPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_RUIN_MANIAC_LARRY::
+	trainerbattle_single TRAINER_RUIN_MANIAC_LARRY, GymAdjacent_Text_RuinIntro, GymAdjacent_Text_RuinDefeat
+	msgbox GymAdjacent_Text_RuinPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_AROMA_LADY_NIKKI::
+	trainerbattle_single TRAINER_AROMA_LADY_NIKKI, GymAdjacent_Text_AromaIntro, GymAdjacent_Text_AromaDefeat
+	msgbox GymAdjacent_Text_AromaPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_AROMA_LADY_VIOLET::
+	trainerbattle_single TRAINER_AROMA_LADY_VIOLET, GymAdjacent_Text_AromaIntro, GymAdjacent_Text_AromaDefeat
+	msgbox GymAdjacent_Text_AromaPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_AROMA_LADY_ROSE::
+	trainerbattle_single TRAINER_AROMA_LADY_ROSE, GymAdjacent_Text_AromaIntro, GymAdjacent_Text_AromaDefeat
+	msgbox GymAdjacent_Text_AromaPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_JOHAN::
+	trainerbattle_single TRAINER_PSYCHIC_JOHAN, GymAdjacent_Text_PsychicIntro, GymAdjacent_Text_PsychicDefeat
+	msgbox GymAdjacent_Text_PsychicPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_TYRON::
+	trainerbattle_single TRAINER_PSYCHIC_TYRON, GymAdjacent_Text_PsychicIntro, GymAdjacent_Text_PsychicDefeat
+	msgbox GymAdjacent_Text_PsychicPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_CAMERON::
+	trainerbattle_single TRAINER_PSYCHIC_CAMERON, GymAdjacent_Text_PsychicIntro, GymAdjacent_Text_PsychicDefeat
+	msgbox GymAdjacent_Text_PsychicPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_PRESTON::
+	trainerbattle_single TRAINER_PSYCHIC_PRESTON, GymAdjacent_Text_PsychicIntro, GymAdjacent_Text_PsychicDefeat
+	msgbox GymAdjacent_Text_PsychicPost, MSGBOX_AUTOCLOSE
+	end
+
+GymAdjacent_Text_EngineerIntro::
+    .string "Circuits, current, and battle\n"
+    .string "plans all need testing!$"
+
+GymAdjacent_Text_EngineerDefeat::
+    .string "My circuit broke!$"
+
+GymAdjacent_Text_EngineerPost::
+    .string "The Power Plant hums louder\n"
+    .string "when strong trainers pass by.$"
+
+GymAdjacent_Text_RuinIntro::
+    .string "Every stone has a story.\n"
+    .string "Let me read yours in battle!$"
+
+GymAdjacent_Text_RuinDefeat::
+    .string "Buried by better skill!$"
+
+GymAdjacent_Text_RuinPost::
+    .string "Caves reward patience, strong\n"
+    .string "legs, and a sharper eye.$"
+
+GymAdjacent_Text_AromaIntro::
+    .string "A healthy path grows from\n"
+    .string "strong roots. Shall we?$"
+
+GymAdjacent_Text_AromaDefeat::
+    .string "You blossomed beautifully!$"
+
+GymAdjacent_Text_AromaPost::
+    .string "Forests and gardens are\n"
+    .string "communities, just like teams.$"
+
+GymAdjacent_Text_PsychicIntro::
+    .string "I felt your approach before\n"
+    .string "you stepped into view.$"
+
+GymAdjacent_Text_PsychicDefeat::
+    .string "The vision scattered!$"
+
+GymAdjacent_Text_PsychicPost::
+    .string "Saffron pulls thoughts from\n"
+    .string "every road around it.$"
