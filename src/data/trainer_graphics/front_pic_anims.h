@@ -23,11 +23,6 @@ static const union AnimCmd *const sAnims_RSRuinManiac[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_Interviewer[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_RSTuberF[] =
 {
     sAnim_GeneralFrame0,
@@ -219,11 +214,6 @@ static const union AnimCmd *const sAnims_SwimmingTriathleteM[] =
 };
 
 static const union AnimCmd *const sAnims_SwimmingTriathleteF[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_DragonTamer[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -745,7 +735,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_AQUA_GRUNT_F]          = sAnims_AquaGruntF,
     [TRAINER_PIC_RS_AROMA_LADY]         = sAnims_RSAromaLady,
     [TRAINER_PIC_RS_RUIN_MANIAC]        = sAnims_RSRuinManiac,
-    [TRAINER_PIC_INTERVIEWER]           = sAnims_Interviewer,
     [TRAINER_PIC_RS_TUBER_F]            = sAnims_RSTuberF,
     [TRAINER_PIC_RS_TUBER_M]            = sAnims_RSTuberM,
     [TRAINER_PIC_RS_COOLTRAINER_M]      = sAnims_RSCooltrainerM,
@@ -785,7 +774,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RUNNING_TRIATHLETE_F]  = sAnims_RunningTriathleteF,
     [TRAINER_PIC_SWIMMING_TRIATHLETE_M] = sAnims_SwimmingTriathleteM,
     [TRAINER_PIC_SWIMMING_TRIATHLETE_F] = sAnims_SwimmingTriathleteF,
-    [TRAINER_PIC_DRAGON_TAMER]          = sAnims_DragonTamer,
     [TRAINER_PIC_RS_BIRD_KEEPER]        = sAnims_RSBirdKeeper,
     [TRAINER_PIC_NINJA_BOY]             = sAnims_NinjaBoy,
     [TRAINER_PIC_BATTLE_GIRL]           = sAnims_BattleGirl,
