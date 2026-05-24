@@ -8,7 +8,6 @@
 #define TRAINER_AQUA_GRUNT_F                       3
 #define TRAINER_RS_AROMA_LADY                      4
 #define TRAINER_RS_RUIN_MANIAC                     5
-#define TRAINER_INTERVIEWER                        6
 #define TRAINER_RS_TUBER_F                         7
 #define TRAINER_RS_TUBER_M                         8
 #define TRAINER_RS_COOLTRAINER_M                   9
@@ -57,8 +56,6 @@
 #define TRAINER_RS_PICNICKER                      52
 #define TRAINER_RS_TWINS                          53
 #define TRAINER_RS_SAILOR                         54
-#define TRAINER_BOARDER_M                         55
-#define TRAINER_BOARDER_F                         56
 #define TRAINER_COLLECTOR                         57
 #define TRAINER_WALLY                             58
 #define TRAINER_BRENDAN                           59
