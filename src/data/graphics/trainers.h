@@ -13,9 +13,6 @@ const u32 gTrainerPalette_RSAromaLady[] = INCBIN_U32("graphics/trainers/palettes
 const u32 gTrainerFrontPic_RSRuinManiac[] = INCBIN_U32("graphics/trainers/front_pics/rs_ruin_maniac_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RSRuinManiac[] = INCBIN_U32("graphics/trainers/palettes/rs_ruin_maniac.gbapal.lz");
 
-const u32 gTrainerFrontPic_Interviewer[] = INCBIN_U32("graphics/trainers/front_pics/interviewer_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Interviewer[] = INCBIN_U32("graphics/trainers/palettes/interviewer.gbapal.lz");
-
 const u32 gTrainerFrontPic_RSTuberF[] = INCBIN_U32("graphics/trainers/front_pics/rs_tuber_f_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RSTuberF[] = INCBIN_U32("graphics/trainers/palettes/rs_tuber_f.gbapal.lz");
 
@@ -132,9 +129,6 @@ const u32 gTrainerPalette_SwimmingTriathleteM[] = INCBIN_U32("graphics/trainers/
 
 const u32 gTrainerFrontPic_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_f_front_pic.4bpp.lz");
 const u32 gTrainerPalette_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/palettes/swimming_triathlete_f.gbapal.lz");
-
-const u32 gTrainerFrontPic_DragonTamer[] = INCBIN_U32("graphics/trainers/front_pics/dragon_tamer_front_pic.4bpp.lz");
-const u32 gTrainerPalette_DragonTamer[] = INCBIN_U32("graphics/trainers/palettes/dragon_tamer.gbapal.lz");
 
 const u32 gTrainerFrontPic_RSBirdKeeper[] = INCBIN_U32("graphics/trainers/front_pics/rs_bird_keeper_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RSBirdKeeper[] = INCBIN_U32("graphics/trainers/palettes/rs_bird_keeper.gbapal.lz");
