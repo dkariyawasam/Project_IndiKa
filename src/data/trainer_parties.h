@@ -310,6 +310,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherGreg[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherGreg2[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_BUTTERFREE,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_BEEDRILL,
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherJames[] = {
     {
         .iv = 0,
@@ -475,6 +488,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassSally[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_NIDORAN_F,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LassSally2[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_NIDORINA,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_PIKACHU,
     },
 };
 
@@ -11734,5 +11760,585 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TuberNoah[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_SHELLDER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_CAMPER_LIAM_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_GEODUDE,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_SANDSHREW,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PICNICKER_DIANA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_GOLDEEN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_ANN_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_NIDORAN_F,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_DAWN_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_PIKACHU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_YOUNGSTER_JOHNSON_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_YOUNGSTER_DESTIN_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_PIDGEY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_YOUNGSTER_CORDELL_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_FARFETCHD,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_FARFETCHD,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PICNICKER_ARIANA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_KAY_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PICNICKER_LEAH_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_CLEFAIRY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_LISA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_ODDISH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_CAMPER_MARCO_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_PARAS,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_PARAS,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_PARAS,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_TUBER_AMIRA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_POLIWAG,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_TUBER_NOAH_2[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_WINGULL,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_KRABBY,
+    },
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_SHELLDER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_TUBER_ALEXIS_2[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_KRABBY,
+    },
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_KRABBY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_NADIA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_RUNNING_TRIATHLETE_M_2[] = {
+    {
+        .iv = 30,
+        .lvl = 33,
+        .species = SPECIES_DODUO,
+    },
+    {
+        .iv = 30,
+        .lvl = 33,
+        .species = SPECIES_PONYTA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_RUNNING_TRIATHLETE_F_2[] = {
+    {
+        .iv = 30,
+        .lvl = 33,
+        .species = SPECIES_PIDGEOTTO,
+    },
+    {
+        .iv = 30,
+        .lvl = 33,
+        .species = SPECIES_BUNEARY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_DALIA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_HOPPIP,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_HOPPIP,
+    },
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_HOPPIP,
+    },
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_HOPPIP,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_JOANA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_SNUBBULL,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_YOUNGSTER_JOSH_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_ZUBAT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_MIRIAM_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_JOHAN_2[] = {
+    {
+        .iv = 30,
+        .lvl = 39,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 41,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 43,
+        .species = SPECIES_HYPNO,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_IRIS_2[] = {
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_CLEFAIRY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_TYRON_2[] = {
+    {
+        .iv = 30,
+        .lvl = 38,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 30,
+        .lvl = 40,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 42,
+        .species = SPECIES_XATU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PICNICKER_SOFIA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_JIGGLYPUFF,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_MEOWTH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_CAMERON_2[] = {
+    {
+        .iv = 30,
+        .lvl = 39,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 41,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 43,
+        .species = SPECIES_HYPNO,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_YOUNGSTER_TYLER_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_NIDORAN_M,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PICNICKER_MARTHA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 18,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_BULBASAUR,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_NORA_2[] = {
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_NIDORAN_M,
+    },
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_NIDORAN_F,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_BUG_CATCHER_JAMES_2[] = {
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 30,
+        .lvl = 19,
+        .species = SPECIES_METAPOD,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_BUG_CATCHER_KEIGO_2[] = {
+    {
+        .iv = 30,
+        .lvl = 24,
+        .species = SPECIES_WEEDLE,
+    },
+    {
+        .iv = 30,
+        .lvl = 24,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 30,
+        .lvl = 24,
+        .species = SPECIES_WEEDLE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_BUG_CATCHER_ELIJAH_2[] = {
+    {
+        .iv = 30,
+        .lvl = 28,
+        .species = SPECIES_BUTTERFREE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_GAMER_HUGO_2[] = {
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_HORSEA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_GAMER_DIRK_2[] = {
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_VOLTORB,
+    },
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_MAGNEMITE,
+    },
+};
+
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_SUPER_NERD_LESLIE_2[] = {
+    {
+        .iv = 30,
+        .lvl = 39,
+        .species = SPECIES_MAGNEMITE,
+    },
+    {
+        .iv = 30,
+        .lvl = 41,
+        .species = SPECIES_VOLTORB,
+    },
+    {
+        .iv = 30,
+        .lvl = 43,
+        .species = SPECIES_MAGNETON,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_BIKER_RICARDO_2[] = {
+    {
+        .iv = 30,
+        .lvl = 30,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 30,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 31,
+        .species = SPECIES_GRIMER,
+    },
+};
+
+
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_BIKER_HIDEO_2[] = {
+    {
+        .iv = 30,
+        .lvl = 41,
+        .species = SPECIES_WEEZING,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_HIKER_CLARK_2[] = {
+    {
+        .iv = 30,
+        .lvl = 39,
+        .species = SPECIES_GEODUDE,
+    },
+    {
+        .iv = 30,
+        .lvl = 41,
+        .species = SPECIES_ONIX,
+    },
+    {
+        .iv = 30,
+        .lvl = 43,
+        .species = SPECIES_RHYHORN,
     },
 };

@@ -3,15 +3,15 @@ CeladonCity_GameCorner_MapScripts::
 	.byte 0
 
 CeladonCity_GameCorner_OnLoad::
-	call_if_unset FLAG_OPENED_ROCKET_HIDEOUT, CeladonCity_GameCorner_EventScript_HideRocketHideout
+	call CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
 	end
 
-CeladonCity_GameCorner_EventScript_HideRocketHideout::
-	setmetatile 15, 2, METATILE_GameCorner_Floor_ShadeFull, 0
-	setmetatile 16, 2, METATILE_GameCorner_Floor_ShadeFull, 0
-	setmetatile 17, 2, METATILE_GameCorner_Floor_ShadeFull, 0
-	setmetatile 16, 3, METATILE_GameCorner_PurpleWall_Floor, 1
-	setmetatile 17, 3, METATILE_GameCorner_PurpleWall_Floor, 1
+CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance::
+	setmetatile 15, 2, METATILE_GameCorner_Floor_StairsTop, 0
+	setmetatile 16, 2, METATILE_GameCorner_StairsTop, 1
+	setmetatile 17, 2, METATILE_GameCorner_StairsBottom, 1
+	setmetatile 16, 3, METATILE_GameCorner_PurpleWall_StairsTop, 1
+	setmetatile 17, 3, METATILE_GameCorner_PurpleWall_stairsBottom, 1
 	return
 
 CeladonCity_GameCorner_EventScript_InfoClerk::
@@ -394,64 +394,14 @@ CeladonCity_GameCorner_EventScript_SlotMachineNoCoinCase::
 CeladonCity_GameCorner_EventScript_Poster::
 	lockall
 	msgbox CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt
-	call_if_unset FLAG_OPENED_ROCKET_HIDEOUT, CeladonCity_GameCorner_EventScript_OpenRocketHideout
+	call CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
+	special DrawWholeMapView
 	releaseall
 	end
 
-CeladonCity_GameCorner_EventScript_OpenRocketHideout::
-	playse SE_UNLOCK
-	setmetatile 15, 2, METATILE_GameCorner_Floor_StairsTop, 0
-	setmetatile 16, 2, METATILE_GameCorner_StairsTop, 1
-	setmetatile 17, 2, METATILE_GameCorner_StairsBottom, 1
-	setmetatile 16, 3, METATILE_GameCorner_PurpleWall_StairsTop, 1
-	setmetatile 17, 3, METATILE_GameCorner_PurpleWall_stairsBottom, 1
-	special DrawWholeMapView
-	setflag FLAG_OPENED_ROCKET_HIDEOUT
-	return
-
 CeladonCity_GameCorner_EventScript_RocketGrunt::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_7, CeladonCity_GameCorner_Text_GruntIntro, CeladonCity_GameCorner_Text_GruntDefeat, CeladonCity_GameCorner_Text_DefeatedGrunt
-	msgbox CeladonCity_GameCorner_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+	msgbox CeladonCity_GameCorner_Text_RocketLeagueGrunt, MSGBOX_NPC
 	end
-
-CeladonCity_GameCorner_Text_DefeatedGrunt::
-	msgbox CeladonCity_GameCorner_Text_GruntPostBattle
-	closemessage
-	call_if_eq VAR_FACING, DIR_WEST, CeladonCity_GameCorner_Text_GruntExitWest
-	call_if_ne VAR_FACING, DIR_WEST, CeladonCity_GameCorner_Text_GruntExit
-	removeobject LOCALID_GAME_CORNER_GRUNT
-	release
-	end
-
-CeladonCity_GameCorner_Text_GruntExitWest::
-	applymovement LOCALID_GAME_CORNER_GRUNT, CeladonCity_GameCorner_Movement_GruntExitWest
-	waitmovement 0
-	return
-
-CeladonCity_GameCorner_Text_GruntExit::
-	applymovement LOCALID_GAME_CORNER_GRUNT, CeladonCity_GameCorner_Movement_GruntExit
-	waitmovement 0
-	return
-
-CeladonCity_GameCorner_Movement_GruntExitWest::
-	walk_down
-	walk_right
-	walk_right
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-CeladonCity_GameCorner_Movement_GruntExit::
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
 
 CeladonCity_GameCorner_EventScript_UnusableSlotMachine1::
 	msgbox CeladonCity_GameCorner_Text_OutOfOrder, MSGBOX_SIGN

@@ -4,7 +4,7 @@ CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
     .string "fabulous prizes next door.$"
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
-    .string "Welcome to ROCKET GAME CORNER!\p"
+    .string "Welcome to CELADON GAME CORNER!\p"
     .string "Do you need some game COINS?\n"
     .string "Would you like to buy some?$"
 
@@ -29,8 +29,8 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
     .string "Keep this quiet.\p"
-    .string "It's rumored that this place is run\n"
-    .string "by TEAM ROCKET.$"
+    .string "It's rumored the ROCKET LEAGUE\n"
+    .string "pays out huge COINS.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
     .string "I think these machines have\n"
@@ -114,14 +114,17 @@ CeladonCity_GameCorner_Text_GruntDefeat::
     .string "Dang!$"
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
-    .string "The TEAM ROCKET HIDEOUT might\n"
-    .string "be discovered!\p"
-    .string "I better tell BOSS!$"
+    .string "I better get going!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
-    .string "Hey!\p"
-    .string "A switch behind the poster!?\n"
-    .string "Let's push it!$"
+    .string "It's a poster advertising the\n"
+    .string "ROCKET LEAGUE.$"
+
+CeladonCity_GameCorner_Text_RocketLeagueGrunt::
+    .string "Beyond those stairs is the\n"
+    .string "ROCKET LEAGUE.\p"
+    .string "Win there, and you'll walk out\n"
+    .string "with a pile of COINS.$"
 
 CeladonCity_GameCorner_Text_CoinCaseIsRequired::
     .string "A COIN CASE is required…$"
@@ -145,4 +148,3 @@ CeladonCity_GameCorner_Text_OutToLunch::
 CeladonCity_GameCorner_Text_SomeonesKeys::
     .string "Someone's keys!\n"
     .string "They'll be back.$"
-
