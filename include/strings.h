@@ -1379,7 +1379,6 @@ extern const u8 gText_QuestLog_CeladonDeptStore[];
 extern const u8 gText_QuestLog_CeladonMansion[];
 extern const u8 gText_QuestLog_RocketGameCorner[];
 extern const u8 gText_QuestLog_Restaurant[];
-extern const u8 gText_QuestLog_RocketHideout[];
 extern const u8 gText_QuestLog_SafariZone[];
 extern const u8 gText_QuestLog_WardensHome[];
 extern const u8 gText_QuestLog_FightingDojo[];
