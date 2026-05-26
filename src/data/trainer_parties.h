@@ -8610,21 +8610,39 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt46[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminPetrel[] = {
     {
         .iv = 120,
-        .lvl = 32,
+        .lvl = 34,
         .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SELF_DESTRUCT, MOVE_TACKLE},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_HAZE, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 120,
         .lvl = 34,
-        .species = SPECIES_RATICATE,
-        .moves = {MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_SCARY_FACE, MOVE_PURSUIT},
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_HAZE, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 120,
-        .lvl = 36,
+        .lvl = 34,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+    },
+    {
+        .iv = 120,
+        .lvl = 34,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FIRE_BLAST, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+    },
+    {
+        .iv = 120,
+        .lvl = 34,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHOCK_WAVE, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+    },
+    {
+        .iv = 120,
+        .lvl = 38,
         .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_SELF_DESTRUCT, MOVE_TACKLE},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
     },
 };
 
@@ -8632,20 +8650,20 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminArcher[] = {
     {
         .iv = 150,
         .lvl = 34,
-        .species = SPECIES_GOLBAT,
-        .moves = {MOVE_CONFUSE_RAY, MOVE_WING_ATTACK, MOVE_BITE, MOVE_AIR_CUTTER},
+        .species = SPECIES_HOUNDOUR,
+        .moves = {MOVE_FLAMETHROWER, MOVE_BITE, MOVE_SHADOW_BALL, MOVE_ROAR},
     },
     {
         .iv = 150,
         .lvl = 36,
         .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_EXPLOSION, MOVE_SHADOW_BALL},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
     },
     {
         .iv = 150,
         .lvl = 38,
         .species = SPECIES_HOUNDOOM,
-        .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_ROAR, MOVE_SHADOW_BALL},
+        .moves = {MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_BITE, MOVE_ROAR},
     },
 };
 
@@ -8654,7 +8672,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminAriana[] = {
         .iv = 150,
         .lvl = 34,
         .species = SPECIES_ARBOK,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_GLARE, MOVE_BITE, MOVE_DIG},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_GLARE},
     },
     {
         .iv = 150,
@@ -8666,7 +8684,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminAriana[] = {
         .iv = 150,
         .lvl = 38,
         .species = SPECIES_MURKROW,
-        .moves = {MOVE_FAINT_ATTACK, MOVE_WING_ATTACK, MOVE_MEAN_LOOK, MOVE_SHADOW_BALL},
+        .moves = {MOVE_AERIAL_ACE, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_NIGHT_SHADE},
     },
 };
 
@@ -8675,19 +8693,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminProton[] = {
         .iv = 150,
         .lvl = 34,
         .species = SPECIES_GOLBAT,
-        .moves = {MOVE_CONFUSE_RAY, MOVE_AIR_CUTTER, MOVE_BITE, MOVE_MEAN_LOOK},
-    },
-    {
-        .iv = 150,
-        .lvl = 36,
-        .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_EXPLOSION, MOVE_SHADOW_BALL},
+        .moves = {MOVE_AERIAL_ACE, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY, MOVE_BITE},
     },
     {
         .iv = 150,
         .lvl = 38,
-        .species = SPECIES_CROBAT,
-        .moves = {MOVE_CONFUSE_RAY, MOVE_AIR_CUTTER, MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL},
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
     },
 };
 
