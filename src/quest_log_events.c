@@ -129,6 +129,7 @@ static bool8 IsSpeciesFromSpecialEncounter(u16);
 static bool8 ShouldRegisterEvent_HandleDeparted(u16, const u16 *);
 static bool8 ShouldRegisterEvent_DepartedGameCorner(u16, const u16 *);
 static void TranslateLinkPartnersName(u8 *);
+static bool8 IsVanillaStoryQuestLogEvent(u16);
 
 typedef u16 *(*RecordEventFunc)(u16 *, const u16 *);
 
@@ -475,6 +476,9 @@ void SetQuestLogEvent(u16 eventId, const u16 * data)
     if (!IS_VALID_QL_EVENT(eventId))
         return;
 
+    if (IsVanillaStoryQuestLogEvent(eventId))
+        return;
+
     // Certain locations do not allow Quest Log events to be recorded
     if (InQuestLogDisabledLocation() == TRUE)
         return;
@@ -686,6 +690,23 @@ void QuestLog_StartRecordingInputsAfterDeferredEvent(void)
         resp = sRecordEventFuncs[sDeferredEvent.id](gQuestLogRecordingPointer, sDeferredEvent.data);
         gQuestLogRecordingPointer = resp;
         ResetDeferredLinkEvent();
+    }
+}
+
+static bool8 IsVanillaStoryQuestLogEvent(u16 eventId)
+{
+    switch (eventId)
+    {
+    case QL_EVENT_DEFEATED_GYM_LEADER:
+    case QL_EVENT_DEFEATED_E4_MEMBER:
+    case QL_EVENT_DEFEATED_CHAMPION:
+    case QL_EVENT_DEFEATED_TRAINER:
+    case QL_EVENT_DEPARTED:
+    case QL_EVENT_OBTAINED_STORY_ITEM:
+    case QL_EVENT_ARRIVED:
+        return TRUE;
+    default:
+        return FALSE;
     }
 }
 
@@ -2150,41 +2171,10 @@ static const u16 *LoadEvent_ObtainedStoryItem(const u16 *eventData)
 
 void QuestLog_RecordEnteredMap(u16 worldMapFlag)
 {
-    s32 i;
-
-    if (QL_IS_PLAYBACK_STATE)
-        return;
-
-    for (i = 0; i < (int)ARRAY_COUNT(sWorldMapFlags); i++)
-    {
-        if (worldMapFlag == sWorldMapFlags[i])
-        {
-            if (!FlagGet(worldMapFlag))
-            {
-                sNewlyEnteredMap = TRUE;
-                break;
-            }
-            else
-            {
-                sNewlyEnteredMap += 0;
-                sNewlyEnteredMap = FALSE;
-                break;
-            }
-        }
-    }
 }
 
 void SetQuestLogEvent_Arrived(void)
 {
-    if (!QL_IS_PLAYBACK_STATE)
-    {
-        if (sNewlyEnteredMap)
-        {
-            u16 mapSec = gMapHeader.regionMapSectionId;
-            SetQuestLogEvent(QL_EVENT_ARRIVED, &mapSec);
-            sNewlyEnteredMap = FALSE;
-        }
-    }
 }
 
 static u16 *RecordEvent_ArrivedInLocation(u16 *dest, const u16 * data)
