@@ -134,11 +134,6 @@ gStdScriptsEnd::
 	.include "data/maps/VictoryRoad_1F/scripts.inc"
 	.include "data/maps/VictoryRoad_2F/scripts.inc"
 	.include "data/maps/VictoryRoad_3F/scripts.inc"
-	.include "data/maps/RocketHideout_B1F/scripts.inc"
-	.include "data/maps/RocketHideout_B2F/scripts.inc"
-	.include "data/maps/RocketHideout_B3F/scripts.inc"
-	.include "data/maps/RocketHideout_B4F/scripts.inc"
-	.include "data/maps/RocketHideout_Elevator/scripts.inc"
 	.include "data/maps/SilphCo_1F/scripts.inc"
 	.include "data/maps/SilphCo_2F/scripts.inc"
 	.include "data/maps/SilphCo_3F/scripts.inc"
@@ -512,11 +507,6 @@ gStdScriptsEnd::
 	.include "data/maps/VictoryRoad_1F/text.inc"
 	.include "data/maps/VictoryRoad_2F/text.inc"
 	.include "data/maps/VictoryRoad_3F/text.inc"
-	.include "data/maps/RocketHideout_B1F/text.inc"
-	.include "data/maps/RocketHideout_B2F/text.inc"
-	.include "data/maps/RocketHideout_B3F/text.inc"
-	.include "data/maps/RocketHideout_B4F/text.inc"
-	.include "data/maps/RocketHideout_Elevator/text.inc"
 	.include "data/maps/SilphCo_1F/text.inc"
 	.include "data/maps/SilphCo_2F/text.inc"
 	.include "data/maps/SilphCo_3F/text.inc"
@@ -964,7 +954,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
 	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
-	setflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
 	setflag FLAG_HIDE_POKEHOUSE_FUJI
 	setflag FLAG_HIDE_LIFT_KEY
 	setflag FLAG_HIDE_CERULEAN_RIVAL

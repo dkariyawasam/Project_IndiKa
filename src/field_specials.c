@@ -733,7 +733,7 @@ static const u8 sElevatorWindowAnimDuration[] = {
 void GetElevatorFloor(void)
 {
     u16 floor = 4;
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_ROCKET_HIDEOUT_B1F))
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_SILPH_CO_1F))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
@@ -770,15 +770,6 @@ void GetElevatorFloor(void)
         case MAP_NUM(MAP_SILPH_CO_11F):
             floor = 14;
             break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B1F):
-            floor = 3;
-            break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B2F):
-            floor = 2;
-            break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B4F):
-            floor = 0;
-            break;
         }
     }
     if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_CELADON_CITY_DEPARTMENT_STORE_1F))
@@ -810,7 +801,7 @@ u16 InitElevatorFloorSelectMenuPos(void)
     sElevatorScroll = 0;
     sElevatorCursorPos = 0;
 
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_ROCKET_HIDEOUT_B1F))
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_SILPH_CO_1F))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
@@ -857,18 +848,6 @@ u16 InitElevatorFloorSelectMenuPos(void)
         case MAP_NUM(MAP_SILPH_CO_1F):
             sElevatorScroll = 5;
             sElevatorCursorPos = 5;
-            break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B1F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 0;
-            break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B2F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 1;
-            break;
-        case MAP_NUM(MAP_ROCKET_HIDEOUT_B4F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 2;
             break;
         }
     }
@@ -1050,16 +1029,6 @@ void ListMenu(void)
         task->data[7] = sElevatorScroll;
         task->data[8] = sElevatorCursorPos;
         break;
-    case LISTMENU_ROCKET_HIDEOUT_FLOORS: // Multichoice used instead
-        task->data[0] = 4;
-        task->data[1] = 4;
-        task->data[2] = 1;
-        task->data[3] = 1;
-        task->data[4] = 8;
-        task->data[5] = 8;
-        task->data[6] = 0;
-        task->data[15] = taskId;
-        break;
     case LISTMENU_DEPT_STORE_FLOORS: // Multichoice used instead
         task->data[0] = 4;
         task->data[1] = 6;
@@ -1125,13 +1094,6 @@ static const u8 *const sListMenuLabels[][12] = {
         gText_3F,
         gText_2F,
         gText_1F,
-        gOtherText_Exit,
-    }, 
-    [LISTMENU_ROCKET_HIDEOUT_FLOORS] = // Unncessary, MULTICHOICE_ROCKET_HIDEOUT_ELEVATOR is used instead
-    {
-        gText_B1F,
-        gText_B2F,
-        gText_B4F,
         gOtherText_Exit,
     }, 
     [LISTMENU_DEPT_STORE_FLOORS] = // Unncessary, MULTICHOICE_DEPT_STORE_ELEVATOR is used instead
@@ -1687,7 +1649,6 @@ static const struct {
     [QL_LOCATION_GAME_CORNER]        = {MAP(MAP_CELADON_CITY_GAME_CORNER),              MAP(MAP_CELADON_CITY)},
     [QL_LOCATION_CELADON_GYM]        = {MAP(MAP_CELADON_CITY_GYM),                      MAP(MAP_CELADON_CITY)},
     [QL_LOCATION_CELADON_RESTAURANT] = {MAP(MAP_CELADON_CITY_RESTAURANT),               MAP(MAP_CELADON_CITY)},
-    [QL_LOCATION_ROCKET_HIDEOUT]     = {MAP(MAP_ROCKET_HIDEOUT_B1F),                    MAP(MAP_CELADON_CITY_GAME_CORNER)},
     [QL_LOCATION_SAFARI_ZONE]        = {MAP(MAP_SAFARI_ZONE_CENTER),                    MAP(MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE)},
     [QL_LOCATION_FUCHSIA_GYM]        = {MAP(MAP_FUCHSIA_CITY_GYM),                      MAP(MAP_FUCHSIA_CITY)},
     [QL_LOCATION_WARDENS_HOME]       = {MAP(MAP_FUCHSIA_CITY_WARDENS_HOUSE),            MAP(MAP_FUCHSIA_CITY)},
@@ -1712,11 +1673,8 @@ void QuestLog_CheckDepartingIndoorsMap(void)
     {
         if (gSaveBlock1Ptr->location.mapGroup == sInsideOutsidePairs[i].inside_grp && gSaveBlock1Ptr->location.mapNum == sInsideOutsidePairs[i].inside_num)
         {
-            if (VarGet(VAR_QL_ENTRANCE) != QL_LOCATION_ROCKET_HIDEOUT || i != QL_LOCATION_GAME_CORNER)
-            {
-                VarSet(VAR_QL_ENTRANCE, i);
-                FlagSet(FLAG_SYS_QL_DEPARTED);
-            }
+            VarSet(VAR_QL_ENTRANCE, i);
+            FlagSet(FLAG_SYS_QL_DEPARTED);
             break;
         }
     }
@@ -1782,11 +1740,6 @@ void QuestLog_TryRecordDepartedLocation(void)
             }
             SetQuestLogEvent(QL_EVENT_DEPARTED, (const u16 *)&data);
             FlagClear(FLAG_SYS_QL_DEPARTED);
-            if (locationId == QL_LOCATION_ROCKET_HIDEOUT)
-            {
-                VarSet(VAR_QL_ENTRANCE, QL_LOCATION_GAME_CORNER);
-                FlagSet(FLAG_SYS_QL_DEPARTED);
-            }
         }
     }
 }
