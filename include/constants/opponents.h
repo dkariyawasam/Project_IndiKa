@@ -376,7 +376,9 @@
 #define TRAINER_BUG_CATCHER_GREG_2              TRAINER_UNUSED_355
 #define TRAINER_TEAM_ROCKET_GRUNT_6              356
 #define TRAINER_UNUSED_357                       357
+#define TRAINER_FISHERMAN_TOMMY_2                TRAINER_UNUSED_357
 #define TRAINER_UNUSED_358                       358
+#define TRAINER_FISHERMAN_TYLOR_2                TRAINER_UNUSED_358
 #define TRAINER_UNUSED_359                       359
 #define TRAINER_UNUSED_360                       360
 #define TRAINER_UNUSED_361                       361

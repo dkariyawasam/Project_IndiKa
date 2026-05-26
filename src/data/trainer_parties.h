@@ -8866,6 +8866,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanTommy[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_FishermanTommy2[] = {
+    {
+        .iv = 10,
+        .lvl = 38,
+        .species = SPECIES_SEAKING,
+    },
+    {
+        .iv = 10,
+        .lvl = 38,
+        .species = SPECIES_QWILFISH,
+    },
+    {
+        .iv = 10,
+        .lvl = 40,
+        .species = SPECIES_KINGLER,
+    },
+};
+
 static const struct TrainerMonItemDefaultMoves sParty_CrushGirlTanya[] = {
     {
         .iv = 50,
@@ -9199,6 +9217,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanTylor[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_QWILFISH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_FishermanTylor2[] = {
+    {
+        .iv = 20,
+        .lvl = 52,
+        .species = SPECIES_QWILFISH,
+    },
+    {
+        .iv = 20,
+        .lvl = 52,
+        .species = SPECIES_LANTURN,
+    },
+    {
+        .iv = 20,
+        .lvl = 54,
+        .species = SPECIES_KINGLER,
     },
 };
 
