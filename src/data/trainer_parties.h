@@ -5549,13 +5549,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock1[] = {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_LEER, MOVE_SANDSTORM, MOVE_SCREECH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
 };
 
@@ -5564,19 +5564,19 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock2[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_LEER, MOVE_SANDSTORM, MOVE_SCREECH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GEODUDE,
-        .moves = {MOVE_MAGNITUDE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_MAGNITUDE, MOVE_BODY_SLAM},
     },
         {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_CONSTRICT, MOVE_WITHDRAW, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_SAFEGUARD, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM},
     },
 };
 
@@ -5585,19 +5585,19 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock3[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_CONSTRICT, MOVE_WITHDRAW, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_WRAP},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GRAVELER,
-        .moves = {MOVE_MAGNITUDE, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_MAGNITUDE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_SCREECH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
 };
 
@@ -5606,25 +5606,25 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock4[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_SCREECH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_GRAVELER,
-        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_MUD_SPORT, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_MAGNITUDE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_BIDE, MOVE_SAFEGUARD, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_SAFEGUARD, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_KABUTO,
-        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_SAND_ATTACK, MOVE_HARDEN},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     }
 };
 
@@ -5633,31 +5633,31 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock5[] = {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_KABUTO,
-        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_SAND_ATTACK, MOVE_HARDEN},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_OMANYTE,
-        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_WITHDRAW, MOVE_PROTECT},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_BIDE, MOVE_SAFEGUARD, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_SAFEGUARD, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_GRAVELER,
-        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_ROCK_BLAST, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_ROCK_BLAST},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
 };
 
@@ -5666,31 +5666,31 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock6[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_GRAVELER,
-        .moves = {MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_ROCK_BLAST, MOVE_ROCK_THROW},
+        .moves = {MOVE_EXPLOSION, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_ROCK_BLAST},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_LARVITAR,
-        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH, MOVE_SANDSTORM},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_OMASTAR,
-        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_SPIKE_CANNON, MOVE_PROTECT},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_KABUTOPS,
-        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_FURY_CUTTER, MOVE_SLASH},
+        .moves = {MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_BIDE, MOVE_REST, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_REST, MOVE_SAFEGUARD, MOVE_ROCK_SLIDE},
     },
 
 };
@@ -5700,408 +5700,472 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock7[] = {
         .iv = 0,
         .lvl = 44,
         .species = SPECIES_SHUCKLE,
-        .moves = {MOVE_BIDE, MOVE_REST, MOVE_WRAP, MOVE_ENCORE},
+        .moves = {MOVE_ENCORE, MOVE_REST, MOVE_SAFEGUARD, MOVE_ROCK_SLIDE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_AERODACTYL,
-        .moves = {MOVE_TAKE_DOWN, MOVE_ANCIENT_POWER, MOVE_WING_ATTACK, MOVE_SUPERSONIC},
+        .moves = {MOVE_ANCIENT_POWER, MOVE_ROCK_SLIDE, MOVE_WING_ATTACK, MOVE_AGILITY},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_OMASTAR,
-        .moves = {MOVE_WATER_GUN, MOVE_MUD_SHOT, MOVE_SPIKE_CANNON, MOVE_PROTECT},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_KABUTOPS,
-        .moves = {MOVE_MUD_SHOT, MOVE_ABSORB, MOVE_FURY_CUTTER, MOVE_SLASH},
+        .moves = {MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_PUPITAR,
-        .moves = {MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_SANDSTORM, MOVE_THRASH},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_THRASH, MOVE_SCREECH, MOVE_SANDSTORM},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_GOLEM,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROLLOUT, MOVE_MAGNITUDE},
+        .moves = {MOVE_EXPLOSION, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_ROCK_BLAST},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_WATER_GUN, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_CHINCHOU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE, MOVE_MIMIC},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_CHINCHOU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE, MOVE_MIMIC},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_POLIWHIRL,
+        .moves = {MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_WATER_GUN, MOVE_COUNTER},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_RECOVER, MOVE_THUNDER_WAVE, MOVE_WATER_GUN, MOVE_DOUBLE_EDGE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_RECOVER, MOVE_THUNDER_WAVE, MOVE_WATER_GUN, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_POLIWHIRL,
+        .moves = {MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_LANTURN,
+        .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_WATER_GUN, MOVE_SUPERSONIC},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty4[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_RECOVER, MOVE_BUBBLE_BEAM, MOVE_THUNDER_WAVE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_LANTURN,
+        .moves = {MOVE_SPARK, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_POLIWHIRL,
+        .moves = {MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_HORSEA,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE, MOVE_MIMIC, MOVE_TWISTER},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_HORSEA,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE, MOVE_MIMIC, MOVE_TWISTER},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_PSYDUCK,
+        .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_CONFUSION, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_POLIWHIRL,
+        .moves = {MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_LANTURN,
+        .moves = {MOVE_SPARK, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_RECOVER, MOVE_BUBBLE_BEAM, MOVE_THUNDER_WAVE, MOVE_LIGHT_SCREEN},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_STARYU,
+        .moves = {MOVE_RECOVER, MOVE_BUBBLE_BEAM, MOVE_THUNDER_WAVE, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_GOLDUCK,
+        .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_CONFUSION, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_POLIWHIRL,
+        .moves = {MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_TENTACRUEL,
+        .moves = {MOVE_BARRIER, MOVE_BUBBLE_BEAM, MOVE_ACID, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_LANTURN,
+        .moves = {MOVE_SPARK, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE, MOVE_WATER_GUN},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderMisty7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_TENTACRUEL,
+        .moves = {MOVE_BARRIER, MOVE_BUBBLE_BEAM, MOVE_ACID, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_LANTURN,
+        .moves = {MOVE_SPARK, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_GOLDUCK,
+        .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_CONFUSION, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_POLITOED,
+        .moves = {MOVE_HYPNOSIS, MOVE_PERISH_SONG, MOVE_BODY_SLAM, MOVE_WATER_GUN},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_STARMIE,
+        .moves = {MOVE_RECOVER, MOVE_CONFUSE_RAY, MOVE_WATER_GUN, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_KINGDRA,
+        .moves = {MOVE_AGILITY, MOVE_TWISTER, MOVE_WATER_GUN, MOVE_SMOKESCREEN},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_PICHU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SWEET_KISS, MOVE_THUNDER_SHOCK, MOVE_CHARM},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_VOLTORB,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_EXPLOSION, MOVE_SCREECH, MOVE_SUBSTITUTE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_PICHU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SWEET_KISS, MOVE_THUNDER_SHOCK, MOVE_CHARM},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_PIKACHU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_EXPLOSION, MOVE_SCREECH},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_PIKACHU,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGNEMITE,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SPARK, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge4[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIKACHU,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SPARK, MOVE_SELF_DESTRUCT, MOVE_THUNDER_WAVE, MOVE_EXPLOSION},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_MAGNEMITE,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_SPARK, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_PIKACHU,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_PLUSLE,
+        .moves = {MOVE_SPARK, MOVE_ENCORE, MOVE_THUNDER_WAVE, MOVE_CHARGE},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_MINUN,
+        .moves = {MOVE_SPARK, MOVE_ENCORE, MOVE_THUNDER_WAVE, MOVE_CHARM},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SPARK, MOVE_LIGHT_SCREEN, MOVE_SELF_DESTRUCT, MOVE_THUNDER_WAVE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_RAICHU,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_SPARK, MOVE_LIGHT_SCREEN, MOVE_EXPLOSION, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_MAGNETON,
+        .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SUPERSONIC, MOVE_LOCK_ON},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_ELEKID,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderLtSurge7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_RAICHU,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_SPARK, MOVE_LIGHT_SCREEN, MOVE_EXPLOSION, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_MAGNETON,
+        .moves = {MOVE_TRI_ATTACK, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_MAGNEZONE,
+        .moves = {MOVE_TRI_ATTACK, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_ELECTIVIRE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_THUNDER_WAVE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_BELLSPROUT,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE, MOVE_MIMIC},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_ODDISH,
+        .moves = {MOVE_STUN_SPORE, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_ODDISH,
+        .moves = {MOVE_STUN_SPORE, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_WEEPINBELL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_VINE_WHIP, MOVE_SWORDS_DANCE},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_TANGELA,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_WEEPINBELL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_VINE_WHIP, MOVE_SWORDS_DANCE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GLOOM,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TANGELA,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
     },
 };
 
@@ -6110,597 +6174,697 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika4[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VICTREEBEL,
-        .moves = {MOVE_STUN_SPORE, MOVE_ACID, MOVE_POISON_POWDER, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_SLEEP_POWDER, MOVE_RAZOR_LEAF, MOVE_SWORDS_DANCE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_TANGELA,
-        .moves = {MOVE_POISON_POWDER, MOVE_CONSTRICT, MOVE_INGRAIN, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_SLEEP_POWDER, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VILEPLUME,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_ACID, MOVE_STUN_SPORE, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_MEGA_DRAIN, MOVE_AROMATHERAPY, MOVE_STUN_SPORE, MOVE_SLEEP_POWDER},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_EXEGGCUTE,
-        .moves = {MOVE_REFLECT, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_LEECH_SEED},
+        .moves = {MOVE_HYPNOSIS, MOVE_LEECH_SEED, MOVE_CONFUSION, MOVE_STUN_SPORE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_BELLOSSOM,
+        .moves = {MOVE_MAGICAL_LEAF, MOVE_STUN_SPORE, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_EXEGGCUTE,
+        .moves = {MOVE_HYPNOSIS, MOVE_LEECH_SEED, MOVE_CONFUSION, MOVE_STUN_SPORE},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_SEEDOT,
+        .moves = {MOVE_SUNNY_DAY, MOVE_SYNTHESIS, MOVE_NATURE_POWER, MOVE_GROWTH},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_VICTREEBEL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_RAZOR_LEAF, MOVE_SWORDS_DANCE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_TANGELA,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_EXEGGUTOR,
+        .moves = {MOVE_HYPNOSIS, MOVE_STUN_SPORE, MOVE_CONFUSION, MOVE_EXPLOSION},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_SHIFTRY,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_NATURE_POWER, MOVE_EXPLOSION, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_VICTREEBEL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_RAZOR_LEAF, MOVE_SWORDS_DANCE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_VILEPLUME,
+        .moves = {MOVE_PETAL_DANCE, MOVE_MEGA_DRAIN, MOVE_AROMATHERAPY, MOVE_STUN_SPORE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_TANGELA,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderErika7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_SHIFTRY,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_NATURE_POWER, MOVE_EXPLOSION, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_EXEGGUTOR,
+        .moves = {MOVE_HYPNOSIS, MOVE_STUN_SPORE, MOVE_CONFUSION, MOVE_EXPLOSION},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_BELLOSSOM,
+        .moves = {MOVE_PETAL_DANCE, MOVE_MAGICAL_LEAF, MOVE_STUN_SPORE, MOVE_SWORDS_DANCE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_VICTREEBEL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_RAZOR_LEAF, MOVE_SWORDS_DANCE, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_VILEPLUME,
+        .moves = {MOVE_PETAL_DANCE, MOVE_MEGA_DRAIN, MOVE_AROMATHERAPY, MOVE_STUN_SPORE},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_TANGROWTH,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_TICKLE, MOVE_MEGA_DRAIN, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SUBSTITUTE, MOVE_MIMIC, MOVE_SMOG},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_GRIMER,
+        .moves = {MOVE_SLUDGE, MOVE_DISABLE, MOVE_BODY_SLAM, MOVE_EXPLOSION},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SELF_DESTRUCT, MOVE_SUBSTITUTE, MOVE_MIMIC},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GOLBAT,
+        .moves = {MOVE_BITE, MOVE_SUPERSONIC, MOVE_DOUBLE_EDGE, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GRIMER,
+        .moves = {MOVE_SLUDGE, MOVE_MINIMIZE, MOVE_DISABLE, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GOLBAT,
+        .moves = {MOVE_WING_ATTACK, MOVE_BITE, MOVE_SUPERSONIC, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SELF_DESTRUCT},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga4[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GOLBAT,
+        .moves = {MOVE_CONFUSE_RAY, MOVE_WING_ATTACK, MOVE_BITE, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_SCREECH},
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_GRIMER,
+        .moves = {MOVE_SLUDGE, MOVE_MINIMIZE, MOVE_DISABLE, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_GOLBAT,
+        .moves = {MOVE_CONFUSE_RAY, MOVE_WING_ATTACK, MOVE_BITE, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_ROCK_SLIDE, MOVE_ACID, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_HAZE, MOVE_SMOKESCREEN},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_GRIMER,
+        .moves = {MOVE_SLUDGE, MOVE_MINIMIZE, MOVE_DISABLE, MOVE_ACID_ARMOR},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_GULPIN,
+        .moves = {MOVE_YAWN, MOVE_SLUDGE, MOVE_TOXIC, MOVE_ENCORE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_CROBAT,
+        .moves = {MOVE_AIR_CUTTER, MOVE_CONFUSE_RAY, MOVE_WING_ATTACK, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_ROCK_SLIDE, MOVE_ACID, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_MUK,
+        .moves = {MOVE_SLUDGE, MOVE_MINIMIZE, MOVE_ACID_ARMOR, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_WEEZING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_HAZE, MOVE_SMOKESCREEN},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_HAZE, MOVE_SMOKESCREEN},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderKoga7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_CROBAT,
+        .moves = {MOVE_AIR_CUTTER, MOVE_CONFUSE_RAY, MOVE_WING_ATTACK, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_ROCK_SLIDE, MOVE_ACID, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_MUK,
+        .moves = {MOVE_SLUDGE, MOVE_MINIMIZE, MOVE_ACID_ARMOR, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_WEEZING,
+        .moves = {MOVE_EXPLOSION, MOVE_SLUDGE, MOVE_HAZE, MOVE_SMOKESCREEN},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_SWALOT,
+        .moves = {MOVE_YAWN, MOVE_BODY_SLAM, MOVE_SLUDGE, MOVE_TOXIC},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_GENGAR,
+        .moves = {MOVE_HYPNOSIS, MOVE_SHADOW_BALL, MOVE_DREAM_EATER, MOVE_CONFUSE_RAY},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_QUICK_ATTACK, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_WILL_O_WISP, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_BODY_SLAM, MOVE_SEISMIC_TOSS, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_BODY_SLAM, MOVE_SEISMIC_TOSS, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine4[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_SMOKESCREEN, MOVE_BODY_SLAM, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_BITE, MOVE_ROAR},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_SUNNY_DAY, MOVE_SMOKESCREEN, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_TAKE_DOWN, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_BITE, MOVE_ROAR},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_SLUGMA,
+        .moves = {MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_AMNESIA},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_BODY_SLAM, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_TAKE_DOWN},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_SUNNY_DAY, MOVE_SMOKESCREEN, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_MAGCARGO,
+        .moves = {MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_AMNESIA},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_VULPIX,
+        .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_FIRE_SPIN},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBlaine7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_BODY_SLAM, MOVE_BITE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_NINETALES,
+        .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_SAFEGUARD},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_TAKE_DOWN},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_MAGCARGO,
+        .moves = {MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_AMNESIA},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_CAMERUPT,
+        .moves = {MOVE_ERUPTION, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_AMNESIA},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_MAGMORTAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_SUNNY_DAY, MOVE_SMOKESCREEN, MOVE_BODY_SLAM},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina1[] = {
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_DROWZEE,
+        .moves = {MOVE_HYPNOSIS, MOVE_CONFUSION, MOVE_DISABLE, MOVE_THUNDER_WAVE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina2[] = {
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_KADABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_CONFUSION},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_DROWZEE,
+        .moves = {MOVE_HYPNOSIS, MOVE_CONFUSION, MOVE_HEADBUTT, MOVE_DISABLE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina3[] = {
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_KADABRA,
+        .moves = {MOVE_REFLECT, MOVE_THUNDER_WAVE, MOVE_PSYBEAM, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_HYPNOSIS, MOVE_THUNDER_WAVE, MOVE_DREAM_EATER, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina4[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KADABRA,
+        .moves = {MOVE_RECOVER, MOVE_REFLECT, MOVE_THUNDER_WAVE, MOVE_PSYBEAM},
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_HYPNOSIS, MOVE_MEDITATE, MOVE_THUNDER_WAVE, MOVE_DREAM_EATER},
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_NATU,
+        .moves = {MOVE_WISH, MOVE_FUTURE_SIGHT, MOVE_NIGHT_SHADE, MOVE_THUNDER_WAVE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina5[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina5[] = {
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_KADABRA,
+        .moves = {MOVE_RECOVER, MOVE_REFLECT, MOVE_THUNDER_WAVE, MOVE_PSYBEAM},
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_MEDITATE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_NATU,
+        .moves = {MOVE_WISH, MOVE_FUTURE_SIGHT, MOVE_NIGHT_SHADE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_CHINGLING,
+        .moves = {MOVE_YAWN, MOVE_PSYWAVE, MOVE_CONFUSION, MOVE_HEAL_BELL},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina6[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina6[] = {
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_CALM_MIND, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_MEDITATE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 40,
         .species = SPECIES_XATU,
+        .moves = {MOVE_WISH, MOVE_FUTURE_SIGHT, MOVE_NIGHT_SHADE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_KADABRA,
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_REFLECT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_ABRA,
+        .moves = {MOVE_THUNDER_WAVE, MOVE_BODY_SLAM, MOVE_DOUBLE_EDGE, MOVE_SEISMIC_TOSS},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderSabrina7[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina7[] = {
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_CALM_MIND, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 42,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_MEDITATE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_XATU,
+        .moves = {MOVE_WISH, MOVE_FUTURE_SIGHT, MOVE_NIGHT_SHADE, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_CHIMECHO,
+        .moves = {MOVE_HEAL_BELL, MOVE_PSYWAVE, MOVE_YAWN, MOVE_CONFUSION},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_CLAYDOL,
+        .moves = {MOVE_COSMIC_POWER, MOVE_ANCIENT_POWER, MOVE_ROCK_SLIDE, MOVE_EXPLOSION},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_BRONZONG,
+        .moves = {MOVE_EXTRASENSORY, MOVE_CONFUSE_RAY, MOVE_IRON_DEFENSE, MOVE_FUTURE_SIGHT},
     },
 };
 
