@@ -23,9 +23,6 @@ static const u8 sViridianForestMapPreviewTilemap[] = INCBIN_U8("graphics/map_pre
 static const u8 sRockTunnelMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/rock_tunnel/tiles.gbapal");
 static const u8 sRockTunnelMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/rock_tunnel/tiles.4bpp.lz");
 static const u8 sRockTunnelMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/rock_tunnel/tilemap.bin.lz");
-static const u8 sRocketHideoutMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/rocket_hideout/tiles.gbapal");
-static const u8 sRocketHideoutMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/rocket_hideout/tiles.4bpp.lz");
-static const u8 sRocketHideoutMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/rocket_hideout/tilemap.bin.lz");
 static const u8 sPowerPlantMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/power_plant/tiles.gbapal");
 static const u8 sPowerPlantMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/power_plant/tiles.4bpp.lz");
 static const u8 sPowerPlantMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/power_plant/tilemap.bin.lz");
@@ -139,14 +136,6 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilesptr = sPokemonMansionMapPreviewTiles,
         .tilemapptr = sPokemonMansionMapPreviewTilemap,
         .palptr = sPokemonMansionMapPreviewPalette
-    },
-    [MPS_ROCKET_HIDEOUT] = {
-        .mapsec = MAPSEC_ROCKET_HIDEOUT,
-        .type = MPS_TYPE_FOREST,
-        .flagId = FLAG_WORLD_MAP_ROCKET_HIDEOUT_B1F,
-        .tilesptr = sRocketHideoutMapPreviewTiles,
-        .tilemapptr = sRocketHideoutMapPreviewTilemap,
-        .palptr = sRocketHideoutMapPreviewPalette
     },
     [MPS_SILPH_CO] = {
         .mapsec = MAPSEC_SILPH_CO,

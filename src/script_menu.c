@@ -447,13 +447,6 @@ static const struct MenuAction sMultichoiceList_Link_Wireless[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_RocketHideoutElevator[] = {
-    { gText_B1F },
-    { gText_B2F },
-    { gText_B4F },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
     { gText_LinkedGamePlay },
     { gText_DirectCorner },
@@ -615,7 +608,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_TRADE_CENTER_COLOSSEUM]                     = MULTICHOICE(sMultichoiceList_TradeCenter_Colosseum),
     [MULTICHOICE_LINK_WIRELESS]                              = MULTICHOICE(sMultichoiceList_Link_Wireless),
     [MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES]             = MULTICHOICE(sMultichoiceList_GameCornerBattleItemPrizes),
-    [MULTICHOICE_ROCKET_HIDEOUT_ELEVATOR]                    = MULTICHOICE(sMultichoiceList_RocketHideoutElevator),
     [MULTICHOICE_LINKED_DIRECT_UNION]                        = MULTICHOICE(sMultichoiceList_LinkedDirectUnion),
     [MULTICHOICE_ISLAND_23]                                  = MULTICHOICE(sMultichoiceList_Island23),
     [MULTICHOICE_ISLAND_13]                                  = MULTICHOICE(sMultichoiceList_Island13),

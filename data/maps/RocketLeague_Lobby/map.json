@@ -2,7 +2,7 @@
   "id": "MAP_ROCKET_LEAGUE_LOBBY",
   "name": "RocketLeague_Lobby",
   "layout": "LAYOUT_ROCKET_LEAGUE_LOBBY",
-  "music": "MUS_ROCKET_HIDEOUT",
+  "music": "MUS_ROCKET_THEME",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
