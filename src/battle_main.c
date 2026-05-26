@@ -1576,6 +1576,11 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if (trainerNum == TRAINER_ROCKET_ADMIN_PETREL && partyData[i].species == SPECIES_WEEZING)
+                {
+                    u8 abilityNum = i % 2;
+                    SetMonData(&party[i], MON_DATA_ABILITY_NUM, &abilityNum);
+                }
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {

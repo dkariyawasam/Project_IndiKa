@@ -8610,96 +8610,156 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt46[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminPetrel[] = {
     {
         .iv = 120,
-        .lvl = 34,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+        .lvl = 35,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_TOXIC, MOVE_PROTECT, MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER},
     },
     {
         .iv = 120,
-        .lvl = 34,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+        .lvl = 36,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_TAUNT, MOVE_TORMENT, MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL},
     },
     {
         .iv = 120,
-        .lvl = 34,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_HAZE, MOVE_SELF_DESTRUCT},
-    },
-    {
-        .iv = 120,
-        .lvl = 34,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_FIRE_BLAST, MOVE_HAZE, MOVE_SELF_DESTRUCT},
-    },
-    {
-        .iv = 120,
-        .lvl = 34,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHOCK_WAVE, MOVE_HAZE, MOVE_SELF_DESTRUCT},
+        .lvl = 37,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SHOCK_WAVE, MOVE_SLUDGE_BOMB, MOVE_HAZE},
     },
     {
         .iv = 120,
         .lvl = 38,
         .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
+        .moves = {MOVE_FIRE_BLAST, MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_SMOKESCREEN},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_REST, MOVE_PROTECT, MOVE_TOXIC, MOVE_SLUDGE},
+    },
+    {
+        .iv = 120,
+        .lvl = 40,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_HAZE},
     },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminArcher[] = {
     {
         .iv = 150,
-        .lvl = 34,
-        .species = SPECIES_HOUNDOUR,
-        .moves = {MOVE_FLAMETHROWER, MOVE_BITE, MOVE_SHADOW_BALL, MOVE_ROAR},
+        .lvl = 35,
+        .species = SPECIES_NINETALES,
+        .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_DIG},
     },
     {
         .iv = 150,
         .lvl = 36,
-        .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLAMETHROWER, MOVE_DIG, MOVE_IRON_TAIL, MOVE_ROAR},
+    },
+    {
+        .iv = 150,
+        .lvl = 37,
+        .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_FLAMETHROWER, MOVE_SOLAR_BEAM, MOVE_TAKE_DOWN, MOVE_STOMP},
     },
     {
         .iv = 150,
         .lvl = 38,
-        .species = SPECIES_HOUNDOOM,
-        .moves = {MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_BITE, MOVE_ROAR},
+        .species = SPECIES_MAGCARGO,
+        .moves = {MOVE_FLAMETHROWER, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_YAWN},
+    },
+    {
+        .iv = 150,
+        .lvl = 39,
+        .species = SPECIES_CAMERUPT,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_AMNESIA},
+    },
+    {
+        .iv = 150,
+        .lvl = 40,
+        .species = SPECIES_MAGMORTAR,
+        .moves = {MOVE_FLAMETHROWER, MOVE_BRICK_BREAK, MOVE_PSYCHIC, MOVE_SUNNY_DAY},
     },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminAriana[] = {
     {
         .iv = 150,
-        .lvl = 34,
-        .species = SPECIES_ARBOK,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_GLARE},
+        .lvl = 35,
+        .species = SPECIES_MIGHTYENA,
+        .moves = {MOVE_SHADOW_BALL, MOVE_TAUNT, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
     },
     {
         .iv = 150,
         .lvl = 36,
-        .species = SPECIES_VILEPLUME,
-        .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_SLUDGE_BOMB},
+        .species = SPECIES_SHIFTRY,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_FAKE_OUT},
+    },
+    {
+        .iv = 150,
+        .lvl = 37,
+        .species = SPECIES_MURKROW,
+        .moves = {MOVE_AERIAL_ACE, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_NIGHT_SHADE},
     },
     {
         .iv = 150,
         .lvl = 38,
-        .species = SPECIES_MURKROW,
-        .moves = {MOVE_AERIAL_ACE, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_NIGHT_SHADE},
+        .species = SPECIES_HOUNDOOM,
+        .moves = {MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_TAUNT},
+    },
+    {
+        .iv = 150,
+        .lvl = 39,
+        .species = SPECIES_SNEASEL,
+        .moves = {MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_FAINT_ATTACK, MOVE_BRICK_BREAK},
+    },
+    {
+        .iv = 150,
+        .lvl = 40,
+        .species = SPECIES_UMBREON,
+        .moves = {MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY, MOVE_FAINT_ATTACK, MOVE_TAUNT},
     },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAdminProton[] = {
     {
         .iv = 150,
-        .lvl = 34,
-        .species = SPECIES_GOLBAT,
-        .moves = {MOVE_AERIAL_ACE, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY, MOVE_BITE},
+        .lvl = 35,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_REFLECT, MOVE_SPARK},
+    },
+    {
+        .iv = 150,
+        .lvl = 36,
+        .species = SPECIES_FORRETRESS,
+        .moves = {MOVE_EXPLOSION, MOVE_EARTHQUAKE, MOVE_REFLECT, MOVE_PROTECT},
+    },
+    {
+        .iv = 150,
+        .lvl = 37,
+        .species = SPECIES_STEELIX,
+        .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SANDSTORM, MOVE_ROCK_TOMB},
     },
     {
         .iv = 150,
         .lvl = 38,
-        .species = SPECIES_WEEZING,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
+        .species = SPECIES_BRONZONG,
+        .moves = {MOVE_EXTRASENSORY, MOVE_CONFUSE_RAY, MOVE_IRON_DEFENSE, MOVE_FUTURE_SIGHT},
+    },
+    {
+        .iv = 150,
+        .lvl = 39,
+        .species = SPECIES_MAGNEZONE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_REFLECT},
+    },
+    {
+        .iv = 150,
+        .lvl = 40,
+        .species = SPECIES_STEELIX,
+        .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_DRAGON_BREATH, MOVE_ROAR},
     },
 };
 
