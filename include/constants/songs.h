@@ -279,7 +279,7 @@
 // New FRLG Music
 #define MUS_FOLLOW_ME             272 // MUS_ANNAI
 #define MUS_GAME_CORNER           273 // MUS_SLOT
-#define MUS_ROCKET_HIDEOUT        274 // MUS_AJITO
+#define MUS_ROCKET_THEME          274 // MUS_AJITO
 #define MUS_GYM                   275 // MUS_GYM
 #define MUS_JIGGLYPUFF            276 // MUS_PURIN
 #define MUS_INTRO_FIGHT           277 // MUS_DEMO

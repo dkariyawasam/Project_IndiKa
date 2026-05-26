@@ -325,7 +325,6 @@ static const u8 *const sLocationNameTexts[] =
     [QL_LOCATION_GAME_CORNER]        = gText_QuestLog_RocketGameCorner,
     [QL_LOCATION_CELADON_GYM]        = gText_QuestLog_Gym,
     [QL_LOCATION_CELADON_RESTAURANT] = gText_QuestLog_Restaurant,
-    [QL_LOCATION_ROCKET_HIDEOUT]     = gText_QuestLog_RocketHideout,
     [QL_LOCATION_SAFARI_ZONE]        = gText_QuestLog_SafariZone,
     [QL_LOCATION_FUCHSIA_GYM]        = gText_QuestLog_Gym,
     [QL_LOCATION_WARDENS_HOME]       = gText_QuestLog_WardensHome,
@@ -394,7 +393,6 @@ static const u8 sLocationToDepartedTextId[] =
     [QL_LOCATION_GAME_CORNER]        = QL_DEPARTED_GAME_CORNER,
     [QL_LOCATION_CELADON_GYM]        = QL_DEPARTED_GYM,
     [QL_LOCATION_CELADON_RESTAURANT] = QL_DEPARTED_TOWN_BUILDING,
-    [QL_LOCATION_ROCKET_HIDEOUT]     = QL_DEPARTED_MISC_BUILDING_1,
     [QL_LOCATION_SAFARI_ZONE]        = QL_DEPARTED_SAFARI_ZONE,
     [QL_LOCATION_FUCHSIA_GYM]        = QL_DEPARTED_GYM,
     [QL_LOCATION_WARDENS_HOME]       = QL_DEPARTED_TOWN_BUILDING,
@@ -562,8 +560,7 @@ static bool8 InQuestLogDisabledLocation(void)
         return TRUE;
 
     // In elevator
-    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_HIDEOUT_ELEVATOR) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_HIDEOUT_ELEVATOR))
-     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SILPH_CO_ELEVATOR) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SILPH_CO_ELEVATOR))
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SILPH_CO_ELEVATOR) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SILPH_CO_ELEVATOR))
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR)))
         return TRUE;
 

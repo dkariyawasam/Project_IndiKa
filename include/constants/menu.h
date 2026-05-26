@@ -46,7 +46,7 @@
 #define MULTICHOICE_TRADE_CENTER_COLOSSEUM                     39
 #define MULTICHOICE_LINK_WIRELESS                              40
 #define MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES             41
-#define MULTICHOICE_ROCKET_HIDEOUT_ELEVATOR                    42
+#define MULTICHOICE_42                                         42
 #define MULTICHOICE_LINKED_DIRECT_UNION                        43
 #define MULTICHOICE_ISLAND_23                                  44
 #define MULTICHOICE_ISLAND_13                                  45
@@ -77,7 +77,7 @@
 
 #define LISTMENU_BADGES                    0
 #define LISTMENU_SILPHCO_FLOORS            1
-#define LISTMENU_ROCKET_HIDEOUT_FLOORS     2
+#define LISTMENU_2                         2
 #define LISTMENU_DEPT_STORE_FLOORS         3
 #define LISTMENU_WIRELESS_LECTURE_HEADERS  4
 #define LISTMENU_BERRY_POWDER              5
