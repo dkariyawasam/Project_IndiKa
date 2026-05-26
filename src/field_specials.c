@@ -1668,80 +1668,10 @@ static const struct {
 
 void QuestLog_CheckDepartingIndoorsMap(void)
 {
-    u8 i;
-    for (i = 0; i < NELEMS(sInsideOutsidePairs); i++)
-    {
-        if (gSaveBlock1Ptr->location.mapGroup == sInsideOutsidePairs[i].inside_grp && gSaveBlock1Ptr->location.mapNum == sInsideOutsidePairs[i].inside_num)
-        {
-            VarSet(VAR_QL_ENTRANCE, i);
-            FlagSet(FLAG_SYS_QL_DEPARTED);
-            break;
-        }
-    }
 }
 
 void QuestLog_TryRecordDepartedLocation(void)
 {
-    s16 x, y;
-    struct QuestLogEvent_Departed data;
-    u16 locationId = VarGet(VAR_QL_ENTRANCE);
-    data.mapSec = 0;
-    data.locationId = 0;
-    if (FlagGet(FLAG_SYS_QL_DEPARTED))
-    {
-        if (locationId == QL_LOCATION_VIRIDIAN_FOREST_1)
-        {
-            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE)
-              && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE)
-               || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)))
-            {
-                data.mapSec = MAPSEC_ROUTE_2;
-                if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE))
-                    data.locationId = locationId;
-                else
-                    data.locationId = locationId + 1;
-                SetQuestLogEvent(QL_EVENT_DEPARTED, (const u16 *)&data);
-                FlagClear(FLAG_SYS_QL_DEPARTED);
-                return;
-            }
-        }
-        else if (locationId == QL_LOCATION_LEAGUE_GATE_1)
-        {
-            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE22) &&
-                (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE22)
-              || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE23)))
-            {
-                data.mapSec = Overworld_GetMapHeaderByGroupAndId(sInsideOutsidePairs[locationId].inside_grp, sInsideOutsidePairs[locationId].inside_num)->regionMapSectionId;
-                if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE22))
-                    data.locationId = locationId;
-                else
-                    data.locationId = locationId + 1;
-                SetQuestLogEvent(QL_EVENT_DEPARTED, (const u16 *)&data);
-                FlagClear(FLAG_SYS_QL_DEPARTED);
-                return;
-            }
-        }
-        if (gSaveBlock1Ptr->location.mapGroup == sInsideOutsidePairs[locationId].outside_grp
-           && gSaveBlock1Ptr->location.mapNum == sInsideOutsidePairs[locationId].outside_num)
-        {
-            data.mapSec = Overworld_GetMapHeaderByGroupAndId(sInsideOutsidePairs[locationId].inside_grp, sInsideOutsidePairs[locationId].inside_num)->regionMapSectionId;
-            data.locationId = locationId;
-            if (locationId == QL_LOCATION_ROCK_TUNNEL_1)
-            {
-                PlayerGetDestCoords(&x, &y);
-                if (x != 15 || y != 26)
-                    data.locationId++;
-            }
-            else if (locationId == QL_LOCATION_SEAFOAM_ISLANDS_1)
-            {
-                PlayerGetDestCoords(&x, &y);
-                if (x != 67 || y != 15)
-                    data.locationId++;
-            }
-            SetQuestLogEvent(QL_EVENT_DEPARTED, (const u16 *)&data);
-            FlagClear(FLAG_SYS_QL_DEPARTED);
-        }
-    }
 }
 
 u16 GetMysteryGiftCardStat(void)
