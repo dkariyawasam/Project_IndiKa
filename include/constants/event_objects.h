@@ -17,8 +17,6 @@
 #define OBJ_EVENT_GFX_GREEN_FISH 11
 #define OBJ_EVENT_GFX_GREEN_VS_SEEKER 12
 #define OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE 13
-#define OBJ_EVENT_GFX_RS_BRENDAN 14
-#define OBJ_EVENT_GFX_RS_MAY 15
 #define OBJ_EVENT_GFX_LITTLE_BOY 16
 #define OBJ_EVENT_GFX_LITTLE_GIRL 17
 #define OBJ_EVENT_GFX_YOUNGSTER 18
@@ -155,8 +153,9 @@
 #define OBJ_EVENT_GFX_DEOXYS_A 149
 #define OBJ_EVENT_GFX_DEOXYS_N 150
 #define OBJ_EVENT_GFX_SS_ANNE 151
+#define OBJ_EVENT_GFX_ROCKET_ARIANA 152
 
-#define NUM_OBJ_EVENT_GFX     152
+#define NUM_OBJ_EVENT_GFX     153
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
