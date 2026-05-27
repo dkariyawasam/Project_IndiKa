@@ -12,8 +12,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFish;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeeker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeekerBike;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RSBrendan;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RSMay;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleBoy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleGirl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Youngster;
@@ -49,6 +47,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAriana;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GBAKid;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
@@ -167,8 +166,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GREEN_FISH]               = &gObjectEventGraphicsInfo_GreenFish,
     [OBJ_EVENT_GFX_GREEN_VS_SEEKER]          = &gObjectEventGraphicsInfo_GreenVSSeeker,
     [OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE]     = &gObjectEventGraphicsInfo_GreenVSSeekerBike,
-    [OBJ_EVENT_GFX_RS_BRENDAN]               = &gObjectEventGraphicsInfo_RSBrendan,
-    [OBJ_EVENT_GFX_RS_MAY]                   = &gObjectEventGraphicsInfo_RSMay,
     [OBJ_EVENT_GFX_LITTLE_BOY]               = &gObjectEventGraphicsInfo_LittleBoy,
     [OBJ_EVENT_GFX_LITTLE_GIRL]              = &gObjectEventGraphicsInfo_LittleGirl,
     [OBJ_EVENT_GFX_YOUNGSTER]                = &gObjectEventGraphicsInfo_Youngster,
@@ -305,4 +302,5 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
+    [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
 };

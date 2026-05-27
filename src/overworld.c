@@ -3536,7 +3536,7 @@ static void CreateLinkPlayerSprite(u8 linkPlayerId, u8 gameVersion)
         }
         else
         {
-            objEvent->spriteId = CreateObjectGraphicsSprite(GetRSAvatarGraphicsIdByGender(linkGender(objEvent)), SpriteCB_LinkPlayer, 0, 0, 0);
+            objEvent->spriteId = CreateObjectGraphicsSprite(GetLinkPartnerAvatarGraphicsIdByGender(linkGender(objEvent)), SpriteCB_LinkPlayer, 0, 0, 0);
         }
 
         sprite = &gSprites[objEvent->spriteId];
