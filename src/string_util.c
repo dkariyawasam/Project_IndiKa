@@ -32,10 +32,6 @@ extern u8 gExpandedPlaceholder_Kun[];
 extern u8 gExpandedPlaceholder_Chan[];
 extern u8 gExpandedPlaceholder_Sapphire[];
 extern u8 gExpandedPlaceholder_Ruby[];
-extern u8 gExpandedPlaceholder_Aqua[];
-extern u8 gExpandedPlaceholder_Magma[];
-extern u8 gExpandedPlaceholder_Archie[];
-extern u8 gExpandedPlaceholder_Maxie[];
 extern u8 gExpandedPlaceholder_Kyogre[];
 extern u8 gExpandedPlaceholder_Groudon[];
 extern u8 gExpandedPlaceholder_Red[];
@@ -415,42 +411,6 @@ static u8 *ExpandPlaceholder_Version(void)
 #endif
 }
 
-static u8 *ExpandPlaceholder_Magma(void)
-{
-#if defined(FIRERED)
-    return gExpandedPlaceholder_Magma;
-#elif defined(LEAFGREEN)
-    return gExpandedPlaceholder_Aqua;
-#endif
-}
-
-static u8 *ExpandPlaceholder_Aqua(void)
-{
-#if defined(FIRERED)
-    return gExpandedPlaceholder_Aqua;
-#elif defined(LEAFGREEN)
-    return gExpandedPlaceholder_Magma;
-#endif
-}
-
-static u8 *ExpandPlaceholder_Maxie(void)
-{
-#if defined(FIRERED)
-    return gExpandedPlaceholder_Maxie;
-#elif defined(LEAFGREEN)
-    return gExpandedPlaceholder_Archie;
-#endif
-}
-
-static u8 *ExpandPlaceholder_Archie(void)
-{
-#if defined(FIRERED)
-    return gExpandedPlaceholder_Archie;
-#elif defined(LEAFGREEN)
-    return gExpandedPlaceholder_Maxie;
-#endif
-}
-
 static u8 *ExpandPlaceholder_Groudon(void)
 {
 #if defined(FIRERED)
@@ -483,10 +443,10 @@ u8 *GetExpandedPlaceholder(u32 id)
         [PLACEHOLDER_ID_KUN]          = ExpandPlaceholder_KunChan,
         [PLACEHOLDER_ID_RIVAL]        = ExpandPlaceholder_RivalName,
         [PLACEHOLDER_ID_VERSION]      = ExpandPlaceholder_Version,
-        [PLACEHOLDER_ID_MAGMA]        = ExpandPlaceholder_Magma,
-        [PLACEHOLDER_ID_AQUA]         = ExpandPlaceholder_Aqua,
-        [PLACEHOLDER_ID_MAXIE]        = ExpandPlaceholder_Maxie,
-        [PLACEHOLDER_ID_ARCHIE]       = ExpandPlaceholder_Archie,
+        [PLACEHOLDER_ID_UNUSED_8]     = ExpandPlaceholder_UnknownStringVar,
+        [PLACEHOLDER_ID_UNUSED_9]     = ExpandPlaceholder_UnknownStringVar,
+        [PLACEHOLDER_ID_UNUSED_A]     = ExpandPlaceholder_UnknownStringVar,
+        [PLACEHOLDER_ID_UNUSED_B]     = ExpandPlaceholder_UnknownStringVar,
         [PLACEHOLDER_ID_GROUDON]      = ExpandPlaceholder_Groudon,
         [PLACEHOLDER_ID_KYOGRE]       = ExpandPlaceholder_Kyogre,
     };

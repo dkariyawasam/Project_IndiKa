@@ -106,7 +106,7 @@
 #define FLAG_HIDE_OAK_IN_CHAMP_ROOM                        0x05A
 #define FLAG_HIDE_GAME_CORNER_ROCKET                       0x05B
 #define FLAG_HIDE_ZAPDOS                                   0x05D
-#define FLAG_UNUSED_0x05E                                  0x05E
+#define FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE               0x05E
 #define FLAG_HIDE_CELADON_SILPH_SCIENTIST                  0x05F
 #define FLAG_HIDE_DOJO_HITMONLEE_BALL                      0x060
 #define FLAG_HIDE_DOJO_HITMONCHAN_BALL                     0x061

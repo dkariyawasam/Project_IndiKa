@@ -120,6 +120,10 @@ CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
     .string "It's a poster advertising the\n"
     .string "ROCKET LEAGUE.$"
 
+CeladonCity_GameCorner_Text_PosterStillGuarded::
+    .string "The ROCKET GRUNT is watching\n"
+    .string "the poster closely.$"
+
 CeladonCity_GameCorner_Text_RocketLeagueGrunt::
     .string "Beyond those stairs is the\n"
     .string "ROCKET LEAGUE.\p"

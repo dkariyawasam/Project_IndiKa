@@ -1141,7 +1141,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_26_2] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -1201,7 +1201,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_30_2] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2651,7 +2651,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_BOSS_GIOVANNI_2] = {
         .trainerClass = TRAINER_CLASS_BOSS,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
         .trainerName = _("GIOVANNI"),
         .items = {},
@@ -2661,7 +2661,7 @@ const struct Trainer gTrainers[] = {
     },
 [TRAINER_LEADER_GIOVANNI] = {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
         .trainerName = _("GIOVANNI"),
         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
@@ -2670,10 +2670,10 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_CUSTOM_MOVES(sParty_LeaderGiovanni),
     },
     [TRAINER_TEAM_ROCKET_GRUNT_6] = {
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
-        .trainerName = _("UNUSED"),
+        .trainerName = _("GRUNT"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
@@ -2801,7 +2801,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_19] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -2811,7 +2811,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_20] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -2821,7 +2821,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_21] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -2831,7 +2831,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_22] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -2841,7 +2841,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_23] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2851,7 +2851,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_24] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2861,7 +2861,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_25] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2871,7 +2871,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_26] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2881,7 +2881,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_27] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2891,7 +2891,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_28] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2901,7 +2901,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_29] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2911,7 +2911,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_30] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2921,7 +2921,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_31] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2931,7 +2931,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_32] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2941,7 +2941,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_33] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2951,7 +2951,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_34] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2961,7 +2961,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_35] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2971,7 +2971,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_36] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2981,7 +2981,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_37] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -2991,7 +2991,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_38] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -3001,7 +3001,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_39] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -3011,7 +3011,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_40] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -3021,7 +3021,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_41] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
@@ -4651,7 +4651,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_43] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4661,7 +4661,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_44] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4671,7 +4671,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_45] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4681,7 +4681,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_46] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4951,7 +4951,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_49] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4961,7 +4961,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_50] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -4971,7 +4971,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_TEAM_ROCKET_GRUNT_51] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
         .trainerName = _("UNUSED"),
         .items = {},
@@ -6681,7 +6681,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ROCKET_ADMIN_PETREL] = {
         .trainerClass = TRAINER_CLASS_ROCKET_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("PETREL"),
         .items = {ITEM_SUPER_POTION},
@@ -6691,7 +6691,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ROCKET_ADMIN_ARCHER] = {
         .trainerClass = TRAINER_CLASS_ROCKET_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("ARCHER"),
         .items = {ITEM_HYPER_POTION},
@@ -6701,7 +6701,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ROCKET_ADMIN_ARIANA] = {
         .trainerClass = TRAINER_CLASS_ROCKET_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
         .trainerName = _("ARIANA"),
         .items = {ITEM_HYPER_POTION},
@@ -6711,7 +6711,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ROCKET_ADMIN_PROTON] = {
         .trainerClass = TRAINER_CLASS_ROCKET_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("PROTON"),
         .items = {ITEM_HYPER_POTION},
