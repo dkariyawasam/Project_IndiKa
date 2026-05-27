@@ -1,18 +1,3 @@
-static const union AnimCmd *const sAnims_AquaLeaderArchie[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_AquaGruntM[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_AquaGruntF[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_RSAromaLady[] =
 {
     sAnim_GeneralFrame0,
@@ -288,21 +273,6 @@ static const union AnimCmd *const sAnims_RSPokemonRangerF[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_MagmaLeaderMaxie[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_MagmaGruntM[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_MagmaGruntF[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_RSLass[] =
 {
     sAnim_GeneralFrame0,
@@ -329,26 +299,6 @@ static const union AnimCmd *const sAnims_OldCouple[] =
 };
 
 static const union AnimCmd *const sAnims_RSSisAndBro[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_AquaAdminM[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_AquaAdminF[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_MagmaAdminM[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_MagmaAdminF[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -710,9 +660,6 @@ static const union AnimCmd *const sAnims_Painter[] =
 
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
-    [TRAINER_PIC_AQUA_LEADER_ARCHIE]    = sAnims_AquaLeaderArchie,
-    [TRAINER_PIC_AQUA_GRUNT_M]          = sAnims_AquaGruntM,
-    [TRAINER_PIC_AQUA_GRUNT_F]          = sAnims_AquaGruntF,
     [TRAINER_PIC_RS_AROMA_LADY]         = sAnims_RSAromaLady,
     [TRAINER_PIC_RS_RUIN_MANIAC]        = sAnims_RSRuinManiac,
     [TRAINER_PIC_RS_TUBER_F]            = sAnims_RSTuberF,
@@ -768,19 +715,12 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RS_POKEMON_BREEDER_F]  = sAnims_RSPokemonBreederF,
     [TRAINER_PIC_RS_POKEMON_RANGER_M]   = sAnims_RSPokemonRangerM,
     [TRAINER_PIC_RS_POKEMON_RANGER_F]   = sAnims_RSPokemonRangerF,
-    [TRAINER_PIC_MAGMA_LEADER_MAXIE]    = sAnims_MagmaLeaderMaxie,
-    [TRAINER_PIC_MAGMA_GRUNT_M]         = sAnims_MagmaGruntM,
-    [TRAINER_PIC_MAGMA_GRUNT_F]         = sAnims_MagmaGruntF,
     [TRAINER_PIC_RS_LASS]               = sAnims_RSLass,
     [TRAINER_PIC_RS_BUG_CATCHER]        = sAnims_RSBugCatcher,
     [TRAINER_PIC_RS_HIKER]              = sAnims_RSHiker,
     [TRAINER_PIC_RS_YOUNG_COUPLE]       = sAnims_RSYoungCouple,
     [TRAINER_PIC_OLD_COUPLE]            = sAnims_OldCouple,
     [TRAINER_PIC_RS_SIS_AND_BRO]        = sAnims_RSSisAndBro,
-    [TRAINER_PIC_AQUA_ADMIN_M]          = sAnims_AquaAdminM,
-    [TRAINER_PIC_AQUA_ADMIN_F]          = sAnims_AquaAdminF,
-    [TRAINER_PIC_MAGMA_ADMIN_M]         = sAnims_MagmaAdminM,
-    [TRAINER_PIC_MAGMA_ADMIN_F]         = sAnims_MagmaAdminF,
     [TRAINER_PIC_LEADER_WATTSON]        = sAnims_LeaderWattson,
     [TRAINER_PIC_LEADER_FLANNERY]       = sAnims_LeaderFlannery,
     [TRAINER_PIC_LEADER_NORMAN]         = sAnims_LeaderNorman,
