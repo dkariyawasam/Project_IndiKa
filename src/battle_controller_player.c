@@ -2180,12 +2180,7 @@ static void PlayerHandleDrawTrainerPic(void)
     }
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
     {
-        if ((gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_RUBY
-         || (gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_SAPPHIRE
-         || (gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_EMERALD)
-            trainerPicId = gLinkPlayers[GetMultiplayerId()].gender + TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN;
-        else
-            trainerPicId = gLinkPlayers[GetMultiplayerId()].gender;
+        trainerPicId = gLinkPlayers[GetMultiplayerId()].gender;
     }
     else
     {

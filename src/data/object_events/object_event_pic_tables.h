@@ -140,32 +140,6 @@ static const struct SpriteFrameImage sPicTable_GreenVSSeekerBike[] = {
     overworld_frame(gObjectEventPic_GreenVSSeekerBike, 4, 4, 5),
 };
 
-static const struct SpriteFrameImage sPicTable_RSBrendan[] = {
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 0),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 1),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 2),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 3),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 4),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 5),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 6),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 7),
-    overworld_frame(gObjectEventPic_RSBrendan, 2, 4, 8),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 0),
-};
-
-static const struct SpriteFrameImage sPicTable_RSMay[] = {
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 0),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 1),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 2),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 3),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 4),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 5),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 6),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 7),
-    overworld_frame(gObjectEventPic_RSMay, 2, 4, 8),
-    overworld_frame(gObjectEventPic_RedFish, 2, 4, 0),
-};
-
 static const struct SpriteFrameImage sPicTable_Policeman[] = {
     overworld_frame(gObjectEventPic_Policeman, 2, 4, 0),
     overworld_frame(gObjectEventPic_Policeman, 2, 4, 1),
@@ -530,6 +504,18 @@ static const struct SpriteFrameImage sPicTable_RocketF[] = {
     overworld_frame(gObjectEventPic_RocketF, 2, 4, 6),
     overworld_frame(gObjectEventPic_RocketF, 2, 4, 7),
     overworld_frame(gObjectEventPic_RocketF, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_RocketAriana[] = {
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 3),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 4),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 5),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 6),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 7),
+    overworld_frame(gObjectEventPic_RocketAriana, 2, 4, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_SwimmerMWater[] = {

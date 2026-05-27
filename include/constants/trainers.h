@@ -71,8 +71,8 @@
 #define TRAINER_PIC_RS_SAILOR              53
 #define TRAINER_PIC_COLLECTOR              54
 #define TRAINER_PIC_WALLY                  55
-#define TRAINER_PIC_RS_BRENDAN_1           56
-#define TRAINER_PIC_RS_MAY_1               57
+#define TRAINER_PIC_UNUSED_56              56
+#define TRAINER_PIC_UNUSED_57              57
 #define TRAINER_PIC_RS_POKEMON_BREEDER_M   58
 #define TRAINER_PIC_RS_POKEMON_BREEDER_F   59
 #define TRAINER_PIC_RS_POKEMON_RANGER_M    60
@@ -148,8 +148,8 @@
 #define TRAINER_PIC_CRUSH_KIN             130
 #define TRAINER_PIC_SIS_AND_BRO           131
 #define TRAINER_PIC_PROFESSOR_OAK         132
-#define TRAINER_PIC_RS_BRENDAN_2          133
-#define TRAINER_PIC_RS_MAY_2              134
+#define TRAINER_PIC_UNUSED_133            133
+#define TRAINER_PIC_UNUSED_134            134
 #define TRAINER_PIC_RED                   135
 #define TRAINER_PIC_LEAF                  136
 #define TRAINER_PIC_ROCKET_GRUNT_F        137
@@ -167,8 +167,8 @@
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_RED                    0
 #define TRAINER_BACK_PIC_LEAF                   1
-#define TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN  2
-#define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      3
+#define TRAINER_BACK_PIC_UNUSED_2               2
+#define TRAINER_BACK_PIC_UNUSED_3               3
 #define TRAINER_BACK_PIC_POKEDUDE               4
 #define TRAINER_BACK_PIC_OLD_MAN                5
 
@@ -327,12 +327,12 @@
 #define FACILITY_CLASS_RS_SAILOR              53
 #define FACILITY_CLASS_COLLECTOR              56
 #define FACILITY_CLASS_PKMN_TRAINER_WALLY     57
-#define FACILITY_CLASS_PKMN_TRAINER_BRENDAN   58
-#define FACILITY_CLASS_PKMN_TRAINER_BRENDAN_2 59
-#define FACILITY_CLASS_PKMN_TRAINER_BRENDAN_3 60
-#define FACILITY_CLASS_PKMN_TRAINER_MAY       61
-#define FACILITY_CLASS_PKMN_TRAINER_MAY_2     62
-#define FACILITY_CLASS_PKMN_TRAINER_MAY_3     63
+#define FACILITY_CLASS_UNUSED_58              58
+#define FACILITY_CLASS_UNUSED_59              59
+#define FACILITY_CLASS_UNUSED_60              60
+#define FACILITY_CLASS_UNUSED_61              61
+#define FACILITY_CLASS_UNUSED_62              62
+#define FACILITY_CLASS_UNUSED_63              63
 #define FACILITY_CLASS_RS_PKMN_BREEDER_M      64
 #define FACILITY_CLASS_RS_PKMN_BREEDER_F      65
 #define FACILITY_CLASS_RS_PKMN_RANGER_M       66
@@ -401,8 +401,8 @@
 #define FACILITY_CLASS_CRUSH_KIN              129
 #define FACILITY_CLASS_SIS_AND_BRO            130
 #define FACILITY_CLASS_PKMN_PROF              131
-#define FACILITY_CLASS_BRENDAN                132
-#define FACILITY_CLASS_MAY                    133
+#define FACILITY_CLASS_UNUSED_132             132
+#define FACILITY_CLASS_UNUSED_133             133
 #define FACILITY_CLASS_RED                    134
 #define FACILITY_CLASS_LEAF                   135
 #define FACILITY_CLASS_ROCKET_GRUNT_F         136

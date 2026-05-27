@@ -62,6 +62,6 @@ bool32 PlayerIsMovingOnRockStairs(u8 direction);
 void UpdatePlayerAvatarTransitionState(void);
 void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender);
 void PlayerUseAcroBikeOnBumpySlope(u8 direction);
-u8 GetRSAvatarGraphicsIdByGender(u8 gender);
+u8 GetLinkPartnerAvatarGraphicsIdByGender(u8 gender);
 
 #endif //GUARD_FIELD_PLAYER_AVATAR_H

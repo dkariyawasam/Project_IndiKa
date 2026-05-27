@@ -1141,9 +1141,9 @@ static const u8 sPlayerAvatarGfxIds[][GENDER_COUNT] = {
     [PLAYER_AVATAR_GFX_VSSEEKER]   = {OBJ_EVENT_GFX_RED_VS_SEEKER,  OBJ_EVENT_GFX_GREEN_VS_SEEKER},
 };
 
-static const u8 sHoennLinkPartnerGfxIds[] = {
-    OBJ_EVENT_GFX_RS_BRENDAN,
-    OBJ_EVENT_GFX_RS_MAY
+static const u8 sLinkPartnerGfxIds[] = {
+    OBJ_EVENT_GFX_RED_NORMAL,
+    OBJ_EVENT_GFX_GREEN_NORMAL
 };
 
 u8 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
@@ -1156,9 +1156,9 @@ u8 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
     return sPlayerAvatarGfxIds[state][gender];
 }
 
-u8 GetRSAvatarGraphicsIdByGender(u8 gender)
+u8 GetLinkPartnerAvatarGraphicsIdByGender(u8 gender)
 {
-    return sHoennLinkPartnerGfxIds[gender];
+    return sLinkPartnerGfxIds[gender];
 }
 
 u8 GetPlayerAvatarGraphicsIdByStateId(u8 state)

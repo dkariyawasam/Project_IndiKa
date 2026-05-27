@@ -211,7 +211,6 @@ static const u32 sBigPokeball_Gfx[] = INCBIN_U32("graphics/battle_transitions/bi
 static const u32 sSlidingPokeball_Tilemap[] = INCBIN_U32("graphics/battle_transitions/sliding_pokeball.bin");
 static const u8 sSlidingPokeball_Gfx[] = INCBIN_U8("graphics/battle_transitions/sliding_pokeball.4bpp");
 static const u32 sMugshotBanner_Gfx[] = INCBIN_U32("graphics/battle_transitions/mugshot_banner.4bpp");
-static const u8 sUnusedBrendan_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_brendan.4bpp");
 static const u8 sUnusedLass_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_lass.4bpp");
 static const u32 sGridSquare_Gfx[] = INCBIN_U32("graphics/battle_transitions/grid_square.4bpp");
 
@@ -503,7 +502,7 @@ static const struct SpriteTemplate sSpriteTemplate_Pokeball =
     .callback = SpriteCB_FldEffPokeballTrail,
 };
 
-static const struct OamData sOam_UnusedBrendanLass =
+static const struct OamData sOam_UnusedMugshot =
 {
     .y = 0,
     .affineMode = ST_OAM_AFFINE_OFF,
@@ -520,14 +519,6 @@ static const struct OamData sOam_UnusedBrendanLass =
     .affineParam = 0,
 };
 
-static const struct SpriteFrameImage sImageTable_UnusedBrendan[] =
-{
-    {
-        .data = sUnusedBrendan_Gfx,
-        .size = sizeof(sUnusedBrendan_Gfx),
-    },
-};
-
 static const struct SpriteFrameImage sImageTable_UnusedLass[] =
 {
     {
@@ -536,30 +527,30 @@ static const struct SpriteFrameImage sImageTable_UnusedLass[] =
     },
 };
 
-static const union AnimCmd sSpriteAnim_UnusedBrendanLass[] =
+static const union AnimCmd sSpriteAnim_UnusedMugshot[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd *const sSpriteAnimTable_UnusedBrendanLass[] = { sSpriteAnim_UnusedBrendanLass };
+static const union AnimCmd *const sSpriteAnimTable_UnusedMugshot[] = { sSpriteAnim_UnusedMugshot };
 
-static const struct SpriteTemplate sSpriteTemplate_UnusedBrendanLass[] =
+static const struct SpriteTemplate sSpriteTemplate_UnusedMugshot[] =
 {
     {
         .tileTag = TAG_NONE,
         .paletteTag = PALTAG_UNUSED_MUGSHOT,
-        .oam = &sOam_UnusedBrendanLass,
-        .anims = sSpriteAnimTable_UnusedBrendanLass,
-        .images = sImageTable_UnusedBrendan,
+        .oam = &sOam_UnusedMugshot,
+        .anims = sSpriteAnimTable_UnusedMugshot,
+        .images = sImageTable_UnusedLass,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCB_MugshotTrainerPic,
     },
     {
         .tileTag = TAG_NONE,
         .paletteTag = PALTAG_UNUSED_MUGSHOT,
-        .oam = &sOam_UnusedBrendanLass,
-        .anims = sSpriteAnimTable_UnusedBrendanLass,
+        .oam = &sOam_UnusedMugshot,
+        .anims = sSpriteAnimTable_UnusedMugshot,
         .images = sImageTable_UnusedLass,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCB_MugshotTrainerPic,

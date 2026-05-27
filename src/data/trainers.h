@@ -4399,25 +4399,25 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_HikerFranklin2),
     },
-    [TRAINER_PLAYER_BRENDAN] = {
+    [TRAINER_UNUSED_518] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_BRENDAN_2,
+        .trainerPic = TRAINER_PIC_RED,
         .trainerName = _("UNUSED"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_PlayerBrendan),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Unused518),
     },
-    [TRAINER_PLAYER_MAY] = {
+    [TRAINER_UNUSED_519] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_MAY_2,
+        .trainerPic = TRAINER_PIC_LEAF,
         .trainerName = _("UNUSED"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_PlayerMay),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Unused519),
     },
     [TRAINER_PLAYER_RED] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
