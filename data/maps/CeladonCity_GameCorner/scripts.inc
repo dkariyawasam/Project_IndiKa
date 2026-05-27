@@ -3,7 +3,7 @@ CeladonCity_GameCorner_MapScripts::
 	.byte 0
 
 CeladonCity_GameCorner_OnLoad::
-	call CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
+	call_if_set FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE, CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
 	end
 
 CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance::
@@ -393,15 +393,50 @@ CeladonCity_GameCorner_EventScript_SlotMachineNoCoinCase::
 
 CeladonCity_GameCorner_EventScript_Poster::
 	lockall
+	goto_if_unset FLAG_HIDE_GAME_CORNER_ROCKET, CeladonCity_GameCorner_EventScript_PosterStillGuarded
+	goto_if_set FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE, CeladonCity_GameCorner_EventScript_PosterAlreadyRevealed
 	msgbox CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt
+	setflag FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE
 	call CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
 	special DrawWholeMapView
 	releaseall
 	end
 
-CeladonCity_GameCorner_EventScript_RocketGrunt::
-	msgbox CeladonCity_GameCorner_Text_RocketLeagueGrunt, MSGBOX_NPC
+CeladonCity_GameCorner_EventScript_PosterStillGuarded::
+	msgbox CeladonCity_GameCorner_Text_PosterStillGuarded
+	releaseall
 	end
+
+CeladonCity_GameCorner_EventScript_PosterAlreadyRevealed::
+	msgbox CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt
+	releaseall
+	end
+
+CeladonCity_GameCorner_EventScript_RocketGrunt::
+	lock
+	faceplayer
+	cleartrainerflag TRAINER_TEAM_ROCKET_GRUNT_6
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_6, CeladonCity_GameCorner_Text_GruntIntro, CeladonCity_GameCorner_Text_GruntDefeat, CeladonCity_GameCorner_EventScript_RocketGruntRetreat
+	release
+	end
+
+CeladonCity_GameCorner_EventScript_RocketGruntRetreat::
+	msgbox CeladonCity_GameCorner_Text_GruntPostBattle
+	closemessage
+	applymovement LOCALID_GAME_CORNER_GRUNT, CeladonCity_GameCorner_Movement_RocketGruntRetreat
+	waitmovement 0
+	setflag FLAG_HIDE_GAME_CORNER_ROCKET
+	removeobject LOCALID_GAME_CORNER_GRUNT
+	release
+	end
+
+CeladonCity_GameCorner_Movement_RocketGruntRetreat::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_up
+	step_end
 
 CeladonCity_GameCorner_EventScript_UnusableSlotMachine1::
 	msgbox CeladonCity_GameCorner_Text_OutOfOrder, MSGBOX_SIGN
