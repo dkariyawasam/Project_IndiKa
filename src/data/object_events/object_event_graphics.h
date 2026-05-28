@@ -139,6 +139,7 @@ const u16 gObjectEventPic_DeoxysA[] = INCBIN_U16("graphics/object_events/pics/po
 const u16 gObjectEventPic_DeoxysN[] = INCBIN_U16("graphics/object_events/pics/pokemon/deoxys_n.4bpp");
 const u16 gObjectEventPic_Agatha[] = INCBIN_U16("graphics/object_events/pics/people/agatha.4bpp");
 const u16 gObjectEventPic_Misty[] = INCBIN_U16("graphics/object_events/pics/people/misty.4bpp");
+const u16 gObjectEventPic_MistyWater[] = INCBIN_U16("graphics/object_events/pics/people/misty_water.4bpp");
 const u16 gObjectEventPic_Lance[] = INCBIN_U16("graphics/object_events/pics/people/lance.4bpp");
 const u16 gObjectEventPic_GBAKid[] = INCBIN_U16("graphics/object_events/pics/people/gba_kid.4bpp");
 const u16 gObjectEventPic_Mom[] = INCBIN_U16("graphics/object_events/pics/people/mom.4bpp");

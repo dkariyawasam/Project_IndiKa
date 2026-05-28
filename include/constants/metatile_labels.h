@@ -165,6 +165,12 @@
 #define METATILE_PokemonMansion_Wall_EndPost_Bottom                      0x2AD
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
 
+// gTileset_RocketLeague
+#define METATILE_RocketLeague_CounterBarrier         0x2B4
+#define METATILE_RocketLeague_Floor_ShadeBottomLeft  0x287
+#define METATILE_RocketLeague_LobbyElevatorDoor      0x2C3
+#define METATILE_RocketLeague_RoofElevatorDoor       0x356
+
 // gTileset_SSAnne
 #define METATILE_SSAnne_Door  0x281
 
@@ -196,8 +202,8 @@
 #define METATILE_SeviiIslands123_PokeCenterDoor  0x2EB
 
 // gTileset_SeviiIslands45
-#define METATILE_SeviiIslands45_DayCareDoor                   0x2B9
-#define METATILE_SeviiIslands45_Door                          0x29A
+#define METATILE_SeviiIslands45_DayCareDoor  0x2B9
+#define METATILE_SeviiIslands45_Door         0x29A
 
 // gTileset_SeviiIslands67
 #define METATILE_SeviiIslands67_Door                   0x30C
@@ -244,12 +250,6 @@
 #define METATILE_SilphCo_VerticalBarrier_TopRight       0x3C1
 #define METATILE_SilphCo_Wall_LeftEdge                  0x347
 #define METATILE_SilphCo_Wall_RightEdge                 0x346
-
-// gTileset_RocketLeague
-#define METATILE_RocketLeague_CounterBarrier         0x2B4
-#define METATILE_RocketLeague_Floor_ShadeBottomLeft  0x287
-#define METATILE_RocketLeague_LobbyElevatorDoor      0x2C3
-#define METATILE_RocketLeague_RoofElevatorDoor       0x356
 
 // gTileset_VermilionCity
 #define METATILE_VermilionCity_Door        0x29E

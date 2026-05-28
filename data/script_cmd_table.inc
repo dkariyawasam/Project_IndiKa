@@ -217,6 +217,7 @@ gScriptCmdTable::
 	.4byte ScrCmd_questmenu                      @ 0xd5
     .4byte ScrCmd_subquestmenu                   @ 0xd6
     .4byte ScrCmd_returnqueststate               @ 0xd7
+    .4byte ScrCmd_setobjectgfx                   @ 0xd8
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop
