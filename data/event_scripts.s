@@ -202,7 +202,7 @@ gStdScriptsEnd::
 	.include "data/maps/FourIsland_IcefallCave_B1F/scripts.inc"
 	.include "data/maps/FourIsland_IcefallCave_Back/scripts.inc"
 	.include "data/maps/SixIsland_PatternBush/scripts.inc"
-	.include "data/maps/SixIsland_AlteringCave/scripts.inc"
+	.include "data/maps/RockTunnel_B2F/scripts.inc"
 	.include "data/maps/NavelRock_Exterior/scripts.inc"
 	.include "data/maps/RocketLeague_Lobby/scripts.inc"
 	.include "data/maps/FiveIsland_LostCave_Entrance/scripts.inc"

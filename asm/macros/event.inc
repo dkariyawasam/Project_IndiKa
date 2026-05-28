@@ -844,6 +844,13 @@
 	.byte \movementType
 	.endm
 
+	@ Sets the graphics id (OBJ_EVENT_GFX_*) for an object.
+	.macro setobjectgfx localId:req, graphicsId:req
+	.byte 0xd8
+	.2byte \localId
+	.byte \graphicsId
+	.endm
+
 	@ If a standard message box (or its text) is being drawn on-screen, this command blocks script execution until the
 	@ box and its text have been fully drawn.
 	.macro waitmessage
