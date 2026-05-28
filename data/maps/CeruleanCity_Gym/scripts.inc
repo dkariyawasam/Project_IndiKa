@@ -8,7 +8,7 @@ CeruleanCity_Gym_OnFrame::
 	.2byte 0
 
 CeruleanCity_Gym_OnTransition::
-	goto_if_lt VAR_MISTY_TRIAL_STATE, 3, CeruleanCity_Gym_EventScript_HideMisty
+	goto_if_lt VAR_MISTY_TRIAL_STATE, 5, CeruleanCity_Gym_EventScript_HideMisty
 	clearflag FLAG_HIDE_CERULEAN_CITY_GYM_MISTY
 	end
 
@@ -120,6 +120,8 @@ CeruleanCity_Gym_EventScript_GymGuy::
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 0, CeruleanCity_Gym_EventScript_GymGuyMistyAwayFirstTime
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 1, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 2, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 3, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 4, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
 	msgbox CeruleanCity_Gym_Text_GymGuyAdvice
 	release
 	end

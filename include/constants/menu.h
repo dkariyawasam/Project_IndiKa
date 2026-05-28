@@ -72,6 +72,7 @@
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_9                     72
 #define MULTICHOICE_GAME_CORNER_TMPRIZES_10                    73
 #define MULTICHOICE_ROUTE20_FERRY                              74
+#define MULTICHOICE_LEFT_RIGHT                                 75
 
 #define MULTICHOICE_NONE                                      255
 

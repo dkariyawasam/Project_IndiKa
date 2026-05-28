@@ -1169,6 +1169,25 @@ bool8 ScrCmd_setobjectmovementtype(struct ScriptContext * ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_setobjectgfx(struct ScriptContext * ctx)
+{
+    u16 localId = VarGet(ScriptReadHalfword(ctx));
+    u8 graphicsId = ScriptReadByte(ctx);
+    u8 objectEventId;
+    u8 i;
+
+    for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
+    {
+        if (gSaveBlock1Ptr->objectEventTemplates[i].localId == localId)
+            gSaveBlock1Ptr->objectEventTemplates[i].graphicsId = graphicsId;
+    }
+
+    if (!TryGetObjectEventIdByLocalIdAndMap(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &objectEventId))
+        ObjectEventSetGraphicsId(&gObjectEvents[objectEventId], graphicsId);
+
+    return FALSE;
+}
+
 bool8 ScrCmd_createvobject(struct ScriptContext * ctx)
 {
     u8 graphicsId = ScriptReadByte(ctx);

@@ -79,6 +79,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrFuji;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MistyWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LtSurge;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
@@ -303,4 +304,5 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
+    [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,
 };

@@ -471,11 +471,87 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1
 	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
-	call_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft
-	call_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid
-	call_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight
-	releaseall
+	call PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattle
+	goto PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	end
+
+PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattle::
+	call_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleLeft
+	call_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleMid
+	call_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleRight
+	setvar VAR_FACING, DIR_NORTH
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleLeft::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleLeft
+	waitmovement 0
+	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleLeft
+	waitmovement 0
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleMid::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleMid
+	waitmovement 0
+	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleMid
+	waitmovement 0
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_ResetAfterRivalBattleRight::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleRight
+	waitmovement 0
+	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleRight
+	waitmovement 0
+	return
+
+PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleLeft::
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleMid::
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_RivalResetAfterBattleRight::
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleLeft::
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleMid::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_PlayerResetAfterBattleRight::
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft

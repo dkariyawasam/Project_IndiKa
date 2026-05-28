@@ -3170,16 +3170,16 @@
       "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_ScufibChamber/map.bin"
     },
     {
-      "id": "LAYOUT_SIX_ISLAND_ALTERING_CAVE",
-      "name": "SixIsland_AlteringCave_Layout",
+      "id": "LAYOUT_ROCK_TUNNEL_B2F",
+      "name": "RockTunnel_B2F_Layout",
       "width": 32,
-      "height": 24,
+      "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_RockTunnel",
-      "border_filepath": "data/layouts/SixIsland_AlteringCave/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_AlteringCave/map.bin"
+      "border_filepath": "data/layouts/RockTunnel_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/RockTunnel_B2F/map.bin"
     },
     {
       "id": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
