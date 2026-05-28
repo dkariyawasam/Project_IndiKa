@@ -298,6 +298,11 @@ static const struct MenuAction sMultichoiceList_RightLeft[] = {
     { gText_Left }
 };
 
+static const struct MenuAction sMultichoiceList_LeftRight[] = {
+    { gText_Left },
+    { gText_Right }
+};
+
 static const struct MenuAction sMultichoiceList_DeptStoreElevator[] = {
     { gText_5F_2 },
     { gText_4F_2 },
@@ -624,6 +629,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_ROUTE21_FERRY]                              = MULTICHOICE(sMultichoiceList_Route21Ferry),
     [MULTICHOICE_ROUTE20_FERRY]                              = MULTICHOICE(sMultichoiceList_Route20Ferry),
+    [MULTICHOICE_LEFT_RIGHT]                                 = MULTICHOICE(sMultichoiceList_LeftRight),
 };
 
 // From Cool to Berries goes unused
