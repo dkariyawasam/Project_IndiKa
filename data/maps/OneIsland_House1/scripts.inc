@@ -6,5 +6,5 @@ OneIsland_House1_EventScript_OldMan::
 	end
 
 OneIsland_House1_EventScript_OldWoman::
-	msgbox OneIsland_House1_Text_LastTimeMtEmberErupted, MSGBOX_NPC
+	msgbox OneIsland_House1_Text_LastTimeCinnabarVolcanoErupted, MSGBOX_NPC
 	end

@@ -1166,9 +1166,9 @@ const u16 gTilesetPalettes_Dummy4[][16] =
 	INCBIN_U16("data/tilesets/secondary/dummy_4/palettes/15.gbapal"),
 };
 
-const u32 gTilesetTiles_MtEmber[] = INCBIN_U32("data/tilesets/secondary/mt_ember/tiles.4bpp.lz");
+const u32 gTilesetTiles_CinnabarVolcano[] = INCBIN_U32("data/tilesets/secondary/mt_ember/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_MtEmber[][16] =
+const u16 gTilesetPalettes_CinnabarVolcano[][16] =
 {
 	INCBIN_U16("data/tilesets/secondary/mt_ember/palettes/00.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/mt_ember/palettes/01.gbapal"),

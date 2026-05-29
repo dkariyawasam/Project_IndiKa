@@ -6277,206 +6277,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_EXTERIOR",
-          "base_label": "sMtEmberExterior_FireRed",
-          "land_mons": {
-            "encounter_rate": 21,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MAGBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_MT_EMBER_EXTERIOR",
-          "base_label": "sMtEmberExterior_LeafGreen",
-          "land_mons": {
-            "encounter_rate": 21,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MAGBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_1F",
-          "base_label": "sMtEmberSummitPath1F_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_1F",
+          "base_label": "sCinnabarVolcanoSummitPath1F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6544,8 +6346,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_1F",
-          "base_label": "sMtEmberSummitPath1F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_1F",
+          "base_label": "sCinnabarVolcanoSummitPath1F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6613,8 +6415,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_2F",
-          "base_label": "sMtEmberSummitPath2F_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_2F",
+          "base_label": "sCinnabarVolcanoSummitPath2F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6712,8 +6514,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_2F",
-          "base_label": "sMtEmberSummitPath2F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_2F",
+          "base_label": "sCinnabarVolcanoSummitPath2F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6811,8 +6613,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_3F",
-          "base_label": "sMtEmberSummitPath3F_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_3F",
+          "base_label": "sCinnabarVolcanoSummitPath3F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6880,8 +6682,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_SUMMIT_PATH_3F",
-          "base_label": "sMtEmberSummitPath3F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_3F",
+          "base_label": "sCinnabarVolcanoSummitPath3F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -6949,107 +6751,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_1F",
-          "base_label": "sMtEmberRubyPath1F_FireRed",
-          "land_mons": {
-            "encounter_rate": 7,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MAGBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_MT_EMBER_RUBY_PATH_1F",
-          "base_label": "sMtEmberRubyPath1F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_1F",
+          "base_label": "sCinnabarVolcanoRubyPath1F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7147,8 +6850,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B1F",
-          "base_label": "sMtEmberRubyPathB1F_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_1F",
+          "base_label": "sCinnabarVolcanoRubyPath1F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7246,8 +6949,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B1F",
-          "base_label": "sMtEmberRubyPathB1F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B1F",
+          "base_label": "sCinnabarVolcanoRubyPathB1F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7345,8 +7048,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B2F",
-          "base_label": "sMtEmberRubyPathB2F_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B1F",
+          "base_label": "sCinnabarVolcanoRubyPathB1F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7444,8 +7147,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B2F",
-          "base_label": "sMtEmberRubyPathB2F_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B2F",
+          "base_label": "sCinnabarVolcanoRubyPathB2F_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7543,206 +7246,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B3F",
-          "base_label": "sMtEmberRubyPathB3F_FireRed",
-          "land_mons": {
-            "encounter_rate": 7,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MAGBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B3F",
-          "base_label": "sMtEmberRubyPathB3F_LeafGreen",
-          "land_mons": {
-            "encounter_rate": 7,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MAGBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_MAGMAR"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MACHOKE"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              },
-              {
-                "min_level": 38,
-                "max_level": 41,
-                "species": "SPECIES_MAGCARGO"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
-          "base_label": "sMtEmberRubyPathB1FStairs_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B2F",
+          "base_label": "sCinnabarVolcanoRubyPathB2F_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7840,8 +7345,206 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
-          "base_label": "sMtEmberRubyPathB1FStairs_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B3F",
+          "base_label": "sCinnabarVolcanoRubyPathB3F_FireRed",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B3F",
+          "base_label": "sCinnabarVolcanoRubyPathB3F_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B1F_STAIRS",
+          "base_label": "sCinnabarVolcanoRubyPathB1FStairs_FireRed",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -7939,8 +7642,8 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B2F_STAIRS",
-          "base_label": "sMtEmberRubyPathB2FStairs_FireRed",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B1F_STAIRS",
+          "base_label": "sCinnabarVolcanoRubyPathB1FStairs_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [
@@ -8038,8 +7741,107 @@
           }
         },
         {
-          "map": "MAP_MT_EMBER_RUBY_PATH_B2F_STAIRS",
-          "base_label": "sMtEmberRubyPathB2FStairs_LeafGreen",
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B2F_STAIRS",
+          "base_label": "sCinnabarVolcanoRubyPathB2FStairs_FireRed",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_MACHOKE"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CINNABAR_VOLCANO_RUBY_PATH_B2F_STAIRS",
+          "base_label": "sCinnabarVolcanoRubyPathB2FStairs_LeafGreen",
           "land_mons": {
             "encounter_rate": 7,
             "mons": [

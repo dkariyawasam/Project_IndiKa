@@ -172,7 +172,7 @@
 #define VAR_MAP_SCENE_POKEMON_CENTER_TEALA                                     0x407C
 #define VAR_ROCKET_LEAGUE_PRIZE_TIER                                           0x407D
 #define VAR_MAP_SCENE_VERMILION_CITY                                           0x407E
-#define VAR_MAP_SCENE_MT_EMBER_EXTERIOR                                        0x407F
+#define VAR_MAP_SCENE_0x407F                                                   0x407F
 #define VAR_MAP_SCENE_ICEFALL_CAVE_BACK                                        0x4080
 #define VAR_MAP_SCENE_SAFFRON_CITY_DOJO                                        0x4081
 #define VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10                             0x4083
