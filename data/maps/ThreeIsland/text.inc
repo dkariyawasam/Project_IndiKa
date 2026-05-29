@@ -158,7 +158,7 @@ ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
 
 ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
     .string "I'm going to train my DODUO in the\n"
-    .string "BERRY FOREST.\p"
+    .string "FUCHSIA FOREST.\p"
     .string "When it evolves, I'm going to play\n"
     .string "a game on TWO ISLAND.$"
 

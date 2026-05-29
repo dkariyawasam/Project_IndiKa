@@ -486,15 +486,15 @@ OneIsland_KindleRoad_EventScript_ItemCarbos::
 	finditem ITEM_CARBOS
 	end
 
-ThreeIsland_BerryForest_EventScript_ItemMaxEther::
+FuchsiaForest_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
 
-ThreeIsland_BerryForest_EventScript_ItemFullHeal::
+FuchsiaForest_EventScript_ItemFullHeal::
 	finditem ITEM_FULL_HEAL
 	end
 
-ThreeIsland_BerryForest_EventScript_ItemMaxElixir::
+FuchsiaForest_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
 	end
 

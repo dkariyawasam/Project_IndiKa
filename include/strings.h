@@ -1108,7 +1108,7 @@ extern const u8 gText_RegionMap_AreaDesc_PokemonTower[];
 extern const u8 gText_RegionMap_AreaDesc_CeruleanCave[];
 extern const u8 gText_RegionMap_AreaDesc_PowerPlant[];
 extern const u8 gText_RegionMap_AreaDesc_MtEmber[];
-extern const u8 gText_RegionMap_AreaDesc_BerryForest[];
+extern const u8 gText_RegionMap_AreaDesc_FuchsiaForest[];
 extern const u8 gText_RegionMap_AreaDesc_IcefallCave[];
 extern const u8 gText_RegionMap_AreaDesc_LostCave[];
 extern const u8 gText_RegionMap_AreaDesc_TanobyRuins[];
