@@ -820,7 +820,7 @@ gFameCheckerFlavorTextOriginLocation_Daisy1::
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy2::
-	.string "WATER LABYRINTH$"
+	.string "PALLET TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy3::
 	.string "VIRIDIAN CITY$"
@@ -955,7 +955,7 @@ gFameCheckerFlavorTextOriginLocation_Blaine4::
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine5::
-	.string "RESORT GORGEOUS$"
+	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei0::
 	.string "POKéMON LEAGUE$"
@@ -991,7 +991,7 @@ gFameCheckerFlavorTextOriginLocation_Bruno4::
 	.string "TWO ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno5::
-	.string "SEVAULT CANYON$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha0::
 	.string "POKéMON LEAGUE$"
@@ -1003,13 +1003,13 @@ gFameCheckerFlavorTextOriginLocation_Agatha2::
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha3::
-	.string "SEVEN ISLAND$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha4::
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha5::
-	.string "SIX ISLAND$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lance0::
 	.string "POKéMON LEAGUE$"

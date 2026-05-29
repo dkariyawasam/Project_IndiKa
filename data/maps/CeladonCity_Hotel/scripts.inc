@@ -6,7 +6,47 @@ CeladonCity_Hotel_EventScript_Receptionist::
 	end
 
 CeladonCity_Hotel_EventScript_Beauty::
-	msgbox CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_eq VAR_POKEMON_REQUEST_REWARD_MON, 0xFFFF, CeladonCity_Hotel_EventScript_BeautyRequestTookTooLong
+	goto_if_ne VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE, CeladonCity_Hotel_EventScript_BeautyCheckForRequestedMon
+	msgbox CeladonCity_Hotel_Text_BeautyRequestIntro
+	goto CeladonCity_Hotel_EventScript_BeautyRequestMon
+	end
+
+CeladonCity_Hotel_EventScript_BeautyRequestMon::
+	special SamplePokemonRequestMonAndReward
+	msgbox CeladonCity_Hotel_Text_BeautyRequestMon
+	release
+	end
+
+CeladonCity_Hotel_EventScript_BeautyRequestTookTooLong::
+	msgbox CeladonCity_Hotel_Text_BeautyRequestTookTooLong
+	goto CeladonCity_Hotel_EventScript_BeautyRequestMon
+	end
+
+CeladonCity_Hotel_EventScript_BeautyCheckForRequestedMon::
+	copyvar VAR_0x8004, VAR_POKEMON_REQUEST_REWARD_MON
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Hotel_EventScript_BeautyReward
+	special SamplePokemonRequestMonAndReward
+	msgbox CeladonCity_Hotel_Text_BeautyStillLooking
+	release
+	end
+
+CeladonCity_Hotel_EventScript_BeautyReward::
+	special SamplePokemonRequestMonAndReward
+	msgbox CeladonCity_Hotel_Text_BeautyThanks
+	giveitem VAR_POKEMON_REQUEST_REWARD_ITEM
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Hotel_EventScript_BeautyBagFull
+	setvar VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE
+	release
+	end
+
+CeladonCity_Hotel_EventScript_BeautyBagFull::
+	msgbox CeladonCity_Hotel_Text_BeautyBagFull
+	setvar VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE
+	release
 	end
 
 CeladonCity_Hotel_EventScript_BeautyBoyfriend::

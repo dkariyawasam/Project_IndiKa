@@ -134,7 +134,7 @@
 #define FLAG_HIDE_ROUTE21_NORTH_SEAGALLOP                  0x077
 #define FLAG_HIDE_ROUTE21_NORTH_SAILOR                     0x078
 #define FLAG_HIDE_THREE_ISLAND_BIKERS                      0x079
-#define FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST                 0x07A
+#define FLAG_HIDE_LOSTELLE_IN_FUCHSIA_FOREST                 0x07A
 #define FLAG_HIDE_TWO_ISLAND_WOMAN                         0x07B
 #define FLAG_HIDE_TWO_ISLAND_BEAUTY                        0x07C
 #define FLAG_HIDE_TWO_ISLAND_POKE_MANIAC                   0x07D
@@ -157,10 +157,10 @@
 #define FLAG_0x08F                                         0x08F
 #define FLAG_HIDE_THREE_ISLAND_LONE_BIKER                  0x091
 #define FLAG_0x092                                         0x092
-#define FLAG_HIDE_LOST_CAVE_SELPHY                         0x093
-#define FLAG_HIDE_RESORT_GORGEOUS_SELPHY                   0x094
-#define FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY            0x095
-#define FLAG_HIDE_SELPHYS_BUTLER                           0x096
+#define FLAG_0x093                                         0x093
+#define FLAG_0x094                                         0x094
+#define FLAG_0x095                                         0x095
+#define FLAG_0x096                                         0x096
 #define FLAG_HIDE_FOUR_ISLAND_RIVAL                        0x097
 #define FLAG_0x098                                         0x098
 #define FLAG_HIDE_LUGIA                                    0x09B
@@ -490,18 +490,18 @@
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER                  0x1DB
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_MAX_REPEL              0x1DC
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_CARBOS                 0x1DD
-#define FLAG_HIDE_FIVE_ISLAND_MEADOW_MAX_POTION                 0x1DE
-#define FLAG_HIDE_FIVE_ISLAND_MEADOW_PP_UP                      0x1DF
-#define FLAG_HIDE_FIVE_ISLAND_MEMORIAL_PILLAR_METAL_COAT        0x1E0
-#define FLAG_HIDE_SIX_ISLAND_OUTCAST_ISLAND_PP_UP               0x1E1
-#define FLAG_HIDE_SIX_ISLAND_WATER_PATH_ELIXIR                  0x1E2
-#define FLAG_HIDE_SIX_ISLAND_WATER_PATH_DRAGON_SCALE            0x1E3
-#define FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_KINGS_ROCK        0x1E7
-#define FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_MAX_ELIXIR        0x1E8
-#define FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_NUGGET            0x1E9
-#define FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ETHER           0x1EA
-#define FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_FULL_HEAL           0x1EB
-#define FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ELIXIR          0x1EC
+#define FLAG_0x1DE                                               0x1DE
+#define FLAG_0x1DF                                               0x1DF
+#define FLAG_0x1E0                                               0x1E0
+#define FLAG_0x1E1                                               0x1E1
+#define FLAG_0x1E2                                               0x1E2
+#define FLAG_0x1E3                                               0x1E3
+#define FLAG_0x1E7                                               0x1E7
+#define FLAG_0x1E8                                               0x1E8
+#define FLAG_0x1E9                                               0x1E9
+#define FLAG_HIDE_FUCHSIA_FOREST_MAX_ETHER           0x1EA
+#define FLAG_HIDE_FUCHSIA_FOREST_FULL_HEAL           0x1EB
+#define FLAG_HIDE_FUCHSIA_FOREST_MAX_ELIXIR          0x1EC
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_ULTRA_BALL                  0x1ED
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE                  0x1EE
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT                    0x1EF
@@ -518,7 +518,7 @@
 #define FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM12_SEA_INCENSE      0x1FA
 #define FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM13_MAX_REVIVE       0x1FB
 #define FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM14_RARE_CANDY       0x1FC
-#define FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE_LUCKY_PUNCH 0x1FD
+#define FLAG_0x1FD                                               0x1FD
 #define FLAG_HIDE_SILPH_CO_4F_TM41                              0x1FE
 
 // Unused?
@@ -580,7 +580,7 @@
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE                  0x233
 #define FLAG_GOT_SS_TICKET                               0x234
 #define FLAG_GOT_SS_TICKET_DUP                           0x235
-#define FLAG_GOT_TM42_AT_MEMORIAL_PILLAR                 0x236
+#define FLAG_0x236                                       0x236
 #define FLAG_GOT_TM51                                    0x237
 #define FLAG_GOT_TM52                                    0x238
 #define FLAG_GOT_TM53                                    0x239
@@ -743,7 +743,7 @@
 #define FLAG_FOUGHT_TANGROWTH                            0x2D4
 #define FLAG_0x2D5                                       0x2D5
 #define FLAG_0x2D6                                       0x2D6
-#define FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR         0x2D7
+#define FLAG_0x2D7                                       0x2D7
 #define FLAG_LEARNED_YES_NAH_CHANSEY                     0x2D8
 #define FLAG_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1       0x2D9
 #define FLAG_RECOVERED_SAPPHIRE                          0x2DC
@@ -1079,11 +1079,11 @@
 #define FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_10                 (FLAG_HIDDEN_ITEMS_START +  60)
 #define FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_11                 (FLAG_HIDDEN_ITEMS_START +  61)
 #define FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_12                 (FLAG_HIDDEN_ITEMS_START +  62)
-#define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_SEVAULT_CANYON_CHERI_BERRY           (FLAG_HIDDEN_ITEMS_START +  63)
-#define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_4           (FLAG_HIDDEN_ITEMS_START +  64)
-#define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE             (FLAG_HIDDEN_ITEMS_START +  65)
-#define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_2           (FLAG_HIDDEN_ITEMS_START +  66)
-#define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_3           (FLAG_HIDDEN_ITEMS_START +  67)
+#define FLAG_HIDDEN_ITEM_0x3F                                               (FLAG_HIDDEN_ITEMS_START +  63)
+#define FLAG_HIDDEN_ITEM_0x40                                               (FLAG_HIDDEN_ITEMS_START +  64)
+#define FLAG_HIDDEN_ITEM_0x41                                               (FLAG_HIDDEN_ITEMS_START +  65)
+#define FLAG_HIDDEN_ITEM_0x42                                               (FLAG_HIDDEN_ITEMS_START +  66)
+#define FLAG_HIDDEN_ITEM_0x43                                               (FLAG_HIDDEN_ITEMS_START +  67)
 #define FLAG_HIDDEN_ITEM_0x44                                               (FLAG_HIDDEN_ITEMS_START +  68)
 #define FLAG_HIDDEN_ITEM_0x45                                               (FLAG_HIDDEN_ITEMS_START +  69)
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_POTION        (FLAG_HIDDEN_ITEMS_START +  70)
@@ -1106,19 +1106,19 @@
 #define FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD                    (FLAG_HIDDEN_ITEMS_START +  87)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2                  (FLAG_HIDDEN_ITEMS_START +  88)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3                        (FLAG_HIDDEN_ITEMS_START +  89)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_RAZZ_BERRY              (FLAG_HIDDEN_ITEMS_START +  90)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_BLUK_BERRY              (FLAG_HIDDEN_ITEMS_START +  91)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_NANAB_BERRY             (FLAG_HIDDEN_ITEMS_START +  92)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_WEPEAR_BERRY            (FLAG_HIDDEN_ITEMS_START +  93)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_ORAN_BERRY              (FLAG_HIDDEN_ITEMS_START +  94)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_CHERI_BERRY             (FLAG_HIDDEN_ITEMS_START +  95)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_CHESTO_BERRY            (FLAG_HIDDEN_ITEMS_START +  96)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PECHA_BERRY             (FLAG_HIDDEN_ITEMS_START +  97)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_RAWST_BERRY             (FLAG_HIDDEN_ITEMS_START +  98)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_ASPEAR_BERRY            (FLAG_HIDDEN_ITEMS_START +  99)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PERSIM_BERRY            (FLAG_HIDDEN_ITEMS_START + 100)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PINAP_BERRY             (FLAG_HIDDEN_ITEMS_START + 101)
-#define FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_LUM_BERRY               (FLAG_HIDDEN_ITEMS_START + 102)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_RAZZ_BERRY              (FLAG_HIDDEN_ITEMS_START +  90)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_BLUK_BERRY              (FLAG_HIDDEN_ITEMS_START +  91)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_NANAB_BERRY             (FLAG_HIDDEN_ITEMS_START +  92)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_WEPEAR_BERRY            (FLAG_HIDDEN_ITEMS_START +  93)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_ORAN_BERRY              (FLAG_HIDDEN_ITEMS_START +  94)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_CHERI_BERRY             (FLAG_HIDDEN_ITEMS_START +  95)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_CHESTO_BERRY            (FLAG_HIDDEN_ITEMS_START +  96)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_PECHA_BERRY             (FLAG_HIDDEN_ITEMS_START +  97)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_RAWST_BERRY             (FLAG_HIDDEN_ITEMS_START +  98)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_ASPEAR_BERRY            (FLAG_HIDDEN_ITEMS_START +  99)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_PERSIM_BERRY            (FLAG_HIDDEN_ITEMS_START + 100)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_PINAP_BERRY             (FLAG_HIDDEN_ITEMS_START + 101)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_LUM_BERRY               (FLAG_HIDDEN_ITEMS_START + 102)
 #define FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_STARDUST                (FLAG_HIDDEN_ITEMS_START + 103)
 #define FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_STARDUST_2              (FLAG_HIDDEN_ITEMS_START + 104)
 #define FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_PEARL                   (FLAG_HIDDEN_ITEMS_START + 105)
@@ -1186,21 +1186,21 @@
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST                 (FLAG_HIDDEN_ITEMS_START + 167)
 #define FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL                                 (FLAG_HIDDEN_ITEMS_START + 168)
 #define FLAG_HIDDEN_ITEM_FOUR_ISLAND_ULTRA_BALL                            (FLAG_HIDDEN_ITEMS_START + 169)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BIG_PEARL             (FLAG_HIDDEN_ITEMS_START + 170)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_RAZZ_BERRY            (FLAG_HIDDEN_ITEMS_START + 171)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_SITRUS_BERRY          (FLAG_HIDDEN_ITEMS_START + 172)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BLUK_BERRY            (FLAG_HIDDEN_ITEMS_START + 173)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_NEST_BALL             (FLAG_HIDDEN_ITEMS_START + 174)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST              (FLAG_HIDDEN_ITEMS_START + 175)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STAR_PIECE            (FLAG_HIDDEN_ITEMS_START + 176)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST_2            (FLAG_HIDDEN_ITEMS_START + 177)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_STAR_PIECE              (FLAG_HIDDEN_ITEMS_START + 178)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_NET_BALL                (FLAG_HIDDEN_ITEMS_START + 179)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_GREEN_PATH_ULTRA_BALL                  (FLAG_HIDDEN_ITEMS_START + 180)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ASPEAR_BERRY                (FLAG_HIDDEN_ITEMS_START + 181)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ORAN_BERRY                  (FLAG_HIDDEN_ITEMS_START + 182)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_PINAP_BERRY                 (FLAG_HIDDEN_ITEMS_START + 183)
-#define FLAG_HIDDEN_ITEM_SIX_ISLAND_LEPPA_BERRY                            (FLAG_HIDDEN_ITEMS_START + 184)
+#define FLAG_HIDDEN_ITEM_0xAA                                            (FLAG_HIDDEN_ITEMS_START + 170)
+#define FLAG_HIDDEN_ITEM_0xAB                                            (FLAG_HIDDEN_ITEMS_START + 171)
+#define FLAG_HIDDEN_ITEM_0xAC                                            (FLAG_HIDDEN_ITEMS_START + 172)
+#define FLAG_HIDDEN_ITEM_0xAD                                            (FLAG_HIDDEN_ITEMS_START + 173)
+#define FLAG_HIDDEN_ITEM_0xAE                                            (FLAG_HIDDEN_ITEMS_START + 174)
+#define FLAG_HIDDEN_ITEM_0xAF                                            (FLAG_HIDDEN_ITEMS_START + 175)
+#define FLAG_HIDDEN_ITEM_0xB0                                            (FLAG_HIDDEN_ITEMS_START + 176)
+#define FLAG_HIDDEN_ITEM_0xB1                                            (FLAG_HIDDEN_ITEMS_START + 177)
+#define FLAG_HIDDEN_ITEM_0xB2                                             (FLAG_HIDDEN_ITEMS_START + 178)
+#define FLAG_HIDDEN_ITEM_0xB3                                             (FLAG_HIDDEN_ITEMS_START + 179)
+#define FLAG_HIDDEN_ITEM_0xB4                                             (FLAG_HIDDEN_ITEMS_START + 180)
+#define FLAG_HIDDEN_ITEM_0xB5                                             (FLAG_HIDDEN_ITEMS_START + 181)
+#define FLAG_HIDDEN_ITEM_0xB6                                             (FLAG_HIDDEN_ITEMS_START + 182)
+#define FLAG_HIDDEN_ITEM_0xB7                                             (FLAG_HIDDEN_ITEMS_START + 183)
+#define FLAG_HIDDEN_ITEM_0xB8                                             (FLAG_HIDDEN_ITEMS_START + 184)
 #define FLAG_HIDDEN_ITEM_UNUSED_SEVII_TOWER_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 185)
 #define FLAG_HIDDEN_ITEM_UNUSED_SEVII_TOWER_PEARL                  (FLAG_HIDDEN_ITEMS_START + 186)
 #define FLAG_HIDDEN_ITEM_UNUSED_SEVII_TOWER_NANAB_BERRY            (FLAG_HIDDEN_ITEMS_START + 187)
@@ -1409,9 +1409,9 @@
 #define FLAG_WORLD_MAP_TWO_ISLAND                                   (SYS_FLAGS + 0x9C)
 #define FLAG_WORLD_MAP_THREE_ISLAND                                 (SYS_FLAGS + 0x9D)
 #define FLAG_WORLD_MAP_FOUR_ISLAND                                  (SYS_FLAGS + 0x9E)
-#define FLAG_WORLD_MAP_FIVE_ISLAND                                  (SYS_FLAGS + 0x9F)
-#define FLAG_WORLD_MAP_SEVEN_ISLAND                                 (SYS_FLAGS + 0xA0)
-#define FLAG_WORLD_MAP_SIX_ISLAND                                   (SYS_FLAGS + 0xA1)
+#define FLAG_SYS_0x9F                                               (SYS_FLAGS + 0x9F)
+#define FLAG_SYS_0xA0                                                (SYS_FLAGS + 0xA0)
+#define FLAG_SYS_0xA1                                                (SYS_FLAGS + 0xA1)
 #define FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F                     (SYS_FLAGS + 0xA2)
 #define FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F                    (SYS_FLAGS + 0xA3)
 #define FLAG_WORLD_MAP_VIRIDIAN_FOREST                              (SYS_FLAGS + 0xA4)
@@ -1433,16 +1433,16 @@
 #define FLAG_WORLD_MAP_POWER_PLANT                                  (SYS_FLAGS + 0xB4)
 #define FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR                          (SYS_FLAGS + 0xB5)
 #define FLAG_WORLD_MAP_MT_EMBER_EXTERIOR                            (SYS_FLAGS + 0xB6)
-#define FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST                    (SYS_FLAGS + 0xB7)
+#define FLAG_WORLD_MAP_FUCHSIA_FOREST                    (SYS_FLAGS + 0xB7)
 #define FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE            (SYS_FLAGS + 0xB8)
 #define FLAG_SYS_0xB9                                             (SYS_FLAGS + 0xB9)
 #define FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY                          (SYS_FLAGS + 0xBA)
 #define FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE               (SYS_FLAGS + 0xBC)
-#define FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH                      (SYS_FLAGS + 0xBD)
-#define FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE                     (SYS_FLAGS + 0xBE)
-#define FLAG_WORLD_MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER     (SYS_FLAGS + 0xBF)
+#define FLAG_SYS_0xBD                                                (SYS_FLAGS + 0xBD)
+#define FLAG_SYS_0xBE                                                (SYS_FLAGS + 0xBE)
+#define FLAG_SYS_0xBF                                                (SYS_FLAGS + 0xBF)
 #define FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL                (SYS_FLAGS + 0xC0)
-#define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       (SYS_FLAGS + 0xC1)
+#define FLAG_SYS_0xC1                                                (SYS_FLAGS + 0xC1)
 
 #define FLAG_0x8C3                                                  (SYS_FLAGS + 0xC3)
 #define FLAG_0x8C4                                                  (SYS_FLAGS + 0xC4)

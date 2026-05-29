@@ -31,6 +31,27 @@ CinnabarIsland_Text_GymSign::
     .string "LEADER: BLAINE\l"
     .string "The Hotheaded Quiz Master!$"
 
+Text_ExplosionTeach::
+    .string "Can you imagine?\n"
+    .string "If this volcano were to erupt?\p"
+    .string "The explosion would be the end of\n"
+    .string "us. How terrifying is that?\p"
+    .string "While we're terrified, would you\n"
+    .string "like me to teach EXPLOSION?$"
+
+Text_ExplosionDeclined::
+    .string "Yeah, you're right.\n"
+    .string "It is too terrifying.$"
+
+Text_ExplosionWhichMon::
+    .string "You're terribly brave!\p"
+    .string "Which POKéMON should I teach\n"
+    .string "EXPLOSION?$"
+
+Text_ExplosionTaught::
+    .string "Using EXPLOSION near a volcano…\p"
+    .string "What a terrifying thrill!$"
+
 CinnabarIsland_Text_HeyIfItIsntPlayer::
     .string "Huh?\n"
     .string "Hey, if it isn't {PLAYER}!$"

@@ -5329,7 +5329,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GentlemanClifford),
     },
-    [TRAINER_LADY_SELPHY] = {
+    [TRAINER_LADY_UNUSED_612] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LADY,
@@ -5337,7 +5337,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = ITEM_CUSTOM_MOVES(sParty_LadySelphy),
+        .party = ITEM_CUSTOM_MOVES(sParty_LadyUnused612),
     },
     [TRAINER_RUIN_MANIAC_LAWSON] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
