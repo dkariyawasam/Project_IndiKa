@@ -537,34 +537,10 @@
       "height": 2
     },
     {
-      "id": "MAPSEC_RESORT_GORGEOUS",
-      "name": "RESORT GORGEOUS",
-      "x": 16,
-      "y": 9,
-      "width": 3,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_WATER_LABYRINTH",
-      "name": "WATER LABYRINTH",
-      "x": 14,
-      "y": 10,
-      "width": 3,
-      "height": 1
-    },
-    {
       "id": "MAPSEC_FIVE_ISLE_MEADOW",
       "name": "FIVE ISLE MEADOW",
       "x": 17,
       "y": 10,
-      "width": 1,
-      "height": 3
-    },
-    {
-      "id": "MAPSEC_MEMORIAL_PILLAR",
-      "name": "MEMORIAL PILLAR",
-      "x": 18,
-      "y": 12,
       "width": 1,
       "height": 3
     },

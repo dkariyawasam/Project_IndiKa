@@ -57,8 +57,8 @@ static void Task_AnimatePcTurnOn(u8 taskId);
 static void PcTurnOnUpdateMetatileId(bool16 flag);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
-static u16 SampleResortGorgeousMon(void);
-static u16 SampleResortGorgeousReward(void);
+static u16 SamplePokemonRequestMon(void);
+static u16 SamplePokemonRequestReward(void);
 static void Task_ElevatorShake(u8 taskId);
 static void AnimateElevatorWindowView(u16 nfloors, bool8 direction);
 static void Task_AnimateElevatorWindowView(u8 taskId);
@@ -546,7 +546,7 @@ void DoPicboxCancel(void)
     PicboxCancel();
 }
 
-static const u16 sResortGorgeousDeluxeRewards[] = {
+static const u16 sPokemonRequestDeluxeRewards[] = {
     ITEM_BIG_PEARL,
     ITEM_PEARL,
     ITEM_STARDUST,
@@ -555,37 +555,37 @@ static const u16 sResortGorgeousDeluxeRewards[] = {
     ITEM_RARE_CANDY
 };
 
-void IncrementResortGorgeousStepCounter(void)
+void IncrementPokemonRequestRewardStepCounter(void)
 {
-    u16 var4035 = VarGet(VAR_RESORT_GOREGEOUS_STEP_COUNTER);
-    if (VarGet(VAR_RESORT_GORGEOUS_REQUESTED_MON) != SPECIES_NONE)
+    u16 stepCounter = VarGet(VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER);
+    if (VarGet(VAR_POKEMON_REQUEST_REWARD_MON) != SPECIES_NONE)
     {
-        var4035++;
-        if (var4035 >= 250)
+        stepCounter++;
+        if (stepCounter >= 250)
         {
-            VarSet(VAR_RESORT_GORGEOUS_REQUESTED_MON, 0xFFFF);
-            VarSet(VAR_RESORT_GOREGEOUS_STEP_COUNTER, 0);
+            VarSet(VAR_POKEMON_REQUEST_REWARD_MON, 0xFFFF);
+            VarSet(VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, 0);
         }
         else
         {
-            VarSet(VAR_RESORT_GOREGEOUS_STEP_COUNTER, var4035);
+            VarSet(VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, stepCounter);
         }
     }
 }
 
-void SampleResortGorgeousMonAndReward(void)
+void SamplePokemonRequestMonAndReward(void)
 {
-    u16 requestedSpecies = VarGet(VAR_RESORT_GORGEOUS_REQUESTED_MON);
+    u16 requestedSpecies = VarGet(VAR_POKEMON_REQUEST_REWARD_MON);
     if (requestedSpecies == SPECIES_NONE || requestedSpecies == 0xFFFF)
     {
-        VarSet(VAR_RESORT_GORGEOUS_REQUESTED_MON, SampleResortGorgeousMon());
-        VarSet(VAR_RESORT_GORGEOUS_REWARD, SampleResortGorgeousReward());
-        VarSet(VAR_RESORT_GOREGEOUS_STEP_COUNTER, 0);
+        VarSet(VAR_POKEMON_REQUEST_REWARD_MON, SamplePokemonRequestMon());
+        VarSet(VAR_POKEMON_REQUEST_REWARD_ITEM, SamplePokemonRequestReward());
+        VarSet(VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, 0);
     }
-    StringCopy(gStringVar1, gSpeciesNames[VarGet(VAR_RESORT_GORGEOUS_REQUESTED_MON)]);
+    StringCopy(gStringVar1, gSpeciesNames[VarGet(VAR_POKEMON_REQUEST_REWARD_MON)]);
 }
 
-static u16 SampleResortGorgeousMon(void)
+static u16 SamplePokemonRequestMon(void)
 {
     u16 i;
     u16 species;
@@ -605,12 +605,12 @@ static u16 SampleResortGorgeousMon(void)
     return species;
 }
 
-static u16 SampleResortGorgeousReward(void)
+static u16 SamplePokemonRequestReward(void)
 {
     if ((Random() % 100) >= 30)
         return ITEM_LUXURY_BALL;
     else
-        return sResortGorgeousDeluxeRewards[Random() % NELEMS(sResortGorgeousDeluxeRewards)];
+        return sPokemonRequestDeluxeRewards[Random() % NELEMS(sPokemonRequestDeluxeRewards)];
 }
 
 bool8 CheckAddCoins(void)
@@ -1499,8 +1499,6 @@ u8 GetUnlockedSeviiAreas(void)
         result |= 1 << 2;
     if (FlagGet(FLAG_WORLD_MAP_FOUR_ISLAND) == TRUE)
         result |= 1 << 3;
-    if (FlagGet(FLAG_WORLD_MAP_FIVE_ISLAND) == TRUE)
-        result |= 1 << 4;
     return result;
 }
 

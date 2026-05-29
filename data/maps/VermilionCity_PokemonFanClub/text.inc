@@ -24,6 +24,27 @@ VermilionCity_PokemonFanClub_Text_Pikachu::
 VermilionCity_PokemonFanClub_Text_Seel::
     .string "SEEL: Kyuoo!$"
 
+Text_BodySlamTeach::
+    .string "Ready?\n"
+    .string "Boing!\p"
+    .string "We're having a BODY SLAM match\n"
+    .string "to see who wimps out first.\p"
+    .string "If you were to join us, you'd be\n"
+    .string "squashed like a bug, though…\p"
+    .string "How about I teach BODY SLAM to\n"
+    .string "a POKéMON of yours instead?$"
+
+Text_BodySlamDeclined::
+    .string "Come again!\n"
+    .string "Boing!$"
+
+Text_BodySlamWhichMon::
+    .string "Which POKéMON wants to learn how\n"
+    .string "to BODY SLAM?$"
+
+Text_BodySlamTaught::
+    .string "Boioing!$"
+
 VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons::
     .string "I chair the POKéMON Fan Club!\p"
     .string "I raise more than a hundred\n"

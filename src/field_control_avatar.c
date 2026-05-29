@@ -220,7 +220,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         WonderNews_IncrementStepCounter();
         IncrementRenewableHiddenItemStepCounter();
         RunMassageCooldownStepCounter();
-        IncrementResortGorgeousStepCounter();
+        IncrementPokemonRequestRewardStepCounter();
         if (TryStartStepBasedScript(&position, metatileBehavior, playerDirection) == TRUE)
         {
             gFieldInputRecord.tookStep = TRUE;

@@ -76,7 +76,7 @@ EventScript_RockSlideTaught::
 	release
 	end
 
-MtEmber_Exterior_EventScript_ExplosionTutor::
+CinnabarIsland_EventScript_ExplosionTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_TUTOR_EXPLOSION, EventScript_ExplosionTaught
@@ -373,7 +373,7 @@ EventScript_MimicTaughtFemale::
 	msgbox Text_MimicTaughtFemale
 	return
 
-FourIsland_House1_EventScript_BodySlamTutor::
+VermilionCity_PokemonFanClub_EventScript_BodySlamTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_TUTOR_BODY_SLAM, EventScript_BodySlamTaught
@@ -399,7 +399,7 @@ EventScript_BodySlamTaught::
 	release
 	end
 
-TwoIsland_House_EventScript_StarterTutor::
+PalletTown_ProfessorOaksLab_EventScript_StarterTutor::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock
@@ -462,22 +462,22 @@ CapeBrinkTutor_EventScript_ChooseMon::
 	end
 
 CapeBrinkTutor_EventScript_JumpInPlaceDown::
-	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceDown
+	applymovement VAR_LAST_TALKED, Movement_JumpInPlaceDown
 	waitmovement 0
 	return
 
 CapeBrinkTutor_EventScript_JumpInPlaceUp::
-	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceUp
+	applymovement VAR_LAST_TALKED, Movement_JumpInPlaceUp
 	waitmovement 0
 	return
 
 CapeBrinkTutor_EventScript_JumpInPlaceLeft::
-	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceLeft
+	applymovement VAR_LAST_TALKED, Movement_JumpInPlaceLeft
 	waitmovement 0
 	return
 
 CapeBrinkTutor_EventScript_JumpInPlaceRight::
-	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceRight
+	applymovement VAR_LAST_TALKED, Movement_JumpInPlaceRight
 	waitmovement 0
 	return
 
