@@ -149,7 +149,7 @@
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_2                  0x086
 #define FLAG_HIDE_SS_ANNE                                  0x087
 #define FLAG_HIDE_FIVE_ISLAND_ROCKETS                      0x088
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_ROCKETS                0x089
+#define FLAG_0x089                                         0x089
 #define FLAG_HIDE_RUBY                                     0x08A
 #define FLAG_HIDE_ICEFALL_CAVE_LORELEI                     0x08B
 #define FLAG_HIDE_LORELEI_IN_HER_HOUSE                     0x08C
@@ -502,9 +502,9 @@
 #define FLAG_HIDE_FUCHSIA_FOREST_MAX_ETHER           0x1EA
 #define FLAG_HIDE_FUCHSIA_FOREST_FULL_HEAL           0x1EB
 #define FLAG_HIDE_FUCHSIA_FOREST_MAX_ELIXIR          0x1EC
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_ULTRA_BALL                  0x1ED
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE                  0x1EE
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT                    0x1EF
+#define FLAG_0x1ED                                               0x1ED
+#define FLAG_0x1EE                                               0x1EE
+#define FLAG_0x1EF                                               0x1EF
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_ULTRA_BALL        0x1F0
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_TM57              0x1F1
 #define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_FULL_RESTORE     0x1F2
@@ -1174,11 +1174,11 @@
 #define FLAG_HIDDEN_ITEM_ROUTE23_MAX_ELIXIR                                (FLAG_HIDDEN_ITEMS_START + 155)
 #define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY                                 (FLAG_HIDDEN_ITEMS_START + 156)
 #define FLAG_HIDDEN_ITEM_ROUTE14_PINAP_BERRY                               (FLAG_HIDDEN_ITEMS_START + 157)
-#define FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_FIRE_STONE                      (FLAG_HIDDEN_ITEMS_START + 158)
+#define FLAG_HIDDEN_ITEM_0x9E                                             (FLAG_HIDDEN_ITEMS_START + 158)
 #define FLAG_HIDDEN_ITEM_POKEMON_TOWER_7F_SOOTHE_BELL                      (FLAG_HIDDEN_ITEMS_START + 159)
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_SUMMIT_SACRED_ASH                      (FLAG_HIDDEN_ITEMS_START + 160)
 #define FLAG_HIDDEN_ITEM_0xA1                                             (FLAG_HIDDEN_ITEMS_START + 161)
-#define FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_ULTRA_BALL                      (FLAG_HIDDEN_ITEMS_START + 162)
+#define FLAG_HIDDEN_ITEM_0xA2                                             (FLAG_HIDDEN_ITEMS_START + 162)
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_DUNSPARCE_TUNNEL_NUGGET              (FLAG_HIDDEN_ITEMS_START + 163)
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_PP_UP                                (FLAG_HIDDEN_ITEMS_START + 164)
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_MAX_REPEL                (FLAG_HIDDEN_ITEMS_START + 165)
@@ -1432,7 +1432,7 @@
 #define FLAG_WORLD_MAP_CERULEAN_CAVE_1F                             (SYS_FLAGS + 0xB3)
 #define FLAG_WORLD_MAP_POWER_PLANT                                  (SYS_FLAGS + 0xB4)
 #define FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR                          (SYS_FLAGS + 0xB5)
-#define FLAG_WORLD_MAP_MT_EMBER_EXTERIOR                            (SYS_FLAGS + 0xB6)
+#define FLAG_WORLD_MAP_CINNABAR_VOLCANO                                     (SYS_FLAGS + 0xB6)
 #define FLAG_WORLD_MAP_FUCHSIA_FOREST                    (SYS_FLAGS + 0xB7)
 #define FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE            (SYS_FLAGS + 0xB8)
 #define FLAG_SYS_0xB9                                             (SYS_FLAGS + 0xB9)

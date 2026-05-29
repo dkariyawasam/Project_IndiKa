@@ -20,7 +20,7 @@ OneIsland_KindleRoad_Text_AbigailPostBattle::
     .string "Maybe I should wear one, too…$"
 
 OneIsland_KindleRoad_Text_FinnIntro::
-    .string "Seen from here, MT. EMBER towers\n"
+    .string "Seen from here, CINNABAR VOLCANO towers\n"
     .string "into the sky.$"
 
 OneIsland_KindleRoad_Text_FinnDefeat::
@@ -156,7 +156,7 @@ OneIsland_KindleRoad_Text_MikNotEnoughMons::
 
 OneIsland_KindleRoad_Text_RouteSign::
     .string "This is KINDLE ROAD.\p"
-    .string "Go straight for MT. EMBER.$"
+    .string "Go straight for CINNABAR VOLCANO.$"
 
 OneIsland_KindleRoad_Text_EmberSpaSign::
     .string "Light the Fire in Your Heart!\n"

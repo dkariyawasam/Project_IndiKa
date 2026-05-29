@@ -498,18 +498,6 @@ FuchsiaForest_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
 	end
 
-MtEmber_Exterior_EventScript_ItemUltraBall::
-	finditem ITEM_ULTRA_BALL
-	end
-
-MtEmber_Exterior_EventScript_ItemFireStone::
-	finditem ITEM_FIRE_STONE
-	end
-
-MtEmber_Exterior_EventScript_ItemDireHit::
-	finditem ITEM_DIRE_HIT
-	end
-
 FourIsland_IcefallCave_1F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
