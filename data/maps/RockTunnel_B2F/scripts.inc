@@ -7,6 +7,7 @@ RockTunnel_B2F_OnTransition::
 	goto_if_ge VAR_MISTY_TRIAL_STATE, 4, RockTunnel_B2F_EventScript_HideMisty
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 3, RockTunnel_B2F_EventScript_PlaceMistyAtGenerator
 	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
 	end
 
 RockTunnel_B2F_EventScript_HideMisty::
