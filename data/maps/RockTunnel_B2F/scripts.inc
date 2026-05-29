@@ -16,9 +16,11 @@ RockTunnel_B2F_EventScript_HideMisty::
 
 RockTunnel_B2F_EventScript_PlaceMistyAtGenerator::
 	clearflag FLAG_HIDE_POWER_PLANT_MISTY
-	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 26, 20
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 22, 20
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 22, 20
 	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY
-	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_LOOK_AROUND
+	addobject LOCALID_ROCK_TUNNEL_MISTY
 	end
 
 RockTunnel_B2F_EventScript_Misty::
@@ -75,10 +77,12 @@ RockTunnel_B2F_EventScript_ChooseRight::
 	msgbox RockTunnel_B2F_Text_TryRight
 	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistySwimRight
 	waitmovement 0
-	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 26, 20
-	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 26, 20
+	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 22, 20
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 22, 20
 	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY
-	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_LOOK_AROUND
+	addobject LOCALID_ROCK_TUNNEL_MISTY
 	setvar VAR_MISTY_TRIAL_STATE, 3
 	release
 	end
@@ -94,7 +98,10 @@ RockTunnel_B2F_EventScript_MistyAtGeneratorFromEdge::
 	goto_if_ne VAR_MISTY_TRIAL_STATE, 3, RockTunnel_B2F_EventScript_PlatformNoResponse
 	msgbox RockTunnel_B2F_Text_MistyGeneratorFixed
 	closemessage
-	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyLeaveGenerator
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyStepOffGenerator
+	waitmovement 0
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistySwimFromGenerator
 	waitmovement 0
 	setvar VAR_MISTY_TRIAL_STATE, 4
 	setflag FLAG_HIDE_POWER_PLANT_MISTY
@@ -109,6 +116,16 @@ RockTunnel_B2F_EventScript_MistyFound::
 	setflag FLAG_HIDE_POWER_PLANT_MISTY
 	removeobject LOCALID_ROCK_TUNNEL_MISTY
 	release
+	end
+
+RockTunnel_B2F_EventScript_WarpToLowerPath::
+	warp MAP_ROCK_TUNNEL_B2F, 5, 36
+	waitstate
+	end
+
+RockTunnel_B2F_EventScript_WarpToUpperPath::
+	warp MAP_ROCK_TUNNEL_B2F, 15, 24
+	waitstate
 	end
 
 RockTunnel_B2F_Text_MistyScoutRequest::
@@ -161,23 +178,37 @@ RockTunnel_B2F_Text_MistyFound::
 	.string "when you're ready.$"
 
 RockTunnel_B2F_Movement_MistyReturnFromLeft::
-	walk_up
-	walk_up
-	walk_up
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
 	walk_in_place_faster_down
 	step_end
 
 RockTunnel_B2F_Movement_MistySwimLeft::
-	walk_left
-	walk_left
 	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+RockTunnel_B2F_Movement_MistyStepOffGenerator::
 	walk_down
 	walk_down
 	step_end
 
-RockTunnel_B2F_Movement_MistyLeaveGenerator::
+RockTunnel_B2F_Movement_MistySwimFromGenerator::
+	walk_right
 	walk_down
 	walk_down
 	walk_down
@@ -186,23 +217,21 @@ RockTunnel_B2F_Movement_MistyLeaveGenerator::
 	step_end
 
 RockTunnel_B2F_Movement_MistySwimRight::
+	walk_down
+	walk_down
+	walk_down
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 RockTunnel_B2F_Movement_MistyReturnFromRight::
