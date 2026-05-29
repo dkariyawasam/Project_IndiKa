@@ -169,7 +169,7 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
     struct ListMenu *list = (struct ListMenu *)gTasks[listTaskId].data;
 
     s32 currentPosition = list->cursorPos + list->itemsAbove;
-    u8 lastPositon = list->template.totalItems - 1;
+    u16 lastPositon = list->template.totalItems - 1;
 
     if (JOY_NEW(A_BUTTON))
     {
