@@ -625,15 +625,15 @@ const struct Tileset gTileset_Dummy4 =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_MtEmber =
+const struct Tileset gTileset_CinnabarVolcano =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_MtEmber,
-    .palettes = gTilesetPalettes_MtEmber,
-    .metatiles = gMetatiles_MtEmber,
-    .metatileAttributes = gMetatileAttributes_MtEmber,
-    .callback = InitTilesetAnim_MtEmber,
+    .tiles = gTilesetTiles_CinnabarVolcano,
+    .palettes = gTilesetPalettes_CinnabarVolcano,
+    .metatiles = gMetatiles_CinnabarVolcano,
+    .metatileAttributes = gMetatileAttributes_CinnabarVolcano,
+    .callback = InitTilesetAnim_CinnabarVolcano,
 };
 
 const struct Tileset gTileset_BerryForest =
