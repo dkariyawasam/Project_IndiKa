@@ -31,18 +31,14 @@
     "gMapGroup_IndoorRoute22",
     "gMapGroup_IndoorRoute23",
     "gMapGroup_IndoorRoute25",
-    "gMapGroup_IndoorSevenIsland",
     "gMapGroup_IndoorOneIsland",
     "gMapGroup_IndoorTwoIsland",
     "gMapGroup_IndoorThreeIsland",
     "gMapGroup_IndoorFourIsland",
     "gMapGroup_IndoorFiveIsland",
-    "gMapGroup_IndoorSixIsland",
     "gMapGroup_IndoorThreeIslandRoute",
     "gMapGroup_IndoorFiveIslandRoute",
-    "gMapGroup_IndoorTwoIslandRoute",
-    "gMapGroup_IndoorSixIslandRoute",
-    "gMapGroup_IndoorSevenIslandRoute"
+    "gMapGroup_IndoorTwoIslandRoute"
   ],
   "gMapGroup_Link": [
     "BattleColosseum_2P",
@@ -161,7 +157,6 @@
     "FourIsland_IcefallCave_1F",
     "FourIsland_IcefallCave_B1F",
     "FourIsland_IcefallCave_Back",
-    "SixIsland_PatternBush",
     "RockTunnel_B2F"
   ],
   "gMapGroup_SpecialArea": [
@@ -182,14 +177,7 @@
     "FiveIsland_LostCave_Room12",
     "FiveIsland_LostCave_Room13",
     "FiveIsland_LostCave_Room14",
-    "SevenIsland_TanobyRuins_MoneanChamber",
-    "SevenIsland_TanobyRuins_LiptooChamber",
-    "SevenIsland_TanobyRuins_WeepthChamber",
-    "SevenIsland_TanobyRuins_ScufibChamber",
-    "SevenIsland_TanobyRuins_RixyChamber",
-    "SevenIsland_TanobyRuins_ViapoisChamber",
     "ThreeIsland_DunsparceTunnel",
-    "SevenIsland_SevaultCanyon_TanobyKey",
     "NavelRock_1F",
     "NavelRock_Summit",
     "NavelRock_Base",
@@ -231,8 +219,6 @@
     "ThreeIsland",
     "FourIsland",
     "FiveIsland",
-    "SevenIsland",
-    "SixIsland",
     "Route1",
     "Route2",
     "Route3",
@@ -263,19 +249,10 @@
     "OneIsland_TreasureBeach",
     "ThreeIsland_BondBridge",
     "ThreeIsland_Port",
-    "Prototype_SeviiIsle_6",
-    "Prototype_SeviiIsle_7",
-    "Prototype_SeviiIsle_8",
-    "Prototype_SeviiIsle_9",
     "FiveIsland_ResortGorgeous",
     "FiveIsland_WaterLabyrinth",
     "FiveIsland_Meadow",
-    "FiveIsland_MemorialPillar",
-    "SixIsland_OutcastIsland",
-    "SixIsland_GreenPath",
-    "SixIsland_WaterPath",
-    "SevenIsland_SevaultCanyon",
-    "SevenIsland_TanobyRuins"
+    "FiveIsland_MemorialPillar"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -453,13 +430,6 @@
   "gMapGroup_IndoorRoute25": [
     "Route25_SeaCottage"
   ],
-  "gMapGroup_IndoorSevenIsland": [
-    "SevenIsland_House_Room1",
-    "SevenIsland_House_Room2",
-    "SevenIsland_Mart",
-    "SevenIsland_UnusedHouse",
-    "SevenIsland_Harbor"
-  ],
   "gMapGroup_IndoorOneIsland": [
     "OneIsland_PokemonCenter_1F",
     "OneIsland_PokemonCenter_2F",
@@ -494,23 +464,11 @@
     "FiveIsland_House1",
     "FiveIsland_House2"
   ],
-  "gMapGroup_IndoorSixIsland": [
-    "SixIsland_Harbor",
-    "SixIsland_House",
-    "SixIsland_Mart"
-  ],
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"
   ],
   "gMapGroup_IndoorFiveIslandRoute": [
     "FiveIsland_ResortGorgeous_House"
   ],
-  "gMapGroup_IndoorTwoIslandRoute": [],
-  "gMapGroup_IndoorSixIslandRoute": [
-    "SixIsland_WaterPath_House1",
-    "SixIsland_WaterPath_House2"
-  ],
-  "gMapGroup_IndoorSevenIslandRoute": [
-    "SevenIsland_SevaultCanyon_House"
-  ]
+  "gMapGroup_IndoorTwoIslandRoute": []
 }

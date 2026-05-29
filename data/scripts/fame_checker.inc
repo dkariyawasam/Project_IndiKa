@@ -160,28 +160,12 @@ SaffronCity_PokemonTrainerFanClub_EventScript_PokemonJournalBruno::
 	release
 	end
 
-SevenIsland_SevaultCanyon_EventScript_BlackBelt::
-	lock
-	faceplayer
-	famechecker FAMECHECKER_BRUNO, 5
-	msgbox SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly
-	release
-	end
-
 IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_AGATHA, 1
 	famechecker FAMECHECKER_AGATHA, 2
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs
-	release
-	end
-
-SixIsland_Mart_EventScript_OldWoman::
-	lock
-	faceplayer
-	famechecker FAMECHECKER_AGATHA, 5
-	msgbox SixIsland_Mart_Text_AgathaOldestEverEliteFourMember
 	release
 	end
 

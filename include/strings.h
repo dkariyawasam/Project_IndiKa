@@ -882,8 +882,6 @@ extern const u8 gText_TmCase[];
 extern const u8 gText_BerryPouch_2[];
 extern const u8 gText_FourIsland[];
 extern const u8 gText_FiveIsland[];
-extern const u8 gText_SixIsland[];
-extern const u8 gText_SevenIsland[];
 
 // trade
 extern const u8 gText_IsThisTradeOkay[];

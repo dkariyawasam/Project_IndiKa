@@ -991,7 +991,7 @@ gFameCheckerFlavorTextOriginLocation_Bruno4::
 	.string "TWO ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno5::
-	.string "SEVAULT CANYON$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha0::
 	.string "POKéMON LEAGUE$"
@@ -1003,13 +1003,13 @@ gFameCheckerFlavorTextOriginLocation_Agatha2::
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha3::
-	.string "SEVEN ISLAND$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha4::
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha5::
-	.string "SIX ISLAND$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lance0::
 	.string "POKéMON LEAGUE$"

@@ -192,8 +192,6 @@ const u32 sTilemap_AreaMap_TwoIsland[] = INCBIN_U32("graphics/pokedex/map_two_is
 const u32 sTilemap_AreaMap_ThreeIsland[] = INCBIN_U32("graphics/pokedex/map_three_island.4bpp.lz");
 const u32 sTilemap_AreaMap_FourIsland[] = INCBIN_U32("graphics/pokedex/map_four_island.4bpp.lz");
 const u32 sTilemap_AreaMap_FiveIsland[] = INCBIN_U32("graphics/pokedex/map_five_island.4bpp.lz");
-const u32 sTilemap_AreaMap_SixIsland[] = INCBIN_U32("graphics/pokedex/map_six_island.4bpp.lz");
-const u32 sTilemap_AreaMap_SevenIsland[] = INCBIN_U32("graphics/pokedex/map_seven_island.4bpp.lz");
 const u16 sBlitTiles_WideEllipse[] = INCBIN_U16("graphics/pokedex/blit_wide_ellipse.4bpp");
 
 #include "data/pokemon/pokedex_orders.h"
@@ -737,26 +735,6 @@ static const struct WindowTemplate sWindowTemplate_AreaMap_FiveIsland = {
     .baseBlock = 0x02a8
 };
 
-static const struct WindowTemplate sWindowTemplate_AreaMap_SixIsland = {
-    .bg = 2,
-    .tilemapLeft = 21,
-    .tilemapTop = 13,
-    .width = 4,
-    .height = 4,
-    .paletteNum = 0,
-    .baseBlock = 0x02b8
-};
-
-static const struct WindowTemplate sWindowTemplate_AreaMap_SevenIsland = {
-    .bg = 2,
-    .tilemapLeft = 25,
-    .tilemapTop = 13,
-    .width = 4,
-    .height = 4,
-    .paletteNum = 0,
-    .baseBlock = 0x02c8
-};
-
 struct {
     const struct WindowTemplate * window;
     const u32 * tiles;
@@ -766,8 +744,6 @@ struct {
     {&sWindowTemplate_AreaMap_ThreeIsland, sTilemap_AreaMap_ThreeIsland},
     {&sWindowTemplate_AreaMap_FourIsland,  sTilemap_AreaMap_FourIsland},
     {&sWindowTemplate_AreaMap_FiveIsland,  sTilemap_AreaMap_FiveIsland},
-    {&sWindowTemplate_AreaMap_SixIsland,   sTilemap_AreaMap_SixIsland},
-    {&sWindowTemplate_AreaMap_SevenIsland, sTilemap_AreaMap_SevenIsland},
 };
 
 static const u16 sCategoryPageIconWindowBg[] = INCBIN_U16("graphics/pokedex/page_icon_tilemap.bin");
@@ -3026,7 +3002,7 @@ u8 DexScreen_DrawMonAreaPage(void)
     kantoMapVoff = 4;
     // If any of the postgame islands are unlocked, Kanto map needs to be flush with the
     // top of the screen.
-    for (i = 3; i < 7; i++)
+    for (i = 3; i < 5; i++)
         if ((sPokedexScreenData->unlockedSeviiAreas >> i) & 1)
             kantoMapVoff = 0;
 
@@ -3035,7 +3011,7 @@ u8 DexScreen_DrawMonAreaPage(void)
     SetWindowAttribute(sPokedexScreenData->windowIds[0], WINDOW_TILEMAP_TOP,
                        GetWindowAttribute(sPokedexScreenData->windowIds[0], WINDOW_TILEMAP_TOP) + kantoMapVoff);
     PutWindowTilemap(sPokedexScreenData->windowIds[0]);
-    for (i = 0; i < 7; i++)
+    for (i = 0; i < ARRAY_COUNT(sAreaMapStructs_SeviiIslands); i++)
         if ((sPokedexScreenData->unlockedSeviiAreas >> i) & 1)
         {
             sPokedexScreenData->windowIds[i + 1] = AddWindow(sAreaMapStructs_SeviiIslands[i].window);
