@@ -651,7 +651,7 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
     }, {
         .id = MAPSEC_FUCHSIA_FOREST,
         .name = sMapsecName_FUCHSIA_FOREST,
-        .desc = gText_RegionMap_AreaDesc_BerryForest
+        .desc = gText_RegionMap_AreaDesc_FuchsiaForest
     }, {
         .id = MAPSEC_ICEFALL_CAVE,
         .name = sMapsecName_ICEFALL_CAVE,
@@ -2957,7 +2957,7 @@ static u8 GetDungeonMapsecType(u8 mapsec)
     case MAPSEC_MT_EMBER:
         return FlagGet(FLAG_WORLD_MAP_MT_EMBER_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_FUCHSIA_FOREST:
-        return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+        return FlagGet(FLAG_WORLD_MAP_FUCHSIA_FOREST) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_ICEFALL_CAVE:
         return FlagGet(FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_LOST_CAVE:

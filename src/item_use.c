@@ -720,7 +720,7 @@ void FieldUseFunc_VsSeeker(u8 taskId)
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIRIDIAN_FOREST)
 	      && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIRIDIAN_FOREST)
 	       || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_MT_EMBER_EXTERIOR)
-	       || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_THREE_ISLAND_BERRY_FOREST))))
+	       || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_FUCHSIA_FOREST))))
     {
         PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
     }

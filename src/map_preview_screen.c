@@ -177,10 +177,10 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilemapptr = sMtEmberMapPreviewTilemap,
         .palptr = sMtEmberMapPreviewPalette
     },
-    [MPS_BERRY_FOREST] = {
+    [MPS_FUCHSIA_FOREST] = {
         .mapsec = MAPSEC_FUCHSIA_FOREST,
         .type = MPS_TYPE_FOREST,
-        .flagId = FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST,
+        .flagId = FLAG_WORLD_MAP_FUCHSIA_FOREST,
         .tilesptr = sBerryForestMapPreviewTiles,
         .tilemapptr = sBerryForestMapPreviewTilemap,
         .palptr = sBerryForestMapPreviewPalette

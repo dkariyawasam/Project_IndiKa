@@ -97,14 +97,14 @@
       "x": 12,
       "y": 6,
       "elevation": 3,
-      "dest_map": "MAP_THREE_ISLAND_BERRY_FOREST",
+      "dest_map": "MAP_FUCHSIA_FOREST",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 6,
       "elevation": 3,
-      "dest_map": "MAP_THREE_ISLAND_BERRY_FOREST",
+      "dest_map": "MAP_FUCHSIA_FOREST",
       "dest_warp_id": "0"
     }
   ],

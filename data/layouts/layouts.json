@@ -2330,16 +2330,16 @@
       "blockdata_filepath": "data/layouts/MtEmber_RubyPath_B4F/map.bin"
     },
     {
-      "id": "LAYOUT_THREE_ISLAND_BERRY_FOREST",
-      "name": "ThreeIsland_BerryForest_Layout",
+      "id": "LAYOUT_FUCHSIA_FOREST",
+      "name": "FuchsiaForest_Layout",
       "width": 57,
       "height": 47,
       "border_width": 3,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_ViridianForest",
-      "border_filepath": "data/layouts/ThreeIsland_BerryForest/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland_BerryForest/map.bin"
+      "border_filepath": "data/layouts/FuchsiaForest/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaForest/map.bin"
     },
     {
       "id": "LAYOUT_ONE_ISLAND_POKEMON_CENTER_1F",

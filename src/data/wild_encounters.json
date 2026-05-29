@@ -8137,8 +8137,8 @@
           }
         },
         {
-          "map": "MAP_THREE_ISLAND_BERRY_FOREST",
-          "base_label": "sThreeIslandBerryForest_FireRed",
+          "map": "MAP_FUCHSIA_FOREST",
+          "base_label": "sFuchsiaForest_FireRed",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -8291,8 +8291,8 @@
           }
         },
         {
-          "map": "MAP_THREE_ISLAND_BERRY_FOREST",
-          "base_label": "sThreeIslandBerryForest_LeafGreen",
+          "map": "MAP_FUCHSIA_FOREST",
+          "base_label": "sFuchsiaForest_LeafGreen",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
