@@ -157,10 +157,10 @@
 #define FLAG_0x08F                                         0x08F
 #define FLAG_HIDE_THREE_ISLAND_LONE_BIKER                  0x091
 #define FLAG_0x092                                         0x092
-#define FLAG_HIDE_LOST_CAVE_SELPHY                         0x093
-#define FLAG_HIDE_RESORT_GORGEOUS_SELPHY                   0x094
-#define FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY            0x095
-#define FLAG_HIDE_SELPHYS_BUTLER                           0x096
+#define FLAG_0x093                                         0x093
+#define FLAG_0x094                                         0x094
+#define FLAG_0x095                                         0x095
+#define FLAG_0x096                                         0x096
 #define FLAG_HIDE_FOUR_ISLAND_RIVAL                        0x097
 #define FLAG_0x098                                         0x098
 #define FLAG_HIDE_LUGIA                                    0x09B
@@ -490,9 +490,9 @@
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER                  0x1DB
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_MAX_REPEL              0x1DC
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_CARBOS                 0x1DD
-#define FLAG_HIDE_FIVE_ISLAND_MEADOW_MAX_POTION                 0x1DE
-#define FLAG_HIDE_FIVE_ISLAND_MEADOW_PP_UP                      0x1DF
-#define FLAG_HIDE_FIVE_ISLAND_MEMORIAL_PILLAR_METAL_COAT        0x1E0
+#define FLAG_0x1DE                                               0x1DE
+#define FLAG_0x1DF                                               0x1DF
+#define FLAG_0x1E0                                               0x1E0
 #define FLAG_0x1E1                                               0x1E1
 #define FLAG_0x1E2                                               0x1E2
 #define FLAG_0x1E3                                               0x1E3
@@ -580,7 +580,7 @@
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE                  0x233
 #define FLAG_GOT_SS_TICKET                               0x234
 #define FLAG_GOT_SS_TICKET_DUP                           0x235
-#define FLAG_GOT_TM42_AT_MEMORIAL_PILLAR                 0x236
+#define FLAG_0x236                                       0x236
 #define FLAG_GOT_TM51                                    0x237
 #define FLAG_GOT_TM52                                    0x238
 #define FLAG_GOT_TM53                                    0x239
@@ -743,7 +743,7 @@
 #define FLAG_FOUGHT_TANGROWTH                            0x2D4
 #define FLAG_0x2D5                                       0x2D5
 #define FLAG_0x2D6                                       0x2D6
-#define FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR         0x2D7
+#define FLAG_0x2D7                                       0x2D7
 #define FLAG_LEARNED_YES_NAH_CHANSEY                     0x2D8
 #define FLAG_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1       0x2D9
 #define FLAG_RECOVERED_SAPPHIRE                          0x2DC
@@ -1186,14 +1186,14 @@
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST                 (FLAG_HIDDEN_ITEMS_START + 167)
 #define FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL                                 (FLAG_HIDDEN_ITEMS_START + 168)
 #define FLAG_HIDDEN_ITEM_FOUR_ISLAND_ULTRA_BALL                            (FLAG_HIDDEN_ITEMS_START + 169)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BIG_PEARL             (FLAG_HIDDEN_ITEMS_START + 170)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_RAZZ_BERRY            (FLAG_HIDDEN_ITEMS_START + 171)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_SITRUS_BERRY          (FLAG_HIDDEN_ITEMS_START + 172)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BLUK_BERRY            (FLAG_HIDDEN_ITEMS_START + 173)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_NEST_BALL             (FLAG_HIDDEN_ITEMS_START + 174)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST              (FLAG_HIDDEN_ITEMS_START + 175)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STAR_PIECE            (FLAG_HIDDEN_ITEMS_START + 176)
-#define FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST_2            (FLAG_HIDDEN_ITEMS_START + 177)
+#define FLAG_HIDDEN_ITEM_0xAA                                            (FLAG_HIDDEN_ITEMS_START + 170)
+#define FLAG_HIDDEN_ITEM_0xAB                                            (FLAG_HIDDEN_ITEMS_START + 171)
+#define FLAG_HIDDEN_ITEM_0xAC                                            (FLAG_HIDDEN_ITEMS_START + 172)
+#define FLAG_HIDDEN_ITEM_0xAD                                            (FLAG_HIDDEN_ITEMS_START + 173)
+#define FLAG_HIDDEN_ITEM_0xAE                                            (FLAG_HIDDEN_ITEMS_START + 174)
+#define FLAG_HIDDEN_ITEM_0xAF                                            (FLAG_HIDDEN_ITEMS_START + 175)
+#define FLAG_HIDDEN_ITEM_0xB0                                            (FLAG_HIDDEN_ITEMS_START + 176)
+#define FLAG_HIDDEN_ITEM_0xB1                                            (FLAG_HIDDEN_ITEMS_START + 177)
 #define FLAG_HIDDEN_ITEM_0xB2                                             (FLAG_HIDDEN_ITEMS_START + 178)
 #define FLAG_HIDDEN_ITEM_0xB3                                             (FLAG_HIDDEN_ITEMS_START + 179)
 #define FLAG_HIDDEN_ITEM_0xB4                                             (FLAG_HIDDEN_ITEMS_START + 180)
@@ -1409,7 +1409,7 @@
 #define FLAG_WORLD_MAP_TWO_ISLAND                                   (SYS_FLAGS + 0x9C)
 #define FLAG_WORLD_MAP_THREE_ISLAND                                 (SYS_FLAGS + 0x9D)
 #define FLAG_WORLD_MAP_FOUR_ISLAND                                  (SYS_FLAGS + 0x9E)
-#define FLAG_WORLD_MAP_FIVE_ISLAND                                  (SYS_FLAGS + 0x9F)
+#define FLAG_SYS_0x9F                                               (SYS_FLAGS + 0x9F)
 #define FLAG_SYS_0xA0                                                (SYS_FLAGS + 0xA0)
 #define FLAG_SYS_0xA1                                                (SYS_FLAGS + 0xA1)
 #define FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F                     (SYS_FLAGS + 0xA2)

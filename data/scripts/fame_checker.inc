@@ -135,14 +135,6 @@ CinnabarIsland_Gym_EventScript_BlaineFujiPhoto::
 	releaseall
 	end
 
-FiveIsland_ResortGorgeous_House_EventScript_PokemonJournal::
-	lockall
-	famechecker FAMECHECKER_BLAINE, 5
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureBlaine
-	releaseall
-	end
-
 FourIsland_Mart_EventScript_OldMan::
 	lock
 	faceplayer

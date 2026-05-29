@@ -358,7 +358,7 @@ gSpecials::
 	def_special DoPicboxCancel
 	def_special NullFieldSpecial
 	def_special SeafoamIslandsB4F_CurrentDumpsPlayerOnLand
-	def_special SampleResortGorgeousMonAndReward
+	def_special SamplePokemonRequestMonAndReward
 	def_special CheckAddCoins
 	def_special GetDaycarePokemonCount
 	def_special CloseElevatorCurrentFloorWindow

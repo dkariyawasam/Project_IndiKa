@@ -258,7 +258,6 @@ gStdScriptsEnd::
 	.include "data/maps/TwoIsland/scripts.inc"
 	.include "data/maps/ThreeIsland/scripts.inc"
 	.include "data/maps/FourIsland/scripts.inc"
-	.include "data/maps/FiveIsland/scripts.inc"
 	.include "data/maps/Route1/scripts.inc"
 	.include "data/maps/Route2/scripts.inc"
 	.include "data/maps/Route3/scripts.inc"
@@ -289,10 +288,6 @@ gStdScriptsEnd::
 	.include "data/maps/OneIsland_TreasureBeach/scripts.inc"
 	.include "data/maps/ThreeIsland_BondBridge/scripts.inc"
 	.include "data/maps/ThreeIsland_Port/scripts.inc"
-	.include "data/maps/FiveIsland_ResortGorgeous/scripts.inc"
-	.include "data/maps/FiveIsland_WaterLabyrinth/scripts.inc"
-	.include "data/maps/FiveIsland_Meadow/scripts.inc"
-	.include "data/maps/FiveIsland_MemorialPillar/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_2F/scripts.inc"
 	.include "data/maps/PalletTown_RivalsHouse/scripts.inc"
@@ -436,11 +431,7 @@ gStdScriptsEnd::
 	.include "data/maps/FourIsland_Harbor/scripts.inc"
 	.include "data/maps/FourIsland_House2/scripts.inc"
 	.include "data/maps/FourIsland_Mart/scripts.inc"
-	.include "data/maps/FiveIsland_Harbor/scripts.inc"
-	.include "data/maps/FiveIsland_House1/scripts.inc"
-	.include "data/maps/FiveIsland_House2/scripts.inc"
 	.include "data/maps/ThreeIsland_Harbor/scripts.inc"
-	.include "data/maps/FiveIsland_ResortGorgeous_House/scripts.inc"
 
 	.include "data/maps/ViridianForest/text.inc"
 	.include "data/maps/MtMoon_1F/text.inc"
@@ -542,7 +533,6 @@ gStdScriptsEnd::
 	.include "data/maps/TwoIsland/text.inc"
 	.include "data/maps/ThreeIsland/text.inc"
 	.include "data/maps/FourIsland/text.inc"
-	.include "data/maps/FiveIsland/text.inc"
 	.include "data/maps/Route1/text.inc"
 	.include "data/maps/Route2/text.inc"
 	.include "data/maps/Route3/text.inc"
@@ -573,10 +563,6 @@ gStdScriptsEnd::
 	.include "data/maps/OneIsland_TreasureBeach/text.inc"
 	.include "data/maps/ThreeIsland_BondBridge/text.inc"
 	.include "data/maps/ThreeIsland_Port/text.inc"
-	.include "data/maps/FiveIsland_ResortGorgeous/text.inc"
-	.include "data/maps/FiveIsland_WaterLabyrinth/text.inc"
-	.include "data/maps/FiveIsland_Meadow/text.inc"
-	.include "data/maps/FiveIsland_MemorialPillar/text.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/text.inc"
 	.include "data/maps/PalletTown_PlayersHouse_2F/text.inc"
 	.include "data/maps/PalletTown_RivalsHouse/text.inc"
@@ -696,9 +682,6 @@ gStdScriptsEnd::
 	.include "data/maps/FourIsland_House1/text.inc"
 	.include "data/maps/FourIsland_LoreleisHouse/text.inc"
 	.include "data/maps/FourIsland_Mart/text.inc"
-	.include "data/maps/FiveIsland_House1/text.inc"
-	.include "data/maps/FiveIsland_House2/text.inc"
-	.include "data/maps/FiveIsland_ResortGorgeous_House/text.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
@@ -939,9 +922,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
 	setflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
 	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
-	setflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
-	setflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
-	setflag FLAG_HIDE_SELPHYS_BUTLER
 	setflag FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL
 	setflag FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL
 	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL
