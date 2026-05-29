@@ -293,11 +293,6 @@ static const struct MenuAction sMultichoiceList_Excellent_NotSoBad[] = {
     { gText_NotSoBad }
 };
 
-static const struct MenuAction sMultichoiceList_RightLeft[] = {
-    { gText_Right },
-    { gText_Left }
-};
-
 static const struct MenuAction sMultichoiceList_LeftRight[] = {
     { gText_Left },
     { gText_Right }
@@ -591,7 +586,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_CELADON_VENDING_MACHINE]                    = MULTICHOICE(sMultichoiceList_CeladonVendingMachine),
     [MULTICHOICE_GAME_CORNER_COIN_PURCHASE_COUNTER]          = MULTICHOICE(sMultichoiceList_GameCornerCoinPurchaseCounter),
     [MULTICHOICE_EXCELLENT_NOT_SO_BAD]                       = MULTICHOICE(sMultichoiceList_Excellent_NotSoBad),
-    [MULTICHOICE_RIGHT_LEFT]                                 = MULTICHOICE(sMultichoiceList_RightLeft),
     [MULTICHOICE_GAME_CORNER_TMPRIZES]                       = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes),
     [MULTICHOICE_GAME_CORNER_TMPRIZES_2]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes2),
     [MULTICHOICE_GAME_CORNER_TMPRIZES_3]                     = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes3),
