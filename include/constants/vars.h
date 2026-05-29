@@ -97,13 +97,13 @@
 #define VAR_ENIGMA_BERRY_AVAILABLE         0x4033
 
 #define VAR_0x4034                         0x4034
-#define VAR_RESORT_GOREGEOUS_STEP_COUNTER  0x4035
-#define VAR_RESORT_GORGEOUS_REQUESTED_MON  0x4036
+#define VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER  0x4035
+#define VAR_POKEMON_REQUEST_REWARD_MON           0x4036
 #define VAR_PC_BOX_TO_SEND_MON             0x4037
 #define VAR_FANCLUB_FAN_COUNTER            0x4038
 #define VAR_FANCLUB_LOSE_FAN_TIMER         0x4039
 #define VAR_ELEVATOR_FLOOR                 0x403A
-#define VAR_RESORT_GORGEOUS_REWARD         0x403B
+#define VAR_POKEMON_REQUEST_REWARD_ITEM          0x403B
 #define VAR_0x403C                         0x403C // Set to 0x0302, never read
 #define VAR_HERACROSS_SIZE_RECORD          0x403D
 #define VAR_0x403E                         0x403E
@@ -176,7 +176,7 @@
 #define VAR_MAP_SCENE_ICEFALL_CAVE_BACK                                        0x4080
 #define VAR_MAP_SCENE_SAFFRON_CITY_DOJO                                        0x4081
 #define VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10                             0x4083
-#define VAR_MAP_SCENE_FIVE_ISLAND_RESORT_GORGEOUS                              0x4084
+#define VAR_MAP_SCENE_0x4084                                                   0x4084
 #define VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR                                  0x4085
 #define VAR_MAP_SCENE_FOUR_ISLAND                                              0x4086
 #define VAR_0x4087                                                             0x4087

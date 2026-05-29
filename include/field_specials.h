@@ -18,7 +18,7 @@ u16 GetHiddenItemAttr(u32 hiddenItem, u8 attr);
 u8 GetUnlockedSeviiAreas(void);
 u32 GetPlayerTrainerId(void);
 void RunMassageCooldownStepCounter(void);
-void IncrementResortGorgeousStepCounter(void);
+void IncrementPokemonRequestRewardStepCounter(void);
 void ResetCyclingRoadChallengeData(void);
 void ResetFieldTasksArgs(void);
 bool8 UsedPokemonCenterWarp(void);

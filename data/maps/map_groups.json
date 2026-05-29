@@ -35,7 +35,6 @@
     "gMapGroup_IndoorTwoIsland",
     "gMapGroup_IndoorThreeIsland",
     "gMapGroup_IndoorFourIsland",
-    "gMapGroup_IndoorFiveIsland",
     "gMapGroup_IndoorThreeIslandRoute",
     "gMapGroup_IndoorFiveIslandRoute",
     "gMapGroup_IndoorTwoIslandRoute"
@@ -218,7 +217,6 @@
     "TwoIsland",
     "ThreeIsland",
     "FourIsland",
-    "FiveIsland",
     "Route1",
     "Route2",
     "Route3",
@@ -248,11 +246,7 @@
     "OneIsland_KindleRoad",
     "OneIsland_TreasureBeach",
     "ThreeIsland_BondBridge",
-    "ThreeIsland_Port",
-    "FiveIsland_ResortGorgeous",
-    "FiveIsland_WaterLabyrinth",
-    "FiveIsland_Meadow",
-    "FiveIsland_MemorialPillar"
+    "ThreeIsland_Port"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -459,16 +453,8 @@
     "FourIsland_House2",
     "FourIsland_Mart"
   ],
-  "gMapGroup_IndoorFiveIsland": [
-    "FiveIsland_Harbor",
-    "FiveIsland_House1",
-    "FiveIsland_House2"
-  ],
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"
-  ],
-  "gMapGroup_IndoorFiveIslandRoute": [
-    "FiveIsland_ResortGorgeous_House"
   ],
   "gMapGroup_IndoorTwoIslandRoute": []
 }

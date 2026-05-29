@@ -820,7 +820,7 @@ gFameCheckerFlavorTextOriginLocation_Daisy1::
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy2::
-	.string "WATER LABYRINTH$"
+	.string "PALLET TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy3::
 	.string "VIRIDIAN CITY$"
@@ -955,7 +955,7 @@ gFameCheckerFlavorTextOriginLocation_Blaine4::
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine5::
-	.string "RESORT GORGEOUS$"
+	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei0::
 	.string "POKéMON LEAGUE$"

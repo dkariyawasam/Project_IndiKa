@@ -486,18 +486,6 @@ OneIsland_KindleRoad_EventScript_ItemCarbos::
 	finditem ITEM_CARBOS
 	end
 
-FiveIsland_Meadow_EventScript_ItemMaxPotion::
-	finditem ITEM_MAX_POTION
-	end
-
-FiveIsland_Meadow_EventScript_ItemPPUp::
-	finditem ITEM_PP_UP
-	end
-
-FiveIsland_MemorialPillar_EventScript_ItemMetalCoat::
-	finditem ITEM_METAL_COAT
-	end
-
 ThreeIsland_BerryForest_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
