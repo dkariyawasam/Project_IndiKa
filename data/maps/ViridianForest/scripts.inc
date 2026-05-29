@@ -51,7 +51,13 @@ ViridianForest_EventScript_Erika::
 	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
 	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 2, ViridianForest_EventScript_ErikaCheckForRoot
 	setvar VAR_ERIKA_TRIAL_STATE, 2
+	msgbox ViridianForest_Text_ErikaLookingForRoot
+	release
+	end
+
+ViridianForest_EventScript_ErikaCheckForRoot::
 	checkitem ITEM_ENERGY_ROOT, 1
 	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_ErikaHasRoot
 	msgbox ViridianForest_Text_ErikaLookingForRoot
@@ -68,6 +74,7 @@ ViridianForest_EventScript_ErikaHasRoot::
 	msgbox ViridianForest_Text_ErikaShownRoot
 	special HasEnoughMonsForDoubleBattle
 	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, ViridianForest_EventScript_NeedTwoPokemon
+	goto_if_unset FLAG_HIDE_CELADON_CITY_GYM_GUIDE, ViridianForest_EventScript_ErikaAskChallenge
 	closemessage
 	applymovement LOCALID_PLAYER, ViridianForest_Movement_PlayerStepAsideForGuide
 	waitmovement 0
@@ -76,8 +83,15 @@ ViridianForest_EventScript_ErikaHasRoot::
 	applymovement LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, ViridianForest_Movement_GymGuideArrive
 	waitmovement 0
 	msgbox ViridianForest_Text_GymGuideFoundErika
-	msgbox ViridianForest_Text_ErikaChallenge
+
+ViridianForest_EventScript_ErikaAskChallenge::
+	msgbox ViridianForest_Text_ErikaChallenge, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ViridianForest_EventScript_ErikaDeclineChallenge
 	goto ViridianForest_EventScript_ErikaBattlePicker
+	end
+
+ViridianForest_EventScript_ErikaDeclineChallenge::
+	release
 	end
 
 ViridianForest_EventScript_ErikaBattlePicker::
