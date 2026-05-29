@@ -169,8 +169,8 @@ const u32 gMetatileAttributes_Dummy3[] = INCBIN_U32("data/tilesets/secondary/dum
 const u16 gMetatiles_Dummy4[] = INCBIN_U16("data/tilesets/secondary/dummy_4/metatiles.bin");
 const u32 gMetatileAttributes_Dummy4[] = INCBIN_U32("data/tilesets/secondary/dummy_4/metatile_attributes.bin");
 
-const u16 gMetatiles_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember/metatiles.bin");
-const u32 gMetatileAttributes_MtEmber[] = INCBIN_U32("data/tilesets/secondary/mt_ember/metatile_attributes.bin");
+const u16 gMetatiles_CinnabarVolcano[] = INCBIN_U16("data/tilesets/secondary/mt_ember/metatiles.bin");
+const u32 gMetatileAttributes_CinnabarVolcano[] = INCBIN_U32("data/tilesets/secondary/mt_ember/metatile_attributes.bin");
 
 const u16 gMetatiles_BerryForest[] = INCBIN_U16("data/tilesets/secondary/berry_forest/metatiles.bin");
 const u32 gMetatileAttributes_BerryForest[] = INCBIN_U32("data/tilesets/secondary/berry_forest/metatile_attributes.bin");
