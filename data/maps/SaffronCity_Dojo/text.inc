@@ -100,3 +100,20 @@ SaffronCity_Dojo_Text_GoesAroundComesAround::
 SaffronCity_Dojo_Text_FightingDojo::
     .string "FIGHTING DOJO$"
 
+Text_SwordsDanceTeach::
+    .string "A strong stance lets strength\n"
+    .string "rise sharper and sharper.\p"
+    .string "That is the heart of\n"
+    .string "SWORDS DANCE.\p"
+    .string "Should I teach it to one\n"
+    .string "of your POKéMON?$"
+
+Text_SwordsDanceDeclined::
+    .string "A calm blade can wait.$"
+
+Text_SwordsDanceWhichMon::
+    .string "Which POKéMON should I teach\n"
+    .string "SWORDS DANCE to?$"
+
+Text_SwordsDanceTaught::
+    .string "Good. Keep that rhythm sharp.$"

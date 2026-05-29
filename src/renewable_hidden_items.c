@@ -158,40 +158,6 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
         }
     },
     {
-        .mapGroup = MAP_GROUP(MAP_SEVEN_ISLAND_TANOBY_RUINS),
-        .mapNum = MAP_NUM(MAP_SEVEN_ISLAND_TANOBY_RUINS),
-        .rare = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_4),
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE),
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_2),
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_3),
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .uncommon = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .common = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
-    },
-    {
         .mapGroup = MAP_GROUP(MAP_MT_MOON_B1F),
         .mapNum = MAP_NUM(MAP_MT_MOON_B1F),
         .rare = {
@@ -414,74 +380,6 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
         },
         .common = {
             NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
-    },
-    {
-        .mapGroup = MAP_GROUP(MAP_SIX_ISLAND_OUTCAST_ISLAND),
-        .mapNum = MAP_NUM(MAP_SIX_ISLAND_OUTCAST_ISLAND),
-        .rare = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_STAR_PIECE),
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_NET_BALL),
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .uncommon = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .common = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
-    },
-    {
-        .mapGroup = MAP_GROUP(MAP_SIX_ISLAND_GREEN_PATH),
-        .mapNum = MAP_NUM(MAP_SIX_ISLAND_GREEN_PATH),
-        .rare = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .uncommon = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .common = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_SIX_ISLAND_GREEN_PATH_ULTRA_BALL),
             NO_ITEM,
             NO_ITEM,
             NO_ITEM,

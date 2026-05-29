@@ -498,30 +498,6 @@ FiveIsland_MemorialPillar_EventScript_ItemMetalCoat::
 	finditem ITEM_METAL_COAT
 	end
 
-SixIsland_OutcastIsland_EventScript_ItemPPUp::
-	finditem ITEM_PP_UP
-	end
-
-SixIsland_WaterPath_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
-	end
-
-SixIsland_WaterPath_EventScript_ItemDragonScale::
-	finditem ITEM_DRAGON_SCALE
-	end
-
-SevenIsland_SevaultCanyon_EventScript_ItemKingsRock::
-	finditem ITEM_KINGS_ROCK
-	end
-
-SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
-	end
-
-SevenIsland_SevaultCanyon_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
-	end
-
 ThreeIsland_BerryForest_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
@@ -580,10 +556,6 @@ FiveIsland_LostCave_Room13_EventScript_ItemMaxRevive::
 
 FiveIsland_LostCave_Room14_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
-	end
-
-SevenIsland_SevaultCanyon_House_EventScript_ItemLuckyPunch::
-	finditem ITEM_LUCKY_PUNCH
 	end
 
 SilphCo_4F_EventScript_ItemTM41::

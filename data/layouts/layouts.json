@@ -2186,30 +2186,6 @@
       "blockdata_filepath": "data/layouts/FiveIsland/map.bin"
     },
     {
-      "id": "LAYOUT_SEVEN_ISLAND",
-      "name": "SevenIsland_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SevenIsland/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland/map.bin"
-    },
-    {
-      "id": "LAYOUT_SIX_ISLAND",
-      "name": "SixIsland_Layout",
-      "width": 24,
-      "height": 30,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SixIsland/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland/map.bin"
-    },
-    {
       "id": "LAYOUT_ONE_ISLAND_KINDLE_ROAD",
       "name": "OneIsland_KindleRoad_Layout",
       "width": 24,
@@ -2258,54 +2234,6 @@
       "blockdata_filepath": "data/layouts/ThreeIsland_Port/map.bin"
     },
     {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_6",
-      "name": "Prototype_SeviiIsle_6_Layout",
-      "width": 1,
-      "height": 1,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_6/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_6/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_7",
-      "name": "Prototype_SeviiIsle_7_Layout",
-      "width": 1,
-      "height": 1,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_7/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_7/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_8",
-      "name": "Prototype_SeviiIsle_8_Layout",
-      "width": 84,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_8/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_8/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_9",
-      "name": "Prototype_SeviiIsle_9_Layout",
-      "width": 24,
-      "height": 60,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_9/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_9/map.bin"
-    },
-    {
       "id": "LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS",
       "name": "FiveIsland_ResortGorgeous_Layout",
       "width": 72,
@@ -2352,66 +2280,6 @@
       "secondary_tileset": "gTileset_SeviiIslands45",
       "border_filepath": "data/layouts/FiveIsland_MemorialPillar/border.bin",
       "blockdata_filepath": "data/layouts/FiveIsland_MemorialPillar/map.bin"
-    },
-    {
-      "id": "LAYOUT_SIX_ISLAND_OUTCAST_ISLAND",
-      "name": "SixIsland_OutcastIsland_Layout",
-      "width": 24,
-      "height": 80,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SixIsland_OutcastIsland/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_OutcastIsland/map.bin"
-    },
-    {
-      "id": "LAYOUT_SIX_ISLAND_GREEN_PATH",
-      "name": "SixIsland_GreenPath_Layout",
-      "width": 72,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SixIsland_GreenPath/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_GreenPath/map.bin"
-    },
-    {
-      "id": "LAYOUT_SIX_ISLAND_WATER_PATH",
-      "name": "SixIsland_WaterPath_Layout",
-      "width": 24,
-      "height": 100,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SixIsland_WaterPath/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_WaterPath/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON",
-      "name": "SevenIsland_SevaultCanyon_Layout",
-      "width": 24,
-      "height": 80,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SevenIsland_SevaultCanyon/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_SevaultCanyon/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS",
-      "name": "SevenIsland_TanobyRuins_Layout",
-      "width": 144,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands67",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins/map.bin"
     },
     {
       "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_22",
@@ -2484,30 +2352,6 @@
       "secondary_tileset": "gTileset_FanClubDaycare",
       "border_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_HOUSE_ROOM1_DOOR_OPEN",
-      "name": "SevenIsland_House_Room1_DoorOpen_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/SevenIsland_House_Room1_DoorOpen/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_House_Room1_DoorOpen/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2",
-      "name": "SevenIsland_House_Room2_Layout",
-      "width": 12,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/SevenIsland_House_Room2/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_House_Room2/map.bin"
     },
     {
       "id": "LAYOUT_VIRIDIAN_CITY_SCHOOL",
@@ -2906,18 +2750,6 @@
       "blockdata_filepath": "data/layouts/OneIsland_PokemonCenter_2F/map.bin"
     },
     {
-      "id": "LAYOUT_SIX_ISLAND_PATTERN_BUSH",
-      "name": "SixIsland_PatternBush_Layout",
-      "width": 60,
-      "height": 32,
-      "border_width": 3,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_ViridianForest",
-      "border_filepath": "data/layouts/SixIsland_PatternBush/border.bin",
-      "blockdata_filepath": "data/layouts/SixIsland_PatternBush/map.bin"
-    },
-    {
       "id": "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL",
       "name": "ThreeIsland_DunsparceTunnel_Layout",
       "width": 30,
@@ -3122,54 +2954,6 @@
       "blockdata_filepath": "data/layouts/FiveIsland_LostCave_Room14/map.bin"
     },
     {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_MoneanChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_MoneanChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_MoneanChamber/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_LiptooChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_LiptooChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_LiptooChamber/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_WeepthChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_WeepthChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_WeepthChamber/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_ScufibChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_ScufibChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_ScufibChamber/map.bin"
-    },
-    {
       "id": "LAYOUT_ROCK_TUNNEL_B2F",
       "name": "RockTunnel_B2F_Layout",
       "width": 32,
@@ -3180,18 +2964,6 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/RockTunnel_B2F/border.bin",
       "blockdata_filepath": "data/layouts/RockTunnel_B2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
-      "name": "SevenIsland_SevaultCanyon_TanobyKey_Layout",
-      "width": 15,
-      "height": 16,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_DiglettsCave",
-      "border_filepath": "data/layouts/SevenIsland_SevaultCanyon_TanobyKey/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_SevaultCanyon_TanobyKey/map.bin"
     },
     {
       "id": "LAYOUT_NAVEL_ROCK_EXTERIOR",
@@ -3422,30 +3194,6 @@
       "blockdata_filepath": "data/layouts/NavelRock_BasePath_B11F/map.bin"
     },
     {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_RixyChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_RixyChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_RixyChamber/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER",
-      "name": "SevenIsland_TanobyRuins_ViapoisChamber_Layout",
-      "width": 23,
-      "height": 17,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_TanobyRuins",
-      "border_filepath": "data/layouts/SevenIsland_TanobyRuins_ViapoisChamber/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_TanobyRuins_ViapoisChamber/map.bin"
-    },
-    {
       "id": "LAYOUT_NAVEL_ROCK_B1F",
       "name": "NavelRock_B1F_Layout",
       "width": 17,
@@ -3468,18 +3216,6 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/NavelRock_Fork/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_Fork/map.bin"
-    },
-    {
-      "id": "LAYOUT_SEVEN_ISLAND_HOUSE_ROOM1",
-      "name": "SevenIsland_House_Room1_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/SevenIsland_House_Room1/border.bin",
-      "blockdata_filepath": "data/layouts/SevenIsland_House_Room1/map.bin"
     },
     {
       "id": "LAYOUT_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",

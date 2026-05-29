@@ -161,7 +161,7 @@
 #define VAR_MAP_SCENE_CINNABAR_ISLAND                                          0x4071
 #define VAR_MAP_SCENE_ROUTE21_NORTH                                            0x4072
 #define VAR_MAP_SCENE_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB                    0x4073
-#define VAR_MAP_SCENE_SEVEN_ISLAND_HOUSE_ROOM1                                 0x4074
+#define VAR_MAP_SCENE_0x4074                                                   0x4074
 #define VAR_MAP_SCENE_ONE_ISLAND_HARBOR                                        0x4075
 #define VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F                             0x4076
 #define VAR_MAP_SCENE_ROUTE20                                                  0x4077

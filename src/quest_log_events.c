@@ -454,9 +454,7 @@ static const u16 sWorldMapFlags[] =
     FLAG_WORLD_MAP_TWO_ISLAND,
     FLAG_WORLD_MAP_THREE_ISLAND,
     FLAG_WORLD_MAP_FOUR_ISLAND,
-    FLAG_WORLD_MAP_FIVE_ISLAND,
-    FLAG_WORLD_MAP_SEVEN_ISLAND,
-    FLAG_WORLD_MAP_SIX_ISLAND
+    FLAG_WORLD_MAP_FIVE_ISLAND
 };
 
 void SetQuestLogEvent(u16 eventId, const u16 * data)
@@ -555,12 +553,6 @@ static bool8 InQuestLogDisabledLocation(void)
     // In pokemon trainer fan club
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB)
       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB))
-        return TRUE;
-
-    // In E-Reader house
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SEVEN_ISLAND_HOUSE_ROOM1) &&
-        (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SEVEN_ISLAND_HOUSE_ROOM1)
-      || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SEVEN_ISLAND_HOUSE_ROOM2)))
         return TRUE;
 
     // In elevator

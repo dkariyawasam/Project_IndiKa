@@ -1,7 +1,0 @@
-SixIsland_OutcastIsland_MapScripts::
-	.byte 0
-
-SixIsland_OutcastIsland_EventScript_Rocket::
-	msgbox SixIsland_OutcastIsland_Text_RocketIntro, MSGBOX_DEFAULT
-	msgbox SixIsland_OutcastIsland_Text_RocketPostBattle, MSGBOX_AUTOCLOSE
-	end
