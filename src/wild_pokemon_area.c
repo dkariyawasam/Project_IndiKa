@@ -110,25 +110,6 @@ static const u16 sDexAreas_Sevii5[][2] = {
 	{ MAPSEC_LOST_CAVE,        DEX_AREA_LOST_CAVE }    
 };
 
-static const u16 sDexAreas_Sevii6[][2] = {
-	{ MAPSEC_OUTCAST_ISLAND, DEX_AREA_OUTCAST_ISLAND },
-	{ MAPSEC_GREEN_PATH,     DEX_AREA_GREEN_PATH },
-	{ MAPSEC_WATER_PATH,     DEX_AREA_WATER_PATH },
-	{ MAPSEC_PATTERN_BUSH,   DEX_AREA_PATTERN_BUSH },
-	{ MAPSEC_ALTERING_CAVE,  DEX_AREA_ALTERING_CAVE }    
-};
-
-static const u16 sDexAreas_Sevii7[][2] = {
-	{ MAPSEC_SEVAULT_CANYON,  DEX_AREA_SEVAULT_CANYON },
-	{ MAPSEC_TANOBY_RUINS,    DEX_AREA_TANOBY_RUINS },
-	{ MAPSEC_MONEAN_CHAMBER,  DEX_AREA_TANOBY_CHAMBER },
-	{ MAPSEC_LIPTOO_CHAMBER,  DEX_AREA_TANOBY_CHAMBER },
-	{ MAPSEC_WEEPTH_CHAMBER,  DEX_AREA_TANOBY_CHAMBER },
-	{ MAPSEC_SCUFIB_CHAMBER,  DEX_AREA_TANOBY_CHAMBER },
-	{ MAPSEC_RIXY_CHAMBER,    DEX_AREA_TANOBY_CHAMBER },
-	{ MAPSEC_VIAPOIS_CHAMBER, DEX_AREA_TANOBY_CHAMBER }    
-};
-
 static const struct
 {
     const u16 (*table)[2];
@@ -136,11 +117,9 @@ static const struct
 } sSeviiDexAreas[] = {
     { sDexAreas_Sevii1, ARRAY_COUNT(sDexAreas_Sevii1) },
     { sDexAreas_Sevii2, ARRAY_COUNT(sDexAreas_Sevii2) },
-    { sDexAreas_Sevii3, ARRAY_COUNT(sDexAreas_Sevii3) },
-    { sDexAreas_Sevii4, ARRAY_COUNT(sDexAreas_Sevii4) },
-    { sDexAreas_Sevii5, ARRAY_COUNT(sDexAreas_Sevii5) },
-    { sDexAreas_Sevii6, ARRAY_COUNT(sDexAreas_Sevii6) },
-    { sDexAreas_Sevii7, ARRAY_COUNT(sDexAreas_Sevii7) }
+	{ sDexAreas_Sevii3, ARRAY_COUNT(sDexAreas_Sevii3) },
+	{ sDexAreas_Sevii4, ARRAY_COUNT(sDexAreas_Sevii4) },
+	{ sDexAreas_Sevii5, ARRAY_COUNT(sDexAreas_Sevii5) }
 };
 
 static const struct RoamerPair sRoamerPairs[] = {

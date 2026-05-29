@@ -1501,10 +1501,6 @@ u8 GetUnlockedSeviiAreas(void)
         result |= 1 << 3;
     if (FlagGet(FLAG_WORLD_MAP_FIVE_ISLAND) == TRUE)
         result |= 1 << 4;
-    if (FlagGet(FLAG_WORLD_MAP_SIX_ISLAND) == TRUE)
-        result |= 1 << 5;
-    if (FlagGet(FLAG_WORLD_MAP_SEVEN_ISLAND) == TRUE)
-        result |= 1 << 6;
     return result;
 }
 
@@ -1587,9 +1583,7 @@ static const u8 sMartMaps[][3] = {
     {MAP(MAP_CINNABAR_ISLAND_MART), 1},
     {MAP(MAP_SAFFRON_CITY_MART),    1},
     {MAP(MAP_THREE_ISLAND_MART),    1},
-    {MAP(MAP_FOUR_ISLAND_MART),     1},
-    {MAP(MAP_SEVEN_ISLAND_MART),    1},
-    {MAP(MAP_SIX_ISLAND_MART),      1}
+    {MAP(MAP_FOUR_ISLAND_MART),     1}
 };
 
 u8 GetMartClerkObjectId(void)

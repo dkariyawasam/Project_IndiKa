@@ -232,7 +232,7 @@ EventScript_SubstituteTaught::
 	release
 	end
 
-SevenIsland_EventScript_SwordsDanceTutor::
+SaffronCity_Dojo_EventScript_SwordsDanceTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_TUTOR_SWORDS_DANCE, EventScript_SwordsDanceTaught
