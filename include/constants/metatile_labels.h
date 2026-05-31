@@ -32,6 +32,9 @@
 // gTileset_CinnabarIsland
 #define METATILE_CinnabarIsland_LabDoor  0x2AD
 
+// gTileset_CinnabarVolcano
+#define METATILE_CinnabarVolcano_CaveEntrance  0x346
+
 // gTileset_DepartmentStore
 #define METATILE_DepartmentStore_ElevatorDoor  0x28D
 
@@ -80,9 +83,6 @@
 // gTileset_Mart
 #define METATILE_Mart_CounterMid_Bottom  0x2C0
 #define METATILE_Mart_CounterMid_Top     0x2BF
-
-// gTileset_CinnabarVolcano
-#define METATILE_CinnabarVolcano_CaveEntrance  0x346
 
 // gTileset_PalletTown
 #define METATILE_PalletTown_Door         0x2A3

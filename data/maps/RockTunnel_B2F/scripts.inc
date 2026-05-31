@@ -1,6 +1,16 @@
 RockTunnel_B2F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RockTunnel_B2F_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, RockTunnel_B2F_OnWarp
 	map_script MAP_SCRIPT_ON_TRANSITION, RockTunnel_B2F_OnTransition
 	.byte 0
+
+RockTunnel_B2F_OnFrame::
+	map_script_2 VAR_TEMP_1, 1, RockTunnel_B2F_EventScript_FacePlayerUpAfterPowerPlant
+	.2byte 0
+
+RockTunnel_B2F_OnWarp::
+	map_script_2 VAR_TEMP_1, 1, RockTunnel_B2F_EventScript_FacePlayerUpAfterPowerPlant
+	.2byte 0
 
 RockTunnel_B2F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCK_TUNNEL_1F
@@ -16,6 +26,11 @@ RockTunnel_B2F_OnTransition::
 
 RockTunnel_B2F_EventScript_HideMisty::
 	setflag FLAG_HIDE_POWER_PLANT_MISTY
+	end
+
+RockTunnel_B2F_EventScript_FacePlayerUpAfterPowerPlant::
+	setvar VAR_TEMP_1, 0
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
 RockTunnel_B2F_EventScript_PlaceMistyAtGenerator::
@@ -50,7 +65,7 @@ RockTunnel_B2F_EventScript_PlaceMistyAtThirdSection::
 	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 52, 15
 	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 52, 15
 	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
-	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_DOWN
 	addobject LOCALID_ROCK_TUNNEL_MISTY
 	end
 
@@ -276,6 +291,8 @@ RockTunnel_B2F_EventScript_MistyAtFinalGenerator::
 	closemessage
 	applymovement LOCALID_PLAYER, RockTunnel_B2F_Movement_PlayerMakeWayForMisty
 	waitmovement 0
+	applymovement LOCALID_PLAYER, RockTunnel_B2F_Movement_PlayerWatchMistyLeave
+	waitmovement 0
 	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyLeaveFinalGenerator
 	waitmovement 0
 	setvar VAR_MISTY_TRIAL_STATE, 9
@@ -311,6 +328,11 @@ RockTunnel_B2F_EventScript_WarpToThirdSection::
 
 RockTunnel_B2F_EventScript_WarpToSecondSection::
 	warp MAP_ROCK_TUNNEL_B2F, 27, 57
+	waitstate
+	end
+
+RockTunnel_B2F_EventScript_WarpToPowerPlant::
+	warp MAP_POWER_PLANT, 5, 3
 	waitstate
 	end
 
@@ -575,6 +597,10 @@ RockTunnel_B2F_Movement_MistyReturnFromLowerWaterfall::
 RockTunnel_B2F_Movement_PlayerMakeWayForMisty::
 	walk_right
 	walk_up
+	step_end
+
+RockTunnel_B2F_Movement_PlayerWatchMistyLeave::
+	walk_in_place_faster_down
 	step_end
 
 RockTunnel_B2F_Movement_MistyLeaveFinalGenerator::
