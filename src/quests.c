@@ -2433,16 +2433,23 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 			case SUB_QUEST_MISTY:
 				switch (VarGet(VAR_MISTY_TRIAL_STATE))
 				{
-					case 1:
 					default:
+						return sText_Empty;
+					case 1:
 						return gText_MistyTrialPhase1;
 					case 2:
-						return gText_MistyTrialPhase2;
 					case 3:
-						return gText_MistyTrialPhase3;
 					case 4:
-						return gText_MistyTrialPhase4;
 					case 5:
+					case 6:
+					case 7:
+					case 8:
+						return gText_MistyTrialPhase2;
+					case 9:
+						return gText_MistyTrialPhase3;
+					case 10:
+						return gText_MistyTrialPhase4;
+					case 11:
 						return gText_MistyTrialPhase5;
 				}
 			case SUB_QUEST_LTSURGE:

@@ -1540,10 +1540,10 @@ const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwithness a
 const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
-const u8 gText_MistyTrialPhase2[] = _("Scout the POWER STATION ahead\nand report back to MISTY.");
-const u8 gText_MistyTrialPhase3[] = _("Meet MISTY by the generator\ninside ROCK TUNNEL.");
-const u8 gText_MistyTrialPhase4[] = _("MISTY fixed one generator and\nfollowed the current farther in.");
-const u8 gText_MistyTrialPhase5[] = _("MISTY's GYM trial is complete.");
+const u8 gText_MistyTrialPhase2[] = _("MISTY asked you to scout the\ncurrents inside ROCK TUNNEL.");
+const u8 gText_MistyTrialPhase3[] = _("MISTY returned to CERULEAN GYM.\nChallenge her.");
+const u8 gText_MistyTrialPhase4[] = _("MISTY spoke of a POLIWAG that\nchanged through trust.");
+const u8 gText_MistyTrialPhase5[] = _("Evolution confirmed through\nMISTY's POLITOED.");
 
 const u8 gText_LtSurgeTrialPhase1[] = _("LT. SURGE is training in\nDIGLETT'S CAVE.");
 const u8 gText_LtSurgeTrialPhase2[] = _("Find LT. SURGE in DIGLETT'S CAVE.");
