@@ -2872,7 +2872,7 @@
     {
       "id": "LAYOUT_ROCK_TUNNEL_B2F",
       "name": "RockTunnel_B2F_Layout",
-      "width": 32,
+      "width": 64,
       "height": 64,
       "border_width": 2,
       "border_height": 2,

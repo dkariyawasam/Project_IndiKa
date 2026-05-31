@@ -4,7 +4,9 @@ RockTunnel_B2F_MapScripts::
 
 RockTunnel_B2F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCK_TUNNEL_1F
-	goto_if_ge VAR_MISTY_TRIAL_STATE, 7, RockTunnel_B2F_EventScript_HideMisty
+	goto_if_ge VAR_MISTY_TRIAL_STATE, 9, RockTunnel_B2F_EventScript_HideMisty
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 8, RockTunnel_B2F_EventScript_PlaceMistyAtFinalGenerator
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 7, RockTunnel_B2F_EventScript_PlaceMistyAtThirdSection
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 6, RockTunnel_B2F_EventScript_PlaceMistyAtSecondGenerator
 	goto_if_ge VAR_MISTY_TRIAL_STATE, 4, RockTunnel_B2F_EventScript_PlaceMistyAtLowerFalls
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 3, RockTunnel_B2F_EventScript_PlaceMistyAtGenerator
@@ -43,6 +45,24 @@ RockTunnel_B2F_EventScript_PlaceMistyAtSecondGenerator::
 	addobject LOCALID_ROCK_TUNNEL_MISTY
 	end
 
+RockTunnel_B2F_EventScript_PlaceMistyAtThirdSection::
+	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 52, 15
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 52, 15
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_RIGHT
+	addobject LOCALID_ROCK_TUNNEL_MISTY
+	end
+
+RockTunnel_B2F_EventScript_PlaceMistyAtFinalGenerator::
+	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 42, 22
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 42, 22
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_LOOK_AROUND
+	addobject LOCALID_ROCK_TUNNEL_MISTY
+	end
+
 RockTunnel_B2F_EventScript_Misty::
 	lock
 	faceplayer
@@ -53,6 +73,8 @@ RockTunnel_B2F_EventScript_Misty::
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 4, RockTunnel_B2F_EventScript_MistyLowerScoutRequest
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 5, RockTunnel_B2F_EventScript_LowerChooseDirection
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 6, RockTunnel_B2F_EventScript_MistyAtSecondGenerator
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 7, RockTunnel_B2F_EventScript_MistyAtThirdSection
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 8, RockTunnel_B2F_EventScript_MistyAtFinalGenerator
 	goto RockTunnel_B2F_EventScript_MistyScoutRequest
 
 RockTunnel_B2F_EventScript_MistyFromPlatform::
@@ -192,6 +214,77 @@ RockTunnel_B2F_EventScript_MistyAtSecondGenerator::
 	release
 	end
 
+RockTunnel_B2F_EventScript_MistySecondGeneratorFromEdge::
+	lock
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	goto_if_ne VAR_MISTY_TRIAL_STATE, 6, RockTunnel_B2F_EventScript_PlatformNoResponse
+	msgbox RockTunnel_B2F_Text_MistySecondGeneratorFixed
+	closemessage
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyStepOffSecondGenerator
+	waitmovement 0
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistySwimFromSecondGenerator
+	waitmovement 0
+	setvar VAR_MISTY_TRIAL_STATE, 7
+	setflag FLAG_HIDE_POWER_PLANT_MISTY
+	removeobject LOCALID_ROCK_TUNNEL_MISTY
+	release
+	end
+
+RockTunnel_B2F_EventScript_MistyAtThirdSection::
+	msgbox RockTunnel_B2F_Text_MistyAtThirdSection
+	multichoice 18, 6, MULTICHOICE_LEFT_RIGHT, FALSE
+	goto_if_eq VAR_RESULT, 0, RockTunnel_B2F_EventScript_ThirdChooseLeft
+	goto_if_eq VAR_RESULT, 1, RockTunnel_B2F_EventScript_ThirdChooseRight
+	release
+	end
+
+RockTunnel_B2F_EventScript_ThirdChooseLeft::
+	msgbox RockTunnel_B2F_Text_ThirdTryLeft
+	closemessage
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyThirdSwimLeft
+	waitmovement 0
+	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 42, 22
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 42, 22
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_LOOK_AROUND
+	addobject LOCALID_ROCK_TUNNEL_MISTY
+	setvar VAR_MISTY_TRIAL_STATE, 8
+	release
+	end
+
+RockTunnel_B2F_EventScript_ThirdChooseRight::
+	msgbox RockTunnel_B2F_Text_ThirdTryRight
+	closemessage
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyThirdSwimRight
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyReturnFromThirdRight
+	waitmovement 0
+	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
+	copyobjectxytoperm LOCALID_ROCK_TUNNEL_MISTY
+	setobjectmovementtype LOCALID_ROCK_TUNNEL_MISTY, MOVEMENT_TYPE_FACE_RIGHT
+	msgbox RockTunnel_B2F_Text_ThirdRightFailed
+	release
+	end
+
+RockTunnel_B2F_EventScript_MistyAtFinalGenerator::
+	msgbox RockTunnel_B2F_Text_MistyAtFinalGenerator
+	closemessage
+	applymovement LOCALID_PLAYER, RockTunnel_B2F_Movement_PlayerMakeWayForMisty
+	waitmovement 0
+	applymovement LOCALID_ROCK_TUNNEL_MISTY, RockTunnel_B2F_Movement_MistyLeaveFinalGenerator
+	waitmovement 0
+	setvar VAR_MISTY_TRIAL_STATE, 9
+	clearflag FLAG_HIDE_CERULEAN_CITY_GYM_MISTY
+	setflag FLAG_HIDE_POWER_PLANT_MISTY
+	removeobject LOCALID_ROCK_TUNNEL_MISTY
+	release
+	end
+
 RockTunnel_B2F_EventScript_MistyFound::
 	msgbox RockTunnel_B2F_Text_MistyFound
 	setvar VAR_MISTY_TRIAL_STATE, 3
@@ -208,6 +301,16 @@ RockTunnel_B2F_EventScript_WarpToLowerPath::
 
 RockTunnel_B2F_EventScript_WarpToUpperPath::
 	warp MAP_ROCK_TUNNEL_B2F, 15, 24
+	waitstate
+	end
+
+RockTunnel_B2F_EventScript_WarpToThirdSection::
+	warp MAP_ROCK_TUNNEL_B2F, 57, 12
+	waitstate
+	end
+
+RockTunnel_B2F_EventScript_WarpToSecondSection::
+	warp MAP_ROCK_TUNNEL_B2F, 27, 57
 	waitstate
 	end
 
@@ -280,6 +383,45 @@ RockTunnel_B2F_Text_MistyAtSecondGenerator::
 	.string "The current carried me right to it.\n"
 	.string "I'll check this one too.$"
 
+RockTunnel_B2F_Text_MistySecondGeneratorFixed::
+	.string "That steadied another surge!\p"
+	.string "There's still one more current\n"
+	.string "pulling deeper into the tunnel.\p"
+	.string "I'm going to follow the opening\n"
+	.string "and see where it branches.$"
+
+RockTunnel_B2F_Text_MistyAtThirdSection::
+	.string "There you are!\p"
+	.string "This exit leads past the second\n"
+	.string "generator's current.\p"
+	.string "I just need to reach the last\n"
+	.string "generator now.\p"
+	.string "Which way should I take?$"
+
+RockTunnel_B2F_Text_ThirdTryLeft::
+	.string "LEFT?\n"
+	.string "Got it! I'll follow that path.$"
+
+RockTunnel_B2F_Text_ThirdTryRight::
+	.string "RIGHT?\n"
+	.string "Got it! I'll test that current.$"
+
+RockTunnel_B2F_Text_ThirdRightFailed::
+	.string "No good!\p"
+	.string "The current that way is too strong.\n"
+	.string "It loops back on itself.$"
+
+RockTunnel_B2F_Text_MistyAtFinalGenerator::
+	.string "That's it!\p"
+	.string "The POWER PLANT is fixed, and\n"
+	.string "the currents are calm again.\p"
+	.string "All this work brought positive\n"
+	.string "change to ROCK TUNNEL.\p"
+	.string "I'm heading back to the GYM.\n"
+	.string "Come find me there, okay?\p"
+	.string "I've got something interesting\n"
+	.string "about evolution to show you.$"
+
 RockTunnel_B2F_Text_MistyFound::
 	.string "That's the way through?\n"
 	.string "Perfect, thanks!\p"
@@ -341,6 +483,70 @@ RockTunnel_B2F_Movement_MistySwimFromGenerator::
 	walk_down
 	step_end
 
+RockTunnel_B2F_Movement_MistyStepOffSecondGenerator::
+	walk_down
+	walk_down
+	step_end
+
+RockTunnel_B2F_Movement_MistySwimFromSecondGenerator::
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+RockTunnel_B2F_Movement_MistyThirdSwimLeft::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+RockTunnel_B2F_Movement_MistyThirdSwimRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+RockTunnel_B2F_Movement_MistyReturnFromThirdRight::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_right
+	step_end
+
 RockTunnel_B2F_Movement_MistyLowerWaterfall::
 	walk_right
 	walk_down
@@ -364,6 +570,29 @@ RockTunnel_B2F_Movement_MistyReturnFromLowerWaterfall::
 	walk_up
 	walk_left
 	walk_in_place_faster_left
+	step_end
+
+RockTunnel_B2F_Movement_PlayerMakeWayForMisty::
+	walk_right
+	walk_up
+	step_end
+
+RockTunnel_B2F_Movement_MistyLeaveFinalGenerator::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 RockTunnel_B2F_Movement_MistySwimRight::
