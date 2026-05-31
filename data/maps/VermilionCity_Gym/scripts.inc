@@ -59,6 +59,7 @@ VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway::
 
 VermilionCity_Gym_EventScript_LtSurge::
 	famechecker FAMECHECKER_LTSURGE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	goto_if_set FLAG_DEFEATED_LT_SURGE, VermilionCity_Gym_EventScript_LtSurgeElectabuzzTrade
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, VermilionCity_Gym_EventScript_LtSurgeChallenge1
 	goto_if_eq VAR_RESULT, 1, VermilionCity_Gym_EventScript_LtSurgeChallenge2
@@ -119,6 +120,37 @@ VermilionCity_Gym_EventScript_DefeatedLtSurge::
 	setvar VAR_LT_SURGE_TRIAL_STATE, 5
 	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	msgbox VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis
+	release
+	end
+
+VermilionCity_Gym_EventScript_LtSurgeElectabuzzTrade::
+	setvar VAR_0x8008, INGAME_TRADE_ELECTABUZZ
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_ELECTABUZZ_TRADE, VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone
+	msgbox VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VermilionCity_Gym_EventScript_LtSurgeDeclineElectabuzzTrade
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, VermilionCity_Gym_EventScript_LtSurgeDeclineElectabuzzTrade
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, VermilionCity_Gym_EventScript_LtSurgeNotRaichu
+	call EventScript_DoInGameTrade
+	msgbox VermilionCity_Gym_Text_LtSurgeElectabuzzTradeComplete
+	setflag FLAG_DID_ELECTABUZZ_TRADE
+	release
+	end
+
+VermilionCity_Gym_EventScript_LtSurgeDeclineElectabuzzTrade::
+	msgbox VermilionCity_Gym_Text_LtSurgeDeclineElectabuzzTrade
+	release
+	end
+
+VermilionCity_Gym_EventScript_LtSurgeNotRaichu::
+	msgbox VermilionCity_Gym_Text_LtSurgeNotRaichu
+	release
+	end
+
+VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone::
+	msgbox VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone
 	release
 	end
 
