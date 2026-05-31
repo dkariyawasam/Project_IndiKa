@@ -90,6 +90,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "RockTunnel_B2F_EventScript_WarpToSecondSection"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RockTunnel_B2F_EventScript_WarpToPowerPlant"
     }
   ],
   "bg_events": [
