@@ -33,7 +33,6 @@
 #define MULTICHOICE_CELADON_VENDING_MACHINE                    26
 #define MULTICHOICE_GAME_CORNER_COIN_PURCHASE_COUNTER          27
 #define MULTICHOICE_EXCELLENT_NOT_SO_BAD                       28
-#define MULTICHOICE_RIGHT_LEFT                                 29
 #define MULTICHOICE_GAME_CORNER_TMPRIZES                       30
 #define MULTICHOICE_DEPT_STORE_ELEVATOR                        31
 #define MULTICHOICE_THIRSTY_GIRL_FRESH_WATER                   32
