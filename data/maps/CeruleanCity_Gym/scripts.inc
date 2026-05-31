@@ -8,7 +8,7 @@ CeruleanCity_Gym_OnFrame::
 	.2byte 0
 
 CeruleanCity_Gym_OnTransition::
-	goto_if_lt VAR_MISTY_TRIAL_STATE, 5, CeruleanCity_Gym_EventScript_HideMisty
+	goto_if_lt VAR_MISTY_TRIAL_STATE, 9, CeruleanCity_Gym_EventScript_HideMisty
 	clearflag FLAG_HIDE_CERULEAN_CITY_GYM_MISTY
 	end
 
@@ -41,6 +41,8 @@ CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway::
 
 CeruleanCity_Gym_EventScript_Misty::
 	famechecker FAMECHECKER_MISTY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 10, CeruleanCity_Gym_EventScript_MistyGyaradosCheck
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 11, CeruleanCity_Gym_EventScript_MistyTradeDone
 	goto_if_set FLAG_DEFEATED_MISTY, CeruleanCity_Gym_EventScript_MistyPostBattle
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, CeruleanCity_Gym_EventScript_MistyChallenge1
@@ -80,7 +82,7 @@ CeruleanCity_Gym_EventScript_MistyChallenge7::
 	end
 
 CeruleanCity_Gym_EventScript_MistyPostBattle::
-	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
+	msgbox CeruleanCity_Gym_Text_MistyGyaradosReminder
 	release
 	end
 
@@ -89,7 +91,6 @@ CeruleanCity_Gym_EventScript_MistyDefeated::
 	setflag FLAG_DEFEATED_MISTY
 	setflag FLAG_BADGE02_GET
 	setvar VAR_MISTY_TRIAL_STATE, 10
-	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
 	setrespawn HEAL_LOCATION_CERULEAN_CITY
 	goto CeruleanCity_Gym_EventScript_GiveCascadeBoard
 	end
@@ -99,6 +100,39 @@ CeruleanCity_Gym_EventScript_GiveCascadeBoard::
 	giveitem_msg CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty, ITEM_CASCADE_BOARD, 1, MUS_OBTAIN_KEY_ITEM
 	setflag FLAG_GOT_TM03_FROM_MISTY
 	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
+	release
+	end
+
+CeruleanCity_Gym_EventScript_MistyGyaradosCheck::
+	setvar VAR_0x8008, INGAME_TRADE_MISTY_POLIWHIRL
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_MISTY_POLIWHIRL_TRADE, CeruleanCity_Gym_EventScript_MistyTradeDone
+	msgbox CeruleanCity_Gym_Text_MistyOfferTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeruleanCity_Gym_EventScript_MistyDeclineTrade
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, CeruleanCity_Gym_EventScript_MistyDeclineTrade
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, CeruleanCity_Gym_EventScript_MistyNotGyarados
+	call EventScript_DoInGameTrade
+	msgbox CeruleanCity_Gym_Text_MistyTradeComplete
+	setflag FLAG_DID_MISTY_POLIWHIRL_TRADE
+	setvar VAR_MISTY_TRIAL_STATE, 11
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
+	release
+	end
+
+CeruleanCity_Gym_EventScript_MistyDeclineTrade::
+	msgbox CeruleanCity_Gym_Text_MistyDeclineTrade
+	release
+	end
+
+CeruleanCity_Gym_EventScript_MistyNotGyarados::
+	msgbox CeruleanCity_Gym_Text_MistyNotGyarados
+	release
+	end
+
+CeruleanCity_Gym_EventScript_MistyTradeDone::
+	msgbox CeruleanCity_Gym_Text_MistyTradeDone
 	release
 	end
 
@@ -122,7 +156,26 @@ CeruleanCity_Gym_EventScript_GymGuy::
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 2, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 3, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 4, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 5, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 6, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 7, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto_if_eq VAR_MISTY_TRIAL_STATE, 8, CeruleanCity_Gym_EventScript_GymGuyMistyAwayRepeat
+	goto CeruleanCity_Gym_EventScript_GymGuyNormal
+
+CeruleanCity_Gym_EventScript_GymGuyNormal::
+	msgbox CeruleanCity_Gym_Text_MistyBackFromRockTunnel, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, CeruleanCity_Gym_EventScript_GymGuyAdvice
+	goto_if_eq VAR_RESULT, NO, CeruleanCity_Gym_EventScript_GymGuyDontNeedAdvice
+	end
+
+CeruleanCity_Gym_EventScript_GymGuyAdvice::
+	msgbox CeruleanCity_Gym_Text_GymGuyLetsMakeWaves
 	msgbox CeruleanCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymGuyDontNeedAdvice::
+	msgbox CeruleanCity_Gym_Text_GymGuyShowMisty
 	release
 	end
 

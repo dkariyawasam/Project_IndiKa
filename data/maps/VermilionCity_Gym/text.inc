@@ -20,6 +20,34 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "cleared VERMILION GYM!\p"
     .string "You're special, kid!$"
 
+VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade::
+    .string "Hey, kid!\p"
+    .string "You've got a RAICHU with real\n"
+    .string "voltage, right?\p"
+    .string "I've got an ELECTABUZZ holding\n"
+    .string "an ELECTIRIZER.\p"
+    .string "Trade me your RAICHU for it?$"
+
+VermilionCity_Gym_Text_LtSurgeDeclineElectabuzzTrade::
+    .string "No pressure, kid!\p"
+    .string "Come back when you're ready to\n"
+    .string "handle that kind of power.$"
+
+VermilionCity_Gym_Text_LtSurgeNotRaichu::
+    .string "That's not RAICHU, kid!\p"
+    .string "Bring me the real lightning rod.$"
+
+VermilionCity_Gym_Text_LtSurgeElectabuzzTradeComplete::
+    .string "Hah!\n"
+    .string "Now that's a power surge!\p"
+    .string "That ELECTIRIZER ought to wake up\n"
+    .string "something fierce in ELECTABUZZ.$"
+
+VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone::
+    .string "That ELECTABUZZ was built for\n"
+    .string "serious output.\p"
+    .string "Keep it charged, kid!$"
+
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
     .string "{PLAYER} received TM34\n"
     .string "from LT. SURGE.$"

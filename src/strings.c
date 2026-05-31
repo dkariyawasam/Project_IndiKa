@@ -1542,7 +1542,7 @@ const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase2[] = _("MISTY asked you to scout the\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase3[] = _("MISTY returned to CERULEAN GYM.\nChallenge her.");
-const u8 gText_MistyTrialPhase4[] = _("MISTY spoke of a POLIWAG that\nchanged through trust.");
+const u8 gText_MistyTrialPhase4[] = _("Trade GYARADOS with MISTY to\nsee POLIWHIRL evolve with a\nKING'S ROCK.");
 const u8 gText_MistyTrialPhase5[] = _("Evolution confirmed through\nMISTY's POLITOED.");
 
 const u8 gText_LtSurgeTrialPhase1[] = _("LT. SURGE is training in\nDIGLETT'S CAVE.");
