@@ -32,6 +32,12 @@ PowerPlant_EventScript_ShowElectrode2::
 	clearflag FLAG_HIDE_POWER_PLANT_ELECTRODE_2
 	return
 
+PowerPlant_EventScript_WarpToRockTunnelB2F::
+	setvar VAR_TEMP_1, 1
+	warp MAP_ROCK_TUNNEL_B2F, 49, 26
+	waitstate
+	end
+
 PowerPlant_EventScript_Zapdos::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
