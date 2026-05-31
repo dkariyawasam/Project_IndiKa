@@ -622,7 +622,7 @@
 #define FLAG_0x25D                                       0x25D
 #define FLAG_GOT_OLD_AMBER                               0x25E
 #define FLAG_DID_BROCK_GRAVELER_TRADE                    0x25F
-#define FLAG_0x260                                       0x260
+#define FLAG_DID_MISTY_POLIWHIRL_TRADE                   0x260
 #define FLAG_0x261                                       0x261
 #define FLAG_0x262                                       0x262
 #define FLAG_GOT_EEVEE                                   0x263
@@ -642,7 +642,7 @@
 #define FLAG_GOT_BICYCLE                                 0x271
 #define FLAG_0x272                                       0x272
 #define FLAG_0x273                                       0x273
-#define FLAG_DID_ESPHERE_TRADE                           0x274
+#define FLAG_DID_ELECTABUZZ_TRADE                        0x274
 #define FLAG_DID_TANGENY_TRADE                           0x275
 #define FLAG_DID_SEELOR_TRADE                            0x276
 #define FLAG_0x277                                       0x277

@@ -131,16 +131,16 @@ static const struct InGameTrade sInGameTrades[] = {
         .requestedSpecies = SPECIES_SLOWBRO
 #endif
     }, 
-    [INGAME_TRADE_ELECTRODE] = 
+    [INGAME_TRADE_ELECTABUZZ] = 
     {
-        .nickname = _("ESPHERE"),
-        .species = SPECIES_ELECTRODE,
+        .nickname = _("ELECTABUZZ"),
+        .species = SPECIES_ELECTABUZZ,
         .ivs = {19, 16, 18, 25, 25, 19},
         .abilityNum = 1,
         .otId = 50298,
         .conditions = {30, 5, 5, 5, 5},
         .personality = 0x06341016,
-        .heldItem = ITEM_NONE,
+        .heldItem = ITEM_ELECTIRIZER,
         .mailNum = 255,
         .otName = _("CLIFTON"),
         .otGender = MALE,
@@ -194,6 +194,22 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_RELICANTH
+    },
+    [INGAME_TRADE_MISTY_POLIWHIRL] =
+    {
+        .nickname = _("POLIWHIRL"),
+        .species = SPECIES_POLIWHIRL,
+        .ivs = {20, 22, 18, 25, 24, 21},
+        .abilityNum = 0,
+        .otId = 10013,
+        .conditions = {5, 30, 5, 5, 5},
+        .personality = 0x0000271d,
+        .heldItem = ITEM_KINGS_ROCK,
+        .mailNum = 255,
+        .otName = _("MISTY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_GYARADOS
     }
 };
 
