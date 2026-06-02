@@ -30,8 +30,8 @@
       "flag": "FLAG_HIDE_CERULEAN_CITY_GYM_MISTY"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_CERULEAN_GYM_GUIDE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_LAND",
       "x": 7,
       "y": 16,
