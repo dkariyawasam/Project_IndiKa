@@ -813,8 +813,8 @@
           }
         },
         {
-          "map": "MAP_DIGLETTS_CAVE_B1F",
-          "base_label": "sDiglettsCaveB1F_FireRed",
+          "map": "MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+          "base_label": "sDiglettsCaveNorthsideB1F_FireRed",
           "land_mons": {
             "encounter_rate": 5,
             "mons": [
@@ -841,12 +841,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PARAS"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MIME_JR"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -854,36 +849,110 @@
                 "species": "SPECIES_DIGLETT"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
-                "species": "SPECIES_GOLBAT"
-              },
-              {
-                "min_level": 26,
-                "max_level": 29,
-                "species": "SPECIES_DUGTRIO"
-              },
-              {
-                "min_level": 24,
-                "max_level": 27,
-                "species": "SPECIES_PARASECT"
-              },
-              {
                 "min_level": 25,
                 "max_level": 28,
                 "species": "SPECIES_MR_MIME"
               },
               {
-                "min_level": 26,
-                "max_level": 29,
-                "species": "SPECIES_DUGTRIO"
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
               }
             ]
           }
         },
         {
-          "map": "MAP_DIGLETTS_CAVE_B1F",
-          "base_label": "sDiglettsCaveB1F_LeafGreen",
+          "map": "MAP_DIGLETTS_CAVE_B2F",
+          "base_label": "sDiglettsCaveB2F_FireRed",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MIME_JR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MR_MIME"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PARAS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F",
+          "base_label": "sDiglettsCaveSouthsideB1F_FireRed",
           "land_mons": {
             "encounter_rate": 5,
             "mons": [
@@ -910,12 +979,130 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PARAS"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MIME_JR"
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MR_MIME"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+          "base_label": "sDiglettsCaveNorthsideB1F_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MR_MIME"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DIGLETTS_CAVE_B2F",
+          "base_label": "sDiglettsCaveB2F_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -928,14 +1115,19 @@
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 26,
-                "max_level": 29,
-                "species": "SPECIES_DUGTRIO"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PARAS"
               },
               {
-                "min_level": 24,
-                "max_level": 27,
-                "species": "SPECIES_PARASECT"
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_MIME_JR"
               },
               {
                 "min_level": 25,
@@ -946,6 +1138,90 @@
                 "min_level": 26,
                 "max_level": 29,
                 "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_PARAS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F",
+          "base_label": "sDiglettsCaveSouthsideB1F_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MR_MIME"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_DIGLETT"
               }
             ]
           }
