@@ -66,12 +66,6 @@ VermilionCity_Text_DontHaveNeededSSTicket::
 VermilionCity_Text_TheShipSetSail::
     .string "The ship set sail.$"
 
-VermilionCity_Text_OhMysticTicketTakeYouToNavelRock::
-    .string "Oh! That's a MYSTICTICKET!\n"
-    .string "Now that is rare.\p"
-    .string "We'll be happy to take you to\n"
-    .string "NAVEL ROCK anytime.$"
-
 VermilionCity_Text_Route2AideHasPackageForYou::
     .string "Oh, hello, {PLAYER}!\n"
     .string "How are you doing?\p"

@@ -46,87 +46,9 @@ VermilionCity_EventScript_OldMan1SSAnneLeft::
 	release
 	end
 
-VermilionCity_EventScript_FerrySailor::
-	lock
-	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckShipDeparted
-	msgbox VermilionCity_Text_WelcomeToTheSSAnne
-	release
-	end
-
-VermilionCity_EventScript_CheckHasMysticTicket::
-	goto_if_unset FLAG_ENABLE_SHIP_NAVEL_ROCK, EventScript_SetResultFalse
-	checkitem ITEM_MYSTIC_TICKET
-	goto_if_eq VAR_RESULT, FALSE, EventScript_SetResultFalse
-	goto EventScript_SetResultTrue
-	end
-
-VermilionCity_EventScript_CheckShipDeparted::
-	msgbox VermilionCity_Text_TheShipSetSail
-	release
-	end
-
-VermilionCity_EventScript_ShowMysticTicket::
-	setflag FLAG_SHOWN_MYSTIC_TICKET
-	msgbox VermilionCity_Text_OhMysticTicketTakeYouToNavelRock
-	return
-
 @ Unreachable
 Vermilion_EventScript_Unused::
 	release
-	end
-
-VermilionCity_EventScript_CheckTicketLeft::
-	lockall
-	goto VermilionCity_EventScript_CheckTicket
-	end
-
-VermilionCity_EventScript_CheckTicketRight::
-	lockall
-	goto VermilionCity_EventScript_CheckTicket
-	end
-
-VermilionCity_EventScript_ExitedTicketCheck::
-	lockall
-	setvar VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER, 0
-	releaseall
-	end
-
-VermilionCity_EventScript_CheckTicket::
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	applymovement LOCALID_VERMILION_FERRY_SAILOR, Common_Movement_WalkInPlaceFasterLeft
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckShipDepartedTrigger
-	msgbox VermilionCity_Text_DoYouHaveATicket
-	goto_if_unset FLAG_GOT_SS_TICKET, VermilionCity_EventScript_DontHaveSSTicket
-	msgbox VermilionCity_Text_FlashedSSTicket
-	setvar VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER, 1
-	releaseall
-	end
-
-VermilionCity_EventScript_DontHaveSSTicket::
-	msgbox VermilionCity_Text_DontHaveNeededSSTicket
-	closemessage
-	goto VermilionCity_EventScript_WalkUpPier
-	end
-
-VermilionCity_EventScript_WalkUpPier::
-	closemessage
-	applymovement LOCALID_VERMILION_FERRY_SAILOR, Common_Movement_FaceOriginalDirection
-	applymovement LOCALID_PLAYER, VermilionCity_Movement_WalkUp
-	waitmovement 0
-	releaseall
-	end
-
-VermilionCity_Movement_WalkUp::
-	walk_up
-	step_end
-
-VermilionCity_EventScript_CheckShipDepartedTrigger::
-	msgbox VermilionCity_Text_TheShipSetSail
-	closemessage
-	goto VermilionCity_EventScript_WalkUpPier
 	end
 
 VermilionCity_EventScript_Sailor::

@@ -48,17 +48,6 @@ bool8 EnterHallOfFame(void)
     {
         IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
         FlagSet(FLAG_SYS_RIBBON_GET);
-#if REVISION >= 0xA
-        // The player has entered the Hall of Fame for the first time.
-        // (At least, this is probably what was intended, except giving at least one Champion Ribbon does not imply first Hall of Fame entry)
-        // Give the event tickets, and the flags for obtaining them, if required.
-        if (!CheckBagHasItem(ITEM_MYSTIC_TICKET, 1))
-        {
-             AddBagItem(ITEM_MYSTIC_TICKET, 1);
-             FlagSet(FLAG_ENABLE_SHIP_NAVEL_ROCK);
-             FlagSet(FLAG_RECEIVED_MYSTIC_TICKET);
-        }
-#endif
     }
     SetMainCallback2(CB2_DoHallOfFameScreen);
     return FALSE;

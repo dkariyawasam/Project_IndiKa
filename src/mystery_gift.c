@@ -29,7 +29,7 @@ static void ClearSavedTrainerIds(void);
 
 static const u16 sReceivedGiftFlags[] = {
     FLAG_WONDER_CARD_UNUSED_0,
-    FLAG_RECEIVED_MYSTIC_TICKET,
+    FLAG_0x2A8,
     FLAG_RECEIVED_OLD_SEA_MAP, // Not used until Emerald
     FLAG_WONDER_CARD_UNUSED_1,
     FLAG_WONDER_CARD_UNUSED_2,

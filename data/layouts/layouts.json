@@ -842,16 +842,16 @@
       "blockdata_filepath": "data/layouts/ViridianForest/map.bin"
     },
     {
-      "id": "LAYOUT_SSANNE_EXTERIOR",
-      "name": "SSAnne_Exterior_Layout",
+      "id": "LAYOUT_VERMILION_HARBOR",
+      "name": "VermilionHarbor_Layout",
       "width": 70,
       "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_VermilionCity",
-      "border_filepath": "data/layouts/SSAnne_Exterior/border.bin",
-      "blockdata_filepath": "data/layouts/SSAnne_Exterior/map.bin"
+      "border_filepath": "data/layouts/VermilionHarbor/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionHarbor/map.bin"
     },
     {
       "id": "LAYOUT_SSANNE_1F_CORRIDOR",

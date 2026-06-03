@@ -694,7 +694,7 @@
 #define FLAG_0x2A5                                       0x2A5
 #define FLAG_GOT_TEA                                     0x2A6
 #define FLAG_WONDER_CARD_UNUSED_0                        0x2A7
-#define FLAG_RECEIVED_MYSTIC_TICKET                      0x2A8
+#define FLAG_0x2A8                                       0x2A8
 #define FLAG_RECEIVED_OLD_SEA_MAP                        0x2A9
 #define FLAG_WONDER_CARD_UNUSED_1                        0x2AA
 #define FLAG_WONDER_CARD_UNUSED_2                        0x2AB
@@ -764,7 +764,7 @@
 #define FLAG_REVIVED_HELIX                               0x2ED
 #define FLAG_REVIVED_AMBER                               0x2EE
 #define FLAG_GOT_TM56                                    0x2EF
-#define FLAG_SHOWN_MYSTIC_TICKET                         0x2F0
+#define FLAG_0x2F0                                       0x2F0
 #define FLAG_0x2F1                                       0x2F1
 #define FLAG_FOUGHT_LUGIA                                0x2F2
 #define FLAG_FOUGHT_HO_OH                                0x2F3
@@ -1206,7 +1206,7 @@
 #define FLAG_HIDDEN_ITEM_UNUSED_SEVII_TOWER_NANAB_BERRY            (FLAG_HIDDEN_ITEMS_START + 187)
 #define FLAG_HIDDEN_ITEM_0xBC                                             (FLAG_HIDDEN_ITEMS_START + 188)
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE                     (FLAG_HIDDEN_ITEMS_START + 189)
-#define FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
+#define FLAG_HIDDEN_ITEM_VERMILION_HARBOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Unused hidden item flags
 #define FLAG_UNUSED_0x4A7               0x4A7 // Unused Flag
@@ -1391,7 +1391,7 @@
 #define FLAG_SYS_SEVII_MAP_4567                                     (SYS_FLAGS + 0x46)
 #define FLAG_SYS_GOT_BERRY_POUCH                                    (SYS_FLAGS + 0x47)
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              (SYS_FLAGS + 0x49)
-#define FLAG_ENABLE_SHIP_NAVEL_ROCK                                 (SYS_FLAGS + 0x4A)
+#define FLAG_SYS_0x4A                                                (SYS_FLAGS + 0x4A)
 
 // World Map Flags
 #define FLAG_WORLD_MAP_PALLET_TOWN                                  (SYS_FLAGS + 0x90)
@@ -1416,7 +1416,7 @@
 #define FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F                    (SYS_FLAGS + 0xA3)
 #define FLAG_WORLD_MAP_VIRIDIAN_FOREST                              (SYS_FLAGS + 0xA4)
 #define FLAG_WORLD_MAP_MT_MOON_1F                                   (SYS_FLAGS + 0xA5)
-#define FLAG_WORLD_MAP_SSANNE_EXTERIOR                              (SYS_FLAGS + 0xA6)
+#define FLAG_WORLD_MAP_VERMILION_HARBOR                              (SYS_FLAGS + 0xA6)
 #define FLAG_WORLD_MAP_UNDERGROUND_PATH_TUNNEL          (SYS_FLAGS + 0xA7)
 #define FLAG_WORLD_MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL            (SYS_FLAGS + 0xA8)
 #define FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F                            (SYS_FLAGS + 0xA9)

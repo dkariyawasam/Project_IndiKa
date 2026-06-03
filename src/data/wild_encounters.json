@@ -561,7 +561,7 @@
           }
         },
         {
-          "map": "MAP_SSANNE_EXTERIOR",
+          "map": "MAP_VERMILION_HARBOR",
           "base_label": "sSSAnneExterior",
           "water_mons": {
             "encounter_rate": 1,
