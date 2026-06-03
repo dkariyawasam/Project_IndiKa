@@ -217,28 +217,17 @@ OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands::
     .string "While I was studying gemstones,\n"
     .string "I discovered something important.\p"
     .string "There is another gem that forms\n"
-    .string "a pair with this RUBY.\p"
-    .string "That other gemstone is supposed to\n"
-    .string "be in the SEVII ISLANDS.\p"
-    .string "{PLAYER}, please, I need you to go\n"
-    .string "find the other gem.\p"
-    .string "{PLAYER}, may I have your ferry\n"
-    .string "PASS and the TOWN MAP?$"
+    .string "a pair with this RUBY.$"
 
-OneIsland_PokemonCenter_1F_Text_ReturnedTriPassForRainbowPass::
-    .string "{PLAYER} returned the TRI-PASS and\n"
-    .string "received the RAINBOW PASS.$"
+OneIsland_PokemonCenter_1F_Text_UpdatedTownMap::
+    .string "CELIO updated the TOWN MAP.$"
 
 OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage::
     .string "Obtained an extra page for the\n"
     .string "TOWN MAP!$"
 
 OneIsland_PokemonCenter_1F_Text_PassLetYouGetToAllIslands::
-    .string "This is my own ferry PASS.\p"
-    .string "It will let you get to all the\n"
-    .string "SEVII ISLANDS.\p"
-    .string "{PLAYER}, please, I can't do\n"
-    .string "it without your help.$"
+    .string "CELIO's work is moving along.$"
 
 OneIsland_PokemonCenter_1F_Text_HandedSapphireToCelio::
     .string "{PLAYER} handed the SAPPHIRE\n"
@@ -352,6 +341,5 @@ OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
     .string "Link established with the KANTO\n"
     .string "and HOENN regions.$"
 
-OneIsland_PokemonCenter_1F_Text_ObtainedTriPass::
-    .string "Obtained the TRI-PASS!$"
-
+OneIsland_PokemonCenter_1F_Text_ReceivedNotes::
+    .string "CELIO shared his notes!$"
