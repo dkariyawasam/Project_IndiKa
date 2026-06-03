@@ -91,6 +91,7 @@ void ApplyNightPaletteToCurrentMap(void)
     for (i = 0; i < NUM_PALS_TOTAL * 16; i++)
     {
         u16 tinted = TintColorNight(sBaseMapPalettes[i]);
+        gPlttBufferUnfaded[i] = tinted;
         gPlttBufferFaded[i] = tinted;
     }
 
@@ -105,6 +106,15 @@ void RestoreDayPaletteForCurrentMap(void)
     CpuFastCopy(sBaseMapPalettes, gPlttBufferUnfaded, NUM_PALS_TOTAL * 16 * sizeof(u16));
     CpuFastCopy(sBaseMapPalettes, gPlttBufferFaded,   NUM_PALS_TOTAL * 16 * sizeof(u16));
     CpuFastCopy(gPlttBufferFaded, (void *)BG_PLTT, NUM_PALS_TOTAL * 16 * sizeof(u16));
+}
+
+void RestoreDayPaletteBuffersForCurrentMap(void)
+{
+    if (!sBaseMapPalettesValid)
+        return;
+
+    CpuFastCopy(sBaseMapPalettes, gPlttBufferUnfaded, NUM_PALS_TOTAL * 16 * sizeof(u16));
+    CpuFastCopy(sBaseMapPalettes, gPlttBufferFaded,   NUM_PALS_TOTAL * 16 * sizeof(u16));
 }
 
 void RefreshCurrentMapNightPalette(void)
@@ -241,6 +251,7 @@ static void ApplyTimeBlendToCurrentMap(u8 blend, u8 maxBlend)
     for (i = 0; i < NUM_PALS_TOTAL * 16; i++)
     {
         u16 color = BlendTowardNight(sBaseMapPalettes[i], blend, maxBlend);
+        gPlttBufferUnfaded[i] = color;
         gPlttBufferFaded[i] = color;
     }
 
