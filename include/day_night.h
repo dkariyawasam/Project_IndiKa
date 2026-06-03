@@ -11,6 +11,7 @@ void ApplyNightPaletteToCurrentMap(void);
 bool8 DoesCurrentMapUseNightPalette(void);
 void RefreshCurrentMapNightPalette(void);
 void RestoreDayPaletteForCurrentMap(void);
+void RestoreDayPaletteBuffersForCurrentMap(void);
 void CacheCurrentMapBasePalettes(void);
 void ApplyNightTintToTallGrassEffect(void);
 void StartTimeOfDayTransition(u8 targetTime);

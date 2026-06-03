@@ -772,6 +772,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     TryRegenerateRenewableHiddenItems();
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
+    RestoreDayPaletteBuffersForCurrentMap();
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
     CacheCurrentMapBasePalettes();
     RefreshCurrentMapNightPalette();
