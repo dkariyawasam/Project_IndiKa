@@ -96,7 +96,7 @@ gStdScriptsEnd::
 	.include "data/maps/MtMoon_1F/scripts.inc"
 	.include "data/maps/MtMoon_B1F/scripts.inc"
 	.include "data/maps/MtMoon_B2F/scripts.inc"
-	.include "data/maps/SSAnne_Exterior/scripts.inc"
+	.include "data/maps/VermilionHarbor/scripts.inc"
 	.include "data/maps/SSAnne_1F_Corridor/scripts.inc"
 	.include "data/maps/SSAnne_2F_Corridor/scripts.inc"
 	.include "data/maps/SSAnne_3F_Corridor/scripts.inc"

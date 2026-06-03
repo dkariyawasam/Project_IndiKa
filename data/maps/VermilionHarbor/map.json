@@ -1,0 +1,121 @@
+{
+  "id": "MAP_VERMILION_HARBOR",
+  "name": "VermilionHarbor",
+  "layout": "LAYOUT_VERMILION_HARBOR",
+  "music": "MUS_SS_ANNE",
+  "region_map_section": "MAPSEC_VERMILION_HARBOR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_VERMILION_CITY",
+      "offset": 9,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_SS_ANNE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SS_ANNE",
+      "x": 30,
+      "y": 16,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_SS_ANNE"
+    },
+    {
+      "local_id": "LOCALID_VERMILION_FERRY_SAILOR",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 33,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VermilionHarbor_EventScript_FerrySailor",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 32,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_SSANNE_1F_CORRIDOR",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 33,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_1F_CORRIDOR",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+      "var_value": "0",
+      "script": "VermilionHarbor_EventScript_CheckTicket"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+      "var_value": "0",
+      "script": "VermilionHarbor_EventScript_CheckTicket"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "VermilionHarbor_EventScript_ExitedTicketCheck"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "VermilionHarbor_EventScript_ExitedTicketCheck"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 58,
+      "y": 28,
+      "elevation": 3,
+      "item": "ITEM_LAVA_COOKIE",
+      "flag": "FLAG_HIDDEN_ITEM_VERMILION_HARBOR_LAVA_COOKIE",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
+}
