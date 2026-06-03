@@ -3,7 +3,7 @@
   "name": "UndergroundPath_WestEntrance",
   "layout": "LAYOUT_UNDERGROUND_PATH_ENTRANCE",
   "music": "MUS_PEWTER",
-  "region_map_section": "MAPSEC_UNDERGROUND_PATH_2",
+  "region_map_section": "MAPSEC_UNDERGROUND_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -56,8 +56,8 @@
       "x": 7,
       "y": 4,
       "elevation": 3,
-      "dest_map": "MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_UNDERGROUND_PATH_TUNNEL",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],

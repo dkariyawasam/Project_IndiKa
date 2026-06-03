@@ -1,0 +1,7 @@
+UndergroundPath_Tunnel_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, UndergroundPath_Tunnel_OnTransition
+	.byte 0
+
+UndergroundPath_Tunnel_OnTransition::
+	setworldmapflag FLAG_WORLD_MAP_UNDERGROUND_PATH_TUNNEL
+	end
