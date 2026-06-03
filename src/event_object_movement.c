@@ -7996,8 +7996,8 @@ static void CalcWhetherObjectIsOffscreen(struct ObjectEvent *objectEvent, struct
     x2 = graphicsInfo->width + (s16)x;
     y2 = graphicsInfo->height + (s16)y;
     
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SSANNE_EXTERIOR)
-     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SSANNE_EXTERIOR)
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VERMILION_HARBOR)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VERMILION_HARBOR)
      && objectEvent->localId == LOCALID_SS_ANNE)
     {
         minX = -32;

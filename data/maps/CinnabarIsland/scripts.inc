@@ -49,7 +49,7 @@ CinnabarIsland_EventScript_ExitPokeCenterForOneIsland::
 CinnabarIsland_EventScript_ReturnFromSeviiIslands::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain
+	msgbox CinnabarIsland_Text_ThanksForYourCompany
 	closemessage
 	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_BillExit
 	waitmovement 0

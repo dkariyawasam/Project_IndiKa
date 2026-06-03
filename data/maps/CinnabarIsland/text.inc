@@ -93,13 +93,8 @@ CinnabarIsland_Text_FerryNoLongerRuns::
     .string "Looks like the ferry isn't\n"
     .string "running anymore.$"
 
-CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
+CinnabarIsland_Text_ThanksForYourCompany::
     .string "Hey, wasn't that a long cruise?\p"
     .string "My buddy CELIO seemed to enjoy\n"
     .string "your company.\p"
-    .string "I'm sure he'd welcome you if you\n"
-    .string "were to visit him again.\p"
-    .string "If you have a TRI-PASS, you can\n"
-    .string "always take a ferry there from\l"
-    .string "VERMILION PORT.\p"
     .string "All right, thanks for your company!$"
