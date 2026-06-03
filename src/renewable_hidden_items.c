@@ -90,11 +90,11 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
         }
     },
     {
-        .mapGroup = MAP_GROUP(MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL),
-        .mapNum = MAP_NUM(MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL),
+        .mapGroup = MAP_GROUP(MAP_UNDERGROUND_PATH_TUNNEL),
+        .mapNum = MAP_NUM(MAP_UNDERGROUND_PATH_TUNNEL),
         .rare = {
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ETHER),
-            NO_ITEM,
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ETHER),
             NO_ITEM,
             NO_ITEM,
             NO_ITEM,
@@ -113,46 +113,12 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
             NO_ITEM
         },
         .common = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
-    },
-    {
-        .mapGroup = MAP_GROUP(MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL),
-        .mapNum = MAP_NUM(MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL),
-        .rare = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ETHER),
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .uncommon = {
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_POTION),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ANTIDOTE),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_PARALYZE_HEAL),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_AWAKENING),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_BURN_HEAL),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ICE_HEAL),
-            NO_ITEM,
-            NO_ITEM
-        },
-        .common = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
             NO_ITEM,
             NO_ITEM
         }
