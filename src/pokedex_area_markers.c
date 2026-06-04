@@ -168,7 +168,6 @@ static const s8 sAreaMarkers[][4] = {
     [DEX_AREA_CINNABAR_VOLCANO]         = { MARKER_CIRCULAR,  14,   1 },
     [DEX_AREA_FUCHSIA_FOREST]     = { MARKER_CIRCULAR,   5,  52 },
     [DEX_AREA_ICEFALL_CAVE]     = { MARKER_CIRCULAR,  13,  80 },
-    [DEX_AREA_LOST_CAVE]        = { MARKER_CIRCULAR,  54,  74 },
     [DEX_AREA_ALTERING_CAVE]    = { MARKER_CIRCULAR,  69,  73 },
     [DEX_AREA_PATTERN_BUSH]     = { MARKER_CIRCULAR,  76,  77 },
     [DEX_AREA_TANOBY_CHAMBER]   = { MARKER_MED_H,     96,  90 },

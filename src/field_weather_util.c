@@ -51,20 +51,6 @@ void ResumePausedWeather(void)
     SetCurrentAndNextWeather(weather);
 }
 
-static const u8 sWeatherCycleRoute119[] = {
-    WEATHER_SUNNY,
-    WEATHER_RAIN,
-    WEATHER_RAIN_THUNDERSTORM,
-    WEATHER_RAIN,
-};
-
-static const u8 sWeatherCycleRoute123[] = {
-    WEATHER_SUNNY,
-    WEATHER_SUNNY,
-    WEATHER_RAIN,
-    WEATHER_SUNNY,
-};
-
 static u8 TranslateWeatherNum(u8 weather)
 {
     switch (weather)
@@ -81,11 +67,8 @@ static u8 TranslateWeatherNum(u8 weather)
     case WEATHER_FOG_DIAGONAL:       return WEATHER_FOG_DIAGONAL;
     case WEATHER_UNDERWATER:         return WEATHER_UNDERWATER;
     case WEATHER_SHADE:              return WEATHER_SHADE;
-    case WEATHER_DROUGHT:            return WEATHER_DROUGHT;
     case WEATHER_DOWNPOUR:           return WEATHER_DOWNPOUR;
     case WEATHER_UNDERWATER_BUBBLES: return WEATHER_UNDERWATER_BUBBLES;
-    case WEATHER_ROUTE119_CYCLE:     return sWeatherCycleRoute119[gSaveBlock1Ptr->weatherCycleStage];
-    case WEATHER_ROUTE123_CYCLE:     return sWeatherCycleRoute123[gSaveBlock1Ptr->weatherCycleStage];
     default:                         return WEATHER_NONE;
     }
 }
