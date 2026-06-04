@@ -101,7 +101,7 @@ static const u16 sDexAreas_Sevii4[][2] = {
 };
 
 static const u16 sDexAreas_Sevii5[][2] = {
-	{ MAPSEC_LOST_CAVE,        DEX_AREA_LOST_CAVE }    
+	{ MAPSEC_NONE, DEX_AREA_NONE }    
 };
 
 static const struct

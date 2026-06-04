@@ -1,7 +1,0 @@
-FiveIsland_LostCave_Room1_MapScripts::
-	.byte 0
-
-FiveIsland_LostCave_Room1_EventScript_Lawson::
-	msgbox FiveIsland_LostCave_Room1_Text_LawsonIntro, MSGBOX_DEFAULT
-	msgbox FiveIsland_LostCave_Room1_Text_LawsonPostBattle, MSGBOX_AUTOCLOSE
-	end

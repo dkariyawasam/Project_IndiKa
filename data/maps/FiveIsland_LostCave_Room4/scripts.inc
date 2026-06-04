@@ -1,7 +1,0 @@
-FiveIsland_LostCave_Room4_MapScripts::
-	.byte 0
-
-FiveIsland_LostCave_Room4_EventScript_Laura::
-	msgbox FiveIsland_LostCave_Room4_Text_LauraIntro, MSGBOX_DEFAULT
-	msgbox FiveIsland_LostCave_Room4_Text_LauraPostBattle, MSGBOX_AUTOCLOSE
-	end

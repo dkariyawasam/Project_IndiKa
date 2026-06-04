@@ -18,7 +18,6 @@ enum MapPreviewScreenId
     MPS_CINNABAR_VOLCANO,
     MPS_FUCHSIA_FOREST,
     MPS_ICEFALL_CAVE,
-    MPS_LOST_CAVE,
     MPS_COUNT
 };
 

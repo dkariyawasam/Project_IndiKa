@@ -514,26 +514,6 @@ FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
-FiveIsland_LostCave_Room10_EventScript_ItemSilkScarf::
-	finditem ITEM_SILK_SCARF
-	end
-
-FiveIsland_LostCave_Room11_EventScript_ItemLaxIncense::
-	finditem ITEM_LAX_INCENSE
-	end
-
-FiveIsland_LostCave_Room12_EventScript_ItemSeaIncense::
-	finditem ITEM_SEA_INCENSE
-	end
-
-FiveIsland_LostCave_Room13_EventScript_ItemMaxRevive::
-	finditem ITEM_MAX_REVIVE
-	end
-
-FiveIsland_LostCave_Room14_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
-	end
-
 SilphCo_4F_EventScript_ItemTM41::
 	finditem ITEM_X_SPECIAL
 	end
