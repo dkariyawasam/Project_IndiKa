@@ -460,7 +460,7 @@
     {
       "id": "LAYOUT_CINNABAR_ISLAND",
       "name": "CinnabarIsland_Layout",
-      "width": 24,
+      "width": 48,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -2966,16 +2966,64 @@
       "blockdata_filepath": "data/layouts/NavelRock_Fork/map.bin"
     },
     {
-      "id": "LAYOUT_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",
-      "name": "OneIsland_KindleRoad_EmberSpa_Layout",
+      "id": "LAYOUT_CINNABAR_VOLCANO_1F",
+      "name": "CinnabarVolcano_1F_Layout",
       "width": 27,
       "height": 39,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_CinnabarVolcano",
-      "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/border.bin",
-      "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/map.bin"
+      "border_filepath": "data/layouts/CinnabarVolcano_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarVolcano_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "name": "CinnabarVolcano_LeftCorridor_2F_Layout",
+      "width": 15,
+      "height": 18,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CinnabarVolcano",
+      "border_filepath": "data/layouts/CinnabarVolcano_LeftCorridor_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarVolcano_LeftCorridor_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABARVOLCANO4",
+      "name": "cinnabarvolcano4",
+      "width": 49,
+      "height": 46,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CinnabarVolcano",
+      "border_filepath": "data/layouts/cinnabarvolcano4/border.bin",
+      "blockdata_filepath": "data/layouts/cinnabarvolcano4/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "name": "CinnabarVolcano_RightCorridor_2F_Layout",
+      "width": 15,
+      "height": 18,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CinnabarVolcano",
+      "border_filepath": "data/layouts/CinnabarVolcano_RightCorridor_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarVolcano_RightCorridor_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABARVOLCANO1",
+      "name": "cinnabarvolcano1",
+      "width": 48,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CinnabarIsland",
+      "border_filepath": "data/layouts/cinnabarvolcano1/border.bin",
+      "blockdata_filepath": "data/layouts/cinnabarvolcano1/map.bin"
     }
   ]
 }

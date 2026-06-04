@@ -225,7 +225,10 @@ gStdScriptsEnd::
 	.include "data/maps/NavelRock_BasePath_B11F/scripts.inc"
 	.include "data/maps/NavelRock_B1F/scripts.inc"
 	.include "data/maps/NavelRock_Fork/scripts.inc"
-	.include "data/maps/OneIsland_KindleRoad_EmberSpa/scripts.inc"
+	.include "data/maps/CinnabarVolcano_1F/scripts.inc"
+	.include "data/maps/CinnabarVolcano_RightCorridor_2F/scripts.inc"
+	.include "data/maps/CinnabarVolcano_LeftCorridor_2F/scripts.inc"
+	.include "data/maps/CinnabarVolcano_3F/scripts.inc"
 	.include "data/maps/NavelRock_Harbor/scripts.inc"
 	.include "data/maps/PalletTown/scripts.inc"
 	.include "data/maps/ViridianCity/scripts.inc"
@@ -497,7 +500,10 @@ gStdScriptsEnd::
 	.include "data/maps/FourIsland_IcefallCave_Back/text.inc"
 	.include "data/maps/RocketLeague_Lobby/text.inc"
 	.include "data/maps/ThreeIsland_DunsparceTunnel/text.inc"
-	.include "data/maps/OneIsland_KindleRoad_EmberSpa/text.inc"
+	.include "data/maps/CinnabarVolcano_1F/text.inc"
+	.include "data/maps/CinnabarVolcano_RightCorridor_2F/text.inc"
+	.include "data/maps/CinnabarVolcano_LeftCorridor_2F/text.inc"
+	.include "data/maps/CinnabarVolcano_3F/text.inc"
 	.include "data/maps/PalletTown/text.inc"
 	.include "data/maps/ViridianCity/text.inc"
 	.include "data/maps/PewterCity/text.inc"
@@ -880,14 +886,12 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
 	setflag FLAG_HIDE_CREDITS_RIVAL
 	setflag FLAG_HIDE_CREDITS_OAK
-	setflag FLAG_HIDE_CINNABAR_BILL
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE21_SOUTH_SAILOR
 	setflag FLAG_HIDE_ROUTE20_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE20_SAILOR
 	setflag FLAG_HIDE_ROUTE19_SEAGALLOP
 	setflag FLAG_HIDE_ROUTE19_SAILOR
-	setflag FLAG_HIDE_CINNABAR_POKECENTER_BILL
 	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_BLACK_BELT
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER
