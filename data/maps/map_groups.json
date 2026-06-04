@@ -139,18 +139,6 @@
     "PokemonTower_6F",
     "PokemonTower_7F",
     "PowerPlant",
-    "CinnabarVolcano_RubyPath_B4F",
-    "CinnabarVolcano_SummitPath_1F",
-    "CinnabarVolcano_SummitPath_2F",
-    "CinnabarVolcano_SummitPath_3F",
-    "CinnabarVolcano_Summit",
-    "CinnabarVolcano_RubyPath_B5F",
-    "CinnabarVolcano_RubyPath_1F",
-    "CinnabarVolcano_RubyPath_B1F",
-    "CinnabarVolcano_RubyPath_B2F",
-    "CinnabarVolcano_RubyPath_B3F",
-    "CinnabarVolcano_RubyPath_B1F_Stairs",
-    "CinnabarVolcano_RubyPath_B2F_Stairs",
     "FuchsiaForest",
     "FourIsland_IcefallCave_Entrance",
     "FourIsland_IcefallCave_1F",
@@ -183,9 +171,13 @@
     "NavelRock_B1F",
     "NavelRock_Fork",
     "CinnabarVolcano_1F",
-    "CinnabarVolcano_RightCorridor_2F",
-    "CinnabarVolcano_LeftCorridor_2F",
+    "CinnabarVolcano_RightCorridor_1F",
+    "CinnabarVolcano_LeftCorridor_1F",
     "CinnabarVolcano_3F",
+    "CinnabarVolcano_LeftCorridor_2F",
+    "CinnabarVolcano_RightCorridor_2F",
+    "CinnabarVolcano_LeftCorridor_3F",
+    "CinnabarVolcano_RightCorridor_3F",
     "NavelRock_Harbor"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -399,7 +391,9 @@
     "Route18_EastEntrance_1F",
     "Route18_EastEntrance_2F"
   ],
-  "gMapGroup_IndoorRoute19": [],
+  "gMapGroup_IndoorRoute19": [
+
+  ],
   "gMapGroup_IndoorRoute22": [
     "Route22_NorthEntrance"
   ],
@@ -441,6 +435,10 @@
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"
   ],
-  "gMapGroup_IndoorFiveIslandRoute": [],
-  "gMapGroup_IndoorTwoIslandRoute": []
+  "gMapGroup_IndoorFiveIslandRoute": [
+
+  ],
+  "gMapGroup_IndoorTwoIslandRoute": [
+
+  ]
 }

@@ -537,7 +537,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_CINNABAR_VOLCANO,
         MAPSEC_FUCHSIA_FOREST,
         MAPSEC_THREE_ISLE_PATH,
-        MAPSEC_EMBER_SPA,
         MAPSEC_NONE
     },
     [REGIONMAP_SEVII45 - 1] =
@@ -831,7 +830,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_FUCHSIA_FOREST      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_ICEFALL_CAVE        - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_THREE_ISLE_PATH     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_EMBER_SPA           - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)
