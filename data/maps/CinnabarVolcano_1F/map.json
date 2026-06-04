@@ -107,6 +107,20 @@
       "elevation": 3,
       "dest_map": "MAP_CINNABAR_ISLAND",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
