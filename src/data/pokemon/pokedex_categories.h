@@ -397,6 +397,12 @@ static const u16 sDexCategory_MountainPkmn_Page7[] = {
     SPECIES_MAGMORTAR,
 };
 
+
+static const u16 sDexCategory_MountainPkmn_Page8[] = {
+    SPECIES_NUMEL,
+    SPECIES_CAMERUPT,
+};
+
 static const u16 sDexCategory_RoughTerrainPkmn_Page1[] = {
     SPECIES_PONYTA,
     SPECIES_RAPIDASH,
@@ -649,11 +655,6 @@ static const u16 sDexCategory_NonNativePkmn_Page14[] = {
     SPECIES_FROSLASS,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page15[] = {
-    SPECIES_NUMEL,
-    SPECIES_CAMERUPT,
-};
-
 static const u16 sDexCategory_NonNativePkmn_Page16[] = {
     SPECIES_TYROGUE,
     SPECIES_HITMONLEE,
@@ -852,6 +853,7 @@ static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
     DEX_CATEGORY(MountainPkmn_Page5),
     DEX_CATEGORY(MountainPkmn_Page6),
     DEX_CATEGORY(MountainPkmn_Page7),
+    DEX_CATEGORY(MountainPkmn_Page8),
 };
 
 static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {
@@ -902,7 +904,6 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page12),
     DEX_CATEGORY(NonNativePkmn_Page13),
     DEX_CATEGORY(NonNativePkmn_Page14),
-    DEX_CATEGORY(NonNativePkmn_Page15),
     DEX_CATEGORY(NonNativePkmn_Page16),
     DEX_CATEGORY(NonNativePkmn_Page17),
     DEX_CATEGORY(NonNativePkmn_Page18),

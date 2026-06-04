@@ -1,7 +1,7 @@
 {
   "id": "MAP_CINNABAR_VOLCANO_3F",
   "name": "CinnabarVolcano_3F",
-  "layout": "LAYOUT_CINNABARVOLCANO4",
+  "layout": "LAYOUT_CINNABAR_VOLCANO_3F",
   "music": "MUS_FUCHSIA",
   "region_map_section": "MAPSEC_CINNABAR_VOLCANO",
   "requires_flash": false,
@@ -20,14 +20,14 @@
       "x": 8,
       "y": 39,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "dest_map": "MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
       "dest_warp_id": "1"
     },
     {
       "x": 46,
       "y": 39,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "dest_map": "MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
       "dest_warp_id": "1"
     }
   ],
