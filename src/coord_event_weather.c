@@ -13,8 +13,6 @@ void WeatherCoordEvent_Sandstorm(void) {}
 void WeatherCoordEvent_FogDiagonal(void) {}
 void WeatherCoordEvent_Underwater(void) {}
 void WeatherCoordEvent_Shade(void) {}
-void WeatherCoordEvent_Route119Cycle(void) {}
-void WeatherCoordEvent_Route123Cycle(void) {}
 
 static struct {
     u8 weatherId;
@@ -30,9 +28,7 @@ static struct {
     {WEATHER_SANDSTORM,         WeatherCoordEvent_Sandstorm       },
     {WEATHER_FOG_DIAGONAL,      WeatherCoordEvent_FogDiagonal     },
     {WEATHER_UNDERWATER,        WeatherCoordEvent_Underwater      },
-    {WEATHER_SHADE,             WeatherCoordEvent_Shade           },
-    {WEATHER_ROUTE119_CYCLE,    WeatherCoordEvent_Route119Cycle   },
-    {WEATHER_ROUTE123_CYCLE,    WeatherCoordEvent_Route123Cycle   }
+    {WEATHER_SHADE,             WeatherCoordEvent_Shade           }
 };
 
 void DoCoordEventWeather(u8 weatherId)

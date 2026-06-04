@@ -59,9 +59,6 @@ static const u8 sCeruleanCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_previ
 static const u8 sDiglettsCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/digletts_cave/tiles.gbapal");
 static const u8 sDiglettsCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/digletts_cave/tiles.4bpp.lz");
 static const u8 sDiglettsCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/digletts_cave/tilemap.bin.lz");
-static const u8 sLostCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/lost_cave/tiles.gbapal");
-static const u8 sLostCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/lost_cave/tiles.4bpp.lz");
-static const u8 sLostCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/lost_cave/tilemap.bin.lz");
 static const u8 sBerryForestMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/berry_forest/tiles.gbapal");
 static const u8 sBerryForestMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/berry_forest/tiles.4bpp.lz");
 static const u8 sBerryForestMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/berry_forest/tilemap.bin.lz");
@@ -192,14 +189,6 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilesptr = sIcefallCaveMapPreviewTiles,
         .tilemapptr = sIcefallCaveMapPreviewTilemap,
         .palptr = sIcefallCaveMapPreviewPalette
-    },
-    [MPS_LOST_CAVE] = {
-        .mapsec = MAPSEC_LOST_CAVE,
-        .type = MPS_TYPE_CAVE,
-        .flagId = FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE,
-        .tilesptr = sLostCaveMapPreviewTiles,
-        .tilemapptr = sLostCaveMapPreviewTilemap,
-        .palptr = sLostCaveMapPreviewPalette
     }
 };
 
