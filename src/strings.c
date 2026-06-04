@@ -1535,8 +1535,8 @@ const u8 gText_SubQuest2_Name8[] = _("GIOVANNI");
 const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
 const u8 gText_BrockTrialPhase2[] = _("BROCK asked to show him something\nof historical value...\nmaybe a fossil?\n");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
-const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokémon from the\ndistant past who still dwells in\nthe depths of the sea.");
-const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwithness a trade evolution.");
+const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokémon from the\ndistant past who still dwells in\nROCK TUNNEL's deepest waters.");
+const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwitness a trade evolution.");
 const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
