@@ -473,9 +473,7 @@ OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandScene::
 	playse SE_EXIT
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 3
-	clearflag FLAG_HIDE_CINNABAR_BILL
-	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 3
-	warp MAP_CINNABAR_ISLAND, 21, 9
+	warp MAP_CINNABAR_ISLAND, 45, 9
 	waitstate
 	end
 
