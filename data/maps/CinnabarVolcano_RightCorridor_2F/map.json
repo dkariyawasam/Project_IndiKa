@@ -1,0 +1,36 @@
+{
+  "id": "MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+  "name": "CinnabarVolcano_RightCorridor_2F",
+  "layout": "LAYOUT_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+  "music": "MUS_FUCHSIA",
+  "region_map_section": "MAPSEC_CINNABAR_VOLCANO",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 15,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_3F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

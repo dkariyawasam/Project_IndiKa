@@ -183,6 +183,9 @@
     "NavelRock_B1F",
     "NavelRock_Fork",
     "CinnabarVolcano_1F",
+    "CinnabarVolcano_RightCorridor_2F",
+    "CinnabarVolcano_LeftCorridor_2F",
+    "CinnabarVolcano_3F",
     "NavelRock_Harbor"
   ],
   "gMapGroup_TownsAndRoutes": [
