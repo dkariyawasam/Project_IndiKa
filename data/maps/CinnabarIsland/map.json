@@ -104,6 +104,13 @@
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_MART",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_VOLCANO_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",
-  "name": "OneIsland_KindleRoad_EmberSpa",
-  "layout": "LAYOUT_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",
+  "id": "MAP_CINNABAR_VOLCANO_1F",
+  "name": "CinnabarVolcano_1F",
+  "layout": "LAYOUT_CINNABAR_VOLCANO_1F",
   "music": "MUS_FUCHSIA",
-  "region_map_section": "MAPSEC_EMBER_SPA",
+  "region_map_section": "MAPSEC_CINNABAR_VOLCANO",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_OldMan",
+      "script": "CinnabarVolcano_1F_EventScript_OldMan",
       "flag": "0"
     },
     {
@@ -40,13 +40,13 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_BaldingMan1",
+      "script": "CinnabarVolcano_1F_EventScript_BaldingMan1",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 6,
+      "x": 8,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -54,21 +54,21 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_BlackBelt",
+      "script": "CinnabarVolcano_1F_EventScript_BlackBelt",
       "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 20,
-      "y": 7,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_OldWoman",
+      "script": "CinnabarVolcano_1F_EventScript_OldWoman",
       "flag": "0"
     },
     {
@@ -82,7 +82,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_RockSmashMan",
+      "script": "CinnabarVolcano_1F_EventScript_RockSmashMan",
       "flag": "0"
     },
     {
@@ -96,7 +96,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_BaldingMan2",
+      "script": "CinnabarVolcano_1F_EventScript_BaldingMan2",
       "flag": "0"
     }
   ],
@@ -105,8 +105,8 @@
       "x": 13,
       "y": 36,
       "elevation": 3,
-      "dest_map": "MAP_ONE_ISLAND_KINDLE_ROAD",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [
@@ -117,7 +117,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_SpaHeal"
+      "script": "CinnabarVolcano_1F_EventScript_SpaHeal"
     }
   ],
   "bg_events": []
