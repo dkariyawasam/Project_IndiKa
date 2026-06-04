@@ -1,13 +1,13 @@
 {
-  "id": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_1F",
-  "name": "CinnabarVolcano_SummitPath_1F",
-  "layout": "LAYOUT_CINNABAR_VOLCANO_SUMMIT_PATH_1F",
-  "music": "MUS_SEVII_CAVE",
+  "id": "MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+  "name": "CinnabarVolcano_RightCorridor_1F",
+  "layout": "LAYOUT_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+  "music": "MUS_FUCHSIA",
   "region_map_section": "MAPSEC_CINNABAR_VOLCANO",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
-  "allow_cycling": true,
+  "allow_cycling": false,
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
@@ -17,18 +17,18 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 2,
+      "x": 12,
       "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "0"
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_1F",
+      "dest_warp_id": "2"
     },
     {
-      "x": 11,
+      "x": 3,
       "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_VOLCANO_SUMMIT_PATH_2F",
-      "dest_warp_id": "0"
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_VOLCANO_3F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
