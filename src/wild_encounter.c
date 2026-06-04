@@ -42,12 +42,34 @@ static void ApplyFluteEncounterRateMod(u32 *rate);
 static u8 GetFluteEncounterRateModType(void);
 static void ApplyCleanseTagEncounterRateMod(u32 *rate);
 static bool8 IsLeadMonHoldingCleanseTag(void);
+static u8 GetEffectiveEncounterType(u8 encounterType, u8 metatileBehavior);
 static u16 WildEncounterRandom(void);
 static void AddToWildEncounterRateBuff(u8 encouterRate);
 static bool8 IsItDayTime(void);
 static const struct WildPokemonInfo *GetFishingMonsInfoForHeader(u16 headerIdx);
 
 #include "data/wild_encounters.h"
+
+static bool8 IsCurrentMapCoastlineSandEncounterMap(void)
+{
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VERMILION_CITY)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VERMILION_CITY))
+        return TRUE;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE19)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE19))
+        return TRUE;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE20)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE20))
+        return TRUE;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE21_NORTH)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE21_NORTH))
+        return TRUE;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE21_SOUTH)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE21_SOUTH))
+        return TRUE;
+
+    return FALSE;
+}
 
 static const u8 sUnownLetterSlots[][LAND_WILD_COUNT] = {
   //  A   A   A   A   A   A   A   A   A   A   A   ?
@@ -339,6 +361,8 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 {
     u16 headerId;
     struct Roamer * roamer;
+    u8 metatileBehavior;
+    u8 encounterType;
 
     if (sWildEncountersDisabled == TRUE)
         return FALSE;
@@ -346,11 +370,13 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
     headerId = GetCurrentMapWildMonHeaderId();
     if (headerId != HEADER_NONE)
     {
-        if (ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_LAND)
+        metatileBehavior = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR);
+        encounterType = GetEffectiveEncounterType(ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_ENCOUNTER_TYPE), metatileBehavior);
+        if (encounterType == TILE_ENCOUNTER_LAND)
         {
             if (gWildMonHeaders[headerId].landMonsInfo == NULL)
                 return FALSE;
-            else if (previousMetatileBehavior != ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR) && !DoGlobalWildEncounterDiceRoll())
+            else if (previousMetatileBehavior != metatileBehavior && !DoGlobalWildEncounterDiceRoll())
                 return FALSE;
             if (DoWildEncounterRateTest(gWildMonHeaders[headerId].landMonsInfo->encounterRate, FALSE) != TRUE)
             {
@@ -384,12 +410,12 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
                 }
             }
         }
-        else if (ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_WATER
-                 || (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && MetatileBehavior_IsBridge(ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR)) == TRUE))
+        else if (encounterType == TILE_ENCOUNTER_WATER
+                 || (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && MetatileBehavior_IsBridge(metatileBehavior) == TRUE))
         {
             if (gWildMonHeaders[headerId].waterMonsInfo == NULL)
                 return FALSE;
-            else if (previousMetatileBehavior != ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR) && !DoGlobalWildEncounterDiceRoll())
+            else if (previousMetatileBehavior != metatileBehavior && !DoGlobalWildEncounterDiceRoll())
                 return FALSE;
             else if (DoWildEncounterRateTest(gWildMonHeaders[headerId].waterMonsInfo->encounterRate, FALSE) != TRUE)
             {
@@ -448,12 +474,16 @@ bool8 SweetScentWildEncounter(void)
 {
     s16 x, y;
     u16 headerId;
+    u8 encounterType;
+    u8 metatileBehavior;
 
     PlayerGetDestCoords(&x, &y);
     headerId = GetCurrentMapWildMonHeaderId();
     if (headerId != HEADER_NONE)
     {
-        if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_LAND)
+        metatileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+        encounterType = GetEffectiveEncounterType(MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE), metatileBehavior);
+        if (encounterType == TILE_ENCOUNTER_LAND)
         {
             if (TryStartRoamerEncounter() == TRUE)
             {
@@ -469,7 +499,7 @@ bool8 SweetScentWildEncounter(void)
             StartWildBattle();
             return TRUE;
         }
-        else if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_WATER)
+        else if (encounterType == TILE_ENCOUNTER_WATER)
         {
             if (TryStartRoamerEncounter() == TRUE)
             {
@@ -698,6 +728,16 @@ static u8 GetMapBaseEncounterCooldown(u8 encounterType)
     return 0xFF;
 }
 
+static u8 GetEffectiveEncounterType(u8 encounterType, u8 metatileBehavior)
+{
+    if (encounterType == TILE_ENCOUNTER_NONE
+     && IsCurrentMapCoastlineSandEncounterMap()
+     && MetatileBehavior_IsSand(metatileBehavior))
+        return TILE_ENCOUNTER_LAND;
+
+    return encounterType;
+}
+
 void ResetEncounterRateModifiers(void)
 {
     sWildEncounterData.encounterRateBuff = 0;
@@ -706,7 +746,8 @@ void ResetEncounterRateModifiers(void)
 
 static bool8 HandleWildEncounterCooldown(u32 currMetatileAttrs)
 {
-    u8 encounterType = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_ENCOUNTER_TYPE);
+    u8 metatileBehavior = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR);
+    u8 encounterType = GetEffectiveEncounterType(ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_ENCOUNTER_TYPE), metatileBehavior);
     u32 minSteps;
     u32 encRate;
     if (encounterType == TILE_ENCOUNTER_NONE)

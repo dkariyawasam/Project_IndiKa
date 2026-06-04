@@ -243,9 +243,9 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_STICK]          = {gItemIcon_Stick, gItemIconPalette_Stick},
     // ????????
     [ITEM_ELECTIRIZER]    = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_0E3]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_0E4]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_0E5]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_PROTECTOR]      = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_MAGMARIZER]     = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_REAPER_CLOTH]   = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E6]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E7]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E8]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
