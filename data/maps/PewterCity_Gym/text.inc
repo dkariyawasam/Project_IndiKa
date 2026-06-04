@@ -49,17 +49,17 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
 	.string "to study the past.\p"
 	.string "Some POKéMON never vanished.\n"
 	.string "They still live... unchanged.\p"
-	.string "Deep in KANTO's waters,\n"
-	.string "there are POKéMON older than\l"
-	.string "anything we've restored.\p"
+	.string "Deep below ROCK TUNNEL,\n"
+	.string "ancient waters shelter POKéMON\l"
+	.string "older than anything restored.\p"
 	.string "Find one. Bring it to me.\p"
 	.string "Then I'll show you another kind\n"
 	.string "of evolution.$"
 
 PewterCity_Gym_Text_BrockRelicanthReminder::
-	.string "Deep in KANTO's waters,\n"
-	.string "there are POKéMON that never\l"
-	.string "vanished from ancient times.\p"
+	.string "Deep below ROCK TUNNEL,\n"
+	.string "ancient waters still shelter\l"
+	.string "POKéMON from another age.\p"
 	.string "Find one and bring it to me.\n"
 	.string "Then I'll show you trade evolution.$"
 
@@ -89,9 +89,9 @@ PewterCity_Gym_Text_BrockTradeDone::
 	.string "OAK's research.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-	.string "Deep in KANTO's waters,\n"
-	.string "there are POKéMON that never\l"
-	.string "vanished from ancient times.\p"
+	.string "Deep below ROCK TUNNEL,\n"
+	.string "ancient waters still shelter\l"
+	.string "POKéMON from another age.\p"
 	.string "Find one and bring it to me.\n"
 	.string "Then I'll show you trade evolution.$"
 
