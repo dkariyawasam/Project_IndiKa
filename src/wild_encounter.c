@@ -45,6 +45,7 @@ static bool8 IsLeadMonHoldingCleanseTag(void);
 static u16 WildEncounterRandom(void);
 static void AddToWildEncounterRateBuff(u8 encouterRate);
 static bool8 IsItDayTime(void);
+static const struct WildPokemonInfo *GetFishingMonsInfoForHeader(u16 headerIdx);
 
 #include "data/wild_encounters.h"
 
@@ -493,16 +494,33 @@ bool8 DoesCurrentMapHaveFishingMons(void)
     u16 headerIdx = GetCurrentMapWildMonHeaderId();
     if (headerIdx == HEADER_NONE)
         return FALSE;
-    if (gWildMonHeaders[headerIdx].fishingMonsInfo == NULL)
+    if (GetFishingMonsInfoForHeader(headerIdx) == NULL)
         return FALSE;
     return TRUE;
 }
 
 void FishingWildEncounter(u8 rod)
 {
-    GenerateFishingEncounter(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
+    GenerateFishingEncounter(GetFishingMonsInfoForHeader(GetCurrentMapWildMonHeaderId()), rod);
     IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
     StartWildBattle();
+}
+
+static const struct WildPokemonInfo *GetFishingMonsInfoForHeader(u16 headerIdx)
+{
+    if (gWildMonHeaders[headerIdx].fishingMonsInfo != NULL)
+        return gWildMonHeaders[headerIdx].fishingMonsInfo;
+
+    if (headerIdx > 0
+     && gWildMonHeaders[headerIdx - 1].mapGroup == gWildMonHeaders[headerIdx].mapGroup
+     && gWildMonHeaders[headerIdx - 1].mapNum == gWildMonHeaders[headerIdx].mapNum)
+        return gWildMonHeaders[headerIdx - 1].fishingMonsInfo;
+
+    if (gWildMonHeaders[headerIdx + 1].mapGroup == gWildMonHeaders[headerIdx].mapGroup
+     && gWildMonHeaders[headerIdx + 1].mapNum == gWildMonHeaders[headerIdx].mapNum)
+        return gWildMonHeaders[headerIdx + 1].fishingMonsInfo;
+
+    return NULL;
 }
 
 u16 GetLocalWildMon(bool8 *isWaterMon)
