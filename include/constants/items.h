@@ -47,10 +47,10 @@
 #define ITEM_WHITE_FLUTE 43
 #define ITEM_BERRY_JUICE 44
 #define ITEM_SACRED_ASH 45
-#define ITEM_RED_SHARD 46
-#define ITEM_BLUE_SHARD 47
-#define ITEM_YELLOW_SHARD 48
-#define ITEM_GREEN_SHARD 49
+#define ITEM_02E 46
+#define ITEM_02F 47
+#define ITEM_030 48
+#define ITEM_031 49
 #define ITEM_034 50
 #define ITEM_035 51
 #define ITEM_036 52

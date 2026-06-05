@@ -347,58 +347,6 @@ static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWaterSodaPopLemo
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_Unref_Shards_0[] = {
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_1[] = {
-    { gText_RedShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_2[] = {
-    { gText_YellowShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_3[] = {
-    { gText_RedShard },
-    { gText_YellowShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_4[] = {
-    { gText_BlueShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_5[] = {
-    { gText_RedShard },
-    { gText_BlueShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_6[] = {
-    { gText_YellowShard },
-    { gText_BlueShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Unref_Shards_7[] = {
-    { gText_RedShard },
-    { gText_YellowShard },
-    { gText_BlueShard },
-    { gText_GreenShard },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_Eeveelutions[] = {
     { gText_Eevee },
     { gText_Flareon },

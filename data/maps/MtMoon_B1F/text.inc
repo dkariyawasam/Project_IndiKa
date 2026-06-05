@@ -13,7 +13,7 @@ MtMoon_Text_BrockFirstMeeting::
 	.string "but combine the right ones...\p"
 	.string "...and you might get something close\n"
 	.string "to what used to live here.\p"
-	.string "If you find a fossil fragment around\n"
+	.string "If you find a fossil around\n"
 	.string "here, show it to me.\l"
 	.string "I'd like to see what you're made of!$"
 
@@ -24,7 +24,7 @@ MtMoon_Text_BrockStillSearching::
 	.string "history in plain sight.$"
 
 MtMoon_Text_BrockSawHelixShard::
-	.string "That's a HELIX SHARD!\p"
+	.string "That's a HELIX FOSSIL!\p"
 	.string "Sharp ridges... light structure...\n"
 	.string "This belonged to something built\l"
 	.string "for speed.\p"
@@ -33,10 +33,10 @@ MtMoon_Text_BrockSawHelixShard::
 
 MtMoon_Text_BrockGaveDartShard::
 	.string "BROCK gave you a\n"
-	.string "DART SHARD.$"
+	.string "DART FOSSIL.$"
 
 MtMoon_Text_BrockSawDomeShard::
-	.string "That's a DOME SHARD!\p"
+	.string "That's a DOME FOSSIL!\p"
 	.string "Dense curve... strong shell...\n"
 	.string "This belonged to something built\l"
 	.string "to endure.\p"
@@ -45,7 +45,7 @@ MtMoon_Text_BrockSawDomeShard::
 
 MtMoon_Text_BrockGaveHasteShard::
 	.string "BROCK gave you a\n"
-	.string "HASTE SHARD.$"
+	.string "HASTE FOSSIL.$"
 
 MtMoon_Text_BrockReturnToGym::
 	.string "You've got a good eye.\p"
