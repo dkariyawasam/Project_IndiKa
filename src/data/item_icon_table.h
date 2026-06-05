@@ -48,12 +48,11 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_WHITE_FLUTE]    = {gItemIcon_Flute, gItemIconPalette_WhiteFlute},
     [ITEM_BERRY_JUICE]    = {gItemIcon_BerryJuice, gItemIconPalette_BerryJuice},
     [ITEM_SACRED_ASH]     = {gItemIcon_SacredAsh, gItemIconPalette_SacredAsh},
-    // Collectibles
-    [ITEM_RED_SHARD]      = {gItemIcon_Shard, gItemIconPalette_RedShard},
-    [ITEM_BLUE_SHARD]     = {gItemIcon_Shard, gItemIconPalette_BlueShard},
-    [ITEM_YELLOW_SHARD]   = {gItemIcon_Shard, gItemIconPalette_YellowShard},
-    [ITEM_GREEN_SHARD]    = {gItemIcon_Shard, gItemIconPalette_GreenShard},
     // ????????
+    [ITEM_02E]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_02F]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_030]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_031]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_034]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_035]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_036]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
