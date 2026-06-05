@@ -121,7 +121,7 @@ PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 
 PewterCity_Gym_Text_LetsGetHappening::
     .string "All right!\n"
-    .string "Let's get happening!$"
+    .string "Let's dig deep!$"
 
 PewterCity_Gym_Text_BrockTypeAdvice::
     .string "BROCK uses ROCK-type POKéMON.\p"
