@@ -117,8 +117,7 @@ VermilionCity_Gym_EventScript_DefeatedLtSurge::
 	clearflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
 	setflag FLAG_DEFEATED_LT_SURGE
 	setflag FLAG_BADGE03_GET
-	setvar VAR_LT_SURGE_TRIAL_STATE, 5
-	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	setvar VAR_LT_SURGE_TRIAL_STATE, 4
 	msgbox VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis
 	release
 	end
@@ -136,6 +135,8 @@ VermilionCity_Gym_EventScript_LtSurgeElectabuzzTrade::
 	call EventScript_DoInGameTrade
 	msgbox VermilionCity_Gym_Text_LtSurgeElectabuzzTradeComplete
 	setflag FLAG_DID_ELECTABUZZ_TRADE
+	setvar VAR_LT_SURGE_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	release
 	end
 
@@ -150,6 +151,8 @@ VermilionCity_Gym_EventScript_LtSurgeNotRaichu::
 	end
 
 VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone::
+	setvar VAR_LT_SURGE_TRIAL_STATE, 5
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	msgbox VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone
 	release
 	end

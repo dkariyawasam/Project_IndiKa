@@ -391,9 +391,7 @@
     "Route18_EastEntrance_1F",
     "Route18_EastEntrance_2F"
   ],
-  "gMapGroup_IndoorRoute19": [
-
-  ],
+  "gMapGroup_IndoorRoute19": [],
   "gMapGroup_IndoorRoute22": [
     "Route22_NorthEntrance"
   ],
@@ -435,10 +433,6 @@
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"
   ],
-  "gMapGroup_IndoorFiveIslandRoute": [
-
-  ],
-  "gMapGroup_IndoorTwoIslandRoute": [
-
-  ]
+  "gMapGroup_IndoorFiveIslandRoute": [],
+  "gMapGroup_IndoorTwoIslandRoute": []
 }

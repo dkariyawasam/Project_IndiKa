@@ -1799,7 +1799,6 @@ extern const u8 gText_BrockTrialPhase2[];
 extern const u8 gText_BrockTrialPhase3[];
 extern const u8 gText_BrockTrialPhase4[];
 extern const u8 gText_BrockTrialPhase5[];
-extern const u8 gText_BrockTrialPhase6[];
 
 extern const u8 gText_MistyTrialPhase1[];
 extern const u8 gText_MistyTrialPhase2[];

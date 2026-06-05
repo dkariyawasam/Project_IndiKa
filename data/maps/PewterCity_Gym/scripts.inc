@@ -106,7 +106,7 @@ PewterCity_Gym_EventScript_BrockRelicanthCheck::
 	call EventScript_DoInGameTrade
 	msgbox PewterCity_Gym_Text_BrockTradeComplete
 	setflag FLAG_DID_BROCK_GRAVELER_TRADE
-	setvar VAR_BROCK_TRIAL_STATE, 6
+	setvar VAR_BROCK_TRIAL_STATE, 5
 	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
 	release
 	end
