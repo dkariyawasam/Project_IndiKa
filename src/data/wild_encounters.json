@@ -568,6 +568,71 @@
         {
           "map": "MAP_VERMILION_HARBOR",
           "base_label": "sSSAnneExterior",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLOYSTER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_STARMIE"
+              }
+            ]
+          },
           "water_mons": {
             "encounter_rate": 1,
             "mons": [
@@ -650,71 +715,6 @@
                 "min_level": 5,
                 "max_level": 8,
                 "species": "SPECIES_PSYDUCK"
-              }
-            ]
-          },
-          "land_mons": {
-            "encounter_rate": 21,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_PELIPPER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_KINGLER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_CLOYSTER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_STARMIE"
               }
             ]
           }
@@ -7517,6 +7517,71 @@
         {
           "map": "MAP_ROUTE19",
           "base_label": "sRoute19_Daytime",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLOYSTER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_STARMIE"
+              }
+            ]
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -7601,7 +7666,11 @@
                 "species": "SPECIES_SEAKING"
               }
             ]
-          },
+          }
+        },
+        {
+          "map": "MAP_ROUTE19",
+          "base_label": "sRoute19_Nighttime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -7666,11 +7735,7 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE19",
-          "base_label": "sRoute19_Nighttime",
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -7700,7 +7765,11 @@
                 "species": "SPECIES_MILOTIC"
               }
             ]
-          },
+          }
+        },
+        {
+          "map": "MAP_ROUTE20",
+          "base_label": "sRoute20_Daytime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -7765,11 +7834,7 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE20",
-          "base_label": "sRoute20_Daytime",
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -7854,7 +7919,11 @@
                 "species": "SPECIES_INVISIBAS"
               }
             ]
-          },
+          }
+        },
+        {
+          "map": "MAP_ROUTE20",
+          "base_label": "sRoute20_Nighttime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -7919,11 +7988,7 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE20",
-          "base_label": "sRoute20_Nighttime",
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -7953,7 +8018,11 @@
                 "species": "SPECIES_MILOTIC"
               }
             ]
-          },
+          }
+        },
+        {
+          "map": "MAP_ROUTE21_NORTH",
+          "base_label": "sRoute21North_Daytime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -8018,11 +8087,7 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE21_NORTH",
-          "base_label": "sRoute21North_Daytime",
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -8105,71 +8170,6 @@
                 "min_level": 5,
                 "max_level": 8,
                 "species": "SPECIES_CLAMPERL"
-              }
-            ]
-          },
-          "land_mons": {
-            "encounter_rate": 21,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_PELIPPER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_KINGLER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_CLOYSTER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_STARMIE"
               }
             ]
           }
@@ -8177,36 +8177,6 @@
         {
           "map": "MAP_ROUTE21_NORTH",
           "base_label": "sRoute21North_Nighttime",
-          "water_mons": {
-            "encounter_rate": 2,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_TENTACOOL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_HORSEA"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_TENTACRUEL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_HORSEA"
-              },
-              {
-                "min_level": 20,
-                "max_level": 23,
-                "species": "SPECIES_GYARADOS"
-              }
-            ]
-          },
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -8271,11 +8241,106 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
           }
         },
         {
           "map": "MAP_ROUTE21_SOUTH",
           "base_label": "sRoute21South_Daytime",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLOYSTER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_STARMIE"
+              }
+            ]
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -8360,7 +8425,11 @@
                 "species": "SPECIES_CHINCHOU"
               }
             ]
-          },
+          }
+        },
+        {
+          "map": "MAP_ROUTE21_SOUTH",
+          "base_label": "sRoute21South_Nighttime",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -8425,11 +8494,7 @@
                 "species": "SPECIES_STARMIE"
               }
             ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE21_SOUTH",
-          "base_label": "sRoute21South_Nighttime",
+          },
           "water_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -8457,71 +8522,6 @@
                 "min_level": 20,
                 "max_level": 23,
                 "species": "SPECIES_GYARADOS"
-              }
-            ]
-          },
-          "land_mons": {
-            "encounter_rate": 21,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_WINGULL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KRABBY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_SHELLDER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_STARYU"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_PELIPPER"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_KINGLER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_CLOYSTER"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_STARMIE"
               }
             ]
           }
@@ -9962,36 +9962,6 @@
         {
           "map": "MAP_VERMILION_CITY",
           "base_label": "sVermilionCity_Nighttime",
-          "water_mons": {
-            "encounter_rate": 1,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_TENTACOOL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_HORSEA"
-              },
-              {
-                "min_level": 30,
-                "max_level": 33,
-                "species": "SPECIES_TENTACRUEL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_HORSEA"
-              },
-              {
-                "min_level": 32,
-                "max_level": 35,
-                "species": "SPECIES_SEADRA"
-              }
-            ]
-          },
           "land_mons": {
             "encounter_rate": 10,
             "mons": [
@@ -10054,6 +10024,36 @@
                 "min_level": 25,
                 "max_level": 28,
                 "species": "SPECIES_STARMIE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 1,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_SEADRA"
               }
             ]
           }

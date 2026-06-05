@@ -18,7 +18,7 @@ ViridianForest_OnTransition::
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
 	call_if_unset FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_ShowTangrowth
 	call_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_HideTangrowth
-	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RemoveErika
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_RemoveErika
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	end
 
@@ -47,10 +47,11 @@ ViridianForest_EventScript_Erika::
 	lock
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_ErikaReturnToGym
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_ErikaReturnToGym
 	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
 	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	goto_if_eq VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_ErikaAskChallenge
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 2, ViridianForest_EventScript_ErikaCheckForRoot
 	setvar VAR_ERIKA_TRIAL_STATE, 2
 	msgbox ViridianForest_Text_ErikaLookingForRoot
@@ -72,6 +73,7 @@ ViridianForest_EventScript_ErikaReturnToGym::
 
 ViridianForest_EventScript_ErikaHasRoot::
 	msgbox ViridianForest_Text_ErikaShownRoot
+	setvar VAR_ERIKA_TRIAL_STATE, 3
 	special HasEnoughMonsForDoubleBattle
 	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, ViridianForest_EventScript_NeedTwoPokemon
 	goto_if_unset FLAG_HIDE_CELADON_CITY_GYM_GUIDE, ViridianForest_EventScript_ErikaAskChallenge
@@ -148,7 +150,7 @@ ViridianForest_EventScript_DefeatedErika::
 	famechecker FAMECHECKER_ERIKA, 1
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
-	setvar VAR_ERIKA_TRIAL_STATE, 3
+	setvar VAR_ERIKA_TRIAL_STATE, 4
 	msgbox ViridianForest_Text_ErikaAfterBattle
 	closemessage
 	applymovement LOCALID_VIRIDIAN_FOREST_ERIKA, ViridianForest_Movement_ErikaLeave
