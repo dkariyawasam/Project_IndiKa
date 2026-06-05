@@ -3239,7 +3239,6 @@ extern const u32 gItemIcon_OldAmber[];
 extern const u32 gItemIconPalette_OldAmber[];
 extern const u32 gItemIcon_CardKey[];
 extern const u32 gItemIconPalette_CardKey[];
-extern const u32 gItemIcon_LiftKey[];
 extern const u32 gItemIconPalette_Key[];
 extern const u32 gItemIcon_HelixFossil[];
 extern const u32 gItemIcon_HasteFossil[];
