@@ -190,7 +190,23 @@ VermilionCity_Gym_EventScript_GymGuy::
 	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 0, VermilionCity_Gym_EventScript_GymGuySurgeAwayFirstTime
 	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 1, VermilionCity_Gym_EventScript_GymGuySurgeAwayRepeat
 	goto_if_eq VAR_LT_SURGE_TRIAL_STATE, 2, VermilionCity_Gym_EventScript_GymGuySurgeAwayRepeat
+	goto VermilionCity_Gym_EventScript_GymGuyNormal
+	end
+
+VermilionCity_Gym_EventScript_GymGuyNormal::
+	msgbox VermilionCity_Gym_Text_GymGuySurgeReturned, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, VermilionCity_Gym_EventScript_GymGuyTakeAdvice
+	goto_if_eq VAR_RESULT, NO, VermilionCity_Gym_EventScript_GymGuyDontNeedAdvice
+	end
+
+VermilionCity_Gym_EventScript_GymGuyTakeAdvice::
+	msgbox VermilionCity_Gym_Text_GymGuyLetsGetCharged
 	msgbox VermilionCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+VermilionCity_Gym_EventScript_GymGuyDontNeedAdvice::
+	msgbox VermilionCity_Gym_Text_GymGuyShowSurge
 	release
 	end
 
