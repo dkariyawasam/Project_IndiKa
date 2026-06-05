@@ -1533,29 +1533,28 @@ const u8 gText_SubQuest2_Name7[] = _("BLAINE");
 const u8 gText_SubQuest2_Name8[] = _("GIOVANNI");
 
 const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
-const u8 gText_BrockTrialPhase2[] = _("BROCK asked to show him something\nof historical value...\nmaybe a fossil?\n");
+const u8 gText_BrockTrialPhase2[] = _("BROCK asked you to find and show\nhim a fossil.");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
-const u8 gText_BrockTrialPhase4[] = _("BROCK spoke of a Pokémon from the\ndistant past who still dwells in\nROCK TUNNEL's deepest waters.");
-const u8 gText_BrockTrialPhase5[] = _("Trade RELICANTH with BROCK to\nwitness a trade evolution.");
-const u8 gText_BrockTrialPhase6[] = _("Trade evolution confirmed through BROCK's GOLEM.");
+const u8 gText_BrockTrialPhase4[] = _("BROCK wants to study a POKéMON\nthat has lived unchanged since\nancient times.");
+const u8 gText_BrockTrialPhase5[] = _("Trade evolution confirmed through BROCK's GOLEM.");
 
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase2[] = _("MISTY asked you to scout the\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase3[] = _("MISTY returned to CERULEAN GYM.\nChallenge her.");
-const u8 gText_MistyTrialPhase4[] = _("Trade GYARADOS with MISTY to\nsee POLIWHIRL evolve with a\nKING'S ROCK.");
+const u8 gText_MistyTrialPhase4[] = _("MISTY wants to see a puny fish\nthat grew into a mighty raging\nPOKéMON.");
 const u8 gText_MistyTrialPhase5[] = _("Evolution confirmed through\nMISTY's POLITOED.");
 
 const u8 gText_LtSurgeTrialPhase1[] = _("LT. SURGE is training in\nDIGLETT'S CAVE.");
-const u8 gText_LtSurgeTrialPhase2[] = _("Find LT. SURGE in DIGLETT'S CAVE.");
+const u8 gText_LtSurgeTrialPhase2[] = _("Bring LT. SURGE an ELECTRIC\nPOKéMON that can learn VOLT TACKLE.");
 const u8 gText_LtSurgeTrialPhase3[] = _("LT. SURGE returned to VERMILION\nGYM. Challenge him.");
-const u8 gText_LtSurgeTrialPhase4[] = _("LT. SURGE's GYM challenge is won.");
-const u8 gText_LtSurgeTrialPhase5[] = _("LT. SURGE's GYM trial is complete.");
+const u8 gText_LtSurgeTrialPhase4[] = _("LT. SURGE wants to trade for a\nPOKéMON charged with serious\nvoltage.");
+const u8 gText_LtSurgeTrialPhase5[] = _("Evolution confirmed through\nLT. SURGE's ELECTIVIRE.");
 
 const u8 gText_ErikaTrialPhase1[] = _("Find ERIKA in\nViridian Forest.");
 const u8 gText_ErikaTrialPhase2[] = _("Bring ERIKA an\nENERGY ROOT.");
-const u8 gText_ErikaTrialPhase3[] = _("Return to\nCeladon Gym.");
-const u8 gText_ErikaTrialPhase4[] = _("Claim ERIKA's\nreward.");
-const u8 gText_ErikaTrialPhase5[] = _("ERIKA's challenge\nis complete.");
+const u8 gText_ErikaTrialPhase3[] = _("Challenge ERIKA.");
+const u8 gText_ErikaTrialPhase4[] = _("ERIKA returned to CELADON GYM.\nClaim your reward.");
+const u8 gText_ErikaTrialPhase5[] = _("Friendship evolution confirmed\nthrough ERIKA's BUDEW.");
 
 const u8 gText_KogaTrialPhase1[] = _("KOGA went to CINNABAR VOLCANO\nfor volcanic rock.");
 const u8 gText_KogaTrialPhase2[] = _("Find KOGA in CINNABAR VOLCANO.");

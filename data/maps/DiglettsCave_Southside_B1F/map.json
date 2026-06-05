@@ -14,7 +14,23 @@
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_DIGLETTS_CAVE_SOUTHSIDE_LT_SURGE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LT_SURGE",
+      "x": 51,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DiglettsCave_Southside_B1F_EventScript_LtSurge",
+      "flag": "FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE"
+    }
+  ],
   "warp_events": [
     {
       "x": 3,

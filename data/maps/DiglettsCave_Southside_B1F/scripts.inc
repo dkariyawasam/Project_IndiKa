@@ -4,4 +4,44 @@ DiglettsCave_Southside_B1F_MapScripts::
 
 DiglettsCave_Southside_B1F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F
+	goto_if_ge VAR_LT_SURGE_TRIAL_STATE, 3, DiglettsCave_Southside_B1F_EventScript_HideLtSurge
+	clearflag FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE
+	end
+
+DiglettsCave_Southside_B1F_EventScript_HideLtSurge::
+	setflag FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE
+	end
+
+.include "data/maps/DiglettsCave_Southside_B1F/text.inc"
+
+DiglettsCave_Southside_B1F_EventScript_LtSurge::
+	lock
+	faceplayer
+	goto_if_ge VAR_LT_SURGE_TRIAL_STATE, 3, DiglettsCave_Southside_B1F_EventScript_LtSurgeGone
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	setvar VAR_LT_SURGE_TRIAL_STATE, 2
+	msgbox DiglettsCave_Southside_B1F_Text_LtSurgeTeachVoltTackle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, DiglettsCave_Southside_B1F_EventScript_LtSurgeDeclineTutor
+	msgbox DiglettsCave_Southside_B1F_Text_LtSurgeChoosePokemon
+	setvar VAR_0x8005, MOVETUTOR_VOLT_TACKLE
+	call EventScript_ChooseMoveTutorMon
+	goto_if_eq VAR_RESULT, FALSE, DiglettsCave_Southside_B1F_EventScript_LtSurgeDeclineTutor
+	msgbox DiglettsCave_Southside_B1F_Text_LtSurgeTaughtVoltTackle
+	closemessage
+	setvar VAR_LT_SURGE_TRIAL_STATE, 3
+	clearflag FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE
+	setflag FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE
+	removeobject LOCALID_DIGLETTS_CAVE_SOUTHSIDE_LT_SURGE
+	release
+	end
+
+DiglettsCave_Southside_B1F_EventScript_LtSurgeDeclineTutor::
+	msgbox DiglettsCave_Southside_B1F_Text_LtSurgeComeBackWithPokemon
+	release
+	end
+
+DiglettsCave_Southside_B1F_EventScript_LtSurgeGone::
+	release
 	end

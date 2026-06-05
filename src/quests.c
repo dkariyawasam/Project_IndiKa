@@ -2455,8 +2455,9 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 			case SUB_QUEST_LTSURGE:
 				switch (VarGet(VAR_LT_SURGE_TRIAL_STATE))
 				{
-					case 1:
 					default:
+						return sText_Empty;
+					case 1:
 						return gText_LtSurgeTrialPhase1;
 					case 2:
 						return gText_LtSurgeTrialPhase2;
@@ -2470,8 +2471,9 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 			case SUB_QUEST_ERIKA:
 				switch (VarGet(VAR_ERIKA_TRIAL_STATE))
 				{
-					case 1:
 					default:
+						return sText_Empty;
+					case 1:
 						return gText_ErikaTrialPhase1;
 					case 2:
 						return gText_ErikaTrialPhase2;
@@ -2485,8 +2487,9 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 			case SUB_QUEST_KOGA:
 				switch (VarGet(VAR_KOGA_TRIAL_STATE))
 				{
-					case 1:
 					default:
+						return sText_Empty;
+					case 1:
 						return gText_KogaTrialPhase1;
 					case 2:
 						return gText_KogaTrialPhase2;
@@ -2500,8 +2503,9 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 			case SUB_QUEST_SABRINA:
 				switch (VarGet(VAR_SABRINA_TRIAL_STATE))
 				{
-					case 1:
 					default:
+						return sText_Empty;
+					case 1:
 						return gText_SabrinaTrialPhase1;
 					case 2:
 						return gText_SabrinaTrialPhase2;

@@ -1925,6 +1925,11 @@ static bool8 CanLearnTutorMove(u16 species, u8 tutor)
             return TRUE;
         else
             return FALSE;
+    case TUTOR_MOVE_VOLT_TACKLE:
+        if (gSpeciesInfo[species].types[0] == TYPE_ELECTRIC || gSpeciesInfo[species].types[1] == TYPE_ELECTRIC)
+            return TRUE;
+        else
+            return FALSE;
     default:
         if (sTutorLearnsets[species] & (1 << tutor))
             return TRUE;

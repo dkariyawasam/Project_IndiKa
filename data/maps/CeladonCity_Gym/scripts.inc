@@ -9,7 +9,7 @@ CeladonCity_Gym_OnFrame::
 
 CeladonCity_Gym_OnTransition::
 	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_SetInitialGuideState
-	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_ShowErikaAndGuide
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, CeladonCity_Gym_EventScript_ShowErikaAndGuide
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
 	goto CeladonCity_Gym_EventScript_HideErika
 
@@ -57,7 +57,7 @@ CeladonCity_Gym_EventScript_Erika::
 	lock
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	goto_if_eq VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_ErikaReward
+	goto_if_eq VAR_ERIKA_TRIAL_STATE, 4, CeladonCity_Gym_EventScript_ErikaReward
 	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_ErikaPostReward
 	msgbox CeladonCity_Gym_Text_ErikaWaitingForChallenge
 	release
@@ -150,7 +150,7 @@ CeladonCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
 	goto_if_eq VAR_ERIKA_TRIAL_STATE, 0, CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime
-	goto_if_ge VAR_ERIKA_TRIAL_STATE, 3, CeladonCity_Gym_EventScript_GymGuideErikaReturned
+	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, CeladonCity_Gym_EventScript_GymGuideErikaReturned
 	msgbox CeladonCity_Gym_Text_GymGuideErikaStillAway
 	release
 	end
