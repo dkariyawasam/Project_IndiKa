@@ -1,13 +1,16 @@
 VermilionCity_Gym_Text_LtSurgeIntro::
-    .string "Hey, kid! What do you think you're\n"
-    .string "doing here?\p"
-    .string "You won't live long in combat!\n"
-    .string "Not with your puny power!\p"
+    .string "So, you made it back, kid!\p"
+    .string "I'm LT. SURGE.\n"
+    .string "VERMILION CITY's GYM LEADER.\p"
+    .string "You handled VOLT TACKLE training\n"
+    .string "without flinching.\p"
+    .string "That takes nerve!\p"
+    .string "But a GYM battle is combat!\n"
+    .string "No holding back!\p"
     .string "I tell you, kid, electric POKéMON\n"
     .string "saved me during the war!\p"
-    .string "They zapped my enemies into\n"
-    .string "paralysis!\p"
-    .string "The same as I'll do to you!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "Now show me you can stand against\n"
+    .string "real voltage!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
     .string "A little word of advice, kid!\p"
@@ -108,8 +111,6 @@ VermilionCity_Gym_Text_DwaynePostBattle::
     .string "second lock is right next to it.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
     .string "LT. SURGE has a nickname.\p"
     .string "People refer to him as the\n"
     .string "Lightning American!\p"
@@ -121,6 +122,23 @@ VermilionCity_Gym_Text_GymGuyAdvice::
     .string "LT. SURGE is very cautious.\p"
     .string "He's locked himself in, so it won't\n"
     .string "be easy getting to him.$"
+
+VermilionCity_Gym_Text_GymGuySurgeReturned::
+    .string "Ah, LT. SURGE is back from\n"
+    .string "DIGLETT'S CAVE!\p"
+    .string "Sounds like he put you through\n"
+    .string "some serious training.\p"
+    .string "Want some advice before you\n"
+    .string "challenge him?$"
+
+VermilionCity_Gym_Text_GymGuyLetsGetCharged::
+    .string "All right!\n"
+    .string "Let's get charged up!$"
+
+VermilionCity_Gym_Text_GymGuyShowSurge::
+    .string "All right!\p"
+    .string "Then go show LT. SURGE what you\n"
+    .string "learned in DIGLETT'S CAVE!$"
 
 VermilionCity_Gym_Text_GymGuySurgeAway::
     .string "Hold it, kid!\p"

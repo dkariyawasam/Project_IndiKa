@@ -5808,8 +5808,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge3[] = {
     {
         .iv = 0,
         .lvl = 25,
-        .species = SPECIES_ELECTABUZZ,
-        .moves = {MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT, MOVE_THUNDER_WAVE},
+        .species = SPECIES_PLUSLE,
+        .moves = {MOVE_SPARK, MOVE_ENCORE, MOVE_THUNDER_WAVE, MOVE_CHARGE},
     },
     {
         .iv = 0,
@@ -5835,13 +5835,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge4[] = {
     {
         .iv = 0,
         .lvl = 31,
-        .species = SPECIES_VOLTORB,
+        .species = SPECIES_ELECTRODE,
         .moves = {MOVE_SPARK, MOVE_SELF_DESTRUCT, MOVE_THUNDER_WAVE, MOVE_EXPLOSION},
     },
     {
         .iv = 0,
         .lvl = 32,
-        .species = SPECIES_MAGNEMITE,
+        .species = SPECIES_MAGNETON,
         .moves = {MOVE_THUNDER_WAVE, MOVE_SPARK, MOVE_DOUBLE_EDGE, MOVE_SUBSTITUTE},
     },
 };
@@ -5874,7 +5874,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge5[] = {
     {
         .iv = 0,
         .lvl = 38,
-        .species = SPECIES_VOLTORB,
+        .species = SPECIES_ELECTRODE,
         .moves = {MOVE_SPARK, MOVE_LIGHT_SCREEN, MOVE_SELF_DESTRUCT, MOVE_THUNDER_WAVE},
     },
 };
@@ -5907,7 +5907,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge6[] = {
     {
         .iv = 0,
         .lvl = 42,
-        .species = SPECIES_ELEKID,
+        .species = SPECIES_ELECTABUZZ,
         .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_SWIFT},
     },
 };
