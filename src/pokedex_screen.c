@@ -119,6 +119,8 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered);
 static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos);
 static void DexScreen_UpdateCategoryPageCursorObject(u8 taskId, u8 cursorPos, u8 numMonsInPage);
 static bool8 DexScreen_FlipCategoryPageInDirection(u8 direction);
+static bool8 DexScreen_IsAlphaSpecies(u16 species);
+static void DexScreen_DrawCategoryPageMonBackdrop(u16 species, u8 slot, u8 numSlots);
 void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale);
 static u8 DexScreen_DrawMonDexPage(bool8 justRegistered);
 u8 RemoveDexPageWindows(void);
@@ -152,6 +154,15 @@ const u16 sDexScreen_CategoryCursorPals[] = {
     RGB(30, 16, 13), RGB(29, 21, 18),
     RGB(28, 18, 15), RGB(28, 22, 19),
     RGB(26, 20, 15), RGB(27, 23, 19)
+};
+
+static const u16 sDexScreen_AlphaCategoryCursorPals[] = {
+    RGB(24, 24, 13), RGB(27, 27, 17),
+    RGB(25, 24, 11), RGB(28, 27, 15),
+    RGB(26, 24, 10), RGB(29, 27, 14),
+    RGB(27, 24, 9),  RGB(30, 27, 13),
+    RGB(26, 24, 10), RGB(29, 27, 14),
+    RGB(25, 24, 11), RGB(28, 27, 15)
 };
 
 const u16 sNationalDexPalette[0x100] = INCBIN_U16("graphics/pokedex/national_dex_bgpals.gbapal");
@@ -969,7 +980,7 @@ static void Task_PokedexScreen(u8 taskId)
     {
     case 0:
         sPokedexScreenData->unlockedCategories = 0;
-        for (i = 0; i < 9; i++)
+        for (i = 0; i < DEX_CATEGORY_COUNT; i++)
             sPokedexScreenData->unlockedCategories |= (DexScreen_IsCategoryUnlocked(i) << i);
         sPokedexScreenData->state = 2;
         break;
@@ -2279,7 +2290,7 @@ bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
 {
     struct WindowTemplate template;
     numSlots--;
-    CopyToBgTilemapBufferRect_ChangePalette(3, sCategoryPageIconWindowBg, sCategoryPageIconCoords[numSlots][slot][0], sCategoryPageIconCoords[numSlots][slot][1], 8, 8, slot + 5);
+    DexScreen_DrawCategoryPageMonBackdrop(species, slot, numSlots);
     if (sPokedexScreenData->categoryMonWindowIds[slot] == 0xFF)
     {
         template = sWindowTemplate_CategoryMonIcon;
@@ -2318,6 +2329,31 @@ bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
         PutWindowTilemap(sPokedexScreenData->categoryMonInfoWindowIds[slot]);
 
     return TRUE;
+}
+
+static bool8 DexScreen_IsAlphaSpecies(u16 species)
+{
+    switch (species)
+    {
+    case SPECIES_TANGROWTH:
+    case SPECIES_ANNIHILAPE:
+    case SPECIES_MIME_SR:
+    case SPECIES_OSSCYTHE:
+    case SPECIES_AMBIPOM:
+    case SPECIES_LICKILICKY:
+    case SPECIES_MAMOSWINE:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+static void DexScreen_DrawCategoryPageMonBackdrop(u16 species, u8 slot, u8 numSlots)
+{
+    u8 left = sCategoryPageIconCoords[numSlots][slot][0];
+    u8 top = sCategoryPageIconCoords[numSlots][slot][1];
+
+    CopyToBgTilemapBufferRect_ChangePalette(3, sCategoryPageIconWindowBg, left, top, 8, 8, slot + 5);
 }
 
 static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void)
@@ -2397,8 +2433,16 @@ static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos)
         {
             if (i == cursorPos)
             {
-                LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 2], PLTT_ID(i) + PLTT_ID(5) + 2 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
-                LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 3], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
+                if (DexScreen_IsAlphaSpecies(sPokedexScreenData->pageSpecies[i]))
+                {
+                    LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx + 0], PLTT_ID(i) + PLTT_ID(5) + 2 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
+                    LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx + 1], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
+                }
+                else
+                {
+                    LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 2], PLTT_ID(i) + PLTT_ID(5) + 2 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
+                    LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 3], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
+                }
             }
             else
             {
@@ -2406,7 +2450,10 @@ static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos)
                 LoadPalette(&sDexScreen_CategoryCursorPals[1], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
             }
         }
-        LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 2], OBJ_PLTT_ID(4) + 1, PLTT_SIZEOF(1));
+        if (DexScreen_IsAlphaSpecies(sPokedexScreenData->pageSpecies[cursorPos]))
+            LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx], OBJ_PLTT_ID(4) + 1, PLTT_SIZEOF(1));
+        else
+            LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 2], OBJ_PLTT_ID(4) + 1, PLTT_SIZEOF(1));
     }
 }
 
