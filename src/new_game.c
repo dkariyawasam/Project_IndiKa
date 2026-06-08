@@ -127,6 +127,7 @@ void NewGameInitData(void)
     ClearPokedexFlags();
     InitEventData();
     FlagSet(FLAG_SYS_CAN_LINK_WITH_RS);
+    FlagSet(FLAG_HIDE_PALLET_FAT_MAN);
     ResetFameChecker();
     SetMoney(&gSaveBlock1Ptr->money, 3000);
     ResetGameStats();

@@ -5,6 +5,14 @@ PalletTown_MapScripts::
 
 PalletTown_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PALLET_TOWN
+	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_EventScript_StarterObtained
+	clearflag FLAG_HIDE_ROUTE21_NORTH_FAT_MAN
+	setflag FLAG_HIDE_PALLET_FAT_MAN
+	end
+
+PalletTown_EventScript_StarterObtained::
+	setflag FLAG_HIDE_ROUTE21_NORTH_FAT_MAN
+	clearflag FLAG_HIDE_PALLET_FAT_MAN
 	end
 
 PalletTown_OnFrame::

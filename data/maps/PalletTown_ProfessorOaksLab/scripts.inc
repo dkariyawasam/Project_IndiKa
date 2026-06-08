@@ -1239,6 +1239,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
+	setflag FLAG_HIDE_ROUTE21_NORTH_FAT_MAN
+	clearflag FLAG_HIDE_PALLET_FAT_MAN
 	release
 	end
 

@@ -11,6 +11,9 @@ PalletTown_Text_OakGrassUnsafeNeedMon::
     .string "Here, come with me!$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
+    .string "I knew I could get unstuck by\n"
+    .string "myself!\p"
+    .string "Unrelated,\n"
     .string "Technology is incredible!\p"
     .string "You can now store and recall items\n"
     .string "and POKéMON as data via PC.$"

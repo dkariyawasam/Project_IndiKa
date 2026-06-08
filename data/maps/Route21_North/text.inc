@@ -39,6 +39,14 @@ Route21_North_Text_SeagallopSailorAllAboard::
 	.string "Alright, all aboard!\n"
 	.string "We set sail!$"
 
+Route21_North_Text_FatManNeedPokemon::
+	.string "I got too excited about going to\n"
+	.string "the beach...\p"
+	.string "And now I'm stuck between these\n"
+	.string "fences!\p"
+	.string "Don't help me!\n"
+	.string "I'll get unstuck by myself!$"
+
 @ Below is the battle text for the Cue Ball that was on Route 21 in Gen 1.
 @ This trainer wasnt used in Gen 3 so their text goes unused/untranslated
 @ Interestingly they did add a rematch intro text for this trainer
