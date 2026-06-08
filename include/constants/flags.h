@@ -741,7 +741,7 @@
 #define FLAG_STOPPED_SEAFOAM_B3F_CURRENT                 0x2D2
 #define FLAG_STOPPED_SEAFOAM_B4F_CURRENT                 0x2D3
 #define FLAG_FOUGHT_TANGROWTH                            0x2D4
-#define FLAG_0x2D5                                       0x2D5
+#define FLAG_FOUGHT_MEW                                  0x2D5
 #define FLAG_0x2D6                                       0x2D6
 #define FLAG_0x2D7                                       0x2D7
 #define FLAG_LEARNED_YES_NAH_CHANSEY                     0x2D8

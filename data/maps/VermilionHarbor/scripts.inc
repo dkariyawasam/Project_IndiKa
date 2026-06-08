@@ -59,6 +59,39 @@ VermilionHarbor_EventScript_ExitedTicketCheck::
 	releaseall
 	end
 
+VermilionHarbor_EventScript_MewEncounter::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	msgbox VermilionHarbor_Text_SomethingUnderTruck
+	waitse
+	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	message VermilionHarbor_Text_MewCry
+	waitmessage
+	waitmoncry
+	delay 20
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
+	waitbuttonpress
+	setwildbattle SPECIES_MEW, 50
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, VermilionHarbor_EventScript_FoughtMew
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VermilionHarbor_EventScript_MewFled
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VermilionHarbor_EventScript_MewFled
+	goto VermilionHarbor_EventScript_FoughtMew
+
+VermilionHarbor_EventScript_FoughtMew::
+	setflag FLAG_FOUGHT_MEW
+	goto EventScript_RemoveStaticMon
+
+VermilionHarbor_EventScript_MewFled::
+	setvar VAR_0x8004, SPECIES_MEW
+	goto EventScript_MonFlewAway
+	end
+
 VermilionHarbor_OnFrame::
 	map_script_2 VAR_MAP_SCENE_VERMILION_CITY, 1, VermilionHarbor_ExitSSAnne
 	.2byte 0
@@ -119,3 +152,10 @@ VermilionHarbor_Movement_WalkDown::
 	walk_down
 	walk_down
 	step_end
+
+VermilionHarbor_Text_SomethingUnderTruck::
+	.string "There's something hiding under\n"
+	.string "the truck!$"
+
+VermilionHarbor_Text_MewCry::
+	.string "Mew!$"
