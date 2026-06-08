@@ -26,7 +26,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_IVYSAUR]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -437,7 +438,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)),
 
     [SPECIES_ARBOK]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -460,8 +460,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM54_STRENGTH)),
+                                        | TMHM(TM54_STRENGTH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PIKACHU]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -484,7 +484,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_RAICHU]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -776,9 +777,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_CLEFABLE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -812,9 +813,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_VULPIX]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -833,7 +835,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM50_OVERHEAT)),
+                                        | TMHM(TM50_OVERHEAT)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_NINETALES]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -884,9 +887,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_WIGGLYTUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -918,9 +921,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ZUBAT]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -964,8 +968,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM47_STEEL_WING)),
 
     [SPECIES_ODDISH]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -983,7 +986,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM51_CUT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_GLOOM]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1171,7 +1175,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM55_FLASH)),
 
@@ -1200,9 +1203,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PSYDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1230,7 +1233,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_GOLDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1467,7 +1471,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -1495,8 +1498,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -1524,8 +1527,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_MACHOP]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1549,7 +1552,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_MACHOKE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2120,8 +2124,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM48_SKILL_SWAP)),
 
     [SPECIES_HAUNTER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2143,8 +2146,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM48_SKILL_SWAP)),
 
     [SPECIES_GENGAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2171,9 +2173,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ONIX]        = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -2195,7 +2197,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_DROWZEE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -2221,7 +2224,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_HYPNO]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -2249,8 +2251,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_KRABBY]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2274,7 +2276,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM56_ROCK_SMASH)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_KINGLER]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2667,7 +2670,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)),
@@ -2691,7 +2693,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_TANGROWTH]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -2910,8 +2913,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_SCYTHER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2930,7 +2933,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM51_CUT)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_JYNX]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3603,7 +3607,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)),
@@ -3656,7 +3659,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM52_FLY)
@@ -3665,7 +3667,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_THERMIKARP]   = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         |  TMHM(TM03_WATER_PULSE)
@@ -3693,7 +3696,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_MEGANIUM]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4079,7 +4083,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM52_FLY)),
 
     [SPECIES_CHINCHOU]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4103,7 +4106,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_LANTURN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4171,7 +4175,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_IGGLYBUFF]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4196,7 +4201,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_TOGEPI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4221,7 +4227,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_TOGETIC]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4252,7 +4259,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM52_FLY)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_NATU]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4412,7 +4420,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM56_ROCK_SMASH)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_AZUMARILL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4438,7 +4447,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM56_ROCK_SMASH)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_SUDOWOODO]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -4568,7 +4578,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM56_ROCK_SMASH)),
@@ -4591,7 +4600,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM51_CUT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SUNFLORA]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4734,7 +4744,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM55_FLASH)),
 
@@ -4757,8 +4766,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM52_FLY)),
+                                        | TMHM(TM52_FLY)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SLOWKING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4793,7 +4802,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_MISDREAVUS]  = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4818,7 +4828,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_UNOWN]       = TMHM_LEARNSET(0),
@@ -4851,7 +4860,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PINECO]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5008,7 +5018,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_GRANBULL]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5045,7 +5056,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_QWILFISH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5160,7 +5172,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM54_STRENGTH)
@@ -5190,7 +5201,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_URSARING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -5474,7 +5486,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(TM56_ROCK_SMASH)),
 
@@ -5500,10 +5511,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_KINGDRA]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5523,7 +5534,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PHANPY]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5791,7 +5803,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)),
@@ -5820,7 +5831,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
@@ -6361,7 +6373,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM56_ROCK_SMASH)),
 
     [SPECIES_MIGHTYENA]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
@@ -6384,9 +6395,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ZIGZAGOON]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6412,7 +6423,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM53_SURF)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_LINOONE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -6758,7 +6770,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_BRELOOM]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -6782,11 +6793,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SPINDA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -6812,10 +6823,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_WINGULL]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6836,7 +6847,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM52_FLY)),
+                                        | TMHM(TM52_FLY)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PELIPPER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7039,7 +7051,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
@@ -7067,7 +7078,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_CLAYDOL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7162,7 +7174,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM55_FLASH)
                                         | TMHM(TM56_ROCK_SMASH)),
@@ -7187,7 +7198,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_WHISCASH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7809,7 +7821,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM53_SURF)
-                                        | TMHM(TM57_WATERFALL)),
+                                        | TMHM(TM57_WATERFALL)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_SPOINK]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -7834,7 +7847,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -7862,8 +7874,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_PLUSLE]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7881,7 +7893,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_MINUN]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7926,7 +7939,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_MEDITITE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -8050,7 +8064,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM55_FLASH)),
 
     [SPECIES_DUSCLOPS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -8078,10 +8091,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ROSELIA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -8100,7 +8113,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM51_CUT)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SLAKOTH]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8219,7 +8233,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM56_ROCK_SMASH)),
 
@@ -8244,9 +8257,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_TROPIUS]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -8272,7 +8285,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM52_FLY)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_WHISMUR]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8391,7 +8405,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM57_WATERFALL)
                                         | TMHM(TM58_DIVE)),
@@ -8417,7 +8430,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM53_SURF)
                                         | TMHM(TM57_WATERFALL)
-                                        | TMHM(TM58_DIVE)),
+                                        | TMHM(TM58_DIVE)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ABSOL]       = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -8449,7 +8463,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
@@ -8477,8 +8490,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_BANETTE]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8503,8 +8516,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SEVIPER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8526,9 +8539,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_ZANGOOSE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8562,7 +8575,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_RELICANTH]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -8864,8 +8878,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
     [SPECIES_KIRLIA]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8891,8 +8905,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_GARDEVOIR]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8919,8 +8934,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM59_DAZZLING_GLEAM)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_BAGON]       = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -8943,7 +8959,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
-                                        | TMHM(TM56_ROCK_SMASH)),
+                                        | TMHM(TM56_ROCK_SMASH)
+                                        | TMHM(TM49_SNATCH)),
 
     [SPECIES_SHELGON]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -9359,7 +9376,6 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_CUT)
                                         | TMHM(TM54_STRENGTH)
                                         | TMHM(TM55_FLASH)
@@ -9387,8 +9403,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)
-                                        | TMHM(TM55_FLASH)),
+                                        | TMHM(TM55_FLASH)
+                                        | TMHM(TM49_SNATCH)),
     [SPECIES_BUNEARY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -9514,5 +9530,100 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM52_FLY)),
+
+    [SPECIES_MIME_JR]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
+
+    [SPECIES_MIME_SR]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
+
+    [SPECIES_SYLVEON]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
+
+    [SPECIES_NINETALES_ALOLAN] = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
+
+    [SPECIES_WEEZING_GALARIAN] = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM36_SLUDGE_BOMB)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM59_DAZZLING_GLEAM)),
 
 };

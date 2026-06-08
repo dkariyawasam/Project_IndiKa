@@ -342,7 +342,7 @@
 #define ITEM_TM56 331
 #define ITEM_TM57 332
 #define ITEM_TM58 333
-#define ITEM_15B 334
+#define ITEM_TM59 334
 #define ITEM_15C 335
 
 #define ITEM_TM01_FOCUS_PUNCH ITEM_TM01
@@ -403,6 +403,7 @@
 #define ITEM_TM56_ROCK_SMASH ITEM_TM56
 #define ITEM_TM57_WATERFALL ITEM_TM57
 #define ITEM_TM58_DIVE ITEM_TM58
+#define ITEM_TM59_DAZZLING_GLEAM ITEM_TM59
 
 // FireRed/LeafGreen
 #define ITEM_POKE_FLUTE 336
@@ -437,7 +438,7 @@
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF
 
-#define NUM_TECHNICAL_MACHINES 58
+#define NUM_TECHNICAL_MACHINES 59
 #define NUM_HIDDEN_MACHINES     0
 
 // Secondary IDs for rods
