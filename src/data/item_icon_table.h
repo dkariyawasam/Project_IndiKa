@@ -354,8 +354,8 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TM56]           = {gItemIcon_TMHM, gItemIconPalette_FightingTMHM},
     [ITEM_TM57]           = {gItemIcon_TMHM, gItemIconPalette_WaterTMHM},
     [ITEM_TM58]           = {gItemIcon_TMHM, gItemIconPalette_WaterTMHM},
+    [ITEM_TM59]           = {gItemIcon_TMHM, gItemIconPalette_PsychicTMHM},
     // ????????
-    [ITEM_15B]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_15C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // FireRed/LeafGreen key items
     [ITEM_POKE_FLUTE]     = {gItemIcon_PokeFlute, gItemIconPalette_PokeFlute},
