@@ -375,7 +375,14 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
-	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
+	.4byte Move_FAIRY_WIND
+	.4byte Move_DISARMING_VOICE
+	.4byte Move_DRAINING_KISS
+	.4byte Move_DAZZLING_GLEAM
+	.4byte Move_PLAY_ROUGH
+	.4byte Move_MOONBLAST
+	.4byte Move_BABY_DOLL_EYES
+	.4byte Move_COUNT @ cannot be reached, because last move is Baby-Doll Eyes
 
 	.align 2
 gBattleAnims_StatusConditions::
@@ -9721,6 +9728,27 @@ Move_PSYCHO_BOOST:
 	blendoff
 	call UnsetPsychicBackground
 	end
+
+Move_FAIRY_WIND:
+	goto Move_GUST
+
+Move_DISARMING_VOICE:
+	goto Move_HYPER_VOICE
+
+Move_DRAINING_KISS:
+	goto Move_ABSORB
+
+Move_DAZZLING_GLEAM:
+	goto Move_MOONLIGHT
+
+Move_PLAY_ROUGH:
+	goto Move_TACKLE
+
+Move_MOONBLAST:
+	goto Move_MOONLIGHT
+
+Move_BABY_DOLL_EYES:
+	goto Move_CHARM
 
 Move_KNOCK_OFF:
 	loadspritegfx ANIM_TAG_SLAM_HIT_2

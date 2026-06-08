@@ -1027,6 +1027,7 @@ static const u16 sTMHMMoves_Duplicate[] =
     MOVE_ROCK_SMASH,
     MOVE_WATERFALL,
     MOVE_DIVE,
+    MOVE_DAZZLING_GLEAM,
 };
 
 enum
@@ -1253,4 +1254,5 @@ static const u16 sTMHMMoves[] =
     MOVE_ROCK_SMASH,
     MOVE_WATERFALL,
     MOVE_DIVE,
+    MOVE_DAZZLING_GLEAM,
 };
