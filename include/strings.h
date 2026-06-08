@@ -790,6 +790,7 @@ extern const u8 gText_Tm55_1000Coins[];
 extern const u8 gText_Tm56_1500Coins[];
 extern const u8 gText_Tm57_4500Coins[];
 extern const u8 gText_Tm58_3500Coins[];
+extern const u8 gText_Tm59_4500Coins[];
 extern const u8 gText_MorePrizes[];
 extern const u8 gText_PreviousPrizes[];
 extern const u8 gText_1F_2[];

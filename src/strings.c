@@ -482,6 +482,7 @@ const u8 gText_Tm55_1000Coins[] = _("TM55{CLEAR_TO 0x48}{FONT_SMALL}1,000 COINS"
 const u8 gText_Tm56_1500Coins[] = _("TM56{CLEAR_TO 0x48}{FONT_SMALL}1,500 COINS");
 const u8 gText_Tm57_4500Coins[] = _("TM57{CLEAR_TO 0x48}{FONT_SMALL}4,500 COINS");
 const u8 gText_Tm58_3500Coins[] = _("TM58{CLEAR_TO 0x48}{FONT_SMALL}3,500 COINS");
+const u8 gText_Tm59_4500Coins[] = _("TM59{CLEAR_TO 0x48}{FONT_SMALL}4,500 COINS");
 const u8 gText_MorePrizes[] = _("MORE");
 const u8 gText_PreviousPrizes[] = _("BACK");
 const u8 gText_1F_2[] = _("1F");
