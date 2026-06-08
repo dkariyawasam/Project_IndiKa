@@ -1,6 +1,16 @@
 Route21_North_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route21_North_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route21_North_OnFrame
 	.byte 0
+
+Route21_North_OnTransition::
+	goto_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, Route21_North_EventScript_ShowFatMan
+	setflag FLAG_HIDE_ROUTE21_NORTH_FAT_MAN
+	end
+
+Route21_North_EventScript_ShowFatMan::
+	clearflag FLAG_HIDE_ROUTE21_NORTH_FAT_MAN
+	end
 
 Route21_North_OnFrame::
 	map_script_2 VAR_MAP_SCENE_ROUTE21_NORTH, 1, Route21_North_EventScript_PlayerStepOffFerry
@@ -17,6 +27,14 @@ Route21_North_EventScript_PlayerStepOffFerry::
 Route21_North_Movement_PlayerStepOffFerry::
 	walk_up
 	step_end
+
+Route21_North_EventScript_FatMan::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox Route21_North_Text_FatManNeedPokemon
+	release
+	end
 
 Route21_North_EventScript_SeagallopSailor::
 	lock
