@@ -172,13 +172,6 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE10_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 2,
-      "y": 48,
-      "elevation": 3,
-      "dest_map": "MAP_POWER_PLANT",
-      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],
