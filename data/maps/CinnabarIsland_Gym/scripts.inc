@@ -47,6 +47,7 @@ CinnabarIsland_Gym_OnLoadOpenDoor6::
 
 CinnabarIsland_Gym_EventScript_Blaine::
 	famechecker FAMECHECKER_BLAINE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	goto_if_set FLAG_DEFEATED_BLAINE, CinnabarIsland_Gym_EventScript_BlaineAlreadyDefeated
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, CinnabarIsland_Gym_EventScript_BlaineChallenge1
 	goto_if_eq VAR_RESULT, 1, CinnabarIsland_Gym_EventScript_BlaineChallenge2
@@ -94,6 +95,11 @@ CinnabarIsland_Gym_EventScript_BlaineChallenge6::
 
 CinnabarIsland_Gym_EventScript_BlaineChallenge7::
 	trainerbattle_double TRAINER_LEADER_BLAINE_7, CinnabarIsland_Gym_Text_BlaineIntro, CinnabarIsland_Gym_Text_BlaineDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, CinnabarIsland_Gym_EventScript_DefeatedBlaine, NO_MUSIC
+	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
+	release
+	end
+
+CinnabarIsland_Gym_EventScript_BlaineAlreadyDefeated::
 	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
 	release
 	end

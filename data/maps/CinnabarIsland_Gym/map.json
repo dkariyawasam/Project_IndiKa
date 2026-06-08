@@ -18,7 +18,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLAINE",
-      "x": 5,
+      "x": 8,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
-      "x": 24,
-      "y": 20,
+      "x": 7,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -46,22 +46,22 @@
   ],
   "warp_events": [
     {
-      "x": 24,
-      "y": 23,
+      "x": 7,
+      "y": 16,
       "elevation": 3,
       "dest_map": "MAP_CINNABAR_ISLAND",
       "dest_warp_id": "1"
     },
     {
-      "x": 25,
-      "y": 23,
+      "x": 8,
+      "y": 16,
       "elevation": 3,
       "dest_map": "MAP_CINNABAR_ISLAND",
       "dest_warp_id": "1"
     },
     {
-      "x": 26,
-      "y": 23,
+      "x": 9,
+      "y": 16,
       "elevation": 3,
       "dest_map": "MAP_CINNABAR_ISLAND",
       "dest_warp_id": "1"
@@ -71,103 +71,23 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 23,
-      "y": 20,
+      "x": 6,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CinnabarIsland_Gym_EventScript_GymStatue"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 20,
+      "x": 10,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CinnabarIsland_Gym_EventScript_GymStatue"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quz1Left"
-    },
-    {
-      "type": "sign",
-      "x": 23,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quz1Right"
-    },
-    {
-      "type": "sign",
-      "x": 15,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz2Left"
-    },
-    {
-      "type": "sign",
-      "x": 16,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz2Right"
-    },
-    {
-      "type": "sign",
-      "x": 13,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz3Left"
-    },
-    {
-      "type": "sign",
-      "x": 14,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz3Right"
-    },
-    {
-      "type": "sign",
-      "x": 13,
-      "y": 17,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz4Left"
-    },
-    {
-      "type": "sign",
-      "x": 14,
-      "y": 17,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz4Right"
-    },
-    {
-      "type": "sign",
-      "x": 1,
-      "y": 18,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz5Left"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 18,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz5Right"
-    },
-    {
-      "type": "sign",
-      "x": 1,
+      "x": 4,
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -175,7 +95,7 @@
     },
     {
       "type": "sign",
-      "x": 2,
+      "x": 5,
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -183,7 +103,7 @@
     },
     {
       "type": "sign",
-      "x": 3,
+      "x": 6,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

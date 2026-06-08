@@ -280,8 +280,8 @@
     {
       "id": "LAYOUT_CINNABAR_ISLAND_GYM",
       "name": "CinnabarIsland_Gym_Layout",
-      "width": 30,
-      "height": 25,
+      "width": 17,
+      "height": 18,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
