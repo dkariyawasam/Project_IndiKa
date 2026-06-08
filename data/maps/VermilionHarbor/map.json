@@ -18,6 +18,11 @@
       "map": "MAP_VERMILION_CITY",
       "offset": 9,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE15",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -80,6 +85,20 @@
       "elevation": 0,
       "dest_map": "MAP_SSANNE_1F_CORRIDOR",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 43,
+      "y": 46,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_FOREST",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 44,
+      "y": 46,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_FOREST",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

@@ -665,11 +665,11 @@
       "id": "LAYOUT_ROUTE15",
       "name": "Route15_Layout",
       "width": 72,
-      "height": 20,
+      "height": 37,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/Route15/border.bin",
       "blockdata_filepath": "data/layouts/Route15/map.bin"
     },
@@ -844,8 +844,8 @@
     {
       "id": "LAYOUT_VERMILION_HARBOR",
       "name": "VermilionHarbor_Layout",
-      "width": 70,
-      "height": 32,
+      "width": 72,
+      "height": 53,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -2928,6 +2928,18 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/diglettcave_b2f_new/border.bin",
       "blockdata_filepath": "data/layouts/diglettcave_b2f_new/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE15_NEW",
+      "name": "route15_new",
+      "width": 72,
+      "height": 37,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ViridianCity",
+      "border_filepath": "data/layouts/route15_new/border.bin",
+      "blockdata_filepath": "data/layouts/route15_new/map.bin"
     }
   ]
 }
