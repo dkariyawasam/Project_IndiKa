@@ -32,6 +32,8 @@ DiglettsCave_Southside_B1F_EventScript_LtSurge::
 	closemessage
 	setvar VAR_LT_SURGE_TRIAL_STATE, 3
 	clearflag FLAG_HIDE_VERMILION_CITY_GYM_LT_SURGE
+	applymovement LOCALID_DIGLETTS_CAVE_SOUTHSIDE_LT_SURGE, DiglettsCave_Southside_B1F_Movement_LtSurgeLeave
+	waitmovement 0
 	setflag FLAG_HIDE_DIGLETTS_CAVE_LT_SURGE
 	removeobject LOCALID_DIGLETTS_CAVE_SOUTHSIDE_LT_SURGE
 	release
@@ -45,3 +47,20 @@ DiglettsCave_Southside_B1F_EventScript_LtSurgeDeclineTutor::
 DiglettsCave_Southside_B1F_EventScript_LtSurgeGone::
 	release
 	end
+
+DiglettsCave_Southside_B1F_Movement_LtSurgeLeave::
+	walk_in_place_faster_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
