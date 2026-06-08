@@ -143,8 +143,8 @@
 #define FLAG_HIDE_ROUTE21_SOUTH_SAILOR                     0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
-#define FLAG_UNUSED_0x083                                  0x083
-#define FLAG_UNUSED_0x084                                  0x084
+#define FLAG_HIDE_ROUTE21_NORTH_FAT_MAN                    0x083
+#define FLAG_HIDE_PALLET_FAT_MAN                           0x084
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_1                  0x085
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_2                  0x086
 #define FLAG_HIDE_SS_ANNE                                  0x087
