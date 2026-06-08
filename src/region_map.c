@@ -534,8 +534,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_TREASURE_BEACH,
         MAPSEC_BOND_BRIDGE,
         MAPSEC_THREE_ISLE_PORT,
-        MAPSEC_CINNABAR_VOLCANO,
-        MAPSEC_FUCHSIA_FOREST,
         MAPSEC_THREE_ISLE_PATH,
         MAPSEC_NONE
     },
@@ -3082,8 +3080,8 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->y = 8;
         break;
     case MAPSEC_CINNABAR_VOLCANO:
-        sMapCursor->x = 2;
-        sMapCursor->y = 3;
+        sMapCursor->x = 4;
+        sMapCursor->y = 13;
         break;
     case MAPSEC_FUCHSIA_FOREST:
         sMapCursor->x = 14;
