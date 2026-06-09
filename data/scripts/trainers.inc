@@ -2608,6 +2608,11 @@ EventScript_RouteTrainer_PKMN_BREEDER_BETHANY::
 	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
 	end
 
+EventScript_RouteTrainer_PKMN_BREEDER_ALLISON::
+	trainerbattle_single TRAINER_PKMN_BREEDER_ALLISON, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
 EventScript_RouteTrainer_AROMA_LADY_NIKKI::
 	trainerbattle_single TRAINER_AROMA_LADY_NIKKI, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -2618,6 +2623,191 @@ EventScript_RouteTrainer_AROMA_LADY_NIKKI::
 EventScript_RouteTrainer_AROMA_LADY_NIKKIRematch::
 	trainerbattle_rematch TRAINER_AROMA_LADY_NIKKI, RouteTrainer_Text_AromaLadyRematchIntro, RouteTrainer_Text_AromaLadyDefeat
 	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_VIOLET::
+	trainerbattle_single TRAINER_AROMA_LADY_VIOLET, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_ROSE::
+	trainerbattle_single TRAINER_AROMA_LADY_ROSE, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_GARRET::
+	trainerbattle_single TRAINER_BUG_CATCHER_GARRET, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_JONAH::
+	trainerbattle_single TRAINER_BUG_CATCHER_JONAH, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_VANCE::
+	trainerbattle_single TRAINER_BUG_CATCHER_VANCE, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_YASU::
+	trainerbattle_single TRAINER_YOUNGSTER_YASU, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_MANIAC_EVAN::
+	trainerbattle_single TRAINER_TAMER_EVAN, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_MANIAC_MARK::
+	trainerbattle_single TRAINER_POKEMANIAC_MARK_2, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_RANGER_LOGAN::
+	trainerbattle_single TRAINER_PKMN_RANGER_LOGAN, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_RANGER_BETH::
+	trainerbattle_single TRAINER_PKMN_RANGER_BETH, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_RANGER_KATELYN::
+	trainerbattle_single TRAINER_PKMN_RANGER_KATELYN, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_ORIN::
+	trainerbattle_single TRAINER_UNUSED_359, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_ROWAN::
+	trainerbattle_single TRAINER_UNUSED_360, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_LYRA::
+	trainerbattle_single TRAINER_UNUSED_361, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_MILO::
+	trainerbattle_single TRAINER_UNUSED_362, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_ELLIS::
+	trainerbattle_single TRAINER_UNUSED_363, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_IVY::
+	trainerbattle_single TRAINER_UNUSED_364, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_FINN::
+	trainerbattle_single TRAINER_UNUSED_365, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_OSCAR::
+	trainerbattle_single TRAINER_UNUSED_366, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_MAE::
+	trainerbattle_single TRAINER_UNUSED_367, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_NIA::
+	trainerbattle_single TRAINER_UNUSED_368, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_HOLLIS::
+	trainerbattle_single TRAINER_UNUSED_518, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_CORA::
+	trainerbattle_single TRAINER_UNUSED_519, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_AROMA_LADY_LINA::
+	trainerbattle_single TRAINER_YOUNGSTER_BEN_3, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_REMI::
+	trainerbattle_single TRAINER_YOUNGSTER_BEN_4, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_NILES::
+	trainerbattle_single TRAINER_YOUNGSTER_CHAD_2, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_CEDAR::
+	trainerbattle_single TRAINER_LASS_RELI_2, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_HAZEL::
+	trainerbattle_single TRAINER_LASS_RELI_3, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_ELI::
+	trainerbattle_single TRAINER_YOUNGSTER_TIMMY_2, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_PAX::
+	trainerbattle_single TRAINER_YOUNGSTER_TIMMY_3, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_TOBIN::
+	trainerbattle_single TRAINER_YOUNGSTER_TIMMY_4, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_ROSA::
+	trainerbattle_single TRAINER_YOUNGSTER_CHAD_3, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_AROMA_LADY_MARIS::
+	trainerbattle_single TRAINER_LASS_JANICE_2, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_QUILL::
+	trainerbattle_single TRAINER_LASS_JANICE_3, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_FERN::
+	trainerbattle_single TRAINER_YOUNGSTER_CHAD_4, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_WREN::
+	trainerbattle_single TRAINER_UNUSED_348, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_DENNY::
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_19, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_AROMA_LADY_DALIA::
@@ -3301,6 +3491,39 @@ RouteTrainer_Text_AromaLadyDefeat::
 RouteTrainer_Text_AromaLadyPost::
     .string "A gentle scent can settle both\n"
     .string "people and POKéMON.$"
+
+RouteTrainer_Text_BugCatcherIntro::
+    .string "The forest is crawling with\n"
+    .string "interesting BUG POKéMON!$"
+
+RouteTrainer_Text_BugCatcherDefeat::
+    .string "My bugs scattered!$"
+
+RouteTrainer_Text_BugCatcherPost::
+    .string "Small POKéMON can teach you\n"
+    .string "a lot if you watch closely.$"
+
+RouteTrainer_Text_BugManiacIntro::
+    .string "I study every rustle and buzz\n"
+    .string "in these trees!$"
+
+RouteTrainer_Text_BugManiacDefeat::
+    .string "You disrupted my research!$"
+
+RouteTrainer_Text_BugManiacPost::
+    .string "A rare bug can hide in plain\n"
+    .string "sight if you rush past it.$"
+
+RouteTrainer_Text_RangerIntro::
+    .string "I patrol these woods to keep\n"
+    .string "people and POKéMON safe.$"
+
+RouteTrainer_Text_RangerDefeat::
+    .string "You handled that with care.$"
+
+RouteTrainer_Text_RangerPost::
+    .string "Strong trainers should leave\n"
+    .string "the forest better than found.$"
 
 RouteTrainer_Text_TuberIntro::
     .string "The shore is my favorite place\n"

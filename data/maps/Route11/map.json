@@ -28,7 +28,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
       "x": 38,
       "y": 15,
       "elevation": 3,
@@ -37,12 +37,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route11_EventScript_Jasper",
+      "script": "EventScript_RouteTrainer_BUG_MANIAC_EVAN",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
       "x": 50,
       "y": 4,
       "elevation": 3,
@@ -51,12 +51,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route11_EventScript_Darian",
+      "script": "EventScript_RouteTrainer_BUG_MANIAC_MARK",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
       "x": 42,
       "y": 8,
       "elevation": 3,
@@ -65,12 +65,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route11_EventScript_Braxton",
+      "script": "EventScript_RouteTrainer_PKMN_RANGER_LOGAN",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
       "x": 32,
       "y": 18,
       "elevation": 3,
@@ -79,7 +79,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "Route11_EventScript_Bernie",
+      "script": "EventScript_RouteTrainer_PKMN_RANGER_BETH",
       "flag": "0"
     },
     {
@@ -126,7 +126,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 14,
       "y": 4,
       "elevation": 3,
@@ -135,12 +135,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_YOUNGSTER_YASU",
+      "script": "EventScript_RouteTrainer_BUG_CATCHER_YASU",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 19,
       "y": 8,
       "elevation": 3,
@@ -149,7 +149,35 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_LASS_ANN",
+      "script": "EventScript_RouteTrainer_PKMN_BREEDER_ALLISON",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 58,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "EventScript_ForestTrainer_AROMA_LADY_LINA",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 63,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "EventScript_ForestTrainer_PICNICKER_REMI",
       "flag": "0"
     }
   ],
@@ -176,7 +204,9 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
