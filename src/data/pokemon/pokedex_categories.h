@@ -356,6 +356,22 @@ static const u16 sDexCategory_CavePkmn_Page17[] = {
     SPECIES_SOLROCK,
 };
 
+static const u16 sDexCategory_CavePkmn_Page18[] = {
+    SPECIES_SLUGMA,
+    SPECIES_MAGCARGO,
+};
+
+static const u16 sDexCategory_CavePkmn_Page19[] = {
+    SPECIES_MAGBY,
+    SPECIES_MAGMAR,
+    SPECIES_MAGMORTAR,
+};
+
+static const u16 sDexCategory_CavePkmn_Page20[] = {
+    SPECIES_NUMEL,
+    SPECIES_CAMERUPT,
+};
+
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
     SPECIES_STARLY,
     SPECIES_STARAVIA,
@@ -384,23 +400,6 @@ static const u16 sDexCategory_MountainPkmn_Page5[] = {
     SPECIES_MANKEY,
     SPECIES_PRIMEAPE,
     SPECIES_ANNIHILAPE,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page6[] = {
-    SPECIES_SLUGMA,
-    SPECIES_MAGCARGO,
-};
-
-static const u16 sDexCategory_MountainPkmn_Page7[] = {
-    SPECIES_MAGBY,
-    SPECIES_MAGMAR,
-    SPECIES_MAGMORTAR,
-};
-
-
-static const u16 sDexCategory_MountainPkmn_Page8[] = {
-    SPECIES_NUMEL,
-    SPECIES_CAMERUPT,
 };
 
 static const u16 sDexCategory_RoughTerrainPkmn_Page1[] = {
@@ -843,6 +842,9 @@ static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
     DEX_CATEGORY(CavePkmn_Page15),
     DEX_CATEGORY(CavePkmn_Page16),
     DEX_CATEGORY(CavePkmn_Page17),
+    DEX_CATEGORY(CavePkmn_Page18),
+    DEX_CATEGORY(CavePkmn_Page19),
+    DEX_CATEGORY(CavePkmn_Page20),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
@@ -851,9 +853,6 @@ static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
     DEX_CATEGORY(MountainPkmn_Page3),
     DEX_CATEGORY(MountainPkmn_Page4),
     DEX_CATEGORY(MountainPkmn_Page5),
-    DEX_CATEGORY(MountainPkmn_Page6),
-    DEX_CATEGORY(MountainPkmn_Page7),
-    DEX_CATEGORY(MountainPkmn_Page8),
 };
 
 static const struct PokedexCategoryPage sDexCategory_RoughTerrainPkmn[] = {

@@ -1,2 +1,7 @@
 CinnabarVolcano_RightCorridor_2F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_RightCorridor_2F_EventScript_Nolan::
+	trainerbattle_single TRAINER_VOLCANO_HIKER_NOLAN, CinnabarVolcano_RightCorridor_2F_Text_NolanIntro, CinnabarVolcano_RightCorridor_2F_Text_NolanDefeat
+	msgbox CinnabarVolcano_RightCorridor_2F_Text_NolanPostBattle, MSGBOX_AUTOCLOSE
+	end

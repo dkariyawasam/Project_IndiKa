@@ -1,2 +1,12 @@
 CinnabarVolcano_RightCorridor_3F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_RightCorridor_3F_EventScript_Kira::
+	trainerbattle_single TRAINER_VOLCANO_BATTLE_GIRL_KIRA, CinnabarVolcano_RightCorridor_3F_Text_KiraIntro, CinnabarVolcano_RightCorridor_3F_Text_KiraDefeat
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_KiraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_RightCorridor_3F_EventScript_Cole::
+	trainerbattle_single TRAINER_VOLCANO_KINDLER_COLE, CinnabarVolcano_RightCorridor_3F_Text_ColeIntro, CinnabarVolcano_RightCorridor_3F_Text_ColeDefeat
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_ColePostBattle, MSGBOX_AUTOCLOSE
+	end

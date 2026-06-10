@@ -42,7 +42,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "x": 26,
       "y": 11,
       "elevation": 3,
@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL",
       "x": 49,
       "y": 17,
       "elevation": 3,
