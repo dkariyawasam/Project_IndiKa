@@ -67,16 +67,15 @@ Route9_Text_BricePostBattle::
     .string "Kids should be tough!$"
 
 Route9_Text_BrentIntro::
-    .string "I got up early every day to raise\n"
-    .string "my POKéMON from cocoons!$"
+    .string "The climb to ROCK TUNNEL is my\n"
+    .string "training ground!$"
 
 Route9_Text_BrentDefeat::
-    .string "WHAT?\p"
-    .string "What a total waste of time!$"
+    .string "I lost my stance!$"
 
 Route9_Text_BrentPostBattle::
-    .string "I have to collect more than bugs\n"
-    .string "to get stronger…$"
+    .string "A strong stance keeps you steady\n"
+    .string "on uneven ground.$"
 
 Route9_Text_AlanIntro::
     .string "Hahahaha!\n"
@@ -91,16 +90,16 @@ Route9_Text_AlanPostBattle::
     .string "Us hearty guys always laugh!$"
 
 Route9_Text_ConnerIntro::
-    .string "Go, my super BUG POKéMON!$"
+    .string "This mountain path makes every\n"
+    .string "battle hit harder!$"
 
 Route9_Text_ConnerDefeat::
-    .string "My bugs…$"
+    .string "You hit harder!$"
 
 Route9_Text_ConnerPostBattle::
-    .string "If you don't like BUG POKéMON,\n"
-    .string "you bug me!$"
+    .string "Train on rough ground and your\n"
+    .string "balance improves fast.$"
 
 Route9_Text_RouteSign::
     .string "ROUTE 9\n"
     .string "CERULEAN CITY - ROCK TUNNEL$"
-

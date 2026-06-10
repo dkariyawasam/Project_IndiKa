@@ -5,8 +5,11 @@
 #define TRAINER_JUGGLER_KAYDEN_2                   TRAINER_NONE
 // Dummy trainers for all the RS trainer classes
 #define TRAINER_UNUSED_1                        1
+#define TRAINER_VOLCANO_CAMPER_MASON            TRAINER_UNUSED_1
 #define TRAINER_UNUSED_2                       2
+#define TRAINER_VOLCANO_PICNICKER_LENA          TRAINER_UNUSED_2
 #define TRAINER_UNUSED_3                       3
+#define TRAINER_VOLCANO_HIKER_GARRETT           TRAINER_UNUSED_3
 #define TRAINER_RS_AROMA_LADY                      4
 #define TRAINER_RS_RUIN_MANIAC                     5
 #define TRAINER_RS_TUBER_F                         7
@@ -60,11 +63,17 @@
 #define TRAINER_COLLECTOR                         57
 #define TRAINER_WALLY                             58
 #define TRAINER_UNUSED_59                         59
+#define TRAINER_VOLCANO_HIKER_NOLAN               TRAINER_UNUSED_59
 #define TRAINER_UNUSED_60                         60
+#define TRAINER_VOLCANO_BLACK_BELT_REN            TRAINER_UNUSED_60
 #define TRAINER_UNUSED_61                         61
+#define TRAINER_VOLCANO_BATTLE_GIRL_KIRA          TRAINER_UNUSED_61
 #define TRAINER_UNUSED_62                         62
+#define TRAINER_VOLCANO_KINDLER_COLE              TRAINER_UNUSED_62
 #define TRAINER_UNUSED_63                         63
+#define TRAINER_VOLCANO_KINDLER_BLAIR             TRAINER_UNUSED_63
 #define TRAINER_UNUSED_64                         64
+#define TRAINER_VOLCANO_RUIN_MANIAC_ELIAS         TRAINER_UNUSED_64
 #define TRAINER_RS_PKMN_BREEDER_M                 65
 #define TRAINER_RS_PKMN_BREEDER_F                 66
 #define TRAINER_RS_PKMN_RANGER_M                  67
@@ -670,6 +679,7 @@
 #define TRAINER_CHANNELER_KARINA_2                 TRAINER_LASS_SALLY_2
 #define TRAINER_BUG_MANIAC_HOLLIS                518
 #define TRAINER_UNUSED_519                       519
+#define TRAINER_BATTLE_GIRL_CORA                   TRAINER_UNUSED_519
 #define TRAINER_PLAYER_RED                       520
 #define TRAINER_PLAYER_LEAF                      521
 #define TRAINER_UNUSED_522                       522
@@ -892,6 +902,8 @@
 #define TRAINER_TAMER_EVAN_2                     729
 #define TRAINER_UNUSED_730                       730
 #define TRAINER_UNUSED_731                       731
+#define TRAINER_HIKER_GREG                         TRAINER_UNUSED_730
+#define TRAINER_BLACK_BELT_BRENT                   TRAINER_UNUSED_731
 #define TRAINER_COOLTRAINER_LEROY_2              732
 #define TRAINER_COOLTRAINER_MICHELLE_2           733
 #define TRAINER_COOL_COUPLE_LEX_NYA_2            734

@@ -1,2 +1,7 @@
 CinnabarVolcano_LeftCorridor_2F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_LeftCorridor_2F_EventScript_Garrett::
+	trainerbattle_single TRAINER_VOLCANO_HIKER_GARRETT, CinnabarVolcano_LeftCorridor_2F_Text_GarrettIntro, CinnabarVolcano_LeftCorridor_2F_Text_GarrettDefeat
+	msgbox CinnabarVolcano_LeftCorridor_2F_Text_GarrettPostBattle, MSGBOX_AUTOCLOSE
+	end

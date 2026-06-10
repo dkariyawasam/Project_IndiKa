@@ -10,15 +10,12 @@ PokemonMansion_1F_Text_TedPostBattle::
     .string "talking about.$"
 
 PokemonMansion_1F_Text_JohnsonIntro::
-    .string "W-w-waah! You startled me!\n"
-    .string "I thought you were a ghost.$"
+    .string "This building is unstable.\n"
+    .string "My research is not.$"
 
 PokemonMansion_1F_Text_JohnsonDefeat::
-    .string "Tch!\n"
-    .string "I can't get any wins.$"
+    .string "My data collapsed!$"
 
 PokemonMansion_1F_Text_JohnsonPostBattle::
-    .string "I was exploring here by myself,\n"
-    .string "but I feel spooked.\p"
-    .string "I ought to go soon.$"
-
+    .string "Every scorched wall here tells\n"
+    .string "part of CINNABAR's story.$"

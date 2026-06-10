@@ -64,3 +64,15 @@ Route22_Text_LeagueGateSign::
 	.string "POKéMON LEAGUE\n"
 	.string "Front Gate$"
 
+Route22_Text_RunningTriathleteFIntro::
+	.string "This rugged path is perfect\n"
+	.string "for endurance training!$"
+
+Route22_Text_RunningTriathleteFDefeat::
+	.string "I need to pace myself!$"
+
+Route22_Text_RunningTriathleteFPostBattle::
+	.string "Strong legs, steady breath,\n"
+	.string "and a good partner POKéMON.\p"
+	.string "That's how you cross rough\n"
+	.string "terrain.$"
