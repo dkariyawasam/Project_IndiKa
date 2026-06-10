@@ -41,6 +41,6 @@ RockTunnel_1F_EventScript_Ariana::
 	end
 
 RockTunnel_1F_EventScript_Dana::
-	trainerbattle_single TRAINER_PICNICKER_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
+	trainerbattle_single TRAINER_FISHERMAN_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
 	msgbox RockTunnel_1F_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
 	end

@@ -416,6 +416,32 @@ static const struct SpriteFrameImage sPicTable_Camper[] = {
     overworld_frame(gObjectEventPic_Camper, 2, 4, 9),
 };
 
+static const struct SpriteFrameImage sPicTable_PokemonRangerM[] = {
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 8),
+    overworld_frame(gObjectEventPic_PokemonRangerM, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_PokemonRangerF[] = {
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 8),
+    overworld_frame(gObjectEventPic_PokemonRangerF, 2, 4, 9),
+};
+
 static const struct SpriteFrameImage sPicTable_Picnicker[] = {
     overworld_frame(gObjectEventPic_Picnicker, 2, 4, 0),
     overworld_frame(gObjectEventPic_Picnicker, 2, 4, 1),

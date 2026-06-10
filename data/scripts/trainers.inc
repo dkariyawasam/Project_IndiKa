@@ -35,14 +35,14 @@ Route3_EventScript_ColtonRematch::
 	end
 
 Route3_EventScript_Greg::
-	trainerbattle_single TRAINER_BUG_CATCHER_GREG, Route3_Text_GregIntro, Route3_Text_GregDefeat
+	trainerbattle_single TRAINER_HIKER_GREG, Route3_Text_GregIntro, Route3_Text_GregDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_GregRematch
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route3_EventScript_GregRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_GREG, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
+	trainerbattle_rematch TRAINER_HIKER_GREG, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -239,27 +239,27 @@ Route25_EventScript_HaleyRematch::
 	end
 
 Route25_EventScript_Franklin::
-	trainerbattle_single TRAINER_HIKER_FRANKLIN, Route25_Text_FranklinIntro, Route25_Text_FranklinDefeat
+	trainerbattle_single TRAINER_HIKER_FRANKLIN, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FranklinRematch
-	msgbox Route25_Text_FranklinPostBattle, MSGBOX_AUTOCLOSE
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_FranklinRematch::
-	trainerbattle_rematch TRAINER_HIKER_FRANKLIN, Route25_Text_FranklinRematchIntro, Route25_Text_FranklinDefeat
-	msgbox Route25_Text_FranklinPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_rematch TRAINER_HIKER_FRANKLIN, RouteTrainer_Text_BreederRematchIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_Nob::
-	trainerbattle_single TRAINER_HIKER_NOB, Route25_Text_NobIntro, Route25_Text_NobDefeat
+	trainerbattle_single TRAINER_HIKER_NOB, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_NobRematch
-	msgbox Route25_Text_NobPostBattle, MSGBOX_AUTOCLOSE
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_NobRematch::
-	trainerbattle_rematch TRAINER_HIKER_NOB, Route25_Text_NobRematchIntro, Route25_Text_NobDefeat
-	msgbox Route25_Text_NobPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_rematch TRAINER_HIKER_NOB, RouteTrainer_Text_BreederRematchIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_Wayne::
@@ -275,14 +275,14 @@ Route25_EventScript_WayneRematch::
 	end
 
 Route25_EventScript_Flint::
-	trainerbattle_single TRAINER_CAMPER_FLINT, Route25_Text_FlintIntro, Route25_Text_FlintDefeat
+	trainerbattle_single TRAINER_FISHERMAN_FLINT, Route25_Text_FlintIntro, Route25_Text_FlintDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FlintRematch
 	msgbox Route25_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_FlintRematch::
-	trainerbattle_rematch TRAINER_CAMPER_FLINT, Route25_Text_FlintRematchIntro, Route25_Text_FlintDefeat
+	trainerbattle_rematch TRAINER_FISHERMAN_FLINT, Route25_Text_FlintRematchIntro, Route25_Text_FlintDefeat
 	msgbox Route25_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -383,14 +383,14 @@ Route11_EventScript_DillonRematch::
 	end
 
 Route11_EventScript_Yasu::
-	trainerbattle_single TRAINER_YOUNGSTER_YASU, Route11_Text_YasuIntro, Route11_Text_YasuDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_YASU, Route11_Text_YasuIntro, Route11_Text_YasuDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_YasuRematch
 	msgbox Route11_Text_YasuPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_YasuRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_YASU, Route11_Text_YasuRematchIntro, Route11_Text_YasuDefeat
+	trainerbattle_rematch TRAINER_BUG_CATCHER_YASU, Route11_Text_YasuRematchIntro, Route11_Text_YasuDefeat
 	msgbox Route11_Text_YasuPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -479,26 +479,26 @@ Route11_EventScript_DarianRematch::
 	end
 
 Route9_EventScript_Brent::
-	trainerbattle_single TRAINER_BUG_CATCHER_BRENT, Route9_Text_BrentIntro, Route9_Text_BrentDefeat
+	trainerbattle_single TRAINER_BLACK_BELT_BRENT, Route9_Text_BrentIntro, Route9_Text_BrentDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_BrentRematch
 	msgbox Route9_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_BrentRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_BRENT, Route9_Text_BrentRematchIntro, Route9_Text_BrentDefeat
+	trainerbattle_rematch TRAINER_BLACK_BELT_BRENT, Route9_Text_BrentRematchIntro, Route9_Text_BrentDefeat
 	msgbox Route9_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_Conner::
-	trainerbattle_single TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
+	trainerbattle_single TRAINER_BATTLE_GIRL_CORA, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_ConnerRematch
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_ConnerRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat
+	trainerbattle_rematch TRAINER_BATTLE_GIRL_CORA, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -2075,14 +2075,14 @@ OneIsland_KindleRoad_EventScript_BryceRematch::
 	end
 
 OneIsland_KindleRoad_EventScript_Claire::
-	trainerbattle_single TRAINER_CAMPER_BLAKE, OneIsland_KindleRoad_Text_ClaireIntro, OneIsland_KindleRoad_Text_ClaireDefeat
+	trainerbattle_single TRAINER_AROMA_LADY_BLAKE, OneIsland_KindleRoad_Text_ClaireIntro, OneIsland_KindleRoad_Text_ClaireDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, OneIsland_KindleRoad_EventScript_ClaireRematch
 	msgbox OneIsland_KindleRoad_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 OneIsland_KindleRoad_EventScript_ClaireRematch::
-	trainerbattle_rematch TRAINER_CAMPER_BLAKE, OneIsland_KindleRoad_Text_ClaireRematchIntro, OneIsland_KindleRoad_Text_ClaireDefeat
+	trainerbattle_rematch TRAINER_AROMA_LADY_BLAKE, OneIsland_KindleRoad_Text_ClaireRematchIntro, OneIsland_KindleRoad_Text_ClaireDefeat
 	msgbox OneIsland_KindleRoad_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -2591,6 +2591,249 @@ EventScript_RouteTrainer_PICNICKER_MARTHARematch::
 	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
 	end
 
+EventScript_RouteTrainer_PKMN_BREEDER_ALIZE::
+	trainerbattle_single TRAINER_PKMN_BREEDER_ALIZE, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PKMN_BREEDER_ALIZERematch
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_BREEDER_ALIZERematch::
+	trainerbattle_rematch TRAINER_PKMN_BREEDER_ALIZE, RouteTrainer_Text_BreederRematchIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_BREEDER_BETHANY::
+	trainerbattle_single TRAINER_PKMN_BREEDER_BETHANY, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_BREEDER_ALLISON::
+	trainerbattle_single TRAINER_PKMN_BREEDER_ALLISON, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_NIKKI::
+	trainerbattle_single TRAINER_AROMA_LADY_NIKKI, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_NIKKIRematch
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_NIKKIRematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_NIKKI, RouteTrainer_Text_AromaLadyRematchIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_VIOLET::
+	trainerbattle_single TRAINER_AROMA_LADY_VIOLET, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_ROSE::
+	trainerbattle_single TRAINER_AROMA_LADY_ROSE, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_GARRET::
+	trainerbattle_single TRAINER_BUG_CATCHER_GARRET, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_JONAH::
+	trainerbattle_single TRAINER_BUG_CATCHER_JONAH, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_VANCE::
+	trainerbattle_single TRAINER_BUG_CATCHER_VANCE, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_CATCHER_YASU::
+	trainerbattle_single TRAINER_BUG_CATCHER_YASU, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_MANIAC_EVAN::
+	trainerbattle_single TRAINER_BUG_MANIAC_EVAN, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_BUG_MANIAC_MARK::
+	trainerbattle_single TRAINER_BUG_MANIAC_MARK, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_RANGER_LOGAN::
+	trainerbattle_single TRAINER_PKMN_RANGER_LOGAN, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_BETH::
+	trainerbattle_single TRAINER_AROMA_LADY_BETH, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_PKMN_RANGER_KATELYN::
+	trainerbattle_single TRAINER_PKMN_RANGER_KATELYN, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_ORIN::
+	trainerbattle_single TRAINER_BUG_CATCHER_ORIN, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_ROWAN::
+	trainerbattle_single TRAINER_CAMPER_ROWAN, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_LYRA::
+	trainerbattle_single TRAINER_PICNICKER_LYRA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_MILO::
+	trainerbattle_single TRAINER_PKMN_BREEDER_MILO, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_ELLIS::
+	trainerbattle_single TRAINER_BUG_MANIAC_ELLIS, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_IVY::
+	trainerbattle_single TRAINER_PKMN_RANGER_IVY, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_FINN::
+	trainerbattle_single TRAINER_BUG_CATCHER_FINN, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_OSCAR::
+	trainerbattle_single TRAINER_CAMPER_OSCAR, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_MAE::
+	trainerbattle_single TRAINER_PICNICKER_MAE, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_NIA::
+	trainerbattle_single TRAINER_PKMN_BREEDER_NIA, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_HOLLIS::
+	trainerbattle_single TRAINER_BUG_MANIAC_HOLLIS, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_JACKSON::
+	trainerbattle_single TRAINER_BUG_MANIAC_JACKSON, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_AROMA_LADY_LINA::
+	trainerbattle_single TRAINER_AROMA_LADY_LINA, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_REMI::
+	trainerbattle_single TRAINER_PICNICKER_REMI, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_NILES::
+	trainerbattle_single TRAINER_BUG_CATCHER_NILES, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_CEDAR::
+	trainerbattle_single TRAINER_BUG_MANIAC_CEDAR, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_HAZEL::
+	trainerbattle_single TRAINER_PKMN_RANGER_HAZEL, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_ELI::
+	trainerbattle_single TRAINER_PKMN_BREEDER_ELI, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_PAX::
+	trainerbattle_single TRAINER_CAMPER_PAX, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_CATCHER_TOBIN::
+	trainerbattle_single TRAINER_BUG_CATCHER_TOBIN, RouteTrainer_Text_BugCatcherIntro, RouteTrainer_Text_BugCatcherDefeat
+	msgbox RouteTrainer_Text_BugCatcherPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PICNICKER_ROSA::
+	trainerbattle_single TRAINER_PICNICKER_ROSA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_AROMA_LADY_MARIS::
+	trainerbattle_single TRAINER_AROMA_LADY_MARIS, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_BUG_MANIAC_QUILL::
+	trainerbattle_single TRAINER_BUG_MANIAC_QUILL, RouteTrainer_Text_BugManiacIntro, RouteTrainer_Text_BugManiacDefeat
+	msgbox RouteTrainer_Text_BugManiacPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_RANGER_REED::
+	trainerbattle_single TRAINER_PKMN_RANGER_REED, RouteTrainer_Text_RangerIntro, RouteTrainer_Text_RangerDefeat
+	msgbox RouteTrainer_Text_RangerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_PKMN_BREEDER_WREN::
+	trainerbattle_single TRAINER_UNUSED_348, RouteTrainer_Text_BreederIntro, RouteTrainer_Text_BreederDefeat
+	msgbox RouteTrainer_Text_BreederPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_ForestTrainer_CAMPER_DENNY::
+	trainerbattle_single TRAINER_CAMPER_DENNY, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_DALIA::
+	trainerbattle_single TRAINER_AROMA_LADY_DALIA, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_DALIARematch
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_DALIARematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_DALIA, RouteTrainer_Text_AromaLadyRematchIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_JOANA::
+	trainerbattle_single TRAINER_AROMA_LADY_JOANA, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_JOANARematch
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_AROMA_LADY_JOANARematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_JOANA, RouteTrainer_Text_AromaLadyRematchIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
+	end
+
 EventScript_RouteTrainer_YOUNGSTER_EDDIE::
 	trainerbattle_single TRAINER_YOUNGSTER_EDDIE, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -2688,14 +2931,14 @@ EventScript_RouteTrainer_PICNICKER_SUSIERematch::
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_YASU::
-	trainerbattle_single TRAINER_YOUNGSTER_YASU, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_YASU, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_YASURematch
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_YASURematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_YASU, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_rematch TRAINER_BUG_CATCHER_YASU, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -2759,16 +3002,16 @@ EventScript_RouteTrainer_LASS_DAWNRematch::
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_CAMPER_FLINT::
-	trainerbattle_single TRAINER_CAMPER_FLINT, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+EventScript_RouteTrainer_FISHERMAN_FLINT::
+	trainerbattle_single TRAINER_FISHERMAN_FLINT, RouteTrainer_Text_FishermanIntro, RouteTrainer_Text_FishermanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_FLINTRematch
-	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_FISHERMAN_FLINTRematch
+	msgbox RouteTrainer_Text_FishermanPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_CAMPER_FLINTRematch::
-	trainerbattle_rematch TRAINER_CAMPER_FLINT, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
-	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+EventScript_RouteTrainer_FISHERMAN_FLINTRematch::
+	trainerbattle_rematch TRAINER_FISHERMAN_FLINT, RouteTrainer_Text_FishermanRematchIntro, RouteTrainer_Text_FishermanDefeat
+	msgbox RouteTrainer_Text_FishermanPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_PICNICKER_GWEN::
@@ -2784,14 +3027,14 @@ EventScript_RouteTrainer_PICNICKER_GWENRematch::
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_JOHNSON::
-	trainerbattle_single TRAINER_YOUNGSTER_JOHNSON, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_single TRAINER_CAMPER_JOHNSON, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_JOHNSONRematch
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_JOHNSONRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_JOHNSON, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_rematch TRAINER_CAMPER_JOHNSON, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -2832,14 +3075,14 @@ EventScript_RouteTrainer_PICNICKER_MISSYRematch::
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_DESTIN::
-	trainerbattle_single TRAINER_YOUNGSTER_DESTIN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_single TRAINER_CAMPER_DESTIN, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_DESTINRematch
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_DESTINRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_DESTIN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_rematch TRAINER_CAMPER_DESTIN, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -2880,14 +3123,14 @@ EventScript_RouteTrainer_PICNICKER_IRENERematch::
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_CORDELL::
-	trainerbattle_single TRAINER_YOUNGSTER_CORDELL, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_single TRAINER_CAMPER_CORDELL, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_CORDELLRematch
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_CORDELLRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_CORDELL, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
+	trainerbattle_rematch TRAINER_CAMPER_CORDELL, RouteTrainer_Text_YoungsterRematchIntro, RouteTrainer_Text_YoungsterDefeat
 	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -2903,16 +3146,16 @@ EventScript_RouteTrainer_LASS_MEGANRematch::
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_PICNICKER_DANA::
-	trainerbattle_single TRAINER_PICNICKER_DANA, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+EventScript_RouteTrainer_FISHERMAN_DANA::
+	trainerbattle_single TRAINER_FISHERMAN_DANA, RouteTrainer_Text_FishermanIntro, RouteTrainer_Text_FishermanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_PICNICKER_DANARematch
-	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_FISHERMAN_DANARematch
+	msgbox RouteTrainer_Text_FishermanPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_PICNICKER_DANARematch::
-	trainerbattle_rematch TRAINER_PICNICKER_DANA, RouteTrainer_Text_PicnickerRematchIntro, RouteTrainer_Text_PicnickerDefeat
-	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+EventScript_RouteTrainer_FISHERMAN_DANARematch::
+	trainerbattle_rematch TRAINER_FISHERMAN_DANA, RouteTrainer_Text_FishermanRematchIntro, RouteTrainer_Text_FishermanDefeat
+	msgbox RouteTrainer_Text_FishermanPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_LASS_JULIA::
@@ -2927,16 +3170,16 @@ EventScript_RouteTrainer_LASS_JULIARematch::
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_CAMPER_BLAKE::
-	trainerbattle_single TRAINER_CAMPER_BLAKE, RouteTrainer_Text_CamperIntro, RouteTrainer_Text_CamperDefeat
+EventScript_RouteTrainer_AROMA_LADY_BLAKE::
+	trainerbattle_single TRAINER_AROMA_LADY_BLAKE, RouteTrainer_Text_AromaLadyIntro, RouteTrainer_Text_AromaLadyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_CAMPER_BLAKERematch
-	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_BLAKERematch
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_RouteTrainer_CAMPER_BLAKERematch::
-	trainerbattle_rematch TRAINER_CAMPER_BLAKE, RouteTrainer_Text_CamperRematchIntro, RouteTrainer_Text_CamperDefeat
-	msgbox RouteTrainer_Text_CamperPost, MSGBOX_AUTOCLOSE
+EventScript_RouteTrainer_AROMA_LADY_BLAKERematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_BLAKE, RouteTrainer_Text_AromaLadyRematchIntro, RouteTrainer_Text_AromaLadyDefeat
+	msgbox RouteTrainer_Text_AromaLadyPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_PICNICKER_ARIANA::
@@ -3060,26 +3303,26 @@ EventScript_RouteTrainer_PICNICKER_BECKYRematch::
 	end
 
 EventScript_RouteTrainer_LASS_DALIA::
-	trainerbattle_single TRAINER_LASS_DALIA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	trainerbattle_single TRAINER_AROMA_LADY_DALIA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_DALIARematch
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_LASS_DALIARematch::
-	trainerbattle_rematch TRAINER_LASS_DALIA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	trainerbattle_rematch TRAINER_AROMA_LADY_DALIA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_LASS_JOANA::
-	trainerbattle_single TRAINER_LASS_JOANA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	trainerbattle_single TRAINER_AROMA_LADY_JOANA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_LASS_JOANARematch
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_LASS_JOANARematch::
-	trainerbattle_rematch TRAINER_LASS_JOANA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
+	trainerbattle_rematch TRAINER_AROMA_LADY_JOANA, RouteTrainer_Text_LassRematchIntro, RouteTrainer_Text_LassDefeat
 	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -3173,6 +3416,21 @@ RouteTrainer_Text_PicnickerPost::
     .string "Taking the long way makes the\n"
     .string "journey feel worthwhile.$"
 
+RouteTrainer_Text_FishermanIntro::
+    .string "The water is looking lively today.\n"
+    .string "Care for a battle?$"
+
+RouteTrainer_Text_FishermanRematchIntro::
+    .string "The water is lively again.\n"
+    .string "So am I!$"
+
+RouteTrainer_Text_FishermanDefeat::
+    .string "Nothing biting...$"
+
+RouteTrainer_Text_FishermanPost::
+    .string "A patient TRAINER is a lot like\n"
+    .string "a patient fisher.$"
+
 RouteTrainer_Text_YoungsterIntro::
     .string "Hey, you are a TRAINER!\n"
     .string "Let us battle!$"
@@ -3202,6 +3460,70 @@ RouteTrainer_Text_LassDefeat::
 RouteTrainer_Text_LassPost::
     .string "A journey feels brighter after\n"
     .string "a good battle.$"
+
+RouteTrainer_Text_BreederIntro::
+    .string "Healthy POKéMON love a wide,\n"
+    .string "open route like this.$"
+
+RouteTrainer_Text_BreederRematchIntro::
+    .string "My POKéMON are growing well.\n"
+    .string "Let us show you!$"
+
+RouteTrainer_Text_BreederDefeat::
+    .string "You raised them well!$"
+
+RouteTrainer_Text_BreederPost::
+    .string "Fresh air and steady care make\n"
+    .string "POKéMON grow strong.$"
+
+RouteTrainer_Text_AromaLadyIntro::
+    .string "The grass is so fragrant here.\n"
+    .string "Would you care for a battle?$"
+
+RouteTrainer_Text_AromaLadyRematchIntro::
+    .string "The flowers are blooming again.\n"
+    .string "Shall we battle again?$"
+
+RouteTrainer_Text_AromaLadyDefeat::
+    .string "Oh!\n"
+    .string "You scattered my focus.$"
+
+RouteTrainer_Text_AromaLadyPost::
+    .string "A gentle scent can settle both\n"
+    .string "people and POKéMON.$"
+
+RouteTrainer_Text_BugCatcherIntro::
+    .string "The forest is crawling with\n"
+    .string "interesting BUG POKéMON!$"
+
+RouteTrainer_Text_BugCatcherDefeat::
+    .string "My bugs scattered!$"
+
+RouteTrainer_Text_BugCatcherPost::
+    .string "Small POKéMON can teach you\n"
+    .string "a lot if you watch closely.$"
+
+RouteTrainer_Text_BugManiacIntro::
+    .string "I study every rustle and buzz\n"
+    .string "in these trees!$"
+
+RouteTrainer_Text_BugManiacDefeat::
+    .string "You disrupted my research!$"
+
+RouteTrainer_Text_BugManiacPost::
+    .string "A rare bug can hide in plain\n"
+    .string "sight if you rush past it.$"
+
+RouteTrainer_Text_RangerIntro::
+    .string "I patrol these woods to keep\n"
+    .string "people and POKéMON safe.$"
+
+RouteTrainer_Text_RangerDefeat::
+    .string "You handled that with care.$"
+
+RouteTrainer_Text_RangerPost::
+    .string "Strong trainers should leave\n"
+    .string "the forest better than found.$"
 
 RouteTrainer_Text_TuberIntro::
     .string "The shore is my favorite place\n"

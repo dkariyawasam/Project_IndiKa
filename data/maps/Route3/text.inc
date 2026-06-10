@@ -42,16 +42,15 @@ Route3_Text_JanicePostBattle::
     .string "don't want to battle!$"
 
 Route3_Text_GregIntro::
-    .string "Are you a TRAINER?\n"
-    .string "Let's get with it right away!$"
+    .string "The trail gets rockier from here.\n"
+    .string "Step carefully!$"
 
 Route3_Text_GregDefeat::
-    .string "If I had new POKéMON, I would've\n"
-    .string "won!$"
+    .string "You found your footing!$"
 
 Route3_Text_GregPostBattle::
-    .string "If a POKéMON BOX on the PC gets\n"
-    .string "full, just switch to another BOX.$"
+    .string "MT. MOON is rougher than this.\n"
+    .string "Bring sturdy POKéMON.$"
 
 Route3_Text_SallyIntro::
     .string "That look you gave me…\n"
@@ -101,4 +100,3 @@ Route3_Text_RobinPostBattle::
 Route3_Text_RouteSign::
     .string "ROUTE 3\n"
     .string "MT. MOON AHEAD$"
-

@@ -1,2 +1,7 @@
 CinnabarVolcano_LeftCorridor_1F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_LeftCorridor_1F_EventScript_Mason::
+	trainerbattle_single TRAINER_VOLCANO_CAMPER_MASON, CinnabarVolcano_LeftCorridor_1F_Text_MasonIntro, CinnabarVolcano_LeftCorridor_1F_Text_MasonDefeat
+	msgbox CinnabarVolcano_LeftCorridor_1F_Text_MasonPostBattle, MSGBOX_AUTOCLOSE
+	end

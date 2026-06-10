@@ -1,2 +1,7 @@
 CinnabarVolcano_RightCorridor_1F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_RightCorridor_1F_EventScript_Lena::
+	trainerbattle_single TRAINER_VOLCANO_PICNICKER_LENA, CinnabarVolcano_RightCorridor_1F_Text_LenaIntro, CinnabarVolcano_RightCorridor_1F_Text_LenaDefeat
+	msgbox CinnabarVolcano_RightCorridor_1F_Text_LenaPostBattle, MSGBOX_AUTOCLOSE
+	end

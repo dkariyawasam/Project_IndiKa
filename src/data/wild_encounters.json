@@ -2129,27 +2129,27 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               }
             ]
           },
@@ -2283,27 +2283,27 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               }
             ]
           }
@@ -2412,27 +2412,27 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_WOBBUFFET"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WYNAUT"
               }
             ]
           },
@@ -3697,12 +3697,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -3722,7 +3722,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3732,12 +3732,12 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 30,
@@ -3761,7 +3761,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3776,7 +3776,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -3786,7 +3786,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3801,7 +3801,7 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 30,
@@ -3811,7 +3811,7 @@
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 38,
@@ -3835,12 +3835,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3855,12 +3855,12 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 30,
@@ -3885,7 +3885,7 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               }
             ]
           }
@@ -3899,7 +3899,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3914,7 +3914,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -3929,12 +3929,12 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 5,
@@ -3954,7 +3954,7 @@
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_CAMERUPT"
               }
             ]
           }
@@ -3968,7 +3968,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -3978,7 +3978,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -3993,12 +3993,12 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 30,
@@ -4013,7 +4013,7 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 38,
@@ -4047,12 +4047,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -4062,12 +4062,12 @@
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 38,
@@ -4082,7 +4082,7 @@
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 30,
@@ -4111,7 +4111,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 5,
@@ -4121,7 +4121,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 5,
@@ -4131,12 +4131,12 @@
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_GRAVELER"
+                "species": "SPECIES_CAMERUPT"
               },
               {
                 "min_level": 28,
                 "max_level": 31,
-                "species": "SPECIES_MACHOKE"
+                "species": "SPECIES_MAGCARGO"
               },
               {
                 "min_level": 30,
