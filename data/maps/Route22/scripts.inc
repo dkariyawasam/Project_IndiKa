@@ -1,6 +1,11 @@
 Route22_MapScripts::
 	.byte 0
 
+Route22_EventScript_RunningTriathleteF::
+	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
+	msgbox Route22_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route22_EventScript_EarlyRivalTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0

@@ -1,2 +1,12 @@
 CinnabarVolcano_3F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_3F_EventScript_Blair::
+	trainerbattle_single TRAINER_VOLCANO_KINDLER_BLAIR, CinnabarVolcano_3F_Text_BlairIntro, CinnabarVolcano_3F_Text_BlairDefeat
+	msgbox CinnabarVolcano_3F_Text_BlairPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_EventScript_Elias::
+	trainerbattle_single TRAINER_VOLCANO_RUIN_MANIAC_ELIAS, CinnabarVolcano_3F_Text_EliasIntro, CinnabarVolcano_3F_Text_EliasDefeat
+	msgbox CinnabarVolcano_3F_Text_EliasPostBattle, MSGBOX_AUTOCLOSE
+	end

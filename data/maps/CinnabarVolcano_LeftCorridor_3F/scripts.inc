@@ -1,2 +1,7 @@
 CinnabarVolcano_LeftCorridor_3F_MapScripts::
 	.byte 0
+
+CinnabarVolcano_LeftCorridor_3F_EventScript_Ren::
+	trainerbattle_single TRAINER_VOLCANO_BLACK_BELT_REN, CinnabarVolcano_LeftCorridor_3F_Text_RenIntro, CinnabarVolcano_LeftCorridor_3F_Text_RenDefeat
+	msgbox CinnabarVolcano_LeftCorridor_3F_Text_RenPostBattle, MSGBOX_AUTOCLOSE
+	end

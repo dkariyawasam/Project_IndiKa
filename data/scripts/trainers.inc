@@ -35,14 +35,14 @@ Route3_EventScript_ColtonRematch::
 	end
 
 Route3_EventScript_Greg::
-	trainerbattle_single TRAINER_BUG_CATCHER_GREG, Route3_Text_GregIntro, Route3_Text_GregDefeat
+	trainerbattle_single TRAINER_HIKER_GREG, Route3_Text_GregIntro, Route3_Text_GregDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_GregRematch
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route3_EventScript_GregRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_GREG, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
+	trainerbattle_rematch TRAINER_HIKER_GREG, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -479,26 +479,26 @@ Route11_EventScript_DarianRematch::
 	end
 
 Route9_EventScript_Brent::
-	trainerbattle_single TRAINER_BUG_CATCHER_BRENT, Route9_Text_BrentIntro, Route9_Text_BrentDefeat
+	trainerbattle_single TRAINER_BLACK_BELT_BRENT, Route9_Text_BrentIntro, Route9_Text_BrentDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_BrentRematch
 	msgbox Route9_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_BrentRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_BRENT, Route9_Text_BrentRematchIntro, Route9_Text_BrentDefeat
+	trainerbattle_rematch TRAINER_BLACK_BELT_BRENT, Route9_Text_BrentRematchIntro, Route9_Text_BrentDefeat
 	msgbox Route9_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_Conner::
-	trainerbattle_single TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
+	trainerbattle_single TRAINER_BATTLE_GIRL_CORA, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_ConnerRematch
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_ConnerRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat
+	trainerbattle_rematch TRAINER_BATTLE_GIRL_CORA, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
