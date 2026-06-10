@@ -182,7 +182,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "graphics_id": "OBJ_EVENT_GFX_POKEMON_RANGER_F",
       "x": 16,
       "y": 74,
       "elevation": 3,

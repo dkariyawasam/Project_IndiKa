@@ -472,6 +472,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_AGATHA                      0x111D
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER                 0x111E
 #define OBJ_EVENT_PAL_TAG_ROCKET_ARIANA               0x111F
+#define OBJ_EVENT_PAL_TAG_POKEMON_RANGER              0x1120
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -505,6 +506,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Agatha,                  OBJ_EVENT_PAL_TAG_AGATHA},
     {gObjectEventPal_BugCatcher,              OBJ_EVENT_PAL_TAG_BUG_CATCHER},
     {gObjectEventPal_RocketAriana,            OBJ_EVENT_PAL_TAG_ROCKET_ARIANA},
+    {gObjectEventPal_PokemonRanger,           OBJ_EVENT_PAL_TAG_POKEMON_RANGER},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };
@@ -1363,6 +1365,9 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
     objectEvent->active = TRUE;
     objectEvent->triggerGroundEffectsOnMove = TRUE;
     objectEvent->graphicsId = template->graphicsId;
+    if (objectEvent->graphicsId == OBJ_EVENT_GFX_POKEMON_RANGER_M
+     || objectEvent->graphicsId == OBJ_EVENT_GFX_POKEMON_RANGER_F)
+        objectEvent->disableCoveringGroundEffects = TRUE;
     objectEvent->movementType = template->objUnion.normal.movementType;
     objectEvent->localId = template->localId;
     objectEvent->mapNum = mapNum;
@@ -1569,6 +1574,8 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
         LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
     else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
         LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
 
     if (objectEvent->movementType == MOVEMENT_TYPE_INVISIBLE)
@@ -1748,6 +1755,8 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
         sprite->sVirtualObjElev = elevation;
         if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
             LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+            PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
         if (subspriteTables != NULL)
         {
@@ -1783,6 +1792,8 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
         sprite->data[0] = localId;
         if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
             LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+            PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
         if (subspriteTables != NULL)
         {
@@ -1902,8 +1913,10 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
     if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
         LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
-    if (graphicsInfo->paletteSlot >= PALSLOT_NPC_SPECIAL)
+    if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
         LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
     spriteId = CreateSprite(&spriteTemplate, 0, 0, 0);
@@ -1971,6 +1984,8 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
 
     if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
         LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
     
     var = sprite->images->size / TILE_SIZE_4BPP;
     if (!sprite->usingSheet)

@@ -27,6 +27,6 @@ PokemonMansion_1F_EventScript_Ted::
 	end
 
 PokemonMansion_1F_EventScript_Johnson::
-	trainerbattle_single TRAINER_YOUNGSTER_JOHNSON, PokemonMansion_1F_Text_JohnsonIntro, PokemonMansion_1F_Text_JohnsonDefeat
+	trainerbattle_single TRAINER_CAMPER_JOHNSON, PokemonMansion_1F_Text_JohnsonIntro, PokemonMansion_1F_Text_JohnsonDefeat
 	msgbox PokemonMansion_1F_Text_JohnsonPostBattle, MSGBOX_AUTOCLOSE
 	end

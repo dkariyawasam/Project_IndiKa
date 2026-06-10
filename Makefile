@@ -259,6 +259,12 @@ generated: $(AUTO_GEN_TARGETS)
 %.pal: ;
 %.wav: ;
 
+graphics/object_events/pics/people/pokemon_ranger_m.4bpp: graphics/object_events/pics/people/pokemon_ranger_m.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+graphics/object_events/pics/people/pokemon_ranger_f.4bpp: graphics/object_events/pics/people/pokemon_ranger_f.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 %.1bpp:   %.png  ; $(GFX) $< $@
 %.4bpp:   %.png  ; $(GFX) $< $@
 %.8bpp:   %.png  ; $(GFX) $< $@
