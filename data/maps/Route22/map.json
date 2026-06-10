@@ -113,7 +113,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
       "x": 37,
       "y": 17,
       "elevation": 3,
@@ -122,7 +122,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route17_EventScript_William",
+      "script": "Route25_EventScript_RunningTriathleteF",
       "flag": "0"
     }
   ],

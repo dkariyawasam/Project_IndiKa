@@ -36,6 +36,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMLand;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF;
@@ -191,6 +193,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TUBER_F]                  = &gObjectEventGraphicsInfo_TuberF,
     [OBJ_EVENT_GFX_TUBER_M_LAND]             = &gObjectEventGraphicsInfo_TuberMLand,
     [OBJ_EVENT_GFX_CAMPER]                   = &gObjectEventGraphicsInfo_Camper,
+    [OBJ_EVENT_GFX_POKEMON_RANGER_M]         = &gObjectEventGraphicsInfo_PokemonRangerM,
+    [OBJ_EVENT_GFX_POKEMON_RANGER_F]         = &gObjectEventGraphicsInfo_PokemonRangerF,
     [OBJ_EVENT_GFX_PICNICKER]                = &gObjectEventGraphicsInfo_Picnicker,
     [OBJ_EVENT_GFX_COOLTRAINER_M]            = &gObjectEventGraphicsInfo_CooltrainerM,
     [OBJ_EVENT_GFX_COOLTRAINER_F]            = &gObjectEventGraphicsInfo_CooltrainerF,
