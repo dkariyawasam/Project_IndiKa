@@ -71,6 +71,8 @@ static void MakeObjectTemplateFromObjectEventTemplate(const struct ObjectEventTe
 static void GetObjectEventMovingCameraOffset(s16 *, s16 *);
 static const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8, u8, u8);
 static void LoadObjectEventPalette(u16);
+static void LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *);
+static bool8 IsCustomObjectPaletteSlot(u8);
 static void RemoveObjectEventIfOutsideView(struct ObjectEvent *);
 static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y);
 static void SetPlayerAvatarObjectEventIdAndObjectId(u8, u8);
@@ -206,7 +208,10 @@ const u8 gReflectionEffectPaletteMap[16] = {
     [PALSLOT_NPC_3_REFLECTION]       = PALSLOT_NPC_3_REFLECTION,
     [PALSLOT_NPC_4_REFLECTION]       = PALSLOT_NPC_4_REFLECTION,
     [PALSLOT_NPC_SPECIAL]            = PALSLOT_NPC_SPECIAL_REFLECTION,
-    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION
+    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION,
+    [PALSLOT_NPC_CUSTOM_1]           = PALSLOT_NPC_CUSTOM_1,
+    [PALSLOT_NPC_CUSTOM_2]           = PALSLOT_NPC_CUSTOM_2,
+    [PALSLOT_NPC_CUSTOM_3]           = PALSLOT_NPC_CUSTOM_3
 };
 
 static const struct SpriteTemplate gCameraSpriteTemplate = {
@@ -473,6 +478,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER                 0x111E
 #define OBJ_EVENT_PAL_TAG_ROCKET_ARIANA               0x111F
 #define OBJ_EVENT_PAL_TAG_POKEMON_RANGER              0x1120
+#define OBJ_EVENT_PAL_TAG_POKEMON_BREEDER             0x1121
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -507,6 +513,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_BugCatcher,              OBJ_EVENT_PAL_TAG_BUG_CATCHER},
     {gObjectEventPal_RocketAriana,            OBJ_EVENT_PAL_TAG_ROCKET_ARIANA},
     {gObjectEventPal_PokemonRanger,           OBJ_EVENT_PAL_TAG_POKEMON_RANGER},
+    {gObjectEventPal_PokemonBreeder,          OBJ_EVENT_PAL_TAG_POKEMON_BREEDER},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };
@@ -1570,13 +1577,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
 
     objectEvent = &gObjectEvents[objectEventId];
     graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
-        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
+    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
     if (objectEvent->movementType == MOVEMENT_TYPE_INVISIBLE)
         objectEvent->invisible = TRUE;
@@ -1753,10 +1754,7 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
         sprite->coordOffsetEnabled = TRUE;
         sprite->sVirtualObjId = virtualObjId;
         sprite->sVirtualObjElev = elevation;
-        if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-            LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-        else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
-            PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
         if (subspriteTables != NULL)
         {
@@ -1790,10 +1788,7 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
         sprite->y += sprite->centerToCornerVecY;
         sprite->oam.paletteNum = graphicsInfo->paletteSlot;
         sprite->data[0] = localId;
-        if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-            LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-        else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
-            PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
         if (subspriteTables != NULL)
         {
@@ -1910,13 +1905,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
     spriteTemplate.images = &spriteFrameImage;
 
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
-    if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
-        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
     spriteId = CreateSprite(&spriteTemplate, 0, 0, 0);
@@ -1979,13 +1968,7 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     sprite = &gSprites[objectEvent->spriteId];
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
-    if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
-        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
     
     var = sprite->images->size / TILE_SIZE_4BPP;
     if (!sprite->usingSheet)
@@ -2194,6 +2177,21 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
 
     LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
     ApplyGlobalFieldPaletteTint(paletteSlot);
+}
+
+static bool8 IsCustomObjectPaletteSlot(u8 paletteSlot)
+{
+    return paletteSlot >= PALSLOT_NPC_CUSTOM_1 && paletteSlot <= PALSLOT_NPC_CUSTOM_3;
+}
+
+static void LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *graphicsInfo)
+{
+    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
+        LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
+        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION || IsCustomObjectPaletteSlot(graphicsInfo->paletteSlot))
+        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 }
 
 void PatchObjectPaletteRange(const u16 *paletteTags, u8 minSlot, u8 maxSlot)
