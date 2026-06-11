@@ -125,3 +125,22 @@ PowerPlant_EventScript_FoughtElectrode2::
 	setflag FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2
 	goto EventScript_RemoveStaticMon
 	end
+
+PowerPlant_EventScript_ElectricianLuca::
+	trainerbattle_single TRAINER_POWER_PLANT_ELECTRICIAN_LUCA, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
+	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Text_ElectricianLucaIntro:
+	.string "I'm tracing a live fault through\n"
+	.string "this whole place.\p"
+	.string "Keep clear unless you can handle\n"
+	.string "a few sparks!$"
+
+PowerPlant_Text_ElectricianLucaDefeat:
+	.string "Shorted out!$"
+
+PowerPlant_Text_ElectricianLucaPostBattle:
+	.string "The current's unstable, but the\n"
+	.string "wiring tells you where it wants\n"
+	.string "to go.$"
