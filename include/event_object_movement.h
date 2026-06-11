@@ -3,9 +3,9 @@
 
 // Palette slots for overworld NPCs.
 // The same standard set of palettes for overworld objects are normally always loaded at the same
-// time while walking around the overworld. The only exceptions are the palettes for the player and
-// the "special" NPC, which can be swapped out. This also means that e.g. two "special" NPCs
-// with competing palettes cannot be properly loaded at the same time.
+// time while walking around the overworld. The player and "special" NPC palettes can be swapped
+// out. Custom trainer palettes are reserved for recurring bespoke overworlds that may appear
+// together and therefore must not fight over the special NPC slots.
 enum {
     PALSLOT_PLAYER,
     PALSLOT_PLAYER_REFLECTION,
@@ -19,8 +19,11 @@ enum {
     PALSLOT_NPC_4_REFLECTION,
     PALSLOT_NPC_SPECIAL,
     PALSLOT_NPC_SPECIAL_REFLECTION,
+    PALSLOT_NPC_CUSTOM_1,
+    PALSLOT_NPC_CUSTOM_2,
+    PALSLOT_NPC_CUSTOM_3,
     OBJ_PALSLOT_COUNT
-    // the remaining sprite palette slots (12-15) are used by field effects, the interface, etc.
+    // the remaining sprite palette slot is used by field effects, the interface, etc.
 };
 
 enum SpinnerRunnerFollowPatterns

@@ -1546,6 +1546,51 @@ Route17_EventScript_VirgilRematch::
 	msgbox Route17_Text_VirgilPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route17_EventScript_Milo::
+	trainerbattle_single TRAINER_URBAN_YOUNGSTER_MILO, RouteTrainer_Text_YoungsterIntro, RouteTrainer_Text_YoungsterDefeat
+	msgbox RouteTrainer_Text_YoungsterPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Tess::
+	trainerbattle_single TRAINER_URBAN_LASS_TESS, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_June::
+	trainerbattle_single TRAINER_URBAN_PICNICKER_JUNE, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Miles::
+	trainerbattle_single TRAINER_URBAN_BIKER_MILES, UrbanTrainer_Text_BikerIntro, UrbanTrainer_Text_BikerDefeat
+	msgbox UrbanTrainer_Text_BikerPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Wade::
+	trainerbattle_single TRAINER_URBAN_CUE_BALL_WADE, UrbanTrainer_Text_CueBallIntro, UrbanTrainer_Text_CueBallDefeat
+	msgbox UrbanTrainer_Text_CueBallPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Orson::
+	trainerbattle_single TRAINER_URBAN_BIKER_ORSON, UrbanTrainer_Text_BikerIntro, UrbanTrainer_Text_BikerDefeat
+	msgbox UrbanTrainer_Text_BikerPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Vaughn::
+	trainerbattle_single TRAINER_URBAN_CUE_BALL_VAUGHN, UrbanTrainer_Text_CueBallIntro, UrbanTrainer_Text_CueBallDefeat
+	msgbox UrbanTrainer_Text_CueBallPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Mina::
+	trainerbattle_single TRAINER_URBAN_LASS_MINA, RouteTrainer_Text_LassIntro, RouteTrainer_Text_LassDefeat
+	msgbox RouteTrainer_Text_LassPost, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_Erin::
+	trainerbattle_single TRAINER_URBAN_PICNICKER_ERIN, RouteTrainer_Text_PicnickerIntro, RouteTrainer_Text_PicnickerDefeat
+	msgbox RouteTrainer_Text_PicnickerPost, MSGBOX_AUTOCLOSE
+	end
+
 Route18_EventScript_Wilton::
 	trainerbattle_single TRAINER_BIRD_KEEPER_WILTON, Route18_Text_WiltonIntro, Route18_Text_WiltonDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -3540,6 +3585,50 @@ RouteTrainer_Text_TuberPost::
     .string "The sea is huge, but every shore\n"
     .string "has its own rhythm.$"
 
+UrbanTrainer_Text_BikerIntro::
+    .string "This road belongs to trainers\n"
+    .string "who can keep moving!$"
+
+UrbanTrainer_Text_BikerDefeat::
+    .string "You cut through my speed!$"
+
+UrbanTrainer_Text_BikerPost::
+    .string "City roads bring all kinds of\n"
+    .string "trainers together.$"
+
+UrbanTrainer_Text_CueBallIntro::
+    .string "You look tough enough to test.\n"
+    .string "Let's see it!$"
+
+UrbanTrainer_Text_CueBallDefeat::
+    .string "Tougher than you look!$"
+
+UrbanTrainer_Text_CueBallPost::
+    .string "A route near the city never\n"
+    .string "stays quiet for long.$"
+
+UrbanTrainer_Text_BurglarIntro::
+    .string "Nobody told me this place\n"
+    .string "would still be guarded!$"
+
+UrbanTrainer_Text_BurglarDefeat::
+    .string "That plan went up in smoke!$"
+
+UrbanTrainer_Text_BurglarPost::
+    .string "Old buildings attract people\n"
+    .string "with questionable hobbies.$"
+
+UrbanTrainer_Text_ScientistIntro::
+    .string "This facility is perfect for\n"
+    .string "field testing!$"
+
+UrbanTrainer_Text_ScientistDefeat::
+    .string "The data was conclusive.$"
+
+UrbanTrainer_Text_ScientistPost::
+    .string "A controlled test still needs\n"
+    .string "an unpredictable trainer.$"
+
 EventScript_GymAdjacent_ENGINEER_BAILY::
 	trainerbattle_single TRAINER_ENGINEER_BAILY, GymAdjacent_Text_EngineerIntro, GymAdjacent_Text_EngineerDefeat
 	msgbox GymAdjacent_Text_EngineerPost, MSGBOX_AUTOCLOSE
@@ -3553,6 +3642,61 @@ EventScript_GymAdjacent_ENGINEER_BRAXTON::
 EventScript_GymAdjacent_ENGINEER_BERNIE::
 	trainerbattle_single TRAINER_ENGINEER_BERNIE, GymAdjacent_Text_EngineerIntro, GymAdjacent_Text_EngineerDefeat
 	msgbox GymAdjacent_Text_EngineerPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_PowerPlant_ELECTRICIAN_CLEM::
+	trainerbattle_single TRAINER_POWER_PLANT_ELECTRICIAN_CLEM, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
+	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_PowerPlant_SCIENTIST_JIRO::
+	trainerbattle_single TRAINER_POWER_PLANT_SCIENTIST_JIRO, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_PowerPlant_SCIENTIST_SOREN::
+	trainerbattle_single TRAINER_POWER_PLANT_SCIENTIST_SOREN, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_BURGLAR_PIKE::
+	trainerbattle_single TRAINER_MANSION_BURGLAR_PIKE, UrbanTrainer_Text_BurglarIntro, UrbanTrainer_Text_BurglarDefeat
+	msgbox UrbanTrainer_Text_BurglarPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_SCIENTIST_NILES::
+	trainerbattle_single TRAINER_MANSION_SCIENTIST_NILES, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_SCIENTIST_MIRA::
+	trainerbattle_single TRAINER_MANSION_SCIENTIST_MIRA, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_BURGLAR_FLINT::
+	trainerbattle_single TRAINER_MANSION_BURGLAR_FLINT, UrbanTrainer_Text_BurglarIntro, UrbanTrainer_Text_BurglarDefeat
+	msgbox UrbanTrainer_Text_BurglarPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_BURGLAR_KNOX::
+	trainerbattle_single TRAINER_MANSION_BURGLAR_KNOX, UrbanTrainer_Text_BurglarIntro, UrbanTrainer_Text_BurglarDefeat
+	msgbox UrbanTrainer_Text_BurglarPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_SCIENTIST_LENOX::
+	trainerbattle_single TRAINER_MANSION_SCIENTIST_LENOX, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_BURGLAR_EGAN::
+	trainerbattle_single TRAINER_MANSION_BURGLAR_EGAN, UrbanTrainer_Text_BurglarIntro, UrbanTrainer_Text_BurglarDefeat
+	msgbox UrbanTrainer_Text_BurglarPost, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_Mansion_SCIENTIST_ORIN::
+	trainerbattle_single TRAINER_MANSION_SCIENTIST_ORIN, UrbanTrainer_Text_ScientistIntro, UrbanTrainer_Text_ScientistDefeat
+	msgbox UrbanTrainer_Text_ScientistPost, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_GymAdjacent_RUIN_MANIAC_STANLY::
