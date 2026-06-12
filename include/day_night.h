@@ -14,6 +14,7 @@ void RestoreDayPaletteForCurrentMap(void);
 void RestoreDayPaletteBuffersForCurrentMap(void);
 void CacheCurrentMapBasePalettes(void);
 void ApplyNightTintToTallGrassEffect(void);
+void ApplyNightTintToSandFootprintsEffect(void);
 void StartTimeOfDayTransition(u8 targetTime);
 void UpdateTimeOfDayTransition(void);
 
