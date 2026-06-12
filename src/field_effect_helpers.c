@@ -528,6 +528,8 @@ u32 FldEff_SandFootprints(void)
         sprite->oam.priority = gFieldEffectArguments[3];
         sprite->data[7] = FLDEFF_SAND_FOOTPRINTS;
         StartSpriteAnim(sprite, gFieldEffectArguments[4]);
+        if (IsNightTime())
+            ApplyNightTintToSandFootprintsEffect();
     }
     return 0;
 }
@@ -546,6 +548,8 @@ u32 FldEff_DeepSandFootprints(void)
         sprite->oam.priority = gFieldEffectArguments[3];
         sprite->data[7] = FLDEFF_DEEP_SAND_FOOTPRINTS;
         StartSpriteAnim(sprite, gFieldEffectArguments[4]);
+        if (IsNightTime())
+            ApplyNightTintToSandFootprintsEffect();
     }
     return spriteId;
 }

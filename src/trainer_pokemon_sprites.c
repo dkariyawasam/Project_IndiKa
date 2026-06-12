@@ -148,7 +148,8 @@ u16 CreatePicSprite(u16 species, u32 otId, u32 personality, bool8 isFrontPic, s1
     }
     if (DecompressPic(species, personality, isFrontPic, framePics, isTrainer, ignoreDeoxys))
     {
-        // debug trap?
+        Free(framePics);
+        Free(images);
         return 0xFFFF;
     }
     for (j = 0; j < 4; j ++)
@@ -164,6 +165,14 @@ u16 CreatePicSprite(u16 species, u32 otId, u32 personality, bool8 isFrontPic, s1
     sCreatingSpriteTemplate.callback = DummyPicSpriteCallback;
     LoadPicPaletteByTagOrSlot(species, otId, personality, paletteSlot, paletteTag, isTrainer);
     spriteId = CreateSprite(&sCreatingSpriteTemplate, x, y, 0);
+    if (spriteId == MAX_SPRITES)
+    {
+        if (paletteTag != TAG_NONE)
+            FreeSpritePaletteByTag(paletteTag);
+        Free(framePics);
+        Free(images);
+        return 0xFFFF;
+    }
     if (paletteTag == TAG_NONE)
         gSprites[spriteId].oam.paletteNum = paletteSlot;
     sSpritePics[i].frames = framePics;

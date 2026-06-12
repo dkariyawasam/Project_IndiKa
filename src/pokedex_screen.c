@@ -93,6 +93,12 @@ struct PokedexCategoryPage
 
 EWRAM_DATA static struct PokedexScreenData * sPokedexScreenData = NULL;
 
+static const struct OamData sOamData_SizeComparisonTrainer =
+{
+    .shape = SPRITE_SHAPE(64x64),
+    .size = SPRITE_SIZE(64x64)
+};
+
 static void Task_PokedexScreen(u8 taskId);
 static void DexScreen_InitGfxForTopMenu(void);
 static void Task_DexScreen_NumericalOrder(u8 taskId);
@@ -134,6 +140,8 @@ void DexScreen_CreateCategoryPageSpeciesList(u8 category, u8 pageNum);
 static u8 DexScreen_PageNumberToRenderablePages(u16 page);
 void DexScreen_InputHandler_StartToCry(void);
 void DexScreen_PrintStringWithAlignment(const u8 *str, s32 mode);
+static u16 DexScreen_CreateSizeComparisonTrainerPicSprite(s16 x, s16 y);
+static void DexScreen_DestroySizeComparisonTrainerPicSprite(u16 spriteId);
 static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct ListMenu *list);
 static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y);
 static void ItemPrintFunc_OrderedListMenu(u8 windowId, u32 itemId, u8 y);
@@ -3121,26 +3129,55 @@ u8 DexScreen_DrawMonAreaPage(void)
     PutWindowTilemap(sPokedexScreenData->windowIds[12]);
     CopyWindowToVram(sPokedexScreenData->windowIds[12], COPYWIN_GFX);
 
-    // Show size comparison
+    // Show live size comparison.
     ResetAllPicSprites();
     LoadPalette(sPalette_Silhouette, OBJ_PLTT_ID(2), PLTT_SIZE_4BPP);
 
     if (monIsCaught)
     {
-        sPokedexScreenData->windowIds[14] = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, 40, 104, 0, 0xFFFF);
-        gSprites[sPokedexScreenData->windowIds[14]].oam.paletteNum = 2;
-        gSprites[sPokedexScreenData->windowIds[14]].oam.affineMode = ST_OAM_AFFINE_NORMAL;
-        gSprites[sPokedexScreenData->windowIds[14]].oam.matrixNum = 2;
-        gSprites[sPokedexScreenData->windowIds[14]].oam.priority = 1;
-        gSprites[sPokedexScreenData->windowIds[14]].y2 = gPokedexEntries[speciesId].pokemonOffset;
-        SetOamMatrix(2, gPokedexEntries[speciesId].pokemonScale, 0, 0, gPokedexEntries[speciesId].pokemonScale);
-        sPokedexScreenData->windowIds[15] = CreateTrainerPicSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender, TRUE), 1, 80, 104, 0, 0xFFFF);
-        gSprites[sPokedexScreenData->windowIds[15]].oam.paletteNum = 2;
-        gSprites[sPokedexScreenData->windowIds[15]].oam.affineMode = ST_OAM_AFFINE_NORMAL;
-        gSprites[sPokedexScreenData->windowIds[15]].oam.matrixNum = 1;
-        gSprites[sPokedexScreenData->windowIds[15]].oam.priority = 1;
-        gSprites[sPokedexScreenData->windowIds[15]].y2 = gPokedexEntries[speciesId].trainerOffset;
-        SetOamMatrix(1, gPokedexEntries[speciesId].trainerScale, 0, 0, gPokedexEntries[speciesId].trainerScale);
+        u16 spriteId;
+        u16 pokemonScale = gPokedexEntries[speciesId].pokemonScale;
+        s16 pokemonOffset = gPokedexEntries[speciesId].pokemonOffset;
+        u16 trainerScale = gPokedexEntries[speciesId].trainerScale;
+        s16 trainerOffset = gPokedexEntries[speciesId].trainerOffset;
+
+        if (pokemonScale == 0)
+            pokemonScale = 256;
+        if (trainerScale == 0)
+            trainerScale = 256;
+
+        spriteId = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, 40, 104, 2, TAG_NONE);
+        if (spriteId != 0xFFFF)
+        {
+            sPokedexScreenData->windowIds[14] = spriteId;
+            gSprites[spriteId].oam.paletteNum = 2;
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.matrixNum = 2;
+            gSprites[spriteId].oam.priority = 1;
+            gSprites[spriteId].y2 = pokemonOffset;
+            SetOamMatrix(2, pokemonScale, 0, 0, pokemonScale);
+        }
+        else
+        {
+            sPokedexScreenData->windowIds[14] = 0xff;
+        }
+
+        spriteId = DexScreen_CreateSizeComparisonTrainerPicSprite(80, 104);
+        if (spriteId != 0xFFFF)
+        {
+            sPokedexScreenData->windowIds[15] = spriteId;
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.matrixNum = 1;
+            gSprites[spriteId].oam.priority = 1;
+            gSprites[spriteId].y2 = trainerOffset;
+            SetOamMatrix(1, trainerScale, 0, 0, trainerScale);
+        }
+        else
+        {
+            sPokedexScreenData->windowIds[15] = 0xff;
+        }
+
+        LoadPalette(sPalette_Silhouette, OBJ_PLTT_ID(2), PLTT_SIZE_4BPP);
     }
     else
     {
@@ -3181,10 +3218,59 @@ u8 DexScreen_DestroyAreaScreenResources(void)
     for (i = 0; i < 13; i++)
         DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[i]);
     if (sPokedexScreenData->windowIds[15] != 0xff)
-        FreeAndDestroyTrainerPicSprite(sPokedexScreenData->windowIds[15]);
+        DexScreen_DestroySizeComparisonTrainerPicSprite(sPokedexScreenData->windowIds[15]);
     if (sPokedexScreenData->windowIds[14] != 0xff)
         FreeAndDestroyMonPicSprite(sPokedexScreenData->windowIds[14]);
     return 0;
+}
+
+static u16 DexScreen_CreateSizeComparisonTrainerPicSprite(s16 x, s16 y)
+{
+    u16 trainerPicId = PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender, TRUE);
+    struct SpriteTemplate spriteTemplate;
+    u8 spriteId;
+    u8 paletteNum;
+
+    LoadCompressedSpriteSheet(&gTrainerFrontPicTable[trainerPicId]);
+    LoadCompressedSpritePalette(&gTrainerFrontPicPaletteTable[trainerPicId]);
+
+    spriteTemplate = gDummySpriteTemplate;
+    spriteTemplate.tileTag = gTrainerFrontPicTable[trainerPicId].tag;
+    spriteTemplate.paletteTag = gTrainerFrontPicPaletteTable[trainerPicId].tag;
+    spriteTemplate.oam = &sOamData_SizeComparisonTrainer;
+    spriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerPicId];
+    spriteTemplate.affineAnims = gDummySpriteAffineAnimTable;
+    spriteTemplate.callback = SpriteCallbackDummy;
+
+    spriteId = CreateSprite(&spriteTemplate, x, y, 0);
+    if (spriteId == MAX_SPRITES)
+    {
+        FreeSpriteTilesByTag(gTrainerFrontPicTable[trainerPicId].tag);
+        FreeSpritePaletteByTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
+        return 0xFFFF;
+    }
+
+    paletteNum = IndexOfSpritePaletteTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
+    if (paletteNum >= 16)
+    {
+        DestroySprite(&gSprites[spriteId]);
+        FreeSpriteTilesByTag(gTrainerFrontPicTable[trainerPicId].tag);
+        FreeSpritePaletteByTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
+        return 0xFFFF;
+    }
+
+    gSprites[spriteId].oam.paletteNum = paletteNum;
+    LoadPalette(sPalette_Silhouette, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
+    return spriteId;
+}
+
+static void DexScreen_DestroySizeComparisonTrainerPicSprite(u16 spriteId)
+{
+    u16 trainerPicId = PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender, TRUE);
+
+    DestroySprite(&gSprites[spriteId]);
+    FreeSpriteTilesByTag(gTrainerFrontPicTable[trainerPicId].tag);
+    FreeSpritePaletteByTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
 }
 
 static int DexScreen_CanShowMonInDex(u16 species)

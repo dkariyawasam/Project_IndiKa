@@ -71,8 +71,8 @@ static void MakeObjectTemplateFromObjectEventTemplate(const struct ObjectEventTe
 static void GetObjectEventMovingCameraOffset(s16 *, s16 *);
 static const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8, u8, u8);
 static void LoadObjectEventPalette(u16);
-static void LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *);
-static bool8 IsCustomObjectPaletteSlot(u8);
+static u8 LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *);
+static u8 LoadDynamicObjectEventPalette(u16);
 static void RemoveObjectEventIfOutsideView(struct ObjectEvent *);
 static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y);
 static void SetPlayerAvatarObjectEventIdAndObjectId(u8, u8);
@@ -208,10 +208,7 @@ const u8 gReflectionEffectPaletteMap[16] = {
     [PALSLOT_NPC_3_REFLECTION]       = PALSLOT_NPC_3_REFLECTION,
     [PALSLOT_NPC_4_REFLECTION]       = PALSLOT_NPC_4_REFLECTION,
     [PALSLOT_NPC_SPECIAL]            = PALSLOT_NPC_SPECIAL_REFLECTION,
-    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION,
-    [PALSLOT_NPC_CUSTOM_1]           = PALSLOT_NPC_CUSTOM_1,
-    [PALSLOT_NPC_CUSTOM_2]           = PALSLOT_NPC_CUSTOM_2,
-    [PALSLOT_NPC_CUSTOM_3]           = PALSLOT_NPC_CUSTOM_3
+    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION
 };
 
 static const struct SpriteTemplate gCameraSpriteTemplate = {
@@ -1570,6 +1567,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     struct Sprite *sprite;
     struct ObjectEvent *objectEvent;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 paletteSlot;
 
     objectEventId = InitObjectEventStateFromTemplate(objectEventTemplate, mapNum, mapGroup);
     if (objectEventId == OBJECT_EVENTS_COUNT)
@@ -1577,7 +1575,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
 
     objectEvent = &gObjectEvents[objectEventId];
     graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
-    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
+    paletteSlot = LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
     if (objectEvent->movementType == MOVEMENT_TYPE_INVISIBLE)
         objectEvent->invisible = TRUE;
@@ -1596,7 +1594,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
     sprite->x += 8;
     sprite->y += 16 + sprite->centerToCornerVecY;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+    sprite->oam.paletteNum = paletteSlot;
     sprite->coordOffsetEnabled = TRUE;
     sprite->data[0] = objectEventId;
     objectEvent->spriteId = spriteId;
@@ -1736,8 +1734,10 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
     struct SpriteTemplate spriteTemplate;
     const struct SubspriteTable *subspriteTables;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 paletteSlot;
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
+    paletteSlot = LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
     CopyObjectGraphicsInfoToSpriteTemplate(graphicsId, SpriteCB_VirtualObject, &spriteTemplate, &subspriteTables);
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
     x += MAP_OFFSET;
@@ -1750,11 +1750,10 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
         sprite->centerToCornerVecX = -(graphicsInfo->width >> 1);
         sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
         sprite->y += sprite->centerToCornerVecY;
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = paletteSlot;
         sprite->coordOffsetEnabled = TRUE;
         sprite->sVirtualObjId = virtualObjId;
         sprite->sVirtualObjElev = elevation;
-        LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
         if (subspriteTables != NULL)
         {
@@ -1775,8 +1774,10 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
     struct SpriteTemplate spriteTemplate;
     const struct SubspriteTable *subspriteTables;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 paletteSlot;
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
+    paletteSlot = LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
     CopyObjectGraphicsInfoToSpriteTemplate(graphicsId, SpriteCallbackDummy, &spriteTemplate, &subspriteTables);
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
 
@@ -1786,9 +1787,8 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
         sprite = &gSprites[spriteId];
         sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
         sprite->y += sprite->centerToCornerVecY;
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = paletteSlot;
         sprite->data[0] = localId;
-        LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
         if (subspriteTables != NULL)
         {
@@ -1887,6 +1887,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
     struct SpriteFrameImage spriteFrameImage;
     const struct SubspriteTable *subspriteTables;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 paletteSlot;
 
 #define i spriteId
     for (i = 0; i < NELEMS(gLinkPlayerObjectEvents); i++)
@@ -1905,7 +1906,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
     spriteTemplate.images = &spriteFrameImage;
 
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
-    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
+    paletteSlot = LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
 
     *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
     spriteId = CreateSprite(&spriteTemplate, 0, 0, 0);
@@ -1926,7 +1927,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         if (subspriteTables != NULL)
             SetSubspriteTables(sprite, subspriteTables);
 
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = paletteSlot;
         sprite->coordOffsetEnabled = TRUE;
         sprite->data[0] = objectEventId;
         objectEvent->spriteId = spriteId;
@@ -1965,10 +1966,11 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     struct Sprite *sprite;
     u8 var;
     u8 var3;
+    u8 paletteSlot;
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     sprite = &gSprites[objectEvent->spriteId];
-    LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
+    paletteSlot = LoadObjectEventPaletteForGraphicsInfo(graphicsInfo);
     
     var = sprite->images->size / TILE_SIZE_4BPP;
     if (!sprite->usingSheet)
@@ -1980,7 +1982,7 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     sprite->images = graphicsInfo->images;
     sprite->anims = graphicsInfo->anims;
     sprite->subspriteTables = graphicsInfo->subspriteTables;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+    sprite->oam.paletteNum = paletteSlot;
     if (!sprite->usingSheet)
     {
         s32 var2;
@@ -2179,19 +2181,50 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
     ApplyGlobalFieldPaletteTint(paletteSlot);
 }
 
-static bool8 IsCustomObjectPaletteSlot(u8 paletteSlot)
+static u8 LoadDynamicObjectEventPalette(u16 paletteTag)
 {
-    return paletteSlot >= PALSLOT_NPC_CUSTOM_1 && paletteSlot <= PALSLOT_NPC_CUSTOM_3;
+    u8 paletteIndex = FindObjectEventPaletteIndexByTag(paletteTag);
+    u8 paletteSlot;
+
+    if (paletteIndex == 0xFF)
+        return PALSLOT_NPC_1;
+
+    paletteSlot = TryLoadObjectPalette(&sObjectEventSpritePalettes[paletteIndex]);
+    if (paletteSlot == 0xFF)
+        paletteSlot = IndexOfSpritePaletteTag(paletteTag);
+
+    if (paletteSlot != 0xFF)
+    {
+        ApplyGlobalFieldPaletteTint(paletteSlot);
+        return paletteSlot;
+    }
+
+    return PALSLOT_NPC_1;
 }
 
-static void LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *graphicsInfo)
+static u8 LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphicsInfo *graphicsInfo)
 {
     if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
+    {
         LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        return graphicsInfo->paletteSlot;
+    }
     else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
+    {
         LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION || IsCustomObjectPaletteSlot(graphicsInfo->paletteSlot))
+        return graphicsInfo->paletteSlot;
+    }
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL_REFLECTION)
+    {
         PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        return graphicsInfo->paletteSlot;
+    }
+    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_DYNAMIC)
+    {
+        return LoadDynamicObjectEventPalette(graphicsInfo->paletteTag);
+    }
+
+    return graphicsInfo->paletteSlot;
 }
 
 void PatchObjectPaletteRange(const u16 *paletteTags, u8 minSlot, u8 maxSlot)

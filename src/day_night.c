@@ -200,6 +200,15 @@ bool8 DoesCurrentMapUseNightPalette(void)
     return FALSE;
 }
 
+static bool8 IsCurrentMapForest(void)
+{
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    u8 num = gSaveBlock1Ptr->location.mapNum;
+
+    return (group == MAP_GROUP(MAP_VIRIDIAN_FOREST) && num == MAP_NUM(MAP_VIRIDIAN_FOREST))
+        || (group == MAP_GROUP(MAP_FUCHSIA_FOREST) && num == MAP_NUM(MAP_FUCHSIA_FOREST));
+}
+
 void CacheCurrentMapBasePalettes(void)
 {
     CpuFastCopy(gPlttBufferUnfaded, sBaseMapPalettes, NUM_PALS_TOTAL * 16 * sizeof(u16));
@@ -211,6 +220,29 @@ void ApplyNightTintToTallGrassEffect(void)
     u8 slot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_GENERAL_1);
     u16 base;
     int i;
+
+    if (!DoesCurrentMapUseNightPalette() || IsCurrentMapForest())
+        return;
+
+    if (slot == 0xFF)
+        return;
+
+    base = OBJ_PLTT_ID(slot);
+
+    for (i = 0; i < 16; i++)
+        gPlttBufferFaded[base + i] = TintColorNight(gPlttBufferUnfaded[base + i]);
+
+    CpuFastCopy(&gPlttBufferFaded[base], (void *)(OBJ_PLTT + base * sizeof(u16)), 16 * sizeof(u16));
+}
+
+void ApplyNightTintToSandFootprintsEffect(void)
+{
+    u8 slot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_GENERAL_0);
+    u16 base;
+    int i;
+
+    if (!DoesCurrentMapUseNightPalette())
+        return;
 
     if (slot == 0xFF)
         return;

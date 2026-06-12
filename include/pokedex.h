@@ -89,6 +89,7 @@ enum {
     DEX_AREA_ALTERING_CAVE,
     DEX_AREA_PATTERN_BUSH,
     DEX_AREA_TANOBY_CHAMBER,
+    DEX_AREA_COUNT,
 };
 
 struct PokedexEntry

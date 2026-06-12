@@ -422,7 +422,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(TANGROWTH, gMonFrontPic_Tangrowth),
     SPECIES_SPRITE(COMBEE, gMonFrontPic_DoubleQuestionMark),
     SPECIES_SPRITE(VESPIQUEN, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(BUDEW, gMonFrontPic_DoubleQuestionMark),
+    SPECIES_SPRITE(BUDEW, gMonFrontPic_Budew),
     SPECIES_SPRITE(ROSERADE, gMonFrontPic_DoubleQuestionMark),
     SPECIES_SPRITE(MAGNEZONE, gMonFrontPic_DoubleQuestionMark),
     SPECIES_SPRITE(ELECTIVIRE, gMonFrontPic_DoubleQuestionMark),

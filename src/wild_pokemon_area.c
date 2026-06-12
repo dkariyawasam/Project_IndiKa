@@ -17,6 +17,7 @@ struct RoamerPair
 
 static s32 GetRoamerIndex(u16 species);
 static s32 GetRoamerPokedexAreaMarkers(u16 species, struct Subsprite * subsprites);
+static bool32 TryAddDexAreaMarker(s32 *areaCount, u16 dexArea, u8 *seenAreas, struct Subsprite *subsprites);
 static bool32 IsSpeciesOnMap(const struct WildPokemonHeader * data, s32 species);
 static bool32 IsSpeciesInEncounterTable(const struct WildPokemonInfo * pokemon, s32 species, s32 count);
 static u16 GetMapSecIdFromWildMonHeader(const struct WildPokemonHeader * header);
@@ -134,6 +135,7 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
     s32 tableIndex;
     s32 seviiAreas;
     s32 i;
+    u8 seenAreas[DEX_AREA_COUNT] = {0};
 
     if (GetRoamerIndex(species) >= 0)
         return GetRoamerPokedexAreaMarkers(species, subsprites);
@@ -149,8 +151,7 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
             tableIndex = 0;
             while (FindDexAreaByMapSec(mapSecId, sDexAreas_Kanto, ARRAY_COUNT(sDexAreas_Kanto), &tableIndex, &dexArea))
             {
-                if (dexArea != DEX_AREA_NONE)
-                    GetAreaMarkerSubsprite(areaCount++, dexArea, subsprites);
+                TryAddDexAreaMarker(&areaCount, dexArea, seenAreas, subsprites);
             }
 
             for (j = 0; j < ARRAY_COUNT(sSeviiDexAreas); j++)
@@ -161,8 +162,7 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
                     tableIndex = 0;
                     while (FindDexAreaByMapSec(mapSecId, sSeviiDexAreas[j].table, sSeviiDexAreas[j].count, &tableIndex, &dexArea))
                     {
-                        if (dexArea != DEX_AREA_NONE)
-                            GetAreaMarkerSubsprite(areaCount++, dexArea, subsprites);
+                        TryAddDexAreaMarker(&areaCount, dexArea, seenAreas, subsprites);
                     }
                 }
             }
@@ -209,6 +209,20 @@ static s32 GetRoamerPokedexAreaMarkers(u16 species, struct Subsprite * subsprite
         }
     }
     return 0;
+}
+
+static bool32 TryAddDexAreaMarker(s32 *areaCount, u16 dexArea, u8 *seenAreas, struct Subsprite *subsprites)
+{
+    if (dexArea == DEX_AREA_NONE || dexArea >= DEX_AREA_COUNT)
+        return FALSE;
+
+    if (seenAreas[dexArea])
+        return FALSE;
+
+    seenAreas[dexArea] = TRUE;
+    GetAreaMarkerSubsprite(*areaCount, dexArea, subsprites);
+    (*areaCount)++;
+    return TRUE;
 }
 
 static bool32 IsSpeciesOnMap(const struct WildPokemonHeader * data, s32 species)
