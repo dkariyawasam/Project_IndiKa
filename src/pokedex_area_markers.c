@@ -200,7 +200,15 @@ u8 CreatePokedexAreaMarkers(u16 species, u16 tilesTag, u8 palIdx, u8 y)
     data->unused = 0;
     data->tilesTag = tilesTag;
     data->paletteTag = TAG_NONE;
-    subsprites = Alloc(120 * sizeof(struct Subsprite));
+    data->spriteId = MAX_SPRITES;
+    subsprites = Alloc(DEX_AREA_COUNT * sizeof(struct Subsprite));
+    if (subsprites == NULL)
+    {
+        data->buffer = NULL;
+        data->subsprites.subsprites = NULL;
+        data->subsprites.subspriteCount = 0;
+        return taskId;
+    }
     data->buffer = subsprites;
     data->subsprites.subsprites = subsprites;
     data->subsprites.subspriteCount = GetSpeciesPokedexAreaMarkers(species, subsprites);
@@ -216,6 +224,15 @@ u8 CreatePokedexAreaMarkers(u16 species, u16 tilesTag, u8 palIdx, u8 y)
     spriteTemplate = gDummySpriteTemplate;
     spriteTemplate.tileTag = tilesTag;
     data->spriteId = CreateSprite(&spriteTemplate, 104, y + 32, 0);
+    if (data->spriteId == MAX_SPRITES)
+    {
+        HideBg(1);
+        SetBgAttribute(1, BG_ATTR_CHARBASEINDEX, 0);
+        FillBgTilemapBufferRect_Palette0(1, 0x00F, 0, 0, 30, 20);
+        CopyBgTilemapBufferToVram(1);
+        ShowBg(1);
+        return taskId;
+    }
     SetSubspriteTables(&gSprites[data->spriteId], &data->subsprites);
     gSprites[data->spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
     gSprites[data->spriteId].oam.paletteNum = palIdx;
@@ -235,8 +252,10 @@ void DestroyPokedexAreaMarkers(u8 taskId)
 {
     struct PAM_TaskData * data = (void *)gTasks[taskId].data;
     FreeSpriteTilesByTag(data->tilesTag);
-    DestroySprite(&gSprites[data->spriteId]);
-    Free(data->buffer);
+    if (data->spriteId < MAX_SPRITES)
+        DestroySprite(&gSprites[data->spriteId]);
+    if (data->buffer != NULL)
+        Free(data->buffer);
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
@@ -253,6 +272,9 @@ void DestroyPokedexAreaMarkers(u8 taskId)
 
 void GetAreaMarkerSubsprite(s32 i, s32 dexArea, struct Subsprite * subsprites)
 {
+    if (dexArea <= DEX_AREA_NONE || dexArea >= DEX_AREA_COUNT || dexArea >= (s32)ARRAY_COUNT(sAreaMarkers))
+        return;
+
     subsprites[i] = *sSubsprites[sAreaMarkers[dexArea][0]];
     subsprites[i].x = sAreaMarkers[dexArea][1];
     subsprites[i].y = sAreaMarkers[dexArea][2];
