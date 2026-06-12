@@ -260,6 +260,13 @@
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 5,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_BERRY_PATCH",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

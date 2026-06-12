@@ -302,7 +302,8 @@
     "CeladonCity_Gym",
     "CeladonCity_Restaurant",
     "CeladonCity_House1",
-    "CeladonCity_Hotel"
+    "CeladonCity_Hotel",
+    "CeladonCity_BerryPatch"
   ],
   "gMapGroup_IndoorFuchsia": [
     "FuchsiaCity_SafariZone_Entrance",
@@ -395,9 +396,7 @@
   "gMapGroup_IndoorRoute22": [
     "Route22_NorthEntrance"
   ],
-  "gMapGroup_IndoorRoute23": [
-    "Route23_UnusedHouse"
-  ],
+  "gMapGroup_IndoorRoute23": [],
   "gMapGroup_IndoorRoute25": [
     "Route25_SeaCottage"
   ],
