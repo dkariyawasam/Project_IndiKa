@@ -1,7 +1,7 @@
 {
   "id": "MAP_CELADON_CITY_BERRY_PATCH",
   "name": "CeladonCity_BerryPatch",
-  "layout": "LAYOUT_HOUSE2",
+  "layout": "LAYOUT_CELADON_CITY_BERRY_PATCH",
   "music": "MUS_CELADON",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
@@ -14,30 +14,178 @@
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
-  "warp_events": [
+  "object_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": "13"
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_LEFT",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_SitrusBerry",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_CENTER",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
       "x": 4,
-      "y": 7,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_LumBerry",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_RIGHT",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_LeppaBerry",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_LEFT",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
+      "x": 3,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_PomegBerry",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_CENTER",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_KelpsyBerry",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CELADON_BERRY_PATCH_PLANT_RIGHT",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_SOIL",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCity_BerryPatch_EventScript_TamatoBerry",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "13"
     },
     {
       "x": 5,
-      "y": 7,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 6,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "13"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_SitrusBerry"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_LumBerry"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_LeppaBerry"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_PomegBerry"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_KelpsyBerry"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_TamatoBerry"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CeladonCity_BerryPatch_EventScript_DebugCounter"
+    }
+  ]
 }

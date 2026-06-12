@@ -2940,6 +2940,18 @@
       "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/route15_new/border.bin",
       "blockdata_filepath": "data/layouts/route15_new/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELADON_CITY_BERRY_PATCH",
+      "name": "CeladonCity_BerryPatch_Layout",
+      "width": 11,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CeladonGym",
+      "border_filepath": "data/layouts/CeladonCity_BerryPatch/border.bin",
+      "blockdata_filepath": "data/layouts/CeladonCity_BerryPatch/map.bin"
     }
   ]
 }

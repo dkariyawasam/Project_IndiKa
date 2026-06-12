@@ -1,2 +1,254 @@
 CeladonCity_BerryPatch_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, CeladonCity_BerryPatch_OnLoad
 	.byte 0
+
+CeladonCity_BerryPatch_OnLoad:
+	call CeladonCity_BerryPatch_EventScript_SetSitrusPlantGfx
+	call CeladonCity_BerryPatch_EventScript_SetLumPlantGfx
+	call CeladonCity_BerryPatch_EventScript_SetLeppaPlantGfx
+	call CeladonCity_BerryPatch_EventScript_SetPomegPlantGfx
+	call CeladonCity_BerryPatch_EventScript_SetKelpsyPlantGfx
+	call CeladonCity_BerryPatch_EventScript_SetTamatoPlantGfx
+	end
+
+CeladonCity_BerryPatch_EventScript_SetSitrusPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetSitrusRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetSitrusAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_LEFT, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetSitrusAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_LEFT, OBJ_EVENT_GFX_SITRUS_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetSitrusRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_LEFT, OBJ_EVENT_GFX_SITRUS_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLumPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetLumRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetLumAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_CENTER, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLumAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_CENTER, OBJ_EVENT_GFX_LUM_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLumRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_CENTER, OBJ_EVENT_GFX_LUM_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLeppaPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetLeppaRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetLeppaAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_RIGHT, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLeppaAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_RIGHT, OBJ_EVENT_GFX_LEPPA_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetLeppaRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_RIGHT, OBJ_EVENT_GFX_LEPPA_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SetPomegPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetPomegRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetPomegAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_LEFT, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetPomegAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_LEFT, OBJ_EVENT_GFX_POMEG_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetPomegRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_LEFT, OBJ_EVENT_GFX_POMEG_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SetKelpsyPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetKelpsyRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetKelpsyAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_CENTER, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetKelpsyAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_CENTER, OBJ_EVENT_GFX_KELPSY_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetKelpsyRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_CENTER, OBJ_EVENT_GFX_KELPSY_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SetTamatoPlantGfx:
+	goto_if_ge VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_SetTamatoRipe
+	copyvar VAR_0x8007, VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY
+	subvar VAR_0x8007, VAR_DAY_NIGHT_DAY_COUNT
+	goto_if_lt VAR_0x8007, 4, CeladonCity_BerryPatch_EventScript_SetTamatoAlmostGrown
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_RIGHT, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_SetTamatoAlmostGrown:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_RIGHT, OBJ_EVENT_GFX_TAMATO_BERRY_GROWING
+	return
+
+CeladonCity_BerryPatch_EventScript_SetTamatoRipe:
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_RIGHT, OBJ_EVENT_GFX_TAMATO_BERRY_RIPE
+	return
+
+CeladonCity_BerryPatch_EventScript_SitrusBerry::
+	setvar VAR_0x8008, ITEM_SITRUS_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetSitrusPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_LumBerry::
+	setvar VAR_0x8008, ITEM_LUM_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetLumPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_LeppaBerry::
+	setvar VAR_0x8008, ITEM_LEPPA_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetLeppaPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_PomegBerry::
+	setvar VAR_0x8008, ITEM_POMEG_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetPomegPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_KelpsyBerry::
+	setvar VAR_0x8008, ITEM_KELPSY_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetKelpsyPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_TamatoBerry::
+	setvar VAR_0x8008, ITEM_TAMATO_BERRY
+	lockall
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto_if_lt VAR_DAY_NIGHT_DAY_COUNT, VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY, CeladonCity_BerryPatch_EventScript_NotReady
+	msgbox CeladonCity_BerryPatch_Text_BerryReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_BerryPatch_EventScript_Release
+	checkitemspace VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_BerryPatch_EventScript_NoRoom
+	giveitem VAR_0x8008
+	copyvar VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY, VAR_DAY_NIGHT_DAY_COUNT
+	addvar VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY, 7
+	call CeladonCity_BerryPatch_EventScript_SetTamatoPlantGfx
+	goto CeladonCity_BerryPatch_EventScript_Harvested
+
+CeladonCity_BerryPatch_EventScript_Harvested:
+	msgbox CeladonCity_BerryPatch_Text_Harvested, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CeladonCity_BerryPatch_EventScript_SetSoilPlants::
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_LEFT, OBJ_EVENT_GFX_BERRY_SOIL
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_CENTER, OBJ_EVENT_GFX_BERRY_SOIL
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_TOP_RIGHT, OBJ_EVENT_GFX_BERRY_SOIL
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_LEFT, OBJ_EVENT_GFX_BERRY_SOIL
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_CENTER, OBJ_EVENT_GFX_BERRY_SOIL
+	setobjectgfx LOCALID_CELADON_BERRY_PATCH_PLANT_RIGHT, OBJ_EVENT_GFX_BERRY_SOIL
+	return
+
+CeladonCity_BerryPatch_EventScript_NotReady::
+	msgbox CeladonCity_BerryPatch_Text_NotReady, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CeladonCity_BerryPatch_EventScript_NoRoom::
+	msgbox CeladonCity_BerryPatch_Text_NoRoom, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CeladonCity_BerryPatch_EventScript_Release::
+	releaseall
+	end
+
+CeladonCity_BerryPatch_EventScript_DebugCounter::
+	lockall
+	copyvar VAR_0x8008, VAR_DAY_NIGHT_DAY_COUNT
+	buffernumberstring STR_VAR_1, VAR_0x8008
+	msgbox CeladonCity_BerryPatch_Text_DebugCounter, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CeladonCity_BerryPatch_Text_BerryReady:
+	.string "The {STR_VAR_1} is ripe and ready.\n"
+	.string "Pick it?$"
+
+CeladonCity_BerryPatch_Text_Harvested:
+	.string "This plot will need time to\n"
+	.string "grow again.$"
+
+CeladonCity_BerryPatch_Text_NotReady:
+	.string "This berry plant is still\n"
+	.string "growing.$"
+
+CeladonCity_BerryPatch_Text_NoRoom:
+	.string "There is no room for that\n"
+	.string "BERRY.$"
+
+CeladonCity_BerryPatch_Text_DebugCounter:
+	.string "DEBUG: Days passed: {STR_VAR_1}.\n"
+	.string "Each plot has its own timer.$"
