@@ -851,6 +851,14 @@ static const union AnimCmd sAnim_BerryTreeStage4[] = {
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_BerryPlantRipe[] = {
+    ANIMCMD_FRAME(0, 24),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(0, 24),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_JUMP(0),
+};
+
 static const union AnimCmd sAnim_NurseBow[] = {
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_FRAME(9, 32),
@@ -1240,6 +1248,10 @@ static const union AnimCmd *const sAnimTable_BerryTree[] = {
     sAnim_BerryTreeStage2,
     sAnim_BerryTreeStage3,
     sAnim_BerryTreeStage4,
+};
+
+static const union AnimCmd *const sAnimTable_BerryPlantRipe[] = {
+    [ANIM_STAY_STILL] = sAnim_BerryPlantRipe,
 };
 
 static const union AnimCmd *const sAnimTable_RockSmashRock[] = {

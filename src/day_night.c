@@ -27,6 +27,14 @@ void InitDayNightCycle(void)
         VarSet(VAR_TIME_OF_DAY, TIME_DAY);
 }
 
+static void SetTimeOfDay(u8 time)
+{
+    if (time == TIME_DAY && VarGet(VAR_TIME_OF_DAY) == TIME_NIGHT)
+        VarSet(VAR_DAY_NIGHT_DAY_COUNT, VarGet(VAR_DAY_NIGHT_DAY_COUNT) + 1);
+
+    VarSet(VAR_TIME_OF_DAY, time);
+}
+
 u8 GetTimeOfDay(void)
 {
     return VarGet(VAR_TIME_OF_DAY);
@@ -337,7 +345,7 @@ void StartTimeOfDayTransition(u8 targetTime)
 {
     if (!DoesCurrentMapUseNightPalette())
     {
-        VarSet(VAR_TIME_OF_DAY, targetTime);
+        SetTimeOfDay(targetTime);
         RefreshCurrentMapNightPalette();
         return;
     }
@@ -358,7 +366,7 @@ void UpdateTimeOfDayTransition(void)
     if (!DoesCurrentMapUseNightPalette())
     {
         sTimeTransitionActive = FALSE;
-        VarSet(VAR_TIME_OF_DAY, sTimeTransitionTarget);
+        SetTimeOfDay(sTimeTransitionTarget);
         RestoreDayPaletteForCurrentMap();
         return;
     }
@@ -374,7 +382,7 @@ void UpdateTimeOfDayTransition(void)
     if (sTimeTransitionStage >= 4)
     {
         sTimeTransitionActive = FALSE;
-        VarSet(VAR_TIME_OF_DAY, sTimeTransitionTarget);
+        SetTimeOfDay(sTimeTransitionTarget);
         RefreshCurrentMapNightPalette();
         return;
     }

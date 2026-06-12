@@ -6,6 +6,31 @@ CeladonCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
 	end
 
+CeladonCity_EventScript_BerryPatchDoor::
+	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	checkitem ITEM_RAINBOW_KEY
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_EventScript_BerryPatchAccessGranted
+	msgbox CeladonCity_Text_BerryPatchAccessDenied
+	closemessage
+	applymovement LOCALID_PLAYER, CeladonCity_Movement_ForcePlayerFromBerryPatchDoor
+	waitmovement 0
+	releaseall
+	end
+
+CeladonCity_EventScript_BerryPatchAccessGranted::
+	msgbox CeladonCity_Text_BerryPatchAccessGranted
+	closemessage
+	warp MAP_CELADON_CITY_BERRY_PATCH, 0
+	waitstate
+	releaseall
+	end
+
+CeladonCity_Movement_ForcePlayerFromBerryPatchDoor::
+	walk_down
+	step_end
+
 CeladonCity_EventScript_LittleGirl::
 	msgbox CeladonCity_Text_GotMyKoffingInCinnabar, MSGBOX_NPC
 	end

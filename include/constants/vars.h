@@ -84,7 +84,7 @@
 #define VAR_WONDER_NEWS_STEP_COUNTER       0x4028
 #define VAR_TIME_OF_DAY                    0x4029
 #define VAR_DAYNIGHT_STEP_COUNTER          0x402A
-#define VAR_0x402B                         0x402B
+#define VAR_DAY_NIGHT_DAY_COUNT            0x402B
 #define VAR_0x402C                         0x402C
 #define VAR_0x402D                         0x402D
 #define VAR_0x402E                         0x402E
@@ -192,12 +192,12 @@
 #define VAR_ERIKA_TRIAL_STATE      0x408F
 #define VAR_KOGA_TRIAL_STATE       0x4090
 #define VAR_SABRINA_TRIAL_STATE    0x4091
-#define VAR_0x4092                 0x4092
-#define VAR_0x4093                 0x4093
-#define VAR_0x4094                 0x4094
-#define VAR_0x4095                 0x4095
-#define VAR_0x4096                 0x4096
-#define VAR_0x4097                 0x4097
+#define VAR_CELADON_BERRY_PATCH_SITRUS_NEXT_HARVEST_DAY 0x4092
+#define VAR_CELADON_BERRY_PATCH_LUM_NEXT_HARVEST_DAY    0x4093
+#define VAR_CELADON_BERRY_PATCH_LEPPA_NEXT_HARVEST_DAY  0x4094
+#define VAR_CELADON_BERRY_PATCH_POMEG_NEXT_HARVEST_DAY  0x4095
+#define VAR_CELADON_BERRY_PATCH_KELPSY_NEXT_HARVEST_DAY 0x4096
+#define VAR_CELADON_BERRY_PATCH_TAMATO_NEXT_HARVEST_DAY 0x4097
 #define VAR_0x4098                 0x4098
 #define VAR_0x4099                 0x4099
 #define VAR_0x409A                 0x409A

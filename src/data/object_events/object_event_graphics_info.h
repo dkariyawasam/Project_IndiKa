@@ -1214,6 +1214,60 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CutTree = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerrySoil = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_BerrySoil,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+#define BERRY_PLANT_GFX_INFO(name, animTable, picTable)              \
+const struct ObjectEventGraphicsInfo name = {                       \
+    .tileTag = TAG_NONE,                                            \
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,                    \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                 \
+    .size = 256,                                                    \
+    .width = 16,                                                    \
+    .height = 32,                                                   \
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,                             \
+    .shadowSize = SHADOW_SIZE_S,                                    \
+    .inanimate = TRUE,                                              \
+    .disableReflectionPaletteLoad = FALSE,                          \
+    .tracks = TRACKS_NONE,                                          \
+    .oam = &gObjectEventBaseOam_16x32,                              \
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,           \
+    .anims = animTable,                                             \
+    .images = picTable,                                             \
+    .affineAnims = gDummySpriteAffineAnimTable,                     \
+}
+
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_SitrusBerryGrowing, sAnimTable_Inanimate, sPicTable_SitrusBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_SitrusBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_SitrusBerryRipe);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LumBerryGrowing, sAnimTable_Inanimate, sPicTable_LumBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LumBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_LumBerryRipe);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LeppaBerryGrowing, sAnimTable_Inanimate, sPicTable_LeppaBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LeppaBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_LeppaBerryRipe);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_PomegBerryGrowing, sAnimTable_Inanimate, sPicTable_PomegBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_PomegBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_PomegBerryRipe);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_KelpsyBerryGrowing, sAnimTable_Inanimate, sPicTable_KelpsyBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_KelpsyBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_KelpsyBerryRipe);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_TamatoBerryGrowing, sAnimTable_Inanimate, sPicTable_TamatoBerryGrowing);
+BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_TamatoBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_TamatoBerryRipe);
+
+#undef BERRY_PLANT_GFX_INFO
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clerk = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,

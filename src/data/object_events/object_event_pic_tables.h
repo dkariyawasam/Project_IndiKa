@@ -885,6 +885,64 @@ static const struct SpriteFrameImage sPicTable_CutTree[] = {
     overworld_frame(gObjectEventPic_CutTree, 2, 2, 3),
 };
 
+static const struct SpriteFrameImage sPicTable_BerrySoil[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_SitrusBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_SitrusBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 2),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 3),
+};
+
+static const struct SpriteFrameImage sPicTable_LumBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LumBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 5),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 6),
+};
+
+static const struct SpriteFrameImage sPicTable_LeppaBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 7),
+};
+
+static const struct SpriteFrameImage sPicTable_LeppaBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 8),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_PomegBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 10),
+};
+
+static const struct SpriteFrameImage sPicTable_PomegBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 11),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 12),
+};
+
+static const struct SpriteFrameImage sPicTable_KelpsyBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 13),
+};
+
+static const struct SpriteFrameImage sPicTable_KelpsyBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 14),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 15),
+};
+
+static const struct SpriteFrameImage sPicTable_TamatoBerryGrowing[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 16),
+};
+
+static const struct SpriteFrameImage sPicTable_TamatoBerryRipe[] = {
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 17),
+    overworld_frame(gObjectEventPic_BerryPlant, 2, 4, 18),
+};
+
 static const struct SpriteFrameImage sPicTable_Clerk[] = {
     overworld_frame(gObjectEventPic_Clerk, 2, 4, 0),
     overworld_frame(gObjectEventPic_Clerk, 2, 4, 1),

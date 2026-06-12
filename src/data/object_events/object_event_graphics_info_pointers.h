@@ -83,6 +83,19 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MistyWater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerrySoil;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SitrusBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SitrusBerryRipe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LumBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LumBerryRipe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeppaBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeppaBerryRipe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PomegBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PomegBerryRipe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KelpsyBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KelpsyBerryRipe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TamatoBerryGrowing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TamatoBerryRipe;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LtSurge;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
@@ -311,4 +324,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
     [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,
+    [OBJ_EVENT_GFX_BERRY_SOIL]               = &gObjectEventGraphicsInfo_BerrySoil,
+    [OBJ_EVENT_GFX_SITRUS_BERRY_GROWING]     = &gObjectEventGraphicsInfo_SitrusBerryGrowing,
+    [OBJ_EVENT_GFX_SITRUS_BERRY_RIPE]        = &gObjectEventGraphicsInfo_SitrusBerryRipe,
+    [OBJ_EVENT_GFX_LUM_BERRY_GROWING]        = &gObjectEventGraphicsInfo_LumBerryGrowing,
+    [OBJ_EVENT_GFX_LUM_BERRY_RIPE]           = &gObjectEventGraphicsInfo_LumBerryRipe,
+    [OBJ_EVENT_GFX_LEPPA_BERRY_GROWING]      = &gObjectEventGraphicsInfo_LeppaBerryGrowing,
+    [OBJ_EVENT_GFX_LEPPA_BERRY_RIPE]         = &gObjectEventGraphicsInfo_LeppaBerryRipe,
+    [OBJ_EVENT_GFX_POMEG_BERRY_GROWING]      = &gObjectEventGraphicsInfo_PomegBerryGrowing,
+    [OBJ_EVENT_GFX_POMEG_BERRY_RIPE]         = &gObjectEventGraphicsInfo_PomegBerryRipe,
+    [OBJ_EVENT_GFX_KELPSY_BERRY_GROWING]     = &gObjectEventGraphicsInfo_KelpsyBerryGrowing,
+    [OBJ_EVENT_GFX_KELPSY_BERRY_RIPE]        = &gObjectEventGraphicsInfo_KelpsyBerryRipe,
+    [OBJ_EVENT_GFX_TAMATO_BERRY_GROWING]     = &gObjectEventGraphicsInfo_TamatoBerryGrowing,
+    [OBJ_EVENT_GFX_TAMATO_BERRY_RIPE]        = &gObjectEventGraphicsInfo_TamatoBerryRipe,
 };

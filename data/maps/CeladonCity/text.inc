@@ -51,6 +51,15 @@ CeladonCity_Text_GameCornerSign::
     .string "GAME CORNER\n"
     .string "The playground for grown-ups!$"
 
+CeladonCity_Text_BerryPatchAccessDenied::
+    .string "Access denied.\p"
+    .string "A RAINBOW KEY is required to\n"
+    .string "enter ERIKA's berry patch.$"
+
+CeladonCity_Text_BerryPatchAccessGranted::
+    .string "Access granted using the\n"
+    .string "RAINBOW KEY.$"
+
 CeladonCity_Text_ScaldedTongueOnTea::
     .string "Aaaagh, ow…\n"
     .string "I scalded my tongue!\p"
