@@ -52,6 +52,10 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "That includes even outsiders you\n"
     .string "got in trades.$"
 
+CeladonCity_Gym_Text_ReceivedRainbowKeyFromErika::
+    .string "{PLAYER} received the RAINBOW KEY\n"
+    .string "from ERIKA.$"
+
 CeladonCity_Gym_Text_ErikaGiftBudew::
     .string "Please also accept this BUDEW.\p"
     .string "Raise it with kindness, and one\n"
