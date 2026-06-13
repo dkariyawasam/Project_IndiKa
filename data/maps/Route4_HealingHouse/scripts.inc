@@ -1,0 +1,151 @@
+	.equ MAGIKARP_PRICE, 500
+
+Route4_HealingHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route4_HealingHouse_OnTransition
+	.byte 0
+
+Route4_HealingHouse_OnTransition::
+	setrespawn HEAL_LOCATION_ROUTE4
+	end
+
+Route4_HealingHouse_EventScript_Healer::
+	lock
+	faceplayer
+	msgbox Route4_HealingHouse_Text_RestHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route4_HealingHouse_EventScript_Goodbye
+	message Route4_HealingHouse_Text_TakeShortRest
+	waitmessage
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	msgbox Route4_HealingHouse_Text_Rested
+	release
+	end
+
+Route4_HealingHouse_EventScript_Goodbye::
+	msgbox Route4_HealingHouse_Text_Goodbye
+	release
+	end
+
+Route4_HealingHouse_EventScript_Boy::
+	msgbox Route4_HealingHouse_Text_CanHaveSixMonsWithYou, MSGBOX_NPC
+	end
+
+Route4_HealingHouse_EventScript_Gentleman::
+	lock
+	msgbox Route4_HealingHouse_Text_TeamRocketAttacksCerulean
+	release
+	end
+
+Route4_HealingHouse_EventScript_MagikarpSalesman::
+	lock
+	faceplayer
+	goto_if_set FLAG_BOUGHT_MAGIKARP, Route4_HealingHouse_EventScript_AlreadyBoughtMagikarp
+	showmoneybox 0, 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route4_HealingHouse_EventScript_AskBuyMagikarpMale
+	goto_if_eq VAR_RESULT, FEMALE, Route4_HealingHouse_EventScript_AskBuyMagikarpFemale
+	end
+
+Route4_HealingHouse_EventScript_AskBuyMagikarpMale::
+	msgbox Route4_HealingHouse_Text_LaddieBuyMagikarpForJust500, MSGBOX_YESNO
+	goto Route4_HealingHouse_EventScript_TryBuyMagikarp
+	end
+
+Route4_HealingHouse_EventScript_AskBuyMagikarpFemale::
+	msgbox Route4_HealingHouse_Text_SweetieBuyMagikarpForJust500, MSGBOX_YESNO
+	goto Route4_HealingHouse_EventScript_TryBuyMagikarp
+	end
+
+Route4_HealingHouse_EventScript_TryBuyMagikarp::
+	goto_if_eq VAR_RESULT, NO, Route4_HealingHouse_EventScript_DeclineMagikarp
+	checkmoney MAGIKARP_PRICE
+	goto_if_eq VAR_RESULT, FALSE, Route4_HealingHouse_EventScript_NotEnoughMoney
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	setvar VAR_TEMP_1, SPECIES_MAGIKARP
+	givemon SPECIES_MAGIKARP, 5
+	goto_if_eq VAR_RESULT, 0, Route4_HealingHouse_EventScript_BuyMagikarpParty
+	goto_if_eq VAR_RESULT, 1, Route4_HealingHouse_EventScript_BuyMagikarpPC
+	goto_if_eq VAR_RESULT, 2, Route4_HealingHouse_EventScript_NoRoomForMagikarp
+	end
+
+Route4_HealingHouse_EventScript_BuyMagikarpParty::
+	call Route4_HealingHouse_EventScript_PayForMagikarp
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route4_HealingHouse_EventScript_EndPurchaseMagikarp
+	call EventScript_GetGiftMonPartySlot
+	fadescreen FADE_TO_BLACK
+	hidemoneybox
+	special ChangePokemonNickname
+	waitstate
+	goto Route4_HealingHouse_EventScript_BoughtMagikarp
+	end
+
+Route4_HealingHouse_EventScript_BuyMagikarpPC::
+	call Route4_HealingHouse_EventScript_PayForMagikarp
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route4_HealingHouse_EventScript_TransferMagikarpCloseMoneyBox
+	fadescreen FADE_TO_BLACK
+	hidemoneybox
+	special ChangeBoxPokemonNickname
+	waitstate
+	lock
+	faceplayer
+	goto Route4_HealingHouse_EventScript_TransferMagikarp
+	end
+
+Route4_HealingHouse_EventScript_TransferMagikarpCloseMoneyBox::
+	call EventScript_TransferredToPC
+	goto Route4_HealingHouse_EventScript_EndPurchaseMagikarp
+	end
+
+Route4_HealingHouse_EventScript_TransferMagikarp::
+	call EventScript_TransferredToPC
+	goto Route4_HealingHouse_EventScript_BoughtMagikarp
+	end
+
+Route4_HealingHouse_EventScript_EndPurchaseMagikarp::
+	hidemoneybox
+	goto Route4_HealingHouse_EventScript_BoughtMagikarp
+	end
+
+Route4_HealingHouse_EventScript_BoughtMagikarp::
+	setflag FLAG_BOUGHT_MAGIKARP
+	release
+	end
+
+Route4_HealingHouse_EventScript_PayForMagikarp::
+	removemoney MAGIKARP_PRICE
+	updatemoneybox
+	playfanfare MUS_LEVEL_UP
+	message Route4_HealingHouse_Text_PaidOutrageouslyForMagikarp
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MAGIKARP
+	return
+
+Route4_HealingHouse_EventScript_DeclineMagikarp::
+	msgbox Route4_HealingHouse_Text_OnlyDoingThisAsFavorToYou
+	hidemoneybox
+	release
+	end
+
+Route4_HealingHouse_EventScript_NotEnoughMoney::
+	msgbox Route4_HealingHouse_Text_YoullNeedMoreMoney
+	hidemoneybox
+	release
+	end
+
+Route4_HealingHouse_EventScript_AlreadyBoughtMagikarp::
+	msgbox Route4_HealingHouse_Text_IDontGiveRefunds
+	release
+	end
+
+Route4_HealingHouse_EventScript_NoRoomForMagikarp::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox Route4_HealingHouse_Text_NoRoomForMorePokemon
+	hidemoneybox
+	release
+	end
+
+Route4_HealingHouse_EventScript_Youngster::
+	msgbox Route4_HealingHouse_Text_ShouldStoreMonsUsingPC, MSGBOX_NPC
+	end

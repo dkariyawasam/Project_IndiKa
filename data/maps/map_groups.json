@@ -344,8 +344,7 @@
     "Route2_ViridianForest_NorthEntrance"
   ],
   "gMapGroup_IndoorRoute4": [
-    "Route4_PokemonCenter_1F",
-    "Route4_PokemonCenter_2F"
+    "Route4_HealingHouse"
   ],
   "gMapGroup_IndoorRoute5": [
     "Route5_PokemonDayCare",
@@ -361,8 +360,7 @@
     "Route8_WestEntrance"
   ],
   "gMapGroup_IndoorRoute10": [
-    "Route10_PokemonCenter_1F",
-    "Route10_PokemonCenter_2F"
+    "Route10_HealingHouse"
   ],
   "gMapGroup_IndoorRoute11": [
     "Route11_EastEntrance_1F",

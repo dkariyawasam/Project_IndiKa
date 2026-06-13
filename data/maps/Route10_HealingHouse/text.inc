@@ -1,18 +1,34 @@
-Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
+Route10_HealingHouse_Text_RestHere::
+    .string "Welcome, traveler.\p"
+    .string "This is a HEALING HOUSE.\n"
+    .string "Would you like to rest your POKéMON?$"
+
+Route10_HealingHouse_Text_Goodbye::
+    .string "Take care around ROCK TUNNEL.$"
+
+Route10_HealingHouse_Text_TakeShortRest::
+    .string "All right.\n"
+    .string "Take a short rest here.$"
+
+Route10_HealingHouse_Text_Rested::
+    .string "Your POKéMON are looking bright\n"
+    .string "and lively again.$"
+
+Route10_HealingHouse_Text_EveryTypeStrongerThanOthers::
     .string "The types of POKéMON match up\n"
     .string "differently with each other.\p"
     .string "Every type is stronger than some\n"
     .string "types and weaker than others.$"
 
-Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
+Route10_HealingHouse_Text_NuggetUselessSoldFor5000::
     .string "A NUGGET is totally useless.\n"
     .string "So I sold it for ¥5000.$"
 
-Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
+Route10_HealingHouse_Text_HeardGhostsHauntLavender::
     .string "I heard that ghosts haunt\n"
     .string "LAVENDER TOWN.$"
 
-Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
+Route10_HealingHouse_Text_GiveEverstoneIfCaught20Mons::
     .string "Oh… {PLAYER}!\n"
     .string "I've been looking for you!\p"
     .string "It's me, one of the ever-present\n"
@@ -26,17 +42,17 @@ Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
     .string "Have you gathered data on at least\n"
     .string "twenty kinds of POKéMON?$"
 
-Route10_PokemonCenter_1F_Text_GreatHereYouGo::
+Route10_HealingHouse_Text_GreatHereYouGo::
     .string "Great! You have caught or owned\n"
     .string "{STR_VAR_3} kinds of POKéMON!\p"
     .string "Congratulations!\n"
     .string "Here you go!$"
 
-Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide::
+Route10_HealingHouse_Text_ReceivedEverstoneFromAide::
     .string "{PLAYER} received the EVERSTONE\n"
     .string "from the AIDE.$"
 
-Route10_PokemonCenter_1F_Text_ExplainEverstone::
+Route10_HealingHouse_Text_ExplainEverstone::
     .string "Making POKéMON evolve certainly\n"
     .string "can add to the POKéDEX.\p"
     .string "However, at times, you may not\n"
@@ -45,4 +61,3 @@ Route10_PokemonCenter_1F_Text_ExplainEverstone::
     .string "to that POKéMON.\p"
     .string "It will prevent evolution according\n"
     .string "to the PROFESSOR.$"
-
