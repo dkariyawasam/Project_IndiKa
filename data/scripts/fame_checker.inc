@@ -27,14 +27,6 @@ EventScript_PokemonJournalUnused2::
 	release
 	end
 
-FourIsland_PokemonCenter_1F_EventScript_PokemonJournal::
-	lockall
-	famechecker FAMECHECKER_DAISY, 5
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureDaisyOak
-	releaseall
-	end
-
 Route4_EventScript_Boy::
 	lock
 	faceplayer
@@ -133,14 +125,6 @@ CinnabarIsland_Gym_EventScript_BlaineFujiPhoto::
 	famechecker FAMECHECKER_MRFUJI, 4
 	msgbox CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji
 	releaseall
-	end
-
-FourIsland_Mart_EventScript_OldMan::
-	lock
-	faceplayer
-	famechecker FAMECHECKER_LORELEI, 2
-	msgbox FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland
-	release
 	end
 
 SaffronCity_PokemonTrainerFanClub_EventScript_PokemonJournalBruno::

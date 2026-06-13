@@ -253,40 +253,6 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
             NO_ITEM
         }
     },
-    {
-        .mapGroup = MAP_GROUP(MAP_FOUR_ISLAND),
-        .mapNum = MAP_NUM(MAP_FOUR_ISLAND),
-        .rare = {
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .uncommon = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL),
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        },
-        .common = {
-            HIDDEN_ID(FLAG_HIDDEN_ITEM_FOUR_ISLAND_ULTRA_BALL),
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
-    },
 };
 
 void SetAllRenewableItemFlags(void)

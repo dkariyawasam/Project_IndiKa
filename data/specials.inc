@@ -318,7 +318,6 @@ gSpecials::
 	def_special DrawElevatorCurrentFloorWindow
 	def_special NullFieldSpecial
 	def_special IsPokerusInParty
-	def_special SetIcefallCaveCrackedIceMetatiles
 	def_special ShakeScreen
 	def_special StartGroudonKyogreBattle
 	def_special StartLegendaryBattle

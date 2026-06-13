@@ -242,18 +242,6 @@
       "blockdata_filepath": "data/layouts/PewterCity_Gym/map.bin"
     },
     {
-      "id": "LAYOUT_FOUR_ISLAND_LORELEIS_HOUSE",
-      "name": "FourIsland_LoreleisHouse_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SafariZoneBuilding",
-      "border_filepath": "data/layouts/FourIsland_LoreleisHouse/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_LoreleisHouse/map.bin"
-    },
-    {
       "id": "LAYOUT_THREE_ISLAND_HOUSE1",
       "name": "ThreeIsland_House1_Layout",
       "width": 11,
@@ -693,7 +681,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "secondary_tileset": "gTileset_SeviiIslands67",
       "border_filepath": "data/layouts/Route17/border.bin",
       "blockdata_filepath": "data/layouts/Route17/map.bin"
     },
@@ -2162,18 +2150,6 @@
       "blockdata_filepath": "data/layouts/ThreeIsland/map.bin"
     },
     {
-      "id": "LAYOUT_FOUR_ISLAND",
-      "name": "FourIsland_Layout",
-      "width": 48,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands45",
-      "border_filepath": "data/layouts/FourIsland/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland/map.bin"
-    },
-    {
       "id": "LAYOUT_ONE_ISLAND_KINDLE_ROAD",
       "name": "OneIsland_KindleRoad_Layout",
       "width": 24,
@@ -2436,54 +2412,6 @@
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B4F_CurrentStopped/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B4F_CurrentStopped/map.bin"
-    },
-    {
-      "id": "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
-      "name": "FourIsland_IcefallCave_Entrance_Layout",
-      "width": 30,
-      "height": 36,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/FourIsland_IcefallCave_Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_IcefallCave_Entrance/map.bin"
-    },
-    {
-      "id": "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_1F",
-      "name": "FourIsland_IcefallCave_1F_Layout",
-      "width": 20,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/FourIsland_IcefallCave_1F/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_IcefallCave_1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_B1F",
-      "name": "FourIsland_IcefallCave_B1F_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/FourIsland_IcefallCave_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_IcefallCave_B1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_BACK",
-      "name": "FourIsland_IcefallCave_Back_Layout",
-      "width": 25,
-      "height": 26,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/FourIsland_IcefallCave_Back/border.bin",
-      "blockdata_filepath": "data/layouts/FourIsland_IcefallCave_Back/map.bin"
     },
     {
       "id": "LAYOUT_ROCKET_LEAGUE_LOBBY",

@@ -1497,8 +1497,6 @@ u8 GetUnlockedSeviiAreas(void)
         result |= 1 << 1;
     if (FlagGet(FLAG_WORLD_MAP_THREE_ISLAND) == TRUE)
         result |= 1 << 2;
-    if (FlagGet(FLAG_WORLD_MAP_FOUR_ISLAND) == TRUE)
-        result |= 1 << 3;
     return result;
 }
 
@@ -1580,8 +1578,7 @@ static const u8 sMartMaps[][3] = {
     {MAP(MAP_FUCHSIA_CITY_MART),    1},
     {MAP(MAP_CINNABAR_ISLAND_MART), 1},
     {MAP(MAP_SAFFRON_CITY_MART),    1},
-    {MAP(MAP_THREE_ISLAND_MART),    1},
-    {MAP(MAP_FOUR_ISLAND_MART),     1}
+    {MAP(MAP_THREE_ISLAND_MART),    1}
 };
 
 u8 GetMartClerkObjectId(void)
@@ -1745,7 +1742,6 @@ const u16 sPokeCenter1FMaps[] = {
     MAP_ROUTE4_POKEMON_CENTER_1F,
     MAP_ROUTE10_POKEMON_CENTER_1F,
     MAP_ONE_ISLAND_POKEMON_CENTER_1F,
-    MAP_FOUR_ISLAND_POKEMON_CENTER_1F,
     MAP_UNION_ROOM,
     MAP_UNDEFINED
 };

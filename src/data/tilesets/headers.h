@@ -636,14 +636,14 @@ const struct Tileset gTileset_CinnabarVolcano =
     .callback = InitTilesetAnim_CinnabarVolcano,
 };
 
-const struct Tileset gTileset_BerryForest =
+const struct Tileset gTileset_FuchsiaForest =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_BerryForest,
-    .palettes = gTilesetPalettes_BerryForest,
-    .metatiles = gMetatiles_BerryForest,
-    .metatileAttributes = gMetatileAttributes_BerryForest,
+    .tiles = gTilesetTiles_FuchsiaForest,
+    .palettes = gTilesetPalettes_FuchsiaForest,
+    .metatiles = gMetatiles_FuchsiaForest,
+    .metatileAttributes = gMetatileAttributes_FuchsiaForest,
     .callback = NULL,
 };
 

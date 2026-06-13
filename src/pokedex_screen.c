@@ -209,7 +209,6 @@ const u32 sTilemap_AreaMap_Kanto[] = INCBIN_U32("graphics/pokedex/map_kanto.4bpp
 const u32 sTilemap_AreaMap_OneIsland[] = INCBIN_U32("graphics/pokedex/map_one_island.4bpp.lz");
 const u32 sTilemap_AreaMap_TwoIsland[] = INCBIN_U32("graphics/pokedex/map_two_island.4bpp.lz");
 const u32 sTilemap_AreaMap_ThreeIsland[] = INCBIN_U32("graphics/pokedex/map_three_island.4bpp.lz");
-const u32 sTilemap_AreaMap_FourIsland[] = INCBIN_U32("graphics/pokedex/map_four_island.4bpp.lz");
 const u32 sTilemap_AreaMap_FiveIsland[] = INCBIN_U32("graphics/pokedex/map_five_island.4bpp.lz");
 const u16 sBlitTiles_WideEllipse[] = INCBIN_U16("graphics/pokedex/blit_wide_ellipse.4bpp");
 
@@ -734,16 +733,6 @@ static const struct WindowTemplate sWindowTemplate_AreaMap_ThreeIsland = {
     .baseBlock = 0x028c
 };
 
-static const struct WindowTemplate sWindowTemplate_AreaMap_FourIsland = {
-    .bg = 2,
-    .tilemapLeft = 13,
-    .tilemapTop = 13,
-    .width = 4,
-    .height = 4,
-    .paletteNum = 0,
-    .baseBlock = 0x0298
-};
-
 static const struct WindowTemplate sWindowTemplate_AreaMap_FiveIsland = {
     .bg = 2,
     .tilemapLeft = 17,
@@ -761,7 +750,6 @@ struct {
     {&sWindowTemplate_AreaMap_OneIsland,   sTilemap_AreaMap_OneIsland},
     {&sWindowTemplate_AreaMap_TwoIsland,   sTilemap_AreaMap_TwoIsland},
     {&sWindowTemplate_AreaMap_ThreeIsland, sTilemap_AreaMap_ThreeIsland},
-    {&sWindowTemplate_AreaMap_FourIsland,  sTilemap_AreaMap_FourIsland},
     {&sWindowTemplate_AreaMap_FiveIsland,  sTilemap_AreaMap_FiveIsland},
 };
 

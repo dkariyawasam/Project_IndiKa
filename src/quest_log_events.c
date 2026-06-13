@@ -452,8 +452,7 @@ static const u16 sWorldMapFlags[] =
     FLAG_WORLD_MAP_SAFFRON_CITY,
     FLAG_WORLD_MAP_ONE_ISLAND,
     FLAG_WORLD_MAP_TWO_ISLAND,
-    FLAG_WORLD_MAP_THREE_ISLAND,
-    FLAG_WORLD_MAP_FOUR_ISLAND
+    FLAG_WORLD_MAP_THREE_ISLAND
 };
 
 void SetQuestLogEvent(u16 eventId, const u16 * data)
