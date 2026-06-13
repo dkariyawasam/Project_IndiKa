@@ -433,14 +433,6 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_FOUR_ISLAND",
-      "name": "FOUR ISLAND",
-      "x": 3,
-      "y": 4,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "MAPSEC_KINDLE_ROAD",
       "name": "KINDLE ROAD",
       "x": 2,
@@ -483,14 +475,6 @@
     {
       "id": "MAPSEC_CINNABAR_VOLCANO",
       "name": "CINNABAR VOLCANO",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ICEFALL_CAVE",
-      "name": "ICEFALL CAVE",
       "x": 0,
       "y": 0,
       "width": 1,

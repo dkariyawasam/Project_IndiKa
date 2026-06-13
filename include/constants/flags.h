@@ -151,9 +151,9 @@
 #define FLAG_HIDE_FIVE_ISLAND_ROCKETS                      0x088
 #define FLAG_0x089                                         0x089
 #define FLAG_HIDE_RUBY                                     0x08A
-#define FLAG_HIDE_ICEFALL_CAVE_LORELEI                     0x08B
+#define FLAG_0x08B                                         0x08B
 #define FLAG_HIDE_LORELEI_IN_HER_HOUSE                     0x08C
-#define FLAG_HIDE_ICEFALL_CAVE_ROCKETS                     0x08D
+#define FLAG_0x08D                                         0x08D
 #define FLAG_0x08F                                         0x08F
 #define FLAG_HIDE_THREE_ISLAND_LONE_BIKER                  0x091
 #define FLAG_0x092                                         0x092
@@ -161,7 +161,7 @@
 #define FLAG_0x094                                         0x094
 #define FLAG_0x095                                         0x095
 #define FLAG_0x096                                         0x096
-#define FLAG_HIDE_FOUR_ISLAND_RIVAL                        0x097
+#define FLAG_0x097                                         0x097
 #define FLAG_0x098                                         0x098
 #define FLAG_HIDE_LUGIA                                    0x09B
 #define FLAG_HIDE_HO_OH                                    0x09C
@@ -485,8 +485,8 @@
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE                    0x1D6
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL                 0x1D7
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL                0x1D8
-#define FLAG_HIDE_FOUR_ISLAND_STAR_PIECE                        0x1D9
-#define FLAG_HIDE_FOUR_ISLAND_STARDUST                          0x1DA
+#define FLAG_0x1D9                                               0x1D9
+#define FLAG_0x1DA                                               0x1DA
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER                  0x1DB
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_MAX_REPEL              0x1DC
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_CARBOS                 0x1DD
@@ -505,10 +505,10 @@
 #define FLAG_0x1ED                                               0x1ED
 #define FLAG_0x1EE                                               0x1EE
 #define FLAG_0x1EF                                               0x1EF
-#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_ULTRA_BALL        0x1F0
-#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_TM57              0x1F1
-#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_FULL_RESTORE     0x1F2
-#define FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_NEVER_MELT_ICE   0x1F3
+#define FLAG_0x1F0                                              0x1F0
+#define FLAG_0x1F1                                              0x1F1
+#define FLAG_0x1F2                                              0x1F2
+#define FLAG_0x1F3                                              0x1F3
 #define FLAG_0x1F4                                              0x1F4
 #define FLAG_0x1F5                                              0x1F5
 #define FLAG_0x1F6                                              0x1F6
@@ -1184,8 +1184,8 @@
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_MAX_REPEL                (FLAG_HIDDEN_ITEMS_START + 165)
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_PEARL                    (FLAG_HIDDEN_ITEMS_START + 166)
 #define FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST                 (FLAG_HIDDEN_ITEMS_START + 167)
-#define FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL                                 (FLAG_HIDDEN_ITEMS_START + 168)
-#define FLAG_HIDDEN_ITEM_FOUR_ISLAND_ULTRA_BALL                            (FLAG_HIDDEN_ITEMS_START + 169)
+#define FLAG_HIDDEN_ITEM_0x0A8                                             (FLAG_HIDDEN_ITEMS_START + 168)
+#define FLAG_HIDDEN_ITEM_0x0A9                                             (FLAG_HIDDEN_ITEMS_START + 169)
 #define FLAG_HIDDEN_ITEM_0xAA                                            (FLAG_HIDDEN_ITEMS_START + 170)
 #define FLAG_HIDDEN_ITEM_0xAB                                            (FLAG_HIDDEN_ITEMS_START + 171)
 #define FLAG_HIDDEN_ITEM_0xAC                                            (FLAG_HIDDEN_ITEMS_START + 172)
@@ -1408,7 +1408,7 @@
 #define FLAG_WORLD_MAP_ONE_ISLAND                                   (SYS_FLAGS + 0x9B)
 #define FLAG_WORLD_MAP_TWO_ISLAND                                   (SYS_FLAGS + 0x9C)
 #define FLAG_WORLD_MAP_THREE_ISLAND                                 (SYS_FLAGS + 0x9D)
-#define FLAG_WORLD_MAP_FOUR_ISLAND                                  (SYS_FLAGS + 0x9E)
+#define FLAG_SYS_0x9E                                               (SYS_FLAGS + 0x9E)
 #define FLAG_SYS_0x9F                                               (SYS_FLAGS + 0x9F)
 #define FLAG_SYS_0xA0                                                (SYS_FLAGS + 0xA0)
 #define FLAG_SYS_0xA1                                                (SYS_FLAGS + 0xA1)
@@ -1434,7 +1434,7 @@
 #define FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR                          (SYS_FLAGS + 0xB5)
 #define FLAG_WORLD_MAP_CINNABAR_VOLCANO                                     (SYS_FLAGS + 0xB6)
 #define FLAG_WORLD_MAP_FUCHSIA_FOREST                    (SYS_FLAGS + 0xB7)
-#define FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE            (SYS_FLAGS + 0xB8)
+#define FLAG_SYS_0xB8                                               (SYS_FLAGS + 0xB8)
 #define FLAG_SYS_0xB9                                             (SYS_FLAGS + 0xB9)
 #define FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY                          (SYS_FLAGS + 0xBA)
 #define FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE               (SYS_FLAGS + 0xBC)
