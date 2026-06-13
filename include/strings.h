@@ -877,7 +877,6 @@ extern const u8 gText_KeyItemsPocket[];
 extern const u8 gText_PokeBallsPocket[];
 extern const u8 gText_TmCase[];
 extern const u8 gText_BerryPouch_2[];
-extern const u8 gText_FourIsland[];
 extern const u8 gText_FiveIsland[];
 
 // trade
@@ -1106,7 +1105,6 @@ extern const u8 gText_RegionMap_AreaDesc_CeruleanCave[];
 extern const u8 gText_RegionMap_AreaDesc_PowerPlant[];
 extern const u8 gText_RegionMap_AreaDesc_CinnabarVolcano[];
 extern const u8 gText_RegionMap_AreaDesc_FuchsiaForest[];
-extern const u8 gText_RegionMap_AreaDesc_IcefallCave[];
 extern const u8 gText_RegionMap_AreaDesc_LostCave[];
 extern const u8 gText_RegionMap_AreaDesc_TanobyRuins[];
 extern const u8 gText_RegionMap_AreaDesc_AlteringCave[];

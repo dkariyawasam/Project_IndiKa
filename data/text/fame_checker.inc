@@ -365,14 +365,14 @@ gFameCheckerFlavorText_Lorelei4:: @ 0x81AEDAA
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that LORELEI has lots\n"
 	.string "and lots of stuffed dolls?\p"
-	.string "Every time she comes back to\n"
-	.string "FOUR ISLAND, her collection grows!$"
+	.string "Every time she comes back from\n"
+	.string "SEAFOAM, her collection grows!$"
 
 gFameCheckerFlavorText_Lorelei5:: @ 0x81AEE51
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The LAPRAS she has, I imagine it\n"
 	.string "to be the one she met as a child.\p"
-	.string "I believe it was in ICEFALL CAVE\n"
+	.string "I believe it was in SEAFOAM\n"
 	.string "that she caught it.\p"
 	.string "Perhaps that POKéMON has been with\n"
 	.string "her ever since.$"
@@ -829,7 +829,7 @@ gFameCheckerFlavorTextOriginLocation_Daisy4::
 	.string "CELADON MANSION$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy5::
-	.string "FOUR ISLAND$"
+	.string "CELADON MANSION$"
 
 gFameCheckerFlavorTextOriginLocation_Brock0::
 	.string "PEWTER CITY$"
@@ -964,16 +964,16 @@ gFameCheckerFlavorTextOriginLocation_Lorelei1::
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei2::
-	.string "FOUR ISLAND$"
+	.string "SEAFOAM ISLANDS$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei3::
 	.string "FIVE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei4::
-	.string "FOUR ISLAND$"
+	.string "SEAFOAM ISLANDS$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei5::
-	.string "FOUR ISLAND$"
+	.string "SEAFOAM ISLANDS$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno0::
 	.string "POKéMON LEAGUE$"

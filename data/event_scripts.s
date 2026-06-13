@@ -185,10 +185,6 @@ gStdScriptsEnd::
 	.include "data/maps/PokemonTower_7F/scripts.inc"
 	.include "data/maps/PowerPlant/scripts.inc"
 	.include "data/maps/FuchsiaForest/scripts.inc"
-	.include "data/maps/FourIsland_IcefallCave_Entrance/scripts.inc"
-	.include "data/maps/FourIsland_IcefallCave_1F/scripts.inc"
-	.include "data/maps/FourIsland_IcefallCave_B1F/scripts.inc"
-	.include "data/maps/FourIsland_IcefallCave_Back/scripts.inc"
 	.include "data/maps/RockTunnel_B2F/scripts.inc"
 	.include "data/maps/NavelRock_Exterior/scripts.inc"
 	.include "data/maps/RocketLeague_Lobby/scripts.inc"
@@ -237,7 +233,6 @@ gStdScriptsEnd::
 	.include "data/maps/OneIsland/scripts.inc"
 	.include "data/maps/TwoIsland/scripts.inc"
 	.include "data/maps/ThreeIsland/scripts.inc"
-	.include "data/maps/FourIsland/scripts.inc"
 	.include "data/maps/Route1/scripts.inc"
 	.include "data/maps/Route2/scripts.inc"
 	.include "data/maps/Route3/scripts.inc"
@@ -402,13 +397,6 @@ gStdScriptsEnd::
 	.include "data/maps/ThreeIsland_House3/scripts.inc"
 	.include "data/maps/ThreeIsland_House4/scripts.inc"
 	.include "data/maps/ThreeIsland_House5/scripts.inc"
-	.include "data/maps/FourIsland_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/FourIsland_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/FourIsland_House1/scripts.inc"
-	.include "data/maps/FourIsland_LoreleisHouse/scripts.inc"
-	.include "data/maps/FourIsland_Harbor/scripts.inc"
-	.include "data/maps/FourIsland_House2/scripts.inc"
-	.include "data/maps/FourIsland_Mart/scripts.inc"
 	.include "data/maps/ThreeIsland_Harbor/scripts.inc"
 
 	.include "data/maps/ViridianForest/text.inc"
@@ -488,7 +476,6 @@ gStdScriptsEnd::
 	.include "data/maps/PokemonTower_6F/text.inc"
 	.include "data/maps/PokemonTower_7F/text.inc"
 	.include "data/maps/FuchsiaForest/text.inc"
-	.include "data/maps/FourIsland_IcefallCave_Back/text.inc"
 	.include "data/maps/RocketLeague_Lobby/text.inc"
 	.include "data/maps/ThreeIsland_DunsparceTunnel/text.inc"
 	.include "data/maps/CinnabarVolcano_1F/text.inc"
@@ -512,7 +499,6 @@ gStdScriptsEnd::
 	.include "data/maps/OneIsland/text.inc"
 	.include "data/maps/TwoIsland/text.inc"
 	.include "data/maps/ThreeIsland/text.inc"
-	.include "data/maps/FourIsland/text.inc"
 	.include "data/maps/Route1/text.inc"
 	.include "data/maps/Route2/text.inc"
 	.include "data/maps/Route3/text.inc"
@@ -658,10 +644,6 @@ gStdScriptsEnd::
 	.include "data/maps/ThreeIsland_House3/text.inc"
 	.include "data/maps/ThreeIsland_House4/text.inc"
 	.include "data/maps/ThreeIsland_House5/text.inc"
-	.include "data/maps/FourIsland_PokemonCenter_1F/text.inc"
-	.include "data/maps/FourIsland_House1/text.inc"
-	.include "data/maps/FourIsland_LoreleisHouse/text.inc"
-	.include "data/maps/FourIsland_Mart/text.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
@@ -899,7 +881,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_TWO_ISLAND_POKE_MANIAC
 	setflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
 	setflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
-	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
 	setflag FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL
 	setflag FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL
 	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL
