@@ -103,10 +103,10 @@ static const u16 *const sTilesetAnims_SilphCo_Fountain[] = {
     sTilesetAnims_SilphCo_Fountain_Frame3
 };
 
-static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/0.4bpp");
-static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/1.4bpp");
-static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/2.4bpp");
-static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/3.4bpp");
+static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/cinnabar_volcano/anim/steam/0.4bpp");
+static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/cinnabar_volcano/anim/steam/1.4bpp");
+static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/cinnabar_volcano/anim/steam/2.4bpp");
+static const u16 sTilesetAnims_CinnabarVolcano_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/cinnabar_volcano/anim/steam/3.4bpp");
 
 static const u16 *const sTilesetAnims_CinnabarVolcano_Steam[] = {
     sTilesetAnims_CinnabarVolcano_Steam_Frame0,

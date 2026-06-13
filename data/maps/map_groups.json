@@ -34,7 +34,6 @@
     "gMapGroup_IndoorOneIsland",
     "gMapGroup_IndoorTwoIsland",
     "gMapGroup_IndoorThreeIsland",
-    "gMapGroup_IndoorFourIsland",
     "gMapGroup_IndoorThreeIslandRoute",
     "gMapGroup_IndoorFiveIslandRoute",
     "gMapGroup_IndoorTwoIslandRoute"
@@ -140,10 +139,6 @@
     "PokemonTower_7F",
     "PowerPlant",
     "FuchsiaForest",
-    "FourIsland_IcefallCave_Entrance",
-    "FourIsland_IcefallCave_1F",
-    "FourIsland_IcefallCave_B1F",
-    "FourIsland_IcefallCave_Back",
     "RockTunnel_B2F"
   ],
   "gMapGroup_SpecialArea": [
@@ -196,7 +191,6 @@
     "OneIsland",
     "TwoIsland",
     "ThreeIsland",
-    "FourIsland",
     "Route1",
     "Route2",
     "Route3",
@@ -419,15 +413,6 @@
     "ThreeIsland_House3",
     "ThreeIsland_House4",
     "ThreeIsland_House5"
-  ],
-  "gMapGroup_IndoorFourIsland": [
-    "FourIsland_PokemonCenter_1F",
-    "FourIsland_PokemonCenter_2F",
-    "FourIsland_House1",
-    "FourIsland_LoreleisHouse",
-    "FourIsland_Harbor",
-    "FourIsland_House2",
-    "FourIsland_Mart"
   ],
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"

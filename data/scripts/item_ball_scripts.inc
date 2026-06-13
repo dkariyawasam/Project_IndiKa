@@ -466,14 +466,6 @@ SeafoamIslands_B4F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-FourIsland_EventScript_ItemStarPiece::
-	finditem ITEM_STAR_PIECE
-	end
-
-FourIsland_EventScript_ItemStardust::
-	finditem ITEM_STARDUST
-	end
-
 OneIsland_KindleRoad_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
@@ -496,22 +488,6 @@ FuchsiaForest_EventScript_ItemFullHeal::
 
 FuchsiaForest_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
-	end
-
-FourIsland_IcefallCave_1F_EventScript_ItemUltraBall::
-	finditem ITEM_ULTRA_BALL
-	end
-
-FourIsland_IcefallCave_1F_EventScript_ItemTM57::
-	finditem ITEM_MAX_POTION
-	end
-
-FourIsland_IcefallCave_B1F_EventScript_ItemFullRestore::
-	finditem ITEM_FULL_RESTORE
-	end
-
-FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
-	finditem ITEM_NEVER_MELT_ICE
 	end
 
 SilphCo_4F_EventScript_ItemTM41::
