@@ -170,8 +170,8 @@
       "x": 13,
       "y": 30,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE10_POKEMON_CENTER_1F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ROUTE10_HEALING_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
