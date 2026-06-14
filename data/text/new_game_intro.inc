@@ -205,57 +205,71 @@ gPikachuIntro_Text_Page3::
     .string "adventure begin!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-    .string "Hello, there!\n"
-    .string "Glad to meet you!\p"
+    .string "Ah, there you are.\p"
+    .string "Your fieldwork assignment is\n"
+    .string "about to begin.\p"
+    .string "But before that, we should go\n"
+    .string "over a few things.\p"
     .string "Welcome to the world of POKéMON!\p"
-    .string "My name is OAK.\p"
-    .string "People affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+    .string "You know me as PROF. OAK.\p"
+    .string "As you know, my specialty is\n"
+    .string "the relationship between POKéMON\l"
+    .string "and people.\p$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "This world…$"
+    .string "KANTO is changing.\p"
+    .string "POKéMON, people, and the places\n"
+    .string "they share are changing with it.$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "Some POKéMON live beside us.\n"
+    .string "Some hide in forests, caves,\l"
+    .string "shorelines, and old ruins.\p"
+    .string "To understand them, you have to\n"
+    .string "go where they live.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\p"
-    .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+    .string "My work is not just about naming\n"
+    .string "and recording POKéMON.\p"
+    .string "I study how POKéMON and people\n"
+    .string "grow together.\p"
+    .string "Trust, battle, friendship...\n"
+    .string "Even evolution may be shaped by\l"
+    .string "those bonds.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a little about\n"
-    .string "yourself.\p$"
+    .string "But first, I need to confirm\n"
+    .string "your field aide record.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
     .string "Let's begin with your name.\n"
-    .string "What is it?\p$"
+    .string "How should it be recorded?\p$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
     .string "Right…\n"
-    .string "So your name is {PLAYER}.$"
+    .string "{PLAYER}.\n"
+    .string "I'll mark that down.$"
 
 gOakSpeech_Text_WhatWasHisName::
     .string "This is my grandson.\p"
-    .string "He's been your rival since you both\n"
-    .string "were babies.\p"
-    .string "…Erm, what was his name now?$"
+    .string "Like you, he has been helping\n"
+    .string "with my research here in\l"
+    .string "PALLET TOWN.\p"
+    .string "His name is...$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-    .string "Your rival's name, what was it now?$"
+    .string "His name is...$"
 
 gOakSpeech_Text_ConfirmRivalName::
-    .string "…Er, was it {RIVAL}?$"
+    .string "His name is {RIVAL}?$"
 
 gOakSpeech_Text_RememberRivalsName::
-    .string "That's right! I remember now!\n"
-    .string "His name is {RIVAL}!\p$"
+    .string "Yes.\n"
+    .string "His name is {RIVAL}.\p$"
 
 gOakSpeech_Text_LetsGo::
     .string "{PLAYER}!\p"
-    .string "Your very own POKéMON legend is\n"
-    .string "about to unfold!\p"
-    .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "KANTO is waiting beyond the LAB.\p"
+    .string "Observe carefully, learn directly,\n"
+    .string "and trust the POKéMON at your side.\p"
+    .string "Your fieldwork begins now.$"
