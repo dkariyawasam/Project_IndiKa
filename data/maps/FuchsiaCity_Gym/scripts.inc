@@ -10,7 +10,7 @@ FuchsiaCity_Gym_OnFrame::
 FuchsiaCity_Gym_OnTransition::
 	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_SetInitialGuideState
 	setflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
-	goto_if_lt VAR_KOGA_TRIAL_STATE, 3, FuchsiaCity_Gym_EventScript_HideKoga
+	goto_if_lt VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_HideKoga
 	clearflag FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA
 	end
 
