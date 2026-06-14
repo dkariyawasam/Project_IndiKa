@@ -31,11 +31,6 @@ ViridianCity_Gym_EventScript_Jason::
 	msgbox ViridianCity_Gym_Text_JasonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-ViridianCity_Gym_EventScript_Cole::
-	trainerbattle_single TRAINER_TAMER_COLE, ViridianCity_Gym_Text_ColeIntro, ViridianCity_Gym_Text_ColeDefeat
-	msgbox ViridianCity_Gym_Text_ColePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 ViridianCity_Gym_EventScript_Atsushi::
 	trainerbattle_single TRAINER_BLACK_BELT_ATSUSHI, ViridianCity_Gym_Text_AtsushiIntro, ViridianCity_Gym_Text_AtsushiDefeat
 	msgbox ViridianCity_Gym_Text_AtsushiPostBattle, MSGBOX_AUTOCLOSE
