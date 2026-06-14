@@ -3378,19 +3378,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TamerJason[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TamerCole[] = {
-    {
-        .iv = 40,
-        .lvl = 39,
-        .species = SPECIES_ARBOK,
-    },
-    {
-        .iv = 40,
-        .lvl = 39,
-        .species = SPECIES_TAUROS,
-    },
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_TamerVincent[] = {
     {
         .iv = 40,
