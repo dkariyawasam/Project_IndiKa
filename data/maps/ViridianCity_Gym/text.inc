@@ -115,18 +115,6 @@ ViridianCity_Gym_Text_TakashiPostBattle::
     .string "The POKéMON LEAGUE?\n"
     .string "You? Don't get cocky!$"
 
-ViridianCity_Gym_Text_ColeIntro::
-    .string "Your POKéMON will cower at the\n"
-    .string "crack of my whip!$"
-
-ViridianCity_Gym_Text_ColeDefeat::
-    .string "Yowch!\n"
-    .string "Whiplash!$"
-
-ViridianCity_Gym_Text_ColePostBattle::
-    .string "Wait!\n"
-    .string "I was just careless!$"
-
 ViridianCity_Gym_Text_SamuelIntro::
     .string "VIRIDIAN GYM was closed for a\n"
     .string "long time.\p"

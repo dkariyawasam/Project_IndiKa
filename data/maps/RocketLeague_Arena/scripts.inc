@@ -62,7 +62,7 @@ RocketLeague_Arena_EventScript_BattlePetrel::
 	msgbox RocketLeague_Arena_Text_PetrelIntro
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PETREL
-	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_RocketDefeat
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_PetrelDefeat
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -72,7 +72,7 @@ RocketLeague_Arena_EventScript_BattleArcher::
 	msgbox RocketLeague_Arena_Text_ArcherIntro
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARCHER
-	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_RocketDefeat
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_ArcherDefeat
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -82,7 +82,7 @@ RocketLeague_Arena_EventScript_BattleAriana::
 	msgbox RocketLeague_Arena_Text_ArianaIntro
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARIANA
-	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_RocketDefeat
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_ArianaDefeat
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -92,7 +92,7 @@ RocketLeague_Arena_EventScript_BattleProton::
 	msgbox RocketLeague_Arena_Text_ProtonIntro
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PROTON
-	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_RocketDefeat
+	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_ProtonDefeat
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
