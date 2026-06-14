@@ -54,8 +54,10 @@ CinnabarVolcano_RightCorridor_3F_EventScript_Koga::
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_KogaTryTogether
 	closemessage
 	applymovement LOCALID_PLAYER, CinnabarVolcano_RightCorridor_3F_Movement_PlayerJoinPull
+	waitmovement LOCALID_PLAYER
 	applymovement LOCALID_KOGA, CinnabarVolcano_RightCorridor_3F_Movement_KogaInspectStone
-	waitmovement 0
+	waitmovement LOCALID_KOGA
+	delay 16
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_PullTogether
 	closemessage
 	setvar VAR_0x8004, 1
