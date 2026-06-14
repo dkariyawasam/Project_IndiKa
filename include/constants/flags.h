@@ -202,9 +202,9 @@
 #define FLAG_HIDE_POKEMON_TOWER_SABRINA               0x0BD
 #define FLAG_HIDE_CINNABAR_VOLCANO_BLAINE             0x0BE
 #define FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH           0x0BF
-#define FLAG_0x0C0                                    0x0C0
-#define FLAG_0x0C1                                    0x0C1
-#define FLAG_0x0C2                                    0x0C2
+#define FLAG_HIDE_CINNABAR_VOLCANO_JANINE             0x0C0
+#define FLAG_KOGA_VOLCANO_JANINE_ARRIVED              0x0C1
+#define FLAG_KOGA_VOLCANO_LAVIC_STONE_PULLED          0x0C2
 #define FLAG_0x0C3                                    0x0C3
 #define FLAG_0x0C4               0x0C4
 #define FLAG_0x0C5               0x0C5

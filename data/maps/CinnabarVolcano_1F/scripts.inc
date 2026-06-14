@@ -1,5 +1,16 @@
 CinnabarVolcano_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarVolcano_1F_OnTransition
 	.byte 0
+
+CinnabarVolcano_1F_OnTransition::
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, CinnabarVolcano_1F_EventScript_ShowKoga
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 1, CinnabarVolcano_1F_EventScript_ShowKoga
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	end
+
+CinnabarVolcano_1F_EventScript_ShowKoga::
+	clearflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	end
 
 CinnabarVolcano_1F_EventScript_OldMan::
 	msgbox CinnabarVolcano_1F_Text_WaterWarmsMeToCore, MSGBOX_NPC
@@ -25,17 +36,25 @@ CinnabarVolcano_1F_EventScript_BlackBelt::
 	release
 	end
 
-CinnabarVolcano_1F_EventScript_RockSmashMan::
+CinnabarVolcano_1F_EventScript_Koga::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TM56, CinnabarVolcano_1F_EventScript_AlreadyGotTM56
-	msgbox CinnabarVolcano_1F_Text_UsedThisToMakeEmberSpa
-	setflag FLAG_GOT_TM56
-	release
-	end
-
-CinnabarVolcano_1F_EventScript_AlreadyGotTM56::
-	msgbox CinnabarVolcano_1F_Text_ExplainTM56
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	msgbox CinnabarVolcano_1F_Text_KogaLookingForLavicStone
+	closemessage
+	playse SE_M_EXPLOSION
+	setfieldeffectargument 0, 17
+	setfieldeffectargument 1, 12
+	setfieldeffectargument 2, 3
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_POP_OUT_OF_ASH
+	delay 12
+	setvar VAR_KOGA_TRIAL_STATE, 2
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	removeobject VAR_LAST_TALKED
+	waitfieldeffect FLDEFF_POP_OUT_OF_ASH
 	release
 	end
 

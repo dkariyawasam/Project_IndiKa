@@ -1,7 +1,36 @@
 CinnabarVolcano_LeftCorridor_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarVolcano_LeftCorridor_2F_OnTransition
 	.byte 0
+
+CinnabarVolcano_LeftCorridor_2F_OnTransition::
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 2, CinnabarVolcano_LeftCorridor_2F_EventScript_ShowKoga
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	end
+
+CinnabarVolcano_LeftCorridor_2F_EventScript_ShowKoga::
+	clearflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	end
 
 CinnabarVolcano_LeftCorridor_2F_EventScript_Garrett::
 	trainerbattle_single TRAINER_VOLCANO_HIKER_GARRETT, CinnabarVolcano_LeftCorridor_2F_Text_GarrettIntro, CinnabarVolcano_LeftCorridor_2F_Text_GarrettDefeat
 	msgbox CinnabarVolcano_LeftCorridor_2F_Text_GarrettPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_LeftCorridor_2F_EventScript_Koga::
+	lock
+	faceplayer
+	msgbox CinnabarVolcano_LeftCorridor_2F_Text_KogaCheckpoint
+	closemessage
+	playse SE_M_EXPLOSION
+	setfieldeffectargument 0, 12
+	setfieldeffectargument 1, 12
+	setfieldeffectargument 2, 3
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_POP_OUT_OF_ASH
+	delay 12
+	setvar VAR_KOGA_TRIAL_STATE, 3
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	removeobject VAR_LAST_TALKED
+	waitfieldeffect FLDEFF_POP_OUT_OF_ASH
+	release
 	end
