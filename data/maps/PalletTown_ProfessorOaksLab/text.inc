@@ -7,10 +7,8 @@ PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting::
     .string "I'm fed up with waiting!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
-    .string "{RIVAL}: Are you done already?\p"
-    .string "If this is your big speech\n"
-    .string "before we leave, I think I get it.\p"
-    .string "We need POKéMON.$"
+    .string "{RIVAL}: If we're doing fieldwork,\n"
+    .string "then we need POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
     .string "{RIVAL}: Go ahead!\p"
@@ -43,10 +41,13 @@ Text_RivalVictory::
     .string "Am I great or what?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
-    .string "OAK: That’s enough.\n"
-    .string "Both of you, over here.\p"
+    .string "OAK: That’s enough.$"
+
+PalletTown_ProfessorOaksLab_Text_OakCallPlayerAndRivalOver::
+    .string "OAK: Both of you, over here.\p"
     .string "There’s something important\n"
-    .string "you need to hear before you go.$"
+    .string "you need to hear before your\l"
+    .string "fieldwork begins.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
     .string "{RIVAL}: Heh. Fine by me.\p"
@@ -65,27 +66,17 @@ PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
     .string "OAK: Ah, {RIVAL}!\p"
     .string "Good, you're both here.\p"
-    .string "The KANTO region has changed a\n"
-    .string "great deal over the years, and\l"
-    .string "POKéMON have changed with it.\p"
-    .string "People still like to think\n"
-    .string "they can be neatly understood.\p"
-    .string "Caught, trained, and explained.\p"
-    .string "But the truth is more\n"
-    .string "complicated than that.\p"
-    .string "My work has never really\n"
-    .string "been about POKéMON in isolation.\p"
-    .string "I study the relationship\n"
-    .string "between POKéMON and the people\l"
-    .string "who live alongside them.\p"
-    .string "How they affect one another.\p"
-    .string "How they grow together.$"
+    .string "You have both helped in this LAB\n"
+    .string "for some time.\p"
+    .string "This summer, I need you as\n"
+    .string "field aides.\p"
+    .string "It is time you studied KANTO\n"
+    .string "directly, beyond the LAB.$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "OAK: Yes you do, {RIVAL}.\p"
-    .string "And if the two of you are\n"
-    .string "going to leave PALLET TOWN\l"
-    .string "you'll have to do it properly.\p"
+    .string "OAK: Exactly, {RIVAL}.\p"
+    .string "Fieldwork cannot be done safely\n"
+    .string "without partners of your own.\p"
     .string "These 3 were recently sent\n"
     .string "to me by another researcher in ALOLA.\p"
     .string "My cousin SAMSON OAK.\p"
@@ -145,11 +136,10 @@ PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
     .string "On the desk there is my invention,\n"
     .string "the POKéDEX!\p"
-    .string "It doesn’t just record\n"
-    .string "what a POKéMON is.\p"
-    .string "It helps us understand\n"
-    .string "how POKéMON live, behave,\l"
-    .string "and adapt to the world around them.$"
+    .string "It records the POKéMON you see\n"
+    .string "and catch.\p"
+    .string "It will help us understand how\n"
+    .string "they live across KANTO.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
     .string "OAK: {PLAYER} and {RIVAL}.\n"
@@ -160,44 +150,29 @@ PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
     .string "from PROF. OAK.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
-    .string "OAK: The longer I’ve studied\n"
-    .string "POKéMON, the more certain I’ve\l"
-    .string "become of one thing.\p"
-    .string "They grow through trust,\n"
-    .string "through closeness, and through\l"
-    .string "the people they spend time with.\p"
-    .string "In some cases, I suspect\n"
-    .string "that bond may even shape the\l"
-    .string "way a POKéMON evolves.\p"
-    .string "If you want to see that for\n"
-    .string "yourself, pay attention to the\l"
-    .string "GYM LEADERS of this region.\p"
-    .string "They’re powerful trainers,\n"
-    .string "yes, but that isn’t the whole of it.\p"
-    .string "Each of them has built a\n"
-    .string "strong bond with their POKéMON.\p"
-    .string "There’s much to learn from that.\p"
-    .string "Of course, observation alone\n"
-    .string "won’t take you very far.\p"
-    .string "You have to catch POKéMON of your\n"
-    .string "own to really understand them.\p"
+    .string "OAK: Seeing POKéMON is useful,\n"
+    .string "but catching them teaches you more.\p"
+    .string "Travel with them.\n"
+    .string "Battle with them.\p"
+    .string "That is how real understanding\n"
+    .string "begins.\p"
     .string "Take these POKé BALLS with you.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
     .string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "OAK: I’m sending both of you out\n"
-    .string "to see KANTO as it truly is.\p"
-    .string "Not from behind the walls\n"
-    .string "of a LAB...$"
+    .string "OAK: The GYM LEADERS know more\n"
+    .string "than strength alone.\p"
+    .string "Watch how they treat their\n"
+    .string "POKéMON.\p"
+    .string "There is much to learn from them.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
-    .string "But out there, where people\n"
-    .string "and POKéMON actually live together.\p"
-    .string "Record what you find.\p"
-    .string "And come back with something\n"
-    .string "worth understanding.$"
+    .string "Now go.\p"
+    .string "See KANTO as my field aides,\n"
+    .string "record what you find,\l"
+    .string "and come back wiser.$"
 
 PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
     .string "POKéMON around the world wait for\n"
