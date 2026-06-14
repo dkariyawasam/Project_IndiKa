@@ -29,9 +29,21 @@ RocketLeague_Arena_Text_ProtonIntro::
     .string "Fine.\n"
     .string "I'll make this quick.$"
 
-RocketLeague_Arena_Text_RocketDefeat::
+RocketLeague_Arena_Text_PetrelDefeat::
+    .string "Heh…\n"
+    .string "Guess the smoke cleared your way.$"
+
+RocketLeague_Arena_Text_ArcherDefeat::
+    .string "So discipline alone was not\n"
+    .string "enough.$"
+
+RocketLeague_Arena_Text_ArianaDefeat::
+    .string "Hmph.\n"
+    .string "You are more polished than you look.$"
+
+RocketLeague_Arena_Text_ProtonDefeat::
     .string "Tch!\n"
-    .string "That one is yours.$"
+    .string "You made that take too long.$"
 
 RocketLeague_Arena_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"

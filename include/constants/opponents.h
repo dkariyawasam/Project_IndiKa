@@ -398,7 +398,6 @@
 #define TRAINER_SWIMMER_MALE_ROLAND              248
 #define TRAINER_TAMER_JASON_2                      TRAINER_SWIMMER_MALE_ROLAND
 #define TRAINER_CUE_BALL_KOJI                    249
-#define TRAINER_TAMER_COLE_2                       TRAINER_CUE_BALL_KOJI
 #define TRAINER_CUE_BALL_LUKE                    250
 #define TRAINER_BLACK_BELT_KIYO_2                  TRAINER_CUE_BALL_LUKE
 #define TRAINER_CUE_BALL_CAMRON                  251
@@ -462,7 +461,7 @@
 #define TRAINER_TAMER_PHIL                       294
 #define TRAINER_TAMER_EDGAR                      295
 #define TRAINER_TAMER_JASON                      296
-#define TRAINER_TAMER_COLE                       297
+#define TRAINER_UNUSED_297                       297
 #define TRAINER_TAMER_VINCENT                    298
 #define TRAINER_TAMER_JOHN                       299
 #define TRAINER_RUNNING_TRIATHLETE_M_2 TRAINER_TAMER_JOHN

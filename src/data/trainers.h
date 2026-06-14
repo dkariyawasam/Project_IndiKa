@@ -2429,15 +2429,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_TamerJason),
     },
-    [TRAINER_TAMER_COLE] = {
-        .trainerClass = TRAINER_CLASS_TAMER,
+    [TRAINER_UNUSED_297] = {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_UNUSED,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
         .trainerPic = TRAINER_PIC_TAMER,
-        .trainerName = _("COLE"),
+        .trainerName = _("UNUSED"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TamerCole),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Unused518),
     },
     [TRAINER_TAMER_VINCENT] = {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
