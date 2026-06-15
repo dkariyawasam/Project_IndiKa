@@ -441,4 +441,7 @@ gSpecials::
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
 	def_special GetBadgeCount
+	def_special SetPartyMonHighFriendship
+	def_special SetBoxMonHighFriendship
+	def_special Script_IsSpeciesCaught
 gSpecialsEnd::

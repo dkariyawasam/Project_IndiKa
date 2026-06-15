@@ -9,8 +9,12 @@ FuchsiaCity_Gym_OnFrame::
 
 FuchsiaCity_Gym_OnTransition::
 	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_SetInitialGuideState
+	goto_if_ge VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_ShowKogaAndGuide
 	setflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
-	goto_if_lt VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_HideKoga
+	goto FuchsiaCity_Gym_EventScript_HideKoga
+
+FuchsiaCity_Gym_EventScript_ShowKogaAndGuide::
+	clearflag FLAG_HIDE_FUCHSIA_CITY_GYM_GUIDE
 	clearflag FLAG_HIDE_FUCHSIA_CITY_GYM_KOGA
 	end
 
@@ -50,7 +54,17 @@ FuchsiaCity_Gym_EventScript_GymGuideInterceptKogaAway::
 	end
 
 FuchsiaCity_Gym_EventScript_Koga::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	goto_if_eq VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_KogaReward
+	goto_if_set FLAG_BADGE05_GET, FuchsiaCity_Gym_EventScript_KogaPostReward
+	msgbox FuchsiaCity_Gym_Text_KogaWaitingForChallenge
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_KogaBattleFallback::
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, FuchsiaCity_Gym_EventScript_KogaChallenge1
 	goto_if_eq VAR_RESULT, 1, FuchsiaCity_Gym_EventScript_KogaChallenge2
@@ -102,13 +116,93 @@ FuchsiaCity_Gym_EventScript_KogaChallenge7::
 	release
 	end
 
+FuchsiaCity_Gym_EventScript_KogaReward::
+	msgbox FuchsiaCity_Gym_Text_KogaReward
+	goto FuchsiaCity_Gym_EventScript_KogaGolbatGift
+
+FuchsiaCity_Gym_EventScript_KogaGolbatGift::
+	goto_if_set FLAG_GOT_GOLBAT_FROM_KOGA, FuchsiaCity_Gym_EventScript_KogaSetQuestComplete
+	msgbox FuchsiaCity_Gym_Text_KogaGiftGolbat
+	setvar VAR_TEMP_1, SPECIES_GOLBAT
+	givemon SPECIES_GOLBAT, 30
+	goto_if_eq VAR_RESULT, 0, FuchsiaCity_Gym_EventScript_KogaReceiveGolbatParty
+	goto_if_eq VAR_RESULT, 1, FuchsiaCity_Gym_EventScript_KogaReceiveGolbatPC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_KogaReceiveGolbatParty::
+	call EventScript_GetGiftMonPartySlot
+	special SetPartyMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message FuchsiaCity_Gym_Text_ReceivedGolbatFromKoga
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_GOLBAT
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_Gym_EventScript_KogaSetGotGolbat
+	call EventScript_ChangePokemonNickname
+	goto FuchsiaCity_Gym_EventScript_KogaSetGotGolbat
+	end
+
+FuchsiaCity_Gym_EventScript_KogaReceiveGolbatPC::
+	special SetBoxMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message FuchsiaCity_Gym_Text_ReceivedGolbatFromKoga
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_GOLBAT
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_Gym_EventScript_KogaTransferGolbatToPC
+	call EventScript_NameReceivedBoxMon
+	goto FuchsiaCity_Gym_EventScript_KogaTransferGolbatToPC
+	end
+
+FuchsiaCity_Gym_EventScript_KogaTransferGolbatToPC::
+	call EventScript_TransferredToPC
+	goto FuchsiaCity_Gym_EventScript_KogaSetGotGolbat
+	end
+
+FuchsiaCity_Gym_EventScript_KogaSetGotGolbat::
+	setflag FLAG_GOT_GOLBAT_FROM_KOGA
+	msgbox FuchsiaCity_Gym_Text_KogaGolbatAdvice
+
+FuchsiaCity_Gym_EventScript_KogaSetQuestComplete::
+	setflag FLAG_BADGE05_GET
+	setvar VAR_KOGA_TRIAL_STATE, 5
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_KogaPostReward::
+	goto_if_ge VAR_KOGA_TRIAL_STATE, 6, FuchsiaCity_Gym_EventScript_KogaPostQuestComplete
+	setvar VAR_0x8004, SPECIES_CROBAT
+	special Script_IsSpeciesCaught
+	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_Gym_EventScript_KogaConfirmCrobat
+	msgbox FuchsiaCity_Gym_Text_KogaCrobatReminder
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_KogaConfirmCrobat::
+	setvar VAR_KOGA_TRIAL_STATE, 6
+	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	msgbox FuchsiaCity_Gym_Text_KogaCrobatConfirmed
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_KogaPostQuestComplete::
+	msgbox FuchsiaCity_Gym_Text_KogaPostReward
+	release
+	end
+
 FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	famechecker FAMECHECKER_KOGA, 1
 	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
-	setvar VAR_KOGA_TRIAL_STATE, 4
+	setvar VAR_KOGA_TRIAL_STATE, 5
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
+	additem ITEM_ITEMFINDER
+	setflag FLAG_GOT_ITEMFINDER
 	release
 	end
 
@@ -147,7 +241,7 @@ FuchsiaCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
 	goto_if_eq VAR_KOGA_TRIAL_STATE, 0, FuchsiaCity_Gym_EventScript_GymGuideKogaAwayFirstTime
-	goto_if_set FLAG_DEFEATED_KOGA, FuchsiaCity_Gym_EventScript_GymGuyPostVictory
+	goto_if_ge VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_GymGuideKogaReturned
 	msgbox FuchsiaCity_Gym_Text_GymGuideKogaStillAway
 	release
 	end
@@ -158,6 +252,12 @@ FuchsiaCity_Gym_EventScript_GymGuideKogaAwayFirstTime::
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
 	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
 	setvar VAR_KOGA_TRIAL_STATE, 1
+	release
+	end
+
+FuchsiaCity_Gym_EventScript_GymGuideKogaReturned::
+	goto_if_ge VAR_KOGA_TRIAL_STATE, 5, FuchsiaCity_Gym_EventScript_GymGuyPostVictory
+	msgbox FuchsiaCity_Gym_Text_GymGuideKogaImpressed
 	release
 	end
 

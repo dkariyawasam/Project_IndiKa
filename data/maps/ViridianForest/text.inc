@@ -129,14 +129,27 @@ ViridianForest_Text_ErikaAfterBattle::
     .string "ERIKA: You are remarkably strong.\p"
     .string "This battle was witnessed, so it\n"
     .string "shall stand as your GYM challenge.\p"
+    .string "I must confer on you the\n"
+    .string "RAINBOWBADGE.\n"
+    .string "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+    .string "It has been reconfigured as\n"
+    .string "the RAINBOW KEY.\p"
+    .string "It opens the BERRY PATCH next\n"
+    .string "door to CELADON GYM.\p"
+    .string "Please feel free to pick the\n"
+    .string "berries growing there.\p"
     .string "I saw trust in the way your\n"
     .string "POKéMON stood with you.\p"
     .string "Friendship can guide evolution\n"
     .string "as surely as sunlight guides\l"
     .string "a bud into bloom.\p"
     .string "Please come to CELADON GYM.\n"
-    .string "There, I will grant a reward for\l"
+    .string "There, I will give a reward for\l"
     .string "the growth you have shown.$"
+
+ViridianForest_Text_ReceivedRainbowKeyFromErika::
+    .string "{PLAYER} received the RAINBOW KEY\n"
+    .string "from ERIKA.$"
 
 ViridianForest_Text_LeavingViridianForest::
     .string "LEAVING VIRIDIAN FOREST\n"
