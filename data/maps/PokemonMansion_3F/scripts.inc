@@ -22,10 +22,24 @@ PokemonMansion_3F_EventScript_DiaryFeb6th::
 
 PokemonMansion_3F_EventScript_Simon::
 	trainerbattle_single TRAINER_BURGLAR_SIMON, PokemonMansion_1F_Text_SimonIntro, PokemonMansion_1F_Text_SimonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonMansion_3F_EventScript_SimonRematch
+	msgbox PokemonMansion_1F_Text_SimonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_3F_EventScript_SimonRematch::
+	trainerbattle_rematch TRAINER_BURGLAR_SIMON, PokemonMansion_1F_Text_SimonIntro, PokemonMansion_1F_Text_SimonDefeat
 	msgbox PokemonMansion_1F_Text_SimonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PokemonMansion_3F_EventScript_Braydon::
 	trainerbattle_single TRAINER_SCIENTIST_BRAYDON, PokemonMansion_1F_Text_BraydonIntro, PokemonMansion_1F_Text_BraydonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonMansion_3F_EventScript_BraydonRematch
+	msgbox PokemonMansion_1F_Text_BraydonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_3F_EventScript_BraydonRematch::
+	trainerbattle_rematch TRAINER_SCIENTIST_BRAYDON, PokemonMansion_1F_Text_BraydonIntro, PokemonMansion_1F_Text_BraydonDefeat
 	msgbox PokemonMansion_1F_Text_BraydonPostBattle, MSGBOX_AUTOCLOSE
 	end

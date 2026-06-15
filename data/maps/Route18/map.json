@@ -28,7 +28,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 46,
       "y": 14,
       "elevation": 3,
@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 39,
       "y": 12,
       "elevation": 3,
@@ -79,7 +79,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_LASS_LISA",
+      "script": "Route18_EventScript_Lena",
       "flag": "0"
     },
     {
@@ -93,7 +93,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_CAMPER_MARCO",
+      "script": "Route18_EventScript_Paxton",
       "flag": "0"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_YAZMIN",
+      "script": "Route18_EventScript_Rina",
       "flag": "0"
     }
   ],

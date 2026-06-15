@@ -35,10 +35,24 @@ Route25_EventScript_FishermanTylorRematch::
 
 Route25_EventScript_RunningTriathleteM::
 	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_RunningTriathleteMRematch
+	msgbox Route25_Text_RunningTriathleteMPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_RunningTriathleteMRematch::
+	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
 	msgbox Route25_Text_RunningTriathleteMPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_RunningTriathleteF::
 	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_RunningTriathleteFRematch
+	msgbox Route25_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_RunningTriathleteFRematch::
+	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
 	msgbox Route25_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
 	end

@@ -28,7 +28,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M_LAND",
       "x": 3,
       "y": 18,
       "elevation": 3,
@@ -42,7 +42,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
       "x": 17,
       "y": 16,
       "elevation": 3,
@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 15,
       "y": 32,
       "elevation": 3,
@@ -70,7 +70,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 2,
       "y": 28,
       "elevation": 3,
@@ -80,6 +80,20 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "EventScript_GymAdjacent_PSYCHIC_TYRON",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_FISHER",
+      "x": 11,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "WatersEdge_EventScript_Route6FishermanSeth",
       "flag": "0"
     }
   ],

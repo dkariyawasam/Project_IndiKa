@@ -47,6 +47,22 @@ Route21_North_Text_FatManNeedPokemon::
 	.string "Don't help me!\n"
 	.string "I'll get unstuck by myself!$"
 
+Route21_North_Text_AnyaIntro::
+	.string "This stretch links PALLET's quiet\n"
+	.string "shore to the open southern sea.$"
+
+Route21_North_Text_AnyaRematchIntro::
+	.string "Back on ROUTE 21?\p"
+	.string "Let's see if the current has made\n"
+	.string "you stronger!$"
+
+Route21_North_Text_AnyaDefeat::
+	.string "The tide turned!$"
+
+Route21_North_Text_AnyaPostBattle::
+	.string "The north water feels gentler,\n"
+	.string "but it still leads to CINNABAR.$"
+
 @ Below is the battle text for the Cue Ball that was on Route 21 in Gen 1.
 @ This trainer wasnt used in Gen 3 so their text goes unused/untranslated
 @ Interestingly they did add a rematch intro text for this trainer
