@@ -150,8 +150,10 @@ ViridianForest_EventScript_DefeatedErika::
 	famechecker FAMECHECKER_ERIKA, 1
 	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
+	setflag FLAG_BADGE04_GET
 	setvar VAR_ERIKA_TRIAL_STATE, 4
 	msgbox ViridianForest_Text_ErikaAfterBattle
+	additem ITEM_RAINBOW_KEY
 	closemessage
 	applymovement LOCALID_VIRIDIAN_FOREST_ERIKA, ViridianForest_Movement_ErikaLeave
 	applymovement LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, ViridianForest_Movement_GymGuideLeave

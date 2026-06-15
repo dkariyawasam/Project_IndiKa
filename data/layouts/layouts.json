@@ -161,7 +161,7 @@
       "id": "LAYOUT_FUCHSIA_CITY_GYM",
       "name": "FuchsiaCity_Gym_Layout",
       "width": 15,
-      "height": 23,
+      "height": 15,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",

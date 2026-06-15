@@ -91,10 +91,22 @@ CinnabarVolcano_RightCorridor_3F_Text_KogaPostStone::
     .string "official.$"
 
 CinnabarVolcano_RightCorridor_3F_Text_KogaAfterBattle::
-    .string "KOGA: Return to FUCHSIA GYM\n"
+    .string "KOGA: Fwahahaha!\n"
+    .string "You have earned the SOULBADGE!\n"
+    .string "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+    .string "Its SOUL FINDER function can\n"
+    .string "sense hidden items around\l"
+    .string "the world.\p"
+    .string "A ninja's eye looks beyond what\n"
+    .string "is plainly visible.\p"
+    .string "Return to FUCHSIA GYM\n"
     .string "when you are ready.\p"
     .string "There, the LAVIC STONE will become\n"
     .string "tools worthy of our clan.$"
+
+CinnabarVolcano_RightCorridor_3F_Text_ReceivedSoulFinderFromKoga::
+    .string "{PLAYER} received the SOUL FINDER\n"
+    .string "from KOGA.$"
 
 CinnabarVolcano_RightCorridor_3F_Text_JaninePostArrival::
     .string "JANINE: If this is for our clan's\n"

@@ -24,10 +24,67 @@ FuchsiaCity_Gym_Text_KogaPostBattle::
     .string "battle wears on!\p"
     .string "It will surely terrorize foes!$"
 
+FuchsiaCity_Gym_Text_KogaWaitingForChallenge::
+    .string "KOGA is away from the GYM.\p"
+    .string "Please look for him in\n"
+    .string "CINNABAR VOLCANO.$"
+
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
     .string "Now that you have the SOULBADGE,\n"
     .string "you have proven your worth in\n"
     .string "FUCHSIA GYM.$"
+
+FuchsiaCity_Gym_Text_KogaReward::
+    .string "KOGA: Fwahahaha!\p"
+    .string "The LAVIC STONE is secure, and\n"
+    .string "your challenge was witnessed.\p"
+    .string "You earned the SOULBADGE in\n"
+    .string "CINNABAR VOLCANO.\p"
+    .string "With the SOUL FINDER already in\n"
+    .string "your hands, accept another tool\l"
+    .string "of togetherness.$"
+
+FuchsiaCity_Gym_Text_ReceivedItemDetectorFromKoga::
+    .string "{PLAYER} received the SOUL FINDER\n"
+    .string "from KOGA.$"
+
+FuchsiaCity_Gym_Text_KogaExplainItemDetector::
+    .string "The SOUL FINDER senses hidden\n"
+    .string "objects nearby.\p"
+    .string "A ninja's eye looks beyond what is\n"
+    .string "plainly visible.$"
+
+FuchsiaCity_Gym_Text_KogaGiftGolbat::
+    .string "Take this GOLBAT as well.\p"
+    .string "It has trained beside my clan and\n"
+    .string "understands the strength of trust.$"
+
+FuchsiaCity_Gym_Text_ReceivedGolbatFromKoga::
+    .string "{PLAYER} received GOLBAT\n"
+    .string "from KOGA.$"
+
+FuchsiaCity_Gym_Text_KogaGolbatAdvice::
+    .string "GOLBAT evolves through friendship.\p"
+    .string "Move with it as one, and it may\n"
+    .string "become a CROBAT.$"
+
+FuchsiaCity_Gym_Text_KogaCrobatReminder::
+    .string "Train beside GOLBAT and earn\n"
+    .string "its trust.\p"
+    .string "When CROBAT is recorded in your\n"
+    .string "POKéDEX, the lesson is complete.$"
+
+FuchsiaCity_Gym_Text_KogaCrobatConfirmed::
+    .string "KOGA: Fwahahaha!\p"
+    .string "Your POKéDEX records CROBAT.\p"
+    .string "Trust has sharpened your strength\n"
+    .string "into something worthy.$"
+
+FuchsiaCity_Gym_Text_KogaPostReward::
+    .string "KOGA: True strength is not only\n"
+    .string "hidden in the self.\p"
+    .string "It sharpens when people move\n"
+    .string "together.$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
     .string "{PLAYER} received TM06\n"
@@ -149,6 +206,14 @@ FuchsiaCity_Gym_Text_GymGuideKogaStillAway::
     .string "volcanic rock in CINNABAR VOLCANO.\p"
     .string "I should hurry after my father\n"
     .string "and help our clan leader.$"
+
+FuchsiaCity_Gym_Text_GymGuideKogaImpressed::
+    .string "I was honored to witness your\n"
+    .string "trial with KOGA.\p"
+    .string "The way you worked together to free\n"
+    .string "that LAVIC STONE was remarkable.\p"
+    .string "Please speak with KOGA.\n"
+    .string "Your reward is waiting.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "It's amazing how ninja can terrify,\n"

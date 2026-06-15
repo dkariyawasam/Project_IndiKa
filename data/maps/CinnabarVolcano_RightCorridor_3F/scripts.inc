@@ -167,8 +167,29 @@ CinnabarVolcano_RightCorridor_3F_EventScript_DefeatedKoga::
 	famechecker FAMECHECKER_KOGA, 1
 	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
+	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 4
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_KogaAfterBattle
+	additem ITEM_ITEMFINDER
+	setflag FLAG_GOT_ITEMFINDER
+	closemessage
+	playse SE_M_EXPLOSION
+	setfieldeffectargument 0, 11
+	setfieldeffectargument 1, 22
+	setfieldeffectargument 2, 3
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_POP_OUT_OF_ASH
+	setfieldeffectargument 0, 12
+	setfieldeffectargument 1, 22
+	setfieldeffectargument 2, 3
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_POP_OUT_OF_ASH
+	delay 12
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_KOGA
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_JANINE
+	removeobject LOCALID_KOGA
+	removeobject LOCALID_JANINE
+	waitfieldeffect FLDEFF_POP_OUT_OF_ASH
 	release
 	end
 

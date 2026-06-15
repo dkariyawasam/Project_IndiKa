@@ -1463,6 +1463,26 @@ void ChangePokemonNickname(void)
     DoNamingScreen(NAMING_SCREEN_NICKNAME, gStringVar2, species, gender, personality, ChangePokemonNickname_CB);
 }
 
+void SetPartyMonHighFriendship(void)
+{
+    u8 friendship = 200;
+
+    if (gSpecialVar_0x8004 < PARTY_SIZE)
+        SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_FRIENDSHIP, &friendship);
+}
+
+void SetBoxMonHighFriendship(void)
+{
+    u8 friendship = 200;
+
+    SetBoxMonData(GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos), MON_DATA_FRIENDSHIP, &friendship);
+}
+
+void Script_IsSpeciesCaught(void)
+{
+    gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), FLAG_GET_CAUGHT);
+}
+
 static void ChangePokemonNickname_CB(void)
 {
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar2);
