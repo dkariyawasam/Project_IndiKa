@@ -2482,6 +2482,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 					case 4:
 						return gText_ErikaTrialPhase4;
 					case 5:
+					case 6:
 						return gText_ErikaTrialPhase5;
 				}
 			case SUB_QUEST_KOGA:
@@ -2498,6 +2499,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 					case 4:
 						return gText_KogaTrialPhase4;
 					case 5:
+					case 6:
 						return gText_KogaTrialPhase5;
 				}
 			case SUB_QUEST_SABRINA:
