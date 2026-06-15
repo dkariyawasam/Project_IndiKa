@@ -43,8 +43,11 @@ CeladonCity_Gym_Text_ErikaReward::
     .string "flourish.\p"
     .string "When people and POKéMON support\n"
     .string "one another, all may bloom.\p"
-    .string "I must confer on you the\n"
-    .string "RAINBOWBADGE.$"
+    .string "You have already earned the\n"
+    .string "RAINBOWBADGE.\p"
+    .string "Now, please accept a POKéMON\n"
+    .string "that shows how friendship can\l"
+    .string "help life bloom.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "With four BADGES, POKéMON up\n"
@@ -70,6 +73,17 @@ CeladonCity_Gym_Text_ErikaBudewAdvice::
     .string "during the day.\p"
     .string "Care for it well, and it will show\n"
     .string "you how trust becomes growth.$"
+
+CeladonCity_Gym_Text_ErikaRoseliaReminder::
+    .string "Raise BUDEW with kindness during\n"
+    .string "the day.\p"
+    .string "When ROSELIA is recorded in your\n"
+    .string "POKéDEX, our lesson will bloom.$"
+
+CeladonCity_Gym_Text_ErikaRoseliaConfirmed::
+    .string "Your POKéDEX records ROSELIA.\p"
+    .string "Friendship has guided growth into\n"
+    .string "bloom. Wonderful.$"
 
 CeladonCity_Gym_Text_GymGuideErikaAway::
     .string "Excuse me!\p"

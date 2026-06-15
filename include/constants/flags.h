@@ -678,7 +678,7 @@
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL                  0x295
 #define FLAG_GOT_TM16_FROM_THIRSTY_GIRL                  0x296
 #define FLAG_GOT_TM03_FROM_MISTY                         0x297
-#define FLAG_0x298                                       0x298
+#define FLAG_GOT_GOLBAT_FROM_KOGA                        0x298
 #define FLAG_0x299                                       0x299
 #define FLAG_0x29A                                       0x29A
 #define FLAG_GOT_FAME_CHECKER                            0x29B
