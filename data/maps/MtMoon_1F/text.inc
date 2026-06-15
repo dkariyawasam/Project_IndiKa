@@ -4,8 +4,8 @@ MtMoon_1F_Text_MarcosIntro::
     .string "…Oh, you're just a kid!$"
 
 MtMoon_1F_Text_MarcosDefeat::
-    .string "Wow!\n"
-    .string "Shocked again!$"
+    .string "Hah!\n"
+    .string "You hit harder than loose rock!$"
 
 MtMoon_1F_Text_MarcosPostBattle::
     .string "Kids like you shouldn't be\n"
@@ -29,7 +29,8 @@ MtMoon_1F_Text_MiriamIntro::
 
 MtMoon_1F_Text_MiriamDefeat::
     .string "Oh!\n"
-    .string "I lost it!$"
+    .string "This cave really is full of\n"
+    .string "surprises.$"
 
 MtMoon_1F_Text_MiriamPostBattle::
     .string "How do you get out of here?\n"
@@ -52,7 +53,8 @@ MtMoon_1F_Text_IrisIntro::
     .string "me here.$"
 
 MtMoon_1F_Text_IrisDefeat::
-    .string "I lost?$"
+    .string "I waited here and still wasn't\n"
+    .string "ready for you.$"
 
 MtMoon_1F_Text_IrisPostBattle::
     .string "I came because I heard there are\n"
@@ -63,7 +65,8 @@ MtMoon_1F_Text_KentIntro::
     .string "What about you?$"
 
 MtMoon_1F_Text_KentDefeat::
-    .string "You got me!$"
+    .string "You found my weak spot faster than\n"
+    .string "I found a fossil.$"
 
 MtMoon_1F_Text_KentPostBattle::
     .string "I saw some glittering stones,\n"
@@ -74,7 +77,7 @@ MtMoon_1F_Text_RobbyIntro::
     .string "to get to CERULEAN CITY.$"
 
 MtMoon_1F_Text_RobbyDefeat::
-    .string "I lost.$"
+    .string "Even the cave echoes know I lost.$"
 
 MtMoon_1F_Text_RobbyPostBattle::
     .string "ZUBAT is tough!\n"

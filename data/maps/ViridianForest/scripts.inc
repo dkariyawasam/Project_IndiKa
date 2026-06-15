@@ -254,25 +254,60 @@ ViridianForest_Movement_GymGuideLeave::
 
 ViridianForest_EventScript_Rick::
 	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_RickRematch
+	msgbox ViridianForest_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_RickRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
 	msgbox ViridianForest_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ViridianForest_EventScript_Doug::
 	trainerbattle_single TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_DougRematch
+	msgbox ViridianForest_Text_DougPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_DougRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
 	msgbox ViridianForest_Text_DougPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ViridianForest_EventScript_Sammy::
 	trainerbattle_single TRAINER_BUG_CATCHER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_SammyRematch
+	msgbox ViridianForest_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_SammyRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
 	msgbox ViridianForest_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ViridianForest_EventScript_Anthony::
 	trainerbattle_single TRAINER_BUG_CATCHER_ANTHONY, ViridianForest_Text_AnthonyIntro, ViridianForest_Text_AnthonyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_AnthonyRematch
+	msgbox ViridianForest_Text_AnthonyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_AnthonyRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_ANTHONY, ViridianForest_Text_AnthonyIntro, ViridianForest_Text_AnthonyDefeat
 	msgbox ViridianForest_Text_AnthonyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ViridianForest_EventScript_Charlie::
 	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_CharlieRematch
+	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_CharlieRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
 	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end

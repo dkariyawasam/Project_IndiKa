@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_YOUNGSTER_JOHNSON",
+      "script": "EventScript_RouteTrainer_CAMPER_JOHNSON",
       "flag": "0"
     },
     {
