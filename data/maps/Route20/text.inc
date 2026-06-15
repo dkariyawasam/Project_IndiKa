@@ -31,14 +31,15 @@ Route20_Text_TiffanyPostBattle::
     .string "Want to float with me?$"
 
 Route20_Text_IreneIntro::
-    .string "Are you on vacation, too?$"
+    .string "The sea is rough enough to make\n"
+    .string "every stroke count.$"
 
 Route20_Text_IreneDefeat::
     .string "No mercy at all!$"
 
 Route20_Text_IrenePostBattle::
-    .string "SEAFOAM used to be a single island\n"
-    .string "in the distant past.$"
+    .string "I train here because calm pools\n"
+    .string "don't make strong swimmers.$"
 
 Route20_Text_DeanIntro::
     .string "Check out my buff physique!$"
@@ -51,26 +52,39 @@ Route20_Text_DeanPostBattle::
     .string "POKéMON, not me!$"
 
 Route20_Text_DarrinIntro::
-    .string "Why are you riding a POKéMON?\n"
-    .string "Can't you swim?$"
+    .string "The water near SEAFOAM bites back.\n"
+    .string "That's why I like it!$"
 
 Route20_Text_DarrinDefeat::
     .string "Ouch!\n"
     .string "Torpedoed!$"
 
 Route20_Text_DarrinPostBattle::
-    .string "Riding a POKéMON sure looks fun!$"
+    .string "If you can hold a course here,\n"
+    .string "you can swim almost anywhere.$"
 
 Route20_Text_RogerIntro::
-    .string "I rode my bird POKéMON here.$"
+    .string "I patrol near SEAFOAM when the\n"
+    .string "water gets crowded.$"
 
 Route20_Text_RogerDefeat::
-    .string "Oh, no!\n"
-    .string "Now what am I to do?$"
+    .string "Washed away!$"
 
 Route20_Text_RogerPostBattle::
-    .string "My birds are exhausted.\n"
-    .string "They can't FLY me back!$"
+    .string "The island looks peaceful, but the\n"
+    .string "sea around it works hard.$"
+
+Route20_Text_MarinerIntro::
+    .string "The SEAFOAM channel keeps sailors\n"
+    .string "honest.\p"
+    .string "Currents change before you notice.$"
+
+Route20_Text_MarinerDefeat::
+    .string "Went under!$"
+
+Route20_Text_MarinerPostBattle::
+    .string "A good sailor reads the water.\n"
+    .string "A good trainer reads the battle.$"
 
 Route20_Text_NoraIntro::
     .string "My boyfriend gave me big pearls.$"
@@ -84,17 +98,16 @@ Route20_Text_NoraPostBattle::
     .string "CLOYSTER?$"
 
 Route20_Text_MissyIntro::
-    .string "I swam here from CINNABAR ISLAND.\n"
-    .string "It wasn't easy, I tell you.$"
+    .string "Swim, bike, run.\p"
+    .string "This channel is my open-water\n"
+    .string "training course!$"
 
 Route20_Text_MissyDefeat::
     .string "I'm so disappointed!$"
 
 Route20_Text_MissyPostBattle::
-    .string "POKéMON have taken over an\n"
-    .string "abandoned mansion on CINNABAR.\p"
-    .string "They call it the POKéMON MANSION\n"
-    .string "now.$"
+    .string "SEAFOAM makes a perfect turning\n"
+    .string "point for a triathlon route.$"
 
 Route20_Text_MelissaIntro::
     .string "CINNABAR, in the west, has a LAB\n"

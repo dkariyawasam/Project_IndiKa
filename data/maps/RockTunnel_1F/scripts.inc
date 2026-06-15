@@ -12,21 +12,49 @@ RockTunnel_1F_EventScript_RouteSign::
 
 RockTunnel_1F_EventScript_Lenny::
 	trainerbattle_single TRAINER_HIKER_LENNY, RockTunnel_1F_Text_LennyIntro, RockTunnel_1F_Text_LennyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_LennyRematch
+	msgbox RockTunnel_1F_Text_LennyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_LennyRematch::
+	trainerbattle_rematch TRAINER_HIKER_LENNY, RockTunnel_1F_Text_LennyIntro, RockTunnel_1F_Text_LennyDefeat
 	msgbox RockTunnel_1F_Text_LennyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_1F_EventScript_Oliver::
 	trainerbattle_single TRAINER_HIKER_OLIVER, RockTunnel_1F_Text_OliverIntro, RockTunnel_1F_Text_OliverDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_OliverRematch
+	msgbox RockTunnel_1F_Text_OliverPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_OliverRematch::
+	trainerbattle_rematch TRAINER_HIKER_OLIVER, RockTunnel_1F_Text_OliverIntro, RockTunnel_1F_Text_OliverDefeat
 	msgbox RockTunnel_1F_Text_OliverPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_1F_EventScript_Lucas::
 	trainerbattle_single TRAINER_HIKER_LUCAS, RockTunnel_1F_Text_LucasIntro, RockTunnel_1F_Text_LucasDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_LucasRematch
+	msgbox RockTunnel_1F_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_LucasRematch::
+	trainerbattle_rematch TRAINER_HIKER_LUCAS, RockTunnel_1F_Text_LucasIntro, RockTunnel_1F_Text_LucasDefeat
 	msgbox RockTunnel_1F_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_1F_EventScript_Ashton::
 	trainerbattle_single TRAINER_POKEMANIAC_ASHTON, RockTunnel_1F_Text_AshtonIntro, RockTunnel_1F_Text_AshtonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_AshtonRematch
+	msgbox RockTunnel_1F_Text_AshtonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_AshtonRematch::
+	trainerbattle_rematch TRAINER_POKEMANIAC_ASHTON, RockTunnel_1F_Text_AshtonIntro, RockTunnel_1F_Text_AshtonDefeat
 	msgbox RockTunnel_1F_Text_AshtonPostBattle, MSGBOX_AUTOCLOSE
 	end
 

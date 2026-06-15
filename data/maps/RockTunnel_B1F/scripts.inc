@@ -13,30 +13,72 @@ RockTunnel_B1F_EventScript_Martha::
 
 RockTunnel_B1F_EventScript_Dudley::
 	trainerbattle_single TRAINER_HIKER_DUDLEY, RockTunnel_B1F_Text_DudleyIntro, RockTunnel_B1F_Text_DudleyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_DudleyRematch
+	msgbox RockTunnel_B1F_Text_DudleyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_DudleyRematch::
+	trainerbattle_rematch TRAINER_HIKER_DUDLEY, RockTunnel_B1F_Text_DudleyIntro, RockTunnel_B1F_Text_DudleyDefeat
 	msgbox RockTunnel_B1F_Text_DudleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_B1F_EventScript_Allen::
 	trainerbattle_single TRAINER_HIKER_ALLEN, RockTunnel_B1F_Text_AllenIntro, RockTunnel_B1F_Text_AllenDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_AllenRematch
+	msgbox RockTunnel_B1F_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_AllenRematch::
+	trainerbattle_rematch TRAINER_HIKER_ALLEN, RockTunnel_B1F_Text_AllenIntro, RockTunnel_B1F_Text_AllenDefeat
 	msgbox RockTunnel_B1F_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_B1F_EventScript_Eric::
 	trainerbattle_single TRAINER_HIKER_ERIC, RockTunnel_B1F_Text_EricIntro, RockTunnel_B1F_Text_EricDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_EricRematch
+	msgbox RockTunnel_B1F_Text_EricPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_EricRematch::
+	trainerbattle_rematch TRAINER_HIKER_ERIC, RockTunnel_B1F_Text_EricIntro, RockTunnel_B1F_Text_EricDefeat
 	msgbox RockTunnel_B1F_Text_EricPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_B1F_EventScript_Cooper::
 	trainerbattle_single TRAINER_POKEMANIAC_COOPER, RockTunnel_B1F_Text_CooperIntro, RockTunnel_B1F_Text_CooperDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_CooperRematch
+	msgbox RockTunnel_B1F_Text_CooperPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_CooperRematch::
+	trainerbattle_rematch TRAINER_POKEMANIAC_COOPER, RockTunnel_B1F_Text_CooperIntro, RockTunnel_B1F_Text_CooperDefeat
 	msgbox RockTunnel_B1F_Text_CooperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_B1F_EventScript_Steve::
 	trainerbattle_single TRAINER_POKEMANIAC_STEVE, RockTunnel_B1F_Text_SteveIntro, RockTunnel_B1F_Text_SteveDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_SteveRematch
+	msgbox RockTunnel_B1F_Text_StevePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_SteveRematch::
+	trainerbattle_rematch TRAINER_POKEMANIAC_STEVE, RockTunnel_B1F_Text_SteveIntro, RockTunnel_B1F_Text_SteveDefeat
 	msgbox RockTunnel_B1F_Text_StevePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_B1F_EventScript_Winston::
 	trainerbattle_single TRAINER_POKEMANIAC_WINSTON, RockTunnel_B1F_Text_WinstonIntro, RockTunnel_B1F_Text_WinstonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_B1F_EventScript_WinstonRematch
+	msgbox RockTunnel_B1F_Text_WinstonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_B1F_EventScript_WinstonRematch::
+	trainerbattle_rematch TRAINER_POKEMANIAC_WINSTON, RockTunnel_B1F_Text_WinstonIntro, RockTunnel_B1F_Text_WinstonDefeat
 	msgbox RockTunnel_B1F_Text_WinstonPostBattle, MSGBOX_AUTOCLOSE
 	end

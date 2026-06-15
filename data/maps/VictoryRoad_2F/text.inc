@@ -4,7 +4,7 @@ VictoryRoad_2F_Text_DawsonIntro::
 
 VictoryRoad_2F_Text_DawsonDefeat::
     .string "No!\n"
-    .string "Unbelievable!$"
+    .string "You really do belong on this road.$"
 
 VictoryRoad_2F_Text_DawsonPostBattle::
     .string "I can beat you when it comes to\n"
@@ -15,7 +15,8 @@ VictoryRoad_2F_Text_DaisukeIntro::
     .string "It's the final test for TRAINERS!$"
 
 VictoryRoad_2F_Text_DaisukeDefeat::
-    .string "Atcho!$"
+    .string "Atcho!\n"
+    .string "Even my focus cracked.$"
 
 VictoryRoad_2F_Text_DaisukePostBattle::
     .string "If you get stuck, try moving some\n"
@@ -26,7 +27,8 @@ VictoryRoad_2F_Text_NelsonIntro::
     .string "ELITE FOUR?$"
 
 VictoryRoad_2F_Text_NelsonDefeat::
-    .string "You got me!$"
+    .string "You got me!\n"
+    .string "That's ELITE FOUR resolve.$"
 
 VictoryRoad_2F_Text_NelsonPostBattle::
     .string "{RIVAL} also came through here.$"
@@ -36,7 +38,7 @@ VictoryRoad_2F_Text_VincentIntro::
     .string "I'll whip you!$"
 
 VictoryRoad_2F_Text_VincentDefeat::
-    .string "I got whipped!$"
+    .string "I got whipped on the final road.$"
 
 VictoryRoad_2F_Text_VincentPostBattle::
     .string "You earned the right to be on\n"
@@ -46,7 +48,8 @@ VictoryRoad_2F_Text_GregoryIntro::
     .string "Is VICTORY ROAD too tough?$"
 
 VictoryRoad_2F_Text_GregoryDefeat::
-    .string "Well done!$"
+    .string "Well done!\n"
+    .string "You didn't flinch from the climb.$"
 
 VictoryRoad_2F_Text_GregoryPostBattle::
     .string "Many TRAINERS give up their\n"
@@ -55,4 +58,3 @@ VictoryRoad_2F_Text_GregoryPostBattle::
 @ Unused, old text for Moltres
 VictoryRoad_2F_Text_Gyaoo::
     .string "ギヤーオ！$"
-

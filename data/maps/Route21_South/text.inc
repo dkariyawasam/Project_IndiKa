@@ -25,7 +25,8 @@ Route21_South_Text_RolandIntro::
 
 Route21_South_Text_RolandDefeat::
 	.string "Yow!\n"
-	.string "I lost!$"
+	.string "The sea breeze didn't carry me\n"
+	.string "far enough.$"
 
 Route21_South_Text_RolandPostBattle::
 	.string "I'm sunburnt to a crisp!$"
@@ -51,6 +52,22 @@ Route21_South_Text_NolanDefeat::
 Route21_South_Text_NolanPostBattle::
 	.string "Oh wait!\n"
 	.string "I got a bite! Yeah!$"
+
+Route21_South_Text_NicoleIntro::
+	.string "CINNABAR's warm water meets the\n"
+	.string "cooler sea here.\p"
+	.string "That's my favorite training spot!$"
+
+Route21_South_Text_NicoleRematchIntro::
+	.string "The water's different every time.\p"
+	.string "So is my battling!$"
+
+Route21_South_Text_NicoleDefeat::
+	.string "I lost my rhythm in the current.$"
+
+Route21_South_Text_NicolePostBattle::
+	.string "The island changes the current.\n"
+	.string "You can feel it before you see it.$"
 
 Route21_South_Text_SeagallopSailorDestination::
 	.string "Ahoy! Leaving CINNABAR\n"

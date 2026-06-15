@@ -65,7 +65,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_BUG_CATCHER_GARRET",
+      "script": "Route2_EventScript_BugCatcherGarret",
       "flag": "0"
     },
     {
@@ -79,7 +79,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_BUG_CATCHER_JONAH",
+      "script": "Route2_EventScript_BugCatcherJonah",
       "flag": "0"
     },
     {
@@ -93,7 +93,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_CAMPER_SHANE",
+      "script": "Route2_EventScript_CamperShane",
       "flag": "0"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_NANCY",
+      "script": "Route2_EventScript_PicnickerNancy",
       "flag": "0"
     },
     {
@@ -121,7 +121,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_ForestTrainer_BUG_CATCHER_ORIN",
+      "script": "Route2_EventScript_BugCatcherOrin",
       "flag": "0"
     },
     {
@@ -135,7 +135,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_ForestTrainer_CAMPER_ROWAN",
+      "script": "Route2_EventScript_CamperRowan",
       "flag": "0"
     },
     {
@@ -149,7 +149,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_ForestTrainer_PICNICKER_LYRA",
+      "script": "Route2_EventScript_PicnickerLyra",
       "flag": "0"
     },
     {
@@ -163,7 +163,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "EventScript_ForestTrainer_PKMN_BREEDER_MILO",
+      "script": "Route2_EventScript_BreederMilo",
       "flag": "0"
     },
     {
@@ -177,7 +177,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "EventScript_ForestTrainer_BUG_MANIAC_ELLIS",
+      "script": "Route2_EventScript_BugManiacEllis",
       "flag": "0"
     },
     {
@@ -191,7 +191,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "EventScript_ForestTrainer_PKMN_RANGER_IVY",
+      "script": "Route2_EventScript_RangerIvy",
       "flag": "0"
     }
   ],

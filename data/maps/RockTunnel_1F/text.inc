@@ -3,7 +3,8 @@ RockTunnel_1F_Text_LennyIntro::
 
 RockTunnel_1F_Text_LennyDefeat::
     .string "Doh!\n"
-    .string "You win!$"
+    .string "You handled the tunnel better than\n"
+    .string "I did!$"
 
 RockTunnel_1F_Text_LennyPostBattle::
     .string "Watch for ONIX.\n"
@@ -29,7 +30,8 @@ RockTunnel_1F_Text_LucasIntro::
     .string "some respect!$"
 
 RockTunnel_1F_Text_LucasDefeat::
-    .string "I give!$"
+    .string "I give!\n"
+    .string "Your footing's steadier than mine.$"
 
 RockTunnel_1F_Text_LucasPostBattle::
     .string "You're talented enough to hike!$"
@@ -39,7 +41,8 @@ RockTunnel_1F_Text_AshtonIntro::
     .string "Ready, go!$"
 
 RockTunnel_1F_Text_AshtonDefeat::
-    .string "Game over!$"
+    .string "Game over!\n"
+    .string "The tunnel swallowed my strategy.$"
 
 RockTunnel_1F_Text_AshtonPostBattle::
     .string "Oh well, I'll get a ZUBAT as I go!$"
@@ -71,7 +74,8 @@ RockTunnel_1F_Text_ArianaIntro::
     .string "Let's start!$"
 
 RockTunnel_1F_Text_ArianaDefeat::
-    .string "You play hard!$"
+    .string "You battle hard, even in this\n"
+    .string "darkness!$"
 
 RockTunnel_1F_Text_ArianaPostBattle::
     .string "Whew!\n"
@@ -80,4 +84,3 @@ RockTunnel_1F_Text_ArianaPostBattle::
 RockTunnel_1F_Text_RouteSign::
     .string "ROCK TUNNEL\n"
     .string "CERULEAN CITY - LAVENDER TOWN$"
-

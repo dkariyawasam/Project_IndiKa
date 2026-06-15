@@ -7,6 +7,6 @@ SSAnne_2F_Room4_EventScript_Lamar::
 	end
 
 SSAnne_2F_Room4_EventScript_Dawn::
-	trainerbattle_single TRAINER_LASS_DAWN, SSAnne_2F_Room4_Text_DawnIntro, SSAnne_2F_Room4_Text_DawnDefeat
+	trainerbattle_single TRAINER_SS_ANNE_BEAUTY_DAWN, SSAnne_2F_Room4_Text_DawnIntro, SSAnne_2F_Room4_Text_DawnDefeat
 	msgbox SSAnne_2F_Room4_Text_DawnPostBattle, MSGBOX_AUTOCLOSE
 	end

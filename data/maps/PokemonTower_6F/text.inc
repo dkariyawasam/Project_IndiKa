@@ -1,9 +1,10 @@
 PokemonTower_6F_Text_AngelicaIntro::
     .string "Give…me…\n"
-    .string "blood…$"
+    .string "your light…$"
 
 PokemonTower_6F_Text_AngelicaDefeat::
-    .string "Groan!$"
+    .string "Groan!\n"
+    .string "The darkness is lifting.$"
 
 PokemonTower_6F_Text_AngelicaPostBattle::
     .string "I feel anemic and weak…$"
@@ -13,7 +14,8 @@ PokemonTower_6F_Text_EmiliaIntro::
     .string "Kwaah!$"
 
 PokemonTower_6F_Text_EmiliaDefeat::
-    .string "Something fell out!$"
+    .string "Something left me!\n"
+    .string "Was that the spirit?$"
 
 PokemonTower_6F_Text_EmiliaPostBattle::
     .string "My hair didn't fall out!\n"
@@ -24,7 +26,8 @@ PokemonTower_6F_Text_JenniferIntro::
     .string "ke…ke…ke!$"
 
 PokemonTower_6F_Text_JenniferDefeat::
-    .string "Keee!$"
+    .string "Keee!\n"
+    .string "The astral pull is breaking.$"
 
 PokemonTower_6F_Text_JenniferPostBattle::
     .string "What's going on here?$"
@@ -40,4 +43,3 @@ PokemonTower_6F_Text_GhostWasCubonesMother::
 PokemonTower_6F_Text_MothersSpiritWasCalmed::
     .string "The mother's spirit was calmed.\p"
     .string "It departed to the afterlife…$"
-

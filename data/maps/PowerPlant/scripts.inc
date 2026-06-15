@@ -128,6 +128,8 @@ PowerPlant_EventScript_FoughtElectrode2::
 
 PowerPlant_EventScript_ElectricianLuca::
 	trainerbattle_single TRAINER_POWER_PLANT_ELECTRICIAN_LUCA, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PowerPlant_EventScript_ElectricianLucaRematch
 	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -144,3 +146,8 @@ PowerPlant_Text_ElectricianLucaPostBattle:
 	.string "The current's unstable, but the\n"
 	.string "wiring tells you where it wants\n"
 	.string "to go.$"
+
+PowerPlant_EventScript_ElectricianLucaRematch::
+	trainerbattle_rematch TRAINER_POWER_PLANT_ELECTRICIAN_LUCA, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
+	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
+	end

@@ -11,13 +11,13 @@ SSAnne_2F_Room2_Text_BrooksPostBattle::
     .string "have won!$"
 
 SSAnne_2F_Room2_Text_DaleIntro::
-    .string "Check out what I fished up!$"
+    .string "A fine voyage calls for a fine\n"
+    .string "battle, wouldn't you say?$"
 
 SSAnne_2F_Room2_Text_DaleDefeat::
-    .string "I'm all out!$"
+    .string "A costly lesson!$"
 
 SSAnne_2F_Room2_Text_DalePostBattle::
-    .string "Party?\p"
-    .string "The cruise ship's party should be\n"
-    .string "over by now.$"
-
+    .string "The ship's party was splendid.\p"
+    .string "The battles afterward have been\n"
+    .string "rather lively, too.$"

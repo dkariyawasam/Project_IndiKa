@@ -17,7 +17,7 @@ RockTunnel_B1F_Text_DudleyIntro::
 
 RockTunnel_B1F_Text_DudleyDefeat::
     .string "Oops!\n"
-    .string "Outmuscled!$"
+    .string "Outmuscled in my own tunnel!$"
 
 RockTunnel_B1F_Text_DudleyPostBattle::
     .string "I go for power because I hate\n"
@@ -65,7 +65,8 @@ RockTunnel_B1F_Text_MarthaIntro::
 
 RockTunnel_B1F_Text_MarthaDefeat::
     .string "Oh!\n"
-    .string "I lost!$"
+    .string "I should have watched the ground,\n"
+    .string "not just the walls.$"
 
 RockTunnel_B1F_Text_MarthaPostBattle::
     .string "I like tiny POKéMON.\n"
@@ -75,7 +76,8 @@ RockTunnel_B1F_Text_EricIntro::
     .string "Hit me with your best shot!$"
 
 RockTunnel_B1F_Text_EricDefeat::
-    .string "Fired away!$"
+    .string "You fired back harder than the\n"
+    .string "echoes in here.$"
 
 RockTunnel_B1F_Text_EricPostBattle::
     .string "I'll raise my POKéMON to beat\n"
@@ -92,4 +94,3 @@ RockTunnel_B1F_Text_WinstonDefeat::
 RockTunnel_B1F_Text_WinstonPostBattle::
     .string "I'm an artist, not a fighter.\n"
     .string "I'll go home to draw.$"
-

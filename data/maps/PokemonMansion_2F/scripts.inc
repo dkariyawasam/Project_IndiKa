@@ -26,5 +26,12 @@ PokemonMansion_2F_EventScript_DiaryJuly10th::
 
 PokemonMansion_2F_EventScript_Arnie::
 	trainerbattle_single TRAINER_BURGLAR_ARNIE, PokemonMansion_1F_Text_ArnieIntro, PokemonMansion_1F_Text_ArnieDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonMansion_2F_EventScript_ArnieRematch
+	msgbox PokemonMansion_1F_Text_ArniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_2F_EventScript_ArnieRematch::
+	trainerbattle_rematch TRAINER_BURGLAR_ARNIE, PokemonMansion_1F_Text_ArnieIntro, PokemonMansion_1F_Text_ArnieDefeat
 	msgbox PokemonMansion_1F_Text_ArniePostBattle, MSGBOX_AUTOCLOSE
 	end

@@ -14,7 +14,9 @@ Route14_Text_MitchIntro::
     .string "for battle.$"
 
 Route14_Text_MitchDefeat::
-    .string "Not ready yet!$"
+    .string "Not ready yet!\n"
+    .string "My birds need more open-road\n"
+    .string "training.$"
 
 Route14_Text_MitchPostBattle::
     .string "My bird POKéMON need to learn\n"
@@ -27,7 +29,9 @@ Route14_Text_BeckIntro::
     .string "many people have HMs.$"
 
 Route14_Text_BeckDefeat::
-    .string "Aww, bummer!$"
+    .string "Aww, bummer!\n"
+    .string "The store-bought moves weren't\n"
+    .string "enough.$"
 
 Route14_Text_BeckPostBattle::
     .string "Try teaching POKéMON a move that's\n"
@@ -67,7 +71,8 @@ Route14_Text_BennyIntro::
     .string "Let's go!$"
 
 Route14_Text_BennyDefeat::
-    .string "I knew it!$"
+    .string "I knew it!\n"
+    .string "You wanted it more than I did.$"
 
 Route14_Text_BennyPostBattle::
     .string "Winning, losing… It's insignificant\n"
@@ -101,7 +106,8 @@ Route14_Text_GeraldIntro::
     .string "wide-open spaces.$"
 
 Route14_Text_GeraldDefeat::
-    .string "Wipeout!$"
+    .string "Wipeout!\n"
+    .string "This road still has teeth.$"
 
 Route14_Text_GeraldPostBattle::
     .string "It's cool you made your POKéMON so\n"
@@ -114,7 +120,8 @@ Route14_Text_MalikIntro::
     .string "Cool! Rumble!$"
 
 Route14_Text_MalikDefeat::
-    .string "Blown away!$"
+    .string "Blown away!\n"
+    .string "The rough road belongs to you.$"
 
 Route14_Text_MalikPostBattle::
     .string "You know who'd win, you and me\n"

@@ -10,7 +10,9 @@ ViridianForest_Text_RickIntro::
     .string "Let's battle 'em!$"
 
 ViridianForest_Text_RickDefeat::
-    .string "No!\nCATERPIE can't hack it!$"
+    .string "No!\n"
+    .string "CATERPIE got tangled up in the\n"
+    .string "forest pace!$"
 
 ViridianForest_Text_RickPostBattle::
     .string "Ssh! You'll scare the bugs away.\n"
@@ -59,7 +61,8 @@ ViridianForest_Text_CharlieIntro::
 
 ViridianForest_Text_CharlieDefeat::
     .string "Oh!\n"
-    .string "I lost!$"
+    .string "Guess evolving fast isn't the same\n"
+    .string "as battling well.$"
 
 ViridianForest_Text_CharliePostBattle::
     .string "BUG POKéMON evolve quickly.\n"

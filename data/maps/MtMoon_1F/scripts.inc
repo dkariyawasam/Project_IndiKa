@@ -12,6 +12,13 @@ MtMoon_1F_EventScript_ZubatSign::
 
 MtMoon_1F_EventScript_Marcos::
 	trainerbattle_single TRAINER_HIKER_MARCOS, MtMoon_1F_Text_MarcosIntro, MtMoon_1F_Text_MarcosDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_MarcosRematch
+	msgbox MtMoon_1F_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtMoon_1F_EventScript_MarcosRematch::
+	trainerbattle_rematch TRAINER_HIKER_MARCOS, MtMoon_1F_Text_MarcosIntro, MtMoon_1F_Text_MarcosDefeat
 	msgbox MtMoon_1F_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -32,15 +39,36 @@ MtMoon_1F_EventScript_Iris::
 
 MtMoon_1F_EventScript_Jovan::
 	trainerbattle_single TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_JovanRematch
+	msgbox MtMoon_1F_Text_JovanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtMoon_1F_EventScript_JovanRematch::
+	trainerbattle_rematch TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
 	msgbox MtMoon_1F_Text_JovanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtMoon_1F_EventScript_Kent::
 	trainerbattle_single TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_KentRematch
+	msgbox MtMoon_1F_Text_KentPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtMoon_1F_EventScript_KentRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
 	msgbox MtMoon_1F_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtMoon_1F_EventScript_Robby::
 	trainerbattle_single TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_RobbyRematch
+	msgbox MtMoon_1F_Text_RobbyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtMoon_1F_EventScript_RobbyRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
 	msgbox MtMoon_1F_Text_RobbyPostBattle, MSGBOX_AUTOCLOSE
 	end

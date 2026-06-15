@@ -3,15 +3,36 @@ PokemonTower_3F_MapScripts::
 
 PokemonTower_3F_EventScript_Patricia::
 	trainerbattle_single TRAINER_CHANNELER_PATRICIA, PokemonTower_3F_Text_PatriciaIntro, PokemonTower_3F_Text_PatriciaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_PatriciaRematch
+	msgbox PokemonTower_3F_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonTower_3F_EventScript_PatriciaRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_PATRICIA, PokemonTower_3F_Text_PatriciaIntro, PokemonTower_3F_Text_PatriciaDefeat
 	msgbox PokemonTower_3F_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PokemonTower_3F_EventScript_Carly::
 	trainerbattle_single TRAINER_CHANNELER_CARLY, PokemonTower_3F_Text_CarlyIntro, PokemonTower_3F_Text_CarlyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_CarlyRematch
+	msgbox PokemonTower_3F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonTower_3F_EventScript_CarlyRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_CARLY, PokemonTower_3F_Text_CarlyIntro, PokemonTower_3F_Text_CarlyDefeat
 	msgbox PokemonTower_3F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PokemonTower_3F_EventScript_Hope::
 	trainerbattle_single TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_HopeRematch
+	msgbox PokemonTower_3F_Text_HopePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonTower_3F_EventScript_HopeRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
 	msgbox PokemonTower_3F_Text_HopePostBattle, MSGBOX_AUTOCLOSE
 	end

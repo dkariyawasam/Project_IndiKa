@@ -2,7 +2,7 @@ SSAnne_2F_Room2_MapScripts::
 	.byte 0
 
 SSAnne_2F_Room2_EventScript_Dale::
-	trainerbattle_single TRAINER_FISHERMAN_DALE, SSAnne_2F_Room2_Text_DaleIntro, SSAnne_2F_Room2_Text_DaleDefeat
+	trainerbattle_single TRAINER_SS_ANNE_RICH_BOY_DALE, SSAnne_2F_Room2_Text_DaleIntro, SSAnne_2F_Room2_Text_DaleDefeat
 	msgbox SSAnne_2F_Room2_Text_DalePostBattle, MSGBOX_AUTOCLOSE
 	end
 

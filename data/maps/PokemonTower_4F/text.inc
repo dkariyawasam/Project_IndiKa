@@ -13,7 +13,8 @@ PokemonTower_4F_Text_LaurelIntro::
     .string "Kwaaah!$"
 
 PokemonTower_4F_Text_LaurelDefeat::
-    .string "What!$"
+    .string "What!\n"
+    .string "The curse lost its grip.$"
 
 PokemonTower_4F_Text_LaurelPostBattle::
     .string "We can't determine the identity of\n"
@@ -25,9 +26,8 @@ PokemonTower_4F_Text_JodyIntro::
 
 PokemonTower_4F_Text_JodyDefeat::
     .string "Huh?\n"
-    .string "Who? What?$"
+    .string "The tower's voices are fading.$"
 
 PokemonTower_4F_Text_JodyPostBattle::
     .string "May the departed POKéMON rest in\n"
     .string "peace…$"
-

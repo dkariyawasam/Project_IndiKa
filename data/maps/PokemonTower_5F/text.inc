@@ -8,7 +8,8 @@ PokemonTower_5F_Text_TammyIntro::
     .string "your…all…$"
 
 PokemonTower_5F_Text_TammyDefeat::
-    .string "Gasp!$"
+    .string "Gasp!\n"
+    .string "The tower air feels clear again.$"
 
 PokemonTower_5F_Text_TammyPostBattle::
     .string "I was under possession.$"
@@ -24,10 +25,12 @@ PokemonTower_5F_Text_RuthPostBattle::
     .string "I was possessed.$"
 
 PokemonTower_5F_Text_KarinaIntro::
-    .string "Zombies!$"
+    .string "The spirits are crowding in...\n"
+    .string "Stay back!$"
 
 PokemonTower_5F_Text_KarinaDefeat::
-    .string "Ha?$"
+    .string "Ha?\n"
+    .string "I can hear myself again.$"
 
 PokemonTower_5F_Text_KarinaPostBattle::
     .string "I regained my senses.$"
@@ -37,7 +40,8 @@ PokemonTower_5F_Text_JanaeIntro::
     .string "Urff…$"
 
 PokemonTower_5F_Text_JanaeDefeat::
-    .string "Whoo!$"
+    .string "Whoo!\n"
+    .string "That spirit was strong.$"
 
 PokemonTower_5F_Text_JanaePostBattle::
     .string "I fell to evil spirits despite my\n"
@@ -48,4 +52,3 @@ PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
     .string "zone.\p"
     .string "{PLAYER}'s POKéMON were fully\n"
     .string "healed.$"
-

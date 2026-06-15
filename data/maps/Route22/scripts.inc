@@ -3,6 +3,13 @@ Route22_MapScripts::
 
 Route22_EventScript_RunningTriathleteF::
 	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_RunningTriathleteFRematch
+	msgbox Route22_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_RunningTriathleteFRematch::
+	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_F, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
 	msgbox Route22_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
 	end
 

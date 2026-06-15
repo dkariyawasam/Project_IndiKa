@@ -3,7 +3,8 @@ VictoryRoad_1F_Text_NaomiIntro::
     .string "for me?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
-    .string "I lost out…$"
+    .string "I lost out…\n"
+    .string "VICTORY ROAD chose you this time.$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
     .string "I never wanted to lose to anybody,\n"
@@ -19,4 +20,3 @@ VictoryRoad_1F_Text_RolandoDefeat::
 VictoryRoad_1F_Text_RolandoPostBattle::
     .string "Tch!\n"
     .string "I concede, you are better than I!$"
-
