@@ -11,16 +11,14 @@ SSAnne_B1F_Room1_Text_PhillipPostBattle::
     .string "POKéMON sometimes drift by.$"
 
 SSAnne_B1F_Room1_Text_BarnyIntro::
-    .string "Hello, stranger!\p"
-    .string "I can't tell if you're from the seas\n"
-    .string "or mountains, but stop and chat.\p"
-    .string "All my POKéMON are from the sea.$"
+    .string "Even below deck, one should keep\n"
+    .string "their battling form polished.$"
 
 SSAnne_B1F_Room1_Text_BarnyDefeat::
-    .string "Darn!\n"
-    .string "I let that one get away!$"
+    .string "Oh!\n"
+    .string "How uncouth of me!$"
 
 SSAnne_B1F_Room1_Text_BarnyPostBattle::
-    .string "I was going to make you my\n"
-    .string "assistant, too!$"
-
+    .string "I came below deck for quiet.\p"
+    .string "Instead, I found quite the capable\n"
+    .string "trainer.$"

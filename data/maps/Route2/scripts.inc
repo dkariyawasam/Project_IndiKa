@@ -8,3 +8,123 @@ Route2_EventScript_RouteSign::
 Route2_EventScript_DiglettsCaveSign::
 	msgbox Route2_Text_DiglettsCave, MSGBOX_SIGN
 	end
+
+Route2_EventScript_BugCatcherGarret::
+	trainerbattle_single TRAINER_BUG_CATCHER_GARRET, Route2_Text_GarretIntro, Route2_Text_GarretDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_BugCatcherGarretRematch
+	msgbox Route2_Text_GarretPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugCatcherGarretRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_GARRET, Route2_Text_GarretIntro, Route2_Text_GarretDefeat
+	msgbox Route2_Text_GarretPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugCatcherJonah::
+	trainerbattle_single TRAINER_BUG_CATCHER_JONAH, Route2_Text_JonahIntro, Route2_Text_JonahDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_BugCatcherJonahRematch
+	msgbox Route2_Text_JonahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugCatcherJonahRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_JONAH, Route2_Text_JonahIntro, Route2_Text_JonahDefeat
+	msgbox Route2_Text_JonahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_CamperShane::
+	trainerbattle_single TRAINER_CAMPER_SHANE, Route2_Text_ShaneIntro, Route2_Text_ShaneDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_CamperShaneRematch
+	msgbox Route2_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_CamperShaneRematch::
+	trainerbattle_rematch TRAINER_CAMPER_SHANE, Route2_Text_ShaneRematchIntro, Route2_Text_ShaneDefeat
+	msgbox Route2_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_PicnickerNancy::
+	trainerbattle_single TRAINER_PICNICKER_NANCY, Route2_Text_NancyIntro, Route2_Text_NancyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_PicnickerNancyRematch
+	msgbox Route2_Text_NancyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_PicnickerNancyRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_NANCY, Route2_Text_NancyRematchIntro, Route2_Text_NancyDefeat
+	msgbox Route2_Text_NancyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugCatcherOrin::
+	trainerbattle_single TRAINER_BUG_CATCHER_ORIN, Route2_Text_OrinIntro, Route2_Text_OrinDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_BugCatcherOrinRematch
+	msgbox Route2_Text_OrinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugCatcherOrinRematch::
+	trainerbattle_rematch TRAINER_BUG_CATCHER_ORIN, Route2_Text_OrinIntro, Route2_Text_OrinDefeat
+	msgbox Route2_Text_OrinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_CamperRowan::
+	trainerbattle_single TRAINER_CAMPER_ROWAN, Route2_Text_RowanIntro, Route2_Text_RowanDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_CamperRowanRematch
+	msgbox Route2_Text_RowanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_CamperRowanRematch::
+	trainerbattle_rematch TRAINER_CAMPER_ROWAN, Route2_Text_RowanIntro, Route2_Text_RowanDefeat
+	msgbox Route2_Text_RowanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_PicnickerLyra::
+	trainerbattle_single TRAINER_PICNICKER_LYRA, Route2_Text_LyraIntro, Route2_Text_LyraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_PicnickerLyraRematch
+	msgbox Route2_Text_LyraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_PicnickerLyraRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_LYRA, Route2_Text_LyraIntro, Route2_Text_LyraDefeat
+	msgbox Route2_Text_LyraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BreederMilo::
+	trainerbattle_single TRAINER_PKMN_BREEDER_MILO, Route2_Text_MiloIntro, Route2_Text_MiloDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_BreederMiloRematch
+	msgbox Route2_Text_MiloPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BreederMiloRematch::
+	trainerbattle_rematch TRAINER_PKMN_BREEDER_MILO, Route2_Text_MiloIntro, Route2_Text_MiloDefeat
+	msgbox Route2_Text_MiloPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugManiacEllis::
+	trainerbattle_single TRAINER_BUG_MANIAC_ELLIS, Route2_Text_EllisIntro, Route2_Text_EllisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_BugManiacEllisRematch
+	msgbox Route2_Text_EllisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_BugManiacEllisRematch::
+	trainerbattle_rematch TRAINER_BUG_MANIAC_ELLIS, Route2_Text_EllisIntro, Route2_Text_EllisDefeat
+	msgbox Route2_Text_EllisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_RangerIvy::
+	trainerbattle_single TRAINER_PKMN_RANGER_IVY, Route2_Text_IvyIntro, Route2_Text_IvyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route2_EventScript_RangerIvyRematch
+	msgbox Route2_Text_IvyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route2_EventScript_RangerIvyRematch::
+	trainerbattle_rematch TRAINER_PKMN_RANGER_IVY, Route2_Text_IvyIntro, Route2_Text_IvyDefeat
+	msgbox Route2_Text_IvyPostBattle, MSGBOX_AUTOCLOSE
+	end

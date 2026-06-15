@@ -23,6 +23,13 @@ PokemonMansion_1F_EventScript_Statue::
 
 PokemonMansion_1F_EventScript_Ted::
 	trainerbattle_single TRAINER_SCIENTIST_TED, PokemonMansion_1F_Text_TedIntro, PokemonMansion_1F_Text_TedDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonMansion_1F_EventScript_TedRematch
+	msgbox PokemonMansion_1F_Text_TedPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_1F_EventScript_TedRematch::
+	trainerbattle_rematch TRAINER_SCIENTIST_TED, PokemonMansion_1F_Text_TedIntro, PokemonMansion_1F_Text_TedDefeat
 	msgbox PokemonMansion_1F_Text_TedPostBattle, MSGBOX_AUTOCLOSE
 	end
 

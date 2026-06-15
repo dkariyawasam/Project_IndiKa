@@ -15,7 +15,8 @@ Route13_Text_SusieIntro::
 
 Route13_Text_SusieDefeat::
     .string "Ohh!\n"
-    .string "I lost!$"
+    .string "The rough grass got the better of\n"
+    .string "my plan.$"
 
 Route13_Text_SusiePostBattle::
     .string "I want to become a good TRAINER.\n"
@@ -26,7 +27,8 @@ Route13_Text_ValerieIntro::
     .string "Your BADGES are too cool!$"
 
 Route13_Text_ValerieDefeat::
-    .string "Not enough!$"
+    .string "Not enough!\n"
+    .string "BADGES aren't just for show.$"
 
 Route13_Text_ValeriePostBattle::
     .string "You got those BADGES from GYM\n"
@@ -61,7 +63,8 @@ Route13_Text_PerryIntro::
     .string "Not when the wind's blowing my way!$"
 
 Route13_Text_PerryDefeat::
-    .string "The wind turned!$"
+    .string "The wind turned, and you rode it\n"
+    .string "better than I did.$"
 
 Route13_Text_PerryPostBattle::
     .string "I'm beat.\n"
@@ -106,7 +109,8 @@ Route13_Text_RobertIntro::
     .string "I've dedicated myself to them.$"
 
 Route13_Text_RobertDefeat::
-    .string "Out of power!$"
+    .string "Out of power!\n"
+    .string "Even my birds need to land.$"
 
 Route13_Text_RobertPostBattle::
     .string "I wish I could fly like PIDGEY and\n"
