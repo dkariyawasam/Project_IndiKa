@@ -27,8 +27,9 @@ Route3_Text_JaniceRematchIntro::
 	.string "You keep looking at me, don't you?$"
 
 Route3_Text_GregRematchIntro::
-	.string "You're a TRAINER, aren't you?\n"
-	.string "Let's get with it right away!$"
+	.string "Back on the rocky trail?\p"
+	.string "Good. Let's see if your footing\n"
+	.string "has gotten even stronger!$"
 
 Route3_Text_SallyRematchIntro::
 	.string "That look you give me…\n"

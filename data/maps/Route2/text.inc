@@ -10,6 +10,11 @@ Route2_Text_GarretIntro::
 	.string "VIRIDIAN FOREST onto this road.\p"
 	.string "I watch the grass for movement!$"
 
+Route2_Text_GarretRematchIntro::
+	.string "I've watched the grass since our\n"
+	.string "last battle.\p"
+	.string "This time, my bugs will move first!$"
+
 Route2_Text_GarretDefeat::
 	.string "You spotted my strategy!$"
 
@@ -22,6 +27,12 @@ Route2_Text_JonahIntro::
 	.string "The forest gate is close.\p"
 	.string "If you can handle my bugs, you can\n"
 	.string "handle the path ahead!$"
+
+Route2_Text_JonahRematchIntro::
+	.string "You've crossed the forest gate\n"
+	.string "before.\p"
+	.string "Let's see if my bugs can still\n"
+	.string "slow you down!$"
 
 Route2_Text_JonahDefeat::
 	.string "My bugs lost their footing!$"
@@ -70,6 +81,12 @@ Route2_Text_OrinIntro::
 	.string "the forest, where they warm up\l"
 	.string "in the grass!$"
 
+Route2_Text_OrinRematchIntro::
+	.string "The sun warmed up my whole team\n"
+	.string "today.\p"
+	.string "Ready for another forest-edge\n"
+	.string "battle?$"
+
 Route2_Text_OrinDefeat::
 	.string "They cooled off too fast!$"
 
@@ -82,6 +99,11 @@ Route2_Text_RowanIntro::
 	.string "A good forest route gives you\n"
 	.string "cover, quiet, and a clear path.\p"
 	.string "Let me test your trail sense!$"
+
+Route2_Text_RowanRematchIntro::
+	.string "You found the path once already.\p"
+	.string "Now let's see if you can read\n"
+	.string "the trail under pressure!$"
 
 Route2_Text_RowanDefeat::
 	.string "You kept your bearings!$"
@@ -96,6 +118,11 @@ Route2_Text_LyraIntro::
 	.string "edge.\p"
 	.string "Battles make them taste better!$"
 
+Route2_Text_LyraRematchIntro::
+	.string "I packed extra snacks this time.\p"
+	.string "A rematch on ROUTE 2 deserves\n"
+	.string "proper supplies!$"
+
 Route2_Text_LyraDefeat::
 	.string "I need a snack break!$"
 
@@ -107,6 +134,11 @@ Route2_Text_MiloIntro::
 	.string "POKéMON behave differently where\n"
 	.string "woods meet open road.\p"
 	.string "I'm studying that boundary.$"
+
+Route2_Text_MiloRematchIntro::
+	.string "Your team changed my notes on\n"
+	.string "forest-edge behavior.\p"
+	.string "Let's gather another sample!$"
 
 Route2_Text_MiloDefeat::
 	.string "That's worth recording!$"
@@ -121,6 +153,11 @@ Route2_Text_EllisIntro::
 	.string "The real bug secrets are here,\n"
 	.string "right at the edge!$"
 
+Route2_Text_EllisRematchIntro::
+	.string "I found a new secret at the edge.\p"
+	.string "This one is called: don't lose\n"
+	.string "the rematch!$"
+
 Route2_Text_EllisDefeat::
 	.string "My secret spot failed me!$"
 
@@ -133,6 +170,12 @@ Route2_Text_IvyIntro::
 	.string "I patrol ROUTE 2 because it links\n"
 	.string "VIRIDIAN, PEWTER, and the forest.\p"
 	.string "Show me you can travel safely!$"
+
+Route2_Text_IvyRematchIntro::
+	.string "Good to see you travelling ROUTE 2\n"
+	.string "again.\p"
+	.string "Show me your team is still ready\n"
+	.string "for changing paths!$"
 
 Route2_Text_IvyDefeat::
 	.string "You travel with care.$"
