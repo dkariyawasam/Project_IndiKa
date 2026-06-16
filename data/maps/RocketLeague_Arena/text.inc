@@ -29,6 +29,12 @@ RocketLeague_Arena_Text_ProtonIntro::
     .string "Fine.\n"
     .string "I'll make this quick.$"
 
+RocketLeague_Arena_Text_GiovanniIntro::
+    .string "GIOVANNI: Four victories in\n"
+    .string "succession.\p"
+    .string "You have earned the right to face\n"
+    .string "the ROCKET LEAGUE CHAMPION.$"
+
 RocketLeague_Arena_Text_PetrelDefeat::
     .string "Heh…\n"
     .string "Guess the smoke cleared your way.$"
@@ -44,6 +50,10 @@ RocketLeague_Arena_Text_ArianaDefeat::
 RocketLeague_Arena_Text_ProtonDefeat::
     .string "Tch!\n"
     .string "You made that take too long.$"
+
+RocketLeague_Arena_Text_GiovanniDefeat::
+    .string "Excellent.\p"
+    .string "Your ambition has weight.$"
 
 RocketLeague_Arena_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"
