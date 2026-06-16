@@ -2617,6 +2617,7 @@ extern const u32 gTrainerFrontPic_AromaLady[];
 extern const u32 gTrainerFrontPic_RuinManiac[];
 extern const u32 gTrainerFrontPic_Lady[];
 extern const u32 gTrainerFrontPic_Painter[];
+extern const u32 gTrainerFrontPic_RocketAdminAriana[];
 
 extern const u32 gTrainerPalette_RSAromaLady[];
 extern const u32 gTrainerPalette_RSRuinManiac[];
@@ -2754,6 +2755,7 @@ extern const u32 gTrainerPalette_AromaLady[];
 extern const u32 gTrainerPalette_RuinManiac[];
 extern const u32 gTrainerPalette_Lady[];
 extern const u32 gTrainerPalette_Painter[];
+extern const u32 gTrainerPalette_RocketAdminAriana[];
 
 extern const u8 gMenuInfoElements_Gfx[];
 extern const u16 gMenuInfoElements1_Pal[];

@@ -2113,7 +2113,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_BUDEW] =
     {
         .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .y_offset = 16,
     },
     [SPECIES_ROSERADE] =
     {

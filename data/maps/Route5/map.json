@@ -155,7 +155,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 17,
       "y": 30,
       "elevation": 3,
@@ -169,7 +169,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 28,
       "y": 31,
       "elevation": 3,
@@ -192,7 +192,7 @@
     },
     {
       "x": 23,
-      "y": 25,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_ROUTE5_POKEMON_DAY_CARE",
       "dest_warp_id": "1"

@@ -1990,6 +1990,43 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GBAKid = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+#define DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(name, palette, slot, picTable)    \
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = {    \
+    .tileTag = TAG_NONE,                                                    \
+    .paletteTag = palette,                                                  \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                         \
+    .size = 256,                                                            \
+    .width = 16,                                                            \
+    .height = 32,                                                           \
+    .paletteSlot = slot,                                                    \
+    .shadowSize = SHADOW_SIZE_M,                                            \
+    .inanimate = FALSE,                                                     \
+    .disableReflectionPaletteLoad = FALSE,                                  \
+    .tracks = TRACKS_FOOT,                                                  \
+    .oam = &gObjectEventBaseOam_16x32,                                      \
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,                   \
+    .anims = sAnimTable_Standard,                                           \
+    .images = picTable,                                                     \
+    .affineAnims = gDummySpriteAffineAnimTable,                             \
+}
+
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSLOT_NPC_DYNAMIC, sPicTable_BugManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Burglar, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Burglar);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Collector, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Collector);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Expert, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Expert);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Gamer, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Gamer);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(HexManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_HexManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Juggler, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_Juggler);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Kindler, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_Kindler);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanM, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_PokefanM);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanF, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_PokefanF);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_RuinManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteM, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteM);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteF, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteF);
+
+#undef DEFINE_TRAINER_OBJ_EVENT_GFX_INFO
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Snorlax = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,

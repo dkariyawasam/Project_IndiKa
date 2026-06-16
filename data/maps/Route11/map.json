@@ -28,7 +28,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 38,
       "y": 15,
       "elevation": 3,
@@ -42,7 +42,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 50,
       "y": 4,
       "elevation": 3,
@@ -126,7 +126,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
       "x": 14,
       "y": 4,
       "elevation": 3,
