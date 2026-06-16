@@ -4730,16 +4730,19 @@ EventScript_RouteTrainer_CAMPER_KYLE_Text_PostBattle::
     .string "ROUTE 10 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_CAMPER_RICKY_Text_Intro::
-    .string "This SCOUT knows\n"
-    .string "ROUTE 4 well!$"
+    .string "I came out of MT. MOON covered\n"
+    .string "in dust and questions.\p"
+    .string "Let's see what your team uncovered!$"
 EventScript_RouteTrainer_CAMPER_RICKY_Text_RematchIntro::
-    .string "Back on ROUTE 4?\n"
-    .string "Then we battle again!$"
+    .string "Back from the mountain again?\p"
+    .string "Good. Every pass through MT. MOON\n"
+    .string "reveals something new!$"
 EventScript_RouteTrainer_CAMPER_RICKY_Text_Defeat::
-    .string "ROUTE 4 wins today!$"
+    .string "That belongs in my field notes!$"
 EventScript_RouteTrainer_CAMPER_RICKY_Text_PostBattle::
-    .string "ROUTE 4 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Fossils, stones, old tunnels...\n"
+    .string "ROUTE 4 is where the mountain's\l"
+    .string "stories spill into daylight.$"
 EventScript_RouteTrainer_CAMPER_RILEY_Text_Intro::
     .string "This SCOUT knows\n"
     .string "ROUTE 25 well!$"
@@ -4785,16 +4788,20 @@ EventScript_RouteTrainer_LASS_ALI_Text_PostBattle::
     .string "ROUTE 8 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_LASS_CRISSY_Text_Intro::
-    .string "This LASS knows\n"
-    .string "ROUTE 4 well!$"
+    .string "I came to MT. MOON looking for\n"
+    .string "mushroom POKéMON.\p"
+    .string "They like damp corners, but I like\n"
+    .string "battles too!$"
 EventScript_RouteTrainer_LASS_CRISSY_Text_RematchIntro::
-    .string "Back on ROUTE 4?\n"
-    .string "Then we battle again!$"
+    .string "I checked the mountain again.\p"
+    .string "No mushrooms this time, so you're\n"
+    .string "my best find!$"
 EventScript_RouteTrainer_LASS_CRISSY_Text_Defeat::
-    .string "ROUTE 4 wins today!$"
+    .string "After all that searching!$"
 EventScript_RouteTrainer_LASS_CRISSY_Text_PostBattle::
-    .string "ROUTE 4 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Mushroom POKéMON hide well.\p"
+    .string "The trick is watching where the\n"
+    .string "mountain stays cool and damp.$"
 EventScript_RouteTrainer_LASS_DAWN_Text_Intro::
     .string "This LASS knows\n"
     .string "ROUTE 12 well!$"
@@ -4941,16 +4948,19 @@ EventScript_RouteTrainer_PICNICKER_BECKY_Text_PostBattle::
     .string "ROUTE 24 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_PICNICKER_CAITLIN_Text_Intro::
-    .string "This SCOUT knows\n"
-    .string "ROUTE 4 well!$"
+    .string "The road opens up after MT. MOON,\n"
+    .string "but don't relax too soon.\p"
+    .string "A good SCOUT checks the exit too!$"
 EventScript_RouteTrainer_PICNICKER_CAITLIN_Text_RematchIntro::
-    .string "Back on ROUTE 4?\n"
-    .string "Then we battle again!$"
+    .string "Coming from CERULEAN or MT. MOON?\p"
+    .string "Either way, I'll check how ready\n"
+    .string "you are!$"
 EventScript_RouteTrainer_PICNICKER_CAITLIN_Text_Defeat::
-    .string "ROUTE 4 wins today!$"
+    .string "You made the exit look easy!$"
 EventScript_RouteTrainer_PICNICKER_CAITLIN_Text_PostBattle::
-    .string "ROUTE 4 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "After a cave, open sky feels huge.\p"
+    .string "That's when tired TRAINERS make\n"
+    .string "mistakes.$"
 EventScript_RouteTrainer_PICNICKER_CAROL_Text_Intro::
     .string "This SCOUT knows\n"
     .string "ROUTE 6 well!$"
@@ -5272,16 +5282,17 @@ EventScript_RouteTrainer_YOUNGSTER_JOSH_Text_PostBattle::
     .string "The closer you get to MT. MOON,\n"
     .string "the tougher the road feels.$"
 EventScript_RouteTrainer_YOUNGSTER_TIMMY_Text_Intro::
-    .string "This YOUNGSTER knows\n"
-    .string "ROUTE 4 well!$"
+    .string "I tripped on a GEODUDE earlier,\n"
+    .string "but I'm not going home!\p"
+    .string "ROUTE 4 made me tougher!$"
 EventScript_RouteTrainer_YOUNGSTER_TIMMY_Text_RematchIntro::
-    .string "Back on ROUTE 4?\n"
-    .string "Then we battle again!$"
+    .string "I watched my step this time!\p"
+    .string "Now watch out for my POKéMON!$"
 EventScript_RouteTrainer_YOUNGSTER_TIMMY_Text_Defeat::
-    .string "ROUTE 4 wins today!$"
+    .string "I still stumbled!$"
 EventScript_RouteTrainer_YOUNGSTER_TIMMY_Text_PostBattle::
-    .string "ROUTE 4 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The rocks here are rough, but they\n"
+    .string "make you pay attention.$"
 EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Intro::
     .string "This YOUNGSTER knows\n"
     .string "ROUTE 8 well!$"
