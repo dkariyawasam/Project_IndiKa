@@ -70,7 +70,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
       "x": 32,
       "y": 18,
       "elevation": 3,
@@ -154,7 +154,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
       "x": 58,
       "y": 6,
       "elevation": 3,

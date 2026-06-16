@@ -478,6 +478,8 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_POKEMON_RANGER              0x1121
 #define OBJ_EVENT_PAL_TAG_POKEMON_BREEDER             0x1122
 #define OBJ_EVENT_PAL_TAG_BERRY_PLANT                 0x1123
+#define OBJ_EVENT_PAL_TAG_AROMA_LADY                  0x1124
+#define OBJ_EVENT_PAL_TAG_POKEMON_RANGER_F            0x1125
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -513,8 +515,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_BugManiac,               OBJ_EVENT_PAL_TAG_BUG_MANIAC},
     {gObjectEventPal_RocketAriana,            OBJ_EVENT_PAL_TAG_ROCKET_ARIANA},
     {gObjectEventPal_PokemonRanger,           OBJ_EVENT_PAL_TAG_POKEMON_RANGER},
+    {gObjectEventPal_PokemonRangerF,          OBJ_EVENT_PAL_TAG_POKEMON_RANGER_F},
     {gObjectEventPal_PokemonBreeder,          OBJ_EVENT_PAL_TAG_POKEMON_BREEDER},
     {gObjectEventPal_BerryPlant,              OBJ_EVENT_PAL_TAG_BERRY_PLANT},
+    {gObjectEventPal_AromaLady,               OBJ_EVENT_PAL_TAG_AROMA_LADY},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };
@@ -1374,7 +1378,8 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
     objectEvent->triggerGroundEffectsOnMove = TRUE;
     objectEvent->graphicsId = template->graphicsId;
     if (objectEvent->graphicsId == OBJ_EVENT_GFX_POKEMON_RANGER_M
-     || objectEvent->graphicsId == OBJ_EVENT_GFX_POKEMON_RANGER_F)
+     || objectEvent->graphicsId == OBJ_EVENT_GFX_POKEMON_RANGER_F
+     || objectEvent->graphicsId == OBJ_EVENT_GFX_AROMA_LADY)
         objectEvent->disableCoveringGroundEffects = TRUE;
     objectEvent->movementType = template->objUnion.normal.movementType;
     objectEvent->localId = template->localId;
