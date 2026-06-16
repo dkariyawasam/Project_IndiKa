@@ -33,7 +33,7 @@ MtMoon_1F_EventScript_Miriam::
 	end
 
 MtMoon_1F_EventScript_Iris::
-	trainerbattle_single TRAINER_LASS_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
+	trainerbattle_single TRAINER_TUBER_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
 	msgbox MtMoon_1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
 	end
 

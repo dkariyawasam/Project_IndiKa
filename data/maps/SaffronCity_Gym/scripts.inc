@@ -119,7 +119,7 @@ SaffronCity_Gym_EventScript_Johan::
 	end
 
 SaffronCity_Gym_EventScript_Tyron::
-	trainerbattle_single TRAINER_PSYCHIC_TYRON, SaffronCity_Gym_Text_TyronIntro, SaffronCity_Gym_Text_TyronDefeat
+	trainerbattle_single TRAINER_SAILOR_TYRON, SaffronCity_Gym_Text_TyronIntro, SaffronCity_Gym_Text_TyronDefeat
 	famechecker FAMECHECKER_SABRINA, 5
 	msgbox SaffronCity_Gym_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
 	end
