@@ -17,7 +17,7 @@ Route2_EventScript_BugCatcherGarret::
 	end
 
 Route2_EventScript_BugCatcherGarretRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_GARRET, Route2_Text_GarretIntro, Route2_Text_GarretDefeat
+	trainerbattle_rematch TRAINER_BUG_CATCHER_GARRET, Route2_Text_GarretRematchIntro, Route2_Text_GarretDefeat
 	msgbox Route2_Text_GarretPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -29,7 +29,7 @@ Route2_EventScript_BugCatcherJonah::
 	end
 
 Route2_EventScript_BugCatcherJonahRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_JONAH, Route2_Text_JonahIntro, Route2_Text_JonahDefeat
+	trainerbattle_rematch TRAINER_BUG_CATCHER_JONAH, Route2_Text_JonahRematchIntro, Route2_Text_JonahDefeat
 	msgbox Route2_Text_JonahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -65,7 +65,7 @@ Route2_EventScript_BugCatcherOrin::
 	end
 
 Route2_EventScript_BugCatcherOrinRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_ORIN, Route2_Text_OrinIntro, Route2_Text_OrinDefeat
+	trainerbattle_rematch TRAINER_BUG_CATCHER_ORIN, Route2_Text_OrinRematchIntro, Route2_Text_OrinDefeat
 	msgbox Route2_Text_OrinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -77,7 +77,7 @@ Route2_EventScript_CamperRowan::
 	end
 
 Route2_EventScript_CamperRowanRematch::
-	trainerbattle_rematch TRAINER_CAMPER_ROWAN, Route2_Text_RowanIntro, Route2_Text_RowanDefeat
+	trainerbattle_rematch TRAINER_CAMPER_ROWAN, Route2_Text_RowanRematchIntro, Route2_Text_RowanDefeat
 	msgbox Route2_Text_RowanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -89,7 +89,7 @@ Route2_EventScript_PicnickerLyra::
 	end
 
 Route2_EventScript_PicnickerLyraRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_LYRA, Route2_Text_LyraIntro, Route2_Text_LyraDefeat
+	trainerbattle_rematch TRAINER_PICNICKER_LYRA, Route2_Text_LyraRematchIntro, Route2_Text_LyraDefeat
 	msgbox Route2_Text_LyraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -101,7 +101,7 @@ Route2_EventScript_BreederMilo::
 	end
 
 Route2_EventScript_BreederMiloRematch::
-	trainerbattle_rematch TRAINER_PKMN_BREEDER_MILO, Route2_Text_MiloIntro, Route2_Text_MiloDefeat
+	trainerbattle_rematch TRAINER_PKMN_BREEDER_MILO, Route2_Text_MiloRematchIntro, Route2_Text_MiloDefeat
 	msgbox Route2_Text_MiloPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -113,7 +113,7 @@ Route2_EventScript_BugManiacEllis::
 	end
 
 Route2_EventScript_BugManiacEllisRematch::
-	trainerbattle_rematch TRAINER_BUG_MANIAC_ELLIS, Route2_Text_EllisIntro, Route2_Text_EllisDefeat
+	trainerbattle_rematch TRAINER_BUG_MANIAC_ELLIS, Route2_Text_EllisRematchIntro, Route2_Text_EllisDefeat
 	msgbox Route2_Text_EllisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -125,6 +125,6 @@ Route2_EventScript_RangerIvy::
 	end
 
 Route2_EventScript_RangerIvyRematch::
-	trainerbattle_rematch TRAINER_PKMN_RANGER_IVY, Route2_Text_IvyIntro, Route2_Text_IvyDefeat
+	trainerbattle_rematch TRAINER_PKMN_RANGER_IVY, Route2_Text_IvyRematchIntro, Route2_Text_IvyDefeat
 	msgbox Route2_Text_IvyPostBattle, MSGBOX_AUTOCLOSE
 	end

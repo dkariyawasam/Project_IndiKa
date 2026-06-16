@@ -4673,16 +4673,18 @@ EventScript_RouteTrainer_CAMPER_DREW_Text_PostBattle::
     .string "ROUTE 8 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_Intro::
-    .string "This SCOUT knows\n"
-    .string "ROUTE 3 well!$"
+    .string "I scout the road before MT. MOON.\p"
+    .string "Loose stones, steep ledges, tough\n"
+    .string "TRAINERS--ROUTE 3 has it all!$"
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_RematchIntro::
-    .string "Back on ROUTE 3?\n"
-    .string "Then we battle again!$"
+    .string "Back for another mountain-road\n"
+    .string "check?\p"
+    .string "Show me your team is trail-ready!$"
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_Defeat::
-    .string "ROUTE 3 wins today!$"
+    .string "You handled the rough path!$"
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_PostBattle::
-    .string "ROUTE 3 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "If you can keep calm on ROUTE 3,\n"
+    .string "MT. MOON won't rattle you as much.$"
 EventScript_RouteTrainer_CAMPER_ISAAC_Text_Intro::
     .string "This SCOUT knows\n"
     .string "ROUTE 9 well!$"
@@ -4882,16 +4884,18 @@ EventScript_RouteTrainer_LASS_RELI_Text_PostBattle::
     .string "ROUTE 7 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_LASS_ROBIN_Text_Intro::
-    .string "This LASS knows\n"
-    .string "ROUTE 3 well!$"
+    .string "The road to MT. MOON makes\n"
+    .string "everyone hurry.\p"
+    .string "Slow down and battle me first!$"
 EventScript_RouteTrainer_LASS_ROBIN_Text_RematchIntro::
-    .string "Back on ROUTE 3?\n"
-    .string "Then we battle again!$"
+    .string "Still rushing toward MT. MOON?\p"
+    .string "Then I'll stop you for one more\n"
+    .string "battle!$"
 EventScript_RouteTrainer_LASS_ROBIN_Text_Defeat::
-    .string "ROUTE 3 wins today!$"
+    .string "You didn't stumble at all!$"
 EventScript_RouteTrainer_LASS_ROBIN_Text_PostBattle::
-    .string "ROUTE 3 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The mountain looks close from here,\n"
+    .string "but ROUTE 3 still tests your pace.$"
 EventScript_RouteTrainer_PICNICKER_ALICIA_Text_Intro::
     .string "This SCOUT knows\n"
     .string "ROUTE 22 well!$"
@@ -5256,16 +5260,17 @@ EventScript_RouteTrainer_CAMPER_JOHNSON_Text_PostBattle::
     .string "ROUTE 13 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_YOUNGSTER_JOSH_Text_Intro::
-    .string "This YOUNGSTER knows\n"
-    .string "ROUTE 3 well!$"
+    .string "MT. MOON is ahead, so I'm training\n"
+    .string "on every rocky patch I can find!\p"
+    .string "Battle me!$"
 EventScript_RouteTrainer_YOUNGSTER_JOSH_Text_RematchIntro::
-    .string "Back on ROUTE 3?\n"
-    .string "Then we battle again!$"
+    .string "I trained on the rocks again!\p"
+    .string "This time, I won't lose my footing!$"
 EventScript_RouteTrainer_YOUNGSTER_JOSH_Text_Defeat::
-    .string "ROUTE 3 wins today!$"
+    .string "I slipped up!$"
 EventScript_RouteTrainer_YOUNGSTER_JOSH_Text_PostBattle::
-    .string "ROUTE 3 has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The closer you get to MT. MOON,\n"
+    .string "the tougher the road feels.$"
 EventScript_RouteTrainer_YOUNGSTER_TIMMY_Text_Intro::
     .string "This YOUNGSTER knows\n"
     .string "ROUTE 4 well!$"
