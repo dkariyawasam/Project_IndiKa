@@ -82,7 +82,6 @@ const u16 gObjectEventPic_Camper[] = INCBIN_U16("graphics/object_events/pics/peo
 const u16 gObjectEventPal_PokemonRanger[] = INCBIN_U16("graphics/object_events/palettes/pokemon_ranger.gbapal");
 const u16 gObjectEventPic_PokemonRangerM[] = INCBIN_U16("graphics/object_events/pics/people/pokemon_ranger_m.4bpp");
 const u16 gObjectEventPic_PokemonRangerF[] = INCBIN_U16("graphics/object_events/pics/people/pokemon_ranger_f.4bpp");
-const u16 gObjectEventPal_PokemonRangerF[] = INCBIN_U16("graphics/object_events/palettes/pokemon_ranger_f.gbapal");
 const u16 gObjectEventPal_PokemonBreeder[] = INCBIN_U16("graphics/object_events/palettes/pokemon_breeder.gbapal");
 const u16 gObjectEventPic_PokemonBreeder[] = INCBIN_U16("graphics/object_events/pics/people/pokemon_breeder.4bpp");
 const u16 gObjectEventPal_AromaLady[] = INCBIN_U16("graphics/object_events/palettes/aroma_lady.gbapal");
