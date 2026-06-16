@@ -216,7 +216,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
       "x": 20,
       "y": 44,
       "elevation": 3,
@@ -230,7 +230,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
       "x": 54,
       "y": 31,
       "elevation": 3,
@@ -244,7 +244,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
       "x": 35,
       "y": 45,
       "elevation": 3,

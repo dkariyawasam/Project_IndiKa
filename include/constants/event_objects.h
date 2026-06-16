@@ -186,8 +186,9 @@
 #define OBJ_EVENT_GFX_SUPER_NERD 181
 #define OBJ_EVENT_GFX_TRIATHLETE_M 182
 #define OBJ_EVENT_GFX_TRIATHLETE_F 183
+#define OBJ_EVENT_GFX_AROMA_LADY 184
 
-#define NUM_OBJ_EVENT_GFX     184
+#define NUM_OBJ_EVENT_GFX     185
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

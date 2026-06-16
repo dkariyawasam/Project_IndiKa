@@ -3,8 +3,17 @@ CeladonCity_GameCorner_MapScripts::
 	.byte 0
 
 CeladonCity_GameCorner_OnLoad::
+	call_if_unset FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE, CeladonCity_GameCorner_EventScript_HideRocketLeagueEntrance
 	call_if_set FLAG_REVEALED_ROCKET_LEAGUE_ENTRANCE, CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance
 	end
+
+CeladonCity_GameCorner_EventScript_HideRocketLeagueEntrance::
+	setmetatile 15, 2, METATILE_GameCorner_Floor_ShadeFull, 1
+	setmetatile 16, 2, METATILE_GameCorner_Floor_ShadeFull, 1
+	setmetatile 17, 2, METATILE_GameCorner_Floor_ShadeFull, 1
+	setmetatile 16, 3, METATILE_GameCorner_PurpleWall_Floor, 1
+	setmetatile 17, 3, METATILE_GameCorner_PurpleWall_Floor, 1
+	return
 
 CeladonCity_GameCorner_EventScript_ShowRocketLeagueEntrance::
 	setmetatile 15, 2, METATILE_GameCorner_Floor_StairsTop, 0
