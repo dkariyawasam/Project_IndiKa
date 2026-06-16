@@ -12775,7 +12775,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_JOHAN_2[
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_IRIS_2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_TuberIris2[] = {
     {
         .iv = 30,
         .lvl = 22,
@@ -12783,7 +12783,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_LASS_IRIS_2[] = 
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_TYRON_2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_SailorTyron2[] = {
     {
         .iv = 30,
         .lvl = 38,
