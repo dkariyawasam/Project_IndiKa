@@ -56,49 +56,61 @@ Route9_Text_JeremyPostBattle::
     .string "me there, eh?$"
 
 Route9_Text_BriceIntro::
-    .string "Hahaha!\n"
-    .string "Aren't you a little toughie!$"
+    .string "The rocks here teach you where\n"
+    .string "to put your feet.\p"
+    .string "Let's see if your battling has\n"
+    .string "the same footing!$"
 
 Route9_Text_BriceDefeat::
-    .string "What's that?$"
+    .string "You found better footing!$"
 
 Route9_Text_BricePostBattle::
-    .string "Hahaha!\n"
-    .string "Kids should be tough!$"
+    .string "ROCK TUNNEL is tougher than this\n"
+    .string "road.\p"
+    .string "If ROUTE 9 tires you out, rest\n"
+    .string "before heading in.$"
 
 Route9_Text_BrentIntro::
     .string "The climb to ROCK TUNNEL is my\n"
-    .string "training ground!$"
+    .string "training ground!\p"
+    .string "Keep your stance low and steady!$"
 
 Route9_Text_BrentDefeat::
     .string "I lost my stance!$"
 
 Route9_Text_BrentPostBattle::
     .string "A strong stance keeps you steady\n"
-    .string "on uneven ground.$"
+    .string "on uneven ground.\p"
+    .string "The mountain path punishes sloppy\n"
+    .string "steps.$"
 
 Route9_Text_AlanIntro::
-    .string "Hahahaha!\n"
-    .string "Bring it on!$"
+    .string "Hahahaha!\p"
+    .string "This ridge wakes up the legs and\n"
+    .string "the lungs. Bring it on!$"
 
 Route9_Text_AlanDefeat::
-    .string "Hahahaha!\n"
+    .string "Hahahaha!\p"
     .string "You beat me fair!$"
 
 Route9_Text_AlanPostBattle::
-    .string "Hahahaha!\n"
-    .string "Us hearty guys always laugh!$"
+    .string "Hahahaha!\p"
+    .string "Us hearty hikers laugh so the\n"
+    .string "mountains know we're coming.$"
 
 Route9_Text_ConnerIntro::
     .string "This mountain path makes every\n"
-    .string "battle hit harder!$"
+    .string "battle hit harder!\p"
+    .string "Loose stones, tight turns--\n"
+    .string "perfect balance training!$"
 
 Route9_Text_ConnerDefeat::
     .string "You hit harder!$"
 
 Route9_Text_ConnerPostBattle::
     .string "Train on rough ground and your\n"
-    .string "balance improves fast.$"
+    .string "balance improves fast.\p"
+    .string "That's why I like ROUTE 9.$"
 
 Route9_Text_RouteSign::
     .string "ROUTE 9\n"

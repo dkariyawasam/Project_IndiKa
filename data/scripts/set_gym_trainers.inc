@@ -37,7 +37,6 @@ EventScript_SetFuchsiaGymTrainers::
 
 EventScript_SetSaffronGymTrainers::
 	settrainerflag TRAINER_PSYCHIC_JOHAN
-	settrainerflag TRAINER_PSYCHIC_TYRON
 	settrainerflag TRAINER_PSYCHIC_CAMERON
 	settrainerflag TRAINER_PSYCHIC_PRESTON
 	settrainerflag TRAINER_CHANNELER_AMANDA

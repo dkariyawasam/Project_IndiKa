@@ -118,8 +118,7 @@
 #define TRAINER_TAMER_EDGAR_2                      TRAINER_BIRD_KEEPER_BECK
 #define TRAINER_YOUNGSTER_JOEY                    93
 #define TRAINER_TAMER_PHIL_2                       TRAINER_YOUNGSTER_JOEY
-#define TRAINER_YOUNGSTER_DAN                     94
-#define TRAINER_JUGGLER_NATE_2                     TRAINER_YOUNGSTER_DAN
+#define TRAINER_TUBER_DAN                     94
 #define TRAINER_YOUNGSTER_CHAD                    95
 #define TRAINER_BUG_CATCHER_ROBBY_2                TRAINER_YOUNGSTER_CHAD
 #define TRAINER_YOUNGSTER_TYLER                   96
@@ -171,7 +170,7 @@
 #define TRAINER_LASS_CRISSY                      119
 #define TRAINER_CHANNELER_ANGELICA_2               TRAINER_LASS_CRISSY
 #define TRAINER_LASS_MIRIAM                      120
-#define TRAINER_LASS_IRIS                        121
+#define TRAINER_TUBER_IRIS                        121
 #define TRAINER_LASS_RELI                        122
 #define TRAINER_CHANNELER_JENNIFER_2               TRAINER_LASS_RELI
 #define TRAINER_LASS_ALI                         123
@@ -231,8 +230,7 @@
 #define TRAINER_SAILOR_DYLAN_2                     TRAINER_PICNICKER_CAITLIN
 #define TRAINER_PICNICKER_HEIDI                  156
 #define TRAINER_SAILOR_DUNCAN_2                    TRAINER_PICNICKER_HEIDI
-#define TRAINER_PICNICKER_CAROL                  157
-#define TRAINER_SAILOR_LEONARD_2                   TRAINER_PICNICKER_CAROL
+#define TRAINER_FISHERMAN_CAROL                  157
 #define TRAINER_PICNICKER_SOFIA                  158
 #define TRAINER_PICNICKER_MARTHA                 159
 #define TRAINER_TUBER_TINA                   160
@@ -437,7 +435,7 @@
 #define TRAINER_SWIMMER_FEMALE_CONNIE            278
 #define TRAINER_SWIMMER_FEMALE_SHIRLEY           279
 #define TRAINER_PSYCHIC_JOHAN                    280
-#define TRAINER_PSYCHIC_TYRON                    281
+#define TRAINER_SAILOR_TYRON                    281
 #define TRAINER_PSYCHIC_CAMERON                  282
 #define TRAINER_PSYCHIC_PRESTON                  283
 #define TRAINER_ROCKER_RANDALL                   284
@@ -575,10 +573,10 @@
 #define TRAINER_COOLTRAINER_CAROLINE             403
 #define TRAINER_COOLTRAINER_ALEXA                404
 #define TRAINER_COOLTRAINER_SHANNON              405
-#define TRAINER_LASS_IRIS_2 TRAINER_COOLTRAINER_SHANNON
+#define TRAINER_TUBER_IRIS_2 TRAINER_COOLTRAINER_SHANNON
 #define TRAINER_COOLTRAINER_NAOMI                406
 #define TRAINER_COOLTRAINER_BROOKE               407
-#define TRAINER_PSYCHIC_TYRON_2 TRAINER_COOLTRAINER_BROOKE
+#define TRAINER_SAILOR_TYRON_2 TRAINER_COOLTRAINER_BROOKE
 #define TRAINER_COOLTRAINER_AUSTINA              408
 #define TRAINER_PICNICKER_SOFIA_2 TRAINER_COOLTRAINER_AUSTINA
 #define TRAINER_COOLTRAINER_JULIE                409
