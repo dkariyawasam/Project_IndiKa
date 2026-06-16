@@ -42,6 +42,20 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Collector;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gamer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Juggler;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kindler;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMLand;
@@ -213,6 +227,20 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PICNICKER]                = &gObjectEventGraphicsInfo_Picnicker,
     [OBJ_EVENT_GFX_COOLTRAINER_M]            = &gObjectEventGraphicsInfo_CooltrainerM,
     [OBJ_EVENT_GFX_COOLTRAINER_F]            = &gObjectEventGraphicsInfo_CooltrainerF,
+    [OBJ_EVENT_GFX_BUG_MANIAC]               = &gObjectEventGraphicsInfo_BugManiac,
+    [OBJ_EVENT_GFX_BURGLAR]                  = &gObjectEventGraphicsInfo_Burglar,
+    [OBJ_EVENT_GFX_COLLECTOR]                = &gObjectEventGraphicsInfo_Collector,
+    [OBJ_EVENT_GFX_EXPERT]                   = &gObjectEventGraphicsInfo_Expert,
+    [OBJ_EVENT_GFX_GAMER]                    = &gObjectEventGraphicsInfo_Gamer,
+    [OBJ_EVENT_GFX_HEX_MANIAC]               = &gObjectEventGraphicsInfo_HexManiac,
+    [OBJ_EVENT_GFX_JUGGLER]                  = &gObjectEventGraphicsInfo_Juggler,
+    [OBJ_EVENT_GFX_KINDLER]                  = &gObjectEventGraphicsInfo_Kindler,
+    [OBJ_EVENT_GFX_POKEFAN_M]                = &gObjectEventGraphicsInfo_PokefanM,
+    [OBJ_EVENT_GFX_POKEFAN_F]                = &gObjectEventGraphicsInfo_PokefanF,
+    [OBJ_EVENT_GFX_RUIN_MANIAC]              = &gObjectEventGraphicsInfo_RuinManiac,
+    [OBJ_EVENT_GFX_SUPER_NERD]               = &gObjectEventGraphicsInfo_SuperNerd,
+    [OBJ_EVENT_GFX_TRIATHLETE_M]             = &gObjectEventGraphicsInfo_TriathleteM,
+    [OBJ_EVENT_GFX_TRIATHLETE_F]             = &gObjectEventGraphicsInfo_TriathleteF,
     [OBJ_EVENT_GFX_SWIMMER_M_WATER]          = &gObjectEventGraphicsInfo_SwimmerMWater,
     [OBJ_EVENT_GFX_SWIMMER_F_WATER]          = &gObjectEventGraphicsInfo_SwimmerFWater,
     [OBJ_EVENT_GFX_SWIMMER_M_LAND]           = &gObjectEventGraphicsInfo_SwimmerMLand,

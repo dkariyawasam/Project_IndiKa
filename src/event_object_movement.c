@@ -473,10 +473,11 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_PROF_OAK                    0x111C
 #define OBJ_EVENT_PAL_TAG_AGATHA                      0x111D
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER                 0x111E
-#define OBJ_EVENT_PAL_TAG_ROCKET_ARIANA               0x111F
-#define OBJ_EVENT_PAL_TAG_POKEMON_RANGER              0x1120
-#define OBJ_EVENT_PAL_TAG_POKEMON_BREEDER             0x1121
-#define OBJ_EVENT_PAL_TAG_BERRY_PLANT                 0x1122
+#define OBJ_EVENT_PAL_TAG_BUG_MANIAC                  0x111F
+#define OBJ_EVENT_PAL_TAG_ROCKET_ARIANA               0x1120
+#define OBJ_EVENT_PAL_TAG_POKEMON_RANGER              0x1121
+#define OBJ_EVENT_PAL_TAG_POKEMON_BREEDER             0x1122
+#define OBJ_EVENT_PAL_TAG_BERRY_PLANT                 0x1123
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -509,6 +510,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_ProfOak,                 OBJ_EVENT_PAL_TAG_PROF_OAK},
     {gObjectEventPal_Agatha,                  OBJ_EVENT_PAL_TAG_AGATHA},
     {gObjectEventPal_BugCatcher,              OBJ_EVENT_PAL_TAG_BUG_CATCHER},
+    {gObjectEventPal_BugManiac,               OBJ_EVENT_PAL_TAG_BUG_MANIAC},
     {gObjectEventPal_RocketAriana,            OBJ_EVENT_PAL_TAG_ROCKET_ARIANA},
     {gObjectEventPal_PokemonRanger,           OBJ_EVENT_PAL_TAG_POKEMON_RANGER},
     {gObjectEventPal_PokemonBreeder,          OBJ_EVENT_PAL_TAG_POKEMON_BREEDER},
