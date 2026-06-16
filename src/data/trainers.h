@@ -7029,6 +7029,16 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_CUSTOM_MOVES(sParty_RocketAdminProton),
     },
+    [TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI] = {
+        .trainerClass = TRAINER_CLASS_CHAMPION,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
+        .trainerName = _("GIOVANNI"),
+        .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_RocketLeagueChampionGiovanni),
+    },
     [TRAINER_TUBER_NOAH] = {
         .trainerClass = TRAINER_CLASS_RS_TUBER_M,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,

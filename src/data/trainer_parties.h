@@ -12330,6 +12330,45 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
     },
 };
 
+static const struct TrainerMonNoItemCustomMoves sParty_RocketLeagueChampionGiovanni[] = {
+    {
+        .iv = 180,
+        .lvl = 41,
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_FAINT_ATTACK, MOVE_SLASH, MOVE_TAUNT, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 180,
+        .lvl = 42,
+        .species = SPECIES_DUGTRIO,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_SAND_TOMB, MOVE_ROCK_TOMB},
+    },
+    {
+        .iv = 180,
+        .lvl = 43,
+        .species = SPECIES_NIDOQUEEN,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_SLUDGE_BOMB},
+    },
+    {
+        .iv = 180,
+        .lvl = 43,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_EARTHQUAKE, MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_SLUDGE_BOMB},
+    },
+    {
+        .iv = 180,
+        .lvl = 44,
+        .species = SPECIES_KANGASKHAN,
+        .moves = {MOVE_DIZZY_PUNCH, MOVE_SHADOW_BALL, MOVE_BRICK_BREAK, MOVE_FAKE_OUT},
+    },
+    {
+        .iv = 180,
+        .lvl = 45,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_TuberNoah[] = {
     {
         .iv = 0,

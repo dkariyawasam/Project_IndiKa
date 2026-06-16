@@ -7,6 +7,7 @@ RocketLeague_Arena_MapScripts::
 RocketLeague_Arena_OnTransition::
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	removeobject LOCALID_ROCKET_LEAGUE_GIOVANNI
 	end
 
 RocketLeague_Arena_OnResume::
@@ -50,6 +51,7 @@ RocketLeague_Arena_EventScript_ReadyPrompt::
 
 RocketLeague_Arena_EventScript_StartRocketBattle::
 	closemessage
+	goto_if_ge VAR_TEMP_3, 4, RocketLeague_Arena_EventScript_BattleGiovanni
 	random 4
 	goto_if_eq VAR_RESULT, 0, RocketLeague_Arena_EventScript_BattlePetrel
 	goto_if_eq VAR_RESULT, 1, RocketLeague_Arena_EventScript_BattleArcher
@@ -63,6 +65,7 @@ RocketLeague_Arena_EventScript_BattlePetrel::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PETREL
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_PetrelDefeat
+	addvar VAR_TEMP_3, 1
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -73,6 +76,7 @@ RocketLeague_Arena_EventScript_BattleArcher::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARCHER
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_ArcherDefeat
+	addvar VAR_TEMP_3, 1
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -83,6 +87,7 @@ RocketLeague_Arena_EventScript_BattleAriana::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARIANA
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_ArianaDefeat
+	addvar VAR_TEMP_3, 1
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
@@ -93,7 +98,19 @@ RocketLeague_Arena_EventScript_BattleProton::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PROTON
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_ProtonDefeat
+	addvar VAR_TEMP_3, 1
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	goto RocketLeague_Arena_EventScript_GiveCoinReward
+
+RocketLeague_Arena_EventScript_BattleGiovanni::
+	call RocketLeague_Arena_EventScript_GiovanniEnter
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_Arena_Text_GiovanniIntro
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	cleartrainerflag TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI
+	trainerbattle_no_intro TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_Text_GiovanniDefeat
+	setvar VAR_TEMP_3, 0
+	removeobject LOCALID_ROCKET_LEAGUE_GIOVANNI
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_AdminMEnter::
@@ -107,6 +124,13 @@ RocketLeague_Arena_EventScript_AdminFEnter::
 	setobjectxyperm LOCALID_ROCKET_LEAGUE_ADMIN_F, 6, 1
 	addobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminEnter
+	waitmovement 0
+	return
+
+RocketLeague_Arena_EventScript_GiovanniEnter::
+	setobjectxyperm LOCALID_ROCKET_LEAGUE_GIOVANNI, 6, 1
+	addobject LOCALID_ROCKET_LEAGUE_GIOVANNI
+	applymovement LOCALID_ROCKET_LEAGUE_GIOVANNI, RocketLeague_Arena_Movement_AdminEnter
 	waitmovement 0
 	return
 
