@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route25_EventScript_Franklin",
+      "script": "Route25_EventScript_BreederTess",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route25_EventScript_Nob",
+      "script": "Route25_EventScript_BreederMira",
       "flag": "0"
     },
     {
@@ -163,7 +163,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_AROMA_LADY_DALIA",
+      "script": "Route25_EventScript_Dalia",
       "flag": "0"
     },
     {
@@ -177,7 +177,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_AROMA_LADY_JOANA",
+      "script": "Route25_EventScript_Joana",
       "flag": "0"
     },
     {
@@ -191,7 +191,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_FISHERMAN_FLINT",
+      "script": "Route25_EventScript_FishermanFlint",
       "flag": "0"
     },
     {
@@ -205,12 +205,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_FISHERMAN_DANA",
+      "script": "Route25_EventScript_FishermanDana",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 41,
       "y": 3,
       "elevation": 3,
@@ -219,7 +219,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_CAMPER_JUSTIN",
+      "script": "Route25_EventScript_ScoutJustin",
       "flag": "0"
     },
     {
@@ -233,7 +233,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_GWEN",
+      "script": "Route25_EventScript_ScoutGwen",
       "flag": "0"
     },
     {
@@ -247,7 +247,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_VALERIE",
+      "script": "Route25_EventScript_ScoutValerie",
       "flag": "0"
     },
     {
@@ -261,7 +261,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_CAMPER_RILEY",
+      "script": "Route25_EventScript_ScoutRiley",
       "flag": "0"
     },
     {
@@ -275,7 +275,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_AROMA_LADY_BLAKE",
+      "script": "Route25_EventScript_Blake",
       "flag": "0"
     },
     {
@@ -289,7 +289,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PKMN_BREEDER_BETHANY",
+      "script": "Route25_EventScript_Bethany",
       "flag": "0"
     }
   ],

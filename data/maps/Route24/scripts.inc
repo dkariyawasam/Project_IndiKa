@@ -1,6 +1,66 @@
 Route24_MapScripts::
 	.byte 0
 
+Route24_EventScript_FishermanCale::
+	trainerbattle_single TRAINER_ROUTE24_FISHERMAN_CALE, Route24_Text_CaleIntro, Route24_Text_CaleDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_FishermanCaleRematch
+	msgbox Route24_Text_CalePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_FishermanCaleRematch::
+	trainerbattle_rematch TRAINER_ROUTE24_FISHERMAN_CALE, Route24_Text_CaleBridgeRematchIntro, Route24_Text_CaleDefeat
+	msgbox Route24_Text_CalePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_TuberNadia::
+	trainerbattle_single TRAINER_ROUTE24_TUBER_NADIA, Route24_Text_NadiaIntro, Route24_Text_NadiaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_TuberNadiaRematch
+	msgbox Route24_Text_NadiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_TuberNadiaRematch::
+	trainerbattle_rematch TRAINER_ROUTE24_TUBER_NADIA, Route24_Text_NadiaRematchIntro, Route24_Text_NadiaDefeat
+	msgbox Route24_Text_NadiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_ScoutKindra::
+	trainerbattle_single TRAINER_ROUTE24_SCOUT_KINDRA, Route24_Text_KindraIntro, Route24_Text_KindraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_ScoutKindraRematch
+	msgbox Route24_Text_KindraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_ScoutKindraRematch::
+	trainerbattle_rematch TRAINER_ROUTE24_SCOUT_KINDRA, Route24_Text_KindraRematchIntro, Route24_Text_KindraDefeat
+	msgbox Route24_Text_KindraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_TriathleteBecky::
+	trainerbattle_single TRAINER_ROUTE24_TRIATHLETE_BECKY, Route24_Text_BeckyIntro, Route24_Text_BeckyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_TriathleteBeckyRematch
+	msgbox Route24_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_TriathleteBeckyRematch::
+	trainerbattle_rematch TRAINER_ROUTE24_TRIATHLETE_BECKY, Route24_Text_BeckyRematchIntro, Route24_Text_BeckyDefeat
+	msgbox Route24_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_SwimmerNell::
+	trainerbattle_single TRAINER_ROUTE24_SWIMMER_NELL, Route24_Text_NellIntro, Route24_Text_NellDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_SwimmerNellRematch
+	msgbox Route24_Text_NellPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route24_EventScript_SwimmerNellRematch::
+	trainerbattle_rematch TRAINER_ROUTE24_SWIMMER_NELL, Route24_Text_NellRematchIntro, Route24_Text_NellDefeat
+	msgbox Route24_Text_NellPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route24_EventScript_RewardGiver::
 	lock
 	faceplayer

@@ -1,34 +1,44 @@
 Route21_North_Text_RonaldIntro::
-	.string "You want to know if the fish are\n"
-	.string "biting?$"
+	.string "Fish gather where PALLET's quiet\n"
+	.string "water starts to deepen.\p"
+	.string "Keep still, or battle me!$"
 
 Route21_North_Text_RonaldDefeat::
-	.string "Dang!$"
+	.string "Line snapped!$"
 
 Route21_North_Text_RonaldPostBattle::
-	.string "I can't catch anything good.\n"
-	.string "Not one good POKéMON to be had!$"
+	.string "Most people rush south toward\n"
+	.string "CINNABAR.\p"
+	.string "I like the north end. It rewards\n"
+	.string "patience.$"
 
 Route21_North_Text_WadeIntro::
-	.string "I got a big haul!\n"
-	.string "Wanna go for it?$"
+	.string "The ferry stirs up the water\n"
+	.string "when it leaves PALLET.\p"
+	.string "That's when I cast my line!$"
 
 Route21_North_Text_WadeDefeat::
-	.string "Heheh, MAGIKARP just don't make\n"
-	.string "the grade, do they?$"
+	.string "You reeled me in!$"
 
 Route21_North_Text_WadePostBattle::
-	.string "I seem to only catch MAGIKARP!$"
+	.string "A little wake can bring fish up\n"
+	.string "from deeper water.\p"
+	.string "The trick is knowing when the\n"
+	.string "sea is about to move.$"
 
 Route21_North_Text_SpencerIntro::
-	.string "The sea cleanses my body and soul!$"
+	.string "ROUTE 21 starts gentle, then\n"
+	.string "keeps pulling south.\p"
+	.string "I'll match that current!$"
 
 Route21_North_Text_SpencerDefeat::
-	.string "Ayah!$"
+	.string "Swept south!$"
 
 Route21_North_Text_SpencerPostBattle::
-	.string "The sea is great and all, but I\n"
-	.string "like the mountains, too.$"
+	.string "From here you can still imagine\n"
+	.string "PALLET behind you.\p"
+	.string "A few strokes later, it's only\n"
+	.string "you and the water.$"
 
 Route21_North_Text_SeagallopSailorGreeting::
 	.string "Ahoy! Heading for CINNABAR\n"
@@ -49,7 +59,9 @@ Route21_North_Text_FatManNeedPokemon::
 
 Route21_North_Text_AnyaIntro::
 	.string "This stretch links PALLET's quiet\n"
-	.string "shore to the open southern sea.$"
+	.string "shore to the open southern sea.\p"
+	.string "Let's see how you handle the\n"
+	.string "first pull of the route.$"
 
 Route21_North_Text_AnyaRematchIntro::
 	.string "Back on ROUTE 21?\p"
@@ -61,7 +73,9 @@ Route21_North_Text_AnyaDefeat::
 
 Route21_North_Text_AnyaPostBattle::
 	.string "The north water feels gentler,\n"
-	.string "but it still leads to CINNABAR.$"
+	.string "but it still leads to CINNABAR.\p"
+	.string "Every current here knows where\n"
+	.string "it's going.$"
 
 @ Below is the battle text for the Cue Ball that was on Route 21 in Gen 1.
 @ This trainer wasnt used in Gen 3 so their text goes unused/untranslated

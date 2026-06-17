@@ -1,12 +1,17 @@
 Route16_Text_LaoIntro::
-    .string "What do you want?$"
+    .string "CYCLING ROAD starts here.\p"
+    .string "You either control the slope,\n"
+    .string "or the slope controls you.$"
 
 Route16_Text_LaoDefeat::
-    .string "Don't you dare laugh!$"
+    .string "Tch.\n"
+    .string "You kept your line.$"
 
 Route16_Text_LaoPostBattle::
-    .string "We like just hanging here.\n"
-    .string "What's it to you?$"
+    .string "CELADON's polished streets end\n"
+    .string "fast out here.\p"
+    .string "That's why we hang around.\n"
+    .string "The road has a rougher pulse.$"
 
 Route16_Text_KojiIntro::
     .string "Nice BIKE!\n"
@@ -19,14 +24,17 @@ Route16_Text_KojiPostBattle::
     .string "Forget it, who needs your BIKE!$"
 
 Route16_Text_LukeIntro::
-    .string "Come out and play, little mouse!$"
+    .string "At the top of the slope,\n"
+    .string "everyone acts brave.\p"
+    .string "Let's see if you are.$"
 
 Route16_Text_LukeDefeat::
-    .string "You little rat!$"
+    .string "You didn't wobble!$"
 
 Route16_Text_LukePostBattle::
-    .string "I hate losing!\n"
-    .string "Get out of my face!$"
+    .string "The road south pulls at you.\p"
+    .string "First lesson: don't fight the\n"
+    .string "slope. Steer through it.$"
 
 Route16_Text_HideoIntro::
     .string "Hey, you just bumped me!$"
@@ -41,30 +49,32 @@ Route16_Text_HideoPostBattle::
     .string "FUCHSIA going along the coast.$"
 
 Route16_Text_CamronIntro::
-    .string "I'm feeling hungry and mean!\n"
-    .string "I need a punching bag!$"
+    .string "I warm up before the downhill\n"
+    .string "run.\p"
+    .string "A battle gets the blood moving.$"
 
 Route16_Text_CamronDefeat::
-    .string "Bad, bad, bad!$"
+    .string "That warmed me up too much!$"
 
 Route16_Text_CamronPostBattle::
-    .string "If I'm going to have POKéMON, they\n"
-    .string "may as well be ferocious.\p"
-    .string "I'd use them to leave my enemies\n"
-    .string "in tatters.$"
+    .string "A tough team helps when the\n"
+    .string "road is crowded.\p"
+    .string "Everyone wants space before\n"
+    .string "the slope takes over.$"
 
 Route16_Text_RubenIntro::
-    .string "Hey, there!\n"
-    .string "Let's have ourselves a good time!$"
+    .string "West of CELADON, the air\n"
+    .string "changes.\p"
+    .string "Smells like rubber, grass,\n"
+    .string "and trouble.$"
 
 Route16_Text_RubenDefeat::
-    .string "Don't make me mad!$"
+    .string "You rode right through!$"
 
 Route16_Text_RubenPostBattle::
-    .string "I get my kicks by harassing people\n"
-    .string "with my stinking POKéMON.\p"
-    .string "They're great for startling people.\n"
-    .string "And, they bite, too.$"
+    .string "ROUTE 16 is a staging line.\p"
+    .string "Once you roll south, CYCLING\n"
+    .string "ROAD takes over.$"
 
 Route16_Text_CyclingRoadSign::
     .string "Enjoy the slope!\n"
@@ -75,35 +85,42 @@ Route16_Text_RouteSign::
     .string "CELADON CITY - FUCHSIA CITY$"
 
 Route16_Text_JedIntro::
-    .string "JED: Our love knows no bounds.\n"
-    .string "We're in love and we show it!$"
+    .string "JED: LEA and I are watching\n"
+    .string "trainers choose between CELADON\l"
+    .string "and the slope.\p"
+    .string "Show us a proper battle!$"
 
 Route16_Text_JedDefeat::
-    .string "JED: Oh, no!\n"
-    .string "My love has seen me as a loser!$"
+    .string "JED: That was a proper battle!$"
 
 Route16_Text_JedPostBattle::
-    .string "JED: Listen, LEA.\n"
-    .string "You need to focus less on me.$"
+    .string "JED: CELADON makes for a fine\n"
+    .string "date, but this view is better.\p"
+    .string "You can feel KANTO stretching\n"
+    .string "out from here.$"
 
 Route16_Text_JedNotEnoughMons::
-    .string "JED: You have just one POKéMON?\n"
-    .string "Is there no love in your heart?$"
+    .string "JED: This is a DOUBLE BATTLE.\p"
+    .string "Bring two POKéMON, then show us\n"
+    .string "your teamwork.$"
 
 Route16_Text_LeaIntro::
-    .string "LEA: Sometimes, the intensity of\n"
-    .string "our love scares me.$"
+    .string "LEA: The city noise fades right\n"
+    .string "here.\p"
+    .string "Let's make some battle noise\n"
+    .string "instead!$"
 
 Route16_Text_LeaDefeat::
-    .string "LEA: Ohh! But JED looks cool\n"
-    .string "even in a loss!$"
+    .string "LEA: That echoed down the road!$"
 
 Route16_Text_LeaPostBattle::
-    .string "LEA: Ehehe, I'm sorry.\n"
-    .string "JED is so cool.$"
+    .string "LEA: Trainers come from CELADON\n"
+    .string "with clean shoes.\p"
+    .string "They leave ROUTE 16 ready for\n"
+    .string "dust and downhill speed.$"
 
 Route16_Text_LeaNotEnoughMons::
-    .string "LEA: Oh, you don't have two\n"
-    .string "POKéMON with you?\p"
-    .string "Doesn't it feel lonely for you or\n"
-    .string "your POKéMON?$"
+    .string "LEA: We need a pair against\n"
+    .string "a pair.\p"
+    .string "Come back with two POKéMON,\n"
+    .string "okay?$"

@@ -11,6 +11,78 @@ Route23_OnTransition::
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_3F, 0
 	end
 
+Route23_EventScript_Wayne::
+	trainerbattle_single TRAINER_ROUTE23_HIKER_WAYNE, Route23_Text_WayneIntro, Route23_Text_WayneDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_WayneRematch
+	msgbox Route23_Text_WaynePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_WayneRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_HIKER_WAYNE, Route23_Text_WayneRematchIntro, Route23_Text_WayneDefeat
+	msgbox Route23_Text_WaynePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_Chester::
+	trainerbattle_single TRAINER_ROUTE23_BIRD_KEEPER_CHESTER, Route23_Text_ChesterIntro, Route23_Text_ChesterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_ChesterRematch
+	msgbox Route23_Text_ChesterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_ChesterRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_BIRD_KEEPER_CHESTER, Route23_Text_ChesterRematchIntro, Route23_Text_ChesterDefeat
+	msgbox Route23_Text_ChesterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_Ernest::
+	trainerbattle_single TRAINER_ROUTE23_BIKER_ERNEST, Route23_Text_ErnestIntro, Route23_Text_ErnestDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_ErnestRematch
+	msgbox Route23_Text_ErnestPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_ErnestRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_BIKER_ERNEST, Route23_Text_ErnestRematchIntro, Route23_Text_ErnestDefeat
+	msgbox Route23_Text_ErnestPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_Zeek::
+	trainerbattle_single TRAINER_ROUTE23_BIKER_ZEEK, Route23_Text_ZeekIntro, Route23_Text_ZeekDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_ZeekRematch
+	msgbox Route23_Text_ZeekPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_ZeekRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_BIKER_ZEEK, Route23_Text_ZeekRematchIntro, Route23_Text_ZeekDefeat
+	msgbox Route23_Text_ZeekPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_Corey::
+	trainerbattle_single TRAINER_ROUTE23_CUE_BALL_COREY, Route23_Text_CoreyIntro, Route23_Text_CoreyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_CoreyRematch
+	msgbox Route23_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_CoreyRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_CUE_BALL_COREY, Route23_Text_CoreyRematchIntro, Route23_Text_CoreyDefeat
+	msgbox Route23_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_Malik::
+	trainerbattle_single TRAINER_ROUTE23_BIKER_MALIK, Route23_Text_MalikIntro, Route23_Text_MalikDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_MalikRematch
+	msgbox Route23_Text_MalikPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_MalikRematch::
+	trainerbattle_rematch TRAINER_ROUTE23_BIKER_MALIK, Route23_Text_MalikRematchIntro, Route23_Text_MalikDefeat
+	msgbox Route23_Text_MalikPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route23_EventScript_CascadeBadgeGuard::
 	lock
 	faceplayer

@@ -1,15 +1,75 @@
 Route22_MapScripts::
 	.byte 0
 
+Route22_EventScript_Jeff::
+	trainerbattle_single TRAINER_ROUTE22_SCOUT_JEFF, Route22_Text_JeffIntro, Route22_Text_JeffDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_JeffRematch
+	msgbox Route22_Text_JeffPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_JeffRematch::
+	trainerbattle_rematch TRAINER_ROUTE22_SCOUT_JEFF, Route22_Text_JeffRematchIntro, Route22_Text_JeffDefeat
+	msgbox Route22_Text_JeffPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_Alicia::
+	trainerbattle_single TRAINER_ROUTE22_SCOUT_ALICIA, Route22_Text_AliciaIntro, Route22_Text_AliciaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_AliciaRematch
+	msgbox Route22_Text_AliciaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_AliciaRematch::
+	trainerbattle_rematch TRAINER_ROUTE22_SCOUT_ALICIA, Route22_Text_AliciaRematchIntro, Route22_Text_AliciaDefeat
+	msgbox Route22_Text_AliciaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_Jaren::
+	trainerbattle_single TRAINER_ROUTE22_BIKER_JAREN, Route22_Text_JarenIntro, Route22_Text_JarenDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_JarenRematch
+	msgbox Route22_Text_JarenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_JarenRematch::
+	trainerbattle_rematch TRAINER_ROUTE22_BIKER_JAREN, Route22_Text_JarenRematchIntro, Route22_Text_JarenDefeat
+	msgbox Route22_Text_JarenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_Robert::
+	trainerbattle_single TRAINER_ROUTE22_BIRD_KEEPER_ROBERT, Route22_Text_RobertIntro, Route22_Text_RobertDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_RobertRematch
+	msgbox Route22_Text_RobertPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_RobertRematch::
+	trainerbattle_rematch TRAINER_ROUTE22_BIRD_KEEPER_ROBERT, Route22_Text_RobertRematchIntro, Route22_Text_RobertDefeat
+	msgbox Route22_Text_RobertPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_Jeremy::
+	trainerbattle_single TRAINER_ROUTE22_HIKER_JEREMY, Route22_Text_JeremyIntro, Route22_Text_JeremyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_JeremyRematch
+	msgbox Route22_Text_JeremyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route22_EventScript_JeremyRematch::
+	trainerbattle_rematch TRAINER_ROUTE22_HIKER_JEREMY, Route22_Text_JeremyRematchIntro, Route22_Text_JeremyDefeat
+	msgbox Route22_Text_JeremyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route22_EventScript_RunningTriathleteF::
-	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
+	trainerbattle_single TRAINER_ROUTE22_TRIATHLETE_RINA, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route22_EventScript_RunningTriathleteFRematch
 	msgbox Route22_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route22_EventScript_RunningTriathleteFRematch::
-	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_F, Route22_Text_RunningTriathleteFIntro, Route22_Text_RunningTriathleteFDefeat
+	trainerbattle_rematch TRAINER_ROUTE22_TRIATHLETE_RINA, Route22_Text_RunningTriathleteFRematchIntro, Route22_Text_RunningTriathleteFDefeat
 	msgbox Route22_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
 	end
 

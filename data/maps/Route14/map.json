@@ -93,7 +93,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route13_EventScript_Lola",
+      "script": "EventScript_RouteTrainer_ROUTE14_TRIATHLETE_LOLA",
       "flag": "0"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_YOUNGSTER_DESTIN",
+      "script": "EventScript_RouteTrainer_ROUTE14_SCOUT_DESTIN",
       "flag": "0"
     },
     {
@@ -121,7 +121,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route9_EventScript_Brice",
+      "script": "EventScript_RouteTrainer_ROUTE14_HIKER_BRICE",
       "flag": "0"
     },
     {
@@ -135,7 +135,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_IRENE",
+      "script": "EventScript_RouteTrainer_ROUTE14_TRIATHLETE_IRENE",
       "flag": "0"
     }
   ],

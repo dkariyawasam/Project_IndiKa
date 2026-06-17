@@ -52,7 +52,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route24_EventScript_Cale",
+      "script": "Route24_EventScript_FishermanCale",
       "flag": "0"
     },
     {
@@ -80,7 +80,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_LASS_NADIA",
+      "script": "Route24_EventScript_TuberNadia",
       "flag": "0"
     },
     {
@@ -94,7 +94,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_KINDRA",
+      "script": "Route24_EventScript_ScoutKindra",
       "flag": "0"
     },
     {
@@ -108,7 +108,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_PICNICKER_BECKY",
+      "script": "Route24_EventScript_TriathleteBecky",
       "flag": "0"
     },
     {
@@ -122,7 +122,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "WatersEdge_EventScript_Route24SwimmerNell",
+      "script": "Route24_EventScript_SwimmerNell",
       "flag": "0"
     }
   ],

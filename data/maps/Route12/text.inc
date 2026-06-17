@@ -1,25 +1,29 @@
 Route12_Text_NedIntro::
-    .string "Yeah!\n"
-    .string "I got a bite here!$"
+    .string "The water gets quiet south\n"
+    .string "of LAVENDER.\p"
+    .string "Quiet water makes every tug\n"
+    .string "feel huge!$"
 
 Route12_Text_NedDefeat::
-    .string "Tch!\n"
-    .string "Just a small fry…$"
+    .string "That was the big one!$"
 
 Route12_Text_NedPostBattle::
-    .string "Hang on!\n"
-    .string "My line's snagged!$"
+    .string "Some folks hurry over the bridge.\p"
+    .string "FISHERMEN know this route is\n"
+    .string "better when you wait.$"
 
 Route12_Text_ChipIntro::
-    .string "Be patient.\n"
-    .string "Fishing is a waiting game.$"
+    .string "On ROUTE 12, patience is\n"
+    .string "as important as bait.\p"
+    .string "Let's see if you can wait out\n"
+    .string "a battle too.$"
 
 Route12_Text_ChipDefeat::
-    .string "That one got away!$"
+    .string "You broke the line!$"
 
 Route12_Text_ChipPostBattle::
-    .string "With a better ROD, I could catch\n"
-    .string "better POKéMON…$"
+    .string "The bridge shadows draw all sorts\n"
+    .string "of POKéMON beneath them.$"
 
 Route12_Text_JustinIntro::
     .string "I'm searching for a MOON STONE.\n"
@@ -46,17 +50,18 @@ Route12_Text_LucaPostBattle::
     .string "should zap sea POKéMON.$"
 
 Route12_Text_HankIntro::
-    .string "The FISHING FOOL versus POKéMON\n"
-    .string "KID!$"
+    .string "Sportfishing means reading the\n"
+    .string "water, the wind, and your\l"
+    .string "POKéMON.\p"
+    .string "Can you read a battle?$"
 
 Route12_Text_HankDefeat::
-    .string "Touch too much!$"
+    .string "You read me clean!$"
 
 Route12_Text_HankPostBattle::
-    .string "I guess you get to be good at\n"
-    .string "what you like.\p"
-    .string "Well, you beat me at POKéMON,\n"
-    .string "but you can't top me at fishing.$"
+    .string "A bite can come from either side\n"
+    .string "of the bridge.\p"
+    .string "That's why I keep looking around.$"
 
 Route12_Text_ElliotIntro::
     .string "I love fishing, don't get me wrong.\p"
@@ -71,17 +76,18 @@ Route12_Text_ElliotPostBattle::
     .string "Losing doesn't bug me anymore.$"
 
 Route12_Text_AndrewIntro::
-    .string "What's catching?\p"
-    .string "You never know what you could\n"
-    .string "catch!$"
+    .string "The farther south you go,\n"
+    .string "the more the route opens up.\p"
+    .string "Let's see what your team can\n"
+    .string "catch before ROUTE 13!$"
 
 Route12_Text_AndrewDefeat::
-    .string "Lost it!$"
+    .string "You landed it!$"
 
 Route12_Text_AndrewPostBattle::
-    .string "What, MAGIKARP?\p"
-    .string "I catch them all the time, sure.\n"
-    .string "But, boy are they wimpy.$"
+    .string "ROUTE 12 is long enough that\n"
+    .string "the water changes mood before\l"
+    .string "you reach the bottom.$"
 
 Route12_Text_RouteSign::
     .string "ROUTE 12 \n"
@@ -91,35 +97,36 @@ Route12_Text_SportfishingArea::
     .string "SPORTFISHING AREA$"
 
 Route12_Text_JesIntro::
-    .string "JES: If I win, I'm going to\n"
-    .string "propose to GIA.$"
+    .string "JES: GIA and I train together\n"
+    .string "on this long bridge.\p"
+    .string "If our rhythm is right,\n"
+    .string "we can't lose!$"
 
 Route12_Text_JesDefeat::
-    .string "JES: Oh, please, why couldn't you\n"
-    .string "let us win?$"
+    .string "JES: Our rhythm slipped!$"
 
 Route12_Text_JesPostBattle::
-    .string "JES: Oh, GIA, forgive me,\n"
-    .string "my love!$"
+    .string "JES: Training beside the water\n"
+    .string "helps us keep pace together.$"
 
 Route12_Text_JesNotEnoughMons::
-    .string "JES: GIA and I, we'll be\n"
-    .string "together forever.\p"
-    .string "We won't battle unless you have\n"
-    .string "two POKéMON of your own.$"
+    .string "JES: GIA and I battle as a pair.\p"
+    .string "Bring two POKéMON if you want\n"
+    .string "to face us properly.$"
 
 Route12_Text_GiaIntro::
-    .string "GIA: Hey, JES…\p"
-    .string "If we win, I'll marry you!$"
+    .string "GIA: JES, match my pace!\p"
+    .string "This bridge is our training lane,\n"
+    .string "and we're not slowing down!$"
 
 Route12_Text_GiaDefeat::
-    .string "GIA: Oh, but why?$"
+    .string "GIA: We lost the pace!$"
 
 Route12_Text_GiaPostBattle::
-    .string "GIA: JES, you silly!\n"
-    .string "You ruined this!$"
+    .string "GIA: The route is narrow,\n"
+    .string "but it teaches teamwork.$"
 
 Route12_Text_GiaNotEnoughMons::
-    .string "GIA: I can't bear to battle\n"
-    .string "without my JES!\p"
-    .string "Don't you have one more POKéMON?$"
+    .string "GIA: JES and I battle together.\p"
+    .string "Come back when you have two\n"
+    .string "POKéMON ready.$"
