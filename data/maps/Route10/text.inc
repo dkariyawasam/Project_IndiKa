@@ -1,78 +1,84 @@
 Route10_Text_MarkIntro::
-    .string "Wow, you came all the way here?\n"
-    .string "Maybe you're a POKéMANIAC, too?\l"
-    .string "Want to see my collection?$"
+    .string "The water by the POWER PLANT\n"
+    .string "pulls in sudden bursts.\p"
+    .string "If you can read currents,\n"
+    .string "you can read battles!$"
 
 Route10_Text_MarkDefeat::
-    .string "Humph.\n"
-    .string "I'm not angry!$"
+    .string "You read that current\n"
+    .string "better than I did!$"
 
 Route10_Text_MarkPostBattle::
-    .string "I have more rare POKéMON at home!$"
+    .string "When ROCK TUNNEL rumbles,\n"
+    .string "even the water seems to buzz.$"
 
 Route10_Text_ClarkIntro::
-    .string "Ha-hahah-ah-ha!$"
+    .string "These cliffs make every step\n"
+    .string "feel heavier.\p"
+    .string "Let's see how steady your\n"
+    .string "footing is!$"
 
 Route10_Text_ClarkDefeat::
-    .string "Ha-haha!\n"
-    .string "Not laughing!\l"
-    .string "Ha-hay fever! Haha-ha-choo!$"
+    .string "That's steady footing!$"
 
 Route10_Text_ClarkPostBattle::
-    .string "Haha-ha-choo!\n"
-    .string "Ha-choo!\l"
-    .string "Snort! Snivel!$"
+    .string "The best hikers listen to\n"
+    .string "loose stones before they step.$"
 
 Route10_Text_HermanIntro::
-    .string "Hi, kid!\n"
-    .string "Want to see my POKéMON?$"
+    .string "I sail whenever I can, but\n"
+    .string "ROUTE 10 has its own tide.\p"
+    .string "The cliffs steer the wind\n"
+    .string "like a harbor wall!$"
 
 Route10_Text_HermanDefeat::
-    .string "Oh, no!\n"
-    .string "My POKéMON!$"
+    .string "You kept your balance!$"
 
 Route10_Text_HermanPostBattle::
-    .string "I don't like you.\n"
-    .string "I don't like anyone better than me!$"
+    .string "Follow the wind north and\n"
+    .string "you'll feel the bridge air.\p"
+    .string "Follow it south and things\n"
+    .string "turn quiet near LAVENDER.$"
 
 Route10_Text_HeidiIntro::
-    .string "I've been out at a POKéMON GYM\n"
-    .string "a few times.\p"
-    .string "…But I always lose.$"
+    .string "I came to train between the\n"
+    .string "tunnel and the water.\p"
+    .string "A route with two tempers\n"
+    .string "makes a trainer better!$"
 
 Route10_Text_HeidiDefeat::
-    .string "Ohh!\n"
-    .string "After all my training!$"
+    .string "Two tempers beat one!$"
 
 Route10_Text_HeidiPostBattle::
-    .string "I noticed some POKéMANIACS\n"
-    .string "prowling around.\p"
-    .string "Can you imagine? Them?\n"
-    .string "Up here in the mountains?$"
+    .string "The tunnel teaches patience.\n"
+    .string "The water teaches movement.\p"
+    .string "You need both out here.$"
 
 Route10_Text_TrentIntro::
-    .string "Ah!\n"
-    .string "This mountain air is delicious!$"
+    .string "The air near a cave mouth\n"
+    .string "changes before the path does.\p"
+    .string "Breathe deep, then battle!$"
 
 Route10_Text_TrentDefeat::
     .string "That cleared my head!$"
 
 Route10_Text_TrentPostBattle::
-    .string "I feel bloated on mountain air!$"
+    .string "ROCK TUNNEL air is damp,\n"
+    .string "cold, and full of echoes.$"
 
 Route10_Text_CarolIntro::
-    .string "I'm feeling a bit faint.\n"
-    .string "I haven't hiked in some time.$"
+    .string "The road bends so much here\n"
+    .string "that I keep losing the wind.\p"
+    .string "Battle me while I find it!$"
 
 Route10_Text_CarolDefeat::
-    .string "I'm too tired.\n"
-    .string "I wasn't up for it.$"
+    .string "There it goes again!$"
 
 Route10_Text_CarolPostBattle::
-    .string "The POKéMON here in the mountains\n"
-    .string "are so chunky…\p"
-    .string "I wish there were pink POKéMON\n"
-    .string "with a floral pattern!$"
+    .string "North, the air opens toward\n"
+    .string "CERULEAN.\p"
+    .string "South, it settles quietly\n"
+    .string "over LAVENDER.$"
 
 Route10_Text_RockTunnelDetourToLavender::
     .string "ROCK TUNNEL\n"

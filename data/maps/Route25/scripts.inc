@@ -9,50 +9,194 @@ Route25_EventScript_Man::
 	msgbox Route25_Text_AreYouHereAlone, MSGBOX_NPC
 	end
 
+Route25_EventScript_BreederTess::
+	trainerbattle_single TRAINER_ROUTE25_BREEDER_TESS, Route25_Text_TessIntro, Route25_Text_TessDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_BreederTessRematch
+	msgbox Route25_Text_TessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_BreederTessRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_BREEDER_TESS, Route25_Text_TessRematchIntro, Route25_Text_TessDefeat
+	msgbox Route25_Text_TessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_BreederMira::
+	trainerbattle_single TRAINER_ROUTE25_BREEDER_MIRA, Route25_Text_MiraIntro, Route25_Text_MiraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_BreederMiraRematch
+	msgbox Route25_Text_MiraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_BreederMiraRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_BREEDER_MIRA, Route25_Text_MiraRematchIntro, Route25_Text_MiraDefeat
+	msgbox Route25_Text_MiraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route25_EventScript_FishermanTommy::
-	trainerbattle_single TRAINER_FISHERMAN_TOMMY, Route25_Text_FishermanTommyIntro, Route25_Text_FishermanTommyDefeat
+	trainerbattle_single TRAINER_ROUTE25_FISHERMAN_TOMMY, Route25_Text_FishermanTommyIntro, Route25_Text_FishermanTommyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanTommyRematch
 	msgbox Route25_Text_FishermanTommyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_FishermanTommyRematch::
-	trainerbattle_rematch TRAINER_FISHERMAN_TOMMY, Route25_Text_FishermanTommyRematchIntro, Route25_Text_FishermanTommyDefeat
+	trainerbattle_rematch TRAINER_ROUTE25_FISHERMAN_TOMMY, Route25_Text_FishermanTommyRematchIntro, Route25_Text_FishermanTommyDefeat
 	msgbox Route25_Text_FishermanTommyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_FishermanTylor::
-	trainerbattle_single TRAINER_FISHERMAN_TYLOR, Route25_Text_FishermanTylorIntro, Route25_Text_FishermanTylorDefeat
+	trainerbattle_single TRAINER_ROUTE25_FISHERMAN_TYLOR, Route25_Text_FishermanTylorIntro, Route25_Text_FishermanTylorDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanTylorRematch
 	msgbox Route25_Text_FishermanTylorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_FishermanTylorRematch::
-	trainerbattle_rematch TRAINER_FISHERMAN_TYLOR, Route25_Text_FishermanTylorRematchIntro, Route25_Text_FishermanTylorDefeat
+	trainerbattle_rematch TRAINER_ROUTE25_FISHERMAN_TYLOR, Route25_Text_FishermanTylorRematchIntro, Route25_Text_FishermanTylorDefeat
 	msgbox Route25_Text_FishermanTylorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_RunningTriathleteM::
-	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
+	trainerbattle_single TRAINER_ROUTE25_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_RunningTriathleteMRematch
 	msgbox Route25_Text_RunningTriathleteMPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_RunningTriathleteMRematch::
-	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_M, Route25_Text_RunningTriathleteMIntro, Route25_Text_RunningTriathleteMDefeat
+	trainerbattle_rematch TRAINER_ROUTE25_TRIATHLETE_M, Route25_Text_RunningTriathleteMRematchIntro, Route25_Text_RunningTriathleteMDefeat
 	msgbox Route25_Text_RunningTriathleteMPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_RunningTriathleteF::
-	trainerbattle_single TRAINER_RUNNING_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
+	trainerbattle_single TRAINER_ROUTE25_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_RunningTriathleteFRematch
 	msgbox Route25_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_RunningTriathleteFRematch::
-	trainerbattle_rematch TRAINER_RUNNING_TRIATHLETE_F, Route25_Text_RunningTriathleteFIntro, Route25_Text_RunningTriathleteFDefeat
+	trainerbattle_rematch TRAINER_ROUTE25_TRIATHLETE_F, Route25_Text_RunningTriathleteFRematchIntro, Route25_Text_RunningTriathleteFDefeat
 	msgbox Route25_Text_RunningTriathleteFPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_Dalia::
+	trainerbattle_single TRAINER_ROUTE25_AROMA_LADY_DALIA, Route25_Text_DaliaIntro, Route25_Text_DaliaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_DaliaRematch
+	msgbox Route25_Text_DaliaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_DaliaRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_AROMA_LADY_DALIA, Route25_Text_DaliaRematchIntro, Route25_Text_DaliaDefeat
+	msgbox Route25_Text_DaliaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_Joana::
+	trainerbattle_single TRAINER_ROUTE25_AROMA_LADY_JOANA, Route25_Text_JoanaIntro, Route25_Text_JoanaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_JoanaRematch
+	msgbox Route25_Text_JoanaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_JoanaRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_AROMA_LADY_JOANA, Route25_Text_JoanaRematchIntro, Route25_Text_JoanaDefeat
+	msgbox Route25_Text_JoanaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanFlint::
+	trainerbattle_single TRAINER_ROUTE25_FISHERMAN_FLINT, Route25_Text_FlintIntro, Route25_Text_FlintDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanFlintRematch
+	msgbox Route25_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanFlintRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_FISHERMAN_FLINT, Route25_Text_FlintBridgeRematchIntro, Route25_Text_FlintDefeat
+	msgbox Route25_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanDana::
+	trainerbattle_single TRAINER_ROUTE25_FISHERMAN_DANA, Route25_Text_DanaIntro, Route25_Text_DanaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_FishermanDanaRematch
+	msgbox Route25_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_FishermanDanaRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_FISHERMAN_DANA, Route25_Text_DanaRematchIntro, Route25_Text_DanaDefeat
+	msgbox Route25_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutJustin::
+	trainerbattle_single TRAINER_ROUTE25_SCOUT_JUSTIN, Route25_Text_JustinIntro, Route25_Text_JustinDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_ScoutJustinRematch
+	msgbox Route25_Text_JustinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutJustinRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_SCOUT_JUSTIN, Route25_Text_JustinRematchIntro, Route25_Text_JustinDefeat
+	msgbox Route25_Text_JustinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutGwen::
+	trainerbattle_single TRAINER_ROUTE25_SCOUT_GWEN, Route25_Text_GwenIntro, Route25_Text_GwenDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_ScoutGwenRematch
+	msgbox Route25_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutGwenRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_SCOUT_GWEN, Route25_Text_GwenRematchIntro, Route25_Text_GwenDefeat
+	msgbox Route25_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutValerie::
+	trainerbattle_single TRAINER_ROUTE25_SCOUT_VALERIE, Route25_Text_ValerieIntro, Route25_Text_ValerieDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_ScoutValerieRematch
+	msgbox Route25_Text_ValeriePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutValerieRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_SCOUT_VALERIE, Route25_Text_ValerieRematchIntro, Route25_Text_ValerieDefeat
+	msgbox Route25_Text_ValeriePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutRiley::
+	trainerbattle_single TRAINER_ROUTE25_SCOUT_RILEY, Route25_Text_RileyIntro, Route25_Text_RileyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_ScoutRileyRematch
+	msgbox Route25_Text_RileyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_ScoutRileyRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_SCOUT_RILEY, Route25_Text_RileyRematchIntro, Route25_Text_RileyDefeat
+	msgbox Route25_Text_RileyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_Blake::
+	trainerbattle_single TRAINER_ROUTE25_AROMA_LADY_BLAKE, Route25_Text_BlakeIntro, Route25_Text_BlakeDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_BlakeRematch
+	msgbox Route25_Text_BlakePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_BlakeRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_AROMA_LADY_BLAKE, Route25_Text_BlakeRematchIntro, Route25_Text_BlakeDefeat
+	msgbox Route25_Text_BlakePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_Bethany::
+	trainerbattle_single TRAINER_ROUTE25_BREEDER_BETHANY, Route25_Text_BethanyIntro, Route25_Text_BethanyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_BethanyRematch
+	msgbox Route25_Text_BethanyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_BethanyRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_BREEDER_BETHANY, Route25_Text_BethanyRematchIntro, Route25_Text_BethanyDefeat
+	msgbox Route25_Text_BethanyPostBattle, MSGBOX_AUTOCLOSE
 	end

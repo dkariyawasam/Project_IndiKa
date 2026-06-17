@@ -1,15 +1,16 @@
 Route15_Text_KindraIntro::
-    .string "I just got some POKéMON in trades.\n"
-    .string "Can I try them out on you?$"
+    .string "FUCHSIA is close, but don't rush\n"
+    .string "the last stretch.\p"
+    .string "A SCOUT checks the rough grass\n"
+    .string "before stepping through!$"
 
 Route15_Text_KindraDefeat::
-    .string "Not good enough!$"
+    .string "You checked it better!$"
 
 Route15_Text_KindraPostBattle::
-    .string "You can't change the nickname of\n"
-    .string "any POKéMON you get in a trade.\p"
-    .string "Only the Original TRAINER can get\n"
-    .string "the nickname changed.$"
+    .string "Between the forest path, the road,\n"
+    .string "and FUCHSIA's gate, ROUTE 15 has\l"
+    .string "more choices than it first shows.$"
 
 Route15_Text_BeckyIntro::
     .string "You look gentle, so I think I can\n"
@@ -24,88 +25,97 @@ Route15_Text_BeckyPostBattle::
     .string "ugly and mean!$"
 
 Route15_Text_EdwinIntro::
-    .string "When I whistle, I can summon bird\n"
-    .string "POKéMON.$"
+    .string "Bird POKéMON love watching the\n"
+    .string "road open toward FUCHSIA.\p"
+    .string "Mine spotted you first!$"
 
 Route15_Text_EdwinDefeat::
-    .string "Ow!\n"
-    .string "That's tragic!$"
+    .string "They spotted you, but couldn't\n"
+    .string "stop you!$"
 
 Route15_Text_EdwinPostBattle::
-    .string "Maybe I'm not cut out for battles.\n"
-    .string "I'm not the right type, I guess.$"
+    .string "The closer you get to FUCHSIA,\n"
+    .string "the more the sky feels busy.\p"
+    .string "Birds, travelers, trainers...\n"
+    .string "everyone's moving.$"
 
 Route15_Text_ChesterIntro::
-    .string "Hmm? My birds are shivering!\n"
-    .string "You're good, aren't you?$"
+    .string "My birds get jumpy near the\n"
+    .string "forest edge.\p"
+    .string "Something about this route keeps\n"
+    .string "them alert!$"
 
 Route15_Text_ChesterDefeat::
-    .string "Just as I thought!$"
+    .string "They were right to be alert!$"
 
 Route15_Text_ChesterPostBattle::
-    .string "This is so obvious, you should know\n"
-    .string "this, but…\p"
-    .string "Moves like EARTHQUAKE and FISSURE\n"
-    .string "have no effect on bird POKéMON.$"
+    .string "Bird keepers listen for changes.\p"
+    .string "On ROUTE 15, the wind sounds\n"
+    .string "different near the trees.$"
 
 Route15_Text_GraceIntro::
-    .string "Oh, you're a little cutie!\n"
-    .string "So like a darling POKéMON!$"
+    .string "I use this long road for finishing\n"
+    .string "sprints.\p"
+    .string "Don't blink when I take off!$"
 
 Route15_Text_GraceDefeat::
-    .string "You looked so cute, too!$"
+    .string "You had the faster finish!$"
 
 Route15_Text_GracePostBattle::
-    .string "I forgive you.\n"
-    .string "I can take it.\l"
-    .string "I'm a big girl now.$"
+    .string "The final run into FUCHSIA feels\n"
+    .string "great when your breathing is\l"
+    .string "steady.$"
 
 Route15_Text_OliviaIntro::
-    .string "I raise POKéMON for protection\n"
-    .string "because I live alone.$"
+    .string "I train where the road gets busy,\n"
+    .string "then quiet, then busy again.\p"
+    .string "That rhythm is perfect!$"
 
 Route15_Text_OliviaDefeat::
-    .string "POKéMON isn't about winning or\n"
-    .string "losing for me.$"
+    .string "You broke my rhythm!$"
 
 Route15_Text_OliviaPostBattle::
-    .string "I love having my POKéMON greet me\n"
-    .string "when I get home.\p"
-    .string "It's so reassuring.$"
+    .string "A TRIATHLETE has to adapt.\p"
+    .string "ROUTE 15 gives you road, grass,\n"
+    .string "and city edge all at once.$"
 
 Route15_Text_ErnestIntro::
-    .string "Hey, kid! C'mon!\n"
-    .string "I just got these off some loser!$"
+    .string "This last run before FUCHSIA is\n"
+    .string "all grit and open throttle.\p"
+    .string "Let's see if you can hold it!$"
 
 Route15_Text_ErnestDefeat::
-    .string "Why not?$"
+    .string "You held it!$"
 
 Route15_Text_ErnestPostBattle::
-    .string "Life's too short.\n"
-    .string "It's cool to live as an outlaw.\l"
-    .string "TEAM ROCKET RULES!$"
+    .string "This road is rough enough without\n"
+    .string "acting tough.\p"
+    .string "The ground does that for you.$"
 
 Route15_Text_AlexIntro::
-    .string "Fork over all your cash when you\n"
-    .string "lose to me, kid!$"
+    .string "Coming from FUCHSIA?\n"
+    .string "Then you should know rough roads.\p"
+    .string "Show me!$"
 
 Route15_Text_AlexDefeat::
-    .string "That can't be true!$"
+    .string "You know them well enough!$"
 
 Route15_Text_AlexPostBattle::
-    .string "I was just joking about the money.\n"
-    .string "Don't take me all serious.$"
+    .string "BIKERS don't need smooth streets.\p"
+    .string "Give us gravel, ruts, and room\n"
+    .string "to move.$"
 
 Route15_Text_CeliaIntro::
-    .string "What's cool and happening?\n"
-    .string "Trading POKéMON!$"
+    .string "Everyone hurries toward FUCHSIA,\n"
+    .string "but I like stopping by the grass.\p"
+    .string "The road feels alive here!$"
 
 Route15_Text_CeliaDefeat::
-    .string "I said trade!$"
+    .string "You kept moving!$"
 
 Route15_Text_CeliaPostBattle::
-    .string "I trade POKéMON with my friends\n"
-    .string "all the time.$"
+    .string "ROUTE 15 is busy, but the grass\n"
+    .string "still has its own rhythm.$"
 
 Route15_Text_YazminIntro::
     .string "Want to play with my POKéMON?$"
@@ -121,32 +131,36 @@ Route15_Text_RouteSign::
     .string "West to FUCHSIA CITY$"
 
 Route15_Text_MyaIntro::
-    .string "MYA: You're perfect.\n"
+    .string "MYA: This road toughens balance\n"
+    .string "and timing.\p"
     .string "Help me train my little brother?$"
 
 Route15_Text_MyaDefeat::
-    .string "MYA: RON, you have to focus!\n"
-    .string "Concentrate on what you're doing!$"
+    .string "MYA: RON, watch your footing!\n"
+    .string "This route punishes drift.$"
 
 Route15_Text_MyaPostBattle::
-    .string "MYA: Okay, we'll turn it up.\n"
-    .string "I'll add to our training menu!$"
+    .string "MYA: We'll keep using ROUTE 15.\p"
+    .string "If RON can handle this road,\n"
+    .string "he can handle anything.$"
 
 Route15_Text_MyaNotEnoughMons::
     .string "MYA: Do you want to challenge us?\n"
     .string "You'll need two POKéMON, though.$"
 
 Route15_Text_RonIntro::
-    .string "RON: My sister gets scary when we\n"
-    .string "lose.$"
+    .string "RON: My sister says this road\n"
+    .string "builds character.\p"
+    .string "I think it builds sore feet.$"
 
 Route15_Text_RonDefeat::
-    .string "RON: Oh, no, no…\n"
-    .string "Sis, I'm sorry!$"
+    .string "RON: Oh, no...\n"
+    .string "I slipped again!$"
 
 Route15_Text_RonPostBattle::
-    .string "RON: Oh, bleah…\n"
-    .string "I wish I had a nice sister…$"
+    .string "RON: FUCHSIA is so close.\p"
+    .string "Maybe if I run there fast enough,\n"
+    .string "training will be over.$"
 
 Route15_Text_RonNotEnoughMons::
     .string "RON: Did you want to battle with\n"
