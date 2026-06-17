@@ -18,9 +18,10 @@ Route3_Text_ColtonRematchIntro::
 	.string "I saw you in VIRIDIAN FOREST!$"
 
 Route3_Text_BenRematchIntro::
-	.string "Hi! I like shorts!\n"
-	.string "They're comfy and easy to wear!\p"
-	.string "You should be wearing shorts, too!$"
+	.string "Hi!\n"
+	.string "Back on the rocky trail?\p"
+	.string "Let's see how much stronger your\n"
+	.string "partners are now!$"
 
 Route3_Text_JaniceRematchIntro::
 	.string "Excuse me!\n"
@@ -36,8 +37,9 @@ Route3_Text_SallyRematchIntro::
 	.string "It intrigues me so!$"
 
 Route3_Text_CalvinRematchIntro::
-	.string "Hey! What's wrong with you?\n"
-	.string "You're still not wearing shorts!$"
+	.string "Hey!\n"
+	.string "Back to test your partners on\n"
+	.string "ROUTE 3 again?$"
 
 Route3_Text_JamesRematchIntro::
 	.string "I'll battle you with the POKéMON\n"
@@ -720,15 +722,14 @@ Route25_Text_DanRematchIntro::
 	.string "the S.S. ANNE at VERMILION CITY.$"
 
 Route25_Text_FlintRematchIntro::
-	.string "I'm a cool guy.\n"
-	.string "I've got a girlfriend!\p"
-	.string "I'll show her how cool I am for\n"
-	.string "sure this time!$"
+	.string "The current shifted again.\p"
+	.string "Let's see if your battle rhythm\n"
+	.string "shifted too!$"
 
 Route25_Text_KelseyRematchIntro::
 	.string "Hi!\n"
-	.string "My boyfriend is cool!\l"
-	.string "My conditioning's good today!$"
+	.string "I've been training in the cape\n"
+	.string "wind. My footing is better now!$"
 
 Route25_Text_ChadRematchIntro::
 	.string "I had this feeling…\n"
@@ -747,8 +748,9 @@ Route25_Text_NobRematchIntro::
 	.string "Have you seen his collection?$"
 
 Route25_Text_WayneRematchIntro::
-	.string "You're going to see BILL again?\n"
-	.string "First, we battle!$"
+	.string "Heading back to the research\n"
+	.string "cottage?\p"
+	.string "First, test yourself against me!$"
 
 Route24_Text_ShaneRematchIntro::
 	.string "I saw your feat from the grass!$"

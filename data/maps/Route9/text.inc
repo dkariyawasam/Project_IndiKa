@@ -1,15 +1,15 @@
 Route9_Text_AliciaIntro::
-    .string "You have POKéMON with you!\n"
-    .string "You're mine!$"
+    .string "ROCK TUNNEL is just ahead.\p"
+    .string "Show me you're ready for a dark,\n"
+    .string "rocky road!$"
 
 Route9_Text_AliciaDefeat::
-    .string "You deceived me…$"
+    .string "You're ready.$"
 
 Route9_Text_AliciaPostBattle::
-    .string "The tunnel coming up is pitch-black\n"
-    .string "inside.\p"
-    .string "You'll need FLASH to get through\n"
-    .string "there.$"
+    .string "The tunnel ahead is dark and rough.\p"
+    .string "Bring steady POKéMON and take your\n"
+    .string "time in there.$"
 
 Route9_Text_ChrisIntro::
     .string "Who's that walking there with those\n"
