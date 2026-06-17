@@ -23,6 +23,16 @@
       "map": "MAP_CINNABAR_ISLAND",
       "offset": -24,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE18",
+      "offset": 24,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE20",
+      "offset": 24,
+      "direction": "down"
     }
   ],
   "object_events": [

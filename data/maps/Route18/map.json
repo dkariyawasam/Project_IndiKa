@@ -16,21 +16,31 @@
   "connections": [
     {
       "map": "MAP_ROUTE17",
-      "offset": 0,
+      "offset": 48,
       "direction": "up"
     },
     {
       "map": "MAP_FUCHSIA_CITY",
       "offset": -10,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE21_NORTH",
+      "offset": -30,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE21_SOUTH",
+      "offset": -24,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 46,
-      "y": 14,
+      "x": 71,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -43,8 +53,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 41,
-      "y": 15,
+      "x": 89,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -57,8 +67,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 39,
-      "y": 12,
+      "x": 64,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -71,8 +81,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 40,
-      "y": 13,
+      "x": 87,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -85,7 +95,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 45,
+      "x": 93,
       "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -99,7 +109,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 52,
+      "x": 100,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -113,14 +123,14 @@
   ],
   "warp_events": [
     {
-      "x": 41,
+      "x": 89,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 48,
+      "x": 96,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
@@ -131,7 +141,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 37,
+      "x": 85,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -139,7 +149,7 @@
     },
     {
       "type": "sign",
-      "x": 52,
+      "x": 100,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

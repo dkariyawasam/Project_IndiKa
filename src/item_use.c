@@ -927,14 +927,37 @@ void ItemUse_SetQuestLogEvent(u8 eventId, struct Pokemon *pokemon, u16 itemId, u
 
 static void ItemUseOnFieldCB_CascadeBoard(u8 taskId)
 {
+    ClearPlayerHeldMovementAndUnfreezeObjectEvents();
+    UnlockPlayerFieldControls();
     gFieldEffectArguments[0] = PARTY_SIZE;
     FieldEffectStart(FLDEFF_USE_SURF);
     DestroyTask(taskId);
 }
 
+bool8 CanUseCascadeBoardOnField(void)
+{
+    s16 x, y;
+    u8 behavior;
+
+    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    behavior = MapGridGetMetatileBehaviorAt(x, y);
+
+    if (MetatileBehavior_IsFastWater(behavior) == TRUE)
+        return FALSE;
+    if (IsPlayerFacingSurfableFishableWater() == TRUE)
+        return TRUE;
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        return FALSE;
+    if (MetatileBehavior_IsSurfable(behavior) == TRUE
+     && MetatileBehavior_IsSurfable(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == FALSE)
+        return TRUE;
+
+    return FALSE;
+}
+
 void ItemUseOutOfBattle_CascadeBoard(u8 taskId)
 {
-    if (SetUpFieldMove_CascadeBoard() == TRUE)
+    if (CanUseCascadeBoardOnField() == TRUE)
     {
         sItemUseOnFieldCB = ItemUseOnFieldCB_CascadeBoard;
         SetUpItemUseOnFieldCallback(taskId);

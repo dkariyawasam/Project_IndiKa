@@ -6,6 +6,7 @@
 #include "decompress.h"
 #include "event_scripts.h"
 #include "event_object_movement.h"
+#include "field_effect.h"
 #include "field_player_avatar.h"
 #include "graphics.h"
 #include "help_system.h"
@@ -31,6 +32,7 @@
 #include "strings.h"
 #include "teachy_tv.h"
 #include "tm_case.h"
+#include "constants/field_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
 #include "constants/quest_log.h"
@@ -2030,6 +2032,14 @@ bool8 UseRegisteredKeyItemOnField(void)
     {
         if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
         {
+            if (gSaveBlock1Ptr->registeredItem == ITEM_CASCADE_BOARD
+             && CanUseCascadeBoardOnField() == TRUE)
+            {
+                gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem;
+                gFieldEffectArguments[0] = PARTY_SIZE;
+                FieldEffectStart(FLDEFF_USE_SURF);
+                return TRUE;
+            }
             LockPlayerFieldControls();
             FreezeObjectEvents();
             HandleEnforcedLookDirectionOnPlayerStopMoving();

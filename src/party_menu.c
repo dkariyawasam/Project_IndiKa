@@ -6342,11 +6342,7 @@ static void FieldCallback_CascadeBoard(void)
 
 bool8 SetUpFieldMove_CascadeBoard(void)
 {
-    s16 x, y;
-
-    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
-    if (MetatileBehavior_IsFastWater(MapGridGetMetatileBehaviorAt(x, y)) != TRUE
-     && IsPlayerFacingSurfableFishableWater() == TRUE)
+    if (CanUseCascadeBoardOnField() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_CascadeBoard;

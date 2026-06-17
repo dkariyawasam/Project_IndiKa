@@ -1221,7 +1221,7 @@ bool8 IsPlayerFacingSurfableFishableWater(void)
         return FALSE;
 }
 
-bool8 MetatileAtCoordsIsWaterTile(s16 x, s16 y)
+static bool8 MetatileAtCoordsIsWaterTile(s16 x, s16 y)
 {
     return TestMetatileAttributeBit(MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_TERRAIN), TILE_TERRAIN_WATER);
 }
