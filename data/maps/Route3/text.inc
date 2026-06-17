@@ -17,18 +17,16 @@ Route3_Text_ColtonPostBattle::
 
 Route3_Text_BenIntro::
     .string "Hi!\n"
-    .string "I like shorts!\p"
-    .string "They're delightfully comfy and\n"
-    .string "easy to wear!$"
+    .string "This rocky trail is perfect for\n"
+    .string "getting stronger!$"
 
 Route3_Text_BenDefeat::
     .string "I don't believe it!$"
 
 Route3_Text_BenPostBattle::
-    .string "Are you using a POKéMON CENTER's\n"
-    .string "PC for storing your POKéMON?\p"
-    .string "Each BOX can hold up to\n"
-    .string "30 POKéMON.$"
+    .string "MT. MOON is close now.\p"
+    .string "If you train here first, the cave\n"
+    .string "feels a lot less scary.$"
 
 Route3_Text_JaniceIntro::
     .string "Excuse me!\n"
@@ -64,16 +62,18 @@ Route3_Text_SallyPostBattle::
     .string "letting TRAINERS see you.$"
 
 Route3_Text_CalvinIntro::
-    .string "Hey! You're not wearing shorts!\n"
-    .string "What's wrong with you?$"
+    .string "Hey!\n"
+    .string "This trail is my favorite place\n"
+    .string "to test new partners!$"
 
 Route3_Text_CalvinDefeat::
     .string "Lost!\n"
     .string "Lost! Lost!$"
 
 Route3_Text_CalvinPostBattle::
-    .string "I always wear shorts, even in\n"
-    .string "winter. That's my policy.$"
+    .string "The rocks make everyone slow down.\p"
+    .string "That makes it easier to spot a\n"
+    .string "TRAINER who wants a battle.$"
 
 Route3_Text_JamesIntro::
     .string "I'll battle you with the POKéMON\n"
