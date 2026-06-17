@@ -499,7 +499,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerM = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_2,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -518,7 +518,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_2,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -537,7 +537,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_3,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -556,7 +556,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLady = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_4,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -2029,7 +2029,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = {    \
     .affineAnims = gDummySpriteAffineAnimTable,                             \
 }
 
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSLOT_NPC_DYNAMIC, sPicTable_BugManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSLOT_NPC_BESPOKE_5, sPicTable_BugManiac);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Burglar, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Burglar);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Collector, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Collector);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Expert, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Expert);
