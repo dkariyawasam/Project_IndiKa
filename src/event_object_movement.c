@@ -2226,6 +2226,12 @@ static u8 LoadObjectEventPaletteForGraphicsInfo(const struct ObjectEventGraphics
         PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
         return graphicsInfo->paletteSlot;
     }
+    else if (graphicsInfo->paletteSlot >= PALSLOT_NPC_1_REFLECTION
+          && graphicsInfo->paletteSlot <= PALSLOT_NPC_4_REFLECTION)
+    {
+        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+        return graphicsInfo->paletteSlot;
+    }
     else if (graphicsInfo->paletteSlot == PALSLOT_NPC_DYNAMIC)
     {
         return LoadDynamicObjectEventPalette(graphicsInfo->paletteTag);
