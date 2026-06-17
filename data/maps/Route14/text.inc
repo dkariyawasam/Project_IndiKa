@@ -1,13 +1,15 @@
 Route14_Text_CarterIntro::
-    .string "You need to use TMs to teach good\n"
-    .string "moves to POKéMON.$"
+    .string "The rough road opens into big sky\n"
+    .string "out here.\p"
+    .string "My bird POKéMON can feel it!$"
 
 Route14_Text_CarterDefeat::
-    .string "Not good enough quite yet.$"
+    .string "Not enough lift!$"
 
 Route14_Text_CarterPostBattle::
-    .string "You have some HMs, right? POKéMON\n"
-    .string "can't forget those moves easily.$"
+    .string "Bird keepers like open roads.\p"
+    .string "You can watch the ground and the\n"
+    .string "sky at the same time.$"
 
 Route14_Text_MitchIntro::
     .string "My bird POKéMON should be ready\n"
@@ -53,18 +55,17 @@ Route14_Text_MarlonPostBattle::
     .string "I don't want to raise anything else.$"
 
 Route14_Text_DonaldIntro::
-    .string "Have you heard the legend of the\n"
-    .string "winged mirages?$"
+    .string "I follow bird calls between\n"
+    .string "ROUTE 13 and FUCHSIA.\p"
+    .string "This stretch has the best echoes!$"
 
 Route14_Text_DonaldDefeat::
-    .string "Why?\n"
-    .string "Why'd I lose?$"
+    .string "Your call was clearer!$"
 
 Route14_Text_DonaldPostBattle::
-    .string "Well, the winged mirages are the\n"
-    .string "legendary bird POKéMON.\p"
-    .string "There are three of them: ARTICUNO,\n"
-    .string "ZAPDOS, and MOLTRES.$"
+    .string "The trees break up the wind here.\p"
+    .string "Bird POKéMON learn quick turns\n"
+    .string "between the gusts.$"
 
 Route14_Text_BennyIntro::
     .string "I'm not into it, but okay.\n"
@@ -91,29 +92,32 @@ Route14_Text_LukasPostBattle::
     .string "What do you want still?$"
 
 Route14_Text_IsaacIntro::
-    .string "I need to burn some time.\n"
-    .string "Shut up and battle.$"
+    .string "This road's rough enough to rattle\n"
+    .string "your teeth.\p"
+    .string "Let's see if it rattles your team!$"
 
 Route14_Text_IsaacDefeat::
-    .string "What?\n"
-    .string "You!?$"
+    .string "Tch!\n"
+    .string "You didn't shake loose!$"
 
 Route14_Text_IsaacPostBattle::
-    .string "Raising POKéMON is a drag, man.$"
+    .string "I like roads that fight back.\p"
+    .string "Smooth pavement makes everyone\n"
+    .string "think they're tough.$"
 
 Route14_Text_GeraldIntro::
-    .string "We ride out here because of the\n"
-    .string "wide-open spaces.$"
+    .string "We ride out here because the road\n"
+    .string "stays wild.\p"
+    .string "No clean lanes, no easy turns!$"
 
 Route14_Text_GeraldDefeat::
     .string "Wipeout!\n"
-    .string "This road still has teeth.$"
+    .string "You found the clean line.$"
 
 Route14_Text_GeraldPostBattle::
-    .string "It's cool you made your POKéMON so\n"
-    .string "strong.\p"
-    .string "Might is right!\n"
-    .string "And you know it!$"
+    .string "ROUTE 14 bites back if you get\n"
+    .string "careless.\p"
+    .string "That's what makes it worth riding.$"
 
 Route14_Text_MalikIntro::
     .string "POKéMON battle?\n"

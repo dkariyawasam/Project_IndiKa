@@ -1,13 +1,15 @@
 Route19_Text_RichardIntro::
-    .string "I have to exercise and warm up\n"
-    .string "before going out for a swim.$"
+    .string "I warm up on the FUCHSIA shore\n"
+    .string "before taking on the current.\p"
+    .string "A battle should do it!$"
 
 Route19_Text_RichardDefeat::
-    .string "All warmed up!$"
+    .string "Now I'm really warmed up!$"
 
 Route19_Text_RichardPostBattle::
-    .string "Thanks, kid!\n"
-    .string "I'm ready for a swim.$"
+    .string "ROUTE 19 looks calm from land,\n"
+    .string "but the water pulls hard once\l"
+    .string "you're out in it.$"
 
 Route19_Text_ReeceIntro::
     .string "Wait! Slow down!\n"
@@ -22,15 +24,18 @@ Route19_Text_ReecePostBattle::
     .string "They sting so painfully.$"
 
 Route19_Text_MatthewIntro::
-    .string "I love swimming!\n"
-    .string "What about you?$"
+    .string "I love swimming south from\n"
+    .string "FUCHSIA.\p"
+    .string "The whole sea opens up once\n"
+    .string "the shore disappears.$"
 
 Route19_Text_MatthewDefeat::
-    .string "Belly flop!$"
+    .string "Washed out!$"
 
 Route19_Text_MatthewPostBattle::
-    .string "I can beat even marine POKéMON\n"
-    .string "at swimming.$"
+    .string "The ferry cuts a clean line\n"
+    .string "through here.\p"
+    .string "I try to stay out of its wake.$"
 
 Route19_Text_DouglasIntro::
     .string "What's beyond the horizon?$"
@@ -43,27 +48,32 @@ Route19_Text_DouglasPostBattle::
     .string "yonder!$"
 
 Route19_Text_DavidIntro::
-    .string "I tried diving for POKéMON, but it\n"
-    .string "was a no-go.$"
+    .string "I tried diving near the rocks,\n"
+    .string "but the current shoved me back.\p"
+    .string "Battling on the surface is safer.$"
 
 Route19_Text_DavidDefeat::
-    .string "Help!$"
+    .string "Sent drifting!$"
 
 Route19_Text_DavidPostBattle::
-    .string "I guess you have to fish for sea\n"
-    .string "POKéMON.$"
+    .string "If you want fish-shaped POKéMON,\n"
+    .string "bring a ROD.\p"
+    .string "If you want trouble, just splash\n"
+    .string "around out here.$"
 
 Route19_Text_TonyIntro::
-    .string "I look at the sea to forget all\n"
-    .string "the bad things that happened.$"
+    .string "The sea between FUCHSIA and\n"
+    .string "SEAFOAM is never still.\p"
+    .string "Good. Neither am I!$"
 
 Route19_Text_TonyDefeat::
-    .string "Ooh!\n"
-    .string "Traumatic!$"
+    .string "Caught in the undertow!$"
 
 Route19_Text_TonyPostBattle::
-    .string "I'm looking at the sea to forget\n"
-    .string "the bad thing that happened!$"
+    .string "Every wave here seems to push\n"
+    .string "you toward SEAFOAM.\p"
+    .string "You have to decide for yourself\n"
+    .string "whether to follow it.$"
 
 Route19_Text_AnyaIntro::
     .string "Oh, I just love your ride!\n"
@@ -79,14 +89,15 @@ Route19_Text_AnyaPostBattle::
 
 Route19_Text_AliceIntro::
     .string "Swimming's great!\n"
-    .string "Sunburns aren't!$"
+    .string "Ferry spray in your face isn't!$"
 
 Route19_Text_AliceDefeat::
-    .string "Shocker!$"
+    .string "Splashed out!$"
 
 Route19_Text_AlicePostBattle::
-    .string "My boyfriend wanted to swim to\n"
-    .string "SEAFOAM ISLANDS.$"
+    .string "The route is shorter by ship,\n"
+    .string "but swimming lets you feel the\l"
+    .string "sea change under you.$"
 
 Route19_Text_AxleIntro::
     .string "Ahoy, there!\n"
@@ -101,17 +112,18 @@ Route19_Text_AxlePostBattle::
     .string "Glub, glub…$"
 
 Route19_Text_ConnieIntro::
-    .string "I swam here with my friends…\n"
-    .string "I'm tired…$"
+    .string "I swam down from FUCHSIA with\n"
+    .string "my friends.\p"
+    .string "I'm tired, but not done!$"
 
 Route19_Text_ConnieDefeat::
-    .string "I'm exhausted…$"
+    .string "Now I'm exhausted…$"
 
 Route19_Text_ConniePostBattle::
-    .string "If I were to ride a POKéMON on\n"
-    .string "the sea, I'd like a LAPRAS.\p"
-    .string "LAPRAS is so big, I bet it\n"
-    .string "would keep me dry on water.$"
+    .string "The shore feels far away once\n"
+    .string "you're surrounded by waves.\p"
+    .string "That's why I never swim this\n"
+    .string "route alone.$"
 
 Route19_Text_RouteSign::
     .string "SEA ROUTE 19\n"
@@ -127,37 +139,38 @@ Route19_Text_SeagallopSailorAllAboard::
     .string "We set sail!$"
 
 Route19_Text_LiaIntro::
-    .string "LIA: I'm looking after my brother.\n"
-    .string "He just became a TRAINER.$"
+    .string "LIA: I'm keeping an eye on LUC.\n"
+    .string "ROUTE 19's current is strong.\p"
+    .string "But battling together will help\n"
+    .string "him learn the sea!$"
 
 Route19_Text_LiaDefeat::
-    .string "LIA: That's no way to treat my\n"
-    .string "little brother!$"
+    .string "LIA: The sea got away from us!$"
 
 Route19_Text_LiaPostBattle::
-    .string "LIA: Do you have a younger\n"
-    .string "brother?\p"
-    .string "I hope you're teaching him all\n"
-    .string "sorts of things.$"
+    .string "LIA: LUC is braver when he can\n"
+    .string "see FUCHSIA behind us.\p"
+    .string "Next time, maybe he'll lead us\n"
+    .string "toward SEAFOAM.$"
 
 Route19_Text_LiaNotEnoughMons::
-    .string "LIA: I want to battle together\n"
-    .string "with my little brother.\p"
+    .string "LIA: We only battle together.\p"
     .string "Don't you have two POKéMON?$"
 
 Route19_Text_LucIntro::
-    .string "LUC: My big sis taught me how\n"
-    .string "to swim and train POKéMON.$"
+    .string "LUC: My big sis says the current\n"
+    .string "is easier if we move together.\p"
+    .string "Our POKéMON do that too!$"
 
 Route19_Text_LucDefeat::
-    .string "LUC: Oh, wow!\n"
-    .string "Someone tougher than my big sis!$"
+    .string "LUC: We got swept back!$"
 
 Route19_Text_LucPostBattle::
-    .string "LUC: My big sis is strong and nice.\n"
-    .string "I think she's awesome!$"
+    .string "LUC: I want to swim all the way\n"
+    .string "to SEAFOAM someday.\p"
+    .string "LIA says I have to read the\n"
+    .string "waves first.$"
 
 Route19_Text_LucNotEnoughMons::
-    .string "LUC: I don't want to if I can't\n"
-    .string "battle you with my big sis.\p"
+    .string "LUC: I battle with LIA!\p"
     .string "Don't you have two POKéMON?$"
