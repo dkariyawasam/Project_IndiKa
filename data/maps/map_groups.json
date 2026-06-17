@@ -144,7 +144,6 @@
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",
     "RocketLeague_Lobby",
-    "ThreeIsland_DunsparceTunnel",
     "NavelRock_1F",
     "NavelRock_Summit",
     "NavelRock_Base",
@@ -207,6 +206,7 @@
     "Route14",
     "Route15",
     "Route16",
+    "ViridianChannel",
     "Route17",
     "Route18",
     "Route19",

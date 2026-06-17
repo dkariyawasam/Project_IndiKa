@@ -23,6 +23,11 @@
       "map": "MAP_VIRIDIAN_CITY",
       "offset": -12,
       "direction": "down"
+    },
+    {
+      "map": "MAP_VIRIDIAN_CHANNEL",
+      "offset": 25,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -57,8 +62,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 8,
-      "y": 8,
+      "x": 6,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -85,8 +90,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 17,
-      "y": 40,
+      "x": 21,
+      "y": 54,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -113,8 +118,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 8,
-      "y": 14,
+      "x": 26,
+      "y": 63,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -127,8 +132,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 16,
-      "y": 28,
+      "x": 34,
+      "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -141,8 +146,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 8,
-      "y": 34,
+      "x": 28,
+      "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -155,8 +160,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER",
-      "x": 16,
-      "y": 50,
+      "x": 28,
+      "y": 55,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -169,8 +174,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
-      "x": 8,
-      "y": 58,
+      "x": 33,
+      "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -183,8 +188,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKEMON_RANGER_F",
-      "x": 16,
-      "y": 74,
+      "x": 27,
+      "y": 75,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 1,
