@@ -42,14 +42,15 @@ Route25_Text_FlintPostBattle::
 
 Route25_Text_KelseyIntro::
     .string "Hi!\n"
-    .string "My boyfriend is cool!$"
+    .string "Training by the cape feels so\n"
+    .string "fresh!$"
 
 Route25_Text_KelseyDefeat::
     .string "My conditioning isn't the best…$"
 
 Route25_Text_KelseyPostBattle::
-    .string "I wish my boyfriend was as good\n"
-    .string "as you.$"
+    .string "The sea breeze helps with running,\n"
+    .string "but battling still takes focus.$"
 
 Route25_Text_ChadIntro::
     .string "I had this feeling…\n"
@@ -100,8 +101,8 @@ Route25_Text_NobPostBattle::
     .string "species of POKéMON.$"
 
 Route25_Text_WayneIntro::
-    .string "You're going to see BILL?\n"
-    .string "First, we battle!$"
+    .string "Heading for the research cottage?\p"
+    .string "First, test yourself against me!$"
 
 Route25_Text_WayneDefeat::
     .string "You're something.$"

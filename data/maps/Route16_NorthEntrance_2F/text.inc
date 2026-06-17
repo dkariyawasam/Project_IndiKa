@@ -1,6 +1,6 @@
 Route16_NorthEntrance_2F_Text_OnBikeRideWithGirlfriend::
     .string "I'm on a relaxing ride on my new\n"
-    .string "bike with my girlfriend.$"
+    .string "bike with my riding partner.$"
 
 Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes::
     .string "We're going riding together on our\n"
@@ -44,4 +44,3 @@ Route16_NorthEntrance_2F_Text_ExplainAmuletCoin::
     .string "held by a POKéMON.\p"
     .string "If the POKéMON appears in a winning\n"
     .string "battle, you will earn more money.$"
-
