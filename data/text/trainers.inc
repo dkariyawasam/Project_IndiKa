@@ -167,29 +167,33 @@ Route9_Text_ConnerRematchIntro::
 	.string "Go win, my super BUG POKéMON!$"
 
 Route10_Text_MarkRematchIntro::
-	.string "Wow, you came here again?\n"
-	.string "Maybe you're a POKéMANIAC, too?\l"
-	.string "Want to see my collection?$"
+	.string "Back by the POWER PLANT\n"
+	.string "current?\p"
+	.string "Then let's see who reads\n"
+	.string "the water faster!$"
 
 Route10_Text_ClarkRematchIntro::
-	.string "Ha-hahah-ah-ha!\n"
-	.string "I can't stop sneezing!$"
+	.string "Back on the cliffs?\p"
+	.string "Good. The stones and I\n"
+	.string "are ready for you!$"
 
 Route10_Text_HermanRematchIntro::
-	.string "Hi, kid!\n"
-	.string "Did I show you my POKéMON?$"
+	.string "The wind brought you back?\p"
+	.string "Then let's battle before\n"
+	.string "it changes direction!$"
 
 Route10_Text_HeidiRematchIntro::
-	.string "I went out to a POKéMON GYM again.\p"
-	.string "…But I lost as usual.$"
+	.string "Back between tunnel and water?\p"
+	.string "Good. Let's train both tempers!$"
 
 Route10_Text_TrentRematchIntro::
-	.string "Ah!\n"
-	.string "This mountain air is delicious!\l"
-	.string "It's so good, I can't leave!$"
+	.string "Breathe in that cave air.\p"
+	.string "Now let's see if your team\n"
+	.string "has grown stronger!$"
 
 Route10_Text_CarolRematchIntro::
-	.string "My head is starting to spin.\n"
+	.string "The wind bent back around.\p"
+	.string "So did you! Battle me again!$"
 	.string "I've been hiking for too long…$"
 
 Route11_Text_HugoRematchIntro::
@@ -237,13 +241,14 @@ Route11_Text_DaveRematchIntro::
 	.string "This time, they should win, too.$"
 
 Route12_Text_NedRematchIntro::
-	.string "Yeah!\n"
-	.string "I got a bite, here!\l"
-	.string "Th-this might be the real thing!$"
+	.string "The water went quiet again.\p"
+	.string "That means either a bite...\n"
+	.string "or a rematch!$"
 
 Route12_Text_ChipRematchIntro::
-	.string "You're finally here.\n"
-	.string "Fishing is a waiting game.$"
+	.string "I waited by the same shadow.\p"
+	.string "Looks like patience brought\n"
+	.string "you back.$"
 
 Route12_Text_JustinRematchIntro::
 	.string "Still can't find a MOON STONE…\n"
@@ -256,8 +261,9 @@ Route12_Text_LucaRematchIntro::
 	.string "of the sea, though.$"
 
 Route12_Text_HankRematchIntro::
-	.string "The FISHING FOOL vs. POKéMON KID!\n"
-	.string "Another round, fight!$"
+	.string "I read the wind.\n"
+	.string "I read the water.\p"
+	.string "Now I'll read your rematch.$"
 
 Route12_Text_ElliotRematchIntro::
 	.string "I love fishing, don't get me wrong.\n"
@@ -265,21 +271,22 @@ Route12_Text_ElliotRematchIntro::
 	.string "…It's hard to give up fishing!$"
 
 Route12_Text_AndrewRematchIntro::
-	.string "What's catching?\p"
-	.string "You'll never know unless you beat\n"
-	.string "me!$"
+	.string "Back before ROUTE 13?\p"
+	.string "Good timing.\n"
+	.string "The water just changed mood.$"
 
 Route12_Text_JesRematchIntro::
-	.string "JES: I'll win here today and\n"
-	.string "propose to my GIA.$"
+	.string "JES: GIA, keep the bridge pace!\p"
+	.string "This time we'll stay in rhythm.$"
 
 Route12_Text_GiaRematchIntro::
-	.string "GIA: Hey, JES…\n"
-	.string "I've been waiting a long time now.\p"
-	.string "If we win today, I'll marry you!$"
+	.string "GIA: JES, eyes forward!\p"
+	.string "The rematch starts on my count.$"
 
 Route13_Text_SebastianRematchIntro::
-	.string "My bird POKéMON remember you!$"
+	.string "The wind's up again.\p"
+	.string "My bird POKéMON remember how you\n"
+	.string "handled it last time!$"
 
 Route13_Text_SusieRematchIntro::
 	.string "I want to be the best TRAINER \n"
@@ -298,8 +305,9 @@ Route13_Text_AlmaRematchIntro::
 	.string "bought more CARBOS.$"
 
 Route13_Text_PerryRematchIntro::
-	.string "I'm not going to lose this time.\n"
-	.string "The wind's blowing my way!$"
+	.string "I studied the gusts since our\n"
+	.string "last battle.\p"
+	.string "This time, we'll ride them better!$"
 
 Route13_Text_LolaRematchIntro::
 	.string "Oh, you're back?\p"
@@ -307,19 +315,21 @@ Route13_Text_LolaRematchIntro::
 	.string "sweetie.$"
 
 Route13_Text_SheilaRematchIntro::
-	.string "Can't you forget that you battled\n"
-	.string "with me?$"
+	.string "Back for another rough-ground run?\p"
+	.string "Good. My team's pace has improved!$"
 
 Route13_Text_JaredRematchIntro::
-	.string "What're you starin' at?$"
+	.string "I learned these ruts better.\p"
+	.string "Try keeping up this time!$"
 
 Route13_Text_RobertRematchIntro::
 	.string "I always go with bird POKéMON.\n"
 	.string "I've dedicated myself to them.$"
 
 Route14_Text_CarterRematchIntro::
-	.string "I used TMs to teach good moves\n"
-	.string "to my POKéMON.$"
+	.string "My birds read the open road\n"
+	.string "better now.\p"
+	.string "Let's see if you do too!$"
 
 Route14_Text_MitchRematchIntro::
 	.string "My bird POKéMON should be ready\n"
@@ -336,8 +346,9 @@ Route14_Text_MarlonRematchIntro::
 	.string "the sky! Give it a try.$"
 
 Route14_Text_DonaldRematchIntro::
-	.string "The legend of the winged mirages…\n"
-	.string "You've heard it, right?$"
+	.string "The calls are echoing again.\p"
+	.string "That means my birds are ready\n"
+	.string "for a rematch!$"
 
 Route14_Text_BennyRematchIntro::
 	.string "I'm really not into it, but okay.\n"
@@ -350,12 +361,14 @@ Route14_Text_LukasRematchIntro::
 	.string "Let's go, let's go, let's go!$"
 
 Route14_Text_IsaacRematchIntro::
-	.string "You're here again, huh?\n"
-	.string "Shut up and battle.$"
+	.string "You came back over this rough road?\p"
+	.string "Fine. Let's see if you still hold\n"
+	.string "steady!$"
 
 Route14_Text_GeraldRematchIntro::
-	.string "We've been riding here because of\n"
-	.string "the wide-open spaces.$"
+	.string "I've learned every rut between\n"
+	.string "here and FUCHSIA.\p"
+	.string "Try taking my line now!$"
 
 Route14_Text_MalikRematchIntro::
 	.string "POKéMON battle, right?\n"
@@ -369,8 +382,9 @@ Route14_Text_JanRematchIntro::
 	.string "Let's win for sure this time!$"
 
 Route15_Text_KindraRematchIntro::
-	.string "I'm going to keep battling with the\n"
-	.string "POKéMON I got in trades.$"
+	.string "I marked a better line through\n"
+	.string "the grass.\p"
+	.string "Want to test it with a rematch?$"
 
 Route15_Text_BeckyRematchIntro::
 	.string "You look gentle, so I think I can\n"
@@ -378,157 +392,186 @@ Route15_Text_BeckyRematchIntro::
 	.string "I'll give it one more go!$"
 
 Route15_Text_EdwinRematchIntro::
-	.string "When I whistle, bird POKéMON\n"
-	.string "gather around.\p"
-	.string "They're amazingly cute!$"
+	.string "My birds spotted you again.\p"
+	.string "They remember the way you battled!$"
 
 Route15_Text_ChesterRematchIntro::
-	.string "Hmm? My birds are shivering!\n"
-	.string "Wait, aren't you that TRAINER…$"
+	.string "My birds heard your steps before\n"
+	.string "I did.\p"
+	.string "They're ready this time!$"
 
 Route15_Text_GraceRematchIntro::
-	.string "Oh, you're a little cutie!\n"
-	.string "So like a darling POKéMON!\l"
-	.string "I remember you now!$"
+	.string "Back for another finishing sprint?\p"
+	.string "Good. I saved my best pace for\n"
+	.string "you!$"
 
 Route15_Text_OliviaRematchIntro::
-	.string "I raise POKéMON for protection\n"
-	.string "because I live alone.\p"
-	.string "That hasn't changed.$"
+	.string "I found a better rhythm on this\n"
+	.string "road.\p"
+	.string "Let's see if you can break it\n"
+	.string "again!$"
 
 Route15_Text_ErnestRematchIntro::
-	.string "Hey, kid! C'mon!\n"
-	.string "I got these off some loser!$"
+	.string "Back on the rough run?\p"
+	.string "Then throttle up and battle!$"
 
 Route15_Text_AlexRematchIntro::
-	.string "Fork over all your cash when you\n"
-	.string "lose to me, kid!$"
+	.string "You still know how to handle this\n"
+	.string "road?\p"
+	.string "Prove it again!$"
 
 Route15_Text_CeliaRematchIntro::
-	.string "What's cool and happening?\n"
-	.string "Trading POKéMON, of course.$"
+	.string "Back by the busy grass?\p"
+	.string "Good. Let's see what changed\n"
+	.string "since last time!$"
 
 Route15_Text_YazminRematchIntro::
 	.string "Want to play with my POKéMON\n"
 	.string "again?$"
 
 Route15_Text_MyaRematchIntro::
-	.string "MYA: Hi, we keep meeting,\n"
-	.string "don't we?\p"
-	.string "Help me train my little brother\n"
+	.string "MYA: RON's footing improved.\p"
+	.string "Help me test him on this road\n"
 	.string "again?$"
 
 Route15_Text_RonRematchIntro::
-	.string "RON: My sister's gotten more\n"
-	.string "powerful…$"
+	.string "RON: My sister says I'm better\n"
+	.string "at rough-road battles now.\p"
+	.string "Please don't prove her wrong...$"
 
 Route16_Text_LaoRematchIntro::
-	.string "What do you want?$"
+	.string "Back at the top of CYCLING\n"
+	.string "ROAD?\p"
+	.string "Let's see if you control the\n"
+	.string "slope better this time.$"
 
 Route16_Text_KojiRematchIntro::
 	.string "Nice BIKE!\n"
 	.string "Hand it over quick!$"
 
 Route16_Text_LukeRematchIntro::
-	.string "Come out and play, little mouse.\n"
-	.string "I'll treat you right!$"
+	.string "Still brave at the top of the\n"
+	.string "slope?\p"
+	.string "Good. Prove it again!$"
 
 Route16_Text_HideoRematchIntro::
 	.string "Hey, wait a second!\n"
 	.string "Don't call me and then run away!$"
 
 Route16_Text_CamronRematchIntro::
-	.string "I'm feeling hungry and mean!\n"
-	.string "I really need a punching bag!$"
+	.string "I warmed up for the downhill\n"
+	.string "run again.\p"
+	.string "A rematch should finish the job!$"
 
 Route16_Text_RubenRematchIntro::
-	.string "Hey, there!\n"
-	.string "We'll have ourselves a good time!$"
+	.string "Smell that?\p"
+	.string "Rubber, grass, and another\n"
+	.string "battle on ROUTE 16.$"
 
 Route16_Text_JedRematchIntro::
-	.string "JED: Are you here to see our\n"
-	.string "love, which knows no bounds?$"
+	.string "JED: Back to choose between\n"
+	.string "CELADON and the slope?\p"
+	.string "Show LEA and me another proper\n"
+	.string "battle first!$"
 
 Route16_Text_LeaRematchIntro::
-	.string "LEA: Sometimes, the intensity of\n"
-	.string "our love scares me.$"
+	.string "LEA: The city got quiet again.\p"
+	.string "Let's make ROUTE 16 echo with\n"
+	.string "another battle!$"
 
 Route17_Text_RaulRematchIntro::
-	.string "I told you, there's no getting rich\n"
-	.string "quick in battling kids.$"
+	.string "Back to search the roadside?\p"
+	.string "Battle me before you check what\n"
+	.string "the slope shook loose.$"
 
 Route17_Text_IsaiahRematchIntro::
-	.string "I'm mighty proud of my bod, kiddo.\n"
-	.string "Come on!$"
+	.string "Still holding steady on this\n"
+	.string "downhill road?\p"
+	.string "Show me that stance again!$"
 
 Route17_Text_VirgilRematchIntro::
-	.string "You out for a stroll?$"
+	.string "Heading down toward FUCHSIA\n"
+	.string "again?\p"
+	.string "Then prove your road sense again.$"
 
 Route17_Text_BillyRematchIntro::
-	.string "We're BIKERS!\n"
-	.string "We rule the roads, man!$"
+	.string "We're still BIKERS!\p"
+	.string "And this road still tests every\n"
+	.string "trainer who rolls through.$"
 
 Route17_Text_NikolasRematchIntro::
-	.string "VOLTORB's going to seriously\n"
-	.string "electrify you today!$"
+	.string "VOLTORB's charged from all this\n"
+	.string "motion.\p"
+	.string "Ready for another jolt?$"
 
 Route17_Text_ZeekRematchIntro::
-	.string "I leveled up my POKéMON, but it\n"
-	.string "absolutely won't evolve. Why?$"
+	.string "I trained on the slope again,\n"
+	.string "but evolution is still tricky.\p"
+	.string "Maybe another battle will help!$"
 
 Route17_Text_JamalRematchIntro::
-	.string "Gaah! I really need to exercise\n"
-	.string "and seriously trim some flab!$"
+	.string "Back for another halfway-down\n"
+	.string "workout?\p"
+	.string "Good. My legs were getting lazy!$"
 
 Route17_Text_CoreyRematchIntro::
-	.string "Be a rebel!$"
+	.string "CYCLING ROAD still has its own\n"
+	.string "rules.\p"
+	.string "Let's see if you remember them!$"
 
 Route17_Text_JaxonRematchIntro::
-	.string "Yep, that's a nice BIKE!\n"
-	.string "How's it handle?$"
+	.string "Still riding that BIKE?\p"
+	.string "Show me how it handles in a\n"
+	.string "rematch!$"
 
 Route17_Text_WilliamRematchIntro::
-	.string "Get lost, kid!\n"
-	.string "I'm bushed!$"
+	.string "I just caught my breath.\p"
+	.string "Naturally, you came back for\n"
+	.string "another battle.$"
 
 Route18_Text_WiltonRematchIntro::
-	.string "I've been checking every grassy\n"
-	.string "area for new POKéMON.\p"
-	.string "But it's not always easy…$"
+	.string "Back where CYCLING ROAD throws\n"
+	.string "everyone out?\p"
+	.string "Let's see if your team is still\n"
+	.string "running hot!$"
 
 Route18_Text_RamiroRematchIntro::
-	.string "Koorukukukoo!\n"
-	.string "Is my birdcall getting better?$"
+	.string "Hold your line again.\p"
+	.string "The road is short, so this battle\n"
+	.string "has to be sharp!$"
 
 Route18_Text_JacobRematchIntro::
-	.string "I warned you before, this is my\n"
-	.string "turf!\p"
-	.string "I don't want you coming around.$"
+	.string "Passing through to FUCHSIA again?\p"
+	.string "Then show me you still handle\n"
+	.string "the last stretch.$"
 
 Route19_Text_RichardRematchIntro::
-	.string "I'm almost warmed up to go\n"
-	.string "out for a swim.$"
+	.string "Back at the FUCHSIA shore?\p"
+	.string "Good. I could use another warm-up\n"
+	.string "before facing the current.$"
 
 Route19_Text_ReeceRematchIntro::
 	.string "Wait! Slow down!\n"
 	.string "What if you have a heart attack?$"
 
 Route19_Text_MatthewRematchIntro::
-	.string "I love swimming!\n"
-	.string "I guess you're the surfing type.$"
+	.string "The sea is open again!\p"
+	.string "Let's battle before the ferry wake\n"
+	.string "throws off my rhythm.$"
 
 Route19_Text_DouglasRematchIntro::
 	.string "What's beyond the horizon?\n"
 	.string "Have you seen?$"
 
 Route19_Text_DavidRematchIntro::
-	.string "I tried diving for POKéMON again,\n"
-	.string "but it was a no-go like before.$"
+	.string "Still staying on the surface?\p"
+	.string "Smart. The rocks and currents\n"
+	.string "are rougher than they look.$"
 
 Route19_Text_TonyRematchIntro::
-	.string "I look at the sea to forget all\n"
-	.string "the bad things that happened.\p"
-	.string "…Like losing to you the last time!$"
+	.string "The waves are pushing south,\n"
+	.string "and you're back for more.\p"
+	.string "Let's see who drifts first!$"
 
 Route19_Text_AnyaRematchIntro::
 	.string "You always get to ride your\n"
@@ -537,79 +580,97 @@ Route19_Text_AnyaRematchIntro::
 	.string "Can I have it if I win?$"
 
 Route19_Text_AliceRematchIntro::
-	.string "Swimming's great!\n"
-	.string "Sunburns aren't!$"
+	.string "Swimming's great!\p"
+	.string "Getting sprayed by the ferry\n"
+	.string "twice is less great!$"
 
 Route19_Text_AxleRematchIntro::
 	.string "These waters are treacherous!\n"
 	.string "You shouldn't come back here!$"
 
 Route19_Text_ConnieRematchIntro::
-	.string "I swam here with my friends…\n"
-	.string "I'm tired…\l"
-	.string "Must we really battle again?$"
+	.string "I saved enough energy for one\n"
+	.string "more battle.\p"
+	.string "After that, I'm floating back\n"
+	.string "toward FUCHSIA.$"
 
 Route19_Text_LiaRematchIntro::
-	.string "LIA: You know my brother just\n"
-	.string "became a TRAINER, right?\p"
-	.string "I want to make him better, so I\n"
-	.string "need your help again.$"
+	.string "LIA: LUC is reading the waves\n"
+	.string "better now.\p"
+	.string "Battle us again and you'll see!$"
 
 Route19_Text_LucRematchIntro::
-	.string "LUC: My big sis taught me all\n"
-	.string "about POKéMON.\p"
-	.string "I wonder if I'm better?$"
+	.string "LUC: I watched the current like\n"
+	.string "LIA told me!\p"
+	.string "Now I can battle better too!$"
 
 Route20_Text_BarryRematchIntro::
-	.string "The water is shallow here.\n"
-	.string "There are many people swimming.$"
+	.string "Back in SEAFOAM water?\p"
+	.string "Good. Let's see if you can keep\n"
+	.string "steady twice!$"
 
 Route20_Text_ShirleyRematchIntro::
-	.string "Are you jealous that I'm\n"
-	.string "vacationing on SEAFOAM?$"
+	.string "The current still has teeth.\p"
+	.string "So do I!$"
 
 Route20_Text_TiffanyRematchIntro::
-	.string "I love floating with the fishes\n"
-	.string "here among the waves.$"
+	.string "I drifted back into position.\p"
+	.string "That means it's time for another\n"
+	.string "battle among the waves!$"
 
 Route20_Text_IreneRematchIntro::
-	.string "Were you on vacation, too?$"
+	.string "SEAFOAM is still my turn marker.\p"
+	.string "Try to keep pace this time!$"
 
 Route20_Text_DeanRematchIntro::
-	.string "Check out my physique!\p"
-	.string "It's even more buff than ever\n"
-	.string "before!$"
+	.string "My open-water form is sharper\n"
+	.string "than before.\p"
+	.string "Route 20 keeps improving me!$"
 
 Route20_Text_DarrinRematchIntro::
-	.string "Why are you riding a POKéMON?\n"
-	.string "Haven't you learned to swim yet?$"
+	.string "The water near SEAFOAM still\n"
+	.string "bites back.\p"
+	.string "So let's bite back harder!$"
 
 Route20_Text_RogerRematchIntro::
-	.string "I rode my bird POKéMON here.$"
+	.string "The ferry lane is clear.\p"
+	.string "That leaves plenty of room for\n"
+	.string "our rematch!$"
 
 Route20_Text_NoraRematchIntro::
-	.string "My boyfriend gave me big pearls.\n"
-	.string "And, they've grown bigger!$"
+	.string "The water's still shining today.\p"
+	.string "Let's see if my battle can shine\n"
+	.string "brighter than last time!$"
 
 Route20_Text_MissyRematchIntro::
-	.string "I swam here from CINNABAR ISLAND.\n"
-	.string "It wasn't easy, like I said.$"
+	.string "One lap around SEAFOAM wasn't\n"
+	.string "enough.\p"
+	.string "A rematch is part of training!$"
 
 Route20_Text_MelissaRematchIntro::
-	.string "CINNABAR, in the west, has a LAB\n"
-	.string "for POKéMON.\p"
-	.string "My daddy works there.$"
+	.string "Warm CINNABAR, cold SEAFOAM,\n"
+	.string "and one more battle between them!$"
+
+Route20_Text_MarinerRematchIntro::
+	.string "Currents change before you notice.\p"
+	.string "Let's see if your battle course\n"
+	.string "has changed too!$"
 
 Route21_North_Text_RonaldRematchIntro::
-	.string "You want to know if the fish are\n"
-	.string "biting?$"
+	.string "The north water is quiet again.\p"
+	.string "Let's see if the battle bites\n"
+	.string "before the fish do!$"
 
 Route21_North_Text_WadeRematchIntro::
-	.string "I got a big haul again!\n"
-	.string "Wanna go for it once more?$"
+	.string "The ferry wake brought the fish\n"
+	.string "up again.\p"
+	.string "Maybe it brought you back for a\n"
+	.string "rematch too!$"
 
 Route21_North_Text_SpencerRematchIntro::
-	.string "The sea cleanses my body and soul!$"
+	.string "Still swimming south from PALLET?\p"
+	.string "Good. Let's see if the current\n"
+	.string "made you stronger!$"
 
 @ Unused trainer from RB that had a rematch intro added
 Route21_North_Text_CueBallRematchIntro::
@@ -617,31 +678,39 @@ Route21_North_Text_CueBallRematchIntro::
 	.string "きちまったぜ$"
 
 Route21_South_Text_JackRematchIntro::
-	.string "I caught my POKéMON at sea.\n"
-	.string "And that's where I train them.$"
+	.string "My POKéMON know this whole\n"
+	.string "stretch north of CINNABAR now.\p"
+	.string "Ready to test them again?$"
 
 Route21_South_Text_JeromeRematchIntro::
-	.string "Right now, I'm in another triathlon\n"
-	.string "meet!$"
+	.string "PALLET to CINNABAR is a long\n"
+	.string "training line.\p"
+	.string "A rematch keeps the pace honest!$"
 
 Route21_South_Text_RolandRematchIntro::
-	.string "Ahh!\n"
-	.string "Feel the sun and the wind!$"
+	.string "CINNABAR's breeze is blowing\n"
+	.string "strong again.\p"
+	.string "Let's ride it into a rematch!$"
 
 Route21_South_Text_ClaudeRematchIntro::
-	.string "Hey, cut it out already.\n"
-	.string "You always scare away the fish!$"
+	.string "The CINNABAR current is strange\n"
+	.string "today.\p"
+	.string "If the fish won't bite, maybe\n"
+	.string "you'll battle!$"
 
 Route21_South_Text_NolanRematchIntro::
-	.string "Keep me company till I get a hit.$"
+	.string "Still waiting on a big catch.\p"
+	.string "A rematch will keep the line from\n"
+	.string "feeling too quiet.$"
 
 Route21_North_Text_LilRematchIntro::
-	.string "LIL: Huh? A battle again?\n"
-	.string "IAN, can't you do it alone?$"
+	.string "LIL: IAN and I practised staying\n"
+	.string "together in the current.\p"
+	.string "Let's try another battle!$"
 
 Route21_North_Text_IanRematchIntro::
-	.string "IAN: My sis is still a slob.\n"
-	.string "Help me get her into shape!$"
+	.string "IAN: LIL says we're steadier now.\p"
+	.string "I want to prove it in a rematch!$"
 
 Route25_Text_JoeyRematchIntro::
 	.string "I won't lose while I'm here!$"

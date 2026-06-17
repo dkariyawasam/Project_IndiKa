@@ -140,7 +140,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "EventScript_RouteTrainer_YOUNGSTER_CORDELL",
+      "script": "EventScript_RouteTrainer_ROUTE15_SCOUT_CORDELL",
       "flag": "0"
     },
     {
@@ -168,7 +168,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route10_EventScript_Clark",
+      "script": "EventScript_RouteTrainer_ROUTE15_HIKER_CLARK",
       "flag": "0"
     },
     {
@@ -182,7 +182,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route10_EventScript_Trent",
+      "script": "EventScript_RouteTrainer_ROUTE15_HIKER_TRENT",
       "flag": "0"
     },
     {
@@ -196,7 +196,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route14_EventScript_Lukas",
+      "script": "EventScript_RouteTrainer_ROUTE15_BIKER_LUKAS",
       "flag": "0"
     },
     {
@@ -224,7 +224,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route14_EventScript_Mitch",
+      "script": "EventScript_RouteTrainer_ROUTE15_BIRD_KEEPER_MITCH",
       "flag": "0"
     },
     {
@@ -238,7 +238,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route14_EventScript_Marlon",
+      "script": "EventScript_RouteTrainer_ROUTE15_BIRD_KEEPER_MARLON",
       "flag": "0"
     }
   ],

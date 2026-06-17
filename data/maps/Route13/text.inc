@@ -1,14 +1,15 @@
 Route13_Text_SebastianIntro::
-    .string "My bird POKéMON want to battle\n"
-    .string "with you!$"
+    .string "The wind off SILENCE BRIDGE makes\n"
+    .string "my bird POKéMON restless.\p"
+    .string "They want a battle!$"
 
 Route13_Text_SebastianDefeat::
-    .string "My PIDGEY and PIDGEOTTO combo\n"
-    .string "lost?$"
+    .string "The crosswind carried you instead!$"
 
 Route13_Text_SebastianPostBattle::
-    .string "My POKéMON look happy even though\n"
-    .string "they lost.$"
+    .string "Bird POKéMON love this route.\p"
+    .string "The rough ground keeps people slow,\n"
+    .string "but the sky stays wide open.$"
 
 Route13_Text_SusieIntro::
     .string "I'm told I'm good for a kid.$"
@@ -59,16 +60,17 @@ Route13_Text_AlmaPostBattle::
     .string "POKéMON.$"
 
 Route13_Text_PerryIntro::
-    .string "I'm not going to lose.\n"
-    .string "Not when the wind's blowing my way!$"
+    .string "This bend catches every gust from\n"
+    .string "the bridge.\p"
+    .string "My birds know how to ride it!$"
 
 Route13_Text_PerryDefeat::
-    .string "The wind turned, and you rode it\n"
-    .string "better than I did.$"
+    .string "You cut through the wind!$"
 
 Route13_Text_PerryPostBattle::
-    .string "I'm beat.\n"
-    .string "I guess I'll FLY home.$"
+    .string "A bird keeper learns to read the\n"
+    .string "air before giving a command.\p"
+    .string "ROUTE 13 changes by the minute.$"
 
 Route13_Text_LolaIntro::
     .string "Sure, I'll play with you, sweetie.$"
@@ -82,27 +84,30 @@ Route13_Text_LolaPostBattle::
     .string "female POKéMON?$"
 
 Route13_Text_SheilaIntro::
-    .string "Do you want to battle some\n"
-    .string "POKéMON with me?$"
+    .string "Loose stones, broken grass,\n"
+    .string "awkward turns...\p"
+    .string "Perfect endurance training!$"
 
 Route13_Text_SheilaDefeat::
-    .string "It's over already?$"
+    .string "You kept a better pace!$"
 
 Route13_Text_SheilaPostBattle::
-    .string "I don't know anything about\n"
-    .string "POKéMON actually.\p"
-    .string "The ones I use… I picked them\n"
-    .string "for their looks!$"
+    .string "ROUTE 13 punishes sloppy footwork.\p"
+    .string "If your stride is uneven, your\n"
+    .string "battle rhythm goes with it.$"
 
 Route13_Text_JaredIntro::
-    .string "What're you lookin' at?$"
+    .string "These ruts are rough on tires.\p"
+    .string "If you can handle them, you can\n"
+    .string "handle a battle!$"
 
 Route13_Text_JaredDefeat::
-    .string "Dang!\n"
-    .string "Stripped gears!$"
+    .string "Tch!\n"
+    .string "My wheels slipped!$"
 
 Route13_Text_JaredPostBattle::
-    .string "Get lost!$"
+    .string "ROUTE 13's no smooth ride.\p"
+    .string "That's why I like it.$"
 
 Route13_Text_RobertIntro::
     .string "I always go with bird POKéMON.\n"

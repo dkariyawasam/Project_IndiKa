@@ -142,7 +142,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route25_EventScript_Wayne",
+      "script": "Route23_EventScript_Wayne",
       "flag": "0"
     },
     {
@@ -156,7 +156,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route15_EventScript_Chester",
+      "script": "Route23_EventScript_Chester",
       "flag": "0"
     },
     {
@@ -170,7 +170,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route15_EventScript_Ernest",
+      "script": "Route23_EventScript_Ernest",
       "flag": "0"
     },
     {
@@ -184,7 +184,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route17_EventScript_Zeek",
+      "script": "Route23_EventScript_Zeek",
       "flag": "0"
     },
     {
@@ -198,12 +198,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route17_EventScript_Corey",
+      "script": "Route23_EventScript_Corey",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 16,
       "y": 43,
       "elevation": 3,
@@ -212,7 +212,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route14_EventScript_Malik",
+      "script": "Route23_EventScript_Malik",
       "flag": "0"
     }
   ],
