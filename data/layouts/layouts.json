@@ -496,7 +496,7 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 24,
+      "width": 40,
       "height": 80,
       "border_width": 2,
       "border_height": 2,
@@ -665,7 +665,7 @@
       "id": "LAYOUT_ROUTE16",
       "name": "Route16_Layout",
       "width": 48,
-      "height": 20,
+      "height": 25,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -789,7 +789,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/MtMoon_1F/border.bin",
       "blockdata_filepath": "data/layouts/MtMoon_1F/map.bin"
     },
@@ -2462,28 +2462,16 @@
       "blockdata_filepath": "data/layouts/OneIsland_PokemonCenter_2F/map.bin"
     },
     {
-      "id": "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL",
-      "name": "ThreeIsland_DunsparceTunnel_Layout",
-      "width": 30,
-      "height": 7,
+      "id": "LAYOUT_VIRIDIAN_CHANNEL",
+      "name": "ViridianChannel_Layout",
+      "width": 32,
+      "height": 55,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/ThreeIsland_DunsparceTunnel/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland_DunsparceTunnel/map.bin"
-    },
-    {
-      "id": "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL_DUG_OUT",
-      "name": "ThreeIsland_DunsparceTunnel_DugOut_Layout",
-      "width": 30,
-      "height": 7,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/ThreeIsland_DunsparceTunnel_DugOut/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland_DunsparceTunnel_DugOut/map.bin"
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ViridianChannel/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianChannel/map.bin"
     },
     {
       "id": "LAYOUT_ROCK_TUNNEL_B2F",
