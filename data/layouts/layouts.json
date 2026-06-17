@@ -688,7 +688,7 @@
     {
       "id": "LAYOUT_ROUTE18",
       "name": "Route18_Layout",
-      "width": 60,
+      "width": 108,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -1996,7 +1996,7 @@
     {
       "id": "LAYOUT_ROUTE21_SOUTH",
       "name": "Route21_South_Layout",
-      "width": 24,
+      "width": 92,
       "height": 50,
       "border_width": 2,
       "border_height": 2,
