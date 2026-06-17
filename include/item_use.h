@@ -42,6 +42,7 @@ void Task_UseDigEscapeRopeOnField(u8 taskId);
 u8 CanUseEscapeRopeOnCurrMap(void);
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
 void ItemUseOutOfBattle_CascadeBoard(u8 taskId);
+bool8 CanUseCascadeBoardOnField(void);
 
 
 #endif //GUARD_ITEM_USE_H
