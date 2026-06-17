@@ -23,6 +23,13 @@ enum {
 };
 
 #define PALSLOT_NPC_DYNAMIC 0xF
+// Fixed bespoke NPC palette slots. These keep recurring custom trainer overworlds out of
+// the dynamic sprite palette pool, which is needed by weather and field effects.
+#define PALSLOT_NPC_BESPOKE_1 PALSLOT_NPC_SPECIAL
+#define PALSLOT_NPC_BESPOKE_2 PALSLOT_NPC_SPECIAL_REFLECTION
+#define PALSLOT_NPC_BESPOKE_3 PALSLOT_NPC_1_REFLECTION
+#define PALSLOT_NPC_BESPOKE_4 PALSLOT_NPC_2_REFLECTION
+#define PALSLOT_NPC_BESPOKE_5 PALSLOT_NPC_3_REFLECTION
 
 enum SpinnerRunnerFollowPatterns
 {
