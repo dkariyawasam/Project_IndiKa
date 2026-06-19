@@ -534,7 +534,6 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_TREASURE_BEACH,
         MAPSEC_BOND_BRIDGE,
         MAPSEC_THREE_ISLE_PORT,
-        MAPSEC_THREE_ISLE_PATH,
         MAPSEC_NONE
     },
     [REGIONMAP_SEVII45 - 1] =
@@ -819,7 +818,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_NAVEL_ROCK          - KANTO_MAPSEC_START] = {MAP(MAP_NAVEL_ROCK_EXTERIOR),                   HEAL_LOCATION_NONE},
     [MAPSEC_CINNABAR_VOLCANO            - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_FUCHSIA_FOREST      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_THREE_ISLE_PATH     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)
@@ -911,8 +909,7 @@ static void InitRegionMapType(void)
     {
         sRegionMap->permissions[i] = sRegionMapPermissions[sRegionMap->type][i];
     }
-    if (!FlagGet(FLAG_SYS_SEVII_MAP_123))
-        sRegionMap->permissions[MAPPERM_HAS_SWITCH_BUTTON] = FALSE;
+    sRegionMap->permissions[MAPPERM_HAS_SWITCH_BUTTON] = FALSE;
     region = REGIONMAP_KANTO;
     j = REGIONMAP_KANTO;
     if (gMapHeader.regionMapSectionId >= SEVII_MAPSEC_START)
@@ -1434,12 +1431,7 @@ static void SetRegionMapPlayerIsOn(u8 region)
 static void InitSwitchMapMenu(u8 whichMap, u8 taskId, TaskFunc taskFunc)
 {
     sSwitchMapMenu = AllocZeroed(sizeof(struct SwitchMapMenu));
-    if (FlagGet(FLAG_SYS_SEVII_MAP_4567))
-        sSwitchMapMenu->maxSelection = 3;
-    else if (FlagGet(FLAG_SYS_SEVII_MAP_123))
-        sSwitchMapMenu->maxSelection = 1;
-    else
-        sSwitchMapMenu->maxSelection = 0;
+    sSwitchMapMenu->maxSelection = 0;
     sSwitchMapMenu->cursorSubsprite[0].x = 88;
     sSwitchMapMenu->cursorSubsprite[1].x = 152;
 
@@ -2854,12 +2846,6 @@ static u8 GetMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_SAFFRON_CITY:
         return FlagGet(FLAG_WORLD_MAP_SAFFRON_CITY) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_ONE_ISLAND:
-        return FlagGet(FLAG_WORLD_MAP_ONE_ISLAND) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_TWO_ISLAND:
-        return FlagGet(FLAG_WORLD_MAP_TWO_ISLAND) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_THREE_ISLAND:
-        return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_NONE:
         return MAPSECTYPE_NONE;
     default:
@@ -2909,8 +2895,6 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_CINNABAR_VOLCANO) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_FUCHSIA_FOREST:
         return FlagGet(FLAG_WORLD_MAP_FUCHSIA_FOREST) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_THREE_ISLE_PATH:
-        return FlagGet(FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }

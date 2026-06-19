@@ -1,38 +1,16 @@
 PokemonTower_4F_MapScripts::
 	.byte 0
 
-PokemonTower_4F_EventScript_Paula::
-	trainerbattle_single TRAINER_CHANNELER_PAULA, PokemonTower_4F_Text_PaulaIntro, PokemonTower_4F_Text_PaulaDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_4F_EventScript_PaulaRematch
-	msgbox PokemonTower_4F_Text_PaulaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_4F_EventScript_PaulaRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_PAULA, PokemonTower_4F_Text_PaulaIntro, PokemonTower_4F_Text_PaulaDefeat
-	msgbox PokemonTower_4F_Text_PaulaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_4F_EventScript_Laurel::
-	trainerbattle_single TRAINER_CHANNELER_LAUREL, PokemonTower_4F_Text_LaurelIntro, PokemonTower_4F_Text_LaurelDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_4F_EventScript_LaurelRematch
-	msgbox PokemonTower_4F_Text_LaurelPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_4F_EventScript_LaurelRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_LAUREL, PokemonTower_4F_Text_LaurelIntro, PokemonTower_4F_Text_LaurelDefeat
-	msgbox PokemonTower_4F_Text_LaurelPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_4F_EventScript_Jody::
-	trainerbattle_single TRAINER_CHANNELER_JODY, PokemonTower_4F_Text_JodyIntro, PokemonTower_4F_Text_JodyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_4F_EventScript_JodyRematch
-	msgbox PokemonTower_4F_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_4F_EventScript_JodyRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_JODY, PokemonTower_4F_Text_JodyIntro, PokemonTower_4F_Text_JodyDefeat
-	msgbox PokemonTower_4F_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
+PokemonTower_4F_EventScript_MrFuji::
+	lock
+	faceplayer
+	famechecker FAMECHECKER_MRFUJI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	setflag FLAG_HIDE_TOWER_FUJI
+	clearflag FLAG_HIDE_POKEHOUSE_FUJI
+	setflag FLAG_RESCUED_MR_FUJI
+	msgbox PokemonTower_4F_Text_MrFujiThankYouFollowMe
+	closemessage
+	warp MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE, 4, 7
+	waitstate
+	release
 	end

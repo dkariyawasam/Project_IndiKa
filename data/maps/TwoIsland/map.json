@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_EventScript_Woman",
-      "flag": "FLAG_HIDE_TWO_ISLAND_WOMAN"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -55,7 +55,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_EventScript_Beauty",
-      "flag": "FLAG_HIDE_TWO_ISLAND_BEAUTY"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_EventScript_PokeManiac",
-      "flag": "FLAG_HIDE_TWO_ISLAND_POKE_MANIAC"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -97,7 +97,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_EventScript_ItemRevive",
-      "flag": "FLAG_HIDE_TWO_ISLAND_REVIVE"
+      "flag": "0"
     },
     {
       "type": "object",

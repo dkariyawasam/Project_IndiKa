@@ -180,9 +180,6 @@ gStdScriptsEnd::
 	.include "data/maps/PokemonTower_2F/scripts.inc"
 	.include "data/maps/PokemonTower_3F/scripts.inc"
 	.include "data/maps/PokemonTower_4F/scripts.inc"
-	.include "data/maps/PokemonTower_5F/scripts.inc"
-	.include "data/maps/PokemonTower_6F/scripts.inc"
-	.include "data/maps/PokemonTower_7F/scripts.inc"
 	.include "data/maps/PowerPlant/scripts.inc"
 	.include "data/maps/FuchsiaForest/scripts.inc"
 	.include "data/maps/RockTunnel_B2F/scripts.inc"
@@ -470,9 +467,6 @@ gStdScriptsEnd::
 	.include "data/maps/PokemonTower_2F/text.inc"
 	.include "data/maps/PokemonTower_3F/text.inc"
 	.include "data/maps/PokemonTower_4F/text.inc"
-	.include "data/maps/PokemonTower_5F/text.inc"
-	.include "data/maps/PokemonTower_6F/text.inc"
-	.include "data/maps/PokemonTower_7F/text.inc"
 	.include "data/maps/FuchsiaForest/text.inc"
 	.include "data/maps/RocketLeague_Lobby/text.inc"
 	.include "data/maps/ViridianChannel/text.inc"
@@ -872,13 +866,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY
-	setflag FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE
-	setflag FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER
-	setflag FLAG_HIDE_TWO_ISLAND_WOMAN
-	setflag FLAG_HIDE_TWO_ISLAND_BEAUTY
-	setflag FLAG_HIDE_TWO_ISLAND_POKE_MANIAC
-	setflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
-	setflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
 	setflag FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL
 	setflag FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL
 	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL

@@ -1,33 +1,13 @@
-PokemonTower_4F_Text_PaulaIntro::
-    .string "Ghost! No!\n"
-    .string "Kwaaah!$"
-
-PokemonTower_4F_Text_PaulaDefeat::
-    .string "Where is the ghost?$"
-
-PokemonTower_4F_Text_PaulaPostBattle::
-    .string "I must have been dreaming…$"
-
-PokemonTower_4F_Text_LaurelIntro::
-    .string "Be cursed with me!\n"
-    .string "Kwaaah!$"
-
-PokemonTower_4F_Text_LaurelDefeat::
-    .string "What!\n"
-    .string "The curse lost its grip.$"
-
-PokemonTower_4F_Text_LaurelPostBattle::
-    .string "We can't determine the identity of\n"
-    .string "the ghosts…$"
-
-PokemonTower_4F_Text_JodyIntro::
-    .string "Huhuhu…\n"
-    .string "Beat me not!$"
-
-PokemonTower_4F_Text_JodyDefeat::
-    .string "Huh?\n"
-    .string "The tower's voices are fading.$"
-
-PokemonTower_4F_Text_JodyPostBattle::
-    .string "May the departed POKéMON rest in\n"
-    .string "peace…$"
+PokemonTower_4F_Text_MrFujiThankYouFollowMe::
+    .string "MR. FUJI: Heh?\n"
+    .string "You came to save me?\p"
+    .string "Thank you. But, I came here of my\n"
+    .string "own free will.\p"
+    .string "I came to calm the spirit of\n"
+    .string "CUBONE's mother.\p"
+    .string "I think MAROWAK's spirit has\n"
+    .string "finally left us.\p"
+    .string "I must thank you for your kind\n"
+    .string "concern.\p"
+    .string "Follow me to my home, POKéMON\n"
+    .string "HOUSE, at the foot of this tower.$"

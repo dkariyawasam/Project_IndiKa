@@ -173,7 +173,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_KindleRoad_EventScript_ItemEther",
-      "flag": "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -187,7 +187,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_KindleRoad_EventScript_ItemMaxRepel",
-      "flag": "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_MAX_REPEL"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -201,7 +201,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_KindleRoad_EventScript_ItemCarbos",
-      "flag": "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_CARBOS"
+      "flag": "0"
     }
   ],
   "warp_events": [

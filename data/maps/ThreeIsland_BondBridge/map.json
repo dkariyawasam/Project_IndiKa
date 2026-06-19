@@ -119,36 +119,6 @@
       "script": "ThreeIsland_BondBridge_EventScript_BerryForestSign"
     },
     {
-      "type": "hidden_item",
-      "x": 61,
-      "y": 5,
-      "elevation": 0,
-      "item": "ITEM_MAX_REPEL",
-      "flag": "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_MAX_REPEL",
-      "quantity": 1,
-      "underfoot": false
-    },
-    {
-      "type": "hidden_item",
-      "x": 44,
-      "y": 12,
-      "elevation": 3,
-      "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_PEARL",
-      "quantity": 1,
-      "underfoot": false
-    },
-    {
-      "type": "hidden_item",
-      "x": 33,
-      "y": 7,
-      "elevation": 3,
-      "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST",
-      "quantity": 1,
-      "underfoot": false
-    },
-    {
       "type": "sign",
       "x": 91,
       "y": 9,

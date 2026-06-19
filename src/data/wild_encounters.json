@@ -3180,8 +3180,8 @@
           }
         },
         {
-          "map": "MAP_POKEMON_TOWER_3F",
-          "base_label": "sPokemonTower3F",
+          "map": "MAP_POKEMON_TOWER_2F",
+          "base_label": "sPokemonTower2F",
           "land_mons": {
             "encounter_rate": 2,
             "mons": [
@@ -3249,146 +3249,8 @@
           }
         },
         {
-          "map": "MAP_POKEMON_TOWER_4F",
-          "base_label": "sPokemonTower4F",
-          "land_mons": {
-            "encounter_rate": 4,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GASTLY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MISDREAVUS"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CHINGLING"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CUBONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_DUSKULL"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_HAUNTER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CUBONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GASTLY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MISDREAVUS"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MAROWAK"
-              },
-              {
-                "min_level": 37,
-                "max_level": 40,
-                "species": "SPECIES_DUSCLOPS"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_MISMAGIUS"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_POKEMON_TOWER_5F",
-          "base_label": "sPokemonTower5F",
-          "land_mons": {
-            "encounter_rate": 6,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_GASTLY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MISDREAVUS"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CUBONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CHINGLING"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_HAUNTER"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_CUBONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_MISDREAVUS"
-              },
-              {
-                "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_DUSKULL"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MAROWAK"
-              },
-              {
-                "min_level": 37,
-                "max_level": 40,
-                "species": "SPECIES_DUSCLOPS"
-              },
-              {
-                "min_level": 25,
-                "max_level": 28,
-                "species": "SPECIES_MISMAGIUS"
-              },
-              {
-                "min_level": 28,
-                "max_level": 31,
-                "species": "SPECIES_MAROWAK"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_POKEMON_TOWER_6F",
-          "base_label": "sPokemonTower6F",
+          "map": "MAP_POKEMON_TOWER_3F",
+          "base_label": "sPokemonTower3F",
           "land_mons": {
             "encounter_rate": 8,
             "mons": [
@@ -3456,8 +3318,8 @@
           }
         },
         {
-          "map": "MAP_POKEMON_TOWER_7F",
-          "base_label": "sPokemonTower7F",
+          "map": "MAP_POKEMON_TOWER_4F",
+          "base_label": "sPokemonTower4F",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [

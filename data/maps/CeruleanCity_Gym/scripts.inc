@@ -98,7 +98,7 @@ CeruleanCity_Gym_EventScript_MistyDefeated::
 CeruleanCity_Gym_EventScript_GiveCascadeBoard::
 	msgbox CeruleanCity_Gym_Text_TakeThisWithYou
 	giveitem_msg CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty, ITEM_CASCADE_BOARD, 1, MUS_OBTAIN_KEY_ITEM
-	setflag FLAG_GOT_TM03_FROM_MISTY
+	setflag FLAG_GOT_CASCADE_BOARD_FROM_MISTY
 	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
 	release
 	end

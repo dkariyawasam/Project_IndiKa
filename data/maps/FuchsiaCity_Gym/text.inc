@@ -86,13 +86,12 @@ FuchsiaCity_Gym_Text_KogaPostReward::
     .string "It sharpens when people move\n"
     .string "together.$"
 
-FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
-    .string "{PLAYER} received TM06\n"
+FuchsiaCity_Gym_Text_UnusedKogaReward::
+    .string "{PLAYER} received something\n"
     .string "from KOGA.$"
 
-FuchsiaCity_Gym_Text_KogaExplainTM06::
-    .string "Sealed within that TM06 lies\n"
-    .string "TOXIC!\p"
+FuchsiaCity_Gym_Text_KogaExplainToxic::
+    .string "TOXIC is a poison technique.\p"
     .string "It is a secret technique dating\n"
     .string "back some four hundred years.$"
 
