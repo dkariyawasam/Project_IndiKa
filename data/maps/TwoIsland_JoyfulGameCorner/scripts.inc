@@ -86,7 +86,6 @@ TwoIsland_JoyfulGameCorner_EventScript_HelpFindLostelleScene::
 	fadedefaultbgm
 	delay 60
 	msgbox TwoIsland_JoyfulGameCorner_Text_PunkScuffedUpMyFloor
-	clearflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
 	setvar VAR_MAP_SCENE_THREE_ISLAND, 2
 	setvar VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 1
 	releaseall
@@ -125,13 +124,7 @@ TwoIsland_JoyfulGameCorner_EventScript_InfoMan::
 	lock
 	faceplayer
 	goto_if_eq VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 4, JoyfulGameCorner_EventScript_InfoMan2
-	goto_if_set FLAG_RESCUED_LOSTELLE, TwoIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon
 	msgbox TwoIsland_JoyfulGameCorner_Text_NotRunningAnyGamesToday
-	release
-	end
-
-TwoIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon::
-	msgbox TwoIsland_JoyfulGameCorner_Text_GetGamesGoingSoon
 	release
 	end
 

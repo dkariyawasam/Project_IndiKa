@@ -10,7 +10,7 @@ SaffronCity_Gym_OnFrame::
 SaffronCity_Gym_OnTransition::
 	goto_if_eq VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_SetInitialGuideState
 	setflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
-	goto_if_lt VAR_SABRINA_TRIAL_STATE, 3, SaffronCity_Gym_EventScript_HideSabrina
+	goto_if_lt VAR_SABRINA_TRIAL_STATE, 4, SaffronCity_Gym_EventScript_HideSabrina
 	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
 	end
 
@@ -51,6 +51,7 @@ SaffronCity_Gym_EventScript_GymGuideInterceptSabrinaAway::
 
 SaffronCity_Gym_EventScript_Sabrina::
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	goto_if_set FLAG_DEFEATED_SABRINA, SaffronCity_Gym_EventScript_SabrinaPostFieldVictory
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, SaffronCity_Gym_EventScript_SabrinaChallenge1
 	goto_if_eq VAR_RESULT, 1, SaffronCity_Gym_EventScript_SabrinaChallenge2
@@ -113,6 +114,11 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	release
 	end
 
+SaffronCity_Gym_EventScript_SabrinaPostFieldVictory::
+	msgbox SaffronCity_Gym_Text_SabrinaPostFieldVictory
+	release
+	end
+
 SaffronCity_Gym_EventScript_Johan::
 	trainerbattle_single TRAINER_PSYCHIC_JOHAN, SaffronCity_Gym_Text_JohanIntro, SaffronCity_Gym_Text_JohanDefeat
 	msgbox SaffronCity_Gym_Text_JohanPostBattle, MSGBOX_AUTOCLOSE
@@ -154,8 +160,10 @@ SaffronCity_Gym_EventScript_GymGuy::
 	faceplayer
 	goto_if_eq VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime
 	goto_if_set FLAG_DEFEATED_SABRINA, SaffronCity_Gym_EventScript_GymGuyPostVictory
-	msgbox SaffronCity_Gym_Text_GymGuideSabrinaStillAway
-	release
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 1, SaffronCity_Gym_EventScript_GymGuideSabrinaAwayRepeat
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 2, SaffronCity_Gym_EventScript_GymGuideSabrinaAwayRepeat
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 3, SaffronCity_Gym_EventScript_GymGuideSabrinaAwayRepeat
+	goto SaffronCity_Gym_EventScript_GymGuyNormal
 	end
 
 SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime::
@@ -164,6 +172,28 @@ SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime::
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
 	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
 	setvar VAR_SABRINA_TRIAL_STATE, 1
+	release
+	end
+
+SaffronCity_Gym_EventScript_GymGuideSabrinaAwayRepeat::
+	msgbox SaffronCity_Gym_Text_GymGuideSabrinaStillAway
+	release
+	end
+
+SaffronCity_Gym_EventScript_GymGuyNormal::
+	msgbox SaffronCity_Gym_Text_GymGuideSabrinaReturned, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, SaffronCity_Gym_EventScript_GymGuyTakeAdvice
+	goto_if_eq VAR_RESULT, NO, SaffronCity_Gym_EventScript_GymGuyDontNeedAdvice
+	end
+
+SaffronCity_Gym_EventScript_GymGuyTakeAdvice::
+	msgbox SaffronCity_Gym_Text_GymGuyFocusYourMind
+	msgbox SaffronCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+SaffronCity_Gym_EventScript_GymGuyDontNeedAdvice::
+	msgbox SaffronCity_Gym_Text_GymGuyShowSabrina
 	release
 	end
 

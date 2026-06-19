@@ -1,5 +1,9 @@
 SaffronCity_Gym_Text_SabrinaIntro::
     .string "I had a vision of your arrival.\p"
+    .string "I am SABRINA.\n"
+    .string "SAFFRON CITY's GYM LEADER.\p"
+    .string "You kept your mind steady within\n"
+    .string "POKéMON TOWER's astral pull.\p"
     .string "I have had psychic powers since\n"
     .string "I was a child.\p"
     .string "It started when a spoon I\n"
@@ -21,18 +25,25 @@ SaffronCity_Gym_Text_SabrinaPostBattle::
     .string "Everyone has psychic power.\n"
     .string "People just don't realize it.$"
 
+SaffronCity_Gym_Text_SabrinaPostFieldVictory::
+    .string "POKéMON TOWER's astral pressure\n"
+    .string "has settled.\p"
+    .string "The MARSHBADGE is proof that your\n"
+    .string "mind held firm within it.$"
+
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "With six BADGES, POKéMON up\n"
     .string "to Lv. 70 obey you.\p"
     .string "Stronger outsider POKéMON may\n"
     .string "ignore your orders in battle.$"
 
-SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
-    .string "{PLAYER} received TM04 from\n"
-    .string "SABRINA.$"
+SaffronCity_Gym_Text_UnusedSabrinaReward::
+    .string "{PLAYER} received something\n"
+    .string "from SABRINA.$"
 
-SaffronCity_Gym_Text_ExplainTM04::
-    .string "TM04 is CALM MIND.\p"
+SaffronCity_Gym_Text_ExplainCalmMind::
+    .string "CALM MIND lets the POKéMON\n"
+    .string "concentrate deeply.\p"
     .string "It makes the POKéMON concentrate\n"
     .string "to raise both SP. ATK and SP. DEF.$"
 
@@ -150,7 +161,25 @@ SaffronCity_Gym_Text_GymGuideSabrinaAway::
 SaffronCity_Gym_Text_GymGuideSabrinaStillAway::
     .string "SABRINA is at POKéMON TOWER,\n"
     .string "drawn there by astral energy.\p"
-    .string "I'd better hurry after her.$"
+    .string "Bring her a POKéMON that can\n"
+    .string "learn DREAM EATER.$"
+
+SaffronCity_Gym_Text_GymGuideSabrinaReturned::
+    .string "SABRINA is back from\n"
+    .string "POKéMON TOWER!\p"
+    .string "She said you held steady inside\n"
+    .string "a powerful astral current.\p"
+    .string "Want some advice before you\n"
+    .string "challenge her?$"
+
+SaffronCity_Gym_Text_GymGuyFocusYourMind::
+    .string "All right!\n"
+    .string "Focus your mind!$"
+
+SaffronCity_Gym_Text_GymGuyShowSabrina::
+    .string "All right!\p"
+    .string "Then go show SABRINA what you\n"
+    .string "learned in POKéMON TOWER!$"
 
 SaffronCity_Gym_Text_GymGuyPostVictory::
     .string "Psychic power, huh?\p"

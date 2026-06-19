@@ -1,33 +1,5 @@
-.equ REQUIRED_SEEN_MONS, 10
-
 Route2_EastBuilding_MapScripts::
 	.byte 0
-
-Route2_EastBuilding_EventScript_Aide::
-	lock
-	faceplayer
-	call Route2_EastBuilding_EventScript_GetAideRequestInfo
-	goto_if_set FLAG_GOT_TM55, Route2_EastBuilding_EventScript_AlreadyGotTM55
-	msgbox Route2_EastBuilding_Text_GiveTM55IfSeen10Mons, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons
-	setvar VAR_0x8004, 0
-	specialvar VAR_RESULT, GetPokedexCount
-	buffernumberstring STR_VAR_3, VAR_0x8006
-	call Route2_EastBuilding_EventScript_GetAideRequestInfo
-	goto_if_lt VAR_0x8006, REQUIRED_SEEN_MONS, Aide_EventScript_HaventCaughtEnough
-	msgbox Route2_EastBuilding_Text_GreatHereYouGo
-	setflag FLAG_GOT_TM55
-	release
-	end
-
-Route2_EastBuilding_EventScript_AlreadyGotTM55::
-	msgbox Route2_EastBuilding_Text_ExplainTM55
-	release
-	end
-
-Route2_EastBuilding_EventScript_GetAideRequestInfo::
-	buffernumberstring STR_VAR_1, REQUIRED_SEEN_MONS
-	return
 
 Route2_EastBuilding_EventScript_Rocker::
 	msgbox Route2_EastBuilding_Text_CanGetThroughRockTunnel, MSGBOX_NPC

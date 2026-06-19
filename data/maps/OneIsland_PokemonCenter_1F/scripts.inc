@@ -103,7 +103,6 @@ OneIsland_PokemonCenter_1F_EventScript_MeetCelioScene::
 	waitmovement 0
 	call_if_ge VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, OneIsland_PokemonCenter_1F_EventScript_ReceiveTownMapPage
 	call_if_lt VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, OneIsland_PokemonCenter_1F_EventScript_ReceiveTownMap
-	setflag FLAG_SYS_SEVII_MAP_123
 	msgbox OneIsland_PokemonCenter_1F_Text_BillCatchYouLater
 	closemessage
 	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, Common_Movement_WalkInPlaceFasterUp
@@ -180,15 +179,7 @@ OneIsland_PokemonCenter_1F_EventScript_Nurse::
 
 OneIsland_PokemonCenter_1F_EventScript_Bill::
 	lock
-	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll
 	msgbox OneIsland_PokemonCenter_1F_Text_HmmHowAboutLikeThis
-	release
-	end
-
-OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
-	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, Common_Movement_FacePlayer
-	waitmovement 0
-	msgbox OneIsland_PokemonCenter_1F_Text_GotPCWorkingStrollAWhileMore
 	release
 	end
 
@@ -197,9 +188,7 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	faceplayer
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
-	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, OneIsland_PokemonCenter_1F_EventScript_ExplainProgress
-	goto_if_set FLAG_GOT_RUBY, OneIsland_PokemonCenter_1F_EventScript_GiveCelioRuby
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 4, OneIsland_PokemonCenter_1F_EventScript_CelioWaitingForRuby
 	specialvar VAR_RESULT, IsNationalPokedexEnabled
 	goto_if_eq VAR_RESULT, TRUE, OneIsland_PokemonCenter_1F_EventScript_CelioRequestRuby
@@ -313,7 +302,6 @@ OneIsland_PokemonCenter_1F_EventScript_UpdateMap::
 	msgbox OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands
 	removeitem ITEM_RUBY
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5
-	setflag FLAG_SYS_SEVII_MAP_4567
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	message OneIsland_PokemonCenter_1F_Text_UpdatedTownMap
@@ -387,7 +375,6 @@ OneIsland_PokemonCenter_1F_EventScript_CrushGirlHoennLinked::
 OneIsland_PokemonCenter_1F_EventScript_NetworkMachine::
 	lockall
 	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithHoenn
-	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithKanto
 	msgbox OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment
 	releaseall
 	end
@@ -471,7 +458,6 @@ OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandScene::
 	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, OneIsland_PokemonCenter_1F_Movement_BillExit
 	waitmovement 0
 	playse SE_EXIT
-	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 3
 	warp MAP_CINNABAR_ISLAND, 45, 9
 	waitstate

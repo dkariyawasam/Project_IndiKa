@@ -2234,17 +2234,9 @@ static bool8 IsHelpSystemSubmenuEnabled(u8 id)
 
 static bool8 HasGottenAtLeastOneHM(void)
 {
-    if (FlagGet(FLAG_GOT_TM51) == TRUE)
+    if (FlagGet(FLAG_HELPED_SS_ANNE_CAPTAIN) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_GOT_TM52) == TRUE)
-        return TRUE;
-    if (FlagGet(FLAG_GOT_TM53) == TRUE)
-        return TRUE;
-    if (FlagGet(FLAG_GOT_TM54) == TRUE)
-        return TRUE;
-    if (FlagGet(FLAG_GOT_TM55) == TRUE)
-        return TRUE;
-    if (FlagGet(FLAG_GOT_TM56) == TRUE)
+    if (FlagGet(FLAG_RETURNED_GOLD_TEETH_TO_WARDEN) == TRUE)
         return TRUE;
     return FALSE;
 }

@@ -3,7 +3,7 @@ SSAnne_CaptainsOffice_MapScripts::
 
 SSAnne_CaptainsOffice_EventScript_Captain::
 	lock
-	goto_if_set FLAG_GOT_TM51, SSAnne_CaptainsOffice_EventScript_AlreadyGotCut
+	goto_if_set FLAG_HELPED_SS_ANNE_CAPTAIN, SSAnne_CaptainsOffice_EventScript_AlreadyGotCut
 	msgbox SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	message SSAnne_CaptainsOffice_Text_RubbedCaptainsBack
@@ -15,7 +15,7 @@ SSAnne_CaptainsOffice_EventScript_Captain::
 	applymovement LOCALID_SS_ANNE_CAPTAIN, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut
-	setflag FLAG_GOT_TM51
+	setflag FLAG_HELPED_SS_ANNE_CAPTAIN
 	setvar VAR_MAP_SCENE_VERMILION_CITY, 1
 	release
 	end
