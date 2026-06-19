@@ -1,29 +1,35 @@
-PokemonTower_1F_Text_ErectedInMemoryOfDeadMons::
-    .string "POKéMON TOWER was erected in the\n"
-    .string "memory of POKéMON that died.$"
+PokemonTower_1F_Text_RivalIntro::
+    .string "{RIVAL}: Hey, {PLAYER}!\n"
+    .string "What brings you here?\l"
+    .string "Is your POKéMON dead?\p"
+    .string "Hey! It's alive!\p"
+    .string "I can at least make them faint!\n"
+    .string "Let's go!$"
 
-PokemonTower_1F_Text_ComeToPayRespectsSon::
-    .string "Did you come to pay respects?\p"
-    .string "Bless your POKéMON-loving heart,\n"
-    .string "son.$"
+PokemonTower_1F_Text_RivalDefeat::
+    .string "What?\n"
+    .string "You stinker!\p"
+    .string "I took it easy on you, too!$"
 
-PokemonTower_1F_Text_ComeToPayRespectsGirl::
-    .string "Did you come to pay respects?\p"
-    .string "Bless your POKéMON-loving heart,\n"
-    .string "girl.$"
+@ Unused. Translated below
+@ Aw, man! They really kicked the bucket! Weak! Do them a favor and raise them more properly.
+PokemonTower_1F_Text_RivalVictory::
+    .string "{RIVAL}“あーあ‥！\n"
+    .string "ほんとに　くたばっちまったぞ！\l"
+    .string "よわいなー！\l"
+    .string "もっと　ちゃんと　そだてて　やれよ$"
 
-PokemonTower_1F_Text_CameToPrayForDepartedClefairy::
-    .string "I came to pray for my dearly\n"
-    .string "departed CLEFAIRY.\p"
-    .string "Sniff!\n"
-    .string "I'm awash in tears…$"
+PokemonTower_1F_Text_RivalPostBattle::
+    .string "How's your POKéDEX coming?\n"
+    .string "I just caught a CUBONE!\p"
+    .string "I can't find the bigger MAROWAK.\n"
+    .string "Where could they be?\p"
+    .string "I bet there aren't any left!\p"
+    .string "Well, I better get going.\n"
+    .string "I've got a lot to accomplish,\l"
+    .string "unlike you.\p"
+    .string "Smell ya later!$"
 
-PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
-    .string "My GROWLITHE…\n"
-    .string "Why did you die?$"
-
-PokemonTower_1F_Text_SenseSpiritsUpToMischief::
-    .string "I am a CHANNELER.\p"
-    .string "There are spirits up to mischief.\n"
-    .string "I sense them high in the TOWER.$"
-
+PokemonTower_1F_Text_SilphScopeCouldUnmaskGhosts::
+    .string "The wayward ghosts show themselves\n"
+    .string "to those who enter this tower.$"

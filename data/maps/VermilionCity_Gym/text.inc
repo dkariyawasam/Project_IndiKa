@@ -51,12 +51,12 @@ VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone::
     .string "serious output.\p"
     .string "Keep it charged, kid!$"
 
-VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
-    .string "{PLAYER} received TM34\n"
+VermilionCity_Gym_Text_UnusedSurgeReward::
+    .string "{PLAYER} received something\n"
     .string "from LT. SURGE.$"
 
-VermilionCity_Gym_Text_ExplainTM34::
-    .string "TM34 contains SHOCK WAVE!\p"
+VermilionCity_Gym_Text_ExplainShockWave::
+    .string "SHOCK WAVE is an ELECTRIC move!\p"
     .string "Teach it to an ELECTRIC POKéMON!$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::

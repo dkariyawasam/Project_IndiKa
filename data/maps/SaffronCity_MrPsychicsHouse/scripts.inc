@@ -4,18 +4,6 @@ SaffronCity_MrPsychicsHouse_MapScripts::
 SaffronCity_MrPsychicsHouse_EventScript_MrPsychic::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TM29_FROM_MR_PSYCHIC, SaffronCity_MrPsychicsHouse_EventScript_AlreadyGotTM29
 	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis
-	setflag FLAG_GOT_TM29_FROM_MR_PSYCHIC
-	release
-	end
-
-SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29::
-	msgbox SaffronCity_MrPsychicsHouse_Text_YouveNoRoom
-	release
-	end
-
-SaffronCity_MrPsychicsHouse_EventScript_AlreadyGotTM29::
-	msgbox SaffronCity_MrPsychicsHouse_Text_ExplainTM29
 	release
 	end

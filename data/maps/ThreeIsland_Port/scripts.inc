@@ -4,7 +4,6 @@ ThreeIsland_Port_MapScripts::
 
 ThreeIsland_Port_OnTransition::
 	clearflag FLAG_SYS_PC_STORAGE_DISABLED
-	setflag FLAG_SEVII_DETOUR_FINISHED
 	end
 
 ThreeIsland_Port_EventScript_Woman::

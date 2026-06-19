@@ -1558,9 +1558,9 @@ const u8 gText_KogaTrialPhase4[] = _("KOGA returned to FUCHSIA GYM.\nClaim your 
 const u8 gText_KogaTrialPhase5[] = _("Raise KOGA's GOLBAT into CROBAT\nthrough friendship.");
 
 const u8 gText_SabrinaTrialPhase1[] = _("SABRINA went to POKéMON TOWER\nafter sensing astral energy.");
-const u8 gText_SabrinaTrialPhase2[] = _("Find SABRINA at POKéMON TOWER.");
-const u8 gText_SabrinaTrialPhase3[] = _("Return to SABRINA.");
-const u8 gText_SabrinaTrialPhase4[] = _("SABRINA is ready for your challenge.");
+const u8 gText_SabrinaTrialPhase2[] = _("Bring SABRINA a POKéMON that\ncan learn DREAM EATER.");
+const u8 gText_SabrinaTrialPhase3[] = _("Challenge SABRINA in\nPOKéMON TOWER.");
+const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.");
 const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your power.");
 
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by bonds\nwith POKéMON.");

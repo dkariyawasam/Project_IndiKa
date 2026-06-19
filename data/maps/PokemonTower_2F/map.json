@@ -5,44 +5,71 @@
   "music": "MUS_POKE_TOWER",
   "region_map_section": "MAPSEC_POKEMON_TOWER",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": true,
-  "floor_number": 0,
+  "floor_number": 2,
   "battle_scene": "MAP_BATTLE_SCENE_INDOOR_1",
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_POKEMON_TOWER_RIVAL",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "x": 16,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "x": 10,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_TOWER_RIVAL"
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "PokemonTower_2F_EventScript_Patricia",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT",
+      "x": 9,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "PokemonTower_2F_EventScript_Carly",
+      "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "x": 12,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "PokemonTower_2F_EventScript_Hope",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PokemonTower_2F_EventScript_Channeler",
-      "flag": "0"
+      "script": "PokemonTower_2F_EventScript_ItemEscapeRope",
+      "flag": "FLAG_HIDE_POKEMON_TOWER_2F_ESCAPE_ROPE"
     }
   ],
   "warp_events": [
@@ -50,36 +77,17 @@
       "x": 4,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_POKEMON_TOWER_3F",
+      "dest_map": "MAP_POKEMON_TOWER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_POKEMON_TOWER_1F",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_POKEMON_TOWER_3F",
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 5,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_POKEMON_TOWER_2F",
-      "var_value": "0",
-      "script": "PokemonTower_2F_EventScript_RivalTriggerRight"
-    },
-    {
-      "type": "trigger",
-      "x": 16,
-      "y": 6,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_POKEMON_TOWER_2F",
-      "var_value": "0",
-      "script": "PokemonTower_2F_EventScript_RivalTriggerDown"
-    }
-  ],
+  "coord_events": [],
   "bg_events": []
 }

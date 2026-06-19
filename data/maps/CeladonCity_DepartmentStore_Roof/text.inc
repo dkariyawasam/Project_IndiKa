@@ -15,30 +15,27 @@ Text_ReceivedItemFromLittleGirl::
     .string "{PLAYER} received a {STR_VAR_2}\n"
     .string "from the little girl.$"
 
-CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
-    .string "TM16 contains LIGHT SCREEN.\p"
-    .string "It's a move that weakens the power\n"
-    .string "of special attacks by your foe.$"
+CeladonCity_DepartmentStore_Roof_Text_ExplainLightScreen::
+    .string "LIGHT SCREEN weakens the power\n"
+    .string "of special attacks from your foe.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
     .string "Yay!\p"
     .string "SODA POP!\p"
     .string "Thank you!$"
 
-CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
-    .string "TM20 contains SAFEGUARD.\p"
-    .string "It's a move that prevents status\n"
-    .string "problems among your POKéMON.$"
+CeladonCity_DepartmentStore_Roof_Text_ExplainSafeguard::
+    .string "SAFEGUARD prevents status problems\n"
+    .string "among your POKéMON.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
     .string "Yay!\p"
     .string "LEMONADE!\p"
     .string "Thank you!$"
 
-CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
-    .string "TM33 contains REFLECT.\p"
-    .string "It's a move that weakens the power\n"
-    .string "of physical attacks by your foe.$"
+CeladonCity_DepartmentStore_Roof_Text_ExplainReflect::
+    .string "REFLECT weakens the power of\n"
+    .string "physical attacks from your foe.$"
 
 CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis::
     .string "You don't have space for this!$"

@@ -1,38 +1,254 @@
 PokemonTower_3F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonTower_3F_OnTransition
 	.byte 0
 
-PokemonTower_3F_EventScript_Patricia::
-	trainerbattle_single TRAINER_CHANNELER_PATRICIA, PokemonTower_3F_Text_PatriciaIntro, PokemonTower_3F_Text_PatriciaDefeat
+PokemonTower_3F_OnTransition::
+	setflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	goto_if_ge VAR_SABRINA_TRIAL_STATE, 4, PokemonTower_3F_EventScript_HideSabrina
+	clearflag FLAG_HIDE_POKEMON_TOWER_SABRINA
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 3, PokemonTower_3F_EventScript_ShowGymGuide
+	end
+
+PokemonTower_3F_EventScript_HideSabrina::
+	setflag FLAG_HIDE_POKEMON_TOWER_SABRINA
+	end
+
+PokemonTower_3F_EventScript_ShowGymGuide::
+	clearflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	end
+
+PokemonTower_3F_EventScript_Sabrina::
+	lock
+	faceplayer
+	goto_if_ge VAR_SABRINA_TRIAL_STATE, 4, PokemonTower_3F_EventScript_SabrinaGone
+	goto_if_eq VAR_SABRINA_TRIAL_STATE, 3, PokemonTower_3F_EventScript_SabrinaAskChallenge
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	setvar VAR_SABRINA_TRIAL_STATE, 2
+	msgbox PokemonTower_3F_Text_SabrinaTeachDreamEater, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PokemonTower_3F_EventScript_SabrinaDeclineTutor
+	msgbox PokemonTower_3F_Text_SabrinaChoosePokemon
+	setvar VAR_0x8005, MOVETUTOR_DREAM_EATER
+	call EventScript_ChooseMoveTutorMon
+	goto_if_eq VAR_RESULT, FALSE, PokemonTower_3F_EventScript_SabrinaDeclineTutor
+	msgbox PokemonTower_3F_Text_SabrinaTaughtDreamEater
+	closemessage
+	setvar VAR_SABRINA_TRIAL_STATE, 3
+	clearflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	addobject LOCALID_POKEMON_TOWER_3F_GYM_GUIDE
+	applymovement LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, PokemonTower_3F_Movement_GymGuideArrive
+	waitmovement 0
+	msgbox PokemonTower_3F_Text_GymGuideArrives
+	goto PokemonTower_3F_EventScript_SabrinaAskChallenge
+
+PokemonTower_3F_EventScript_SabrinaDeclineTutor::
+	msgbox PokemonTower_3F_Text_SabrinaComeBackWithPokemon
+	release
+	end
+
+PokemonTower_3F_EventScript_SabrinaGone::
+	release
+	end
+
+PokemonTower_3F_EventScript_SabrinaAskChallenge::
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonTower_3F_EventScript_NeedTwoPokemon
+	msgbox PokemonTower_3F_Text_SabrinaReadyToBattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PokemonTower_3F_EventScript_SabrinaDeclineBattle
+	special GetBadgeCount
+	goto_if_eq VAR_RESULT, 0, PokemonTower_3F_EventScript_SabrinaChallenge1
+	goto_if_eq VAR_RESULT, 1, PokemonTower_3F_EventScript_SabrinaChallenge2
+	goto_if_eq VAR_RESULT, 2, PokemonTower_3F_EventScript_SabrinaChallenge3
+	goto_if_eq VAR_RESULT, 3, PokemonTower_3F_EventScript_SabrinaChallenge4
+	goto_if_eq VAR_RESULT, 4, PokemonTower_3F_EventScript_SabrinaChallenge5
+	goto_if_eq VAR_RESULT, 5, PokemonTower_3F_EventScript_SabrinaChallenge6
+	goto PokemonTower_3F_EventScript_SabrinaChallenge7
+
+PokemonTower_3F_EventScript_NeedTwoPokemon::
+	msgbox Common_Text_NeedTwoPokemonForDoubleBattle
+	release
+	end
+
+PokemonTower_3F_EventScript_SabrinaDeclineBattle::
+	msgbox PokemonTower_3F_Text_SabrinaDeclineBattle
+	release
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge1::
+	trainerbattle_double TRAINER_LEADER_SABRINA_1, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge2::
+	trainerbattle_double TRAINER_LEADER_SABRINA_2, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge3::
+	trainerbattle_double TRAINER_LEADER_SABRINA_3, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge4::
+	trainerbattle_double TRAINER_LEADER_SABRINA_4, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge5::
+	trainerbattle_double TRAINER_LEADER_SABRINA_5, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge6::
+	trainerbattle_double TRAINER_LEADER_SABRINA_6, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_SabrinaChallenge7::
+	trainerbattle_double TRAINER_LEADER_SABRINA_7, PokemonTower_3F_Text_SabrinaBattleIntro, PokemonTower_3F_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, PokemonTower_3F_EventScript_DefeatedSabrina, NO_MUSIC
+	end
+
+PokemonTower_3F_EventScript_DefeatedSabrina::
+	famechecker FAMECHECKER_SABRINA, 2
+	famechecker FAMECHECKER_SABRINA, 3
+	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
+	setflag FLAG_DEFEATED_SABRINA
+	setflag FLAG_BADGE06_GET
+	setvar VAR_SABRINA_TRIAL_STATE, 4
+	msgbox PokemonTower_3F_Text_SabrinaAfterBattle
+	closemessage
+	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
+	applymovement LOCALID_POKEMON_TOWER_3F_SABRINA, PokemonTower_3F_Movement_SabrinaStepBehindGuide
+	waitmovement 0
+	applymovement LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, PokemonTower_3F_Movement_GymGuideLeave
+	applymovement LOCALID_POKEMON_TOWER_3F_SABRINA, PokemonTower_3F_Movement_SabrinaLeave
+	waitmovement 0
+	setflag FLAG_HIDE_POKEMON_TOWER_SABRINA
+	setflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	removeobject LOCALID_POKEMON_TOWER_3F_SABRINA
+	removeobject LOCALID_POKEMON_TOWER_3F_GYM_GUIDE
+	release
+	end
+
+PokemonTower_3F_EventScript_GymGuide::
+	lock
+	faceplayer
+	msgbox PokemonTower_3F_Text_GymGuideWaiting
+	release
+	end
+
+PokemonTower_3F_Movement_GymGuideArrive::
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_in_place_faster_up
+	step_end
+
+PokemonTower_3F_Movement_GymGuideLeave::
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PokemonTower_3F_Movement_SabrinaStepBehindGuide::
+	walk_right
+	walk_up
+	step_end
+
+PokemonTower_3F_Movement_SabrinaLeave::
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PokemonTower_3F_EventScript_MarowakGhost::
+	lockall
+	textcolor NPC_TEXT_COLOR_MON
+	msgbox PokemonTower_3F_Text_BeGoneIntruders
+	goto_if_questlog EventScript_ReleaseEnd
+	setwildbattle SPECIES_MAROWAK, 30
+	special StartMarowakBattle
+	waitstate
+	special QuestLog_CutRecording
+	goto_if_eq VAR_RESULT, FALSE, PokemonTower_3F_EventScript_DefeatedMarowakGhost  @ VAR_RESULT set by CB2_EndMarowakBattle
+	applymovement LOCALID_PLAYER, PokemonTower_3F_Movement_ForcePlayerUp
+	waitmovement 0
+	releaseall
+	end
+
+PokemonTower_3F_EventScript_DefeatedMarowakGhost::
+	message PokemonTower_3F_Text_GhostWasCubonesMother
+	waitmessage
+	waitse
+	playmoncry SPECIES_MAROWAK, CRY_MODE_NORMAL
+	waitbuttonpress
+	waitmoncry
+	msgbox PokemonTower_3F_Text_MothersSpiritWasCalmed
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_3F, 1
+	releaseall
+	end
+
+PokemonTower_3F_Movement_ForcePlayerUp::
+	walk_up
+	step_end
+
+PokemonTower_3F_EventScript_Angelica::
+	trainerbattle_single TRAINER_CHANNELER_ANGELICA, PokemonTower_3F_Text_AngelicaIntro, PokemonTower_3F_Text_AngelicaDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_PatriciaRematch
-	msgbox PokemonTower_3F_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_AngelicaRematch
+	msgbox PokemonTower_3F_Text_AngelicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_3F_EventScript_PatriciaRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_PATRICIA, PokemonTower_3F_Text_PatriciaIntro, PokemonTower_3F_Text_PatriciaDefeat
-	msgbox PokemonTower_3F_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
+PokemonTower_3F_EventScript_AngelicaRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_ANGELICA, PokemonTower_3F_Text_AngelicaIntro, PokemonTower_3F_Text_AngelicaDefeat
+	msgbox PokemonTower_3F_Text_AngelicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_3F_EventScript_Carly::
-	trainerbattle_single TRAINER_CHANNELER_CARLY, PokemonTower_3F_Text_CarlyIntro, PokemonTower_3F_Text_CarlyDefeat
+PokemonTower_3F_EventScript_Emilia::
+	trainerbattle_single TRAINER_CHANNELER_EMILIA, PokemonTower_3F_Text_EmiliaIntro, PokemonTower_3F_Text_EmiliaDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_CarlyRematch
-	msgbox PokemonTower_3F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_EmiliaRematch
+	msgbox PokemonTower_3F_Text_EmiliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_3F_EventScript_CarlyRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_CARLY, PokemonTower_3F_Text_CarlyIntro, PokemonTower_3F_Text_CarlyDefeat
-	msgbox PokemonTower_3F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
+PokemonTower_3F_EventScript_EmiliaRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_EMILIA, PokemonTower_3F_Text_EmiliaIntro, PokemonTower_3F_Text_EmiliaDefeat
+	msgbox PokemonTower_3F_Text_EmiliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_3F_EventScript_Hope::
-	trainerbattle_single TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
+PokemonTower_3F_EventScript_Jennifer::
+	trainerbattle_single TRAINER_CHANNELER_JENNIFER, PokemonTower_3F_Text_JenniferIntro, PokemonTower_3F_Text_JenniferDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_HopeRematch
-	msgbox PokemonTower_3F_Text_HopePostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, PokemonTower_3F_EventScript_JenniferRematch
+	msgbox PokemonTower_3F_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_3F_EventScript_HopeRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
-	msgbox PokemonTower_3F_Text_HopePostBattle, MSGBOX_AUTOCLOSE
+PokemonTower_3F_EventScript_JenniferRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_JENNIFER, PokemonTower_3F_Text_JenniferIntro, PokemonTower_3F_Text_JenniferDefeat
+	msgbox PokemonTower_3F_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
 	end

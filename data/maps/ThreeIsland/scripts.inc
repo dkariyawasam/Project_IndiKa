@@ -3,14 +3,8 @@ ThreeIsland_MapScripts::
 	.byte 0
 
 ThreeIsland_OnTransition::
-	setworldmapflag FLAG_WORLD_MAP_THREE_ISLAND
-	call_if_set FLAG_RESCUED_LOSTELLE, ThreeIsland_EventScript_HideAntiBikers
 	call_if_eq VAR_MAP_SCENE_THREE_ISLAND, 4, ThreeIsland_EventScript_SetAntiBikersMovementAfterBikers
 	end
-
-ThreeIsland_EventScript_HideAntiBikers::
-	setflag FLAG_HIDE_THREE_ISLAND_ANTIBIKERS
-	return
 
 ThreeIsland_EventScript_SetAntiBikersMovementAfterBikers::
 	setobjectmovementtype LOCALID_THREE_ISLAND_ANTIBIKER1, MOVEMENT_TYPE_LOOK_AROUND
@@ -26,7 +20,6 @@ ThreeIsland_EventScript_Biker::
 
 ThreeIsland_EventScript_AntiBiker1::
 	lock
-	goto_if_set FLAG_GOT_FULL_RESTORE_FROM_THREE_ISLAND_DEFENDER, ThreeIsland_EventScript_AntiBiker1GotFullRestore
 	goto_if_eq VAR_MAP_SCENE_THREE_ISLAND, 4, ThreeIsland_EventScript_GiveFullRestore
 	setvar VAR_TEMP_1, 0
 	call ThreeIsland_EventScript_BikerArgumentScene
@@ -48,7 +41,6 @@ ThreeIsland_EventScript_GiveFullRestore::
 	goto_if_eq VAR_RESULT, FALSE, ThreeIsland_EventScript_NoRoomForFullRestore
 	msgreceiveditem ThreeIsland_Text_GivenFullRestore, ITEM_FULL_RESTORE
 	additem ITEM_FULL_RESTORE
-	setflag FLAG_GOT_FULL_RESTORE_FROM_THREE_ISLAND_DEFENDER
 	msgbox ThreeIsland_Text_YouveGotImpressiveMons
 	release
 	end

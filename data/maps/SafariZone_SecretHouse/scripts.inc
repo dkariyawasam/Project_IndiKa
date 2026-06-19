@@ -4,19 +4,7 @@ SafariZone_SecretHouse_MapScripts::
 SafariZone_SecretHouse_EventScript_Attendant::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TM53, SafariZone_SecretHouse_EventScript_ExplainSurf
 	msgbox SafariZone_SecretHouse_Text_CongratsYouveWon
-	msgbox SafariZone_SecretHouse_Text_ExplainSurf
-	setflag FLAG_GOT_TM53
-	release
-	end
-
-SafariZone_SecretHouse_EventScript_NoRoomForTM53::
-	msgbox SafariZone_SecretHouse_Text_DontHaveRoomForPrize
-	release
-	end
-
-SafariZone_SecretHouse_EventScript_ExplainSurf::
 	msgbox SafariZone_SecretHouse_Text_ExplainSurf
 	release
 	end

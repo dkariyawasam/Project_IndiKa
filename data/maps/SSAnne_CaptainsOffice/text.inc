@@ -19,8 +19,8 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "Maybe another time.\n"
     .string "I should let the ship set sail.$"
 
-SSAnne_CaptainsOffice_Text_ObtainedTM51FromCaptain::
-    .string "{PLAYER} obtained TM51\n"
+SSAnne_CaptainsOffice_Text_UnusedCaptainReward::
+    .string "{PLAYER} received something\n"
     .string "from the CAPTAIN!$"
 
 SSAnne_CaptainsOffice_Text_ExplainCut::

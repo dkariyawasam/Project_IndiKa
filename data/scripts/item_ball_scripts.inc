@@ -22,7 +22,7 @@ MtMoon_1F_EventScript_ItemParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL
 	end
 
-MtMoon_1F_EventScript_ItemTM09::
+MtMoon_1F_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
 
@@ -46,24 +46,24 @@ MtMoon_B2F_EventScript_ItemStarPiece::
 	finditem ITEM_STAR_PIECE
 	end
 
-MtMoon_B2F_EventScript_ItemTM46::
-	finditem ITEM_GREAT_BALL
+MtMoon_B2F_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
 	end
 
-Route4_EventScript_ItemTM05::
+Route4_EventScript_ItemAwakening::
 	finditem ITEM_AWAKENING
 	end
 
-Route24_EventScript_ItemTM45::
-	finditem ITEM_SUPER_POTION
+Route24_EventScript_ItemSitrusBerry::
+	finditem ITEM_SITRUS_BERRY
 	end
 
-Route25_EventScript_ItemTM43::
-	finditem ITEM_GREAT_BALL
+Route25_EventScript_ItemLumBerry::
+	finditem ITEM_LUM_BERRY
 	end
 
-SSAnne_1F_Room2_EventScript_ItemTM31::
-	finditem ITEM_REVIVE
+SSAnne_1F_Room2_EventScript_ItemXAttack::
+	finditem ITEM_X_ATTACK
 	end
 
 SSAnne_2F_Room2_EventScript_ItemStardust::
@@ -74,8 +74,8 @@ SSAnne_2F_Room4_EventScript_ItemXAttack::
 	finditem ITEM_X_ATTACK
 	end
 
-SSAnne_B1F_Room2_EventScript_ItemTM44::
-	finditem ITEM_HYPER_POTION
+SSAnne_B1F_Room2_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
 	end
 
 SSAnne_B1F_Room3_EventScript_ItemEther::
@@ -90,48 +90,32 @@ SSAnne_Kitchen_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL
 	end
 
-Route9_EventScript_ItemTM40::
-	finditem ITEM_PARALYZE_HEAL
+Route9_EventScript_ItemHyperPotion::
+	finditem ITEM_HYPER_POTION
 	end
 
-PokemonTower_3F_EventScript_ItemEscapeRope::
+PokemonTower_2F_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
 
-PokemonTower_4F_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
-	end
-
-PokemonTower_4F_EventScript_ItemAwakening::
-	finditem ITEM_AWAKENING
-	end
-
-PokemonTower_4F_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
-	end
-
-PokemonTower_5F_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
-	end
-
-PokemonTower_6F_EventScript_ItemRareCandy::
+PokemonTower_3F_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-PokemonTower_6F_EventScript_ItemXAccuracy::
+PokemonTower_3F_EventScript_ItemXAccuracy::
 	finditem ITEM_X_ACCURACY
 	end
 
-Route12_EventScript_ItemTM48::
-	finditem ITEM_FULL_HEAL
+Route12_EventScript_ItemXAccuracy::
+	finditem ITEM_X_ACCURACY
 	end
 
 Route12_EventScript_ItemIron::
 	finditem ITEM_IRON
 	end
 
-Route15_EventScript_ItemTM18::
-	finditem ITEM_REVIVE
+Route15_EventScript_ItemSitrusBerry::
+	finditem ITEM_SITRUS_BERRY
 	end
 
 SafariZone_Center_EventScript_ItemNugget::
@@ -146,8 +130,8 @@ SafariZone_East_EventScript_ItemFullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
 
-SafariZone_East_EventScript_ItemTM11::
-	finditem ITEM_MAX_REPEL
+SafariZone_East_EventScript_ItemLumBerry::
+	finditem ITEM_LUM_BERRY
 	end
 
 SafariZone_East_EventScript_ItemLeafStone::
@@ -158,12 +142,12 @@ SafariZone_North_EventScript_ItemProtein::
 	finditem ITEM_PROTEIN
 	end
 
-SafariZone_North_EventScript_ItemTM47::
-	finditem ITEM_MAX_REVIVE
+SafariZone_North_EventScript_ItemMaxPotion::
+	finditem ITEM_MAX_POTION
 	end
 
-SafariZone_West_EventScript_ItemTM32::
-	finditem ITEM_FULL_RESTORE
+SafariZone_West_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
 	end
 
 SafariZone_West_EventScript_ItemGoldTeeth::
@@ -198,7 +182,7 @@ SilphCo_5F_EventScript_ItemProtein::
 	finditem ITEM_PROTEIN
 	end
 
-SilphCo_5F_EventScript_ItemTM01::
+SilphCo_5F_EventScript_ItemXAttack::
 	finditem ITEM_X_ATTACK
 	end
 
@@ -218,7 +202,7 @@ SilphCo_7F_EventScript_ItemCalcium::
 	finditem ITEM_CALCIUM
 	end
 
-SilphCo_7F_EventScript_ItemTM08::
+SilphCo_7F_EventScript_ItemXDefend::
 	finditem ITEM_X_DEFEND
 	end
 
@@ -238,12 +222,12 @@ PowerPlant_EventScript_ItemMaxPotion::
 	finditem ITEM_MAX_POTION
 	end
 
-PowerPlant_EventScript_ItemTM17::
-	finditem ITEM_MAX_POTION
+PowerPlant_EventScript_ItemXAccuracy::
+	finditem ITEM_X_ACCURACY
 	end
 
-PowerPlant_EventScript_ItemTM25::
-	finditem ITEM_ULTRA_BALL
+PowerPlant_EventScript_ItemMaxRepel::
+	finditem ITEM_MAX_REPEL
 	end
 
 PowerPlant_EventScript_ItemThunderStone::
@@ -274,47 +258,47 @@ PokemonMansion_3F_EventScript_ItemIron::
 	finditem ITEM_IRON
 	end
 
-PokemonMansion_B1F_EventScript_ItemTM14::
-	finditem ITEM_FULL_RESTORE
+PokemonMansion_B1F_EventScript_ItemMaxPotion::
+	finditem ITEM_MAX_POTION
 	end
 
 PokemonMansion_B1F_EventScript_ItemFullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
 
-PokemonMansion_B1F_EventScript_ItemTM22::
-	finditem ITEM_MAX_REVIVE
+PokemonMansion_B1F_EventScript_ItemSitrusBerry::
+	finditem ITEM_SITRUS_BERRY
 	end
 
 VictoryRoad_1F_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-VictoryRoad_1F_EventScript_ItemTM02::
-	finditem ITEM_MAX_POTION
+VictoryRoad_1F_EventScript_ItemFullRestore::
+	finditem ITEM_FULL_RESTORE
 	end
 
 VictoryRoad_2F_EventScript_ItemGuardSpec::
 	finditem ITEM_GUARD_SPEC
 	end
 
-VictoryRoad_2F_EventScript_ItemTM07::
-	finditem ITEM_FULL_HEAL
+VictoryRoad_2F_EventScript_ItemLumBerry::
+	finditem ITEM_LUM_BERRY
 	end
 
 VictoryRoad_2F_EventScript_ItemFullHeal::
 	finditem ITEM_FULL_HEAL
 	end
 
-VictoryRoad_2F_EventScript_ItemTM37::
-	finditem ITEM_MAX_REVIVE
+VictoryRoad_2F_EventScript_ItemMaxPotion::
+	finditem ITEM_MAX_POTION
 	end
 
 VictoryRoad_3F_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
 
-VictoryRoad_3F_EventScript_ItemTM50::
+VictoryRoad_3F_EventScript_ItemFullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
 
@@ -434,10 +418,6 @@ Route11_EventScript_ItemAwakening::
 	finditem ITEM_AWAKENING
 	end
 
-PokemonTower_5F_EventScript_ItemCleanseTag::
-	finditem ITEM_CLEANSE_TAG
-	end
-
 CeladonCity_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
@@ -490,6 +470,6 @@ FuchsiaForest_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
 	end
 
-SilphCo_4F_EventScript_ItemTM41::
+SilphCo_4F_EventScript_ItemXSpecial::
 	finditem ITEM_X_SPECIAL
 	end

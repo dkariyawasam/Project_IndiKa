@@ -43,7 +43,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_PokemonCenter_1F_EventScript_Bill",
-      "flag": "FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_CELIO",
@@ -58,7 +58,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_PokemonCenter_1F_EventScript_Celio",
-      "flag": "FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO"
+      "flag": "0"
     },
     {
       "type": "object",

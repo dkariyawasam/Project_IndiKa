@@ -4,7 +4,6 @@ OneIsland_MapScripts::
 	.byte 0
 
 OneIsland_OnTransition::
-	setworldmapflag FLAG_WORLD_MAP_ONE_ISLAND
 	end
 
 OneIsland_OnFrame::
@@ -78,7 +77,6 @@ OneIsland_EventScript_OldMan::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, OneIsland_EventScript_OldManLinkHoenn
-	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_EventScript_OldManLinkKanto
 	msgbox OneIsland_Text_LuckyToHaveCelioHere
 	release
 	end

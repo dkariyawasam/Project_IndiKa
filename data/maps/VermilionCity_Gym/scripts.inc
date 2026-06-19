@@ -113,7 +113,6 @@ VermilionCity_Gym_EventScript_LtSurgeChallenge7::
 
 VermilionCity_Gym_EventScript_DefeatedLtSurge::
 	famechecker FAMECHECKER_LTSURGE, 1
-	call_if_unset FLAG_GOT_TM55, VermilionCity_Gym_EventScript_ShowOaksAide
 	clearflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
 	setflag FLAG_DEFEATED_LT_SURGE
 	setflag FLAG_BADGE03_GET
@@ -156,10 +155,6 @@ VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone::
 	msgbox VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone
 	release
 	end
-
-VermilionCity_Gym_EventScript_ShowOaksAide::
-	clearflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
-	return
 
 VermilionCity_Gym_EventScript_Dwayne::
 	trainerbattle_single TRAINER_SAILOR_DWAYNE, VermilionCity_Gym_Text_DwayneIntro, VermilionCity_Gym_Text_DwayneDefeat

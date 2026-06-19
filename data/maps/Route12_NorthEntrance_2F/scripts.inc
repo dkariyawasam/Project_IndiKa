@@ -12,28 +12,6 @@ Route12_NorthEntrance_2F_EventScript_RightBinoculars::
 Route12_NorthEntrance_2F_EventScript_Lass::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TM27, Route12_NorthEntrance_2F_EventScript_ExplainTM27
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route12_NorthEntrance_2F_EventScript_TakeTMMale
-	call_if_eq VAR_RESULT, FEMALE, Route12_NorthEntrance_2F_EventScript_TakeTMFemale
-	setflag FLAG_GOT_TM27
-	release
-	end
-
-Route12_NorthEntrance_2F_EventScript_TakeTMMale::
-	msgbox Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreMale
-	return
-
-Route12_NorthEntrance_2F_EventScript_TakeTMFemale::
-	msgbox Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale
-	return
-
-Route12_NorthEntrance_2F_EventScript_NoRoomForTM27::
-	msgbox Route12_NorthEntrance_2F_Text_DontHaveRoomForThis
-	release
-	end
-
-Route12_NorthEntrance_2F_EventScript_ExplainTM27::
-	msgbox Route12_NorthEntrance_2F_Text_ExplainTM27
+	msgbox Route12_NorthEntrance_2F_Text_RememberPokemon
 	release
 	end

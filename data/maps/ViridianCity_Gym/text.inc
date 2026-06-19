@@ -36,14 +36,13 @@ ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "POKéMON LEAGUE.\p"
     .string "Go. Your path lies ahead.$"
 
-ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
-    .string "{PLAYER} received TM26\n"
+ViridianCity_Gym_Text_UnusedGiovanniReward::
+    .string "{PLAYER} received something\n"
     .string "from GIOVANNI.$"
 
-ViridianCity_Gym_Text_ExplainTM26::
-    .string "TM26 contains EARTHQUAKE.\p"
-    .string "It is a powerful attack that causes\n"
-    .string "a massive tremor.\p"
+ViridianCity_Gym_Text_ExplainEarthquake::
+    .string "EARTHQUAKE is a powerful attack\n"
+    .string "that causes a massive tremor.\p"
     .string "I made it when I ran the GYM here,\n"
     .string "far too long ago… $"
 

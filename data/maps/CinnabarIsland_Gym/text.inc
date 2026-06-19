@@ -23,8 +23,8 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
     .string "The VOLCANOBADGE proves you\n"
     .string "survived CINNABAR GYM's heat.$"
 
-CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
-    .string "{PLAYER} received TM38\n"
+CinnabarIsland_Gym_Text_UnusedBlaineReward::
+    .string "{PLAYER} received something\n"
     .string "from BLAINE.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
@@ -176,7 +176,7 @@ CinnabarIsland_Gym_Text_QuizQuestion5::
     .string "are not identical?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion6::
-    .string "TM28 contains TOMBSTONY?$"
+    .string "This contains TOMBSTONY?$"
 
 CinnabarIsland_Gym_Text_CorrectGoOnThrough::
     .string "You're absolutely correct!\p"
