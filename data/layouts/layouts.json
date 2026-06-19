@@ -1370,42 +1370,6 @@
       "blockdata_filepath": "data/layouts/PokemonTower_4F/map.bin"
     },
     {
-      "id": "LAYOUT_POKEMON_TOWER_5F",
-      "name": "PokemonTower_5F_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonTower",
-      "border_filepath": "data/layouts/PokemonTower_5F/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonTower_5F/map.bin"
-    },
-    {
-      "id": "LAYOUT_POKEMON_TOWER_6F",
-      "name": "PokemonTower_6F_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonTower",
-      "border_filepath": "data/layouts/PokemonTower_6F/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonTower_6F/map.bin"
-    },
-    {
-      "id": "LAYOUT_POKEMON_TOWER_7F",
-      "name": "PokemonTower_7F_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonTower",
-      "border_filepath": "data/layouts/PokemonTower_7F/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonTower_7F/map.bin"
-    },
-    {
       "id": "LAYOUT_POWER_PLANT",
       "name": "PowerPlant_Layout",
       "width": 49,

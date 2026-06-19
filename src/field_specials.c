@@ -1510,14 +1510,7 @@ u32 GetPlayerTrainerId(void)
 
 u8 GetUnlockedSeviiAreas(void)
 {
-    u8 result = 0;
-    if (FlagGet(FLAG_WORLD_MAP_ONE_ISLAND) == TRUE)
-        result |= 1 << 0;
-    if (FlagGet(FLAG_WORLD_MAP_TWO_ISLAND) == TRUE)
-        result |= 1 << 1;
-    if (FlagGet(FLAG_WORLD_MAP_THREE_ISLAND) == TRUE)
-        result |= 1 << 2;
-    return result;
+    return 0;
 }
 
 void UpdateTrainerCardPhotoIcons(void)

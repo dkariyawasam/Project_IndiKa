@@ -1,35 +1,35 @@
-PokemonTower_2F_Text_RivalIntro::
-    .string "{RIVAL}: Hey, {PLAYER}!\n"
-    .string "What brings you here?\l"
-    .string "Is your POKéMON dead?\p"
-    .string "Hey! It's alive!\p"
-    .string "I can at least make them faint!\n"
-    .string "Let's go!$"
+PokemonTower_2F_Text_HopeIntro::
+    .string "Urrg… Awaa…\n"
+    .string "Huhu… Graa…$"
 
-PokemonTower_2F_Text_RivalDefeat::
-    .string "What?\n"
-    .string "You stinker!\p"
-    .string "I took it easy on you, too!$"
+PokemonTower_2F_Text_HopeDefeat::
+    .string "Hwa!\n"
+    .string "I'm saved!$"
 
-@ Unused. Translated below
-@ Aw, man! They really kicked the bucket! Weak! Do them a favor and raise them more properly.
-PokemonTower_2F_Text_RivalVictory::
-    .string "{RIVAL}“あーあ‥！\n"
-    .string "ほんとに　くたばっちまったぞ！\l"
-    .string "よわいなー！\l"
-    .string "もっと　ちゃんと　そだてて　やれよ$"
+PokemonTower_2F_Text_HopePostBattle::
+    .string "The ghosts can be identified\n"
+    .string "clearly now.$"
 
-PokemonTower_2F_Text_RivalPostBattle::
-    .string "How's your POKéDEX coming?\n"
-    .string "I just caught a CUBONE!\p"
-    .string "I can't find the bigger MAROWAK.\n"
-    .string "Where could they be?\p"
-    .string "I bet there aren't any left!\p"
-    .string "Well, I better get going.\n"
-    .string "I've got a lot to accomplish,\l"
-    .string "unlike you.\p"
-    .string "Smell ya later!$"
+PokemonTower_2F_Text_CarlyIntro::
+    .string "Kekeke…\n"
+    .string "Kwaaah!$"
 
-PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
-    .string "The wayward ghosts show themselves\n"
-    .string "to those who enter this tower.$"
+PokemonTower_2F_Text_CarlyDefeat::
+    .string "Hmm?\n"
+    .string "What am I doing?$"
+
+PokemonTower_2F_Text_CarlyPostBattle::
+    .string "Sorry!\n"
+    .string "I was possessed!$"
+
+PokemonTower_2F_Text_PatriciaIntro::
+    .string "Be gone!\n"
+    .string "Malevolent spirit!$"
+
+PokemonTower_2F_Text_PatriciaDefeat::
+    .string "Whew!\n"
+    .string "The spirit left!$"
+
+PokemonTower_2F_Text_PatriciaPostBattle::
+    .string "The others above…\n"
+    .string "They must have been possessed.$"

@@ -54,15 +54,6 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
     .string "Come.\n"
     .string "Follow me.$"
 
-PalletTown_Text_OakYouEnjoyingTraveling::
-    .string "OAK: Ah, {PLAYER}!\n"
-    .string "You seem to be enjoying traveling.\p"
-    .string "Knowing you, {PLAYER}, I can easily\n"
-    .string "imagine you going out to even more\l"
-    .string "exotic locales.\p"
-    .string "Good for you, good for you.\n"
-    .string "Hohoho.$"
-
 PalletTown_Text_DebugSign_CompletePokedex::
     .string "POKéDEX seen and owned data\n"
     .string "completed.$"

@@ -38,8 +38,8 @@ FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
     .string "I'll never forget what you've done\n"
     .string "for me.$"
 
-FuchsiaCity_WardensHouse_Text_ReceivedTM54FromWarden::
-    .string "{PLAYER} received TM54\n"
+FuchsiaCity_WardensHouse_Text_UnusedWardenReward::
+    .string "{PLAYER} received something\n"
     .string "from the WARDEN.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::

@@ -114,16 +114,15 @@ CeladonCity_Gym_Text_GymGuidePostVictory::
     .string "You bloomed brilliantly against\n"
     .string "ERIKA's garden of POKéMON.$"
 
-CeladonCity_Gym_Text_ReceivedTM19FromErika::
-    .string "{PLAYER} received TM19\n"
+CeladonCity_Gym_Text_UnusedErikaReward::
+    .string "{PLAYER} received something\n"
     .string "from ERIKA.$"
 
-CeladonCity_Gym_Text_ExplainTM19::
-    .string "TM19 contains GIGA DRAIN.\p"
-    .string "Half the damage it inflicts is\n"
-    .string "drained to heal your POKéMON.\p"
-    .string "Wouldn't you agree that it's a\n"
-    .string "wonderful move?$"
+CeladonCity_Gym_Text_ExplainGigaDrain::
+    .string "GIGA DRAIN heals the user for\n"
+    .string "half the damage it inflicts.\p"
+    .string "That strength through renewal is\n"
+    .string "a beautiful thing.$"
 
 CeladonCity_Gym_Text_ShouldMakeRoomForThis::
     .string "You should make room for this.$"

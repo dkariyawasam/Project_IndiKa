@@ -26,8 +26,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PokemonMansion_B1F_EventScript_ItemTM22",
-      "flag": "FLAG_HIDE_POKEMON_MANSION_B1F_TM22"
+      "script": "PokemonMansion_B1F_EventScript_ItemSitrusBerry",
+      "flag": "FLAG_HIDE_POKEMON_MANSION_B1F_SITRUS_BERRY"
     },
     {
       "type": "object",
@@ -96,8 +96,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PokemonMansion_B1F_EventScript_ItemTM14",
-      "flag": "FLAG_HIDE_POKEMON_MANSION_B1F_TM14"
+      "script": "PokemonMansion_B1F_EventScript_ItemMaxPotion",
+      "flag": "FLAG_HIDE_POKEMON_MANSION_B1F_MAX_POTION"
     },
     {
       "type": "object",

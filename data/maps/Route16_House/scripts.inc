@@ -4,19 +4,7 @@ Route16_House_MapScripts::
 Route16_House_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TM52, Route16_House_EventScript_AlreadyGotTM52
 	msgbox Route16_House_Text_FoundMySecretRetreat
-	setflag FLAG_GOT_TM52
-	release
-	end
-
-Route16_House_EventScript_NoRoomForTM52::
-	msgbox Route16_House_Text_DontHaveAnyRoomForThis
-	release
-	end
-
-Route16_House_EventScript_AlreadyGotTM52::
-	msgbox Route16_House_Text_ExplainTM52
 	release
 	end
 
