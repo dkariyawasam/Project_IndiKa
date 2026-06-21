@@ -32,11 +32,9 @@
     "gMapGroup_IndoorRoute23",
     "gMapGroup_IndoorRoute25",
     "gMapGroup_IndoorOneIsland",
-    "gMapGroup_IndoorTwoIsland",
     "gMapGroup_IndoorThreeIsland",
     "gMapGroup_IndoorThreeIslandRoute",
-    "gMapGroup_IndoorFiveIslandRoute",
-    "gMapGroup_IndoorTwoIslandRoute"
+    "gMapGroup_IndoorFiveIslandRoute"
   ],
   "gMapGroup_Link": [
     "BattleColosseum_2P",
@@ -185,7 +183,6 @@
     "SaffronCity",
     "SaffronCity_Connection",
     "OneIsland",
-    "TwoIsland",
     "ThreeIsland",
     "Route1",
     "Route2",
@@ -396,11 +393,6 @@
     "OneIsland_House2",
     "OneIsland_Harbor"
   ],
-  "gMapGroup_IndoorTwoIsland": [
-    "TwoIsland_JoyfulGameCorner",
-    "TwoIsland_House",
-    "TwoIsland_Harbor"
-  ],
   "gMapGroup_IndoorThreeIsland": [
     "ThreeIsland_House1",
     "ThreeIsland_Mart",
@@ -412,6 +404,5 @@
   "gMapGroup_IndoorThreeIslandRoute": [
     "ThreeIsland_Harbor"
   ],
-  "gMapGroup_IndoorFiveIslandRoute": [],
-  "gMapGroup_IndoorTwoIslandRoute": []
+  "gMapGroup_IndoorFiveIslandRoute": []
 }
