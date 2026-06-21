@@ -562,7 +562,6 @@ const u8 gText_TmCase[] = _("TM CASE");
 const u8 gText_BerryPouch_2[] = _("BERRY POUCH");
 const u8 gText_Other[] = _("OTHER");
 const u8 gText_OneIsland[] = _("ONE ISLAND");
-const u8 gText_TwoIsland[] = _("TWO ISLAND");
 const u8 gText_ThreeIsland[] = _("THREE ISLAND");
 const u8 gText_FiveIsland[] = _("FIVE ISLAND");
 const u8 gText_Vermilion[] = _("VERMILION");

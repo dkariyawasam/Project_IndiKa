@@ -404,7 +404,6 @@ static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
 };
 
 static const struct MenuAction sMultichoiceList_Island23[] = {
-    { gText_TwoIsland },
     { gText_ThreeIsland },
     { gOtherText_Exit }
 };
@@ -417,7 +416,6 @@ static const struct MenuAction sMultichoiceList_Island13[] = {
 
 static const struct MenuAction sMultichoiceList_Island12[] = {
     { gText_OneIsland },
-    { gText_TwoIsland },
     { gOtherText_Exit }
 };
 

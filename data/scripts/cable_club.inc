@@ -1272,7 +1272,7 @@ CableClub_EventScript_ExplainDodrioBerryPickingRequirements::
 	msgbox Text_OnlyDodrioAllowed
 	return
 
-TwoIsland_JoyfulGameCorner_EventScript_ShowPokemonJumpRecords::
+CableClub_EventScript_ShowPokemonJumpRecords::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	special ShowPokemonJumpRecords
@@ -1280,7 +1280,7 @@ TwoIsland_JoyfulGameCorner_EventScript_ShowPokemonJumpRecords::
 	releaseall
 	end
 
-TwoIsland_JoyfulGameCorner_EventScript_ShowDodrioBerryPickingRecords::
+CableClub_EventScript_ShowDodrioBerryPickingRecords::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	special ShowDodrioBerryPickingRecords

@@ -338,10 +338,6 @@ FuchsiaCity_WardensHouse_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-TwoIsland_EventScript_ItemRevive::
-	finditem ITEM_REVIVE
-	end
-
 ThreeIsland_EventScript_ItemZinc::
 	finditem ITEM_ZINC
 	end

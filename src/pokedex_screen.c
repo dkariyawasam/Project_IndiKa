@@ -207,7 +207,6 @@ const u16 sTopMenuIconPals_Smallest[] = INCBIN_U16("graphics/pokedex/cat_icon_sm
 const u8 sDexScreen_CaughtIcon[] = INCBIN_U8("graphics/pokedex/caught_marker.4bpp");
 const u32 sTilemap_AreaMap_Kanto[] = INCBIN_U32("graphics/pokedex/map_kanto.4bpp.lz");
 const u32 sTilemap_AreaMap_OneIsland[] = INCBIN_U32("graphics/pokedex/map_one_island.4bpp.lz");
-const u32 sTilemap_AreaMap_TwoIsland[] = INCBIN_U32("graphics/pokedex/map_two_island.4bpp.lz");
 const u32 sTilemap_AreaMap_ThreeIsland[] = INCBIN_U32("graphics/pokedex/map_three_island.4bpp.lz");
 const u32 sTilemap_AreaMap_FiveIsland[] = INCBIN_U32("graphics/pokedex/map_five_island.4bpp.lz");
 const u16 sBlitTiles_WideEllipse[] = INCBIN_U16("graphics/pokedex/blit_wide_ellipse.4bpp");
@@ -713,16 +712,6 @@ static const struct WindowTemplate sWindowTemplate_AreaMap_OneIsland = {
     .baseBlock = 0x0274
 };
 
-static const struct WindowTemplate sWindowTemplate_AreaMap_TwoIsland = {
-    .bg = 2,
-    .tilemapLeft = 13,
-    .tilemapTop = 7,
-    .width = 4,
-    .height = 3,
-    .paletteNum = 0,
-    .baseBlock = 0x0280
-};
-
 static const struct WindowTemplate sWindowTemplate_AreaMap_ThreeIsland = {
     .bg = 2,
     .tilemapLeft = 13,
@@ -748,7 +737,6 @@ struct {
     const u32 * tiles;
 } const sAreaMapStructs_SeviiIslands[] = {
     {&sWindowTemplate_AreaMap_OneIsland,   sTilemap_AreaMap_OneIsland},
-    {&sWindowTemplate_AreaMap_TwoIsland,   sTilemap_AreaMap_TwoIsland},
     {&sWindowTemplate_AreaMap_ThreeIsland, sTilemap_AreaMap_ThreeIsland},
     {&sWindowTemplate_AreaMap_FiveIsland,  sTilemap_AreaMap_FiveIsland},
 };

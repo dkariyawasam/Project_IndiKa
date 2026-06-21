@@ -988,7 +988,7 @@ gFameCheckerFlavorTextOriginLocation_Bruno3::
 	.string "EMBER SPA$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno4::
-	.string "TWO ISLAND$"
+	.string "KANTO$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno5::
 	.string "POKéMON LEAGUE$"
