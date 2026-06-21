@@ -165,8 +165,8 @@
 #define VAR_MAP_SCENE_ONE_ISLAND_HARBOR                                        0x4075
 #define VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F                             0x4076
 #define VAR_MAP_SCENE_ROUTE20                                                  0x4077
-#define VAR_MAP_SCENE_TWO_ISLAND                                               0x4078
-#define VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER                            0x4079
+#define VAR_MAP_SCENE_0x4078                                                   0x4078
+#define VAR_MAP_SCENE_0x4079                                                   0x4079
 #define VAR_MAP_SCENE_ROUTE19                                                  0x407A
 #define VAR_MAP_SCENE_THREE_ISLAND                                             0x407B
 #define VAR_MAP_SCENE_POKEMON_CENTER_TEALA                                     0x407C
