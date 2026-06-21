@@ -18,9 +18,3 @@ ThreeIsland_Port_Text_ThankGoodnessBikersGone::
     .string "Are they gone?\p"
     .string "Oh, thank goodness!\n"
     .string "They certainly had me terrified!$"
-
-ThreeIsland_Port_Text_EverythingTurnedOutForBest::
-    .string "Those BIKERS ran off, and\n"
-    .string "LOSTELLE was found safe.\p"
-    .string "Everything turned out for the best!$"
-

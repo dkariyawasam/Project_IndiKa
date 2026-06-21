@@ -149,7 +149,6 @@ static const s8 sAreaMarkers[][4] = {
     [DEX_AREA_POKEMON_MANSION]  = { MARKER_CIRCULAR,  52,  62 },
     [DEX_AREA_VICTORY_ROAD]     = { MARKER_CIRCULAR,  45,   7 },
     [DEX_AREA_ONE_ISLAND]       = { MARKER_CIRCULAR,  10,  10 },
-    [DEX_AREA_TWO_ISLAND]       = { MARKER_CIRCULAR,  12,  35 },
     [DEX_AREA_THREE_ISLAND]     = { MARKER_CIRCULAR,  14,  52 },
     [DEX_AREA_FIVE_ISLAND]      = { MARKER_CIRCULAR,  45,  81 },
     [DEX_AREA_KINDLE_ROAD]      = { MARKER_SMALL_V,   14,   2 },

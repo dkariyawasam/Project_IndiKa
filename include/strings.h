@@ -830,7 +830,6 @@ extern const u8 gText_Colosseum[];
 extern const u8 gText_GameLinkCable[];
 extern const u8 gText_Wireless[];
 extern const u8 gText_OneIsland[];
-extern const u8 gText_TwoIsland[];
 extern const u8 gText_ThreeIsland[];
 extern const u8 gText_Vermilion[];
 extern const u8 gText_Colosseum_2[];

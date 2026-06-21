@@ -51,16 +51,10 @@ OneIsland_PokemonCenter_1F_Text_CanYouDeliverThisMeteoritePlayer::
     .string "me just a bit?\p"
     .string "…Actually, can I get you to do\n"
     .string "me a favor?\p"
-    .string "The island next to this one's\n"
-    .string "called TWO ISLAND.\p"
-    .string "There's a guy there that runs\n"
-    .string "a GAME CORNER.\p"
-    .string "He has this thing for rare rocks\n"
-    .string "and gems.\p"
-    .string "We keep in touch, being fellow\n"
-    .string "maniacs.\p"
-    .string "So, can I get you to deliver this\n"
-    .string "METEORITE to him?$"
+    .string "I'm going to stay here and help\n"
+    .string "CELIO with the network.\p"
+    .string "You should look around the local\n"
+    .string "islands while we work.$"
 
 OneIsland_PokemonCenter_1F_Text_AcceptedMeteoriteFromBill::
     .string "{PLAYER} accepted the METEORITE\n"
@@ -68,13 +62,13 @@ OneIsland_PokemonCenter_1F_Text_AcceptedMeteoriteFromBill::
 
 OneIsland_PokemonCenter_1F_Text_CelioPleaseTakeThis::
     .string "CELIO: {PLAYER}, if you are going\n"
-    .string "to TWO ISLAND, please take this.$"
+    .string "to explore, please take this.$"
 
 OneIsland_PokemonCenter_1F_Text_PassLetsYouTravelBetweenIslands::
     .string "It's a PASS for the ferry service\n"
     .string "serving the local islands.\p"
     .string "It will let you travel between the\n"
-    .string "ISLANDS ONE, TWO, and THREE.\p"
+    .string "nearby islands.\p"
     .string "Oh, you should have this, too.$"
 
 OneIsland_PokemonCenter_1F_Text_ReceivedExtraPageForTownMap::

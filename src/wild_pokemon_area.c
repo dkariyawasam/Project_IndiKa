@@ -87,7 +87,7 @@ static const u16 sDexAreas_Sevii1[][2] = {
 };
 
 static const u16 sDexAreas_Sevii2[][2] = {
-	{ MAPSEC_TWO_ISLAND, DEX_AREA_TWO_ISLAND }    
+	{ MAPSEC_NONE, DEX_AREA_NONE }    
 };
 
 static const u16 sDexAreas_Sevii3[][2] = {
