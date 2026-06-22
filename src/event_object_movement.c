@@ -479,6 +479,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_POKEMON_BREEDER             0x1122
 #define OBJ_EVENT_PAL_TAG_BERRY_PLANT                 0x1123
 #define OBJ_EVENT_PAL_TAG_AROMA_LADY                  0x1124
+#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER                 0x1125
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -517,6 +518,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_PokemonBreeder,          OBJ_EVENT_PAL_TAG_POKEMON_BREEDER},
     {gObjectEventPal_BerryPlant,              OBJ_EVENT_PAL_TAG_BERRY_PLANT},
     {gObjectEventPal_AromaLady,               OBJ_EVENT_PAL_TAG_AROMA_LADY},
+    {gObjectEventPal_BirdKeeper,              OBJ_EVENT_PAL_TAG_BIRD_KEEPER},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };

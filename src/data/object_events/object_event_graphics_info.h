@@ -2043,8 +2043,29 @@ DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSL
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteM, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteM);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteF, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteF);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BirdKeeper, OBJ_EVENT_PAL_TAG_BIRD_KEEPER, PALSLOT_NPC_DYNAMIC, sPicTable_BirdKeeper);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Engineer, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_Engineer);
 
 #undef DEFINE_TRAINER_OBJ_EVENT_GFX_INFO
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_PINK,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_2,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = gObjectEventSpriteOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_CueBall,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Snorlax = {
     .tileTag = TAG_NONE,
