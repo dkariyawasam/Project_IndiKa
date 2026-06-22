@@ -1182,7 +1182,7 @@ const u8 gLedianPokedexText[] = _(
 const u8 gLedianPokedexTextUnused[] = _("");
 
 const u8 gSpinarakPokedexText[] = _(
-    "It spins a web using fine--but durable--\n"
+    "It spins a web using fine-but durable-\n"
     "thread. It then waits patiently for prey\n"
     "to be trapped.");
 
@@ -1232,7 +1232,7 @@ const u8 gCleffaPokedexTextUnused[] = _("");
 
 const u8 gIgglybuffPokedexText[] = _(
     "Its extremely flexible and elastic body\n"
-    "makes it bounce continuously--anytime,\n"
+    "makes it bounce continuously-anytime,\n"
     "anywhere.");
 
 const u8 gIgglybuffPokedexTextUnused[] = _("");
