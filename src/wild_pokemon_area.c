@@ -81,7 +81,6 @@ static const u16 sDexAreas_Kanto[][2] = {
 };
 
 static const u16 sDexAreas_Sevii1[][2] = {
-	{ MAPSEC_KINDLE_ROAD,    DEX_AREA_KINDLE_ROAD },
 	{ MAPSEC_TREASURE_BEACH, DEX_AREA_TREASURE_BEACH },
 	{ MAPSEC_ONE_ISLAND,     DEX_AREA_ONE_ISLAND }    
 };
@@ -91,7 +90,6 @@ static const u16 sDexAreas_Sevii2[][2] = {
 };
 
 static const u16 sDexAreas_Sevii3[][2] = {
-	{ MAPSEC_BOND_BRIDGE,     DEX_AREA_BOND_BRIDGE },
 	{ MAPSEC_THREE_ISLE_PORT, DEX_AREA_THREE_ISLE_PATH },
 	{ MAPSEC_THREE_ISLAND,    DEX_AREA_THREE_ISLAND }
 };
