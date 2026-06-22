@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_CUE_BALL",
       "x": 15,
       "y": 24,
       "elevation": 3,
@@ -196,7 +196,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_CUE_BALL",
       "x": 5,
       "y": 104,
       "elevation": 3,
@@ -224,7 +224,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_CUE_BALL",
       "x": 5,
       "y": 134,
       "elevation": 3,

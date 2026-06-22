@@ -57,6 +57,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Engineer;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMLand;
@@ -367,4 +370,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRIATHLETE_M]             = &gObjectEventGraphicsInfo_TriathleteM,
     [OBJ_EVENT_GFX_TRIATHLETE_F]             = &gObjectEventGraphicsInfo_TriathleteF,
     [OBJ_EVENT_GFX_AROMA_LADY]               = &gObjectEventGraphicsInfo_AromaLady,
+    [OBJ_EVENT_GFX_BIRD_KEEPER]              = &gObjectEventGraphicsInfo_BirdKeeper,
+    [OBJ_EVENT_GFX_CUE_BALL]                 = &gObjectEventGraphicsInfo_CueBall,
+    [OBJ_EVENT_GFX_ENGINEER]                 = &gObjectEventGraphicsInfo_Engineer,
 };
