@@ -139,15 +139,15 @@ ThreeIsland_Text_YouveGotImpressiveMons::
     .string "You've got seriously impressive\n"
     .string "POKéMON with you.$"
 
-ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
+ThreeIsland_Text_LostelleWentOffTowardsBerryForest::
     .string "It'd be fantastic if someone as\n"
     .string "strong as you lived here.\p"
     .string "I hope you'll at least stay here\n"
     .string "a while.\p"
     .string "…I beg your pardon?\n"
     .string "You're looking for LOSTELLE?\p"
-    .string "LOSTELLE went off towards BOND\n"
-    .string "BRIDGE a while ago.$"
+    .string "LOSTELLE went off towards BERRY\n"
+    .string "FOREST a while ago.$"
 
 ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
     .string "THREE ISLAND is actually the most\n"
@@ -160,7 +160,7 @@ ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
     .string "I'm going to train my DODUO in the\n"
     .string "FUCHSIA FOREST.\p"
     .string "When it evolves, I'm going to race\n"
-    .string "it across BOND BRIDGE.$"
+    .string "it through BERRY FOREST.$"
 
 ThreeIsland_Text_Doduo::
     .string "DODUO: Gigiih!$"

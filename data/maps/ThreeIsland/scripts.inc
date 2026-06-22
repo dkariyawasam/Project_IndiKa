@@ -120,7 +120,7 @@ ThreeIsland_EventScript_AntiBiker2::
 ThreeIsland_EventScript_AntiBiker2BikersGone::
 	applymovement LOCALID_THREE_ISLAND_ANTIBIKER2, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox ThreeIsland_Text_LostelleWentOffTowardsBondBridge
+	msgbox ThreeIsland_Text_LostelleWentOffTowardsBerryForest
 	release
 	end
 

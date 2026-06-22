@@ -442,18 +442,6 @@ SeafoamIslands_B4F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-OneIsland_KindleRoad_EventScript_ItemEther::
-	finditem ITEM_ETHER
-	end
-
-OneIsland_KindleRoad_EventScript_ItemMaxRepel::
-	finditem ITEM_MAX_REPEL
-	end
-
-OneIsland_KindleRoad_EventScript_ItemCarbos::
-	finditem ITEM_CARBOS
-	end
-
 FuchsiaForest_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end

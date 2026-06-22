@@ -425,28 +425,12 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_KINDLE_ROAD",
-      "name": "KINDLE ROAD",
-      "x": 2,
-      "y": 3,
-      "width": 1,
-      "height": 6
-    },
-    {
       "id": "MAPSEC_TREASURE_BEACH",
       "name": "TREASURE BEACH",
       "x": 1,
       "y": 9,
       "width": 1,
       "height": 2
-    },
-    {
-      "id": "MAPSEC_BOND_BRIDGE",
-      "name": "BOND BRIDGE",
-      "x": 13,
-      "y": 12,
-      "width": 4,
-      "height": 1
     },
     {
       "id": "MAPSEC_THREE_ISLE_PORT",
