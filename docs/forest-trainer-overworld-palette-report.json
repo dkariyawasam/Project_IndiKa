@@ -1,0 +1,462 @@
+{
+  "note": "Palette index 0 is ignored as transparent. Colors are exact RGB values after expanding each indexed PNG palette.",
+  "totalUnionColors": 55,
+  "sharedColorCount": 20,
+  "uniqueColorCount": 35,
+  "colors": {
+    "#000000": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#143d34": [
+      "Breeder"
+    ],
+    "#204110": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#206040": [
+      "Breeder"
+    ],
+    "#2b2652": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#2fa138": [
+      "Breeder"
+    ],
+    "#3382cc": [
+      "Bug Catcher"
+    ],
+    "#39394a": [
+      "Bug Maniac"
+    ],
+    "#398b00": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#402110": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#495959": [
+      "Bug Maniac"
+    ],
+    "#4a3131": [
+      "Aroma Lady",
+      "Breeder"
+    ],
+    "#4e496e": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#522041": [
+      "Camper"
+    ],
+    "#525220": [
+      "Bug Catcher",
+      "Picnicker",
+      "Ranger M",
+      "Ranger F",
+      "Camper"
+    ],
+    "#5448a1": [
+      "Bug Catcher"
+    ],
+    "#6283cd": [
+      "Bug Maniac"
+    ],
+    "#676f89": [
+      "Bug Catcher"
+    ],
+    "#6960a6": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#6f8787": [
+      "Bug Maniac"
+    ],
+    "#755800": [
+      "Breeder"
+    ],
+    "#7b4141": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#7d4757": [
+      "Aroma Lady"
+    ],
+    "#83cd31": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#877b4e": [
+      "Bug Maniac"
+    ],
+    "#94c5ee": [
+      "Bug Maniac"
+    ],
+    "#9c4e00": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#9ed666": [
+      "Breeder"
+    ],
+    "#a48320": [
+      "Bug Catcher",
+      "Picnicker",
+      "Camper"
+    ],
+    "#a8adbd": [
+      "Bug Catcher"
+    ],
+    "#ababab": [
+      "Breeder"
+    ],
+    "#ad672d": [
+      "Aroma Lady"
+    ],
+    "#b08963": [
+      "Bug Catcher"
+    ],
+    "#bd6b84": [
+      "Aroma Lady"
+    ],
+    "#c5c5d5": [
+      "Bug Maniac"
+    ],
+    "#c6c6e7": [
+      "Aroma Lady"
+    ],
+    "#c7831e": [
+      "Breeder"
+    ],
+    "#d0d8e0": [
+      "Bug Catcher"
+    ],
+    "#d1b552": [
+      "Bug Catcher"
+    ],
+    "#d4bf72": [
+      "Bug Maniac"
+    ],
+    "#de9473": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#de94bd": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#debd41": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#e69757": [
+      "Aroma Lady"
+    ],
+    "#e6cb6c": [
+      "Bug Catcher"
+    ],
+    "#e7e7ff": [
+      "Aroma Lady"
+    ],
+    "#e8b443": [
+      "Breeder"
+    ],
+    "#ed7539": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#ede6c0": [
+      "Bug Maniac"
+    ],
+    "#f6bd94": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#fa6173": [
+      "Aroma Lady"
+    ],
+    "#ff9c9c": [
+      "Aroma Lady"
+    ],
+    "#ffd078": [
+      "Aroma Lady"
+    ],
+    "#ffd5b4": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#ffffff": [
+      "Picnicker",
+      "Bug Maniac",
+      "Breeder",
+      "Camper"
+    ]
+  },
+  "trainers": [
+    {
+      "name": "Bug Catcher",
+      "source": "graphics/object_events/pics/people/bug_catcher.png",
+      "dimensions": "160x32",
+      "colorCount": 15,
+      "uniqueColorCount": 8,
+      "colors": [
+        "#000000",
+        "#3382cc",
+        "#525220",
+        "#5448a1",
+        "#676f89",
+        "#7b4141",
+        "#a48320",
+        "#a8adbd",
+        "#b08963",
+        "#d0d8e0",
+        "#d1b552",
+        "#de9473",
+        "#e6cb6c",
+        "#f6bd94",
+        "#ffd5b4"
+      ],
+      "uniqueColors": [
+        "#3382cc",
+        "#5448a1",
+        "#676f89",
+        "#a8adbd",
+        "#b08963",
+        "#d0d8e0",
+        "#d1b552",
+        "#e6cb6c"
+      ]
+    },
+    {
+      "name": "Picnicker",
+      "source": "graphics/object_events/pics/people/picnicker.png",
+      "dimensions": "160x32",
+      "colorCount": 12,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#204110",
+        "#398b00",
+        "#525220",
+        "#7b4141",
+        "#83cd31",
+        "#a48320",
+        "#de9473",
+        "#de94bd",
+        "#f6bd94",
+        "#ffd5b4",
+        "#ffffff"
+      ],
+      "uniqueColors": []
+    },
+    {
+      "name": "Aroma Lady",
+      "source": "graphics/object_events/pics/people/aroma_lady.png",
+      "dimensions": "16x320",
+      "colorCount": 15,
+      "uniqueColorCount": 9,
+      "colors": [
+        "#000000",
+        "#4a3131",
+        "#7b4141",
+        "#7d4757",
+        "#ad672d",
+        "#bd6b84",
+        "#c6c6e7",
+        "#de9473",
+        "#e69757",
+        "#e7e7ff",
+        "#f6bd94",
+        "#fa6173",
+        "#ff9c9c",
+        "#ffd078",
+        "#ffd5b4"
+      ],
+      "uniqueColors": [
+        "#7d4757",
+        "#ad672d",
+        "#bd6b84",
+        "#c6c6e7",
+        "#e69757",
+        "#e7e7ff",
+        "#fa6173",
+        "#ff9c9c",
+        "#ffd078"
+      ]
+    },
+    {
+      "name": "Bug Maniac",
+      "source": "graphics/object_events/pics/people/bug_maniac.png",
+      "dimensions": "16x320",
+      "colorCount": 15,
+      "uniqueColorCount": 9,
+      "colors": [
+        "#000000",
+        "#39394a",
+        "#495959",
+        "#6283cd",
+        "#6f8787",
+        "#7b4141",
+        "#877b4e",
+        "#94c5ee",
+        "#c5c5d5",
+        "#d4bf72",
+        "#de9473",
+        "#ede6c0",
+        "#f6bd94",
+        "#ffd5b4",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#39394a",
+        "#495959",
+        "#6283cd",
+        "#6f8787",
+        "#877b4e",
+        "#94c5ee",
+        "#c5c5d5",
+        "#d4bf72",
+        "#ede6c0"
+      ]
+    },
+    {
+      "name": "Ranger M",
+      "source": "graphics/object_events/pics/people/pokemon_ranger_m.png",
+      "dimensions": "160x32",
+      "colorCount": 13,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#2b2652",
+        "#402110",
+        "#4e496e",
+        "#525220",
+        "#6960a6",
+        "#7b4141",
+        "#9c4e00",
+        "#de9473",
+        "#debd41",
+        "#ed7539",
+        "#f6bd94",
+        "#ffd5b4"
+      ],
+      "uniqueColors": []
+    },
+    {
+      "name": "Ranger F",
+      "source": "graphics/object_events/pics/people/pokemon_ranger_f.png",
+      "dimensions": "160x32",
+      "colorCount": 13,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#2b2652",
+        "#402110",
+        "#4e496e",
+        "#525220",
+        "#6960a6",
+        "#7b4141",
+        "#9c4e00",
+        "#de9473",
+        "#debd41",
+        "#ed7539",
+        "#f6bd94",
+        "#ffd5b4"
+      ],
+      "uniqueColors": []
+    },
+    {
+      "name": "Breeder",
+      "source": "graphics/object_events/pics/people/pokemon_breeder.png",
+      "dimensions": "160x32",
+      "colorCount": 15,
+      "uniqueColorCount": 8,
+      "colors": [
+        "#000000",
+        "#143d34",
+        "#206040",
+        "#2fa138",
+        "#4a3131",
+        "#755800",
+        "#7b4141",
+        "#9ed666",
+        "#ababab",
+        "#c7831e",
+        "#de9473",
+        "#e8b443",
+        "#f6bd94",
+        "#ffd5b4",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#143d34",
+        "#206040",
+        "#2fa138",
+        "#755800",
+        "#9ed666",
+        "#ababab",
+        "#c7831e",
+        "#e8b443"
+      ]
+    },
+    {
+      "name": "Camper",
+      "source": "graphics/object_events/pics/people/camper.png",
+      "dimensions": "160x32",
+      "colorCount": 13,
+      "uniqueColorCount": 1,
+      "colors": [
+        "#000000",
+        "#204110",
+        "#398b00",
+        "#522041",
+        "#525220",
+        "#7b4141",
+        "#83cd31",
+        "#a48320",
+        "#de9473",
+        "#de94bd",
+        "#f6bd94",
+        "#ffd5b4",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#522041"
+      ]
+    }
+  ]
+}

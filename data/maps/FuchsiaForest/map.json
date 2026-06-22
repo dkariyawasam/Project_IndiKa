@@ -73,7 +73,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_F",
       "x": 22,
       "y": 9,
       "elevation": 3,
@@ -143,7 +143,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_M",
       "x": 47,
       "y": 38,
       "elevation": 3,
