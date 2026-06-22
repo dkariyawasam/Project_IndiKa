@@ -4405,7 +4405,7 @@ EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_PostBattle::
 EventScript_ForestTrainer_BUG_MANIAC_HOLLIS_Text_Intro::
     .string "Everyone talks about the DAY CARE,\n"
     .string "but I watch the bugs nearby.\p"
-    .string "Breeding, molting, changing--\n"
+    .string "Breeding, molting, changing-\n"
     .string "it's all connected!$"
 EventScript_ForestTrainer_BUG_MANIAC_HOLLIS_Text_RematchIntro::
     .string "I found another pattern in the\n"
@@ -4981,7 +4981,7 @@ EventScript_RouteTrainer_CAMPER_DREW_Text_PostBattle::
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_Intro::
     .string "I scout the road before MT. MOON.\p"
     .string "Loose stones, steep ledges, tough\n"
-    .string "TRAINERS--ROUTE 3 has it all!$"
+    .string "TRAINERS-ROUTE 3 has it all!$"
 EventScript_RouteTrainer_CAMPER_ETHAN_Text_RematchIntro::
     .string "Back for another mountain-road\n"
     .string "check?\p"
@@ -5366,7 +5366,7 @@ EventScript_RouteTrainer_PICNICKER_GWEN_Text_PostBattle::
 EventScript_RouteTrainer_PICNICKER_HEIDI_Text_Intro::
     .string "I like this road because it gives\n"
     .string "you choices.\p"
-    .string "CERULEAN, SAFFRON, or the tunnel--\n"
+    .string "CERULEAN, SAFFRON, or the tunnel-\n"
     .string "which way are you heading?$"
 EventScript_RouteTrainer_PICNICKER_HEIDI_Text_RematchIntro::
     .string "You chose to come back here?\p"
@@ -5447,7 +5447,7 @@ EventScript_RouteTrainer_PICNICKER_SOFIA_Text_Defeat::
     .string "You crossed my line cleanly!$"
 EventScript_RouteTrainer_PICNICKER_SOFIA_Text_PostBattle::
     .string "Short routes can hide big choices.\p"
-    .string "CELADON, SAFFRON, or the tunnel--\n"
+    .string "CELADON, SAFFRON, or the tunnel-\n"
     .string "you always have to pick a path.$"
 EventScript_RouteTrainer_ROUTE10_SWIMMER_SUSIE_Text_Intro::
     .string "South of here, LAVENDER\n"
@@ -5502,7 +5502,7 @@ EventScript_RouteTrainer_PKMN_BREEDER_ALLISON_Text_Defeat::
 EventScript_RouteTrainer_PKMN_BREEDER_ALLISON_Text_PostBattle::
     .string "A road can train temperament.\p"
     .string "Noise, wind, footsteps,\n"
-    .string "tremors--it all matters.$"
+    .string "tremors-it all matters.$"
 EventScript_RouteTrainer_PKMN_BREEDER_BETHANY_Text_Intro::
     .string "This BREEDER knows\n"
     .string "ROUTE 25 well!$"

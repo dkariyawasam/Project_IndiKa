@@ -101,7 +101,7 @@ Route9_Text_AlanPostBattle::
 Route9_Text_ConnerIntro::
     .string "This mountain path makes every\n"
     .string "battle hit harder!\p"
-    .string "Loose stones, tight turns--\n"
+    .string "Loose stones, tight turns-\n"
     .string "perfect balance training!$"
 
 Route9_Text_ConnerDefeat::
