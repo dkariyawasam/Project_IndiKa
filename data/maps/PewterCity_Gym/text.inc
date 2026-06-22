@@ -12,7 +12,7 @@ PewterCity_Gym_Text_BrockIntro::
     .string "that's where true strength lies.\p"
     .string "There's something I want to show\n"
     .string "you about evolution.\p"
-    .string "But first--you'll have to\n"
+    .string "But first-you'll have to\n"
     .string "defeat me in battle.\p"
     .string "Let's see what you've learned!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
@@ -31,7 +31,7 @@ PewterCity_Gym_Text_BrockDefeat::
 
 PewterCity_Gym_Text_TakeThisWithYou::
     .string "Wait.\p"
-    .string "Take this--\n"
+    .string "Take this-\n"
     .string "the BOULDERBADGE.\p"
 	.string "And with it, the key to\n"
 	.string "the CINNABAR LAB.$"
