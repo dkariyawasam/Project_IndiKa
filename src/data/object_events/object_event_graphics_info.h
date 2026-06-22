@@ -473,7 +473,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutM = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -488,7 +488,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Camper,
+    .images = sPicTable_ScoutM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -568,7 +568,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLady = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutF = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -583,7 +583,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Picnicker,
+    .images = sPicTable_ScoutF,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
