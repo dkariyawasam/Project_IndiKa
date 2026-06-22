@@ -1,0 +1,497 @@
+{
+  "note": "Transparent index/colors ignored. Colors are exact RGB values after expanding each indexed PNG palette.",
+  "totalUnionColors": 68,
+  "sharedColorCount": 30,
+  "uniqueColorCount": 38,
+  "colors": {
+    "#000000": [
+      "Bug Catcher",
+      "Picnicker",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ],
+    "#101010": [
+      "Aroma Lady"
+    ],
+    "#205220": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#206241": [
+      "Breeder"
+    ],
+    "#29395a": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#313952": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#314183": [
+      "Bug Maniac"
+    ],
+    "#317b9c": [
+      "Bug Catcher",
+      "Bug Maniac"
+    ],
+    "#414a4a": [
+      "Bug Maniac"
+    ],
+    "#415283": [
+      "Bug Catcher"
+    ],
+    "#4aa452": [
+      "Breeder"
+    ],
+    "#523131": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#624139": [
+      "Bug Maniac"
+    ],
+    "#625a7b": [
+      "Aroma Lady"
+    ],
+    "#626a83": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#62a4de": [
+      "Bug Catcher",
+      "Bug Maniac"
+    ],
+    "#6a4a4a": [
+      "Bug Catcher",
+      "Picnicker",
+      "Aroma Lady",
+      "Camper"
+    ],
+    "#6a7373": [
+      "Bug Maniac"
+    ],
+    "#6aa441": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#737394": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#7b6252": [
+      "Breeder"
+    ],
+    "#7bcd6a": [
+      "Breeder"
+    ],
+    "#834a31": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#838ba4": [
+      "Bug Catcher"
+    ],
+    "#838bac": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#8394ac": [
+      "Breeder"
+    ],
+    "#8b6a52": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#8bcd6a": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#946a6a": [
+      "Aroma Lady"
+    ],
+    "#9c8b4a": [
+      "Bug Maniac"
+    ],
+    "#9c94b4": [
+      "Aroma Lady"
+    ],
+    "#9cc5c5": [
+      "Aroma Lady"
+    ],
+    "#b4bdd5": [
+      "Bug Catcher"
+    ],
+    "#bd3139": [
+      "Bug Catcher"
+    ],
+    "#bd4139": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#bd6a83": [
+      "Aroma Lady"
+    ],
+    "#bd8b6a": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#bd9439": [
+      "Breeder"
+    ],
+    "#bd946a": [
+      "Breeder"
+    ],
+    "#bdac73": [
+      "Bug Catcher"
+    ],
+    "#bdbdc5": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#c55a4a": [
+      "Breeder"
+    ],
+    "#c58b6a": [
+      "Bug Catcher",
+      "Picnicker",
+      "Bug Maniac",
+      "Camper"
+    ],
+    "#c5946a": [
+      "Aroma Lady"
+    ],
+    "#c5c58b": [
+      "Bug Maniac"
+    ],
+    "#c5c5e6": [
+      "Aroma Lady"
+    ],
+    "#cd6a4a": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#cdcdd5": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#cdd5d5": [
+      "Bug Maniac"
+    ],
+    "#d5dee6": [
+      "Bug Catcher",
+      "Breeder"
+    ],
+    "#de8394": [
+      "Aroma Lady"
+    ],
+    "#de947b": [
+      "Breeder"
+    ],
+    "#dedea4": [
+      "Bug Maniac"
+    ],
+    "#e66a8b": [
+      "Picnicker",
+      "Camper"
+    ],
+    "#e6b494": [
+      "Picnicker"
+    ],
+    "#e6bd94": [
+      "Ranger M",
+      "Ranger F",
+      "Breeder"
+    ],
+    "#e6e6ff": [
+      "Aroma Lady"
+    ],
+    "#eeac52": [
+      "Breeder"
+    ],
+    "#eeb494": [
+      "Bug Catcher",
+      "Bug Maniac",
+      "Camper"
+    ],
+    "#eebd94": [
+      "Aroma Lady"
+    ],
+    "#eede94": [
+      "Bug Catcher"
+    ],
+    "#f69452": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#f6bdc5": [
+      "Aroma Lady"
+    ],
+    "#f6f6ff": [
+      "Aroma Lady"
+    ],
+    "#ffcd41": [
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#ffdecd": [
+      "Bug Catcher",
+      "Picnicker",
+      "Bug Maniac",
+      "Breeder",
+      "Camper"
+    ],
+    "#ffe6cd": [
+      "Aroma Lady",
+      "Ranger M",
+      "Ranger F"
+    ],
+    "#ffffff": [
+      "Bug Catcher",
+      "Picnicker",
+      "Bug Maniac",
+      "Ranger M",
+      "Ranger F",
+      "Breeder",
+      "Camper"
+    ]
+  },
+  "trainers": [
+    {
+      "name": "Bug Catcher",
+      "source": "graphics/trainers/front_pics/bug_catcher_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 6,
+      "colors": [
+        "#000000",
+        "#317b9c",
+        "#415283",
+        "#62a4de",
+        "#6a4a4a",
+        "#838ba4",
+        "#b4bdd5",
+        "#bd3139",
+        "#bdac73",
+        "#c58b6a",
+        "#d5dee6",
+        "#eeb494",
+        "#eede94",
+        "#ffdecd",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#415283",
+        "#838ba4",
+        "#b4bdd5",
+        "#bd3139",
+        "#bdac73",
+        "#eede94"
+      ]
+    },
+    {
+      "name": "Picnicker",
+      "source": "graphics/trainers/front_pics/picnicker_front_pic.png",
+      "colorCount": 14,
+      "uniqueColorCount": 1,
+      "colors": [
+        "#000000",
+        "#205220",
+        "#29395a",
+        "#6a4a4a",
+        "#6aa441",
+        "#737394",
+        "#8bcd6a",
+        "#bd4139",
+        "#c58b6a",
+        "#cdcdd5",
+        "#e66a8b",
+        "#e6b494",
+        "#ffdecd",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#e6b494"
+      ]
+    },
+    {
+      "name": "Aroma Lady",
+      "source": "graphics/trainers/front_pics/aroma_lady_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 13,
+      "colors": [
+        "#101010",
+        "#625a7b",
+        "#6a4a4a",
+        "#946a6a",
+        "#9c94b4",
+        "#9cc5c5",
+        "#bd6a83",
+        "#c5946a",
+        "#c5c5e6",
+        "#de8394",
+        "#e6e6ff",
+        "#eebd94",
+        "#f6bdc5",
+        "#f6f6ff",
+        "#ffe6cd"
+      ],
+      "uniqueColors": [
+        "#101010",
+        "#625a7b",
+        "#946a6a",
+        "#9c94b4",
+        "#9cc5c5",
+        "#bd6a83",
+        "#c5946a",
+        "#c5c5e6",
+        "#de8394",
+        "#e6e6ff",
+        "#eebd94",
+        "#f6bdc5",
+        "#f6f6ff"
+      ]
+    },
+    {
+      "name": "Bug Maniac",
+      "source": "graphics/trainers/front_pics/bug_maniac_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 8,
+      "colors": [
+        "#000000",
+        "#314183",
+        "#317b9c",
+        "#414a4a",
+        "#624139",
+        "#62a4de",
+        "#6a7373",
+        "#9c8b4a",
+        "#c58b6a",
+        "#c5c58b",
+        "#cdd5d5",
+        "#dedea4",
+        "#eeb494",
+        "#ffdecd",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#314183",
+        "#414a4a",
+        "#624139",
+        "#6a7373",
+        "#9c8b4a",
+        "#c5c58b",
+        "#cdd5d5",
+        "#dedea4"
+      ]
+    },
+    {
+      "name": "Ranger M",
+      "source": "graphics/trainers/front_pics/pokemon_ranger_m_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#313952",
+        "#523131",
+        "#626a83",
+        "#834a31",
+        "#838bac",
+        "#8b6a52",
+        "#bd8b6a",
+        "#bdbdc5",
+        "#cd6a4a",
+        "#e6bd94",
+        "#f69452",
+        "#ffcd41",
+        "#ffe6cd",
+        "#ffffff"
+      ],
+      "uniqueColors": []
+    },
+    {
+      "name": "Ranger F",
+      "source": "graphics/trainers/front_pics/pokemon_ranger_f_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#313952",
+        "#523131",
+        "#626a83",
+        "#834a31",
+        "#838bac",
+        "#8b6a52",
+        "#bd8b6a",
+        "#bdbdc5",
+        "#cd6a4a",
+        "#e6bd94",
+        "#f69452",
+        "#ffcd41",
+        "#ffe6cd",
+        "#ffffff"
+      ],
+      "uniqueColors": []
+    },
+    {
+      "name": "Breeder",
+      "source": "graphics/trainers/front_pics/pokemon_breeder_front_pic.png",
+      "colorCount": 15,
+      "uniqueColorCount": 10,
+      "colors": [
+        "#000000",
+        "#206241",
+        "#4aa452",
+        "#7b6252",
+        "#7bcd6a",
+        "#8394ac",
+        "#bd9439",
+        "#bd946a",
+        "#c55a4a",
+        "#d5dee6",
+        "#de947b",
+        "#e6bd94",
+        "#eeac52",
+        "#ffdecd",
+        "#ffffff"
+      ],
+      "uniqueColors": [
+        "#206241",
+        "#4aa452",
+        "#7b6252",
+        "#7bcd6a",
+        "#8394ac",
+        "#bd9439",
+        "#bd946a",
+        "#c55a4a",
+        "#de947b",
+        "#eeac52"
+      ]
+    },
+    {
+      "name": "Camper",
+      "source": "graphics/trainers/front_pics/camper_front_pic.png",
+      "colorCount": 14,
+      "uniqueColorCount": 0,
+      "colors": [
+        "#000000",
+        "#205220",
+        "#29395a",
+        "#6a4a4a",
+        "#6aa441",
+        "#737394",
+        "#8bcd6a",
+        "#bd4139",
+        "#c58b6a",
+        "#cdcdd5",
+        "#e66a8b",
+        "#eeb494",
+        "#ffdecd",
+        "#ffffff"
+      ],
+      "uniqueColors": []
+    }
+  ]
+}

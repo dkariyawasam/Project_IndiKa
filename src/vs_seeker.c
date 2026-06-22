@@ -974,8 +974,8 @@ static u8 GetRunningBehaviorFromGraphicsId(u8 graphicsId)
         case OBJ_EVENT_GFX_BEAUTY:
         case OBJ_EVENT_GFX_BALDING_MAN:
         case OBJ_EVENT_GFX_TUBER_F:
-        case OBJ_EVENT_GFX_CAMPER:
-        case OBJ_EVENT_GFX_PICNICKER:
+        case OBJ_EVENT_GFX_SCOUT_M:
+        case OBJ_EVENT_GFX_SCOUT_F:
         case OBJ_EVENT_GFX_COOLTRAINER_M:
         case OBJ_EVENT_GFX_COOLTRAINER_F:
         case OBJ_EVENT_GFX_SWIMMER_M_LAND:

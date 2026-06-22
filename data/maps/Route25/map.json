@@ -210,7 +210,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_M",
       "x": 41,
       "y": 3,
       "elevation": 3,
@@ -224,7 +224,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_F",
       "x": 32,
       "y": 2,
       "elevation": 3,
@@ -238,7 +238,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_F",
       "x": 34,
       "y": 6,
       "elevation": 3,
@@ -252,7 +252,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "graphics_id": "OBJ_EVENT_GFX_SCOUT_M",
       "x": 21,
       "y": 9,
       "elevation": 3,
