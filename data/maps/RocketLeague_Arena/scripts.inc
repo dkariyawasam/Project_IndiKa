@@ -7,7 +7,6 @@ RocketLeague_Arena_MapScripts::
 RocketLeague_Arena_OnTransition::
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
-	removeobject LOCALID_ROCKET_LEAGUE_GIOVANNI
 	end
 
 RocketLeague_Arena_OnResume::
@@ -38,6 +37,29 @@ RocketLeague_Arena_EventScript_ReturnToLobby::
 	waitstate
 	end
 
+RocketLeague_Arena_EventScript_TryEnterChampionRoom::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	special IsLeagueChallengeActive
+	goto_if_eq VAR_RESULT, 0, RocketLeague_Arena_EventScript_ChampionRoomLocked
+	special GetLeagueChallengeCurrentTrainer
+	goto_if_eq VAR_RESULT, TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_EventScript_WarpToChampionRoom
+	goto RocketLeague_Arena_EventScript_ChampionRoomLocked
+
+RocketLeague_Arena_EventScript_WarpToChampionRoom::
+	warp MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM, 6, 19
+	waitstate
+	releaseall
+	end
+
+RocketLeague_Arena_EventScript_ChampionRoomLocked::
+	msgbox RocketLeague_Arena_Text_ChampionRoomLocked
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromChampionRoom
+	waitmovement 0
+	releaseall
+	end
+
 RocketLeague_Arena_EventScript_ReadyPrompt::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
@@ -66,7 +88,7 @@ RocketLeague_Arena_EventScript_StartRocketBattle::
 	goto_if_eq VAR_RESULT, TRAINER_ROCKET_ACE_SABLE, RocketLeague_Arena_EventScript_BattleSable
 	goto_if_eq VAR_RESULT, TRAINER_ROCKET_ACE_JET, RocketLeague_Arena_EventScript_BattleJet
 	goto_if_eq VAR_RESULT, TRAINER_ROCKET_ACE_VIPER, RocketLeague_Arena_EventScript_BattleViper
-	goto_if_eq VAR_RESULT, TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_EventScript_BattleGiovanni
+	goto_if_eq VAR_RESULT, TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_EventScript_ChampionAwaits
 	call RocketLeague_Arena_EventScript_StartChallenge
 	goto RocketLeague_Arena_EventScript_StartRocketBattle
 
@@ -206,16 +228,13 @@ RocketLeague_Arena_EventScript_BattleViper::
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
-RocketLeague_Arena_EventScript_BattleGiovanni::
-	call RocketLeague_Arena_EventScript_GiovanniEnter
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox RocketLeague_Arena_Text_GiovanniIntro
-	playbgm MUS_ENCOUNTER_ROCKET, 0
-	cleartrainerflag TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI
-	trainerbattle_no_intro TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_Text_GiovanniDefeat
-	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_GIOVANNI
-	goto RocketLeague_Arena_EventScript_GiveCoinReward
+RocketLeague_Arena_EventScript_ChampionAwaits::
+	msgbox RocketLeague_Arena_Text_ChampionAwaits
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
+	waitmovement 0
+	releaseall
+	end
 
 RocketLeague_Arena_EventScript_AdminMEnter::
 	setobjectxyperm LOCALID_ROCKET_LEAGUE_ADMIN_M, 6, 1
@@ -228,13 +247,6 @@ RocketLeague_Arena_EventScript_AdminFEnter::
 	setobjectxyperm LOCALID_ROCKET_LEAGUE_ADMIN_F, 6, 1
 	addobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminEnter
-	waitmovement 0
-	return
-
-RocketLeague_Arena_EventScript_GiovanniEnter::
-	setobjectxyperm LOCALID_ROCKET_LEAGUE_GIOVANNI, 6, 1
-	addobject LOCALID_ROCKET_LEAGUE_GIOVANNI
-	applymovement LOCALID_ROCKET_LEAGUE_GIOVANNI, RocketLeague_Arena_Movement_AdminEnter
 	waitmovement 0
 	return
 
@@ -294,6 +306,10 @@ RocketLeague_Arena_EventScript_CoinRewardFull::
 	end
 
 RocketLeague_Arena_Movement_StepBackFromArena::
+	walk_down
+	step_end
+
+RocketLeague_Arena_Movement_StepBackFromChampionRoom::
 	walk_down
 	step_end
 

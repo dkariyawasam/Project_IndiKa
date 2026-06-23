@@ -5389,7 +5389,9 @@ static bool8 IsRocketLeagueBattle(void)
 {
     return ((gSaveBlock2Ptr->leagueChallenge.active && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_ROCKET)
          || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_ARENA)
-          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA)));
+          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA))
+         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM)
+          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM)));
 }
 
 static bool8 IsIndigoLeagueBattle(void)

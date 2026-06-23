@@ -6,6 +6,14 @@ RocketLeague_Arena_Text_Official::
 RocketLeague_Arena_Text_AreYouReady::
     .string "Are you ready?$"
 
+RocketLeague_Arena_Text_ChampionRoomLocked::
+    .string "The ROCKET LEAGUE CHAMPION\n"
+    .string "is not receiving challengers yet.$"
+
+RocketLeague_Arena_Text_ChampionAwaits::
+    .string "The ROCKET LEAGUE CHAMPION\n"
+    .string "awaits you in the next room.$"
+
 RocketLeague_Arena_Text_PetrelIntro::
     .string "PETREL: Heh!\n"
     .string "You came looking for trouble?\p"
@@ -34,12 +42,6 @@ RocketLeague_Arena_Text_RocketAceIntro::
     .string "the lights.\p"
     .string "Now prove you can survive them.$"
 
-RocketLeague_Arena_Text_GiovanniIntro::
-    .string "GIOVANNI: Four victories in\n"
-    .string "succession.\p"
-    .string "You have earned the right to face\n"
-    .string "the ROCKET LEAGUE CHAMPION.$"
-
 RocketLeague_Arena_Text_PetrelDefeat::
     .string "Heh…\n"
     .string "Guess the smoke cleared your way.$"
@@ -59,10 +61,6 @@ RocketLeague_Arena_Text_ProtonDefeat::
 RocketLeague_Arena_Text_RocketAceDefeat::
     .string "So that's your answer.\n"
     .string "Not bad.$"
-
-RocketLeague_Arena_Text_GiovanniDefeat::
-    .string "Excellent.\p"
-    .string "Your ambition has weight.$"
 
 RocketLeague_Arena_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"
