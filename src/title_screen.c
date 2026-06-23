@@ -270,7 +270,11 @@ static const struct BgTemplate sBgTemplates[] = {
         .mapBaseIndex = 30,
         .screenSize = 0,
         .paletteMode = 0, // 4bpp
+#if defined(FIRERED)
+        .priority = 3,
+#else
         .priority = 1,
+#endif
         .baseTile = 0
     }, {
         .bg = 2,
