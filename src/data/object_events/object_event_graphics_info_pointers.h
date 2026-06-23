@@ -30,10 +30,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BaldingMan;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan2;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldManLyingDown;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMWater;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMLand;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerM;
@@ -61,6 +60,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMCycling;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFCycling;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFLand;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Engineer;
@@ -223,10 +223,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WOMAN_3]                  = &gObjectEventGraphicsInfo_Woman3,
     [OBJ_EVENT_GFX_OLD_MAN_1]                = &gObjectEventGraphicsInfo_OldMan1,
     [OBJ_EVENT_GFX_OLD_MAN_2]                = &gObjectEventGraphicsInfo_OldMan2,
-    [OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN]       = &gObjectEventGraphicsInfo_OldManLyingDown,
     [OBJ_EVENT_GFX_OLD_WOMAN]                = &gObjectEventGraphicsInfo_OldWoman,
     [OBJ_EVENT_GFX_TUBER_M_WATER]            = &gObjectEventGraphicsInfo_TuberMWater,
-    [OBJ_EVENT_GFX_TUBER_F]                  = &gObjectEventGraphicsInfo_TuberF,
+    [OBJ_EVENT_GFX_TUBER_F_WATER]            = &gObjectEventGraphicsInfo_TuberFWater,
     [OBJ_EVENT_GFX_TUBER_M_LAND]             = &gObjectEventGraphicsInfo_TuberMLand,
     [OBJ_EVENT_GFX_SCOUT_M]                  = &gObjectEventGraphicsInfo_ScoutM,
     [OBJ_EVENT_GFX_SCOUT_F]                  = &gObjectEventGraphicsInfo_ScoutF,
@@ -375,10 +374,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRIATHLETE_F_LAND]        = &gObjectEventGraphicsInfo_TriathleteFLand,
     [OBJ_EVENT_GFX_AROMA_LADY]               = &gObjectEventGraphicsInfo_AromaLady,
     [OBJ_EVENT_GFX_BIRD_KEEPER]              = &gObjectEventGraphicsInfo_BirdKeeper,
-    [OBJ_EVENT_GFX_CUE_BALL]                 = &gObjectEventGraphicsInfo_CueBall,
+    [OBJ_EVENT_GFX_ROUGHNECK]                 = &gObjectEventGraphicsInfo_CueBall,
     [OBJ_EVENT_GFX_ENGINEER]                 = &gObjectEventGraphicsInfo_Engineer,
     [OBJ_EVENT_GFX_TRIATHLETE_M_WATER]       = &gObjectEventGraphicsInfo_TriathleteMWater,
     [OBJ_EVENT_GFX_TRIATHLETE_F_WATER]       = &gObjectEventGraphicsInfo_TriathleteFWater,
     [OBJ_EVENT_GFX_TRIATHLETE_M_CYCLING]     = &gObjectEventGraphicsInfo_TriathleteMCycling,
     [OBJ_EVENT_GFX_TRIATHLETE_F_CYCLING]     = &gObjectEventGraphicsInfo_TriathleteFCycling,
+    [OBJ_EVENT_GFX_TUBER_F_LAND]             = &gObjectEventGraphicsInfo_TuberFLand,
 };
