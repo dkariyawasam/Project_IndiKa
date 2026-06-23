@@ -263,6 +263,34 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route17_EventScript_Erin",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_M_CYCLING",
+      "x": 14,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_CYCLING",
+      "x": 9,
+      "y": 146,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA",
+      "flag": "0"
     }
   ],
   "warp_events": [],

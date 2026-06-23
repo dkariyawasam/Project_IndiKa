@@ -1870,6 +1870,30 @@ EventScript_RouteTrainer_ROUTE17_SCOUT_LEAHRematch::
 	msgbox EventScript_RouteTrainer_ROUTE17_SCOUT_LEAH_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX::
+	trainerbattle_single TRAINER_ROUTE17_TRIATHLETE_DAX, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Intro, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAXRematch
+	msgbox EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAXRematch::
+	trainerbattle_rematch TRAINER_ROUTE17_TRIATHLETE_DAX, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_RematchIntro, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Defeat
+	msgbox EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA::
+	trainerbattle_single TRAINER_ROUTE17_TRIATHLETE_NINA, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Intro, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINARematch
+	msgbox EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINARematch::
+	trainerbattle_rematch TRAINER_ROUTE17_TRIATHLETE_NINA, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_RematchIntro, EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Defeat
+	msgbox EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route18_EventScript_Wilton::
 	trainerbattle_single TRAINER_ROUTE18_BIKER_WILTON, Route18_Text_WiltonIntro, Route18_Text_WiltonDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -5858,6 +5882,30 @@ EventScript_RouteTrainer_ROUTE17_SCOUT_LEAH_Text_PostBattle::
     .string "empty.\p"
     .string "Good rest points turn a hard road\n"
     .string "into a manageable one.$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Intro::
+    .string "This slope is my training route.\p"
+    .string "Keep up if you can!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_RematchIntro::
+    .string "Back for another downhill run?\p"
+    .string "Good. Keep your cadence steady!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Defeat::
+    .string "You kept pace!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_PostBattle::
+    .string "A TRIATHLETE learns fast legs are\n"
+    .string "useless without calm hands.$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Intro::
+    .string "I time every lap from CELADON\n"
+    .string "to FUCHSIA.\p"
+    .string "Let's see your split!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_RematchIntro::
+    .string "Another timed run?\p"
+    .string "Then don't blink!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Defeat::
+    .string "Fast finish!$"
+EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_PostBattle::
+    .string "The road changes under your\n"
+    .string "wheels.\p"
+    .string "That's what makes it training.$"
 Route25_EventScript_Franklin_Text_Intro::
     .string "This BREEDER knows\n"
     .string "ROUTE 25 well!$"
