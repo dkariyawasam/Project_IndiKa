@@ -46,8 +46,8 @@ PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
 PalletTown_ProfessorOaksLab_Text_OakCallPlayerAndRivalOver::
     .string "OAK: Both of you, over here.\p"
     .string "There’s something important\n"
-    .string "you need to hear before your\l"
-    .string "fieldwork begins.$"
+    .string "you need to hear before\l"
+    .string "you begin.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
     .string "{RIVAL}: Heh. Fine by me.\p"
@@ -134,16 +134,18 @@ PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
     .string "OAK: I have a request for you two.$"
 
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
-    .string "On the desk there is my invention,\n"
-    .string "the POKéDEX!\p"
+    .string "On the desk here is my\n"
+    .string "invention, the POKéDEX!\p"
     .string "It records the POKéMON you see\n"
     .string "and catch.\p"
-    .string "It will help us understand how\n"
+    .string "It’ll help us understand how\n"
     .string "they live across KANTO.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
     .string "OAK: {PLAYER} and {RIVAL}.\n"
-    .string "Take these with you.$"
+    .string "Take these with you.\p"
+    .string "Record what you find and\n"
+    .string "come back wiser.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
     .string "{PLAYER} received the POKéDEX\n"
@@ -162,10 +164,11 @@ PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
     .string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "OAK: The GYM LEADERS know more\n"
-    .string "than strength alone.\p"
-    .string "Watch how they treat their\n"
-    .string "POKéMON.\p"
+    .string "OAK: Furthermore, pay attention\n"
+    .string "to how the GYM LEADERS in\l"
+    .string "KANTO treat their POKéMON.\p"
+    .string "They know more than strength\n"
+    .string "alone.\p"
     .string "There is much to learn from them.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
