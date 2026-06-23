@@ -583,30 +583,82 @@ static const struct SpriteFrameImage sPicTable_CooltrainerF[] = {
     overworld_frame(gObjectEventPic_CooltrainerF, 2, 4, 9),
 };
 
-static const struct SpriteFrameImage sPicTable_TriathleteM[] = {
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 0),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 1),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 2),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 3),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 4),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 5),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 6),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 7),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 8),
-    overworld_frame(gObjectEventPic_TriathleteM, 2, 4, 9),
+static const struct SpriteFrameImage sPicTable_TriathleteMLand[] = {
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteMLand, 2, 4, 9),
 };
 
-static const struct SpriteFrameImage sPicTable_TriathleteF[] = {
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 0),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 1),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 2),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 3),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 4),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 5),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 6),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 7),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 8),
-    overworld_frame(gObjectEventPic_TriathleteF, 2, 4, 9),
+static const struct SpriteFrameImage sPicTable_TriathleteFLand[] = {
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteFLand, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_TriathleteMWater[] = {
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteMWater, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_TriathleteFWater[] = {
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteFWater, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_TriathleteMCycling[] = {
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteMCycling, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_TriathleteFCycling[] = {
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 0),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 1),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 2),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 3),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 4),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 5),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 6),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 7),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 8),
+    overworld_frame(gObjectEventPic_TriathleteFCycling, 2, 4, 9),
 };
 
 static const struct SpriteFrameImage sPicTable_Boy[] = {
