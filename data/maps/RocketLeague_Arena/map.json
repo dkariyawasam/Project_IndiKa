@@ -49,9 +49,9 @@
   "warp_events": [
     {
       "x": 6,
-      "y": 12,
+      "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_ROCKET_LEAGUE_LOBBY",
+      "dest_map": "MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM",
       "dest_warp_id": "0"
     }
   ],
@@ -59,11 +59,20 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 1,
+      "y": 3,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "RocketLeague_Arena_EventScript_TryEnterChampionRoom"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "RocketLeague_Arena_EventScript_ReadyPrompt"
     },
     {
       "type": "trigger",

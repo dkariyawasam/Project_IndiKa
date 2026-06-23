@@ -33,6 +33,8 @@ RocketLeague_Arena_EventScript_Admin::
 	end
 
 RocketLeague_Arena_EventScript_ReturnToLobby::
+	special ResetLeagueChallenge
+	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	warp MAP_ROCKET_LEAGUE_LOBBY, 9, 2
 	waitstate
 	end
@@ -103,8 +105,9 @@ RocketLeague_Arena_EventScript_BattlePetrel::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PETREL
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_PetrelDefeat
+	msgbox RocketLeague_Arena_Text_PetrelPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleArcher::
@@ -114,8 +117,9 @@ RocketLeague_Arena_EventScript_BattleArcher::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARCHER
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARCHER, RocketLeague_Arena_Text_ArcherDefeat
+	msgbox RocketLeague_Arena_Text_ArcherPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleAriana::
@@ -125,8 +129,9 @@ RocketLeague_Arena_EventScript_BattleAriana::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_ARIANA
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_ARIANA, RocketLeague_Arena_Text_ArianaDefeat
+	msgbox RocketLeague_Arena_Text_ArianaPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	call RocketLeague_Arena_EventScript_AdminFExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleProton::
@@ -136,8 +141,9 @@ RocketLeague_Arena_EventScript_BattleProton::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ADMIN_PROTON
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PROTON, RocketLeague_Arena_Text_ProtonDefeat
+	msgbox RocketLeague_Arena_Text_ProtonPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleRazor::
@@ -147,8 +153,9 @@ RocketLeague_Arena_EventScript_BattleRazor::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_RAZOR
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_RAZOR, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_RazorPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleVex::
@@ -158,8 +165,9 @@ RocketLeague_Arena_EventScript_BattleVex::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_VEX
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_VEX, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_VexPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	call RocketLeague_Arena_EventScript_AdminFExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleNova::
@@ -169,8 +177,9 @@ RocketLeague_Arena_EventScript_BattleNova::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_NOVA
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_NOVA, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_NovaPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	call RocketLeague_Arena_EventScript_AdminFExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleKnell::
@@ -180,8 +189,9 @@ RocketLeague_Arena_EventScript_BattleKnell::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_KNELL
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_KNELL, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_KnellPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleMako::
@@ -191,8 +201,9 @@ RocketLeague_Arena_EventScript_BattleMako::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_MAKO
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_MAKO, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_MakoPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleSable::
@@ -202,8 +213,9 @@ RocketLeague_Arena_EventScript_BattleSable::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_SABLE
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_SABLE, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_SablePostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	call RocketLeague_Arena_EventScript_AdminFExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleJet::
@@ -213,8 +225,9 @@ RocketLeague_Arena_EventScript_BattleJet::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_JET
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_JET, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_JetPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	call RocketLeague_Arena_EventScript_AdminMExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleViper::
@@ -224,8 +237,9 @@ RocketLeague_Arena_EventScript_BattleViper::
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	cleartrainerflag TRAINER_ROCKET_ACE_VIPER
 	trainerbattle_no_intro TRAINER_ROCKET_ACE_VIPER, RocketLeague_Arena_Text_RocketAceDefeat
+	msgbox RocketLeague_Arena_Text_ViperPostBattle
 	special AdvanceLeagueChallengeRound
-	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	call RocketLeague_Arena_EventScript_AdminFExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_ChampionAwaits::
@@ -248,6 +262,18 @@ RocketLeague_Arena_EventScript_AdminFEnter::
 	addobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminEnter
 	waitmovement 0
+	return
+
+RocketLeague_Arena_EventScript_AdminMExit::
+	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_M, RocketLeague_Arena_Movement_AdminExit
+	waitmovement 0
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
+	return
+
+RocketLeague_Arena_EventScript_AdminFExit::
+	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminExit
+	waitmovement 0
+	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
 	return
 
 RocketLeague_Arena_EventScript_GiveCoinReward::
@@ -286,7 +312,6 @@ RocketLeague_Arena_EventScript_GiveTierThreeCoinReward::
 	goto RocketLeague_Arena_EventScript_FinishCoinReward
 
 RocketLeague_Arena_EventScript_FinishCoinReward::
-	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	playse SE_SHOP
 	waitse
 	closemessage
@@ -296,7 +321,6 @@ RocketLeague_Arena_EventScript_FinishCoinReward::
 	end
 
 RocketLeague_Arena_EventScript_CoinRewardFull::
-	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_CoinCaseFull
 	closemessage
@@ -318,4 +342,11 @@ RocketLeague_Arena_Movement_AdminEnter::
 	walk_down
 	walk_down
 	walk_down
+	step_end
+
+RocketLeague_Arena_Movement_AdminExit::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end

@@ -62,6 +62,65 @@ RocketLeague_Arena_Text_RocketAceDefeat::
     .string "So that's your answer.\n"
     .string "Not bad.$"
 
+RocketLeague_Arena_Text_PetrelPostBattle::
+    .string "PETREL: Go on, then.\p"
+    .string "I want to see how long that\n"
+    .string "nerve of yours lasts.$"
+
+RocketLeague_Arena_Text_ArcherPostBattle::
+    .string "ARCHER: The next opponent will\n"
+    .string "not be so easily unsettled.\p"
+    .string "Proceed.$"
+
+RocketLeague_Arena_Text_ArianaPostBattle::
+    .string "ARIANA: Hmph.\p"
+    .string "Keep that edge sharp.\n"
+    .string "You'll need it.$"
+
+RocketLeague_Arena_Text_ProtonPostBattle::
+    .string "PROTON: Fine, you win.\p"
+    .string "Don't expect the next fight to\n"
+    .string "be polite.$"
+
+RocketLeague_Arena_Text_RazorPostBattle::
+    .string "DEE: You cut clean through\n"
+    .string "my plan.\p"
+    .string "Let's see you do it again.$"
+
+RocketLeague_Arena_Text_VexPostBattle::
+    .string "HONGMIAO: Data point recorded.\p"
+    .string "Your odds just became more\n"
+    .string "interesting.$"
+
+RocketLeague_Arena_Text_NovaPostBattle::
+    .string "JAKE: That hit harder than\n"
+    .string "I expected.\p"
+    .string "No shame in recalibrating.$"
+
+RocketLeague_Arena_Text_KnellPostBattle::
+    .string "JAYCE: You heard the bell\n"
+    .string "and kept standing.\p"
+    .string "Respect.$"
+
+RocketLeague_Arena_Text_MakoPostBattle::
+    .string "MAKO: Not bad under pressure.\p"
+    .string "The deep end is still ahead.$"
+
+RocketLeague_Arena_Text_SablePostBattle::
+    .string "SABLE: Shadows favor the\n"
+    .string "patient.\p"
+    .string "Maybe they favor you too.$"
+
+RocketLeague_Arena_Text_JetPostBattle::
+    .string "JET: Fast enough to catch me,\n"
+    .string "huh?\p"
+    .string "Then don't slow down now.$"
+
+RocketLeague_Arena_Text_ViperPostBattle::
+    .string "VIPER: You avoided the bite.\p"
+    .string "Next time, the venom goes\n"
+    .string "deeper.$"
+
 RocketLeague_Arena_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"
     .string "as a ROCKET LEAGUE prize.$"

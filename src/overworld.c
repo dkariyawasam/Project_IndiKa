@@ -23,6 +23,7 @@
 #include "link.h"
 #include "link_rfu.h"
 #include "load_save.h"
+#include "league_challenge.h"
 #include "m4a.h"
 #include "map_name_popup.h"
 #include "map_preview_screen.h"
@@ -53,6 +54,7 @@
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
+#include "constants/vars.h"
 #include "day_night.h"
 
 #define PLAYER_LINK_STATE_IDLE 0x80
@@ -248,9 +250,24 @@ static const u16 sWhiteOutMoneyLossBadgeFlagIDs[] = {
     FLAG_BADGE08_GET
 };
 
+static void ResetRocketLeagueChallengeOnWhiteOut(void)
+{
+    if (gSaveBlock2Ptr->leagueChallenge.active
+     && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_ROCKET
+     && ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_ARENA)
+       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA))
+      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM)
+       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM))))
+    {
+        ResetLeagueChallenge();
+        VarSet(VAR_ROCKET_LEAGUE_PRIZE_TIER, 0);
+    }
+}
+
 static void DoWhiteOut(void)
 {
     RunScriptImmediately(EventScript_ResetEliteFourEnd);
+    ResetRocketLeagueChallengeOnWhiteOut();
     RemoveMoney(&gSaveBlock1Ptr->money, ComputeWhiteOutMoneyLoss());
     HealPlayerParty();
     Overworld_ResetStateAfterWhitingOut();

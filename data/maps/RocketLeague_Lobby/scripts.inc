@@ -15,7 +15,6 @@ RocketLeague_Lobby_OnReturnToField::
 RocketLeague_Lobby_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY
 	setrespawn HEAL_LOCATION_ROCKET_LEAGUE
-	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	setvar VAR_TEMP_3, 0
 	end
 

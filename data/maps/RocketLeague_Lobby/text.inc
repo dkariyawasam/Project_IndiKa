@@ -56,3 +56,8 @@ RocketLeague_Lobby_Text_PrizeBoardMax::
 RocketLeague_Lobby_Text_NotEnoughCoinsForBet::
     .string "You don't have enough COINS\n"
     .string "to place that bet.$"
+
+RocketLeague_Lobby_Text_NurseAfterHeal::
+    .string "Your team is combat-ready.\p"
+    .string "Return to the arena and make\n"
+    .string "TEAM ROCKET proud.$"
