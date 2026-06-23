@@ -30,12 +30,20 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 
 EventScript_PkmnCenterNurse_CheckRocketLeagueAndUnionRoom::
 	specialvar VAR_RESULT, IsPlayerNotInRocketLeagueLobby
-	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_ReturnPkmn
+	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_ReturnPkmnRocketLeague
 	specialvar VAR_RESULT, BufferUnionRoomPlayerName
 	copyvar VAR_0x8008, VAR_RESULT
 	goto_if_eq VAR_0x8008, 0, EventScript_PkmnCenterNurse_ReturnPkmn
 	goto_if_eq VAR_0x8008, 1, EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom
 	end
+
+EventScript_PkmnCenterNurse_ReturnPkmnRocketLeague::
+	message Text_RestoredPkmnToFullHealth
+	waitmessage
+	applymovement VAR_LAST_TALKED, Movement_Bow
+	waitmovement 0
+	msgbox RocketLeague_Lobby_Text_NurseAfterHeal
+	return
 
 EventScript_PkmnCenterNurse_ReturnPkmn::
 	message Text_RestoredPkmnToFullHealth
