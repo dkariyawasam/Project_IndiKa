@@ -29,6 +29,11 @@ RocketLeague_Arena_Text_ProtonIntro::
     .string "Fine.\n"
     .string "I'll make this quick.$"
 
+RocketLeague_Arena_Text_RocketAceIntro::
+    .string "ROCKET ACE: You made it under\n"
+    .string "the lights.\p"
+    .string "Now prove you can survive them.$"
+
 RocketLeague_Arena_Text_GiovanniIntro::
     .string "GIOVANNI: Four victories in\n"
     .string "succession.\p"
@@ -50,6 +55,10 @@ RocketLeague_Arena_Text_ArianaDefeat::
 RocketLeague_Arena_Text_ProtonDefeat::
     .string "Tch!\n"
     .string "You made that take too long.$"
+
+RocketLeague_Arena_Text_RocketAceDefeat::
+    .string "So that's your answer.\n"
+    .string "Not bad.$"
 
 RocketLeague_Arena_Text_GiovanniDefeat::
     .string "Excellent.\p"

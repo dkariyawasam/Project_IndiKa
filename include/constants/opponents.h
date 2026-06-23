@@ -976,6 +976,14 @@
 #define TRAINER_ROUTE13_BIKER_KOJI               770
 #define TRAINER_ROUTE13_SCOUT_JOHNSON            771
 #define TRAINER_ROUTE13_TRIATHLETE_MISSY         772
+#define TRAINER_ROCKET_ACE_RAZOR                 773
+#define TRAINER_ROCKET_ACE_VEX                   774
+#define TRAINER_ROCKET_ACE_NOVA                  775
+#define TRAINER_ROCKET_ACE_KNELL                 776
+#define TRAINER_ROCKET_ACE_MAKO                  777
+#define TRAINER_ROCKET_ACE_SABLE                 778
+#define TRAINER_ROCKET_ACE_JET                   779
+#define TRAINER_ROCKET_ACE_VIPER                 780
 #define TRAINER_ROUTE14_TRIATHLETE_LOLA          TRAINER_PAINTER_CELINA
 #define TRAINER_ROUTE14_SCOUT_DESTIN             TRAINER_PAINTER_RAYNA
 #define TRAINER_ROUTE14_HIKER_BRICE              TRAINER_LADY_GILLIAN
@@ -1089,7 +1097,7 @@
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             772
-#define MAX_TRAINERS_COUNT                       774
+#define NUM_TRAINERS                             781
+#define MAX_TRAINERS_COUNT                       782
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
