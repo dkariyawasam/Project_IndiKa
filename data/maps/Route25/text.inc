@@ -161,35 +161,35 @@ Route25_Text_FishermanTylorPostBattle::
     .string "Can't complain when the bites are\n"
     .string "this good.$"
 
-Route25_Text_RunningTriathleteMIntro::
+Route25_Text_TriathleteMLandIntro::
     .string "This bridge is perfect for interval\n"
     .string "training! Keep up!$"
 
-Route25_Text_RunningTriathleteMRematchIntro::
+Route25_Text_TriathleteMLandRematchIntro::
     .string "Back on the long bridge?\p"
     .string "Good. I've been timing my laps\n"
     .string "for this rematch!$"
 
-Route25_Text_RunningTriathleteMDefeat::
+Route25_Text_TriathleteMLandDefeat::
     .string "Outpaced!$"
 
-Route25_Text_RunningTriathleteMPostBattle::
+Route25_Text_TriathleteMLandPostBattle::
     .string "The best part of a long run is\n"
     .string "feeling the wind over the water.$"
 
-Route25_Text_RunningTriathleteFIntro::
+Route25_Text_TriathleteFLandIntro::
     .string "No slowing down on the bridge!\n"
     .string "Battle at full stride!$"
 
-Route25_Text_RunningTriathleteFRematchIntro::
+Route25_Text_TriathleteFLandRematchIntro::
     .string "You made it back across the span!\p"
     .string "Let's see if you still have speed\n"
     .string "left for me.$"
 
-Route25_Text_RunningTriathleteFDefeat::
+Route25_Text_TriathleteFLandDefeat::
     .string "You found another gear!$"
 
-Route25_Text_RunningTriathleteFPostBattle::
+Route25_Text_TriathleteFLandPostBattle::
     .string "A straight path, sea air, and a\n"
     .string "good battle. That's training.$"
 

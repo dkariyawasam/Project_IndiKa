@@ -185,7 +185,7 @@ RocketLeague_Lobby_EventScript_PrizeBoardEnd::
 	release
 	end
 
-RocketLeague_Lobby_EventScript_CooltrainerF::
+RocketLeague_Lobby_EventScript_AceTrainerF::
 	msgbox RocketLeague_Lobby_Text_WonderWhatKindsOfTrainers, MSGBOX_NPC
 	end
 

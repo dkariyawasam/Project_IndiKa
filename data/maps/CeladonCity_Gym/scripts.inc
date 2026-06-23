@@ -224,7 +224,7 @@ CeladonCity_Gym_EventScript_Lori::
 	end
 
 CeladonCity_Gym_EventScript_Mary::
-	trainerbattle_single TRAINER_COOLTRAINER_MARY, CeladonCity_Gym_Text_MaryIntro, CeladonCity_Gym_Text_MaryDefeat
+	trainerbattle_single TRAINER_ACE_TRAINER_MARY, CeladonCity_Gym_Text_MaryIntro, CeladonCity_Gym_Text_MaryDefeat
 	msgbox CeladonCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
 	end
 

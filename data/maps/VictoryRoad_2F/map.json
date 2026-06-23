@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
       "x": 31,
       "y": 16,
       "elevation": 4,
@@ -73,7 +73,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
       "x": 36,
       "y": 5,
       "elevation": 3,
@@ -187,7 +187,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
       "x": 40,
       "y": 9,
       "elevation": 3,

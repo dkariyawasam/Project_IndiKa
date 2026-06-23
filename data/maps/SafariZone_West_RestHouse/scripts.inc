@@ -9,6 +9,6 @@ SafariZone_West_RestHouse_EventScript_Scientist::
 	msgbox SafariZone_West_Text_RocksMakeMonRunButEasierCatch, MSGBOX_NPC
 	end
 
-SafariZone_West_RestHouse_EventScript_CooltrainerF::
+SafariZone_West_RestHouse_EventScript_AceTrainerF::
 	msgbox SafariZone_West_Text_HikedLotsDidntSeeMonIWanted, MSGBOX_NPC
 	end

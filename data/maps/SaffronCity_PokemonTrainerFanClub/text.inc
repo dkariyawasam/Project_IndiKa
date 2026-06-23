@@ -163,7 +163,7 @@ SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan::
     .string "I want to be a psychic girl just\n"
     .string "like her!$"
 
-SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay::
+SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeAceTrainerOneDay::
     .string "I wonder if I can become a cool\n"
     .string "TRAINER one day?$"
 

@@ -172,7 +172,7 @@ CeladonCity_DepartmentStore_Roof_EventScript_NotThirstyAfterAll::
 	release
 	end
 
-CeladonCity_DepartmentStore_Roof_EventScript_CooltrainerM::
+CeladonCity_DepartmentStore_Roof_EventScript_AceTrainerM::
 	msgbox CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature, MSGBOX_NPC
 	end
 

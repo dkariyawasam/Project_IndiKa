@@ -18,7 +18,7 @@ FuchsiaCity_PokemonCenter_1F_EventScript_Man::
 	msgbox FuchsiaCity_PokemonCenter_1F_Text_CantBecomeGoodTrainerWithOneMon, MSGBOX_NPC
 	end
 
-FuchsiaCity_PokemonCenter_1F_EventScript_CooltrainerF::
+FuchsiaCity_PokemonCenter_1F_EventScript_AceTrainerF::
 	msgbox FuchsiaCity_PokemonCenter_1F_Text_PokemonLeagueWestOfViridian, MSGBOX_NPC
 	end
 

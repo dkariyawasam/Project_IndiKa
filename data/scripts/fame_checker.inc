@@ -186,7 +186,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_PokemonJournal::
 	release
 	end
 
-IndigoPlateau_PokemonCenter_1F_EventScript_CooltrainerM::
+IndigoPlateau_PokemonCenter_1F_EventScript_AceTrainerM::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_LANCE, 5
