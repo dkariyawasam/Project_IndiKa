@@ -173,8 +173,7 @@ gControlsGuide_Text_LRButtons::
     .string "press the L or R Button.$"
 
 gOakSpeech_Text_AskPlayerGender::
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+    .string "Are you a boy or a girl?$"
 
 gPikachuIntro_Text_Page1::
     .string "In the world which you are about to\n"
@@ -206,49 +205,43 @@ gPikachuIntro_Text_Page3::
 
 gOakSpeech_Text_WelcomeToTheWorld::
     .string "Ah, there you are.\p"
-    .string "Your fieldwork assignment is\n"
-    .string "about to begin.\p"
-    .string "But before that, we should go\n"
-    .string "over a few things.\p"
-    .string "Welcome to the world of POKéMON!\p"
-    .string "You know me as PROF. OAK.\p"
-    .string "As you know, my specialty is\n"
-    .string "the relationship between POKéMON\l"
-    .string "and people.\p$"
+    .string "Your dedicated work in my LAB\n"
+    .string "has been much appreciated.\p"
+    .string "And now, your fieldwork\n"
+    .string "assignment is about to begin.$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "KANTO is changing.\p"
-    .string "POKéMON, people, and the places\n"
-    .string "they share are changing with it.$"
+    .string "As you know, at the heart of\n"
+    .string "my research is the relationship\l"
+    .string "between POKéMON and people...$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "Some POKéMON live beside us.\n"
-    .string "Some hide in forests, caves,\l"
-    .string "shorelines, and old ruins.\p"
-    .string "To understand them, you have to\n"
-    .string "go where they live.\p$"
+    .string "...How they grow together\n"
+    .string "through trust, battle,\l"
+    .string "friendship...\p"
+    .string "Even evolution may be shaped\n"
+    .string "by those bonds.$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "My work is not just about naming\n"
-    .string "and recording POKéMON.\p"
-    .string "I study how POKéMON and people\n"
-    .string "grow together.\p"
-    .string "Trust, battle, friendship...\n"
-    .string "Even evolution may be shaped by\l"
-    .string "those bonds.\p$"
+    .string "But to understand this, you\n"
+    .string "need to go where they live.\p"
+    .string "The towns, forests, caves,\n"
+    .string "shorelines, and old ruins.\p"
+    .string "I am too old for fieldwork now,\n"
+    .string "but you are just the right age\l"
+    .string "for this expedition.$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, I need to confirm\n"
-    .string "your field aide record.\p$"
+    .string "Now tell me for your\n"
+    .string "FIELD AIDE record.$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
-    .string "Let's begin with your name.\n"
-    .string "How should it be recorded?\p$"
+    .string "And how do you spell\n"
+    .string "your name?$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
     .string "Right…\n"
-    .string "{PLAYER}.\n"
-    .string "I'll mark that down.$"
+    .string "{PLAYER}.$"
 
 gOakSpeech_Text_WhatWasHisName::
     .string "This is my grandson.\p"
