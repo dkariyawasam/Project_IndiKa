@@ -84,9 +84,9 @@ static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/leafgreen/bord
 static const u32 sSlash_Gfx[] = INCBIN_U32("graphics/title_screen/slash.4bpp.lz");
 
 #if defined(FIRERED)
-static const u16 sFlames_Pal[] = INCBIN_U16("graphics/title_screen/firered/flames.gbapal");
-static const u32 sFlames_Gfx[] = INCBIN_U32("graphics/title_screen/firered/flames.4bpp.lz");
-static const u32 sBlankFlames_Gfx[] = INCBIN_U32("graphics/title_screen/firered/blank_flames.4bpp.lz");
+static const u16 sSparkles_Pal[] = INCBIN_U16("graphics/intro/game_freak/sparkles.gbapal");
+static const u32 sSparklesSmall_Gfx[] = INCBIN_U32("graphics/intro/game_freak/sparkles_small.4bpp.lz");
+static const u32 sSparklesBig_Gfx[] = INCBIN_U32("graphics/intro/game_freak/sparkles_big.4bpp.lz");
 #elif defined(LEAFGREEN)
 static const u16 sLeaves_Pal[] = INCBIN_U16("graphics/title_screen/leafgreen/leaves.gbapal");
 static const u32 sLeaves_Gfx[] = INCBIN_U32("graphics/title_screen/leafgreen/leaves.4bpp.lz");
@@ -96,38 +96,43 @@ static const u32 sStreak_Gfx[] = INCBIN_U32("graphics/title_screen/leafgreen/str
 static const struct OamData sOamData_FlameOrLeaf = {
     .objMode = ST_OAM_OBJ_NORMAL,
     .shape = ST_OAM_SQUARE,
+#if defined(FIRERED)
+    .size = ST_OAM_SIZE_0,
+#else
     .size = ST_OAM_SIZE_1,
+#endif
     .tileNum = 0,
+#if defined(FIRERED)
+    .priority = 2,
+#else
     .priority = 3,
+#endif
     .paletteNum = 0
 };
 
 #if defined(FIRERED)
-static const union AnimCmd sSpriteAnim_Flame[] = {
-    ANIMCMD_FRAME(0, 3),
-    ANIMCMD_FRAME(4, 6),
-    ANIMCMD_FRAME(8, 6),
-    ANIMCMD_FRAME(12, 6),
-    ANIMCMD_FRAME(16, 6),
-    ANIMCMD_FRAME(20, 6),
-    ANIMCMD_FRAME(24, 6),
-    ANIMCMD_FRAME(28, 6),
-    ANIMCMD_FRAME(32, 6),
-    ANIMCMD_FRAME(36, 6),
-    ANIMCMD_END
+static const union AnimCmd sSpriteAnim_Sparkle[] = {
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sSpriteAnim_Flame_Unused[] = {
-    ANIMCMD_FRAME(24, 6),
-    ANIMCMD_FRAME(28, 6),
-    ANIMCMD_FRAME(32, 6),
-    ANIMCMD_FRAME(36, 6),
+static const union AnimCmd sSpriteAnim_BigSparkle[] = {
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(16, 8),
+    ANIMCMD_FRAME(32, 8),
+    ANIMCMD_FRAME(48, 8),
     ANIMCMD_END
 };
 
 static const union AnimCmd *const sSpriteAnim_FlameOrLeaf[] = {
-    sSpriteAnim_Flame,
-    sSpriteAnim_Flame_Unused,
+    sSpriteAnim_Sparkle,
+};
+
+static const union AnimCmd *const sSpriteAnim_BigSparkleTable[] = {
+    sSpriteAnim_BigSparkle
 };
 
 #elif defined(LEAFGREEN)
@@ -175,11 +180,20 @@ static const struct SpriteTemplate sSpriteTemplate_FlameOrLeaf = {
 };
 
 #if defined(FIRERED)
-static const struct SpriteTemplate sSpriteTemplate_BlankFlame = {
+static const struct OamData sOamData_BigSparkle = {
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .shape = SPRITE_SHAPE(32x32),
+    .size = SPRITE_SIZE(32x32),
+    .tileNum = 0,
+    .priority = 2,
+    .paletteNum = 0
+};
+
+static const struct SpriteTemplate sSpriteTemplate_BigSparkle = {
     .tileTag = TILE_TAG_BLANK_OR_STREAK,
     .paletteTag = PAL_TAG_DEFAULT,
-    .oam = &sOamData_FlameOrLeaf,
-    .anims = sSpriteAnim_FlameOrLeaf,
+    .oam = &sOamData_BigSparkle,
+    .anims = sSpriteAnim_BigSparkleTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
@@ -288,14 +302,14 @@ static void (*const sSceneFuncs[])(s16 *data) = {
 
 #if defined(FIRERED)
 static const struct CompressedSpriteSheet sSpriteSheets[] = {
-    {sFlames_Gfx,                    0x500, TILE_TAG_FLAME_OR_LEAF},
-    {sBlankFlames_Gfx,               0x500, TILE_TAG_BLANK_OR_STREAK},
+    {sSparklesSmall_Gfx,             0x80,  TILE_TAG_FLAME_OR_LEAF},
+    {sSparklesBig_Gfx,               0x800, TILE_TAG_BLANK_OR_STREAK},
     {gTitleScreen_BlankSprite_Tiles, 0x400, TILE_TAG_BLANK},
     {sSlash_Gfx,                     0x800, TILE_TAG_SLASH}
 };
 
 static const struct SpritePalette sSpritePals[] = {
-    {sFlames_Pal,            PAL_TAG_DEFAULT},
+    {sSparkles_Pal,          PAL_TAG_DEFAULT},
     {gTitleScreen_Slash_Pal, PAL_TAG_SLASH},
     {}
 };
@@ -952,53 +966,67 @@ static void LoadSpriteGfxAndPals(void)
 #define sSpeedX    data[1]
 #define sPosY      data[2]
 #define sSpeedY    data[3]
+#define sFlickerStart data[4]
+#define sDestroyTime  data[5]
+#define sCreateBigSparkle data[6]
+#define sTimer     data[7]
+
+static void SpriteCallback_TitleScreenBigSparkle(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroySprite(sprite);
+}
 
 static void SpriteCallback_TitleScreenFlame(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
-    sPosX -= sSpeedX;
-    sprite->x = sPosX >> 4;
-    if (sprite->x < -8)
+    sPosX += sSpeedX;
+    sprite->x = sPosX >> 5;
+    if (sprite->x < -8 || sprite->x > DISPLAY_WIDTH + 8)
     {
         DestroySprite(sprite);
         return;
     }
     sPosY += sSpeedY;
-    sprite->y = sPosY >> 4;
-    if (sprite->y < 16 || sprite->y > 200)
+    sprite->y = sPosY >> 5;
+    if (sprite->y < -8 || sprite->y > DISPLAY_HEIGHT + 8)
     {
         DestroySprite(sprite);
         return;
     }
-    if (sprite->animEnded)
+    sTimer++;
+    if (sTimer > sFlickerStart)
     {
-        DestroySprite(sprite);
-        return;
-    }
-    if (data[7] != 0 && --data[7] == 0)
-    {
-        StartSpriteAnim(sprite, 0);
-        sprite->invisible = FALSE;
+        sprite->invisible = !sprite->invisible;
+        if (sTimer > sDestroyTime)
+        {
+            if (sCreateBigSparkle)
+            {
+                u8 spriteId = CreateSprite(&sSpriteTemplate_BigSparkle, sprite->x, sprite->y, 0);
+                if (spriteId != MAX_SPRITES)
+                    gSprites[spriteId].callback = SpriteCallback_TitleScreenBigSparkle;
+            }
+            DestroySprite(sprite);
+            return;
+        }
     }
 }
 
-static bool32 CreateFlameSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, bool32 createFlame)
+static bool32 CreateSparkleSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, s32 lifetime, bool32 createBigSparkle)
 {
     u8 spriteId;
-    if (createFlame)
-        spriteId = CreateSprite(&sSpriteTemplate_FlameOrLeaf, x, y, 0);
-    else
-        spriteId = CreateSprite(&sSpriteTemplate_BlankFlame, x, y, 0);
+    spriteId = CreateSprite(&sSpriteTemplate_FlameOrLeaf, x, y, 0);
 
     if (spriteId != MAX_SPRITES)
     {
-        gSprites[spriteId].sPosX = x * 16;
+        gSprites[spriteId].sPosX = x * 32;
         gSprites[spriteId].sSpeedX = xspeed;
-        gSprites[spriteId].sPosY = y * 16;
+        gSprites[spriteId].sPosY = y * 32;
         gSprites[spriteId].sSpeedY = yspeed;
-        gSprites[spriteId].data[4] = 0;
-        gSprites[spriteId].data[5] = (xspeed * yspeed) % 16;
-        gSprites[spriteId].data[6] = createFlame;
+        gSprites[spriteId].sFlickerStart = lifetime - 30;
+        gSprites[spriteId].sDestroyTime = lifetime;
+        gSprites[spriteId].sCreateBigSparkle = createBigSparkle;
+        gSprites[spriteId].sTimer = 0;
         gSprites[spriteId].callback = SpriteCallback_TitleScreenFlame;
         return TRUE;
     }
@@ -1009,6 +1037,10 @@ static bool32 CreateFlameSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, bool32 cre
 #undef sSpeedX
 #undef sPosY
 #undef sSpeedY
+#undef sFlickerStart
+#undef sDestroyTime
+#undef sCreateBigSparkle
+#undef sTimer
 
 #define tState       data[0]
 #define tTimer       data[1]
@@ -1019,7 +1051,8 @@ static bool32 CreateFlameSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, bool32 cre
 static void Task_FlameSpawner(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    s32 x, y, xspeed, yspeed;
+    s32 x, y, xspeed, yspeed, lifetime;
+    bool32 createBigSparkle;
     s32 i;
 
     switch (tState)
@@ -1034,29 +1067,45 @@ static void Task_FlameSpawner(u8 taskId)
         {
             tTimer = 0;
             TitleScreen_rand(taskId, 3);
-            tDelay = 18;
-            xspeed = (TitleScreen_rand(taskId, 3) % 4) - 2;
-            yspeed = (TitleScreen_rand(taskId, 3) % 8) - 16;
-            y = (TitleScreen_rand(taskId, 3) % 3) + 116;
+            tDelay = 48;
+            xspeed = (TitleScreen_rand(taskId, 3) % 8) + 2;
+            if (TitleScreen_rand(taskId, 3) & 1)
+                xspeed = -xspeed;
+            yspeed = -((TitleScreen_rand(taskId, 3) % 6) + 2);
+            if (TitleScreen_rand(taskId, 3) & 3)
+                lifetime = (TitleScreen_rand(taskId, 3) % 81) + 210;
+            else
+                lifetime = (TitleScreen_rand(taskId, 3) % 101) + 340;
+            createBigSparkle = (TitleScreen_rand(taskId, 3) & 7) == 0;
+            y = (TitleScreen_rand(taskId, 3) % 48) + 88;
             x = TitleScreen_rand(taskId, 3) % DISPLAY_WIDTH;
-            CreateFlameSprite(
+            CreateSparkleSprite(
                 x,
                 y,
                 xspeed,
                 yspeed,
-                (TitleScreen_rand(taskId, 3) % 16) < 8 ? FALSE : TRUE
+                lifetime,
+                createBigSparkle
             );
-            for (i = 0; i < 15; i++)
+            for (i = 0; i < 15; i += 10)
             {
-                CreateFlameSprite(
+                CreateSparkleSprite(
                     tOffsetX + sFlameXPositions[i],
                     y,
                     xspeed,
                     yspeed,
-                    TRUE
+                    lifetime,
+                    createBigSparkle
                 );
-                xspeed = (TitleScreen_rand(taskId, 3) % 4) - 2;
-                yspeed = (TitleScreen_rand(taskId, 3) % 8) - 16;
+                xspeed = (TitleScreen_rand(taskId, 3) % 8) + 2;
+                if (TitleScreen_rand(taskId, 3) & 1)
+                    xspeed = -xspeed;
+                yspeed = -((TitleScreen_rand(taskId, 3) % 6) + 2);
+                if (TitleScreen_rand(taskId, 3) & 3)
+                    lifetime = (TitleScreen_rand(taskId, 3) % 81) + 210;
+                else
+                    lifetime = (TitleScreen_rand(taskId, 3) % 101) + 340;
+                createBigSparkle = (TitleScreen_rand(taskId, 3) & 7) == 0;
             }
             tOffsetX++;
             if (tOffsetX > 3)
