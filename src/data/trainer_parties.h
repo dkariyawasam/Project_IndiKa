@@ -12330,6 +12330,174 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
     },
 };
 
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceRazor[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_PRIMEAPE,
+        .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_SCREECH, MOVE_FOCUS_ENERGY},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_HITMONLEE,
+        .moves = {MOVE_BRICK_BREAK, MOVE_MEGA_KICK, MOVE_FOCUS_ENERGY, MOVE_ROCK_TOMB},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_MACHAMP,
+        .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_SLIDE, MOVE_BULK_UP, MOVE_SEISMIC_TOSS},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceVex[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_GLARE, MOVE_BITE, MOVE_DIG},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_MUK,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_MINIMIZE, MOVE_ACID_ARMOR, MOVE_BRICK_BREAK},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_CROBAT,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_AERIAL_ACE, MOVE_CONFUSE_RAY, MOVE_BITE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceNova[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_SUPERSONIC, MOVE_REFLECT},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDERBOLT, MOVE_BRICK_BREAK, MOVE_LIGHT_SCREEN, MOVE_QUICK_ATTACK},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_SCREECH, MOVE_LIGHT_SCREEN},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceKnell[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_HAUNTER,
+        .moves = {MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_CONFUSE_RAY},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_HYPNO,
+        .moves = {MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_HEADBUTT, MOVE_DISABLE},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_GENGAR,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_THUNDERBOLT},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceMako[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_GOLDUCK,
+        .moves = {MOVE_SURF, MOVE_CONFUSION, MOVE_DISABLE, MOVE_ICE_BEAM},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_CLOYSTER,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_PROTECT, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_SURF, MOVE_DRAGON_DANCE, MOVE_BITE, MOVE_EARTHQUAKE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceSable[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_SLASH, MOVE_FAINT_ATTACK, MOVE_TAUNT, MOVE_SCREECH},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_KANGASKHAN,
+        .moves = {MOVE_DIZZY_PUNCH, MOVE_FAKE_OUT, MOVE_BRICK_BREAK, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_SNORLAX,
+        .moves = {MOVE_BODY_SLAM, MOVE_REST, MOVE_SHADOW_BALL, MOVE_BRICK_BREAK},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceJet[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_DUGTRIO,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_SAND_TOMB, MOVE_ROCK_TOMB},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_ONIX,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCREECH, MOVE_IRON_TAIL},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_RocketAceViper[] = {
+    {
+        .iv = 120,
+        .lvl = 35,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_FLAMETHROWER, MOVE_HAZE},
+    },
+    {
+        .iv = 120,
+        .lvl = 37,
+        .species = SPECIES_HOUNDOOM,
+        .moves = {MOVE_FLAMETHROWER, MOVE_FAINT_ATTACK, MOVE_ROAR, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 120,
+        .lvl = 39,
+        .species = SPECIES_NIDOQUEEN,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLUDGE_BOMB, MOVE_BODY_SLAM, MOVE_DOUBLE_KICK},
+    },
+};
+
 static const struct TrainerMonNoItemCustomMoves sParty_RocketLeagueChampionGiovanni[] = {
     {
         .iv = 180,

@@ -59,6 +59,8 @@ static void DrawLevelUpWindow2(void);
 static void PutMonIconOnLvlUpBanner(void);
 static void DrawLevelUpBannerText(void);
 static void SpriteCB_MonIconOnLvlUpBanner(struct Sprite* sprite);
+static bool8 IsRocketLeagueBattle(void);
+static bool8 IsIndigoLeagueBattle(void);
 
 static void Cmd_attackcanceler(void);
 static void Cmd_accuracycheck(void);
@@ -3123,7 +3125,8 @@ static void Cmd_getexp(void)
              (BATTLE_TYPE_LINK
               | BATTLE_TYPE_BATTLE_TOWER
               | BATTLE_TYPE_SAFARI
-              | BATTLE_TYPE_EREADER_TRAINER)))
+              | BATTLE_TYPE_EREADER_TRAINER))
+         || IsIndigoLeagueBattle())
         {
             gBattleScripting.getexpState = 6; // goto last case
         }
@@ -5320,8 +5323,7 @@ static void Cmd_getmoneyreward(void)
 
     if (gBattleOutcome == B_OUTCOME_WON)
     {
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_ARENA)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA))
+        if (IsRocketLeagueBattle())
         {
             moneyReward = 0;
         }
@@ -5381,6 +5383,33 @@ static void Cmd_getmoneyreward(void)
         gBattlescriptCurrInstr += 5;
     else
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+}
+
+static bool8 IsRocketLeagueBattle(void)
+{
+    return ((gSaveBlock2Ptr->leagueChallenge.active && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_ROCKET)
+         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_ARENA)
+          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_ARENA)));
+}
+
+static bool8 IsIndigoLeagueBattle(void)
+{
+    if (gSaveBlock2Ptr->leagueChallenge.active && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_INDIGO)
+        return TRUE;
+
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_LORELEIS_ROOM)
+      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_LORELEIS_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_BRUNOS_ROOM)
+      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_BRUNOS_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_LANCES_ROOM)
+      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_LANCES_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
+      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)))
+    {
+        return TRUE;
+    }
+
+    return FALSE;
 }
 
 // Command is never used

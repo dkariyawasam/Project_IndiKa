@@ -269,6 +269,7 @@
 #define TRAINER_CLASS_LADY                105
 #define TRAINER_CLASS_PAINTER             106
 #define TRAINER_CLASS_ROCKET_ADMIN        107
+#define TRAINER_CLASS_ROCKET_ACE          108
 
 #define FACILITY_CLASS_UNUSED_0     0
 #define FACILITY_CLASS_UNUSED_1           1

@@ -243,6 +243,15 @@ gSpecials::
 	def_special BattleTowerMapScript2
 	def_special ChooseNextBattleTowerTrainer
 	def_special CheckPartyBattleTowerBanlist
+	def_special StartIndigoLeagueChallenge
+	def_special StartRocketLeagueChallenge
+	def_special ResetLeagueChallenge
+	def_special AdvanceLeagueChallengeRound
+	def_special GetLeagueChallengeCurrentTrainer
+	def_special GetLeagueChallengeTrainerForRound
+	def_special GetLeagueChallengeRound
+	def_special GetLeagueChallengeType
+	def_special IsLeagueChallengeActive
 	def_special PrintBattleTowerTrainerGreeting
 	def_special BufferEReaderTrainerGreeting
 	def_special StartSpecialBattle
