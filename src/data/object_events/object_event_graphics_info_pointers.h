@@ -40,8 +40,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLady;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutF;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Collector;
@@ -229,8 +229,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TUBER_M_LAND]             = &gObjectEventGraphicsInfo_TuberMLand,
     [OBJ_EVENT_GFX_SCOUT_M]                  = &gObjectEventGraphicsInfo_ScoutM,
     [OBJ_EVENT_GFX_SCOUT_F]                  = &gObjectEventGraphicsInfo_ScoutF,
-    [OBJ_EVENT_GFX_COOLTRAINER_M]            = &gObjectEventGraphicsInfo_CooltrainerM,
-    [OBJ_EVENT_GFX_COOLTRAINER_F]            = &gObjectEventGraphicsInfo_CooltrainerF,
+    [OBJ_EVENT_GFX_ACE_TRAINER_M]            = &gObjectEventGraphicsInfo_AceTrainerM,
+    [OBJ_EVENT_GFX_ACE_TRAINER_F]            = &gObjectEventGraphicsInfo_AceTrainerF,
     [OBJ_EVENT_GFX_SWIMMER_M_WATER]          = &gObjectEventGraphicsInfo_SwimmerMWater,
     [OBJ_EVENT_GFX_SWIMMER_F_WATER]          = &gObjectEventGraphicsInfo_SwimmerFWater,
     [OBJ_EVENT_GFX_SWIMMER_M_LAND]           = &gObjectEventGraphicsInfo_SwimmerMLand,

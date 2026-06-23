@@ -163,20 +163,20 @@ Route22_Text_JeremyPostBattle::
 	.string "It prepares your legs before the\n"
 	.string "LEAGUE road gets serious.$"
 
-Route22_Text_RunningTriathleteFIntro::
+Route22_Text_TriathleteFLandIntro::
 	.string "I run from VIRIDIAN to the\n"
 	.string "LEAGUE gate and back.\p"
 	.string "Rough terrain builds endurance!$"
 
-Route22_Text_RunningTriathleteFRematchIntro::
+Route22_Text_TriathleteFLandRematchIntro::
 	.string "Another run, another rematch.\p"
 	.string "Let's see whose pace holds on\n"
 	.string "ROUTE 22!$"
 
-Route22_Text_RunningTriathleteFDefeat::
+Route22_Text_TriathleteFLandDefeat::
 	.string "I need to pace myself!$"
 
-Route22_Text_RunningTriathleteFPostBattle::
+Route22_Text_TriathleteFLandPostBattle::
 	.string "Strong legs, steady breath,\n"
 	.string "and a good partner POKéMON.\p"
 	.string "That's how you cross rough\n"

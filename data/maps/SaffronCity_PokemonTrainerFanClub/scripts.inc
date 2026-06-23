@@ -223,7 +223,7 @@ SaffronCity_PokemonTrainerFanClub_EventScript_LittleGirlOnlyNonFan::
 	end
 
 SaffronCity_PokemonTrainerFanClub_EventScript_LittleGirlPlayerNotChampion::
-	msgbox SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay
+	msgbox SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeAceTrainerOneDay
 	release
 	end
 

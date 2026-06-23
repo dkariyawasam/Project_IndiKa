@@ -23,7 +23,7 @@ EventScript_SetCeladonGymTrainers::
 	settrainerflag TRAINER_BEAUTY_BRIDGET
 	settrainerflag TRAINER_BEAUTY_TAMIA
 	settrainerflag TRAINER_BEAUTY_LORI
-	settrainerflag TRAINER_COOLTRAINER_MARY
+	settrainerflag TRAINER_ACE_TRAINER_MARY
 	return
 
 EventScript_SetFuchsiaGymTrainers::
@@ -59,7 +59,7 @@ EventScript_SetViridianGymTrainers::
 	settrainerflag TRAINER_BLACK_BELT_ATSUSHI
 	settrainerflag TRAINER_BLACK_BELT_KIYO
 	settrainerflag TRAINER_BLACK_BELT_TAKASHI
-	settrainerflag TRAINER_COOLTRAINER_SAMUEL
-	settrainerflag TRAINER_COOLTRAINER_YUJI
-	settrainerflag TRAINER_COOLTRAINER_WARREN
+	settrainerflag TRAINER_ACE_TRAINER_SAMUEL
+	settrainerflag TRAINER_ACE_TRAINER_YUJI
+	settrainerflag TRAINER_ACE_TRAINER_WARREN
 	return
