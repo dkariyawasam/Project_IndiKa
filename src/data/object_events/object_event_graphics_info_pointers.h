@@ -55,8 +55,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMLand;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFLand;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMWater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFWater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMCycling;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFCycling;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Engineer;
@@ -367,10 +371,14 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_POKEFAN_F]                = &gObjectEventGraphicsInfo_PokefanF,
     [OBJ_EVENT_GFX_RUIN_MANIAC]              = &gObjectEventGraphicsInfo_RuinManiac,
     [OBJ_EVENT_GFX_SUPER_NERD]               = &gObjectEventGraphicsInfo_SuperNerd,
-    [OBJ_EVENT_GFX_TRIATHLETE_M]             = &gObjectEventGraphicsInfo_TriathleteM,
-    [OBJ_EVENT_GFX_TRIATHLETE_F]             = &gObjectEventGraphicsInfo_TriathleteF,
+    [OBJ_EVENT_GFX_TRIATHLETE_M_LAND]        = &gObjectEventGraphicsInfo_TriathleteMLand,
+    [OBJ_EVENT_GFX_TRIATHLETE_F_LAND]        = &gObjectEventGraphicsInfo_TriathleteFLand,
     [OBJ_EVENT_GFX_AROMA_LADY]               = &gObjectEventGraphicsInfo_AromaLady,
     [OBJ_EVENT_GFX_BIRD_KEEPER]              = &gObjectEventGraphicsInfo_BirdKeeper,
     [OBJ_EVENT_GFX_CUE_BALL]                 = &gObjectEventGraphicsInfo_CueBall,
     [OBJ_EVENT_GFX_ENGINEER]                 = &gObjectEventGraphicsInfo_Engineer,
+    [OBJ_EVENT_GFX_TRIATHLETE_M_WATER]       = &gObjectEventGraphicsInfo_TriathleteMWater,
+    [OBJ_EVENT_GFX_TRIATHLETE_F_WATER]       = &gObjectEventGraphicsInfo_TriathleteFWater,
+    [OBJ_EVENT_GFX_TRIATHLETE_M_CYCLING]     = &gObjectEventGraphicsInfo_TriathleteMCycling,
+    [OBJ_EVENT_GFX_TRIATHLETE_F_CYCLING]     = &gObjectEventGraphicsInfo_TriathleteFCycling,
 };

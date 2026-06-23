@@ -126,7 +126,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_M",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_M_LAND",
       "x": 43,
       "y": 30,
       "elevation": 3,
@@ -140,7 +140,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_LAND",
       "x": 59,
       "y": 24,
       "elevation": 3,
