@@ -167,7 +167,8 @@
     "CinnabarVolcano_RightCorridor_2F",
     "CinnabarVolcano_LeftCorridor_3F",
     "CinnabarVolcano_RightCorridor_3F",
-    "NavelRock_Harbor"
+    "NavelRock_Harbor",
+    "RocketLeague_ChampionsRoom"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
