@@ -122,7 +122,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route22_EventScript_RunningTriathleteF",
+      "script": "Route22_EventScript_TriathleteFLand",
       "flag": "0"
     }
   ],

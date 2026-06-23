@@ -9,6 +9,6 @@ Route2_ViridianForest_NorthEntrance_EventScript_OldMan::
 	msgbox Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees, MSGBOX_NPC
 	end
 
-Route2_ViridianForest_NorthEntrance_EventScript_CooltrainerF::
+Route2_ViridianForest_NorthEntrance_EventScript_AceTrainerF::
 	msgbox Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution, MSGBOX_NPC
 	end

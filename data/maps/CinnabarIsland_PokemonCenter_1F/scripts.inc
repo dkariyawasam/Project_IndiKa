@@ -18,7 +18,7 @@ CinnabarIsland_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom, MSGBOX_NPC
 	end
 
-CinnabarIsland_PokemonCenter_1F_EventScript_CooltrainerF::
+CinnabarIsland_PokemonCenter_1F_EventScript_AceTrainerF::
 	msgbox CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked, MSGBOX_NPC
 	end
 

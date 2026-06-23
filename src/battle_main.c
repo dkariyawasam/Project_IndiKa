@@ -476,7 +476,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_TEAM_ROCKET, 8},
     {TRAINER_CLASS_LASS, 1},
     {TRAINER_CLASS_BEAUTY, 18},
-    {TRAINER_CLASS_BLACK_BELT, 6},
+    {TRAINER_CLASS_BLACK_BELT_M, 6},
     {TRAINER_CLASS_ROUGHNECK, 6},
     {TRAINER_CLASS_CHANNELER, 8},
     {TRAINER_CLASS_ROCKER, 6},
@@ -486,7 +486,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_ENGINEER, 3},
     {TRAINER_CLASS_JUGGLER, 10},
     {TRAINER_CLASS_SAILOR, 2},
-    {TRAINER_CLASS_COOLTRAINER, 25},
+    {TRAINER_CLASS_ACE_TRAINER, 25},
     {TRAINER_CLASS_POKEMANIAC, 2},
     {TRAINER_CLASS_TAMER, 10},
     {TRAINER_CLASS_SCOUT_M, 1},
@@ -494,7 +494,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_BIKER, 5},
     {TRAINER_CLASS_GAMER, 18},
     {TRAINER_CLASS_SCIENTIST, 3},
-    {TRAINER_CLASS_CRUSH_GIRL, 6},
+    {TRAINER_CLASS_BLACK_BELT_F, 6},
     {TRAINER_CLASS_TUBER, 1},
     {TRAINER_CLASS_PKMN_BREEDER, 7},
     {TRAINER_CLASS_PKMN_RANGER, 9},
@@ -3718,7 +3718,7 @@ static void HandleEndTurn_BattleWon(void)
             break;
         case TRAINER_CLASS_BOSS:
         case TRAINER_CLASS_TEAM_ROCKET:
-        case TRAINER_CLASS_COOLTRAINER:
+        case TRAINER_CLASS_ACE_TRAINER:
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_GENTLEMAN:
         default:
