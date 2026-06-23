@@ -91,7 +91,7 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
     else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(MAP_ROCKET_LEAGUE_LOBBY) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY))
     {
         warp->x = 4;
-        warp->y = 11;
+        warp->y = 8;
     }
     else
     {
