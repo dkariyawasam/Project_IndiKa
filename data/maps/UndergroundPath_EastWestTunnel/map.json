@@ -1,7 +1,7 @@
 {
   "id": "MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL",
   "name": "UndergroundPath_EastWestTunnel",
-  "layout": "LAYOUT_UNDERGROUND_PATH_EAST_WEST_TUNNEL",
+  "layout": "LAYOUT_UNDERGROUND_PATH_TUNNEL",
   "music": "MUS_ROUTE1",
   "region_map_section": "MAPSEC_UNDERGROUND_PATH_2",
   "requires_flash": false,
