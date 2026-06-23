@@ -24,6 +24,7 @@
 #include "constants/maps.h"
 #include "constants/items.h"
 #include "constants/quest_log.h"
+#include "constants/trainers.h"
 #include "constants/trainer_types.h"
 
 // Each trainer can have up to 6 parties, including their original party.
@@ -118,6 +119,9 @@ static u8 GetCurVsSeekerResponse(s32 vsSeekerIdx, u16 trainerIdx);
 static void StartAllRespondantIdleMovements(void);
 static bool8 ObjectEventIdIsSane(u8 objectEventId);
 static u8 GetRandomFaceDirectionMovementType();
+static bool8 IsTrainerExcludedFromVsSeekerRematches(u16 trainerId);
+static bool8 IsKantoVsSeekerMap(void);
+static bool8 IsTrainerEligibleForDefaultRematch(u16 trainerId);
 
 static const struct RematchData sRematches[] = {
 
@@ -188,11 +192,11 @@ static const struct RematchData sRematches[] = {
       MAP(MAP_FUCHSIA_CITY_GYM) },
    { {TRAINER_JUGGLER_SHAWN, TRAINER_JUGGLER_SHAWN_2},
       MAP(MAP_FUCHSIA_CITY_GYM) },
-   { {TRAINER_JUGGLER_KIRK, TRAINER_JUGGLER_KIRK_2},
+   { {TRAINER_JUGGLER_KIRK, TRAINER_NONE},
       MAP(MAP_FUCHSIA_CITY_GYM) },
    { {TRAINER_TAMER_EDGAR, TRAINER_TAMER_EDGAR_2},
       MAP(MAP_FUCHSIA_CITY_GYM) },
-   { {TRAINER_TAMER_PHIL, TRAINER_TAMER_PHIL_2},
+   { {TRAINER_TAMER_PHIL, TRAINER_NONE},
       MAP(MAP_FUCHSIA_CITY_GYM) },
    { {TRAINER_BUG_CATCHER_ROBBY, TRAINER_BUG_CATCHER_ROBBY_2},
       MAP(MAP_MT_MOON_1F) },
@@ -206,19 +210,19 @@ static const struct RematchData sRematches[] = {
       MAP(MAP_POKEMON_MANSION_1F) },
    { {TRAINER_BURGLAR_ARNIE, TRAINER_BURGLAR_ARNIE_2},
       MAP(MAP_POKEMON_MANSION_2F) },
-   { {TRAINER_BURGLAR_SIMON, TRAINER_BURGLAR_SIMON_2},
+   { {TRAINER_BURGLAR_SIMON, TRAINER_NONE},
       MAP(MAP_POKEMON_MANSION_3F) },
    { {TRAINER_SCIENTIST_BRAYDON, TRAINER_SCIENTIST_BRAYDON_2},
       MAP(MAP_POKEMON_MANSION_3F) },
    { {TRAINER_BURGLAR_LEWIS, TRAINER_BURGLAR_LEWIS_2},
       MAP(MAP_POKEMON_MANSION_B1F) },
-   { {TRAINER_SCIENTIST_IVAN, TRAINER_SCIENTIST_IVAN_2},
+   { {TRAINER_SCIENTIST_IVAN, TRAINER_NONE},
       MAP(MAP_POKEMON_MANSION_B1F) },
-   { {TRAINER_CHANNELER_PATRICIA, TRAINER_CHANNELER_PATRICIA_2},
+   { {TRAINER_CHANNELER_PATRICIA, TRAINER_NONE},
       MAP(MAP_POKEMON_TOWER_2F) },
-   { {TRAINER_CHANNELER_CARLY, TRAINER_CHANNELER_CARLY_2},
+   { {TRAINER_CHANNELER_CARLY, TRAINER_NONE},
       MAP(MAP_POKEMON_TOWER_2F) },
-   { {TRAINER_CHANNELER_HOPE, TRAINER_CHANNELER_HOPE_2},
+   { {TRAINER_CHANNELER_HOPE, TRAINER_NONE},
       MAP(MAP_POKEMON_TOWER_2F) },
    { {TRAINER_CHANNELER_ANGELICA, TRAINER_CHANNELER_ANGELICA_2},
       MAP(MAP_POKEMON_TOWER_3F) },
@@ -246,99 +250,99 @@ static const struct RematchData sRematches[] = {
       MAP(MAP_ROCK_TUNNEL_B1F) },
    { {TRAINER_POKEMANIAC_WINSTON, TRAINER_POKEMANIAC_WINSTON_2},
       MAP(MAP_ROCK_TUNNEL_B1F) },
-   { {TRAINER_GENTLEMAN_ARTHUR, TRAINER_GENTLEMAN_ARTHUR_2},
+   { {TRAINER_GENTLEMAN_ARTHUR, TRAINER_NONE},
       MAP(MAP_SSANNE_1F_ROOM5) },
    { {TRAINER_GENTLEMAN_THOMAS, TRAINER_NONE},
       MAP(MAP_SSANNE_1F_ROOM7) },
    { {TRAINER_FISHERMAN_DALE, TRAINER_FISHERMAN_DALE_2},
       MAP(MAP_SSANNE_2F_ROOM2) },
-   { {TRAINER_GENTLEMAN_BROOKS, TRAINER_GENTLEMAN_BROOKS_2},
+   { {TRAINER_GENTLEMAN_BROOKS, TRAINER_NONE},
       MAP(MAP_SSANNE_2F_ROOM2) },
-   { {TRAINER_GENTLEMAN_LAMAR, TRAINER_GENTLEMAN_LAMAR_2},
+   { {TRAINER_GENTLEMAN_LAMAR, TRAINER_NONE},
       MAP(MAP_SSANNE_2F_ROOM4) },
-   { {TRAINER_FISHERMAN_BARNY, TRAINER_FISHERMAN_BARNY_2},
+   { {TRAINER_FISHERMAN_BARNY, TRAINER_NONE},
       MAP(MAP_SSANNE_B1F_ROOM1) },
-   { {TRAINER_SAILOR_PHILLIP, TRAINER_SAILOR_PHILLIP_2},
+   { {TRAINER_SAILOR_PHILLIP, TRAINER_NONE},
       MAP(MAP_SSANNE_B1F_ROOM1) },
-   { {TRAINER_SAILOR_HUEY, TRAINER_SAILOR_HUEY_2},
+   { {TRAINER_SAILOR_HUEY, TRAINER_NONE},
       MAP(MAP_SSANNE_B1F_ROOM2) },
-   { {TRAINER_SAILOR_DYLAN, TRAINER_SAILOR_DYLAN_2},
+   { {TRAINER_SAILOR_DYLAN, TRAINER_NONE},
       MAP(MAP_SSANNE_B1F_ROOM3) },
-   { {TRAINER_SAILOR_DUNCAN, TRAINER_SAILOR_DUNCAN_2},
+   { {TRAINER_SAILOR_DUNCAN, TRAINER_NONE},
       MAP(MAP_SSANNE_B1F_ROOM4) },
    { {TRAINER_SAILOR_TREVOR, TRAINER_SAILOR_TREVOR_2},
       MAP(MAP_SSANNE_DECK) },
-   { {TRAINER_SAILOR_EDMOND, TRAINER_SAILOR_EDMOND_2},
+   { {TRAINER_SAILOR_EDMOND, TRAINER_NONE},
       MAP(MAP_SSANNE_DECK) },
-   { {TRAINER_BLACK_BELT_HITOSHI, TRAINER_BLACK_BELT_HITOSHI_2},
+   { {TRAINER_BLACK_BELT_HITOSHI, TRAINER_NONE},
       MAP(MAP_SAFFRON_CITY_DOJO) },
-   { {TRAINER_BLACK_BELT_HIDEKI, TRAINER_BLACK_BELT_HIDEKI_2},
+   { {TRAINER_BLACK_BELT_HIDEKI, TRAINER_NONE},
       MAP(MAP_SAFFRON_CITY_DOJO) },
-   { {TRAINER_BLACK_BELT_AARON, TRAINER_BLACK_BELT_AARON_2},
+   { {TRAINER_BLACK_BELT_AARON, TRAINER_NONE},
       MAP(MAP_SAFFRON_CITY_DOJO) },
-   { {TRAINER_BLACK_BELT_MIKE, TRAINER_BLACK_BELT_MIKE_2},
+   { {TRAINER_BLACK_BELT_MIKE, TRAINER_NONE},
       MAP(MAP_SAFFRON_CITY_DOJO) },
-   { {TRAINER_BLACK_BELT_KOICHI, TRAINER_BLACK_BELT_KOICHI_2},
+   { {TRAINER_BLACK_BELT_KOICHI, TRAINER_NONE},
       MAP(MAP_SAFFRON_CITY_DOJO) },
-   { {TRAINER_SCIENTIST_TRAVIS, TRAINER_SCIENTIST_TRAVIS_2},
+   { {TRAINER_SCIENTIST_TRAVIS, TRAINER_NONE},
       MAP(MAP_SILPH_CO_10F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_39, TRAINER_TEAM_ROCKET_GRUNT_39_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_39, TRAINER_NONE},
       MAP(MAP_SILPH_CO_10F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_40, TRAINER_TEAM_ROCKET_GRUNT_40_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_40, TRAINER_NONE},
       MAP(MAP_SILPH_CO_11F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_41, TRAINER_TEAM_ROCKET_GRUNT_41_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_41, TRAINER_NONE},
       MAP(MAP_SILPH_CO_11F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_24, TRAINER_TEAM_ROCKET_GRUNT_24_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_24, TRAINER_NONE},
       MAP(MAP_SILPH_CO_2F) },
-   { {TRAINER_SCIENTIST_JERRY, TRAINER_SCIENTIST_JERRY_2},
+   { {TRAINER_SCIENTIST_JERRY, TRAINER_NONE},
       MAP(MAP_SILPH_CO_2F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_23, TRAINER_TEAM_ROCKET_GRUNT_23_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_23, TRAINER_NONE},
       MAP(MAP_SILPH_CO_2F) },
-   { {TRAINER_SCIENTIST_CONNOR, TRAINER_SCIENTIST_CONNOR_2},
+   { {TRAINER_SCIENTIST_CONNOR, TRAINER_NONE},
       MAP(MAP_SILPH_CO_2F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_25, TRAINER_TEAM_ROCKET_GRUNT_25_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_25, TRAINER_NONE},
       MAP(MAP_SILPH_CO_3F) },
-   { {TRAINER_SCIENTIST_JOSE, TRAINER_SCIENTIST_JOSE_2},
+   { {TRAINER_SCIENTIST_JOSE, TRAINER_NONE},
       MAP(MAP_SILPH_CO_3F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_27, TRAINER_TEAM_ROCKET_GRUNT_27_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_27, TRAINER_NONE},
       MAP(MAP_SILPH_CO_4F) },
    { {TRAINER_TEAM_ROCKET_GRUNT_26, TRAINER_TEAM_ROCKET_GRUNT_26_2},
       MAP(MAP_SILPH_CO_4F) },
-   { {TRAINER_SCIENTIST_RODNEY, TRAINER_SCIENTIST_RODNEY_2},
+   { {TRAINER_SCIENTIST_RODNEY, TRAINER_NONE},
       MAP(MAP_SILPH_CO_4F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_29, TRAINER_TEAM_ROCKET_GRUNT_29_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_29, TRAINER_NONE},
       MAP(MAP_SILPH_CO_5F) },
-   { {TRAINER_JUGGLER_DALTON, TRAINER_JUGGLER_DALTON_2},
+   { {TRAINER_JUGGLER_DALTON, TRAINER_NONE},
       MAP(MAP_SILPH_CO_5F) },
-   { {TRAINER_SCIENTIST_BEAU, TRAINER_SCIENTIST_BEAU_2},
+   { {TRAINER_SCIENTIST_BEAU, TRAINER_NONE},
       MAP(MAP_SILPH_CO_5F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_28, TRAINER_TEAM_ROCKET_GRUNT_28_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_28, TRAINER_NONE},
       MAP(MAP_SILPH_CO_5F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_30, TRAINER_TEAM_ROCKET_GRUNT_30_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_30, TRAINER_NONE},
       MAP(MAP_SILPH_CO_6F) },
-   { {TRAINER_SCIENTIST_TAYLOR, TRAINER_SCIENTIST_TAYLOR_2},
+   { {TRAINER_SCIENTIST_TAYLOR, TRAINER_NONE},
       MAP(MAP_SILPH_CO_6F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_31, TRAINER_TEAM_ROCKET_GRUNT_31_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_31, TRAINER_NONE},
       MAP(MAP_SILPH_CO_6F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_33, TRAINER_TEAM_ROCKET_GRUNT_33_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_33, TRAINER_NONE},
       MAP(MAP_SILPH_CO_7F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_34, TRAINER_TEAM_ROCKET_GRUNT_34_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_34, TRAINER_NONE},
       MAP(MAP_SILPH_CO_7F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_35, TRAINER_TEAM_ROCKET_GRUNT_35_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_35, TRAINER_NONE},
       MAP(MAP_SILPH_CO_7F) },
-   { {TRAINER_SCIENTIST_JOSHUA, TRAINER_SCIENTIST_JOSHUA_2},
+   { {TRAINER_SCIENTIST_JOSHUA, TRAINER_NONE},
       MAP(MAP_SILPH_CO_7F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_32, TRAINER_TEAM_ROCKET_GRUNT_32_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_32, TRAINER_NONE},
       MAP(MAP_SILPH_CO_8F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_36, TRAINER_TEAM_ROCKET_GRUNT_36_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_36, TRAINER_NONE},
       MAP(MAP_SILPH_CO_8F) },
-   { {TRAINER_SCIENTIST_PARKER, TRAINER_SCIENTIST_PARKER_2},
+   { {TRAINER_SCIENTIST_PARKER, TRAINER_NONE},
       MAP(MAP_SILPH_CO_8F) },
-   { {TRAINER_SCIENTIST_ED, TRAINER_SCIENTIST_ED_2},
+   { {TRAINER_SCIENTIST_ED, TRAINER_NONE},
       MAP(MAP_SILPH_CO_9F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_38, TRAINER_TEAM_ROCKET_GRUNT_38_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_38, TRAINER_NONE},
       MAP(MAP_SILPH_CO_9F) },
-   { {TRAINER_TEAM_ROCKET_GRUNT_37, TRAINER_TEAM_ROCKET_GRUNT_37_2},
+   { {TRAINER_TEAM_ROCKET_GRUNT_37, TRAINER_NONE},
       MAP(MAP_SILPH_CO_9F) },
    { {TRAINER_ACE_TRAINER_ROLANDO, TRAINER_ACE_TRAINER_ROLANDO_2},
       MAP(MAP_VICTORY_ROAD_1F) },
@@ -364,19 +368,19 @@ static const struct RematchData sRematches[] = {
       MAP(MAP_VICTORY_ROAD_3F) },
    { {TRAINER_COOL_COUPLE_RAY_TYRA, TRAINER_COOL_COUPLE_RAY_TYRA_2},
       MAP(MAP_VICTORY_ROAD_3F) },
-   { {TRAINER_BLACK_BELT_TAKASHI, TRAINER_BLACK_BELT_TAKASHI_2},
+   { {TRAINER_BLACK_BELT_TAKASHI, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_ACE_TRAINER_YUJI, TRAINER_ACE_TRAINER_YUJI_2},
+   { {TRAINER_ACE_TRAINER_YUJI, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_BLACK_BELT_ATSUSHI, TRAINER_BLACK_BELT_ATSUSHI_2},
+   { {TRAINER_BLACK_BELT_ATSUSHI, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_TAMER_JASON, TRAINER_TAMER_JASON_2},
+   { {TRAINER_TAMER_JASON, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_BLACK_BELT_KIYO, TRAINER_BLACK_BELT_KIYO_2},
+   { {TRAINER_BLACK_BELT_KIYO, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_ACE_TRAINER_SAMUEL, TRAINER_ACE_TRAINER_SAMUEL_2},
+   { {TRAINER_ACE_TRAINER_SAMUEL, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
-   { {TRAINER_ACE_TRAINER_WARREN, TRAINER_ACE_TRAINER_WARREN_2},
+   { {TRAINER_ACE_TRAINER_WARREN, TRAINER_NONE},
       MAP(MAP_VIRIDIAN_CITY_GYM) },
    { {TRAINER_BUG_CATCHER_RICK, TRAINER_BUG_CATCHER_RICK_2},
       MAP(MAP_VIRIDIAN_FOREST) },
@@ -851,8 +855,14 @@ static bool8 ShouldTryRematchBattleInternal(const struct RematchData *vsSeekerDa
 {
     s32 rematchIdx = GetRematchIdx(vsSeekerData, trainerBattleOpponent);
 
-    if (rematchIdx == -1)
+    if (IsTrainerExcludedFromVsSeekerRematches(trainerBattleOpponent))
         return FALSE;
+    if (rematchIdx == -1)
+    {
+        if (IsTrainerEligibleForDefaultRematch(trainerBattleOpponent) && IsThisTrainerRematchable(gSpecialVar_LastTalked))
+            return TRUE;
+        return FALSE;
+    }
     if (rematchIdx >= 0 && rematchIdx < NELEMS(sRematches))
     {
         if (IsThisTrainerRematchable(gSpecialVar_LastTalked))
@@ -865,6 +875,8 @@ static bool8 HasRematchTrainerAlreadyBeenFought(const struct RematchData *vsSeek
 {
     s32 rematchIdx = GetRematchIdx(vsSeekerData, trainerBattleOpponent);
 
+    if (IsTrainerExcludedFromVsSeekerRematches(trainerBattleOpponent))
+        return FALSE;
     if (rematchIdx == -1)
         return FALSE;
     if (!HasTrainerBeenFought(vsSeekerData[rematchIdx].trainerIdxs[0]))
@@ -904,10 +916,19 @@ int GetRematchTrainerId(u16 trainerId)
 {
     u8 i;
     u8 j;
+
+    if (IsTrainerExcludedFromVsSeekerRematches(trainerId))
+        return 0;
     j = GetNextAvailableRematchTrainer(sRematches, trainerId, &i);
     if (!j)
+    {
+        if (IsTrainerEligibleForDefaultRematch(trainerId))
+            return trainerId;
         return 0;
+    }
     TryGetRematchTrainerIdGivenGameState(sRematches[i].trainerIdxs, &j);
+    if (sRematches[i].trainerIdxs[j] == TRAINER_NONE)
+        return trainerId;
     return sRematches[i].trainerIdxs[j];
 }
 
@@ -920,8 +941,14 @@ static bool8 IsTrainerReadyForRematchInternal(const struct RematchData * array, 
 {
     int rematchTrainerIdx = LookupVsSeekerOpponentInArray(array, trainerId);
 
-    if (rematchTrainerIdx == -1)
+    if (IsTrainerExcludedFromVsSeekerRematches(trainerId))
         return FALSE;
+    if (rematchTrainerIdx == -1)
+    {
+        if (IsTrainerEligibleForDefaultRematch(trainerId) && IsThisTrainerRematchable(gSpecialVar_LastTalked))
+            return TRUE;
+        return FALSE;
+    }
     if (rematchTrainerIdx >= NELEMS(sRematches))
         return FALSE;
     if (!IsThisTrainerRematchable(gSpecialVar_LastTalked))
@@ -1064,6 +1091,9 @@ static u8 GetNextAvailableRematchTrainer(const struct RematchData * vsSeekerData
 {
     int i, j;
 
+    if (IsTrainerExcludedFromVsSeekerRematches(trainerFlagNo))
+        return 0;
+
     for (i = 0; i < NELEMS(sRematches); i++)
     {
         if (vsSeekerData[i].trainerIdxs[0] == trainerFlagNo)
@@ -1072,7 +1102,11 @@ static u8 GetNextAvailableRematchTrainer(const struct RematchData * vsSeekerData
             for (j = 1; j < MAX_REMATCH_PARTIES; j++)
             {
                 if (vsSeekerData[i].trainerIdxs[j] == TRAINER_NONE)
+                {
+                    if (j == 1 && IsTrainerEligibleForDefaultRematch(trainerFlagNo))
+                        return j;
                     return j - 1;
+                }
                 if (vsSeekerData[i].trainerIdxs[j] == SKIP)
                     continue;
                 if (HasTrainerBeenFought(vsSeekerData[i].trainerIdxs[j]))
@@ -1084,7 +1118,56 @@ static u8 GetNextAvailableRematchTrainer(const struct RematchData * vsSeekerData
     }
 
     *idxPtr = 0;
+    if (IsTrainerEligibleForDefaultRematch(trainerFlagNo))
+        return 1;
     return 0;
+}
+
+static bool8 IsTrainerExcludedFromVsSeekerRematches(u16 trainerId)
+{
+    u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    u8 mapNum = gSaveBlock1Ptr->location.mapNum;
+
+    if (mapGroup == 1 && mapNum >= 5 && mapNum <= 29)
+        return TRUE;
+    if (mapGroup == 14 && mapNum == 2)
+        return TRUE;
+    if (mapGroup == 1 && mapNum >= 43 && mapNum <= 53 && gTrainers[trainerId].trainerClass == TRAINER_CLASS_TEAM_ROCKET)
+        return TRUE;
+    return FALSE;
+}
+
+static bool8 IsKantoVsSeekerMap(void)
+{
+    u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    u8 mapNum = gSaveBlock1Ptr->location.mapNum;
+
+    if (mapGroup == 1)
+        return TRUE;
+    if (mapGroup == 2 && mapNum >= 23 && mapNum <= 30)
+        return TRUE;
+    if (mapGroup == 3 && (mapNum <= 11 || (mapNum >= 14 && mapNum <= 40)))
+        return TRUE;
+    if (mapGroup >= 4 && mapGroup <= 30)
+        return TRUE;
+    return FALSE;
+}
+
+static bool8 IsTrainerEligibleForDefaultRematch(u16 trainerId)
+{
+    switch (gTrainers[trainerId].trainerClass)
+    {
+        case TRAINER_CLASS_RIVAL_EARLY:
+        case TRAINER_CLASS_BOSS:
+        case TRAINER_CLASS_LEADER:
+        case TRAINER_CLASS_ELITE_FOUR:
+        case TRAINER_CLASS_RIVAL_LATE:
+        case TRAINER_CLASS_CHAMPION:
+        case TRAINER_CLASS_ROCKET_ADMIN:
+            return FALSE;
+        default:
+            return IsKantoVsSeekerMap();
+    }
 }
 
 static u8 GetRematchableTrainerLocalId(void)
