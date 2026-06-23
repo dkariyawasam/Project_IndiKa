@@ -799,7 +799,8 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_SILPH_CO            - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_POKEMON_MANSION     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_KANTO_SAFARI_ZONE   - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_POKEMON_LEAGUE      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
+    [MAPSEC_LEAGUE_INDIGO       - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
+    [MAPSEC_LEAGUE_ROCKET       - KANTO_MAPSEC_START] = {MAP(MAP_ROCKET_LEAGUE_LOBBY),                   HEAL_LOCATION_ROCKET_LEAGUE},
     [MAPSEC_ROCK_TUNNEL         - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_SEAFOAM_ISLANDS     - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_POKEMON_TOWER       - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
@@ -2871,8 +2872,10 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_POKEMON_MANSION_1F) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_KANTO_SAFARI_ZONE:
         return FlagGet(FLAG_WORLD_MAP_SAFARI_ZONE_CENTER) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_POKEMON_LEAGUE:
+    case MAPSEC_LEAGUE_INDIGO:
         return FlagGet(FLAG_WORLD_MAP_POKEMON_LEAGUE_LORELEIS_ROOM) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+    case MAPSEC_LEAGUE_ROCKET:
+        return MAPSECTYPE_VISITED;
     case MAPSEC_ROCK_TUNNEL:
         return FlagGet(FLAG_WORLD_MAP_ROCK_TUNNEL_1F) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_SEAFOAM_ISLANDS:
@@ -3018,9 +3021,13 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 14;
         sMapCursor->y = 9;
         break;
-    case MAPSEC_POKEMON_LEAGUE:
+    case MAPSEC_LEAGUE_INDIGO:
         sMapCursor->x = 2;
         sMapCursor->y = 3;
+        break;
+    case MAPSEC_LEAGUE_ROCKET:
+        sMapCursor->x = 11;
+        sMapCursor->y = 6;
         break;
     case MAPSEC_UNDERGROUND_PATH:
         sMapCursor->x = 14;

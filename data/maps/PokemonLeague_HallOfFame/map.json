@@ -3,7 +3,7 @@
   "name": "PokemonLeague_HallOfFame",
   "layout": "LAYOUT_POKEMON_LEAGUE_HALL_OF_FAME",
   "music": "MUS_SLOW_PALLET",
-  "region_map_section": "MAPSEC_POKEMON_LEAGUE",
+  "region_map_section": "MAPSEC_LEAGUE_INDIGO",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
