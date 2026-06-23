@@ -8734,39 +8734,39 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt44[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt45[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Route17TriathleteDax[] = {
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_ZUBAT,
+        .iv = 40,
+        .lvl = 30,
+        .species = SPECIES_DODUO,
     },
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_ZUBAT,
+        .iv = 40,
+        .lvl = 31,
+        .species = SPECIES_VOLTORB,
     },
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_GOLBAT,
+        .iv = 40,
+        .lvl = 32,
+        .species = SPECIES_PONYTA,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt46[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Route17TriathleteNina[] = {
     {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_MUK,
+        .iv = 40,
+        .lvl = 30,
+        .species = SPECIES_PIDGEOTTO,
     },
     {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_GOLBAT,
+        .iv = 40,
+        .lvl = 31,
+        .species = SPECIES_PIKACHU,
     },
     {
-        .iv = 0,
-        .lvl = 48,
-        .species = SPECIES_RATICATE,
+        .iv = 40,
+        .lvl = 32,
+        .species = SPECIES_BUNEARY,
     },
 };
 
