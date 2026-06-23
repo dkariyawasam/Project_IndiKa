@@ -324,6 +324,23 @@ struct BattleTowerData // Leftover from R/S
     /*0x04D1, 0x0581*/ u8 filler_4D1[0x317];
 }; /* size = 0x7E8 */
 
+#define LEAGUE_CHALLENGE_NONE 0
+#define LEAGUE_CHALLENGE_INDIGO 1
+#define LEAGUE_CHALLENGE_ROCKET 2
+
+#define LEAGUE_CHALLENGE_POOL_BATTLE_COUNT 4
+#define LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT 5
+#define LEAGUE_CHALLENGE_SELECTED_PARTY_SIZE 4
+
+struct LeagueChallengeData
+{
+    u8 active;
+    u8 type;
+    u8 round;
+    u8 selectedPartyMons[LEAGUE_CHALLENGE_SELECTED_PARTY_SIZE];
+    u16 trainerIds[LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT];
+}; /* size = 0x12 */
+
 // quest menu
 #include "constants/quests.h"
 
@@ -358,7 +375,8 @@ struct SaveBlock2
     /*0xB00*/ struct PokemonJumpRecords pokeJump;
     /*0xB10*/ struct BerryPickingResults berryPick;
     //RECOMMENDED TO REMOVE THIS
-    /*0xB20*/ u8 filler_B20[0x400];
+    /*0xB20*/ struct LeagueChallengeData leagueChallenge;
+    /*0xB32*/ u8 filler_B32[0x3EE];
     /*0xF20*/ u32 encryptionKey;
 #define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
 #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)
