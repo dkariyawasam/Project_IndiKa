@@ -1,14 +1,13 @@
 PalletTown_Text_OakDontGoOut::
-    .string "OAK: Hey! Wait!\n"
-    .string "Don't go out!$"
+    .string "OAK: Wait!\n"
+    .string "Don't leave yet!$"
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
     .string "OAK: It's unsafe!\n"
-    .string "Wild POKéMON live in tall grass!\p"
+    .string "POKéMON live in tall grass.\p"
     .string "You need your own POKéMON for\n"
     .string "your protection.\p"
-    .string "I know!\n"
-    .string "Here, come with me!$"
+    .string "Come with me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
     .string "I knew I could get unstuck by\n"
