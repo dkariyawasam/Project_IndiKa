@@ -587,7 +587,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutF = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerM = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -602,11 +602,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_CooltrainerM,
+    .images = sPicTable_AceTrainerM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerF = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -621,7 +621,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_CooltrainerF,
+    .images = sPicTable_AceTrainerF,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

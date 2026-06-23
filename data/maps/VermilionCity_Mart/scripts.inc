@@ -1,7 +1,7 @@
 VermilionCity_Mart_MapScripts::
 	.byte 0
 
-VermilionCity_Mart_EventScript_CooltrainerF::
+VermilionCity_Mart_EventScript_AceTrainerF::
 	msgbox VermilionCity_Mart_Text_MonsGoodOrBadDependingOnTrainer, MSGBOX_NPC
 	end
 
