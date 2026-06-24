@@ -31,17 +31,17 @@ MtMoon_B2F_EventScript_Annihilape::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ANNIHILAPE, 50
-	waitse
+	seteventmon SPECIES_ANNIHILAPE, 50
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_ANNIHILAPE, CRY_MODE_ENCOUNTER
-	message Text_Gyaoo
+	message MtMoon_B2F_Text_AnnihilapeApexCry
 	waitmessage
 	waitmoncry
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -65,3 +65,6 @@ MtMoon_B2F_EventScript_RanFromAnnihilape::
 	setvar VAR_0x8004, SPECIES_ANNIHILAPE
 	goto EventScript_MonFlewAway
 	end
+
+MtMoon_B2F_Text_AnnihilapeApexCry:
+	.string "GRAAAOO!$"
