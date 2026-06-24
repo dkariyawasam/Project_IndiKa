@@ -11,6 +11,7 @@ MAP_WIDTH = 32
 MAP_HEIGHT = 20
 BACKDROP_FIRST_ROW = 1
 BACKDROP_ROWS = 17
+BACKDROP_FIRST_COL = 4
 BG3_TILE_OFFSET = 144
 BACKDROP_TILE_OFFSET = BG3_TILE_OFFSET + 64
 BACKDROP_PAL_NUM = 4
@@ -114,21 +115,74 @@ def make_tile(index_rows, tx, ty):
     return bytes(tile)
 
 
-def tile_distance(left, right):
-    return sum(abs((a & 0xF) - (b & 0xF)) + abs((a >> 4) - (b >> 4)) for a, b in zip(left, right))
+def tile_pixels(tile):
+    pixels = []
+    for byte in tile:
+        pixels.append(byte & 0xF)
+        pixels.append(byte >> 4)
+    return pixels
 
 
-def best_tile_id(tile, tiles):
-    best_id = 0
-    best_distance = None
-    for i, existing in enumerate(tiles):
-        distance = tile_distance(tile, existing)
-        if best_distance is None or distance < best_distance:
-            best_id = i
-            best_distance = distance
-            if distance == 0:
+def weighted_tile_distance(left, right, palette):
+    distance = 0
+    for left_index, right_index in zip(tile_pixels(left), tile_pixels(right)):
+        left_rgb = palette[left_index]
+        right_rgb = palette[right_index]
+        distance += sum((a - b) * (a - b) for a, b in zip(left_rgb, right_rgb))
+    return distance
+
+
+def cluster_tiles(cell_tiles, palette):
+    unique_tiles = []
+    tile_to_id = {}
+    importance = []
+
+    for ty, tile in cell_tiles:
+        if tile not in tile_to_id:
+            tile_to_id[tile] = len(unique_tiles)
+            unique_tiles.append(tile)
+            importance.append(0)
+        tile_id = tile_to_id[tile]
+        importance[tile_id] += 4 if ty >= 12 else 2 if ty >= 8 else 1
+
+    active = set(range(len(unique_tiles)))
+    parent = list(range(len(unique_tiles)))
+
+    while len(active) > MAX_BACKDROP_TILES:
+        best_pair = None
+        best_distance = None
+        active_list = sorted(active)
+        for i, left_id in enumerate(active_list):
+            for right_id in active_list[i + 1:]:
+                distance = weighted_tile_distance(unique_tiles[left_id], unique_tiles[right_id], palette)
+                if best_distance is None or distance < best_distance:
+                    best_distance = distance
+                    best_pair = (left_id, right_id)
+                    if distance == 0:
+                        break
+            if best_distance == 0:
                 break
-    return best_id
+
+        left_id, right_id = best_pair
+        if importance[left_id] < importance[right_id]:
+            left_id, right_id = right_id, left_id
+        parent[right_id] = left_id
+        importance[left_id] += importance[right_id]
+        active.remove(right_id)
+
+    def find(tile_id):
+        while parent[tile_id] != tile_id:
+            parent[tile_id] = parent[parent[tile_id]]
+            tile_id = parent[tile_id]
+        return tile_id
+
+    active_list = sorted(active)
+    active_to_output = {tile_id: i for i, tile_id in enumerate(active_list)}
+    tile_to_output = {
+        tile: active_to_output[find(tile_id)]
+        for tile, tile_id in tile_to_id.items()
+    }
+    return [unique_tiles[tile_id] for tile_id in active_list], tile_to_output
 
 
 def main():
@@ -166,27 +220,28 @@ def main():
         if tile_id < 64:
             write_u16(tilemap, i, (entry & ~0x3FF) | (BG3_TILE_OFFSET + tile_id))
 
-    tile_to_index = {}
-    tiles = []
+    rgb_palette = [(0, 0, 0)] + colors + [(0, 0, 0)] * (15 - len(colors))
+    cell_tiles = []
     for ty in range(BACKDROP_ROWS):
         source_ty = ty + BACKDROP_FIRST_ROW
-        for tx in range(DISPLAY_WIDTH // 8):
-            tile = make_tile(index_rows, tx, source_ty)
-            if tile not in tile_to_index:
-                if len(tiles) < MAX_BACKDROP_TILES:
-                    tile_to_index[tile] = len(tiles)
-                    tiles.append(tile)
-                else:
-                    tile_to_index[tile] = best_tile_id(tile, tiles)
-            tile_id = tile_to_index[tile]
+        for tx in range(BACKDROP_FIRST_COL, DISPLAY_WIDTH // 8):
+            cell_tiles.append((ty, make_tile(index_rows, tx, source_ty)))
+
+    tiles, tile_to_output = cluster_tiles(cell_tiles, rgb_palette)
+
+    cell_index = 0
+    for ty in range(BACKDROP_ROWS):
+        for tx in range(BACKDROP_FIRST_COL, DISPLAY_WIDTH // 8):
+            tile = cell_tiles[cell_index][1]
+            cell_index += 1
+            tile_id = tile_to_output[tile]
             write_u16(
                 tilemap,
                 (BACKDROP_FIRST_ROW + ty) * MAP_WIDTH + tx,
                 (BACKDROP_PAL_NUM << 12) | (BACKDROP_TILE_OFFSET + tile_id),
             )
 
-    palette = [0] + [gba_color(color) for color in colors]
-    palette.extend([0] * (16 - len(palette)))
+    palette = [gba_color(color) for color in rgb_palette]
 
     with open(tiles_path, "wb") as f:
         f.write(b"".join(tiles))
