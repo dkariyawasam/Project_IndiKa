@@ -2037,6 +2037,42 @@ static const struct SpriteFrameImage sPicTable_Tangrowth[] = {
     overworld_frame(gObjectEventPic_Tangrowth, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_Osscythe[] = {
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Osscythe, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Annihilape[] = {
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Annihilape, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_MimeSr[] = {
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 3),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 5),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 6),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 7),
+    overworld_frame(gObjectEventPic_MimeSr, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_Chansey[] = {
     overworld_frame(gObjectEventPic_Chansey, 2, 2, 0),
     overworld_frame(gObjectEventPic_Chansey, 2, 2, 1),

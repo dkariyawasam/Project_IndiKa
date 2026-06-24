@@ -150,6 +150,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cubone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Poliwrath;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tangrowth;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Osscythe;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Annihilape;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MimeSr;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeot;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jigglypuff;
@@ -303,6 +306,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CUBONE]                   = &gObjectEventGraphicsInfo_Cubone,
     [OBJ_EVENT_GFX_POLIWRATH]                = &gObjectEventGraphicsInfo_Poliwrath,
     [OBJ_EVENT_GFX_TANGROWTH]                = &gObjectEventGraphicsInfo_Tangrowth,
+    [OBJ_EVENT_GFX_OSSCYTHE]                 = &gObjectEventGraphicsInfo_Osscythe,
+    [OBJ_EVENT_GFX_ANNIHILAPE]               = &gObjectEventGraphicsInfo_Annihilape,
+    [OBJ_EVENT_GFX_MIME_SR]                  = &gObjectEventGraphicsInfo_MimeSr,
     [OBJ_EVENT_GFX_CLEFAIRY]                 = &gObjectEventGraphicsInfo_Clefairy,
     [OBJ_EVENT_GFX_PIDGEOT]                  = &gObjectEventGraphicsInfo_Pidgeot,
     [OBJ_EVENT_GFX_JIGGLYPUFF]               = &gObjectEventGraphicsInfo_Jigglypuff,
