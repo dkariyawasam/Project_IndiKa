@@ -4472,7 +4472,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
-    [SPECIES_THERMIKARP] =
+    [SPECIES_CINNABAR_MAGIKARP] =
     {
         .baseHP = 45,
         .baseAttack = 49,
@@ -12037,7 +12037,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
-    [SPECIES_INVISIBAS] =
+    [SPECIES_CINNABAR_FEEBAS] =
     {
         .baseHP = 50,
         .baseAttack = 50,
@@ -12045,7 +12045,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed = 50,
         .baseSpAttack = 50,
         .baseSpDefense = 50,
-        .types = {TYPE_NORMAL, TYPE_NORMAL},
+        .types = {TYPE_WATER, TYPE_DRAGON},
         .catchRate = 45,
         .expYield = 100,
         .evYield_HP = 0,

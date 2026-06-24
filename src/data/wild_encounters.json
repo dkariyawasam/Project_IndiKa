@@ -7425,7 +7425,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_INVISIBAS"
+                "species": "SPECIES_CINNABAR_FEEBAS"
               },
               {
                 "min_level": 5,
@@ -7663,7 +7663,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_THERMIKARP"
+                "species": "SPECIES_CINNABAR_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -7688,7 +7688,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_INVISIBAS"
+                "species": "SPECIES_CINNABAR_FEEBAS"
               }
             ]
           }
@@ -7936,7 +7936,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_THERMIKARP"
+                "species": "SPECIES_CINNABAR_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -8189,7 +8189,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_THERMIKARP"
+                "species": "SPECIES_CINNABAR_MAGIKARP"
               },
               {
                 "min_level": 5,

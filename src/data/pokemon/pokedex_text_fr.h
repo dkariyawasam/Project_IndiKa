@@ -1076,12 +1076,12 @@ const u8 gMewPokedexText[] = _(
 
 const u8 gMewPokedexTextUnused[] = _("");
 
-const u8 gThermikarpPokedexText[] = _(
+const u8 gCinnabarMagikarpPokedexText[] = _(
     "It has adapted to the volcanic\n"
     "waters of CINNABAR VOLCANO giving it\n"
     "the raging essence of fire.");
 
-const u8 gThermikarpPokedexTextUnused[] = _("");
+const u8 gCinnabarMagikarpPokedexTextUnused[] = _("");
 
 const u8 gBayleefPokedexText[] = _(
     "A spicy aroma emanates from around its\n"
@@ -2911,11 +2911,11 @@ const u8 gRhyperiorPokedexText[] = _(
     "ordinary attacks.");
 const u8 gRhyperiorPokedexTextUnused[] = _("");
 
-const u8 gInvisibasPokedexText[] = _(
+const u8 gCinnabarFeebasPokedexText[] = _(
     "Its transparent scales make it almost\n"
     "impossible to see in water. Only ripples\n"
     "give away its path.");
-const u8 gInvisibasPokedexTextUnused[] = _("");
+const u8 gCinnabarFeebasPokedexTextUnused[] = _("");
 
 const u8 gWeavilePokedexText[] = _(
     "It hunts in clever packs. Sharp claws and\n"
