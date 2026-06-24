@@ -3670,7 +3670,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM58_DIVE)
                                         | TMHM(TM49_SNATCH)),
 
-    [SPECIES_THERMIKARP]   = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
+    [SPECIES_CINNABAR_MAGIKARP]   = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         |  TMHM(TM03_WATER_PULSE)
                                         |  TMHM(TM35_FLAMETHROWER)
                                                          ),

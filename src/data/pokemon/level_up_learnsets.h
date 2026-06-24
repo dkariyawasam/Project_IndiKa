@@ -2188,7 +2188,7 @@ static const u16 sMewLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sThermikarpLevelUpLearnset[] = {
+static const u16 sCinnabarMagikarpLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_SPLASH),
     LEVEL_UP_MOVE(5, MOVE_TACKLE),
     LEVEL_UP_MOVE(15, MOVE_DRAGON_RAGE),
