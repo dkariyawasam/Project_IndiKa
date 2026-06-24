@@ -647,17 +647,6 @@ const struct Tileset gTileset_FuchsiaForest =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_NavelRock =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_NavelRock,
-    .palettes = gTilesetPalettes_NavelRock,
-    .metatiles = gMetatiles_NavelRock,
-    .metatileAttributes = gMetatileAttributes_NavelRock,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_TanobyRuins =
 {
     .isCompressed = TRUE,
@@ -745,4 +734,3 @@ const struct Tileset gTileset_HallOfFame =
     .metatileAttributes = gMetatileAttributes_HallOfFame,
     .callback = NULL,
 };
-

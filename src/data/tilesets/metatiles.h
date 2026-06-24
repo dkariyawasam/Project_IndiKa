@@ -175,9 +175,6 @@ const u32 gMetatileAttributes_CinnabarVolcano[] = INCBIN_U32("data/tilesets/seco
 const u16 gMetatiles_FuchsiaForest[] = INCBIN_U16("data/tilesets/secondary/fuchsia_forest/metatiles.bin");
 const u32 gMetatileAttributes_FuchsiaForest[] = INCBIN_U32("data/tilesets/secondary/fuchsia_forest/metatile_attributes.bin");
 
-const u16 gMetatiles_NavelRock[] = INCBIN_U16("data/tilesets/secondary/navel_rock/metatiles.bin");
-const u32 gMetatileAttributes_NavelRock[] = INCBIN_U32("data/tilesets/secondary/navel_rock/metatile_attributes.bin");
-
 const u16 gMetatiles_TanobyRuins[] = INCBIN_U16("data/tilesets/secondary/tanoby_ruins/metatiles.bin");
 const u32 gMetatileAttributes_TanobyRuins[] = INCBIN_U32("data/tilesets/secondary/tanoby_ruins/metatile_attributes.bin");
 
