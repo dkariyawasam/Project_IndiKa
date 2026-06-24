@@ -243,6 +243,9 @@ $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
 $(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin: $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/firered/grass.pal $(TITLESCREENGFXDIR)/copyright_press_start.bin tools/pack_title_grass.py
 	python3 tools/pack_title_grass.py $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/copyright_press_start.bin $(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin
 
+$(TITLESCREENGFXDIR)/firered/backdrop.4bpp $(TITLESCREENGFXDIR)/firered/backdrop.bin $(TITLESCREENGFXDIR)/firered/backdrop.gbapal: $(TITLESCREENGFXDIR)/firered/backdrop.png $(TITLESCREENGFXDIR)/firered/border_bg.bin tools/pack_title_backdrop.py
+	python3 tools/pack_title_backdrop.py $(TITLESCREENGFXDIR)/firered/backdrop.png $(TITLESCREENGFXDIR)/firered/border_bg.bin $(TITLESCREENGFXDIR)/firered/backdrop.4bpp $(TITLESCREENGFXDIR)/firered/backdrop.bin $(TITLESCREENGFXDIR)/firered/backdrop.gbapal
+
 $(TITLESCREENGFXDIR)/firered/footer.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 60 -Wnum_tiles
 
