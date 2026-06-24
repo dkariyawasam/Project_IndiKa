@@ -10,6 +10,8 @@ HEIGHT = 144
 TILE_OFFSET = 64
 GRASS_PAL_NUM = 14
 BLANK_TILE = 0xF03D
+HEADER_COLOR_INDEX = 13
+HEADER_BORDER_COLOR_INDEX = 14
 
 
 def read_png_indices(path):
@@ -133,6 +135,17 @@ def main():
                 tiles.append(tile)
             tile_id = tile_to_index[tile]
             write_u16(tilemap, ty * 32 + tx, (GRASS_PAL_NUM << 12) | (TILE_OFFSET + tile_id))
+
+    header_tile = bytearray([HEADER_COLOR_INDEX | (HEADER_COLOR_INDEX << 4)] * 32)
+    for x in range(4):
+        header_tile[7 * 4 + x] = HEADER_BORDER_COLOR_INDEX | (HEADER_BORDER_COLOR_INDEX << 4)
+    header_tile = bytes(header_tile)
+    if header_tile not in tile_to_index:
+        tile_to_index[header_tile] = len(tiles)
+        tiles.append(header_tile)
+    header_tile_id = tile_to_index[header_tile]
+    for col in range(WIDTH // 8):
+        write_u16(tilemap, col, (GRASS_PAL_NUM << 12) | (TILE_OFFSET + header_tile_id))
 
     # Overlay only the visible PRESS START tiles so the grass row remains intact.
     for col in range(32):
