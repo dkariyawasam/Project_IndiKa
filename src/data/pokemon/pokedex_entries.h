@@ -2015,13 +2015,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
-    [NATIONAL_DEX_THERMIKARP] =
+    [NATIONAL_DEX_CINNABAR_MAGIKARP] =
     {
         .categoryName = _("DRAGON"),
         .height = 6,
         .weight = 79,
-        .description = gThermikarpPokedexText,
-        .unusedDescription = gThermikarpPokedexTextUnused,
+        .description = gCinnabarMagikarpPokedexText,
+        .unusedDescription = gCinnabarMagikarpPokedexTextUnused,
         .pokemonScale = 512,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -5408,13 +5408,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
-    [NATIONAL_DEX_INVISIBAS] =
+    [NATIONAL_DEX_CINNABAR_FEEBAS] =
     {
         .categoryName = _("UNKNOWN"),
         .height = 10,
         .weight = 100,
-        .description = gInvisibasPokedexText,
-        .unusedDescription = gInvisibasPokedexTextUnused,
+        .description = gCinnabarFeebasPokedexText,
+        .unusedDescription = gCinnabarFeebasPokedexTextUnused,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,

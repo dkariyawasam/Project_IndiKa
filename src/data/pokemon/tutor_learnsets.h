@@ -1103,7 +1103,7 @@ static const u16 sTutorLearnsets[] =
                   | TUTOR(MOVE_ROCK_SLIDE)
                   | TUTOR(MOVE_SUBSTITUTE),
 
-    [SPECIES_THERMIKARP] = TUTOR(MOVE_SWORDS_DANCE)
+    [SPECIES_CINNABAR_MAGIKARP] = TUTOR(MOVE_SWORDS_DANCE)
                          | TUTOR(MOVE_BODY_SLAM)
                          | TUTOR(MOVE_DOUBLE_EDGE)
                          | TUTOR(MOVE_COUNTER)
