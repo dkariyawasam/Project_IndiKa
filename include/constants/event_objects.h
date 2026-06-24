@@ -202,8 +202,9 @@
 #define OBJ_EVENT_GFX_TRIATHLETE_M_CYCLING 190
 #define OBJ_EVENT_GFX_TRIATHLETE_F_CYCLING 191
 #define OBJ_EVENT_GFX_TUBER_F_LAND 192
+#define OBJ_EVENT_GFX_TANGROWTH 193
 
-#define NUM_OBJ_EVENT_GFX     193
+#define NUM_OBJ_EVENT_GFX     194
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
