@@ -58,6 +58,7 @@ static void CB2_FadeOutTransitionToSaveClearScreen(void);
 static void CB2_FadeOutTransitionToBerryFix(void);
 static void LoadSpriteGfxAndPals(void);
 #if defined(FIRERED)
+static void UpdateTitleBackdropPaletteCycle(void);
 static void SpriteCallback_TitleScreenFlame(struct Sprite *sprite);
 static void Task_FlameSpawner(u8 taskId);
 #elif defined(LEAFGREEN)
@@ -76,7 +77,19 @@ static void SpriteCallback_Slash(struct Sprite *sprite);
 static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4bpp.lz");
 
 #if defined(FIRERED)
-static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/border_bg.bin.lz");
+#define TITLE_BACKDROP_PAL_SLOT 4
+#define TITLE_BACKDROP_NIGHT_START (15 * 60)
+#define TITLE_BACKDROP_NIGHT_END   (19 * 60)
+#define TITLE_BACKDROP_DAY_START   (30 * 60)
+#define TITLE_BACKDROP_DAY_END     (34 * 60)
+
+static const u16 sBackdropPal[] = INCBIN_U16("graphics/title_screen/firered/backdrop.gbapal");
+static const u8 sBackdropTiles[] = INCBIN_U8("graphics/title_screen/firered/backdrop.4bpp.lz");
+static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/backdrop.bin.lz");
+static const u8 sFooterTiles[] = INCBIN_U8("graphics/title_screen/firered/footer.4bpp.lz");
+static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
+static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
+static const u8 sGrassMap[] = INCBIN_U8("graphics/title_screen/firered/grass.bin.lz");
 #elif defined(LEAFGREEN)
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/leafgreen/border_bg.bin.lz");
 #endif
@@ -286,7 +299,7 @@ static const struct BgTemplate sBgTemplates[] = {
         .baseTile = 0
     }, {
         .bg = 3,
-        .charBaseIndex = 3,
+        .charBaseIndex = 1,
         .mapBaseIndex = 28,
         .screenSize = 0,
         .paletteMode = 0, // 4bpp
@@ -383,6 +396,9 @@ void CB2_InitTitleScreen(void)
         break;
     case 1:
         LoadPalette(gGraphics_TitleScreen_GameTitleLogoPals, BG_PLTT_ID(0), 13 * PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+        LoadPalette(sBackdropPal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+#endif
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoMap, 0, 0, 1);
         LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
@@ -391,8 +407,20 @@ void CB2_InitTitleScreen(void)
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartMap, 0, 0, 1);
+#if defined(FIRERED)
+        DecompressAndCopyTileDataToVram(2, sGrassTiles, 0, 64, 0);
+        DecompressAndCopyTileDataToVram(2, sGrassMap, 0, 0, 1);
+#endif
+#if defined(FIRERED)
+        LoadPalette(sGrassPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#else
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
-        DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 0, 0);
+#endif
+        DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 144, 0);
+#if defined(FIRERED)
+        DecompressAndCopyTileDataToVram(3, sFooterTiles, 0, 148, 0);
+        DecompressAndCopyTileDataToVram(3, sBackdropTiles, 0, 208, 0);
+#endif
         DecompressAndCopyTileDataToVram(3, sBorderBgMap, 0, 0, 1);
         LoadSpriteGfxAndPals();
         break;
@@ -433,6 +461,9 @@ static void CB2_TitleScreenRun(void)
     AnimateSprites();
     BuildOamBuffer();
     UpdatePaletteFade();
+#if defined(FIRERED)
+    UpdateTitleBackdropPaletteCycle();
+#endif
 }
 
 static void VBlankCB(void)
@@ -456,6 +487,82 @@ static void Task_TitleScreenTimer(u8 taskId)
         DestroyTask(taskId);
     }
 }
+
+#if defined(FIRERED)
+static u16 TintTitleBackdropColorNight(u16 color)
+{
+    u8 r = color & 0x1F;
+    u8 g = (color >> 5) & 0x1F;
+    u8 b = (color >> 10) & 0x1F;
+
+    r = (r * 18) / 32;
+    g = (g * 20) / 32;
+    b = (b * 25) / 32;
+
+    return RGB(r, g, b);
+}
+
+static u16 BlendTitleBackdropColorTowardNight(u16 dayColor, u8 blend, u8 maxBlend)
+{
+    u16 nightColor = TintTitleBackdropColorNight(dayColor);
+    u8 dayR = dayColor & 0x1F;
+    u8 dayG = (dayColor >> 5) & 0x1F;
+    u8 dayB = (dayColor >> 10) & 0x1F;
+    u8 nightR = nightColor & 0x1F;
+    u8 nightG = (nightColor >> 5) & 0x1F;
+    u8 nightB = (nightColor >> 10) & 0x1F;
+    u8 r = dayR + (((s8)nightR - (s8)dayR) * blend) / maxBlend;
+    u8 g = dayG + (((s8)nightG - (s8)dayG) * blend) / maxBlend;
+    u8 b = dayB + (((s8)nightB - (s8)dayB) * blend) / maxBlend;
+
+    return RGB(r, g, b);
+}
+
+static void LoadTitleBackdropPaletteBlend(u8 blend)
+{
+    u32 i;
+    u16 offset = BG_PLTT_ID(TITLE_BACKDROP_PAL_SLOT);
+
+    for (i = 0; i < PLTT_SIZE_4BPP / sizeof(u16); i++)
+    {
+        u16 color = BlendTitleBackdropColorTowardNight(sBackdropPal[i], blend, 16);
+        gPlttBufferUnfaded[offset + i] = color;
+        gPlttBufferFaded[offset + i] = color;
+    }
+}
+
+static void UpdateTitleBackdropPaletteCycle(void)
+{
+    s16 timer;
+    u8 blend;
+
+    if (sTitleScreenTimerTaskId == TASK_NONE)
+        return;
+
+    timer = gTasks[sTitleScreenTimerTaskId].data[0];
+    if (timer < TITLE_BACKDROP_NIGHT_START)
+        return;
+
+    if (timer < TITLE_BACKDROP_NIGHT_END)
+    {
+        blend = ((timer - TITLE_BACKDROP_NIGHT_START) * 16) / (TITLE_BACKDROP_NIGHT_END - TITLE_BACKDROP_NIGHT_START);
+    }
+    else if (timer < TITLE_BACKDROP_DAY_START)
+    {
+        blend = 16;
+    }
+    else if (timer < TITLE_BACKDROP_DAY_END)
+    {
+        blend = 16 - (((timer - TITLE_BACKDROP_DAY_START) * 16) / (TITLE_BACKDROP_DAY_END - TITLE_BACKDROP_DAY_START));
+    }
+    else
+    {
+        blend = 0;
+    }
+
+    LoadTitleBackdropPaletteBlend(blend);
+}
+#endif
 
 // task data for Task_TitleScreenMain and the scenes
 #define tSceneNum              data[0]
@@ -929,9 +1036,16 @@ static void LoadMainTitleScreenPalsAndResetBgs(void)
     DestroyBlendPalettesGraduallyTask();
     ResetPaletteFadeControl();
     LoadPalette(gGraphics_TitleScreen_GameTitleLogoPals, BG_PLTT_ID(0), 13 * PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+    LoadPalette(sBackdropPal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+#endif
     LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
     LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+    LoadPalette(sGrassPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#else
     LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#endif
     ResetBgPositions();
     ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_WIN1_ON | DISPCNT_OBJWIN_ON);
     ShowBg(1);
