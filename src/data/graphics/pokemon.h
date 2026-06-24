@@ -1062,12 +1062,12 @@ const u32 gMonShinyPalette_Mew[] = INCBIN_U32("graphics/pokemon/mew/shiny.gbapal
 const u8 gMonIcon_Mew[] = INCBIN_U8("graphics/pokemon/mew/icon.4bpp");
 const u8 gMonFootprint_Mew[] = INCBIN_U8("graphics/pokemon/mew/footprint.1bpp");
 
-const u32 gMonFrontPic_Thermikarp[] = INCBIN_U32("graphics/pokemon/thermikarp/front.4bpp.lz");
-const u32 gMonPalette_Thermikarp[] = INCBIN_U32("graphics/pokemon/thermikarp/normal.gbapal.lz");
-const u32 gMonBackPic_Thermikarp[] = INCBIN_U32("graphics/pokemon/thermikarp/back.4bpp.lz");
-const u32 gMonShinyPalette_Thermikarp[] = INCBIN_U32("graphics/pokemon/thermikarp/shiny.gbapal.lz");
-const u8 gMonIcon_Thermikarp[] = INCBIN_U8("graphics/pokemon/thermikarp/icon.4bpp");
-const u8 gMonFootprint_Thermikarp[] = INCBIN_U8("graphics/pokemon/thermikarp/footprint.1bpp");
+const u32 gMonFrontPic_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/front.4bpp.lz");
+const u32 gMonPalette_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/normal.gbapal.lz");
+const u32 gMonBackPic_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/back.4bpp.lz");
+const u32 gMonShinyPalette_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/shiny.gbapal.lz");
+const u8 gMonIcon_CinnabarMagikarp[] = INCBIN_U8("graphics/pokemon/cinnabar_magikarp/icon.4bpp");
+const u8 gMonFootprint_CinnabarMagikarp[] = INCBIN_U8("graphics/pokemon/cinnabar_magikarp/footprint.1bpp");
 
 const u32 gMonFrontPic_Bayleef[] = INCBIN_U32("graphics/pokemon/bayleef/front.4bpp.lz");
 const u32 gMonPalette_Bayleef[] = INCBIN_U32("graphics/pokemon/bayleef/normal.gbapal.lz");
