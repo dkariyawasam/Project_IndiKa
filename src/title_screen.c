@@ -76,7 +76,9 @@ static void SpriteCallback_Slash(struct Sprite *sprite);
 static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4bpp.lz");
 
 #if defined(FIRERED)
-static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/border_bg.bin.lz");
+static const u16 sBackdropPal[] = INCBIN_U16("graphics/title_screen/firered/backdrop.gbapal");
+static const u8 sBackdropTiles[] = INCBIN_U8("graphics/title_screen/firered/backdrop.4bpp.lz");
+static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/backdrop.bin.lz");
 static const u8 sFooterTiles[] = INCBIN_U8("graphics/title_screen/firered/footer.4bpp.lz");
 static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
 static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
@@ -290,7 +292,7 @@ static const struct BgTemplate sBgTemplates[] = {
         .baseTile = 0
     }, {
         .bg = 3,
-        .charBaseIndex = 3,
+        .charBaseIndex = 1,
         .mapBaseIndex = 28,
         .screenSize = 0,
         .paletteMode = 0, // 4bpp
@@ -387,6 +389,9 @@ void CB2_InitTitleScreen(void)
         break;
     case 1:
         LoadPalette(gGraphics_TitleScreen_GameTitleLogoPals, BG_PLTT_ID(0), 13 * PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+        LoadPalette(sBackdropPal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+#endif
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoMap, 0, 0, 1);
         LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
@@ -404,9 +409,10 @@ void CB2_InitTitleScreen(void)
 #else
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
 #endif
-        DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 0, 0);
+        DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 144, 0);
 #if defined(FIRERED)
-        DecompressAndCopyTileDataToVram(3, sFooterTiles, 0, 4, 0);
+        DecompressAndCopyTileDataToVram(3, sFooterTiles, 0, 148, 0);
+        DecompressAndCopyTileDataToVram(3, sBackdropTiles, 0, 208, 0);
 #endif
         DecompressAndCopyTileDataToVram(3, sBorderBgMap, 0, 0, 1);
         LoadSpriteGfxAndPals();
@@ -944,6 +950,9 @@ static void LoadMainTitleScreenPalsAndResetBgs(void)
     DestroyBlendPalettesGraduallyTask();
     ResetPaletteFadeControl();
     LoadPalette(gGraphics_TitleScreen_GameTitleLogoPals, BG_PLTT_ID(0), 13 * PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+    LoadPalette(sBackdropPal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+#endif
     LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
     LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
 #if defined(FIRERED)
