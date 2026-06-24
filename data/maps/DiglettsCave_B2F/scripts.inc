@@ -32,17 +32,17 @@ DiglettsCave_B2F_EventScript_MimeSr::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_MIME_SR, 50
-	waitse
+	seteventmon SPECIES_MIME_SR, 50
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_MIME_SR, CRY_MODE_ENCOUNTER
-	message Text_Gyaoo
+	message DiglettsCave_B2F_Text_MimeSrApexCry
 	waitmessage
 	waitmoncry
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -66,3 +66,6 @@ DiglettsCave_B2F_EventScript_RanFromMimeSr::
 	setvar VAR_0x8004, SPECIES_MIME_SR
 	goto EventScript_MonFlewAway
 	end
+
+DiglettsCave_B2F_Text_MimeSrApexCry:
+	.string "HOOOHAH!$"

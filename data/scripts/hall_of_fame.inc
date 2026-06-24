@@ -4,16 +4,10 @@ EventScript_SetDefeatedEliteFourFlagsVars::
 	special Script_UpdateTrainerFanClubGameClear
 	specialvar VAR_RESULT, IsNationalPokedexEnabled
 	call_if_eq VAR_RESULT, FALSE, EventScript_SetReadyTryGiveNationalDexScene
-	call EventScript_ResetLegendaries
 	return
 
 EventScript_SetReadyTryGiveNationalDexScene::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 2
-	return
-
-EventScript_ResetLegendaries::
-	clearflag FLAG_LUGIA_FLEW_AWAY
-	clearflag FLAG_HO_OH_FLEW_AWAY
 	return
 
 EventScript_ResetEliteFourEnd::

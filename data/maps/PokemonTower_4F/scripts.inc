@@ -45,17 +45,17 @@ PokemonTower_4F_EventScript_Osscythe::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_OSSCYTHE, 50
-	waitse
+	seteventmon SPECIES_OSSCYTHE, 50
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_OSSCYTHE, CRY_MODE_ENCOUNTER
-	message Text_Gyaoo
+	message PokemonTower_4F_Text_OsscytheApexCry
 	waitmessage
 	waitmoncry
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -79,3 +79,6 @@ PokemonTower_4F_EventScript_RanFromOsscythe::
 	setvar VAR_0x8004, SPECIES_OSSCYTHE
 	goto EventScript_MonFlewAway
 	end
+
+PokemonTower_4F_Text_OsscytheApexCry:
+	.string "SKREEEAH!$"
