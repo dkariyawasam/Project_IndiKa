@@ -464,12 +464,6 @@ static const struct MenuAction sMultichoiceList_TradeColosseumBlank[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_SeviiNavel[] = {
-    { gText_SeviiIslands },
-    { gText_NavelRock },
-    { gOtherText_Exit }
-};
-
 static const u8 sText_SeafoamIsland[] = _("SEAFOAM ISLAND");
 static const u8 sText_PalletTown[] = _("PALLET TOWN");
 static const u8 sText_CinnabarIsland[] = _("CINNABAR ISLAND");
@@ -565,7 +559,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_MUSHROOMS]                                  = MULTICHOICE(sMultichoiceList_Mushrooms),
     [MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH]                = MULTICHOICE(sMultichoiceList_TradeColosseumBlankCrush),
     [MULTICHOICE_TRADE_COLOSSEUM_BLANK]                      = MULTICHOICE(sMultichoiceList_TradeColosseumBlank),
-    [MULTICHOICE_SEVII_NAVEL]                                = MULTICHOICE(sMultichoiceList_SeviiNavel),
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_ROUTE21_FERRY]                              = MULTICHOICE(sMultichoiceList_Route21Ferry),
