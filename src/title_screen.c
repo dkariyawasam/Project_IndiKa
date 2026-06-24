@@ -77,6 +77,7 @@ static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4b
 
 #if defined(FIRERED)
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/border_bg.bin.lz");
+static const u8 sFooterTiles[] = INCBIN_U8("graphics/title_screen/firered/footer.4bpp.lz");
 static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
 static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
 static const u8 sGrassMap[] = INCBIN_U8("graphics/title_screen/firered/grass.bin.lz");
@@ -404,6 +405,9 @@ void CB2_InitTitleScreen(void)
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
 #endif
         DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 0, 0);
+#if defined(FIRERED)
+        DecompressAndCopyTileDataToVram(3, sFooterTiles, 0, 4, 0);
+#endif
         DecompressAndCopyTileDataToVram(3, sBorderBgMap, 0, 0, 1);
         LoadSpriteGfxAndPals();
         break;
