@@ -240,8 +240,11 @@ $(ITEMPCGFXDIR)/bg.4bpp: %.4bpp: %.png
 $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
 
-$(TITLESCREENGFXDIR)/firered/grass.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 288 -Wnum_tiles
+$(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin: $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/firered/grass.pal $(TITLESCREENGFXDIR)/copyright_press_start.bin tools/pack_title_grass.py
+	python3 tools/pack_title_grass.py $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/copyright_press_start.bin $(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin
+
+$(TITLESCREENGFXDIR)/firered/footer.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 60 -Wnum_tiles
 
 $(TITLESCREENGFXDIR)/firered/grass.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@
