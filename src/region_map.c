@@ -535,7 +535,6 @@ static const u8 sSeviiMapsecs[3][30] = {
     },
     [REGIONMAP_SEVII45 - 1] =
     {
-        MAPSEC_NAVEL_ROCK,
         MAPSEC_NONE
     }, 
     [REGIONMAP_SEVII67 - 1] = 
@@ -810,7 +809,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_THREE_ISLAND        - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND),                          HEAL_LOCATION_NONE},
     [MAPSEC_TREASURE_BEACH      - KANTO_MAPSEC_START] = {MAP(MAP_ONE_ISLAND_TREASURE_BEACH),             HEAL_LOCATION_NONE},
     [MAPSEC_THREE_ISLE_PORT     - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND_PORT),                     HEAL_LOCATION_NONE},
-    [MAPSEC_NAVEL_ROCK          - KANTO_MAPSEC_START] = {MAP(MAP_NAVEL_ROCK_EXTERIOR),                   HEAL_LOCATION_NONE},
     [MAPSEC_CINNABAR_VOLCANO            - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_FUCHSIA_FOREST      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
 };
@@ -1393,8 +1391,6 @@ static void BufferRegionMapBg(u8 bg, u16 *map)
         whichMap = sSwitchMapMenu->currentSelection;
     else
         whichMap = sRegionMap->selectedRegion;
-    if (whichMap == REGIONMAP_SEVII45 && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
-        FillBgTilemapBufferRect_Palette0(0, 0x003, 13, 11, 3, 2);
 }
 
 static bool8 GetRegionMapPermission(u8 attr)
@@ -2795,8 +2791,6 @@ static u16 GetMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, sMapCursor->y, sMapCursor->x);
-    if (mapsec == MAPSEC_NAVEL_ROCK && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
-        mapsec = MAPSEC_NONE;
     return mapsec;
 }
 
@@ -2886,8 +2880,6 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_CERULEAN_CAVE_1F) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_POWER_PLANT:
         return FlagGet(FLAG_WORLD_MAP_POWER_PLANT) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_NAVEL_ROCK:
-        return FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_CINNABAR_VOLCANO:
         return FlagGet(FLAG_WORLD_MAP_CINNABAR_VOLCANO) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_FUCHSIA_FOREST:
@@ -3047,10 +3039,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
             sMapCursor->x = 15;
             sMapCursor->y = 6; // optimized out but required to match
         }
-        break;
-    case MAPSEC_NAVEL_ROCK:
-        sMapCursor->x = 10;
-        sMapCursor->y = 8;
         break;
     case MAPSEC_CINNABAR_VOLCANO:
         sMapCursor->x = 4;
