@@ -114,6 +114,7 @@ extern const u8 gText_Boy[];
 extern const u8 gText_Girl[];
 extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
+extern const struct OamData gOamData_AffineOff_ObjNormal_64x64;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x16;
 extern const struct OamData gOamData_AffineOff_ObjNormal_16x8;
 
@@ -133,8 +134,10 @@ static const u32 sOakSpeech_Oak_Tiles[] = INCBIN_U32("graphics/oak_speech/oak/pi
 static const u16 sOakSpeech_Rival_Pal[] = INCBIN_U16("graphics/oak_speech/rival/pal.gbapal");
 static const u32 sOakSpeech_Rival_Tiles[] = INCBIN_U32("graphics/oak_speech/rival/pic.8bpp.lz");
 static const u16 sOakSpeech_Platform_Pal[] = INCBIN_U16("graphics/oak_speech/platform.gbapal");
+static const u16 sOakSpeech_Nidorino_Pal[] = INCBIN_U16("graphics/intro/nidorino.gbapal");
 static const u16 sPikachuIntro_Pikachu_Pal[] = INCBIN_U16("graphics/oak_speech/pikachu_intro/pikachu.gbapal");
 static const u32 sOakSpeech_Platform_Gfx[] = INCBIN_U32("graphics/oak_speech/platform.4bpp.lz");
+static const u32 sOakSpeech_Nidorino_Gfx[] = INCBIN_U32("graphics/intro/scene_3/nidorino.4bpp.lz");
 static const u32 sPikachuIntro_PikachuBody_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/body.4bpp.lz");
 static const u32 sPikachuIntro_PikachuEars_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/ears.4bpp.lz");
 static const u32 sPikachuIntro_PikachuEyes_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/eyes.4bpp.lz");
@@ -165,7 +168,7 @@ static const struct BgTemplate sBgTemplates[] =
         .mapBaseIndex = 28,
         .screenSize = 1,
         .paletteMode = 1,
-        .priority = 1,
+        .priority = 0,
         .baseTile = 0
     }
 };
@@ -351,9 +354,11 @@ static const u8 *const sPikachuIntro_Strings[NUM_PIKACHU_INTRO_PAGES] =
 #define GFX_TAG_PIKACHU      0x1001
 #define GFX_TAG_PIKACHU_EARS 0x1002
 #define GFX_TAG_PIKACHU_EYES 0x1003
+#define GFX_TAG_OAK_NIDORINO 0x1004
 
 #define PAL_TAG_PLATFORM     0x1000
 #define PAL_TAG_PIKACHU      0x1001
+#define PAL_TAG_OAK_NIDORINO 0x1002
 
 enum
 {
@@ -398,6 +403,13 @@ static const struct CompressedSpriteSheet sOakSpeech_Platform_SpriteSheet =
     .tag = GFX_TAG_PLATFORM
 };
 
+static const struct CompressedSpriteSheet sOakSpeech_Nidorino_SpriteSheet =
+{
+    .data = sOakSpeech_Nidorino_Gfx,
+    .size = 0x2800,
+    .tag = GFX_TAG_OAK_NIDORINO
+};
+
 static const struct SpritePalette sPikachuIntro_Pikachu_SpritePalette =
 {
     .data = sPikachuIntro_Pikachu_Pal,
@@ -408,6 +420,12 @@ static const struct SpritePalette sOakSpeech_Platform_SpritePalette =
 {
     .data = sOakSpeech_Platform_Pal,
     .tag = PAL_TAG_PLATFORM
+};
+
+static const struct SpritePalette sOakSpeech_Nidorino_SpritePalette =
+{
+    .data = sOakSpeech_Nidorino_Pal,
+    .tag = PAL_TAG_OAK_NIDORINO
 };
 
 static const union AnimCmd sOakSpeech_PlatformLeft_Anim[] =
@@ -475,6 +493,28 @@ static const struct SpriteTemplate sOakSpeech_Platform_SpriteTemplates[] =
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy
     },
+};
+
+static const union AnimCmd sOakSpeech_Nidorino_Anim[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sOakSpeech_Nidorino_Anims[] =
+{
+    sOakSpeech_Nidorino_Anim
+};
+
+static const struct SpriteTemplate sOakSpeech_Nidorino_SpriteTemplate =
+{
+    .tileTag = GFX_TAG_OAK_NIDORINO,
+    .paletteTag = PAL_TAG_OAK_NIDORINO,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .anims = sOakSpeech_Nidorino_Anims,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
 };
 
 static const union AnimCmd sPikachuIntro_PikachuBody_Anim[] =
@@ -680,7 +720,6 @@ static void Task_NewGameScene(u8 taskId)
         break;
     case 1:
         sOakSpeechResources = AllocZeroed(sizeof(*sOakSpeechResources));
-        CreateMonSpritesGfxManager(1, 1);
         break;
     case 2:
         SetGpuReg(REG_OFFSET_WIN0H, 0);
@@ -1187,6 +1226,8 @@ static void Task_OakSpeech_TellMeALittleAboutYourself(u8 taskId)
         {
             DestroySprite(&gSprites[tNidoranFSpriteId]);
             DestroySprite(&gSprites[tPokeBallSpriteId]);
+            FreeSpriteTilesByTag(GFX_TAG_OAK_NIDORINO);
+            FreeSpritePaletteByTag(PAL_TAG_OAK_NIDORINO);
         }
         if (tTimer != 0)
         {
@@ -1724,7 +1765,6 @@ static void Task_OakSpeech_WaitForFade(u8 taskId)
 static void Task_OakSpeech_FreeResources(u8 taskId)
 {
     FreeAllWindowBuffers();
-    DestroyMonSpritesGfxManager();
     Free(sOakSpeechResources);
     sOakSpeechResources = NULL;
     gTextFlags.canABSpeedUpPrint = FALSE;
@@ -1831,10 +1871,9 @@ static void CreateNidoranFSprite(u8 taskId)
 {
     u8 spriteId;
 
-    DecompressPicFromTable(&gMonFrontPicTable[INTRO_SPECIES], MonSpritesGfxManager_GetSpritePtr(0), INTRO_SPECIES);
-    LoadCompressedSpritePaletteUsingHeap(&gMonPaletteTable[INTRO_SPECIES]);
-    SetMultiuseSpriteTemplateToPokemon(INTRO_SPECIES, 0);
-    spriteId = CreateSprite(&gMultiuseSpriteTemplate, 96, 96, 1);
+    LoadCompressedSpriteSheet(&sOakSpeech_Nidorino_SpriteSheet);
+    LoadSpritePalette(&sOakSpeech_Nidorino_SpritePalette);
+    spriteId = CreateSprite(&sOakSpeech_Nidorino_SpriteTemplate, 88, 80, 1);
     gSprites[spriteId].callback = SpriteCallbackDummy;
     gSprites[spriteId].oam.priority = 1;
     gSprites[spriteId].invisible = TRUE;
