@@ -26,17 +26,17 @@ CeruleanCave_B1F_EventScript_Mewtwo::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	waitse
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
-	message CeruleanCave_B1F_Text_Mew
+	message CeruleanCave_B1F_Text_MewtwoApexCry
 	waitmessage
 	waitmoncry
 	delay 20
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
-	setwildbattle SPECIES_MEWTWO, 70
+	seteventmon SPECIES_MEWTWO, 70
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -56,3 +56,6 @@ CeruleanCave_B1F_EventScript_RanFromMewtwo::
 	setvar VAR_0x8004, SPECIES_MEWTWO
 	goto EventScript_MonFlewAway
 	end
+
+CeruleanCave_B1F_Text_MewtwoApexCry:
+	.string "GRAAAH!$"

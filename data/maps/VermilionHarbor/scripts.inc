@@ -73,10 +73,8 @@ VermilionHarbor_EventScript_MewEncounter::
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setwildbattle SPECIES_MEW, 50
-	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartWildBattle
 	waitstate
-	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, VermilionHarbor_EventScript_FoughtMew
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VermilionHarbor_EventScript_MewFled

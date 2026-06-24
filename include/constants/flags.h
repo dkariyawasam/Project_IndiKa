@@ -145,8 +145,6 @@
 #define FLAG_HIDE_ARTICUNO                                 0x082
 #define FLAG_HIDE_ROUTE21_NORTH_FAT_MAN                    0x083
 #define FLAG_HIDE_PALLET_FAT_MAN                           0x084
-#define FLAG_HIDE_POWER_PLANT_ELECTRODE_1                  0x085
-#define FLAG_HIDE_POWER_PLANT_ELECTRODE_2                  0x086
 #define FLAG_HIDE_SS_ANNE                                  0x087
 #define FLAG_0x088                                         0x088
 #define FLAG_0x089                                         0x089
@@ -163,8 +161,6 @@
 #define FLAG_0x096                                         0x096
 #define FLAG_0x097                                         0x097
 #define FLAG_0x098                                         0x098
-#define FLAG_HIDE_LUGIA                                    0x09B
-#define FLAG_HIDE_HO_OH                                    0x09C
 #define FLAG_HIDE_POSTGAME_GOSSIPERS                       0x09D
 #define FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS              0x09E
 #define FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL                0x09F
@@ -736,8 +732,6 @@
 #define FLAG_TUTOR_MIMIC                                 0x2CD
 #define FLAG_TUTOR_BODY_SLAM                             0x2CE
 #define FLAG_VISITED_OAKS_LAB                            0x2CF
-#define FLAG_FOUGHT_POWER_PLANT_ELECTRODE_1              0x2D0
-#define FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2              0x2D1
 #define FLAG_STOPPED_SEAFOAM_B3F_CURRENT                 0x2D2
 #define FLAG_STOPPED_SEAFOAM_B4F_CURRENT                 0x2D3
 #define FLAG_FOUGHT_TANGROWTH                            0x2D4
@@ -766,11 +760,7 @@
 #define FLAG_0x2EF                                    0x2EF
 #define FLAG_0x2F0                                       0x2F0
 #define FLAG_0x2F1                                       0x2F1
-#define FLAG_FOUGHT_LUGIA                                0x2F2
-#define FLAG_FOUGHT_HO_OH                                0x2F3
 #define FLAG_OAK_SAW_DEX_COMPLETION                      0x2F4
-#define FLAG_LUGIA_FLEW_AWAY                             0x2F5
-#define FLAG_HO_OH_FLEW_AWAY                             0x2F6
 #define FLAG_TALKED_TO_TEA_LADY_AFTER_HOF                0x2F8
 #define FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION            0x2F9
 #define FLAG_GOT_EVERSTONE_FROM_OAKS_AIDE                0x2FA

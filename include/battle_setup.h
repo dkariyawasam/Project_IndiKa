@@ -9,7 +9,7 @@ void StartOldManTutorialBattle(void);
 void StartScriptedWildBattle(void);
 void StartMarowakBattle(void);
 void StartSouthernIslandBattle(void);
-void StartLegendaryBattle(void);
+void StartApexBattle(void);
 void StartGroudonKyogreBattle(void);
 void StartRegiBattle(void);
 u8 BattleSetup_GetTerrainId(void);

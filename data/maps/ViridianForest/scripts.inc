@@ -181,17 +181,17 @@ ViridianForest_EventScript_Tangrowth::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_TANGROWTH, 50
-	waitse
+	seteventmon SPECIES_TANGROWTH, 50
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_TANGROWTH, CRY_MODE_ENCOUNTER
-	message Text_Gyaoo
+	message ViridianForest_Text_TangrowthApexCry
 	waitmessage
 	waitmoncry
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -314,3 +314,6 @@ ViridianForest_EventScript_CharlieRematch::
 	trainerbattle_rematch TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
 	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+ViridianForest_Text_TangrowthApexCry:
+	.string "GREEEAOW!$"

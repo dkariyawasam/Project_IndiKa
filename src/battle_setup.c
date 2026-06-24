@@ -320,7 +320,7 @@ void StartSouthernIslandBattle(void)
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }
 
-void StartLegendaryBattle(void)
+void StartApexBattle(void)
 {
     u16 species;
     
@@ -339,8 +339,6 @@ void StartLegendaryBattle(void)
     case SPECIES_MOLTRES:
     case SPECIES_ARTICUNO:
     case SPECIES_ZAPDOS:
-    case SPECIES_HO_OH:
-    case SPECIES_LUGIA:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_LEGEND);
         break;
     default:

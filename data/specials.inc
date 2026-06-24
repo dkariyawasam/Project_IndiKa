@@ -329,7 +329,8 @@ gSpecials::
 	def_special IsPokerusInParty
 	def_special ShakeScreen
 	def_special StartGroudonKyogreBattle
-	def_special StartLegendaryBattle
+	def_special StartWildBattle
+	def_special StartApexBattle
 	def_special StartRegiBattle
 	def_special SetUpTrainerMovement
 	def_special NullFieldSpecial
