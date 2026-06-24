@@ -23,7 +23,10 @@ ViridianForest_OnTransition::
 	end
 
 ViridianForest_EventScript_ShowTangrowth::
+	removeobject LOCALID_VIRIDIAN_FOREST_TANGROWTH
+	setobjectgfx LOCALID_VIRIDIAN_FOREST_TANGROWTH, OBJ_EVENT_GFX_TANGROWTH
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	addobject LOCALID_VIRIDIAN_FOREST_TANGROWTH
 	return
 
 ViridianForest_EventScript_HideTangrowth::
