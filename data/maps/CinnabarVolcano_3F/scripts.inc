@@ -1,5 +1,30 @@
 CinnabarVolcano_3F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarVolcano_3F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CinnabarVolcano_3F_OnResume
 	.byte 0
+
+CinnabarVolcano_3F_OnTransition::
+	call_if_unset FLAG_FOUGHT_VOLCANO_MOLTRES, CinnabarVolcano_3F_EventScript_ShowMoltres
+	call_if_set FLAG_FOUGHT_VOLCANO_MOLTRES, CinnabarVolcano_3F_EventScript_HideMoltres
+	end
+
+CinnabarVolcano_3F_OnResume::
+	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, CinnabarVolcano_3F_EventScript_TryRemoveMoltres
+	end
+
+CinnabarVolcano_3F_EventScript_TryRemoveMoltres::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EventScript_Return
+	removeobject VAR_LAST_TALKED
+	return
+
+CinnabarVolcano_3F_EventScript_ShowMoltres::
+	clearflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	return
+
+CinnabarVolcano_3F_EventScript_HideMoltres::
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	return
 
 CinnabarVolcano_3F_EventScript_Blair::
 	trainerbattle_single TRAINER_VOLCANO_KINDLER_BLAIR, CinnabarVolcano_3F_Text_BlairIntro, CinnabarVolcano_3F_Text_BlairDefeat
@@ -23,4 +48,44 @@ CinnabarVolcano_3F_EventScript_Elias::
 CinnabarVolcano_3F_EventScript_EliasRematch::
 	trainerbattle_rematch TRAINER_VOLCANO_RUIN_MANIAC_ELIAS, CinnabarVolcano_3F_Text_EliasIntro, CinnabarVolcano_3F_Text_EliasDefeat
 	msgbox CinnabarVolcano_3F_Text_EliasPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_EventScript_Moltres::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_MOLTRES, 50
+	waitse
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	message Text_Gyaoo
+	waitmessage
+	waitmoncry
+	delay 10
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
+	waitbuttonpress
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CinnabarVolcano_3F_EventScript_DefeatedMoltres
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CinnabarVolcano_3F_EventScript_RanFromMoltres
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CinnabarVolcano_3F_EventScript_RanFromMoltres
+	setflag FLAG_FOUGHT_VOLCANO_MOLTRES
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	release
+	end
+
+CinnabarVolcano_3F_EventScript_DefeatedMoltres::
+	setflag FLAG_FOUGHT_VOLCANO_MOLTRES
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	goto EventScript_RemoveStaticMon
+	end
+
+CinnabarVolcano_3F_EventScript_RanFromMoltres::
+	setflag FLAG_FOUGHT_VOLCANO_MOLTRES
+	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	setvar VAR_0x8004, SPECIES_MOLTRES
+	goto EventScript_MonFlewAway
 	end
