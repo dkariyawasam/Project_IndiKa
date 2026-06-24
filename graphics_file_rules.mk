@@ -240,6 +240,12 @@ $(ITEMPCGFXDIR)/bg.4bpp: %.4bpp: %.png
 $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
 
+$(TITLESCREENGFXDIR)/firered/grass.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 288 -Wnum_tiles
+
+$(TITLESCREENGFXDIR)/firered/grass.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
 $(TITLESCREENGFXDIR)/leafgreen/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 123 -Wnum_tiles
 

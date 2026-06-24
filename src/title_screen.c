@@ -77,6 +77,9 @@ static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4b
 
 #if defined(FIRERED)
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/border_bg.bin.lz");
+static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
+static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
+static const u8 sGrassMap[] = INCBIN_U8("graphics/title_screen/firered/grass.bin.lz");
 #elif defined(LEAFGREEN)
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/leafgreen/border_bg.bin.lz");
 #endif
@@ -391,7 +394,15 @@ void CB2_InitTitleScreen(void)
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartMap, 0, 0, 1);
+#if defined(FIRERED)
+        DecompressAndCopyTileDataToVram(2, sGrassTiles, 0, 64, 0);
+        DecompressAndCopyTileDataToVram(2, sGrassMap, 0, 0, 1);
+#endif
+#if defined(FIRERED)
+        LoadPalette(sGrassPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#else
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#endif
         DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(3, sBorderBgMap, 0, 0, 1);
         LoadSpriteGfxAndPals();
@@ -931,7 +942,11 @@ static void LoadMainTitleScreenPalsAndResetBgs(void)
     LoadPalette(gGraphics_TitleScreen_GameTitleLogoPals, BG_PLTT_ID(0), 13 * PLTT_SIZE_4BPP);
     LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
     LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+#if defined(FIRERED)
+    LoadPalette(sGrassPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#else
     LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#endif
     ResetBgPositions();
     ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_WIN1_ON | DISPCNT_OBJWIN_ON);
     ShowBg(1);
