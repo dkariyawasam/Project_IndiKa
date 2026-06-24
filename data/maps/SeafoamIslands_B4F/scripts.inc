@@ -156,17 +156,17 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ARTICUNO, 50
-	waitse
+	seteventmon SPECIES_ARTICUNO, 50
+	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
-	message Text_Gyaoo
+	message SeafoamIslands_B4F_Text_ArticunoApexCry
 	waitmessage
 	waitmoncry
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	special StartApexBattle
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -186,6 +186,9 @@ SeafoamIslands_B4F_EventScript_RanFromArticuno::
 	setvar VAR_0x8004, SPECIES_ARTICUNO
 	goto EventScript_MonFlewAway
 	end
+
+SeafoamIslands_B4F_Text_ArticunoApexCry:
+	.string "KREEEAAH!$"
 
 SeafoamIslands_B4F_EventScript_FastCurrentSign::
 	msgbox SeafoamIslands_B4F_Text_DangerFastCurrent, MSGBOX_SIGN
