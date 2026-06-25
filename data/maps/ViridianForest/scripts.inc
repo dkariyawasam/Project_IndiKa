@@ -160,8 +160,8 @@ ViridianForest_EventScript_DefeatedErika::
 	setflag FLAG_BADGE04_GET
 	setvar VAR_ERIKA_TRIAL_STATE, 4
 	msgbox ViridianForest_Text_ErikaAfterBattle
-	additem ITEM_RAINBOW_KEY
-	closemessage
+	giveitem_msg ViridianForest_Text_ReceivedRainbowKeyFromErika, ITEM_RAINBOW_KEY, 1, MUS_OBTAIN_KEY_ITEM
+	msgbox ViridianForest_Text_ExplainRainbowKey
 	applymovement LOCALID_VIRIDIAN_FOREST_ERIKA, ViridianForest_Movement_ErikaLeave
 	applymovement LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, ViridianForest_Movement_GymGuideLeave
 	waitmovement 0
