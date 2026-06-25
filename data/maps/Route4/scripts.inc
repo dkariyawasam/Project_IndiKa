@@ -8,7 +8,7 @@ Route4_EventScript_Woman::
 	msgbox Route4_Text_TrippedOverGeodude, MSGBOX_NPC
 	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route4_EventScript_MtMoonSign::

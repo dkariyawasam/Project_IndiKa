@@ -37,7 +37,7 @@ CinnabarVolcano_3F_EventScript_Blair::
 	msgbox CinnabarVolcano_3F_Text_BlairPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 CinnabarVolcano_3F_EventScript_BlairRematch::
@@ -45,7 +45,7 @@ CinnabarVolcano_3F_EventScript_BlairRematch::
 	msgbox CinnabarVolcano_3F_Text_BlairPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 CinnabarVolcano_3F_EventScript_Elias::
