@@ -34,6 +34,10 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
     .string "you have proven your worth in\n"
     .string "FUCHSIA GYM.$"
 
+FuchsiaCity_Gym_Text_ReceivedSoulPassFromKoga::
+    .string "{PLAYER} received the SOUL PASS\n"
+    .string "from KOGA.$"
+
 FuchsiaCity_Gym_Text_KogaReward::
     .string "KOGA: Fwahahaha!\p"
     .string "The LAVIC STONE is secure, and\n"
