@@ -362,6 +362,8 @@ gSpecials::
 	def_special SetPostgameFlags
 	def_special StartMarowakBattle
 	def_special TryCompleteApexInstinctQuest
+	def_special RecordApexRumor
+	def_special IsApexRevealed
 	def_special ForcePlayerOntoBike
 	def_special ListMenu
 	def_special ReturnToListMenu

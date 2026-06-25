@@ -38,8 +38,10 @@ Route4_EventScript_Boy::
 MtMoon_1F_EventScript_BaldingMan::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BROCK, 4
-	msgbox MtMoon_1F_Text_BrockHelpsExcavateFossils
+	msgbox MtMoon_1F_Text_AngryPrimalPokemon
+	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	release
 	end
 

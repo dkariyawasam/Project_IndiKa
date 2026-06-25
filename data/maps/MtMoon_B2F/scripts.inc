@@ -4,8 +4,12 @@ MtMoon_B2F_MapScripts::
 	.byte 0
 
 MtMoon_B2F_OnTransition::
-	call_if_unset FLAG_FOUGHT_ANNIHILAPE, MtMoon_B2F_EventScript_ShowAnnihilape
-	call_if_set FLAG_FOUGHT_ANNIHILAPE, MtMoon_B2F_EventScript_HideAnnihilape
+	call MtMoon_B2F_EventScript_HideAnnihilape
+	goto_if_set FLAG_FOUGHT_ANNIHILAPE, MtMoon_B2F_EventScript_OnTransitionEnd
+	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, MtMoon_B2F_EventScript_ShowAnnihilape
+MtMoon_B2F_EventScript_OnTransitionEnd::
 	end
 
 MtMoon_B2F_OnResume::
