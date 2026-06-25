@@ -8,7 +8,8 @@ CeruleanCity_House2_Text_RepairsCostABundle::
 CeruleanCity_House2_Text_EnormousPokemonBargedIn::
     .string "An enormous POKéMON barged in\n"
     .string "through the wall!\p"
-    .string "It was unstoppable!\p"
+    .string "It was shaking with rage.\n"
+    .string "Completely unstoppable!\p"
     .string "Lucky for us, it rampaged out\n"
     .string "the door and headed west.$"
 
