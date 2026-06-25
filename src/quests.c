@@ -31,6 +31,7 @@
 #include "constants/field_weather.h"
 #include "constants/flags.h"
 #include "constants/quests.h"
+#include "constants/vars.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "constants/event_objects.h"
@@ -241,6 +242,10 @@ static const u8 sText_DotSpace[] = _(". ");
 static const u8 sText_Close[] = _("Close");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
+static const u8 sText_InProgress[] = _("Active");
+static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of an out\nof control POKéMON.");
+static const u8 sText_ApexAnnihilapeConfirmed[] = _("Rumour confirmed.\nLet's investigate MT. MOON.");
+static const u8 sText_ApexAnnihilapeRecorded[] = _("APEX POKéMON ANNIHILAPE\nrecorded in MT. MOON.");
 
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -507,6 +512,58 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      0
 	),
 };
+
+#define APEX_RUMORS_REQUIRED 3
+
+static u8 GetApexRumorCount(u8 apexSubquest)
+{
+    u8 i;
+    u8 count = 0;
+
+    for (i = 0; i < APEX_RUMORS_REQUIRED; i++)
+    {
+        u8 bit = apexSubquest * APEX_RUMORS_REQUIRED + i;
+        u16 var = bit < 16 ? VAR_APEX_RUMOR_BITS_1 : VAR_APEX_RUMOR_BITS_2;
+        u16 mask = 1 << (bit % 16);
+
+        if (VarGet(var) & mask)
+            count++;
+    }
+
+    return count;
+}
+
+void RecordApexRumor(void)
+{
+    u8 apexSubquest = VarGet(VAR_0x8004);
+    u8 rumor = VarGet(VAR_0x8005);
+    u8 bit;
+    u16 var;
+    u16 mask;
+
+    if (apexSubquest >= QUEST_3_SUB_COUNT || rumor >= APEX_RUMORS_REQUIRED)
+        return;
+
+    bit = apexSubquest * APEX_RUMORS_REQUIRED + rumor;
+    var = bit < 16 ? VAR_APEX_RUMOR_BITS_1 : VAR_APEX_RUMOR_BITS_2;
+    mask = 1 << (bit % 16);
+
+    VarSet(var, VarGet(var) | mask);
+    QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
+    if (!QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_GET_COMPLETED))
+        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
+    QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, apexSubquest);
+}
+
+u16 IsApexRevealed(void)
+{
+    u8 apexSubquest = VarGet(VAR_0x8004);
+
+    if (apexSubquest >= QUEST_3_SUB_COUNT)
+        return FALSE;
+
+    return GetApexRumorCount(apexSubquest) >= APEX_RUMORS_REQUIRED;
+}
 
 void TryCompleteApexInstinctQuest(void)
 {
@@ -1998,6 +2055,11 @@ u8 GenerateSubquestState(u8 questId)
 	{
 		StringCopy(gStringVar4, sSideQuests[parentQuest].subquests[questId].type);
 	}
+	else if (parentQuest == QUEST_APEX_POKEMON
+	      && QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, questId))
+	{
+		StringCopy(gStringVar4, sText_InProgress);
+	}
 	else
 	{
 		StringCopy(gStringVar4, sText_Empty);
@@ -2646,6 +2708,18 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 					case 5:
 						return gText_SabrinaTrialPhase5;
 				}
+        }
+    }
+    else if (parentQuest == QUEST_APEX_POKEMON)
+    {
+        if (subquestId == SUB_QUEST_APEX_ANNIHILAPE)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexAnnihilapeRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexAnnihilapeConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexAnnihilapeRumor;
         }
     }
 
