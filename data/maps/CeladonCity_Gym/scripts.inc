@@ -157,7 +157,6 @@ CeladonCity_Gym_EventScript_DefeatedErika::
 	setflag FLAG_BADGE04_GET
 	setvar VAR_ERIKA_TRIAL_STATE, 5
 	completesubquest QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
-	additem ITEM_RAINBOW_KEY
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
 	release
 	end
