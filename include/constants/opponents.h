@@ -1092,12 +1092,14 @@
 #define TRAINER_LEADER_SABRINA_5                 TRAINER_PSYCHIC_RODETTE
 #define TRAINER_LEADER_SABRINA_6                 TRAINER_PSYCHIC_DARIO_2
 #define TRAINER_LEADER_SABRINA_7                 TRAINER_PSYCHIC_RODETTE_2
+#define TRAINER_ROUTE11_POKEMANIAC_CHAPLIN      781
+#define TRAINER_ROUTE11_POKEMANIAC_CHAPLIN_2    782
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             781
-#define MAX_TRAINERS_COUNT                       782
+#define NUM_TRAINERS                             783
+#define MAX_TRAINERS_COUNT                       784
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

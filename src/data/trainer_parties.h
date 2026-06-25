@@ -1543,6 +1543,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_Route11PokemaniacChaplin[] = {
+    {
+        .iv = 30,
+        .lvl = 24,
+        .species = SPECIES_MR_MIME,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route11PokemaniacChaplin2[] = {
+    {
+        .iv = 30,
+        .lvl = 30,
+        .species = SPECIES_MR_MIME,
+    },
+    {
+        .iv = 30,
+        .lvl = 32,
+        .species = SPECIES_MR_MIME,
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacHerman[] = {
     {
         .iv = 30,

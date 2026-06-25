@@ -246,6 +246,9 @@ static const u8 sText_InProgress[] = _("Active");
 static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of an out\nof control POKéMON.");
 static const u8 sText_ApexAnnihilapeConfirmed[] = _("Rumour confirmed.\nLet's investigate MT. MOON.");
 static const u8 sText_ApexAnnihilapeRecorded[] = _("APEX POKéMON ANNIHILAPE\nrecorded in MT. MOON.");
+static const u8 sText_ApexMimeSrRumor[] = _("There are rumours of invisible\nwalls in DIGLETT CAVE.");
+static const u8 sText_ApexMimeSrConfirmed[] = _("Rumour confirmed.\nLet's investigate DIGLETT CAVE.");
+static const u8 sText_ApexMimeSrRecorded[] = _("APEX POKéMON MIME SR.\nrecorded in DIGLETT CAVE.");
 
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -2720,6 +2723,15 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
                 return sText_ApexAnnihilapeConfirmed;
             else if (GetApexRumorCount(subquestId) > 0)
                 return sText_ApexAnnihilapeRumor;
+        }
+        else if (subquestId == SUB_QUEST_APEX_MIME_SR)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexMimeSrRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexMimeSrConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexMimeSrRumor;
         }
     }
 
