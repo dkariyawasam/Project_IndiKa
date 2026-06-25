@@ -23,7 +23,7 @@ SaffronCity_EventScript_RocketGrunt4::
 	msgbox SaffronCity_Text_TookCuboneFromMother, MSGBOX_NPC
 	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 SaffronCity_EventScript_Cubone::
@@ -35,7 +35,7 @@ SaffronCity_EventScript_Cubone::
 	waitmoncry
 	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 

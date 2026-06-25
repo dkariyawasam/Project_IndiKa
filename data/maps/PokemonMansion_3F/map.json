@@ -47,7 +47,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
       "x": 30,
-      "y": 16,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
