@@ -22,14 +22,26 @@ VermilionCity_Gym_Text_LtSurgePostBattle::
     .string "But, it's useless against GROUND-\n"
     .string "type POKéMON!$"
 
-VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
+VermilionCity_Gym_Text_TakeThisWithYou::
     .string "The THUNDERBADGE proves you\n"
     .string "cleared VERMILION GYM!\p"
-    .string "You're special, kid!$"
+    .string "And with it, take this pass.\n"
+    .string "It'll get you special MART stock.$"
 
 VermilionCity_Gym_Text_ReceivedThunderPassFromLtSurge::
     .string "{PLAYER} received the THUNDER PASS\n"
     .string "from LT. SURGE.$"
+
+VermilionCity_Gym_Text_ExplainThunderBadge::
+    .string "That pass unlocks vitamins and\n"
+    .string "battle items at POKéMON MARTS.\p"
+    .string "Power isn't handed to you.\n"
+    .string "Use those tools and train until\l"
+    .string "your POKéMON can hold it.\p"
+    .string "Bring me a RAICHU with real\n"
+    .string "voltage.\p"
+    .string "Then I'll show you evolution\n"
+    .string "through serious output.$"
 
 VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade::
     .string "Hey, kid!\p"
