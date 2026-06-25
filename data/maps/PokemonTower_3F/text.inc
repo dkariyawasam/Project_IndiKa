@@ -23,9 +23,10 @@ PokemonTower_3F_Text_SabrinaTaughtDreamEater::
     .string "That is DREAM EATER.\p"
     .string "It draws strength from a sleeping\n"
     .string "foe through psychic focus.\p"
-    .string "You remained calm inside the\n"
-    .string "tower's astral pull.\p"
-    .string "That calm is enough for an\n"
+    .string "You remained peaceful inside\n"
+    .string "the tower's astral pull.\p"
+    .string "That emotional control is\n"
+    .string "enough for an\n"
     .string "official challenge here.$"
 
 PokemonTower_3F_Text_GymGuideArrives::
@@ -40,8 +41,8 @@ PokemonTower_3F_Text_GymGuideWaiting::
     .string "whenever you are ready.$"
 
 PokemonTower_3F_Text_SabrinaReadyToBattle::
-    .string "A clear mind is not proven by\n"
-    .string "silence alone.\p"
+    .string "Peace is not proven by silence\n"
+    .string "alone.\p"
     .string "Let us see how your focus holds\n"
     .string "in battle.\p"
     .string "Are you ready to challenge me?$"
@@ -62,7 +63,7 @@ PokemonTower_3F_Text_SabrinaDefeat::
 PokemonTower_3F_Text_SabrinaAfterBattle::
     .string "The MARSHBADGE is yours.\p"
     .string "You met the tower's pressure and\n"
-    .string "answered it with purpose.\p"
+    .string "answered it with peaceful control.\p"
     .string "I will return to SAFFRON GYM.\n"
     .string "Come there when you are ready.$"
 

@@ -83,8 +83,8 @@ FuchsiaCity_Gym_Text_KogaCrobatConfirmed::
 FuchsiaCity_Gym_Text_KogaPostReward::
     .string "KOGA: True strength is not only\n"
     .string "hidden in the self.\p"
-    .string "It sharpens when people move\n"
-    .string "together.$"
+    .string "It sharpens when a community\n"
+    .string "moves together.$"
 
 FuchsiaCity_Gym_Text_UnusedKogaReward::
     .string "{PLAYER} received something\n"

@@ -59,6 +59,10 @@ CinnabarVolcano_RightCorridor_3F_Text_StonePulledFree::
 CinnabarVolcano_RightCorridor_3F_Text_KogaOfficialChallenge::
     .string "KOGA: Together, we freed the\n"
     .string "stone.\p"
+    .string "A community does not weaken\n"
+    .string "the self.\p"
+    .string "It gives strength somewhere to\n"
+    .string "stand.\p"
     .string "Back at the GYM, this will become\n"
     .string "the heart of new ninja tools.\p"
     .string "But before I return, I want to\n"

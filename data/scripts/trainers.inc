@@ -4399,7 +4399,9 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle::
     .string "are so beautiful.\p"
     .string "They seem more vibrant and grow\n"
     .string "in number the closer you get to\l"
-    .string "the centre of the forest.$"
+    .string "the centre of the forest.\p"
+    .string "Almost like something is drawing\n"
+    .string "them inward.$"
 EventScript_GymAdjacent_AROMA_LADY_ROSE_Text_Intro::
     .string "This AROMA LADY knows\n"
     .string "VIRIDIAN FOREST well!$"
@@ -4774,7 +4776,8 @@ EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle::
     .string "They have gone into DIGLETT\n"
     .string "CAVE and erected barriers.\p"
     .string "It's like they built their own\n"
-    .string "little community down there.$"
+    .string "little community and closed the\l"
+    .string "world out.$"
 EventScript_RouteTrainer_CAMPER_BRYCE_Text_Intro::
     .string "I set camp halfway between the\n"
     .string "city noise and LAVENDER's quiet.\p"

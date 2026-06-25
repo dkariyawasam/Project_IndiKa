@@ -5,6 +5,8 @@ CeruleanCity_Gym_Text_MistyIntro::
     .string "The POWER PLANT is stable again,\n"
     .string "and I learned a lot watching how\l"
     .string "you handled the flow.\p"
+    .string "Water is beautiful because it\n"
+    .string "changes without losing itself.\p"
     .string "Now it's time for an official\n"
     .string "GYM challenge.\p"
     .string "My policy is an all-out offensive\n"
@@ -22,6 +24,7 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
     .string "got in trades.\p"
     .string "A puny fish can become a mighty,\n"
     .string "raging POKéMON.\p"
+    .string "That's the beauty of change.\p"
     .string "Bring me that GYARADOS.\n"
     .string "Then I'll show you trade evolution\l"
     .string "with a natural held item.$"
@@ -52,6 +55,7 @@ CeruleanCity_Gym_Text_MistyDefeat::
 CeruleanCity_Gym_Text_MistyGyaradosReminder::
     .string "A puny fish can become a mighty,\n"
     .string "raging POKéMON.\p"
+    .string "That's the beauty of change.\p"
     .string "Bring me that GYARADOS.\n"
     .string "Then I'll show you trade evolution\l"
     .string "with a natural held item.$"
@@ -88,7 +92,8 @@ CeruleanCity_Gym_Text_MistyTradeDone::
     .string "POLITOED is proof that evolution\n"
     .string "can follow the flow of an item\l"
     .string "and a trade.\p"
-    .string "Keep watching how POKéMON change.$"
+    .string "Keep watching how beautifully\n"
+    .string "POKéMON can change.$"
 
 CeruleanCity_Gym_Text_DianaIntro::
     .string "What? You?\n"

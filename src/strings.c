@@ -1543,7 +1543,7 @@ const u8 gText_BrockTrialPhase5[] = _("Trade evolution confirmed through BROCK's
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase2[] = _("MISTY asked you to scout the\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase3[] = _("MISTY returned to CERULEAN GYM.\nChallenge her.");
-const u8 gText_MistyTrialPhase4[] = _("MISTY wants to see a puny fish\nthat grew into a mighty raging\nPOKéMON.");
+const u8 gText_MistyTrialPhase4[] = _("MISTY wants to see the beauty\nof a POKéMON changed by growth.");
 const u8 gText_MistyTrialPhase5[] = _("Evolution confirmed through\nMISTY's POLITOED.");
 
 const u8 gText_LtSurgeTrialPhase1[] = _("LT. SURGE is training in\nDIGLETT'S CAVE.");
@@ -1559,7 +1559,7 @@ const u8 gText_ErikaTrialPhase4[] = _("ERIKA returned to CELADON GYM.\nClaim you
 const u8 gText_ErikaTrialPhase5[] = _("Raise ERIKA's BUDEW into ROSELIA\nthrough friendship.");
 
 const u8 gText_KogaTrialPhase1[] = _("KOGA went to CINNABAR VOLCANO\nfor a LAVIC STONE.");
-const u8 gText_KogaTrialPhase2[] = _("KOGA challenged you to reach\nthe water source together.");
+const u8 gText_KogaTrialPhase2[] = _("KOGA challenged you to prove the\nstrength of moving together.");
 const u8 gText_KogaTrialPhase3[] = _("Return to KOGA at the\nthermal water source.");
 const u8 gText_KogaTrialPhase4[] = _("KOGA returned to FUCHSIA GYM.\nClaim your reward.");
 const u8 gText_KogaTrialPhase5[] = _("Raise KOGA's GOLBAT into CROBAT\nthrough friendship.");
@@ -1568,7 +1568,7 @@ const u8 gText_SabrinaTrialPhase1[] = _("SABRINA went to POKéMON TOWER\nafter s
 const u8 gText_SabrinaTrialPhase2[] = _("Bring SABRINA a POKéMON that\ncan learn DREAM EATER.");
 const u8 gText_SabrinaTrialPhase3[] = _("Challenge SABRINA in\nPOKéMON TOWER.");
 const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.");
-const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your power.");
+const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your calm\ncontrol under pressure.");
 
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by trust\nand friendship.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution shaped by habitat,\ninstinct, and survival.");
@@ -1581,12 +1581,12 @@ const u8 gText_SubQuest1_Desc8[] = _("Description Sub 8");
 const u8 gText_SubQuest1_Desc9[] = _("Description Sub 9");
 const u8 gText_SubQuest1_Desc10[] = _("Description Sub 10");
 
-const u8 gText_SubQuest2_Desc1[] = _("Learn what BROCK knows about\nancient POKéMON and fossils.");
-const u8 gText_SubQuest2_Desc2[] = _("Learn what MISTY knows about\nwater habitats and growth.");
+const u8 gText_SubQuest2_Desc1[] = _("Learn why BROCK is fascinated by\nancient POKéMON and fossils.");
+const u8 gText_SubQuest2_Desc2[] = _("Learn what MISTY knows about\nthe beauty of change.");
 const u8 gText_SubQuest2_Desc3[] = _("Learn what LT. SURGE knows about\npower, discipline, and trust.");
-const u8 gText_SubQuest2_Desc4[] = _("Learn what ERIKA knows about\nplants, care, and friendship.");
-const u8 gText_SubQuest2_Desc5[] = _("Learn what KOGA knows about\npoison, training, and patience.");
-const u8 gText_SubQuest2_Desc6[] = _("Learn what SABRINA knows about\nhidden power and restraint.");
+const u8 gText_SubQuest2_Desc4[] = _("Learn what ERIKA knows about\nplants, care, and family.");
+const u8 gText_SubQuest2_Desc5[] = _("Learn what KOGA knows about\nstrength in community.");
+const u8 gText_SubQuest2_Desc6[] = _("Learn what SABRINA knows about\npeace and emotional control.");
 const u8 gText_SubQuest2_Desc7[] = _("Learn what BLAINE knows about\nfire, fossils, and adaptation.");
 const u8 gText_SubQuest2_Desc8[] = _("Learn what GIOVANNI knows about\nstrength without understanding.");
 const u8 gText_SubQuest3_Desc1[] = _("Record the Apex TANGROWTH in\nVIRIDIAN FOREST.");
