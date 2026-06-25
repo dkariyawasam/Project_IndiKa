@@ -5,8 +5,12 @@ DiglettsCave_B2F_MapScripts::
 
 DiglettsCave_B2F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F
-	call_if_unset FLAG_FOUGHT_MIME_SR, DiglettsCave_B2F_EventScript_ShowMimeSr
-	call_if_set FLAG_FOUGHT_MIME_SR, DiglettsCave_B2F_EventScript_HideMimeSr
+	call DiglettsCave_B2F_EventScript_HideMimeSr
+	goto_if_set FLAG_FOUGHT_MIME_SR, DiglettsCave_B2F_EventScript_OnTransitionEnd
+	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, DiglettsCave_B2F_EventScript_ShowMimeSr
+DiglettsCave_B2F_EventScript_OnTransitionEnd::
 	end
 
 DiglettsCave_B2F_OnResume::

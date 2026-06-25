@@ -2894,6 +2894,24 @@ EventScript_RouteTrainer_BUG_MANIAC_MARKRematch::
 	msgbox EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN::
+	trainerbattle_single TRAINER_ROUTE11_POKEMANIAC_CHAPLIN, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch
+	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
+	end
+
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch::
+	trainerbattle_rematch TRAINER_ROUTE11_POKEMANIAC_CHAPLIN, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat
+	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
+	end
+
 EventScript_RouteTrainer_PKMN_RANGER_LOGAN::
 	trainerbattle_single TRAINER_PKMN_RANGER_LOGAN, EventScript_RouteTrainer_PKMN_RANGER_LOGAN_Text_Intro, EventScript_RouteTrainer_PKMN_RANGER_LOGAN_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -4733,6 +4751,20 @@ EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle::
     .string "The best things on ROUTE 11\n"
     .string "are small enough to hide\l"
     .string "under one leaf.$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro::
+    .string "All the MR. MIME have\n"
+    .string "disappeared from the area!$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro::
+    .string "All the MR. MIME have\n"
+    .string "disappeared from the area!$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat::
+    .string "I would've won had you\n"
+    .string "challenged me with my full\l"
+    .string "team of MR. MIME.$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle::
+    .string "They have gone into DIGLETT\n"
+    .string "CAVE and erected barriers all\l"
+    .string "around just to avoid training.$"
 EventScript_RouteTrainer_CAMPER_BRYCE_Text_Intro::
     .string "I set camp halfway between the\n"
     .string "city noise and LAVENDER's quiet.\p"
