@@ -527,10 +527,6 @@ static const u8 *const sTextColorTable[] = {
 static const u8 sSeviiMapsecs[3][30] = {
     [REGIONMAP_SEVII123 - 1] =
     {
-        MAPSEC_ONE_ISLAND,
-        MAPSEC_THREE_ISLAND,
-        MAPSEC_TREASURE_BEACH,
-        MAPSEC_THREE_ISLE_PORT,
         MAPSEC_NONE
     },
     [REGIONMAP_SEVII45 - 1] =
@@ -805,10 +801,6 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_POKEMON_TOWER       - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_CERULEAN_CAVE       - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_POWER_PLANT         - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
-    [MAPSEC_ONE_ISLAND          - KANTO_MAPSEC_START] = {MAP(MAP_ONE_ISLAND),                            HEAL_LOCATION_ONE_ISLAND},
-    [MAPSEC_THREE_ISLAND        - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND),                          HEAL_LOCATION_NONE},
-    [MAPSEC_TREASURE_BEACH      - KANTO_MAPSEC_START] = {MAP(MAP_ONE_ISLAND_TREASURE_BEACH),             HEAL_LOCATION_NONE},
-    [MAPSEC_THREE_ISLE_PORT     - KANTO_MAPSEC_START] = {MAP(MAP_THREE_ISLAND_PORT),                     HEAL_LOCATION_NONE},
     [MAPSEC_CINNABAR_VOLCANO            - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_FUCHSIA_FOREST      - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
 };
@@ -907,7 +899,7 @@ static void InitRegionMapType(void)
     j = REGIONMAP_KANTO;
     if (gMapHeader.regionMapSectionId >= SEVII_MAPSEC_START)
     {
-        // Mapsec is in Sevii Islands, determine which map to use
+        // Mapsec is on a secondary region map; determine which one to use
         while (region == REGIONMAP_KANTO)
         {
             for (i = 0; sSeviiMapsecs[j][i] != MAPSEC_NONE; i++)
@@ -2804,7 +2796,7 @@ static u16 GetDungeonMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
-    if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_CAN_LINK_WITH_RS))
+    if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_GAME_CLEAR))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
@@ -3372,7 +3364,7 @@ static void CreateDungeonIcons(void)
                 mapsec = GetSelectedMapSection(i, LAYER_DUNGEON, y, x);
                 if (mapsec == MAPSEC_NONE)
                     continue;
-                if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_CAN_LINK_WITH_RS))
+                if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_GAME_CLEAR))
                     continue;
                 CreateDungeonIconSprite(i, numIcons, x, y, numIcons + 35, 10);
                 if (GetDungeonMapsecType(mapsec) != 2)

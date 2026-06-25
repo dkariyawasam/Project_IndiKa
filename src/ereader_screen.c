@@ -477,7 +477,7 @@ static void Task_EReader(u8 taskId)
     case ER_STATE_SUCCESS_MSG:
         if (UpdateTimer(&data->timer, 120))
         {
-            AddTextPrinterToWindow1(gJPText_NewTrainerHasComeToSevii);
+            AddTextPrinterToWindow1(gJPText_NewTrainerHasCome);
             PlayFanfare(MUS_OBTAIN_ITEM);
             data->state = ER_STATE_SUCCESS_END;
         }

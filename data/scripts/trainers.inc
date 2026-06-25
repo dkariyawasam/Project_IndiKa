@@ -2386,18 +2386,6 @@ Route21_South_EventScript_NicoleRematch::
 	msgbox Route21_South_Text_NicolePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-OneIsland_TreasureBeach_EventScript_Amara::
-	trainerbattle_single TRAINER_SWIMMER_FEMALE_AMARA, OneIsland_TreasureBeach_Text_AmaraIntro, OneIsland_TreasureBeach_Text_AmaraDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, OneIsland_TreasureBeach_EventScript_AmaraRematch
-	msgbox OneIsland_TreasureBeach_Text_AmaraPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-OneIsland_TreasureBeach_EventScript_AmaraRematch::
-	trainerbattle_rematch TRAINER_SWIMMER_FEMALE_AMARA, OneIsland_TreasureBeach_Text_AmaraRematchIntro, OneIsland_TreasureBeach_Text_AmaraDefeat
-	msgbox OneIsland_TreasureBeach_Text_AmaraPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 @ Route trainer redistribution scripts
 EventScript_RouteTrainer_YOUNGSTER_BEN::
 	trainerbattle_single TRAINER_YOUNGSTER_BEN, EventScript_RouteTrainer_YOUNGSTER_BEN_Text_Intro, EventScript_RouteTrainer_YOUNGSTER_BEN_Text_Defeat

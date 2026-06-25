@@ -417,38 +417,6 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_ONE_ISLAND",
-      "name": "ONE ISLAND",
-      "x": 1,
-      "y": 8,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_THREE_ISLAND",
-      "name": "THREE ISLAND",
-      "x": 18,
-      "y": 12,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_TREASURE_BEACH",
-      "name": "TREASURE BEACH",
-      "x": 1,
-      "y": 9,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "MAPSEC_THREE_ISLE_PORT",
-      "name": "THREE ISLE PORT",
-      "x": 18,
-      "y": 13,
-      "width": 2,
-      "height": 1
-    },
-    {
       "id": "MAPSEC_CINNABAR_VOLCANO",
       "name": "CINNABAR VOLCANO",
       "x": 0,

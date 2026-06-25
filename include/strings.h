@@ -829,8 +829,6 @@ extern const u8 gText_TradeCenter[];
 extern const u8 gText_Colosseum[];
 extern const u8 gText_GameLinkCable[];
 extern const u8 gText_Wireless[];
-extern const u8 gText_OneIsland[];
-extern const u8 gText_ThreeIsland[];
 extern const u8 gText_Vermilion[];
 extern const u8 gText_Colosseum_2[];
 extern const u8 gText_BerryCrush[];
@@ -841,7 +839,6 @@ extern const u8 gText_PokemonJump[];
 extern const u8 gText_DodrioBerryPicking[];
 extern const u8 gText_2Tinymushrooms[];
 extern const u8 gText_1BigMushroom[];
-extern const u8 gText_SeviiIslands[];
 extern const u8 gText_MiracleSeed_1000Coins[];
 extern const u8 gText_Charcoal_1000Coins[];
 extern const u8 gText_MysticWater_1000Coins[];
@@ -875,7 +872,6 @@ extern const u8 gText_KeyItemsPocket[];
 extern const u8 gText_PokeBallsPocket[];
 extern const u8 gText_TmCase[];
 extern const u8 gText_BerryPouch_2[];
-extern const u8 gText_FiveIsland[];
 
 // trade
 extern const u8 gText_IsThisTradeOkay[];
@@ -1103,11 +1099,6 @@ extern const u8 gText_RegionMap_AreaDesc_CeruleanCave[];
 extern const u8 gText_RegionMap_AreaDesc_PowerPlant[];
 extern const u8 gText_RegionMap_AreaDesc_CinnabarVolcano[];
 extern const u8 gText_RegionMap_AreaDesc_FuchsiaForest[];
-extern const u8 gText_RegionMap_AreaDesc_LostCave[];
-extern const u8 gText_RegionMap_AreaDesc_TanobyRuins[];
-extern const u8 gText_RegionMap_AreaDesc_AlteringCave[];
-extern const u8 gText_RegionMap_AreaDesc_PatternBush[];
-extern const u8 gText_RegionMap_AreaDesc_DottedHole[];
 
 // field_screen_effect
 extern const u8 gText_PlayerScurriedToCenter[];
@@ -1195,7 +1186,7 @@ extern const u8 gJPText_ConnectionErrorCheckLink[];
 extern const u8 gJPText_ConnectionErrorTryAgain[];
 extern const u8 gJPText_AllowEReaderToLoadCard[];
 extern const u8 gJPText_ConnectionComplete[];
-extern const u8 gJPText_NewTrainerHasComeToSevii[];
+extern const u8 gJPText_NewTrainerHasCome[];
 extern const u8 gJPText_PleaseWaitAMoment[];
 extern const u8 gJPText_WriteErrorUnableToSaveData[];
 

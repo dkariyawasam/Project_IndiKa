@@ -338,10 +338,6 @@ FuchsiaCity_WardensHouse_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-ThreeIsland_EventScript_ItemZinc::
-	finditem ITEM_ZINC
-	end
-
 ViridianForest_EventScript_ItemPotion2::
 	finditem ITEM_POTION
 	end

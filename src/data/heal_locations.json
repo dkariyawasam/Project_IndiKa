@@ -105,14 +105,6 @@
       "respawn_npc": "LOCALID_ROUTE10_HEALER"
     },
     {
-      "id": "HEAL_LOCATION_ONE_ISLAND",
-      "map": "MAP_ONE_ISLAND",
-      "x": 14,
-      "y": 6,
-      "respawn_map": "MAP_ONE_ISLAND_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_ONE_ISLAND_NURSE"
-    },
-    {
       "id": "HEAL_LOCATION_ROCKET_LEAGUE",
       "map": "MAP_ROCKET_LEAGUE_LOBBY",
       "x": 4,

@@ -1508,11 +1508,6 @@ u32 GetPlayerTrainerId(void)
     return (gSaveBlock2Ptr->playerTrainerId[3] << 24) | (gSaveBlock2Ptr->playerTrainerId[2] << 16) | (gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0];
 }
 
-u8 GetUnlockedSeviiAreas(void)
-{
-    return 0;
-}
-
 void UpdateTrainerCardPhotoIcons(void)
 {
     u16 species[PARTY_SIZE];
@@ -1590,8 +1585,7 @@ static const u8 sMartMaps[][3] = {
     {MAP(MAP_VERMILION_CITY_MART),  1},
     {MAP(MAP_FUCHSIA_CITY_MART),    1},
     {MAP(MAP_CINNABAR_ISLAND_MART), 1},
-    {MAP(MAP_SAFFRON_CITY_MART),    1},
-    {MAP(MAP_THREE_ISLAND_MART),    1}
+    {MAP(MAP_SAFFRON_CITY_MART),    1}
 };
 
 u8 GetMartClerkObjectId(void)
@@ -1752,7 +1746,6 @@ const u16 sPokeCenter1FMaps[] = {
     MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F,
     MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F,
     MAP_SAFFRON_CITY_POKEMON_CENTER_1F,
-    MAP_ONE_ISLAND_POKEMON_CENTER_1F,
     MAP_UNION_ROOM,
     MAP_UNDEFINED
 };
