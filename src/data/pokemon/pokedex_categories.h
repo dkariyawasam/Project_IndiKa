@@ -167,6 +167,17 @@ static const u16 sDexCategory_ForestPkmn_Page21[] = {
     SPECIES_TANGROWTH,
 };
 
+static const u16 sDexCategory_ForestPkmn_Page22[] = {
+    SPECIES_BUDEW,
+    SPECIES_ROSELIA,
+    SPECIES_ROSERADE,
+};
+
+static const u16 sDexCategory_ForestPkmn_Page23[] = {
+    SPECIES_PLUSLE,
+    SPECIES_MINUN,
+};
+
 static const u16 sDexCategory_WatersEdgePkmn_Page1[] = {
     SPECIES_WOOPER,
     SPECIES_QUAGSIRE,
@@ -607,17 +618,6 @@ static const u16 sDexCategory_NonNativePkmn_Page5[] = {
     SPECIES_EELEKTROSS,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page6[] = {
-    SPECIES_BUDEW,
-    SPECIES_ROSELIA,
-    SPECIES_ROSERADE,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page7[] = {
-    SPECIES_PLUSLE,
-    SPECIES_MINUN,
-};
-
 static const u16 sDexCategory_NonNativePkmn_Page8[] = {
     SPECIES_CHINGLING,
     SPECIES_CHIMECHO,
@@ -829,6 +829,8 @@ static const struct PokedexCategoryPage sDexCategory_ForestPkmn[] = {
     DEX_CATEGORY(ForestPkmn_Page19),
     DEX_CATEGORY(ForestPkmn_Page20),
     DEX_CATEGORY(ForestPkmn_Page21),
+    DEX_CATEGORY(ForestPkmn_Page22),
+    DEX_CATEGORY(ForestPkmn_Page23),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WatersEdgePkmn[] = {
@@ -927,8 +929,6 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page3),
     DEX_CATEGORY(NonNativePkmn_Page4),
     DEX_CATEGORY(NonNativePkmn_Page5),
-    DEX_CATEGORY(NonNativePkmn_Page6),
-    DEX_CATEGORY(NonNativePkmn_Page7),
     DEX_CATEGORY(NonNativePkmn_Page8),
     DEX_CATEGORY(NonNativePkmn_Page9),
     DEX_CATEGORY(NonNativePkmn_Page10),
