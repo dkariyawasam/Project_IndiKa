@@ -19,7 +19,12 @@ SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
 	return
 
 SeafoamIslands_B4F_OnTransition::
-	call_if_unset FLAG_FOUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_ShowArticuno
+	call SeafoamIslands_B4F_EventScript_HideArticuno
+	goto_if_set FLAG_FOUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_CheckCurrent
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, SeafoamIslands_B4F_EventScript_ShowArticuno
+SeafoamIslands_B4F_EventScript_CheckCurrent::
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_SetNoCurrentLayout
 	end
@@ -41,6 +46,10 @@ SeafoamIslands_B4F_EventScript_SetNoCurrentLayout::
 
 SeafoamIslands_B4F_EventScript_ShowArticuno::
 	clearflag FLAG_HIDE_ARTICUNO
+	return
+
+SeafoamIslands_B4F_EventScript_HideArticuno::
+	setflag FLAG_HIDE_ARTICUNO
 	return
 
 SeafoamIslands_B4F_OnLoad::

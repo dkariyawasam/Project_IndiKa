@@ -95,7 +95,7 @@ MtMoon_1F_Text_BrockHelpsExcavateFossils::
     .string "lends me a hand.$"
 
 MtMoon_1F_Text_AngryPrimalPokemon::
-    .string "There's something angry and\n"
-    .string "primal deep within this cave.\p"
-    .string "Maybe it's best I head back\n"
-    .string "home.$"
+    .string "There's something furious and\n"
+    .string "hurt deep within this cave.\p"
+    .string "I can feel it losing control.\n"
+    .string "Maybe I should head home.$"

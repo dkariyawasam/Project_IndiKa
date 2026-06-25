@@ -243,12 +243,15 @@ static const u8 sText_Close[] = _("Close");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
 static const u8 sText_InProgress[] = _("Active");
-static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of an out\nof control POKéMON.");
+static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of a POKéMON\nlosing control of its emotions.");
 static const u8 sText_ApexAnnihilapeConfirmed[] = _("Rumour confirmed.\nLet's investigate MT. MOON.");
 static const u8 sText_ApexAnnihilapeRecorded[] = _("APEX POKéMON ANNIHILAPE\nrecorded in MT. MOON.");
-static const u8 sText_ApexMimeSrRumor[] = _("There are rumours of invisible\nwalls in DIGLETT CAVE.");
+static const u8 sText_ApexMimeSrRumor[] = _("There are rumours of an isolated\nMR. MIME community.");
 static const u8 sText_ApexMimeSrConfirmed[] = _("Rumour confirmed.\nLet's investigate DIGLETT CAVE.");
 static const u8 sText_ApexMimeSrRecorded[] = _("APEX POKéMON MIME SR.\nrecorded in DIGLETT CAVE.");
+static const u8 sText_ApexArticunoRumor[] = _("There are rumours of sudden\nchange at SEAFOAM ISLANDS.");
+static const u8 sText_ApexArticunoConfirmed[] = _("Rumour confirmed.\nLet's investigate SEAFOAM.");
+static const u8 sText_ApexArticunoRecorded[] = _("APEX POKéMON ARTICUNO\nrecorded in SEAFOAM ISLANDS.");
 
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -2732,6 +2735,15 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
                 return sText_ApexMimeSrConfirmed;
             else if (GetApexRumorCount(subquestId) > 0)
                 return sText_ApexMimeSrRumor;
+        }
+        else if (subquestId == SUB_QUEST_APEX_ARTICUNO)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexArticunoRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexArticunoConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexArticunoRumor;
         }
     }
 

@@ -91,16 +91,15 @@ Route20_Text_RogerPostBattle::
     .string "water around it is the real map.$"
 
 Route20_Text_MarinerIntro::
-    .string "The SEAFOAM channel keeps sailors\n"
-    .string "honest.\p"
-    .string "Currents change before you notice.$"
+    .string "I heard SEAFOAM got fractured\n"
+    .string "when a sudden cold settled in\l"
+    .string "the caves and reshaped it.$"
 
 Route20_Text_MarinerDefeat::
-    .string "Went under!$"
+    .string "Agh!$"
 
 Route20_Text_MarinerPostBattle::
-    .string "A good sailor reads the water.\n"
-    .string "A good trainer reads the battle.$"
+    .string "You broke me into pieces too!$"
 
 Route20_Text_NoraIntro::
     .string "The water here polishes stones\n"
@@ -154,8 +153,10 @@ Route20_Text_SeagallopSailorAllAboard::
     .string "Alright, all aboard!\n"
     .string "We set sail!$"
 
-Route20_Text_MistyTrainsHere::
-    .string "Strong TRAINERS and WATER POKéMON\n"
-    .string "are common sights in these parts.\p"
-    .string "They say that MISTY of the\n"
-    .string "CERULEAN GYM trains here.$"
+Route20_Text_SeafoamUsedToBeVolcanic::
+    .string "SEAFOAM ISLANDS used to be\n"
+    .string "volcanic just like CINNABAR\l"
+    .string "ISLAND.\p"
+    .string "Then one day everything changed\n"
+    .string "at once, and now it's as cold\l"
+    .string "as ice!$"

@@ -57,7 +57,10 @@ Route20_EventScript_Camper::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_MISTY, 3
-	msgbox Route20_Text_MistyTrainsHere
+	msgbox Route20_Text_SeafoamUsedToBeVolcanic
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	release
 	end
 
