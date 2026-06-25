@@ -40,6 +40,8 @@ MtMoon_B2F_EventScript_Annihilape::
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
+	setflag FLAG_INTERACTED_APEX_ANNIHILAPE
+	special TryCompleteApexInstinctQuest
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartApexBattle
 	waitstate

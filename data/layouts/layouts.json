@@ -2234,18 +2234,6 @@
       "blockdata_filepath": "data/layouts/CeruleanCity_House5/map.bin"
     },
     {
-      "id": "LAYOUT_ISLAND_HARBOR",
-      "name": "Island_Harbor_Layout",
-      "width": 17,
-      "height": 13,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/Island_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/Island_Harbor/map.bin"
-    },
-    {
       "id": "LAYOUT_VIRIDIAN_CHANNEL",
       "name": "ViridianChannel_Layout",
       "width": 32,

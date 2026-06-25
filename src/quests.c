@@ -29,6 +29,8 @@
 #include "menu_indicators.h"
 #include "constants/items.h"
 #include "constants/field_weather.h"
+#include "constants/flags.h"
+#include "constants/quests.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "constants/event_objects.h"
@@ -361,6 +363,89 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	)
 };
 
+static const struct SubQuest sSubQuests3[QUEST_3_SUB_COUNT] =
+{
+	sub_quest(
+	      11,
+	      gText_SubQuest3_Name1,
+	      gText_SubQuest3_Desc1,
+	      gText_SubQuest3_Map1,
+	      SPECIES_TANGROWTH,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      12,
+	      gText_SubQuest3_Name2,
+	      gText_SubQuest3_Desc2,
+	      gText_SubQuest3_Map2,
+	      SPECIES_ZAPDOS,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      13,
+	      gText_SubQuest3_Name3,
+	      gText_SubQuest3_Desc3,
+	      gText_SubQuest3_Map3,
+	      SPECIES_ARTICUNO,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      14,
+	      gText_SubQuest3_Name4,
+	      gText_SubQuest3_Desc4,
+	      gText_SubQuest3_Map4,
+	      SPECIES_MEWTWO,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      15,
+	      gText_SubQuest3_Name5,
+	      gText_SubQuest3_Desc5,
+	      gText_SubQuest3_Map5,
+	      SPECIES_OSSCYTHE,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      16,
+	      gText_SubQuest3_Name6,
+	      gText_SubQuest3_Desc6,
+	      gText_SubQuest3_Map6,
+	      SPECIES_MOLTRES,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      17,
+	      gText_SubQuest3_Name7,
+	      gText_SubQuest3_Desc7,
+	      gText_SubQuest3_Map7,
+	      SPECIES_MIME_SR,
+	      PKMN,
+	      sText_Found
+	),
+
+	sub_quest(
+	      18,
+	      gText_SubQuest3_Name8,
+	      gText_SubQuest3_Desc8,
+	      gText_SubQuest3_Map8,
+	      SPECIES_ANNIHILAPE,
+	      PKMN,
+	      sText_Found
+	)
+};
+
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -396,10 +481,10 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_3,
 	      gText_SideQuestDoneDesc_3,
 	      gText_SideQuestMap3,
-	      OBJ_EVENT_GFX_BLUE,
-	      OBJECT,
-	      sSubQuests2,
-	      QUEST_2_SUB_COUNT
+	      SPECIES_TANGROWTH,
+	      PKMN,
+	      sSubQuests3,
+	      QUEST_3_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_4,
@@ -422,6 +507,49 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      0
 	),
 };
+
+void TryCompleteApexInstinctQuest(void)
+{
+    static const struct
+    {
+        u16 flag;
+        u8 subquest;
+    } sApexQuestProgress[] =
+    {
+        {FLAG_INTERACTED_APEX_TANGROWTH, SUB_QUEST_APEX_TANGROWTH},
+        {FLAG_INTERACTED_APEX_ZAPDOS, SUB_QUEST_APEX_ZAPDOS},
+        {FLAG_INTERACTED_APEX_ARTICUNO, SUB_QUEST_APEX_ARTICUNO},
+        {FLAG_INTERACTED_APEX_MEWTWO, SUB_QUEST_APEX_MEWTWO},
+        {FLAG_INTERACTED_APEX_OSSCYTHE, SUB_QUEST_APEX_OSSCYTHE},
+        {FLAG_INTERACTED_APEX_MOLTRES, SUB_QUEST_APEX_MOLTRES},
+        {FLAG_INTERACTED_APEX_MIME_SR, SUB_QUEST_APEX_MIME_SR},
+        {FLAG_INTERACTED_APEX_ANNIHILAPE, SUB_QUEST_APEX_ANNIHILAPE},
+    };
+    u8 i;
+    u8 count = 0;
+
+    for (i = 0; i < NELEMS(sApexQuestProgress); i++)
+    {
+        if (FlagGet(sApexQuestProgress[i].flag))
+        {
+            count++;
+            QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
+            QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
+            QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, sApexQuestProgress[i].subquest);
+            QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED, sApexQuestProgress[i].subquest);
+        }
+    }
+
+    if (count >= 2 && !QuestMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_GET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT))
+        QuestMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_SET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT);
+
+    if (count >= QUEST_3_SUB_COUNT)
+    {
+        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED);
+        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_REMOVE_ACTIVE);
+    }
+}
+
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
