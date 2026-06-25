@@ -9,8 +9,10 @@ Route10_Text_MarkDefeat::
     .string "better than I did!$"
 
 Route10_Text_MarkPostBattle::
-    .string "When ROCK TUNNEL rumbles,\n"
-    .string "even the water seems to buzz.$"
+    .string "When storms pass over the POWER\n"
+    .string "PLANT, the river keeps buzzing.\p"
+    .string "It's like nature is feeding it\n"
+    .string "power without end.$"
 
 Route10_Text_ClarkIntro::
     .string "These cliffs make every step\n"
