@@ -81,40 +81,6 @@ static const u16 sDexAreas_Kanto[][2] = {
     { MAPSEC_FUCHSIA_FOREST,      DEX_AREA_FUCHSIA_FOREST }
 };
 
-static const u16 sDexAreas_Sevii1[][2] = {
-	{ MAPSEC_TREASURE_BEACH, DEX_AREA_TREASURE_BEACH },
-	{ MAPSEC_ONE_ISLAND,     DEX_AREA_ONE_ISLAND }    
-};
-
-static const u16 sDexAreas_Sevii2[][2] = {
-	{ MAPSEC_NONE, DEX_AREA_NONE }    
-};
-
-static const u16 sDexAreas_Sevii3[][2] = {
-	{ MAPSEC_THREE_ISLE_PORT, DEX_AREA_THREE_ISLE_PATH },
-	{ MAPSEC_THREE_ISLAND,    DEX_AREA_THREE_ISLAND }
-};
-
-static const u16 sDexAreas_Sevii4[][2] = {
-	{ MAPSEC_NONE, DEX_AREA_NONE }    
-};
-
-static const u16 sDexAreas_Sevii5[][2] = {
-	{ MAPSEC_NONE, DEX_AREA_NONE }    
-};
-
-static const struct
-{
-    const u16 (*table)[2];
-    s32 count;
-} sSeviiDexAreas[] = {
-    { sDexAreas_Sevii1, ARRAY_COUNT(sDexAreas_Sevii1) },
-    { sDexAreas_Sevii2, ARRAY_COUNT(sDexAreas_Sevii2) },
-	{ sDexAreas_Sevii3, ARRAY_COUNT(sDexAreas_Sevii3) },
-	{ sDexAreas_Sevii4, ARRAY_COUNT(sDexAreas_Sevii4) },
-	{ sDexAreas_Sevii5, ARRAY_COUNT(sDexAreas_Sevii5) }
-};
-
 static const struct RoamerPair sRoamerPairs[] = {
     { SPECIES_ENTEI,   SPECIES_BULBASAUR  },
     { SPECIES_SUICUNE, SPECIES_CHARMANDER },
@@ -130,14 +96,12 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
     s32 mapSecId;
     u16 dexArea;
     s32 tableIndex;
-    s32 seviiAreas;
     s32 i;
     u8 seenAreas[DEX_AREA_COUNT] = {0};
 
     if (GetRoamerIndex(species) >= 0)
         return GetRoamerPokedexAreaMarkers(species, subsprites);
 
-    seviiAreas = GetUnlockedSeviiAreas();
     for (i = 0, areaCount = 0; gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED); i++)
     {
         mapSecId = GetMapSecIdFromWildMonHeader(&gWildMonHeaders[i]);
@@ -149,19 +113,6 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
             while (FindDexAreaByMapSec(mapSecId, sDexAreas_Kanto, ARRAY_COUNT(sDexAreas_Kanto), &tableIndex, &dexArea))
             {
                 TryAddDexAreaMarker(&areaCount, dexArea, seenAreas, subsprites);
-            }
-
-            for (j = 0; j < ARRAY_COUNT(sSeviiDexAreas); j++)
-            {
-                if ((seviiAreas >> j) & 1)
-                {
-                    // Search for all dex areas associated with this MAPSEC in this unlocked Sevii Island
-                    tableIndex = 0;
-                    while (FindDexAreaByMapSec(mapSecId, sSeviiDexAreas[j].table, sSeviiDexAreas[j].count, &tableIndex, &dexArea))
-                    {
-                        TryAddDexAreaMarker(&areaCount, dexArea, seenAreas, subsprites);
-                    }
-                }
             }
         }
     }

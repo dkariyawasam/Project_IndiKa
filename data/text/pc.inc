@@ -1,6 +1,10 @@
 Text_BootedUpPC::
 	.string "{PLAYER} booted up the PC.$"
 
+Text_PCServicesUnavailable::
+	.string "The PC services aren't\n"
+	.string "available right now.$"
+
 Text_AccessWhichPC::
 	.string "Which PC should be accessed?$"
 

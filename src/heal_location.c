@@ -83,11 +83,6 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
         warp->x = 13;
         warp->y = 12;
     }
-    else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(MAP_ONE_ISLAND_POKEMON_CENTER_1F) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(MAP_ONE_ISLAND_POKEMON_CENTER_1F))
-    {
-        warp->x = 5;
-        warp->y = 4;
-    }
     else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(MAP_ROCKET_LEAGUE_LOBBY) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(MAP_ROCKET_LEAGUE_LOBBY))
     {
         warp->x = 4;

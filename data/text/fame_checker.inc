@@ -967,7 +967,7 @@ gFameCheckerFlavorTextOriginLocation_Lorelei2::
 	.string "SEAFOAM ISLANDS$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei3::
-	.string "FIVE ISLAND$"
+	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei4::
 	.string "SEAFOAM ISLANDS$"

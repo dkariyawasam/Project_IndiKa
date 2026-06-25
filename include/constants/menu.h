@@ -47,9 +47,6 @@
 #define MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES             41
 #define MULTICHOICE_42                                         42
 #define MULTICHOICE_LINKED_DIRECT_UNION                        43
-#define MULTICHOICE_ISLAND_23                                  44
-#define MULTICHOICE_ISLAND_13                                  45
-#define MULTICHOICE_ISLAND_12                                  46
 #define MULTICHOICE_TRADE_COLOSSEUM_CRUSH                      47
 #define MULTICHOICE_48                                         48
 #define MULTICHOICE_POKEJUMP_DODRIO                            49
@@ -57,7 +54,6 @@
 #define MULTICHOICE_MUSHROOMS                                  51
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH                52
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK                      53
-#define MULTICHOICE_SEVII_NAVEL                                54
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_ROUTE21_FERRY                              64
