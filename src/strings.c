@@ -1583,11 +1583,11 @@ const u8 gText_SubQuest1_Desc10[] = _("Description Sub 10");
 
 const u8 gText_SubQuest2_Desc1[] = _("Learn why BROCK is fascinated by\nancient POKéMON and fossils.");
 const u8 gText_SubQuest2_Desc2[] = _("Learn what MISTY knows about\nthe beauty of change.");
-const u8 gText_SubQuest2_Desc3[] = _("Learn what LT. SURGE knows about\npower, discipline, and trust.");
+const u8 gText_SubQuest2_Desc3[] = _("Learn how LT. SURGE trains\nPOKéMON to achieve power.");
 const u8 gText_SubQuest2_Desc4[] = _("Learn what ERIKA knows about\nplants, care, and family.");
 const u8 gText_SubQuest2_Desc5[] = _("Learn what KOGA knows about\nstrength in community.");
 const u8 gText_SubQuest2_Desc6[] = _("Learn what SABRINA knows about\npeace and emotional control.");
-const u8 gText_SubQuest2_Desc7[] = _("Learn what BLAINE knows about\nfire, fossils, and adaptation.");
+const u8 gText_SubQuest2_Desc7[] = _("Learn what BLAINE knows about\ninnovation and progress.");
 const u8 gText_SubQuest2_Desc8[] = _("Learn what GIOVANNI knows about\nstrength without understanding.");
 const u8 gText_SubQuest3_Desc1[] = _("Record the Apex TANGROWTH in\nVIRIDIAN FOREST.");
 const u8 gText_SubQuest3_Desc2[] = _("Record the Apex ZAPDOS in the\nPOWER PLANT.");
