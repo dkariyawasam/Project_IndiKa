@@ -42,6 +42,8 @@ PowerPlant_EventScript_Zapdos::
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
+	setflag FLAG_INTERACTED_APEX_ZAPDOS
+	special TryCompleteApexInstinctQuest
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartApexBattle
 	waitstate

@@ -17,7 +17,7 @@
 // quest number defines
 #define QUEST_THE_NATURE_OF_EVOLUTION           0
 #define QUEST_GYM_LEADER_TRIALS                 1
-#define QUEST_GIOVANNIS_AMBITION                2
+#define QUEST_APEX_POKEMON                      2
 #define QUEST_THE_ROCKET_LEAGUE                 3
 #define QUEST_THE_INDIGO_LEAGUE                 4
 #define QUEST_COUNT     (QUEST_THE_INDIGO_LEAGUE + 1)
@@ -33,9 +33,18 @@
 #define SUB_QUEST_SABRINA                       5
 #define SUB_QUEST_BLAINE                        6
 #define SUB_QUEST_GIOVANNI                      7
+#define SUB_QUEST_APEX_TANGROWTH                0
+#define SUB_QUEST_APEX_ZAPDOS                   1
+#define SUB_QUEST_APEX_ARTICUNO                 2
+#define SUB_QUEST_APEX_MEWTWO                   3
+#define SUB_QUEST_APEX_OSSCYTHE                 4
+#define SUB_QUEST_APEX_MOLTRES                  5
+#define SUB_QUEST_APEX_MIME_SR                  6
+#define SUB_QUEST_APEX_ANNIHILAPE               7
 #define QUEST_1_SUB_COUNT 3
 #define QUEST_2_SUB_COUNT 8
-#define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT)
+#define QUEST_3_SUB_COUNT 8
+#define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT + QUEST_3_SUB_COUNT)
 
 #define QUEST_ARRAY_COUNT (SUB_QUEST_COUNT > QUEST_COUNT ? SUB_QUEST_COUNT : QUEST_COUNT)
 #endif // GUARD_CONSTANTS_QUESTS_H

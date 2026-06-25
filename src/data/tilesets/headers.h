@@ -702,17 +702,6 @@ const struct Tileset gTileset_RocketLeague =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_IslandHarbor =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_IslandHarbor,
-    .palettes = gTilesetPalettes_IslandHarbor,
-    .metatiles = gMetatiles_IslandHarbor,
-    .metatileAttributes = gMetatileAttributes_IslandHarbor,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_PokemonLeague =
 {
     .isCompressed = TRUE,

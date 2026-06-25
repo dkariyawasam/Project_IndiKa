@@ -1377,7 +1377,7 @@ const u8 gText_QuestActive[] =_("active");
 //names
 const u8 gText_QuestTheNatureOfEvolutionName_1[] = _("The Nature of Evolution");
 const u8 gText_SideQuestName_2[] = _("Gym Leader Trials");
-const u8 gText_SideQuestName_3[] = _("Side Quest 3");
+const u8 gText_SideQuestName_3[] = _("Apex Pokémon");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
 const u8 gText_SideQuestName_6[] = _("Side Quest 6");
@@ -1407,9 +1407,9 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
-const u8 gText_QuestTheNatureOfEvolutionDesc_1[] = _("Study Pokémon evolution across the\nKANTO region.");
-const u8 gText_SideQuestDesc_2[] = _("Description 2");
-const u8 gText_SideQuestDesc_3[] = _("Description 3");
+const u8 gText_QuestTheNatureOfEvolutionDesc_1[] = _("Record how POKéMON grow through\ntrust, battle, and evolution.");
+const u8 gText_SideQuestDesc_2[] = _("Observe how KANTO's GYM LEADERS\ntrain and trust their POKéMON.");
+const u8 gText_SideQuestDesc_3[] = _("Record rare Apex POKéMON whose\ninstincts exceed ordinary limits.");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
 const u8 gText_SideQuestDesc_5[] = _("Description 5");
 const u8 gText_SideQuestDesc_6[] = _("Description 6");
@@ -1439,9 +1439,9 @@ const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //completed quest description
-const u8 gText_QuestTheNatureOfEvolutionDoneDesc_1[] = _("Completed Quest 1");
-const u8 gText_SideQuestDoneDesc_2[] = _("Completed Quest 2");
-const u8 gText_SideQuestDoneDesc_3[] = _("Completed Quest 3");
+const u8 gText_QuestTheNatureOfEvolutionDoneDesc_1[] = _("Your field notes helped explain\nhow POKéMON and people grow.");
+const u8 gText_SideQuestDoneDesc_2[] = _("You learned from every KANTO GYM\nLEADER and came back wiser.");
+const u8 gText_SideQuestDoneDesc_3[] = _("Your Apex field notes revealed\ninstinct at its wildest edge.");
 const u8 gText_SideQuestDoneDesc_4[] = _("Completed Quest 4");
 const u8 gText_SideQuestDoneDesc_5[] = _("Completed Quest 5");
 const u8 gText_SideQuestDoneDesc_6[] = _("Completed Quest 6");
@@ -1473,7 +1473,7 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 //map
 const u8 gText_QuestTheNatureOfEvolutionMap1[] = _("KANTO");
 const u8 gText_SideQuestMap2[] = _("KANTO");
-const u8 gText_SideQuestMap3[] = _("Map 3");
+const u8 gText_SideQuestMap3[] = _("KANTO");
 const u8 gText_SideQuestMap4[] = _("Map 4");
 const u8 gText_SideQuestMap5[] = _("Map 5");
 const u8 gText_SideQuestMap6[] = _("Map 6");
@@ -1516,6 +1516,24 @@ const u8 gText_SubQuest2_Name6[] = _("SABRINA");
 const u8 gText_SubQuest2_Name7[] = _("BLAINE");
 const u8 gText_SubQuest2_Name8[] = _("GIOVANNI");
 
+const u8 gText_SubQuest3_Name1[] = _("TANGROWTH");
+const u8 gText_SubQuest3_Name2[] = _("ZAPDOS");
+const u8 gText_SubQuest3_Name3[] = _("ARTICUNO");
+const u8 gText_SubQuest3_Name4[] = _("MEWTWO");
+const u8 gText_SubQuest3_Name5[] = _("OSSCYTHE");
+const u8 gText_SubQuest3_Name6[] = _("MOLTRES");
+const u8 gText_SubQuest3_Name7[] = _("MIME SR.");
+const u8 gText_SubQuest3_Name8[] = _("ANNIHILAPE");
+
+const u8 gText_SubQuest3_Map1[] = _("VIRIDIAN FOREST");
+const u8 gText_SubQuest3_Map2[] = _("POWER PLANT");
+const u8 gText_SubQuest3_Map3[] = _("SEAFOAM ISLANDS");
+const u8 gText_SubQuest3_Map4[] = _("CERULEAN CAVE");
+const u8 gText_SubQuest3_Map5[] = _("POKéMON TOWER");
+const u8 gText_SubQuest3_Map6[] = _("CINNABAR VOLCANO");
+const u8 gText_SubQuest3_Map7[] = _("DIGLETT'S CAVE");
+const u8 gText_SubQuest3_Map8[] = _("MT. MOON");
+
 const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
 const u8 gText_BrockTrialPhase2[] = _("BROCK asked you to find and show\nhim a fossil.");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
@@ -1552,9 +1570,9 @@ const u8 gText_SabrinaTrialPhase3[] = _("Challenge SABRINA in\nPOKéMON TOWER.")
 const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.");
 const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your power.");
 
-const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by bonds\nwith POKéMON.");
-const u8 gText_SubQuest1_Desc2[] = _("Study evolution driven by instinct\nand  survival.");
-const u8 gText_SubQuest1_Desc3[] = _("Study evolution created through\nhuman design.");
+const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by trust\nand friendship.");
+const u8 gText_SubQuest1_Desc2[] = _("Study evolution shaped by habitat,\ninstinct, and survival.");
+const u8 gText_SubQuest1_Desc3[] = _("Study evolution shaped by items,\ntrades, and human care.");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");
 const u8 gText_SubQuest1_Desc5[] = _("Description Sub 5");
 const u8 gText_SubQuest1_Desc6[] = _("Description Sub 6");
@@ -1563,14 +1581,22 @@ const u8 gText_SubQuest1_Desc8[] = _("Description Sub 8");
 const u8 gText_SubQuest1_Desc9[] = _("Description Sub 9");
 const u8 gText_SubQuest1_Desc10[] = _("Description Sub 10");
 
-const u8 gText_SubQuest2_Desc1[] = _("Description Sub 1");
-const u8 gText_SubQuest2_Desc2[] = _("Description Sub 2");
-const u8 gText_SubQuest2_Desc3[] = _("Description Sub 3");
-const u8 gText_SubQuest2_Desc4[] = _("Description Sub 4");
-const u8 gText_SubQuest2_Desc5[] = _("Description Sub 5");
-const u8 gText_SubQuest2_Desc6[] = _("Description Sub 6");
-const u8 gText_SubQuest2_Desc7[] = _("Description Sub 7");
-const u8 gText_SubQuest2_Desc8[] = _("Description Sub 8");
+const u8 gText_SubQuest2_Desc1[] = _("Learn what BROCK knows about\nancient POKéMON and fossils.");
+const u8 gText_SubQuest2_Desc2[] = _("Learn what MISTY knows about\nwater habitats and growth.");
+const u8 gText_SubQuest2_Desc3[] = _("Learn what LT. SURGE knows about\npower, discipline, and trust.");
+const u8 gText_SubQuest2_Desc4[] = _("Learn what ERIKA knows about\nplants, care, and friendship.");
+const u8 gText_SubQuest2_Desc5[] = _("Learn what KOGA knows about\npoison, training, and patience.");
+const u8 gText_SubQuest2_Desc6[] = _("Learn what SABRINA knows about\nhidden power and restraint.");
+const u8 gText_SubQuest2_Desc7[] = _("Learn what BLAINE knows about\nfire, fossils, and adaptation.");
+const u8 gText_SubQuest2_Desc8[] = _("Learn what GIOVANNI knows about\nstrength without understanding.");
+const u8 gText_SubQuest3_Desc1[] = _("Record the Apex TANGROWTH in\nVIRIDIAN FOREST.");
+const u8 gText_SubQuest3_Desc2[] = _("Record the Apex ZAPDOS in the\nPOWER PLANT.");
+const u8 gText_SubQuest3_Desc3[] = _("Record the Apex ARTICUNO in the\nSEAFOAM ISLANDS.");
+const u8 gText_SubQuest3_Desc4[] = _("Record the Apex MEWTWO in\nCERULEAN CAVE.");
+const u8 gText_SubQuest3_Desc5[] = _("Record the Apex OSSCYTHE in\nPOKéMON TOWER.");
+const u8 gText_SubQuest3_Desc6[] = _("Record the Apex MOLTRES in\nCINNABAR VOLCANO.");
+const u8 gText_SubQuest3_Desc7[] = _("Record the Apex MIME SR. in\nDIGLETT'S CAVE.");
+const u8 gText_SubQuest3_Desc8[] = _("Record the Apex ANNIHILAPE in\nMT. MOON.");
 const u8 gText_SubQuest2_Desc9[] = _("Description Sub 9");
 const u8 gText_SubQuest2_Desc10[] = _("Description Sub 10");
 const u8 gText_SubQuest2_Desc11[] = _("Description Sub 11");

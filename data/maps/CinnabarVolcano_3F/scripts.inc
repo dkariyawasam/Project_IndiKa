@@ -64,6 +64,8 @@ CinnabarVolcano_3F_EventScript_Moltres::
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
+	setflag FLAG_INTERACTED_APEX_MOLTRES
+	special TryCompleteApexInstinctQuest
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartApexBattle
 	waitstate
