@@ -1605,18 +1605,6 @@ static const struct SpriteFrameImage sPicTable_SSAnne[] = {
     overworld_frame(gObjectEventPic_SSAnne, 8, 16, 0),
 };
 
-static const struct SpriteFrameImage sPicTable_Snorlax[] = {
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Snorlax, 4, 4, 0),
-};
-
 static const struct SpriteFrameImage sPicTable_Spearow[] = {
     overworld_frame(gObjectEventPic_Spearow, 2, 2, 0),
     overworld_frame(gObjectEventPic_Spearow, 2, 2, 1),

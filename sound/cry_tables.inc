@@ -142,7 +142,6 @@ gCryTable::
 	cry Cry_Kabuto
 	cry Cry_Kabutops
 	cry Cry_Aerodactyl
-	cry Cry_Snorlax
 	cry Cry_Articuno
 	cry Cry_Zapdos
 	cry Cry_Moltres
@@ -184,7 +183,6 @@ gCryTable::
 	cry Cry_Bellossom
 	cry Cry_Marill
 	cry Cry_Azumarill
-	cry Cry_Sudowoodo
 	cry Cry_Politoed
 	cry Cry_Hoppip
 	cry Cry_Skiploom
@@ -533,7 +531,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Kabuto
 	cry_reverse Cry_Kabutops
 	cry_reverse Cry_Aerodactyl
-	cry_reverse Cry_Snorlax
 	cry_reverse Cry_Articuno
 	cry_reverse Cry_Zapdos
 	cry_reverse Cry_Moltres
@@ -575,7 +572,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Bellossom
 	cry_reverse Cry_Marill
 	cry_reverse Cry_Azumarill
-	cry_reverse Cry_Sudowoodo
 	cry_reverse Cry_Politoed
 	cry_reverse Cry_Hoppip
 	cry_reverse Cry_Skiploom

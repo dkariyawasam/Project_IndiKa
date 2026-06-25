@@ -480,14 +480,6 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_BREATH,
               MOVE_CURSE),
 
-    egg_moves(SNORLAX,
-              MOVE_LICK,
-              MOVE_CHARM,
-              MOVE_DOUBLE_EDGE,
-              MOVE_CURSE,
-              MOVE_FISSURE,
-              MOVE_SUBSTITUTE),
-
     egg_moves(DRATINI,
               MOVE_LIGHT_SCREEN,
               MOVE_MIST,
@@ -626,9 +618,6 @@ const u16 gEggMoves[] = {
               MOVE_PERISH_SONG,
               MOVE_SUPERSONIC,
               MOVE_SUBSTITUTE),
-
-    egg_moves(SUDOWOODO,
-              MOVE_SELF_DESTRUCT),
 
     egg_moves(HOPPIP,
               MOVE_CONFUSION,

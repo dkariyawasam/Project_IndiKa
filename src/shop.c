@@ -144,17 +144,19 @@ static void DebugFunc_PrintPurchaseDetails(u8 taskId);
 static void DebugFunc_PrintShopMenuHistoryBeforeClearMaybe(void);
 static void RecordTransactionForQuestLog(void);
 
-static const struct MenuAction sShopMenuActions_BuySell[] =
-{
-    {gText_ShopBuy, {.void_u8 = Task_HandleShopMenuBuy}},
-    {gText_ShopSell, {.void_u8 = Task_HandleShopMenuSell}}
-};
-
-static const struct MenuAction sShopMenuActions_BuySellSpecials[] =
+static const struct MenuAction sShopMenuActions_BuySellCancel[] =
 {
     {gText_ShopBuy, {.void_u8 = Task_HandleShopMenuBuy}},
     {gText_ShopSell, {.void_u8 = Task_HandleShopMenuSell}},
-    {gText_ShopSpecials, {.void_u8 = Task_HandleShopMenuSpecials}}
+    {gText_Cancel, {.void_u8 = Task_HandleShopMenuQuit}}
+};
+
+static const struct MenuAction sShopMenuActions_BuySellSpecialsCancel[] =
+{
+    {gText_ShopBuy, {.void_u8 = Task_HandleShopMenuBuy}},
+    {gText_ShopSell, {.void_u8 = Task_HandleShopMenuSell}},
+    {gText_ShopSpecials, {.void_u8 = Task_HandleShopMenuSpecials}},
+    {gText_Cancel, {.void_u8 = Task_HandleShopMenuQuit}}
 };
 
 static const u16 sThunderPassSpecialItems[] =
@@ -187,7 +189,7 @@ static const struct WindowTemplate sShopMenuWindowTemplate =
     .tilemapLeft = 2,
     .tilemapTop = 1,
     .width = 12,
-    .height = 6,
+    .height = 8,
     .paletteNum = 15,
     .baseBlock = 8
 };
@@ -235,8 +237,8 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
 // Functions
 static u8 CreateShopMenu(u8 martType)
 {
-    const struct MenuAction *menuActions = sShopMenuActions_BuySell;
-    u8 menuActionCount = NELEMS(sShopMenuActions_BuySell);
+    const struct MenuAction *menuActions = sShopMenuActions_BuySellCancel;
+    u8 menuActionCount = NELEMS(sShopMenuActions_BuySellCancel);
 
     sShopData.martType = GetMartTypeFromItemList(martType);
     sShopData.selectedRow = 0;
@@ -247,8 +249,8 @@ static u8 CreateShopMenu(u8 martType)
 
     if (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
     {
-        menuActions = sShopMenuActions_BuySellSpecials;
-        menuActionCount = NELEMS(sShopMenuActions_BuySellSpecials);
+        menuActions = sShopMenuActions_BuySellSpecialsCancel;
+        menuActionCount = NELEMS(sShopMenuActions_BuySellSpecialsCancel);
     }
 
     sShopMenuWindowId = AddWindow(&sShopMenuWindowTemplate);
@@ -297,8 +299,8 @@ static void Task_ShopMenu(u8 taskId)
 {
     s8 input = Menu_ProcessInputNoWrapAround();
     const struct MenuAction *menuActions = (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
-        ? sShopMenuActions_BuySellSpecials
-        : sShopMenuActions_BuySell;
+        ? sShopMenuActions_BuySellSpecialsCancel
+        : sShopMenuActions_BuySellCancel;
 
     switch (input)
     {
