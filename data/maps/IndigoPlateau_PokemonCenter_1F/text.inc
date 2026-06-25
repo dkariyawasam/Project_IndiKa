@@ -14,14 +14,6 @@ IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
     .string "If you win, a door opens to the\n"
     .string "next TRAINER. Good luck!$"
 
-IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
-    .string "I am so sorry, but you've wasted\n"
-    .string "your time coming here.\p"
-    .string "LORELEI of the ELITE FOUR is\n"
-    .string "absent, you see.\p"
-    .string "As a result, the POKéMON LEAGUE is\n"
-    .string "closed for the time being.$"
-
 IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
     .string "AGATHA's GHOST-type POKéMON are\n"
     .string "horrifically terrifying in toughness.\p"
@@ -40,4 +32,3 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
     .string "From what I've heard, LANCE has\n"
     .string "a cousin who's a GYM LEADER\l"
     .string "somewhere far away.$"
-

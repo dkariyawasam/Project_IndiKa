@@ -403,22 +403,6 @@ static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
     { gOtherText_Quit }
 };
 
-static const struct MenuAction sMultichoiceList_Island23[] = {
-    { gText_ThreeIsland },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Island13[] = {
-    { gText_OneIsland },
-    { gText_ThreeIsland },
-    { gOtherText_Exit }
-};
-
-static const struct MenuAction sMultichoiceList_Island12[] = {
-    { gText_OneIsland },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_TradeColosseumCrush[] = {
     { gText_TradeCenter },
     { gText_Colosseum_2 },
@@ -549,9 +533,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_LINK_WIRELESS]                              = MULTICHOICE(sMultichoiceList_Link_Wireless),
     [MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES]             = MULTICHOICE(sMultichoiceList_GameCornerBattleItemPrizes),
     [MULTICHOICE_LINKED_DIRECT_UNION]                        = MULTICHOICE(sMultichoiceList_LinkedDirectUnion),
-    [MULTICHOICE_ISLAND_23]                                  = MULTICHOICE(sMultichoiceList_Island23),
-    [MULTICHOICE_ISLAND_13]                                  = MULTICHOICE(sMultichoiceList_Island13),
-    [MULTICHOICE_ISLAND_12]                                  = MULTICHOICE(sMultichoiceList_Island12),
     [MULTICHOICE_TRADE_COLOSSEUM_CRUSH]                      = MULTICHOICE(sMultichoiceList_TradeColosseumCrush),
     [MULTICHOICE_48]                                         = MULTICHOICE(sMultichoiceList_48),
     [MULTICHOICE_POKEJUMP_DODRIO]                            = MULTICHOICE(sMultichoiceList_PokejumpDodrio),
