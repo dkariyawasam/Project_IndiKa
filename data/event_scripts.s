@@ -663,6 +663,47 @@ Text_WelcomeWantToHealPkmn::
 	.string "Would you like me to heal your\n"
 	.string "POKéMON back to perfect health?$"
 
+Text_NurseRecognizedSoulPass::
+	.string "Oh, that's a SOUL PASS.\p"
+	.string "POKéMON CENTER nurses can now\n"
+	.string "check how close your first\l"
+	.string "POKéMON feels to you.$"
+
+Text_NurseCheckLeadMonFriendship::
+	.string "Let me see the first POKéMON\n"
+	.string "in your party.$"
+
+Text_NurseMonFriendshipLowest::
+	.string "It seems deeply unhappy.\p"
+	.string "Please spend more time caring\n"
+	.string "for it.$"
+
+Text_NurseMonFriendshipLower::
+	.string "It still seems wary of you.\p"
+	.string "Gentle care should help it feel\n"
+	.string "more secure.$"
+
+Text_NurseMonFriendshipLow::
+	.string "It is not very familiar with you\n"
+	.string "yet.\p"
+	.string "Keep traveling together.$"
+
+Text_NurseMonFriendshipMid::
+	.string "It is warming up to you.\p"
+	.string "Trust is beginning to grow.$"
+
+Text_NurseMonFriendshipHigh::
+	.string "It is quite friendly with you.\p"
+	.string "You are treating it well.$"
+
+Text_NurseMonFriendshipHigher::
+	.string "It looks very happy.\p"
+	.string "It clearly trusts you.$"
+
+Text_NurseMonFriendshipHighest::
+	.string "It could not love you more.\p"
+	.string "That bond is wonderful.$"
+
 Text_TakeYourPkmnForFewSeconds::
 	.string "Okay, I'll take your POKéMON for a\n"
 	.string "few seconds.$"

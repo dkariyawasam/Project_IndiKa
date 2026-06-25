@@ -27,6 +27,10 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "cleared VERMILION GYM!\p"
     .string "You're special, kid!$"
 
+VermilionCity_Gym_Text_ReceivedThunderPassFromLtSurge::
+    .string "{PLAYER} received the THUNDER PASS\n"
+    .string "from LT. SURGE.$"
+
 VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade::
     .string "Hey, kid!\p"
     .string "You've got a RAICHU with real\n"
