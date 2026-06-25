@@ -92,8 +92,8 @@ Route20_Text_RogerPostBattle::
 
 Route20_Text_MarinerIntro::
     .string "I heard SEAFOAM got fractured\n"
-    .string "when a sudden cold settled in\l"
-    .string "the caves and reshaped it.$"
+    .string "when the cold arrived all at\l"
+    .string "once and reshaped the caves.$"
 
 Route20_Text_MarinerDefeat::
     .string "Agh!$"
@@ -157,6 +157,6 @@ Route20_Text_SeafoamUsedToBeVolcanic::
     .string "SEAFOAM ISLANDS used to be\n"
     .string "volcanic just like CINNABAR\l"
     .string "ISLAND.\p"
-    .string "Then one day everything changed\n"
-    .string "at once, and now it's as cold\l"
-    .string "as ice!$"
+    .string "Then one day it all changed at\n"
+    .string "once, and now it's as cold as\l"
+    .string "ice!$"

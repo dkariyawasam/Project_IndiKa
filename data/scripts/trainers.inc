@@ -4395,8 +4395,11 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_RematchIntro::
 EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_Defeat::
     .string "VIRIDIAN FOREST wins today!$"
 EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The flowers in VIRIDIAN FOREST\n"
+    .string "are so beautiful.\p"
+    .string "They seem more vibrant and grow\n"
+    .string "in number the closer you get to\l"
+    .string "the centre of the forest.$"
 EventScript_GymAdjacent_AROMA_LADY_ROSE_Text_Intro::
     .string "This AROMA LADY knows\n"
     .string "VIRIDIAN FOREST well!$"
@@ -6481,11 +6484,17 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
 	trainerbattle_rematch TRAINER_AROMA_LADY_NIKKI, EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_RematchIntro, EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_Defeat
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_VIOLET::
