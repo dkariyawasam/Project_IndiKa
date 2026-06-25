@@ -1898,19 +1898,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 2,
     },
 
-    [NATIONAL_DEX_SNORLAX] =
-    {
-        .categoryName = _("SLEEPING"),
-        .height = 21,
-        .weight = 4600,
-        .description = gSnorlaxPokedexText,
-        .unusedDescription = gSnorlaxPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = 1,
-        .trainerScale = 408,
-        .trainerOffset = 7,
-    },
-
     [NATIONAL_DEX_ARTICUNO] =
     {
         .categoryName = _("FREEZE"),
@@ -2440,19 +2427,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .unusedDescription = gAzumarillPokedexTextUnused,
         .pokemonScale = 448,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
-    [NATIONAL_DEX_SUDOWOODO] =
-    {
-        .categoryName = _("IMITATION"),
-        .height = 12,
-        .weight = 380,
-        .description = gSudowoodoPokedexText,
-        .unusedDescription = gSudowoodoPokedexTextUnused,
-        .pokemonScale = 305,
-        .pokemonOffset = 7,
         .trainerScale = 256,
         .trainerOffset = -2,
     },

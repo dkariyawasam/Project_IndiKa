@@ -757,6 +757,39 @@ static const u16 sDexCategory_NonNativePkmn_Page34[] = {
 
 static const u16 sDexCategory_NonNativePkmn_Page35[] = {
     SPECIES_KOFFING_GALARIAN,
+    SPECIES_WEEZING_GALARIAN,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page36[] = {
+    SPECIES_TAUROS,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page37[] = {
+    SPECIES_MAREEP,
+    SPECIES_FLAAFFY,
+    SPECIES_AMPHAROS,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page38[] = {
+    SPECIES_AZURILL,
+    SPECIES_MARILL,
+    SPECIES_AZUMARILL,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page39[] = {
+    SPECIES_SMEARGLE,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page40[] = {
+    SPECIES_MILTANK,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page41[] = {
+    SPECIES_FARFETCHD,
+};
+
+static const u16 sDexCategory_NonNativePkmn_Page42[] = {
+    SPECIES_GIRAFARIG,
 };
 
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
@@ -923,6 +956,13 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page33),
     DEX_CATEGORY(NonNativePkmn_Page34),
     DEX_CATEGORY(NonNativePkmn_Page35),
+    DEX_CATEGORY(NonNativePkmn_Page36),
+    DEX_CATEGORY(NonNativePkmn_Page37),
+    DEX_CATEGORY(NonNativePkmn_Page38),
+    DEX_CATEGORY(NonNativePkmn_Page39),
+    DEX_CATEGORY(NonNativePkmn_Page40),
+    DEX_CATEGORY(NonNativePkmn_Page41),
+    DEX_CATEGORY(NonNativePkmn_Page42),
 };
 static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page1),

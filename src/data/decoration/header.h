@@ -997,17 +997,7 @@ const struct Decoration gDecorations[] = {
         DECORCAT_CUSHION,
         2000,
         DecorDesc_WATER_CUSHION,
-        DecorGfx_WATER_CUSHION
-    }, {
-        DECOR_SNORLAX_DOLL,
-        _("SNORLAX DOLL"),
-        DECORPERM_SPRITE,
-        DECORSHAPE_1x2,
-        DECORCAT_DOLL,
-        10000,
-        DecorDesc_SNORLAX_DOLL,
-        DecorGfx_SNORLAX_DOLL
-    }, {
+        DecorGfx_WATER_CUSHION    }, {
         DECOR_RHYDON_DOLL,
         _("RHYDON DOLL"),
         DECORPERM_SPRITE,

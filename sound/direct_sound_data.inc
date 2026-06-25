@@ -872,10 +872,6 @@ Cry_Aerodactyl::
 	.incbin "sound/direct_sound_samples/cries/aerodactyl.bin"
 
 	.align 2
-Cry_Snorlax::
-	.incbin "sound/direct_sound_samples/cries/snorlax.bin"
-
-	.align 2
 Cry_Articuno::
 	.incbin "sound/direct_sound_samples/cries/articuno.bin"
 
@@ -1038,10 +1034,6 @@ Cry_Marill::
 	.align 2
 Cry_Azumarill::
 	.incbin "sound/direct_sound_samples/cries/azumarill.bin"
-
-	.align 2
-Cry_Sudowoodo::
-	.incbin "sound/direct_sound_samples/cries/sudowoodo.bin"
 
 	.align 2
 Cry_Politoed::

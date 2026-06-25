@@ -486,7 +486,7 @@ void SetQuestLogEvent(u16 eventId, const u16 * data)
     if (TryDeferTrainerBattleEvent(eventId, data) == TRUE)
         return;
 
-    // Wild battles with static encounter species (Snorlax, Mewtwo, etc.) are not recorded.
+    // Wild battles with static encounter species (Mewtwo, etc.) are not recorded.
     if (IsEventWithSpecialEncounterSpecies(eventId, data) == TRUE)
         return;
 
@@ -1818,7 +1818,6 @@ static bool8 IsSpeciesFromSpecialEncounter(u16 species)
 {
     switch (species)
     {
-    case SPECIES_SNORLAX:
     case SPECIES_ARTICUNO:
     case SPECIES_ZAPDOS:
     case SPECIES_MOLTRES:

@@ -1013,12 +1013,6 @@ const u8 gAerodactylPokedexText[] = _(
 
 const u8 gAerodactylPokedexTextUnused[] = _("");
 
-const u8 gSnorlaxPokedexText[] = _(
-    "It is not satisfied unless it eats over 880\n"
-    "pounds of food every day. When it is done\n"
-    "eating, it goes promptly to sleep.");
-
-const u8 gSnorlaxPokedexTextUnused[] = _("");
 
 const u8 gArticunoPokedexText[] = _(
     "One of the legendary bird POKéMON.\n"
@@ -1307,12 +1301,6 @@ const u8 gAzumarillPokedexText[] = _(
 
 const u8 gAzumarillPokedexTextUnused[] = _("");
 
-const u8 gSudowoodoPokedexText[] = _(
-    "It disguises itself as a tree to avoid\n"
-    "attack. It hates water, so it will\n"
-    "disappear if it starts raining.");
-
-const u8 gSudowoodoPokedexTextUnused[] = _("");
 
 const u8 gPolitoedPokedexText[] = _(
     "Whenever three or more of these get\n"
