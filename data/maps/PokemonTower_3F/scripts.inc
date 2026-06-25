@@ -111,7 +111,9 @@ PokemonTower_3F_EventScript_DefeatedSabrina::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_SABRINA_TRIAL_STATE, 4
 	msgbox PokemonTower_3F_Text_SabrinaAfterBattle
-	closemessage
+	giveitem_msg SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina, ITEM_MARSH_FINDER, 1, MUS_OBTAIN_KEY_ITEM
+	setflag FLAG_GOT_MARSH_FINDER
+	msgbox SaffronCity_Gym_Text_ExplainMarshFinder
 	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
 	applymovement LOCALID_POKEMON_TOWER_3F_SABRINA, PokemonTower_3F_Movement_SabrinaStepBehindGuide
 	waitmovement 0

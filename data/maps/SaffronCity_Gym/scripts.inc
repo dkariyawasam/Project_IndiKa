@@ -111,9 +111,6 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_SABRINA_TRIAL_STATE, 4
 	msgbox SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis
-	giveitem_msg SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina, ITEM_MARSH_FINDER, 1, MUS_OBTAIN_KEY_ITEM
-	setflag FLAG_GOT_MARSH_FINDER
-	msgbox SaffronCity_Gym_Text_ExplainMarshFinder
 	release
 	end
 

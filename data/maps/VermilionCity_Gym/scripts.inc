@@ -117,8 +117,9 @@ VermilionCity_Gym_EventScript_DefeatedLtSurge::
 	setflag FLAG_DEFEATED_LT_SURGE
 	setflag FLAG_BADGE03_GET
 	setvar VAR_LT_SURGE_TRIAL_STATE, 4
-	msgbox VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis
+	msgbox VermilionCity_Gym_Text_TakeThisWithYou
 	giveitem_msg VermilionCity_Gym_Text_ReceivedThunderPassFromLtSurge, ITEM_THUNDER_PASS, 1, MUS_OBTAIN_KEY_ITEM
+	msgbox VermilionCity_Gym_Text_ExplainThunderBadge
 	release
 	end
 
