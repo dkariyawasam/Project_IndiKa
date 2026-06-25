@@ -83,22 +83,22 @@ RocketLeague_Arena_Text_ProtonPostBattle::
     .string "be polite.$"
 
 RocketLeague_Arena_Text_RazorPostBattle::
-    .string "DEE: You cut clean through\n"
+    .string "KARDINAL: You cut clean through\n"
     .string "my plan.\p"
     .string "Let's see you do it again.$"
 
 RocketLeague_Arena_Text_VexPostBattle::
-    .string "HONGMIAO: Data point recorded.\p"
+    .string "SHION: Data point recorded.\p"
     .string "Your odds just became more\n"
     .string "interesting.$"
 
 RocketLeague_Arena_Text_NovaPostBattle::
-    .string "JAKE: That hit harder than\n"
+    .string "MOJAY: That hit harder than\n"
     .string "I expected.\p"
     .string "No shame in recalibrating.$"
 
 RocketLeague_Arena_Text_KnellPostBattle::
-    .string "JAYCE: You heard the bell\n"
+    .string "ATTRYCE: You heard the bell\n"
     .string "and kept standing.\p"
     .string "Respect.$"
 
