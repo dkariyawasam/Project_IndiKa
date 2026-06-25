@@ -6,8 +6,11 @@ CinnabarVolcano_3F_Text_BlairDefeat::
     .string "Burned out!$"
 
 CinnabarVolcano_3F_Text_BlairPostBattle::
-    .string "Fire-types love this pressure.\n"
-    .string "They get sharper down here.$"
+    .string "Fire-types love this pressure.\p"
+    .string "Down here, even burned ground\n"
+    .string "feels alive again.\p"
+    .string "Like the volcano keeps renewing\n"
+    .string "its own energy.$"
 
 CinnabarVolcano_3F_Text_EliasIntro::
     .string "These stones remember every\n"

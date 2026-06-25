@@ -10,14 +10,17 @@ CinnabarIsland_Text_PokemonLabAccessGranted::
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
     .string "CINNABAR GYM's BLAINE is quite the\n"
     .string "odd fellow.\p"
-    .string "He's lived on the island since way\n"
-    .string "before the LAB was built.$"
+    .string "He has watched this island change\n"
+    .string "from old lava rock into a place\l"
+    .string "of invention.\p"
+    .string "No wonder he talks so much about\n"
+    .string "progress.$"
 
 CinnabarIsland_Text_ScientistsExperimentInMansion::
-    .string "Scientists conduct experiments \n"
-    .string "in the burned-out building.\p"
-    .string "You know, the one they call the\n"
-    .string "POKéMON MANSION.$"
+    .string "After each eruption, the volcano\n"
+    .string "leaves new soil behind.\p"
+    .string "Plants return stronger than before.\n"
+    .string "Nature renews itself through fire.$"
 
 CinnabarIsland_Text_IslandSign::
     .string "CINNABAR ISLAND\n"

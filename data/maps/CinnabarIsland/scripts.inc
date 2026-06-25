@@ -41,6 +41,9 @@ CinnabarIsland_EventScript_Woman::
 
 CinnabarIsland_EventScript_OldMan::
 	msgbox CinnabarIsland_Text_ScientistsExperimentInMansion, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	end
 
 CinnabarIsland_EventScript_IslandSign::

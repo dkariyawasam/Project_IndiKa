@@ -2,9 +2,11 @@ CinnabarIsland_Gym_Text_BlaineIntro::
     .string "Hah!\p"
     .string "I am BLAINE, the red-hot LEADER\n"
     .string "of CINNABAR GYM!\p"
-    .string "My fiery POKéMON are all rough\n"
-    .string "and ready with intense heat!\p"
-    .string "They incinerate all challengers!\p"
+    .string "Fire is more than destruction.\n"
+    .string "Properly handled, it drives\l"
+    .string "innovation and progress!\p"
+    .string "My fiery POKéMON are ready to\n"
+    .string "test your next breakthrough!\p"
     .string "Hah!\n"
     .string "You better have BURN HEAL!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
@@ -28,9 +30,9 @@ CinnabarIsland_Gym_Text_UnusedBlaineReward::
     .string "from BLAINE.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
-    .string "Fire is a living thing!\p"
-    .string "Treat it carelessly, and it will\n"
-    .string "burn you before your foes.$"
+    .string "Fire is the engine of progress!\p"
+    .string "Treat it with discipline, and it\n"
+    .string "can light the way to tomorrow.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
