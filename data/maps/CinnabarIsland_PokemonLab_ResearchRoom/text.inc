@@ -1,6 +1,9 @@
-CinnabarIsland_PokemonLab_ResearchRoom_Text_EeveeCanEvolveIntroThreeMons::
-    .string "EEVEE can evolve into one of three\n"
-    .string "kinds of POKéMON.$"
+CinnabarIsland_PokemonLab_ResearchRoom_Text_MoltresRenewingEnergy::
+    .string "Our lab studies how fire can\n"
+    .string "restore as well as consume.\p"
+    .string "There are reports of MOLTRES\n"
+    .string "stirring life back into scorched\l"
+    .string "volcanic earth.$"
 
 CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
     .string "There's an e-mail message.\p"
@@ -16,4 +19,3 @@ CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
 
 CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe::
     .string "An amber pipe!$"
-
