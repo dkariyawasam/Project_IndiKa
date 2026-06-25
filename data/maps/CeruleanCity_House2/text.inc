@@ -5,6 +5,13 @@ CeruleanCity_House2_Text_RepairsCostABundle::
     .string "That repair is going to cost me a\n"
     .string "bundle, it is!$"
 
+CeruleanCity_House2_Text_EnormousPokemonBargedIn::
+    .string "An enormous POKéMON barged in\n"
+    .string "through the wall!\p"
+    .string "It was unstoppable!\p"
+    .string "Lucky for us, it rampaged out\n"
+    .string "the door and headed west.$"
+
 CeruleanCity_House2_Text_RepairWorkIsExhausting::
     .string "Repair work is exhausting.\p"
     .string "At least there's a breeze through\n"
