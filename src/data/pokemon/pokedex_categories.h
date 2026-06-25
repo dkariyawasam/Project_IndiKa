@@ -383,6 +383,15 @@ static const u16 sDexCategory_CavePkmn_Page20[] = {
     SPECIES_CAMERUPT,
 };
 
+static const u16 sDexCategory_CavePkmn_Page21[] = {
+    SPECIES_BRONZOR,
+    SPECIES_BRONZONG,
+};
+
+static const u16 sDexCategory_CavePkmn_Page22[] = {
+    SPECIES_SHUCKLE,
+};
+
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
     SPECIES_STARLY,
     SPECIES_STARAVIA,
@@ -553,6 +562,17 @@ static const u16 sDexCategory_UrbanPkmn_Page16[] = {
     SPECIES_DITTO,
 };
 
+static const u16 sDexCategory_UrbanPkmn_Page17[] = {
+    SPECIES_CHINGLING,
+    SPECIES_CHIMECHO,
+};
+
+static const u16 sDexCategory_UrbanPkmn_Page18[] = {
+    SPECIES_DUSKULL,
+    SPECIES_DUSCLOPS,
+    SPECIES_DUSKNOIR,
+};
+
 static const u16 sDexCategory_RarePkmn_Page1[] = {
     SPECIES_OMANYTE,
     SPECIES_OMASTAR,
@@ -618,28 +638,8 @@ static const u16 sDexCategory_NonNativePkmn_Page5[] = {
     SPECIES_EELEKTROSS,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page8[] = {
-    SPECIES_CHINGLING,
-    SPECIES_CHIMECHO,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page9[] = {
-    SPECIES_BRONZOR,
-    SPECIES_BRONZONG,
-};
-
 static const u16 sDexCategory_NonNativePkmn_Page10[] = {
     SPECIES_SPIRITOMB,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page11[] = {
-    SPECIES_DUSKULL,
-    SPECIES_DUSCLOPS,
-    SPECIES_DUSKNOIR,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page12[] = {
-    SPECIES_SHUCKLE,
 };
 
 static const u16 sDexCategory_NonNativePkmn_Page13[] = {
@@ -880,6 +880,8 @@ static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
     DEX_CATEGORY(CavePkmn_Page18),
     DEX_CATEGORY(CavePkmn_Page19),
     DEX_CATEGORY(CavePkmn_Page20),
+    DEX_CATEGORY(CavePkmn_Page21),
+    DEX_CATEGORY(CavePkmn_Page22),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {
@@ -921,6 +923,8 @@ static const struct PokedexCategoryPage sDexCategory_UrbanPkmn[] = {
     DEX_CATEGORY(UrbanPkmn_Page14),
     DEX_CATEGORY(UrbanPkmn_Page15),
     DEX_CATEGORY(UrbanPkmn_Page16),
+    DEX_CATEGORY(UrbanPkmn_Page17),
+    DEX_CATEGORY(UrbanPkmn_Page18),
 };
 
 static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
@@ -929,11 +933,7 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page3),
     DEX_CATEGORY(NonNativePkmn_Page4),
     DEX_CATEGORY(NonNativePkmn_Page5),
-    DEX_CATEGORY(NonNativePkmn_Page8),
-    DEX_CATEGORY(NonNativePkmn_Page9),
     DEX_CATEGORY(NonNativePkmn_Page10),
-    DEX_CATEGORY(NonNativePkmn_Page11),
-    DEX_CATEGORY(NonNativePkmn_Page12),
     DEX_CATEGORY(NonNativePkmn_Page13),
     DEX_CATEGORY(NonNativePkmn_Page14),
     DEX_CATEGORY(NonNativePkmn_Page16),
