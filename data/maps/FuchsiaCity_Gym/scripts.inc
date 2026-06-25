@@ -201,7 +201,6 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 5
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
-	giveitem_msg FuchsiaCity_Gym_Text_ReceivedSoulPassFromKoga, ITEM_SOUL_PASS, 1, MUS_OBTAIN_KEY_ITEM
 	release
 	end
 
