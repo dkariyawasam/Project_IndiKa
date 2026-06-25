@@ -4065,12 +4065,12 @@
       "secondaryId": 0
     },
     {
-      "english": "SOUL FINDER",
-      "itemId": "ITEM_ITEMFINDER",
+      "english": "MARSH FINDER",
+      "itemId": "ITEM_MARSH_FINDER",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "The SOULBADGE reconfigured into\\na finder. Used to sense hidden\\nitems nearby.",
+      "description_english": "The MARSHBADGE reconfigured into\\na finder. Used to sense hidden\\nitems nearby.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",

@@ -201,8 +201,6 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 5
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
-	additem ITEM_ITEMFINDER
-	setflag FLAG_GOT_ITEMFINDER
 	release
 	end
 
