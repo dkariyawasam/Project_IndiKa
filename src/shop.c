@@ -25,6 +25,7 @@
 #include "money.h"
 #include "quest_log.h"
 #include "script.h"
+#include "event_data.h"
 #include "constants/songs.h"
 #include "constants/items.h"
 #include "constants/game_stat.h"
@@ -57,17 +58,18 @@ struct ShopData
 {
     /*0x00*/ void (*callback)(void);
     /*0x04*/ const u16 *itemList;
-    /*0x08*/ u32 itemPrice;
-    /*0x0C*/ u16 selectedRow;
-    /*0x0E*/ u16 scrollOffset;
-    /*0x10*/ u16 itemCount;
-    /*0x12*/ u16 itemsShowed;
-    /*0x14*/ u16 maxQuantity;
-    /*0x16*/ u16 martType:4;    // 0x1 if tm list
+    /*0x08*/ const u16 *mainItemList;
+    /*0x0C*/ u32 itemPrice;
+    /*0x10*/ u16 selectedRow;
+    /*0x12*/ u16 scrollOffset;
+    /*0x14*/ u16 itemCount;
+    /*0x16*/ u16 itemsShowed;
+    /*0x18*/ u16 maxQuantity;
+    /*0x1A*/ u16 martType:4;    // 0x1 if tm list
              u16 fontId:5;
              u16 itemSlot:2;
              u16 unk16_11:5;
-    /*0x18*/ u16 unk18;
+    /*0x1C*/ u16 unk18;
 };
 
 static EWRAM_DATA s16 sViewportObjectEvents[OBJECT_EVENTS_COUNT][4] = {0};
@@ -89,12 +91,14 @@ static void SetShopMenuCallback(MainCallback callback);
 static void Task_ShopMenu(u8 taskId);
 static void Task_HandleShopMenuBuy(u8 taskId);
 static void Task_HandleShopMenuSell(u8 taskId);
+static void Task_HandleShopMenuSpecials(u8 taskId);
 static void CB2_GoToSellMenu(void);
 static void Task_HandleShopMenuQuit(u8 taskId);
 static void ClearShopMenuWindow(void);
 static void Task_GoToBuyOrSellMenu(u8 taskId);
 static void MapPostLoadHook_ReturnToShopMenu(void);
 static void Task_ReturnToShopMenu(u8 taskId);
+static void Task_ShowShopMenuAfterThunderPassIntro(u8 taskId);
 static void ShowShopMenuAfterExitingBuyOrSellMenu(u8 taskId);
 static void CB2_BuyMenu(void);
 static void VBlankCB_BuyMenu(void);
@@ -140,11 +144,35 @@ static void DebugFunc_PrintPurchaseDetails(u8 taskId);
 static void DebugFunc_PrintShopMenuHistoryBeforeClearMaybe(void);
 static void RecordTransactionForQuestLog(void);
 
-static const struct MenuAction sShopMenuActions_BuySellQuit[] =
+static const struct MenuAction sShopMenuActions_BuySell[] =
+{
+    {gText_ShopBuy, {.void_u8 = Task_HandleShopMenuBuy}},
+    {gText_ShopSell, {.void_u8 = Task_HandleShopMenuSell}}
+};
+
+static const struct MenuAction sShopMenuActions_BuySellSpecials[] =
 {
     {gText_ShopBuy, {.void_u8 = Task_HandleShopMenuBuy}},
     {gText_ShopSell, {.void_u8 = Task_HandleShopMenuSell}},
-    {gText_ShopQuit, {.void_u8 = Task_HandleShopMenuQuit}}
+    {gText_ShopSpecials, {.void_u8 = Task_HandleShopMenuSpecials}}
+};
+
+static const u16 sThunderPassSpecialItems[] =
+{
+    ITEM_HP_UP,
+    ITEM_PROTEIN,
+    ITEM_IRON,
+    ITEM_CALCIUM,
+    ITEM_ZINC,
+    ITEM_CARBOS,
+    ITEM_GUARD_SPEC,
+    ITEM_DIRE_HIT,
+    ITEM_X_ATTACK,
+    ITEM_X_DEFEND,
+    ITEM_X_SPEED,
+    ITEM_X_ACCURACY,
+    ITEM_X_SPECIAL,
+    ITEM_NONE
 };
 
 static const struct YesNoFuncTable sShopMenuActions_BuyQuit[] =
@@ -207,6 +235,9 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
 // Functions
 static u8 CreateShopMenu(u8 martType)
 {
+    const struct MenuAction *menuActions = sShopMenuActions_BuySell;
+    u8 menuActionCount = NELEMS(sShopMenuActions_BuySell);
+
     sShopData.martType = GetMartTypeFromItemList(martType);
     sShopData.selectedRow = 0;
     if (ContextNpcGetTextColor() == NPC_TEXT_COLOR_NEUTRAL)
@@ -214,10 +245,16 @@ static u8 CreateShopMenu(u8 martType)
     else
         sShopData.fontId = FONT_NORMAL;
 
+    if (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
+    {
+        menuActions = sShopMenuActions_BuySellSpecials;
+        menuActionCount = NELEMS(sShopMenuActions_BuySellSpecials);
+    }
+
     sShopMenuWindowId = AddWindow(&sShopMenuWindowTemplate);
     SetStdWindowBorderStyle(sShopMenuWindowId, 0);
-    PrintTextArray(sShopMenuWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, 16, 3, sShopMenuActions_BuySellQuit);
-    Menu_InitCursor(sShopMenuWindowId, FONT_NORMAL, 0, 2, 16, 3, 0);
+    PrintTextArray(sShopMenuWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, 16, menuActionCount, menuActions);
+    Menu_InitCursor(sShopMenuWindowId, FONT_NORMAL, 0, 2, 16, menuActionCount, 0);
     PutWindowTilemap(sShopMenuWindowId);
     CopyWindowToVram(sShopMenuWindowId, COPYWIN_MAP);
     return CreateTask(Task_ShopMenu, 8);
@@ -259,6 +296,9 @@ static void SetShopMenuCallback(void (*callback)(void))
 static void Task_ShopMenu(u8 taskId)
 {
     s8 input = Menu_ProcessInputNoWrapAround();
+    const struct MenuAction *menuActions = (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
+        ? sShopMenuActions_BuySellSpecials
+        : sShopMenuActions_BuySell;
 
     switch (input)
     {
@@ -269,13 +309,14 @@ static void Task_ShopMenu(u8 taskId)
         Task_HandleShopMenuQuit(taskId);
         break;
     default:
-        sShopMenuActions_BuySellQuit[Menu_GetCursorPos()].func.void_u8(taskId);
+        menuActions[Menu_GetCursorPos()].func.void_u8(taskId);
         break;
     }
 }
 
 static void Task_HandleShopMenuBuy(u8 taskId)
 {
+    SetShopItemsForSale(sShopData.mainItemList);
     SetWordTaskArg(taskId, 0xE, (u32)CB2_InitBuyMenu);
     FadeScreen(FADE_TO_BLACK, 0);
     gTasks[taskId].func = Task_GoToBuyOrSellMenu;
@@ -284,6 +325,14 @@ static void Task_HandleShopMenuBuy(u8 taskId)
 static void Task_HandleShopMenuSell(u8 taskId)
 {
     SetWordTaskArg(taskId, 0xE, (u32)CB2_GoToSellMenu);
+    FadeScreen(FADE_TO_BLACK, 0);
+    gTasks[taskId].func = Task_GoToBuyOrSellMenu;
+}
+
+static void Task_HandleShopMenuSpecials(u8 taskId)
+{
+    SetShopItemsForSale(sThunderPassSpecialItems);
+    SetWordTaskArg(taskId, 0xE, (u32)CB2_InitBuyMenu);
     FadeScreen(FADE_TO_BLACK, 0);
     gTasks[taskId].func = Task_GoToBuyOrSellMenu;
 }
@@ -331,6 +380,11 @@ static void Task_ReturnToShopMenu(u8 taskId)
         return;
 
     DisplayItemMessageOnField(taskId, GetMartFontId(), gText_AnythingElseICanHelp, ShowShopMenuAfterExitingBuyOrSellMenu);
+}
+
+static void Task_ShowShopMenuAfterThunderPassIntro(u8 taskId)
+{
+    DisplayItemMessageOnField(taskId, GetMartFontId(), gText_MartThunderPassAcknowledgement, ShowShopMenuAfterExitingBuyOrSellMenu);
 }
 
 static void ShowShopMenuAfterExitingBuyOrSellMenu(u8 taskId)
@@ -1194,12 +1248,21 @@ static void RecordTransactionForQuestLog(void)
 void CreatePokemartMenu(const u16 *itemsForSale)
 {
     SetShopItemsForSale(itemsForSale);
-    CreateShopMenu(MART_TYPE_REGULAR);
+    sShopData.mainItemList = itemsForSale;
     SetShopMenuCallback(ScriptContext_Enable);
     DebugFunc_PrintShopMenuHistoryBeforeClearMaybe();
     memset(&sHistory, 0, sizeof(sHistory));
     sHistory[0].mapSec = gMapHeader.regionMapSectionId;
     sHistory[1].mapSec = gMapHeader.regionMapSectionId;
+    if (CheckBagHasItem(ITEM_THUNDER_PASS, 1) && !FlagGet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART))
+    {
+        FlagSet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART);
+        CreateTask(Task_ShowShopMenuAfterThunderPassIntro, 8);
+    }
+    else
+    {
+        CreateShopMenu(MART_TYPE_REGULAR);
+    }
 }
 
 void CreateDecorationShop1Menu(const u16 *itemsForSale)

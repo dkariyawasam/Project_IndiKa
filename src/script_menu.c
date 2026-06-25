@@ -43,6 +43,12 @@ static const struct MenuAction sMultichoiceList_YesNo[] = {
     { gText_No }
 };
 
+static const struct MenuAction sMultichoiceList_HealCheckFriendshipCancel[] = {
+    { gText_Heal },
+    { gText_CheckFriendship },
+    { gText_Cancel }
+};
+
 static const struct MenuAction sMultichoiceList_TrainerCardIconTint[] = {
     { gText_Normal },
     { gText_Black },
@@ -545,6 +551,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_ROUTE21_FERRY]                              = MULTICHOICE(sMultichoiceList_Route21Ferry),
     [MULTICHOICE_ROUTE20_FERRY]                              = MULTICHOICE(sMultichoiceList_Route20Ferry),
     [MULTICHOICE_LEFT_RIGHT]                                 = MULTICHOICE(sMultichoiceList_LeftRight),
+    [MULTICHOICE_HEAL_CHECK_FRIENDSHIP_CANCEL]               = MULTICHOICE(sMultichoiceList_HealCheckFriendshipCancel),
 };
 
 // From Cool to Berries goes unused

@@ -123,6 +123,7 @@ const u8 gOtherText_Give[] = _("GIVE");
 const u8 gMenuText_Confirm[] = _("けってい");
 const u8 gOtherText_Walk[] = _("WALK");
 const u8 gFameCheckerText_Cancel[] = _("CANCEL");
+const u8 gText_Cancel[] = _("CANCEL");
 const u8 gOtherText_Exit[] = _("EXIT");
 const u8 gString_Dummy[] = _("");
 const u8 gText_Cancel7[] = _("キャンセル");
@@ -211,9 +212,16 @@ const u8 gText_BerryPouch[] = _("BERRY POUCH");
 const u8 gText_TheBerryPouchWillBePutAway[] = _("The BERRY POUCH will be\nput away.");
 const u8 gText_ShopBuy[] = _("BUY");
 const u8 gText_ShopSell[] = _("SELL");
+const u8 gText_ShopSpecials[] = _("SPECIALS");
 const u8 gText_ShopQuit[] = _("SEE YA!");
 const u8 gText_InBagVar1[] = _("IN BAG:{FONT_SMALL} {STR_VAR_1}");
 const u8 gText_QuitShopping[] = _("Quit shopping.");
+const u8 gText_MartThunderPassAcknowledgement[] = _("Ah, that's a THUNDER PASS!\p"
+    "You now have access to our\n"
+    "SPECIALS stock of vitamins and\l"
+    "battle items.");
+const u8 gText_Heal[] = _("HEAL");
+const u8 gText_CheckFriendship[] = _("CHECK FRIENDSHIP");
 const u8 gText_Var1CertainlyHowMany[] = _("{STR_VAR_1}? Certainly.\nHow many would you like?");
 const u8 gText_Var1AndYouWantedVar2[] = _("{STR_VAR_1}, and you want {STR_VAR_2}.\nThat will be ¥{STR_VAR_3}. Okay?");
 const u8 gText_Var1IsItThatllBeVar2[] = _("{STR_VAR_1} だね!\n{STR_VAR_2}¥ だけど かうかい?");
