@@ -88,7 +88,10 @@ ViridianCity_EventScript_YoungsterDeclineExplanation::
 ViridianCity_EventScript_Woman::
 	lock
 	faceplayer
-	msgbox ViridianCity_Text_GoShoppingInPewterOccasionally
+	msgbox ViridianCity_Text_FatherHeardShadowyFigure
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	release
 	end
 

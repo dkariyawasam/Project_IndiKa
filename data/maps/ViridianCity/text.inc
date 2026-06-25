@@ -24,11 +24,12 @@ ViridianCity_Text_ExplainCaterpieWeedle::
     .string "Watch that your POKéMON aren't\n"
     .string "stabbed by WEEDLE's POISON STING.$"
 
-ViridianCity_Text_GoShoppingInPewterOccasionally::
-    .string "I go shopping in PEWTER CITY\n"
-    .string "occasionally.\p"
-    .string "I have to take the winding trail in\n"
-    .string "VIRIDIAN FOREST when I go.$"
+ViridianCity_Text_FatherHeardShadowyFigure::
+    .string "My father once told me he\n"
+    .string "ventured deep into VIRIDIAN\l"
+    .string "FOREST.\p"
+    .string "He heard the grumbling growls of\n"
+    .string "a shadowy figure lurking within.$"
 
 ViridianCity_Text_CitySign::
     .string "VIRIDIAN CITY \n"
