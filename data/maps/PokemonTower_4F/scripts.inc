@@ -4,8 +4,12 @@ PokemonTower_4F_MapScripts::
 	.byte 0
 
 PokemonTower_4F_OnTransition::
-	call_if_unset FLAG_FOUGHT_OSSCYTHE, PokemonTower_4F_EventScript_ShowOsscythe
-	call_if_set FLAG_FOUGHT_OSSCYTHE, PokemonTower_4F_EventScript_HideOsscythe
+	call PokemonTower_4F_EventScript_HideOsscythe
+	goto_if_set FLAG_FOUGHT_OSSCYTHE, PokemonTower_4F_EventScript_OsscytheHidden
+	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, PokemonTower_4F_EventScript_ShowOsscythe
+PokemonTower_4F_EventScript_OsscytheHidden::
 	end
 
 PokemonTower_4F_OnResume::

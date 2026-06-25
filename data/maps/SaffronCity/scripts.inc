@@ -20,7 +20,23 @@ SaffronCity_EventScript_RocketGrunt2::
 	end
 
 SaffronCity_EventScript_RocketGrunt4::
-	msgbox SaffronCity_Text_SaffronBelongsToTeamRocket, MSGBOX_NPC
+	msgbox SaffronCity_Text_TookCuboneFromMother, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
+	end
+
+SaffronCity_EventScript_Cubone::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
+	msgbox SaffronCity_Text_CuboneCry
+	waitmoncry
+	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
+	release
 	end
 
 SaffronCity_EventScript_RocketGrunt5::
