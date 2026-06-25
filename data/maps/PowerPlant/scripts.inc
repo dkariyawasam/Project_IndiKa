@@ -15,11 +15,20 @@ PowerPlant_EventScript_TryRemoveStaticMon::
 
 PowerPlant_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_POWER_PLANT
-	call_if_unset FLAG_FOUGHT_ZAPDOS, PowerPlant_EventScript_ShowZapdos
+	call PowerPlant_EventScript_HideZapdos
+	goto_if_set FLAG_FOUGHT_ZAPDOS, PowerPlant_EventScript_ZapdosHidden
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, PowerPlant_EventScript_ShowZapdos
+PowerPlant_EventScript_ZapdosHidden::
 	end
 
 PowerPlant_EventScript_ShowZapdos::
 	clearflag FLAG_HIDE_ZAPDOS
+	return
+
+PowerPlant_EventScript_HideZapdos::
+	setflag FLAG_HIDE_ZAPDOS
 	return
 
 PowerPlant_EventScript_WarpToRockTunnelB2F::

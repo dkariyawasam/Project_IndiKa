@@ -614,11 +614,17 @@ Route10_EventScript_Mark::
 	trainerbattle_single TRAINER_ROUTE10_SWIMMER_MARK, Route10_Text_MarkIntro, Route10_Text_MarkDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route10_EventScript_MarkRematch
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route10_EventScript_MarkRematch::
 	trainerbattle_rematch TRAINER_ROUTE10_SWIMMER_MARK, Route10_Text_MarkRematchIntro, Route10_Text_MarkDefeat
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -4433,8 +4439,10 @@ EventScript_GymAdjacent_ENGINEER_BAILY_Text_RematchIntro::
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat::
     .string "POWER PLANT wins today!$"
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle::
-    .string "POWER PLANT has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Even when the generators quiet\n"
+    .string "down, the air still crackles.\p"
+    .string "It feels like the power is coming\n"
+    .string "from the sky itself.$"
 EventScript_GymAdjacent_ENGINEER_BERNIE_Text_Intro::
     .string "This ENGINEER knows\n"
     .string "POWER PLANT well!$"
@@ -4455,8 +4463,10 @@ EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_RematchIntro::
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat::
     .string "POWER PLANT wins today!$"
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle::
-    .string "POWER PLANT has more to teach\n"
-    .string "than one battle can show.$"
+    .string "I saw lightning gather here\n"
+    .string "without a cloud overhead.\p"
+    .string "No battery can hold power like\n"
+    .string "that. It just keeps coming.$"
 EventScript_GymAdjacent_PSYCHIC_CAMERON_Text_Intro::
     .string "SAFFRON's thoughts press outward,\n"
     .string "even here on ROUTE 7.\p"
@@ -6282,11 +6292,17 @@ EventScript_GymAdjacent_ENGINEER_BAILY::
 	trainerbattle_single TRAINER_ENGINEER_BAILY, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Intro, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_ENGINEER_BAILYRematch
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_GymAdjacent_ENGINEER_BAILYRematch::
 	trainerbattle_rematch TRAINER_ENGINEER_BAILY, EventScript_GymAdjacent_ENGINEER_BAILY_Text_RematchIntro, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -6294,11 +6310,17 @@ EventScript_GymAdjacent_ENGINEER_BRAXTON::
 	trainerbattle_single TRAINER_ENGINEER_BRAXTON, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Intro, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_ENGINEER_BRAXTONRematch
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_GymAdjacent_ENGINEER_BRAXTONRematch::
 	trainerbattle_rematch TRAINER_ENGINEER_BRAXTON, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_RematchIntro, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat
+	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -5,6 +5,8 @@ VermilionCity_Gym_Text_LtSurgeIntro::
     .string "You handled VOLT TACKLE training\n"
     .string "without flinching.\p"
     .string "That takes nerve!\p"
+    .string "Power isn't handed to you.\n"
+    .string "You train until you can hold it!\p"
     .string "But a GYM battle is combat!\n"
     .string "No holding back!\p"
     .string "I tell you, kid, electric POKéMON\n"
@@ -15,6 +17,8 @@ VermilionCity_Gym_Text_LtSurgeIntro::
 VermilionCity_Gym_Text_LtSurgePostBattle::
     .string "A little word of advice, kid!\p"
     .string "Electricity is sure powerful!\p"
+    .string "But training is how you make\n"
+    .string "that power obey!\p"
     .string "But, it's useless against GROUND-\n"
     .string "type POKéMON!$"
 

@@ -258,6 +258,9 @@ static const u8 sText_ApexOsscytheRecorded[] = _("APEX POKéMON OSSCYTHE\nrecord
 static const u8 sText_ApexTangrowthRumor[] = _("There are old legends about\nVIRIDIAN FOREST coming alive.");
 static const u8 sText_ApexTangrowthConfirmed[] = _("Rumour confirmed.\nLet's investigate VIRIDIAN FOREST.");
 static const u8 sText_ApexTangrowthRecorded[] = _("APEX POKéMON TANGROWTH\nrecorded in VIRIDIAN FOREST.");
+static const u8 sText_ApexZapdosRumor[] = _("There are rumours of endless\nnatural power at the POWER PLANT.");
+static const u8 sText_ApexZapdosConfirmed[] = _("Rumour confirmed.\nLet's investigate the POWER PLANT.");
+static const u8 sText_ApexZapdosRecorded[] = _("APEX POKéMON ZAPDOS\nrecorded in the POWER PLANT.");
 static const u8 sText_ApexMoltresRumor[] = _("There are rumours of renewing\nenergy inside CINNABAR VOLCANO.");
 static const u8 sText_ApexMoltresConfirmed[] = _("Rumour confirmed.\nLet's investigate CINNABAR VOLCANO.");
 static const u8 sText_ApexMoltresRecorded[] = _("APEX POKéMON MOLTRES\nrecorded in CINNABAR VOLCANO.");
@@ -2771,6 +2774,15 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
                 return sText_ApexTangrowthConfirmed;
             else if (GetApexRumorCount(subquestId) > 0)
                 return sText_ApexTangrowthRumor;
+        }
+        else if (subquestId == SUB_QUEST_APEX_ZAPDOS)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexZapdosRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexZapdosConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexZapdosRumor;
         }
         else if (subquestId == SUB_QUEST_APEX_MOLTRES)
         {
