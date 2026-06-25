@@ -30,6 +30,8 @@ PokemonTower_1F_Text_RivalPostBattle::
     .string "unlike you.\p"
     .string "Smell ya later!$"
 
-PokemonTower_1F_Text_SilphScopeCouldUnmaskGhosts::
-    .string "The wayward ghosts show themselves\n"
-    .string "to those who enter this tower.$"
+PokemonTower_1F_Text_SpiritSearchingForFamily::
+    .string "The tower carries the grief of\n"
+    .string "families torn apart.\p"
+    .string "Some say one spirit still waits\n"
+    .string "above, calling for what it lost.$"

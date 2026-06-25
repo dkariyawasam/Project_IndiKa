@@ -6,8 +6,14 @@ SaffronCity_Text_BossTakeTownForTeamRocket::
     .string "BOSS said he'll take this town\n"
     .string "in the name of TEAM ROCKET!$"
 
-SaffronCity_Text_SaffronBelongsToTeamRocket::
-    .string "SAFFRON belongs to TEAM ROCKET!$"
+SaffronCity_Text_TookCuboneFromMother::
+    .string "I took this CUBONE away from\n"
+    .string "its mother.\p"
+    .string "Now it won't even train with me!\n"
+    .string "Bad investment.$"
+
+SaffronCity_Text_CuboneCry::
+    .string "CUBONE: Kyoo!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
     .string "My life as a criminal makes me feel\n"
