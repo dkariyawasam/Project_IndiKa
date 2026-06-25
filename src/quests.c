@@ -252,6 +252,9 @@ static const u8 sText_ApexMimeSrRecorded[] = _("APEX POKéMON MIME SR.\nrecorded
 static const u8 sText_ApexArticunoRumor[] = _("There are rumours of sudden\nchange at SEAFOAM ISLANDS.");
 static const u8 sText_ApexArticunoConfirmed[] = _("Rumour confirmed.\nLet's investigate SEAFOAM.");
 static const u8 sText_ApexArticunoRecorded[] = _("APEX POKéMON ARTICUNO\nrecorded in SEAFOAM ISLANDS.");
+static const u8 sText_ApexOsscytheRumor[] = _("There are rumours of a spirit\nmourning its lost family.");
+static const u8 sText_ApexOsscytheConfirmed[] = _("Rumour confirmed.\nLet's investigate POKéMON TOWER.");
+static const u8 sText_ApexOsscytheRecorded[] = _("APEX POKéMON OSSCYTHE\nrecorded in POKéMON TOWER.");
 
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -2744,6 +2747,15 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
                 return sText_ApexArticunoConfirmed;
             else if (GetApexRumorCount(subquestId) > 0)
                 return sText_ApexArticunoRumor;
+        }
+        else if (subquestId == SUB_QUEST_APEX_OSSCYTHE)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexOsscytheRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexOsscytheConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexOsscytheRumor;
         }
     }
 

@@ -7,7 +7,10 @@ PokemonTower_1F_OnTransition::
 	end
 
 PokemonTower_1F_EventScript_Channeler::
-	msgbox PokemonTower_1F_Text_SilphScopeCouldUnmaskGhosts, MSGBOX_NPC
+	msgbox PokemonTower_1F_Text_SpiritSearchingForFamily, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 PokemonTower_1F_EventScript_RivalTriggerRight::

@@ -27,7 +27,10 @@ LavenderTown_EventScript_WorkerM::
 	end
 
 LavenderTown_EventScript_Boy::
-	msgbox LavenderTown_Text_GhostsAppearedInTower, MSGBOX_NPC
+	msgbox LavenderTown_Text_VengefulSpiritAtopTower, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 LavenderTown_EventScript_TownSign::
