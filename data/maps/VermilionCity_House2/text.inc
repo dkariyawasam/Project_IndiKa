@@ -18,3 +18,9 @@ VermilionCity_House2_Text_ThankYou::
 VermilionCity_House2_Text_HowIsMyOldMon::
 	.string "How is my old {STR_VAR_2}?\p"
 	.string "My {STR_VAR_1} is doing great!$"
+
+VermilionCity_House2_Text_NoLongerTrading::
+	.string "I used to trade POKéMON with\n"
+	.string "passing TRAINERS.\p"
+	.string "These days, I just like hearing\n"
+	.string "where rare POKéMON live.$"
