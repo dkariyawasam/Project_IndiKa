@@ -42,6 +42,9 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success::
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingFossil::
     .string "You don't have the right fragments.$"
 
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingAmber::
+    .string "You don't have OLD AMBER.$"
+
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmanyte::
     .string "OMANYTE, the cephalopod mollusk POKéMON!$"
 
@@ -53,6 +56,9 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabuto::
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabustar::
     .string "KABUSTAR, the horseshoe mollusk POKéMON!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl::
+    .string "AERODACTYL, the fossil pterosaur POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
     .string "You late.\n"
@@ -90,4 +96,3 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk::
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain::
     .string "Aiyah!\n"
     .string "You come again!$"
-

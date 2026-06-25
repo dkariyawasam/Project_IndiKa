@@ -124,7 +124,7 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered);
 static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos);
 static void DexScreen_UpdateCategoryPageCursorObject(u8 taskId, u8 cursorPos, u8 numMonsInPage);
 static bool8 DexScreen_FlipCategoryPageInDirection(u8 direction);
-static bool8 DexScreen_IsAlphaSpecies(u16 species);
+static bool8 DexScreen_IsApexSpecies(u16 species);
 static void DexScreen_DrawCategoryPageMonBackdrop(u16 species, u8 slot, u8 numSlots);
 void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale);
 static u8 DexScreen_DrawMonDexPage(bool8 justRegistered);
@@ -2272,7 +2272,7 @@ bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
     return TRUE;
 }
 
-static bool8 DexScreen_IsAlphaSpecies(u16 species)
+static bool8 DexScreen_IsApexSpecies(u16 species)
 {
     switch (species)
     {
@@ -2374,7 +2374,7 @@ static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos)
         {
             if (i == cursorPos)
             {
-                if (DexScreen_IsAlphaSpecies(sPokedexScreenData->pageSpecies[i]))
+                if (DexScreen_IsApexSpecies(sPokedexScreenData->pageSpecies[i]))
                 {
                     LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx + 0], PLTT_ID(i) + PLTT_ID(5) + 2 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
                     LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx + 1], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
@@ -2391,7 +2391,7 @@ static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos)
                 LoadPalette(&sDexScreen_CategoryCursorPals[1], PLTT_ID(i) + PLTT_ID(5) + 8 + BG_PLTT_OFFSET, PLTT_SIZEOF(1));
             }
         }
-        if (DexScreen_IsAlphaSpecies(sPokedexScreenData->pageSpecies[cursorPos]))
+        if (DexScreen_IsApexSpecies(sPokedexScreenData->pageSpecies[cursorPos]))
             LoadPalette(&sDexScreen_AlphaCategoryCursorPals[2 * palIdx], OBJ_PLTT_ID(4) + 1, PLTT_SIZEOF(1));
         else
             LoadPalette(&sDexScreen_CategoryCursorPals[2 * palIdx + 2], OBJ_PLTT_ID(4) + 1, PLTT_SIZEOF(1));
