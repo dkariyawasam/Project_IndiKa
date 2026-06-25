@@ -5,7 +5,7 @@ Route2_ViridianForest_SouthEntrance_EventScript_Woman1::
 	msgbox Route2_ViridianForest_SouthEntrance_Text_ForestComesAlive, MSGBOX_NPC
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route2_ViridianForest_SouthEntrance_EventScript_Woman2::
