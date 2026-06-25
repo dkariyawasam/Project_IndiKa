@@ -273,7 +273,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     // Key items
     [ITEM_0FE]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_COIN_CASE]      = {gItemIcon_CoinCase, gItemIconPalette_CoinCase},
-    [ITEM_ITEMFINDER]     = {gItemIcon_Itemfinder, gItemIconPalette_Itemfinder},
+    [ITEM_MARSH_FINDER]   = {gItemIcon_Itemfinder, gItemIconPalette_Itemfinder},
     [ITEM_BOULDER_KEY]    = {gItemIcon_BoulderKey, gItemIconPalette_OldRod},
     [ITEM_CASCADE_BOARD]  = {gItemIcon_CascadeBoard, gItemIconPalette_CascadeBoard},
     [ITEM_FISHING_ROD]    = {gItemIcon_SuperRod, gItemIconPalette_SuperRod},

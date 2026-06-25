@@ -37,6 +37,16 @@ SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "Stronger outsider POKéMON may\n"
     .string "ignore your orders in battle.$"
 
+SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina::
+    .string "{PLAYER} received the MARSH FINDER\n"
+    .string "from SABRINA.$"
+
+SaffronCity_Gym_Text_ExplainMarshFinder::
+    .string "The MARSH FINDER senses hidden\n"
+    .string "objects nearby.\p"
+    .string "A calm mind can notice what the\n"
+    .string "eyes alone overlook.$"
+
 SaffronCity_Gym_Text_UnusedSabrinaReward::
     .string "{PLAYER} received something\n"
     .string "from SABRINA.$"
