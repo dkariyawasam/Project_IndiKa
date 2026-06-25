@@ -242,18 +242,6 @@
       "blockdata_filepath": "data/layouts/PewterCity_Gym/map.bin"
     },
     {
-      "id": "LAYOUT_THREE_ISLAND_HOUSE1",
-      "name": "ThreeIsland_House1_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/ThreeIsland_House1/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland_House1/map.bin"
-    },
-    {
       "id": "LAYOUT_SAFFRON_CITY_GYM",
       "name": "SaffronCity_Gym_Layout",
       "width": 29,
@@ -2078,102 +2066,6 @@
       "blockdata_filepath": "data/layouts/SilphCo_Elevator/map.bin"
     },
     {
-      "id": "LAYOUT_ONE_ISLAND",
-      "name": "OneIsland_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands123",
-      "border_filepath": "data/layouts/OneIsland/border.bin",
-      "blockdata_filepath": "data/layouts/OneIsland/map.bin"
-    },
-    {
-      "id": "LAYOUT_THREE_ISLAND",
-      "name": "ThreeIsland_Layout",
-      "width": 24,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands123",
-      "border_filepath": "data/layouts/ThreeIsland/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland/map.bin"
-    },
-    {
-      "id": "LAYOUT_ONE_ISLAND_TREASURE_BEACH",
-      "name": "OneIsland_TreasureBeach_Layout",
-      "width": 24,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands123",
-      "border_filepath": "data/layouts/OneIsland_TreasureBeach/border.bin",
-      "blockdata_filepath": "data/layouts/OneIsland_TreasureBeach/map.bin"
-    },
-    {
-      "id": "LAYOUT_THREE_ISLAND_PORT",
-      "name": "ThreeIsland_Port_Layout",
-      "width": 48,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands123",
-      "border_filepath": "data/layouts/ThreeIsland_Port/border.bin",
-      "blockdata_filepath": "data/layouts/ThreeIsland_Port/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_22",
-      "name": "Prototype_SeviiIsle_22_Layout",
-      "width": 24,
-      "height": 60,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PalletTown",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_22/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_22/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_23_EAST",
-      "name": "Prototype_SeviiIsle_23_East_Layout",
-      "width": 144,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PalletTown",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_23_East/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_23_East/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_23_WEST",
-      "name": "Prototype_SeviiIsle_23_West_Layout",
-      "width": 24,
-      "height": 60,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PalletTown",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_23_West/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_23_West/map.bin"
-    },
-    {
-      "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_24",
-      "name": "Prototype_SeviiIsle_24_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PalletTown",
-      "border_filepath": "data/layouts/Prototype_SeviiIsle_24/border.bin",
-      "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_24/map.bin"
-    },
-    {
       "id": "LAYOUT_UNION_ROOM",
       "name": "UnionRoom_Layout",
       "width": 15,
@@ -2244,18 +2136,6 @@
       "secondary_tileset": "gTileset_ViridianForest",
       "border_filepath": "data/layouts/FuchsiaForest/border.bin",
       "blockdata_filepath": "data/layouts/FuchsiaForest/map.bin"
-    },
-    {
-      "id": "LAYOUT_ONE_ISLAND_POKEMON_CENTER_1F",
-      "name": "OneIsland_PokemonCenter_1F_Layout",
-      "width": 19,
-      "height": 11,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/OneIsland_PokemonCenter_1F/border.bin",
-      "blockdata_filepath": "data/layouts/OneIsland_PokemonCenter_1F/map.bin"
     },
     {
       "id": "LAYOUT_VERMILION_CITY_POKEMON_FAN_CLUB",
@@ -2364,18 +2244,6 @@
       "secondary_tileset": "gTileset_IslandHarbor",
       "border_filepath": "data/layouts/Island_Harbor/border.bin",
       "blockdata_filepath": "data/layouts/Island_Harbor/map.bin"
-    },
-    {
-      "id": "LAYOUT_ONE_ISLAND_POKEMON_CENTER_2F",
-      "name": "OneIsland_PokemonCenter_2F_Layout",
-      "width": 15,
-      "height": 10,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/OneIsland_PokemonCenter_2F/border.bin",
-      "blockdata_filepath": "data/layouts/OneIsland_PokemonCenter_2F/map.bin"
     },
     {
       "id": "LAYOUT_VIRIDIAN_CHANNEL",

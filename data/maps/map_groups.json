@@ -30,11 +30,7 @@
     "gMapGroup_IndoorRoute19",
     "gMapGroup_IndoorRoute22",
     "gMapGroup_IndoorRoute23",
-    "gMapGroup_IndoorRoute25",
-    "gMapGroup_IndoorOneIsland",
-    "gMapGroup_IndoorThreeIsland",
-    "gMapGroup_IndoorThreeIslandRoute",
-    "gMapGroup_IndoorFiveIslandRoute"
+    "gMapGroup_IndoorRoute25"
   ],
   "gMapGroup_Link": [
     "BattleColosseum_2P",
@@ -161,8 +157,6 @@
     "IndigoPlateau_Exterior",
     "SaffronCity",
     "SaffronCity_Connection",
-    "OneIsland",
-    "ThreeIsland",
     "Route1",
     "Route2",
     "Route3",
@@ -189,9 +183,7 @@
     "Route22",
     "Route23",
     "Route24",
-    "Route25",
-    "OneIsland_TreasureBeach",
-    "ThreeIsland_Port"
+    "Route25"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -355,31 +347,16 @@
     "Route18_EastEntrance_1F",
     "Route18_EastEntrance_2F"
   ],
-  "gMapGroup_IndoorRoute19": [],
+  "gMapGroup_IndoorRoute19": [
+
+  ],
   "gMapGroup_IndoorRoute22": [
     "Route22_NorthEntrance"
   ],
-  "gMapGroup_IndoorRoute23": [],
+  "gMapGroup_IndoorRoute23": [
+
+  ],
   "gMapGroup_IndoorRoute25": [
     "Route25_SeaCottage"
-  ],
-  "gMapGroup_IndoorOneIsland": [
-    "OneIsland_PokemonCenter_1F",
-    "OneIsland_PokemonCenter_2F",
-    "OneIsland_House1",
-    "OneIsland_House2",
-    "OneIsland_Harbor"
-  ],
-  "gMapGroup_IndoorThreeIsland": [
-    "ThreeIsland_House1",
-    "ThreeIsland_Mart",
-    "ThreeIsland_House2",
-    "ThreeIsland_House3",
-    "ThreeIsland_House4",
-    "ThreeIsland_House5"
-  ],
-  "gMapGroup_IndoorThreeIslandRoute": [
-    "ThreeIsland_Harbor"
-  ],
-  "gMapGroup_IndoorFiveIslandRoute": []
+  ]
 }

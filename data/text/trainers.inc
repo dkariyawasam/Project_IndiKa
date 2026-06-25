@@ -779,7 +779,3 @@ Route24_Text_CaleRematchIntro::
 	.string "not allowed to take the challenge…\p"
 	.string "…But, you're welcome to battle with\n"
 	.string "us again.$"
-
-OneIsland_TreasureBeach_Text_AmaraRematchIntro::
-	.string "Lying back, rocked by the waves…\n"
-	.string "I don't notice time slipping by…$"

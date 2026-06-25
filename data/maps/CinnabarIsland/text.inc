@@ -52,17 +52,6 @@ Text_ExplosionTaught::
     .string "Using EXPLOSION near a volcano…\p"
     .string "What a terrifying thrill!$"
 
-CinnabarIsland_Text_HeyIfItIsntPlayer::
-    .string "Huh?\n"
-    .string "Hey, if it isn't {PLAYER}!$"
-
-CinnabarIsland_Text_ComeWithMeToOneIsland::
-    .string "Look, it's me, BILL.\n"
-    .string "Long time no see!\p"
-    .string "I hope you're still using my\n"
-    .string "PC system.\p"
-    .string "Well, listen, since we met up here,\n"
-    .string "how about spending time with me?\p"
     .string "There's this little island in the far\n"
     .string "south called ONE ISLAND.\p"
     .string "A friend invited me, so I'm on my\n"

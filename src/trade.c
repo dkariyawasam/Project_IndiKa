@@ -2835,10 +2835,10 @@ s32 GetGameProgressForLinkTrade(void)
         else
             versionId = 2;
 
-        // If trading with RSE, both players must have progessed the story enough
+        // If trading with RSE, both players must have progressed far enough.
         if (versionId > 0)
         {
-            // Has player finished the Sevii Islands
+            // Has player unlocked national linking.
             if (gLinkPlayers[GetMultiplayerId()].progressFlagsCopy & 0xF0)
             {
                 if (versionId == 2)
@@ -2883,8 +2883,7 @@ int GetUnionRoomTradeMessageId(struct RfuGameCompatibilityData player, struct Rf
     else
         isNotFRLG = TRUE;
 
-    // If partner is not using FRLG, both players must have progressed the story
-    // to a certain point (becoming champion in RSE, finishing the Sevii islands in FRLG)
+    // If partner is not using FRLG, both players must be allowed to link nationally.
     if (isNotFRLG)
     {
         if (!playerCanLinkNationally)
