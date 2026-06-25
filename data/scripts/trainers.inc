@@ -2151,11 +2151,17 @@ Route20_EventScript_Mariner::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_MarinerRematch
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 Route20_EventScript_MarinerRematch::
 	trainerbattle_rematch TRAINER_ROUTE20_SAILOR_MARINER, Route20_Text_MarinerRematchIntro, Route20_Text_MarinerDefeat
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 Route20_EventScript_Tiffany::
@@ -4752,19 +4758,20 @@ EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle::
     .string "are small enough to hide\l"
     .string "under one leaf.$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro::
-    .string "All the MR. MIME have\n"
-    .string "disappeared from the area!$"
+    .string "All the MR. MIME have withdrawn\n"
+    .string "from the area!$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro::
-    .string "All the MR. MIME have\n"
-    .string "disappeared from the area!$"
+    .string "All the MR. MIME have withdrawn\n"
+    .string "from the area!$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat::
     .string "I would've won had you\n"
-    .string "challenged me with my full\l"
-    .string "team of MR. MIME.$"
+    .string "challenged me before they shut\l"
+    .string "themselves away.$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle::
     .string "They have gone into DIGLETT\n"
-    .string "CAVE and erected barriers all\l"
-    .string "around just to avoid training.$"
+    .string "CAVE and erected barriers.\p"
+    .string "It's like they built their own\n"
+    .string "little community down there.$"
 EventScript_RouteTrainer_CAMPER_BRYCE_Text_Intro::
     .string "I set camp halfway between the\n"
     .string "city noise and LAVENDER's quiet.\p"
