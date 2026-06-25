@@ -28,9 +28,6 @@
 
 enum {
     REGIONMAP_KANTO,
-    REGIONMAP_SEVII123,
-    REGIONMAP_SEVII45,
-    REGIONMAP_SEVII67,
     REGIONMAP_COUNT
 };
 
@@ -100,7 +97,7 @@ struct RegionMap
     u16 bgTilemapBuffers[3][BG_SCREEN_SIZE];
     u8 type; // REGIONMAP_TYPE_*
     bool8 permissions[MAPPERM_COUNT];
-    u8 selectedRegion; // REGIONMAP_KANTO, REGIONMAP_SEVII*
+    u8 selectedRegion;
     u8 playersRegion;
     u8 ALIGNED(4) mainState;
     u8 ALIGNED(4) openState;
@@ -408,13 +405,7 @@ static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map/region_map.4
 static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map/map_edge.4bpp.lz");
 static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_menu.4bpp.lz");
 static const u32 sKanto_Tilemap[] = INCBIN_U32("graphics/region_map/kanto.bin.lz");
-static const u32 sSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_123.bin.lz");
-static const u32 sSevii45_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_45.bin.lz");
-static const u32 sSevii67_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_67.bin.lz");
 static const u32 sMapEdge_Tilemap[] = INCBIN_U32("graphics/region_map/map_edge.bin.lz");
-static const u32 sSwitchMap_KantoSeviiAll_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all.bin.lz");
-static const u32 sSwitchMap_KantoSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_123.bin.lz");
-static const u32 sSwitchMap_KantoSeviiAll2_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all2.bin.lz");
 static const u32 sMapEdge_TopLeft[] = INCBIN_U32("graphics/region_map/map_edge_top_left.4bpp.lz");
 static const u32 sMapEdge_TopRight[] = INCBIN_U32("graphics/region_map/map_edge_top_right.4bpp.lz");
 static const u32 sMapEdge_MidLeft[] = INCBIN_U32("graphics/region_map/map_edge_mid_left.4bpp.lz");
@@ -524,25 +515,10 @@ static const u8 *const sTextColorTable[] = {
     [MAPSECTYPE_NOT_VISITED - 2] = sTextColor_Red
 };
 
-static const u8 sSeviiMapsecs[3][30] = {
-    [REGIONMAP_SEVII123 - 1] =
-    {
-        MAPSEC_NONE
-    },
-    [REGIONMAP_SEVII45 - 1] =
-    {
-        MAPSEC_NONE
-    }, 
-    [REGIONMAP_SEVII67 - 1] = 
-    {
-        MAPSEC_NONE
-    }
-};
-
 ALIGNED(4) static const bool8 sRegionMapPermissions[REGIONMAP_TYPE_COUNT][MAPPERM_COUNT] = {
     [REGIONMAP_TYPE_NORMAL] = 
     {
-        [MAPPERM_HAS_SWITCH_BUTTON]    = TRUE, 
+        [MAPPERM_HAS_SWITCH_BUTTON]    = FALSE,
         [MAPPERM_HAS_MAP_PREVIEW]      = TRUE, 
         [MAPPERM_HAS_OPEN_ANIM]        = TRUE, 
         [MAPPERM_HAS_FLY_DESTINATIONS] = FALSE
@@ -744,9 +720,6 @@ static const u8 sTextColors[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_CO
 #include "data/region_map/region_map_entries.h"
 
 #include "data/region_map/region_map_layout_kanto.h"
-#include "data/region_map/region_map_layout_sevii_123.h"
-#include "data/region_map/region_map_layout_sevii_45.h"
-#include "data/region_map/region_map_layout_sevii_67.h"
 
 static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_PALLET_TOWN         - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_PALLET_TOWN},
@@ -876,8 +849,6 @@ void InitRegionMapWithExitCB(u8 type, MainCallback cb)
 static void InitRegionMapType(void)
 {
     u8 i;
-    u8 j;
-    u8 region;
 
     switch (sRegionMap->type)
     {
@@ -894,27 +865,8 @@ static void InitRegionMapType(void)
     {
         sRegionMap->permissions[i] = sRegionMapPermissions[sRegionMap->type][i];
     }
-    sRegionMap->permissions[MAPPERM_HAS_SWITCH_BUTTON] = FALSE;
-    region = REGIONMAP_KANTO;
-    j = REGIONMAP_KANTO;
-    if (gMapHeader.regionMapSectionId >= SEVII_MAPSEC_START)
-    {
-        // Mapsec is on a secondary region map; determine which one to use
-        while (region == REGIONMAP_KANTO)
-        {
-            for (i = 0; sSeviiMapsecs[j][i] != MAPSEC_NONE; i++)
-            {
-                if (gMapHeader.regionMapSectionId == sSeviiMapsecs[j][i])
-                {
-                    region = j + 1;
-                    break;
-                }
-            }
-            j++;
-        }
-    }
-    sRegionMap->selectedRegion = region;
-    sRegionMap->playersRegion = region;
+    sRegionMap->selectedRegion = REGIONMAP_KANTO;
+    sRegionMap->playersRegion = REGIONMAP_KANTO;
 }
 
 static void CB2_OpenRegionMap(void)
@@ -1001,15 +953,6 @@ static bool8 LoadRegionMapGfx(void)
         break;
     case 5:
         LZ77UnCompWram(sKanto_Tilemap, sRegionMap->layouts[REGIONMAP_KANTO]);
-        break;
-    case 6:
-        LZ77UnCompWram(sSevii123_Tilemap, sRegionMap->layouts[REGIONMAP_SEVII123]);
-        break;
-    case 7:
-        LZ77UnCompWram(sSevii45_Tilemap, sRegionMap->layouts[REGIONMAP_SEVII45]);
-        break;
-    case 8:
-        LZ77UnCompWram(sSevii67_Tilemap, sRegionMap->layouts[REGIONMAP_SEVII67]);
         break;
     default:
         LZ77UnCompWram(sBackground_Tilemap, sRegionMap->layouts[REGIONMAP_COUNT]);
@@ -1418,22 +1361,8 @@ static void InitSwitchMapMenu(u8 whichMap, u8 taskId, TaskFunc taskFunc)
     sSwitchMapMenu->cursorSubsprite[0].x = 88;
     sSwitchMapMenu->cursorSubsprite[1].x = 152;
 
-    switch (sSwitchMapMenu->maxSelection)
-    {
-    case 1:
-        LZ77UnCompWram(sSwitchMap_KantoSevii123_Tilemap, sSwitchMapMenu->switchMapTilemap);
-        sSwitchMapMenu->yOffset = 6;
-        break;
-    case 2: // never reached
-        LZ77UnCompWram(sSwitchMap_KantoSeviiAll2_Tilemap, sSwitchMapMenu->switchMapTilemap);
-        sSwitchMapMenu->yOffset = 4;
-        break;
-    case 3:
-    default:
-        sSwitchMapMenu->yOffset = 3;
-        LZ77UnCompWram(sSwitchMap_KantoSeviiAll_Tilemap, sSwitchMapMenu->switchMapTilemap);
-        break;
-    }
+    sSwitchMapMenu->yOffset = 3;
+    CpuFill16(0, sSwitchMapMenu->switchMapTilemap, sizeof(sSwitchMapMenu->switchMapTilemap));
     LZ77UnCompWram(sSwitchMapMenu_Gfx, sSwitchMapMenu->switchMapTiles);
     sSwitchMapMenu->mainState = 0;
     sSwitchMapMenu->currentSelection = whichMap;
@@ -3129,12 +3058,6 @@ static u8 GetSelectedMapSection(u8 whichMap, u8 layer, s16 y, s16 x)
     {
     case REGIONMAP_KANTO:
         return sRegionMapSections_Kanto[layer][y][x];
-    case REGIONMAP_SEVII123:
-        return sRegionMapSections_Sevii123[layer][y][x];
-    case REGIONMAP_SEVII45:
-        return sRegionMapSections_Sevii45[layer][y][x];
-    case REGIONMAP_SEVII67:
-        return sRegionMapSections_Sevii67[layer][y][x];
     default:
         return MAPSEC_NONE;
     }
