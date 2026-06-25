@@ -604,7 +604,7 @@
 #define FLAG_OAK_SKIP_22_RIVAL_CHECK                     0x24F
 #define FLAG_GOT_MASTER_BALL_FROM_SILPH                  0x250
 #define FLAG_DID_NINA_TRADE                              0x251
-#define FLAG_GOT_ITEMFINDER                              0x252
+#define FLAG_GOT_MARSH_FINDER                           0x252
 #define FLAG_0x253                                       0x253
 #define FLAG_0x254                                       0x254
 #define FLAG_GOT_FISHING_ROD                             0x255

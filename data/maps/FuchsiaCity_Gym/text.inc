@@ -40,19 +40,8 @@ FuchsiaCity_Gym_Text_KogaReward::
     .string "your challenge was witnessed.\p"
     .string "You earned the SOULBADGE in\n"
     .string "CINNABAR VOLCANO.\p"
-    .string "With the SOUL FINDER already in\n"
-    .string "your hands, accept another tool\l"
-    .string "of togetherness.$"
-
-FuchsiaCity_Gym_Text_ReceivedItemDetectorFromKoga::
-    .string "{PLAYER} received the SOUL FINDER\n"
-    .string "from KOGA.$"
-
-FuchsiaCity_Gym_Text_KogaExplainItemDetector::
-    .string "The SOUL FINDER senses hidden\n"
-    .string "objects nearby.\p"
-    .string "A ninja's eye looks beyond what is\n"
-    .string "plainly visible.$"
+    .string "Accept another tool of\n"
+    .string "togetherness.$"
 
 FuchsiaCity_Gym_Text_KogaGiftGolbat::
     .string "Take this GOLBAT as well.\p"
