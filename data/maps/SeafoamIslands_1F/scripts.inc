@@ -19,5 +19,5 @@ SeafoamIslands_1F_EventScript_LavaRumorNpc::
 SeafoamIslands_1F_Text_UsedToBeFloodedWithLava::
 	.string "Can you believe this whole area\n"
 	.string "used to be flooded with lava?\p"
-	.string "One sudden change, and now the\n"
-	.string "whole cave feels frozen in place.$"
+	.string "One sudden change, and the\n"
+	.string "whole cave became something else.$"

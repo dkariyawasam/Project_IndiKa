@@ -255,6 +255,9 @@ static const u8 sText_ApexArticunoRecorded[] = _("APEX POKéMON ARTICUNO\nrecord
 static const u8 sText_ApexOsscytheRumor[] = _("There are rumours of a spirit\nmourning its lost family.");
 static const u8 sText_ApexOsscytheConfirmed[] = _("Rumour confirmed.\nLet's investigate POKéMON TOWER.");
 static const u8 sText_ApexOsscytheRecorded[] = _("APEX POKéMON OSSCYTHE\nrecorded in POKéMON TOWER.");
+static const u8 sText_ApexTangrowthRumor[] = _("There are old legends about\nVIRIDIAN FOREST coming alive.");
+static const u8 sText_ApexTangrowthConfirmed[] = _("Rumour confirmed.\nLet's investigate VIRIDIAN FOREST.");
+static const u8 sText_ApexTangrowthRecorded[] = _("APEX POKéMON TANGROWTH\nrecorded in VIRIDIAN FOREST.");
 
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -2756,6 +2759,15 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
                 return sText_ApexOsscytheConfirmed;
             else if (GetApexRumorCount(subquestId) > 0)
                 return sText_ApexOsscytheRumor;
+        }
+        else if (subquestId == SUB_QUEST_APEX_TANGROWTH)
+        {
+            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+                return sText_ApexTangrowthRecorded;
+            else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
+                return sText_ApexTangrowthConfirmed;
+            else if (GetApexRumorCount(subquestId) > 0)
+                return sText_ApexTangrowthRumor;
         }
     }
 
