@@ -1320,28 +1320,6 @@ const u16 gTilesetPalettes_RocketLeague[][16] =
 	INCBIN_U16("data/tilesets/secondary/rocket_league/palettes/15.gbapal"),
 };
 
-const u32 gTilesetTiles_IslandHarbor[] = INCBIN_U32("data/tilesets/secondary/island_harbor/tiles.4bpp.lz");
-
-const u16 gTilesetPalettes_IslandHarbor[][16] =
-{
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/00.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/01.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/02.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/03.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/04.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/05.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/06.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/07.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/08.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/09.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/10.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/11.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/12.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/13.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/14.gbapal"),
-	INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/15.gbapal"),
-};
-
 const u32 gTilesetTiles_PokemonLeague[] = INCBIN_U32("data/tilesets/secondary/pokemon_league/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_PokemonLeague[][16] =
