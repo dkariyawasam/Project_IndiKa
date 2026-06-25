@@ -6,7 +6,10 @@ CinnabarIsland_PokemonLab_ResearchRoom_EventScript_MetronomeTutor::
 	end
 
 CinnabarIsland_PokemonLab_ResearchRoom_EventScript_Scientist::
-	msgbox CinnabarIsland_PokemonLab_ResearchRoom_Text_EeveeCanEvolveIntroThreeMons, MSGBOX_NPC
+	msgbox CinnabarIsland_PokemonLab_ResearchRoom_Text_MoltresRenewingEnergy, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 CinnabarIsland_PokemonLab_ResearchRoom_EventScript_Computer::

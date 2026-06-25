@@ -4,8 +4,12 @@ CinnabarVolcano_3F_MapScripts::
 	.byte 0
 
 CinnabarVolcano_3F_OnTransition::
-	call_if_unset FLAG_FOUGHT_VOLCANO_MOLTRES, CinnabarVolcano_3F_EventScript_ShowMoltres
-	call_if_set FLAG_FOUGHT_VOLCANO_MOLTRES, CinnabarVolcano_3F_EventScript_HideMoltres
+	call CinnabarVolcano_3F_EventScript_HideMoltres
+	goto_if_set FLAG_FOUGHT_VOLCANO_MOLTRES, CinnabarVolcano_3F_EventScript_MoltresHidden
+	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, CinnabarVolcano_3F_EventScript_ShowMoltres
+CinnabarVolcano_3F_EventScript_MoltresHidden::
 	end
 
 CinnabarVolcano_3F_OnResume::
@@ -31,11 +35,17 @@ CinnabarVolcano_3F_EventScript_Blair::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, CinnabarVolcano_3F_EventScript_BlairRematch
 	msgbox CinnabarVolcano_3F_Text_BlairPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 CinnabarVolcano_3F_EventScript_BlairRematch::
 	trainerbattle_rematch TRAINER_VOLCANO_KINDLER_BLAIR, CinnabarVolcano_3F_Text_BlairIntro, CinnabarVolcano_3F_Text_BlairDefeat
 	msgbox CinnabarVolcano_3F_Text_BlairPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 CinnabarVolcano_3F_EventScript_Elias::
