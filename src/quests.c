@@ -532,6 +532,9 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 };
 
 #define APEX_RUMORS_REQUIRED 3
+#define APEX_RUMOR_RESULT_NONE 0
+#define APEX_RUMOR_RESULT_RECORDED 1
+#define APEX_RUMOR_RESULT_UPDATED 2
 
 static u8 GetApexRumorCount(u8 apexSubquest)
 {
@@ -555,9 +558,12 @@ void RecordApexRumor(void)
 {
     u8 apexSubquest = VarGet(VAR_0x8004);
     u8 rumor = VarGet(VAR_0x8005);
+    u8 oldCount;
     u8 bit;
     u16 var;
     u16 mask;
+
+    gSpecialVar_Result = APEX_RUMOR_RESULT_NONE;
 
     if (apexSubquest >= QUEST_3_SUB_COUNT || rumor >= APEX_RUMORS_REQUIRED)
         return;
@@ -566,11 +572,16 @@ void RecordApexRumor(void)
     var = bit < 16 ? VAR_APEX_RUMOR_BITS_1 : VAR_APEX_RUMOR_BITS_2;
     mask = 1 << (bit % 16);
 
+    if (VarGet(var) & mask)
+        return;
+
+    oldCount = GetApexRumorCount(apexSubquest);
     VarSet(var, VarGet(var) | mask);
     QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
     if (!QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_GET_COMPLETED))
         QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
     QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, apexSubquest);
+    gSpecialVar_Result = oldCount == 0 ? APEX_RUMOR_RESULT_RECORDED : APEX_RUMOR_RESULT_UPDATED;
 }
 
 u16 IsApexRevealed(void)

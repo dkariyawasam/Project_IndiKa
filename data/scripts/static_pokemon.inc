@@ -19,6 +19,23 @@ EventScript_ApexEncounterShake::
     waitse
     return
 
+EventScript_RecordApexRumorWithFeedback::
+    special RecordApexRumor
+    goto_if_eq VAR_RESULT, 0, EventScript_RecordApexRumorWithFeedbackDone
+    playse SE_PIN
+    applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+    waitmovement 0
+    goto_if_eq VAR_RESULT, 1, EventScript_ApexRumorRecorded
+    msgbox Text_ApexRumorUpdated
+    return
+
+EventScript_ApexRumorRecorded::
+    msgbox Text_ApexRumorRecorded
+    return
+
+EventScript_RecordApexRumorWithFeedbackDone::
+    return
+
 EventScript_RemoveStaticMon::
     fadescreen FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
@@ -34,3 +51,9 @@ EventScript_MonFlewAway::
     msgbox Text_MonFlewAway
     release
     end
+
+Text_ApexRumorRecorded:
+    .string "Rumour recorded.$"
+
+Text_ApexRumorUpdated:
+    .string "Rumour updated.$"

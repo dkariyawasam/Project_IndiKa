@@ -7,7 +7,7 @@ CeruleanCity_House2_EventScript_Hiker::
 	msgbox CeruleanCity_House2_Text_EnormousPokemonBargedIn
 	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 

@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE16",
-      "offset": 0,
+      "offset": 2,
       "direction": "up"
     },
     {
@@ -267,7 +267,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_M_CYCLING",
-      "x": 14,
+      "x": 15,
       "y": 58,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",

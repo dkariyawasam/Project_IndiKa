@@ -41,7 +41,7 @@ MtMoon_1F_EventScript_BaldingMan::
 	msgbox MtMoon_1F_Text_AngryPrimalPokemon
 	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 
@@ -60,7 +60,7 @@ Route20_EventScript_Camper::
 	msgbox Route20_Text_SeafoamUsedToBeVolcanic
 	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 

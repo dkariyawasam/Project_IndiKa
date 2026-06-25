@@ -614,18 +614,18 @@ Route10_EventScript_Mark::
 	trainerbattle_single TRAINER_ROUTE10_SWIMMER_MARK, Route10_Text_MarkIntro, Route10_Text_MarkDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route10_EventScript_MarkRematch
+	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
-	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route10_EventScript_MarkRematch::
 	trainerbattle_rematch TRAINER_ROUTE10_SWIMMER_MARK, Route10_Text_MarkRematchIntro, Route10_Text_MarkDefeat
+	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
-	msgbox Route10_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route10_EventScript_Herman::
@@ -2159,7 +2159,7 @@ Route20_EventScript_Mariner::
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route20_EventScript_MarinerRematch::
@@ -2167,7 +2167,7 @@ Route20_EventScript_MarinerRematch::
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 Route20_EventScript_Tiffany::
@@ -2913,7 +2913,7 @@ EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN::
 	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch::
@@ -2921,7 +2921,7 @@ EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch::
 	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_RouteTrainer_PKMN_RANGER_LOGAN::
@@ -6292,36 +6292,36 @@ EventScript_GymAdjacent_ENGINEER_BAILY::
 	trainerbattle_single TRAINER_ENGINEER_BAILY, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Intro, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_ENGINEER_BAILYRematch
+	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
-	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_ENGINEER_BAILYRematch::
 	trainerbattle_rematch TRAINER_ENGINEER_BAILY, EventScript_GymAdjacent_ENGINEER_BAILY_Text_RematchIntro, EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat
+	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
-	msgbox EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_ENGINEER_BRAXTON::
 	trainerbattle_single TRAINER_ENGINEER_BRAXTON, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Intro, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_ENGINEER_BRAXTONRematch
+	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
-	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_ENGINEER_BRAXTONRematch::
 	trainerbattle_rematch TRAINER_ENGINEER_BRAXTON, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_RematchIntro, EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat
+	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_ZAPDOS
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
-	msgbox EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle, MSGBOX_AUTOCLOSE
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_ENGINEER_BERNIE::
@@ -6511,7 +6511,7 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI::
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
@@ -6519,7 +6519,7 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_VIOLET::

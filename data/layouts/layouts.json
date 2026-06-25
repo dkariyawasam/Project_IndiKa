@@ -484,7 +484,7 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 40,
+      "width": 38,
       "height": 80,
       "border_width": 2,
       "border_height": 2,
@@ -652,7 +652,7 @@
     {
       "id": "LAYOUT_ROUTE16",
       "name": "Route16_Layout",
-      "width": 48,
+      "width": 46,
       "height": 25,
       "border_width": 2,
       "border_height": 2,
@@ -2236,12 +2236,12 @@
     {
       "id": "LAYOUT_VIRIDIAN_CHANNEL",
       "name": "ViridianChannel_Layout",
-      "width": 32,
+      "width": 36,
       "height": 55,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_GenericBuilding1",
+      "secondary_tileset": "gTileset_LavenderTown",
       "border_filepath": "data/layouts/ViridianChannel/border.bin",
       "blockdata_filepath": "data/layouts/ViridianChannel/map.bin"
     },

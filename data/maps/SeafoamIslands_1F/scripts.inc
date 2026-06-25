@@ -12,7 +12,7 @@ SeafoamIslands_1F_EventScript_LavaRumorNpc::
 	msgbox SeafoamIslands_1F_Text_UsedToBeFloodedWithLava
 	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
 	setvar VAR_0x8005, 2
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 

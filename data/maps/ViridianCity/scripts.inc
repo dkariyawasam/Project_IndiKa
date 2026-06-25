@@ -91,7 +91,7 @@ ViridianCity_EventScript_Woman::
 	msgbox ViridianCity_Text_FatherHeardShadowyFigure
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 0
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	release
 	end
 

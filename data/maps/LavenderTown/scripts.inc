@@ -30,7 +30,7 @@ LavenderTown_EventScript_Boy::
 	msgbox LavenderTown_Text_VengefulSpiritAtopTower, MSGBOX_NPC
 	setvar VAR_0x8004, SUB_QUEST_APEX_OSSCYTHE
 	setvar VAR_0x8005, 1
-	special RecordApexRumor
+	call EventScript_RecordApexRumorWithFeedback
 	end
 
 LavenderTown_EventScript_TownSign::
