@@ -51,7 +51,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_FossilScientist::
 	case 1, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixDart
 	case 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeDart
 	case 3, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeHaste
-	case 4, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Cancel
+	case 4, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_OldAmber
+	case 5, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Cancel
 	release
 	end
 
@@ -111,8 +112,25 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeHaste::
 	release
 	end
 
+CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_OldAmber::
+	checkitem ITEM_OLD_AMBER, 1
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_MissingAmber
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	removeitem ITEM_OLD_AMBER, 1
+	setflag FLAG_REVIVED_AMBER
+	givemon SPECIES_AERODACTYL, 5
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	release
+	end
+
 CinnabarIsland_PokemonLab_ExperimentRoom_Missing::
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingFossil
+	release
+	end
+
+CinnabarIsland_PokemonLab_ExperimentRoom_MissingAmber::
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingAmber
 	release
 	end
 

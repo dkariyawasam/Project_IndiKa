@@ -142,6 +142,7 @@ static const struct MenuAction sMultichoiceList_FossilReconstruction[] = {
     { gText_HelixDart },
     { gText_DomeDart },
     { gText_DomeHaste },
+    { gText_OldAmber },
     { gOtherText_Exit }
 };
 
