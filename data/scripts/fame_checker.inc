@@ -38,8 +38,10 @@ Route4_EventScript_Boy::
 MtMoon_1F_EventScript_BaldingMan::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BROCK, 4
-	msgbox MtMoon_1F_Text_BrockHelpsExcavateFossils
+	msgbox MtMoon_1F_Text_AngryPrimalPokemon
+	setvar VAR_0x8004, SUB_QUEST_APEX_ANNIHILAPE
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	release
 	end
 
@@ -55,7 +57,10 @@ Route20_EventScript_Camper::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_MISTY, 3
-	msgbox Route20_Text_MistyTrainsHere
+	msgbox Route20_Text_SeafoamUsedToBeVolcanic
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 0
+	special RecordApexRumor
 	release
 	end
 

@@ -2151,11 +2151,17 @@ Route20_EventScript_Mariner::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_MarinerRematch
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 Route20_EventScript_MarinerRematch::
 	trainerbattle_rematch TRAINER_ROUTE20_SAILOR_MARINER, Route20_Text_MarinerRematchIntro, Route20_Text_MarinerDefeat
 	msgbox Route20_Text_MarinerPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_ARTICUNO
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 Route20_EventScript_Tiffany::
@@ -2892,6 +2898,24 @@ EventScript_RouteTrainer_BUG_MANIAC_MARK::
 EventScript_RouteTrainer_BUG_MANIAC_MARKRematch::
 	trainerbattle_rematch TRAINER_BUG_MANIAC_MARK, EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_RematchIntro, EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_Defeat
 	msgbox EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN::
+	trainerbattle_single TRAINER_ROUTE11_POKEMANIAC_CHAPLIN, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch
+	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
+	end
+
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch::
+	trainerbattle_rematch TRAINER_ROUTE11_POKEMANIAC_CHAPLIN, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro, EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat
+	msgbox EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_MIME_SR
+	setvar VAR_0x8005, 1
+	special RecordApexRumor
 	end
 
 EventScript_RouteTrainer_PKMN_RANGER_LOGAN::
@@ -4371,8 +4395,11 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_RematchIntro::
 EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_Defeat::
     .string "VIRIDIAN FOREST wins today!$"
 EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The flowers in VIRIDIAN FOREST\n"
+    .string "are so beautiful.\p"
+    .string "They seem more vibrant and grow\n"
+    .string "in number the closer you get to\l"
+    .string "the centre of the forest.$"
 EventScript_GymAdjacent_AROMA_LADY_ROSE_Text_Intro::
     .string "This AROMA LADY knows\n"
     .string "VIRIDIAN FOREST well!$"
@@ -4733,6 +4760,21 @@ EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle::
     .string "The best things on ROUTE 11\n"
     .string "are small enough to hide\l"
     .string "under one leaf.$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro::
+    .string "All the MR. MIME have withdrawn\n"
+    .string "from the area!$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro::
+    .string "All the MR. MIME have withdrawn\n"
+    .string "from the area!$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat::
+    .string "I would've won had you\n"
+    .string "challenged me before they shut\l"
+    .string "themselves away.$"
+EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle::
+    .string "They have gone into DIGLETT\n"
+    .string "CAVE and erected barriers.\p"
+    .string "It's like they built their own\n"
+    .string "little community down there.$"
 EventScript_RouteTrainer_CAMPER_BRYCE_Text_Intro::
     .string "I set camp halfway between the\n"
     .string "city noise and LAVENDER's quiet.\p"
@@ -6442,11 +6484,17 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
 	trainerbattle_rematch TRAINER_AROMA_LADY_NIKKI, EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_RematchIntro, EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_Defeat
 	msgbox EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 2
+	special RecordApexRumor
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_VIOLET::

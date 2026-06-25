@@ -16,8 +16,12 @@ ViridianForest_EventScript_TryRemoveTangrowth::
 ViridianForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
-	call_if_unset FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_ShowTangrowth
-	call_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_HideTangrowth
+	call ViridianForest_EventScript_HideTangrowth
+	goto_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_CheckErika
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_ShowTangrowth
+ViridianForest_EventScript_CheckErika::
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_RemoveErika
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	end

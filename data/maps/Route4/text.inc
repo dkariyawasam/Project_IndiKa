@@ -1,6 +1,11 @@
 Route4_Text_TrippedOverGeodude::
-    .string "Ouch! I tripped over a rocky\n"
-    .string "POKéMON, GEODUDE!$"
+    .string "A hulking PRIMEAPE fled in a\n"
+    .string "blind rage and took refuge\n"
+    .string "inside MT. MOON.\p"
+    .string "It was out of control, like its\n"
+    .string "feelings had boiled over!\p"
+    .string "I've never seen one get that\n"
+    .string "big before!$"
 
 Route4_Text_CrissyIntro::
     .string "I came to MT. MOON in search of\n"

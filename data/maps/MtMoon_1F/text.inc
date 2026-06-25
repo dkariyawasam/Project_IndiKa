@@ -93,3 +93,9 @@ MtMoon_1F_Text_BrockHelpsExcavateFossils::
     .string "under MT. MOON.\p"
     .string "Sometimes, BROCK of PEWTER GYM\n"
     .string "lends me a hand.$"
+
+MtMoon_1F_Text_AngryPrimalPokemon::
+    .string "There's something furious and\n"
+    .string "hurt deep within this cave.\p"
+    .string "I can feel it losing control.\n"
+    .string "Maybe I should head home.$"
