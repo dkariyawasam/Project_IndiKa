@@ -605,8 +605,8 @@
 #define FLAG_GOT_MASTER_BALL_FROM_SILPH                  0x250
 #define FLAG_DID_NINA_TRADE                              0x251
 #define FLAG_GOT_MARSH_FINDER                           0x252
-#define FLAG_0x253                                       0x253
-#define FLAG_0x254                                       0x254
+#define FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART           0x253
+#define FLAG_ACKNOWLEDGED_SOUL_PASS_AT_CENTER            0x254
 #define FLAG_GOT_FISHING_ROD                             0x255
 #define FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE                0x256
 #define FLAG_DID_MARC_TRADE                              0x257

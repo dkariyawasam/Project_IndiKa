@@ -184,6 +184,7 @@ CinnabarVolcano_RightCorridor_3F_EventScript_DefeatedKoga::
 	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 4
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_KogaAfterBattle
+	giveitem_msg FuchsiaCity_Gym_Text_ReceivedSoulPassFromKoga, ITEM_SOUL_PASS, 1, MUS_OBTAIN_KEY_ITEM
 	closemessage
 	playse SE_M_EXPLOSION
 	setfieldeffectargument 0, 11

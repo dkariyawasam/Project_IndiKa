@@ -2,12 +2,69 @@ EventScript_PkmnCenterNurse::
 	goto_if_questlog EventScript_ReleaseEnd
 	message Text_WelcomeWantToHealPkmn
 	waitmessage
+	checkitem ITEM_SOUL_PASS, 1
+	goto_if_eq VAR_RESULT, TRUE, EventScript_PkmnCenterNurse_SoulPassMenu
 	multichoice 19, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
 	switch VAR_RESULT
 	case 0, EventScript_PkmnCenterNurse_HealPkmn
 	case 1 EventScript_PkmnCenterNurse_Goodbye
 	case SCR_MENU_CANCEL, EventScript_PkmnCenterNurse_Goodbye
 	end
+
+EventScript_PkmnCenterNurse_SoulPassMenu::
+	goto_if_set FLAG_ACKNOWLEDGED_SOUL_PASS_AT_CENTER, EventScript_PkmnCenterNurse_ShowSoulPassMenu
+	msgbox Text_NurseRecognizedSoulPass
+	setflag FLAG_ACKNOWLEDGED_SOUL_PASS_AT_CENTER
+
+EventScript_PkmnCenterNurse_ShowSoulPassMenu::
+	multichoice 11, 6, MULTICHOICE_HEAL_CHECK_FRIENDSHIP_CANCEL, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_PkmnCenterNurse_HealPkmn
+	case 1, EventScript_PkmnCenterNurse_CheckFriendship
+	case 2, EventScript_PkmnCenterNurse_Goodbye
+	case SCR_MENU_CANCEL, EventScript_PkmnCenterNurse_Goodbye
+	end
+
+EventScript_PkmnCenterNurse_CheckFriendship::
+	msgbox Text_NurseCheckLeadMonFriendship
+	specialvar VAR_RESULT, GetLeadMonFriendship
+	switch VAR_RESULT
+	case 0, EventScript_PkmnCenterNurse_MonFriendshipLowest
+	case 1, EventScript_PkmnCenterNurse_MonFriendshipLower
+	case 2, EventScript_PkmnCenterNurse_MonFriendshipLow
+	case 3, EventScript_PkmnCenterNurse_MonFriendshipMid
+	case 4, EventScript_PkmnCenterNurse_MonFriendshipHigh
+	case 5, EventScript_PkmnCenterNurse_MonFriendshipHigher
+	case 6, EventScript_PkmnCenterNurse_MonFriendshipHighest
+	end
+
+EventScript_PkmnCenterNurse_MonFriendshipLowest::
+	msgbox Text_NurseMonFriendshipLowest
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipLower::
+	msgbox Text_NurseMonFriendshipLower
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipLow::
+	msgbox Text_NurseMonFriendshipLow
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipMid::
+	msgbox Text_NurseMonFriendshipMid
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipHigh::
+	msgbox Text_NurseMonFriendshipHigh
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipHigher::
+	msgbox Text_NurseMonFriendshipHigher
+	return
+
+EventScript_PkmnCenterNurse_MonFriendshipHighest::
+	msgbox Text_NurseMonFriendshipHighest
+	return
 
 EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
