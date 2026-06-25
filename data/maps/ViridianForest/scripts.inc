@@ -190,6 +190,8 @@ ViridianForest_EventScript_Tangrowth::
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
+	setflag FLAG_INTERACTED_APEX_TANGROWTH
+	special TryCompleteApexInstinctQuest
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartApexBattle
 	waitstate

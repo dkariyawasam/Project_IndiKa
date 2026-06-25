@@ -1746,6 +1746,15 @@ extern const u8 gText_SubQuest2_Name18[];
 extern const u8 gText_SubQuest2_Name19[];
 extern const u8 gText_SubQuest2_Name20[];
 
+extern const u8 gText_SubQuest3_Name1[];
+extern const u8 gText_SubQuest3_Name2[];
+extern const u8 gText_SubQuest3_Name3[];
+extern const u8 gText_SubQuest3_Name4[];
+extern const u8 gText_SubQuest3_Name5[];
+extern const u8 gText_SubQuest3_Name6[];
+extern const u8 gText_SubQuest3_Name7[];
+extern const u8 gText_SubQuest3_Name8[];
+
 extern const u8 gText_SubQuest1_Desc1[];
 extern const u8 gText_SubQuest1_Desc2[];
 extern const u8 gText_SubQuest1_Desc3[];
@@ -1777,6 +1786,24 @@ extern const u8 gText_SubQuest2_Desc17[];
 extern const u8 gText_SubQuest2_Desc18[];
 extern const u8 gText_SubQuest2_Desc19[];
 extern const u8 gText_SubQuest2_Desc20[];
+
+extern const u8 gText_SubQuest3_Desc1[];
+extern const u8 gText_SubQuest3_Desc2[];
+extern const u8 gText_SubQuest3_Desc3[];
+extern const u8 gText_SubQuest3_Desc4[];
+extern const u8 gText_SubQuest3_Desc5[];
+extern const u8 gText_SubQuest3_Desc6[];
+extern const u8 gText_SubQuest3_Desc7[];
+extern const u8 gText_SubQuest3_Desc8[];
+
+extern const u8 gText_SubQuest3_Map1[];
+extern const u8 gText_SubQuest3_Map2[];
+extern const u8 gText_SubQuest3_Map3[];
+extern const u8 gText_SubQuest3_Map4[];
+extern const u8 gText_SubQuest3_Map5[];
+extern const u8 gText_SubQuest3_Map6[];
+extern const u8 gText_SubQuest3_Map7[];
+extern const u8 gText_SubQuest3_Map8[];
 
 extern const u8 gText_BrockTrialPhase1[];
 extern const u8 gText_BrockTrialPhase2[];

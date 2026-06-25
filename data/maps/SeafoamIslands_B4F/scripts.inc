@@ -165,6 +165,8 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	delay 10
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
+	setflag FLAG_INTERACTED_APEX_ARTICUNO
+	special TryCompleteApexInstinctQuest
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartApexBattle
 	waitstate
