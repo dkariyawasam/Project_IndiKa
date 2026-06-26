@@ -2142,27 +2142,6 @@ const u8 gMawilePokedexText[] = _(
 
 const u8 gMawilePokedexTextUnused[] = _("");
 
-const u8 gAronPokedexText[] = _(
-    "It eats iron to build its steel body.\n"
-    "It is a pest that descends from mountains\n"
-    "to eat bridges and train tracks.");
-
-const u8 gAronPokedexTextUnused[] = _("");
-
-const u8 gLaironPokedexText[] = _(
-    "It habitually shows off its strength with\n"
-    "the size of sparks it creates by ramming\n"
-    "its steel body into boulders.");
-
-const u8 gLaironPokedexTextUnused[] = _("");
-
-const u8 gAggronPokedexText[] = _(
-    "It claims a large mountain as its sole\n"
-    "territory. It mercilessly thrashes those\n"
-    "that violate its space.");
-
-const u8 gAggronPokedexTextUnused[] = _("");
-
 const u8 gMedititePokedexText[] = _(
     "It never skips its daily yoga training.\n"
     "It heightens its inner strength through\n"

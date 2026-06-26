@@ -1908,21 +1908,6 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 48),
         .y_offset = 10,
     },
-    [SPECIES_ARON] =
-    {
-        .size = MON_COORDS_SIZE(40, 32),
-        .y_offset = 17,
-    },
-    [SPECIES_LAIRON] =
-    {
-        .size = MON_COORDS_SIZE(64, 32),
-        .y_offset = 17,
-    },
-    [SPECIES_AGGRON] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 7,
-    },
     [SPECIES_CASTFORM] =
     {
         .size = MON_COORDS_SIZE(32, 40),
