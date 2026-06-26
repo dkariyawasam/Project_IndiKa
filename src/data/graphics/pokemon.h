@@ -1557,6 +1557,14 @@ const u32 gMonShinyPalette_Shuckle[] = INCBIN_U32("graphics/pokemon/shuckle/shin
 const u8 gMonIcon_Shuckle[] = INCBIN_U8("graphics/pokemon/shuckle/icon.4bpp");
 const u8 gMonFootprint_Shuckle[] = INCBIN_U8("graphics/pokemon/shuckle/footprint.1bpp");
 
+const u32 gMonFrontPic_Kricketot[] = INCBIN_U32("graphics/pokemon/kricketot/front.4bpp.lz");
+const u32 gMonPalette_Kricketot[] = INCBIN_U32("graphics/pokemon/kricketot/normal.gbapal.lz");
+const u32 gMonBackPic_Kricketot[] = INCBIN_U32("graphics/pokemon/kricketot/back.4bpp.lz");
+const u32 gMonShinyPalette_Kricketot[] = INCBIN_U32("graphics/pokemon/kricketot/shiny.gbapal.lz");
+
+const u32 gMonFrontPic_Kricketune[] = INCBIN_U32("graphics/pokemon/kricketune/front.4bpp.lz");
+const u32 gMonBackPic_Kricketune[] = INCBIN_U32("graphics/pokemon/kricketune/back.4bpp.lz");
+
 const u32 gMonFrontPic_Heracross[] = INCBIN_U32("graphics/pokemon/heracross/front.4bpp.lz");
 const u32 gMonPalette_Heracross[] = INCBIN_U32("graphics/pokemon/heracross/normal.gbapal.lz");
 const u32 gMonBackPic_Heracross[] = INCBIN_U32("graphics/pokemon/heracross/back.4bpp.lz");
