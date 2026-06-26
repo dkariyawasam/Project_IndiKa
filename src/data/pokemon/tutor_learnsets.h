@@ -2560,28 +2560,11 @@ static const u16 sTutorLearnsets[] =
                         | TUTOR(MOVE_ROCK_SLIDE)
                         | TUTOR(MOVE_SUBSTITUTE),
 
-    [SPECIES_ARON] = TUTOR(MOVE_BODY_SLAM)
-                   | TUTOR(MOVE_DOUBLE_EDGE)
-                   | TUTOR(MOVE_MIMIC)
-                   | TUTOR(MOVE_ROCK_SLIDE)
-                   | TUTOR(MOVE_SUBSTITUTE),
+    [SPECIES_ARON] = 0,
 
-    [SPECIES_LAIRON] = TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_ROCK_SLIDE)
-                     | TUTOR(MOVE_SUBSTITUTE),
+    [SPECIES_LAIRON] = 0,
 
-    [SPECIES_AGGRON] = TUTOR(MOVE_MEGA_PUNCH)
-                     | TUTOR(MOVE_MEGA_KICK)
-                     | TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_COUNTER)
-                     | TUTOR(MOVE_SEISMIC_TOSS)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_THUNDER_WAVE)
-                     | TUTOR(MOVE_ROCK_SLIDE)
-                     | TUTOR(MOVE_SUBSTITUTE),
+    [SPECIES_AGGRON] = 0,
 
     [SPECIES_CASTFORM] = TUTOR(MOVE_BODY_SLAM)
                        | TUTOR(MOVE_DOUBLE_EDGE)

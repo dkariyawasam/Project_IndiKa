@@ -3965,45 +3965,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -3,
     },
 
-    [NATIONAL_DEX_ARON] =
-    {
-        .categoryName = _("IRON ARMOR"),
-        .height = 4,
-        .weight = 600,
-        .description = gAronPokedexText,
-        .unusedDescription = gAronPokedexTextUnused,
-        .pokemonScale = 419,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
-    [NATIONAL_DEX_LAIRON] =
-    {
-        .categoryName = _("IRON ARMOR"),
-        .height = 9,
-        .weight = 1200,
-        .description = gLaironPokedexText,
-        .unusedDescription = gLaironPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
-    [NATIONAL_DEX_AGGRON] =
-    {
-        .categoryName = _("IRON ARMOR"),
-        .height = 21,
-        .weight = 3600,
-        .description = gAggronPokedexText,
-        .unusedDescription = gAggronPokedexTextUnused,
-        .pokemonScale = 274,
-        .pokemonOffset = -1,
-        .trainerScale = 374,
-        .trainerOffset = 7,
-    },
-
     [NATIONAL_DEX_MEDITITE] =
     {
         .categoryName = _("MEDITATE"),
