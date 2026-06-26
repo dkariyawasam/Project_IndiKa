@@ -1243,12 +1243,6 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_TALK,
               MOVE_ROCK_SLIDE),
 
-    egg_moves(ARON,
-              MOVE_ENDEAVOR,
-              MOVE_BODY_SLAM,
-              MOVE_STOMP,
-              MOVE_SMELLING_SALT),
-
     egg_moves(CASTFORM,
               MOVE_FUTURE_SIGHT,
               MOVE_PSYCH_UP),

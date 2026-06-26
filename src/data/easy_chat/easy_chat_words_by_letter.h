@@ -39,7 +39,6 @@ static const u16 sEasyChatWordsByLetter_A[] = {
     EC_POKEMON(AERODACTYL),
     EC_WORD_AFTER,
     EC_WORD_AGE,
-    EC_POKEMON2(AGGRON),
     EC_MOVE(AGILITY),
     EC_WORD_AGREE,
     EC_WORD_AHAHA,
@@ -94,7 +93,6 @@ static const u16 sEasyChatWordsByLetter_A[] = {
     EC_MOVE2(ARM_THRUST),
     EC_POKEMON2(ARMALDO),
     EC_MOVE(AROMATHERAPY),
-    EC_POKEMON2(ARON),
     EC_WORD_AROUND,
     EC_WORD_ARRGH,
     EC_POKEMON(ARTICUNO),
@@ -858,7 +856,6 @@ static const u16 sEasyChatWordsByLetter_L[] = {
     EC_WORD_LACKING,
     EC_WORD_LACKS,
     EC_WORD_LADY,
-    EC_POKEMON2(LAIRON),
     EC_WORD_LALALA,
     -1, 2, // Doubled pokemon species name
     EC_POKEMON2(LANTURN),
