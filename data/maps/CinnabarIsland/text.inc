@@ -55,10 +55,10 @@ Text_ExplosionTaught::
     .string "Using EXPLOSION near a volcano…\p"
     .string "What a terrifying thrill!$"
 
-    .string "There's this little island in the far\n"
-    .string "south called ONE ISLAND.\p"
+    .string "There's a research site near\n"
+    .string "CINNABAR VOLCANO.\p"
     .string "A friend invited me, so I'm on my\n"
-    .string "way out there.\p"
+    .string "way up there.\p"
     .string "How about it?\n"
     .string "Do you feel like coming with me?$"
 
@@ -76,17 +76,17 @@ CinnabarIsland_Text_IllBeWaitingInPokeCenter::
     .string "your business here.$"
 
 CinnabarIsland_Text_MyPalsBoatArrived::
-    .string "Looks like my pal's boat arrived,\n"
+    .string "Looks like my pal's ready,\n"
     .string "too.\p"
-    .string "He sent it specially here to\n"
+    .string "He came specially here to\n"
     .string "CINNABAR to pick me up.$"
 
 CinnabarIsland_Text_FerryNoLongerRuns::
-    .string "Looks like the ferry isn't\n"
-    .string "running anymore.$"
+    .string "Looks like the path isn't\n"
+    .string "safe right now.$"
 
 CinnabarIsland_Text_ThanksForYourCompany::
-    .string "Hey, wasn't that a long cruise?\p"
-    .string "My buddy CELIO seemed to enjoy\n"
+    .string "Hey, wasn't that a long trek?\p"
+    .string "My buddy seemed to enjoy\n"
     .string "your company.\p"
     .string "All right, thanks for your company!$"

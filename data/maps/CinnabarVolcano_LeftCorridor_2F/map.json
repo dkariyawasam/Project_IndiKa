@@ -2,7 +2,7 @@
   "id": "MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
   "name": "CinnabarVolcano_LeftCorridor_2F",
   "layout": "LAYOUT_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
-  "music": "MUS_SEVII_CAVE",
+  "music": "MUS_FUCHSIA",
   "region_map_section": "MAPSEC_CINNABAR_VOLCANO",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
