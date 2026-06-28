@@ -311,7 +311,7 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
     .string "I'll get the POKéDEX completed,\n"
     .string "don't you worry about a thing.\p"
     .string "I think I'll try looking around\n"
-    .string "ONE ISLAND first…\p"
+    .string "KANTO first…\p"
     .string "Anyways, I'm outta here!$"
 
 Text_UltimateMoveThatMon::

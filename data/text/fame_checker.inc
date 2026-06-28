@@ -767,8 +767,8 @@ gFameCheckerPersonName_Bill:: @ 0x81B0A45
 gFameCheckerPersonQuote_Bill:: @ 0x81B0A50
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BILL\n"
 	.string "To: {PLAYER}\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! CELIO had nothing but\n"
-	.string "praise for you.\p"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! Everyone has had\n"
+	.string "nothing but praise for you.\p"
 	.string "Hearing that makes me happy.\p"
 	.string "When you catch some rare POKéMON,\n"
 	.string "come show me, okay? Promise!$"
@@ -925,7 +925,7 @@ gFameCheckerFlavorTextOriginLocation_Sabrina0::
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina1::
-	.string "THREE ISLAND$"
+	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina2::
 	.string "SAFFRON GYM$"
@@ -985,7 +985,7 @@ gFameCheckerFlavorTextOriginLocation_Bruno2::
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno3::
-	.string "EMBER SPA$"
+	.string "KANTO$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno4::
 	.string "KANTO$"
@@ -1039,13 +1039,13 @@ gFameCheckerFlavorTextOriginLocation_Bill2::
 	.string "FUCHSIA CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill3::
-	.string "ONE ISLAND$"
+	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill4::
-	.string "ONE ISLAND$"
+	.string "GOLDENROD CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill5::
-	.string "ONE ISLAND$"
+	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji0::
 	.string "LAVENDER TOWN$"
@@ -1327,13 +1327,13 @@ gFameCheckerFlavorTextOriginObjectName_Bill2::
 	.string "OLD MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill3::
-	.string "CELIO$"
+	.string "SCIENTIST$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill4::
-	.string "CELIO$"
+	.string "TRAVELER$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill5::
-	.string "CELIO$"
+	.string "POKéMANIAC$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji0::
 	.string "LITTLE GIRL$"
