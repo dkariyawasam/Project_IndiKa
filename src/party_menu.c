@@ -517,71 +517,71 @@ static bool8 ShowPartyMenu(void)
             ++gMain.state;
         }
         break;
-    case 8:
+    case 7:
         if (AllocPartyMenuBgGfx())
             ++gMain.state;
         break;
-    case 9:
+    case 8:
         InitPartyMenuWindows(gPartyMenu.layout);
         ++gMain.state;
         break;
-    case 10:
+    case 9:
         InitPartyMenuBoxes(gPartyMenu.layout);
         sPartyMenuInternal->data[0] = 0;
         ++gMain.state;
         break;
-    case 11:
+    case 10:
         LoadHeldItemIcons();
         ++gMain.state;
         break;
-    case 12:
+    case 11:
         LoadPartyMenuPokeballGfx();
         ++gMain.state;
         break;
-    case 13:
+    case 12:
         LoadPartyMenuAilmentGfx();
         ++gMain.state;
         break;
-    case 14:
+    case 13:
         LoadMonIconPalettes();
         ++gMain.state;
         break;
-    case 15:
+    case 14:
         if (CreatePartyMonSpritesLoop())
         {
             sPartyMenuInternal->data[0] = 0;
             ++gMain.state;
         }
         break;
-    case 16:
+    case 15:
         if (RenderPartyMenuBoxes())
         {
             sPartyMenuInternal->data[0] = 0;
             ++gMain.state;
         }
         break;
-    case 17:
+    case 16:
         CreateCancelConfirmPokeballSprites();
         ++gMain.state;
         break;
-    case 18:
+    case 17:
         CreateCancelConfirmWindows(sPartyMenuInternal->chooseMultiple);
         ++gMain.state;
         break;
-    case 19:
+    case 18:
         SetHelpContext(HELPCONTEXT_PARTY_MENU);
         ++gMain.state;
         break;
-    case 20:
+    case 19:
         CreateTask(sPartyMenuInternal->task, 0);
         DisplayPartyMenuStdMessage(sPartyMenuInternal->messageId);
         ++gMain.state;
         break;
-    case 21:
+    case 20:
         BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
         ++gMain.state;
         break;
-    case 22:
+    case 21:
         BeginNormalPaletteFade(PALETTES_ALL, -2, 16, 0, RGB_BLACK);
         gPaletteFade.bufferTransferDisabled = FALSE;
         ++gMain.state;
