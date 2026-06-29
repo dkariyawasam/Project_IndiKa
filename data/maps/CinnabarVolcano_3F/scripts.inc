@@ -82,16 +82,19 @@ CinnabarVolcano_3F_EventScript_Moltres::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CinnabarVolcano_3F_EventScript_DefeatedMoltres
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, CinnabarVolcano_3F_EventScript_DefeatedMoltres
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CinnabarVolcano_3F_EventScript_RanFromMoltres
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CinnabarVolcano_3F_EventScript_RanFromMoltres
 	setflag FLAG_FOUGHT_VOLCANO_MOLTRES
 	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	pokedexmsg Text_OakApexMoltres
 	release
 	end
 
 CinnabarVolcano_3F_EventScript_DefeatedMoltres::
 	setflag FLAG_FOUGHT_VOLCANO_MOLTRES
 	setflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	pokedexmsg Text_OakApexMoltres
 	goto EventScript_RemoveStaticMon
 	end
 

@@ -182,14 +182,17 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafoamIslands_B4F_EventScript_DefeatedArticuno
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, SeafoamIslands_B4F_EventScript_DefeatedArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	setflag FLAG_FOUGHT_ARTICUNO
+	pokedexmsg Text_OakApexArticuno
 	release
 	end
 
 SeafoamIslands_B4F_EventScript_DefeatedArticuno::
 	setflag FLAG_FOUGHT_ARTICUNO
+	pokedexmsg Text_OakApexArticuno
 	goto EventScript_RemoveStaticMon
 	end
 

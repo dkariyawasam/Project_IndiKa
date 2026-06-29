@@ -66,16 +66,19 @@ PokemonTower_4F_EventScript_Osscythe::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PokemonTower_4F_EventScript_DefeatedOsscythe
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, PokemonTower_4F_EventScript_DefeatedOsscythe
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PokemonTower_4F_EventScript_RanFromOsscythe
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PokemonTower_4F_EventScript_RanFromOsscythe
 	setflag FLAG_FOUGHT_OSSCYTHE
 	setflag FLAG_HIDE_POKEMON_TOWER_OSSCYTHE
+	pokedexmsg Text_OakApexOsscythe
 	release
 	end
 
 PokemonTower_4F_EventScript_DefeatedOsscythe::
 	setflag FLAG_FOUGHT_OSSCYTHE
 	setflag FLAG_HIDE_POKEMON_TOWER_OSSCYTHE
+	pokedexmsg Text_OakApexOsscythe
 	goto EventScript_RemoveStaticMon
 	end
 

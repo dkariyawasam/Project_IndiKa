@@ -59,14 +59,17 @@ PowerPlant_EventScript_Zapdos::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_DefeatedZapdos
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, PowerPlant_EventScript_DefeatedZapdos
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_RanFromZapdos
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_RanFromZapdos
 	setflag FLAG_FOUGHT_ZAPDOS
+	pokedexmsg Text_OakApexZapdos
 	release
 	end
 
 PowerPlant_EventScript_DefeatedZapdos::
 	setflag FLAG_FOUGHT_ZAPDOS
+	pokedexmsg Text_OakApexZapdos
 	goto EventScript_RemoveStaticMon
 	end
 

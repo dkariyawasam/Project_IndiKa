@@ -202,16 +202,19 @@ ViridianForest_EventScript_Tangrowth::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, ViridianForest_EventScript_DefeatedTangrowth
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, ViridianForest_EventScript_DefeatedTangrowth
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, ViridianForest_EventScript_RanFromTangrowth
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ViridianForest_EventScript_RanFromTangrowth
 	setflag FLAG_FOUGHT_TANGROWTH
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	pokedexmsg Text_OakApexTangrowth
 	release
 	end
 
 ViridianForest_EventScript_DefeatedTangrowth::
 	setflag FLAG_FOUGHT_TANGROWTH
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
+	pokedexmsg Text_OakApexTangrowth
 	goto EventScript_RemoveStaticMon
 	end
 
