@@ -437,9 +437,6 @@ static void Task_LinkupAwaitTrainerCardData(u8 taskId)
     HideFieldMessageBox();
     if (gSpecialVar_Result == LINKUP_SUCCESS)
     {
-        // Dumb trick required to match
-        if (gLinkType == LINKTYPE_BERRY_BLENDER_SETUP)
-            *UnusedVarNeededToMatch += 0;
         ClearLinkPlayerCountWindow(gTasks[taskId].tWindowId);
         ScriptContext_Enable();
         DestroyTask(taskId);
@@ -562,9 +559,6 @@ u8 CreateTask_ReestablishCableClubLink(void)
         break;
     case USING_TRADE_CENTER:
         gLinkType = LINKTYPE_TRADE;
-        break;
-    case USING_RECORD_CORNER:
-        gLinkType = LINKTYPE_RECORD_MIX_AFTER;
         break;
     }
     return CreateTask(Task_ReestablishLink, 80);

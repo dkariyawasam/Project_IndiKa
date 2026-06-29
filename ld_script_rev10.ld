@@ -292,23 +292,17 @@ SECTIONS {
         src/mystery_gift_show_news.o(.text);
         src/wonder_news.o(.text);
         src/seagallop.o(.text);
-        src/pokemon_jump.o(.text);
-        src/berry_crush.o(.text);
         src/wireless_communication_status_screen.o(.text);
         src/braille_text.o(.text);
         src/text_window.o(.text);
         src/quest_log_player.o(.text);
-        src/dodrio_berry_picking.o(.text);
         src/battle_controller_pokedude.o(.text);
         src/quest_log_objects.o(.text);
-        src/dodrio_berry_picking_comm.o(.text);
         src/teachy_tv.o(.text);
         src/ereader_helpers.o(.text);
         src/digit_obj_util.o(.text);
         src/ss_anne.o(.text);
         src/renewable_hidden_items.o(.text);
-        src/berry_powder.o(.text);
-        src/minigame_countdown.o(.text);
         src/berry_fix_program.o(.text);
     } > ROM =0
 
@@ -585,19 +579,15 @@ SECTIONS {
         src/wonder_news.o(.rodata);
         src/wonder_news.o(.rodata.str1.4);
         src/seagallop.o(.rodata);
-        src/pokemon_jump.o(.rodata);
-        src/berry_crush.o(.rodata);
         src/wireless_communication_status_screen.o(.rodata);
         src/braille_text.o(.rodata);
         src/text_window_graphics.o(.rodata);
         src/quest_log_player.o(.rodata);
-        src/dodrio_berry_picking.o(.rodata);
         src/battle_controller_pokedude.o(.rodata);
         src/teachy_tv.o(.rodata);
         src/digit_obj_util.o(.rodata);
         src/ss_anne.o(.rodata);
         src/renewable_hidden_items.o(.rodata);
-        src/minigame_countdown.o(.rodata);
         src/berry_fix_program.o(.rodata);
         src/keyboard_text.o(.rodata);
         src/move_descriptions.o(.rodata);
@@ -659,7 +649,6 @@ SECTIONS {
         sound/songs/midi/se_truck_stop.o(.rodata);
         sound/songs/midi/se_truck_unload.o(.rodata);
         sound/songs/midi/se_truck_door.o(.rodata);
-        sound/songs/midi/se_berry_blender.o(.rodata);
         sound/songs/midi/se_save.o(.rodata);
         sound/songs/midi/se_ball_bounce_1.o(.rodata);
         sound/songs/midi/se_ball_bounce_2.o(.rodata);
@@ -866,8 +855,6 @@ SECTIONS {
         sound/songs/midi/se_help_close.o(.rodata);
         sound/songs/midi/se_help_error.o(.rodata);
         sound/songs/midi/se_deoxys_move.o(.rodata);
-        sound/songs/midi/se_poke_jump_success.o(.rodata);
-        sound/songs/midi/se_poke_jump_failure.o(.rodata);
         sound/songs/midi/mus_heal.o(.rodata);
         sound/songs/midi/mus_level_up.o(.rodata);
         sound/songs/midi/mus_obtain_item.o(.rodata);
@@ -938,11 +925,9 @@ SECTIONS {
         sound/songs/midi/mus_new_game_instruct.o(.rodata);
         sound/songs/midi/mus_new_game_intro.o(.rodata);
         sound/songs/midi/mus_new_game_exit.o(.rodata);
-        sound/songs/midi/mus_poke_jump.o(.rodata);
         sound/songs/midi/mus_union_room.o(.rodata);
         sound/songs/midi/mus_net_center.o(.rodata);
         sound/songs/midi/mus_mystery_gift.o(.rodata);
-        sound/songs/midi/mus_berry_pick.o(.rodata);
         sound/songs/midi/mus_sevii_cave.o(.rodata);
         sound/songs/midi/mus_teachy_tv_show.o(.rodata);
         sound/songs/midi/mus_sevii_route.o(.rodata);

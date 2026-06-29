@@ -250,7 +250,7 @@ static const u16 sWhiteOutMoneyLossBadgeFlagIDs[] = {
     FLAG_BADGE08_GET
 };
 
-static void ResetRocketLeagueChallengeOnWhiteOut(void)
+static void ResetLeagueChallengeOnWhiteOut(void)
 {
     if (gSaveBlock2Ptr->leagueChallenge.active
      && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_ROCKET
@@ -262,12 +262,21 @@ static void ResetRocketLeagueChallengeOnWhiteOut(void)
         ResetLeagueChallenge();
         VarSet(VAR_ROCKET_LEAGUE_PRIZE_TIER, 0);
     }
+    else if (gSaveBlock2Ptr->leagueChallenge.active
+          && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_INDIGO
+          && ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_BRUNOS_ROOM)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_BRUNOS_ROOM))
+           || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM))))
+    {
+        ResetLeagueChallenge();
+    }
 }
 
 static void DoWhiteOut(void)
 {
     RunScriptImmediately(EventScript_ResetEliteFourEnd);
-    ResetRocketLeagueChallengeOnWhiteOut();
+    ResetLeagueChallengeOnWhiteOut();
     RemoveMoney(&gSaveBlock1Ptr->money, ComputeWhiteOutMoneyLoss());
     HealPlayerParty();
     Overworld_ResetStateAfterWhitingOut();
@@ -3148,14 +3157,6 @@ static u16 GetDirectionForEventScript(const u8 *script)
     else if (script == BattleColosseum_4P_EventScript_PlayerSpot2)
         return FACING_FORCED_RIGHT;
     else if (script == BattleColosseum_4P_EventScript_PlayerSpot3)
-        return FACING_FORCED_LEFT;
-    else if (script == RecordCorner_EventScript_Spot0)
-        return FACING_FORCED_RIGHT;
-    else if (script == RecordCorner_EventScript_Spot1)
-        return FACING_FORCED_LEFT;
-    else if (script == RecordCorner_EventScript_Spot2)
-        return FACING_FORCED_RIGHT;
-    else if (script == RecordCorner_EventScript_Spot3)
         return FACING_FORCED_LEFT;
     else if (script == BattleColosseum_2P_EventScript_PlayerSpot0)
         return FACING_FORCED_RIGHT;

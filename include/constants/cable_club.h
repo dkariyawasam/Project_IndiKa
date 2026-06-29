@@ -5,11 +5,11 @@
 #define USING_SINGLE_BATTLE  1
 #define USING_DOUBLE_BATTLE  2
 #define USING_TRADE_CENTER   3
-#define USING_RECORD_CORNER  4
+#define USING_UNUSED_4       4
 #define USING_MULTI_BATTLE   5
 #define USING_UNION_ROOM     6
-#define USING_BERRY_CRUSH    7
-#define USING_MINIGAME       8
+#define USING_UNUSED_7       7
+#define USING_UNUSED_8       8
 #define USING_BATTLE_TOWER   9
 
 // Return states for the group of specials that use CreateLinkupTask

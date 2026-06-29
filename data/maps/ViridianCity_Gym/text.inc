@@ -28,10 +28,11 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
     .string "Farewell!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
-    .string "With all eight BADGES, POKéMON\n"
-    .string "of any level obey without question.\p"
-    .string "It is evidence of your mastery as\n"
-    .string "a POKéMON TRAINER.\p"
+    .string "The EARTHBADGE is evidence of\n"
+    .string "your mastery as a TRAINER.\p"
+    .string "But obedience is earned through\n"
+    .string "the trust recorded in your\l"
+    .string "FIELD AIDE work.\p"
     .string "With it, you can challenge the\n"
     .string "POKéMON LEAGUE.\p"
     .string "Go. Your path lies ahead.$"

@@ -48,7 +48,7 @@
 #define SE_TRUCK_STOP             44  // SE_TRACK_STOP
 #define SE_TRUCK_UNLOAD           45  // SE_TRACK_HAIKI
 #define SE_TRUCK_DOOR             46  // SE_TRACK_DOOR
-#define SE_BERRY_BLENDER          47  // SE_MOTER
+#define SE_UNUSED_47              47
 #define SE_SAVE                   48  // SE_SAVE
 #define SE_BALL_BOUNCE_1          49  // SE_KON
 #define SE_BALL_BOUNCE_2          50  // SE_KON2
@@ -257,8 +257,8 @@
 #define SE_HELP_CLOSE             251 // SE_HELP_CL
 #define SE_HELP_ERROR             252 // SE_HELP_NG
 #define SE_DEOXYS_MOVE            253 // SE_DEOMOV
-#define SE_POKE_JUMP_SUCCESS      254 // SE_EXCELLENT
-#define SE_POKE_JUMP_FAILURE      255 // SE_NAWAMISS
+#define SE_UNUSED_254             254
+#define SE_UNUSED_255             255
 // Music kept from RS
 #define MUS_HEAL                  256 // MUS_ME_ASA
 #define MUS_LEVEL_UP              257 // MUS_FANFA1
@@ -331,11 +331,11 @@
 #define MUS_NEW_GAME_INSTRUCT     323 // MUS_SOUSA
 #define MUS_NEW_GAME_INTRO        324 // MUS_SEKAIKAN
 #define MUS_NEW_GAME_EXIT         325 // MUS_SEIBETU
-#define MUS_POKE_JUMP             326 // MUS_JUMP
+#define MUS_UNUSED_326            326
 #define MUS_UNION_ROOM            327 // MUS_UNION
 #define MUS_NET_CENTER            328 // MUS_NETWORK
 #define MUS_MYSTERY_GIFT          329 // MUS_OKURIMONO
-#define MUS_BERRY_PICK            330 // MUS_KINOMIKUI
+#define MUS_UNUSED_330            330
 #define MUS_SEVII_CAVE            331 // MUS_NANADUNGEON
 #define MUS_TEACHY_TV_SHOW        332 // MUS_OSHIE_TV
 #define MUS_SEVII_ROUTE           333 // MUS_NANASHIMA
