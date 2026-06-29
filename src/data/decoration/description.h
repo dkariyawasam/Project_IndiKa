@@ -312,15 +312,15 @@ const u8 DecorDesc_BALL_POSTER[] = _(
 
 const u8 DecorDesc_GREEN_POSTER[] = _(
     "A small poster with\n"
-        "a TREECKO print.");
+        "a ????? print.");
 
 const u8 DecorDesc_RED_POSTER[] = _(
     "A small poster with\n"
-        "a TORCHIC print.");
+        "a ????? print.");
 
 const u8 DecorDesc_BLUE_POSTER[] = _(
     "A small poster with\n"
-        "a MUDKIP print.");
+        "a ????? print.");
 
 const u8 DecorDesc_CUTE_POSTER[] = _(
     "A small poster with\n"
@@ -407,18 +407,18 @@ const u8 DecorDesc_SMOOCHUM_DOLL[] = _(
         "Place it on a mat\n"
         "or a desk.");
 
-const u8 DecorDesc_TREECKO_DOLL[] = _(
-    "A TREECKO doll.\n"
+const u8 DecorDesc_UNUSED_DOLL_1[] = _(
+    "A ????? doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
-const u8 DecorDesc_TORCHIC_DOLL[] = _(
-    "A TORCHIC doll.\n"
+const u8 DecorDesc_UNUSED_DOLL_2[] = _(
+    "A ????? doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
-const u8 DecorDesc_MUDKIP_DOLL[] = _(
-    "A MUDKIP doll.\n"
+const u8 DecorDesc_UNUSED_DOLL_3[] = _(
+    "A ????? doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 

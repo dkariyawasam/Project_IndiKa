@@ -14,8 +14,6 @@ const u32 gUnusedBattleTerrain_Stadium_Map_Tilemap[] = INCBIN_U32("graphics/batt
 
 const u32 gUnusedBattleTerrain_Building_Palette[] = INCBIN_U32("graphics/battle_terrain/unused/building/palette.gbapal.lz");
 
-const u32 gUnusedBattleTerrain_Kyogre_Palette[] = INCBIN_U32("graphics/battle_terrain/unused/kyogre.gbapal.lz");
-const u32 gUnusedBattleTerrain_Groudon_Palette[] = INCBIN_U32("graphics/battle_terrain/unused/groudon.gbapal.lz");
 
 const u32 gUnusedBattleTerrain_Building_Palette2[] = INCBIN_U32("graphics/battle_terrain/unused/building/palette2.gbapal.lz");
 const u32 gUnusedBattleTerrain_Building_Palette3[] = INCBIN_U32("graphics/battle_terrain/unused/building/palette3.gbapal.lz");

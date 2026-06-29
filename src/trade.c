@@ -1961,9 +1961,9 @@ static u8 CheckValidityOfTradeMons(u8 *aliveMons, u8 playerPartyCount, u8 cursor
             hasLiveMon += aliveMons[i];
     }
 
-    // Partner cant trade illegitimate Deoxys or Mew
+    // Partner cant trade illegitimate Mew
     partnerSpecies = GetMonData(&gEnemyParty[sTradeMenu->partnerCursorPosition % PARTY_SIZE], MON_DATA_SPECIES);
-    if ((partnerSpecies == SPECIES_DEOXYS || partnerSpecies == SPECIES_MEW)
+    if (partnerSpecies == SPECIES_MEW
         && !GetMonData(&gEnemyParty[sTradeMenu->partnerCursorPosition % PARTY_SIZE], MON_DATA_MODERN_FATEFUL_ENCOUNTER))
         return PARTNER_MON_INVALID;
 
@@ -2792,7 +2792,7 @@ static u32 CanTradeSelectedMon(struct Pokemon * playerParty, int partyCount, int
         }
     }
 
-    if (species[monIdx] == SPECIES_DEOXYS || species[monIdx] == SPECIES_MEW)
+    if (species[monIdx] == SPECIES_MEW)
     {
         if (!GetMonData(&playerParty[monIdx], MON_DATA_MODERN_FATEFUL_ENCOUNTER))
             return CANT_TRADE_INVALID_MON;
@@ -2861,7 +2861,7 @@ s32 GetGameProgressForLinkTrade(void)
 
 static bool32 IsDeoxysOrMewUntradable(u16 species, bool8 isModernFatefulEncounter)
 {
-    if (species == SPECIES_DEOXYS || species == SPECIES_MEW)
+    if (species == SPECIES_MEW)
     {
         if (!isModernFatefulEncounter)
             return TRUE;
@@ -2892,7 +2892,7 @@ int GetUnionRoomTradeMessageId(struct RfuGameCompatibilityData player, struct Rf
             return UR_TRADE_MSG_CANT_TRADE_WITH_PARTNER_2;
     }
 
-    // Cannot trade illegitimate Deoxys/Mew
+    // Cannot trade illegitimate Mew
     if (IsDeoxysOrMewUntradable(playerSpecies, isModernFatefulEncounter))
         return UR_TRADE_MSG_MON_CANT_BE_TRADED_2;
 

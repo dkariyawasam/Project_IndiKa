@@ -792,32 +792,32 @@ const struct Decoration gDecorations[] = {
         DecorDesc_SMOOCHUM_DOLL,
         DecorGfx_SMOOCHUM_DOLL
     }, {
-        DECOR_TREECKO_DOLL,
-        _("TREECKO DOLL"),
+        DECOR_UNUSED_DOLL_1,
+        _("????? DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TREECKO_DOLL,
-        DecorGfx_TREECKO_DOLL
+        DecorDesc_UNUSED_DOLL_1,
+        DecorGfx_UNUSED_DOLL_1
     }, {
-        DECOR_TORCHIC_DOLL,
-        _("TORCHIC DOLL"),
+        DECOR_UNUSED_DOLL_2,
+        _("????? DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TORCHIC_DOLL,
-        DecorGfx_TORCHIC_DOLL
+        DecorDesc_UNUSED_DOLL_2,
+        DecorGfx_UNUSED_DOLL_2
     }, {
-        DECOR_MUDKIP_DOLL,
-        _("MUDKIP DOLL"),
+        DECOR_UNUSED_DOLL_3,
+        _("????? DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_MUDKIP_DOLL,
-        DecorGfx_MUDKIP_DOLL
+        DecorDesc_UNUSED_DOLL_3,
+        DecorGfx_UNUSED_DOLL_3
     }, {
         DECOR_DUSKULL_DOLL,
         _("DUSKULL DOLL"),

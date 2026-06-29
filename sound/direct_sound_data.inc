@@ -1324,10 +1324,6 @@ Cry_Duskull::
 	.incbin "sound/direct_sound_samples/cries/duskull.bin"
 
 	.align 2
-Cry_Latias::
-	.incbin "sound/direct_sound_samples/cries/latias.bin"
-
-	.align 2
 Cry_Wynaut::
 	.incbin "sound/direct_sound_samples/cries/wynaut.bin"
 
@@ -1374,42 +1370,6 @@ Cry_Unused268::
 	.align 2
 Cry_Spinda::
 	.incbin "sound/direct_sound_samples/cries/spinda.bin"
-
-	.align 2
-Cry_Torchic::
-	.incbin "sound/direct_sound_samples/cries/torchic.bin"
-
-	.align 2
-Cry_Combusken::
-	.incbin "sound/direct_sound_samples/cries/combusken.bin"
-
-	.align 2
-Cry_Blaziken::
-	.incbin "sound/direct_sound_samples/cries/blaziken.bin"
-
-	.align 2
-Cry_Treecko::
-	.incbin "sound/direct_sound_samples/cries/treecko.bin"
-
-	.align 2
-Cry_Grovyle::
-	.incbin "sound/direct_sound_samples/cries/grovyle.bin"
-
-	.align 2
-Cry_Sceptile::
-	.incbin "sound/direct_sound_samples/cries/sceptile.bin"
-
-	.align 2
-Cry_Mudkip::
-	.incbin "sound/direct_sound_samples/cries/mudkip.bin"
-
-	.align 2
-Cry_Marshtomp::
-	.incbin "sound/direct_sound_samples/cries/marshtomp.bin"
-
-	.align 2
-Cry_Swampert::
-	.incbin "sound/direct_sound_samples/cries/swampert.bin"
 
 	.align 2
 Cry_Pelipper::
@@ -1752,36 +1712,12 @@ Cry_Mawile::
 	.incbin "sound/direct_sound_samples/cries/mawile.bin"
 
 	.align 2
-Cry_Aron::
-	.incbin "sound/direct_sound_samples/cries/aron.bin"
-
-	.align 2
-Cry_Lairon::
-	.incbin "sound/direct_sound_samples/cries/lairon.bin"
-
-	.align 2
-Cry_Aggron::
-	.incbin "sound/direct_sound_samples/cries/aggron.bin"
-
-	.align 2
 Cry_Relicanth::
 	.incbin "sound/direct_sound_samples/cries/relicanth.bin"
 
 	.align 2
 Cry_Luvdisc::
 	.incbin "sound/direct_sound_samples/cries/luvdisc.bin"
-
-	.align 2
-Cry_Groudon::
-	.incbin "sound/direct_sound_samples/cries/groudon.bin"
-
-	.align 2
-Cry_Kyogre::
-	.incbin "sound/direct_sound_samples/cries/kyogre.bin"
-
-	.align 2
-Cry_Rayquaza::
-	.incbin "sound/direct_sound_samples/cries/rayquaza.bin"
 
 	.align 2
 Cry_Salamence::
@@ -1830,18 +1766,6 @@ Cry_Whismur::
 	.align 2
 Cry_Snorunt::
 	.incbin "sound/direct_sound_samples/cries/snorunt.bin"
-
-	.align 2
-Cry_Latios::
-	.incbin "sound/direct_sound_samples/cries/latios.bin"
-
-	.align 2
-Cry_Jirachi::
-	.incbin "sound/direct_sound_samples/cries/jirachi.bin"
-
-	.align 2
-Cry_Deoxys::
-	.incbin "sound/direct_sound_samples/cries/deoxys.bin"
 
 	.align 2
 Cry_Chimecho::

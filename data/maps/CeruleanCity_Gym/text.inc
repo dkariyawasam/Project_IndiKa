@@ -18,10 +18,11 @@ CeruleanCity_Gym_Text_ExplainWaterPulse::
     .string "Use it on an aquatic POKéMON!$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
-    .string "With two BADGES, POKéMON up\n"
-    .string "to Lv. 30 obey.\p"
-    .string "That includes even outsiders you\n"
-    .string "got in trades.\p"
+    .string "That BADGE marks a real change\n"
+    .string "in your journey.\p"
+    .string "Keep building your FIELD AIDE\n"
+    .string "record, and outsider POKéMON\l"
+    .string "will trust you more.\p"
     .string "A puny fish can become a mighty,\n"
     .string "raging POKéMON.\p"
     .string "That's the beauty of change.\p"

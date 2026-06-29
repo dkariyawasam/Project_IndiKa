@@ -203,38 +203,6 @@ struct Pokedex
     /*0x44*/ u8 seen[DEX_FLAGS_NO];
 };
 
-struct PokemonJumpRecords
-{
-    u16 jumpsInRow;
-    u16 unused1; // Set to 0, never read
-    u16 excellentsInRow;
-    u16 gamesWithMaxPlayers;
-    u32 unused2; // Set to 0, never read
-    u32 bestJumpScore;
-};
-
-struct BerryPickingResults // possibly used in the game itself? Size may be wrong as well
-{
-    u32 bestScore;
-    u16 berriesPicked;
-    u16 berriesPickedInRow;
-    u8 field_8;
-    u8 field_9;
-    u8 field_A;
-    u8 field_B;
-    u8 field_C;
-    u8 field_D;
-    u8 field_E;
-    u8 field_F;
-};
-
-struct BerryCrush
-{
-    u16 pressingSpeeds[4]; // For the record with each possible group size, 2-5 players
-    u32 berryPowderAmount;
-    u32 unk;
-};
-
 #define LINK_B_RECORDS_COUNT 5
 
 struct LinkBattleRecord
@@ -371,12 +339,9 @@ struct SaveBlock2
     /*0x0B0*/ struct BattleTowerData battleTower;
     /*0x898*/ u16 mapView[0x100];
     /*0xA98*/ struct LinkBattleRecords linkBattleRecords;
-    /*0xAF0*/ struct BerryCrush berryCrush;
-    /*0xB00*/ struct PokemonJumpRecords pokeJump;
-    /*0xB10*/ struct BerryPickingResults berryPick;
-    //RECOMMENDED TO REMOVE THIS
-    /*0xB20*/ struct LeagueChallengeData leagueChallenge;
-    /*0xB32*/ u8 filler_B32[0x3EE];
+    /*0xAF0*/ u8 filler_AF0[0x10];
+    /*0xB00*/ struct LeagueChallengeData leagueChallenge;
+    /*0xB12*/ u8 filler_B12[0x40E];
     /*0xF20*/ u32 encryptionKey;
 #define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
 #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)

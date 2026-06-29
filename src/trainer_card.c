@@ -31,8 +31,6 @@ enum
     TRAINER_CARD_STRING_LINK_LOSSES,
     TRAINER_CARD_STRING_TRADES,
     TRAINER_CARD_STRING_TRADE_COUNT,
-    TRAINER_CARD_STRING_BERRY_CRUSH,
-    TRAINER_CARD_STRING_BERRY_CRUSH_COUNT,
     TRAINER_CARD_STRING_UNION_ROOM,
     TRAINER_CARD_STRING_UNION_ROOM_NUM,
     TRAINER_CARD_STRING_COUNT,
@@ -123,8 +121,6 @@ static void BufferLinkBattleResults(void);
 static void PrintLinkBattleResultsOnCard(void);
 static void BufferNumTrades(void);
 static void PrintTradesStringOnCard(void);
-static void BufferBerryCrushPoints(void);
-static void PrintBerryCrushStringOnCard(void);
 static void BufferUnionRoomStats(void);
 static void PrintUnionStringOnCard(void);
 static void PrintPokemonIconsOnCard(void);
@@ -388,10 +384,10 @@ static const struct TrainerCard sLinkPlayerTrainerCardTemplate1 =
     },
     .version = VERSION_FIRE_RED,
     .hasAllFrontierSymbols = FALSE,
-    .berryCrushPoints = 5555,
+    .unusedLinkStat0 = 0,
     .unionRoomNum = 8500,
-    .berriesPicked = 5456,
-    .jumpsInRow = 6300,
+    .unusedLinkStat1 = 0,
+    .unusedLinkStat2 = 0,
     .shouldDrawStickers = TRUE,
     .hasAllMons = TRUE,
     .monIconTint = MON_ICON_TINT_PINK,
@@ -428,10 +424,10 @@ static const struct TrainerCard sLinkPlayerTrainerCardTemplate2 =
     },
     .version = 0,
     .hasAllFrontierSymbols = FALSE,
-    .berryCrushPoints = 555,
+    .unusedLinkStat0 = 0,
     .unionRoomNum = 500,
-    .berriesPicked = 456,
-    .jumpsInRow = 300,
+    .unusedLinkStat1 = 0,
+    .unusedLinkStat2 = 0,
     .shouldDrawStickers = TRUE,
     .hasAllMons = TRUE,
     .monIconTint = MON_ICON_TINT_PINK,
@@ -870,10 +866,10 @@ void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
 
     trainerCard->rse.caughtAllHoenn = HasAllKantoMons();
     trainerCard->hasAllMons = HasAllMons();
-    trainerCard->berriesPicked = gSaveBlock2Ptr->berryPick.berriesPicked;
-    trainerCard->jumpsInRow = gSaveBlock2Ptr->pokeJump.jumpsInRow;
+    trainerCard->unusedLinkStat1 = 0;
+    trainerCard->unusedLinkStat2 = 0;
 
-    trainerCard->berryCrushPoints = GetCappedGameStat(GAME_STAT_BERRY_CRUSH_POINTS, 0xFFFF);
+    trainerCard->unusedLinkStat0 = 0;
     trainerCard->unionRoomNum = GetCappedGameStat(GAME_STAT_NUM_UNION_ROOM_BATTLES, 0xFFFF);
     trainerCard->shouldDrawStickers = TRUE;
 
@@ -881,9 +877,6 @@ void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
         trainerCard->rse.stars++;
 
     if (trainerCard->hasAllMons)
-        trainerCard->rse.stars++;
-
-    if (trainerCard->berriesPicked >= 200 && trainerCard->jumpsInRow >= 200)
         trainerCard->rse.stars++;
 
     id = ((u16)trainerCard->rse.trainerId) % NUM_LINK_TRAINER_CARD_CLASSES;
@@ -1090,15 +1083,12 @@ static bool8 PrintAllOnCardBack(void)
         PrintTradesStringOnCard();
         break;
     case 4:
-        PrintBerryCrushStringOnCard();
-        break;
-    case 5:
         PrintUnionStringOnCard();
         break;
-    case 6:
+    case 5:
         PrintPokemonIconsOnCard();
         break;
-    case 7:
+    case 6:
         PrintStickersOnCard();
         break;
     default:
@@ -1115,7 +1105,6 @@ static void BufferTextForCardBack(void)
     BufferHofDebutTime();
     BufferLinkBattleResults();
     BufferNumTrades();
-    BufferBerryCrushPoints();
     BufferUnionRoomStats();
 }
 
@@ -1351,24 +1340,6 @@ static void PrintTradesStringOnCard(void)
     }
 }
 
-static void BufferBerryCrushPoints(void)
-{
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
-    {
-        StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH], gText_BerryCrushes);
-        ConvertIntToDecimalStringN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH_COUNT], sTrainerCardDataPtr->trainerCard.berryCrushPoints, STR_CONV_MODE_RIGHT_ALIGN, 5);
-    }
-}
-
-static void PrintBerryCrushStringOnCard(void)
-{
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.berryCrushPoints)
-    {
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 99, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 99, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH_COUNT]);
-    }
-}
-
 static void BufferUnionRoomStats(void)
 {
     if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
@@ -1584,12 +1555,6 @@ static void DrawCardBackStats(void)
         {
             FillBgTilemapBufferRect(3, 141, 26, 9, 1, 1, 1);
             FillBgTilemapBufferRect(3, 157, 26, 10, 1, 1, 1);
-        }
-
-        if (sTrainerCardDataPtr->trainerCard.berryCrushPoints)
-        {
-            FillBgTilemapBufferRect(3, 141, 21, 13, 1, 1, 1);
-            FillBgTilemapBufferRect(3, 157, 21, 14, 1, 1, 1);
         }
 
         if (sTrainerCardDataPtr->trainerCard.unionRoomNum)
