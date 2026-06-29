@@ -1174,7 +1174,6 @@ extern const u8 CableClub_Text_BattleUsingLinkCable[];
 extern const u8 CableClub_Text_CancelSelectedItem[];
 extern const u8 CableClub_Text_YouMayTradeHere[];
 extern const u8 CableClub_Text_YouMayBattleHere[];
-extern const u8 CableClub_Text_CanMakeBerryPowder[];
 extern const u8 EventScript_PC[];
 
 extern const u8 EventScript_RepelWoreOff[];
@@ -1253,10 +1252,6 @@ extern const u8 BattleColosseum_4P_EventScript_PlayerSpot0[];
 extern const u8 BattleColosseum_4P_EventScript_PlayerSpot1[];
 extern const u8 BattleColosseum_4P_EventScript_PlayerSpot2[];
 extern const u8 BattleColosseum_4P_EventScript_PlayerSpot3[];
-extern const u8 RecordCorner_EventScript_Spot0[];
-extern const u8 RecordCorner_EventScript_Spot1[];
-extern const u8 RecordCorner_EventScript_Spot2[];
-extern const u8 RecordCorner_EventScript_Spot3[];
 extern const u8 BattleColosseum_2P_EventScript_PlayerSpot0[];
 extern const u8 BattleColosseum_2P_EventScript_PlayerSpot1[];
 extern const u8 TradeCenter_EventScript_Chair0[];

@@ -414,30 +414,20 @@ gSpecials::
 	def_special OpenMuseumFossilPic
 	def_special CloseMuseumFossilPic
 	def_special ChooseMonForMoveTutor
-	def_special ChooseMonForWirelessMinigame
 	def_special SetBattledTrainerFlag
 	def_special SetHelpContextForMap
 	def_special DoSSAnneDepartureCutscene
-	def_special IsPokemonJumpSpeciesInParty
 	def_special IsNationalPokedexEnabled
-	def_special ShowPokemonJumpRecords
 	def_special BufferTMHMMoveName
 	def_special DaisyMassageServices
 	def_special HelpSystem_Disable
 	def_special HelpSystem_Enable
 	def_special SetPostgameFlags
 	def_special HasAtLeastOneBerry
-	def_special DisplayBerryPowderVendorMenu
-	def_special RemoveBerryPowderVendorMenu
-	def_special Script_HasEnoughBerryPowder
-	def_special Script_TakeBerryPowder
-	def_special PrintPlayerBerryPowderAmount
 	def_special DoPokemonLeagueLightingEffect
-	def_special ShowBerryCrushRankings
 	def_special CapeBrinkGetMoveToTeachLeadPokemon
 	def_special HasLearnedAllMovesFromCapeBrinkTutor
 	def_special DoCredits
-	def_special ShowDodrioBerryPickingRecords
 	def_special GetPlayerFacingDirection
 	def_special IsPlayerLeftOfVermilionSailor
 	def_special IsBadEggInParty
@@ -447,7 +437,6 @@ gSpecials::
 	def_special Script_ResetUnionRoomTrade
 	def_special PlayerPartyContainsSpeciesWithPlayerID
 	def_special AnimateTeleporterHousing
-	def_special IsDodrioInParty
 	def_special AnimateTeleporterCable
 	def_special InitElevatorFloorSelectMenuPos
 	def_special UpdateLoreleiDollCollection

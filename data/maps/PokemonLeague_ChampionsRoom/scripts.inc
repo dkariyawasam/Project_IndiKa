@@ -7,25 +7,7 @@ PokemonLeague_ChampionsRoom_MapScripts::
 PokemonLeague_ChampionsRoom_OnResume::
 	setvar VAR_0x8004, 4
 	call PokemonLeague_EventScript_DoLightingEffect
-	call_if_eq VAR_STARTER_MON, 2, PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerSquirtle
-	call_if_eq VAR_STARTER_MON, 1, PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur
-	call_if_eq VAR_STARTER_MON, 0, PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerCharmander
 	end
-
-PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerSquirtle::
-	goto_if_defeated TRAINER_CHAMPION_FIRST_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	goto_if_defeated TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	return
-
-PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur::
-	goto_if_defeated TRAINER_CHAMPION_FIRST_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	goto_if_defeated TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	return
-
-PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerCharmander::
-	goto_if_defeated TRAINER_CHAMPION_FIRST_CHARMANDER, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	goto_if_defeated TRAINER_CHAMPION_REMATCH_CHARMANDER, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	return
 
 PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger::
 	setvar VAR_TEMP_1, 1
@@ -46,6 +28,20 @@ PokemonLeague_ChampionsRoom_OnFrame::
 PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	special IsLeagueChallengeActive
+	goto_if_eq VAR_RESULT, 0, PokemonLeague_ChampionsRoom_EventScript_NotReady
+	special GetLeagueChallengeType
+	goto_if_ne VAR_RESULT, 1, PokemonLeague_ChampionsRoom_EventScript_NotReady
+	special GetLeagueChallengeCurrentTrainer
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_FIRST_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_FIRST_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_FIRST_CHARMANDER, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto_if_eq VAR_RESULT, TRAINER_CHAMPION_REMATCH_CHARMANDER, PokemonLeague_ChampionsRoom_EventScript_EnterReady
+	goto PokemonLeague_ChampionsRoom_EventScript_NotReady
+
+PokemonLeague_ChampionsRoom_EventScript_EnterReady::
 	setflag FLAG_TEMP_2
 	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerEnter
 	waitmovement 0
@@ -58,6 +54,7 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	savebgm MUS_VICTORY_GYM_LEADER
 	call_if_unset FLAG_SYS_GAME_CLEAR, PokemonLeague_ChampionsRoom_EventScript_Battle
 	call_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_ChampionsRoom_EventScript_Rematch
+	special AdvanceLeagueChallengeRound
 	setflag FLAG_TEMP_4
 	clearflag FLAG_TEMP_5
 	setflag FLAG_DEFEATED_CHAMP
@@ -95,6 +92,15 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	releaseall
 	end
 
+PokemonLeague_ChampionsRoom_EventScript_NotReady::
+	setvar VAR_TEMP_1, 1
+	msgbox PokemonLeague_ChampionsRoom_Text_NotReady
+	closemessage
+	warp MAP_POKEMON_LEAGUE_BRUNOS_ROOM, 6, 2
+	waitstate
+	releaseall
+	end
+
 PokemonLeague_ChampionsRoom_EventScript_QuestLogEnd::
 	call PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	releaseall
@@ -121,26 +127,32 @@ PokemonLeague_ChampionsRoom_EventScript_RematchIntro::
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleSquirtle::
+	cleartrainerflag TRAINER_CHAMPION_FIRST_SQUIRTLE
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_SQUIRTLE, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleBulbasaur::
+	cleartrainerflag TRAINER_CHAMPION_FIRST_BULBASAUR
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_BULBASAUR, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleCharmander::
+	cleartrainerflag TRAINER_CHAMPION_FIRST_CHARMANDER
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_CHARMANDER, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchSquirtle::
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_SQUIRTLE
 	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchBulbasaur::
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_BULBASAUR
 	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchCharmander::
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_CHARMANDER
 	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_CHARMANDER, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 

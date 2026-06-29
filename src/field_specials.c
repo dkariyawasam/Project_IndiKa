@@ -1049,16 +1049,6 @@ void ListMenu(void)
         task->data[6] = 1;
         task->data[15] = taskId;
         break;
-    case LISTMENU_BERRY_POWDER:
-        task->data[0] = 7;
-        task->data[1] = 12;
-        task->data[2] = 16;
-        task->data[3] = 1;
-        task->data[4] = 17;
-        task->data[5] = 12;
-        task->data[6] = 0;
-        task->data[15] = taskId;
-        break;
     case 99:
         break;
     default:
@@ -1111,21 +1101,6 @@ static const u8 *const sListMenuLabels[][12] = {
         gText_DirectCorner,
         gText_UnionRoom,
         gOtherText_Quit,
-    }, 
-    [LISTMENU_BERRY_POWDER] = 
-    {
-        gText_Energypowder_50,
-        gText_EnergyRoot_80,
-        gText_HealPowder_50,
-        gText_RevivalHerb_300,
-        gText_Protein_1000,
-        gText_Iron_1000,
-        gText_Carbos_1000,
-        gText_Calcium_1000,
-        gText_Zinc_1000,
-        gText_HpUp_1000,
-        gText_PpUp_3000,
-        gOtherText_Exit,
     }, 
 };
 

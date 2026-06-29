@@ -50,10 +50,10 @@ CeladonCity_Gym_Text_ErikaReward::
     .string "help life bloom.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
-    .string "With four BADGES, POKéMON up\n"
-    .string "to Lv. 50 obey.\p"
-    .string "That includes even outsiders you\n"
-    .string "got in trades.$"
+    .string "Outsider POKéMON respond to more\n"
+    .string "than BADGES alone.\p"
+    .string "Your FIELD AIDE record shows how\n"
+    .string "deeply you understand them.$"
 
 CeladonCity_Gym_Text_ReceivedRainbowKeyFromErika::
     .string "{PLAYER} received the RAINBOW KEY\n"

@@ -89,9 +89,9 @@
 #define DECOR_CLEFAIRY_DOLL    85
 #define DECOR_DITTO_DOLL       86
 #define DECOR_SMOOCHUM_DOLL    87
-#define DECOR_TREECKO_DOLL     88
-#define DECOR_TORCHIC_DOLL     89
-#define DECOR_MUDKIP_DOLL      90
+#define DECOR_UNUSED_DOLL_1    88
+#define DECOR_UNUSED_DOLL_2    89
+#define DECOR_UNUSED_DOLL_3    90
 #define DECOR_DUSKULL_DOLL     91
 #define DECOR_WYNAUT_DOLL      92
 #define DECOR_BALTOY_DOLL      93

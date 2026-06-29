@@ -43,6 +43,10 @@ PokemonLeague_ChampionsRoom_Text_Defeat::
     .string "My reign is over already?\n"
     .string "It's not fair!$"
 
+PokemonLeague_ChampionsRoom_Text_NotReady::
+    .string "The INDIGO LEAGUE CHAMPION\n"
+    .string "is not receiving challengers yet.$"
+
 PokemonLeague_ChampionsRoom_Text_Victory::
     .string "はーはッ！\n"
     .string "かった！　かった！　かった！\p"
@@ -98,4 +102,3 @@ PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe::
     .string "POKéMON is marvelous.\p"
     .string "{PLAYER}!\n"
     .string "Come with me!$"
-

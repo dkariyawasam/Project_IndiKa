@@ -5756,17 +5756,17 @@
       "secondaryId": 0
     },
     {
-      "english": "POWDER JAR",
-      "itemId": "ITEM_POWDER_JAR",
+      "english": "????????",
+      "itemId": "ITEM_UNUSED_359",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A jar for storing BERRY POWDER\\nmade using a BERRY CRUSHER.",
+      "description_english": "?????",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
       "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_PowderJar",
+      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0

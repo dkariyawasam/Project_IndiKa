@@ -25,8 +25,6 @@
 #include "mystery_gift.h"
 #include "renewable_hidden_items.h"
 #include "script.h"
-#include "berry_powder.h"
-#include "pokemon_jump.h"
 #include "quests.h"
 #include "event_scripts.h"
 #include "constants/flags.h"
@@ -147,19 +145,10 @@ void NewGameInitData(void)
     InitEasyChatPhrases();
     ResetTrainerFanClub();
     UnionRoomChat_InitializeRegisteredTexts();
-    ResetMiniGamesResults();
     ClearMysteryGift();
     SetAllRenewableItemFlags();
     WarpToPlayersRoom();
     RunScriptImmediately(EventScript_ResetAllMapFlags);
     StringCopy(gSaveBlock1Ptr->rivalName, rivalName);
     QuestMenu_ResetMenuSaveData();
-}
-
-static void ResetMiniGamesResults(void)
-{
-    CpuFill16(0, &gSaveBlock2Ptr->berryCrush, sizeof(struct BerryCrush));
-    SetBerryPowder(&gSaveBlock2Ptr->berryCrush.berryPowderAmount, 0);
-    ResetPokemonJumpRecords();
-    CpuFill16(0, &gSaveBlock2Ptr->berryPick, sizeof(struct BerryPickingResults));
 }

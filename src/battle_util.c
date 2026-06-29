@@ -9,6 +9,7 @@
 #include "string_util.h"
 #include "field_weather.h"
 #include "event_data.h"
+#include "quests.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_scripts.h"
@@ -28,11 +29,50 @@
 
 #define SOUND_MOVES_END 0xFFFF
 
+#define FIELD_AIDE_OBEDIENCE_LEVEL_2 2
+#define FIELD_AIDE_OBEDIENCE_LEVEL_3 5
+#define FIELD_AIDE_OBEDIENCE_LEVEL_4 8
+#define FIELD_AIDE_OBEDIENCE_COMPLETE 10
+
 static const u16 sSoundMovesTable[] =
 {
     MOVE_GROWL, MOVE_ROAR, MOVE_SING, MOVE_SUPERSONIC, MOVE_SCREECH, MOVE_SNORE,
     MOVE_UPROAR, MOVE_METAL_SOUND, MOVE_GRASS_WHISTLE, MOVE_HYPER_VOICE, SOUND_MOVES_END
 };
+
+static u8 CountCompletedSubquests(u8 questId, u8 count)
+{
+    u8 i;
+    u8 completed = 0;
+
+    for (i = 0; i < count; i++)
+    {
+        if (QuestMenu_GetSetSubquestState(questId, FLAG_GET_COMPLETED, i))
+            completed++;
+    }
+
+    return completed;
+}
+
+static u8 GetFieldAideObedienceLevel(void)
+{
+    u8 completedSubquests = 0;
+
+    completedSubquests += CountCompletedSubquests(QUEST_THE_NATURE_OF_EVOLUTION, QUEST_1_SUB_COUNT);
+    completedSubquests += CountCompletedSubquests(QUEST_GYM_LEADER_TRIALS, QUEST_2_SUB_COUNT);
+    completedSubquests += CountCompletedSubquests(QUEST_APEX_POKEMON, QUEST_3_SUB_COUNT);
+
+    if (completedSubquests >= FIELD_AIDE_OBEDIENCE_COMPLETE)
+        return 0xFF;
+    if (completedSubquests >= FIELD_AIDE_OBEDIENCE_LEVEL_4)
+        return 70;
+    if (completedSubquests >= FIELD_AIDE_OBEDIENCE_LEVEL_3)
+        return 50;
+    if (completedSubquests >= FIELD_AIDE_OBEDIENCE_LEVEL_2)
+        return 30;
+
+    return 10;
+}
 
 u8 GetBattlerForBattleScript(u8 caseId)
 {
@@ -3125,9 +3165,8 @@ static bool32 IsBattlerModernFatefulEncounter(u8 battlerId)
 {
     if (GetBattlerSide(battlerId) == B_SIDE_OPPONENT)
         return TRUE;
-    if (GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES, NULL) != SPECIES_DEOXYS
-        && GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES, NULL) != SPECIES_MEW)
-            return TRUE;
+    if (GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES, NULL) != SPECIES_MEW)
+        return TRUE;
     return GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_MODERN_FATEFUL_ENCOUNTER, NULL);
 }
 
@@ -3136,8 +3175,6 @@ u8 IsMonDisobedient(void)
     s32 rnd;
     s32 calc;
     u8 obedienceLevel = 0;
-    u8 badgeCount;
-    u8 i;
 
     if ((gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_POKEDUDE)))
         return 0;
@@ -3149,23 +3186,9 @@ u8 IsMonDisobedient(void)
         if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
             return 0;
 
-        for (badgeCount = 0, i = 0; i < NUM_BADGES; i++)
-        {
-            if (FlagGet(FLAG_BADGE01_GET + i))
-                badgeCount++;
-        }
-
-        if (badgeCount >= 8)
+        obedienceLevel = GetFieldAideObedienceLevel();
+        if (obedienceLevel == 0xFF)
             return 0;
-
-        obedienceLevel = 10;
-
-        if (badgeCount >= 2)
-            obedienceLevel = 30;
-        if (badgeCount >= 4)
-            obedienceLevel = 50;
-        if (badgeCount >= 6)
-            obedienceLevel = 70;
     }
 
     if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)

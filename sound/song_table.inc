@@ -46,7 +46,7 @@ gSongTable::
 	song se_truck_stop, 1, 1
 	song se_truck_unload, 2, 2
 	song se_truck_door, 1, 1
-	song se_berry_blender, 2, 2
+	song se_truck_door, 1, 1
 	song se_save, 1, 1
 	song se_ball_bounce_1, 1, 1
 	song se_ball_bounce_2, 1, 1
@@ -253,8 +253,8 @@ gSongTable::
 	song se_help_close, 1, 1
 	song se_help_error, 1, 1
 	song se_deoxys_move, 1, 1
-	song se_poke_jump_success, 1, 1
-	song se_poke_jump_failure, 1, 1
+	song mus_dummy, 0, 0
+	song mus_dummy, 0, 0
 	song mus_heal, 2, 2
 	song mus_level_up, 2, 2
 	song mus_obtain_item, 2, 2
@@ -325,11 +325,11 @@ gSongTable::
 	song mus_new_game_instruct, 0, 0
 	song mus_new_game_intro, 0, 0
 	song mus_new_game_exit, 0, 0
-	song mus_poke_jump, 0, 0
+	song mus_dummy, 0, 0
 	song mus_union_room, 0, 0
 	song mus_net_center, 0, 0
 	song mus_mystery_gift, 0, 0
-	song mus_berry_pick, 0, 0
+	song mus_dummy, 0, 0
 	song mus_sevii_cave, 0, 0
 	song mus_teachy_tv_show, 0, 0
 	song mus_sevii_route, 0, 0

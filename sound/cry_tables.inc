@@ -255,7 +255,7 @@ gCryTable::
 	cry Cry_Electrike
 	cry Cry_Manectric
 	cry Cry_Duskull
-	cry Cry_Latias
+	cry Cry_Unown
 	cry Cry_Wynaut
 	cry Cry_Seviper
 	cry Cry_Sharpedo
@@ -268,15 +268,15 @@ gCryTable::
 	cry Cry_Swellow
 	cry Cry_Unused268
 	cry Cry_Spinda
-	cry Cry_Torchic
-	cry Cry_Combusken
-	cry Cry_Blaziken
-	cry Cry_Treecko
-	cry Cry_Grovyle
-	cry Cry_Sceptile
-	cry Cry_Mudkip
-	cry Cry_Marshtomp
-	cry Cry_Swampert
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
 	cry Cry_Pelipper
 	cry Cry_Wingull
 	cry Cry_Banette
@@ -362,14 +362,14 @@ gCryTable::
 	cry Cry_Dusclops
 	cry Cry_Sableye
 	cry Cry_Mawile
-	cry Cry_Aron
-	cry Cry_Lairon
-	cry Cry_Aggron
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
 	cry Cry_Relicanth
 	cry Cry_Luvdisc
-	cry Cry_Groudon
-	cry Cry_Kyogre
-	cry Cry_Rayquaza
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
 	cry Cry_Salamence
 	cry Cry_Breloom
 	cry Cry_Shroomish
@@ -382,9 +382,9 @@ gCryTable::
 	cry Cry_Wailord
 	cry Cry_Whismur
 	cry Cry_Snorunt
-	cry Cry_Latios
-	cry Cry_Jirachi
-	cry Cry_Deoxys
+	cry Cry_Unown
+	cry Cry_Unown
+	cry Cry_Unown
 	cry Cry_Chimecho
 
 	.align 2
@@ -644,7 +644,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Electrike
 	cry_reverse Cry_Manectric
 	cry_reverse Cry_Duskull
-	cry_reverse Cry_Latias
+	cry_reverse Cry_Unown
 	cry_reverse Cry_Wynaut
 	cry_reverse Cry_Seviper
 	cry_reverse Cry_Sharpedo
@@ -657,15 +657,15 @@ gCryTable_Reverse::
 	cry_reverse Cry_Swellow
 	cry_reverse Cry_Unused268
 	cry_reverse Cry_Spinda
-	cry_reverse Cry_Torchic
-	cry_reverse Cry_Combusken
-	cry_reverse Cry_Blaziken
-	cry_reverse Cry_Treecko
-	cry_reverse Cry_Grovyle
-	cry_reverse Cry_Sceptile
-	cry_reverse Cry_Mudkip
-	cry_reverse Cry_Marshtomp
-	cry_reverse Cry_Swampert
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
 	cry_reverse Cry_Pelipper
 	cry_reverse Cry_Wingull
 	cry_reverse Cry_Banette
@@ -751,14 +751,14 @@ gCryTable_Reverse::
 	cry_reverse Cry_Dusclops
 	cry_reverse Cry_Sableye
 	cry_reverse Cry_Mawile
-	cry_reverse Cry_Aron
-	cry_reverse Cry_Lairon
-	cry_reverse Cry_Aggron
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
 	cry_reverse Cry_Relicanth
 	cry_reverse Cry_Luvdisc
-	cry_reverse Cry_Groudon
-	cry_reverse Cry_Kyogre
-	cry_reverse Cry_Rayquaza
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
 	cry_reverse Cry_Salamence
 	cry_reverse Cry_Breloom
 	cry_reverse Cry_Shroomish
@@ -771,7 +771,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Wailord
 	cry_reverse Cry_Whismur
 	cry_reverse Cry_Snorunt
-	cry_reverse Cry_Latios
-	cry_reverse Cry_Jirachi
-	cry_reverse Cry_Deoxys
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
+	cry_reverse Cry_Unown
 	cry_reverse Cry_Chimecho

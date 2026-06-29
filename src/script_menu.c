@@ -410,13 +410,6 @@ static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
     { gOtherText_Quit }
 };
 
-static const struct MenuAction sMultichoiceList_TradeColosseumCrush[] = {
-    { gText_TradeCenter },
-    { gText_Colosseum_2 },
-    { gText_BerryCrush },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_48[] = {
     { gText_EmptyLinkService1 },
     { gText_EmptyLinkService2 },
@@ -429,29 +422,15 @@ static const struct MenuAction sMultichoiceList_TradeColosseum_2[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_PokejumpDodrio[] = {
-    { gText_PokemonJump },
-    { gText_DodrioBerryPicking },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_Mushrooms[] = {
     { gText_2Tinymushrooms },
     { gText_1BigMushroom }
 };
 
-static const struct MenuAction sMultichoiceList_TradeColosseumBlankCrush[] = {
-    { gText_TradeCenter },
-    { gText_Colosseum_2 },
-    { gText_RecordCorner },
-    { gText_BerryCrush },
-    { gOtherText_Exit }
-};
-
 static const struct MenuAction sMultichoiceList_TradeColosseumBlank[] = {
     { gText_TradeCenter },
     { gText_Colosseum_2 },
-    { gText_RecordCorner },
+    { gText_EmptyLinkService2 },
     { gOtherText_Exit }
 };
 
@@ -540,12 +519,12 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_LINK_WIRELESS]                              = MULTICHOICE(sMultichoiceList_Link_Wireless),
     [MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES]             = MULTICHOICE(sMultichoiceList_GameCornerBattleItemPrizes),
     [MULTICHOICE_LINKED_DIRECT_UNION]                        = MULTICHOICE(sMultichoiceList_LinkedDirectUnion),
-    [MULTICHOICE_TRADE_COLOSSEUM_CRUSH]                      = MULTICHOICE(sMultichoiceList_TradeColosseumCrush),
+    [MULTICHOICE_TRADE_COLOSSEUM_CRUSH]                      = MULTICHOICE(sMultichoiceList_TradeColosseum_2),
     [MULTICHOICE_48]                                         = MULTICHOICE(sMultichoiceList_48),
-    [MULTICHOICE_POKEJUMP_DODRIO]                            = MULTICHOICE(sMultichoiceList_PokejumpDodrio),
+    [MULTICHOICE_UNUSED_49]                                  = MULTICHOICE(sMultichoiceList_Exit),
     [MULTICHOICE_TRADE_COLOSSEUM_2]                          = MULTICHOICE(sMultichoiceList_TradeColosseum_2),
     [MULTICHOICE_MUSHROOMS]                                  = MULTICHOICE(sMultichoiceList_Mushrooms),
-    [MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH]                = MULTICHOICE(sMultichoiceList_TradeColosseumBlankCrush),
+    [MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH]                = MULTICHOICE(sMultichoiceList_TradeColosseumBlank),
     [MULTICHOICE_TRADE_COLOSSEUM_BLANK]                      = MULTICHOICE(sMultichoiceList_TradeColosseumBlank),
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
@@ -591,13 +570,6 @@ const u8 *const gStdStringPtrs[] = {
 static const u8 *const sDescriptionPtrs_CableClub_TradeBattleCancel[] = {
     CableClub_Text_TradeMonsUsingLinkCable,
     CableClub_Text_BattleUsingLinkCable,
-    CableClub_Text_CancelSelectedItem
-};
-
-static const u8 *const sDescriptionPtrs_WirelessCenter_TradeBattleCrushCancel[] = {
-    CableClub_Text_YouMayTradeHere,
-    CableClub_Text_YouMayBattleHere,
-    CableClub_Text_CanMakeBerryPowder,
     CableClub_Text_CancelSelectedItem
 };
 
@@ -826,7 +798,7 @@ static void MultiChoicePrintHelpDescription(u8 mcId)
         break;
     case MULTICHOICE_TRADE_COLOSSEUM_CRUSH:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sDescriptionPtrs_WirelessCenter_TradeBattleCrushCancel[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, FONT_NORMAL, sDescriptionPtrs_WirelessCenter_TradeBattleCancel[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
         break;
     case MULTICHOICE_TRADE_COLOSSEUM_2:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));

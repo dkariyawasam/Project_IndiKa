@@ -1812,93 +1812,15 @@ static const u16 sTutorLearnsets[] =
                      | TUTOR(MOVE_DREAM_EATER)
                      | TUTOR(MOVE_SUBSTITUTE),
 
-    [SPECIES_TREECKO] = TUTOR(MOVE_MEGA_PUNCH)
-                      | TUTOR(MOVE_SWORDS_DANCE)
-                      | TUTOR(MOVE_MEGA_KICK)
-                      | TUTOR(MOVE_BODY_SLAM)
-                      | TUTOR(MOVE_DOUBLE_EDGE)
-                      | TUTOR(MOVE_COUNTER)
-                      | TUTOR(MOVE_SEISMIC_TOSS)
-                      | TUTOR(MOVE_MIMIC)
-                      | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_GROVYLE] = TUTOR(MOVE_MEGA_PUNCH)
-                      | TUTOR(MOVE_SWORDS_DANCE)
-                      | TUTOR(MOVE_MEGA_KICK)
-                      | TUTOR(MOVE_BODY_SLAM)
-                      | TUTOR(MOVE_DOUBLE_EDGE)
-                      | TUTOR(MOVE_COUNTER)
-                      | TUTOR(MOVE_SEISMIC_TOSS)
-                      | TUTOR(MOVE_MIMIC)
-                      | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_SCEPTILE] = TUTOR(MOVE_MEGA_PUNCH)
-                       | TUTOR(MOVE_SWORDS_DANCE)
-                       | TUTOR(MOVE_MEGA_KICK)
-                       | TUTOR(MOVE_BODY_SLAM)
-                       | TUTOR(MOVE_DOUBLE_EDGE)
-                       | TUTOR(MOVE_COUNTER)
-                       | TUTOR(MOVE_SEISMIC_TOSS)
-                       | TUTOR(MOVE_MIMIC)
-                       | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_TORCHIC] = TUTOR(MOVE_MEGA_PUNCH)
-                      | TUTOR(MOVE_SWORDS_DANCE)
-                      | TUTOR(MOVE_MEGA_KICK)
-                      | TUTOR(MOVE_BODY_SLAM)
-                      | TUTOR(MOVE_DOUBLE_EDGE)
-                      | TUTOR(MOVE_COUNTER)
-                      | TUTOR(MOVE_SEISMIC_TOSS)
-                      | TUTOR(MOVE_MIMIC)
-                      | TUTOR(MOVE_ROCK_SLIDE)
-                      | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_COMBUSKEN] = TUTOR(MOVE_MEGA_PUNCH)
-                        | TUTOR(MOVE_SWORDS_DANCE)
-                        | TUTOR(MOVE_MEGA_KICK)
-                        | TUTOR(MOVE_BODY_SLAM)
-                        | TUTOR(MOVE_DOUBLE_EDGE)
-                        | TUTOR(MOVE_COUNTER)
-                        | TUTOR(MOVE_SEISMIC_TOSS)
-                        | TUTOR(MOVE_MIMIC)
-                        | TUTOR(MOVE_ROCK_SLIDE)
-                        | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_BLAZIKEN] = TUTOR(MOVE_MEGA_PUNCH)
-                       | TUTOR(MOVE_SWORDS_DANCE)
-                       | TUTOR(MOVE_MEGA_KICK)
-                       | TUTOR(MOVE_BODY_SLAM)
-                       | TUTOR(MOVE_DOUBLE_EDGE)
-                       | TUTOR(MOVE_COUNTER)
-                       | TUTOR(MOVE_SEISMIC_TOSS)
-                       | TUTOR(MOVE_MIMIC)
-                       | TUTOR(MOVE_ROCK_SLIDE)
-                       | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_MUDKIP] = TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_MARSHTOMP] = TUTOR(MOVE_MEGA_PUNCH)
-                        | TUTOR(MOVE_MEGA_KICK)
-                        | TUTOR(MOVE_BODY_SLAM)
-                        | TUTOR(MOVE_DOUBLE_EDGE)
-                        | TUTOR(MOVE_COUNTER)
-                        | TUTOR(MOVE_SEISMIC_TOSS)
-                        | TUTOR(MOVE_MIMIC)
-                        | TUTOR(MOVE_ROCK_SLIDE)
-                        | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_SWAMPERT] = TUTOR(MOVE_MEGA_PUNCH)
-                       | TUTOR(MOVE_MEGA_KICK)
-                       | TUTOR(MOVE_BODY_SLAM)
-                       | TUTOR(MOVE_DOUBLE_EDGE)
-                       | TUTOR(MOVE_COUNTER)
-                       | TUTOR(MOVE_SEISMIC_TOSS)
-                       | TUTOR(MOVE_MIMIC)
-                       | TUTOR(MOVE_ROCK_SLIDE)
-                       | TUTOR(MOVE_SUBSTITUTE),
+    [SPECIES_TREECKO] = 0,
+    [SPECIES_GROVYLE] = 0,
+    [SPECIES_SCEPTILE] = 0,
+    [SPECIES_TORCHIC] = 0,
+    [SPECIES_COMBUSKEN] = 0,
+    [SPECIES_BLAZIKEN] = 0,
+    [SPECIES_MUDKIP] = 0,
+    [SPECIES_MARSHTOMP] = 0,
+    [SPECIES_SWAMPERT] = 0,
 
     [SPECIES_POOCHYENA] = TUTOR(MOVE_BODY_SLAM)
                         | TUTOR(MOVE_DOUBLE_EDGE)
@@ -2642,6 +2564,19 @@ static const u16 sTutorLearnsets[] =
                         | TUTOR(MOVE_THUNDER_WAVE)
                         | TUTOR(MOVE_SUBSTITUTE),
 
+    [SPECIES_GALLADE] = TUTOR(MOVE_MEGA_PUNCH)
+                      | TUTOR(MOVE_SWORDS_DANCE)
+                      | TUTOR(MOVE_MEGA_KICK)
+                      | TUTOR(MOVE_BODY_SLAM)
+                      | TUTOR(MOVE_DOUBLE_EDGE)
+                      | TUTOR(MOVE_COUNTER)
+                      | TUTOR(MOVE_SEISMIC_TOSS)
+                      | TUTOR(MOVE_MIMIC)
+                      | TUTOR(MOVE_DREAM_EATER)
+                      | TUTOR(MOVE_THUNDER_WAVE)
+                      | TUTOR(MOVE_ROCK_SLIDE)
+                      | TUTOR(MOVE_SUBSTITUTE),
+
     [SPECIES_BAGON] = TUTOR(MOVE_BODY_SLAM)
                     | TUTOR(MOVE_DOUBLE_EDGE)
                     | TUTOR(MOVE_MIMIC)
@@ -2712,65 +2647,13 @@ static const u16 sTutorLearnsets[] =
                         | TUTOR(MOVE_ROCK_SLIDE)
                         | TUTOR(MOVE_SUBSTITUTE),
 
-    [SPECIES_KYOGRE] = TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_THUNDER_WAVE)
-                     | TUTOR(MOVE_ROCK_SLIDE)
-                     | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_GROUDON] = TUTOR(MOVE_MEGA_PUNCH)
-                      | TUTOR(MOVE_SWORDS_DANCE)
-                      | TUTOR(MOVE_MEGA_KICK)
-                      | TUTOR(MOVE_BODY_SLAM)
-                      | TUTOR(MOVE_DOUBLE_EDGE)
-                      | TUTOR(MOVE_COUNTER)
-                      | TUTOR(MOVE_SEISMIC_TOSS)
-                      | TUTOR(MOVE_MIMIC)
-                      | TUTOR(MOVE_THUNDER_WAVE)
-                      | TUTOR(MOVE_ROCK_SLIDE)
-                      | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_RAYQUAZA] = TUTOR(MOVE_BODY_SLAM)
-                       | TUTOR(MOVE_DOUBLE_EDGE)
-                       | TUTOR(MOVE_MIMIC)
-                       | TUTOR(MOVE_THUNDER_WAVE)
-                       | TUTOR(MOVE_ROCK_SLIDE)
-                       | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_LATIAS] = TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_DREAM_EATER)
-                     | TUTOR(MOVE_THUNDER_WAVE)
-                     | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_LATIOS] = TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_DREAM_EATER)
-                     | TUTOR(MOVE_THUNDER_WAVE)
-                     | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_JIRACHI] = TUTOR(MOVE_BODY_SLAM)
-                      | TUTOR(MOVE_DOUBLE_EDGE)
-                      | TUTOR(MOVE_MIMIC)
-                      | TUTOR(MOVE_METRONOME)
-                      | TUTOR(MOVE_DREAM_EATER)
-                      | TUTOR(MOVE_THUNDER_WAVE)
-                      | TUTOR(MOVE_SUBSTITUTE),
-
-    [SPECIES_DEOXYS] = TUTOR(MOVE_MEGA_PUNCH)
-                     | TUTOR(MOVE_MEGA_KICK)
-                     | TUTOR(MOVE_BODY_SLAM)
-                     | TUTOR(MOVE_DOUBLE_EDGE)
-                     | TUTOR(MOVE_COUNTER)
-                     | TUTOR(MOVE_SEISMIC_TOSS)
-                     | TUTOR(MOVE_MIMIC)
-                     | TUTOR(MOVE_DREAM_EATER)
-                     | TUTOR(MOVE_THUNDER_WAVE)
-                     | TUTOR(MOVE_ROCK_SLIDE)
-                     | TUTOR(MOVE_SUBSTITUTE),
+    [SPECIES_KYOGRE] = 0,
+    [SPECIES_GROUDON] = 0,
+    [SPECIES_RAYQUAZA] = 0,
+    [SPECIES_LATIAS] = 0,
+    [SPECIES_LATIOS] = 0,
+    [SPECIES_JIRACHI] = 0,
+    [SPECIES_DEOXYS] = 0,
 
     [SPECIES_CHIMECHO] = TUTOR(MOVE_DOUBLE_EDGE)
                        | TUTOR(MOVE_MIMIC)

@@ -377,15 +377,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(OLD_UNOWN_X),
     SPECIES_TO_HOENN(OLD_UNOWN_Y),
     SPECIES_TO_HOENN(OLD_UNOWN_Z),
-    SPECIES_TO_HOENN(TREECKO),
-    SPECIES_TO_HOENN(GROVYLE),
-    SPECIES_TO_HOENN(SCEPTILE),
-    SPECIES_TO_HOENN(TORCHIC),
-    SPECIES_TO_HOENN(COMBUSKEN),
-    SPECIES_TO_HOENN(BLAZIKEN),
-    SPECIES_TO_HOENN(MUDKIP),
-    SPECIES_TO_HOENN(MARSHTOMP),
-    SPECIES_TO_HOENN(SWAMPERT),
     SPECIES_TO_HOENN(POOCHYENA),
     SPECIES_TO_HOENN(MIGHTYENA),
     SPECIES_TO_HOENN(ZIGZAGOON),
@@ -492,6 +483,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(RALTS),
     SPECIES_TO_HOENN(KIRLIA),
     SPECIES_TO_HOENN(GARDEVOIR),
+    SPECIES_TO_NATIONAL(GALLADE),
     SPECIES_TO_HOENN(BAGON),
     SPECIES_TO_HOENN(SHELGON),
     SPECIES_TO_HOENN(SALAMENCE),
@@ -501,13 +493,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(REGIROCK),
     SPECIES_TO_HOENN(REGICE),
     SPECIES_TO_HOENN(REGISTEEL),
-    SPECIES_TO_HOENN(KYOGRE),
-    SPECIES_TO_HOENN(GROUDON),
-    SPECIES_TO_HOENN(RAYQUAZA),
-    SPECIES_TO_HOENN(LATIAS),
-    SPECIES_TO_HOENN(LATIOS),
-    SPECIES_TO_HOENN(JIRACHI),
-    SPECIES_TO_HOENN(DEOXYS),
     SPECIES_TO_HOENN(CHIMECHO),
 };
 
@@ -788,15 +773,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(OLD_UNOWN_X),
     SPECIES_TO_NATIONAL(OLD_UNOWN_Y),
     SPECIES_TO_NATIONAL(OLD_UNOWN_Z),
-    SPECIES_TO_NATIONAL(TREECKO),
-    SPECIES_TO_NATIONAL(GROVYLE),
-    SPECIES_TO_NATIONAL(SCEPTILE),
-    SPECIES_TO_NATIONAL(TORCHIC),
-    SPECIES_TO_NATIONAL(COMBUSKEN),
-    SPECIES_TO_NATIONAL(BLAZIKEN),
-    SPECIES_TO_NATIONAL(MUDKIP),
-    SPECIES_TO_NATIONAL(MARSHTOMP),
-    SPECIES_TO_NATIONAL(SWAMPERT),
     SPECIES_TO_NATIONAL(POOCHYENA),
     SPECIES_TO_NATIONAL(MIGHTYENA),
     SPECIES_TO_NATIONAL(ZIGZAGOON),
@@ -912,13 +888,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(REGIROCK),
     SPECIES_TO_NATIONAL(REGICE),
     SPECIES_TO_NATIONAL(REGISTEEL),
-    SPECIES_TO_NATIONAL(KYOGRE),
-    SPECIES_TO_NATIONAL(GROUDON),
-    SPECIES_TO_NATIONAL(RAYQUAZA),
-    SPECIES_TO_NATIONAL(LATIAS),
-    SPECIES_TO_NATIONAL(LATIOS),
-    SPECIES_TO_NATIONAL(JIRACHI),
-    SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
     SPECIES_TO_NATIONAL(BUNEARY),
     SPECIES_TO_NATIONAL(LOPUNNY),
@@ -997,20 +966,12 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(KRICKETUNE),
     SPECIES_TO_NATIONAL(HAPPINY),
     SPECIES_TO_NATIONAL(LICKILICKY),
+    SPECIES_TO_NATIONAL(GALLADE),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
 static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
 {
-    HOENN_TO_NATIONAL(TREECKO),
-    HOENN_TO_NATIONAL(GROVYLE),
-    HOENN_TO_NATIONAL(SCEPTILE),
-    HOENN_TO_NATIONAL(TORCHIC),
-    HOENN_TO_NATIONAL(COMBUSKEN),
-    HOENN_TO_NATIONAL(BLAZIKEN),
-    HOENN_TO_NATIONAL(MUDKIP),
-    HOENN_TO_NATIONAL(MARSHTOMP),
-    HOENN_TO_NATIONAL(SWAMPERT),
     HOENN_TO_NATIONAL(POOCHYENA),
     HOENN_TO_NATIONAL(MIGHTYENA),
     HOENN_TO_NATIONAL(ZIGZAGOON),
@@ -1033,6 +994,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(RALTS),
     HOENN_TO_NATIONAL(KIRLIA),
     HOENN_TO_NATIONAL(GARDEVOIR),
+    SPECIES_TO_NATIONAL(GALLADE),
     HOENN_TO_NATIONAL(SURSKIT),
     HOENN_TO_NATIONAL(MASQUERAIN),
     HOENN_TO_NATIONAL(SHROOMISH),
@@ -1194,13 +1156,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(REGIROCK),
     HOENN_TO_NATIONAL(REGICE),
     HOENN_TO_NATIONAL(REGISTEEL),
-    HOENN_TO_NATIONAL(LATIAS),
-    HOENN_TO_NATIONAL(LATIOS),
-    HOENN_TO_NATIONAL(KYOGRE),
-    HOENN_TO_NATIONAL(GROUDON),
-    HOENN_TO_NATIONAL(RAYQUAZA),
-    HOENN_TO_NATIONAL(JIRACHI),
-    HOENN_TO_NATIONAL(DEOXYS),
     HOENN_TO_NATIONAL(BULBASAUR), // Pokémon from here onwards are UNSEEN in the HoennDex.
     HOENN_TO_NATIONAL(IVYSAUR),
     HOENN_TO_NATIONAL(VENUSAUR),
@@ -2492,11 +2447,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     // Apply boosts from hold items
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
-        attack = (150 * attack) / 100;
-    if (attackerHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER)) && (attacker->species == SPECIES_LATIAS || attacker->species == SPECIES_LATIOS))
-        spAttack = (150 * spAttack) / 100;
-    if (defenderHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER)) && (defender->species == SPECIES_LATIAS || defender->species == SPECIES_LATIOS))
-        spDefense = (150 * spDefense) / 100;
+        attack = (150 * attack) / 100;        spDefense = (150 * spDefense) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_DEEP_SEA_TOOTH && attacker->species == SPECIES_CLAMPERL)
         spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_CLAMPERL)
@@ -5169,7 +5120,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         for (i = 0; i < EVOS_PER_MON; i++)
         {
             if ((gEvolutionTable[species][i].method == EVO_ITEM
-              || (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE && GetMonGender(mon) == MON_FEMALE))
+              || (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE && GetMonGender(mon) == MON_FEMALE)
+              || (gEvolutionTable[species][i].method == EVO_ITEM_MALE && GetMonGender(mon) == MON_MALE))
              && gEvolutionTable[species][i].param == evolutionItem)
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;

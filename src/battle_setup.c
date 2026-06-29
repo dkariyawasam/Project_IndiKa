@@ -333,9 +333,6 @@ void StartApexBattle(void)
     case SPECIES_MEWTWO:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_MEWTWO);
         break;
-    case SPECIES_DEOXYS:
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_DEOXYS);
-        break;
     case SPECIES_MOLTRES:
     case SPECIES_ARTICUNO:
     case SPECIES_ZAPDOS:

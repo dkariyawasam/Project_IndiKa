@@ -679,8 +679,6 @@ const u32 gItemIconPalette_TeachyTV[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_Tea[] = INCBIN_U32("graphics/items/icons/tea.4bpp.lz");
 const u32 gItemIconPalette_Tea[] = INCBIN_U32("graphics/items/icon_palettes/tea.gbapal.lz");
 
-const u32 gItemIcon_PowderJar[] = INCBIN_U32("graphics/items/icons/powder_jar.4bpp.lz");
-const u32 gItemIconPalette_PowderJar[] = INCBIN_U32("graphics/items/icon_palettes/powder_jar.gbapal.lz");
 
 const u32 gItemIconPalette_Ruby[] = INCBIN_U32("graphics/items/icon_palettes/ruby.gbapal.lz");
 const u32 gItemIcon_Gem[] = INCBIN_U32("graphics/items/icons/gem.4bpp.lz");

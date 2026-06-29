@@ -3200,6 +3200,13 @@ static int DexScreen_CanShowMonInDex(u16 species)
     return FALSE;
 }
 
+static int DexScreen_CanShowMonInCategory(u8 categoryNum, u16 species)
+{
+    if (categoryNum == DEX_CATEGORY_NON_NATIVE)
+        return TRUE;
+    return DexScreen_CanShowMonInDex(species);
+}
+
 static u8 DexScreen_IsPageUnlocked(u8 categoryNum, u8 pageNum)
 {
     int i, count;
@@ -3212,7 +3219,7 @@ static u8 DexScreen_IsPageUnlocked(u8 categoryNum, u8 pageNum)
         if (i < count)
         {
             species = gDexCategories[categoryNum].page[pageNum].species[i];
-            if (DexScreen_CanShowMonInDex(species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
+            if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
                 return TRUE;
         }
     }
@@ -3246,7 +3253,7 @@ void DexScreen_CreateCategoryPageSpeciesList(u8 categoryNum, u8 pageNum)
     for (i = 0; i < count; i++)
     {
         species = gDexCategories[categoryNum].page[pageNum].species[i];
-        if (DexScreen_CanShowMonInDex(species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
+        if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
         {
             sPokedexScreenData->pageSpecies[sPokedexScreenData->numMonsOnPage] = gDexCategories[categoryNum].page[pageNum].species[i];
             sPokedexScreenData->numMonsOnPage++;
@@ -3305,7 +3312,7 @@ static u8 DexScreen_LookUpCategoryBySpecies(u16 species)
                     sPokedexScreenData->categoryCursorPosInPage = posInPage;
                     return FALSE;
                 }
-                if (DexScreen_CanShowMonInDex(dexSpecies) == TRUE && DexScreen_GetSetPokedexFlag(dexSpecies, FLAG_GET_SEEN, TRUE))
+                if (DexScreen_CanShowMonInCategory(i, dexSpecies) == TRUE && DexScreen_GetSetPokedexFlag(dexSpecies, FLAG_GET_SEEN, TRUE))
                     posInPage++;
             }
         }

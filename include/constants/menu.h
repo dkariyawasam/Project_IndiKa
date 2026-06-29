@@ -49,7 +49,7 @@
 #define MULTICHOICE_LINKED_DIRECT_UNION                        43
 #define MULTICHOICE_TRADE_COLOSSEUM_CRUSH                      47
 #define MULTICHOICE_48                                         48
-#define MULTICHOICE_POKEJUMP_DODRIO                            49
+#define MULTICHOICE_UNUSED_49                                  49
 #define MULTICHOICE_TRADE_COLOSSEUM_2                          50
 #define MULTICHOICE_MUSHROOMS                                  51
 #define MULTICHOICE_TRADE_COLOSSEUM_BLANK_CRUSH                52
@@ -77,7 +77,7 @@
 #define LISTMENU_2                         2
 #define LISTMENU_DEPT_STORE_FLOORS         3
 #define LISTMENU_WIRELESS_LECTURE_HEADERS  4
-#define LISTMENU_BERRY_POWDER              5
+#define LISTMENU_UNUSED_5                  5
 
 // Std String Ids
 #define STDSTRING_COOL              0

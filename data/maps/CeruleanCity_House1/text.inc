@@ -18,45 +18,40 @@ CeruleanCity_House1_Text_AttackStatFlash::
     .string "you defeated PEWTER GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv30Cut::
-    .string "With two BADGES, POKéMON up\n"
-    .string "to Lv. 30 will obey you.\p"
-    .string "That includes even outsiders you\n"
-    .string "obtain in trades.\p"
-    .string "POKéMON of higher levels will\n"
-    .string "be unruly in battle, however.$"
+    .string "BADGES are proof of skill, but\n"
+    .string "obedience comes from trust.\p"
+    .string "As your FIELD AIDE record grows,\n"
+    .string "outsider POKéMON will better\l"
+    .string "respect your commands.$"
 
 CeruleanCity_House1_Text_SpeedStatFly::
     .string "The THUNDERBADGE is proof that\n"
     .string "you defeated VERMILION GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
-    .string "With four BADGES, POKéMON up\n"
-    .string "to Lv. 50 will obey you.\p"
-    .string "That includes even outsiders you\n"
-    .string "obtain in trades.\p"
-    .string "POKéMON of higher levels will\n"
-    .string "be unruly in battle, however.\p"
-    .string "It also lets you use the move\n"
-    .string "STRENGTH outside of battle.$"
+    .string "Your own POKéMON know you best,\n"
+    .string "and will follow your lead.\p"
+    .string "Outsider POKéMON judge your field\n"
+    .string "experience more carefully.\p"
+    .string "Complete PROF. OAK's subquests\n"
+    .string "to earn their confidence.$"
 
 CeruleanCity_House1_Text_DefenseStatSurf::
     .string "The SOULBADGE is proof that\n"
     .string "you defeated FUCHSIA GYM's LEADER.$"
 
 CeruleanCity_House1_Text_ObeyLv70RockSmash::
-    .string "With six BADGES, POKéMON up\n"
-    .string "to Lv. 70 will obey you.\p"
-    .string "That includes even outsiders you\n"
-    .string "obtain in trades.\p"
-    .string "POKéMON of higher levels will\n"
-    .string "be unruly in battle, however.\p"
-    .string "It also lets you use the move\n"
-    .string "ROCK SMASH outside of battle.$"
+    .string "The stronger an outsider POKéMON\n"
+    .string "is, the more it tests you.\p"
+    .string "A strong FIELD AIDE record shows\n"
+    .string "that you understand POKéMON in\l"
+    .string "battle, habitats, and evolution.$"
 
 CeruleanCity_House1_Text_SpStatsWaterfall::
     .string "The VOLCANOBADGE is proof that\n"
     .string "you defeated CINNABAR GYM's LEADER.$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
-    .string "With all eight BADGES, all\n"
-    .string "POKéMON will obey you!$"
+    .string "Complete enough of PROF. OAK's\n"
+    .string "subquests, and even powerful\l"
+    .string "outsider POKéMON will obey you.$"

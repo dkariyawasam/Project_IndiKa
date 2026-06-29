@@ -1778,69 +1778,6 @@ const u8 gCelebiPokedexText[] = _(
 
 const u8 gCelebiPokedexTextUnused[] = _("");
 
-const u8 gTreeckoPokedexText[] = _(
-    "It quickly scales even vertical walls.\n"
-    "It senses humidity with its tail to predict\n"
-    "the next day's weather.");
-
-const u8 gTreeckoPokedexTextUnused[] = _("");
-
-const u8 gGrovylePokedexText[] = _(
-    "Its strongly developed thigh muscles\n"
-    "give it astounding agility and jumping\n"
-    "performance.");
-
-const u8 gGrovylePokedexTextUnused[] = _("");
-
-const u8 gSceptilePokedexText[] = _(
-    "The leaves on its forelegs are as sharp\n"
-    "as swords. It agilely leaps about the\n"
-    "branches of trees to strike.");
-
-const u8 gSceptilePokedexTextUnused[] = _("");
-
-const u8 gTorchicPokedexText[] = _(
-    "It has a flame sac inside its belly that\n"
-    "perpetually burns. It feels warm if it is\n"
-    "hugged.");
-
-const u8 gTorchicPokedexTextUnused[] = _("");
-
-const u8 gCombuskenPokedexText[] = _(
-    "It boosts its concentration by emitting\n"
-    "harsh cries. Its kicks have outstanding\n"
-    "destructive power.");
-
-const u8 gCombuskenPokedexTextUnused[] = _("");
-
-const u8 gBlazikenPokedexText[] = _(
-    "When facing a tough foe, it looses flames\n"
-    "from its wrists. Its powerful legs let it\n"
-    "jump clear over buildings.");
-
-const u8 gBlazikenPokedexTextUnused[] = _("");
-
-const u8 gMudkipPokedexText[] = _(
-    "Its large tail fin propels it through\n"
-    "water with powerful acceleration. It is\n"
-    "strong in spite of its size.");
-
-const u8 gMudkipPokedexTextUnused[] = _("");
-
-const u8 gMarshtompPokedexText[] = _(
-    "It is at its best when on muddy ground\n"
-    "with poor footing. It quickly overwhelms\n"
-    "foes struggling in mud.");
-
-const u8 gMarshtompPokedexTextUnused[] = _("");
-
-const u8 gSwampertPokedexText[] = _(
-    "Its arms are rock-hard. With one swing,\n"
-    "they can batter down its foe. It makes its\n"
-    "nest on beautiful beaches.");
-
-const u8 gSwampertPokedexTextUnused[] = _("");
-
 const u8 gPoochyenaPokedexText[] = _(
     "It has a very tenacious nature. Its acute\n"
     "sense of smell lets it chase a chosen\n"
@@ -1994,6 +1931,13 @@ const u8 gGardevoirPokedexText[] = _(
     "TRAINER.");
 
 const u8 gGardevoirPokedexTextUnused[] = _("");
+
+const u8 gGalladePokedexText[] = _(
+    "A master of courtesy and swordplay.\n"
+    "It protects others by striking with the\n"
+    "sharp blades on its elbows.");
+
+const u8 gGalladePokedexTextUnused[] = _("");
 
 const u8 gSurskitPokedexText[] = _(
     "They usually live on ponds, but after an\n"
@@ -2652,55 +2596,6 @@ const u8 gRegisteelPokedexText[] = _(
     "over tens of thousands of years.");
 
 const u8 gRegisteelPokedexTextUnused[] = _("");
-
-const u8 gLatiasPokedexText[] = _(
-    "It can telepathically communicate with\n"
-    "people. It changes its appearance using\n"
-    "its down that refracts light.");
-
-const u8 gLatiasPokedexTextUnused[] = _("");
-
-const u8 gLatiosPokedexText[] = _(
-    "It has a docile temperament and dislikes\n"
-    "fighting. Tucking in its forelegs, it can\n"
-    "fly faster than a jet plane.");
-
-const u8 gLatiosPokedexTextUnused[] = _("");
-
-const u8 gKyogrePokedexText[] = _(
-    "This POKéMON is said to have\n"
-    "expanded the sea by bringing heavy rains.\n"
-    "It has the power to control water.");
-
-const u8 gKyogrePokedexTextUnused[] = _("");
-
-const u8 gGroudonPokedexText[] = _(
-    "This legendary POKéMON is said to\n"
-    "represent the land. It went to sleep after\n"
-    "dueling KYOGRE.");
-
-const u8 gGroudonPokedexTextUnused[] = _("");
-
-const u8 gRayquazaPokedexText[] = _(
-    "It has lived for hundreds of millions of\n"
-    "years in the ozone layer. Its flying form\n"
-    "looks like a meteor.");
-
-const u8 gRayquazaPokedexTextUnused[] = _("");
-
-const u8 gJirachiPokedexText[] = _(
-    "It is said to make any wish come true.\n"
-    "It is awake for only seven days out of\n"
-    "a thousand years.");
-
-const u8 gJirachiPokedexTextUnused[] = _("");
-
-const u8 gDeoxysPokedexText[] = _(
-    "This DEOXYS has transformed into its\n"
-    "aggressive guise. It can fool enemies by\n"
-    "altering its appearance.");
-
-const u8 gDeoxysPokedexTextUnused[] = _("");
 
 const u8 gBunearyPokedexText[] = _(
     "It sharply uncoils its rolled ears\n"

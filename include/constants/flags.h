@@ -711,7 +711,7 @@
 #define FLAG_WONDER_CARD_UNUSED_17                       0x2BA
 #define NUM_WONDER_CARD_FLAGS                            (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_WONDER_CARD_UNUSED_0)
 
-#define FLAG_GOT_POWDER_JAR                              0x2BB
+#define FLAG_UNUSED_0x2BB                                0x2BB
 #define FLAG_FOUGHT_MEWTWO                               0x2BC
 #define FLAG_FOUGHT_MOLTRES                              0x2BD
 #define FLAG_FOUGHT_ARTICUNO                             0x2BE

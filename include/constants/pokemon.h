@@ -281,6 +281,7 @@
 #define EVO_BEAUTY           15 // Pokémon levels up with beauty ≥ specified value
 #define EVO_ITEM_FEMALE      16 // specified item is used on a female Pokémon
 #define EVO_LEVEL_ITEM_NIGHT 17 // Pokémon levels up at night while holding the specified item
+#define EVO_ITEM_MALE        18 // specified item is used on a male Pokémon
 
 #define EVOS_PER_MON 7
 

@@ -1383,51 +1383,6 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 1,
     },
-    [SPECIES_TREECKO] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 6,
-    },
-    [SPECIES_GROVYLE] =
-    {
-        .size = MON_COORDS_SIZE(64, 48),
-        .y_offset = 8,
-    },
-    [SPECIES_SCEPTILE] =
-    {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 1,
-    },
-    [SPECIES_TORCHIC] =
-    {
-        .size = MON_COORDS_SIZE(48, 56),
-        .y_offset = 5,
-    },
-    [SPECIES_COMBUSKEN] =
-    {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
-    },
-    [SPECIES_BLAZIKEN] =
-    {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
-    },
-    [SPECIES_MUDKIP] =
-    {
-        .size = MON_COORDS_SIZE(56, 56),
-        .y_offset = 5,
-    },
-    [SPECIES_MARSHTOMP] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 4,
-    },
-    [SPECIES_SWAMPERT] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 5,
-    },
     [SPECIES_POOCHYENA] =
     {
         .size = MON_COORDS_SIZE(56, 48),
@@ -2003,41 +1958,6 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 40),
         .y_offset = 14,
     },
-    [SPECIES_KYOGRE] =
-    {
-        .size = MON_COORDS_SIZE(64, 32),
-        .y_offset = 19,
-    },
-    [SPECIES_GROUDON] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 7,
-    },
-    [SPECIES_RAYQUAZA] =
-    {
-        .size = MON_COORDS_SIZE(56, 64),
-        .y_offset = 0,
-    },
-    [SPECIES_LATIAS] =
-    {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 2,
-    },
-    [SPECIES_LATIOS] =
-    {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 3,
-    },
-    [SPECIES_JIRACHI] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 5,
-    },
-    [SPECIES_DEOXYS] =
-    {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 7,
-    },
     [SPECIES_CHIMECHO] =
     {
         .size = MON_COORDS_SIZE(32, 56),
@@ -2564,6 +2484,11 @@ const struct MonCoords gMonBackPicCoords[] =
         .y_offset = 16,
     },
     [SPECIES_LICKILICKY] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_GALLADE] =
     {
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,

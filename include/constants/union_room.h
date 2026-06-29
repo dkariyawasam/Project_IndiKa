@@ -27,14 +27,14 @@
 #define ACTIVITY_WONDER_CARD_DUP    6 // Duplicates of later WONDER constants
 #define ACTIVITY_WONDER_NEWS_DUP    7 //
 #define ACTIVITY_CARD               8
-#define ACTIVITY_POKEMON_JUMP       9
-#define ACTIVITY_BERRY_CRUSH        10
-#define ACTIVITY_BERRY_PICK         11
+#define ACTIVITY_UNUSED_9           9
+#define ACTIVITY_UNUSED_10          10
+#define ACTIVITY_UNUSED_11          11
 #define ACTIVITY_SEARCH             12
 #define ACTIVITY_SPIN_TRADE         13
 #define ACTIVITY_ITEM_TRADE         14 // Replaced with ACTIVITY_BATTLE_TOWER_OPEN in Emerald
-#define ACTIVITY_RECORD_CORNER      15
-#define ACTIVITY_BERRY_BLENDER      16
+#define ACTIVITY_UNUSED_15          15
+#define ACTIVITY_UNUSED_16          16
 
 // Player response
 #define ACTIVITY_ACCEPT             17
@@ -52,9 +52,9 @@
 #define LINK_GROUP_DOUBLE_BATTLE        1
 #define LINK_GROUP_MULTI_BATTLE         2
 #define LINK_GROUP_TRADE                3
-#define LINK_GROUP_POKEMON_JUMP         4
-#define LINK_GROUP_BERRY_CRUSH          5
-#define LINK_GROUP_BERRY_PICKING        6
+#define LINK_GROUP_UNUSED_4             4
+#define LINK_GROUP_UNUSED_5             5
+#define LINK_GROUP_UNUSED_6             6
 #define LINK_GROUP_WONDER_CARD          7
 #define LINK_GROUP_WONDER_NEWS          8
 #define LINK_GROUP_UNION_ROOM_RESUME    9

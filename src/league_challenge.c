@@ -40,12 +40,21 @@ static u16 GetIndigoChampionTrainerId(void)
     switch (VarGet(VAR_STARTER_MON))
     {
     case 0:
-        return TRAINER_CHAMPION_FIRST_CHARMANDER;
+        if (FlagGet(FLAG_SYS_GAME_CLEAR))
+            return TRAINER_CHAMPION_REMATCH_CHARMANDER;
+        else
+            return TRAINER_CHAMPION_FIRST_CHARMANDER;
     case 1:
-        return TRAINER_CHAMPION_FIRST_BULBASAUR;
+        if (FlagGet(FLAG_SYS_GAME_CLEAR))
+            return TRAINER_CHAMPION_REMATCH_BULBASAUR;
+        else
+            return TRAINER_CHAMPION_FIRST_BULBASAUR;
     case 2:
     default:
-        return TRAINER_CHAMPION_FIRST_SQUIRTLE;
+        if (FlagGet(FLAG_SYS_GAME_CLEAR))
+            return TRAINER_CHAMPION_REMATCH_SQUIRTLE;
+        else
+            return TRAINER_CHAMPION_FIRST_SQUIRTLE;
     }
 }
 

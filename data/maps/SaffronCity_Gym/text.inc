@@ -32,10 +32,10 @@ SaffronCity_Gym_Text_SabrinaPostFieldVictory::
     .string "mind held firm within it.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
-    .string "With six BADGES, POKéMON up\n"
-    .string "to Lv. 70 obey you.\p"
-    .string "Stronger outsider POKéMON may\n"
-    .string "ignore your orders in battle.$"
+    .string "A calm mind earns trust from\n"
+    .string "even strong outsider POKéMON.\p"
+    .string "Keep completing PROF. OAK's\n"
+    .string "subquests to strengthen that bond.$"
 
 SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina::
     .string "{PLAYER} received the MARSH FINDER\n"
