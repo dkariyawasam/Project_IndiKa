@@ -1253,10 +1253,10 @@ static u16 BuildMenuTemplate(void)
 	gMultiuseListMenuTemplate.itemVerticalPadding = 2;
 	gMultiuseListMenuTemplate.upText_Y = 2;
 	gMultiuseListMenuTemplate.maxShowed = sStateDataPtr->maxShowed;
-	gMultiuseListMenuTemplate.fontId = 2;
-	gMultiuseListMenuTemplate.cursorPal = 2;
-	gMultiuseListMenuTemplate.fillValue = 0;
-	gMultiuseListMenuTemplate.cursorShadowPal = 0;
+	gMultiuseListMenuTemplate.fontId = FONT_NORMAL;
+	gMultiuseListMenuTemplate.cursorPal = TEXT_COLOR_DARK_GRAY;
+	gMultiuseListMenuTemplate.fillValue = TEXT_COLOR_TRANSPARENT;
+	gMultiuseListMenuTemplate.cursorShadowPal = TEXT_COLOR_LIGHT_GRAY;
 	gMultiuseListMenuTemplate.moveCursorFunc = MoveCursorFunc;
 	gMultiuseListMenuTemplate.itemPrintFunc = GenerateStateAndPrint;
 	gMultiuseListMenuTemplate.scrollMultiple = LIST_MULTIPLE_SCROLL_DPAD;
