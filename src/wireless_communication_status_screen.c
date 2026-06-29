@@ -144,24 +144,11 @@ static const u8 sActivityGroupInfo[][3] = {
     {ACTIVITY_TRADE,                          GROUPTYPE_TRADE,  2},
     {ACTIVITY_WONDER_CARD,                    GROUPTYPE_TOTAL,  2},
     {ACTIVITY_WONDER_NEWS,                    GROUPTYPE_TOTAL,  2},
-#if REVISION >= 0xA
-    {ACTIVITY_POKEMON_JUMP,                   GROUPTYPE_TOTAL,   0},
-    {ACTIVITY_BERRY_CRUSH,                    GROUPTYPE_TOTAL,   0},
-    {ACTIVITY_BERRY_PICK,                     GROUPTYPE_TOTAL,   0},
-#else
-    {ACTIVITY_POKEMON_JUMP,                   NUM_GROUPTYPES,   0},
-    {ACTIVITY_BERRY_CRUSH,                    NUM_GROUPTYPES,   0},
-    {ACTIVITY_BERRY_PICK,                     NUM_GROUPTYPES,   0},
-#endif
     {ACTIVITY_SEARCH,                         GROUPTYPE_NONE,   0},
     {ACTIVITY_SPIN_TRADE,                     GROUPTYPE_TRADE,  0},
     {ACTIVITY_ITEM_TRADE,                     GROUPTYPE_NONE,   0},
-#if REVISION >= 0xA
-    {ACTIVITY_RECORD_CORNER,                  GROUPTYPE_TOTAL,   0},
-#else
-    {ACTIVITY_RECORD_CORNER,                  NUM_GROUPTYPES,   0},
-#endif
-    {ACTIVITY_BERRY_BLENDER,                  GROUPTYPE_NONE,   0},
+    {ACTIVITY_UNUSED_15,                      GROUPTYPE_NONE,   0},
+    {ACTIVITY_UNUSED_16,                      GROUPTYPE_NONE,   0},
     {ACTIVITY_NONE | IN_UNION_ROOM,           GROUPTYPE_UNION,  1},
     {ACTIVITY_BATTLE_SINGLE | IN_UNION_ROOM,  GROUPTYPE_UNION,  2},
     {ACTIVITY_TRADE | IN_UNION_ROOM,          GROUPTYPE_UNION,  2},

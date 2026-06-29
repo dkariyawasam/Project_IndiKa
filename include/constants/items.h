@@ -429,7 +429,7 @@
 #define ITEM_0x164 356
 #define ITEM_TEA 357
 #define ITEM_0x166 358
-#define ITEM_POWDER_JAR 359
+#define ITEM_UNUSED_359 359
 #define ITEM_RUBY 360
 #define ITEM_SAPPHIRE 361
 

@@ -78,10 +78,10 @@ static const u16 sFieldMoveStreaksIndoors_Gfx[] = INCBIN_U16("graphics/field_eff
 static const u16 sFieldMoveStreaksIndoors_Pal[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_indoors.gbapal");
 static const u16 sFieldMoveStreaksIndoors_Tilemap[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_indoors.bin");
 
-static const u16 sRockFragment_TopLeft[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_top_left.4bpp");
-static const u16 sRockFragment_TopRight[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_top_right.4bpp");
-static const u16 sRockFragment_BottomLeft[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_bottom_left.4bpp");
-static const u16 sRockFragment_BottomRight[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_bottom_right.4bpp");
+static const u16 sRockFragment_TopLeft[] = INCBIN_U16("graphics/field_effects/pics/rock_fragment_top_left.4bpp");
+static const u16 sRockFragment_TopRight[] = INCBIN_U16("graphics/field_effects/pics/rock_fragment_top_right.4bpp");
+static const u16 sRockFragment_BottomLeft[] = INCBIN_U16("graphics/field_effects/pics/rock_fragment_bottom_left.4bpp");
+static const u16 sRockFragment_BottomRight[] = INCBIN_U16("graphics/field_effects/pics/rock_fragment_bottom_right.4bpp");
 
 static bool8 (*const sFldEffScrcmdTable[])(const u8 **script, u32 *result) = {
     FieldEffectCmd_loadtiles,

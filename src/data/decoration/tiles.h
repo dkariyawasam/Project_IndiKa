@@ -510,15 +510,15 @@ const u16 DecorGfx_SMOOCHUM_DOLL[] = {
     OBJ_EVENT_GFX_ITEM_BALL
 };
 
-const u16 DecorGfx_TREECKO_DOLL[] = {
+const u16 DecorGfx_UNUSED_DOLL_1[] = {
     OBJ_EVENT_GFX_ITEM_BALL
 };
 
-const u16 DecorGfx_TORCHIC_DOLL[] = {
+const u16 DecorGfx_UNUSED_DOLL_2[] = {
     OBJ_EVENT_GFX_ITEM_BALL
 };
 
-const u16 DecorGfx_MUDKIP_DOLL[] = {
+const u16 DecorGfx_UNUSED_DOLL_3[] = {
     OBJ_EVENT_GFX_ITEM_BALL
 };
 

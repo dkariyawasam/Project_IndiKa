@@ -376,7 +376,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_BERRY_POUCH]    = {gItemIcon_BerryPouch, gItemIconPalette_BerryPouch},
     [ITEM_TEACHY_TV]      = {gItemIcon_TeachyTV, gItemIconPalette_TeachyTV},
     [ITEM_TEA]            = {gItemIcon_Tea, gItemIconPalette_Tea},
-    [ITEM_POWDER_JAR]     = {gItemIcon_PowderJar, gItemIconPalette_PowderJar},
+    [ITEM_UNUSED_359]     = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_RUBY]           = {gItemIcon_Gem, gItemIconPalette_Ruby},
     [ITEM_SAPPHIRE]       = {gItemIcon_Gem, gItemIconPalette_Sapphire},
     // Return to field arrow
