@@ -52,16 +52,19 @@ MtMoon_B2F_EventScript_Annihilape::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MtMoon_B2F_EventScript_DefeatedAnnihilape
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, MtMoon_B2F_EventScript_DefeatedAnnihilape
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtMoon_B2F_EventScript_RanFromAnnihilape
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MtMoon_B2F_EventScript_RanFromAnnihilape
 	setflag FLAG_FOUGHT_ANNIHILAPE
 	setflag FLAG_HIDE_MT_MOON_ANNIHILAPE
+	pokedexmsg Text_OakApexAnnihilape
 	release
 	end
 
 MtMoon_B2F_EventScript_DefeatedAnnihilape::
 	setflag FLAG_FOUGHT_ANNIHILAPE
 	setflag FLAG_HIDE_MT_MOON_ANNIHILAPE
+	pokedexmsg Text_OakApexAnnihilape
 	goto EventScript_RemoveStaticMon
 	end
 

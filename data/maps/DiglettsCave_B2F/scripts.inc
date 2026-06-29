@@ -53,16 +53,19 @@ DiglettsCave_B2F_EventScript_MimeSr::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, DiglettsCave_B2F_EventScript_DefeatedMimeSr
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, DiglettsCave_B2F_EventScript_DefeatedMimeSr
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, DiglettsCave_B2F_EventScript_RanFromMimeSr
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, DiglettsCave_B2F_EventScript_RanFromMimeSr
 	setflag FLAG_FOUGHT_MIME_SR
 	setflag FLAG_HIDE_DIGLETTS_CAVE_MIME_SR
+	pokedexmsg Text_OakApexMimeSr
 	release
 	end
 
 DiglettsCave_B2F_EventScript_DefeatedMimeSr::
 	setflag FLAG_FOUGHT_MIME_SR
 	setflag FLAG_HIDE_DIGLETTS_CAVE_MIME_SR
+	pokedexmsg Text_OakApexMimeSr
 	goto EventScript_RemoveStaticMon
 	end
 

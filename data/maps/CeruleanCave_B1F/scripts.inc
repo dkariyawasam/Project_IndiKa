@@ -43,14 +43,17 @@ CeruleanCave_B1F_EventScript_Mewtwo::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CeruleanCave_B1F_EventScript_DefeatedMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, CeruleanCave_B1F_EventScript_DefeatedMewtwo
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave_B1F_EventScript_RanFromMewtwo
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeruleanCave_B1F_EventScript_RanFromMewtwo
 	setflag FLAG_FOUGHT_MEWTWO
+	pokedexmsg Text_OakApexMewtwo
 	release
 	end
 
 CeruleanCave_B1F_EventScript_DefeatedMewtwo::
 	setflag FLAG_FOUGHT_MEWTWO
+	pokedexmsg Text_OakApexMewtwo
 	goto EventScript_RemoveStaticMon
 	end
 
