@@ -1318,6 +1318,16 @@ bool8 ScrCmd_messageautoscroll(struct ScriptContext * ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_pokedexmsg(struct ScriptContext * ctx)
+{
+    const u8 *msg = (const u8 *)ScriptReadWord(ctx);
+
+    if (msg == NULL)
+        msg = (const u8 *)ctx->data[0];
+    ShowFieldPokedexMessage(msg);
+    return FALSE;
+}
+
 bool8 ScrCmd_waitmessage(struct ScriptContext * ctx)
 {
     SetupNativeScript(ctx, IsFieldMessageBoxHidden);

@@ -865,6 +865,12 @@
 	.4byte \text
 	.endm
 
+	@ Starts displaying a message box using the POKEDEX transmission frame.
+	.macro pokedexmessage text:req
+	.byte 0xd9
+	.4byte \text
+	.endm
+
 	@ Closes the current message box.
 	.macro closemessage
 	.byte 0x68
@@ -1946,6 +1952,13 @@
 	.macro msgbox text:req, type=MSGBOX_DEFAULT
 	loadword 0, \text
 	callstd \type
+	.endm
+
+	@ Prints a POKEDEX transmission message, then waits for player input.
+	.macro pokedexmsg text:req
+	pokedexmessage \text
+	waitmessage
+	waitbuttonpress
 	.endm
 
 	@ Gives 'amount' of the specified 'item' to the player and prints a message with fanfare.
