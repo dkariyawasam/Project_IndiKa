@@ -8,10 +8,12 @@ enum {
     FIELD_MESSAGE_BOX_UNUSED,
     FIELD_MESSAGE_BOX_NORMAL,
     FIELD_MESSAGE_BOX_AUTO_SCROLL,
+    FIELD_MESSAGE_BOX_POKEDEX,
 };
 
 bool8 ShowFieldMessage(const u8 *message);
 bool8 ShowFieldAutoScrollMessage(const u8 *message);
+bool8 ShowFieldPokedexMessage(const u8 *message);
 void HideFieldMessageBox(void);
 bool8 IsFieldMessageBoxHidden(void);
 u8 GetFieldMessageBoxType(void);
