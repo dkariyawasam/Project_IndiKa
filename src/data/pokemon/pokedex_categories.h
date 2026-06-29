@@ -576,15 +576,15 @@ static const u16 sDexCategory_UrbanPkmn_Page18[] = {
 static const u16 sDexCategory_RarePkmn_Page1[] = {
     SPECIES_OMANYTE,
     SPECIES_OMASTAR,
-    SPECIES_KABUSTAR,
-    SPECIES_KABUKNIGHT,
+    SPECIES_OMATOPS,
+    SPECIES_OMATO,
 };
 
 static const u16 sDexCategory_RarePkmn_Page2[] = {
     SPECIES_KABUTO,
     SPECIES_KABUTOPS,
-    SPECIES_OMATO,
-    SPECIES_OMATOPS,
+    SPECIES_KABUKNIGHT,
+    SPECIES_KABUSTAR,
 };
 
 static const u16 sDexCategory_RarePkmn_Page3[] = {
