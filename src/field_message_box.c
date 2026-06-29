@@ -25,9 +25,10 @@ static void Task_DrawFieldMessageBox(u8 taskId)
     switch (task->data[0])
     {
     case 0:
-        if (gQuestLogState == QL_STATE_PLAYBACK)
+        if (sMessageBoxType == FIELD_MESSAGE_BOX_POKEDEX || gQuestLogState == QL_STATE_PLAYBACK)
         {
-            gTextFlags.autoScroll = TRUE;
+            if (gQuestLogState == QL_STATE_PLAYBACK)
+                gTextFlags.autoScroll = TRUE;
             LoadQuestLogWindowTiles(0, 0x200);
         }
         else if (!IsMsgSignpost())
@@ -76,6 +77,15 @@ bool8 ShowFieldAutoScrollMessage(const u8 *str)
     if (sMessageBoxType != FIELD_MESSAGE_BOX_HIDDEN)
         return FALSE;
     sMessageBoxType = FIELD_MESSAGE_BOX_AUTO_SCROLL;
+    ExpandStringAndStartDrawFieldMessageBox(str);
+    return TRUE;
+}
+
+bool8 ShowFieldPokedexMessage(const u8 *str)
+{
+    if (sMessageBoxType != FIELD_MESSAGE_BOX_HIDDEN)
+        return FALSE;
+    sMessageBoxType = FIELD_MESSAGE_BOX_POKEDEX;
     ExpandStringAndStartDrawFieldMessageBox(str);
     return TRUE;
 }
