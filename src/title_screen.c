@@ -495,9 +495,9 @@ static u16 TintTitleBackdropColorNight(u16 color)
     u8 g = (color >> 5) & 0x1F;
     u8 b = (color >> 10) & 0x1F;
 
-    r = (r * 18) / 32;
-    g = (g * 20) / 32;
-    b = (b * 25) / 32;
+    r = (r * 10) / 32;
+    g = (g * 11) / 32;
+    b = (b * 19) / 32;
 
     return RGB(r, g, b);
 }
@@ -671,14 +671,15 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
         data[2]++;
         if (data[2] > 36)
         {
-            CreateTask(Task_TitleScreen_SlideWin0, 3);
+            ChangeBgX(2, 0, 0);
+            BlendPalettesGradually((1 << 14) | (1 << 15), -4, 16, 0, RGB_BLACK, 3, 1);
             BlendPalettesGradually(1 << 13, -4, 1, 16, RGB(30, 30, 31), 0, 0);
             data[2] = 0;
             tState++;
         }
         break;
     case 4:
-        if (!IsBlendPalettesGraduallyTaskActive(0))
+        if (!IsBlendPalettesGraduallyTaskActive(0) && !IsBlendPalettesGraduallyTaskActive(1))
         {
             BlendPalettesGradually(1 << 13, -4, 15, 0, RGB(30, 30, 31), 0, 0);
             tState++;
