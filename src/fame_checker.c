@@ -17,8 +17,11 @@
 #include "menu_indicators.h"
 #include "text_window.h"
 #include "fame_checker.h"
+#include "quests.h"
 #include "strings.h"
 #include "constants/event_objects.h"
+#include "constants/flags.h"
+#include "constants/quests.h"
 
 #define SPRITETAG_SELECTOR_CURSOR 1000
 #define SPRITETAG_QUESTION_MARK 1001
@@ -48,6 +51,19 @@ struct FameCheckerData
     u8 viewingFlavorText:1;
     u8 unk_23_1:1; // unused
     u8 pickModeOverCancel:1;
+    u8 isApexDossier:1;
+    u8 apexSubquest:4;
+};
+
+struct ApexRumorDossierEntry
+{
+    const u8 *name;
+    const u8 *rumors[3];
+    const u8 *locations[3];
+    const u8 *sources[3];
+    u16 graphicsIds[3];
+    u16 apexGraphicsId;
+    u16 apexInteractedFlag;
 };
 
 static EWRAM_DATA u16 * sBg3TilemapBuffer = NULL;
@@ -107,6 +123,12 @@ static void Task_SwitchToPickMode(u8 taskId);
 static void PrintCancelDescription(void);
 static void FC_DoMoveCursor(s32 itemIndex, bool8 onInit);
 static u8 FC_PopulateListMenu(void);
+static bool8 FC_HasApexDossierRumor(u8 rumor);
+static bool8 FC_HasEncounteredApexDossierMon(void);
+static bool8 FC_IsApexDossierMonSlot(u8 slot);
+static bool8 FC_IsApexDossierWitnessSlot(u8 slot);
+static u8 FC_GetApexDossierRumorForSlot(u8 slot);
+static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot);
 static void FC_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId);
 static void FC_CreateScrollIndicatorArrowPair(void);
 static void FreeListMenuSelectorArrowPairResources(void);
@@ -136,6 +158,170 @@ static const u16 sSilhouettePalette[] = INCBIN_U16("graphics/fame_checker/silhou
 static const u8 sTextColor_White[3]  = {0, 1, 2};
 static const u8 sTextColor_DkGrey[3] = {0, 2, 3};
 static const u8 sTextColor_Green[3]  = {0, 6, 7};
+
+static const u8 sApexDossierName_Tangrowth[] = _("TANGROWTH");
+static const u8 sApexDossierName_Zapdos[] = _("ZAPDOS");
+static const u8 sApexDossierName_Articuno[] = _("ARTICUNO");
+static const u8 sApexDossierName_Mewtwo[] = _("MEWTWO");
+static const u8 sApexDossierName_Osscythe[] = _("OSSCYTHE");
+static const u8 sApexDossierName_Moltres[] = _("MOLTRES");
+static const u8 sApexDossierName_MimeSr[] = _("MIME SR.");
+static const u8 sApexDossierName_Annihilape[] = _("ANNIHILAPE");
+
+static const u8 sApexRumorUnknown[] = _("No rumour recorded yet.");
+static const u8 sApexMonUnknown[] = _("The APEX POKEMON has not been\nencountered yet.");
+static const u8 sApexMonRecorded[] = _("The APEX POKEMON has been\nrecorded.");
+static const u8 sApexRumorSourceUnknown[] = _("Unrecorded");
+static const u8 sApexRumorLocationUnknown[] = _("????");
+static const u8 sApexLoc_Apex[] = _("APEX");
+static const u8 sApexSrc_FieldRecord[] = _("Field record");
+static const u8 sApexLoc_Viridian[] = _("VIRIDIAN");
+static const u8 sApexLoc_ForestGate[] = _("FOREST GATE");
+static const u8 sApexLoc_ViridianForest[] = _("VIRIDIAN FOREST");
+static const u8 sApexLoc_PowerPlant[] = _("POWER PLANT");
+static const u8 sApexLoc_Route10[] = _("ROUTE 10");
+static const u8 sApexLoc_Route20[] = _("ROUTE 20");
+static const u8 sApexLoc_Seafoam[] = _("SEAFOAM");
+static const u8 sApexLoc_Unknown[] = _("UNKNOWN");
+static const u8 sApexLoc_Saffron[] = _("SAFFRON");
+static const u8 sApexLoc_Lavender[] = _("LAVENDER");
+static const u8 sApexLoc_PokemonTower[] = _("POKEMON TOWER");
+static const u8 sApexLoc_Cinnabar[] = _("CINNABAR");
+static const u8 sApexLoc_Volcano[] = _("VOLCANO");
+static const u8 sApexLoc_DiglettCave[] = _("DIGLETT CAVE");
+static const u8 sApexLoc_Route11[] = _("ROUTE 11");
+static const u8 sApexLoc_MtMoon[] = _("MT. MOON");
+static const u8 sApexLoc_Cerulean[] = _("CERULEAN");
+static const u8 sApexLoc_Route4[] = _("ROUTE 4");
+
+static const u8 sApexSrc_OldTale[] = _("Old tale");
+static const u8 sApexSrc_ScaredLocal[] = _("Scared local");
+static const u8 sApexSrc_FlowerWatcher[] = _("Flower watcher");
+static const u8 sApexSrc_Engineer[] = _("Engineer");
+static const u8 sApexSrc_Rocker[] = _("Rocker");
+static const u8 sApexSrc_Picnicker[] = _("Picnicker");
+static const u8 sApexSrc_Swimmer[] = _("Swimmer");
+static const u8 sApexSrc_Trainer[] = _("Trainer");
+static const u8 sApexSrc_Explorer[] = _("Explorer");
+static const u8 sApexSrc_NoWitness[] = _("No witness");
+static const u8 sApexSrc_Rocket[] = _("Rocket");
+static const u8 sApexSrc_TownLocal[] = _("Town local");
+static const u8 sApexSrc_Mourner[] = _("Mourner");
+static const u8 sApexSrc_Scientist[] = _("Scientist");
+static const u8 sApexSrc_Hiker[] = _("Hiker");
+static const u8 sApexSrc_Witness[] = _("Witness");
+static const u8 sApexSrc_CaveVisitor[] = _("Cave visitor");
+static const u8 sApexSrc_Pokemaniac[] = _("Pokemaniac");
+static const u8 sApexSrc_HouseResident[] = _("House resident");
+
+static const u8 sApexRumor_Tangrowth0[] = _("My father once heard the growls\nof a shadowy figure deep in\nVIRIDIAN FOREST.");
+static const u8 sApexRumor_Tangrowth1[] = _("Legends say VIRIDIAN FOREST\ncomes alive and ensnares the\nwicked.");
+static const u8 sApexRumor_Tangrowth2[] = _("The flowers grow more vibrant\nnear the centre of VIRIDIAN\nFOREST.");
+static const u8 sApexRumor_Zapdos0[] = _("They say power gathers at the\nPLANT without training, without\nlimit.");
+static const u8 sApexRumor_Zapdos1[] = _("The air near the POWER PLANT\ncrackles like a storm that never\nruns dry.");
+static const u8 sApexRumor_Zapdos2[] = _("A flash crossed the sky, and the\nwhole route shook with thunder.");
+static const u8 sApexRumor_Articuno0[] = _("SEAFOAM changed all at once.\nA volcanic place became cold as\nice.");
+static const u8 sApexRumor_Articuno1[] = _("I heard SEAFOAM fractured when\nthe spirit of ice settled in the\ncaves.");
+static const u8 sApexRumor_Articuno2[] = _("This whole area used to be lava.\nThen everything changed in a\nsingle burst.");
+static const u8 sApexRumor_Mewtwo0[] = _("No witness statement has been\nrecorded.");
+static const u8 sApexRumor_Mewtwo1[] = _("No witness statement has been\nrecorded.");
+static const u8 sApexRumor_Mewtwo2[] = _("No witness statement has been\nrecorded.");
+static const u8 sApexRumor_Osscythe0[] = _("A ROCKET took a CUBONE from\nits mother. The poor thing only\ncries.");
+static const u8 sApexRumor_Osscythe1[] = _("Atop POKEMON TOWER, a vengeful\nspirit howls over a tragic loss.");
+static const u8 sApexRumor_Osscythe2[] = _("Families come here to mourn.\nSome losses refuse to stay quiet.");
+static const u8 sApexRumor_Moltres0[] = _("CINNABAR keeps rebuilding.\nSomething beneath the volcano\nkeeps giving it life.");
+static const u8 sApexRumor_Moltres1[] = _("When old rock breaks, new land\nis born. That is the volcano's\npower.");
+static const u8 sApexRumor_Moltres2[] = _("A firebird's cry was heard where\nthe volcano breathes hottest.");
+static const u8 sApexRumor_MimeSr0[] = _("MR. MIME have taken home in\nDIGLETT CAVE. It leads all the\nway to PEWTER.");
+static const u8 sApexRumor_MimeSr1[] = _("All the MR. MIME disappeared\ninto DIGLETT CAVE and raised\nbarriers.");
+static const u8 sApexRumor_MimeSr2[] = _("DIGLETT CAVE leads to VERMILION.\nWatch out for invisible walls!");
+static const u8 sApexRumor_Annihilape0[] = _("There's something angry and\nprimal deep within MT. MOON.");
+static const u8 sApexRumor_Annihilape1[] = _("An enormous POKEMON smashed\nthrough the wall and rampaged\nwest.");
+static const u8 sApexRumor_Annihilape2[] = _("A hulking PRIMEAPE took refuge\ninside MT. MOON, totally out of\ncontrol!");
+
+static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_COUNT] =
+{
+    [SUB_QUEST_APEX_TANGROWTH] =
+    {
+        sApexDossierName_Tangrowth,
+        {sApexRumor_Tangrowth0, sApexRumor_Tangrowth1, sApexRumor_Tangrowth2},
+        {sApexLoc_Viridian, sApexLoc_ForestGate, sApexLoc_ViridianForest},
+        {sApexSrc_OldTale, sApexSrc_ScaredLocal, sApexSrc_FlowerWatcher},
+        {OBJ_EVENT_GFX_OLD_MAN_1, OBJ_EVENT_GFX_LITTLE_GIRL, OBJ_EVENT_GFX_LASS},
+        OBJ_EVENT_GFX_TANGROWTH,
+        FLAG_INTERACTED_APEX_TANGROWTH
+    },
+    [SUB_QUEST_APEX_ZAPDOS] =
+    {
+        sApexDossierName_Zapdos,
+        {sApexRumor_Zapdos0, sApexRumor_Zapdos1, sApexRumor_Zapdos2},
+        {sApexLoc_PowerPlant, sApexLoc_Route10, sApexLoc_Route10},
+        {sApexSrc_Engineer, sApexSrc_Rocker, sApexSrc_Picnicker},
+        {OBJ_EVENT_GFX_ENGINEER, OBJ_EVENT_GFX_ROCKER, OBJ_EVENT_GFX_SCOUT_F},
+        OBJ_EVENT_GFX_ZAPDOS,
+        FLAG_INTERACTED_APEX_ZAPDOS
+    },
+    [SUB_QUEST_APEX_ARTICUNO] =
+    {
+        sApexDossierName_Articuno,
+        {sApexRumor_Articuno0, sApexRumor_Articuno1, sApexRumor_Articuno2},
+        {sApexLoc_Route20, sApexLoc_Seafoam, sApexLoc_Seafoam},
+        {sApexSrc_Swimmer, sApexSrc_Trainer, sApexSrc_Explorer},
+        {OBJ_EVENT_GFX_SWIMMER_F_WATER, OBJ_EVENT_GFX_SWIMMER_M_WATER, OBJ_EVENT_GFX_MAN},
+        OBJ_EVENT_GFX_ARTICUNO,
+        FLAG_INTERACTED_APEX_ARTICUNO
+    },
+    [SUB_QUEST_APEX_MEWTWO] =
+    {
+        sApexDossierName_Mewtwo,
+        {sApexRumor_Mewtwo0, sApexRumor_Mewtwo1, sApexRumor_Mewtwo2},
+        {sApexLoc_Unknown, sApexLoc_Unknown, sApexLoc_Unknown},
+        {sApexSrc_NoWitness, sApexSrc_NoWitness, sApexSrc_NoWitness},
+        {OBJ_EVENT_GFX_CLIPBOARD, OBJ_EVENT_GFX_CLIPBOARD, OBJ_EVENT_GFX_CLIPBOARD},
+        OBJ_EVENT_GFX_MEWTWO,
+        FLAG_INTERACTED_APEX_MEWTWO
+    },
+    [SUB_QUEST_APEX_OSSCYTHE] =
+    {
+        sApexDossierName_Osscythe,
+        {sApexRumor_Osscythe0, sApexRumor_Osscythe1, sApexRumor_Osscythe2},
+        {sApexLoc_Saffron, sApexLoc_Lavender, sApexLoc_PokemonTower},
+        {sApexSrc_Rocket, sApexSrc_TownLocal, sApexSrc_Mourner},
+        {OBJ_EVENT_GFX_ROCKET_M, OBJ_EVENT_GFX_OLD_WOMAN, OBJ_EVENT_GFX_BALDING_MAN},
+        OBJ_EVENT_GFX_OSSCYTHE,
+        FLAG_INTERACTED_APEX_OSSCYTHE
+    },
+    [SUB_QUEST_APEX_MOLTRES] =
+    {
+        sApexDossierName_Moltres,
+        {sApexRumor_Moltres0, sApexRumor_Moltres1, sApexRumor_Moltres2},
+        {sApexLoc_Cinnabar, sApexLoc_Volcano, sApexLoc_Volcano},
+        {sApexSrc_Scientist, sApexSrc_Hiker, sApexSrc_Witness},
+        {OBJ_EVENT_GFX_SCIENTIST, OBJ_EVENT_GFX_HIKER, OBJ_EVENT_GFX_WOMAN_1},
+        OBJ_EVENT_GFX_MOLTRES,
+        FLAG_INTERACTED_APEX_MOLTRES
+    },
+    [SUB_QUEST_APEX_MIME_SR] =
+    {
+        sApexDossierName_MimeSr,
+        {sApexRumor_MimeSr0, sApexRumor_MimeSr1, sApexRumor_MimeSr2},
+        {sApexLoc_DiglettCave, sApexLoc_Route11, sApexLoc_DiglettCave},
+        {sApexSrc_CaveVisitor, sApexSrc_Pokemaniac, sApexSrc_CaveVisitor},
+        {OBJ_EVENT_GFX_GENTLEMAN, OBJ_EVENT_GFX_SUPER_NERD, OBJ_EVENT_GFX_MAN},
+        OBJ_EVENT_GFX_MIME_SR,
+        FLAG_INTERACTED_APEX_MIME_SR
+    },
+    [SUB_QUEST_APEX_ANNIHILAPE] =
+    {
+        sApexDossierName_Annihilape,
+        {sApexRumor_Annihilape0, sApexRumor_Annihilape1, sApexRumor_Annihilape2},
+        {sApexLoc_MtMoon, sApexLoc_Cerulean, sApexLoc_Route4},
+        {sApexSrc_CaveVisitor, sApexSrc_HouseResident, sApexSrc_Hiker},
+        {OBJ_EVENT_GFX_MAN, OBJ_EVENT_GFX_WOMAN_1, OBJ_EVENT_GFX_HIKER},
+        OBJ_EVENT_GFX_ANNIHILAPE,
+        FLAG_INTERACTED_APEX_ANNIHILAPE
+    },
+};
 
 #define FAME_CHECKER_PROF_OAK  (FC_NONTRAINER_START + 0)
 #define FAME_CHECKER_DAISY_OAK (FC_NONTRAINER_START + 1)
@@ -635,6 +821,24 @@ void UseFameChecker(MainCallback savedCallback)
     SetMainCallback2(MainCB2_LoadFameChecker);
 }
 
+void UseApexRumorDossier(MainCallback savedCallback, u8 apexSubquest)
+{
+    if (apexSubquest >= QUEST_3_SUB_COUNT)
+        apexSubquest = SUB_QUEST_APEX_TANGROWTH;
+
+    SetVBlankCallback(NULL);
+    sFameCheckerData = AllocZeroed(sizeof(struct FameCheckerData));
+    sFameCheckerData->savedCallback = savedCallback;
+    sFameCheckerData->listMenuCurIdx = 0;
+    sFameCheckerData->listMenuTopIdx2 = 0;
+    sFameCheckerData->listMenuDrawnSelIdx = 0;
+    sFameCheckerData->viewingFlavorText = FALSE;
+    sFameCheckerData->isApexDossier = TRUE;
+    sFameCheckerData->apexSubquest = apexSubquest;
+    PlaySE(SE_M_SWIFT);
+    SetMainCallback2(MainCB2_LoadFameChecker);
+}
+
 static void MainCB2_LoadFameChecker(void)
 {
     switch (gMain.state)
@@ -737,7 +941,7 @@ static void Task_TopMenuHandleInput(u8 taskId)
         RunTextPrinters();
         if ((JOY_NEW(SELECT_BUTTON)) && !sFameCheckerData->inPickMode && sFameCheckerData->savedCallback != CB2_BagMenuFromStartMenu)
             task->func = Task_StartToCloseFameChecker;
-        else if (JOY_NEW(START_BUTTON))
+        else if (JOY_NEW(START_BUTTON) && !sFameCheckerData->isApexDossier)
         {
             cursorPos = FameCheckerGetCursorY();
             if (TryExitPickMode(taskId) == TRUE)
@@ -774,6 +978,8 @@ static void Task_TopMenuHandleInput(u8 taskId)
             else if (sFameCheckerData->personHasUnlockedPanels)
             {
                 PlaySE(SE_SELECT);
+                if (sFameCheckerData->isApexDossier)
+                    task->data[1] = 1;
                 task->data[0] = CreateFlavorTextIconSelectorCursorSprite(task->data[1]);
                 for (i = 0; i < 6; i++)
                 {
@@ -888,7 +1094,11 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     }
     else if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
     {
-        if (task->data[1] >= 3)
+        if (sFameCheckerData->isApexDossier)
+        {
+            FC_MoveApexDossierCursor(taskId, FC_IsApexDossierMonSlot(task->data[1]) ? 4 : 1);
+        }
+        else if (task->data[1] >= 3)
         {
             task->data[1] -= 3;
             FC_MoveSelectorCursor(taskId, 0, -0x1b);
@@ -901,7 +1111,12 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     }
     else if (JOY_NEW(DPAD_LEFT))
     {
-        if (task->data[1] == 0 || task->data[1] % 3 == 0)
+        if (sFameCheckerData->isApexDossier)
+        {
+            if (task->data[1] > 3)
+                FC_MoveApexDossierCursor(taskId, task->data[1] - 1);
+        }
+        else if (task->data[1] == 0 || task->data[1] % 3 == 0)
         {
             task->data[1] += 2;
             FC_MoveSelectorCursor(taskId, +0x5e, 0);
@@ -914,7 +1129,12 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     }
     else if (JOY_NEW(DPAD_RIGHT))
     {
-        if ((task->data[1] + 1) % 3 == 0)
+        if (sFameCheckerData->isApexDossier)
+        {
+            if (task->data[1] >= 3 && task->data[1] < 5)
+                FC_MoveApexDossierCursor(taskId, task->data[1] + 1);
+        }
+        else if ((task->data[1] + 1) % 3 == 0)
         {
             task->data[1] -= 2;
             FC_MoveSelectorCursor(taskId, -0x5e, 0);
@@ -951,6 +1171,14 @@ static void GetPickModeText(void)
 {
     s32 whichText = 0;
     u16 who = FameCheckerGetCursorY();
+
+    if (sFameCheckerData->isApexDossier)
+    {
+        WipeMsgBoxAndTransfer();
+        MessageBoxPrintEmptyText();
+        return;
+    }
+
     if (gSaveBlock1Ptr->fameChecker[sFameCheckerData->unlockedPersons[who]].pickState != FCPICKSTATE_COLORED)
     {
         WipeMsgBoxAndTransfer();
@@ -972,7 +1200,25 @@ static void PrintSelectedNameInBrightGreen(u8 taskId)
     s16 *data = gTasks[taskId].data;
     u16 cursorPos = FameCheckerGetCursorY();
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
-    StringExpandPlaceholders(gStringVar4, sFameCheckerFlavorTextPointers[sFameCheckerData->unlockedPersons[cursorPos] * 6 + data[1]]);
+    if (sFameCheckerData->isApexDossier)
+    {
+        if (FC_IsApexDossierMonSlot(data[1]))
+        {
+            StringExpandPlaceholders(gStringVar4, FC_HasEncounteredApexDossierMon() ? sApexMonRecorded : sApexMonUnknown);
+        }
+        else if (FC_IsApexDossierWitnessSlot(data[1]) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(data[1])))
+        {
+            StringExpandPlaceholders(gStringVar4, sApexRumorDossierEntries[sFameCheckerData->apexSubquest].rumors[FC_GetApexDossierRumorForSlot(data[1])]);
+        }
+        else
+        {
+            StringExpandPlaceholders(gStringVar4, sApexRumorUnknown);
+        }
+    }
+    else
+    {
+        StringExpandPlaceholders(gStringVar4, sFameCheckerFlavorTextPointers[sFameCheckerData->unlockedPersons[cursorPos] * 6 + data[1]]);
+    }
     AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
     FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
 }
@@ -1100,6 +1346,62 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
 {
     bool8 result = FALSE;
     u8 i;
+
+    if (sFameCheckerData->isApexDossier)
+    {
+        for (i = 0; i < 6; i++)
+        {
+            if (FC_IsApexDossierMonSlot(i))
+            {
+                sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
+                    sApexRumorDossierEntries[sFameCheckerData->apexSubquest].apexGraphicsId,
+                    i,
+                    47 * (i % 3) + 0x72,
+                    27 * (i / 3) + 0x2F
+                );
+                if (!FC_HasEncounteredApexDossierMon())
+                    LoadPalette(sSilhouettePalette, OBJ_PLTT_ID(gSprites[sFameCheckerData->spriteIds[i]].oam.paletteNum), sizeof(sSilhouettePalette));
+                result = TRUE;
+            }
+            else if (FC_IsApexDossierWitnessSlot(i) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(i)))
+            {
+                sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
+                    sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
+                    i,
+                    47 * (i % 3) + 0x72,
+                    27 * (i / 3) + 0x2F
+                );
+                result = TRUE;
+            }
+            else
+            {
+                if (FC_IsApexDossierWitnessSlot(i))
+                {
+                    sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
+                        sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
+                        i,
+                        47 * (i % 3) + 0x72,
+                        27 * (i / 3) + 0x2F
+                    );
+                    LoadPalette(sSilhouettePalette, OBJ_PLTT_ID(gSprites[sFameCheckerData->spriteIds[i]].oam.paletteNum), sizeof(sSilhouettePalette));
+                }
+                else
+                {
+                    sFameCheckerData->spriteIds[i] = PlaceQuestionMarkTile(
+                        47 * (i % 3) + 0x72,
+                        27 * (i / 3) + 0x1F
+                    );
+                    gSprites[sFameCheckerData->spriteIds[i]].invisible = TRUE;
+                }
+                gSprites[sFameCheckerData->spriteIds[i]].data[1] = 0xFF;
+            }
+        }
+
+        sFameCheckerData->personHasUnlockedPanels = result;
+        PrintUIHelp(result ? 0 : 1);
+        return result;
+    }
+
     for (i = 0; i < 6; i++)
     {
         if ((gSaveBlock1Ptr->fameChecker[sFameCheckerData->unlockedPersons[who]].flavorTextFlags >> i) & 1)
@@ -1342,6 +1644,9 @@ static void SpriteCB_FCSpinningPokeball(struct Sprite *sprite)
 static u8 CreatePersonPicSprite(u8 fcPersonIdx)
 {
     u8 spriteId;
+    if (sFameCheckerData->isApexDossier)
+        fcPersonIdx = FAMECHECKER_OAK;
+
     if (fcPersonIdx == FAMECHECKER_DAISY)
     {
         spriteId = CreateSprite(&sDaisySpriteTemplate, PERSON_X, PERSON_Y, 0);
@@ -1399,9 +1704,34 @@ static void UpdateIconDescriptionBox(u8 whichText)
     HandleFlavorTextModeSwitch(TRUE);
     gIconDescriptionBoxIsOpen = 1;
     FillWindowPixelRect(FCWINDOWID_ICONDESC, PIXEL_FILL(0), 0, 0, 0x58, 0x20);
-    width = (0x54 - GetStringWidth(FONT_SMALL, sFlavorTextOriginLocationTexts[idx], 0)) / 2;
-    AddTextPrinterParameterized4(FCWINDOWID_ICONDESC, FONT_SMALL, width, 0, 0, 2, sTextColor_DkGrey, -1, sFlavorTextOriginLocationTexts[idx]);
-    StringExpandPlaceholders(gStringVar1, sFlavorTextOriginObjectNameTexts[idx]);
+
+    if (sFameCheckerData->isApexDossier)
+    {
+        const u8 *location = sApexRumorLocationUnknown;
+        const u8 *source = sApexRumorSourceUnknown;
+
+        if (FC_IsApexDossierMonSlot(whichText))
+        {
+            location = sApexLoc_Apex;
+            source = FC_HasEncounteredApexDossierMon() ? sApexSrc_FieldRecord : sApexRumorSourceUnknown;
+        }
+        else if (FC_IsApexDossierWitnessSlot(whichText) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(whichText)))
+        {
+            location = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].locations[FC_GetApexDossierRumorForSlot(whichText)];
+            source = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].sources[FC_GetApexDossierRumorForSlot(whichText)];
+        }
+
+        width = (0x54 - GetStringWidth(FONT_SMALL, location, 0)) / 2;
+        AddTextPrinterParameterized4(FCWINDOWID_ICONDESC, FONT_SMALL, width, 0, 0, 2, sTextColor_DkGrey, -1, location);
+        StringExpandPlaceholders(gStringVar1, source);
+    }
+    else
+    {
+        width = (0x54 - GetStringWidth(FONT_SMALL, sFlavorTextOriginLocationTexts[idx], 0)) / 2;
+        AddTextPrinterParameterized4(FCWINDOWID_ICONDESC, FONT_SMALL, width, 0, 0, 2, sTextColor_DkGrey, -1, sFlavorTextOriginLocationTexts[idx]);
+        StringExpandPlaceholders(gStringVar1, sFlavorTextOriginObjectNameTexts[idx]);
+    }
+
     width = (0x54 - GetStringWidth(FONT_SMALL, gStringVar1, 0)) / 2;
     AddTextPrinterParameterized4(FCWINDOWID_ICONDESC, FONT_SMALL, width, 10, 0, 2, sTextColor_DkGrey, -1, gStringVar1);
     FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_ICONDESC);
@@ -1548,6 +1878,21 @@ static u8 FC_PopulateListMenu(void)
     u8 nitems = 0;
     u8 i;
 
+    if (sFameCheckerData->isApexDossier)
+    {
+        sListMenuItems[nitems].label = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].name;
+        sListMenuItems[nitems].index = nitems;
+        sFameCheckerData->unlockedPersons[nitems] = FAMECHECKER_OAK;
+        nitems++;
+        sListMenuItems[nitems].label = gFameCheckerText_Cancel;
+        sListMenuItems[nitems].index = nitems;
+        sFameCheckerData->unlockedPersons[nitems] = 0xFF;
+        nitems++;
+        gFameChecker_ListMenuTemplate.totalItems = nitems;
+        gFameChecker_ListMenuTemplate.maxShowed = nitems;
+        return nitems;
+    }
+
     for (i = 0; i < NUM_FAMECHECKER_PERSONS; i++)
     {
         u8 fameCheckerIdx = AdjustGiovanniIndexIfBeatenInGym(i);
@@ -1577,6 +1922,43 @@ static u8 FC_PopulateListMenu(void)
     else
         gFameChecker_ListMenuTemplate.maxShowed = 5;
     return nitems;
+}
+
+static bool8 FC_HasApexDossierRumor(u8 rumor)
+{
+    return QuestMenu_HasHeardApexRumor(sFameCheckerData->apexSubquest, rumor);
+}
+
+static bool8 FC_HasEncounteredApexDossierMon(void)
+{
+    return FlagGet(sApexRumorDossierEntries[sFameCheckerData->apexSubquest].apexInteractedFlag);
+}
+
+static bool8 FC_IsApexDossierMonSlot(u8 slot)
+{
+    return slot == 1;
+}
+
+static bool8 FC_IsApexDossierWitnessSlot(u8 slot)
+{
+    return slot >= 3 && slot < 6;
+}
+
+static u8 FC_GetApexDossierRumorForSlot(u8 slot)
+{
+    return slot - 3;
+}
+
+static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot)
+{
+    s16 *data = gTasks[taskId].data;
+    s16 oldX = 47 * (data[1] % 3) + 0x72;
+    s16 oldY = 27 * (data[1] / 3) + 0x2F;
+    s16 newX = 47 * (newSlot % 3) + 0x72;
+    s16 newY = 27 * (newSlot / 3) + 0x2F;
+
+    data[1] = newSlot;
+    FC_MoveSelectorCursor(taskId, newX - oldX, newY - oldY);
 }
 
 static void FC_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId)
