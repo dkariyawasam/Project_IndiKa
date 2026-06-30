@@ -17,6 +17,7 @@ extern u8 gIconDescriptionBoxIsOpen;
 void ResetFameChecker(void);
 void FullyUnlockFameChecker(void);
 void UseFameChecker(MainCallback savedCallback);
+void UseApexRumorDossier(MainCallback savedCallback, u8 apexSubquest);
 void SetFlavorTextFlagFromSpecialVars(void);
 void UpdatePickStateFromSpecialVar8005(void);
 

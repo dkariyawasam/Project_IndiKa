@@ -23,6 +23,7 @@
 #include "task.h"
 #include "text_window.h"
 #include "quests.h"
+#include "fame_checker.h"
 #include "overworld.h"
 #include "event_data.h"
 #include "new_menu_helpers.h"
@@ -76,6 +77,7 @@ EWRAM_DATA static struct QuestMenuStaticResources sListMenuState = {0};
 EWRAM_DATA static u8 sItemMenuIconSpriteIds[12] = {0};        // from pokefirered src/item_menu_icons.c
 EWRAM_DATA static void *questNamePointer = NULL;
 EWRAM_DATA static u8 **questNameArray = NULL;
+EWRAM_DATA static u8 sPendingApexDossierSubquest = 0;
 
 // This File's Functions
 void QuestMenu_Init(u8 a0, MainCallback callback);
@@ -201,6 +203,8 @@ static void Task_QuestMenuWaitFadeAndBail(u8 taskId);
 static void FadeAndBail(void);
 static void FreeResources(void);
 static void TurnOffQuestMenu(u8 taskId);
+static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId);
+static void CB2_OpenApexRumorDossier(void);
 static void Task_QuestMenuTurnOff1(u8 taskId);
 static void Task_QuestMenuTurnOff2(u8 taskId);
 
@@ -552,6 +556,22 @@ static u8 GetApexRumorCount(u8 apexSubquest)
     }
 
     return count;
+}
+
+bool8 QuestMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor)
+{
+    u8 bit;
+    u16 var;
+    u16 mask;
+
+    if (apexSubquest >= QUEST_3_SUB_COUNT || rumor >= APEX_RUMORS_REQUIRED)
+        return FALSE;
+
+    bit = apexSubquest * APEX_RUMORS_REQUIRED + rumor;
+    var = bit < 16 ? VAR_APEX_RUMOR_BITS_1 : VAR_APEX_RUMOR_BITS_2;
+    mask = 1 << (bit % 16);
+
+    return (VarGet(var) & mask) != 0;
 }
 
 void RecordApexRumor(void)
@@ -2294,6 +2314,11 @@ static void Task_Main(u8 taskId)
 				{
 					EnterSubquestModeAndCleanUp(taskId, data, input);
 				}
+				else if (sStateDataPtr->parentQuest == QUEST_APEX_POKEMON
+				         && !CheckSelectedIsCancel(selectedQuestId))
+				{
+					OpenApexDossierAndCleanUp(taskId, selectedQuestId);
+				}
 				break;
 		}
 	}
@@ -2567,6 +2592,19 @@ void TurnOffQuestMenu(u8 taskId)
 {
 	SetInitializedFlag(0);
 	gTasks[taskId].func = Task_QuestMenuTurnOff1;
+}
+
+static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId)
+{
+	PlaySE(SE_SELECT);
+	sPendingApexDossierSubquest = subquestId;
+	sStateDataPtr->savedCallback = CB2_OpenApexRumorDossier;
+	TurnOffQuestMenu(taskId);
+}
+
+static void CB2_OpenApexRumorDossier(void)
+{
+	UseApexRumorDossier(sListMenuState.savedCallback, sPendingApexDossierSubquest);
 }
 static void Task_QuestMenuTurnOff1(u8 taskId)
 {
