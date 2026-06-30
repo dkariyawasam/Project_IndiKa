@@ -49,6 +49,7 @@ const u16 gObjectEventPal_NpcBlue[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPal_NpcPink[] = INCBIN_U16("graphics/object_events/palettes/npc_pink.gbapal");
 const u16 gObjectEventPal_NpcGreen[] = INCBIN_U16("graphics/object_events/palettes/npc_green.gbapal");
 const u16 gObjectEventPal_NpcWhite[] = INCBIN_U16("graphics/object_events/palettes/npc_white.gbapal");
+const u16 gObjectEventPal_Rival[] = INCBIN_U16("graphics/object_events/palettes/rival.gbapal");
 const u16 gObjectEventPal_NpcBlueReflection[] = INCBIN_U16("graphics/object_events/palettes/npc_blue_reflection.gbapal");
 const u16 gObjectEventPal_NpcPinkReflection[] = INCBIN_U16("graphics/object_events/palettes/npc_pink_reflection.gbapal");
 const u16 gObjectEventPal_NpcGreenReflection[] = INCBIN_U16("graphics/object_events/palettes/npc_green_reflection.gbapal");
