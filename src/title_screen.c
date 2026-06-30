@@ -87,6 +87,8 @@ static const u16 sBackdropPal[] = INCBIN_U16("graphics/title_screen/firered/back
 static const u8 sBackdropTiles[] = INCBIN_U8("graphics/title_screen/firered/backdrop.4bpp.lz");
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/backdrop.bin.lz");
 static const u8 sFooterTiles[] = INCBIN_U8("graphics/title_screen/firered/footer.4bpp.lz");
+static const u8 sCopyrightPressStartTiles[] = INCBIN_U8("graphics/title_screen/copyright_press_start.4bpp");
+static const u8 sCopyrightPressStartTransparentTiles[] = INCBIN_U8("graphics/title_screen/copyright_press_start_transparent.4bpp");
 static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
 static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
 static const u8 sGrassMap[] = INCBIN_U8("graphics/title_screen/firered/grass.bin.lz");
@@ -941,7 +943,6 @@ static void Task_TitleScreen_SlideWin0(u8 taskId)
 static void Task_TitleScreen_BlinkPressStart(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    s32 i;
 
     if (data[15] && gPaletteFade.active)
         data[14] = 1;
@@ -960,19 +961,11 @@ static void Task_TitleScreen_BlinkPressStart(u8 taskId)
             data[1] ^= 1;
             if (data[1])
             {
-                for (i = 0; i < 5; i++)
-                {
-                    gPlttBufferUnfaded[BG_PLTT_ID(15) + 1 + i] = gGraphics_TitleScreen_BackgroundPals[6];
-                    gPlttBufferFaded[BG_PLTT_ID(15) + 1 + i] = gGraphics_TitleScreen_BackgroundPals[6];
-                }
+                LoadBgTiles(2, sCopyrightPressStartTransparentTiles, sizeof(sCopyrightPressStartTransparentTiles), 0);
             }
             else
             {
-                for (i = 0; i < 5; i++)
-                {
-                    gPlttBufferUnfaded[BG_PLTT_ID(15) + 1 + i] = gGraphics_TitleScreen_BackgroundPals[1 + i];
-                    gPlttBufferFaded[BG_PLTT_ID(15) + 1 + i] = gGraphics_TitleScreen_BackgroundPals[1 + i];
-                }
+                LoadBgTiles(2, sCopyrightPressStartTiles, sizeof(sCopyrightPressStartTiles), 0);
             }
             if (data[14])
             {
