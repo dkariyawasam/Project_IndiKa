@@ -1,6 +1,5 @@
 LavenderTown_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_PokemonCenter_1F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 LavenderTown_PokemonCenter_1F_OnTransition::
@@ -10,7 +9,17 @@ LavenderTown_PokemonCenter_1F_OnTransition::
 LavenderTown_PokemonCenter_1F_EventScript_Nurse::
 	lock
 	faceplayer
-	call EventScript_PkmnCenterNurse
+	msgbox LavenderTown_PokemonCenter_1F_Text_RestHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavenderTown_PokemonCenter_1F_EventScript_Goodbye
+	message LavenderTown_PokemonCenter_1F_Text_TakeShortRest
+	waitmessage
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	msgbox LavenderTown_PokemonCenter_1F_Text_Rested
+	release
+	end
+
+LavenderTown_PokemonCenter_1F_EventScript_Goodbye::
+	msgbox LavenderTown_PokemonCenter_1F_Text_Goodbye
 	release
 	end
 
