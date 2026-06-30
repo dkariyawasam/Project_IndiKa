@@ -1,5 +1,10 @@
 PalletTown_PlayersHouse_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_1F_OnTransition
 	.byte 0
+
+PalletTown_PlayersHouse_1F_OnTransition::
+	setrespawn HEAL_LOCATION_PALLET_TOWN
+	end
 
 PalletTown_PlayersHouse_1F_EventScript_Mom::
 	lock
@@ -25,6 +30,7 @@ PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouFemale::
 PalletTown_PlayersHouse_1F_EventScript_MomHeal::
 	msgbox PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest
 	closemessage
+	setrespawn HEAL_LOCATION_PALLET_TOWN
 	call EventScript_OutOfCenterPartyHeal
 	msgbox PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare
 	release
