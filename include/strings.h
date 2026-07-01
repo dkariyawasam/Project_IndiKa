@@ -129,7 +129,6 @@ extern const u8 gTeachyTvString_TypeMatchups[];
 extern const u8 gTeachyTvString_CatchPkmn[];
 extern const u8 gTeachyTvString_Training[];
 extern const u8 gTeachyTvString_AboutTMs[];
-extern const u8 gTeachyTvString_RegisterItem[];
 extern const u8 gTeachyTvString_Cancel[];
 extern const u8 gTeachyTvString_Demonstration[];
 extern const u8 gTeachyTvString_Theory[];
@@ -143,7 +142,6 @@ extern const u8 gTeachyTvText_CatchingScript1[];
 extern const u8 gTeachyTvText_CatchingTheoryScript1[];
 extern const u8 gTeachyTvText_TrainingScript1[];
 extern const u8 gTeachyTvText_TMsScript1[];
-extern const u8 gTeachyTvText_RegisterScript1[];
 extern const u8 gTeachyTvText_BattleScript2[];
 extern const u8 gTeachyTvText_BattleTheoryScript2[];
 extern const u8 gTeachyTvText_StatusScript2[];
@@ -155,7 +153,6 @@ extern const u8 gTeachyTvText_CatchingScript2[];
 extern const u8 gTeachyTvText_CatchingTheoryScript2[];
 extern const u8 gTeachyTvText_TrainingScript2[];
 extern const u8 gTeachyTvText_TMsScript2[];
-extern const u8 gTeachyTvText_RegisterScript2[];
 
 // help_system_812B1E0
 extern const u8 gText_HelpSystemControls_A_Next[];

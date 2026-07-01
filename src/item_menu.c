@@ -160,7 +160,6 @@ static bool8 BagIsTutorial(void);
 static void Task_Bag_OldManTutorial(u8 taskId);
 static void Task_Pokedude_FadeFromBag(u8 taskId);
 static void Task_Pokedude_WaitFadeAndExitBag(u8 taskId);
-static void Task_Bag_TeachyTvRegister(u8 taskId);
 static void Task_Bag_TeachyTvCatching(u8 taskId);
 static void Task_Bag_TeachyTvStatus(u8 taskId);
 static void Task_Bag_TeachyTvTMs(u8 taskId);
@@ -611,8 +610,6 @@ static u8 CreateBagInputHandlerTask(u8 location)
     {
     case ITEMMENULOCATION_OLD_MAN:
         return CreateTask(Task_Bag_OldManTutorial, 0);
-    case ITEMMENULOCATION_TTVSCR_REGISTER:
-        return CreateTask(Task_Bag_TeachyTvRegister, 0);
     case ITEMMENULOCATION_TTVSCR_TMS:
         return CreateTask(Task_Bag_TeachyTvTMs, 0);
     case ITEMMENULOCATION_TTVSCR_STATUS:
@@ -2083,7 +2080,6 @@ static bool8 BagIsTutorial(void)
         gBagMenuState.location == ITEMMENULOCATION_OLD_MAN 
      || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_CATCHING 
      || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_STATUS 
-     || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_REGISTER 
      || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_TMS
     )
         return TRUE;
@@ -2233,60 +2229,6 @@ static bool8 Task_BButtonInterruptTeachyTv(u8 taskId)
     else
     {
         return FALSE;
-    }
-}
-
-static void Task_Bag_TeachyTvRegister(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-    if (!gPaletteFade.active && Task_BButtonInterruptTeachyTv(taskId) != TRUE)
-    {
-        switch (data[8])
-        {
-        case 102:
-            PlaySE(SE_BAG_POCKET);
-            SwitchPockets(taskId, 1, FALSE);
-            break;
-        case 204:
-            PlaySE(SE_SELECT);
-            bag_menu_print_cursor_(data[0], 2);
-            Bag_FillMessageBoxWithPalette(1);
-            gSpecialVar_ItemId = ITEM_TM_CASE;
-            OpenContextMenu(taskId);
-            break;
-        case 306:
-            PlaySE(SE_SELECT);
-            Menu_MoveCursorNoWrapAround(1);
-            break;
-        case 408:
-            PlaySE(SE_SELECT);
-            gSaveBlock1Ptr->registeredItem = gSpecialVar_ItemId;
-            HideBagWindow(10);
-            HideBagWindow(6);
-            PutWindowTilemap(0);
-            PutWindowTilemap(1);
-            DestroyListMenuTask(data[0], &gBagMenuState.cursorPos[gBagMenuState.pocket], &gBagMenuState.itemsAbove[gBagMenuState.pocket]);
-            Bag_BuildListMenuTemplate(gBagMenuState.pocket);
-            data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.cursorPos[gBagMenuState.pocket], gBagMenuState.itemsAbove[gBagMenuState.pocket]);
-            Bag_FillMessageBoxWithPalette(0);
-            bag_menu_print_cursor_(data[0], 1);
-            CopyWindowToVram(0, COPYWIN_MAP);
-            break;
-        case 510:
-        case 612:
-            gMain.newKeys = 0;
-            gMain.newAndRepeatedKeys = DPAD_DOWN;
-            ListMenu_ProcessInput(data[0]);
-            break;
-        case 714:
-            PlaySE(SE_SELECT);
-            DestroyListMenuTask(data[0], NULL, NULL);
-            RestorePlayerBag();
-            Bag_BeginCloseWin0Animation();
-            gTasks[taskId].func = Task_Pokedude_FadeFromBag;
-            return;
-        }
-        data[8]++;
     }
 }
 

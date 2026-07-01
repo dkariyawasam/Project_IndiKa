@@ -673,9 +673,6 @@ const u32 gItemIconPalette_TMCase[] = INCBIN_U32("graphics/items/icon_palettes/t
 const u32 gItemIcon_BerryPouch[] = INCBIN_U32("graphics/items/icons/berry_pouch.4bpp.lz");
 const u32 gItemIconPalette_BerryPouch[] = INCBIN_U32("graphics/items/icon_palettes/berry_pouch.gbapal.lz");
 
-const u32 gItemIcon_TeachyTV[] = INCBIN_U32("graphics/items/icons/teachy_tv.4bpp.lz");
-const u32 gItemIconPalette_TeachyTV[] = INCBIN_U32("graphics/items/icon_palettes/teachy_tv.gbapal.lz");
-
 const u32 gItemIcon_Tea[] = INCBIN_U32("graphics/items/icons/tea.4bpp.lz");
 const u32 gItemIconPalette_Tea[] = INCBIN_U32("graphics/items/icon_palettes/tea.gbapal.lz");
 

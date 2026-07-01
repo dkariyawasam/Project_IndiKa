@@ -3233,8 +3233,6 @@ extern const u32 gItemIcon_TMCase[];
 extern const u32 gItemIconPalette_TMCase[];
 extern const u32 gItemIcon_BerryPouch[];
 extern const u32 gItemIconPalette_BerryPouch[];
-extern const u32 gItemIcon_TeachyTV[];
-extern const u32 gItemIconPalette_TeachyTV[];
 extern const u32 gItemIcon_Tea[];
 extern const u32 gItemIconPalette_Tea[];
 extern const u32 gItemIcon_Gem[];
