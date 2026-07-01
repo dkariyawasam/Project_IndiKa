@@ -1,5 +1,6 @@
 #include "global.h"
 #include "gflib.h"
+#include "decompress.h"
 #include "scanline_effect.h"
 #include "overworld.h"
 #include "link.h"
@@ -67,6 +68,13 @@ static EWRAM_DATA u8 sStartMenuCursorPos = 0;
 static EWRAM_DATA u8 sNumStartMenuItems = 0;
 static EWRAM_DATA u8 sStartMenuOrder[MAX_STARTMENU_ITEMS] = {};
 static EWRAM_DATA s8 sDrawStartMenuState[2] = {};
+static EWRAM_DATA u8 sRadialStartMenuWindowIds[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuSlotToItem[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuSlotToOrderIndex[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuButtonSpriteIds[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuSpriteIds[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
+static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
 static EWRAM_DATA u8 sSafariZoneStatsWindowId = 0;
 static ALIGNED(4) EWRAM_DATA u8 sSaveStatsWindowId = 0;
 
@@ -75,6 +83,7 @@ static u8 sSaveDialogDelay;
 static bool8 sSaveDialogIsPrinting;
 
 static const u8 gText_MenuQuest[] = _("LOGBOOK");
+static const u8 sStartMenuDesc_Quest[] = _("Review your FIELD AIDE research,\nrumours, and active assignments.");
 
 static bool8 StartMenuQuestCallback(void);
 static void SetUpStartMenu_Link(void);
@@ -96,6 +105,20 @@ static bool8 StartMenuLinkPlayerCallback(void);
 static bool8 StartCB_Save1(void);
 static bool8 StartCB_Save2(void);
 static void StartMenu_PrepareForSave(void);
+static void CreateRadialStartMenu(void);
+static void DestroyRadialStartMenuWindows(bool8 copyToVram);
+static void DrawRadialStartMenu(void);
+static void CreateRadialStartMenuSprites(void);
+static void DestroyRadialStartMenuSprites(void);
+static void UpdateRadialStartMenuSpriteStates(void);
+static void UpdateRadialStartMenuSelection(u8 newSlot);
+static u8 FindNextRadialStartMenuSlot(s8 step);
+static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy);
+static u8 GetRadialStartMenuWindowLeft(u8 slot);
+static u8 GetRadialStartMenuWindowTop(u8 slot);
+static s16 GetRadialStartMenuSpriteX(u8 slot);
+static s16 GetRadialStartMenuSpriteY(u8 slot);
+static void RefreshStartMenuHelpText(void);
 static u8 RunSaveDialogCB(void);
 static void task50_save_game(u8 taskId);
 static u8 SaveDialogCB_PrintAskSaveText(void);
@@ -145,6 +168,7 @@ static const u8 *const sStartMenuDescPointers[] = {
     gStartMenuDesc_Pokedex,
     gStartMenuDesc_Pokemon,
     gStartMenuDesc_Bag,
+    sStartMenuDesc_Quest,
     gStartMenuDesc_Player,
     gStartMenuDesc_Save,
     gStartMenuDesc_Option,
@@ -190,6 +214,174 @@ static const struct WindowTemplate sSaveStatsWindowTemplate = {
 static ALIGNED(2) const u8 sTextColor_StatName[] = { 1, 2, 3 };
 static ALIGNED(2) const u8 sTextColor_StatValue[] = { 1, 4, 5 };
 static ALIGNED(2) const u8 sTextColor_LocationHeader[] = { 1, 6, 7 };
+static ALIGNED(2) const u8 sTextColor_RadialMenuNormal[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
+static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY };
+
+static const s8 sRadialStartMenuWindowXOffsets[] = { -40, 32, -16, -16, -40, -64, -64, -72 };
+static const s8 sRadialStartMenuWindowYOffsets[] = { -19, -47, -7, 17, 29, 17, -7, -47 };
+static const s8 sRadialStartMenuSlotXs[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
+static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
+
+#define TAG_START_MENU_BUTTON_ICON  0x1250
+#define TAG_START_MENU_POKEMON_ICON 0x1251
+#define TAG_START_MENU_SETTINGS_ICON 0x1252
+#define TAG_START_MENU_LOGBOOK_ICON 0x1253
+#define TAG_START_MENU_POKEDEX_ICON 0x1254
+#define TAG_START_MENU_CARD_ICON    0x1255
+#define TAG_START_MENU_BAG_ICON     0x1256
+
+static const u32 sRadialStartMenuButtonIconGfx[] = INCBIN_U32("graphics/start_menu/button.4bpp.lz");
+static const u32 sRadialStartMenuButtonIconPal[] = INCBIN_U32("graphics/start_menu/button.gbapal.lz");
+static const u32 sRadialStartMenuPokemonIconGfx[] = INCBIN_U32("graphics/start_menu/pokemon.4bpp.lz");
+static const u32 sRadialStartMenuSettingsIconGfx[] = INCBIN_U32("graphics/start_menu/settings.4bpp.lz");
+static const u32 sRadialStartMenuSettingsIconPal[] = INCBIN_U32("graphics/start_menu/settings.gbapal.lz");
+static const u32 sRadialStartMenuLogbookIconGfx[] = INCBIN_U32("graphics/start_menu/logbook.4bpp.lz");
+static const u32 sRadialStartMenuPokedexIconGfx[] = INCBIN_U32("graphics/start_menu/pokedex.4bpp.lz");
+static const u32 sRadialStartMenuCardIconGfx[] = INCBIN_U32("graphics/start_menu/card.4bpp.lz");
+static const u32 sRadialStartMenuBagIconGfx[] = INCBIN_U32("graphics/start_menu/bag.4bpp.lz");
+
+static const struct OamData sOamData_RadialStartMenuIcon = {
+    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .shape = SPRITE_SHAPE(32x32),
+    .size = SPRITE_SIZE(32x32),
+    .priority = 0
+};
+
+static const union AnimCmd sAnim_RadialStartMenuIcon[] = {
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_RadialStartMenuIconPressed[] = {
+    ANIMCMD_FRAME(16, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sAnims_RadialStartMenuIcon[] = {
+    sAnim_RadialStartMenuIcon,
+    sAnim_RadialStartMenuIconPressed
+};
+
+static const union AffineAnimCmd sAffineAnim_RadialStartMenuIconNormal[] = {
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd sAffineAnim_RadialStartMenuIconSelected[] = {
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd *const sAffineAnims_RadialStartMenuIcon[] = {
+    sAffineAnim_RadialStartMenuIconNormal,
+    sAffineAnim_RadialStartMenuIconSelected
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuButtonIcon = {
+    sRadialStartMenuButtonIconGfx, 32 * 32 / 2, TAG_START_MENU_BUTTON_ICON
+};
+
+static const struct CompressedSpritePalette sSpritePalette_RadialStartMenuButtonIcon = {
+    sRadialStartMenuButtonIconPal, TAG_START_MENU_BUTTON_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuButtonIcon = {
+    .tileTag = TAG_START_MENU_BUTTON_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuPokemonIcon = {
+    sRadialStartMenuPokemonIconGfx, 32 * 64 / 2, TAG_START_MENU_POKEMON_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuPokemonIcon = {
+    .tileTag = TAG_START_MENU_POKEMON_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuSettingsIcon = {
+    sRadialStartMenuSettingsIconGfx, 32 * 64 / 2, TAG_START_MENU_SETTINGS_ICON
+};
+
+static const struct CompressedSpritePalette sSpritePalette_RadialStartMenuSettingsIcon = {
+    sRadialStartMenuSettingsIconPal, TAG_START_MENU_SETTINGS_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuSettingsIcon = {
+    .tileTag = TAG_START_MENU_SETTINGS_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuLogbookIcon = {
+    sRadialStartMenuLogbookIconGfx, 32 * 64 / 2, TAG_START_MENU_LOGBOOK_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuLogbookIcon = {
+    .tileTag = TAG_START_MENU_LOGBOOK_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuPokedexIcon = {
+    sRadialStartMenuPokedexIconGfx, 32 * 64 / 2, TAG_START_MENU_POKEDEX_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuPokedexIcon = {
+    .tileTag = TAG_START_MENU_POKEDEX_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuCardIcon = {
+    sRadialStartMenuCardIconGfx, 32 * 64 / 2, TAG_START_MENU_CARD_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuCardIcon = {
+    .tileTag = TAG_START_MENU_CARD_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuBagIcon = {
+    sRadialStartMenuBagIconGfx, 32 * 64 / 2, TAG_START_MENU_BAG_ICON
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuBagIcon = {
+    .tileTag = TAG_START_MENU_BAG_ICON,
+    .paletteTag = TAG_START_MENU_SETTINGS_ICON,
+    .oam = &sOamData_RadialStartMenuIcon,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
+};
 
 // Unused
 static void SetHasPokedexAndPokemon(void)
@@ -228,7 +420,6 @@ static void SetUpStartMenu_NormalField(void)
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_SafariZone(void)
@@ -239,7 +430,6 @@ static void SetUpStartMenu_SafariZone(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_Link(void)
@@ -248,7 +438,6 @@ static void SetUpStartMenu_Link(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER2);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_UnionRoom(void)
@@ -257,7 +446,6 @@ static void SetUpStartMenu_UnionRoom(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void DrawSafariZoneStatsWindow(void)
@@ -308,11 +496,589 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
     return FALSE;
 }
 
+static u8 GetRadialStartMenuPreferredSlot(u8 menuItem)
+{
+    switch (menuItem)
+    {
+    case STARTMENU_POKEDEX:
+        return 0;
+    case STARTMENU_POKEMON:
+        return 3;
+    case STARTMENU_BAG:
+        return 2;
+    case STARTMENU_SAVE:
+        return 7;
+    case STARTMENU_OPTION:
+        return 4;
+    case STARTMENU_QUEST:
+        return 5;
+    case STARTMENU_PLAYER:
+    case STARTMENU_PLAYER2:
+        return 6;
+    case STARTMENU_EXIT:
+        return 1;
+    case STARTMENU_RETIRE:
+    default:
+        return 0;
+    }
+}
+
+static void InitRadialStartMenuSlots(void)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
+    {
+        sRadialStartMenuWindowIds[i] = WINDOW_NONE;
+        sRadialStartMenuSlotToItem[i] = 0xFF;
+        sRadialStartMenuSlotToOrderIndex[i] = 0xFF;
+        sRadialStartMenuButtonSpriteIds[i] = MAX_SPRITES;
+        sRadialStartMenuSpriteIds[i] = MAX_SPRITES;
+    }
+}
+
+static void PopulateRadialStartMenuSlots(void)
+{
+    u8 i;
+    u8 slot;
+    u8 preferredSlot;
+
+    InitRadialStartMenuSlots();
+    for (i = 0; i < sNumStartMenuItems; i++)
+    {
+        preferredSlot = GetRadialStartMenuPreferredSlot(sStartMenuOrder[i]);
+        for (slot = preferredSlot; sRadialStartMenuSlotToItem[slot] != 0xFF; slot = (slot + 1) & 7)
+            ;
+        sRadialStartMenuSlotToItem[slot] = sStartMenuOrder[i];
+        sRadialStartMenuSlotToOrderIndex[slot] = i;
+    }
+}
+
+static u8 GetFirstPopulatedRadialStartMenuSlot(void)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
+    {
+        if (sRadialStartMenuSlotToItem[i] != 0xFF)
+            return i;
+    }
+    return 0;
+}
+
+static void SelectInitialRadialStartMenuSlot(void)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSlotToOrderIndex); i++)
+    {
+        if (sRadialStartMenuSlotToOrderIndex[i] == sStartMenuCursorPos)
+        {
+            sRadialStartMenuCursorSlot = i;
+            return;
+        }
+    }
+    sRadialStartMenuCursorSlot = GetFirstPopulatedRadialStartMenuSlot();
+    sStartMenuCursorPos = sRadialStartMenuSlotToOrderIndex[sRadialStartMenuCursorSlot];
+}
+
+static void PrintRadialStartMenuItem(u8 slot)
+{
+    u8 windowId = sRadialStartMenuWindowIds[slot];
+    u8 menuItem = sRadialStartMenuSlotToItem[slot];
+    const u8 *colors;
+    const u8 *text;
+    s32 width;
+    s32 x;
+
+    if (windowId == WINDOW_NONE)
+        return;
+
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    DrawStdWindowFrame(windowId, FALSE);
+
+    colors = (slot == sRadialStartMenuCursorSlot) ? sTextColor_RadialMenuSelected : sTextColor_RadialMenuNormal;
+    StringExpandPlaceholders(gStringVar4, sStartMenuActionTable[menuItem].text);
+    text = gStringVar4;
+
+    width = GetStringWidth(FONT_NORMAL, text, 0);
+    x = (80 - width) / 2;
+    if (x < 0)
+        x = 0;
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL, x, 6, colors, 0xFF, text);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+}
+
+static void DrawRadialStartMenu(void)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
+    {
+        if (sRadialStartMenuWindowIds[i] != WINDOW_NONE)
+            PrintRadialStartMenuItem(i);
+    }
+}
+
+static u8 GetClampedRadialStartMenuTileCoord(s16 pixelCoord, u8 maxTile)
+{
+    s16 tileCoord = pixelCoord / 8;
+
+    if (tileCoord < 0)
+        return 0;
+    if (tileCoord > maxTile)
+        return maxTile;
+    return tileCoord;
+}
+
+static u8 GetRadialStartMenuWindowLeft(u8 slot)
+{
+    u8 menuItem = sRadialStartMenuSlotToItem[slot];
+
+    if (menuItem == STARTMENU_SAVE)
+        return 0;
+    if (menuItem == STARTMENU_EXIT)
+        return 20;
+    return GetClampedRadialStartMenuTileCoord(DISPLAY_WIDTH / 2 + sRadialStartMenuWindowXOffsets[slot], 20);
+}
+
+static u8 GetRadialStartMenuWindowTop(u8 slot)
+{
+    u8 menuItem = sRadialStartMenuSlotToItem[slot];
+
+    if (menuItem == STARTMENU_SAVE || menuItem == STARTMENU_EXIT)
+        return 0;
+    return GetClampedRadialStartMenuTileCoord(DISPLAY_HEIGHT / 2 + sRadialStartMenuWindowYOffsets[slot], 17);
+}
+
+static s16 GetRadialStartMenuSpriteX(u8 slot)
+{
+    return DISPLAY_WIDTH / 2 + sRadialStartMenuWindowXOffsets[slot] + 40;
+}
+
+static s16 GetRadialStartMenuSpriteY(u8 slot)
+{
+    return DISPLAY_HEIGHT / 2 + sRadialStartMenuWindowYOffsets[slot] - 8;
+}
+
+static void CreateRadialStartMenu(void)
+{
+    u8 i;
+
+    PopulateRadialStartMenuSlots();
+    SelectInitialRadialStartMenuSlot();
+
+    for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
+    {
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_SAVE
+         || sRadialStartMenuSlotToItem[i] == STARTMENU_EXIT)
+        {
+            struct WindowTemplate template = {
+                .bg = 0,
+                .tilemapLeft = GetRadialStartMenuWindowLeft(i),
+                .tilemapTop = GetRadialStartMenuWindowTop(i),
+                .width = 10,
+                .height = 3,
+                .paletteNum = 15,
+                .baseBlock = 0x200 + (i * 0x20)
+            };
+            sRadialStartMenuWindowIds[i] = AddWindow(&template);
+            PutWindowTilemap(sRadialStartMenuWindowIds[i]);
+        }
+    }
+    DrawRadialStartMenu();
+    CreateRadialStartMenuSprites();
+}
+
+static void DestroyRadialStartMenuWindows(bool8 copyToVram)
+{
+    u8 i;
+
+    DestroyRadialStartMenuSprites();
+
+    for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
+    {
+        if (sRadialStartMenuWindowIds[i] != WINDOW_NONE)
+        {
+            ClearStdWindowAndFrameToTransparent(sRadialStartMenuWindowIds[i], copyToVram);
+            RemoveWindow(sRadialStartMenuWindowIds[i]);
+            sRadialStartMenuWindowIds[i] = WINDOW_NONE;
+        }
+    }
+}
+
+static void CreateRadialStartMenuSprites(void)
+{
+    u8 i;
+    bool8 needButtonIcon = FALSE;
+    bool8 needPokedexIcon = FALSE;
+    bool8 needPokemonIcon = FALSE;
+    bool8 needSettingsIcon = FALSE;
+    bool8 needLogbookIcon = FALSE;
+    bool8 needCardIcon = FALSE;
+    bool8 needBagIcon = FALSE;
+
+    if (sRadialStartMenuSpritesLoaded)
+        return;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
+    {
+        switch (sRadialStartMenuSlotToItem[i])
+        {
+        case STARTMENU_POKEDEX:
+            needPokedexIcon = TRUE;
+            break;
+        case STARTMENU_POKEMON:
+            needPokemonIcon = TRUE;
+            break;
+        case STARTMENU_BAG:
+            needBagIcon = TRUE;
+            break;
+        case STARTMENU_OPTION:
+            needSettingsIcon = TRUE;
+            break;
+        case STARTMENU_QUEST:
+            needLogbookIcon = TRUE;
+            break;
+        case STARTMENU_PLAYER:
+        case STARTMENU_PLAYER2:
+            needCardIcon = TRUE;
+            break;
+        case STARTMENU_EXIT:
+        case STARTMENU_SAVE:
+        case 0xFF:
+            break;
+        default:
+            needButtonIcon = TRUE;
+            break;
+        }
+    }
+
+    if (needPokedexIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuPokedexIcon);
+    }
+    if (needLogbookIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuLogbookIcon);
+    }
+    if (needSettingsIcon || needPokedexIcon || needPokemonIcon || needLogbookIcon || needCardIcon || needBagIcon || needButtonIcon)
+    {
+        LoadCompressedSpritePalette(&sSpritePalette_RadialStartMenuSettingsIcon);
+    }
+    if (needSettingsIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuSettingsIcon);
+    }
+    if (needCardIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuCardIcon);
+    }
+    if (needBagIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuBagIcon);
+    }
+    if (needPokemonIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuPokemonIcon);
+    }
+    if (needButtonIcon)
+    {
+        LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuButtonIcon);
+    }
+    sRadialStartMenuSpritesLoaded = TRUE;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
+    {
+        if (sRadialStartMenuSlotToItem[i] != 0xFF
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_EXIT
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_SAVE
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_POKEMON
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_BAG
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_OPTION
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_QUEST
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_POKEDEX
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_PLAYER
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_PLAYER2)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuButtonSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuButtonIcon, x, y, 1);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_BAG)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuBagIcon, x, y, 0);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_POKEDEX)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuPokedexIcon, x, y, 0);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_POKEMON)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuPokemonIcon, x, y, 0);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_OPTION)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuSettingsIcon, x, y, 0);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_QUEST)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuLogbookIcon, x, y, 0);
+        }
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_PLAYER
+         || sRadialStartMenuSlotToItem[i] == STARTMENU_PLAYER2)
+        {
+            s16 x = GetRadialStartMenuSpriteX(i);
+            s16 y = GetRadialStartMenuSpriteY(i);
+
+            sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuCardIcon, x, y, 0);
+        }
+    }
+    UpdateRadialStartMenuSpriteStates();
+}
+
+static void DestroyRadialStartMenuSprites(void)
+{
+    u8 i;
+
+    if (!sRadialStartMenuSpritesLoaded)
+        return;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
+    {
+        if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
+        {
+            DestroySprite(&gSprites[sRadialStartMenuButtonSpriteIds[i]]);
+            sRadialStartMenuButtonSpriteIds[i] = MAX_SPRITES;
+        }
+        if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
+        {
+            DestroySprite(&gSprites[sRadialStartMenuSpriteIds[i]]);
+            sRadialStartMenuSpriteIds[i] = MAX_SPRITES;
+        }
+    }
+    FreeSpriteTilesByTag(TAG_START_MENU_BUTTON_ICON);
+    FreeSpritePaletteByTag(TAG_START_MENU_BUTTON_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_POKEMON_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_SETTINGS_ICON);
+    FreeSpritePaletteByTag(TAG_START_MENU_SETTINGS_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_LOGBOOK_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_POKEDEX_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_CARD_ICON);
+    FreeSpriteTilesByTag(TAG_START_MENU_BAG_ICON);
+    sRadialStartMenuSpritesLoaded = FALSE;
+}
+
+static void UpdateRadialStartMenuSpriteStates(void)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
+    {
+        if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
+            StartSpriteAffineAnim(&gSprites[sRadialStartMenuButtonSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
+        if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
+        {
+            StartSpriteAnim(&gSprites[sRadialStartMenuSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
+            StartSpriteAffineAnim(&gSprites[sRadialStartMenuSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
+        }
+    }
+}
+
+static void RefreshStartMenuHelpText(void)
+{
+    DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
+}
+
+static void UpdateRadialStartMenuSelection(u8 newSlot)
+{
+    u8 oldSlot;
+
+    if (newSlot == sRadialStartMenuCursorSlot || sRadialStartMenuSlotToItem[newSlot] == 0xFF)
+        return;
+
+    oldSlot = sRadialStartMenuCursorSlot;
+    sRadialStartMenuCursorSlot = newSlot;
+    sStartMenuCursorPos = sRadialStartMenuSlotToOrderIndex[newSlot];
+    PrintRadialStartMenuItem(oldSlot);
+    PrintRadialStartMenuItem(newSlot);
+    UpdateRadialStartMenuSpriteStates();
+    RefreshStartMenuHelpText();
+}
+
+static u8 FindNextRadialStartMenuSlot(s8 step)
+{
+    u8 i;
+    u8 slot = sRadialStartMenuCursorSlot;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
+    {
+        slot = (slot + step) & 7;
+        if (sRadialStartMenuSlotToItem[slot] != 0xFF)
+            return slot;
+    }
+    return sRadialStartMenuCursorSlot;
+}
+
+static u8 FindRadialStartMenuSlotByItem(u8 menuItem)
+{
+    u8 i;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
+    {
+        if (sRadialStartMenuSlotToItem[i] == menuItem)
+            return i;
+    }
+    return 0xFF;
+}
+
+static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
+{
+    u8 i;
+    u8 bestSlot = 0xFF;
+    u8 targetSlot;
+    u8 currentItem = sRadialStartMenuSlotToItem[sRadialStartMenuCursorSlot];
+    s16 bestScore = -32768;
+    s16 fromX = sRadialStartMenuSlotXs[sRadialStartMenuCursorSlot];
+    s16 fromY = sRadialStartMenuSlotYs[sRadialStartMenuCursorSlot];
+
+    if ((currentItem == STARTMENU_POKEDEX && dx == 0 && dy < 0)
+     || (currentItem == STARTMENU_OPTION && dx == 0 && dy > 0)
+     || (currentItem == STARTMENU_QUEST && dx < 0 && dy == 0)
+     || (currentItem == STARTMENU_QUEST && dx == 0 && dy > 0)
+     || (currentItem == STARTMENU_POKEMON && dx > 0 && dy == 0)
+     || (currentItem == STARTMENU_POKEMON && dx == 0 && dy > 0)
+     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx < 0 && dy == 0)
+     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx == 0 && dy < 0)
+     || (currentItem == STARTMENU_BAG && dx == 0 && dy < 0)
+     || (currentItem == STARTMENU_BAG && dx > 0 && dy == 0))
+        return sRadialStartMenuCursorSlot;
+
+    if (currentItem == STARTMENU_POKEDEX)
+    {
+        if (dx < 0 && dy == 0)
+        {
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
+            if (targetSlot == 0xFF)
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
+        }
+        else if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx > 0 && dy == 0)
+    {
+        targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_BAG && dx < 0 && dy == 0)
+    {
+        targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+
+    if (currentItem == STARTMENU_OPTION)
+    {
+        if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
+        else if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_POKEMON)
+    {
+        if (dx == 0 && dy < 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
+        else if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_QUEST)
+    {
+        if (dx == 0 && dy < 0)
+        {
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
+            if (targetSlot == 0xFF)
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
+        }
+        else if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
+    {
+        s16 relX;
+        s16 relY;
+        s16 projection;
+        s16 perpendicular;
+        s16 score;
+
+        if (i == sRadialStartMenuCursorSlot || sRadialStartMenuSlotToItem[i] == 0xFF)
+            continue;
+
+        relX = sRadialStartMenuSlotXs[i] - fromX;
+        relY = sRadialStartMenuSlotYs[i] - fromY;
+        projection = relX * dx + relY * dy;
+        if (projection <= 0)
+            continue;
+
+        perpendicular = relX * dy - relY * dx;
+        if (perpendicular < 0)
+            perpendicular = -perpendicular;
+        score = projection * 4 - perpendicular;
+        if (score > bestScore)
+        {
+            bestScore = score;
+            bestSlot = i;
+        }
+    }
+
+    if (bestSlot == 0xFF)
+        return dx + dy > 0 ? FindNextRadialStartMenuSlot(1) : FindNextRadialStartMenuSlot(-1);
+    return bestSlot;
+}
+
 static s8 DoDrawStartMenu(void)
 {
     switch (sDrawStartMenuState[0])
     {
     case 0:
+        MapNamePopupWindowIdSetDummy();
         sDrawStartMenuState[0]++;
         break;
     case 1:
@@ -321,7 +1087,7 @@ static s8 DoDrawStartMenu(void)
         break;
     case 2:
         LoadStdWindowFrameGfx();
-        DrawStdWindowFrame(CreateStartMenuWindow(sNumStartMenuItems), FALSE);
+        CreateRadialStartMenu();
         sDrawStartMenuState[0]++;
         break;
     case 3:
@@ -330,16 +1096,10 @@ static s8 DoDrawStartMenu(void)
         sDrawStartMenuState[0]++;
         break;
     case 4:
-        if (PrintStartMenuItems(&sDrawStartMenuState[1], 2) == TRUE)
-            sDrawStartMenuState[0]++;
+        sDrawStartMenuState[0]++;
         break;
     case 5:
-        sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), FONT_NORMAL, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
-        if (!MenuHelpers_IsLinkActive() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
-        {
-            DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
-        }
-        CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
+        RefreshStartMenuHelpText();
         return TRUE;
     }
     return FALSE;
@@ -418,20 +1178,22 @@ static bool8 StartCB_HandleInput(void)
     if (JOY_NEW(DPAD_UP))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(-1);
-        if (!MenuHelpers_IsLinkActive() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
-        {
-            PrintTextOnHelpMessageWindow(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]], 2);
-        }
+        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(0, -1));
     }
     if (JOY_NEW(DPAD_DOWN))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(+1);
-        if (!MenuHelpers_IsLinkActive() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
-        {
-            PrintTextOnHelpMessageWindow(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]], 2);
-        }
+        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(0, 1));
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        PlaySE(SE_SELECT);
+        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(-1, 0));
+    }
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        PlaySE(SE_SELECT);
+        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(1, 0));
     }
     if (JOY_NEW(A_BUTTON))
     {
@@ -477,6 +1239,7 @@ static bool8 StartMenuPokedexCallback(void)
         IncrementGameStat(GAME_STAT_CHECKED_POKEDEX);
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_OpenPokedexFromStartMenu);
         return TRUE;
@@ -490,6 +1253,7 @@ static bool8 StartMenuPokemonCallback(void)
     {
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_PartyMenuFromStartMenu);
         return TRUE;
@@ -503,6 +1267,7 @@ static bool8 StartMenuBagCallback(void)
     {
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_BagMenuFromStartMenu);
         return TRUE;
@@ -516,6 +1281,7 @@ static bool8 StartMenuPlayerCallback(void)
     {
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         ShowPlayerTrainerCard(CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
@@ -535,6 +1301,7 @@ static bool8 StartMenuOptionCallback(void)
     {
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_OptionsMenuFromStartMenu);
         gMain.savedCallback = CB2_ReturnToFieldWithOpenMenu;
@@ -566,6 +1333,7 @@ static bool8 StartMenuLinkPlayerCallback(void)
     if (!gPaletteFade.active)
     {
         PlayRainStoppingSoundEffect();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         ShowTrainerCardInLink(gLocalLinkPlayerId, CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
@@ -716,8 +1484,7 @@ static bool8 SaveDialog_Wait60FramesThenCheckAButtonHeld(void)
 
 static u8 SaveDialogCB_PrintAskSaveText(void)
 {
-    ClearStdWindowAndFrame(GetStartMenuWindowId(), FALSE);
-    RemoveStartMenuWindow();
+    DestroyRadialStartMenuWindows(FALSE);
     DestroyHelpMessageWindow(0);
     PrintSaveStats();
     PrintSaveTextWithFollowupFunc(gText_WouldYouLikeToSaveTheGame, SaveDialogCB_AskSavePrintYesNoMenu);
@@ -1011,8 +1778,7 @@ static void CloseSaveStatsWindow(void)
 static void CloseStartMenu(void)
 {
     PlaySE(SE_SELECT);
-    ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
-    RemoveStartMenuWindow();
+    DestroyRadialStartMenuWindows(TRUE);
     ClearPlayerHeldMovementAndUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
 }
@@ -1029,8 +1795,9 @@ static bool8 StartMenuQuestCallback(void)
     {
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
-        QuestMenu_Init(0, CB2_ReturnToField);
+        QuestMenu_Init(0, CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
     }
     return FALSE;
