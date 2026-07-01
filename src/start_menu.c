@@ -254,6 +254,8 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 
 #define START_MENU_LABEL_PALETTE_NUM 14
 #define START_MENU_LABEL_FILL_COLOR TEXT_COLOR_DARK_GRAY
+#define START_MENU_LABEL_STRIPE_DARK 8
+#define START_MENU_LABEL_STRIPE_LIGHT 9
 #define START_MENU_CENTER_LABEL_INSET 3
 #define START_MENU_CENTER_LABEL_WIDTH 58
 #define START_MENU_CENTER_LABEL_TOP 3
@@ -269,8 +271,8 @@ static const u16 sStartMenuLabelPalette[] = {
     RGB(31, 23, 14),
     RGB(4, 19, 1),
     RGB(18, 31, 18),
-    RGB(6, 10, 25),
-    RGB(20, 24, 31),
+    RGB(4, 16, 18),
+    RGB(8, 22, 23),
     RGB_BLACK,
     RGB_BLACK,
     RGB_BLACK,
@@ -951,6 +953,7 @@ static void PrintStartMenuCenterLabel(void)
     s32 windowWidth;
     s32 width;
     s32 x;
+    u8 i;
 
     if (sStartMenuCenterLabelWindowId == WINDOW_NONE)
         return;
@@ -963,12 +966,15 @@ static void PrintStartMenuCenterLabel(void)
         x = START_MENU_CENTER_LABEL_INSET;
 
     FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(TEXT_COLOR_TRANSPARENT));
-    FillWindowPixelRect(sStartMenuCenterLabelWindowId,
-                        PIXEL_FILL(START_MENU_LABEL_FILL_COLOR),
-                        START_MENU_CENTER_LABEL_INSET,
-                        START_MENU_CENTER_LABEL_TOP,
-                        START_MENU_CENTER_LABEL_WIDTH,
-                        START_MENU_CENTER_LABEL_HEIGHT);
+    for (i = 0; i < START_MENU_CENTER_LABEL_HEIGHT; i++)
+    {
+        FillWindowPixelRect(sStartMenuCenterLabelWindowId,
+                            PIXEL_FILL((i & 1) ? START_MENU_LABEL_STRIPE_LIGHT : START_MENU_LABEL_STRIPE_DARK),
+                            START_MENU_CENTER_LABEL_INSET,
+                            START_MENU_CENTER_LABEL_TOP + i,
+                            START_MENU_CENTER_LABEL_WIDTH,
+                            1);
+    }
     AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 1, sTextColor_RadialMenuSelected, 0xFF, text);
     CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_GFX);
 }
