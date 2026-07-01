@@ -10,7 +10,6 @@
 #include "strings.h"
 #include "field_fadetransition.h"
 #include "gba/m4a_internal.h"
-#include "teachy_tv.h"
 
 // can't include the one in menu_helpers.h since Task_OptionMenu needs bool32 for matching
 bool32 IsActiveOverworldLinkBusy(void);
@@ -23,7 +22,6 @@ enum
     MENUITEM_BATTLESTYLE,
     MENUITEM_SOUND,
     MENUITEM_FRAMETYPE,
-    MENUITEM_HELP,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -63,7 +61,6 @@ static void Task_OptionMenu(u8 taskId);
 static u8 OptionMenu_ProcessInput(void);
 static void BufferOptionMenuString(u8 selection);
 static void CloseAndSaveOptionMenu(u8 taskId);
-static void CloseAndOpenTeachyTv(u8 taskId);
 static void SaveOptionMenuSettings(void);
 static void PrintOptionMenuHeader(void);
 static void DrawOptionMenuBg(void);
@@ -135,7 +132,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 10, 1, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 10, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -144,7 +141,6 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
-    [MENUITEM_HELP]        = gText_ButtonMode,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -213,7 +209,6 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_BATTLESTYLE] = gSaveBlock2Ptr->optionsBattleStyle;
     sOptionMenuPtr->option[MENUITEM_SOUND] = gSaveBlock2Ptr->optionsSound;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
-    sOptionMenuPtr->option[MENUITEM_HELP] = 0;
     
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
     {
@@ -393,9 +388,6 @@ static void Task_OptionMenu(u8 taskId)
         case 4:
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
-        case 5:
-            sOptionMenuPtr->loadState = 6;
-            break;
         }
         break;
     case 3:
@@ -409,18 +401,6 @@ static void Task_OptionMenu(u8 taskId)
         break;
     case 5:
         CloseAndSaveOptionMenu(taskId);
-        break;
-    case 6:
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
-        sOptionMenuPtr->loadState++;
-        break;
-    case 7:
-        if (gPaletteFade.active)
-            return;
-        sOptionMenuPtr->loadState++;
-        break;
-    case 8:
-        CloseAndOpenTeachyTv(taskId);
         break;
     }
 }
@@ -476,8 +456,6 @@ static u8 OptionMenu_ProcessInput(void)
     }
     else if (JOY_NEW(B_BUTTON) || JOY_NEW(A_BUTTON))
     {
-        if (JOY_NEW(A_BUTTON) && sOptionMenuPtr->cursorPos == MENUITEM_HELP)
-            return 5;
         return 1;
     }
     else
@@ -540,20 +518,6 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     DestroyTask(taskId);
 }
 
-static void CloseAndOpenTeachyTv(u8 taskId)
-{
-    FreeAllWindowBuffers();
-    SaveOptionMenuSettings();
-    if (sOptionMenuDisabledHelpSystem)
-    {
-        HelpSystem_Enable();
-        sOptionMenuDisabledHelpSystem = FALSE;
-    }
-    FREE_AND_SET_NULL(sOptionMenuPtr);
-    DestroyTask(taskId);
-    InitTeachyTvController(0, CB2_OptionsMenuFromStartMenu);
-}
-
 static void SaveOptionMenuSettings(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = sOptionMenuPtr->option[MENUITEM_TEXTSPEED];
@@ -568,7 +532,7 @@ static void SaveOptionMenuSettings(void)
 static void PrintOptionMenuHeader(void)
 {
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_TEXT_OPTION, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_TEXT_OPTION, FONT_NORMAL, gText_MenuSettings, 8, 1, TEXT_SKIP_DRAW, NULL);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
 }
