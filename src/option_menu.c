@@ -10,6 +10,7 @@
 #include "strings.h"
 #include "field_fadetransition.h"
 #include "gba/m4a_internal.h"
+#include "teachy_tv.h"
 
 // can't include the one in menu_helpers.h since Task_OptionMenu needs bool32 for matching
 bool32 IsActiveOverworldLinkBusy(void);
@@ -21,8 +22,8 @@ enum
     MENUITEM_BATTLESCENE,
     MENUITEM_BATTLESTYLE,
     MENUITEM_SOUND,
-    MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
+    MENUITEM_HELP,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -45,6 +46,7 @@ struct OptionMenu
 };
 
 static EWRAM_DATA struct OptionMenu *sOptionMenuPtr = NULL;
+static EWRAM_DATA bool8 sOptionMenuDisabledHelpSystem = FALSE;
 
 //Function Declarataions
 static void CB2_InitOptionMenu(void);
@@ -61,6 +63,8 @@ static void Task_OptionMenu(u8 taskId);
 static u8 OptionMenu_ProcessInput(void);
 static void BufferOptionMenuString(u8 selection);
 static void CloseAndSaveOptionMenu(u8 taskId);
+static void CloseAndOpenTeachyTv(u8 taskId);
+static void SaveOptionMenuSettings(void);
 static void PrintOptionMenuHeader(void);
 static void DrawOptionMenuBg(void);
 static void LoadOptionMenuItemNames(void);
@@ -131,7 +135,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 10, 1, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -139,8 +143,8 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BATTLESCENE] = gText_BattleScene,
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
-    [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
+    [MENUITEM_HELP]        = gText_ButtonMode,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -169,13 +173,6 @@ static const u8 *const sSoundOptions[] =
     gText_SoundStereo
 };
 
-static const u8 *const sButtonTypeOptions[] =
-{
-    gText_ButtonTypeHelp,
-	gText_ButtonTypeLR,
-	gText_ButtonTypeLEqualsA
-};
-
 static const u8 sOptionMenuPickSwitchCancelTextColor[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 static const u8 sOptionMenuTextColor[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_RED};
 
@@ -201,6 +198,11 @@ void CB2_OptionsMenuFromStartMenu(void)
     
     if (gMain.savedCallback == NULL)
         gMain.savedCallback = CB2_ReturnToFieldWithOpenMenu;
+    if (gHelpSystemEnabled)
+    {
+        HelpSystem_Disable();
+        sOptionMenuDisabledHelpSystem = TRUE;
+    }
     sOptionMenuPtr = AllocZeroed(sizeof(struct OptionMenu));
     sOptionMenuPtr->loadState = 0;
     sOptionMenuPtr->loadPaletteState = 0;
@@ -210,8 +212,8 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_BATTLESCENE] = gSaveBlock2Ptr->optionsBattleSceneOff;
     sOptionMenuPtr->option[MENUITEM_BATTLESTYLE] = gSaveBlock2Ptr->optionsBattleStyle;
     sOptionMenuPtr->option[MENUITEM_SOUND] = gSaveBlock2Ptr->optionsSound;
-    sOptionMenuPtr->option[MENUITEM_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
+    sOptionMenuPtr->option[MENUITEM_HELP] = 0;
     
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
     {
@@ -391,6 +393,9 @@ static void Task_OptionMenu(u8 taskId)
         case 4:
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
+        case 5:
+            sOptionMenuPtr->loadState = 6;
+            break;
         }
         break;
     case 3:
@@ -405,6 +410,18 @@ static void Task_OptionMenu(u8 taskId)
     case 5:
         CloseAndSaveOptionMenu(taskId);
         break;
+    case 6:
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
+        sOptionMenuPtr->loadState++;
+        break;
+    case 7:
+        if (gPaletteFade.active)
+            return;
+        sOptionMenuPtr->loadState++;
+        break;
+    case 8:
+        CloseAndOpenTeachyTv(taskId);
+        break;
     }
 }
 
@@ -414,6 +431,8 @@ static u8 OptionMenu_ProcessInput(void)
     u16 *curr;
     if (JOY_REPT(DPAD_RIGHT))
     {
+        if (sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] == 0)
+            return 0;
         current = sOptionMenuPtr->option[(sOptionMenuPtr->cursorPos)];
         if (current == (sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] - 1))
             sOptionMenuPtr->option[sOptionMenuPtr->cursorPos] = 0;
@@ -426,6 +445,8 @@ static u8 OptionMenu_ProcessInput(void)
     }
     else if (JOY_REPT(DPAD_LEFT))
     {
+        if (sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] == 0)
+            return 0;
         curr = &sOptionMenuPtr->option[sOptionMenuPtr->cursorPos];
         if (*curr == 0)
             *curr = sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] - 1;
@@ -455,6 +476,8 @@ static u8 OptionMenu_ProcessInput(void)
     }
     else if (JOY_NEW(B_BUTTON) || JOY_NEW(A_BUTTON))
     {
+        if (JOY_NEW(A_BUTTON) && sOptionMenuPtr->cursorPos == MENUITEM_HELP)
+            return 5;
         return 1;
     }
     else
@@ -489,9 +512,6 @@ static void BufferOptionMenuString(u8 selection)
     case MENUITEM_SOUND:
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sSoundOptions[sOptionMenuPtr->option[selection]]);
         break;
-    case MENUITEM_BUTTONMODE:
-        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sButtonTypeOptions[sOptionMenuPtr->option[selection]]);
-        break;
     case MENUITEM_FRAMETYPE:
         StringCopy(str, gText_FrameType);
         ConvertIntToDecimalStringN(buf, sOptionMenuPtr->option[selection] + 1, 1, 2);
@@ -510,15 +530,39 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     gFieldCallback = FieldCB_DefaultWarpExit;
     SetMainCallback2(gMain.savedCallback);
     FreeAllWindowBuffers();
+    SaveOptionMenuSettings();
+    if (sOptionMenuDisabledHelpSystem)
+    {
+        HelpSystem_Enable();
+        sOptionMenuDisabledHelpSystem = FALSE;
+    }
+    FREE_AND_SET_NULL(sOptionMenuPtr);
+    DestroyTask(taskId);
+}
+
+static void CloseAndOpenTeachyTv(u8 taskId)
+{
+    FreeAllWindowBuffers();
+    SaveOptionMenuSettings();
+    if (sOptionMenuDisabledHelpSystem)
+    {
+        HelpSystem_Enable();
+        sOptionMenuDisabledHelpSystem = FALSE;
+    }
+    FREE_AND_SET_NULL(sOptionMenuPtr);
+    DestroyTask(taskId);
+    InitTeachyTvController(0, CB2_OptionsMenuFromStartMenu);
+}
+
+static void SaveOptionMenuSettings(void)
+{
     gSaveBlock2Ptr->optionsTextSpeed = sOptionMenuPtr->option[MENUITEM_TEXTSPEED];
     gSaveBlock2Ptr->optionsBattleSceneOff = sOptionMenuPtr->option[MENUITEM_BATTLESCENE];
     gSaveBlock2Ptr->optionsBattleStyle = sOptionMenuPtr->option[MENUITEM_BATTLESTYLE];
     gSaveBlock2Ptr->optionsSound = sOptionMenuPtr->option[MENUITEM_SOUND];
-    gSaveBlock2Ptr->optionsButtonMode = sOptionMenuPtr->option[MENUITEM_BUTTONMODE];
+    gSaveBlock2Ptr->optionsButtonMode = OPTIONS_BUTTON_MODE_LR;
     gSaveBlock2Ptr->optionsWindowFrameType = sOptionMenuPtr->option[MENUITEM_FRAMETYPE];
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
-    FREE_AND_SET_NULL(sOptionMenuPtr);
-    DestroyTask(taskId);
 }
 
 static void PrintOptionMenuHeader(void)

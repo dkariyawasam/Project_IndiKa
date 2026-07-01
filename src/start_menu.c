@@ -77,6 +77,7 @@ static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
 static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
 static EWRAM_DATA u8 sSafariZoneStatsWindowId = 0;
 static ALIGNED(4) EWRAM_DATA u8 sSaveStatsWindowId = 0;
+static EWRAM_DATA bool8 sSaveMenuDisabledHelpSystem = FALSE;
 
 static u8 (*sSaveDialogCB)(void);
 static u8 sSaveDialogDelay;
@@ -105,6 +106,8 @@ static bool8 StartMenuLinkPlayerCallback(void);
 static bool8 StartCB_Save1(void);
 static bool8 StartCB_Save2(void);
 static void StartMenu_PrepareForSave(void);
+static void SaveMenu_DisableHelpSystem(void);
+static void SaveMenu_RestoreHelpSystem(void);
 static void CreateRadialStartMenu(void);
 static void DestroyRadialStartMenuWindows(bool8 copyToVram);
 static void DrawRadialStartMenu(void);
@@ -1344,6 +1347,7 @@ static bool8 StartMenuLinkPlayerCallback(void)
 static bool8 StartCB_Save1(void)
 {
     BackupHelpContext();
+    SaveMenu_DisableHelpSystem();
     SetHelpContext(HELPCONTEXT_SAVE);
     StartMenu_PrepareForSave();
     sStartMenuCallback = StartCB_Save2;
@@ -1361,11 +1365,13 @@ static bool8 StartCB_Save2(void)
         ClearPlayerHeldMovementAndUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         RestoreHelpContext();
+        SaveMenu_RestoreHelpSystem();
         return TRUE;
     case SAVECB_RETURN_CANCEL:
         ClearDialogWindowAndFrameToTransparent(0, FALSE);
         DrawStartMenuInOneGo();
         RestoreHelpContext();
+        SaveMenu_RestoreHelpSystem();
         sStartMenuCallback = StartCB_HandleInput;
         break;
     case SAVECB_RETURN_ERROR:
@@ -1373,6 +1379,7 @@ static bool8 StartCB_Save2(void)
         ClearPlayerHeldMovementAndUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         RestoreHelpContext();
+        SaveMenu_RestoreHelpSystem();
         return TRUE;
     }
     return FALSE;
@@ -1396,6 +1403,7 @@ static u8 RunSaveDialogCB(void)
 void Field_AskSaveTheGame(void)
 {
     BackupHelpContext();
+    SaveMenu_DisableHelpSystem();
     SetHelpContext(HELPCONTEXT_SAVE);
     StartMenu_PrepareForSave();
     CreateTask(task50_save_game, 80);
@@ -1427,6 +1435,25 @@ static void task50_save_game(u8 taskId)
     DestroyTask(taskId);
     ScriptContext_Enable();
     RestoreHelpContext();
+    SaveMenu_RestoreHelpSystem();
+}
+
+static void SaveMenu_DisableHelpSystem(void)
+{
+    if (gHelpSystemEnabled)
+    {
+        HelpSystem_Disable();
+        sSaveMenuDisabledHelpSystem = TRUE;
+    }
+}
+
+static void SaveMenu_RestoreHelpSystem(void)
+{
+    if (sSaveMenuDisabledHelpSystem)
+    {
+        HelpSystem_Enable();
+        sSaveMenuDisabledHelpSystem = FALSE;
+    }
 }
 
 static void CloseSaveMessageWindow(void)

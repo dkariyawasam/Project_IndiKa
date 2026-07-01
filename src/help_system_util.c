@@ -51,7 +51,7 @@ u8 RunHelpSystemCallback(void)
             return 0;
         if (JOY_NEW(L_BUTTON | R_BUTTON))
         {
-            if (!HelpSystem_IsSinglePlayer() || !gHelpSystemEnabled)
+            if (!HelpSystem_IsSinglePlayer() || !gHelpSystemEnabled || !HelpSystem_CurrentContextHasTopics())
             {
                 PlaySE(SE_HELP_ERROR);
                 return 0;

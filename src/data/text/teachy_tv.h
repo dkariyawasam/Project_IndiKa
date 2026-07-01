@@ -1,10 +1,13 @@
-const u8 gTeachyTvString_TeachBattle[] = _("Teach me how to battle.");
-const u8 gTeachyTvString_StatusProblems[] = _("What are status problems?");
-const u8 gTeachyTvString_TypeMatchups[] = _("What are type matchups?");
-const u8 gTeachyTvString_CatchPkmn[] = _("I want to catch POKéMON.");
+const u8 gTeachyTvString_TeachBattle[] = _("Battling");
+const u8 gTeachyTvString_StatusProblems[] = _("Status Conditions");
+const u8 gTeachyTvString_TypeMatchups[] = _("Type Matchups");
+const u8 gTeachyTvString_CatchPkmn[] = _("Catching");
+const u8 gTeachyTvString_Training[] = _("Training");
 const u8 gTeachyTvString_AboutTMs[] = _("Teach me about TMs.");
 const u8 gTeachyTvString_RegisterItem[] = _("How do I register an item?");
 const u8 gTeachyTvString_Cancel[] = _("CANCEL");
+const u8 gTeachyTvString_Demonstration[] = _("Demonstration");
+const u8 gTeachyTvString_Theory[] = _("Theory");
 const u8 gTeachyTvText_PokedudeSaysHello[] = _(
     "Hey, all you TRAINERS out there!\n"
     "HELLO, TRAINERS!\p"
@@ -37,6 +40,32 @@ const u8 gTeachyTvText_BattleScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
+const u8 gTeachyTvText_BattleTheoryScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "explain battles!\p"
+    "In a battle, each TRAINER sends\n"
+    "out POKéMON and chooses what they\l"
+    "should do each turn.\p"
+    "A POKéMON can use a move, switch\n"
+    "out, use an item, or try to run\l"
+    "from a wild battle.\p"
+    "Most battles are SINGLE BATTLES.\n"
+    "One POKéMON faces one opponent.\p"
+    "In single battles, timing matters.\n"
+    "Switch if your matchup is bad,\l"
+    "or attack if you have the edge!");
+const u8 gTeachyTvText_BattleTheoryScript2[] = _(
+    "Some battles are DOUBLE BATTLES.\n"
+    "Two POKéMON fight on each side.\p"
+    "In double battles, moves can hit\n"
+    "one target, both foes, or everyone\l"
+    "on the field.\p"
+    "Think about teamwork! One POKéMON\n"
+    "can protect, weaken, or set up for\l"
+    "its partner.\p"
+    "Whether single or double, watch HP,\n"
+    "status, type matchups, and speed.\p"
+    "That's how real strategy begins!");
 const u8 gTeachyTvText_StatusScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "tell you about status problems!\p"
@@ -67,6 +96,28 @@ const u8 gTeachyTvText_StatusScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
+const u8 gTeachyTvText_StatusTheoryScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "explain status conditions!\p"
+    "Some conditions stay after battle.\n"
+    "Poison, paralysis, sleep, burn,\l"
+    "and freezing are the big ones.\p"
+    "POISON slowly drains HP.\n"
+    "BURN drains HP and weakens physical\l"
+    "attacks.\p"
+    "PARALYSIS can stop a POKéMON from\n"
+    "moving and lowers its SPEED.");
+const u8 gTeachyTvText_StatusTheoryScript2[] = _(
+    "SLEEP stops a POKéMON from acting\n"
+    "until it wakes up.\p"
+    "FREEZE stops a POKéMON until it\n"
+    "thaws out.\p"
+    "Some conditions are battle-only.\n"
+    "CONFUSION may make a POKéMON hurt\l"
+    "itself, but it ends after battle.\p"
+    "Use items, BERRIES, or a POKéMON\n"
+    "CENTER to heal lasting conditions.\p"
+    "Take care of your team!");
 const u8 gTeachyTvText_MatchupsScript1[] = _(
     "Does everyone know about type\n"
     "matchups?\p"
@@ -104,6 +155,43 @@ const u8 gTeachyTvText_MatchupsScript2[] = _(
     "up perfectly!\p"
     "Remember, a good deed a day\n"
     "brings happiness to stay!");
+const u8 gTeachyTvText_MatchupsTheoryScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "explain type matchups!\p"
+    "Depending on the matchup of the\n"
+    "move type and the target POKéMON's\l"
+    "type, the move's effectiveness varies.\p"
+    "{CIRCLE_DOT}: Super effective!\p"
+    "{TRIANGLE}: Not very effective\p"
+    "{BIG_MULT_X}: Not effective at all\p"
+    "Here are the super effective\n"
+    "matchups for attacking moves!\p"
+    "NORMAL: None\p"
+    "FIRE: GRASS, ICE, BUG, STEEL\p"
+    "WATER: FIRE, GROUND, ROCK\p"
+    "ELECTRIC: WATER, FLYING\p"
+    "GRASS: WATER, GROUND, ROCK\p"
+    "ICE: GRASS, GROUND, FLYING,\n"
+    "DRAGON\p"
+    "FIGHTING: NORMAL, ICE, ROCK,\n"
+    "DARK, STEEL\p"
+    "POISON: GRASS");
+const u8 gTeachyTvText_MatchupsTheoryScript2[] = _(
+    "GROUND: FIRE, ELECTRIC, POISON,\n"
+    "ROCK, STEEL\p"
+    "FLYING: GRASS, FIGHTING, BUG\p"
+    "PSYCHIC: FIGHTING, POISON\p"
+    "BUG: GRASS, PSYCHIC, DARK\p"
+    "ROCK: FIRE, ICE, FLYING, BUG\p"
+    "GHOST: PSYCHIC, GHOST\p"
+    "DRAGON: DRAGON\p"
+    "DARK: PSYCHIC, GHOST\p"
+    "STEEL: ICE, ROCK\p"
+    "FAIRY: FIGHTING, DRAGON, DARK\p"
+    "If a battle feels tough, try changing\n"
+    "moves or switching POKéMON.\p"
+    "A smart matchup can turn a battle\n"
+    "around in one move!");
 const u8 gTeachyTvText_CatchingScript1[] = _(
     "Today, the POKé DUDE's going to\n"
     "show you how to catch POKéMON!\p"
@@ -126,6 +214,52 @@ const u8 gTeachyTvText_CatchingScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
+const u8 gTeachyTvText_CatchingTheoryScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "explain catching POKéMON!\p"
+    "A POKé BALL works best when the\n"
+    "wild POKéMON is easier to catch.\p"
+    "Lowering its HP helps a lot.\n"
+    "The less HP it has, the better\l"
+    "your chance becomes.\p"
+    "Status conditions can help, too.\n"
+    "Sleep and paralysis are especially\l"
+    "useful when catching POKéMON.");
+const u8 gTeachyTvText_CatchingTheoryScript2[] = _(
+    "Different POKé BALLS suit different\n"
+    "situations.\p"
+    "GREAT BALLS and ULTRA BALLS are\n"
+    "stronger than regular POKé BALLS.\p"
+    "Some rare or powerful POKéMON are\n"
+    "naturally harder to catch, even if\l"
+    "you do everything right.\p"
+    "So weaken them carefully, choose\n"
+    "the right BALL, and keep trying!\p"
+    "That's the catching spirit!");
+const u8 gTeachyTvText_TrainingScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "explain training POKéMON!\p"
+    "POKéMON grow by gaining EXP. from\n"
+    "battle. Gain enough, and they will\l"
+    "go up a LEVEL.\p"
+    "A higher LEVEL usually means better\n"
+    "stats, like ATTACK, DEFENSE,\l"
+    "SP. ATK, SP. DEF, and SPEED.\p"
+    "Some POKéMON can evolve as they\n"
+    "grow, or when special conditions\l"
+    "are met.");
+const u8 gTeachyTvText_TrainingScript2[] = _(
+    "POKéMON also learn moves as they\n"
+    "train.\p"
+    "If a POKéMON already knows four\n"
+    "moves, you'll need to forget one\l"
+    "before learning a new move.\p"
+    "Abilities are special traits that\n"
+    "can help in battle or while you\l"
+    "travel.\p"
+    "A good TRAINER watches stats,\n"
+    "moves, abilities, and evolution.\p"
+    "That's how a partner grows strong!");
 const u8 gTeachyTvText_TMsScript1[] = _(
     "Hey, everyone!\n"
     "Do you all have TMs?\p"

@@ -23,6 +23,8 @@
 
 #define TAG_AREA_MARKERS 2001
 
+static EWRAM_DATA bool8 sPokedexDisabledHelpSystem = FALSE;
+
 enum TextMode {
     TEXT_LEFT,
     TEXT_CENTER,
@@ -867,6 +869,11 @@ void DexScreen_LoadResources(void)
 void CB2_OpenPokedexFromStartMenu(void)
 {
     DexScreen_LoadResources();
+    if (gHelpSystemEnabled)
+    {
+        HelpSystem_Disable();
+        sPokedexDisabledHelpSystem = TRUE;
+    }
     ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_WIN1_ON);
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
@@ -900,6 +907,11 @@ bool8 DoClosePokedex(void)
         FREE_IF_NOT_NULL(GetBgTilemapBuffer(2));
         FREE_IF_NOT_NULL(GetBgTilemapBuffer(3));
         BGMVolumeMax_EnableHelpSystemReduction();
+        if (sPokedexDisabledHelpSystem)
+        {
+            HelpSystem_Enable();
+            sPokedexDisabledHelpSystem = FALSE;
+        }
         break;
     }
     return TRUE;
@@ -1810,27 +1822,14 @@ static u8 DexScreen_CreateCategoryMenuScrollArrows(void)
  */
 static int DexScreen_InputHandler_GetShoulderInput(void)
 {
-    switch (gSaveBlock2Ptr->optionsButtonMode)
-    {
-    case OPTIONS_BUTTON_MODE_L_EQUALS_A:
-        // Using the JOY_HELD and JOY_NEW macros here does not match!
-        if ((gMain.heldKeys & R_BUTTON) && (gMain.newKeys & DPAD_LEFT))
-            return 1;
-        else if ((gMain.heldKeys & R_BUTTON) && (gMain.newKeys & DPAD_RIGHT))
-            return 2;
-        else
-            return 0;
-    case OPTIONS_BUTTON_MODE_LR:
-        if (gMain.newKeys & L_BUTTON)
-            return 1;
-        else if (gMain.newKeys & R_BUTTON)
-            return 2;
-        else
-            return 0;
-    case OPTIONS_BUTTON_MODE_HELP:
-    default:
+    if (!OPTIONS_BUTTON_MODE_USES_LR(gSaveBlock2Ptr->optionsButtonMode))
         return 0;
-    }
+    if (gMain.newKeys & L_BUTTON)
+        return 1;
+    else if (gMain.newKeys & R_BUTTON)
+        return 2;
+    else
+        return 0;
 }
 
 static void Task_DexScreen_ShowMonPage(u8 taskId)

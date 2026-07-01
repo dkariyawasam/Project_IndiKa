@@ -743,7 +743,6 @@ static void SetTitleScreenScene_Run(s16 *data)
     switch (tState)
     {
     case 0:
-        SetHelpContext(HELPCONTEXT_TITLE_SCREEN);
         CreateTask(Task_TitleScreen_BlinkPressStart, 0);
 #if defined(FIRERED)
         CreateTask(Task_FlameSpawner, 5);
@@ -752,7 +751,6 @@ static void SetTitleScreenScene_Run(s16 *data)
 #endif
         SetGpuRegsForTitleScreenRun();
         tSlashSpriteId = CreateSlashSprite();
-        HelpSystem_Enable();
         tState++;
         // fallthrough
     case 1:

@@ -21,6 +21,8 @@
 #include "constants/trainers.h"
 
 // Trainer Card Strings
+static EWRAM_DATA bool8 sTrainerCardDisabledHelpSystem = FALSE;
+
 enum
 {
     TRAINER_CARD_STRING_NAME = 0,
@@ -471,6 +473,11 @@ static void CloseTrainerCard(u8 taskId)
 {
     SetMainCallback2(sTrainerCardDataPtr->callback2);
     FreeAllWindowBuffers();
+    if (sTrainerCardDisabledHelpSystem)
+    {
+        HelpSystem_Enable();
+        sTrainerCardDisabledHelpSystem = FALSE;
+    }
     FREE_AND_SET_NULL(sTrainerCardDataPtr);
     DestroyTask(taskId);
 }
@@ -1023,6 +1030,11 @@ static void InitBgsAndWindows(void)
 
 static void SetTrainerCardCB2(void)
 {
+    if (gHelpSystemEnabled)
+    {
+        HelpSystem_Disable();
+        sTrainerCardDisabledHelpSystem = TRUE;
+    }
     SetMainCallback2(CB2_TrainerCard);
     SetHelpContext(HELPCONTEXT_TRAINER_CARD_FRONT);
 }
