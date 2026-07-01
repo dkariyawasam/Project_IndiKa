@@ -953,7 +953,6 @@ static void PrintStartMenuCenterLabel(void)
     s32 windowWidth;
     s32 width;
     s32 x;
-    u8 i;
 
     if (sStartMenuCenterLabelWindowId == WINDOW_NONE)
         return;
@@ -966,15 +965,12 @@ static void PrintStartMenuCenterLabel(void)
         x = START_MENU_CENTER_LABEL_INSET;
 
     FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(TEXT_COLOR_TRANSPARENT));
-    for (i = 0; i < START_MENU_CENTER_LABEL_HEIGHT; i++)
-    {
-        FillWindowPixelRect(sStartMenuCenterLabelWindowId,
-                            PIXEL_FILL((i & 1) ? START_MENU_LABEL_STRIPE_LIGHT : START_MENU_LABEL_STRIPE_DARK),
-                            START_MENU_CENTER_LABEL_INSET,
-                            START_MENU_CENTER_LABEL_TOP + i,
-                            START_MENU_CENTER_LABEL_WIDTH,
-                            1);
-    }
+    FillWindowPixelRect(sStartMenuCenterLabelWindowId,
+                        PIXEL_FILL(START_MENU_LABEL_FILL_COLOR),
+                        START_MENU_CENTER_LABEL_INSET,
+                        START_MENU_CENTER_LABEL_TOP,
+                        START_MENU_CENTER_LABEL_WIDTH,
+                        START_MENU_CENTER_LABEL_HEIGHT);
     AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 1, sTextColor_RadialMenuSelected, 0xFF, text);
     CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_GFX);
 }
