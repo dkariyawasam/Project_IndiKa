@@ -78,6 +78,7 @@ static EWRAM_DATA u8 sRadialStartMenuSpriteIds[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuBackdropSpriteId = MAX_SPRITES;
 static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
 static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
+static EWRAM_DATA bool8 sRadialStartMenuIconsVisible = FALSE;
 static EWRAM_DATA u8 sStartMenuReturnItem = 0xFF;
 static EWRAM_DATA u8 sStartMenuSaveShortcutWindowId = WINDOW_NONE;
 static EWRAM_DATA u8 sStartMenuSettingsShortcutWindowId = WINDOW_NONE;
@@ -137,6 +138,9 @@ static void RestoreStartMenuBg0TilemapRect(const u16 *src, u8 left, u8 top, u8 w
 static void CreateRadialStartMenuSprites(void);
 static void DestroyRadialStartMenuSprites(void);
 static void UpdateRadialStartMenuSpriteStates(void);
+static void SetRadialStartMenuIconsVisible(bool8 visible);
+static void SpriteCB_RadialStartMenuBackdrop(struct Sprite *sprite);
+static void SpriteCB_RadialStartMenuIcon(struct Sprite *sprite);
 static void UpdateRadialStartMenuSelection(u8 newSlot);
 static u8 FindNextRadialStartMenuSlot(s8 step);
 static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy);
@@ -254,6 +258,7 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 #define START_MENU_CENTER_LABEL_WIDTH 58
 #define START_MENU_CENTER_LABEL_TOP 3
 #define START_MENU_CENTER_LABEL_HEIGHT 10
+#define START_MENU_SELECTED_ICON_BOB_INTERVAL 8
 
 static const u16 sStartMenuLabelPalette[] = {
     RGB_BLACK,
@@ -308,7 +313,7 @@ static const struct OamData sOamData_RadialStartMenuIcon = {
 };
 
 static const struct OamData sOamData_RadialStartMenuBackdrop = {
-    .affineMode = ST_OAM_AFFINE_OFF,
+    .affineMode = ST_OAM_AFFINE_DOUBLE,
     .shape = SPRITE_SHAPE(64x64),
     .size = SPRITE_SIZE(64x64),
     .priority = 1
@@ -344,6 +349,17 @@ static const union AffineAnimCmd *const sAffineAnims_RadialStartMenuIcon[] = {
     sAffineAnim_RadialStartMenuIconSelected
 };
 
+static const union AffineAnimCmd sAffineAnim_RadialStartMenuBackdropOpen[] = {
+    AFFINEANIMCMD_FRAME(0x10, 0x10, 0, 0),
+    AFFINEANIMCMD_FRAME(0x50, 0x50, 0, 3),
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd *const sAffineAnims_RadialStartMenuBackdrop[] = {
+    sAffineAnim_RadialStartMenuBackdropOpen
+};
+
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuBackdrop = {
     sRadialStartMenuBackdropGfx, 64 * 64 / 2, TAG_START_MENU_BACKDROP
 };
@@ -358,8 +374,8 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuBackdrop = {
     .oam = &sOamData_RadialStartMenuBackdrop,
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
-    .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .affineAnims = sAffineAnims_RadialStartMenuBackdrop,
+    .callback = SpriteCB_RadialStartMenuBackdrop
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuButtonIcon = {
@@ -377,7 +393,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuButtonIcon = {
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuPokemonIcon = {
@@ -391,7 +407,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuPokemonIcon = 
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuSettingsIcon = {
@@ -409,7 +425,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuSettingsIcon =
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuLogbookIcon = {
@@ -423,7 +439,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuLogbookIcon = 
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuPokedexIcon = {
@@ -437,7 +453,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuPokedexIcon = 
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuCardIcon = {
@@ -451,7 +467,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuCardIcon = {
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuBagIcon = {
@@ -465,7 +481,7 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuBagIcon = {
     .anims = sAnims_RadialStartMenuIcon,
     .images = NULL,
     .affineAnims = sAffineAnims_RadialStartMenuIcon,
-    .callback = SpriteCallbackDummy
+    .callback = SpriteCB_RadialStartMenuIcon
 };
 
 // Unused
@@ -1096,6 +1112,7 @@ static void CreateRadialStartMenuSprites(void)
         LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuButtonIcon);
     }
     sRadialStartMenuSpritesLoaded = TRUE;
+    sRadialStartMenuIconsVisible = FALSE;
     sRadialStartMenuBackdropSpriteId = CreateSprite(&sSpriteTemplate_RadialStartMenuBackdrop, DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 4);
 
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
@@ -1160,8 +1177,14 @@ static void CreateRadialStartMenuSprites(void)
 
             sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuCardIcon, x, y, 0);
         }
+
+        if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
+            gSprites[sRadialStartMenuButtonSpriteIds[i]].data[0] = i;
+        if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
+            gSprites[sRadialStartMenuSpriteIds[i]].data[0] = i;
     }
     UpdateRadialStartMenuSpriteStates();
+    SetRadialStartMenuIconsVisible(sRadialStartMenuBackdropSpriteId == MAX_SPRITES);
 }
 
 static void DestroyRadialStartMenuSprites(void)
@@ -1173,6 +1196,7 @@ static void DestroyRadialStartMenuSprites(void)
 
     if (sRadialStartMenuBackdropSpriteId != MAX_SPRITES)
     {
+        FreeSpriteOamMatrix(&gSprites[sRadialStartMenuBackdropSpriteId]);
         DestroySprite(&gSprites[sRadialStartMenuBackdropSpriteId]);
         sRadialStartMenuBackdropSpriteId = MAX_SPRITES;
     }
@@ -1202,6 +1226,7 @@ static void DestroyRadialStartMenuSprites(void)
     FreeSpriteTilesByTag(TAG_START_MENU_CARD_ICON);
     FreeSpriteTilesByTag(TAG_START_MENU_BAG_ICON);
     sRadialStartMenuSpritesLoaded = FALSE;
+    sRadialStartMenuIconsVisible = FALSE;
 }
 
 static void UpdateRadialStartMenuSpriteStates(void)
@@ -1212,6 +1237,51 @@ static void UpdateRadialStartMenuSpriteStates(void)
     {
         if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
             StartSpriteAnim(&gSprites[sRadialStartMenuSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
+    }
+}
+
+static void SetRadialStartMenuIconsVisible(bool8 visible)
+{
+    u8 i;
+
+    sRadialStartMenuIconsVisible = visible;
+
+    for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
+    {
+        if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
+            gSprites[sRadialStartMenuButtonSpriteIds[i]].invisible = !visible;
+        if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
+            gSprites[sRadialStartMenuSpriteIds[i]].invisible = !visible;
+    }
+}
+
+static void SpriteCB_RadialStartMenuBackdrop(struct Sprite *sprite)
+{
+    if (!sRadialStartMenuIconsVisible && sprite->affineAnimEnded)
+        SetRadialStartMenuIconsVisible(TRUE);
+}
+
+static void SpriteCB_RadialStartMenuIcon(struct Sprite *sprite)
+{
+    if (sprite->data[0] != sRadialStartMenuCursorSlot)
+    {
+        sprite->y2 = 0;
+        sprite->data[1] = 0;
+        sprite->data[2] = 0;
+        return;
+    }
+
+    if (sprite->data[2] == 0)
+    {
+        sprite->y2 = -1;
+        sprite->data[2] = 1;
+        return;
+    }
+
+    if (++sprite->data[1] >= START_MENU_SELECTED_ICON_BOB_INTERVAL)
+    {
+        sprite->data[1] = 0;
+        sprite->y2 = -sprite->y2;
     }
 }
 
