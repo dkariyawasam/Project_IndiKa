@@ -69,7 +69,7 @@ void CreateYesNoMenuWithCallbacks(u8 taskId, const struct WindowTemplate *templa
 
 u8 GetLRKeysPressed(void)
 {
-    if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
+    if (OPTIONS_BUTTON_MODE_USES_LR(gSaveBlock2Ptr->optionsButtonMode))
     {
         if (JOY_NEW(L_BUTTON))
             return MENU_L_PRESSED;
@@ -81,7 +81,7 @@ u8 GetLRKeysPressed(void)
 
 u8 GetLRKeysPressedAndHeld(void)
 {
-    if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
+    if (OPTIONS_BUTTON_MODE_USES_LR(gSaveBlock2Ptr->optionsButtonMode))
     {
         if (JOY_REPT(L_BUTTON))
             return MENU_L_PRESSED;

@@ -244,7 +244,7 @@ u32 svc_50(void) {
 
 // Called by InitMainCallbacks and MoveSaveBlocks_ResetHeap.
 // Lets the emulator know where SaveBlock2 is located in memory.
-// Emulator appears to use this to get saveBlock2->optionsButtonMode to check against L_EQUALS_A.
+// Emulator appears to use this to get saveBlock2->optionsButtonMode.
 void svc_SetSaveBlock2(struct SaveBlock2* saveBlock2) {
     asm volatile(
         "movs r0, %0 \n"
