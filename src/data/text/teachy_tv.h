@@ -4,7 +4,6 @@ const u8 gTeachyTvString_TypeMatchups[] = _("Type Matchups");
 const u8 gTeachyTvString_CatchPkmn[] = _("Catching");
 const u8 gTeachyTvString_Training[] = _("Training");
 const u8 gTeachyTvString_AboutTMs[] = _("Teach me about TMs.");
-const u8 gTeachyTvString_RegisterItem[] = _("How do I register an item?");
 const u8 gTeachyTvString_Cancel[] = _("CANCEL");
 const u8 gTeachyTvString_Demonstration[] = _("Demonstration");
 const u8 gTeachyTvString_Theory[] = _("Theory");
@@ -296,37 +295,6 @@ const u8 gPokedudeText_ReadTMDescription[] = _(
     "arms that can throw punches!");
 const u8 gTeachyTvText_TMsScript2[] = _(
     "Wow, I talked a lot today!\n"
-    "All righty, be seeing you!\p"
-    "Remember, TRAINERS, a good deed\n"
-    "a day brings happiness to stay!");
-const u8 gTeachyTvText_RegisterScript1[] = _(
-    "A TRAINER's BAG has a bunch of\n"
-    "nifty, convenient features!\p"
-    "Take stuff in the KEY ITEMS\n"
-    "POCKET, for instance.\p"
-    "You can use a key item without\n"
-    "opening the BAG every time.\p"
-    "For example, let's pretend I have\n"
-    "a TM CASE in my BAG.\p"
-    "I can register it for instant use,\n"
-    "and I'll show you how!\p"
-    "All righty, here goes!\p"
-    "Keep your eyes glued to the sorta\n"
-    "super POKé DUDE SHOW!");
-const u8 gTeachyTvText_RegisterScript2[] = _(
-    "And now, your TM CASE is\n"
-    "registered.\p"
-    "How do you use it?\n"
-    "Well, here's how it works.\p"
-    "Once an item in the KEY ITEMS\n"
-    "POKCET is registered, you can use\l"
-    "it by pressing SELECT.\p"
-    "So, you've given yourself\n"
-    "one-touch access to your TM CASE.\p"
-    "All it takes for you to see me is\n"
-    "pressing one button!\p"
-    "That kind of attention is a little\n"
-    "embarrassing!\p"
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");

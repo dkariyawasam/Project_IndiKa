@@ -31,6 +31,7 @@
 #define SPRITETAG_FUJI 1007
 #define SPRITETAG_OAK 1008
 #define SPRITETAG_BILL 1009
+#define SPRITETAG_APEX_SILHOUETTE 1010
 
 #define FC_NONTRAINER_START 0xFE00
 
@@ -128,6 +129,7 @@ static bool8 FC_HasEncounteredApexDossierMon(void);
 static bool8 FC_IsApexDossierMonSlot(u8 slot);
 static bool8 FC_IsApexDossierWitnessSlot(u8 slot);
 static u8 FC_GetApexDossierRumorForSlot(u8 slot);
+static void SetApexDossierSilhouettePalette(u8 spriteId);
 static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot);
 static void FC_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId);
 static void FC_CreateScrollIndicatorArrowPair(void);
@@ -247,7 +249,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Tangrowth0, sApexRumor_Tangrowth1, sApexRumor_Tangrowth2},
         {sApexLoc_Viridian, sApexLoc_ForestGate, sApexLoc_ViridianForest},
         {sApexSrc_OldTale, sApexSrc_ScaredLocal, sApexSrc_FlowerWatcher},
-        {OBJ_EVENT_GFX_OLD_MAN_1, OBJ_EVENT_GFX_LITTLE_GIRL, OBJ_EVENT_GFX_LASS},
+        {OBJ_EVENT_GFX_WOMAN_3, OBJ_EVENT_GFX_WOMAN_2, OBJ_EVENT_GFX_AROMA_LADY},
         OBJ_EVENT_GFX_TANGROWTH,
         FLAG_INTERACTED_APEX_TANGROWTH
     },
@@ -257,7 +259,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Zapdos0, sApexRumor_Zapdos1, sApexRumor_Zapdos2},
         {sApexLoc_PowerPlant, sApexLoc_Route10, sApexLoc_Route10},
         {sApexSrc_Engineer, sApexSrc_Rocker, sApexSrc_Picnicker},
-        {OBJ_EVENT_GFX_ENGINEER, OBJ_EVENT_GFX_ROCKER, OBJ_EVENT_GFX_SCOUT_F},
+        {OBJ_EVENT_GFX_SWIMMER_M_LAND, OBJ_EVENT_GFX_ENGINEER, OBJ_EVENT_GFX_ENGINEER},
         OBJ_EVENT_GFX_ZAPDOS,
         FLAG_INTERACTED_APEX_ZAPDOS
     },
@@ -267,7 +269,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Articuno0, sApexRumor_Articuno1, sApexRumor_Articuno2},
         {sApexLoc_Route20, sApexLoc_Seafoam, sApexLoc_Seafoam},
         {sApexSrc_Swimmer, sApexSrc_Trainer, sApexSrc_Explorer},
-        {OBJ_EVENT_GFX_SWIMMER_F_WATER, OBJ_EVENT_GFX_SWIMMER_M_WATER, OBJ_EVENT_GFX_MAN},
+        {OBJ_EVENT_GFX_SCOUT_M, OBJ_EVENT_GFX_SAILOR, OBJ_EVENT_GFX_OLD_MAN_1},
         OBJ_EVENT_GFX_ARTICUNO,
         FLAG_INTERACTED_APEX_ARTICUNO
     },
@@ -287,7 +289,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Osscythe0, sApexRumor_Osscythe1, sApexRumor_Osscythe2},
         {sApexLoc_Saffron, sApexLoc_Lavender, sApexLoc_PokemonTower},
         {sApexSrc_Rocket, sApexSrc_TownLocal, sApexSrc_Mourner},
-        {OBJ_EVENT_GFX_ROCKET_M, OBJ_EVENT_GFX_OLD_WOMAN, OBJ_EVENT_GFX_BALDING_MAN},
+        {OBJ_EVENT_GFX_ROCKET_M, OBJ_EVENT_GFX_BOY, OBJ_EVENT_GFX_CHANNELER},
         OBJ_EVENT_GFX_OSSCYTHE,
         FLAG_INTERACTED_APEX_OSSCYTHE
     },
@@ -297,7 +299,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Moltres0, sApexRumor_Moltres1, sApexRumor_Moltres2},
         {sApexLoc_Cinnabar, sApexLoc_Volcano, sApexLoc_Volcano},
         {sApexSrc_Scientist, sApexSrc_Hiker, sApexSrc_Witness},
-        {OBJ_EVENT_GFX_SCIENTIST, OBJ_EVENT_GFX_HIKER, OBJ_EVENT_GFX_WOMAN_1},
+        {OBJ_EVENT_GFX_OLD_MAN_1, OBJ_EVENT_GFX_SCIENTIST, OBJ_EVENT_GFX_KINDLER},
         OBJ_EVENT_GFX_MOLTRES,
         FLAG_INTERACTED_APEX_MOLTRES
     },
@@ -307,7 +309,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_MimeSr0, sApexRumor_MimeSr1, sApexRumor_MimeSr2},
         {sApexLoc_DiglettCave, sApexLoc_Route11, sApexLoc_DiglettCave},
         {sApexSrc_CaveVisitor, sApexSrc_Pokemaniac, sApexSrc_CaveVisitor},
-        {OBJ_EVENT_GFX_GENTLEMAN, OBJ_EVENT_GFX_SUPER_NERD, OBJ_EVENT_GFX_MAN},
+        {OBJ_EVENT_GFX_OLD_MAN_1, OBJ_EVENT_GFX_POKE_MANIAC, OBJ_EVENT_GFX_HIKER},
         OBJ_EVENT_GFX_MIME_SR,
         FLAG_INTERACTED_APEX_MIME_SR
     },
@@ -317,7 +319,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         {sApexRumor_Annihilape0, sApexRumor_Annihilape1, sApexRumor_Annihilape2},
         {sApexLoc_MtMoon, sApexLoc_Cerulean, sApexLoc_Route4},
         {sApexSrc_CaveVisitor, sApexSrc_HouseResident, sApexSrc_Hiker},
-        {OBJ_EVENT_GFX_MAN, OBJ_EVENT_GFX_WOMAN_1, OBJ_EVENT_GFX_HIKER},
+        {OBJ_EVENT_GFX_BALDING_MAN, OBJ_EVENT_GFX_HIKER, OBJ_EVENT_GFX_WOMAN_1},
         OBJ_EVENT_GFX_ANNIHILAPE,
         FLAG_INTERACTED_APEX_ANNIHILAPE
     },
@@ -615,6 +617,7 @@ static const struct SpriteSheet sUISpriteSheets[] = {
 static const struct SpritePalette sUISpritePalettes[] = {
     {sSelectorCursorSpritePalette, SPRITETAG_SELECTOR_CURSOR},
     {sSpinningPokeballSpritePalette, SPRITETAG_SPINNING_POKEBALL},
+    {sSilhouettePalette, SPRITETAG_APEX_SILHOUETTE},
     {}
 };
 
@@ -1360,7 +1363,7 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
                     27 * (i / 3) + 0x2F
                 );
                 if (!FC_HasEncounteredApexDossierMon())
-                    LoadPalette(sSilhouettePalette, OBJ_PLTT_ID(gSprites[sFameCheckerData->spriteIds[i]].oam.paletteNum), sizeof(sSilhouettePalette));
+                    SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
                 result = TRUE;
             }
             else if (FC_IsApexDossierWitnessSlot(i) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(i)))
@@ -1383,7 +1386,7 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
                         47 * (i % 3) + 0x72,
                         27 * (i / 3) + 0x2F
                     );
-                    LoadPalette(sSilhouettePalette, OBJ_PLTT_ID(gSprites[sFameCheckerData->spriteIds[i]].oam.paletteNum), sizeof(sSilhouettePalette));
+                    SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
                 }
                 else
                 {
@@ -1592,6 +1595,7 @@ static void FreeSpinningPokeballSpriteResources(void)
 {
     FreeSpriteTilesByTag(SPRITETAG_SPINNING_POKEBALL);
     FreeSpritePaletteByTag(SPRITETAG_SPINNING_POKEBALL);
+    FreeSpritePaletteByTag(SPRITETAG_APEX_SILHOUETTE);
 }
 
 static u8 CreateSpinningPokeballSprite(void)
@@ -1947,6 +1951,14 @@ static bool8 FC_IsApexDossierWitnessSlot(u8 slot)
 static u8 FC_GetApexDossierRumorForSlot(u8 slot)
 {
     return slot - 3;
+}
+
+static void SetApexDossierSilhouettePalette(u8 spriteId)
+{
+    u8 paletteNum = IndexOfSpritePaletteTag(SPRITETAG_APEX_SILHOUETTE);
+
+    if (spriteId != MAX_SPRITES && paletteNum != 0xFF)
+        gSprites[spriteId].oam.paletteNum = paletteNum;
 }
 
 static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot)

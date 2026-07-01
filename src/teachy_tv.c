@@ -404,26 +404,6 @@ static void (* const sTMsScript[])(u8) =
     TTVcmd_End,
 };
 
-static void (* const sRegisterKeyItemScript[])(u8) = 
-{
-    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
-    TTVcmd_ClearBg2TeachyTvGraphic,
-    TTVcmd_NpcMoveAndSetupTextPrinter,
-    TTVcmd_IdleIfTextPrinterIsActive,
-    TTVcmd_IdleIfTextPrinterIsActive2,
-    TTVcmd_TextPrinterSwitchStringByOptionChosen,
-    TTVcmd_IdleIfTextPrinterIsActive2,
-    TTVcmd_EraseTextWindowIfKeyPressed,
-    TTVcmd_TaskBattleOrFadeByOptionChosen,
-    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
-    TTVcmd_IdleIfTextPrinterIsActive2,
-    TTVcmd_EraseTextWindowIfKeyPressed,
-    TTVcmd_DudeTurnLeft,
-    TTVcmd_DudeMoveLeft,
-    TTVcmd_RenderAndRemoveBg1EndGraphic,
-    TTVcmd_End,
-};
-
 static void (* const sMatchupsTheoryScript[])(u8) =
 {
     TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
@@ -812,7 +792,6 @@ static void TeachyTvSetupPostBattleWindowAndObj(u8 taskId)
         sResources->grassAnimCounterHi -= 3;
         break;
     case TTVSCR_TMS:
-    case TTVSCR_REGISTER:
         TeachyTvSetSpriteCoordsAndSwitchFrame(data[1], 0x78, 0x38, 0);
         break;
     }
@@ -1063,7 +1042,6 @@ static void TeachyTvRenderMsgAndSwitchClusterFuncs(u8 taskId)
             sMatchupsScript,
             sCatchingScript,
             sTMsScript,
-            sRegisterKeyItemScript,
             sMatchupsTheoryScript,
             sBattleTheoryScript,
             sCatchingTheoryScript,
@@ -1084,7 +1062,6 @@ static void TTVcmd_TextPrinterSwitchStringByOptionChosen(u8 taskId)
         gTeachyTvText_MatchupsScript1,
         gTeachyTvText_CatchingScript1,
         gTeachyTvText_TMsScript1,
-        gTeachyTvText_RegisterScript1,
         gTeachyTvText_MatchupsTheoryScript1,
         gTeachyTvText_BattleTheoryScript1,
         gTeachyTvText_CatchingTheoryScript1,
@@ -1105,7 +1082,6 @@ static void TTVcmd_TextPrinterSwitchStringByOptionChosen2(u8 taskId)
         gTeachyTvText_MatchupsScript2,
         gTeachyTvText_CatchingScript2,
         gTeachyTvText_TMsScript2,
-        gTeachyTvText_RegisterScript2,
         gTeachyTvText_MatchupsTheoryScript2,
         gTeachyTvText_BattleTheoryScript2,
         gTeachyTvText_CatchingTheoryScript2,
@@ -1327,7 +1303,6 @@ static void TTVcmd_TaskBattleOrFadeByOptionChosen(u8 taskId)
         TeachyTvPrepBattle(taskId);
         break;
     case TTVSCR_TMS:
-    case TTVSCR_REGISTER:
         sResources->savedCallback = TeachyTvSetupBagItemsByOptionChosen;
         TeachyTvQuitBeginFade(taskId);
         break;
@@ -1336,10 +1311,7 @@ static void TTVcmd_TaskBattleOrFadeByOptionChosen(u8 taskId)
 
 static void TeachyTvSetupBagItemsByOptionChosen(void)
 {
-    if (sStaticResources.whichScript == TTVSCR_TMS)
-        InitPokedudeBag(ITEMMENULOCATION_TTVSCR_TMS);
-    else
-        InitPokedudeBag(ITEMMENULOCATION_TTVSCR_REGISTER);
+    InitPokedudeBag(ITEMMENULOCATION_TTVSCR_TMS);
 }
 
 static void TeachyTvPostBattleFadeControl(u8 taskId)
