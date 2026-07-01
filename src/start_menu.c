@@ -247,6 +247,28 @@ static ALIGNED(2) const u8 sTextColor_LocationHeader[] = { 1, 6, 7 };
 static ALIGNED(2) const u8 sTextColor_RadialMenuNormal[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
 static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY };
 
+#define START_MENU_LABEL_PALETTE_NUM 14
+#define START_MENU_LABEL_FILL_COLOR TEXT_COLOR_DARK_GRAY
+
+static const u16 sStartMenuLabelPalette[] = {
+    RGB_BLACK,
+    RGB_WHITE,
+    RGB(4, 4, 4),
+    RGB(12, 12, 12),
+    RGB(29, 1, 1),
+    RGB(31, 23, 14),
+    RGB(4, 19, 1),
+    RGB(18, 31, 18),
+    RGB(6, 10, 25),
+    RGB(20, 24, 31),
+    RGB_BLACK,
+    RGB_BLACK,
+    RGB_BLACK,
+    RGB_BLACK,
+    RGB_BLACK,
+    RGB_BLACK
+};
+
 static const s8 sRadialStartMenuWindowXOffsets[] = { -40, -16, -16, -16, -40, -64, -64, -64 };
 static const s8 sRadialStartMenuWindowYOffsets[] = { -20, -10, -6, 20, 32, 20, -6, -10 };
 static const s8 sRadialStartMenuSlotXs[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
@@ -731,6 +753,7 @@ static void CreateRadialStartMenu(void)
     u8 i;
 
     ShowBg(0);
+    LoadPalette(sStartMenuLabelPalette, BG_PLTT_ID(START_MENU_LABEL_PALETTE_NUM), sizeof(sStartMenuLabelPalette));
     PopulateRadialStartMenuSlots();
     SelectInitialRadialStartMenuSlot();
 
@@ -786,7 +809,7 @@ static void CreateStartMenuShortcutWindows(void)
             .tilemapTop = 0,
             .width = 6,
             .height = 2,
-            .paletteNum = 15,
+            .paletteNum = START_MENU_LABEL_PALETTE_NUM,
             .baseBlock = 0x220
         };
 
@@ -804,7 +827,7 @@ static void CreateStartMenuShortcutWindows(void)
             .tilemapTop = 0,
             .width = 8,
             .height = 2,
-            .paletteNum = 15,
+            .paletteNum = START_MENU_LABEL_PALETTE_NUM,
             .baseBlock = 0x240
         };
 
@@ -840,7 +863,7 @@ static void PrintStartMenuShortcutWindow(u8 windowId, const u8 *text)
 
     if (x < 0)
         x = 0;
-    FillWindowPixelBuffer(windowId, PIXEL_FILL(TEXT_COLOR_DARK_GRAY));
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(START_MENU_LABEL_FILL_COLOR));
     AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 2, sTextColor_RadialMenuSelected, 0xFF, text);
     CopyWindowToVram(windowId, COPYWIN_FULL);
 }
@@ -853,7 +876,7 @@ static void CreateStartMenuCenterLabelWindow(void)
         .tilemapTop = 9,
         .width = 9,
         .height = 2,
-        .paletteNum = 15,
+        .paletteNum = START_MENU_LABEL_PALETTE_NUM,
         .baseBlock = 0x260
     };
 
@@ -890,7 +913,7 @@ static void PrintStartMenuCenterLabel(void)
     if (x < 0)
         x = 0;
 
-    FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(TEXT_COLOR_DARK_GRAY));
+    FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(START_MENU_LABEL_FILL_COLOR));
     AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 2, sTextColor_RadialMenuSelected, 0xFF, text);
     CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_GFX);
 }
