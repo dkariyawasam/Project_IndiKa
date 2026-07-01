@@ -183,6 +183,8 @@ static void CreateCancelConfirmPokeballSprites(void);
 static void CreateCancelConfirmWindows(bool8 chooseMultiple);
 static void Task_ExitPartyMenu(u8 taskId);
 static void FreePartyPointers(void);
+static void PartyMenu_DisableHelpSystem(void);
+static void PartyMenu_RestoreHelpSystem(void);
 static void PartyPaletteBufferCopy(u8 offset);
 static void DisplayPartyPokemonDataForMultiBattle(u8 slot);
 static void DisplayPartyPokemonDataForChooseMultiple(u8 slot);
@@ -396,6 +398,7 @@ EWRAM_DATA struct PartyMenu gPartyMenu = {0};
 static EWRAM_DATA struct PartyMenuBox *sPartyMenuBoxes = NULL;
 static EWRAM_DATA u8 *sPartyBgGfxTilemap = NULL;
 static EWRAM_DATA u8 *sPartyBgTilemapBuffer = NULL;
+static EWRAM_DATA bool8 sPartyMenuDisabledHelpSystem = FALSE;
 EWRAM_DATA bool8 gPartyMenuUseExitCallback = FALSE;
 EWRAM_DATA u8 gSelectedMonPartyId = 0;
 EWRAM_DATA MainCallback gPostMenuFieldCallback = NULL;
@@ -424,6 +427,8 @@ void InitPartyMenu(u8 menuType, u8 layout, u8 partyAction, bool8 keepCursorPos, 
         gPartyMenu.menuType = menuType;
         gPartyMenu.exitCallback = callback;
         gPartyMenu.action = partyAction;
+        if (menuType == PARTY_MENU_TYPE_FIELD)
+            PartyMenu_DisableHelpSystem();
         sPartyMenuInternal->messageId = messageId;
         sPartyMenuInternal->task = task;
         sPartyMenuInternal->exitCallback = NULL;
@@ -697,6 +702,7 @@ static void PartyPaletteBufferCopy(u8 offset)
 
 static void FreePartyPointers(void)
 {
+    PartyMenu_RestoreHelpSystem();
     if (sPartyMenuInternal)
         Free(sPartyMenuInternal);
     if (sPartyBgTilemapBuffer)
@@ -706,6 +712,24 @@ static void FreePartyPointers(void)
     if (sPartyMenuBoxes)
         Free(sPartyMenuBoxes);
     FreeAllWindowBuffers();
+}
+
+static void PartyMenu_DisableHelpSystem(void)
+{
+    if (gHelpSystemEnabled)
+    {
+        HelpSystem_Disable();
+        sPartyMenuDisabledHelpSystem = TRUE;
+    }
+}
+
+static void PartyMenu_RestoreHelpSystem(void)
+{
+    if (sPartyMenuDisabledHelpSystem)
+    {
+        HelpSystem_Enable();
+        sPartyMenuDisabledHelpSystem = FALSE;
+    }
 }
 
 static void InitPartyMenuBoxes(u8 layout)
@@ -4159,6 +4183,7 @@ static void CB2_UseItem(void)
         GiveMoveToMon(&gPlayerParty[gPartyMenu.slotId], ItemIdToBattleMoveId(gSpecialVar_ItemId));
         AdjustFriendship(&gPlayerParty[gPartyMenu.slotId], FRIENDSHIP_EVENT_LEARN_TMHM);
         RemoveBagItem(gSpecialVar_ItemId, 1);
+        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -4178,6 +4203,7 @@ static void CB2_UseTMHMAfterForgettingMove(void)
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, move);
         RemoveBagItem(gSpecialVar_ItemId, 1);
+        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -5395,6 +5421,7 @@ static void CB2_ReturnToPartyOrBagMenuFromWritingMail(void)
         SetMonData(mon, MON_DATA_HELD_ITEM, &sPartyMenuItemId);
         RemoveBagItem(sPartyMenuItemId, 1);
         ReturnGiveItemToBagOrPC(item);
+        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     // Wrote mail

@@ -1609,40 +1609,40 @@ static const u8 sTerms_Basic[] = {
 // Cant get this to match as a 2D array but it probably should be one, [HELPCONTEXT_COUNT][TOPIC_COUNT - 1] (Excludes TOPIC_EXIT)
 static const u8 *const sHelpSystemSubmenuItemLists[HELPCONTEXT_COUNT * (TOPIC_COUNT - 1)] = {
     NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_NONE
-    NULL,                          NULL,                       NULL,                       sAboutGame_TitleScreen,  NULL, // HELPCONTEXT_TITLE_SCREEN
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_TITLE_SCREEN
     NULL,                          NULL,                       NULL,                       sAboutGame_NewGame,      NULL, // HELPCONTEXT_NEW_GAME
     NULL,                          sHowTo_NamingScreen,        NULL,                       sAboutGame_NamingScreen, NULL, // HELPCONTEXT_NAMING_SCREEN
-    NULL,                          sHowTo_Pokedex,             NULL,                       NULL,                    NULL, // HELPCONTEXT_POKEDEX
-    NULL,                          sHowTo_PartyMenu,           sTerms_PartyMenu,           NULL,                    NULL, // HELPCONTEXT_PARTY_MENU
-    NULL,                          sHowTo_PokemonInfo,         sTerms_PokemonInfo,         NULL,                    NULL, // HELPCONTEXT_POKEMON_INFO
-    NULL,                          NULL,                       sTerms_PokemonSkills,       NULL,                    NULL, // HELPCONTEXT_POKEMON_SKILLS
-    NULL,                          NULL,                       sTerms_PokemonMoves,        NULL,                    NULL, // HELPCONTEXT_POKEMON_MOVES
-    NULL,                          sHowTo_Bag,                 sTerms_Bag,                 NULL,                    NULL, // HELPCONTEXT_BAG
-    NULL,                          sHowTo_TrainerCardFront,    sTerms_TrainerCardFront,    NULL,                    NULL, // HELPCONTEXT_TRAINER_CARD_FRONT
-    NULL,                          sHowTo_TrainerCardBack,     NULL,                       NULL,                    NULL, // HELPCONTEXT_TRAINER_CARD_BACK
-    NULL,                          sHowTo_Save,                sTerms_Save,                NULL,                    NULL, // HELPCONTEXT_SAVE
-    NULL,                          sHowTo_Options,             sTerms_Options,             NULL,                    NULL, // HELPCONTEXT_OPTIONS
-    sWhatToDo_PlayersHouse,        NULL,                       NULL,                       sAboutGame_PlayersHouse, NULL, // HELPCONTEXT_PLAYERS_HOUSE
-    sWhatToDo_OaksLab,             sHowTo_OaksLab,             sTerms_OaksLab,             NULL,                    NULL, // HELPCONTEXT_OAKS_LAB
-    sWhatToDo_PokeCenter,          sHowTo_PokeCenter,          sTerms_PokeCenter,          sAboutGame_PokeCenter,   NULL, // HELPCONTEXT_POKECENTER
-    sWhatToDo_Mart,                sHowTo_Mart,                sTerms_Mart,                NULL,                    NULL, // HELPCONTEXT_MART
-    sWhatToDo_Gym,                 sHowTo_Gym,                 sTerms_Gym,                 NULL,                    sTypeMatchups_Gym, // HELPCONTEXT_GYM
-    sWhatToDo_Indoors,             sHowTo_Indoors,             sTerms_Indoors,             NULL,                    NULL, // HELPCONTEXT_INDOORS
-    sWhatToDo_Overworld,           sHowTo_Overworld,           sTerms_Overworld,           NULL,                    NULL, // HELPCONTEXT_OVERWORLD
-    sWhatToDo_Dungeon,             sHowTo_Dungeon,             sTerms_Dungeon,             NULL,                    NULL, // HELPCONTEXT_DUNGEON
-    sWhatToDo_Surfing,             sHowTo_Surfing,             sTerms_Surfing,             NULL,                    NULL, // HELPCONTEXT_SURFING
-    sWhatToDo_WildBattle,          sHowTo_WildBattle,          sTerms_WildBattle,          NULL,                    sTypeMatchups_WildBattle, // HELPCONTEXT_WILD_BATTLE
-    sWhatToDo_TrainerBattleSingle, sHowTo_TrainerBattleSingle, sTerms_TrainerBattleSingle, NULL,                    sTypeMatchups_TrainerBattleSingle, // HELPCONTEXT_TRAINER_BATTLE_SINGLE
-    sWhatToDo_TrainerBattleDouble, sHowTo_TrainerBattleDouble, sTerms_TrainerBattleDouble, NULL,                    sTypeMatchups_TrainerBattleDouble, // HELPCONTEXT_TRAINER_BATTLE_DOUBLE
-    sWhatToDo_SafariBattle,        sHowTo_SafariBattle,        sTerms_SafariBattle,        NULL,                    sTypeMatchups_SafariBattle, // HELPCONTEXT_SAFARI_BATTLE
-    NULL,                          sHowTo_PC,                  NULL,                       NULL,                    NULL, // HELPCONTEXT_PC
-    NULL,                          sHowTo_BillsPC,             NULL,                       NULL,                    NULL, // HELPCONTEXT_BILLS_PC
-    NULL,                          sHowTo_PlayersPCItems,      NULL,                       NULL,                    NULL, // HELPCONTEXT_PLAYERS_PC_ITEMS
-    NULL,                          sHowTo_PlayersPCMailbox,    NULL,                       NULL,                    NULL, // HELPCONTEXT_PLAYERS_PC_MAILBOX
-    NULL,                          sHowTo_PCMisc,              NULL,                       NULL,                    NULL, // HELPCONTEXT_PC_MISC
-    NULL,                          sHowTo_BedroomPC,           NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC
-    NULL,                          sHowTo_BedroomPCItems,      NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC_ITEMS
-    NULL,                          sHowTo_BedroomPCMailbox,    NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC_MAILBOX
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_POKEDEX
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PARTY_MENU
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_POKEMON_INFO
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_POKEMON_SKILLS
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_POKEMON_MOVES
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_BAG
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_TRAINER_CARD_FRONT
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_TRAINER_CARD_BACK
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_SAVE
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_OPTIONS
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PLAYERS_HOUSE
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_OAKS_LAB
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_POKECENTER
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_MART
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_GYM
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_INDOORS
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_OVERWORLD
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_DUNGEON
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_SURFING
+    sWhatToDo_WildBattle,          sHowTo_WildBattle,          sTerms_WildBattle,          NULL,                    NULL, // HELPCONTEXT_WILD_BATTLE
+    sWhatToDo_TrainerBattleSingle, sHowTo_TrainerBattleSingle, sTerms_TrainerBattleSingle, NULL,                    NULL, // HELPCONTEXT_TRAINER_BATTLE_SINGLE
+    sWhatToDo_TrainerBattleDouble, sHowTo_TrainerBattleDouble, sTerms_TrainerBattleDouble, NULL,                    NULL, // HELPCONTEXT_TRAINER_BATTLE_DOUBLE
+    sWhatToDo_SafariBattle,        sHowTo_SafariBattle,        sTerms_SafariBattle,        NULL,                    NULL, // HELPCONTEXT_SAFARI_BATTLE
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PC
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_BILLS_PC
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PLAYERS_PC_ITEMS
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PLAYERS_PC_MAILBOX
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_PC_MISC
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC_ITEMS
+    NULL,                          NULL,                       NULL,                       NULL,                    NULL, // HELPCONTEXT_BEDROOM_PC_MAILBOX
     NULL,                          NULL,                       NULL,                       NULL,                    NULL  // HELPCONTEXT_UNUSED
 };
 
@@ -1669,40 +1669,40 @@ static const u8 sHelpSystemContextTopicOrder[TOPIC_COUNT] = {
 
 static const bool8 sHelpSystemContextTopicFlags[HELPCONTEXT_COUNT + 1][TOPIC_COUNT] = {
     [HELPCONTEXT_NONE]                  = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_TITLE_SCREEN]          = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE,  TRUE, FALSE,  TRUE),
+    [HELPCONTEXT_TITLE_SCREEN]          = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
     [HELPCONTEXT_NEW_GAME]              = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE,  TRUE, FALSE,  TRUE),
     [HELPCONTEXT_NAMING_SCREEN]         = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE,  TRUE, FALSE,  TRUE),
-    [HELPCONTEXT_POKEDEX]               = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_PARTY_MENU]            = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_POKEMON_INFO]          = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_POKEMON_SKILLS]        = CONTEXT_TOPIC_FLAGS(FALSE, FALSE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_POKEMON_MOVES]         = CONTEXT_TOPIC_FLAGS(FALSE, FALSE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_BAG]                   = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_TRAINER_CARD_FRONT]    = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_TRAINER_CARD_BACK]     = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_SAVE]                  = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_OPTIONS]               = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_PLAYERS_HOUSE]         = CONTEXT_TOPIC_FLAGS( TRUE, FALSE, FALSE,  TRUE, FALSE,  TRUE),
-    [HELPCONTEXT_OAKS_LAB]              = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_POKECENTER]            = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE,  TRUE, FALSE,  TRUE),
-    [HELPCONTEXT_MART]                  = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_GYM]                   = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE,  TRUE,  TRUE),
-    [HELPCONTEXT_INDOORS]               = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_OVERWORLD]             = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_DUNGEON]               = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_SURFING]               = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_WILD_BATTLE]           = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE,  TRUE,  TRUE),
-    [HELPCONTEXT_TRAINER_BATTLE_SINGLE] = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE,  TRUE,  TRUE),
-    [HELPCONTEXT_TRAINER_BATTLE_DOUBLE] = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE,  TRUE,  TRUE),
-    [HELPCONTEXT_SAFARI_BATTLE]         = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE,  TRUE,  TRUE),
-    [HELPCONTEXT_PC]                    = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_BILLS_PC]              = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_PLAYERS_PC_ITEMS]      = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_PLAYERS_PC_MAILBOX]    = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_PC_MISC]               = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_BEDROOM_PC]            = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_BEDROOM_PC_ITEMS]      = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
-    [HELPCONTEXT_BEDROOM_PC_MAILBOX]    = CONTEXT_TOPIC_FLAGS(FALSE,  TRUE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_POKEDEX]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PARTY_MENU]            = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_POKEMON_INFO]          = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_POKEMON_SKILLS]        = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_POKEMON_MOVES]         = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_BAG]                   = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_TRAINER_CARD_FRONT]    = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_TRAINER_CARD_BACK]     = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_SAVE]                  = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_OPTIONS]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PLAYERS_HOUSE]         = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_OAKS_LAB]              = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_POKECENTER]            = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_MART]                  = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_GYM]                   = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_INDOORS]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_OVERWORLD]             = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_DUNGEON]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_SURFING]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_WILD_BATTLE]           = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_TRAINER_BATTLE_SINGLE] = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_TRAINER_BATTLE_DOUBLE] = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_SAFARI_BATTLE]         = CONTEXT_TOPIC_FLAGS( TRUE,  TRUE,  TRUE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PC]                    = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_BILLS_PC]              = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PLAYERS_PC_ITEMS]      = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PLAYERS_PC_MAILBOX]    = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_PC_MISC]               = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_BEDROOM_PC]            = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_BEDROOM_PC_ITEMS]      = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
+    [HELPCONTEXT_BEDROOM_PC_MAILBOX]    = CONTEXT_TOPIC_FLAGS(FALSE, FALSE, FALSE, FALSE, FALSE,  TRUE),
     [HELPCONTEXT_UNUSED]                = {},
     [HELPCONTEXT_COUNT]                 = {}
 };
@@ -1777,6 +1777,19 @@ void SetHelpContext(u8 contextId)
         sHelpSystemContextId = contextId;
         break;
     }
+}
+
+bool8 HelpSystem_CurrentContextHasTopics(void)
+{
+    u8 i;
+
+    for (i = 0; i < TOPIC_COUNT; i++)
+    {
+        if (sHelpSystemContextTopicOrder[i] != TOPIC_EXIT
+         && sHelpSystemContextTopicFlags[sHelpSystemContextId][sHelpSystemContextTopicOrder[i]] == TRUE)
+            return TRUE;
+    }
+    return FALSE;
 }
 
 void Script_SetHelpContext(void)
