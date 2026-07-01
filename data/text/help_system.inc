@@ -1154,7 +1154,7 @@ Help_Text_Sound::
 	.string "SOUND$"
 
 Help_Text_ButtonMode::
-	.string "BUTTON MODE$"
+	.string "HELP$"
 
 Help_Text_Frame::
 	.string "FRAME$"
@@ -1415,13 +1415,9 @@ Help_Text_DefineSound::
 	.string "STEREO sound output.$"
 
 Help_Text_DefineButtonMode::
-	.string "Set to “HELP” to display help messages\n"
-	.string "by pressing the L or R Button.\l"
-	.string "Set to “LR” to enable the switching\l"
-	.string "of the POKéDEX pages and BAG POCKETS\l"
-	.string "using the L and R Buttons.\l"
-	.string "Set to “L=A” to make the L Button\l"
-	.string "work the same as the A Button.$"
+	.string "HELP opens TEACHY TV for quick\n"
+	.string "lessons on catching, battling,\l"
+	.string "training, status, and types.$"
 
 Help_Text_DefineFrame::
 	.string "You may choose the design of the frame\n"
@@ -1878,4 +1874,3 @@ Help_Text_TypeMatchupOwnPokemonBug::
 	.string "Effect of foe's move on own POKéMON:\p"
 	.string "   {CIRCLE_DOT}: FIRE, FLYING, ROCK\p"
 	.string "   {TRIANGLE}: GRASS, FIGHTING, GROUND$"
-

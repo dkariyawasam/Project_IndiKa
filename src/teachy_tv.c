@@ -33,8 +33,11 @@ struct TeachyTvCtrlBlk
     MainCallback callback;
     u8 mode;
     u8 whichScript;
+    u8 menuMode;
     u16 scrollOffset;
     u16 selectedRow;
+    u16 lessonScrollOffset;
+    u16 lessonSelectedRow;
 };
 
 struct TeachyTvBuf
@@ -82,6 +85,10 @@ static void TeachyTvSetupBg(void);
 static void TeachyTvLoadGraphic(void);
 static void TeachyTvPostBattleFadeControl(u8);
 static void TeachyTvOptionListController(u8);
+static u8 TeachyTvSetupMainWindow(void);
+static u8 TeachyTvSetupLessonWindow(void);
+static void TeachyTvOpenLessonSubmenu(u8 taskId, u8 lesson);
+static void TeachyTvReturnToMainMenuFromSubmenu(u8 taskId);
 static void TeachyTvAudioByInput(s32, bool8, struct ListMenu *);
 static void TeachyTvQuitFadeControlAndTaskDel(u8 taskId);
 static void TeachyTvRenderMsgAndSwitchClusterFuncs(u8 taskId);
@@ -168,8 +175,16 @@ static const struct WindowTemplate sWindowTemplates[] =
 static const struct ListMenuItem sListMenuItems[] = 
 {
     {
+        .label = gTeachyTvString_CatchPkmn,
+        .index = TTVSCR_CATCHING
+    },
+    {
         .label = gTeachyTvString_TeachBattle,
         .index = TTVSCR_BATTLE
+    },
+    {
+        .label = gTeachyTvString_Training,
+        .index = TTVSCR_TRAINING
     },
     {
         .label = gTeachyTvString_StatusProblems,
@@ -178,18 +193,6 @@ static const struct ListMenuItem sListMenuItems[] =
     {
         .label = gTeachyTvString_TypeMatchups,
         .index = TTVSCR_MATCHUPS
-    },
-    {
-        .label = gTeachyTvString_CatchPkmn,
-        .index = TTVSCR_CATCHING
-    },
-    {
-        .label = gTeachyTvString_AboutTMs,
-        .index = TTVSCR_TMS
-    },
-    {
-        .label = gTeachyTvString_RegisterItem,
-        .index = TTVSCR_REGISTER
     },
 
     {
@@ -201,8 +204,16 @@ static const struct ListMenuItem sListMenuItems[] =
 static const struct ListMenuItem sListMenuItems_NoTMCase[] = 
 {
     {
+        .label = gTeachyTvString_CatchPkmn,
+        .index = TTVSCR_CATCHING
+    },
+    {
         .label = gTeachyTvString_TeachBattle,
         .index = TTVSCR_BATTLE
+    },
+    {
+        .label = gTeachyTvString_Training,
+        .index = TTVSCR_TRAINING
     },
     {
         .label = gTeachyTvString_StatusProblems,
@@ -213,8 +224,20 @@ static const struct ListMenuItem sListMenuItems_NoTMCase[] =
         .index = TTVSCR_MATCHUPS
     },
     {
-        .label = gTeachyTvString_CatchPkmn,
-        .index = TTVSCR_CATCHING
+        .label = gTeachyTvString_Cancel,
+        .index = -2
+    },
+};
+
+static const struct ListMenuItem sListMenuItems_Lesson[] =
+{
+    {
+        .label = gTeachyTvString_Demonstration,
+        .index = 0
+    },
+    {
+        .label = gTeachyTvString_Theory,
+        .index = 1
     },
     {
         .label = gTeachyTvString_Cancel,
@@ -227,7 +250,7 @@ static const struct ListMenuTemplate sListMenuTemplate =
     .items = sListMenuItems,
     .moveCursorFunc = NULL,
     .itemPrintFunc = NULL,
-    .totalItems = 7,
+    .totalItems = 6,
     .maxShowed = 6,
     .windowId = 0,
     .header_X = 0,
@@ -401,6 +424,101 @@ static void (* const sRegisterKeyItemScript[])(u8) =
     TTVcmd_End,
 };
 
+static void (* const sMatchupsTheoryScript[])(u8) =
+{
+    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
+    TTVcmd_ClearBg2TeachyTvGraphic,
+    TTVcmd_NpcMoveAndSetupTextPrinter,
+    TTVcmd_IdleIfTextPrinterIsActive,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_DudeTurnLeft,
+    TTVcmd_DudeMoveLeft,
+    TTVcmd_RenderAndRemoveBg1EndGraphic,
+    TTVcmd_End,
+};
+
+static void (* const sBattleTheoryScript[])(u8) =
+{
+    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
+    TTVcmd_ClearBg2TeachyTvGraphic,
+    TTVcmd_NpcMoveAndSetupTextPrinter,
+    TTVcmd_IdleIfTextPrinterIsActive,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_DudeTurnLeft,
+    TTVcmd_DudeMoveLeft,
+    TTVcmd_RenderAndRemoveBg1EndGraphic,
+    TTVcmd_End,
+};
+
+static void (* const sCatchingTheoryScript[])(u8) =
+{
+    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
+    TTVcmd_ClearBg2TeachyTvGraphic,
+    TTVcmd_NpcMoveAndSetupTextPrinter,
+    TTVcmd_IdleIfTextPrinterIsActive,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_DudeTurnLeft,
+    TTVcmd_DudeMoveLeft,
+    TTVcmd_RenderAndRemoveBg1EndGraphic,
+    TTVcmd_End,
+};
+
+static void (* const sStatusTheoryScript[])(u8) =
+{
+    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
+    TTVcmd_ClearBg2TeachyTvGraphic,
+    TTVcmd_NpcMoveAndSetupTextPrinter,
+    TTVcmd_IdleIfTextPrinterIsActive,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_DudeTurnLeft,
+    TTVcmd_DudeMoveLeft,
+    TTVcmd_RenderAndRemoveBg1EndGraphic,
+    TTVcmd_End,
+};
+
+static void (* const sTrainingScript[])(u8) =
+{
+    TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos,
+    TTVcmd_ClearBg2TeachyTvGraphic,
+    TTVcmd_NpcMoveAndSetupTextPrinter,
+    TTVcmd_IdleIfTextPrinterIsActive,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_TextPrinterSwitchStringByOptionChosen2,
+    TTVcmd_IdleIfTextPrinterIsActive2,
+    TTVcmd_EraseTextWindowIfKeyPressed,
+    TTVcmd_DudeTurnLeft,
+    TTVcmd_DudeMoveLeft,
+    TTVcmd_RenderAndRemoveBg1EndGraphic,
+    TTVcmd_End,
+};
+
 static void TeachyTvCallback(void)
 {
     RunTasks();
@@ -425,6 +543,9 @@ void InitTeachyTvController(u8 mode, MainCallback cb)
     {
         sStaticResources.scrollOffset = 0;
         sStaticResources.selectedRow = 0;
+        sStaticResources.lessonScrollOffset = 0;
+        sStaticResources.lessonSelectedRow = 0;
+        sStaticResources.menuMode = 0;
         sStaticResources.whichScript = TTVSCR_BATTLE;
     }
     if (mode == 1)
@@ -548,15 +669,21 @@ static void TeachyTvCreateAndRenderRbox(void)
 
 static u8 TeachyTvSetupWindow(void)
 {
+    if (sStaticResources.menuMode != 0)
+        return TeachyTvSetupLessonWindow();
+    return TeachyTvSetupMainWindow();
+}
+
+static u8 TeachyTvSetupMainWindow(void)
+{
     gMultiuseListMenuTemplate = sListMenuTemplate;
     gMultiuseListMenuTemplate.windowId = 1;
     gMultiuseListMenuTemplate.moveCursorFunc = TeachyTvAudioByInput;
     if (!CheckBagHasItem(ITEM_TM_CASE, 1))
     {
         gMultiuseListMenuTemplate.items = sListMenuItems_NoTMCase;
-        gMultiuseListMenuTemplate.totalItems = 5;
-        gMultiuseListMenuTemplate.maxShowed = 5;
-        gMultiuseListMenuTemplate.upText_Y = (gMultiuseListMenuTemplate.upText_Y + 8) & 0xF;
+        gMultiuseListMenuTemplate.totalItems = 6;
+        gMultiuseListMenuTemplate.maxShowed = 6;
     }
     return ListMenuInit(
                &gMultiuseListMenuTemplate,
@@ -565,8 +692,30 @@ static u8 TeachyTvSetupWindow(void)
     );
 }
 
+static u8 TeachyTvSetupLessonWindow(void)
+{
+    gMultiuseListMenuTemplate = sListMenuTemplate;
+    gMultiuseListMenuTemplate.windowId = 1;
+    gMultiuseListMenuTemplate.moveCursorFunc = TeachyTvAudioByInput;
+    gMultiuseListMenuTemplate.items = sListMenuItems_Lesson;
+    gMultiuseListMenuTemplate.totalItems = NELEMS(sListMenuItems_Lesson);
+    gMultiuseListMenuTemplate.maxShowed = NELEMS(sListMenuItems_Lesson);
+    gMultiuseListMenuTemplate.upText_Y = (gMultiuseListMenuTemplate.upText_Y + 8) & 0xF;
+    return ListMenuInit(
+               &gMultiuseListMenuTemplate,
+               sStaticResources.lessonScrollOffset,
+               sStaticResources.lessonSelectedRow
+    );
+}
+
 static void TeachyTvSetupScrollIndicatorArrowPair(void)
 {
+    if (sStaticResources.menuMode != 0)
+    {
+        sResources->scrollIndicatorArrowPairId = 0xFF;
+        return;
+    }
+
     if (!CheckBagHasItem(ITEM_TM_CASE, 1))
     {
         struct TeachyTvBuf * temp = sResources;
@@ -719,7 +868,10 @@ static void TeachyTvOptionListController(u8 taskId)
     if (!gPaletteFade.active)
     {
         input = ListMenu_ProcessInput(data[0]);
-        ListMenuGetScrollAndRow(data[0], &sStaticResources.scrollOffset, &sStaticResources.selectedRow);
+        if (sStaticResources.menuMode != 0)
+            ListMenuGetScrollAndRow(data[0], &sStaticResources.lessonScrollOffset, &sStaticResources.lessonSelectedRow);
+        else
+            ListMenuGetScrollAndRow(data[0], &sStaticResources.scrollOffset, &sStaticResources.selectedRow);
         if ((JOY_NEW(SELECT_BUTTON) && sStaticResources.callback != CB2_BagMenuFromStartMenu))
         {
             PlaySE(SE_SELECT);
@@ -733,12 +885,67 @@ static void TeachyTvOptionListController(u8 taskId)
                 break;
             case -2:
                 PlaySE(SE_SELECT);
-                TeachyTvQuitBeginFade(taskId);
+                if (sStaticResources.menuMode != 0)
+                    TeachyTvReturnToMainMenuFromSubmenu(taskId);
+                else
+                    TeachyTvQuitBeginFade(taskId);
                 break;
             default:
                 PlaySE(SE_SELECT);
+                if (sStaticResources.menuMode != 0)
+                {
+                    switch (sStaticResources.lessonSelectedRow)
+                    {
+                    case 0:
+                        if (sStaticResources.menuMode == 1)
+                            input = TTVSCR_BATTLE;
+                        else if (sStaticResources.menuMode == 2)
+                            input = TTVSCR_MATCHUPS;
+                        else if (sStaticResources.menuMode == 3)
+                            input = TTVSCR_CATCHING;
+                        else
+                            input = TTVSCR_STATUS;
+                        break;
+                    case 1:
+                        if (sStaticResources.menuMode == 1)
+                            input = TTVSCR_BATTLE_THEORY;
+                        else if (sStaticResources.menuMode == 2)
+                            input = TTVSCR_MATCHUPS_THEORY;
+                        else if (sStaticResources.menuMode == 3)
+                            input = TTVSCR_CATCHING_THEORY;
+                        else
+                            input = TTVSCR_STATUS_THEORY;
+                        break;
+                    default:
+                        TeachyTvReturnToMainMenuFromSubmenu(taskId);
+                        return;
+                    }
+                }
+                if (sStaticResources.menuMode == 0 && input == TTVSCR_BATTLE)
+                {
+                    TeachyTvOpenLessonSubmenu(taskId, 1);
+                    break;
+                }
+                if (sStaticResources.menuMode == 0 && input == TTVSCR_STATUS)
+                {
+                    TeachyTvOpenLessonSubmenu(taskId, 4);
+                    break;
+                }
+                if (sStaticResources.menuMode == 0 && input == TTVSCR_MATCHUPS)
+                {
+                    TeachyTvOpenLessonSubmenu(taskId, 2);
+                    break;
+                }
+                if (sStaticResources.menuMode == 0 && input == TTVSCR_CATCHING)
+                {
+                    TeachyTvOpenLessonSubmenu(taskId, 3);
+                    break;
+                }
                 sStaticResources.whichScript = input;
-                DestroyListMenuTask(data[0], &sStaticResources.scrollOffset, &sStaticResources.selectedRow);
+                if (sStaticResources.menuMode != 0)
+                    DestroyListMenuTask(data[0], &sStaticResources.lessonScrollOffset, &sStaticResources.lessonSelectedRow);
+                else
+                    DestroyListMenuTask(data[0], &sStaticResources.scrollOffset, &sStaticResources.selectedRow);
                 TeachyTvClearWindowRegs();
                 ClearWindowTilemap(1);
                 ScheduleBgCopyTilemapToVram(0);
@@ -750,6 +957,34 @@ static void TeachyTvOptionListController(u8 taskId)
             }
         }
     }
+}
+
+static void TeachyTvOpenLessonSubmenu(u8 taskId, u8 lesson)
+{
+    s16 *data = gTasks[taskId].data;
+
+    DestroyListMenuTask(data[0], &sStaticResources.scrollOffset, &sStaticResources.selectedRow);
+    TeachyTvRemoveScrollIndicatorArrowPair();
+    FillWindowPixelBuffer(1, 0);
+    sStaticResources.menuMode = lesson;
+    sStaticResources.lessonScrollOffset = 0;
+    sStaticResources.lessonSelectedRow = 0;
+    data[0] = TeachyTvSetupWindow();
+    PutWindowTilemap(1);
+    ScheduleBgCopyTilemapToVram(0);
+}
+
+static void TeachyTvReturnToMainMenuFromSubmenu(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    DestroyListMenuTask(data[0], &sStaticResources.lessonScrollOffset, &sStaticResources.lessonSelectedRow);
+    FillWindowPixelBuffer(1, 0);
+    sStaticResources.menuMode = 0;
+    data[0] = TeachyTvSetupWindow();
+    PutWindowTilemap(1);
+    TeachyTvSetupScrollIndicatorArrowPair();
+    ScheduleBgCopyTilemapToVram(0);
 }
 
 static void TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos(u8 taskId)
@@ -829,6 +1064,11 @@ static void TeachyTvRenderMsgAndSwitchClusterFuncs(u8 taskId)
             sCatchingScript,
             sTMsScript,
             sRegisterKeyItemScript,
+            sMatchupsTheoryScript,
+            sBattleTheoryScript,
+            sCatchingTheoryScript,
+            sStatusTheoryScript,
+            sTrainingScript,
         };
         void (*const *cluster)(u8) = array[sStaticResources.whichScript];
         cluster[data[3]](taskId);
@@ -845,6 +1085,11 @@ static void TTVcmd_TextPrinterSwitchStringByOptionChosen(u8 taskId)
         gTeachyTvText_CatchingScript1,
         gTeachyTvText_TMsScript1,
         gTeachyTvText_RegisterScript1,
+        gTeachyTvText_MatchupsTheoryScript1,
+        gTeachyTvText_BattleTheoryScript1,
+        gTeachyTvText_CatchingTheoryScript1,
+        gTeachyTvText_StatusTheoryScript1,
+        gTeachyTvText_TrainingScript1,
     };
     TeachyTvInitTextPrinter(texts[sStaticResources.whichScript]);
     ++data[3];
@@ -861,6 +1106,11 @@ static void TTVcmd_TextPrinterSwitchStringByOptionChosen2(u8 taskId)
         gTeachyTvText_CatchingScript2,
         gTeachyTvText_TMsScript2,
         gTeachyTvText_RegisterScript2,
+        gTeachyTvText_MatchupsTheoryScript2,
+        gTeachyTvText_BattleTheoryScript2,
+        gTeachyTvText_CatchingTheoryScript2,
+        gTeachyTvText_StatusTheoryScript2,
+        gTeachyTvText_TrainingScript2,
     };
     TeachyTvInitTextPrinter(texts[sStaticResources.whichScript]);
     ++data[3];

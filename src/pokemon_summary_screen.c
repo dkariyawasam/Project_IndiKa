@@ -1081,7 +1081,7 @@ bool32 IsPageFlipInput(u8 direction)
         if (JOY_NEW(DPAD_RIGHT))
             return TRUE;
 
-        if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR && JOY_NEW(R_BUTTON))
+        if (OPTIONS_BUTTON_MODE_USES_LR(gSaveBlock2Ptr->optionsButtonMode) && JOY_NEW(R_BUTTON))
             return TRUE;
 
         break;
@@ -1089,7 +1089,7 @@ bool32 IsPageFlipInput(u8 direction)
         if (JOY_NEW(DPAD_LEFT))
             return TRUE;
 
-        if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR && JOY_NEW(L_BUTTON))
+        if (OPTIONS_BUTTON_MODE_USES_LR(gSaveBlock2Ptr->optionsButtonMode) && JOY_NEW(L_BUTTON))
             return TRUE;
 
         break;
