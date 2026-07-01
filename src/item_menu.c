@@ -2198,7 +2198,6 @@ void InitPokedudeBag(u8 a0)
     BackUpPlayerBag();
     AddBagItem(ITEM_POTION, 1);
     AddBagItem(ITEM_ANTIDOTE, 1);
-    AddBagItem(ITEM_TEACHY_TV, 1);
     AddBagItem(ITEM_TM_CASE, 1);
     AddBagItem(ITEM_POKE_BALL, 5);
     AddBagItem(ITEM_GREAT_BALL, 1);
@@ -2252,7 +2251,7 @@ static void Task_Bag_TeachyTvRegister(u8 taskId)
             PlaySE(SE_SELECT);
             bag_menu_print_cursor_(data[0], 2);
             Bag_FillMessageBoxWithPalette(1);
-            gSpecialVar_ItemId = ITEM_TEACHY_TV;
+            gSpecialVar_ItemId = ITEM_TM_CASE;
             OpenContextMenu(taskId);
             break;
         case 306:

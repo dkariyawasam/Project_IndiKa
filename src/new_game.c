@@ -139,7 +139,6 @@ void NewGameInitData(void)
     ClearRoamerData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
-    AddBagItem(ITEM_TEACHY_TV, 1);
     NewGameInitPCItems();
     ClearEnigmaBerries();
     InitEasyChatPhrases();
