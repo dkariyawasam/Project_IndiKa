@@ -692,7 +692,7 @@ u16 GetStdWindowBaseTileNum(void)
 void DrawHelpMessageWindowWithText(const u8 * text)
 {
     LoadHelpMessageWindowGfx(CreateHelpMessageWindow(), DLG_WINDOW_BASE_TILE_NUM, BG_PLTT_ID(DLG_WINDOW_PALETTE_NUM));
-    PrintTextOnHelpMessageWindow(text, 2);
+    PrintTextOnHelpMessageWindow(text, COPYWIN_FULL);
 }
 
 void DestroyHelpMessageWindow_(void)
