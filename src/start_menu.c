@@ -35,6 +35,7 @@
 #include "option_menu.h"
 #include "save_menu_util.h"
 #include "help_system.h"
+#include "teachy_tv.h"
 #include "constants/songs.h"
 #include "constants/field_weather.h"
 #include "sloopsvc.h"
@@ -48,6 +49,7 @@ enum StartMenuOption
     STARTMENU_QUEST,
     STARTMENU_PLAYER,
     STARTMENU_SAVE,
+    STARTMENU_SETTINGS,
     STARTMENU_OPTION,
     STARTMENU_EXIT,
     STARTMENU_RETIRE,
@@ -75,6 +77,13 @@ static EWRAM_DATA u8 sRadialStartMenuButtonSpriteIds[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuSpriteIds[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
 static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
+static EWRAM_DATA u8 sStartMenuReturnItem = 0xFF;
+static EWRAM_DATA u8 sStartMenuSaveShortcutWindowId = WINDOW_NONE;
+static EWRAM_DATA u8 sStartMenuSettingsShortcutWindowId = WINDOW_NONE;
+static EWRAM_DATA u8 sStartMenuCenterLabelWindowId = WINDOW_NONE;
+static EWRAM_DATA u16 sStartMenuSaveShortcutBgBackup[6 * 2] = {};
+static EWRAM_DATA u16 sStartMenuSettingsShortcutBgBackup[8 * 2] = {};
+static EWRAM_DATA u16 sStartMenuCenterLabelBgBackup[9 * 2] = {};
 static EWRAM_DATA u8 sSafariZoneStatsWindowId = 0;
 static ALIGNED(4) EWRAM_DATA u8 sSaveStatsWindowId = 0;
 static EWRAM_DATA bool8 sSaveMenuDisabledHelpSystem = FALSE;
@@ -85,6 +94,8 @@ static bool8 sSaveDialogIsPrinting;
 
 static const u8 gText_MenuQuest[] = _("LOGBOOK");
 static const u8 sStartMenuDesc_Quest[] = _("Review your FIELD AIDE research,\nrumours, and active assignments.");
+static const u8 sText_MenuSettingsShortcut[] = _("SETTINGS{R_BUTTON}");
+static const u8 sText_MenuCard[] = _("CARD");
 
 static bool8 StartMenuQuestCallback(void);
 static void SetUpStartMenu_Link(void);
@@ -99,6 +110,7 @@ static bool8 StartMenuPokemonCallback(void);
 static bool8 StartMenuBagCallback(void);
 static bool8 StartMenuPlayerCallback(void);
 static bool8 StartMenuSaveCallback(void);
+static bool8 StartMenuSettingsCallback(void);
 static bool8 StartMenuOptionCallback(void);
 static bool8 StartMenuExitCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
@@ -111,6 +123,16 @@ static void SaveMenu_RestoreHelpSystem(void);
 static void CreateRadialStartMenu(void);
 static void DestroyRadialStartMenuWindows(bool8 copyToVram);
 static void DrawRadialStartMenu(void);
+static void CreateStartMenuShortcutWindows(void);
+static void DestroyStartMenuShortcutWindows(bool8 copyToVram);
+static void PrintStartMenuShortcutWindow(u8 windowId, const u8 *text);
+static void CreateStartMenuCenterLabelWindow(void);
+static void DestroyStartMenuCenterLabelWindow(bool8 copyToVram);
+static void PrintStartMenuCenterLabel(void);
+static const u8 *GetStartMenuCenterLabelText(u8 menuItem);
+static bool8 StartMenuHasItem(u8 menuItem);
+static void SaveStartMenuBg0TilemapRect(u16 *dest, u8 left, u8 top, u8 width, u8 height);
+static void RestoreStartMenuBg0TilemapRect(const u16 *src, u8 left, u8 top, u8 width, u8 height, bool8 copyToVram);
 static void CreateRadialStartMenuSprites(void);
 static void DestroyRadialStartMenuSprites(void);
 static void UpdateRadialStartMenuSpriteStates(void);
@@ -119,8 +141,11 @@ static u8 FindNextRadialStartMenuSlot(s8 step);
 static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy);
 static u8 GetRadialStartMenuWindowLeft(u8 slot);
 static u8 GetRadialStartMenuWindowTop(u8 slot);
+static u8 GetRadialStartMenuWindowWidth(u8 slot);
 static s16 GetRadialStartMenuSpriteX(u8 slot);
 static s16 GetRadialStartMenuSpriteY(u8 slot);
+static void SetStartMenuReturnItem(u8 menuItem);
+static bool8 IsSelectableRadialStartMenuSlot(u8 slot);
 static void RefreshStartMenuHelpText(void);
 static u8 RunSaveDialogCB(void);
 static void task50_save_game(u8 taskId);
@@ -151,6 +176,7 @@ static const struct MenuAction sStartMenuActionTable[] = {
     [STARTMENU_QUEST]   = { gText_MenuQuest,   {.u8_void = StartMenuQuestCallback} },
     [STARTMENU_PLAYER]  = { gText_MenuPlayer,  {.u8_void = StartMenuPlayerCallback} },
     [STARTMENU_SAVE]    = { gText_MenuSave,    {.u8_void = StartMenuSaveCallback} },
+    [STARTMENU_SETTINGS] = { sText_MenuSettingsShortcut, {.u8_void = StartMenuSettingsCallback} },
     [STARTMENU_OPTION]  = { gText_MenuOption,  {.u8_void = StartMenuOptionCallback} },
     [STARTMENU_EXIT]    = { gText_MenuExit,    {.u8_void = StartMenuExitCallback} },
     [STARTMENU_RETIRE]  = { gText_MenuRetire,  {.u8_void = StartMenuSafariZoneRetireCallback} },
@@ -174,6 +200,7 @@ static const u8 *const sStartMenuDescPointers[] = {
     sStartMenuDesc_Quest,
     gStartMenuDesc_Player,
     gStartMenuDesc_Save,
+    gStartMenuDesc_Settings,
     gStartMenuDesc_Option,
     gStartMenuDesc_Exit,
     gStartMenuDesc_Retire,
@@ -220,8 +247,8 @@ static ALIGNED(2) const u8 sTextColor_LocationHeader[] = { 1, 6, 7 };
 static ALIGNED(2) const u8 sTextColor_RadialMenuNormal[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
 static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY };
 
-static const s8 sRadialStartMenuWindowXOffsets[] = { -40, 32, -16, -16, -40, -64, -64, -72 };
-static const s8 sRadialStartMenuWindowYOffsets[] = { -19, -47, -7, 17, 29, 17, -7, -47 };
+static const s8 sRadialStartMenuWindowXOffsets[] = { -40, -16, -16, -16, -40, -64, -64, -64 };
+static const s8 sRadialStartMenuWindowYOffsets[] = { -20, -10, -6, 20, 32, 20, -6, -10 };
 static const s8 sRadialStartMenuSlotXs[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
 static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 
@@ -244,7 +271,7 @@ static const u32 sRadialStartMenuCardIconGfx[] = INCBIN_U32("graphics/start_menu
 static const u32 sRadialStartMenuBagIconGfx[] = INCBIN_U32("graphics/start_menu/bag.4bpp.lz");
 
 static const struct OamData sOamData_RadialStartMenuIcon = {
-    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .affineMode = ST_OAM_AFFINE_OFF,
     .shape = SPRITE_SHAPE(32x32),
     .size = SPRITE_SIZE(32x32),
     .priority = 0
@@ -422,6 +449,7 @@ static void SetUpStartMenu_NormalField(void)
         AppendToStartMenuItems(STARTMENU_QUEST);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
+    AppendToStartMenuItems(STARTMENU_SETTINGS);
     AppendToStartMenuItems(STARTMENU_OPTION);
 }
 
@@ -432,6 +460,7 @@ static void SetUpStartMenu_SafariZone(void)
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
+    AppendToStartMenuItems(STARTMENU_SETTINGS);
     AppendToStartMenuItems(STARTMENU_OPTION);
 }
 
@@ -440,6 +469,7 @@ static void SetUpStartMenu_Link(void)
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER2);
+    AppendToStartMenuItems(STARTMENU_SETTINGS);
     AppendToStartMenuItems(STARTMENU_OPTION);
 }
 
@@ -448,6 +478,7 @@ static void SetUpStartMenu_UnionRoom(void)
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
+    AppendToStartMenuItems(STARTMENU_SETTINGS);
     AppendToStartMenuItems(STARTMENU_OPTION);
 }
 
@@ -506,18 +537,16 @@ static u8 GetRadialStartMenuPreferredSlot(u8 menuItem)
     case STARTMENU_POKEDEX:
         return 0;
     case STARTMENU_POKEMON:
-        return 3;
-    case STARTMENU_BAG:
-        return 2;
-    case STARTMENU_SAVE:
         return 7;
+    case STARTMENU_BAG:
+        return 1;
+    case STARTMENU_PLAYER:
+    case STARTMENU_PLAYER2:
+        return 5;
     case STARTMENU_OPTION:
         return 4;
     case STARTMENU_QUEST:
-        return 5;
-    case STARTMENU_PLAYER:
-    case STARTMENU_PLAYER2:
-        return 6;
+        return 3;
     case STARTMENU_EXIT:
         return 1;
     case STARTMENU_RETIRE:
@@ -549,6 +578,8 @@ static void PopulateRadialStartMenuSlots(void)
     InitRadialStartMenuSlots();
     for (i = 0; i < sNumStartMenuItems; i++)
     {
+        if (sStartMenuOrder[i] == STARTMENU_SAVE || sStartMenuOrder[i] == STARTMENU_SETTINGS)
+            continue;
         preferredSlot = GetRadialStartMenuPreferredSlot(sStartMenuOrder[i]);
         for (slot = preferredSlot; sRadialStartMenuSlotToItem[slot] != 0xFF; slot = (slot + 1) & 7)
             ;
@@ -563,7 +594,7 @@ static u8 GetFirstPopulatedRadialStartMenuSlot(void)
 
     for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
     {
-        if (sRadialStartMenuSlotToItem[i] != 0xFF)
+        if (IsSelectableRadialStartMenuSlot(i))
             return i;
     }
     return 0;
@@ -573,9 +604,24 @@ static void SelectInitialRadialStartMenuSlot(void)
 {
     u8 i;
 
+    if (sStartMenuReturnItem != 0xFF)
+    {
+        for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
+        {
+            if (sRadialStartMenuSlotToItem[i] == sStartMenuReturnItem && IsSelectableRadialStartMenuSlot(i))
+            {
+                sRadialStartMenuCursorSlot = i;
+                sStartMenuCursorPos = sRadialStartMenuSlotToOrderIndex[i];
+                sStartMenuReturnItem = 0xFF;
+                return;
+            }
+        }
+        sStartMenuReturnItem = 0xFF;
+    }
+
     for (i = 0; i < NELEMS(sRadialStartMenuSlotToOrderIndex); i++)
     {
-        if (sRadialStartMenuSlotToOrderIndex[i] == sStartMenuCursorPos)
+        if (sRadialStartMenuSlotToOrderIndex[i] == sStartMenuCursorPos && IsSelectableRadialStartMenuSlot(i))
         {
             sRadialStartMenuCursorSlot = i;
             return;
@@ -591,6 +637,8 @@ static void PrintRadialStartMenuItem(u8 slot)
     u8 menuItem = sRadialStartMenuSlotToItem[slot];
     const u8 *colors;
     const u8 *text;
+    u8 fontId;
+    s32 windowWidth;
     s32 width;
     s32 x;
 
@@ -600,15 +648,17 @@ static void PrintRadialStartMenuItem(u8 slot)
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     DrawStdWindowFrame(windowId, FALSE);
 
-    colors = (slot == sRadialStartMenuCursorSlot) ? sTextColor_RadialMenuSelected : sTextColor_RadialMenuNormal;
+    colors = (slot == sRadialStartMenuCursorSlot && IsSelectableRadialStartMenuSlot(slot)) ? sTextColor_RadialMenuSelected : sTextColor_RadialMenuNormal;
     StringExpandPlaceholders(gStringVar4, sStartMenuActionTable[menuItem].text);
     text = gStringVar4;
 
-    width = GetStringWidth(FONT_NORMAL, text, 0);
-    x = (80 - width) / 2;
+    fontId = (menuItem == STARTMENU_SAVE || menuItem == STARTMENU_SETTINGS) ? FONT_SMALL : FONT_NORMAL;
+    windowWidth = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8;
+    width = GetStringWidth(fontId, text, 0);
+    x = (windowWidth - width) / 2;
     if (x < 0)
         x = 0;
-    AddTextPrinterParameterized3(windowId, FONT_NORMAL, x, 6, colors, 0xFF, text);
+    AddTextPrinterParameterized3(windowId, fontId, x, 6, colors, 0xFF, text);
     CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
@@ -621,6 +671,7 @@ static void DrawRadialStartMenu(void)
         if (sRadialStartMenuWindowIds[i] != WINDOW_NONE)
             PrintRadialStartMenuItem(i);
     }
+    PrintStartMenuCenterLabel();
 }
 
 static u8 GetClampedRadialStartMenuTileCoord(s16 pixelCoord, u8 maxTile)
@@ -636,22 +687,21 @@ static u8 GetClampedRadialStartMenuTileCoord(s16 pixelCoord, u8 maxTile)
 
 static u8 GetRadialStartMenuWindowLeft(u8 slot)
 {
-    u8 menuItem = sRadialStartMenuSlotToItem[slot];
-
-    if (menuItem == STARTMENU_SAVE)
-        return 0;
-    if (menuItem == STARTMENU_EXIT)
-        return 20;
+    if (sRadialStartMenuSlotToItem[slot] == STARTMENU_EXIT)
+        return 30 - GetRadialStartMenuWindowWidth(slot);
     return GetClampedRadialStartMenuTileCoord(DISPLAY_WIDTH / 2 + sRadialStartMenuWindowXOffsets[slot], 20);
 }
 
 static u8 GetRadialStartMenuWindowTop(u8 slot)
 {
-    u8 menuItem = sRadialStartMenuSlotToItem[slot];
-
-    if (menuItem == STARTMENU_SAVE || menuItem == STARTMENU_EXIT)
+    if (sRadialStartMenuSlotToItem[slot] == STARTMENU_EXIT)
         return 0;
     return GetClampedRadialStartMenuTileCoord(DISPLAY_HEIGHT / 2 + sRadialStartMenuWindowYOffsets[slot], 17);
+}
+
+static u8 GetRadialStartMenuWindowWidth(u8 slot)
+{
+    return 10;
 }
 
 static s16 GetRadialStartMenuSpriteX(u8 slot)
@@ -664,23 +714,35 @@ static s16 GetRadialStartMenuSpriteY(u8 slot)
     return DISPLAY_HEIGHT / 2 + sRadialStartMenuWindowYOffsets[slot] - 8;
 }
 
+static void SetStartMenuReturnItem(u8 menuItem)
+{
+    sStartMenuReturnItem = menuItem;
+}
+
+static bool8 IsSelectableRadialStartMenuSlot(u8 slot)
+{
+    u8 menuItem = sRadialStartMenuSlotToItem[slot];
+
+    return menuItem != 0xFF;
+}
+
 static void CreateRadialStartMenu(void)
 {
     u8 i;
 
+    ShowBg(0);
     PopulateRadialStartMenuSlots();
     SelectInitialRadialStartMenuSlot();
 
     for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
     {
-        if (sRadialStartMenuSlotToItem[i] == STARTMENU_SAVE
-         || sRadialStartMenuSlotToItem[i] == STARTMENU_EXIT)
+        if (sRadialStartMenuSlotToItem[i] == STARTMENU_EXIT)
         {
             struct WindowTemplate template = {
                 .bg = 0,
                 .tilemapLeft = GetRadialStartMenuWindowLeft(i),
                 .tilemapTop = GetRadialStartMenuWindowTop(i),
-                .width = 10,
+                .width = GetRadialStartMenuWindowWidth(i),
                 .height = 3,
                 .paletteNum = 15,
                 .baseBlock = 0x200 + (i * 0x20)
@@ -689,6 +751,8 @@ static void CreateRadialStartMenu(void)
             PutWindowTilemap(sRadialStartMenuWindowIds[i]);
         }
     }
+    CreateStartMenuShortcutWindows();
+    CreateStartMenuCenterLabelWindow();
     DrawRadialStartMenu();
     CreateRadialStartMenuSprites();
 }
@@ -698,6 +762,8 @@ static void DestroyRadialStartMenuWindows(bool8 copyToVram)
     u8 i;
 
     DestroyRadialStartMenuSprites();
+    DestroyStartMenuShortcutWindows(copyToVram);
+    DestroyStartMenuCenterLabelWindow(copyToVram);
 
     for (i = 0; i < NELEMS(sRadialStartMenuWindowIds); i++)
     {
@@ -708,6 +774,179 @@ static void DestroyRadialStartMenuWindows(bool8 copyToVram)
             sRadialStartMenuWindowIds[i] = WINDOW_NONE;
         }
     }
+}
+
+static void CreateStartMenuShortcutWindows(void)
+{
+    if (StartMenuHasItem(STARTMENU_SAVE))
+    {
+        struct WindowTemplate saveTemplate = {
+            .bg = 0,
+            .tilemapLeft = 0,
+            .tilemapTop = 0,
+            .width = 6,
+            .height = 2,
+            .paletteNum = 15,
+            .baseBlock = 0x220
+        };
+
+        sStartMenuSaveShortcutWindowId = AddWindow(&saveTemplate);
+        SaveStartMenuBg0TilemapRect(sStartMenuSaveShortcutBgBackup, saveTemplate.tilemapLeft, saveTemplate.tilemapTop, saveTemplate.width, saveTemplate.height);
+        PutWindowTilemap(sStartMenuSaveShortcutWindowId);
+        PrintStartMenuShortcutWindow(sStartMenuSaveShortcutWindowId, gText_MenuSave);
+    }
+
+    if (StartMenuHasItem(STARTMENU_SETTINGS))
+    {
+        struct WindowTemplate settingsTemplate = {
+            .bg = 0,
+            .tilemapLeft = 22,
+            .tilemapTop = 0,
+            .width = 8,
+            .height = 2,
+            .paletteNum = 15,
+            .baseBlock = 0x240
+        };
+
+        sStartMenuSettingsShortcutWindowId = AddWindow(&settingsTemplate);
+        SaveStartMenuBg0TilemapRect(sStartMenuSettingsShortcutBgBackup, settingsTemplate.tilemapLeft, settingsTemplate.tilemapTop, settingsTemplate.width, settingsTemplate.height);
+        PutWindowTilemap(sStartMenuSettingsShortcutWindowId);
+        PrintStartMenuShortcutWindow(sStartMenuSettingsShortcutWindowId, sText_MenuSettingsShortcut);
+    }
+}
+
+static void DestroyStartMenuShortcutWindows(bool8 copyToVram)
+{
+    if (sStartMenuSaveShortcutWindowId != WINDOW_NONE)
+    {
+        RestoreStartMenuBg0TilemapRect(sStartMenuSaveShortcutBgBackup, 0, 0, 6, 2, copyToVram);
+        RemoveWindow(sStartMenuSaveShortcutWindowId);
+        sStartMenuSaveShortcutWindowId = WINDOW_NONE;
+    }
+
+    if (sStartMenuSettingsShortcutWindowId != WINDOW_NONE)
+    {
+        RestoreStartMenuBg0TilemapRect(sStartMenuSettingsShortcutBgBackup, 22, 0, 8, 2, copyToVram);
+        RemoveWindow(sStartMenuSettingsShortcutWindowId);
+        sStartMenuSettingsShortcutWindowId = WINDOW_NONE;
+    }
+}
+
+static void PrintStartMenuShortcutWindow(u8 windowId, const u8 *text)
+{
+    s32 windowWidth = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8;
+    s32 width = GetStringWidth(FONT_SMALL, text, 0);
+    s32 x = (windowWidth - width) / 2;
+
+    if (x < 0)
+        x = 0;
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(TEXT_COLOR_DARK_GRAY));
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 2, sTextColor_RadialMenuSelected, 0xFF, text);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+}
+
+static void CreateStartMenuCenterLabelWindow(void)
+{
+    struct WindowTemplate template = {
+        .bg = 0,
+        .tilemapLeft = 17,
+        .tilemapTop = 9,
+        .width = 9,
+        .height = 2,
+        .paletteNum = 15,
+        .baseBlock = 0x260
+    };
+
+    sStartMenuCenterLabelWindowId = AddWindow(&template);
+    SaveStartMenuBg0TilemapRect(sStartMenuCenterLabelBgBackup, template.tilemapLeft, template.tilemapTop, template.width, template.height);
+    PutWindowTilemap(sStartMenuCenterLabelWindowId);
+    CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_MAP);
+}
+
+static void DestroyStartMenuCenterLabelWindow(bool8 copyToVram)
+{
+    if (sStartMenuCenterLabelWindowId != WINDOW_NONE)
+    {
+        RestoreStartMenuBg0TilemapRect(sStartMenuCenterLabelBgBackup, 17, 9, 9, 2, copyToVram);
+        RemoveWindow(sStartMenuCenterLabelWindowId);
+        sStartMenuCenterLabelWindowId = WINDOW_NONE;
+    }
+}
+
+static void PrintStartMenuCenterLabel(void)
+{
+    const u8 *text;
+    s32 windowWidth;
+    s32 width;
+    s32 x;
+
+    if (sStartMenuCenterLabelWindowId == WINDOW_NONE)
+        return;
+
+    text = GetStartMenuCenterLabelText(sRadialStartMenuSlotToItem[sRadialStartMenuCursorSlot]);
+    windowWidth = GetWindowAttribute(sStartMenuCenterLabelWindowId, WINDOW_WIDTH) * 8;
+    width = GetStringWidth(FONT_NORMAL, text, 0);
+    x = (windowWidth - width) / 2;
+    if (x < 0)
+        x = 0;
+
+    FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(TEXT_COLOR_DARK_GRAY));
+    AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 2, sTextColor_RadialMenuSelected, 0xFF, text);
+    CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_GFX);
+}
+
+static const u8 *GetStartMenuCenterLabelText(u8 menuItem)
+{
+    if (menuItem == STARTMENU_PLAYER || menuItem == STARTMENU_PLAYER2)
+        return sText_MenuCard;
+    return sStartMenuActionTable[menuItem].text;
+}
+
+static bool8 StartMenuHasItem(u8 menuItem)
+{
+    u8 i;
+
+    for (i = 0; i < sNumStartMenuItems; i++)
+    {
+        if (sStartMenuOrder[i] == menuItem)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+static void SaveStartMenuBg0TilemapRect(u16 *dest, u8 left, u8 top, u8 width, u8 height)
+{
+    u8 i;
+    u8 j;
+    const u16 *src = GetBgTilemapBuffer(0);
+
+    if (src == NULL)
+        return;
+
+    for (i = 0; i < height; i++)
+    {
+        for (j = 0; j < width; j++)
+            dest[i * width + j] = src[(top + i) * 32 + left + j];
+    }
+}
+
+static void RestoreStartMenuBg0TilemapRect(const u16 *src, u8 left, u8 top, u8 width, u8 height, bool8 copyToVram)
+{
+    u8 i;
+    u8 j;
+    u16 *dest = GetBgTilemapBuffer(0);
+
+    if (dest == NULL)
+        return;
+
+    for (i = 0; i < height; i++)
+    {
+        for (j = 0; j < width; j++)
+            dest[(top + i) * 32 + left + j] = src[i * width + j];
+    }
+
+    if (copyToVram == TRUE)
+        CopyBgTilemapBufferToVram(0);
 }
 
 static void CreateRadialStartMenuSprites(void)
@@ -739,6 +978,8 @@ static void CreateRadialStartMenuSprites(void)
             break;
         case STARTMENU_OPTION:
             needSettingsIcon = TRUE;
+            break;
+        case STARTMENU_SETTINGS:
             break;
         case STARTMENU_QUEST:
             needLogbookIcon = TRUE;
@@ -796,6 +1037,7 @@ static void CreateRadialStartMenuSprites(void)
         if (sRadialStartMenuSlotToItem[i] != 0xFF
          && sRadialStartMenuSlotToItem[i] != STARTMENU_EXIT
          && sRadialStartMenuSlotToItem[i] != STARTMENU_SAVE
+         && sRadialStartMenuSlotToItem[i] != STARTMENU_SETTINGS
          && sRadialStartMenuSlotToItem[i] != STARTMENU_POKEMON
          && sRadialStartMenuSlotToItem[i] != STARTMENU_BAG
          && sRadialStartMenuSlotToItem[i] != STARTMENU_OPTION
@@ -894,13 +1136,8 @@ static void UpdateRadialStartMenuSpriteStates(void)
 
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
     {
-        if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
-            StartSpriteAffineAnim(&gSprites[sRadialStartMenuButtonSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
         if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
-        {
             StartSpriteAnim(&gSprites[sRadialStartMenuSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
-            StartSpriteAffineAnim(&gSprites[sRadialStartMenuSpriteIds[i]], i == sRadialStartMenuCursorSlot ? 1 : 0);
-        }
     }
 }
 
@@ -913,7 +1150,7 @@ static void UpdateRadialStartMenuSelection(u8 newSlot)
 {
     u8 oldSlot;
 
-    if (newSlot == sRadialStartMenuCursorSlot || sRadialStartMenuSlotToItem[newSlot] == 0xFF)
+    if (newSlot == sRadialStartMenuCursorSlot || !IsSelectableRadialStartMenuSlot(newSlot))
         return;
 
     oldSlot = sRadialStartMenuCursorSlot;
@@ -921,6 +1158,7 @@ static void UpdateRadialStartMenuSelection(u8 newSlot)
     sStartMenuCursorPos = sRadialStartMenuSlotToOrderIndex[newSlot];
     PrintRadialStartMenuItem(oldSlot);
     PrintRadialStartMenuItem(newSlot);
+    PrintStartMenuCenterLabel();
     UpdateRadialStartMenuSpriteStates();
     RefreshStartMenuHelpText();
 }
@@ -933,7 +1171,7 @@ static u8 FindNextRadialStartMenuSlot(s8 step)
     for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
     {
         slot = (slot + step) & 7;
-        if (sRadialStartMenuSlotToItem[slot] != 0xFF)
+        if (IsSelectableRadialStartMenuSlot(slot))
             return slot;
     }
     return sRadialStartMenuCursorSlot;
@@ -963,17 +1201,31 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
 
     if ((currentItem == STARTMENU_POKEDEX && dx == 0 && dy < 0)
      || (currentItem == STARTMENU_OPTION && dx == 0 && dy > 0)
-     || (currentItem == STARTMENU_QUEST && dx < 0 && dy == 0)
-     || (currentItem == STARTMENU_QUEST && dx == 0 && dy > 0)
-     || (currentItem == STARTMENU_POKEMON && dx > 0 && dy == 0)
-     || (currentItem == STARTMENU_POKEMON && dx == 0 && dy > 0)
-     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx < 0 && dy == 0)
-     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx == 0 && dy < 0)
+     || (currentItem == STARTMENU_POKEMON && dx < 0 && dy == 0)
+     || (currentItem == STARTMENU_POKEMON && dx == 0 && dy < 0)
+     || (currentItem == STARTMENU_BAG && dx > 0 && dy == 0)
      || (currentItem == STARTMENU_BAG && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_BAG && dx > 0 && dy == 0))
+     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx < 0 && dy == 0)
+     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx == 0 && dy > 0)
+     || (currentItem == STARTMENU_QUEST && dx > 0 && dy == 0)
+     || (currentItem == STARTMENU_QUEST && dx == 0 && dy > 0))
         return sRadialStartMenuCursorSlot;
 
     if (currentItem == STARTMENU_POKEDEX)
+    {
+        if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
+        else if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
+        else if (dx == 0 && dy > 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_OPTION)
     {
         if (dx < 0 && dy == 0)
         {
@@ -982,32 +1234,9 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
                 targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
         }
         else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx > 0 && dy == 0)
-    {
-        targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_BAG && dx < 0 && dy == 0)
-    {
-        targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-
-    if (currentItem == STARTMENU_OPTION)
-    {
-        if (dx < 0 && dy == 0)
             targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
+        else if (dx == 0 && dy < 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
         else
             targetSlot = 0xFF;
 
@@ -1016,10 +1245,26 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     }
     if (currentItem == STARTMENU_POKEMON)
     {
-        if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
-        else if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
+        else if (dx == 0 && dy > 0)
+        {
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
+            if (targetSlot == 0xFF)
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
+        }
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_BAG)
+    {
+        if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
+        else if (dx == 0 && dy > 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
         else
             targetSlot = 0xFF;
 
@@ -1028,12 +1273,20 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     }
     if (currentItem == STARTMENU_QUEST)
     {
+        if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else if (dx == 0 && dy < 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
+        else
+            targetSlot = 0xFF;
+
+        if (targetSlot != 0xFF)
+            return targetSlot;
+    }
+    if (currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2)
+    {
         if (dx == 0 && dy < 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-        }
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
         else if (dx > 0 && dy == 0)
             targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
         else
@@ -1051,7 +1304,7 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
         s16 perpendicular;
         s16 score;
 
-        if (i == sRadialStartMenuCursorSlot || sRadialStartMenuSlotToItem[i] == 0xFF)
+        if (i == sRadialStartMenuCursorSlot || !IsSelectableRadialStartMenuSlot(i))
             continue;
 
         relX = sRadialStartMenuSlotXs[i] - fromX;
@@ -1198,6 +1451,26 @@ static bool8 StartCB_HandleInput(void)
         PlaySE(SE_SELECT);
         UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(1, 0));
     }
+    if (JOY_NEW(L_BUTTON))
+    {
+        if (StartMenuHasItem(STARTMENU_SAVE))
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuCallback = sStartMenuActionTable[STARTMENU_SAVE].func.u8_void;
+            StartMenu_FadeScreenIfLeavingOverworld();
+            return FALSE;
+        }
+    }
+    if (JOY_NEW(R_BUTTON))
+    {
+        if (StartMenuHasItem(STARTMENU_SETTINGS))
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuCallback = sStartMenuActionTable[STARTMENU_SETTINGS].func.u8_void;
+            StartMenu_FadeScreenIfLeavingOverworld();
+            return FALSE;
+        }
+    }
     if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
@@ -1298,7 +1571,7 @@ static bool8 StartMenuSaveCallback(void)
     return FALSE;
 }
 
-static bool8 StartMenuOptionCallback(void)
+static bool8 StartMenuSettingsCallback(void)
 {
     if (!gPaletteFade.active)
     {
@@ -1308,6 +1581,21 @@ static bool8 StartMenuOptionCallback(void)
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_OptionsMenuFromStartMenu);
         gMain.savedCallback = CB2_ReturnToFieldWithOpenMenu;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool8 StartMenuOptionCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        DestroySafariZoneStatsWindow();
+        DestroyRadialStartMenuWindows(FALSE);
+        CleanupOverworldWindowsAndTilemaps();
+        SetStartMenuReturnItem(STARTMENU_OPTION);
+        InitTeachyTvController(0, CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
     }
     return FALSE;
@@ -1806,6 +2094,8 @@ static void CloseStartMenu(void)
 {
     PlaySE(SE_SELECT);
     DestroyRadialStartMenuWindows(TRUE);
+    EraseFieldMessageBox(TRUE);
+    HideBg(0);
     ClearPlayerHeldMovementAndUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
 }
