@@ -298,7 +298,6 @@ static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 static const u32 sRadialStartMenuBackdropGfx[] = INCBIN_U32("graphics/start_menu/backdrop.4bpp.lz");
 static const u32 sRadialStartMenuBackdropPal[] = INCBIN_U32("graphics/start_menu/backdrop.gbapal.lz");
 static const u32 sRadialStartMenuButtonIconGfx[] = INCBIN_U32("graphics/start_menu/button.4bpp.lz");
-static const u32 sRadialStartMenuButtonIconPal[] = INCBIN_U32("graphics/start_menu/button.gbapal.lz");
 static const u32 sRadialStartMenuPokemonIconGfx[] = INCBIN_U32("graphics/start_menu/pokemon.4bpp.lz");
 static const u32 sRadialStartMenuSettingsIconGfx[] = INCBIN_U32("graphics/start_menu/settings.4bpp.lz");
 static const u32 sRadialStartMenuSettingsIconPal[] = INCBIN_U32("graphics/start_menu/settings.gbapal.lz");
@@ -382,10 +381,6 @@ static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuBackdrop = {
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuButtonIcon = {
     sRadialStartMenuButtonIconGfx, 32 * 32 / 2, TAG_START_MENU_BUTTON_ICON
-};
-
-static const struct CompressedSpritePalette sSpritePalette_RadialStartMenuButtonIcon = {
-    sRadialStartMenuButtonIconPal, TAG_START_MENU_BUTTON_ICON
 };
 
 static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuButtonIcon = {
@@ -1219,7 +1214,6 @@ static void DestroyRadialStartMenuSprites(void)
     FreeSpriteTilesByTag(TAG_START_MENU_BACKDROP);
     FreeSpritePaletteByTag(TAG_START_MENU_BACKDROP);
     FreeSpriteTilesByTag(TAG_START_MENU_BUTTON_ICON);
-    FreeSpritePaletteByTag(TAG_START_MENU_BUTTON_ICON);
     FreeSpriteTilesByTag(TAG_START_MENU_POKEMON_ICON);
     FreeSpriteTilesByTag(TAG_START_MENU_SETTINGS_ICON);
     FreeSpritePaletteByTag(TAG_START_MENU_SETTINGS_ICON);

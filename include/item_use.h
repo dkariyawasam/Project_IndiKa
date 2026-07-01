@@ -20,7 +20,6 @@ void FieldUseFunc_SacredAsh(u8 taskId);
 void FieldUseFunc_TmCase(u8 taskId);
 void FieldUseFunc_BerryPouch(u8 taskId);
 void BattleUseFunc_BerryPouch(u8 taskId);
-void FieldUseFunc_TeachyTv(u8 taskId);
 void FieldUseFunc_Repel(u8 taskId);
 void FieldUseFunc_BlackWhiteFlute(u8 taskId);
 void FieldUseFunc_TownMap(u8 taskId);
