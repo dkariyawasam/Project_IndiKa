@@ -75,6 +75,7 @@ static EWRAM_DATA u8 sRadialStartMenuSlotToItem[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuSlotToOrderIndex[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuButtonSpriteIds[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuSpriteIds[8] = {};
+static EWRAM_DATA u8 sRadialStartMenuBackdropSpriteId = MAX_SPRITES;
 static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
 static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
 static EWRAM_DATA u8 sStartMenuReturnItem = 0xFF;
@@ -249,6 +250,10 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 
 #define START_MENU_LABEL_PALETTE_NUM 14
 #define START_MENU_LABEL_FILL_COLOR TEXT_COLOR_DARK_GRAY
+#define START_MENU_CENTER_LABEL_INSET 3
+#define START_MENU_CENTER_LABEL_WIDTH 58
+#define START_MENU_CENTER_LABEL_TOP 3
+#define START_MENU_CENTER_LABEL_HEIGHT 10
 
 static const u16 sStartMenuLabelPalette[] = {
     RGB_BLACK,
@@ -281,7 +286,10 @@ static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 #define TAG_START_MENU_POKEDEX_ICON 0x1254
 #define TAG_START_MENU_CARD_ICON    0x1255
 #define TAG_START_MENU_BAG_ICON     0x1256
+#define TAG_START_MENU_BACKDROP     0x1257
 
+static const u32 sRadialStartMenuBackdropGfx[] = INCBIN_U32("graphics/start_menu/backdrop.4bpp.lz");
+static const u32 sRadialStartMenuBackdropPal[] = INCBIN_U32("graphics/start_menu/backdrop.gbapal.lz");
 static const u32 sRadialStartMenuButtonIconGfx[] = INCBIN_U32("graphics/start_menu/button.4bpp.lz");
 static const u32 sRadialStartMenuButtonIconPal[] = INCBIN_U32("graphics/start_menu/button.gbapal.lz");
 static const u32 sRadialStartMenuPokemonIconGfx[] = INCBIN_U32("graphics/start_menu/pokemon.4bpp.lz");
@@ -297,6 +305,13 @@ static const struct OamData sOamData_RadialStartMenuIcon = {
     .shape = SPRITE_SHAPE(32x32),
     .size = SPRITE_SIZE(32x32),
     .priority = 0
+};
+
+static const struct OamData sOamData_RadialStartMenuBackdrop = {
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .shape = SPRITE_SHAPE(64x64),
+    .size = SPRITE_SIZE(64x64),
+    .priority = 1
 };
 
 static const union AnimCmd sAnim_RadialStartMenuIcon[] = {
@@ -327,6 +342,24 @@ static const union AffineAnimCmd sAffineAnim_RadialStartMenuIconSelected[] = {
 static const union AffineAnimCmd *const sAffineAnims_RadialStartMenuIcon[] = {
     sAffineAnim_RadialStartMenuIconNormal,
     sAffineAnim_RadialStartMenuIconSelected
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuBackdrop = {
+    sRadialStartMenuBackdropGfx, 64 * 64 / 2, TAG_START_MENU_BACKDROP
+};
+
+static const struct CompressedSpritePalette sSpritePalette_RadialStartMenuBackdrop = {
+    sRadialStartMenuBackdropPal, TAG_START_MENU_BACKDROP
+};
+
+static const struct SpriteTemplate sSpriteTemplate_RadialStartMenuBackdrop = {
+    .tileTag = TAG_START_MENU_BACKDROP,
+    .paletteTag = TAG_START_MENU_BACKDROP,
+    .oam = &sOamData_RadialStartMenuBackdrop,
+    .anims = sAnims_RadialStartMenuIcon,
+    .images = NULL,
+    .affineAnims = sAffineAnims_RadialStartMenuIcon,
+    .callback = SpriteCallbackDummy
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_RadialStartMenuButtonIcon = {
@@ -872,9 +905,9 @@ static void CreateStartMenuCenterLabelWindow(void)
 {
     struct WindowTemplate template = {
         .bg = 0,
-        .tilemapLeft = 17,
+        .tilemapLeft = 11,
         .tilemapTop = 9,
-        .width = 9,
+        .width = 8,
         .height = 2,
         .paletteNum = START_MENU_LABEL_PALETTE_NUM,
         .baseBlock = 0x260
@@ -890,7 +923,7 @@ static void DestroyStartMenuCenterLabelWindow(bool8 copyToVram)
 {
     if (sStartMenuCenterLabelWindowId != WINDOW_NONE)
     {
-        RestoreStartMenuBg0TilemapRect(sStartMenuCenterLabelBgBackup, 17, 9, 9, 2, copyToVram);
+        RestoreStartMenuBg0TilemapRect(sStartMenuCenterLabelBgBackup, 11, 9, 8, 2, copyToVram);
         RemoveWindow(sStartMenuCenterLabelWindowId);
         sStartMenuCenterLabelWindowId = WINDOW_NONE;
     }
@@ -907,14 +940,20 @@ static void PrintStartMenuCenterLabel(void)
         return;
 
     text = GetStartMenuCenterLabelText(sRadialStartMenuSlotToItem[sRadialStartMenuCursorSlot]);
-    windowWidth = GetWindowAttribute(sStartMenuCenterLabelWindowId, WINDOW_WIDTH) * 8;
+    windowWidth = START_MENU_CENTER_LABEL_WIDTH;
     width = GetStringWidth(FONT_NORMAL, text, 0);
-    x = (windowWidth - width) / 2;
+    x = START_MENU_CENTER_LABEL_INSET + (windowWidth - width) / 2;
     if (x < 0)
-        x = 0;
+        x = START_MENU_CENTER_LABEL_INSET;
 
-    FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(START_MENU_LABEL_FILL_COLOR));
-    AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 2, sTextColor_RadialMenuSelected, 0xFF, text);
+    FillWindowPixelBuffer(sStartMenuCenterLabelWindowId, PIXEL_FILL(TEXT_COLOR_TRANSPARENT));
+    FillWindowPixelRect(sStartMenuCenterLabelWindowId,
+                        PIXEL_FILL(START_MENU_LABEL_FILL_COLOR),
+                        START_MENU_CENTER_LABEL_INSET,
+                        START_MENU_CENTER_LABEL_TOP,
+                        START_MENU_CENTER_LABEL_WIDTH,
+                        START_MENU_CENTER_LABEL_HEIGHT);
+    AddTextPrinterParameterized3(sStartMenuCenterLabelWindowId, FONT_NORMAL, x, 1, sTextColor_RadialMenuSelected, 0xFF, text);
     CopyWindowToVram(sStartMenuCenterLabelWindowId, COPYWIN_GFX);
 }
 
@@ -986,6 +1025,9 @@ static void CreateRadialStartMenuSprites(void)
     if (sRadialStartMenuSpritesLoaded)
         return;
 
+    LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuBackdrop);
+    LoadCompressedSpritePalette(&sSpritePalette_RadialStartMenuBackdrop);
+
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
     {
         switch (sRadialStartMenuSlotToItem[i])
@@ -1054,6 +1096,7 @@ static void CreateRadialStartMenuSprites(void)
         LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuButtonIcon);
     }
     sRadialStartMenuSpritesLoaded = TRUE;
+    sRadialStartMenuBackdropSpriteId = CreateSprite(&sSpriteTemplate_RadialStartMenuBackdrop, DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 4);
 
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
     {
@@ -1128,6 +1171,12 @@ static void DestroyRadialStartMenuSprites(void)
     if (!sRadialStartMenuSpritesLoaded)
         return;
 
+    if (sRadialStartMenuBackdropSpriteId != MAX_SPRITES)
+    {
+        DestroySprite(&gSprites[sRadialStartMenuBackdropSpriteId]);
+        sRadialStartMenuBackdropSpriteId = MAX_SPRITES;
+    }
+
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
     {
         if (sRadialStartMenuButtonSpriteIds[i] != MAX_SPRITES)
@@ -1141,6 +1190,8 @@ static void DestroyRadialStartMenuSprites(void)
             sRadialStartMenuSpriteIds[i] = MAX_SPRITES;
         }
     }
+    FreeSpriteTilesByTag(TAG_START_MENU_BACKDROP);
+    FreeSpritePaletteByTag(TAG_START_MENU_BACKDROP);
     FreeSpriteTilesByTag(TAG_START_MENU_BUTTON_ICON);
     FreeSpritePaletteByTag(TAG_START_MENU_BUTTON_ICON);
     FreeSpriteTilesByTag(TAG_START_MENU_POKEMON_ICON);
