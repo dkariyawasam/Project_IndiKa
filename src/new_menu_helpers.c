@@ -455,6 +455,7 @@ void LoadStdWindowFrameGfx(void)
 
 void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
 {
+    ShowBg(GetWindowAttribute(windowId, WINDOW_BG));
     CallWindowFunction(windowId, WindowFunc_DrawDialogueFrame);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
@@ -464,6 +465,7 @@ void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
 
 void DrawStdWindowFrame(u8 windowId, bool8 copyToVram)
 {
+    ShowBg(GetWindowAttribute(windowId, WINDOW_BG));
     CallWindowFunction(windowId, WindowFunc_DrawStandardFrame);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
