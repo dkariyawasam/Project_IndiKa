@@ -18,5 +18,6 @@ enum {
 void InitTMCase(u8 type, void (* exitCallback)(void), bool8 allowSelectClose);
 void ResetTMCaseCursorPos(void);
 void Pokedude_InitTMCase(void);
+bool8 IsTMCaseOpen(void);
 
 #endif //GUARD_TM_CASE_H

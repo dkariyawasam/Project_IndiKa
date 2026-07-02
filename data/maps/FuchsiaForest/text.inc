@@ -29,7 +29,7 @@ FuchsiaForest_Text_LetsGoHome::
     .string "Let's go home!$"
 
 FuchsiaForest_Text_BerryPouchIsFull::
-    .string "Your BERRY POUCH is full.\n"
+    .string "Your BERRIES pocket is full.\n"
     .string "I guess you don't want this.$"
 
 FuchsiaForest_Text_WelcomeToFuchsiaForest::

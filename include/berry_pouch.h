@@ -20,5 +20,6 @@ void InitBerryPouch(u8 type, void (*savedCallback)(void), u8 allowSelect);
 void DisplayItemMessageInBerryPouch(u8 taskId, u8 fontId, const u8 * str, TaskFunc followUpFunc);
 void Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu(u8 taskId);
 void BerryPouch_CursorResetToTop(void);
+bool8 IsBerryPouchOpen(void);
 
 #endif //GUARD_BERRY_POUCH_H
