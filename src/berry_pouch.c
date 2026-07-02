@@ -850,12 +850,26 @@ static void UpdateListMenuScrollOffset(void)
 static void BerryPouch_DestroyResources(void)
 {
     if (sResources != NULL)
+    {
         Free(sResources);
+        sResources = NULL;
+    }
     if (sListMenuItems != NULL)
+    {
         Free(sListMenuItems);
+        sListMenuItems = NULL;
+    }
     if (sListMenuStrbuf != NULL)
+    {
         Free(sListMenuStrbuf);
+        sListMenuStrbuf = NULL;
+    }
     FreeAllWindowBuffers();
+}
+
+bool8 IsBerryPouchOpen(void)
+{
+    return sResources != NULL;
 }
 
 void BerryPouch_StartFadeToExitCallback(u8 taskId)

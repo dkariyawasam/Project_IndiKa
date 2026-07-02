@@ -268,8 +268,8 @@ const u8 gTeachyTvText_TMsScript1[] = _(
     "it may not learn when leveling up!\p"
     "Isn't that just great? What a\n"
     "convenient world we live in!\p"
-    "Open the TM CASE and check out\n"
-    "the TMs you have.\p"
+    "Open the BAG's TMs pocket and\n"
+    "check out the TMs you have.\p"
     "You can check them out in detail,\n"
     "too.");
 const u8 gPokedudeText_TMTypes[] = _(

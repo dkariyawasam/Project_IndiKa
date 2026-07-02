@@ -25,7 +25,7 @@ struct HelpSystemVideoState
     /*0x15*/ u8 state;
 };
 
-static EWRAM_DATA u8 sMapTilesBackup[BG_CHAR_SIZE] = {0};
+static EWRAM_DATA u8 *sMapTilesBackup = NULL;
 EWRAM_DATA u8 gDisableHelpSystemVolumeReduce = 0;
 EWRAM_DATA bool8 gHelpSystemToggleWithRButtonDisabled = FALSE;
 static EWRAM_DATA u8 sDelayTimer = 0;
@@ -39,101 +39,7 @@ static const u16 sPals[] = INCBIN_U16("graphics/help_system/bg_tiles.gbapal");
 
 u8 RunHelpSystemCallback(void)
 {
-    s32 i;
-
-    switch (sVideoState.state)
-    {
-    case 0:
-        sInHelpSystem = 0;
-        if (gSaveBlock2Ptr->optionsButtonMode != OPTIONS_BUTTON_MODE_HELP)
-            return 0;
-        if (JOY_NEW(R_BUTTON) && gHelpSystemToggleWithRButtonDisabled == TRUE)
-            return 0;
-        if (JOY_NEW(L_BUTTON | R_BUTTON))
-        {
-            if (!HelpSystem_IsSinglePlayer() || !gHelpSystemEnabled || !HelpSystem_CurrentContextHasTopics())
-            {
-                PlaySE(SE_HELP_ERROR);
-                return 0;
-            }
-            m4aMPlayStop(&gMPlayInfo_SE1);
-            m4aMPlayStop(&gMPlayInfo_SE2);
-            PlaySE(SE_HELP_OPEN);
-            if (!gDisableHelpSystemVolumeReduce)
-                m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x80);
-            SaveCallbacks();
-            sInHelpSystem = 1;
-            sVideoState.state = 1;
-        }
-        break;
-    case 1:
-        SaveMapTiles();
-        SaveMapGPURegs();
-        SaveMapTextColors();
-        (*(vu16 *)PLTT) = sPals[15];
-        SetGpuReg(REG_OFFSET_DISPCNT, 0);
-        sVideoState.state = 2;
-        break;
-    case 2:
-        RequestDma3Fill(0, (void *)BG_CHAR_ADDR(3), BG_CHAR_SIZE, DMA3_16BIT);
-        RequestDma3Copy(sPals, (void *)PLTT, sizeof(sPals), DMA3_16BIT);
-        RequestDma3Copy(sTiles, gDecompressionBuffer + 0x3EE0, sizeof(sTiles), DMA3_16BIT);
-        sVideoState.state = 3;
-        break;
-    case 3:
-        HS_BufferFillMapWithTile1FF();
-        HelpSystem_FillPanel3();
-        HelpSystem_FillPanel2();
-        HelpSystem_PrintTextInTopLeftCorner(gString_Help);
-        HS_ShowOrHideWordHELPinTopLeft(1);
-        if (HelpSystem_UpdateHasntSeenIntro() == TRUE)
-            HelpSystemSubroutine_PrintWelcomeMessage(&gHelpSystemListMenu, gHelpSystemListMenuItems);
-        else
-            HelpSystemSubroutine_WelcomeEndGotoMenu(&gHelpSystemListMenu, gHelpSystemListMenuItems);
-        HS_ShowOrHideHeaderAndFooterLines_Lighter(1);
-        HS_ShowOrHideVerticalBlackBarsAlongSides(1);
-        CommitTilemap();
-        sVideoState.state = 4;
-        break;
-    case 4:
-        SetGpuReg(REG_OFFSET_BLDCNT, 0);
-        SetGpuReg(REG_OFFSET_BG0HOFS, 0);
-        SetGpuReg(REG_OFFSET_BG0VOFS, 0);
-        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(3) | BGCNT_16COLOR | BGCNT_SCREENBASE(31));
-        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_BG0_ON);
-        sVideoState.state = 5;
-        break;
-    case 5:
-        if (!RunHelpMenuSubroutine(&gHelpSystemListMenu, gHelpSystemListMenuItems))
-        {
-            PlaySE(SE_HELP_CLOSE);
-            sVideoState.state = 6;
-        }
-        break;
-    case 6:
-        SetGpuReg(REG_OFFSET_DISPCNT, 0);
-        RestoreMapTiles();
-        for (i = 0; i < 0x200; i += 2)
-        {
-            *((vu16 *)(PLTT + 0x000 + i)) = sPals[15];
-            *((vu16 *)(PLTT + 0x200 + i)) = sPals[15];
-        }
-        sVideoState.state = 7;
-        break;
-    case 7:
-        if (!gDisableHelpSystemVolumeReduce)
-            m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x100);
-        RestoreMapTextColors();
-        RestoreGPURegs();
-        sVideoState.state = 8;
-        break;
-    case 8:
-        RestoreCallbacks();
-        sInHelpSystem = 0;
-        sVideoState.state = 0;
-        break;
-    }
-    return sVideoState.state;
+    return 0;
 }
 
 void SaveCallbacks(void)
@@ -161,7 +67,11 @@ void SaveMapGPURegs(void)
 
 void SaveMapTiles(void)
 {
-    RequestDma3Copy((void *)BG_CHAR_ADDR(3), sMapTilesBackup, BG_CHAR_SIZE, DMA3_16BIT);
+    if (sMapTilesBackup == NULL)
+        sMapTilesBackup = Alloc(BG_CHAR_SIZE);
+
+    if (sMapTilesBackup != NULL)
+        RequestDma3Copy((void *)BG_CHAR_ADDR(3), sMapTilesBackup, BG_CHAR_SIZE, DMA3_16BIT);
 }
 
 void SaveMapTextColors(void)
@@ -190,7 +100,12 @@ void RestoreGPURegs(void)
 
 void RestoreMapTiles(void)
 {
-    RequestDma3Copy(sMapTilesBackup, (void *)BG_CHAR_ADDR(3), BG_CHAR_SIZE, DMA3_16BIT);
+    if (sMapTilesBackup != NULL)
+    {
+        RequestDma3Copy(sMapTilesBackup, (void *)BG_CHAR_ADDR(3), BG_CHAR_SIZE, DMA3_16BIT);
+        Free(sMapTilesBackup);
+        sMapTilesBackup = NULL;
+    }
 }
 
 void RestoreMapTextColors(void)

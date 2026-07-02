@@ -49,12 +49,12 @@ EventScript_BufferPokeBallsPocket::
 	return
 
 EventScript_BufferTMCase::
-	bufferstdstring STR_VAR_3, STDSTRING_TM_CASE
+	bufferstdstring STR_VAR_3, STDSTRING_TMHMS
 	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedTMHM
 	return
 
 EventScript_BufferBerryPouch::
-	bufferstdstring STR_VAR_3, STDSTRING_BERRY_POUCH
+	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
 	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
 	return
 
