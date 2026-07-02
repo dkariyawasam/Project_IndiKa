@@ -2092,7 +2092,7 @@ static bool8 IsHelpSystemSubmenuEnabled(u8 id)
         case HELP_WHAT_DOES_HIDDEN_MOVE_DO:
             return HasGottenAtLeastOneHM();
         case HELP_WHAT_IS_THAT_PERSON_LIKE:
-            return FlagGet(FLAG_GOT_FAME_CHECKER);
+            return FlagGet(FLAG_GOT_APEX_LOG);
         case HELP_WHAT_IS_A_GYM:
             return FlagGet(FLAG_WORLD_MAP_PEWTER_CITY);
         }

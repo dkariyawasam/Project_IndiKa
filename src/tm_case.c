@@ -843,16 +843,36 @@ static void TMCaseSetup_UpdateVisualMenuOffset(void)
 static void DestroyTMCaseBuffers(void)
 {
     if (sTMCaseDynamicResources != NULL)
+    {
         Free(sTMCaseDynamicResources);
+        sTMCaseDynamicResources = NULL;
+    }
     if (sTilemapBuffer != NULL)
+    {
         Free(sTilemapBuffer);
+        sTilemapBuffer = NULL;
+    }
     if (sListMenuItemsBuffer != NULL)
+    {
         Free(sListMenuItemsBuffer);
+        sListMenuItemsBuffer = NULL;
+    }
     if (sListMenuStringsBuffer != NULL)
+    {
         Free(sListMenuStringsBuffer);
+        sListMenuStringsBuffer = NULL;
+    }
     if (sTMSpritePaletteBuffer != NULL)
+    {
         Free(sTMSpritePaletteBuffer);
+        sTMSpritePaletteBuffer = NULL;
+    }
     FreeAllWindowBuffers();
+}
+
+bool8 IsTMCaseOpen(void)
+{
+    return sTMCaseDynamicResources != NULL;
 }
 
 static void Task_BeginFadeOutFromTMCase(u8 taskId)

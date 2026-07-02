@@ -34,6 +34,14 @@
 #define SPRITETAG_APEX_SILHOUETTE 1010
 
 #define FC_NONTRAINER_START 0xFE00
+#define FC_ICON_X_LEFT 0x72
+#define FC_ICON_Y_TOP 0x2F
+#define FC_ICON_X_SPACING 47
+#define FC_ICON_Y_SPACING 27
+#define FC_APEX_DOSSIER_ICON_X_LEFT 73
+#define FC_APEX_DOSSIER_ICON_Y_TOP FC_ICON_Y_TOP
+#define FC_APEX_DOSSIER_ICONDESC_LEFT 10
+#define FC_APEX_DOSSIER_INFOBOX_LEFT 9
 
 struct FameCheckerData
 {
@@ -86,6 +94,7 @@ static void MessageBoxPrintEmptyText(void);
 static void Task_EnterPickMode(u8 taskId);
 static void Task_ExitPickMode(u8 taskId);
 static void Task_FlavorTextDisplayHandleInput(u8 taskId);
+static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound);
 static void FC_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy);
 static void GetPickModeText(void);
 static void PrintSelectedNameInBrightGreen(u8 taskId);
@@ -105,6 +114,8 @@ static void FCSetup_ResetBGCoords(void);
 static bool8 HasUnlockedAllFlavorTextsForCurrentPerson(void);
 static void FreeSelectionCursorSpriteResources(void);
 static u8 CreateFlavorTextIconSelectorCursorSprite(s16 where);
+static s16 FC_GetFlavorTextIconX(u8 slot);
+static s16 FC_GetFlavorTextIconY(u8 slot);
 static void SpriteCB_DestroyFlavorTextIconSelectorCursor(struct Sprite *sprite);
 static void FreeQuestionMarkSpriteResources(void);
 static u8 PlaceQuestionMarkTile(u8 x, u8 y);
@@ -173,6 +184,7 @@ static const u8 sApexDossierName_Annihilape[] = _("ANNIHILAPE");
 static const u8 sApexRumorUnknown[] = _("No rumour recorded yet.");
 static const u8 sApexMonUnknown[] = _("The APEX POKEMON has not been\nencountered yet.");
 static const u8 sApexMonRecorded[] = _("The APEX POKEMON has been\nrecorded.");
+static const u8 sApexDossierText_UI[] = _("{DPAD_ANY}PICK {B_BUTTON}CANCEL");
 static const u8 sApexRumorSourceUnknown[] = _("Unrecorded");
 static const u8 sApexRumorLocationUnknown[] = _("????");
 static const u8 sApexLoc_Apex[] = _("APEX");
@@ -811,7 +823,7 @@ static void MainCB2_FameCheckerMain(void)
     UpdatePaletteFade();
 }
 
-void UseFameChecker(MainCallback savedCallback)
+void UseApexLog(MainCallback savedCallback)
 {
     SetVBlankCallback(NULL);
     sFameCheckerData = AllocZeroed(sizeof(struct FameCheckerData));
@@ -873,6 +885,16 @@ static void MainCB2_LoadFameChecker(void)
             LoadPalette(&gFameCheckerBgPals[0], BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
             LoadPalette(&gFameCheckerBgPals[1], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
             CopyToBgTilemapBufferRect(2, gFameCheckerBg2Tilemap, 0, 0, 32, 32);
+            if (sFameCheckerData->isApexDossier)
+            {
+                FillBgTilemapBufferRect(2, 0x000, 0, 2, 10, 12, 0);
+                FillBgTilemapBufferRect(2, 0x000, 14, 9, 13, 1, 0);
+                FillBgTilemapBufferRect(2, 0x000, 14, 10, 13, 3, 0);
+                FillBgTilemapBufferRect(2, 0x000, 14, 13, 13, 1, 0);
+                CopyToBgTilemapBufferRect(2, &gFameCheckerBg2Tilemap[9 * 32 + 14], FC_APEX_DOSSIER_INFOBOX_LEFT, 9, 13, 1);
+                CopyToBgTilemapBufferRect(2, &gFameCheckerBg2Tilemap[13 * 32 + 14], FC_APEX_DOSSIER_INFOBOX_LEFT, 13, 13, 1);
+                UpdateInfoBoxTilemap(2, 2);
+            }
             CopyToBgTilemapBufferRect_ChangePalette(1, sFameCheckerTilemap, 30, 0, 32, 32, 0x11);
             LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
             gMain.state++;
@@ -892,10 +914,15 @@ static void MainCB2_LoadFameChecker(void)
             break;
         case 5:
             InitWindows(sUIWindowTemplates);
+            if (sFameCheckerData->isApexDossier)
+                SetWindowAttribute(FCWINDOWID_ICONDESC, WINDOW_TILEMAP_LEFT, FC_APEX_DOSSIER_ICONDESC_LEFT);
             DeactivateAllTextPrinters();
             Setup_DrawMsgAndListBoxes();
-            sListMenuItems = AllocZeroed(17 * sizeof(struct ListMenuItem));
-            FC_CreateListMenu();
+            if (!sFameCheckerData->isApexDossier)
+            {
+                sListMenuItems = AllocZeroed(17 * sizeof(struct ListMenuItem));
+                FC_CreateListMenu();
+            }
             gMain.state++;
             break;
         case 6:
@@ -911,8 +938,11 @@ static void MainCB2_LoadFameChecker(void)
             SetGpuReg(REG_OFFSET_BLDALPHA, 0x07);
             SetGpuReg(REG_OFFSET_BLDY, 0x08);
             SetVBlankCallback(FC_VBlankCallback);
-            sFameCheckerData->listMenuTopIdx = 0;
-            FC_CreateScrollIndicatorArrowPair();
+            if (!sFameCheckerData->isApexDossier)
+            {
+                sFameCheckerData->listMenuTopIdx = 0;
+                FC_CreateScrollIndicatorArrowPair();
+            }
             UpdateInfoBoxTilemap(1, 4);
             CreateTask(Task_WaitFadeOnInit, 0x08);
             SetMainCallback2(MainCB2_FameCheckerMain);
@@ -930,15 +960,18 @@ static void LoadUISpriteSheetsAndPalettes(void)
 static void Task_WaitFadeOnInit(u8 taskId)
 {
     if (!gPaletteFade.active)
-        gTasks[taskId].func = Task_TopMenuHandleInput;
+    {
+        if (sFameCheckerData->isApexDossier && sFameCheckerData->personHasUnlockedPanels)
+            FC_EnterFlavorTextSelection(taskId, 1, FALSE);
+        else
+            gTasks[taskId].func = Task_TopMenuHandleInput;
+    }
 }
 
 static void Task_TopMenuHandleInput(u8 taskId)
 {
     u16 cursorPos;
-    u8 i;
     struct Task *task = &gTasks[taskId];
-    s16 * data = gTasks[taskId].data;
     if (FindTaskIdByFunc(Task_FCOpenOrCloseInfoBox) == 0xFF)
     {
         RunTextPrinters();
@@ -980,25 +1013,7 @@ static void Task_TopMenuHandleInput(u8 taskId)
             }
             else if (sFameCheckerData->personHasUnlockedPanels)
             {
-                PlaySE(SE_SELECT);
-                if (sFameCheckerData->isApexDossier)
-                    task->data[1] = 1;
-                task->data[0] = CreateFlavorTextIconSelectorCursorSprite(task->data[1]);
-                for (i = 0; i < 6; i++)
-                {
-                    if (i != task->data[1])
-                        SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_BLEND);
-                }
-                gIconDescriptionBoxIsOpen = 0xFF;
-                PlaceListMenuCursor(FALSE);
-                PrintUIHelp(2);
-                if (gSprites[sFameCheckerData->spriteIds[task->data[1]]].data[1] != 0xFF) // not a ? tile
-                {
-                    PrintSelectedNameInBrightGreen(taskId);
-                    UpdateIconDescriptionBox(data[1]);
-                }
-                FreeListMenuSelectorArrowPairResources();
-                task->func = Task_FlavorTextDisplayHandleInput;
+                FC_EnterFlavorTextSelection(taskId, sFameCheckerData->isApexDossier ? 1 : task->data[1], TRUE);
             }
         }
         else if (JOY_NEW(B_BUTTON))
@@ -1009,6 +1024,34 @@ static void Task_TopMenuHandleInput(u8 taskId)
         else
             ListMenu_ProcessInput(0);
     }
+}
+
+static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound)
+{
+    u8 i;
+    struct Task *task = &gTasks[taskId];
+
+    if (playSound)
+        PlaySE(SE_SELECT);
+
+    task->data[1] = initialSlot;
+    task->data[0] = CreateFlavorTextIconSelectorCursorSprite(task->data[1]);
+    for (i = 0; i < 6; i++)
+    {
+        if (i != task->data[1])
+            SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_BLEND);
+    }
+    gIconDescriptionBoxIsOpen = 0xFF;
+    if (!sFameCheckerData->isApexDossier)
+        PlaceListMenuCursor(FALSE);
+    PrintUIHelp(2);
+    if (gSprites[sFameCheckerData->spriteIds[task->data[1]]].data[1] != 0xFF) // not a ? tile
+    {
+        PrintSelectedNameInBrightGreen(taskId);
+        UpdateIconDescriptionBox(task->data[1]);
+    }
+    FreeListMenuSelectorArrowPairResources();
+    task->func = Task_FlavorTextDisplayHandleInput;
 }
 
 static bool8 TryExitPickMode(u8 taskId)
@@ -1082,6 +1125,13 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     if (JOY_NEW(B_BUTTON))
     {
         u8 i;
+        if (sFameCheckerData->isApexDossier)
+        {
+            gSprites[task->data[0]].callback = SpriteCB_DestroyFlavorTextIconSelectorCursor;
+            Task_StartToCloseFameChecker(taskId);
+            return;
+        }
+
         PlaySE(SE_SELECT);
         for (i = 0; i < 6; i++)
             SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_NORMAL);
@@ -1173,7 +1223,7 @@ static void FC_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy)
 static void GetPickModeText(void)
 {
     s32 whichText = 0;
-    u16 who = FameCheckerGetCursorY();
+    u16 who;
 
     if (sFameCheckerData->isApexDossier)
     {
@@ -1182,6 +1232,7 @@ static void GetPickModeText(void)
         return;
     }
 
+    who = FameCheckerGetCursorY();
     if (gSaveBlock1Ptr->fameChecker[sFameCheckerData->unlockedPersons[who]].pickState != FCPICKSTATE_COLORED)
     {
         WipeMsgBoxAndTransfer();
@@ -1201,7 +1252,7 @@ static void GetPickModeText(void)
 static void PrintSelectedNameInBrightGreen(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    u16 cursorPos = FameCheckerGetCursorY();
+    u16 cursorPos;
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
     if (sFameCheckerData->isApexDossier)
     {
@@ -1220,6 +1271,7 @@ static void PrintSelectedNameInBrightGreen(u8 taskId)
     }
     else
     {
+        cursorPos = FameCheckerGetCursorY();
         StringExpandPlaceholders(gStringVar4, sFameCheckerFlavorTextPointers[sFameCheckerData->unlockedPersons[cursorPos] * 6 + data[1]]);
     }
     AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
@@ -1237,7 +1289,8 @@ static void Setup_DrawMsgAndListBoxes(void)
     LoadStdWindowFrameGfx();
     DrawDialogueFrame(FCWINDOWID_MSGBOX, TRUE);
     FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_LIST);
+    if (!sFameCheckerData->isApexDossier)
+        FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_LIST);
 }
 
 static void FC_PutWindowTilemapAndCopyWindowToVramMode3(u8 windowId)
@@ -1266,9 +1319,11 @@ static void Task_StartToCloseFameChecker(u8 taskId)
 static void Task_DestroyAssetsAndCloseFameChecker(u8 taskId)
 {
     u8 i;
+    bool8 isApexDossier;
 
     if (!gPaletteFade.active)
     {
+        isApexDossier = sFameCheckerData->isApexDossier;
         if (sFameCheckerData->inPickMode)
         {
             DestroyPersonPicSprite(taskId, FameCheckerGetCursorY());
@@ -1285,13 +1340,19 @@ static void Task_DestroyAssetsAndCloseFameChecker(u8 taskId)
         FreeQuestionMarkSpriteResources();
         FreeListMenuSelectorArrowPairResources();
         SetMainCallback2(sFameCheckerData->savedCallback);
-        DestroyListMenuTask(sFameCheckerData->listMenuTaskId, NULL, NULL);
+        if (!isApexDossier)
+            DestroyListMenuTask(sFameCheckerData->listMenuTaskId, NULL, NULL);
         Free(sBg3TilemapBuffer);
         Free(sBg1TilemapBuffer);
         Free(sBg2TilemapBuffer);
         Free(sFameCheckerData);
-        Free(sListMenuItems);
-        FC_DestroyWindow(FCWINDOWID_LIST);
+        if (sListMenuItems != NULL)
+        {
+            Free(sListMenuItems);
+            sListMenuItems = NULL;
+        }
+        if (!isApexDossier)
+            FC_DestroyWindow(FCWINDOWID_LIST);
         FC_DestroyWindow(FCWINDOWID_UIHELP);
         FC_DestroyWindow(FCWINDOWID_MSGBOX);
         FC_DestroyWindow(FCWINDOWID_ICONDESC);
@@ -1324,7 +1385,10 @@ static void PrintUIHelp(u8 state)
 {
     s32 width;
     const u8 * src = gFameCheckerText_MainScreenUI;
-    if (state != 0)
+
+    if (sFameCheckerData->isApexDossier)
+        src = sApexDossierText_UI;
+    else if (state != 0)
     {
         src = gFameCheckerText_FlavorTextUI;
         if (state == 1)
@@ -1359,8 +1423,8 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
                 sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
                     sApexRumorDossierEntries[sFameCheckerData->apexSubquest].apexGraphicsId,
                     i,
-                    47 * (i % 3) + 0x72,
-                    27 * (i / 3) + 0x2F
+                    FC_GetFlavorTextIconX(i),
+                    FC_GetFlavorTextIconY(i)
                 );
                 if (!FC_HasEncounteredApexDossierMon())
                     SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
@@ -1371,8 +1435,8 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
                 sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
                     sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
                     i,
-                    47 * (i % 3) + 0x72,
-                    27 * (i / 3) + 0x2F
+                    FC_GetFlavorTextIconX(i),
+                    FC_GetFlavorTextIconY(i)
                 );
                 result = TRUE;
             }
@@ -1383,16 +1447,16 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
                     sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
                         sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
                         i,
-                        47 * (i % 3) + 0x72,
-                        27 * (i / 3) + 0x2F
+                        FC_GetFlavorTextIconX(i),
+                        FC_GetFlavorTextIconY(i)
                     );
                     SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
                 }
                 else
                 {
                     sFameCheckerData->spriteIds[i] = PlaceQuestionMarkTile(
-                        47 * (i % 3) + 0x72,
-                        27 * (i / 3) + 0x1F
+                        FC_GetFlavorTextIconX(i),
+                        FC_GetFlavorTextIconY(i) - 16
                     );
                     gSprites[sFameCheckerData->spriteIds[i]].invisible = TRUE;
                 }
@@ -1412,16 +1476,16 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
             sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
                 sFameCheckerArrayNpcGraphicsIds[sFameCheckerData->unlockedPersons[who] * 6 + i],
                 i,
-                47 * (i % 3) + 0x72,
-                27 * (i / 3) + 0x2F
+                FC_GetFlavorTextIconX(i),
+                FC_GetFlavorTextIconY(i)
             );
             result = TRUE;
         }
         else
         {
             sFameCheckerData->spriteIds[i] = PlaceQuestionMarkTile(
-                47 * (i % 3) + 0x72,
-                27 * (i / 3) + 0x1F
+                FC_GetFlavorTextIconX(i),
+                FC_GetFlavorTextIconY(i) - 16
             );
             gSprites[sFameCheckerData->spriteIds[i]].data[1] = 0xFF;
         }
@@ -1568,9 +1632,23 @@ static void FreeSelectionCursorSpriteResources(void)
 
 static u8 CreateFlavorTextIconSelectorCursorSprite(s16 where)
 {
-    s16 y =  34 + 27 * (where >= 3);
-    s16 x = 114 + 47 * (where %  3);
+    s16 x = FC_GetFlavorTextIconX(where);
+    s16 y = FC_GetFlavorTextIconY(where) - 13;
     return CreateSprite(&sSpriteTemplate_SelectorCursor, x, y, 0);
+}
+
+static s16 FC_GetFlavorTextIconX(u8 slot)
+{
+    if (sFameCheckerData->isApexDossier)
+        return FC_APEX_DOSSIER_ICON_X_LEFT + FC_ICON_X_SPACING * (slot % 3);
+    return FC_ICON_X_LEFT + FC_ICON_X_SPACING * (slot % 3);
+}
+
+static s16 FC_GetFlavorTextIconY(u8 slot)
+{
+    if (sFameCheckerData->isApexDossier)
+        return FC_APEX_DOSSIER_ICON_Y_TOP + FC_ICON_Y_SPACING * (slot / 3);
+    return FC_ICON_Y_TOP + FC_ICON_Y_SPACING * (slot / 3);
 }
 
 static void SpriteCB_DestroyFlavorTextIconSelectorCursor(struct Sprite *sprite)
@@ -2063,62 +2141,64 @@ static void Task_FCOpenOrCloseInfoBox(u8 taskId)
 
 static void UpdateInfoBoxTilemap(u8 bg, s16 state)
 {
+    u8 left = (sFameCheckerData != NULL && sFameCheckerData->isApexDossier) ? FC_APEX_DOSSIER_INFOBOX_LEFT : 14;
+
     if (state == 0 || state == 3)
     {
-        FillBgTilemapBufferRect(bg, 0x8C, 14, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0xA1, 15, 10, 10,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x8D, 25, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x8E, 26, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x8F, 14, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x00, 15, 11, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x90, 26, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x91, 14, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0xA3, 15, 12, 10,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x92, 25, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x93, 26, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x8C, left,      10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0xA1, left +  1, 10, 10,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x8D, left + 11, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x8E, left + 12, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x8F, left,      11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x00, left +  1, 11, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x90, left + 12, 11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x91, left,      12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0xA3, left +  1, 12, 10,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x92, left + 11, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x93, left + 12, 12,  1,  1, 1);
     }
     else if (state == 1)
     {
-        FillBgTilemapBufferRect(bg, 0x9B, 14, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x9C, 15, 10, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x96, 26, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x9D, 14, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x00, 15, 11, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x90, 26, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x9E, 14, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x9F, 15, 12, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x99, 26, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9B, left,      10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9C, left +  1, 10, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x96, left + 12, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9D, left,      11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x00, left +  1, 11, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x90, left + 12, 11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9E, left,      12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9F, left +  1, 12, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x99, left + 12, 12,  1,  1, 1);
     }
     else if (state == 2)
     {
-        FillBgTilemapBufferRect(bg, 0x94, 14, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x95, 15, 10, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x96, 26, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x8F, 14, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x9A, 15, 11, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x90, 26, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x97, 14, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x98, 15, 12, 11,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x99, 26, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x94, left,      10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x95, left +  1, 10, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x96, left + 12, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x8F, left,      11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x9A, left +  1, 11, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x90, left + 12, 11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x97, left,      12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x98, left +  1, 12, 11,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x99, left + 12, 12,  1,  1, 1);
     }
     else if (state == 4)
     {
-        FillBgTilemapBufferRect(bg, 0x83, 14, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0xA0, 15, 10, 10,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x84, 25, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x85, 26, 10,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x86, 14, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0xA2, 15, 11, 10,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x87, 25, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x88, 26, 11,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x83, 14, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0xA0, 15, 12, 10,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x84, 25, 12,  1,  1, 1);
-        FillBgTilemapBufferRect(bg, 0x85, 26, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x83, left,      10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0xA0, left +  1, 10, 10,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x84, left + 11, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x85, left + 12, 10,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x86, left,      11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0xA2, left +  1, 11, 10,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x87, left + 11, 11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x88, left + 12, 11,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x83, left,      12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0xA0, left +  1, 12, 10,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x84, left + 11, 12,  1,  1, 1);
+        FillBgTilemapBufferRect(bg, 0x85, left + 12, 12,  1,  1, 1);
     }
     else if (state == 5)
     {
-        FillBgTilemapBufferRect(bg, 0x00, 14, 10, 13,  3, 1);
+        FillBgTilemapBufferRect(bg, 0x00, left, 10, 13,  3, 1);
     }
     CopyBgTilemapBufferToVram(bg);
 }

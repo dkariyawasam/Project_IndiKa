@@ -4116,7 +4116,7 @@ void CB2_ShowPartyMenuForItemUse(void)
                 break;
             }
         }
-        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
+        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && gBagMenuState.pocket != POCKET_BERRY_POUCH - 1)
             callback = CB2_ReturnToBerryPouchMenu;
         task = Task_SetSacredAshCB;
         msgId = PARTY_MSG_NONE;
@@ -4130,11 +4130,17 @@ void CB2_ShowPartyMenuForItemUse(void)
             break;
         case POCKET_TM_CASE:
             msgId = PARTY_MSG_TEACH_WHICH_MON;
-            callback = CB2_ReturnToTMCaseMenu;
+            if (gBagMenuState.pocket == POCKET_TM_CASE - 1)
+                callback = CB2_ReturnToBagMenu;
+            else
+                callback = CB2_ReturnToTMCaseMenu;
             break;
         case POCKET_BERRY_POUCH:
             msgId = PARTY_MSG_USE_ON_WHICH_MON;
-            callback = CB2_ReturnToBerryPouchMenu;
+            if (gBagMenuState.pocket == POCKET_BERRY_POUCH - 1)
+                callback = CB2_ReturnToBagMenu;
+            else
+                callback = CB2_ReturnToBerryPouchMenu;
             break;
         }
         task = Task_HandleChooseMonInput;
@@ -4149,12 +4155,12 @@ static void CB2_ReturnToBagMenu(void)
 
 static void CB2_ReturnToTMCaseMenu(void)
 {
-    InitTMCase(TMCASE_REOPENING, NULL, TMCASE_KEEP_PREV);
+    GoToBagMenu(ITEMMENULOCATION_LAST, OPEN_BAG_TMS, NULL);
 }
 
 static void CB2_ReturnToBerryPouchMenu(void)
 {
-    InitBerryPouch(BERRYPOUCH_NA, NULL, 0xFF);
+    GoToBagMenu(ITEMMENULOCATION_LAST, OPEN_BAG_BERRIES, NULL);
 }
 
 static void Task_DoUseItemAnim(u8 taskId)
@@ -5333,10 +5339,16 @@ void CB2_ChooseMonToGiveItem(void)
         callback = CB2_ReturnToBagMenu;
         break;
     case POCKET_TM_CASE:
-        callback = CB2_ReturnToTMCaseMenu;
+        if (gBagMenuState.pocket == POCKET_TM_CASE - 1)
+            callback = CB2_ReturnToBagMenu;
+        else
+            callback = CB2_ReturnToTMCaseMenu;
         break;
     case POCKET_BERRY_POUCH:
-        callback = CB2_ReturnToBerryPouchMenu;
+        if (gBagMenuState.pocket == POCKET_BERRY_POUCH - 1)
+            callback = CB2_ReturnToBagMenu;
+        else
+            callback = CB2_ReturnToBerryPouchMenu;
         break;
     }
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_GIVE_ITEM, FALSE, PARTY_MSG_GIVE_TO_WHICH_MON, Task_HandleChooseMonInput, callback);
@@ -5774,7 +5786,7 @@ void EnterPartyFromItemMenuInBattle(void)
     {
         MainCallback callback;
 
-        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
+        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && gBagMenuState.pocket != POCKET_BERRY_POUCH - 1)
             callback = CB2_ReturnToBerryPouchMenu;
         else
             callback = CB2_BagMenuFromBattle;

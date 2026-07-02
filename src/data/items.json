@@ -5676,17 +5676,17 @@
       "secondaryId": 0
     },
     {
-      "english": "FAME CHECKER",
-      "itemId": "ITEM_FAME_CHECKER",
+      "english": "APEX LOG",
+      "itemId": "ITEM_APEX_LOG",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A device that enables you to\\nrecall what you've heard and seen\\nabout famous people.",
+      "description_english": "A log for reviewing\\nrecorded rumours about\\nAPEX POKEMON.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
       "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_FameChecker",
+      "fieldUseFunc": "FieldUseFunc_ApexLog",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0

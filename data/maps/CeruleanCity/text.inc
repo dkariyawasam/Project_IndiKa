@@ -32,13 +32,13 @@ CeruleanCity_Text_OhRightLittlePresentAsFavor::
     .string "I feel sorry for you. No, really.\n"
     .string "You're always plodding behind me.\p"
     .string "So here, I'll give you a little\n"
-    .string "present as a favor.$"
+    .string "advice as a favor.$"
 
 CeruleanCity_Text_ExplainFameCheckerSmellYa::
-    .string "A chatty gossip like you…\n"
-    .string "That thing's perfect.\p"
-    .string "I don't need it because I don't\n"
-    .string "give a hoot about others.\p"
+    .string "That LOGBOOK tracks rumours\n"
+    .string "you've picked up.\p"
+    .string "I won't need hints. I'll find\n"
+    .string "them before anyone else does.\p"
     .string "All right, this time I really am\n"
     .string "gone. Smell ya!$"
 

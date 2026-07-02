@@ -1092,11 +1092,11 @@ EventScript_BufferPutAwayPocketPokeBalls::
 	return
 
 EventScript_BufferPutAwayPocketTMCase::
-	bufferstdstring STR_VAR_3, STDSTRING_TM_CASE
+	bufferstdstring STR_VAR_3, STDSTRING_TMHMS
 	return
 
 EventScript_BufferPutAwayPocketBerryPouch::
-	bufferstdstring STR_VAR_3, STDSTRING_BERRY_POUCH
+	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
 	return
 
 	.include "data/scripts/seagallop.inc"

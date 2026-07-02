@@ -54,15 +54,14 @@ static void InitTMCaseFromBag(void);
 static void Task_InitTMCaseFromField(u8 taskId);
 static void InitBerryPouchFromBag(void);
 static void Task_InitBerryPouchFromField(u8 taskId);
-static void InitBerryPouchFromBattle(void);
 static void Task_UseRepel(u8 taskId);
 static void RemoveUsedItem(void);
 static void Task_UsedBlackWhiteFlute(u8 taskId);
 static void ItemUseOnFieldCB_EscapeRope(u8 taskId);
 static void UseTownMapFromBag(void);
 static void Task_UseTownMapFromField(u8 taskId);
-static void UseFameCheckerFromBag(void);
-static void Task_UseFameCheckerFromField(u8 taskId);
+static void UseApexLogFromBag(void);
+static void Task_UseApexLogFromField(u8 taskId);
 static void Task_BattleUse_StatBooster_DelayAndPrint(u8 taskId);
 static void Task_BattleUse_StatBooster_WaitButton_ReturnToBattle(u8 taskId);
 void FieldCallback_Surf(void);
@@ -141,7 +140,7 @@ static void SetUpItemUseCallback(u8 taskId)
         itemType = gTasks[taskId].data[4] - 1;
     else
         itemType = ItemId_GetType(gSpecialVar_ItemId) - 1;
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
+    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
     {
         BerryPouch_SetExitCallback(sExitCallbackByItemType[itemType]);
         BerryPouch_StartFadeToExitCallback(taskId);
@@ -494,13 +493,8 @@ static void Task_InitBerryPouchFromField(u8 taskId)
 
 void BattleUseFunc_BerryPouch(u8 taskId)
 {
-    ItemMenu_SetExitCallback(InitBerryPouchFromBattle);
+    ItemMenu_SetExitCallback(CB2_BagMenuFromBattleBerries);
     ItemMenu_StartFadeToExitCallback(taskId);
-}
-
-static void InitBerryPouchFromBattle(void)
-{
-    InitBerryPouch(BERRYPOUCH_FROMBATTLE, CB2_BagMenuFromBattle, 0);
 }
 
 void FieldUseFunc_Repel(u8 taskId)
@@ -633,34 +627,34 @@ static void Task_UseTownMapFromField(u8 taskId)
     }
 }
 
-void FieldUseFunc_FameChecker(u8 taskId)
+void FieldUseFunc_ApexLog(u8 taskId)
 {
     ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, NULL, gSpecialVar_ItemId, 0xFFFF);
     if (gTasks[taskId].data[3] == 0)
     {
-        ItemMenu_SetExitCallback(UseFameCheckerFromBag);
+        ItemMenu_SetExitCallback(UseApexLogFromBag);
         ItemMenu_StartFadeToExitCallback(taskId);
     }
     else
     {
         StopPokemonLeagueLightingEffectTask();
         FadeScreen(FADE_TO_BLACK, 0);
-        gTasks[taskId].func = Task_UseFameCheckerFromField;
+        gTasks[taskId].func = Task_UseApexLogFromField;
     }
 }
 
-static void UseFameCheckerFromBag(void)
+static void UseApexLogFromBag(void)
 {
-    UseFameChecker(CB2_BagMenuFromStartMenu);
+    UseApexLog(CB2_BagMenuFromStartMenu);
 }
 
-static void Task_UseFameCheckerFromField(u8 taskId)
+static void Task_UseApexLogFromField(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
         CleanupOverworldWindowsAndTilemaps();
         SetFieldCallback2ForItemUse();
-        UseFameChecker(CB2_ReturnToField);
+        UseApexLog(CB2_ReturnToField);
         DestroyTask(taskId);
     }
 }
@@ -741,7 +735,7 @@ static void Task_BattleUse_StatBooster_WaitButton_ReturnToBattle(u8 taskId)
 
 static void ItemUse_SwitchToPartyMenuInBattle(u8 taskId)
 {
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
+    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
     {
         BerryPouch_SetExitCallback(EnterPartyFromItemMenuInBattle);
         BerryPouch_StartFadeToExitCallback(taskId);
@@ -855,7 +849,7 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
 
 void FieldUseFunc_OakStopsYou(u8 taskId)
 {
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
+    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
     {
         StringExpandPlaceholders(gStringVar4, gText_OakForbidsUseOfItemHere);
         DisplayItemMessageInBerryPouch(taskId, FONT_MALE, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);

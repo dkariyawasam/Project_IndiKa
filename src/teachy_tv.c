@@ -201,34 +201,6 @@ static const struct ListMenuItem sListMenuItems[] =
     },
 };
 
-static const struct ListMenuItem sListMenuItems_NoTMCase[] = 
-{
-    {
-        .label = gTeachyTvString_CatchPkmn,
-        .index = TTVSCR_CATCHING
-    },
-    {
-        .label = gTeachyTvString_TeachBattle,
-        .index = TTVSCR_BATTLE
-    },
-    {
-        .label = gTeachyTvString_Training,
-        .index = TTVSCR_TRAINING
-    },
-    {
-        .label = gTeachyTvString_StatusProblems,
-        .index = TTVSCR_STATUS
-    },
-    {
-        .label = gTeachyTvString_TypeMatchups,
-        .index = TTVSCR_MATCHUPS
-    },
-    {
-        .label = gTeachyTvString_Cancel,
-        .index = -2
-    },
-};
-
 static const struct ListMenuItem sListMenuItems_Lesson[] =
 {
     {
@@ -659,12 +631,6 @@ static u8 TeachyTvSetupMainWindow(void)
     gMultiuseListMenuTemplate = sListMenuTemplate;
     gMultiuseListMenuTemplate.windowId = 1;
     gMultiuseListMenuTemplate.moveCursorFunc = TeachyTvAudioByInput;
-    if (!CheckBagHasItem(ITEM_TM_CASE, 1))
-    {
-        gMultiuseListMenuTemplate.items = sListMenuItems_NoTMCase;
-        gMultiuseListMenuTemplate.totalItems = 6;
-        gMultiuseListMenuTemplate.maxShowed = 6;
-    }
     return ListMenuInit(
                &gMultiuseListMenuTemplate,
                sStaticResources.scrollOffset,
@@ -696,15 +662,7 @@ static void TeachyTvSetupScrollIndicatorArrowPair(void)
         return;
     }
 
-    if (!CheckBagHasItem(ITEM_TM_CASE, 1))
-    {
-        struct TeachyTvBuf * temp = sResources;
-        temp->scrollIndicatorArrowPairId = 0xFF;
-    }
-    else
-    {
-        sResources->scrollIndicatorArrowPairId = AddScrollIndicatorArrowPair(&sScrollIndicatorArrowPair, &(sStaticResources.scrollOffset));
-    }
+    sResources->scrollIndicatorArrowPairId = AddScrollIndicatorArrowPair(&sScrollIndicatorArrowPair, &(sStaticResources.scrollOffset));
 }
 
 static void TeachyTvRemoveScrollIndicatorArrowPair(void)

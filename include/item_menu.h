@@ -15,8 +15,8 @@ struct BagStruct
     u8 location;
     bool8 bagOpen;
     u16 pocket;
-    u16 itemsAbove[NUM_BAG_POCKETS_NO_CASES];
-    u16 cursorPos[NUM_BAG_POCKETS_NO_CASES];
+    u16 itemsAbove[NUM_VISIBLE_BAG_POCKETS];
+    u16 cursorPos[NUM_VISIBLE_BAG_POCKETS];
 };
 
 extern struct BagStruct gBagMenuState;
@@ -35,6 +35,7 @@ void ItemMenu_SetExitCallback(void (*)(void));
 void DisplayItemMessageInBag(u8 taskId, u8 fontId, const u8 * string, TaskFunc followUpFunc);
 void Task_ReturnToBagFromContextMenu(u8 taskId);
 void CB2_BagMenuFromBattle(void);
+void CB2_BagMenuFromBattleBerries(void);
 void InitOldManBag(void);
 void Pocket_CalculateNItemsAndMaxShowed(u8 pocketId);
 void PocketCalculateInitialCursorPosAndItemsAbove(u8 pocketId);

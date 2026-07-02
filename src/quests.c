@@ -80,6 +80,7 @@ EWRAM_DATA static u8 sItemMenuIconSpriteIds[12] = {0};        // from pokefirere
 EWRAM_DATA static void *questNamePointer = NULL;
 EWRAM_DATA static u8 **questNameArray = NULL;
 EWRAM_DATA static u8 sPendingApexDossierSubquest = 0;
+EWRAM_DATA static bool8 sReturningFromApexDossier = FALSE;
 
 // This File's Functions
 void QuestMenu_Init(u8 a0, MainCallback callback);
@@ -145,10 +146,9 @@ static void QuestMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
 static void MoveCursorFunc(s32 itemIndex, bool8 onInit,
                            struct ListMenu *list);
 static void PlayCursorSound(bool8 firstRun);
+static void FillQuestFooterWindow(void);
 static void PrintDetailsForCancel();
 static void GenerateAndPrintQuestDetails(s32 questId);
-static void GenerateQuestLocation(s32 questId);
-static void PrintQuestLocation(s32 questId);
 static void GenerateQuestFlavorText(s32 questId);
 static void UpdateQuestFlavorText(s32 questId);
 static void PrintQuestFlavorText(s32 questId);
@@ -174,9 +174,7 @@ static void GenerateAndPrintHeader(void);
 static void GenerateDenominatorNumQuests(void);
 static void GenerateNumeratorNumQuests(void);
 static void GenerateMenuContext(void);
-static void PrintNumQuests(void);
 static void PrintMenuContext(void);
-static void PrintTypeFilterButton(void);
 
 static void Task_Main(u8 taskId);
 static u8 ManageFavorites(u8 index);
@@ -207,6 +205,7 @@ static void FreeResources(void);
 static void TurnOffQuestMenu(u8 taskId);
 static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId);
 static void CB2_OpenApexRumorDossier(void);
+static void CB2_ReturnToApexSubquestMenu(void);
 static void Task_QuestMenuTurnOff1(u8 taskId);
 static void Task_QuestMenuTurnOff2(u8 taskId);
 
@@ -214,13 +213,20 @@ static void Task_QuestMenuTurnOff2(u8 taskId);
 static const u32 sQuestMenuTiles[] =
         INCBIN_U32("graphics/quest_menu/menu.4bpp.lz");
 static const u32 sQuestMenuBgPals[] =
-        INCBIN_U32("graphics/quest_menu/menu.gbapal.lz");
+        INCBIN_U32("graphics/item_menu/bg.gbapal.lz");
 static const u32 sQuestMenuTilemap[] =
         INCBIN_U32("graphics/quest_menu/menu.bin.lz");
 
+#define QUEST_MENU_FOOTER_BG_COLOR 15
+#define QUEST_MENU_FOOTER_BORDER_DARK_COLOR 13
+#define QUEST_MENU_FOOTER_BORDER_LIGHT_COLOR 12
+#define QUEST_MENU_FOOTER_BOTTOM_MID_COLOR 14
+#define QUEST_MENU_FOOTER_TEXT_COLOR 10
+#define QUEST_MENU_FOOTER_SHADOW_COLOR 13
+
 //Strings used for the Quest Menu
 static const u8 sText_Empty[] = _("");
-static const u8 sText_AllHeader[] = _("All Missions");
+static const u8 sText_AllHeader[] = _("ALL MISSIONS");
 static const u8 sText_InactiveHeader[] = _("Inactive Missions");
 static const u8 sText_ActiveHeader[] = _("Active Missions");
 static const u8 sText_RewardHeader[] = _("Reward Available");
@@ -232,20 +238,18 @@ static const u8 sText_Unk[] = _("??????");
 static const u8 sText_Active[] = _("Active");
 static const u8 sText_Reward[] = _("Reward");
 static const u8 sText_Complete[] = _("Done");
-static const u8 sText_ShowLocation[] =
-      _("Location: {STR_VAR_2}");
 static const u8 sText_StartForMore[] =
       _("Start for more details.");
 static const u8 sText_ReturnRecieveReward[] =
       _("Return to {STR_VAR_2}\nto recieve your reward!");
 static const u8 sText_SubQuestButton[] = _(" {A_BUTTON}");
-static const u8 sText_Type[] = _("{R_BUTTON}Type");
 static const u8 sText_Caught[] = _("Caught");
 static const u8 sText_Found[] = _("Found");
 static const u8 sText_Read[] = _("Read");
 static const u8 sText_Back[] = _("Back");
 static const u8 sText_DotSpace[] = _(". ");
-static const u8 sText_Close[] = _("Close");
+static const u8 sText_Close[] = _("CANCEL");
+static const u8 sText_CloseLogbook[] = _("CLOSE LOGBOOK");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
 static const u8 sText_InProgress[] = _("Active");
@@ -687,7 +691,7 @@ static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
 		//0: Content window
 		.bg = 0,
 		.tilemapLeft = 0,
-		.tilemapTop = 2,
+		.tilemapTop = 4,
 		.width = 30,
 		.height = 8,
 		.paletteNum = 15,
@@ -697,20 +701,20 @@ static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
 		//1: Footer window
 		.bg = 0,
 		.tilemapLeft = 0,
-		.tilemapTop = 12,
+		.tilemapTop = 14,
 		.width = 30,
-		.height = 12,
-		.paletteNum = 15,
+		.height = 6,
+		.paletteNum = 1,
 		.baseBlock = 361
 	},
-	{
-		// 2: Header window
-		.bg = 0,
-		.tilemapLeft = 0,
-		.tilemapTop = 0,
-		.width = 30,
-		.height = 2,
-		.paletteNum = 15,
+		{
+			// 2: Header window
+			.bg = 0,
+			.tilemapLeft = 0,
+			.tilemapTop = 1,
+			.width = 30,
+			.height = 2,
+			.paletteNum = 15,
 		.baseBlock = 721
 	},
 	DUMMY_WIN_TEMPLATE
@@ -722,8 +726,8 @@ static const u8 sQuestMenuWindowFontColors[][4] =
 	{
 		//Header of Quest Menu
 		TEXT_COLOR_TRANSPARENT,
-		TEXT_COLOR_DARK_GRAY,
-		TEXT_COLOR_LIGHT_GRAY
+		TEXT_COLOR_WHITE,
+		TEXT_COLOR_DARK_GRAY
 	},
 	{
 		//Reward state progress indicator
@@ -746,8 +750,8 @@ static const u8 sQuestMenuWindowFontColors[][4] =
 	{
 		//Footer flavor text
 		TEXT_COLOR_TRANSPARENT,
-		TEXT_COLOR_WHITE,
-		TEXT_COLOR_DARK_GRAY
+		QUEST_MENU_FOOTER_TEXT_COLOR,
+		QUEST_MENU_FOOTER_SHADOW_COLOR
 	},
 };
 
@@ -1066,7 +1070,7 @@ static void PlaceTopMenuScrollIndicatorArrows(void)
 	}
 
 	sStateDataPtr->scrollIndicatorArrowPairId =
-	      AddScrollIndicatorArrowPairParameterized(2, 94, 8, 90,
+	      AddScrollIndicatorArrowPairParameterized(2, 94, 25, 107,
 	                  (listSize - sStateDataPtr->maxShowed), 110, 110, &sListMenuState.scroll);
 }
 
@@ -1156,7 +1160,16 @@ static void SaveScrollAndRow(s16 *data)
 
 void ClearModeOnStartup(void)
 {
-	sStateDataPtr->filterMode = 0;
+	if (sReturningFromApexDossier)
+	{
+		sStateDataPtr->filterMode = SORT_SUBQUEST;
+		sStateDataPtr->parentQuest = QUEST_APEX_POKEMON;
+		sReturningFromApexDossier = FALSE;
+	}
+	else
+	{
+		sStateDataPtr->filterMode = 0;
+	}
 }
 
 static u8 ManageMode(u8 action)
@@ -1279,7 +1292,7 @@ static u16 BuildMenuTemplate(void)
 	gMultiuseListMenuTemplate.item_X = 23;
 	gMultiuseListMenuTemplate.lettersSpacing = 1;
 	gMultiuseListMenuTemplate.itemVerticalPadding = 2;
-	gMultiuseListMenuTemplate.upText_Y = 2;
+	gMultiuseListMenuTemplate.upText_Y = 3;
 	gMultiuseListMenuTemplate.maxShowed = sStateDataPtr->maxShowed;
 	gMultiuseListMenuTemplate.fontId = FONT_NORMAL;
 	gMultiuseListMenuTemplate.cursorPal = TEXT_COLOR_DARK_GRAY;
@@ -1367,7 +1380,7 @@ u8 GenerateSubquestList()
 
 	for (numRow = 0; numRow < sSideQuests[parentQuest].numSubquests; numRow++)
 	{
-		PrependQuestNumber(countQuest);
+		PopulateEmptyRow(countQuest);
 		PopulateSubquestName(parentQuest, countQuest);
 		PopulateListRowNameAndId(numRow, countQuest);
 
@@ -1735,10 +1748,13 @@ void PopulateSubquestName(u8 parentQuest, u8 countQuest)
             sSideQuests[parentQuest].subquests[countQuest].name
         );
     }
-    else
-    {
-        questNamePointer = StringAppend(questNamePointer, sText_Unk);
-    }
+	else
+	{
+	    questNamePointer = StringAppend(questNamePointer, sText_Unk);
+	}
+
+	if (parentQuest == QUEST_APEX_POKEMON)
+	    questNamePointer = StringAppend(questNamePointer, sText_SubQuestButton);
 }
 
 u8 PopulateListRowNameAndId(u8 row, u8 countQuest)
@@ -1809,44 +1825,29 @@ static void PlayCursorSound(bool8 firstRun)
 	}
 }
 
+static void FillQuestFooterWindow(void)
+{
+	FillWindowPixelBuffer(1, PIXEL_FILL(QUEST_MENU_FOOTER_BG_COLOR));
+	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_DARK_COLOR), 0, 0, 240, 2);
+	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_LIGHT_COLOR), 0, 2, 240, 1);
+	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BOTTOM_MID_COLOR), 0, 45, 240, 1);
+	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_DARK_COLOR), 0, 46, 240, 2);
+}
+
 static void PrintDetailsForCancel()
 {
-	FillWindowPixelBuffer(1, 0);
+	FillQuestFooterWindow();
 
-	QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 2, 3, 2, 0, 0,
-	                                      0);
-	QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 40, 19, 5, 0, 0,
-	                                      0);
+	QuestMenu_AddTextPrinterParameterized(1, 2, sText_CloseLogbook, 40, 3, 2, 0, 0,
+	                                      4);
 
 	QuestMenu_CreateSprite(-1, sStateDataPtr->spriteIconSlot, ITEM);
 }
 
 void GenerateAndPrintQuestDetails(s32 questId)
 {
-	GenerateQuestLocation(questId);
-	PrintQuestLocation(questId);
 	GenerateQuestFlavorText(questId);
 	PrintQuestFlavorText(questId);
-}
-void GenerateQuestLocation(s32 questId)
-{
-	if (!IsSubquestMode())
-	{
-		StringCopy(gStringVar2, sSideQuests[questId].map);
-	}
-	else
-	{
-		StringCopy(gStringVar2,
-		           sSideQuests[sStateDataPtr->parentQuest].subquests[questId].map);
-	}
-
-	StringExpandPlaceholders(gStringVar4, sText_ShowLocation);
-}
-void PrintQuestLocation(s32 questId)
-{
-	FillWindowPixelBuffer(1, 0);
-	QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 2, 3, 2, 0, 0,
-	                                      4);
 }
 void GenerateQuestFlavorText(s32 questId)
 {
@@ -1901,7 +1902,8 @@ void UpdateQuestFlavorText(s32 questId)
 }
 void PrintQuestFlavorText(s32 questId)
 {
-	QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar3, 40, 19, 5, 0, 0,
+	FillQuestFooterWindow();
+	QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar3, 40, 3, 2, 0, 0,
 	                                      4);
 }
 
@@ -2037,11 +2039,11 @@ static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
 				break;
 		}
 
-		gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
-
 		if (spriteId != MAX_SPRITES)
 		{
 			ptr[idx] = spriteId;
+			gSprites[spriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
+			gSprites[spriteId].oam.priority = 0;
 
 			if (spriteType == ITEM)
 			{
@@ -2150,8 +2152,8 @@ u8 GenerateQuestState(u8 questId)
 
 void PrintQuestState(u8 windowId, u8 y, u8 colorIndex)
 {
-	QuestMenu_AddTextPrinterParameterized(windowId, 0, gStringVar4, 200, y, 0,
-	                                      0, 0xFF, colorIndex);
+	QuestMenu_AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4,
+	                                      192, y, 0, 0, 0xFF, colorIndex);
 }
 
 static void GenerateAndPrintHeader(void)
@@ -2160,13 +2162,7 @@ static void GenerateAndPrintHeader(void)
 	GenerateNumeratorNumQuests();
 	GenerateMenuContext();
 
-	PrintNumQuests();
 	PrintMenuContext();
-
-	if (!IsSubquestMode())
-	{
-		PrintTypeFilterButton();
-	}
 }
 static void GenerateDenominatorNumQuests(void)
 {
@@ -2259,22 +2255,13 @@ static void GenerateMenuContext(void)
 	}
 }
 
-static void PrintNumQuests(void)
-{
-	StringExpandPlaceholders(gStringVar4, sText_QuestNumberDisplay);
-	QuestMenu_AddTextPrinterParameterized(2, 0, gStringVar4, 167, 1, 0, 1, 0,
-	                                      0);
-}
 static void PrintMenuContext(void)
 {
-	QuestMenu_AddTextPrinterParameterized(2, 0,
-	                                      questNameArray[QUEST_ARRAY_COUNT], 10, 1, 0, 1, 0, 0);
-}
-static void PrintTypeFilterButton(void)
-{
-	QuestMenu_AddTextPrinterParameterized(2, 0, sText_Type, 198, 1,
-	                                      0, 1, 0, 0);
+	u8 x = (DISPLAY_WIDTH - GetStringWidth(FONT_NORMAL_COPY_1, questNameArray[QUEST_ARRAY_COUNT], 0)) / 2;
 
+	QuestMenu_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_1,
+	                                      questNameArray[QUEST_ARRAY_COUNT],
+	                                      x, 1, 0, 1, 0, 0);
 }
 
 static void Task_Main(u8 taskId)
@@ -2612,8 +2599,15 @@ static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId)
 
 static void CB2_OpenApexRumorDossier(void)
 {
-	UseApexRumorDossier(sListMenuState.savedCallback, sPendingApexDossierSubquest);
+	UseApexRumorDossier(CB2_ReturnToApexSubquestMenu, sPendingApexDossierSubquest);
 }
+
+static void CB2_ReturnToApexSubquestMenu(void)
+{
+	sReturningFromApexDossier = TRUE;
+	QuestMenu_Init(1, sListMenuState.savedCallback);
+}
+
 static void Task_QuestMenuTurnOff1(u8 taskId)
 {
 	BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
