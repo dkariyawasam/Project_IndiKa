@@ -47,9 +47,9 @@ VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox VermilionCity_Gym_Text_GymGuySurgeAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	setvar VAR_LT_SURGE_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_VERMILION_GYM_GUY, VermilionCity_Gym_Movement_GymGuyReturnToSpot
@@ -209,9 +209,9 @@ VermilionCity_Gym_EventScript_GymGuyDontNeedAdvice::
 
 VermilionCity_Gym_EventScript_GymGuySurgeAwayFirstTime::
 	msgbox VermilionCity_Gym_Text_GymGuySurgeAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	setvar VAR_LT_SURGE_TRIAL_STATE, 1
 	release
 	end

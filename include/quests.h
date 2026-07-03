@@ -69,13 +69,13 @@ enum QuestCases
 };
 
 // functions
-void QuestMenu_Init(u8 a0, MainCallback callback);
-u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest);
-u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId);
-void Task_QuestMenu_OpenFromStartMenu(u8);
-void QuestMenu_CopyQuestName(u8 *dst, u8 questId);
-void QuestMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId);
-void QuestMenu_ResetMenuSaveData(void);
-bool8 QuestMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor);
+void LogbookMenu_Init(u8 a0, MainCallback callback);
+u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest);
+u8 LogbookMenu_GetSetQuestState(u8 quest, u8 caseId);
+void Task_LogbookMenu_OpenFromStartMenu(u8);
+void LogbookMenu_CopyQuestName(u8 *dst, u8 questId);
+void LogbookMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId);
+void LogbookMenu_ResetMenuSaveData(void);
+bool8 LogbookMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor);
 
 #endif // GUARD_QUESTS_H

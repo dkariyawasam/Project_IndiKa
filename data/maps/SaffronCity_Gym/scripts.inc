@@ -35,9 +35,9 @@ SaffronCity_Gym_EventScript_GymGuideInterceptSabrinaAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox SaffronCity_Gym_Text_GymGuideSabrinaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
 	setvar VAR_SABRINA_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_PLAYER, SaffronCity_Gym_Movement_PlayerStepAsideForGuide
@@ -168,9 +168,9 @@ SaffronCity_Gym_EventScript_GymGuy::
 
 SaffronCity_Gym_EventScript_GymGuideSabrinaAwayFirstTime::
 	msgbox SaffronCity_Gym_Text_GymGuideSabrinaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
 	setvar VAR_SABRINA_TRIAL_STATE, 1
 	release
 	end

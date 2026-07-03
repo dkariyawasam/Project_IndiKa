@@ -19,9 +19,9 @@ PewterCity_Gym_EventScript_GymGuyInterceptBrockAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox PewterCity_Gym_Text_GymGuyBrockInMtMoon
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
 	setvar VAR_BROCK_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_PEWTER_GYM_GUY, PewterCity_Gym_Movement_GymGuyReturnToSpot
@@ -136,9 +136,9 @@ PewterCity_Gym_EventScript_GymGuy::
 
 PewterCity_Gym_EventScript_GymGuyBrockAwayFirstTime::
 	msgbox PewterCity_Gym_Text_GymGuyBrockInMtMoon
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BROCK
 	setvar VAR_BROCK_TRIAL_STATE, 1
 	release
 	end

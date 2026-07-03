@@ -19,7 +19,6 @@ TITLESCREENGFXDIR := graphics/title_screen
 ITEMMENUGFXDIR := graphics/item_menu
 INTROGFXDIR := graphics/intro
 BATTLETERRAINGFXDIR := graphics/battle_terrain
-BERRYPOUCHGFXDIR := graphics/berry_pouch
 HALLOFFAMEGFXDIR := graphics/hall_of_fame
 MAPPREVIEWGFXDIR := graphics/map_preview
 NAMINGGFXDIR := graphics/naming_screen
@@ -198,9 +197,6 @@ $(FIELDEFFECTSGFXDIR)/pics/tree_disguise.4bpp: %.4bpp: %.png
 $(INTERFACEGFXDIR)/selector_outline.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 8 -Wnum_tiles
 
-graphics/tm_case/tm_case.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 91 -Wnum_tiles
-	
 $(FAMECHECKERGFXDIR)/spinning_pokeball.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 15 -Wnum_tiles
 

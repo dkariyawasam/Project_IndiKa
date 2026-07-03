@@ -290,7 +290,7 @@ static void QLogCB_Playback(void)
 
 void GetQuestLogState(void)
 {
-    gSpecialVar_Result = gQuestLogState;
+    gSpecialVar_Result = 0;
 }
 
 u8 GetQuestLogStartType(void)
@@ -300,6 +300,8 @@ u8 GetQuestLogStartType(void)
 
 void QL_StartRecordingAction(u16 eventId)
 {
+    return;
+
     if (sCurrentSceneNum >= QUEST_LOG_SCENE_COUNT)
         sCurrentSceneNum = 0;
 
@@ -448,6 +450,10 @@ static bool8 TryRecordActionSequence(struct QuestLogAction * actions)
 void TryStartQuestLogPlayback(u8 taskId)
 {
     u8 i;
+
+    SetMainCallback2(CB2_ContinueSavedGame);
+    DestroyTask(taskId);
+    return;
 
     QL_EnableRecordingSteps();
     sNumScenes = 0;
@@ -1293,6 +1299,13 @@ void QL_FinishRecordingScene(void)
 
 void QuestLog_CutRecording(void)
 {
+    gQuestLogState = 0;
+    gQuestLogPlaybackState = QL_PLAYBACK_STATE_STOPPED;
+    gQuestLogDefeatedWildMonRecord = NULL;
+    gQuestLogRecordingPointer = NULL;
+    sQuestLogCB = NULL;
+    return;
+
     if (gQuestLogPlaybackState != QL_PLAYBACK_STATE_STOPPED && gQuestLogState == QL_STATE_RECORDING)
     {
         TryRecordActionSequence(sQuestLogActionRecordBuffer);
@@ -1330,11 +1343,7 @@ static void SortQuestLogInSav1(void)
 
 void SaveQuestLogData(void)
 {
-    if (MenuHelpers_IsLinkActive() != TRUE)
-    {
-        QuestLog_CutRecording();
-        SortQuestLogInSav1();
-    }
+    QuestLog_CutRecording();
 }
 
 void QL_UpdateObject(struct Sprite *sprite)

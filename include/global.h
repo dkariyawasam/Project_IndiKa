@@ -309,7 +309,7 @@ struct LeagueChallengeData
     u16 trainerIds[LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT];
 }; /* size = 0x12 */
 
-// quest menu
+// logbook menu
 #include "constants/quests.h"
 
 struct SaveBlock2

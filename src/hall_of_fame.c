@@ -424,7 +424,6 @@ static void Task_Hof_InitTeamSaveData(u8 taskId)
     u16 i;
     struct HallofFameTeam* lastSavedTeam = (struct HallofFameTeam *)(gDecompressionBuffer);
 
-    SaveQuestLogData();
     if (!gHasHallOfFameRecords)
     {
         memset(gDecompressionBuffer, 0, SECTOR_SIZE * NUM_HOF_SECTORS);

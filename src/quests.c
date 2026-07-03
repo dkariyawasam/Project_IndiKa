@@ -44,7 +44,7 @@
 #define tPageItems      data[4]
 #define tItemPcParam    data[6]
 
-struct QuestMenuResources
+struct LogbookMenuResources
 {
 	MainCallback savedCallback;
 	u8 moveModeOrigPos;
@@ -59,7 +59,7 @@ struct QuestMenuResources
 	bool8 restoreCursor;
 };
 
-struct QuestMenuStaticResources
+struct LogbookMenuStaticResources
 {
 	MainCallback savedCallback;
 	u16 scroll;
@@ -70,10 +70,10 @@ struct QuestMenuStaticResources
 };
 
 // RAM
-EWRAM_DATA static struct QuestMenuResources *sStateDataPtr = NULL;
+EWRAM_DATA static struct LogbookMenuResources *sStateDataPtr = NULL;
 EWRAM_DATA static u8 *sBg1TilemapBuffer = NULL;
 EWRAM_DATA static struct ListMenuItem *sListMenuItems = NULL;
-EWRAM_DATA static struct QuestMenuStaticResources sListMenuState = {0};
+EWRAM_DATA static struct LogbookMenuStaticResources sListMenuState = {0};
 EWRAM_DATA static u8 sItemMenuIconSpriteIds[12] = {0};        // from pokefirered src/item_menu_icons.c
 EWRAM_DATA static void *questNamePointer = NULL;
 EWRAM_DATA static u8 **questNameArray = NULL;
@@ -81,7 +81,7 @@ EWRAM_DATA static u8 sPendingApexDossierSubquest = 0;
 EWRAM_DATA static bool8 sReturningFromApexDossier = FALSE;
 
 // This File's Functions
-void QuestMenu_Init(u8 a0, MainCallback callback);
+void LogbookMenu_Init(u8 a0, MainCallback callback);
 const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId);
 static void MainCB(void);
 static void VBlankCB(void);
@@ -89,7 +89,7 @@ static void RunSetup(void);
 
 static bool8 SetupGraphics(void);
 static bool8 LoadGraphics(void);
-static void QuestMenu_InitWindows(void);
+static void LogbookMenu_InitWindows(void);
 static bool8 InitBackgrounds(void);
 static void InitItems(void);
 static bool8 AllocateResourcesForListMenu(void);
@@ -137,7 +137,7 @@ static u8 PopulateListRowNameAndId(u8 row, u8 countQuest);
 static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId);
 static void AddSubQuestButton(u8 countQuest);
 
-static void QuestMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
+static void LogbookMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
             const u8 *str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed,
             u8 colorIdx);
 
@@ -159,9 +159,9 @@ static bool8 IsQuestCompletedState(s32 questId);
 static bool8 IsSubquestUnlockedState(s32 questId);
 
 static void DetermineSpriteType(s32 questId);
-static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType);
+static void LogbookMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType);
 static void ResetSpriteState(void);
-static void QuestMenu_DestroySprite(u8 idx);
+static void LogbookMenu_DestroySprite(u8 idx);
 
 static void GenerateStateAndPrint(u8 windowId, u32 itemId, u8 y);
 static u8 GenerateSubquestState(u8 questId);
@@ -176,10 +176,10 @@ static void PrintMenuContext(void);
 
 static void Task_Main(u8 taskId);
 static u8 ManageFavorites(u8 index);
-static void Task_QuestMenuCleanUp(u8 taskId);
+static void Task_LogbookMenuCleanUp(u8 taskId);
 static void RestoreSavedScrollAndRow(s16 *data);
 static void ResetCursorToTop(s16 *data);
-static void QuestMenu_RemoveScrollIndicatorArrowPair(void);
+static void LogbookMenu_RemoveScrollIndicatorArrowPair(void);
 static void EnterSubquestModeAndCleanUp(u8 taskId, s16 *data, s32 input);
 static void ChangeModeAndCleanUp(u8 taskId);
 static void ToggleAlphaModeAndCleanUp(u8 taskId);
@@ -197,32 +197,32 @@ static bool8 HandleFadeIn(u8 taskId);
 static void Task_FadeOut(u8 taskId);
 static void Task_FadeIn(u8 taskId);
 
-static void Task_QuestMenuWaitFadeAndBail(u8 taskId);
+static void Task_LogbookMenuWaitFadeAndBail(u8 taskId);
 static void FadeAndBail(void);
 static void FreeResources(void);
-static void TurnOffQuestMenu(u8 taskId);
+static void TurnOffLogbookMenu(u8 taskId);
 static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId);
 static void CB2_OpenApexRumorDossier(void);
 static void CB2_ReturnToApexSubquestMenu(void);
-static void Task_QuestMenuTurnOff1(u8 taskId);
-static void Task_QuestMenuTurnOff2(u8 taskId);
+static void Task_LogbookMenuTurnOff1(u8 taskId);
+static void Task_LogbookMenuTurnOff2(u8 taskId);
 
-// Tiles, palettes and tilemaps for the Quest Menu
-static const u32 sQuestMenuTiles[] =
-        INCBIN_U32("graphics/quest_menu/menu.4bpp.lz");
-static const u32 sQuestMenuBgPals[] =
+// Tiles, palettes and tilemaps for the Logbook Menu
+static const u32 sLogbookMenuTiles[] =
+        INCBIN_U32("graphics/logbook_menu/menu.4bpp.lz");
+static const u32 sLogbookMenuBgPals[] =
         INCBIN_U32("graphics/item_menu/bg.gbapal.lz");
-static const u32 sQuestMenuTilemap[] =
-        INCBIN_U32("graphics/quest_menu/menu.bin.lz");
+static const u32 sLogbookMenuTilemap[] =
+        INCBIN_U32("graphics/logbook_menu/menu.bin.lz");
 
-#define QUEST_MENU_FOOTER_BG_COLOR 15
-#define QUEST_MENU_FOOTER_BORDER_DARK_COLOR 13
-#define QUEST_MENU_FOOTER_BORDER_LIGHT_COLOR 12
-#define QUEST_MENU_FOOTER_BOTTOM_MID_COLOR 14
-#define QUEST_MENU_FOOTER_TEXT_COLOR 10
-#define QUEST_MENU_FOOTER_SHADOW_COLOR 13
+#define LOGBOOK_MENU_FOOTER_BG_COLOR 15
+#define LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR 13
+#define LOGBOOK_MENU_FOOTER_BORDER_LIGHT_COLOR 12
+#define LOGBOOK_MENU_FOOTER_BOTTOM_MID_COLOR 14
+#define LOGBOOK_MENU_FOOTER_TEXT_COLOR 10
+#define LOGBOOK_MENU_FOOTER_SHADOW_COLOR 13
 
-//Strings used for the Quest Menu
+//Strings used for the Logbook Menu
 static const u8 sText_Empty[] = _("");
 static const u8 sText_AllHeader[] = _("ALL MISSIONS");
 static const u8 sText_InactiveHeader[] = _("Inactive Missions");
@@ -562,7 +562,7 @@ static u8 GetApexRumorCount(u8 apexSubquest)
     return count;
 }
 
-bool8 QuestMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor)
+bool8 LogbookMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor)
 {
     u8 bit;
     u16 var;
@@ -601,10 +601,10 @@ void RecordApexRumor(void)
 
     oldCount = GetApexRumorCount(apexSubquest);
     VarSet(var, VarGet(var) | mask);
-    QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
-    if (!QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_GET_COMPLETED))
-        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
-    QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, apexSubquest);
+    LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
+    if (!LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_GET_COMPLETED))
+        LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
+    LogbookMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, apexSubquest);
     gSpecialVar_Result = oldCount == 0 ? APEX_RUMOR_RESULT_RECORDED : APEX_RUMOR_RESULT_UPDATED;
 }
 
@@ -643,20 +643,20 @@ void TryCompleteApexInstinctQuest(void)
         if (FlagGet(sApexQuestProgress[i].flag))
         {
             count++;
-            QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
-            QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
-            QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, sApexQuestProgress[i].subquest);
-            QuestMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED, sApexQuestProgress[i].subquest);
+            LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED);
+            LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
+            LogbookMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, sApexQuestProgress[i].subquest);
+            LogbookMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED, sApexQuestProgress[i].subquest);
         }
     }
 
-    if (count >= 2 && !QuestMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_GET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT))
-        QuestMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_SET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT);
+    if (count >= 2 && !LogbookMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_GET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT))
+        LogbookMenu_GetSetSubquestState(QUEST_THE_NATURE_OF_EVOLUTION, FLAG_SET_COMPLETED, SUB_QUEST_EVOLUTION_THROUGH_INSTINCT);
 
     if (count >= QUEST_3_SUB_COUNT)
     {
-        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED);
-        QuestMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_REMOVE_ACTIVE);
+        LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_COMPLETED);
+        LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_REMOVE_ACTIVE);
     }
 }
 
@@ -664,7 +664,7 @@ void TryCompleteApexInstinctQuest(void)
 ///////////////////////////////////////////////////////////////////////////////
 
 //BG layer defintions
-static const struct BgTemplate sQuestMenuBgTemplates[2] =
+static const struct BgTemplate sLogbookMenuBgTemplates[2] =
 {
 	{
 		//All text and content is loaded to this window
@@ -683,7 +683,7 @@ static const struct BgTemplate sQuestMenuBgTemplates[2] =
 };
 
 //Window definitions
-static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
+static const struct WindowTemplate sLogbookMenuHeaderWindowTemplates[] =
 {
 	{
 		//0: Content window
@@ -719,10 +719,10 @@ static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
 };
 
 //Font color combinations for printed text
-static const u8 sQuestMenuWindowFontColors[][4] =
+static const u8 sLogbookMenuWindowFontColors[][4] =
 {
 	{
-		//Header of Quest Menu
+		//Header of Logbook Menu
 		TEXT_COLOR_TRANSPARENT,
 		TEXT_COLOR_WHITE,
 		TEXT_COLOR_DARK_GRAY
@@ -748,15 +748,15 @@ static const u8 sQuestMenuWindowFontColors[][4] =
 	{
 		//Footer flavor text
 		TEXT_COLOR_TRANSPARENT,
-		QUEST_MENU_FOOTER_TEXT_COLOR,
-		QUEST_MENU_FOOTER_SHADOW_COLOR
+		LOGBOOK_MENU_FOOTER_TEXT_COLOR,
+		LOGBOOK_MENU_FOOTER_SHADOW_COLOR
 	},
 };
 
 //Functions begin here
 
 //ported from firered by ghoulslash
-void QuestMenu_Init(u8 a0, MainCallback callback)
+void LogbookMenu_Init(u8 a0, MainCallback callback)
 {
 	u8 i;
 
@@ -766,7 +766,7 @@ void QuestMenu_Init(u8 a0, MainCallback callback)
 		return;
 	}
 
-	if ((sStateDataPtr = Alloc(sizeof(struct QuestMenuResources))) == NULL)
+	if ((sStateDataPtr = Alloc(sizeof(struct LogbookMenuResources))) == NULL)
 	{
 		SetMainCallback2(callback);
 		return;
@@ -870,7 +870,7 @@ static bool8 SetupGraphics(void)
 			}
 			break;
 		case 9:
-			QuestMenu_InitWindows();
+			LogbookMenu_InitWindows();
 			gMain.state++;
 			break;
 		case 10:
@@ -951,18 +951,18 @@ static bool8 LoadGraphics(void)
 	{
 		case 0:
 			ResetTempTileDataBuffers();
-			DecompressAndCopyTileDataToVram(1, sQuestMenuTiles, 0, 0, 0);
+			DecompressAndCopyTileDataToVram(1, sLogbookMenuTiles, 0, 0, 0);
 			sStateDataPtr->data[0]++;
 			break;
 		case 1:
 			if (FreeTempTileDataBuffersIfPossible() != TRUE)
 			{
-				LZDecompressWram(sQuestMenuTilemap, sBg1TilemapBuffer);
+				LZDecompressWram(sLogbookMenuTilemap, sBg1TilemapBuffer);
 				sStateDataPtr->data[0]++;
 			}
 			break;
 		case 2:
-			LoadCompressedPalette(sQuestMenuBgPals, 0x00, 0x60);
+			LoadCompressedPalette(sLogbookMenuBgPals, 0x00, 0x60);
 			sStateDataPtr->data[0]++;
 			break;
 		case 3:
@@ -975,11 +975,11 @@ static bool8 LoadGraphics(void)
 	return FALSE;
 }
 
-static void QuestMenu_InitWindows(void)
+static void LogbookMenu_InitWindows(void)
 {
 	u8 i;
 
-	InitWindows(sQuestMenuHeaderWindowTemplates);
+	InitWindows(sLogbookMenuHeaderWindowTemplates);
 	DeactivateAllTextPrinters();
 
 	for (i = 0; i < 3; i++)
@@ -1002,8 +1002,8 @@ static bool8 InitBackgrounds(void)
 
 	memset(sBg1TilemapBuffer, 0, 0x800);
 	ResetBgsAndClearDma3BusyFlags(0);
-	InitBgsFromTemplates(0, sQuestMenuBgTemplates,
-	                     NELEMS(sQuestMenuBgTemplates));
+	InitBgsFromTemplates(0, sLogbookMenuBgTemplates,
+	                     NELEMS(sLogbookMenuBgTemplates));
 	SetBgTilemapBuffer(1, sBg1TilemapBuffer);
 	ScheduleBgCopyTilemapToVram(1);
 	SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
@@ -1395,14 +1395,14 @@ u8 GenerateList(bool8 isFiltered)
 	{
 		selectedQuestId = *(sortedQuestList + countQuest);
 
-		if (isFiltered && !QuestMenu_GetSetQuestState(selectedQuestId, mode))
+		if (isFiltered && !LogbookMenu_GetSetQuestState(selectedQuestId, mode))
 		{
 			continue;
 		}
 
 		PopulateEmptyRow(selectedQuestId);
 
-		if (QuestMenu_GetSetQuestState(selectedQuestId, FLAG_GET_FAVORITE))
+		if (LogbookMenu_GetSetQuestState(selectedQuestId, FLAG_GET_FAVORITE))
 		{
 			SetFavoriteQuest(selectedQuestId);
 			newRow = numRow;
@@ -1434,7 +1434,7 @@ static void AssignCancelNameAndId(u8 numRow)
 	sListMenuItems[numRow].index = LIST_CANCEL;
 }
 
-u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
+u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 {
     u8 uniqueId;
     u8 index;
@@ -1469,7 +1469,7 @@ u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
     return 0;
 }
 
-u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
+u8 LogbookMenu_GetSetQuestState(u8 quest, u8 caseId)
 {
 	u8 index = quest * 5 / 8;
 	u8 bit = quest * 5 % 8;
@@ -1583,7 +1583,7 @@ u8 CountUnlockedQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (QuestMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED))
+		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED))
 		{
 			q++;
 		}
@@ -1597,7 +1597,7 @@ u8 CountInactiveQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (QuestMenu_GetSetQuestState(i, FLAG_GET_INACTIVE))
+		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_INACTIVE))
 		{
 			q++;
 		}
@@ -1611,7 +1611,7 @@ u8 CountActiveQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (QuestMenu_GetSetQuestState(i, FLAG_GET_ACTIVE))
+		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_ACTIVE))
 		{
 			q++;
 		}
@@ -1625,7 +1625,7 @@ u8 CountRewardQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (QuestMenu_GetSetQuestState(i, FLAG_GET_REWARD))
+		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_REWARD))
 		{
 			q++;
 		}
@@ -1643,7 +1643,7 @@ u8 CountCompletedQuests(void)
 	{
 		for (i = 0; i < sSideQuests[parentQuest].numSubquests; i++)
 		{
-			if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, i))
+			if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, i))
 			{
 				q++;
 			}
@@ -1653,7 +1653,7 @@ u8 CountCompletedQuests(void)
 	{
 		for (i = 0; i < QUEST_COUNT; i++)
 		{
-			if (QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED))
+			if (LogbookMenu_GetSetQuestState(i, FLAG_GET_COMPLETED))
 			{
 				q++;
 			}
@@ -1670,9 +1670,9 @@ u8 CountFavoriteQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (QuestMenu_GetSetQuestState(i, FLAG_GET_FAVORITE))
+		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_FAVORITE))
 		{
-			if (QuestMenu_GetSetQuestState(i, mode))
+			if (LogbookMenu_GetSetQuestState(i, mode))
 			{
 				x++;
 			}
@@ -1711,7 +1711,7 @@ void SetFavoriteQuest(u8 countQuest)
 
 void PopulateQuestName(u8 countQuest)
 {
-	if (QuestMenu_GetSetQuestState(countQuest, FLAG_GET_UNLOCKED))
+	if (LogbookMenu_GetSetQuestState(countQuest, FLAG_GET_UNLOCKED))
 	{
 		questNamePointer = StringAppend(questNameArray[countQuest],
 		                                sSideQuests[countQuest].name);
@@ -1733,7 +1733,7 @@ void PopulateSubquestName(u8 parentQuest, u8 countQuest)
         return;
     }
 
-    if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, countQuest))
+    if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, countQuest))
     {
         questNamePointer = StringAppend(
             questNamePointer,
@@ -1758,8 +1758,8 @@ u8 PopulateListRowNameAndId(u8 row, u8 countQuest)
 static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId)
 {
 	if (sSideQuests[itemId].numSubquests != 0
-	            && QuestMenu_GetSetQuestState(itemId, FLAG_GET_UNLOCKED)
-	            && !QuestMenu_GetSetQuestState(itemId, FLAG_GET_INACTIVE))
+	            && LogbookMenu_GetSetQuestState(itemId, FLAG_GET_UNLOCKED)
+	            && !LogbookMenu_GetSetQuestState(itemId, FLAG_GET_INACTIVE))
 	{
 		return TRUE;
 	}
@@ -1778,13 +1778,13 @@ void AddSubQuestButton(u8 countQuest)
 	}
 
 }
-static void QuestMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
+static void LogbookMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
             const u8 *str, u8 x, u8 y,
             u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
 {
 	AddTextPrinterParameterized4(windowId, fontId, x, y, letterSpacing,
 	                             lineSpacing,
-	                             sQuestMenuWindowFontColors[colorIdx], speed, str);
+	                             sLogbookMenuWindowFontColors[colorIdx], speed, str);
 }
 
 static void MoveCursorFunc(s32 questId, bool8 onInit,
@@ -1794,7 +1794,7 @@ static void MoveCursorFunc(s32 questId, bool8 onInit,
 
 	if (sStateDataPtr->moveModeOrigPos == 0xFF)
 	{
-		QuestMenu_DestroySprite(sStateDataPtr->spriteIconSlot ^ 1);
+		LogbookMenu_DestroySprite(sStateDataPtr->spriteIconSlot ^ 1);
 		sStateDataPtr->spriteIconSlot ^= 1;
 
 		if (questId == LIST_CANCEL)
@@ -1819,21 +1819,21 @@ static void PlayCursorSound(bool8 firstRun)
 
 static void FillQuestFooterWindow(void)
 {
-	FillWindowPixelBuffer(1, PIXEL_FILL(QUEST_MENU_FOOTER_BG_COLOR));
-	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_DARK_COLOR), 0, 0, 240, 2);
-	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_LIGHT_COLOR), 0, 2, 240, 1);
-	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BOTTOM_MID_COLOR), 0, 45, 240, 1);
-	FillWindowPixelRect(1, PIXEL_FILL(QUEST_MENU_FOOTER_BORDER_DARK_COLOR), 0, 46, 240, 2);
+	FillWindowPixelBuffer(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BG_COLOR));
+	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR), 0, 0, 240, 2);
+	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_LIGHT_COLOR), 0, 2, 240, 1);
+	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BOTTOM_MID_COLOR), 0, 45, 240, 1);
+	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR), 0, 46, 240, 2);
 }
 
 static void PrintDetailsForCancel()
 {
 	FillQuestFooterWindow();
 
-	QuestMenu_AddTextPrinterParameterized(1, 2, sText_CloseLogbook, 40, 3, 2, 0, 0,
+	LogbookMenu_AddTextPrinterParameterized(1, 2, sText_CloseLogbook, 40, 3, 2, 0, 0,
 	                                      4);
 
-	QuestMenu_CreateSprite(-1, sStateDataPtr->spriteIconSlot, ITEM);
+	LogbookMenu_CreateSprite(-1, sStateDataPtr->spriteIconSlot, ITEM);
 }
 
 void GenerateAndPrintQuestDetails(s32 questId)
@@ -1870,7 +1870,7 @@ void GenerateQuestFlavorText(s32 questId)
     {
         StringCopy(gStringVar1, sText_Empty);
     }
-    else if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
+    else if (LogbookMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId))
     {
         const u8 *desc = GetDynamicSubquestDesc(sStateDataPtr->parentQuest, questId);
 
@@ -1895,13 +1895,13 @@ void UpdateQuestFlavorText(s32 questId)
 void PrintQuestFlavorText(s32 questId)
 {
 	FillQuestFooterWindow();
-	QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar3, 40, 3, 2, 0, 0,
+	LogbookMenu_AddTextPrinterParameterized(1, 2, gStringVar3, 40, 3, 2, 0, 0,
 	                                      4);
 }
 
 bool8 IsSubquestUnlockedState(s32 questId)
 {
-	if (QuestMenu_GetSetSubquestState(sStateDataPtr->parentQuest,
+	if (LogbookMenu_GetSetSubquestState(sStateDataPtr->parentQuest,
 	                                  FLAG_GET_UNLOCKED,
 	                                  questId))
 	{
@@ -1914,7 +1914,7 @@ bool8 IsSubquestUnlockedState(s32 questId)
 }
 bool8 IsQuestRewardState(s32 questId)
 {
-	if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
 	{
 		return TRUE;
 	}
@@ -1926,7 +1926,7 @@ bool8 IsQuestRewardState(s32 questId)
 
 bool8 IsQuestInactiveState(s32 questId)
 {
-	if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
+	if (!LogbookMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
 	{
 		return TRUE;
 	}
@@ -1938,7 +1938,7 @@ bool8 IsQuestInactiveState(s32 questId)
 
 bool8 IsQuestActiveState(s32 questId)
 {
-	if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
 	{
 		return TRUE;
 	}
@@ -1950,7 +1950,7 @@ bool8 IsQuestActiveState(s32 questId)
 
 bool8 IsQuestCompletedState(s32 questId)
 {
-	if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
 	{
 		return TRUE;
 	}
@@ -1962,7 +1962,7 @@ bool8 IsQuestCompletedState(s32 questId)
 
 bool8 IsQuestUnlocked(s32 questId)
 {
-	if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
 	{
 		return TRUE;
 	}
@@ -1982,7 +1982,7 @@ void DetermineSpriteType(s32 questId)
 		spriteId = sSideQuests[questId].sprite;
 		spriteType = sSideQuests[questId].spritetype;
 
-		QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
+		LogbookMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
 		                       spriteType);
 	}
 	else if (IsSubquestUnlockedState(questId) == TRUE)
@@ -1991,17 +1991,17 @@ void DetermineSpriteType(s32 questId)
 		      sSideQuests[sStateDataPtr->parentQuest].subquests[questId].sprite;
 		spriteType =
 		      sSideQuests[sStateDataPtr->parentQuest].subquests[questId].spritetype;
-		QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
+		LogbookMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
 		                       spriteType);
 	}
 	else
 	{
-		QuestMenu_CreateSprite(ITEM_NONE, sStateDataPtr->spriteIconSlot, ITEM);
+		LogbookMenu_CreateSprite(ITEM_NONE, sStateDataPtr->spriteIconSlot, ITEM);
 	}
-	QuestMenu_DestroySprite(sStateDataPtr->spriteIconSlot ^ 1);
+	LogbookMenu_DestroySprite(sStateDataPtr->spriteIconSlot ^ 1);
 	sStateDataPtr->spriteIconSlot ^= 1;
 }
-static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
+static void LogbookMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
 {
 	u8 *ptr = &sItemMenuIconSpriteIds[10];
 	u8 spriteId;
@@ -2056,7 +2056,7 @@ void ResetSpriteState(void)
 	}
 }
 
-static void QuestMenu_DestroySprite(u8 idx)
+static void LogbookMenu_DestroySprite(u8 idx)
 {
 	u8 *ptr = &sItemMenuIconSpriteIds[10];
 
@@ -2101,13 +2101,13 @@ u8 GenerateSubquestState(u8 questId)
 {
 	u8 parentQuest = sStateDataPtr->parentQuest;
 
-	if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED,
+	if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED,
 	                                  questId))
 	{
 		StringCopy(gStringVar4, sSideQuests[parentQuest].subquests[questId].type);
 	}
 	else if (parentQuest == QUEST_APEX_POKEMON
-	      && QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, questId))
+	      && LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, questId))
 	{
 		StringCopy(gStringVar4, sText_InProgress);
 	}
@@ -2121,17 +2121,17 @@ u8 GenerateSubquestState(u8 questId)
 
 u8 GenerateQuestState(u8 questId)
 {
-	if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
 	{
 		StringCopy(gStringVar4, sText_Complete);
 		return 2;
 	}
-	else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
+	else if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
 	{
 		StringCopy(gStringVar4, sText_Reward);
 		return 1;
 	}
-	else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
+	else if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
 	{
 		StringCopy(gStringVar4, sText_Active);
 		return 3;
@@ -2144,7 +2144,7 @@ u8 GenerateQuestState(u8 questId)
 
 void PrintQuestState(u8 windowId, u8 y, u8 colorIndex)
 {
-	QuestMenu_AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4,
+	LogbookMenu_AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4,
 	                                      192, y, 0, 0, 0xFF, colorIndex);
 }
 
@@ -2251,7 +2251,7 @@ static void PrintMenuContext(void)
 {
 	u8 x = (DISPLAY_WIDTH - GetStringWidth(FONT_NORMAL_COPY_1, questNameArray[QUEST_ARRAY_COUNT], 0)) / 2;
 
-	QuestMenu_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_1,
+	LogbookMenu_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_1,
 	                                      questNameArray[QUEST_ARRAY_COUNT],
 	                                      x, 1, 0, 1, 0, 0);
 }
@@ -2292,7 +2292,7 @@ static void Task_Main(u8 taskId)
 				}
 				else
 				{
-					TurnOffQuestMenu(taskId);
+					TurnOffLogbookMenu(taskId);
 				}
 				break;
 
@@ -2313,21 +2313,21 @@ static void Task_Main(u8 taskId)
 
 u8 ManageFavorites(u8 selectedQuestId)
 {
-	if (QuestMenu_GetSetQuestState(selectedQuestId, FLAG_GET_FAVORITE))
+	if (LogbookMenu_GetSetQuestState(selectedQuestId, FLAG_GET_FAVORITE))
 	{
-		QuestMenu_GetSetQuestState(selectedQuestId, FLAG_REMOVE_FAVORITE);
+		LogbookMenu_GetSetQuestState(selectedQuestId, FLAG_REMOVE_FAVORITE);
 	}
 	else
 	{
-		QuestMenu_GetSetQuestState(selectedQuestId, FLAG_SET_FAVORITE);
+		LogbookMenu_GetSetQuestState(selectedQuestId, FLAG_SET_FAVORITE);
 	}
 }
 
-static void Task_QuestMenuCleanUp(u8 taskId)
+static void Task_LogbookMenuCleanUp(u8 taskId)
 {
 	s16 *data = gTasks[taskId].data;
 
-	QuestMenu_RemoveScrollIndicatorArrowPair();
+	LogbookMenu_RemoveScrollIndicatorArrowPair();
 	DestroyListMenuTask(data[0], &sListMenuState.scroll, &sListMenuState.row);
 	ClearStdWindowAndFrameToTransparent(2, FALSE);
 
@@ -2362,7 +2362,7 @@ static void ResetCursorToTop(s16 *data)
 	                       sListMenuState.row);
 }
 
-static void QuestMenu_RemoveScrollIndicatorArrowPair(void)
+static void LogbookMenu_RemoveScrollIndicatorArrowPair(void)
 {
 	if (sStateDataPtr->scrollIndicatorArrowPairId != 0xFF)
 	{
@@ -2392,7 +2392,7 @@ void ChangeModeAndCleanUp(u8 taskId)
 	{
 		PlaySE(SE_SELECT);
 		sStateDataPtr->filterMode = ManageMode(INCREMENT);
-		Task_QuestMenuCleanUp(taskId);
+		Task_LogbookMenuCleanUp(taskId);
 	}
 }
 void ToggleAlphaModeAndCleanUp(u8 taskId)
@@ -2401,7 +2401,7 @@ void ToggleAlphaModeAndCleanUp(u8 taskId)
 	{
 		PlaySE(SE_SELECT);
 		sStateDataPtr->filterMode = ManageMode(ALPHA);
-		Task_QuestMenuCleanUp(taskId);
+		Task_LogbookMenuCleanUp(taskId);
 	}
 }
 void ToggleFavoriteAndCleanUp(u8 taskId, u8 selectedQuestId)
@@ -2412,7 +2412,7 @@ void ToggleFavoriteAndCleanUp(u8 taskId, u8 selectedQuestId)
 		PlaySE(SE_SELECT);
 		ManageFavorites(selectedQuestId);
 		sStateDataPtr->restoreCursor = FALSE;
-		Task_QuestMenuCleanUp(taskId);
+		Task_LogbookMenuCleanUp(taskId);
 	}
 }
 bool8 CheckSelectedIsCancel(u8 selectedQuestId)
@@ -2520,7 +2520,7 @@ static void Task_FadeOut(u8 taskId)
 	if (HandleFadeOut(taskId))
 	{
 		PrepareFadeIn(taskId);
-		Task_QuestMenuCleanUp(taskId);
+		Task_LogbookMenuCleanUp(taskId);
 		gTasks[taskId].func = Task_FadeIn;
 	}
 }
@@ -2533,7 +2533,7 @@ static void Task_FadeIn(u8 taskId)
 	}
 }
 
-static void Task_QuestMenuWaitFadeAndBail(u8 taskId)
+static void Task_LogbookMenuWaitFadeAndBail(u8 taskId)
 {
 	if (!gPaletteFade.active)
 	{
@@ -2546,7 +2546,7 @@ static void Task_QuestMenuWaitFadeAndBail(u8 taskId)
 static void FadeAndBail(void)
 {
 	BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
-	CreateTask(Task_QuestMenuWaitFadeAndBail, 0);
+	CreateTask(Task_LogbookMenuWaitFadeAndBail, 0);
 	SetVBlankCallback(VBlankCB);
 	SetMainCallback2(MainCB);
 }
@@ -2575,10 +2575,10 @@ static void FreeResources(void)
 	FreeAllWindowBuffers();
 }
 
-void TurnOffQuestMenu(u8 taskId)
+void TurnOffLogbookMenu(u8 taskId)
 {
 	SetInitializedFlag(0);
-	gTasks[taskId].func = Task_QuestMenuTurnOff1;
+	gTasks[taskId].func = Task_LogbookMenuTurnOff1;
 }
 
 static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId)
@@ -2586,7 +2586,7 @@ static void OpenApexDossierAndCleanUp(u8 taskId, u8 subquestId)
 	PlaySE(SE_SELECT);
 	sPendingApexDossierSubquest = subquestId;
 	sStateDataPtr->savedCallback = CB2_OpenApexRumorDossier;
-	TurnOffQuestMenu(taskId);
+	TurnOffLogbookMenu(taskId);
 }
 
 static void CB2_OpenApexRumorDossier(void)
@@ -2597,16 +2597,16 @@ static void CB2_OpenApexRumorDossier(void)
 static void CB2_ReturnToApexSubquestMenu(void)
 {
 	sReturningFromApexDossier = TRUE;
-	QuestMenu_Init(1, sListMenuState.savedCallback);
+	LogbookMenu_Init(1, sListMenuState.savedCallback);
 }
 
-static void Task_QuestMenuTurnOff1(u8 taskId)
+static void Task_LogbookMenuTurnOff1(u8 taskId)
 {
 	BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
-	gTasks[taskId].func = Task_QuestMenuTurnOff2;
+	gTasks[taskId].func = Task_LogbookMenuTurnOff2;
 }
 
-static void Task_QuestMenuTurnOff2(u8 taskId)
+static void Task_LogbookMenuTurnOff2(u8 taskId)
 {
 	s16 *data = gTasks[taskId].data;
 
@@ -2622,34 +2622,34 @@ static void Task_QuestMenuTurnOff2(u8 taskId)
 			SetMainCallback2(sListMenuState.savedCallback);
 		}
 
-		QuestMenu_RemoveScrollIndicatorArrowPair();
+		LogbookMenu_RemoveScrollIndicatorArrowPair();
 		FreeResources();
 		DestroyTask(taskId);
 	}
 }
 
-void Task_QuestMenu_OpenFromStartMenu(u8 taskId)
+void Task_LogbookMenu_OpenFromStartMenu(u8 taskId)
 {
 	s16 *data = gTasks[taskId].data;
 	if (!gPaletteFade.active)
 	{
 		CleanupOverworldWindowsAndTilemaps();
-		QuestMenu_Init(tItemPcParam, CB2_ReturnToFieldWithOpenMenu);
+		LogbookMenu_Init(tItemPcParam, CB2_ReturnToFieldWithOpenMenu);
 		DestroyTask(taskId);
 	}
 }
 
-void QuestMenu_CopyQuestName(u8 *dst, u8 questId)
+void LogbookMenu_CopyQuestName(u8 *dst, u8 questId)
 {
 	StringCopy(dst, sSideQuests[questId].name);
 }
 
-void QuestMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId)
+void LogbookMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId)
 {
 	StringCopy(dst, sSideQuests[parentId].subquests[childId].name);
 }
 
-void QuestMenu_ResetMenuSaveData(void)
+void LogbookMenu_ResetMenuSaveData(void)
 {
 	memset(&gSaveBlock2Ptr->questData, 0,
 	       sizeof(gSaveBlock2Ptr->questData));
@@ -2775,7 +2775,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
     {
         if (subquestId == SUB_QUEST_APEX_ANNIHILAPE)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexAnnihilapeRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexAnnihilapeConfirmed;
@@ -2784,7 +2784,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_MIME_SR)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexMimeSrRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexMimeSrConfirmed;
@@ -2793,7 +2793,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_ARTICUNO)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexArticunoRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexArticunoConfirmed;
@@ -2802,7 +2802,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_OSSCYTHE)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexOsscytheRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexOsscytheConfirmed;
@@ -2811,7 +2811,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_TANGROWTH)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexTangrowthRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexTangrowthConfirmed;
@@ -2820,7 +2820,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_ZAPDOS)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexZapdosRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexZapdosConfirmed;
@@ -2829,7 +2829,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
         }
         else if (subquestId == SUB_QUEST_APEX_MOLTRES)
         {
-            if (QuestMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+            if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
                 return sText_ApexMoltresRecorded;
             else if (GetApexRumorCount(subquestId) >= APEX_RUMORS_REQUIRED)
                 return sText_ApexMoltresConfirmed;

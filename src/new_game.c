@@ -145,5 +145,5 @@ void NewGameInitData(void)
     WarpToPlayersRoom();
     RunScriptImmediately(EventScript_ResetAllMapFlags);
     StringCopy(gSaveBlock1Ptr->rivalName, rivalName);
-    QuestMenu_ResetMenuSaveData();
+    LogbookMenu_ResetMenuSaveData();
 }

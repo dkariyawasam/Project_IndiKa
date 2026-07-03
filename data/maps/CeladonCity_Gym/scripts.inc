@@ -39,9 +39,9 @@ CeladonCity_Gym_EventScript_GymGuideInterceptErikaAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox CeladonCity_Gym_Text_GymGuideErikaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	setvar VAR_ERIKA_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_PLAYER, CeladonCity_Gym_Movement_PlayerStepAsideForGuide
@@ -172,9 +172,9 @@ CeladonCity_Gym_EventScript_GymGuide::
 
 CeladonCity_Gym_EventScript_GymGuideErikaAwayFirstTime::
 	msgbox CeladonCity_Gym_Text_GymGuideErikaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	setvar VAR_ERIKA_TRIAL_STATE, 1
 	release
 	end
