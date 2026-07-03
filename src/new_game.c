@@ -5,8 +5,6 @@
 #include "constants/maps.h"
 #include "load_save.h"
 #include "item_menu.h"
-#include "tm_case.h"
-#include "berry_pouch.h"
 #include "quest_log.h"
 #include "wild_encounter.h"
 #include "event_data.h"
@@ -97,8 +95,6 @@ void ResetMenuAndMonGlobals(void)
     ZeroPlayerPartyMons();
     ZeroEnemyPartyMons();
     ResetBagCursorPositions();
-    ResetTMCaseCursorPos();
-    BerryPouch_CursorResetToTop();
     ResetQuestLog();
     SeedWildEncounterRng(Random());
     ResetSpecialVars();

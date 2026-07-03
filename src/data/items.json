@@ -5702,7 +5702,7 @@
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
       "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_TmCase",
+      "fieldUseFunc": "NULL",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
@@ -5718,9 +5718,9 @@
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
       "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_BerryPouch",
-      "battleUsage": 3,
-      "battleUseFunc": "BattleUseFunc_BerryPouch",
+      "fieldUseFunc": "NULL",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
       "secondaryId": 0
     },
     {

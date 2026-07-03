@@ -6,7 +6,6 @@
 #include "battle_gfx_sfx_util.h"
 #include "battle_interface.h"
 #include "battle_tower.h"
-#include "berry_pouch.h"
 #include "data.h"
 #include "decompress.h"
 #include "easy_chat.h"
@@ -20,7 +19,6 @@
 #include "fldeff.h"
 #include "graphics.h"
 #include "help_message.h"
-#include "help_system.h"
 #include "item.h"
 #include "item_menu.h"
 #include "item_use.h"
@@ -53,7 +51,6 @@
 #include "task.h"
 #include "teachy_tv.h"
 #include "text_window.h"
-#include "tm_case.h"
 #include "trade.h"
 #include "union_room.h"
 #include "constants/battle.h"
@@ -183,8 +180,6 @@ static void CreateCancelConfirmPokeballSprites(void);
 static void CreateCancelConfirmWindows(bool8 chooseMultiple);
 static void Task_ExitPartyMenu(u8 taskId);
 static void FreePartyPointers(void);
-static void PartyMenu_DisableHelpSystem(void);
-static void PartyMenu_RestoreHelpSystem(void);
 static void PartyPaletteBufferCopy(u8 offset);
 static void DisplayPartyPokemonDataForMultiBattle(u8 slot);
 static void DisplayPartyPokemonDataForChooseMultiple(u8 slot);
@@ -398,7 +393,6 @@ EWRAM_DATA struct PartyMenu gPartyMenu = {0};
 static EWRAM_DATA struct PartyMenuBox *sPartyMenuBoxes = NULL;
 static EWRAM_DATA u8 *sPartyBgGfxTilemap = NULL;
 static EWRAM_DATA u8 *sPartyBgTilemapBuffer = NULL;
-static EWRAM_DATA bool8 sPartyMenuDisabledHelpSystem = FALSE;
 EWRAM_DATA bool8 gPartyMenuUseExitCallback = FALSE;
 EWRAM_DATA u8 gSelectedMonPartyId = 0;
 EWRAM_DATA MainCallback gPostMenuFieldCallback = NULL;
@@ -427,8 +421,6 @@ void InitPartyMenu(u8 menuType, u8 layout, u8 partyAction, bool8 keepCursorPos, 
         gPartyMenu.menuType = menuType;
         gPartyMenu.exitCallback = callback;
         gPartyMenu.action = partyAction;
-        if (menuType == PARTY_MENU_TYPE_FIELD)
-            PartyMenu_DisableHelpSystem();
         sPartyMenuInternal->messageId = messageId;
         sPartyMenuInternal->task = task;
         sPartyMenuInternal->exitCallback = NULL;
@@ -574,7 +566,6 @@ static bool8 ShowPartyMenu(void)
         ++gMain.state;
         break;
     case 18:
-        SetHelpContext(HELPCONTEXT_PARTY_MENU);
         ++gMain.state;
         break;
     case 19:
@@ -702,7 +693,6 @@ static void PartyPaletteBufferCopy(u8 offset)
 
 static void FreePartyPointers(void)
 {
-    PartyMenu_RestoreHelpSystem();
     if (sPartyMenuInternal)
         Free(sPartyMenuInternal);
     if (sPartyBgTilemapBuffer)
@@ -712,24 +702,6 @@ static void FreePartyPointers(void)
     if (sPartyMenuBoxes)
         Free(sPartyMenuBoxes);
     FreeAllWindowBuffers();
-}
-
-static void PartyMenu_DisableHelpSystem(void)
-{
-    if (gHelpSystemEnabled)
-    {
-        HelpSystem_Disable();
-        sPartyMenuDisabledHelpSystem = TRUE;
-    }
-}
-
-static void PartyMenu_RestoreHelpSystem(void)
-{
-    if (sPartyMenuDisabledHelpSystem)
-    {
-        HelpSystem_Enable();
-        sPartyMenuDisabledHelpSystem = FALSE;
-    }
 }
 
 static void InitPartyMenuBoxes(u8 layout)
@@ -1648,10 +1620,10 @@ static void BufferBagFullCantTakeItemMessage(u16 itemId)
         string = gText_MenuBag;
         break;
     case POCKET_TM_CASE:
-        string = ItemId_GetName(ITEM_TM_CASE);
+        string = gText_TMsAndHMs;
         break;
     case POCKET_BERRY_POUCH:
-        string = ItemId_GetName(ITEM_BERRY_POUCH);
+        string = gText_Berries;
         break;
     }
     StringCopy(gStringVar1, string);
@@ -4116,7 +4088,7 @@ void CB2_ShowPartyMenuForItemUse(void)
                 break;
             }
         }
-        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && gBagMenuState.pocket != POCKET_BERRY_POUCH - 1)
+        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
             callback = CB2_ReturnToBerryPouchMenu;
         task = Task_SetSacredAshCB;
         msgId = PARTY_MSG_NONE;
@@ -4130,17 +4102,11 @@ void CB2_ShowPartyMenuForItemUse(void)
             break;
         case POCKET_TM_CASE:
             msgId = PARTY_MSG_TEACH_WHICH_MON;
-            if (gBagMenuState.pocket == POCKET_TM_CASE - 1)
-                callback = CB2_ReturnToBagMenu;
-            else
-                callback = CB2_ReturnToTMCaseMenu;
+            callback = CB2_ReturnToTMCaseMenu;
             break;
         case POCKET_BERRY_POUCH:
             msgId = PARTY_MSG_USE_ON_WHICH_MON;
-            if (gBagMenuState.pocket == POCKET_BERRY_POUCH - 1)
-                callback = CB2_ReturnToBagMenu;
-            else
-                callback = CB2_ReturnToBerryPouchMenu;
+            callback = CB2_ReturnToBerryPouchMenu;
             break;
         }
         task = Task_HandleChooseMonInput;
@@ -4189,7 +4155,6 @@ static void CB2_UseItem(void)
         GiveMoveToMon(&gPlayerParty[gPartyMenu.slotId], ItemIdToBattleMoveId(gSpecialVar_ItemId));
         AdjustFriendship(&gPlayerParty[gPartyMenu.slotId], FRIENDSHIP_EVENT_LEARN_TMHM);
         RemoveBagItem(gSpecialVar_ItemId, 1);
-        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -4209,7 +4174,6 @@ static void CB2_UseTMHMAfterForgettingMove(void)
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, move);
         RemoveBagItem(gSpecialVar_ItemId, 1);
-        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -5339,16 +5303,10 @@ void CB2_ChooseMonToGiveItem(void)
         callback = CB2_ReturnToBagMenu;
         break;
     case POCKET_TM_CASE:
-        if (gBagMenuState.pocket == POCKET_TM_CASE - 1)
-            callback = CB2_ReturnToBagMenu;
-        else
-            callback = CB2_ReturnToTMCaseMenu;
+        callback = CB2_ReturnToTMCaseMenu;
         break;
     case POCKET_BERRY_POUCH:
-        if (gBagMenuState.pocket == POCKET_BERRY_POUCH - 1)
-            callback = CB2_ReturnToBagMenu;
-        else
-            callback = CB2_ReturnToBerryPouchMenu;
+        callback = CB2_ReturnToBerryPouchMenu;
         break;
     }
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_GIVE_ITEM, FALSE, PARTY_MSG_GIVE_TO_WHICH_MON, Task_HandleChooseMonInput, callback);
@@ -5433,7 +5391,6 @@ static void CB2_ReturnToPartyOrBagMenuFromWritingMail(void)
         SetMonData(mon, MON_DATA_HELD_ITEM, &sPartyMenuItemId);
         RemoveBagItem(sPartyMenuItemId, 1);
         ReturnGiveItemToBagOrPC(item);
-        PartyMenu_RestoreHelpSystem();
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     // Wrote mail
@@ -5786,7 +5743,7 @@ void EnterPartyFromItemMenuInBattle(void)
     {
         MainCallback callback;
 
-        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && gBagMenuState.pocket != POCKET_BERRY_POUCH - 1)
+        if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
             callback = CB2_ReturnToBerryPouchMenu;
         else
             callback = CB2_BagMenuFromBattle;
