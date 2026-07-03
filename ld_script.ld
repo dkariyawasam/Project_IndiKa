@@ -253,7 +253,6 @@ SECTIONS {
         src/quest_log.o(.text);
         src/help_message.o(.text);
         src/trainer_fan_club.o(.text);
-        src/quest_log_events.o(.text);
         src/union_room.o(.text);
         src/union_room_player_avatar.o(.text);
         src/union_room_battle.o(.text);
@@ -264,7 +263,6 @@ SECTIONS {
         src/union_room_chat_display.o(.text);
         src/union_room_chat_objects.o(.text);
         src/help_system.o(.text);
-        src/quest_log_battle.o(.text);
         src/fame_checker.o(.text);
         src/menu2.o(.text);
         src/oak_speech.o(.text);
@@ -537,7 +535,6 @@ SECTIONS {
         src/quest_log.o(.rodata);
         src/help_message.o(.rodata);
         src/trainer_fan_club.o(.rodata);
-        src/quest_log_events.o(.rodata);
         src/union_room.o(.rodata);
         src/union_room_player_avatar.o(.rodata);
         src/union_room_battle.o(.rodata);

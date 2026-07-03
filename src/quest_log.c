@@ -82,6 +82,7 @@ static EWRAM_DATA u16 sRecordSequenceStartIdx = 0;
 static EWRAM_DATA u8 sWindowIds[WIN_COUNT] = {0};
 EWRAM_DATA u16 *gQuestLogDefeatedWildMonRecord = NULL;
 EWRAM_DATA u16 *gQuestLogRecordingPointer = NULL;
+EWRAM_DATA struct QuestLogRepeatEventTracker gQuestLogRepeatEventTracker = {0};
 static EWRAM_DATA u16 *sEventData[32] = {NULL};
 static EWRAM_DATA void (* sQuestLogCB)(void) = NULL;
 static EWRAM_DATA u16 *sPalettesBackup = NULL;
@@ -1278,20 +1279,6 @@ static void QL_SlightlyDarkenSomePals(void)
     Free(buffer);
 }
 
-void QL_FinishRecordingScene(void)
-{
-    if (gQuestLogState == QL_STATE_RECORDING)
-    {
-        TryRecordActionSequence(sQuestLogActionRecordBuffer);
-        RecordSceneEnd();
-        gQuestLogState = 0;
-        sQuestLogCB = NULL;
-        gQuestLogDefeatedWildMonRecord = NULL;
-        gQuestLogRecordingPointer = NULL;
-        gQuestLogPlaybackState = QL_PLAYBACK_STATE_STOPPED;
-    }
-}
-
 void QuestLog_CutRecording(void)
 {
     gQuestLogState = 0;
@@ -1768,4 +1755,81 @@ static void QuestLogResetFlagsOrVars(u8 state, struct FlagOrVarRecord * records,
                 sFlagOrVarRecords[i] = sDummyFlagOrVarRecord;
         }
     }
+}
+
+void ResetDeferredLinkEvent(void)
+{
+}
+
+void SetQLPlayedTheSlots(void)
+{
+}
+
+bool8 QuestLog_ShouldEndSceneOnMapChange(void)
+{
+    return FALSE;
+}
+
+void QL_ResetEventStates(void)
+{
+}
+
+void QL_ResetRepeatEventTracker(void)
+{
+    gQuestLogRepeatEventTracker = (struct QuestLogRepeatEventTracker){};
+}
+
+u16 *QL_RecordAction_SceneEnd(u16 *cursor)
+{
+    return cursor;
+}
+
+u16 *QL_LoadAction_Wait(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_RecordAction_Input(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_LoadAction_Input(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_RecordAction_MovementOrGfxChange(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_LoadAction_MovementOrGfxChange(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_LoadAction_SceneEnd(u16 *cursor, struct QuestLogAction *action)
+{
+    return cursor;
+}
+
+u16 *QL_SkipCommand(u16 *cursor, u16 **eventData)
+{
+    *eventData = NULL;
+    return cursor;
+}
+
+void QL_UpdateLastDepartedLocation(const u16 *eventData)
+{
+}
+
+bool8 QL_LoadEvent(const u16 *eventData)
+{
+    return FALSE;
+}
+
+bool8 QL_TryRepeatEvent(const u16 *eventData)
+{
+    return FALSE;
 }
