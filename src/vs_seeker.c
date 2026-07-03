@@ -600,7 +600,6 @@ void Task_VsSeeker_0(u8 taskId)
     }
     else if (respval == VSSEEKER_CAN_USE)
     {
-        ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, 0, gSpecialVar_ItemId, 0xFFFF);
         FieldEffectStart(FLDEFF_USE_VS_SEEKER);
         gTasks[taskId].func = Task_VsSeeker_1;
         gTasks[taskId].data[0] = 15;
