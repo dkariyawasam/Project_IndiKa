@@ -27,6 +27,8 @@
 #include "event_scripts.h"
 #include "constants/flags.h"
 #include "constants/items.h"
+#include "constants/pokemon.h"
+#include "constants/species.h"
 
 // this file's functions
 static void ResetMiniGamesResults(void);
@@ -132,6 +134,7 @@ void NewGameInitData(void)
     gPlayerPartyCount = 0;
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();
+    CreateBoxMonAt(0, 0, SPECIES_GENGAR, 100, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     ClearRoamerData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();

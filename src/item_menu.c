@@ -1368,7 +1368,7 @@ static void OpenContextMenu(u8 taskId)
     {
     case ITEMMENULOCATION_BATTLE:
     case ITEMMENULOCATION_TTVSCR_STATUS:
-        if (ItemId_GetBattleUsage(gSpecialVar_ItemId) || gBagMenuState.pocket == OPEN_BAG_BERRIES)
+        if (ItemId_GetBattleUsage(gSpecialVar_ItemId))
         {
             sContextMenuItemsPtr = sContextMenuItems_BattleUse;
             sContextMenuNumItems = 2;
@@ -1488,6 +1488,7 @@ static void Task_ItemMenuAction_Use(u8 taskId)
             Task_PrintThereIsNoPokemon(taskId);
         else
         {
+            gItemUseCB = ItemUseCB_TMHM;
             ItemMenu_SetExitCallback(CB2_ShowPartyMenuForItemUse);
             ItemMenu_StartFadeToExitCallback(taskId);
         }

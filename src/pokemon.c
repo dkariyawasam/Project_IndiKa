@@ -3993,7 +3993,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
     u8 battleMonId = MAX_BATTLERS_COUNT;
     u16 heldItem;
     u8 val;
-    u32 evDelta;
+    s32 evDelta;
+    s8 evChange;
 
     // Get item hold effect
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
@@ -4211,28 +4212,40 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     case 0: // ITEM4_EV_HP
                     case 1: // ITEM4_EV_ATK
                         evCount = GetMonEVCount(mon);
-
-                        // Has EV increase limit already been reached?
-                        if (evCount >= MAX_TOTAL_EVS)
-                            return TRUE;
                         data = GetMonData(mon, sGetMonDataEVConstants[i], NULL);
-                        if (data < EV_ITEM_RAISE_LIMIT)
-                        {
-                            // Limit the increase
-                            if (data + itemEffect[idx] > EV_ITEM_RAISE_LIMIT)
-                                evDelta = EV_ITEM_RAISE_LIMIT - (data + itemEffect[idx]) + itemEffect[idx];
-                            else
-                                evDelta = itemEffect[idx];
-                            if (evCount + evDelta > MAX_TOTAL_EVS)
-                                evDelta += MAX_TOTAL_EVS - (evCount + evDelta);
+                        evChange = itemEffect[idx++];
 
-                            // Update EVs and stats
-                            data += evDelta;
-                            SetMonData(mon, sGetMonDataEVConstants[i], &data);
-                            CalculateMonStats(mon);
-                            idx++;
-                            retVal = FALSE;
+                        if (evChange > 0)
+                        {
+                            // Has EV increase limit already been reached?
+                            if (evCount >= MAX_TOTAL_EVS)
+                                return TRUE;
+                            if (data >= EV_ITEM_RAISE_LIMIT)
+                                break;
+
+                            // Limit the increase
+                            if (data + evChange > EV_ITEM_RAISE_LIMIT)
+                                evDelta = EV_ITEM_RAISE_LIMIT - data;
+                            else
+                                evDelta = evChange;
+                            if (evCount + evDelta > MAX_TOTAL_EVS)
+                                evDelta = MAX_TOTAL_EVS - evCount;
                         }
+                        else
+                        {
+                            if (data == 0)
+                                break;
+                            if (data + evChange < 0)
+                                evDelta = -data;
+                            else
+                                evDelta = evChange;
+                        }
+
+                        // Update EVs and stats
+                        data += evDelta;
+                        SetMonData(mon, sGetMonDataEVConstants[i], &data);
+                        CalculateMonStats(mon);
+                        retVal = FALSE;
                         break;
                     case 2: // ITEM4_HEAL_HP
                         // If Revive, update number of times revive has been used
@@ -4418,28 +4431,40 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     case 2: // ITEM5_EV_SPDEF
                     case 3: // ITEM5_EV_SPATK
                         evCount = GetMonEVCount(mon);
-                        
-                        // Has EV increase limit already been reached?
-                        if (evCount >= MAX_TOTAL_EVS)
-                            return TRUE;
                         data = GetMonData(mon, sGetMonDataEVConstants[i + 2], NULL);
-                        if (data < EV_ITEM_RAISE_LIMIT)
+                        evChange = itemEffect[idx++];
+
+                        if (evChange > 0)
                         {
+                            // Has EV increase limit already been reached?
+                            if (evCount >= MAX_TOTAL_EVS)
+                                return TRUE;
+                            if (data >= EV_ITEM_RAISE_LIMIT)
+                                break;
+
                             // Limit the increase
-                            if (data + itemEffect[idx] > EV_ITEM_RAISE_LIMIT)
-                                evDelta = EV_ITEM_RAISE_LIMIT - (data + itemEffect[idx]) + itemEffect[idx];
+                            if (data + evChange > EV_ITEM_RAISE_LIMIT)
+                                evDelta = EV_ITEM_RAISE_LIMIT - data;
                             else
-                                evDelta = itemEffect[idx];
+                                evDelta = evChange;
                             if (evCount + evDelta > MAX_TOTAL_EVS)
-                                evDelta += MAX_TOTAL_EVS - (evCount + evDelta);
-                            
-                            // Update EVs and stats
-                            data += evDelta;
-                            SetMonData(mon, sGetMonDataEVConstants[i + 2], &data);
-                            CalculateMonStats(mon);
-                            retVal = FALSE;
-                            idx++;
+                                evDelta = MAX_TOTAL_EVS - evCount;
                         }
+                        else
+                        {
+                            if (data == 0)
+                                break;
+                            if (data + evChange < 0)
+                                evDelta = -data;
+                            else
+                                evDelta = evChange;
+                        }
+
+                        // Update EVs and stats
+                        data += evDelta;
+                        SetMonData(mon, sGetMonDataEVConstants[i + 2], &data);
+                        CalculateMonStats(mon);
+                        retVal = FALSE;
                         break;
                     case 4: // ITEM5_PP_MAX
                         data = (GetMonData(mon, MON_DATA_PP_BONUSES, NULL) & gPPUpGetMask[moveIndex]) >> (moveIndex * 2);
@@ -4522,6 +4547,7 @@ bool8 PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mo
     u16 heldItem;
     u8 curEffect;
     u32 curMoveId;
+    s8 evChange;
 
     // Get item hold effect
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
@@ -4677,14 +4703,18 @@ bool8 PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mo
                     {
                     case 0: // ITEM4_EV_HP
                     case 1: // ITEM4_EV_ATK
-
-                        // Has EV increase limit already been reached?
-                        if (GetMonEVCount(mon) >= MAX_TOTAL_EVS)
-                            return TRUE;
                         data = GetMonData(mon, sGetMonDataEVConstants[i], NULL);
-                        if (data < EV_ITEM_RAISE_LIMIT)
+                        evChange = itemEffect[idx++];
+                        if (evChange > 0)
                         {
-                            idx++;
+                            // Has EV increase limit already been reached?
+                            if (GetMonEVCount(mon) >= MAX_TOTAL_EVS)
+                                return TRUE;
+                            if (data < EV_ITEM_RAISE_LIMIT)
+                                retVal = FALSE;
+                        }
+                        else if (data != 0)
+                        {
                             retVal = FALSE;
                         }
                         break;
@@ -4763,13 +4793,18 @@ bool8 PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mo
                     case 1: // ITEM5_EV_SPEED
                     case 2: // ITEM5_EV_SPDEF
                     case 3: // ITEM5_EV_SPATK
-                        if (GetMonEVCount(mon) >= MAX_TOTAL_EVS)
-                            return TRUE;
                         data = GetMonData(mon, sGetMonDataEVConstants[i + 2], NULL);
-                        if (data < EV_ITEM_RAISE_LIMIT)
+                        evChange = itemEffect[idx++];
+                        if (evChange > 0)
+                        {
+                            if (GetMonEVCount(mon) >= MAX_TOTAL_EVS)
+                                return TRUE;
+                            if (data < EV_ITEM_RAISE_LIMIT)
+                                retVal = FALSE;
+                        }
+                        else if (data != 0)
                         {
                             retVal = FALSE;
-                            idx++;
                         }
                         break;
                     case 4: // ITEM5_PP_MAX

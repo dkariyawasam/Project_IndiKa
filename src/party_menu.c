@@ -4143,6 +4143,59 @@ static bool8 IsHPRecoveryItem(u16 item)
         return FALSE;
 }
 
+static bool8 IsEVLoweringItem(u16 item)
+{
+    const u8 *effect;
+    u8 effectByte;
+    u8 effectBit;
+    u8 paramOffset;
+
+    if (item == ITEM_ENIGMA_BERRY)
+        effect = gSaveBlock1Ptr->enigmaBerry.itemEffect;
+    else
+        effect = gItemEffectTable[item - ITEM_POTION];
+
+    switch (GetItemEffectType(item))
+    {
+    case ITEM_EFFECT_HP_EV:
+        effectByte = 4;
+        effectBit = ITEM4_EV_HP;
+        break;
+    case ITEM_EFFECT_ATK_EV:
+        effectByte = 4;
+        effectBit = ITEM4_EV_ATK;
+        break;
+    case ITEM_EFFECT_DEF_EV:
+        effectByte = 5;
+        effectBit = ITEM5_EV_DEF;
+        break;
+    case ITEM_EFFECT_SPEED_EV:
+        effectByte = 5;
+        effectBit = ITEM5_EV_SPEED;
+        break;
+    case ITEM_EFFECT_SPATK_EV:
+        effectByte = 5;
+        effectBit = ITEM5_EV_SPATK;
+        break;
+    case ITEM_EFFECT_SPDEF_EV:
+        effectByte = 5;
+        effectBit = ITEM5_EV_SPDEF;
+        break;
+    default:
+        return FALSE;
+    }
+
+    paramOffset = GetItemEffectParamOffset(item, effectByte, effectBit);
+    return paramOffset != 0 && (s8)effect[paramOffset] < 0;
+}
+
+static const u8 *GetEVItemEffectMessage(u16 item)
+{
+    if (IsEVLoweringItem(item))
+        return gText_PkmnBaseVar2StatDecreased;
+    return gText_PkmnBaseVar2StatIncreased;
+}
+
 static void GetMedicineItemEffectMessage(u16 item)
 {
     switch (GetItemEffectType(item))
@@ -4173,27 +4226,27 @@ static void GetMedicineItemEffectMessage(u16 item)
         break;
     case ITEM_EFFECT_HP_EV:
         StringCopy(gStringVar2, gText_ItemEffect_HP);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_ATK_EV:
         StringCopy(gStringVar2, gText_ItemEffect_Attack);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_DEF_EV:
         StringCopy(gStringVar2, gText_ItemEffect_Defense);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_SPEED_EV:
         StringCopy(gStringVar2, gText_ItemEffect_Speed);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_SPATK_EV:
         StringCopy(gStringVar2, gText_ItemEffect_SpAtk);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_SPDEF_EV:
         StringCopy(gStringVar2, gText_ItemEffect_SpDef);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        StringExpandPlaceholders(gStringVar4, GetEVItemEffectMessage(item));
         break;
     case ITEM_EFFECT_PP_UP:
     case ITEM_EFFECT_PP_MAX:
