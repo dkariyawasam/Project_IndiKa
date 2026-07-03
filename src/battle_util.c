@@ -47,7 +47,7 @@ static u8 CountCompletedSubquests(u8 questId, u8 count)
 
     for (i = 0; i < count; i++)
     {
-        if (QuestMenu_GetSetSubquestState(questId, FLAG_GET_COMPLETED, i))
+        if (LogbookMenu_GetSetSubquestState(questId, FLAG_GET_COMPLETED, i))
             completed++;
     }
 

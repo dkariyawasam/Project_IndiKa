@@ -55,9 +55,9 @@ ViridianForest_EventScript_Erika::
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_ErikaReturnToGym
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_ERIKA
 	goto_if_eq VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_ErikaAskChallenge
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 2, ViridianForest_EventScript_ErikaCheckForRoot
 	setvar VAR_ERIKA_TRIAL_STATE, 2

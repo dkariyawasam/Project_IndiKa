@@ -227,9 +227,6 @@ bool8 AddBagItem(u16 itemId, u16 count)
         }
     }
 
-    if (itemId == ITEM_BERRY_POUCH)
-        FlagSet(FLAG_SYS_GOT_BERRY_POUCH);
-
     idx = BagPocketGetFirstEmptySlot(pocket);
     if (idx == -1)
         return FALSE;

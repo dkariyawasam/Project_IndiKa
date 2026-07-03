@@ -1349,7 +1349,7 @@
 
 #define FLAG_SYS_POKEMON_GET                                        (SYS_FLAGS + 0x28)
 #define FLAG_SYS_POKEDEX_GET                                        (SYS_FLAGS + 0x29)
-#define FLAG_SYS_QUEST_MENU_GET                                     (SYS_FLAGS + 0x2A) // add QUESTS to start menu
+#define FLAG_SYS_LOGBOOK_MENU_GET                                     (SYS_FLAGS + 0x2A) // add LOGBOOK to start menu
 #define FLAG_0x82B                                                  (SYS_FLAGS + 0x2B)
 #define FLAG_SYS_GAME_CLEAR                                         (SYS_FLAGS + 0x2C)
 #define FLAG_SYS_SET_TRAINER_CARD_PROFILE                           (SYS_FLAGS + 0x2D)
@@ -1378,7 +1378,6 @@
 #define FLAG_SYS_CAN_LINK_WITH_RS                                   (SYS_FLAGS + 0x44)
 #define FLAG_0x845                                                  (SYS_FLAGS + 0x45)
 #define FLAG_0x846                                                  (SYS_FLAGS + 0x46)
-#define FLAG_SYS_GOT_BERRY_POUCH                                    (SYS_FLAGS + 0x47)
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              (SYS_FLAGS + 0x49)
 #define FLAG_0x84A                                                (SYS_FLAGS + 0x4A)
 

@@ -39,9 +39,9 @@ CinnabarVolcano_1F_EventScript_BlackBelt::
 CinnabarVolcano_1F_EventScript_Koga::
 	lock
 	faceplayer
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
 	msgbox CinnabarVolcano_1F_Text_KogaLookingForLavicStone
 	closemessage
 	playse SE_M_EXPLOSION

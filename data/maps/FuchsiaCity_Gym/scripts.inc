@@ -39,9 +39,9 @@ FuchsiaCity_Gym_EventScript_GymGuideInterceptKogaAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox FuchsiaCity_Gym_Text_GymGuideKogaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
 	setvar VAR_KOGA_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_PLAYER, FuchsiaCity_Gym_Movement_PlayerStepAsideForGuide
@@ -246,9 +246,9 @@ FuchsiaCity_Gym_EventScript_GymGuy::
 
 FuchsiaCity_Gym_EventScript_GymGuideKogaAwayFirstTime::
 	msgbox FuchsiaCity_Gym_Text_GymGuideKogaAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_KOGA
 	setvar VAR_KOGA_TRIAL_STATE, 1
 	release
 	end
