@@ -235,6 +235,7 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
 // Functions
 static u8 CreateShopMenu(u8 martType)
 {
+    struct WindowTemplate shopMenuWindowTemplate = sShopMenuWindowTemplate;
     const struct MenuAction *menuActions = sShopMenuActions_BuySellCancel;
     u8 menuActionCount = NELEMS(sShopMenuActions_BuySellCancel);
 
@@ -251,7 +252,8 @@ static u8 CreateShopMenu(u8 martType)
         menuActionCount = NELEMS(sShopMenuActions_BuySellSpecialsCancel);
     }
 
-    sShopMenuWindowId = AddWindow(&sShopMenuWindowTemplate);
+    shopMenuWindowTemplate.height = menuActionCount * 2;
+    sShopMenuWindowId = AddWindow(&shopMenuWindowTemplate);
     SetStdWindowBorderStyle(sShopMenuWindowId, 0);
     PrintTextArray(sShopMenuWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, 16, menuActionCount, menuActions);
     Menu_InitCursor(sShopMenuWindowId, FONT_NORMAL, 0, 2, 16, menuActionCount, 0);
