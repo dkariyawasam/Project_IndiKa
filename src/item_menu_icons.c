@@ -51,7 +51,7 @@ static const struct OamData sOamData_Bag = {
 
 static const union AnimCmd sAnim_Bag_OpenPokeBallsPocket[] = {
     ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x40, 0),
+    ANIMCMD_FRAME(0xc0, 0),
     ANIMCMD_END
 };
 
@@ -63,19 +63,19 @@ static const union AnimCmd sAnim_Bag_OpenItemsPocket[] = {
 
 static const union AnimCmd sAnim_Bag_OpenBerriesPocket[] = {
     ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x80, 0),
+    ANIMCMD_FRAME(0x100, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenTMsPocket[] = {
     ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_FRAME(0x140, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenKeyItemsPocket[] = {
     ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_FRAME(0x40, 0),
     ANIMCMD_END
 };
 
@@ -107,13 +107,13 @@ static const union AffineAnimCmd *const sAffineAnimTable_Bag[] = {
 
 const struct CompressedSpriteSheet gSpriteSheet_BagMale = {
     .data = gBagMale_Gfx,
-    .size = 0x2000,
+    .size = 0x3000,
     .tag = TAG_BAG
 };
 
 const struct CompressedSpriteSheet gSpriteSheet_BagFemale = {
     .data = gBagFemale_Gfx,
-    .size = 0x2000,
+    .size = 0x3000,
     .tag = TAG_BAG
 };
 

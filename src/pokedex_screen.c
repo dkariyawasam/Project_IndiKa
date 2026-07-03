@@ -6,7 +6,7 @@
 #include "task.h"
 #include "new_menu_helpers.h"
 #include "event_data.h"
-#include "help_system.h"
+#include "list_menu.h"
 #include "menu_indicators.h"
 #include "overworld.h"
 #include "strings.h"
@@ -22,8 +22,6 @@
 #include "field_specials.h"
 
 #define TAG_AREA_MARKERS 2001
-
-static EWRAM_DATA bool8 sPokedexDisabledHelpSystem = FALSE;
 
 enum TextMode {
     TEXT_LEFT,
@@ -866,17 +864,11 @@ void DexScreen_LoadResources(void)
 void CB2_OpenPokedexFromStartMenu(void)
 {
     DexScreen_LoadResources();
-    if (gHelpSystemEnabled)
-    {
-        HelpSystem_Disable();
-        sPokedexDisabledHelpSystem = TRUE;
-    }
     ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_WIN1_ON);
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
     SetMainCallback2(CB2_PokedexScreen);
-    SetHelpContext(HELPCONTEXT_POKEDEX);
 }
 
 #define FREE_IF_NOT_NULL(ptr0) ({ void *ptr = (ptr0); if (ptr) Free(ptr); })
@@ -904,11 +896,6 @@ bool8 DoClosePokedex(void)
         FREE_IF_NOT_NULL(GetBgTilemapBuffer(2));
         FREE_IF_NOT_NULL(GetBgTilemapBuffer(3));
         BGMVolumeMax_EnableHelpSystemReduction();
-        if (sPokedexDisabledHelpSystem)
-        {
-            HelpSystem_Enable();
-            sPokedexDisabledHelpSystem = FALSE;
-        }
         break;
     }
     return TRUE;

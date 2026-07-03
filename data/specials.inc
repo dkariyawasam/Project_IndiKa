@@ -397,9 +397,9 @@ gSpecials::
 	def_special OverworldWhiteOutGetMoneyLoss
 	def_special DoSeagallopFerryScene
 	def_special DoesPlayerPartyContainSpecies
-	def_special Script_SetHelpContext
-	def_special BackupHelpContext
-	def_special RestoreHelpContext
+	def_special NullFieldSpecial
+	def_special NullFieldSpecial
+	def_special NullFieldSpecial
 	def_special ValidateSavedWonderCard
 	def_special SetUnlockedPokedexFlags
 	def_special InitUnionRoom
@@ -415,7 +415,7 @@ gSpecials::
 	def_special CloseMuseumFossilPic
 	def_special ChooseMonForMoveTutor
 	def_special SetBattledTrainerFlag
-	def_special SetHelpContextForMap
+	def_special NullFieldSpecial
 	def_special DoSSAnneDepartureCutscene
 	def_special IsNationalPokedexEnabled
 	def_special BufferTMHMMoveName

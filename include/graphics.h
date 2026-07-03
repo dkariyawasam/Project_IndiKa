@@ -2738,17 +2738,6 @@ extern const u16 gFameCheckerBgTiles[0xa50];
 extern const u16 gFameCheckerBg3Tilemap[0x400];
 extern const u16 gFameCheckerBg2Tilemap[0x400];
 
-// tm_case
-extern const u32 gTMCase_Gfx[];
-extern const u32 gTMCaseMenu_Tilemap[];
-extern const u32 gTMCase_Tilemap[];
-extern const u32 gTMCaseMenu_Male_Pal[];
-extern const u32 gTMCaseMenu_Female_Pal[];
-extern const u32 gTMCaseDisc_Gfx[];
-extern const u32 gTMCaseDiscTypes1_Pal[];
-extern const u32 gTMCaseDiscTypes2_Pal[];
-extern const u8 gTMCaseHM_Gfx[];
-
 extern const u16 gStandardMenuPalette[];
 
 // egg_hatch
@@ -3920,14 +3909,6 @@ extern const u16 gCreditsMonPokeball_Pals[][16];
 extern const u16 gCreditsCopyright_Pal[];
 extern const u8 gCreditsCopyright_Tiles[];
 extern const u8 gCreditsCopyright_Tilemap[];
-
-// berry_pouch
-extern const u32 gBerryPouchSpriteTiles[];
-extern const u8 gBerryPouchBgGfx[];
-extern const u32 gBerryPouchBgPals[];
-extern const u32 gBerryPouchBgPal0FemaleOverride[];
-extern const u32 gBerryPouchSpritePalette[];
-extern const u8 gBerryPouchBg1Tilemap[];
 
 extern const u8 gTrainerBackPic_Red[];
 extern const u8 gTrainerBackPic_Leaf[];

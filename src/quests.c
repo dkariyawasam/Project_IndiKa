@@ -28,7 +28,6 @@
 #include "event_data.h"
 #include "new_menu_helpers.h"
 #include "menu_indicators.h"
-#include "help_system.h"
 #include "constants/items.h"
 #include "constants/field_weather.h"
 #include "constants/flags.h"
@@ -75,7 +74,6 @@ EWRAM_DATA static struct QuestMenuResources *sStateDataPtr = NULL;
 EWRAM_DATA static u8 *sBg1TilemapBuffer = NULL;
 EWRAM_DATA static struct ListMenuItem *sListMenuItems = NULL;
 EWRAM_DATA static struct QuestMenuStaticResources sListMenuState = {0};
-EWRAM_DATA static bool8 sQuestMenuDisabledHelpSystem = FALSE;
 EWRAM_DATA static u8 sItemMenuIconSpriteIds[12] = {0};        // from pokefirered src/item_menu_icons.c
 EWRAM_DATA static void *questNamePointer = NULL;
 EWRAM_DATA static u8 **questNameArray = NULL;
@@ -772,12 +770,6 @@ void QuestMenu_Init(u8 a0, MainCallback callback)
 	{
 		SetMainCallback2(callback);
 		return;
-	}
-
-	if (gHelpSystemEnabled)
-	{
-		HelpSystem_Disable();
-		sQuestMenuDisabledHelpSystem = TRUE;
 	}
 
 	if (a0 != 1)
@@ -2632,11 +2624,6 @@ static void Task_QuestMenuTurnOff2(u8 taskId)
 
 		QuestMenu_RemoveScrollIndicatorArrowPair();
 		FreeResources();
-		if (sQuestMenuDisabledHelpSystem)
-		{
-			HelpSystem_Enable();
-			sQuestMenuDisabledHelpSystem = FALSE;
-		}
 		DestroyTask(taskId);
 	}
 }
