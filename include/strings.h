@@ -166,7 +166,6 @@ extern const u8 gString_HelpSystem_ClearTo8[];
 
 extern const u8 gText_Var1IsSelected[];
 extern const u8 gOtherText_WhereShouldTheStrVar1BePlaced[];
-extern const u8 gOtherText_Powder[];
 extern const u8 gText_NoMoreRoomInBag[];
 extern const u8 gText_WithdrawHowMany[];
 extern const u8 gText_WithdrewQuantItem[];
@@ -371,6 +370,7 @@ extern const u8 gText_ItemEffect_Speed[];
 extern const u8 gText_ItemEffect_SpAtk[];
 extern const u8 gText_ItemEffect_SpDef[];
 extern const u8 gText_PkmnBaseVar2StatIncreased[];
+extern const u8 gText_PkmnBaseVar2StatDecreased[];
 extern const u8 gText_MovesPPIncreased[];
 extern const u8 gText_PPWasRestored[];
 extern const u8 gText_PkmnHPRestoredByVar2[];
@@ -663,17 +663,6 @@ extern const u8 gText_LinkedGamePlay[];
 extern const u8 gText_DirectCorner[];
 extern const u8 gText_UnionRoom[];
 extern const u8 gOtherText_Quit[];
-extern const u8 gText_Energypowder_50[];
-extern const u8 gText_EnergyRoot_80[];
-extern const u8 gText_HealPowder_50[];
-extern const u8 gText_RevivalHerb_300[];
-extern const u8 gText_Protein_1000[];
-extern const u8 gText_Iron_1000[];
-extern const u8 gText_Carbos_1000[];
-extern const u8 gText_Calcium_1000[];
-extern const u8 gText_Zinc_1000[];
-extern const u8 gText_HpUp_1000[];
-extern const u8 gText_PpUp_3000[];
 
 // script_menu
 extern const u8 Text_AccessWhichPC[];
