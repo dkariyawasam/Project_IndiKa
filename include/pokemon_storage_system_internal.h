@@ -419,7 +419,7 @@ struct PokemonStorageSystemData
     struct PokeStorageItemIcon itemIcons[MAX_ITEM_ICONS];
     u16 movingItemId;
     u16 itemInfoWindowOffset;
-    struct QuestLogEvent_MovedBoxMon questLogData;
+    u16 unusedQuestLogData[4];
     u16 unusedField2;
     u16 displayMonPalOffset;
     u16 *displayMonTilePtr;

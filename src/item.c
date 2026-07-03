@@ -198,7 +198,7 @@ bool8 AddBagItem(u16 itemId, u16 count)
     u8 pocket;
     s8 idx;
 
-    if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH)
+    if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_TEACHY_TV)
         return TRUE;
 
     if (ItemId_GetPocket(itemId) == 0)
@@ -499,10 +499,6 @@ u16 BagGetQuantityByItemId(u16 itemId)
     }
 
     return 0;
-}
-
-void TrySetObtainedItemQuestLogEvent(u16 itemId)
-{
 }
 
 u16 SanitizeItemId(u16 itemId)

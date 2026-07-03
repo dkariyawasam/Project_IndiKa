@@ -467,7 +467,6 @@ bool8 ScrCmd_additem(struct ScriptContext * ctx)
     u32 quantity = VarGet(ScriptReadHalfword(ctx));
 
     gSpecialVar_Result = AddBagItem(itemId, (u8)quantity);
-    TrySetObtainedItemQuestLogEvent(itemId);
     return FALSE;
 }
 
@@ -598,7 +597,6 @@ bool8 ScrCmd_comparestat(struct ScriptContext * ctx)
 bool8 ScrCmd_setworldmapflag(struct ScriptContext * ctx)
 {
     u16 value = ScriptReadHalfword(ctx);
-    QuestLog_RecordEnteredMap(value);
     MapPreview_SetFlag(value);
     return FALSE;
 }
