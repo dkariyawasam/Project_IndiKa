@@ -2,7 +2,6 @@ Route5_PokemonDayCare_MapScripts::
 	.byte 0
 
 Route5_PokemonDayCare_EventScript_DaycareWoman::
-	goto_if_questlog EventScript_ReleaseEnd
 	lock
 	faceplayer
 	specialvar VAR_RESULT, GetDaycareState

@@ -660,22 +660,6 @@ void ResetDeferredLinkEvent(void)
     sDeferredEvent = (struct DeferredLinkEvent){};
 }
 
-void QuestLog_StartRecordingInputsAfterDeferredEvent(void)
-{
-    ResetDeferredLinkEvent();
-    return;
-
-    if (sDeferredEvent.id != 0)
-    {
-        u16 *resp;
-        sLastDepartedLocation = 0;
-        QL_StartRecordingAction(sDeferredEvent.id);
-        resp = sRecordEventFuncs[sDeferredEvent.id](gQuestLogRecordingPointer, sDeferredEvent.data);
-        gQuestLogRecordingPointer = resp;
-        ResetDeferredLinkEvent();
-    }
-}
-
 static bool8 IsVanillaStoryQuestLogEvent(u16 eventId)
 {
     switch (eventId)

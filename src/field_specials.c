@@ -1572,11 +1572,6 @@ u8 GetMartClerkObjectId(void)
     return 1;
 }
 
-void SetUsedPkmnCenterQuestLogEvent(void)
-{
-    SetQuestLogEvent(QL_EVENT_USED_PKMN_CENTER, NULL);
-}
-
 static const struct {
     u16 inside_grp;
     u16 inside_num;

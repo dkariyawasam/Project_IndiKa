@@ -400,8 +400,6 @@ EventScript_BodySlamTaught::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_StarterTutor::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_set FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK, CapeBrinkTutor_EventScript_TaughtAllMoves
