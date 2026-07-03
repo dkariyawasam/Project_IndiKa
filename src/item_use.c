@@ -1,7 +1,6 @@
 #include "global.h"
 #include "gflib.h"
 #include "battle.h"
-#include "berry_pouch.h"
 #include "bike.h"
 #include "coins.h"
 #include "event_data.h"
@@ -27,7 +26,6 @@
 #include "script.h"
 #include "strings.h"
 #include "task.h"
-#include "tm_case.h"
 #include "vs_seeker.h"
 #include "constants/sound.h"
 #include "constants/items.h"
@@ -50,10 +48,6 @@ static bool8 CanFish(void);
 static void ItemUseOnFieldCB_Rod(u8 taskId);
 static void Task_PlayPokeFlute(u8 taskId);
 static void Task_DisplayPokeFluteMessage(u8 taskId);
-static void InitTMCaseFromBag(void);
-static void Task_InitTMCaseFromField(u8 taskId);
-static void InitBerryPouchFromBag(void);
-static void Task_InitBerryPouchFromField(u8 taskId);
 static void Task_UseRepel(u8 taskId);
 static void RemoveUsedItem(void);
 static void Task_UsedBlackWhiteFlute(u8 taskId);
@@ -140,18 +134,10 @@ static void SetUpItemUseCallback(u8 taskId)
         itemType = gTasks[taskId].data[4] - 1;
     else
         itemType = ItemId_GetType(gSpecialVar_ItemId) - 1;
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
-    {
-        BerryPouch_SetExitCallback(sExitCallbackByItemType[itemType]);
-        BerryPouch_StartFadeToExitCallback(taskId);
-    }
-    else
-    {
-        ItemMenu_SetExitCallback(sExitCallbackByItemType[itemType]);
-        if (itemType == ITEM_TYPE_FIELD - 1)
-            Bag_BeginCloseWin0Animation();
-        ItemMenu_StartFadeToExitCallback(taskId);
-    }
+    ItemMenu_SetExitCallback(sExitCallbackByItemType[itemType]);
+    if (itemType == ITEM_TYPE_FIELD - 1)
+        Bag_BeginCloseWin0Animation();
+    ItemMenu_StartFadeToExitCallback(taskId);
 }
 
 static void SetUpItemUseOnFieldCallback(u8 taskId)
@@ -429,74 +415,6 @@ void FieldUseFunc_SacredAsh(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
-void FieldUseFunc_TmCase(u8 taskId)
-{
-    if (gTasks[taskId].data[3] == 0)
-    {
-        ItemMenu_SetExitCallback(InitTMCaseFromBag);
-        ItemMenu_StartFadeToExitCallback(taskId);
-    }
-    else
-    {
-        StopPokemonLeagueLightingEffectTask();
-        FadeScreen(FADE_TO_BLACK, 0);
-        gTasks[taskId].func = Task_InitTMCaseFromField;
-    }
-}
-
-static void InitTMCaseFromBag(void)
-{
-    InitTMCase(TMCASE_FIELD, CB2_BagMenuFromStartMenu, FALSE);
-}
-
-static void Task_InitTMCaseFromField(u8 taskId)
-{
-    if (!gPaletteFade.active)
-    {
-        CleanupOverworldWindowsAndTilemaps();
-        SetFieldCallback2ForItemUse();
-        InitTMCase(TMCASE_FIELD, CB2_ReturnToField, TRUE);
-        DestroyTask(taskId);
-    }
-}
-
-void FieldUseFunc_BerryPouch(u8 taskId)
-{
-    if (gTasks[taskId].data[3] == 0)
-    {
-        ItemMenu_SetExitCallback(InitBerryPouchFromBag);
-        ItemMenu_StartFadeToExitCallback(taskId);
-    }
-    else
-    {
-        StopPokemonLeagueLightingEffectTask();
-        FadeScreen(FADE_TO_BLACK, 0);
-        gTasks[taskId].func = Task_InitBerryPouchFromField;
-    }
-}
-
-static void InitBerryPouchFromBag(void)
-{
-    InitBerryPouch(BERRYPOUCH_FROMFIELD, CB2_BagMenuFromStartMenu, 0);
-}
-
-static void Task_InitBerryPouchFromField(u8 taskId)
-{
-    if (!gPaletteFade.active)
-    {
-        CleanupOverworldWindowsAndTilemaps();
-        SetFieldCallback2ForItemUse();
-        InitBerryPouch(BERRYPOUCH_FROMFIELD, CB2_ReturnToField, 1);
-        DestroyTask(taskId);
-    }
-}
-
-void BattleUseFunc_BerryPouch(u8 taskId)
-{
-    ItemMenu_SetExitCallback(CB2_BagMenuFromBattleBerries);
-    ItemMenu_StartFadeToExitCallback(taskId);
-}
-
 void FieldUseFunc_Repel(u8 taskId)
 {
     if (VarGet(VAR_REPEL_STEP_COUNT) == 0)
@@ -735,16 +653,8 @@ static void Task_BattleUse_StatBooster_WaitButton_ReturnToBattle(u8 taskId)
 
 static void ItemUse_SwitchToPartyMenuInBattle(u8 taskId)
 {
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
-    {
-        BerryPouch_SetExitCallback(EnterPartyFromItemMenuInBattle);
-        BerryPouch_StartFadeToExitCallback(taskId);
-    }
-    else
-    {
-        ItemMenu_SetExitCallback(EnterPartyFromItemMenuInBattle);
-        ItemMenu_StartFadeToExitCallback(taskId);
-    }
+    ItemMenu_SetExitCallback(EnterPartyFromItemMenuInBattle);
+    ItemMenu_StartFadeToExitCallback(taskId);
 }
 
 void BattleUseFunc_Medicine(u8 taskId)
@@ -849,13 +759,7 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
 
 void FieldUseFunc_OakStopsYou(u8 taskId)
 {
-    if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH && IsBerryPouchOpen())
-    {
-        StringExpandPlaceholders(gStringVar4, gText_OakForbidsUseOfItemHere);
-        DisplayItemMessageInBerryPouch(taskId, FONT_MALE, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
-    }
-    else
-        PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
+    PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
 }
 
 void ItemUse_SetQuestLogEvent(u8 eventId, struct Pokemon *pokemon, u16 itemId, u16 param)

@@ -2,14 +2,12 @@
 #include "gflib.h"
 #include "bag.h"
 #include "battle_controllers.h"
-#include "berry_pouch.h"
 #include "decompress.h"
 #include "event_scripts.h"
 #include "event_object_movement.h"
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "graphics.h"
-#include "help_system.h"
 #include "item.h"
 #include "item_menu.h"
 #include "item_menu_icons.h"
@@ -31,7 +29,6 @@
 #include "shop.h"
 #include "strings.h"
 #include "teachy_tv.h"
-#include "tm_case.h"
 #include "constants/field_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
@@ -76,7 +73,6 @@ static EWRAM_DATA u8 sContextMenuItemsBuffer[4] = {};
 static EWRAM_DATA const u8 *sContextMenuItemsPtr = NULL;
 static EWRAM_DATA u8 sContextMenuNumItems = 0;
 static EWRAM_DATA struct BagSlots * sBackupPlayerBag = NULL;
-static EWRAM_DATA bool8 sBagMenuDisabledHelpSystem = FALSE;
 EWRAM_DATA u16 gSpecialVar_ItemId = ITEM_NONE;
 
 static void CB2_OpenBagMenu(void);
@@ -102,8 +98,6 @@ static void BagDestroyPocketSwitchArrowPair(void);
 static void CalculateInitialCursorPosAndItemsAbove(void);
 static void UpdatePocketScrollPositions(void);
 static void DestroyBagMenuResources(void);
-static void BagMenu_DisableHelpSystem(void);
-static void BagMenu_RestoreHelpSystem(void);
 static void Task_ItemMenu_WaitFadeAndSwitchToExitCallback(u8 taskId);
 static void Task_AnimateWin0v(u8 taskId);
 static void ShowBagOrBeginWin0OpenTask(void);
@@ -337,8 +331,6 @@ void GoToBagMenu(u8 location, u8 pocket, MainCallback bagCallback)
             gBagMenuState.location = location;
         if (bagCallback != NULL)
             gBagMenuState.bagCallback = bagCallback;
-        if (gBagMenuState.location != ITEMMENULOCATION_ITEMPC)
-            BagMenu_DisableHelpSystem();
         sBagMenuDisplay->exitCB = NULL;
         sBagMenuDisplay->itemOriginalLocation = 0xFF;
         sBagMenuDisplay->itemMenuIcon = 0;
@@ -516,8 +508,6 @@ static bool8 LoadBagMenuGraphics(void)
         gMain.state++;
         break;
     case 19:
-        if (gBagMenuState.location == ITEMMENULOCATION_ITEMPC)
-            SetHelpContext(HELPCONTEXT_PLAYERS_PC_ITEMS);
         gPaletteFade.bufferTransferDisabled = FALSE;
         gMain.state++;
         break;
@@ -910,30 +900,11 @@ static void UpdatePocketScrollPositions(void)
 
 static void DestroyBagMenuResources(void)
 {
-    BagMenu_RestoreHelpSystem();
     FREE_IF_SET(sBagMenuDisplay);
     FREE_IF_SET(sBagBgTilemapBuffer);
     FREE_IF_SET(sListMenuItems);
     FREE_IF_SET(sListMenuItemStrings);
     FreeAllWindowBuffers();
-}
-
-static void BagMenu_DisableHelpSystem(void)
-{
-    if (gHelpSystemEnabled)
-    {
-        HelpSystem_Disable();
-        sBagMenuDisabledHelpSystem = TRUE;
-    }
-}
-
-static void BagMenu_RestoreHelpSystem(void)
-{
-    if (sBagMenuDisabledHelpSystem)
-    {
-        HelpSystem_Enable();
-        sBagMenuDisabledHelpSystem = FALSE;
-    }
 }
 
 void ItemMenu_StartFadeToExitCallback(u8 taskId)
