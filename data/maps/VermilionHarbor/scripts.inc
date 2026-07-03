@@ -60,8 +60,6 @@ VermilionHarbor_EventScript_ExitedTicketCheck::
 	end
 
 VermilionHarbor_EventScript_MewEncounter::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	msgbox VermilionHarbor_Text_SomethingUnderTruck
 	waitse

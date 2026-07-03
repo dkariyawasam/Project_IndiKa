@@ -61,8 +61,6 @@ CinnabarVolcano_3F_EventScript_EliasRematch::
 	end
 
 CinnabarVolcano_3F_EventScript_Moltres::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_MOLTRES, 50

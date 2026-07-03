@@ -28,8 +28,6 @@ VermilionCity_House1_EventScript_NoRoomForSuperRod::
 	end
 
 VermilionCity_House1_EventScript_CheckMagikarpRecord::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	setvar VAR_0x8004, SPECIES_MAGIKARP
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoMagikarpInParty

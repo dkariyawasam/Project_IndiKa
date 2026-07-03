@@ -38,8 +38,6 @@ PowerPlant_EventScript_WarpToRockTunnelB2F::
 	end
 
 PowerPlant_EventScript_Zapdos::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_ZAPDOS, 50

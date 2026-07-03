@@ -2015,10 +2015,6 @@
 	call EventScript_SetGymTrainers
 	.endm
 
-	@ Jumps to dest if the Quest Log is currently showing playback scenes (dest is usually a release/end)
-	.macro goto_if_questlog dest:req
-	.endm
-
 	@ Prints a braille message, then waits for users input.
 	.macro braillemessage_wait text:req
 	setvar VAR_0x8006, 0

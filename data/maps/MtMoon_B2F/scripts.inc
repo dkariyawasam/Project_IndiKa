@@ -31,8 +31,6 @@ MtMoon_B2F_EventScript_HideAnnihilape::
 	return
 
 MtMoon_B2F_EventScript_Annihilape::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_ANNIHILAPE, 50

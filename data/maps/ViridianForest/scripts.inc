@@ -181,8 +181,6 @@ ViridianForest_EventScript_ExitSign::
 	end
 
 ViridianForest_EventScript_Tangrowth::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_TANGROWTH, 50

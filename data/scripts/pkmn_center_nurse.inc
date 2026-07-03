@@ -1,5 +1,4 @@
 EventScript_PkmnCenterNurse::
-	goto_if_questlog EventScript_ReleaseEnd
 	message Text_WelcomeWantToHealPkmn
 	waitmessage
 	checkitem ITEM_SOUL_PASS, 1
@@ -71,7 +70,6 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	message Text_TakeYourPkmnForFewSeconds
 	waitmessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	special SetUsedPkmnCenterQuestLogEvent
 	goto EventScript_PkmnCenterNurse_CheckRocketLeagueAndUnionRoom
 	end
 

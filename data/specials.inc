@@ -382,7 +382,6 @@ gSpecials::
 	def_special ChangeBoxPokemonNickname
 	def_special UpdateTrainerCardPhotoIcons
 	def_special StickerManGetBragFlags
-	def_special SetUsedPkmnCenterQuestLogEvent
 	def_special IsWirelessAdapterConnected
 	def_special TryBecomeLinkLeader
 	def_special TryJoinLinkGroup
@@ -404,11 +403,8 @@ gSpecials::
 	def_special SetUnlockedPokedexFlags
 	def_special InitUnionRoom
 	def_special BufferUnionRoomPlayerName
-	def_special QuestLog_StartRecordingInputsAfterDeferredEvent
 	def_special GetMartClerkObjectId
 	def_special GetMysteryGiftCardStat
-	def_special GetQuestLogState
-	def_special QuestLog_CutRecording
 	def_special WonderNews_GetRewardInfo
 	def_special GetPCBoxToSendMon
 	def_special OpenMuseumFossilPic

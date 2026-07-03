@@ -5692,12 +5692,12 @@
       "secondaryId": 0
     },
     {
-      "english": "TM CASE",
+      "english": "????????",
       "itemId": "ITEM_TM_CASE",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A case that holds TMs and HMs.\\nIt is attached to the BAG's\\ncompartment for important items.",
+      "description_english": "?????",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
@@ -5708,12 +5708,12 @@
       "secondaryId": 0
     },
     {
-      "english": "BERRY POUCH",
+      "english": "????????",
       "itemId": "ITEM_BERRY_POUCH",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A pouch for carrying BERRIES.\\nIt is attached to the BAG's\\ncompartment for important items.",
+      "description_english": "?????",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",

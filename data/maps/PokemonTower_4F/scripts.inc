@@ -45,8 +45,6 @@ PokemonTower_4F_EventScript_MrFuji::
 	end
 
 PokemonTower_4F_EventScript_Osscythe::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_OSSCYTHE, 50

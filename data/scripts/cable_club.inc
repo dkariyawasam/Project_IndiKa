@@ -13,8 +13,6 @@ EventScript_HideMysteryGiftMan::
 	return
 
 CableClub_EventScript_MysteryGiftMan::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	trywondercardscript
 
 @ Unused
@@ -78,7 +76,6 @@ CableClub_EventScript_ExitLinkRoom::
 CableClub_EventScript_CloseLinkAndExitLinkRoom::
 	special CloseLink
 	special HelpSystem_Enable
-	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
@@ -103,7 +100,6 @@ CableClub_EventScript_ExitTradeCenter::
 CableClub_EventScript_PlayerExitTradeCenter::
 	special CloseLink
 	special HelpSystem_Enable
-	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
@@ -126,7 +122,6 @@ CableClub_EventScript_ExitUnionRoom::
 
 CableClub_EventScript_PlayerExitUnionRoom::
 	special HelpSystem_Enable
-	special QuestLog_StartRecordingInputsAfterDeferredEvent
 	setvar VAR_CABLE_CLUB_STATE, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	goto_if_eq VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom
@@ -522,7 +517,6 @@ Movement_PlayerFaceAttendantRight::
 	step_end
 
 CableClub_EventScript_ShowBattleRecords::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 0
@@ -682,8 +676,6 @@ CableClub_EventScript_DoLinkRoomExit::
 	end
 
 CableClub_EventScript_UnionRoomAttendant::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
@@ -785,8 +777,6 @@ CableClub_EventScript_DontAskAboutLinking::
 	return
 
 CableClub_EventScript_DirectCornerAttendant::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
@@ -994,7 +984,6 @@ CableClub_EventScript_EnterWirelessLinkRoom::
 	end
 
 CableClub_EventScript_ShowWirelessCommunicationScreen::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_NotReadyYet
 	specialvar VAR_RESULT, IsWirelessAdapterConnected
