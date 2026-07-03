@@ -16,6 +16,7 @@
 #include "menu_helpers.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "pokedex.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "string_util.h"
@@ -164,6 +165,8 @@ static void ResetSpriteState(void);
 static void LogbookMenu_DestroySprite(u8 idx);
 
 static void GenerateStateAndPrint(u8 windowId, u32 itemId, u8 y);
+static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex);
+static bool8 TryGenerateGymTrialState(u8 subquestId, u8 *colorIndex);
 static u8 GenerateSubquestState(u8 questId);
 static u8 GenerateQuestState(u8 questId);
 static void PrintQuestState(u8 windowId, u8 y, u8 colorIndex);
@@ -251,6 +254,9 @@ static const u8 sText_CloseLogbook[] = _("CLOSE LOGBOOK");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
 static const u8 sText_InProgress[] = _("Active");
+static const u8 sText_InProgressCaps[] = _("In progress");
+static const u8 sText_CompletedCaps[] = _("Done");
+static const u8 sText_TradedCaps[] = _("Traded");
 static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of a POKéMON\nlosing control of its emotions.");
 static const u8 sText_ApexAnnihilapeConfirmed[] = _("Rumour confirmed.\nLet's investigate MT. MOON.");
 static const u8 sText_ApexAnnihilapeRecorded[] = _("APEX POKéMON ANNIHILAPE\nrecorded in MT. MOON.");
@@ -2097,11 +2103,204 @@ static void GenerateStateAndPrint(u8 windowId, u32 questId,
 	}
 }
 
+static u8 CountApexInteractionsForNatureQuest(void)
+{
+    static const u16 sApexInteractionFlags[] =
+    {
+        FLAG_INTERACTED_APEX_TANGROWTH,
+        FLAG_INTERACTED_APEX_ZAPDOS,
+        FLAG_INTERACTED_APEX_ARTICUNO,
+        FLAG_INTERACTED_APEX_MEWTWO,
+        FLAG_INTERACTED_APEX_OSSCYTHE,
+        FLAG_INTERACTED_APEX_MOLTRES,
+        FLAG_INTERACTED_APEX_MIME_SR,
+        FLAG_INTERACTED_APEX_ANNIHILAPE,
+    };
+    u8 i;
+    u8 count = 0;
+
+    for (i = 0; i < NELEMS(sApexInteractionFlags); i++)
+    {
+        if (FlagGet(sApexInteractionFlags[i]))
+            count++;
+    }
+
+    return count;
+}
+
+static bool8 IsSpeciesCaught(u16 species)
+{
+    return GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
+}
+
+static u8 CountEvolutionThroughBondMilestones(void)
+{
+    u8 count = 0;
+
+    if (FlagGet(FLAG_DID_BROCK_GRAVELER_TRADE))
+        count++;
+    if (FlagGet(FLAG_DID_MISTY_POLIWHIRL_TRADE))
+        count++;
+    if (FlagGet(FLAG_DID_ELECTABUZZ_TRADE))
+        count++;
+    if (IsSpeciesCaught(SPECIES_ROSELIA))
+        count++;
+    if (IsSpeciesCaught(SPECIES_CROBAT))
+        count++;
+    if (IsSpeciesCaught(SPECIES_CHIMECHO))
+        count++;
+    if (IsSpeciesCaught(SPECIES_PORYGON2))
+        count++;
+    if (IsSpeciesCaught(SPECIES_RHYPERIOR))
+        count++;
+
+    return count;
+}
+
+static u8 CountEvolutionThroughDesignMilestones(void)
+{
+    u8 count = 0;
+
+    if (IsSpeciesCaught(SPECIES_PORYGON))
+        count++;
+    if (IsSpeciesCaught(SPECIES_OMANYTE))
+        count++;
+    if (IsSpeciesCaught(SPECIES_OMASTAR))
+        count++;
+    if (IsSpeciesCaught(SPECIES_OMATO))
+        count++;
+    if (IsSpeciesCaught(SPECIES_OMATOPS))
+        count++;
+    if (IsSpeciesCaught(SPECIES_KABUTO))
+        count++;
+    if (IsSpeciesCaught(SPECIES_KABUTOPS))
+        count++;
+    if (IsSpeciesCaught(SPECIES_KABUSTAR))
+        count++;
+    if (IsSpeciesCaught(SPECIES_KABUKNIGHT))
+        count++;
+    if (IsSpeciesCaught(SPECIES_AERODACTYL))
+        count++;
+
+    return count;
+}
+
+static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex)
+{
+    u8 count;
+    const u8 target = 2;
+
+    switch (subquestId)
+    {
+    case SUB_QUEST_EVOLUTION_THROUGH_BOND:
+        count = CountEvolutionThroughBondMilestones();
+        break;
+    case SUB_QUEST_EVOLUTION_THROUGH_INSTINCT:
+        count = CountApexInteractionsForNatureQuest();
+        break;
+    case SUB_QUEST_EVOLUTION_THROUGH_DESIGN:
+        count = CountEvolutionThroughDesignMilestones();
+        break;
+    default:
+        return FALSE;
+    }
+
+    ConvertIntToDecimalStringN(gStringVar1, count, STR_CONV_MODE_LEFT_ALIGN, 1);
+    ConvertIntToDecimalStringN(gStringVar2, target, STR_CONV_MODE_LEFT_ALIGN, 1);
+    StringExpandPlaceholders(gStringVar4, sText_QuestNumberDisplay);
+    *colorIndex = (count >= target) ? 2 : 3;
+    return TRUE;
+}
+
+static bool8 IsGymTrialTraded(u8 subquestId)
+{
+    if (LogbookMenu_GetSetSubquestState(QUEST_GYM_LEADER_TRIALS, FLAG_GET_COMPLETED, subquestId))
+        return TRUE;
+
+    switch (subquestId)
+    {
+    case SUB_QUEST_BROCK:
+        return FlagGet(FLAG_DID_BROCK_GRAVELER_TRADE) || VarGet(VAR_BROCK_TRIAL_STATE) >= 5;
+    case SUB_QUEST_MISTY:
+        return FlagGet(FLAG_DID_MISTY_POLIWHIRL_TRADE) || VarGet(VAR_MISTY_TRIAL_STATE) >= 11;
+    case SUB_QUEST_LTSURGE:
+        return FlagGet(FLAG_DID_ELECTABUZZ_TRADE) || VarGet(VAR_LT_SURGE_TRIAL_STATE) >= 5;
+    case SUB_QUEST_ERIKA:
+        return VarGet(VAR_ERIKA_TRIAL_STATE) >= 6;
+    case SUB_QUEST_KOGA:
+        return VarGet(VAR_KOGA_TRIAL_STATE) >= 6;
+    case SUB_QUEST_SABRINA:
+        return VarGet(VAR_SABRINA_TRIAL_STATE) >= 5;
+    default:
+        return FALSE;
+    }
+}
+
+static bool8 IsGymTrialCompleted(u8 subquestId)
+{
+    switch (subquestId)
+    {
+    case SUB_QUEST_BROCK:
+        return FlagGet(FLAG_DEFEATED_BROCK) || VarGet(VAR_BROCK_TRIAL_STATE) >= 4;
+    case SUB_QUEST_MISTY:
+        return FlagGet(FLAG_DEFEATED_MISTY) || VarGet(VAR_MISTY_TRIAL_STATE) >= 10;
+    case SUB_QUEST_LTSURGE:
+        return FlagGet(FLAG_DEFEATED_LT_SURGE) || VarGet(VAR_LT_SURGE_TRIAL_STATE) >= 4;
+    case SUB_QUEST_ERIKA:
+        return FlagGet(FLAG_DEFEATED_ERIKA) || VarGet(VAR_ERIKA_TRIAL_STATE) >= 4;
+    case SUB_QUEST_KOGA:
+        return FlagGet(FLAG_DEFEATED_KOGA) || VarGet(VAR_KOGA_TRIAL_STATE) >= 4;
+    case SUB_QUEST_SABRINA:
+        return FlagGet(FLAG_DEFEATED_SABRINA) || VarGet(VAR_SABRINA_TRIAL_STATE) >= 4;
+    case SUB_QUEST_BLAINE:
+        return FlagGet(FLAG_DEFEATED_BLAINE);
+    case SUB_QUEST_GIOVANNI:
+        return FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI);
+    default:
+        return FALSE;
+    }
+}
+
+static bool8 TryGenerateGymTrialState(u8 subquestId, u8 *colorIndex)
+{
+    if (!LogbookMenu_GetSetSubquestState(QUEST_GYM_LEADER_TRIALS, FLAG_GET_UNLOCKED, subquestId))
+        return FALSE;
+
+    if (IsGymTrialTraded(subquestId))
+    {
+        StringCopy(gStringVar4, sText_TradedCaps);
+        *colorIndex = 2;
+    }
+    else if (IsGymTrialCompleted(subquestId))
+    {
+        StringCopy(gStringVar4, sText_CompletedCaps);
+        *colorIndex = 2;
+    }
+    else
+    {
+        StringCopy(gStringVar4, sText_InProgressCaps);
+        *colorIndex = 3;
+    }
+
+    return TRUE;
+}
+
 u8 GenerateSubquestState(u8 questId)
 {
 	u8 parentQuest = sStateDataPtr->parentQuest;
+    u8 colorIndex;
 
-	if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED,
+    if (parentQuest == QUEST_THE_NATURE_OF_EVOLUTION
+     && TryGenerateNatureSubquestCounter(questId, &colorIndex))
+    {
+        return colorIndex;
+    }
+    else if (parentQuest == QUEST_GYM_LEADER_TRIALS
+          && TryGenerateGymTrialState(questId, &colorIndex))
+    {
+        return colorIndex;
+    }
+    else if (LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED,
 	                                  questId))
 	{
 		StringCopy(gStringVar4, sSideQuests[parentQuest].subquests[questId].type);
