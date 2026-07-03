@@ -165,6 +165,11 @@ static const u8 sItemEffect_SacredAsh[7] = {
     [(i) + 1] = 3, /* Friendship change, mid */  \
     [(i) + 2] = 2  /* Friendship change, high */
 
+#define FRIENDSHIP_BERRY_CHANGE(i)                \
+    [(i) + 0] = 10, /* Friendship change, low */  \
+    [(i) + 1] = 5,  /* Friendship change, mid */  \
+    [(i) + 2] = 2   /* Friendship change, high */
+
 static const u8 sItemEffect_HPUp[10] = {
     [4] = ITEM4_EV_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
@@ -335,6 +340,44 @@ static const u8 sItemEffect_SitrusBerry[7] = {
     [6] = 30, // Amount of HP to recover
 };
 
+static const u8 sItemEffect_PomegBerry[10] = {
+    [4] = ITEM4_EV_HP,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
+static const u8 sItemEffect_KelpsyBerry[10] = {
+    [4] = ITEM4_EV_ATK,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
+static const u8 sItemEffect_QualotBerry[10] = {
+    [5] = ITEM5_EV_DEF | ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
+static const u8 sItemEffect_HondewBerry[10] = {
+    [5] = ITEM5_EV_SPATK | ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
+static const u8 sItemEffect_GrepaBerry[10] = {
+    [5] = ITEM5_EV_SPDEF | ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
+static const u8 sItemEffect_TamatoBerry[10] = {
+    [5] = ITEM5_EV_SPEED | ITEM5_FRIENDSHIP_ALL,
+    [6] = ITEM6_SUBTRACT_EV,
+    FRIENDSHIP_BERRY_CHANGE(7),
+};
+
 const u8 *const gItemEffectTable[] =
 {
     [ITEM_POTION - ITEM_POTION]        = sItemEffect_Potion,
@@ -400,5 +443,11 @@ const u8 *const gItemEffectTable[] =
     [ITEM_PERSIM_BERRY - ITEM_POTION]  = sItemEffect_PersimBerry,
     [ITEM_LUM_BERRY - ITEM_POTION]     = sItemEffect_LumBerry,
     [ITEM_SITRUS_BERRY - ITEM_POTION]  = sItemEffect_SitrusBerry,
+    [ITEM_POMEG_BERRY - ITEM_POTION]   = sItemEffect_PomegBerry,
+    [ITEM_KELPSY_BERRY - ITEM_POTION]  = sItemEffect_KelpsyBerry,
+    [ITEM_QUALOT_BERRY - ITEM_POTION]  = sItemEffect_QualotBerry,
+    [ITEM_HONDEW_BERRY - ITEM_POTION]  = sItemEffect_HondewBerry,
+    [ITEM_GREPA_BERRY - ITEM_POTION]   = sItemEffect_GrepaBerry,
+    [ITEM_TAMATO_BERRY - ITEM_POTION]  = sItemEffect_TamatoBerry,
     [LAST_BERRY_INDEX - ITEM_POTION]   = NULL,
 };
