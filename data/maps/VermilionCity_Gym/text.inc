@@ -133,10 +133,10 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 VermilionCity_Gym_Text_GymGuyAdvice::
     .string "LT. SURGE has a nickname.\p"
     .string "People refer to him as the\n"
-    .string "Lightning American!\p"
+    .string "Lightning Unovan!\p"
     .string "He's an expert on electric\n"
     .string "POKéMON.\p"
-    .string "BIRD/WATER-type POKéMON match\n"
+    .string "FLYING/WATER-type POKéMON match\n"
     .string "poorly against the ELECTRIC type.\p"
     .string "Beware of paralysis, too.\p"
     .string "LT. SURGE is very cautious.\p"
