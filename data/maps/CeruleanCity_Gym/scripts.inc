@@ -29,9 +29,9 @@ CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox CeruleanCity_Gym_Text_GymGuideMistyAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
 	setvar VAR_MISTY_TRIAL_STATE, 1
 	closemessage
 	applymovement LOCALID_CERULEAN_GYM_GUIDE, CeruleanCity_Gym_Movement_GymGuideReturnToSpot
@@ -181,9 +181,9 @@ CeruleanCity_Gym_EventScript_GymGuyDontNeedAdvice::
 
 CeruleanCity_Gym_EventScript_GymGuyMistyAwayFirstTime::
 	msgbox CeruleanCity_Gym_Text_GymGuideMistyAway
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_MISTY
 	setvar VAR_MISTY_TRIAL_STATE, 1
 	release
 	end

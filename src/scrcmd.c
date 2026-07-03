@@ -2293,63 +2293,63 @@ bool8 ScrCmd_setmonmetlocation(struct ScriptContext * ctx)
     return FALSE;
 }
 
-bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
+bool8 ScrCmd_logbookmenu(struct ScriptContext *ctx)
 {
     u8 caseId = ScriptReadByte(ctx);
     u8 questId = VarGet(ScriptReadByte(ctx));
 
     switch (caseId)
     {
-    case QUEST_MENU_OPEN:
+    case LOGBOOK_MENU_OPEN:
     default:
         BeginNormalPaletteFade(0xFFFFFFFF, 2, 16, 0, 0);
-        QuestMenu_Init(0, CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        LogbookMenu_Init(0, CB2_ReturnToFieldContinueScriptPlayMapMusic);
         ScriptContext_Stop();
         break;
-    case QUEST_MENU_UNLOCK_QUEST:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
+    case LOGBOOK_MENU_UNLOCK_QUEST:
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
         break;
-    case QUEST_MENU_SET_ACTIVE:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_ACTIVE);
+    case LOGBOOK_MENU_SET_ACTIVE:
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_ACTIVE);
         break;
-    case QUEST_MENU_SET_REWARD:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_REWARD);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
+    case LOGBOOK_MENU_SET_REWARD:
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_REWARD);
+        LogbookMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
         break;
-    case QUEST_MENU_COMPLETE_QUEST:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_REWARD);
+    case LOGBOOK_MENU_COMPLETE_QUEST:
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
+        LogbookMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
+        LogbookMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
+        LogbookMenu_GetSetQuestState(questId, FLAG_REMOVE_REWARD);
         break;
-    case QUEST_MENU_CHECK_UNLOCKED:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
+    case LOGBOOK_MENU_CHECK_UNLOCKED:
+        if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
             gSpecialVar_Result = TRUE;
         else
             gSpecialVar_Result = FALSE;
         break;
-    case QUEST_MENU_CHECK_ACTIVE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
+    case LOGBOOK_MENU_CHECK_ACTIVE:
+        if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
             gSpecialVar_Result = TRUE;
         else
             gSpecialVar_Result = FALSE;
         break;
-    case QUEST_MENU_CHECK_REWARD:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
+    case LOGBOOK_MENU_CHECK_REWARD:
+        if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
             gSpecialVar_Result = TRUE;
         else
             gSpecialVar_Result = FALSE;
         break;
-    case QUEST_MENU_CHECK_COMPLETE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+    case LOGBOOK_MENU_CHECK_COMPLETE:
+        if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
             gSpecialVar_Result = TRUE;
         else
             gSpecialVar_Result = FALSE;
         break;
-    case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopyQuestName(gStringVar1, questId);
+    case LOGBOOK_MENU_BUFFER_QUEST_NAME:
+            LogbookMenu_CopyQuestName(gStringVar1, questId);
         break;
     }
 
@@ -2360,25 +2360,25 @@ bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
 {
     u8 questId = VarGet(ScriptReadByte(ctx));
 
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_INACTIVE)){
+    if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_INACTIVE)){
         gSpecialVar_Result = FLAG_GET_INACTIVE;
         return FALSE;
     }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)){
+    if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)){
         gSpecialVar_Result = FLAG_GET_ACTIVE;
         return FALSE;
     }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD)){
+    if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_REWARD)){
         gSpecialVar_Result = FLAG_GET_REWARD;
         return FALSE;
     }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)){
+    if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)){
         gSpecialVar_Result = FLAG_GET_COMPLETED;
         return FALSE;
     }
 }
 
-bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
+bool8 ScrCmd_sublogbookmenu(struct ScriptContext *ctx)
 {
     u8 caseId = ScriptReadByte(ctx);
     u8 parentId = VarGet(ScriptReadHalfword(ctx));
@@ -2386,30 +2386,30 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
 
     switch (caseId)
     {
-        case QUEST_MENU_UNLOCK_QUEST:
-            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_UNLOCKED, childId);
+        case LOGBOOK_MENU_UNLOCK_QUEST:
+            LogbookMenu_GetSetSubquestState(parentId, FLAG_SET_UNLOCKED, childId);
             break;
 
-        case QUEST_MENU_COMPLETE_QUEST:
-            QuestMenu_GetSetSubquestState(parentId, FLAG_SET_COMPLETED, childId);
+        case LOGBOOK_MENU_COMPLETE_QUEST:
+            LogbookMenu_GetSetSubquestState(parentId, FLAG_SET_COMPLETED, childId);
             break;
 
-        case QUEST_MENU_CHECK_UNLOCKED:
+        case LOGBOOK_MENU_CHECK_UNLOCKED:
             gSpecialVar_Result =
-                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_UNLOCKED, childId) ? TRUE : FALSE;
+                LogbookMenu_GetSetSubquestState(parentId, FLAG_GET_UNLOCKED, childId) ? TRUE : FALSE;
             break;
 
-        case QUEST_MENU_CHECK_ACTIVE:
+        case LOGBOOK_MENU_CHECK_ACTIVE:
             gSpecialVar_Result = FALSE;
             break;
 
-        case QUEST_MENU_CHECK_COMPLETE:
+        case LOGBOOK_MENU_CHECK_COMPLETE:
             gSpecialVar_Result =
-                QuestMenu_GetSetSubquestState(parentId, FLAG_GET_COMPLETED, childId) ? TRUE : FALSE;
+                LogbookMenu_GetSetSubquestState(parentId, FLAG_GET_COMPLETED, childId) ? TRUE : FALSE;
             break;
 
-        case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopySubquestName(gStringVar1, parentId, childId);
+        case LOGBOOK_MENU_BUFFER_QUEST_NAME:
+            LogbookMenu_CopySubquestName(gStringVar1, parentId, childId);
             break;
     }
 

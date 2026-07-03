@@ -18,9 +18,9 @@ DiglettsCave_Southside_B1F_EventScript_LtSurge::
 	lock
 	faceplayer
 	goto_if_ge VAR_LT_SURGE_TRIAL_STATE, 3, DiglettsCave_Southside_B1F_EventScript_LtSurgeGone
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_LTSURGE
 	setvar VAR_LT_SURGE_TRIAL_STATE, 2
 	msgbox DiglettsCave_Southside_B1F_Text_LtSurgeTeachVoltTackle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, DiglettsCave_Southside_B1F_EventScript_LtSurgeDeclineTutor

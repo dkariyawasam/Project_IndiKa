@@ -509,7 +509,7 @@ static void SetUpStartMenu_NormalField(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
+    if (FlagGet(FLAG_SYS_LOGBOOK_MENU_GET))
         AppendToStartMenuItems(STARTMENU_QUEST);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
@@ -1977,7 +1977,6 @@ static u8 SaveDialogCB_AskOverwriteOrReplacePreviousFileHandleInput(void)
 
 static u8 SaveDialogCB_PrintSavingDontTurnOffPower(void)
 {
-    SaveQuestLogData();
     PrintSaveTextWithFollowupFunc(gText_SavingDontTurnOffThePower, SaveDialogCB_DoSave);
     return SAVECB_RETURN_CONTINUE;
 }
@@ -2218,7 +2217,7 @@ static bool8 StartMenuQuestCallback(void)
         DestroySafariZoneStatsWindow();
         DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
-        QuestMenu_Init(0, CB2_ReturnToFieldWithOpenMenu);
+        LogbookMenu_Init(0, CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
     }
     return FALSE;
