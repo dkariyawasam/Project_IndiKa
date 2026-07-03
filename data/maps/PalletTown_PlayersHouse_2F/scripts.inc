@@ -14,7 +14,7 @@ PalletTown_PlayersHouse_2F_OnWarp::
 PalletTown_PlayersHouse_2F_FirstWarpIn::
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	setflag FLAG_SYS_B_DASH
-	setflag FLAG_SYS_QUEST_MENU_GET
+	setflag FLAG_SYS_LOGBOOK_MENU_GET
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_BROCK
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 1
 	end
@@ -24,7 +24,6 @@ PalletTown_PlayersHouse_2F_EventScript_NES::
 	end
 
 PalletTown_PlayersHouse_2F_EventScript_PC::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	setvar VAR_0x8004, 1
 	special AnimatePcTurnOn

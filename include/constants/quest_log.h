@@ -20,7 +20,7 @@
 #define QL_TINT_SEPIA             2
 #define QL_TINT_BACKUP_GRAYSCALE  3
 
-#define QL_IS_PLAYBACK_STATE (gQuestLogState == QL_STATE_PLAYBACK || gQuestLogState == QL_STATE_PLAYBACK_LAST)
+#define QL_IS_PLAYBACK_STATE FALSE
 
 #define QL_EVENT_INPUT                          0 // Null
 #define QL_EVENT_GFX_CHANGE                     1 // Null

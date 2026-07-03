@@ -2,7 +2,6 @@ Text_MonUsedMove::
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
 EventScript_RockSmash::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	checkpartymove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
@@ -61,7 +60,6 @@ Text_MonMaySmashRock::
 	.string "may be able to smash it.$"
 
 EventScript_StrengthBoulder::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_AlreadyUsedStrength
 	checkpartymove MOVE_STRENGTH
@@ -119,7 +117,6 @@ Text_StrengthMadeMovingBouldersPossible::
 	.string "boulders around.$"
 
 EventScript_Waterfall::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	checkpartymove MOVE_WATERFALL
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_WaterCrashingDown

@@ -18,8 +18,6 @@ Route5_EventScript_UndergroundPathSign::
 	end
 
 Route5_EventScript_DaycareMan::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	special GetDaycareMonNicknames

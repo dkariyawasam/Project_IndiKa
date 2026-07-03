@@ -2008,7 +2008,7 @@ static u8 FC_PopulateListMenu(void)
 
 static bool8 FC_HasApexDossierRumor(u8 rumor)
 {
-    return QuestMenu_HasHeardApexRumor(sFameCheckerData->apexSubquest, rumor);
+    return LogbookMenu_HasHeardApexRumor(sFameCheckerData->apexSubquest, rumor);
 }
 
 static bool8 FC_HasEncounteredApexDossierMon(void)

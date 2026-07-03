@@ -456,6 +456,8 @@ void SetQuestLogEvent(u16 eventId, const u16 * data)
 {
     u16 *r1;
 
+    return;
+
     if (eventId == QL_EVENT_DEPARTED && sStepRecordingMode == STEP_RECORDING_MODE_DISABLED_UNTIL_DEPART)
     {
         QL_EnableRecordingSteps();
@@ -560,15 +562,6 @@ static bool8 InQuestLogDisabledLocation(void)
 
 bool8 QuestLog_ShouldEndSceneOnMapChange(void)
 {
-    if (InQuestLogDisabledLocation() != TRUE)
-        return FALSE;
-
-    if (gQuestLogState == QL_STATE_PLAYBACK)
-        return TRUE;
-
-    if (gQuestLogState == QL_STATE_RECORDING)
-        QuestLog_CutRecording();
-
     return FALSE;
 }
 
@@ -621,7 +614,7 @@ static bool8 ShouldRegisterEvent_HandleBeatStoryTrainer(u16 eventId, const u16 *
 
 void QL_EnableRecordingSteps(void)
 {
-    sStepRecordingMode = STEP_RECORDING_MODE_ENABLED;
+    sStepRecordingMode = STEP_RECORDING_MODE_DISABLED;
 }
 
 static u16 *ShouldRegisterEvent(u16 eventId, const u16 * data)
@@ -665,19 +658,6 @@ static bool8 TryDeferLinkEvent(u16 eventId, const u16 * data)
 void ResetDeferredLinkEvent(void)
 {
     sDeferredEvent = (struct DeferredLinkEvent){};
-}
-
-void QuestLog_StartRecordingInputsAfterDeferredEvent(void)
-{
-    if (sDeferredEvent.id != 0)
-    {
-        u16 *resp;
-        sLastDepartedLocation = 0;
-        QL_StartRecordingAction(sDeferredEvent.id);
-        resp = sRecordEventFuncs[sDeferredEvent.id](gQuestLogRecordingPointer, sDeferredEvent.data);
-        gQuestLogRecordingPointer = resp;
-        ResetDeferredLinkEvent();
-    }
 }
 
 static bool8 IsVanillaStoryQuestLogEvent(u16 eventId)

@@ -22,9 +22,9 @@ PokemonTower_3F_EventScript_Sabrina::
 	faceplayer
 	goto_if_ge VAR_SABRINA_TRIAL_STATE, 4, PokemonTower_3F_EventScript_SabrinaGone
 	goto_if_eq VAR_SABRINA_TRIAL_STATE, 3, PokemonTower_3F_EventScript_SabrinaAskChallenge
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
-	subquestmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
 	setvar VAR_SABRINA_TRIAL_STATE, 2
 	msgbox PokemonTower_3F_Text_SabrinaTeachDreamEater, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, PokemonTower_3F_EventScript_SabrinaDeclineTutor
@@ -192,11 +192,9 @@ PokemonTower_3F_EventScript_MarowakGhost::
 	lockall
 	textcolor NPC_TEXT_COLOR_MON
 	msgbox PokemonTower_3F_Text_BeGoneIntruders
-	goto_if_questlog EventScript_ReleaseEnd
 	setwildbattle SPECIES_MAROWAK, 30
 	special StartMarowakBattle
 	waitstate
-	special QuestLog_CutRecording
 	goto_if_eq VAR_RESULT, FALSE, PokemonTower_3F_EventScript_DefeatedMarowakGhost  @ VAR_RESULT set by CB2_EndMarowakBattle
 	applymovement LOCALID_PLAYER, PokemonTower_3F_Movement_ForcePlayerUp
 	waitmovement 0
