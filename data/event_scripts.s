@@ -34,7 +34,6 @@
 #include "constants/daycare.h"
 #include "constants/easy_chat.h"
 #include "constants/trainer_card.h"
-#include "constants/help_system.h"
 #include "constants/trainer_fan_club.h"
 #include "constants/mystery_gift.h"
 #include "constants/quests.h"
@@ -1092,11 +1091,11 @@ EventScript_BufferPutAwayPocketPokeBalls::
 	return
 
 EventScript_BufferPutAwayPocketTMCase::
-	bufferstdstring STR_VAR_3, STDSTRING_TM_CASE
+	bufferstdstring STR_VAR_3, STDSTRING_TMHMS
 	return
 
 EventScript_BufferPutAwayPocketBerryPouch::
-	bufferstdstring STR_VAR_3, STDSTRING_BERRY_POUCH
+	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
 	return
 
 	.include "data/scripts/seagallop.inc"
@@ -1135,7 +1134,6 @@ Text_TestMsg::
 	.include "data/text/fame_checker.inc"
 	.include "data/text/trainer_card.inc"
 	.include "data/scripts/trainer_card.inc"
-	.include "data/text/help_system.inc"
 	.include "data/scripts/cable_club.inc"
 	.include "data/scripts/field_moves.inc"
 	.include "data/scripts/item_ball_scripts.inc"

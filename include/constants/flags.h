@@ -677,7 +677,7 @@
 #define FLAG_GOT_GOLBAT_FROM_KOGA                        0x298
 #define FLAG_0x299                                       0x299
 #define FLAG_0x29A                                       0x29A
-#define FLAG_GOT_FAME_CHECKER                            0x29B
+#define FLAG_GOT_APEX_LOG                                0x29B
 #define FLAG_GOT_RECORD_SETTING_MAGIKARP                 0x29C
 #define FLAG_0x29D                                       0x29D
 #define FLAG_0x29E                                       0x29E
