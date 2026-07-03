@@ -32,8 +32,6 @@ DiglettsCave_B2F_EventScript_HideMimeSr::
 	return
 
 DiglettsCave_B2F_EventScript_MimeSr::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	seteventmon SPECIES_MIME_SR, 50

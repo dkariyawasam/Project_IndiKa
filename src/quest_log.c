@@ -288,11 +288,6 @@ static void QLogCB_Playback(void)
     }
 }
 
-void GetQuestLogState(void)
-{
-    gSpecialVar_Result = 0;
-}
-
 u8 GetQuestLogStartType(void)
 {
     return gSaveBlock1Ptr->questLog[sCurrentSceneNum].startType;

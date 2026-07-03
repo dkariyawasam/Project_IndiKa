@@ -24,7 +24,6 @@ PalletTown_PlayersHouse_2F_EventScript_NES::
 	end
 
 PalletTown_PlayersHouse_2F_EventScript_PC::
-	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	setvar VAR_0x8004, 1
 	special AnimatePcTurnOn
