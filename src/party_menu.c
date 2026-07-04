@@ -74,6 +74,9 @@
 #define PARTY_PAL_NO_MON       (1 << 6)
 #define PARTY_PAL_UNUSED       (1 << 7)
 
+#define PARTY_MENU_HEADER_Y_OFFSET 16
+#define PARTY_MENU_HINT_WINDOW_ID 7
+
 #define MENU_DIR_DOWN     1
 #define MENU_DIR_UP      -1
 #define MENU_DIR_RIGHT    2
@@ -211,6 +214,9 @@ static void CreatePartyMonIconSprite(struct Pokemon *mon, struct PartyMenuBox *m
 static void CreatePartyMonHeldItemSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox);
 static void CreatePartyMonPokeballSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox);
 static void CreatePartyMonStatusSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox);
+static s16 GetPartyMenuHeaderYOffset(void);
+static void MovePartyMenuBgHeaderRows(void);
+static void PrintPartyMenuControlHints(void);
 static void CreateCancelConfirmPokeballSprites(void);
 static void DrawCancelConfirmButtons(void);
 static u8 CreatePokeballButtonSprite(u8 x, u8 y);
@@ -252,6 +258,7 @@ static u16 GetTutorMove(u8 tutor);
 static bool8 CanLearnTutorMove(u16 species, u8 tutor);
 static void CreateSelectionWindow(void);
 static bool8 ShouldUseChooseMonText(void);
+static bool8 IsChooseMonPromptMessage(u32 stringId);
 static void UpdatePartyMonHPBar(u8 spriteId, struct Pokemon *mon);
 static void SpriteCB_UpdatePartyMonIcon(struct Sprite *sprite);
 static void SpriteCB_BouncePartyMonIcon(struct Sprite *sprite);
@@ -404,6 +411,15 @@ static EWRAM_DATA u16 sPartyMenuItemId = ITEM_NONE;
 ALIGNED(4) EWRAM_DATA u8 gBattlePartyCurrentOrder[PARTY_SIZE / 2] = {0}; // bits 0-3 are the current pos of Slot 1, 4-7 are Slot 2, and so on
 
 COMMON_DATA void (*gItemUseCB)(u8, TaskFunc) = NULL;
+
+static const u16 sPartyMenuHintHeaderPalette[] =
+{
+    RGB(0, 15, 25),  RGB_WHITE,      RGB(12, 12, 12), RGB(26, 26, 25),
+    RGB(28, 1, 1),   RGB(31, 23, 14), RGB(4, 19, 1),   RGB(18, 30, 18),
+    RGB(0, 15, 25),  RGB(20, 24, 30), RGB(13, 25, 24), RGB_BLACK,
+    RGB_BLACK,       RGB(31, 19, 18), RGB_WHITE,       RGB(23, 11, 10),
+};
+static const u8 sPartyMenuHintTextColors[] = {0, 1, 2};
 
 #include "data/pokemon/tutor_learnsets.h"
 #include "data/party_menu.h"
@@ -650,6 +666,7 @@ static bool8 AllocPartyMenuBgGfx(void)
         if (!IsDma3ManagerBusyWithBgCopy())
         {
             LZDecompressWram(gPartyMenuBg_Tilemap, sPartyBgTilemapBuffer);
+            MovePartyMenuBgHeaderRows();
             ++sPartyMenuInternal->data[0];
         }
         break;
@@ -689,6 +706,33 @@ static void PartyPaletteBufferCopy(u8 offset)
     offset = PLTT_ID(offset);
     CpuCopy16(&gPlttBufferUnfaded[BG_PLTT_ID(3)], &gPlttBufferUnfaded[offset], PLTT_SIZE_4BPP);
     CpuCopy16(&gPlttBufferUnfaded[BG_PLTT_ID(3)], &gPlttBufferFaded[offset], PLTT_SIZE_4BPP);
+}
+
+static void PrintPartyMenuControlHints(void)
+{
+    u8 x = 236 - GetStringWidth(FONT_SMALL, gText_PickOKExit, 0);
+
+    FillWindowPixelBuffer(PARTY_MENU_HINT_WINDOW_ID, PIXEL_FILL(8));
+    AddTextPrinterParameterized4(PARTY_MENU_HINT_WINDOW_ID, FONT_SMALL, x, 0, 0, 0, sPartyMenuHintTextColors, 0, gText_PickOKExit);
+    ScrollWindow(PARTY_MENU_HINT_WINDOW_ID, 0, 1, PIXEL_FILL(0));
+    FillWindowPixelRect(PARTY_MENU_HINT_WINDOW_ID, PIXEL_FILL(10), 0, 15, 240, 1);
+    PutWindowTilemap(PARTY_MENU_HINT_WINDOW_ID);
+    CopyWindowToVram(PARTY_MENU_HINT_WINDOW_ID, COPYWIN_GFX);
+    ScheduleBgCopyTilemapToVram(0);
+}
+
+static void MovePartyMenuBgHeaderRows(void)
+{
+    u16 *tilemap;
+
+    if (gPartyMenu.layout != PARTY_LAYOUT_SINGLE || sPartyMenuInternal->chooseMultiple)
+        return;
+
+    tilemap = (u16 *)sPartyBgTilemapBuffer;
+    CpuCopy16(&tilemap[0 * 32], &tilemap[2 * 32], 32 * sizeof(u16));
+    CpuCopy16(&tilemap[1 * 32], &tilemap[3 * 32], 32 * sizeof(u16));
+    CpuFill16(0, &tilemap[0 * 32], 32 * sizeof(u16));
+    CpuFill16(0, &tilemap[1 * 32], 32 * sizeof(u16));
 }
 
 static void FreePartyPointers(void)
@@ -961,7 +1005,10 @@ static void CreateCancelConfirmPokeballSprites(void)
             sPartyMenuInternal->spriteIdCancelPokeball = CreateSmallPokeballButtonSprite(0xBF, 0x98);
         }
         else
-            sPartyMenuInternal->spriteIdCancelPokeball = CreatePokeballButtonSprite(198, 148);
+        {
+            FillBgTilemapBufferRect(1, 14, 23, 17, 7, 2, 1);
+            ScheduleBgCopyTilemapToVram(1);
+        }
 
         AnimatePartySlot(gPartyMenu.slotId, 1);
     }
@@ -1328,7 +1375,11 @@ static void UpdatePartySelectionSingleLayout(s8 *slotPtr, s8 movementDir)
     {
     case MENU_DIR_UP:
         if (*slotPtr == 0)
+        {
+            if (!sPartyMenuInternal->chooseMultiple)
+                break;
             *slotPtr = SLOT_CANCEL;
+        }
         else if (*slotPtr == SLOT_CONFIRM)
             *slotPtr = gPlayerPartyCount - 1;
         else if (*slotPtr == SLOT_CANCEL)
@@ -1348,8 +1399,6 @@ static void UpdatePartySelectionSingleLayout(s8 *slotPtr, s8 movementDir)
         {
             if (sPartyMenuInternal->chooseMultiple)
                 *slotPtr = SLOT_CONFIRM;
-            else
-                *slotPtr = SLOT_CANCEL;
         }
         else
             ++*slotPtr;
@@ -1383,6 +1432,8 @@ static void UpdatePartySelectionDoubleLayout(s8 *slotPtr, s8 movementDir)
     case MENU_DIR_UP:
         if (*slotPtr == 0)
         {
+            if (!sPartyMenuInternal->chooseMultiple)
+                break;
             *slotPtr = SLOT_CANCEL;
             break;
         }
@@ -1416,8 +1467,6 @@ static void UpdatePartySelectionDoubleLayout(s8 *slotPtr, s8 movementDir)
             {
                 if (sPartyMenuInternal->chooseMultiple)
                     *slotPtr = SLOT_CONFIRM;
-                else
-                    *slotPtr = SLOT_CANCEL;
             }
             else
                 *slotPtr = newSlot;
@@ -1971,7 +2020,10 @@ static void InitPartyMenuWindows(u8 layout)
     switch (layout)
     {
     case PARTY_LAYOUT_SINGLE:
-        InitWindows(sSinglePartyMenuWindowTemplate);
+        if (sPartyMenuInternal->chooseMultiple)
+            InitWindows(sSinglePartyMenuWindowTemplate);
+        else
+            InitWindows(sSinglePartyMenuHeaderWindowTemplate);
         break;
     case PARTY_LAYOUT_DOUBLE:
         InitWindows(sDoublePartyMenuWindowTemplate);
@@ -1990,6 +2042,10 @@ static void InitPartyMenuWindows(u8 layout)
     LoadStdWindowGfx(0, 0x58, BG_PLTT_ID(15));
     LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(12), PLTT_SIZE_4BPP);
     LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+    LoadPalette(sPartyMenuHintHeaderPalette, BG_PLTT_ID(11), PLTT_SIZE_4BPP);
+
+    if (layout == PARTY_LAYOUT_SINGLE && !sPartyMenuInternal->chooseMultiple)
+        PrintPartyMenuControlHints();
 }
 
 static void CreateCancelConfirmWindows(bool8 chooseMultiple)
@@ -1998,23 +2054,15 @@ static void CreateCancelConfirmWindows(bool8 chooseMultiple)
     u8 cancelWindowId;
     u8 offset;
 
-    if (gPartyMenu.menuType != PARTY_MENU_TYPE_MULTI_SHOWCASE)
+    if (gPartyMenu.menuType != PARTY_MENU_TYPE_MULTI_SHOWCASE && chooseMultiple == TRUE)
     {
-        if (chooseMultiple == TRUE)
-        {
-            confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
-            FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
-            AddTextPrinterParameterized4(confirmWindowId, FONT_SMALL, (48 - GetStringWidth(FONT_SMALL, gText_PartyMenu_OK, 0)) / 2u, 1, 0, 0, sFontColorTable[0], -1, gText_PartyMenu_OK);
-            PutWindowTilemap(confirmWindowId);
-            CopyWindowToVram(confirmWindowId, COPYWIN_GFX);
-            cancelWindowId = AddWindow(&sMultiCancelButtonWindowTemplate);
-            offset = 0;
-        }
-        else
-        {
-            cancelWindowId = AddWindow(&sCancelButtonWindowTemplate);
-            offset = 3;
-        }
+        confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
+        FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
+        AddTextPrinterParameterized4(confirmWindowId, FONT_SMALL, (48 - GetStringWidth(FONT_SMALL, gText_PartyMenu_OK, 0)) / 2u, 1, 0, 0, sFontColorTable[0], -1, gText_PartyMenu_OK);
+        PutWindowTilemap(confirmWindowId);
+        CopyWindowToVram(confirmWindowId, COPYWIN_GFX);
+        cancelWindowId = AddWindow(&sMultiCancelButtonWindowTemplate);
+        offset = 0;
         FillWindowPixelBuffer(cancelWindowId, PIXEL_FILL(0));
         // Branches are functionally identical. Second branch is never reached, Spin Trade wasnt fully implemented
         if (gPartyMenu.menuType != PARTY_MENU_TYPE_SPIN_TRADE)
@@ -2343,6 +2391,9 @@ void DisplayPartyMenuStdMessage(u32 stringId)
     if (*windowPtr != WINDOW_NONE)
         PartyMenuRemoveWindow(windowPtr);
 
+    if (IsChooseMonPromptMessage(stringId))
+        return;
+
     if (stringId != PARTY_MSG_NONE)
     {
         switch (stringId)
@@ -2376,6 +2427,20 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
         AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, 0, 2, 0, 0);
         ScheduleBgCopyTilemapToVram(2);
+    }
+}
+
+static bool8 IsChooseMonPromptMessage(u32 stringId)
+{
+    switch (stringId)
+    {
+    case PARTY_MSG_CHOOSE_MON:
+    case PARTY_MSG_CHOOSE_MON_OR_CANCEL:
+    case PARTY_MSG_CHOOSE_MON_AND_CONFIRM:
+    case PARTY_MSG_CHOOSE_MON_2:
+        return TRUE;
+    default:
+        return FALSE;
     }
 }
 
@@ -2526,11 +2591,20 @@ static void CreatePartyMonIconSprite(struct Pokemon *mon, struct PartyMenuBox *m
     UpdatePartyMonHPBar(menuBox->monSpriteId, mon);
 }
 
+static s16 GetPartyMenuHeaderYOffset(void)
+{
+    if (sPartyMenuInternal != NULL
+        && gPartyMenu.layout == PARTY_LAYOUT_SINGLE
+        && !sPartyMenuInternal->chooseMultiple)
+        return PARTY_MENU_HEADER_Y_OFFSET;
+    return 0;
+}
+
 static void CreatePartyMonIconSpriteParameterized(u16 species, u32 pid, struct PartyMenuBox *menuBox, u8 priority, bool32 handleDeoxys)
 {
     if (species != SPECIES_NONE)
     {
-        menuBox->monSpriteId = CreateMonIcon(species, SpriteCB_MonIcon, menuBox->spriteCoords[0], menuBox->spriteCoords[1], 4, pid, handleDeoxys);
+        menuBox->monSpriteId = CreateMonIcon(species, SpriteCB_MonIcon, menuBox->spriteCoords[0], menuBox->spriteCoords[1] + GetPartyMenuHeaderYOffset(), 4, pid, handleDeoxys);
         gSprites[menuBox->monSpriteId].oam.priority = priority;
     }
 }
@@ -2609,7 +2683,7 @@ static void CreatePartyMonHeldItemSprite(struct Pokemon *mon, struct PartyMenuBo
 {
     if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE)
     {
-        menuBox->itemSpriteId = CreateSprite(&sSpriteTemplate_HeldItem, menuBox->spriteCoords[2], menuBox->spriteCoords[3], 0);
+        menuBox->itemSpriteId = CreateSprite(&sSpriteTemplate_HeldItem, menuBox->spriteCoords[2], menuBox->spriteCoords[3] + GetPartyMenuHeaderYOffset(), 0);
         UpdatePartyMonHeldItemSprite(mon, menuBox);
     }
 }
@@ -2618,7 +2692,7 @@ static void CreatePartyMonHeldItemSpriteParameterized(u16 species, u16 item, str
 {
     if (species != SPECIES_NONE)
     {
-        menuBox->itemSpriteId = CreateSprite(&sSpriteTemplate_HeldItem, menuBox->spriteCoords[2], menuBox->spriteCoords[3], 0);
+        menuBox->itemSpriteId = CreateSprite(&sSpriteTemplate_HeldItem, menuBox->spriteCoords[2], menuBox->spriteCoords[3] + GetPartyMenuHeaderYOffset(), 0);
         gSprites[menuBox->itemSpriteId].oam.priority = 0;
         ShowOrHideHeldItemSprite(item, menuBox);
     }
@@ -2709,14 +2783,14 @@ static void SpriteCB_HeldItem(struct Sprite *sprite)
 static void CreatePartyMonPokeballSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox)
 {
     if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE)
-        menuBox->pokeballSpriteId = CreateSprite(&sSpriteTemplate_MenuPokeball, menuBox->spriteCoords[6], menuBox->spriteCoords[7], 8);
+        menuBox->pokeballSpriteId = CreateSprite(&sSpriteTemplate_MenuPokeball, menuBox->spriteCoords[6], menuBox->spriteCoords[7] + GetPartyMenuHeaderYOffset(), 8);
 }
 
 static void CreatePartyMonPokeballSpriteParameterized(u16 species, struct PartyMenuBox *menuBox)
 {
     if (species != SPECIES_NONE)
     {
-        menuBox->pokeballSpriteId = CreateSprite(&sSpriteTemplate_MenuPokeball, menuBox->spriteCoords[6], menuBox->spriteCoords[7], 8);
+        menuBox->pokeballSpriteId = CreateSprite(&sSpriteTemplate_MenuPokeball, menuBox->spriteCoords[6], menuBox->spriteCoords[7] + GetPartyMenuHeaderYOffset(), 8);
         gSprites[menuBox->pokeballSpriteId].oam.priority = 0;
     }
 }
@@ -2772,7 +2846,7 @@ static void CreatePartyMonStatusSprite(struct Pokemon *mon, struct PartyMenuBox 
 {
     if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE)
     {
-        menuBox->statusSpriteId = CreateSprite(&sSpriteTemplate_StatusIcons, menuBox->spriteCoords[4], menuBox->spriteCoords[5], 0);
+        menuBox->statusSpriteId = CreateSprite(&sSpriteTemplate_StatusIcons, menuBox->spriteCoords[4], menuBox->spriteCoords[5] + GetPartyMenuHeaderYOffset(), 0);
         SetPartyMonAilmentGfx(mon, menuBox);
     }
 }
@@ -2781,7 +2855,7 @@ static void CreatePartyMonStatusSpriteParameterized(u16 species, u8 status, stru
 {
     if (species != SPECIES_NONE)
     {
-        menuBox->statusSpriteId = CreateSprite(&sSpriteTemplate_StatusIcons, menuBox->spriteCoords[4], menuBox->spriteCoords[5], 0);
+        menuBox->statusSpriteId = CreateSprite(&sSpriteTemplate_StatusIcons, menuBox->spriteCoords[4], menuBox->spriteCoords[5] + GetPartyMenuHeaderYOffset(), 0);
         UpdatePartyMonAilmentGfx(status, menuBox);
         gSprites[menuBox->statusSpriteId].oam.priority = 0;
     }
