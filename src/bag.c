@@ -21,9 +21,9 @@ static const struct WindowTemplate sDefaultBagWindowsStd[] = {
     {
         .bg = 0,
         .tilemapLeft = 11,
-        .tilemapTop = 1,
+        .tilemapTop = 3,
         .width = 18,
-        .height = 12,
+        .height = 10,
         .paletteNum = 15,
         .baseBlock = 0x008a
     }, {
@@ -37,11 +37,19 @@ static const struct WindowTemplate sDefaultBagWindowsStd[] = {
     }, {
         .bg = 0,
         .tilemapLeft = 1,
-        .tilemapTop = 1,
+        .tilemapTop = 3,
         .width = 9,
         .height = 2,
         .paletteNum = 15,
         .baseBlock = 0x01f8
+    }, {
+        .bg = 0,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 15,
+        .baseBlock = 0x03b2
     }, DUMMY_WIN_TEMPLATE
 };
 
@@ -49,9 +57,9 @@ static const struct WindowTemplate sDefaultBagWindowsDeposit[] = {
     {
         .bg = 0,
         .tilemapLeft = 11,
-        .tilemapTop = 1,
+        .tilemapTop = 3,
         .width = 18,
-        .height = 12,
+        .height = 10,
         .paletteNum = 15,
         .baseBlock = 0x008a
     }, {
@@ -65,11 +73,19 @@ static const struct WindowTemplate sDefaultBagWindowsDeposit[] = {
     }, {
         .bg = 0,
         .tilemapLeft = 1,
-        .tilemapTop = 1,
+        .tilemapTop = 3,
         .width = 8,
         .height = 2,
         .paletteNum = 12,
         .baseBlock = 0x01f8
+    }, {
+        .bg = 0,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 15,
+        .baseBlock = 0x03b2
     }, DUMMY_WIN_TEMPLATE
 };
 
@@ -206,7 +222,7 @@ void InitBagWindows(void)
     LoadMenuMessageWindowGfx(0, 0x6D, BG_PLTT_ID(13));
     LoadStdWindowGfx(0, 0x81, BG_PLTT_ID(12));
     LoadPalette(sBagWindowPalF, BG_PLTT_ID(15), sizeof(sBagWindowPalF));
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 4; i++)
     {
         FillWindowPixelBuffer(i, 0x00);
         PutWindowTilemap(i);

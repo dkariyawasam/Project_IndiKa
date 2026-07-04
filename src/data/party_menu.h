@@ -189,6 +189,83 @@ static const struct WindowTemplate sSinglePartyMenuWindowTemplate[] =
     DUMMY_WIN_TEMPLATE,
 };
 
+static const struct WindowTemplate sSinglePartyMenuHeaderWindowTemplate[] =
+{
+    {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 5,
+        .width = 10,
+        .height = 7,
+        .paletteNum = 3,
+        .baseBlock = 0x63,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 12,
+        .tilemapTop = 3,
+        .width = 18,
+        .height = 3,
+        .paletteNum = 4,
+        .baseBlock = 0xA9,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 12,
+        .tilemapTop = 6,
+        .width = 18,
+        .height = 3,
+        .paletteNum = 5,
+        .baseBlock = 0xDF,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 12,
+        .tilemapTop = 9,
+        .width = 18,
+        .height = 3,
+        .paletteNum = 6,
+        .baseBlock = 0x115,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 12,
+        .tilemapTop = 12,
+        .width = 18,
+        .height = 3,
+        .paletteNum = 7,
+        .baseBlock = 0x14B,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 12,
+        .tilemapTop = 15,
+        .width = 18,
+        .height = 3,
+        .paletteNum = 8,
+        .baseBlock = 0x181,
+    },
+    {
+        .bg = 2,
+        .tilemapLeft = 1,
+        .tilemapTop = 15,
+        .width = 28,
+        .height = 4,
+        .paletteNum = 14,
+        .baseBlock = 0x1DF,
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 11,
+        .baseBlock = 0x3C4,
+    },
+    DUMMY_WIN_TEMPLATE,
+};
+
 static const struct WindowTemplate sDoublePartyMenuWindowTemplate[] =
 {
     {

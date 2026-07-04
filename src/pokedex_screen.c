@@ -119,7 +119,7 @@ static void DexScreen_PrintNum3RightAlign(u8 windowId, u8 fontId, u16 num, u8 x,
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y);
 static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex);
 static void DexScreen_PrintControlInfo(const u8 *src);
-static void DexScreen_PrintTopMenuHeader(void);
+static void DexScreen_PrintHeaderControlInfo(const u8 *src);
 static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void);
 static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered);
 static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos);
@@ -858,7 +858,7 @@ void DexScreen_LoadResources(void)
     FillBgTilemapBufferRect(1, 0x000, 0,  0, 32, 32, 17);
     FillBgTilemapBufferRect(0, 0x003, 0,  0, 32,  2, 15);
     FillBgTilemapBufferRect(0, 0x000, 0,  2, 32, 16, 17);
-    FillBgTilemapBufferRect(0, 0x003, 0, 18, 32,  2, 15);
+    FillBgTilemapBufferRect(0, 0x000, 0, 18, 32,  2, 17);
 }
 
 void CB2_OpenPokedexFromStartMenu(void)
@@ -1053,6 +1053,7 @@ static void DexScreen_InitGfxForTopMenu(void)
 {
     struct ListMenuTemplate listMenuTemplate;
     FillBgTilemapBufferRect(3, 0x00E, 0, 0, 30, 20, 0);
+    FillBgTilemapBufferRect(0, 0x003, 0, 0, 32, 2, 15);
     FillBgTilemapBufferRect(2, 0x000, 0, 0, 30, 20, 17);
     FillBgTilemapBufferRect(1, 0x000, 0, 0, 30, 20, 17);
     sPokedexScreenData->modeSelectWindowId = AddWindow(&sWindowTemplate_ModeSelect);
@@ -1080,11 +1081,8 @@ static void DexScreen_InitGfxForTopMenu(void)
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, 8, 18, 0);
         DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedKanto, 44, 18, 2);
     }
-    FillWindowPixelBuffer(0, PIXEL_FILL(15));
-    DexScreen_PrintTopMenuHeader();
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    PutWindowTilemap(0);
-    CopyWindowToVram(0, COPYWIN_GFX);
+    DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_GFX);
     PutWindowTilemap(sPokedexScreenData->dexCountsWindowId);
@@ -1198,7 +1196,7 @@ static void DexScreen_InitGfxForNumericalOrderList(void)
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_PokemonListNoColor, TEXT_CENTER);
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    DexScreen_PrintControlInfo(gText_PickOKExit);
+    DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
 }
@@ -1284,7 +1282,7 @@ static void DexScreen_CreateCharacteristicListMenu(void)
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_SearchNoColor, TEXT_CENTER);
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    DexScreen_PrintControlInfo(gText_PickOKExit);
+    DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
 }
@@ -2206,12 +2204,26 @@ static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex)
 
 static void DexScreen_PrintControlInfo(const u8 *src)
 {
+    ClearWindowTilemap(1);
+    SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
+    SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 18);
+    SetWindowAttribute(1, WINDOW_WIDTH, 30);
+    FillWindowPixelBuffer(1, PIXEL_FILL(15));
     DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, src, 236 - GetStringWidth(FONT_SMALL, src, 0), 2, 4);
 }
 
-static void DexScreen_PrintTopMenuHeader(void)
+static void DexScreen_PrintHeaderControlInfo(const u8 *src)
 {
-    DexScreen_AddTextPrinterParameterized(0, FONT_SMALL, gText_PickOK, 236 - GetStringWidth(FONT_SMALL, gText_PickOK, 0), 2, 4);
+    u8 x = 236 - GetStringWidth(FONT_SMALL, src, 0);
+
+    ClearWindowTilemap(1);
+    SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
+    SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
+    SetWindowAttribute(1, WINDOW_WIDTH, 30);
+    FillWindowPixelBuffer(1, PIXEL_FILL(11));
+    DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, src, x, 0, 4);
+    ScrollWindow(1, 0, 1, PIXEL_FILL(11));
+    FillWindowPixelRect(1, PIXEL_FILL(12), 0, 15, 240, 1);
 }
 
 bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
