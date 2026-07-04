@@ -10,6 +10,7 @@
 #include "graphics.h"
 #include "item.h"
 #include "item_menu.h"
+#include "ui_hint_header.h"
 #include "item_menu_icons.h"
 #include "item_use.h"
 #include "link.h"
@@ -786,13 +787,7 @@ static void PrintItemDescriptionOnMessageWindow(s32 itemIndex)
 
 static void PrintBagControlHints(void)
 {
-    u8 x = 236 - GetStringWidth(FONT_SMALL, gText_PickOKExit, 0);
-
-    FillWindowPixelBuffer(3, PIXEL_FILL(0));
-    BagPrintTextOnWindow(3, FONT_SMALL, gText_PickOKExit, x, 0, 0, 0, 0, 0);
-    ScrollWindow(3, 0, 1, PIXEL_FILL(0));
-    FillWindowPixelRect(3, PIXEL_FILL(10), 0, 15, 240, 1);
-    CopyWindowToVram(3, COPYWIN_GFX);
+    DrawUiHintHeader(3, gText_PickOKExit, 0, 10, 0, FALSE);
 }
 
 static void CreatePocketScrollArrowPair(void)

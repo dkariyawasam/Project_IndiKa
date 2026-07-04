@@ -24,6 +24,7 @@
 #include "graphics.h"
 #include "fieldmap.h"
 #include "strings.h"
+#include "ui_hint_header.h"
 #include "constants/field_effects.h"
 #include "constants/event_objects.h"
 
@@ -82,6 +83,7 @@ static void TeachyTvSetupScrollIndicatorArrowPair(void);
 static void TeachyTvSetWindowRegs(void);
 static void TeachyTvSetupBg(void);
 static void TeachyTvLoadGraphic(void);
+static void TeachyTvPrintControlHints(void);
 static void TeachyTvPostBattleFadeControl(u8);
 static void TeachyTvOptionListController(u8);
 static u8 TeachyTvSetupMainWindow(void);
@@ -162,14 +164,25 @@ static const struct WindowTemplate sWindowTemplates[] =
     {
         .bg = 0,
         .tilemapLeft = 4,
-        .tilemapTop = 1,
+        .tilemapTop = 3,
         .width = 22,
-        .height = 12,
+        .height = 10,
         .paletteNum = 3,
         .baseBlock = 0x152,
     },
+    {
+        .bg = 1,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 4,
+        .baseBlock = 0x22E,
+    },
     DUMMY_WIN_TEMPLATE,
 };
+
+static const u8 sText_TeachyTvControlHints[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
 
 static const struct ListMenuItem sListMenuItems[] = 
 {
@@ -193,11 +206,6 @@ static const struct ListMenuItem sListMenuItems[] =
         .label = gTeachyTvString_TypeMatchups,
         .index = TTVSCR_MATCHUPS
     },
-
-    {
-        .label = gTeachyTvString_Cancel,
-        .index = -2
-    },
 };
 
 static const struct ListMenuItem sListMenuItems_Lesson[] =
@@ -210,10 +218,6 @@ static const struct ListMenuItem sListMenuItems_Lesson[] =
         .label = gTeachyTvString_Theory,
         .index = 1
     },
-    {
-        .label = gTeachyTvString_Cancel,
-        .index = -2
-    },
 };
 
 static const struct ListMenuTemplate sListMenuTemplate = 
@@ -221,8 +225,8 @@ static const struct ListMenuTemplate sListMenuTemplate =
     .items = sListMenuItems,
     .moveCursorFunc = NULL,
     .itemPrintFunc = NULL,
-    .totalItems = 6,
-    .maxShowed = 6,
+    .totalItems = NELEMS(sListMenuItems),
+    .maxShowed = NELEMS(sListMenuItems),
     .windowId = 0,
     .header_X = 0,
     .item_X = 8,
@@ -236,21 +240,6 @@ static const struct ListMenuTemplate sListMenuTemplate =
     .scrollMultiple = 0x1,
     .fontId = FONT_NORMAL,
     .cursorKind = 0x0,
-};
-
-static const struct ScrollArrowsTemplate sScrollIndicatorArrowPair = 
-{
-    .firstArrowType = 0x2,
-    .firstX = 0x78,
-    .firstY = 0xC,
-    .secondArrowType = 0x3,
-    .secondX = 0x78,
-    .secondY = 0x64,
-    .fullyUpThreshold = 0,
-    .fullyDownThreshold = 1,
-    .tileTag = 0x800,
-    .palTag = 0x800,
-    .palNum = 0x0,
 };
 
 static const u8 sWhereToReturnToFromBattle[] = 
@@ -602,6 +591,7 @@ static void TeachyTvLoadGraphic(void)
     LZDecompressWram(gTeachyTvScreen_Tilemap, sResources->screenTilemap);
     LZDecompressWram(gTeachyTvTitle_Tilemap, sResources->titleTilemap);
     LoadCompressedPalette(gTeachyTv_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
+    LoadPalette(gUiHintHeaderPalette, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
     LoadPalette(&src, BG_PLTT_ID(0), sizeof(src));
     LoadSpritePalette(&gSpritePalette_GeneralFieldEffect1);
     TeachyTvLoadBg3Map(sResources->buffer3);
@@ -614,7 +604,13 @@ static void TeachyTvCreateAndRenderRbox(void)
     FillWindowPixelBuffer(0, 0xCC);
     PutWindowTilemap(0);
     PutWindowTilemap(1);
+    TeachyTvPrintControlHints();
     CopyWindowToVram(0, COPYWIN_GFX);
+}
+
+static void TeachyTvPrintControlHints(void)
+{
+    DrawUiHintHeader(2, sText_TeachyTvControlHints, 8, 10, 0, TRUE);
 }
 
 static u8 TeachyTvSetupWindow(void)
@@ -638,6 +634,9 @@ static u8 TeachyTvSetupMainWindow(void)
 
 static u8 TeachyTvSetupLessonWindow(void)
 {
+    if (sStaticResources.lessonSelectedRow >= NELEMS(sListMenuItems_Lesson))
+        sStaticResources.lessonSelectedRow = 0;
+
     gMultiuseListMenuTemplate = sListMenuTemplate;
     gMultiuseListMenuTemplate.windowId = 1;
     gMultiuseListMenuTemplate.moveCursorFunc = TeachyTvAudioByInput;
@@ -654,13 +653,7 @@ static u8 TeachyTvSetupLessonWindow(void)
 
 static void TeachyTvSetupScrollIndicatorArrowPair(void)
 {
-    if (sStaticResources.menuMode != 0)
-    {
-        sResources->scrollIndicatorArrowPairId = 0xFF;
-        return;
-    }
-
-    sResources->scrollIndicatorArrowPairId = AddScrollIndicatorArrowPair(&sScrollIndicatorArrowPair, &(sStaticResources.scrollOffset));
+    sResources->scrollIndicatorArrowPairId = 0xFF;
 }
 
 static void TeachyTvRemoveScrollIndicatorArrowPair(void)
@@ -704,7 +697,7 @@ static void TeachyTvSetSpriteCoordsAndSwitchFrame(u8 objId, u16 x, u16 y, u8 fra
 
 static void TeachyTvSetWindowRegs(void)
 {
-    SetGpuReg(REG_OFFSET_WIN0V, 0xC64);
+    SetGpuReg(REG_OFFSET_WIN0V, 0x1C64);
     SetGpuReg(REG_OFFSET_WIN0H, 0x1CD4);
 }
 
@@ -718,7 +711,7 @@ static void TeachyTvBg2AnimController(void)
 {
     u16 * tilemapBuffer = GetBgTilemapBuffer(2);
     u8 i, j;
-    for (i = 1; i < 13; i++)
+    for (i = 3; i < 13; i++)
     {
         for (j = 2; j < 28; j++)
         {

@@ -19,6 +19,7 @@
 #include "constants/songs.h"
 #include "constants/sound.h"
 #include "pokedex_area_markers.h"
+#include "ui_hint_header.h"
 #include "field_specials.h"
 
 #define TAG_AREA_MARKERS 2001
@@ -2214,16 +2215,11 @@ static void DexScreen_PrintControlInfo(const u8 *src)
 
 static void DexScreen_PrintHeaderControlInfo(const u8 *src)
 {
-    u8 x = 236 - GetStringWidth(FONT_SMALL, src, 0);
-
     ClearWindowTilemap(1);
     SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
     SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
     SetWindowAttribute(1, WINDOW_WIDTH, 30);
-    FillWindowPixelBuffer(1, PIXEL_FILL(11));
-    DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, src, x, 0, 4);
-    ScrollWindow(1, 0, 1, PIXEL_FILL(11));
-    FillWindowPixelRect(1, PIXEL_FILL(12), 0, 15, 240, 1);
+    DrawUiHintHeader(1, src, 11, 12, 0, FALSE);
 }
 
 bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)

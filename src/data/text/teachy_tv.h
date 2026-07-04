@@ -4,7 +4,6 @@ const u8 gTeachyTvString_TypeMatchups[] = _("Type Matchups");
 const u8 gTeachyTvString_CatchPkmn[] = _("Catching");
 const u8 gTeachyTvString_Training[] = _("Training");
 const u8 gTeachyTvString_AboutTMs[] = _("Teach me about TMs.");
-const u8 gTeachyTvString_Cancel[] = _("CANCEL");
 const u8 gTeachyTvString_Demonstration[] = _("Demonstration");
 const u8 gTeachyTvString_Theory[] = _("Theory");
 const u8 gTeachyTvText_PokedudeSaysHello[] = _(

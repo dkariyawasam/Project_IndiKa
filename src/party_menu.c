@@ -51,6 +51,7 @@
 #include "task.h"
 #include "teachy_tv.h"
 #include "text_window.h"
+#include "ui_hint_header.h"
 #include "trade.h"
 #include "union_room.h"
 #include "constants/battle.h"
@@ -412,15 +413,6 @@ ALIGNED(4) EWRAM_DATA u8 gBattlePartyCurrentOrder[PARTY_SIZE / 2] = {0}; // bits
 
 COMMON_DATA void (*gItemUseCB)(u8, TaskFunc) = NULL;
 
-static const u16 sPartyMenuHintHeaderPalette[] =
-{
-    RGB(0, 15, 25),  RGB_WHITE,      RGB(12, 12, 12), RGB(26, 26, 25),
-    RGB(28, 1, 1),   RGB(31, 23, 14), RGB(4, 19, 1),   RGB(18, 30, 18),
-    RGB(0, 15, 25),  RGB(20, 24, 30), RGB(13, 25, 24), RGB_BLACK,
-    RGB_BLACK,       RGB(31, 19, 18), RGB_WHITE,       RGB(23, 11, 10),
-};
-static const u8 sPartyMenuHintTextColors[] = {0, 1, 2};
-
 #include "data/pokemon/tutor_learnsets.h"
 #include "data/party_menu.h"
 
@@ -710,14 +702,7 @@ static void PartyPaletteBufferCopy(u8 offset)
 
 static void PrintPartyMenuControlHints(void)
 {
-    u8 x = 236 - GetStringWidth(FONT_SMALL, gText_PickOKExit, 0);
-
-    FillWindowPixelBuffer(PARTY_MENU_HINT_WINDOW_ID, PIXEL_FILL(8));
-    AddTextPrinterParameterized4(PARTY_MENU_HINT_WINDOW_ID, FONT_SMALL, x, 0, 0, 0, sPartyMenuHintTextColors, 0, gText_PickOKExit);
-    ScrollWindow(PARTY_MENU_HINT_WINDOW_ID, 0, 1, PIXEL_FILL(0));
-    FillWindowPixelRect(PARTY_MENU_HINT_WINDOW_ID, PIXEL_FILL(10), 0, 15, 240, 1);
-    PutWindowTilemap(PARTY_MENU_HINT_WINDOW_ID);
-    CopyWindowToVram(PARTY_MENU_HINT_WINDOW_ID, COPYWIN_GFX);
+    DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, gText_PickOKExit, 8, 10, 0, TRUE);
     ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -2042,7 +2027,7 @@ static void InitPartyMenuWindows(u8 layout)
     LoadStdWindowGfx(0, 0x58, BG_PLTT_ID(15));
     LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(12), PLTT_SIZE_4BPP);
     LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(14), PLTT_SIZE_4BPP);
-    LoadPalette(sPartyMenuHintHeaderPalette, BG_PLTT_ID(11), PLTT_SIZE_4BPP);
+    LoadPalette(gUiHintHeaderPalette, BG_PLTT_ID(11), PLTT_SIZE_4BPP);
 
     if (layout == PARTY_LAYOUT_SINGLE && !sPartyMenuInternal->chooseMultiple)
         PrintPartyMenuControlHints();
