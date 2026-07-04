@@ -11,6 +11,7 @@
 #include "coins.h"
 #include "strings.h"
 #include "trainer_card.h"
+#include "ui_hint_header.h"
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "graphics.h"
@@ -158,7 +159,6 @@ static const u32 sHoennTrainerCardFrontLink_Tilemap[] = INCBIN_U32("graphics/tra
 static const u32 sKantoTrainerCardFrontLink_Tilemap[] = INCBIN_U32("graphics/trainer_card/front_link.bin.lz");
 static const u32 sHoennTrainerCardBg_Tilemap[]        = INCBIN_U32("graphics/trainer_card/rse/bg.bin.lz");
 static const u32 sKantoTrainerCardBg_Tilemap[]        = INCBIN_U32("graphics/trainer_card/bg.bin.lz");
-static const u16 sUnused_Pal[]                        = INCBIN_U16("graphics/trainer_card/unused.gbapal");
 static const u16 sHoennTrainerCardBronze_Pal[]        = INCBIN_U16("graphics/trainer_card/rse/bronze.gbapal");
 static const u16 sKantoTrainerCardGreen_Pal[]         = INCBIN_U16("graphics/trainer_card/green.gbapal");
 static const u16 sHoennTrainerCardCopper_Pal[]        = INCBIN_U16("graphics/trainer_card/rse/copper.gbapal");
@@ -169,14 +169,12 @@ static const u16 sHoennTrainerCardGold_Pal[]          = INCBIN_U16("graphics/tra
 static const u16 sKantoTrainerCardGold_Pal[]          = INCBIN_U16("graphics/trainer_card/gold.gbapal");
 static const u16 sHoennTrainerCardFemaleBg_Pal[]      = INCBIN_U16("graphics/trainer_card/rse/female_bg.gbapal");
 static const u16 sKantoTrainerCardFemaleBg_Pal[]      = INCBIN_U16("graphics/trainer_card/female_bg.gbapal");
-static const u16 sHoennTrainerCardBadges_Pal[]        = INCBIN_U16("graphics/trainer_card/rse/badges.gbapal");
-static const u16 sKantoTrainerCardBadges_Pal[]        = INCBIN_U16("graphics/trainer_card/badges.gbapal");
+static const u16 sTrainerCardBadges_Pal[]             = INCBIN_U16("graphics/trainer_card/badges.gbapal");
 static const u16 sTrainerCardStar_Pal[]               = INCBIN_U16("graphics/trainer_card/star.gbapal");
 static const u16 sTrainerCardStickerPal1[]            = INCBIN_U16("graphics/trainer_card/stickers1.gbapal");
 static const u16 sTrainerCardStickerPal2[]            = INCBIN_U16("graphics/trainer_card/stickers2.gbapal");
 static const u16 sTrainerCardStickerPal3[]            = INCBIN_U16("graphics/trainer_card/stickers3.gbapal");
 static const u16 sTrainerCardStickerPal4[]            = INCBIN_U16("graphics/trainer_card/stickers4.gbapal");
-static const u32 sHoennTrainerCardBadges_Gfx[]        = INCBIN_U32("graphics/trainer_card/rse/badges.4bpp.lz");
 static const u32 sKantoTrainerCardBadges_Gfx[]        = INCBIN_U32("graphics/trainer_card/badges.4bpp.lz");
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] = 
@@ -352,7 +350,6 @@ static const u8 sTrainerCardFrontNameYPositions[] = {0x25, 0x19};
 static const u8 sTrainerCardIdXPositions[] = {0x8E, 0x80};
 static const u8 sTrainerCardIdYPositions[] = {0x12, 0x1};
 static const u8 *const sTimeColonTextColors[] = {sTrainerCardTextColors, sTimeColonInvisibleTextColors};
-static const u8 sTrainerCardHintTextColors[] = {0, 1, 2};
 static const u8 sText_TrainerCardControlHints[] = _("{A_BUTTON}FLIP {B_BUTTON}BACK");
 static const u16 sTrainerCardHintHeaderTiles[] = {0x1000 | 0xBC, 0x1000 | 0xBB};
 static const u8 sTrainerCardTimeHoursXPositions[] = {0x65, 0x55};
@@ -519,7 +516,6 @@ static void Task_TrainerCard(u8 taskId)
         break;
     case 2:
         DrawTrainerCardWindow(1);
-        PrintTrainerCardControlHints();
         sTrainerCardDataPtr->mainState++;
         break;
     case 3:
@@ -538,6 +534,7 @@ static void Task_TrainerCard(u8 taskId)
         break;
     case 6:
         DrawStarsAndBadgesOnCard();
+        PrintTrainerCardControlHints();
         sTrainerCardDataPtr->mainState++;
         break;
     // Fade in
@@ -689,7 +686,6 @@ static bool8 LoadCardGfx(void)
         }
         break;
     case 3:
-        // ? Doesnt check for RSE, sHoennTrainerCardBadges_Gfx goes unused
         LZ77UnCompWram(sKantoTrainerCardBadges_Gfx, sTrainerCardDataPtr->badgeTiles);
         break;
     case 4:
@@ -1466,11 +1462,7 @@ static void DrawTrainerCardWindow(u8 windowId)
 
 static void PrintTrainerCardControlHints(void)
 {
-    u8 x = 236 - GetStringWidth(FONT_SMALL, sText_TrainerCardControlHints, 0);
-
-    FillWindowPixelBuffer(3, PIXEL_FILL(0));
-    AddTextPrinterParameterized4(3, FONT_SMALL, x, 1, 0, 0, sTrainerCardHintTextColors, 0, sText_TrainerCardControlHints);
-    DrawTrainerCardWindow(3);
+    DrawUiHintHeader(3, sText_TrainerCardControlHints, 0, 0, 1, TRUE);
 }
 
 static bool8 SetTrainerCardBgsAndPals(void)
@@ -1490,10 +1482,7 @@ static bool8 SetTrainerCardBgsAndPals(void)
             LoadPalette(sKantoTrainerCardPals[sTrainerCardDataPtr->trainerCard.rse.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         break;
     case 3:
-        if (sTrainerCardDataPtr->cardType == CARD_TYPE_RSE)
-            LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), sizeof(sHoennTrainerCardBadges_Pal));
-        else
-            LoadPalette(sKantoTrainerCardBadges_Pal, BG_PLTT_ID(3), sizeof(sKantoTrainerCardBadges_Pal));
+        LoadPalette(sTrainerCardBadges_Pal, BG_PLTT_ID(3), sizeof(sTrainerCardBadges_Pal));
         break;
     case 4:
         if (sTrainerCardDataPtr->cardType == CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.rse.gender != MALE)

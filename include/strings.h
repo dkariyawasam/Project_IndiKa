@@ -127,7 +127,6 @@ extern const u8 gTeachyTvString_TypeMatchups[];
 extern const u8 gTeachyTvString_CatchPkmn[];
 extern const u8 gTeachyTvString_Training[];
 extern const u8 gTeachyTvString_AboutTMs[];
-extern const u8 gTeachyTvString_Cancel[];
 extern const u8 gTeachyTvString_Demonstration[];
 extern const u8 gTeachyTvString_Theory[];
 extern const u8 gTeachyTvText_PokedudeSaysHello[];
