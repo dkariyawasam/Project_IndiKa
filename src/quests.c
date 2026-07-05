@@ -108,25 +108,17 @@ static void SaveScrollAndRow(s16 *data);
 
 static void ClearModeOnStartup(void);
 static u8 ManageMode(u8 action);
-static u8 ToggleAlphaMode(u8 mode);
 static u8 ToggleSubquestMode(u8 mode);
-static u8 IncrementMode(u8 mode);
 static bool8 IsSubquestMode(void);
-static bool8 IsNotFilteredMode(void);
-static bool8 IsAlphaMode(void);
 
 static u16 BuildMenuTemplate(void);
 static u8 GetModeAndGenerateList();
 static u8 CountNumberListRows();
 static u8 *DefineQuestOrder();
 static u8 GenerateSubquestList();
-static u8 GenerateList(bool8 isFiltered);
-static void AssignCancelNameAndId(u8 numRow);
+static u8 GenerateList(void);
 
 static u8 CountUnlockedQuests(void);
-static u8 CountInactiveQuests(void);
-static u8 CountActiveQuests(void);
-static u8 CountRewardQuests(void);
 static u8 CountCompletedQuests(void);
 static u8 CountFavoriteQuests(void);
 
@@ -137,7 +129,6 @@ static void PopulateQuestName(u8 countQuest);
 static void PopulateSubquestName(u8 parentQuest, u8 countQuest);
 static u8 PopulateListRowNameAndId(u8 row, u8 countQuest);
 static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId);
-static void AddSubQuestButton(u8 countQuest);
 
 static void LogbookMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
             const u8 *str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed,
@@ -176,7 +167,8 @@ static void GenerateAndPrintHeader(void);
 static void GenerateDenominatorNumQuests(void);
 static void GenerateNumeratorNumQuests(void);
 static void GenerateMenuContext(void);
-static void PrintMenuContext(void);
+static void PrintMenuContext(bool8 selectedRowAcceptsA);
+static bool8 DoesSelectedRowAcceptA(s32 questId);
 
 static void Task_Main(u8 taskId);
 static u8 ManageFavorites(u8 index);
@@ -185,8 +177,6 @@ static void RestoreSavedScrollAndRow(s16 *data);
 static void ResetCursorToTop(s16 *data);
 static void LogbookMenu_RemoveScrollIndicatorArrowPair(void);
 static void EnterSubquestModeAndCleanUp(u8 taskId, s16 *data, s32 input);
-static void ChangeModeAndCleanUp(u8 taskId);
-static void ToggleAlphaModeAndCleanUp(u8 taskId);
 static void ToggleFavoriteAndCleanUp(u8 taskId, u8 selectedQuestId);
 static bool8 CheckSelectedIsCancel(u8 selectedQuestId);
 static void ReturnFromSubquestAndCleanUp(u8 taskId);
@@ -231,11 +221,6 @@ static const u16 sLogbookMenuWindowPal[] =
 //Strings used for the Logbook Menu
 static const u8 sText_Empty[] = _("");
 static const u8 sText_AllHeader[] = _("ALL MISSIONS");
-static const u8 sText_InactiveHeader[] = _("Inactive Missions");
-static const u8 sText_ActiveHeader[] = _("Active Missions");
-static const u8 sText_RewardHeader[] = _("Reward Available");
-static const u8 sText_CompletedHeader[] =
-      _("Completed Missions");
 static const u8 sText_QuestNumberDisplay[] =
       _("{STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_Unk[] = _("??????");
@@ -246,16 +231,13 @@ static const u8 sText_StartForMore[] =
       _("Start for more details.");
 static const u8 sText_ReturnRecieveReward[] =
       _("Return to {STR_VAR_2}\nto recieve your reward!");
-static const u8 sText_SubQuestButton[] = _(" {A_BUTTON}");
+static const u8 sText_PickBack[] = _("{DPAD_UPDOWN}PICK {B_BUTTON}BACK");
 static const u8 sText_Caught[] = _("Caught");
 static const u8 sText_Found[] = _("Found");
 static const u8 sText_Read[] = _("Read");
-static const u8 sText_Back[] = _("Back");
 static const u8 sText_DotSpace[] = _(". ");
-static const u8 sText_Close[] = _("CANCEL");
 static const u8 sText_CloseLogbook[] = _("CLOSE LOGBOOK");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
-static const u8 sText_AZ[] = _(" A-Z");
 static const u8 sText_InProgress[] = _("Active");
 static const u8 sText_InProgressCaps[] = _("In progress");
 static const u8 sText_CompletedCaps[] = _("Done");
@@ -721,7 +703,7 @@ static const struct WindowTemplate sLogbookMenuHeaderWindowTemplates[] =
 		.tilemapTop = 0,
 		.width = 30,
 		.height = 2,
-		.paletteNum = 15,
+		.paletteNum = 14,
 		.baseBlock = 721
 	},
 	DUMMY_WIN_TEMPLATE
@@ -976,6 +958,7 @@ static bool8 LoadGraphics(void)
 			break;
 		case 3:
 			LoadPalette(sLogbookMenuWindowPal, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+			LoadPalette(gUiHintHeaderPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
 			sStateDataPtr->data[0]++;
 			break;
 		default:
@@ -1178,22 +1161,9 @@ static u8 ManageMode(u8 action)
 {
 	u8 mode = sStateDataPtr->filterMode;
 
-	switch (action)
-	{
-		case SUB:
-			mode = ToggleSubquestMode(mode);
-			break;
+	if (action == SUB)
+		mode = ToggleSubquestMode(mode);
 
-		case ALPHA:
-			mode = ToggleAlphaMode(mode);
-			sStateDataPtr->restoreCursor = FALSE;
-			break;
-
-		default:
-			mode = IncrementMode(mode);
-			sStateDataPtr->restoreCursor = FALSE;
-			break;
-	}
 	return mode;
 }
 
@@ -1213,64 +1183,9 @@ u8 ToggleSubquestMode(u8 mode)
 	return mode;
 }
 
-u8 ToggleAlphaMode(u8 mode)
-{
-	if (IsAlphaMode())
-	{
-		mode -= SORT_DEFAULT_AZ;
-	}
-	else
-	{
-		mode += SORT_DEFAULT_AZ;
-	}
-
-	return mode;
-}
-
-u8 IncrementMode(u8 mode)
-{
-	if (mode % 10 == SORT_DONE)
-	{
-		mode -= SORT_DONE;
-	}
-	else
-	{
-		mode++;
-	}
-
-	return mode;
-}
-
 static bool8 IsSubquestMode(void)
 {
-	if (sStateDataPtr->filterMode > SORT_DONE_AZ)
-	{
-		return TRUE;
-	}
-	else
-	{
-		return FALSE;
-	}
-}
-
-static bool8 IsNotFilteredMode(void)
-{
-	u8 mode = sStateDataPtr->filterMode % 10;
-
-	if (mode == FLAG_GET_UNLOCKED)
-	{
-		return TRUE;
-	}
-	else
-	{
-		return FALSE;
-	}
-}
-
-static bool8 IsAlphaMode(void)
-{
-	if (sStateDataPtr->filterMode < SORT_SUBQUEST
-	            && sStateDataPtr->filterMode > SORT_DONE)
+	if (sStateDataPtr->filterMode >= SORT_SUBQUEST)
 	{
 		return TRUE;
 	}
@@ -1282,9 +1197,7 @@ static bool8 IsAlphaMode(void)
 
 static u16 BuildMenuTemplate(void)
 {
-	u8 lastRow = GetModeAndGenerateList();
-
-	AssignCancelNameAndId(lastRow);
+	GetModeAndGenerateList();
 
 	gMultiuseListMenuTemplate.totalItems = CountNumberListRows();
 	gMultiuseListMenuTemplate.items = sListMenuItems;
@@ -1314,61 +1227,28 @@ u8 GetModeAndGenerateList()
 	}
 	else
 	{
-		return GenerateList(!IsNotFilteredMode());
+		return GenerateList();
 	}
 }
 
 static u8 CountNumberListRows()
 {
-	u8 mode = sStateDataPtr->filterMode % 10;
-
 	if (IsSubquestMode())
 	{
-		return sSideQuests[sStateDataPtr->parentQuest].numSubquests + 1;
+		return sSideQuests[sStateDataPtr->parentQuest].numSubquests;
 	}
 
-	switch (mode)
-	{
-		case SORT_DEFAULT:
-			return QUEST_COUNT + 1;
-		case SORT_INACTIVE:
-			return CountInactiveQuests() + 1;
-		case SORT_ACTIVE:
-			return CountActiveQuests() + 1;
-		case SORT_REWARD:
-			return CountRewardQuests() + 1;
-		case SORT_DONE:
-			return CountCompletedQuests() + 1;
-	}
-
+	return QUEST_COUNT;
 }
 
 u8 *DefineQuestOrder()
 {
 	static u8 sortedList[QUEST_COUNT];
-	u8 a, c, d, e;
-	u8 placeholderVariable;
+	u8 a;
 
 	for (a = 0; a < QUEST_COUNT; a++)
 	{
 		sortedList[a] = a;
-	}
-
-	if (IsAlphaMode())
-	{
-		for (c = 0; c < QUEST_COUNT; c++)
-		{
-			for (d = c + 1; d < QUEST_COUNT; d++)
-			{
-				if (StringCompare(sSideQuests[sortedList[c]].name,
-				                  sSideQuests[sortedList[d]].name) > 0)
-				{
-					placeholderVariable = sortedList[c];
-					sortedList[c] = sortedList[d];
-					sortedList[d] = placeholderVariable;
-				}
-			}
-		}
 	}
 
 	return sortedList;
@@ -1377,7 +1257,6 @@ u8 *DefineQuestOrder()
 u8 GenerateSubquestList()
 {
 	u8 parentQuest = sStateDataPtr->parentQuest;
-	u8 mode = sStateDataPtr->filterMode % 10;
 	u8 lastRow = 0, numRow = 0, countQuest = 0;
 
 	for (numRow = 0; numRow < sSideQuests[parentQuest].numSubquests; numRow++)
@@ -1392,9 +1271,8 @@ u8 GenerateSubquestList()
 	return lastRow;
 }
 
-u8 GenerateList(bool8 isFiltered)
+u8 GenerateList(void)
 {
-	u8 mode = sStateDataPtr-> filterMode % 10;
 	u8 lastRow = 0, numRow = 0, offset = 0, newRow = 0, countQuest = 0,
 	   selectedQuestId = 0;
 	u8 *sortedQuestList;
@@ -1404,11 +1282,6 @@ u8 GenerateList(bool8 isFiltered)
 	for (countQuest = 0; countQuest < QUEST_COUNT; countQuest++)
 	{
 		selectedQuestId = *(sortedQuestList + countQuest);
-
-		if (isFiltered && !LogbookMenu_GetSetQuestState(selectedQuestId, mode))
-		{
-			continue;
-		}
 
 		PopulateEmptyRow(selectedQuestId);
 
@@ -1428,20 +1301,6 @@ u8 GenerateList(bool8 isFiltered)
 		PopulateListRowNameAndId(newRow, selectedQuestId);
 	}
 	return numRow + offset;
-}
-
-static void AssignCancelNameAndId(u8 numRow)
-{
-	if (IsSubquestMode())
-	{
-		sListMenuItems[numRow].label = sText_Back;
-	}
-	else
-	{
-		sListMenuItems[numRow].label = sText_Close;
-	}
-
-	sListMenuItems[numRow].index = LIST_CANCEL;
 }
 
 u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
@@ -1601,48 +1460,6 @@ u8 CountUnlockedQuests(void)
 	return q;
 }
 
-u8 CountInactiveQuests(void)
-{
-	u8 q = 0, i = 0;
-
-	for (i = 0; i < QUEST_COUNT; i++)
-	{
-		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_INACTIVE))
-		{
-			q++;
-		}
-	}
-	return q;
-}
-
-u8 CountActiveQuests(void)
-{
-	u8 q = 0, i = 0;
-
-	for (i = 0; i < QUEST_COUNT; i++)
-	{
-		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_ACTIVE))
-		{
-			q++;
-		}
-	}
-	return q;
-}
-
-u8 CountRewardQuests(void)
-{
-	u8 q = 0, i = 0;
-
-	for (i = 0; i < QUEST_COUNT; i++)
-	{
-		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_REWARD))
-		{
-			q++;
-		}
-	}
-	return q;
-}
-
 u8 CountCompletedQuests(void)
 {
 	u8 q = 0, i = 0;
@@ -1675,30 +1492,17 @@ u8 CountCompletedQuests(void)
 
 u8 CountFavoriteQuests(void)
 {
-	u8 q = 0, i = 0, x = 0;
-	u8 mode = sStateDataPtr->filterMode % 10;
+	u8 q = 0, i = 0;
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
 		if (LogbookMenu_GetSetQuestState(i, FLAG_GET_FAVORITE))
 		{
-			if (LogbookMenu_GetSetQuestState(i, mode))
-			{
-				x++;
-			}
 			q++;
 		}
 	}
 
-	if (IsNotFilteredMode())
-	{
-		return q;
-	}
-	else
-	{
-		return x;
-	}
-
+	return q;
 }
 
 void PopulateEmptyRow(u8 countQuest)
@@ -1725,7 +1529,6 @@ void PopulateQuestName(u8 countQuest)
 	{
 		questNamePointer = StringAppend(questNameArray[countQuest],
 		                                sSideQuests[countQuest].name);
-		AddSubQuestButton(countQuest);
 	}
 	else
 	{
@@ -1755,8 +1558,6 @@ void PopulateSubquestName(u8 parentQuest, u8 countQuest)
 	    questNamePointer = StringAppend(questNamePointer, sText_Unk);
 	}
 
-	if (parentQuest == QUEST_APEX_POKEMON)
-	    questNamePointer = StringAppend(questNamePointer, sText_SubQuestButton);
 }
 
 u8 PopulateListRowNameAndId(u8 row, u8 countQuest)
@@ -1779,15 +1580,6 @@ static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId)
 	}
 }
 
-void AddSubQuestButton(u8 countQuest)
-{
-	if (DoesQuestHaveChildrenAndNotInactive(countQuest))
-	{
-		questNamePointer = StringAppend(questNameArray[countQuest],
-		                                sText_SubQuestButton);
-	}
-
-}
 static void LogbookMenu_AddTextPrinterParameterized(u8 windowId, u8 fontId,
             const u8 *str, u8 x, u8 y,
             u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
@@ -1816,6 +1608,7 @@ static void MoveCursorFunc(s32 questId, bool8 onInit,
 			GenerateAndPrintQuestDetails(questId);
 			DetermineSpriteType(questId);
 		}
+		PrintMenuContext(DoesSelectedRowAcceptA(questId));
 	}
 }
 
@@ -2357,7 +2150,7 @@ static void GenerateAndPrintHeader(void)
 	GenerateNumeratorNumQuests();
 	GenerateMenuContext();
 
-	PrintMenuContext();
+	PrintMenuContext(FALSE);
 }
 static void GenerateDenominatorNumQuests(void)
 {
@@ -2367,35 +2160,10 @@ static void GenerateDenominatorNumQuests(void)
 
 static void GenerateNumeratorNumQuests(void)
 {
-	u8 mode = sStateDataPtr->filterMode % 10;
 	u8 parentQuest = sStateDataPtr->parentQuest;
 
-	switch (mode)
-	{
-		case SORT_DEFAULT:
-			ConvertIntToDecimalStringN(gStringVar1, CountUnlockedQuests(),
-			                           STR_CONV_MODE_LEFT_ALIGN,
-			                           6);
-			break;
-		case SORT_INACTIVE:
-			ConvertIntToDecimalStringN(gStringVar1, CountInactiveQuests(),
-			                           STR_CONV_MODE_LEFT_ALIGN,
-			                           6);
-			break;
-		case SORT_ACTIVE:
-			ConvertIntToDecimalStringN(gStringVar1, CountActiveQuests(),
-			                           STR_CONV_MODE_LEFT_ALIGN, 6);
-			break;
-		case SORT_REWARD:
-			ConvertIntToDecimalStringN(gStringVar1, CountRewardQuests(),
-			                           STR_CONV_MODE_LEFT_ALIGN, 6);
-			break;
-		case SORT_DONE:
-			ConvertIntToDecimalStringN(gStringVar1, CountCompletedQuests(),
-			                           STR_CONV_MODE_LEFT_ALIGN,
-			                           6);
-			break;
-	}
+	ConvertIntToDecimalStringN(gStringVar1, CountUnlockedQuests(),
+	                           STR_CONV_MODE_LEFT_ALIGN, 6);
 
 	if (IsSubquestMode())
 	{
@@ -2410,38 +2178,11 @@ static void GenerateNumeratorNumQuests(void)
 
 static void GenerateMenuContext(void)
 {
-	u8 mode = sStateDataPtr->filterMode % 10;
 	u8 parentQuest = sStateDataPtr->parentQuest;
 
-	switch (mode)
-	{
-		case SORT_DEFAULT:
-			questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
-			                              sText_AllHeader);
-			break;
-		case SORT_INACTIVE:
-			questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
-			                              sText_InactiveHeader);
-			break;
-		case SORT_ACTIVE:
-			questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
-			                              sText_ActiveHeader);
-			break;
-		case SORT_REWARD:
-			questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
-			                              sText_RewardHeader);
-			break;
-		case SORT_DONE:
-			questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
-			                              sText_CompletedHeader);
-			break;
-	}
+	questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
+	                              sText_AllHeader);
 
-	if (IsAlphaMode())
-	{
-		questNamePointer = StringAppend(questNameArray[QUEST_ARRAY_COUNT],
-		                                sText_AZ);
-	}
 	if (IsSubquestMode())
 	{
 		questNamePointer = StringCopy(questNameArray[QUEST_ARRAY_COUNT],
@@ -2450,13 +2191,25 @@ static void GenerateMenuContext(void)
 	}
 }
 
-static void PrintMenuContext(void)
+static void PrintMenuContext(bool8 selectedRowAcceptsA)
 {
-	DrawUiHintHeader(2, gText_PickOKExit, 8, 10, 0, FALSE);
+	DrawUiHintHeader(2, selectedRowAcceptsA ? gText_PickOKExit : sText_PickBack,
+	                 8, 10, 0, FALSE);
 	LogbookMenu_AddTextPrinterParameterized(2, FONT_NORMAL,
 	                                      questNameArray[QUEST_ARRAY_COUNT],
 	                                      8, 1, 0, 0, 0, 0);
 	CopyWindowToVram(2, COPYWIN_GFX);
+}
+
+static bool8 DoesSelectedRowAcceptA(s32 questId)
+{
+	if (questId == LIST_CANCEL)
+		return FALSE;
+
+	if (!IsSubquestMode())
+		return DoesQuestHaveChildrenAndNotInactive(questId);
+
+	return sStateDataPtr->parentQuest == QUEST_APEX_POKEMON;
 }
 
 static void Task_Main(u8 taskId)
@@ -2474,14 +2227,6 @@ static void Task_Main(u8 taskId)
 		switch (input)
 		{
 			case LIST_NOTHING_CHOSEN:
-				if (JOY_NEW(R_BUTTON))
-				{
-					ChangeModeAndCleanUp(taskId);
-				}
-				if (JOY_NEW(START_BUTTON))
-				{
-					ToggleAlphaModeAndCleanUp(taskId);
-				}
 				if (JOY_NEW(SELECT_BUTTON))
 				{
 					ToggleFavoriteAndCleanUp(taskId, selectedQuestId);
@@ -2580,30 +2325,10 @@ void EnterSubquestModeAndCleanUp(u8 taskId, s16 *data,
 {
 	if (DoesQuestHaveChildrenAndNotInactive(input))
 	{
-		PrepareFadeOut(taskId);
-
 		PlaySE(SE_SELECT);
 		sStateDataPtr->parentQuest = input;
 		sStateDataPtr->filterMode = ManageMode(SUB);
 		SaveScrollAndRow(data);
-		gTasks[taskId].func = Task_FadeOut;
-	}
-}
-void ChangeModeAndCleanUp(u8 taskId)
-{
-	if (!IsSubquestMode())
-	{
-		PlaySE(SE_SELECT);
-		sStateDataPtr->filterMode = ManageMode(INCREMENT);
-		Task_LogbookMenuCleanUp(taskId);
-	}
-}
-void ToggleAlphaModeAndCleanUp(u8 taskId)
-{
-	if (!IsSubquestMode())
-	{
-		PlaySE(SE_SELECT);
-		sStateDataPtr->filterMode = ManageMode(ALPHA);
 		Task_LogbookMenuCleanUp(taskId);
 	}
 }
@@ -2631,11 +2356,9 @@ bool8 CheckSelectedIsCancel(u8 selectedQuestId)
 }
 void ReturnFromSubquestAndCleanUp(u8 taskId)
 {
-	PrepareFadeOut(taskId);
-
 	PlaySE(SE_SELECT);
 	sStateDataPtr->filterMode = ManageMode(SUB);
-	gTasks[taskId].func = Task_FadeOut;
+	Task_LogbookMenuCleanUp(taskId);
 }
 
 static void SetGpuRegBaseForFade()
