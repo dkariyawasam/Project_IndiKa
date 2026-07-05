@@ -182,7 +182,7 @@ static const struct WindowTemplate sWindowTemplates[] =
     DUMMY_WIN_TEMPLATE,
 };
 
-static const u8 sText_TeachyTvControlHints[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_TeachyTvControlHints[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
 
 static const struct ListMenuItem sListMenuItems[] = 
 {
