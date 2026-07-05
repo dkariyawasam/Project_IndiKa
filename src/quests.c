@@ -680,9 +680,9 @@ static const struct WindowTemplate sLogbookMenuHeaderWindowTemplates[] =
 		//0: Content window
 		.bg = 0,
 		.tilemapLeft = 0,
-		.tilemapTop = 4,
+		.tilemapTop = 3,
 		.width = 30,
-		.height = 8,
+		.height = 10,
 		.paletteNum = 15,
 		.baseBlock = 1
 	},
@@ -1010,8 +1010,8 @@ static void InitItems(void)
 {
 	sStateDataPtr->nItems = (CountNumberListRows()) - 1;
 
-	sStateDataPtr->maxShowed = sStateDataPtr->nItems + 1 <= 4 ?
-	                           sStateDataPtr->nItems + 1 : 4;
+	sStateDataPtr->maxShowed = sStateDataPtr->nItems + 1 <= 5 ?
+	                           sStateDataPtr->nItems + 1 : 5;
 }
 
 #define try_alloc(ptr__, size) ({ \
@@ -1095,9 +1095,9 @@ static void SetScrollPosition(void)
 {
 	u8 i;
 
-	if (sListMenuState.row > 3)
+	if (sListMenuState.row > 4)
 	{
-		for (i = 0; i <= sListMenuState.row - 3;
+		for (i = 0; i <= sListMenuState.row - 4;
 		            sListMenuState.row--, sListMenuState.scroll++, i++)
 		{
 			if (sListMenuState.scroll + sStateDataPtr->maxShowed ==
