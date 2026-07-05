@@ -221,7 +221,7 @@ void ResetItemMenuIconState(void)
 
 void CreateBagSprite(u8 animNum)
 {
-    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 76, 0);
+    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 60, 0);
     SetBagVisualPocketId(animNum);
 }
 

@@ -95,6 +95,9 @@ static void bag_menu_print_cursor(u8 y, u8 colorIdx);
 static void PrintBagPocketName(void);
 static void PrintItemDescriptionOnMessageWindow(s32 itemIndex);
 static void PrintBagControlHints(void);
+static void DrawBagHeader(void);
+static void DrawBagPocketNotches(u8 windowId);
+static void RestoreBagPocketTitleWindow(void);
 static void CreatePocketScrollArrowPair(void);
 static void CreatePocketSwitchArrowPair(void);
 static void BagDestroyPocketSwitchArrowPair(void);
@@ -768,8 +771,7 @@ static void bag_menu_print_cursor(u8 y, u8 colorIdx)
 
 static void PrintBagPocketName(void)
 {
-    FillWindowPixelBuffer(2, PIXEL_FILL(0));
-    BagPrintTextOnWin1CenteredColor0(sPocketNames[gBagMenuState.pocket], gBagMenuState.pocket);
+    DrawBagHeader();
 }
 
 static void PrintItemDescriptionOnMessageWindow(s32 itemIndex)
@@ -787,7 +789,41 @@ static void PrintItemDescriptionOnMessageWindow(s32 itemIndex)
 
 static void PrintBagControlHints(void)
 {
+    DrawBagHeader();
+}
+
+static void DrawBagHeader(void)
+{
     DrawUiHintHeader(3, gText_PickOKExit, 0, 10, 0, FALSE);
+    BagPrintTextOnWindow(3, FONT_NORMAL, sPocketNames[gBagMenuState.pocket], 8, 1, 1, 0, 0, 0);
+    DrawBagPocketNotches(3);
+    CopyWindowToVram(3, COPYWIN_GFX);
+}
+
+static void DrawBagPocketNotches(u8 windowId)
+{
+    u8 i;
+    u8 x;
+    u8 color;
+
+    for (i = 0; i < NUM_VISIBLE_BAG_POCKETS; i++)
+    {
+        x = 84 + i * 12;
+        color = i == gBagMenuState.pocket ? 1 : 9;
+
+        FillWindowPixelRect(windowId, PIXEL_FILL(0), x, 0, 8, 16);
+        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 2, 4, 4, 1);
+        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 1, 5, 6, 6);
+        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 2, 11, 4, 1);
+    }
+}
+
+static void RestoreBagPocketTitleWindow(void)
+{
+    if (gBagMenuState.location == ITEMMENULOCATION_ITEMPC)
+        PutWindowTilemap(2);
+    else
+        ClearWindowTilemap(2);
 }
 
 static void CreatePocketScrollArrowPair(void)
@@ -812,10 +848,7 @@ static void CreatePocketScrollArrowPair(void)
 
 static void CreatePocketSwitchArrowPair(void)
 {
-    if (sBagMenuDisplay->pocketSwitchMode != 1)
-    {
-        sBagMenuDisplay->pocketSwitchArrowsTask = AddScrollIndicatorArrowPair(&sPocketSwitchArrowPairTemplate, &gBagMenuState.pocket);
-    }
+    sBagMenuDisplay->pocketSwitchArrowsTask = TASK_NONE;
 }
 
 static void CreatePocketScrollArrowPair_SellQuantity(void)
@@ -1268,7 +1301,7 @@ static void Task_AnimateSwitchPockets(u8 taskId)
         Bag_BuildListMenuTemplate(gBagMenuState.pocket);
         InitBagListMenu(taskId);
         PutWindowTilemap(1);
-        PutWindowTilemap(2);
+        RestoreBagPocketTitleWindow();
         ScheduleBgCopyTilemapToVram(0);
         CreatePocketScrollArrowPair();
         CreatePocketSwitchArrowPair();
@@ -1868,7 +1901,7 @@ static void Task_SellItem_No(u8 taskId)
     s16 *data = gTasks[taskId].data;
     HideBagWindow(2);
     CloseBagWindow(5);
-    PutWindowTilemap(2);
+    RestoreBagPocketTitleWindow();
     PutWindowTilemap(0);
     PutWindowTilemap(1);
     ScheduleBgCopyTilemapToVram(0);
@@ -1917,7 +1950,7 @@ static void Task_SelectQuantityToSell(u8 taskId)
         HideBagWindow(0);
         HideBagWindow(2);
         CloseBagWindow(5);
-        PutWindowTilemap(2);
+        RestoreBagPocketTitleWindow();
         PutWindowTilemap(0);
         PutWindowTilemap(1);
         ScheduleBgCopyTilemapToVram(0);
@@ -1963,7 +1996,7 @@ static void Task_WaitPressAB_AfterSell(u8 taskId)
     {
         PlaySE(SE_SELECT);
         HideBagWindow(2);
-        PutWindowTilemap(2);
+        RestoreBagPocketTitleWindow();
         sBagMenuDisplay->inhibitItemDescriptionPrint = FALSE;
         Task_ReturnToBagFromContextMenu(taskId);
     }
