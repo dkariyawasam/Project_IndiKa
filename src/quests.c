@@ -39,6 +39,7 @@
 #include "constants/event_objects.h"
 #include "event_object_movement.h"
 #include "pokemon_icon.h"
+#include "ui_hint_header.h"
 
 #include "random.h"
 
@@ -217,6 +218,8 @@ static const u32 sLogbookMenuBgPals[] =
         INCBIN_U32("graphics/item_menu/bg.gbapal.lz");
 static const u32 sLogbookMenuTilemap[] =
         INCBIN_U32("graphics/logbook_menu/menu.bin.lz");
+static const u16 sLogbookMenuWindowPal[] =
+        INCBIN_U16("graphics/item_menu/bag_window_pal.gbapal");
 
 #define LOGBOOK_MENU_FOOTER_BG_COLOR 15
 #define LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR 13
@@ -711,14 +714,14 @@ static const struct WindowTemplate sLogbookMenuHeaderWindowTemplates[] =
 		.paletteNum = 1,
 		.baseBlock = 361
 	},
-		{
-			// 2: Header window
-			.bg = 0,
-			.tilemapLeft = 0,
-			.tilemapTop = 1,
-			.width = 30,
-			.height = 2,
-			.paletteNum = 15,
+	{
+		// 2: Header window
+		.bg = 0,
+		.tilemapLeft = 0,
+		.tilemapTop = 0,
+		.width = 30,
+		.height = 2,
+		.paletteNum = 15,
 		.baseBlock = 721
 	},
 	DUMMY_WIN_TEMPLATE
@@ -972,6 +975,7 @@ static bool8 LoadGraphics(void)
 			sStateDataPtr->data[0]++;
 			break;
 		case 3:
+			LoadPalette(sLogbookMenuWindowPal, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
 			sStateDataPtr->data[0]++;
 			break;
 		default:
@@ -2448,11 +2452,11 @@ static void GenerateMenuContext(void)
 
 static void PrintMenuContext(void)
 {
-	u8 x = (DISPLAY_WIDTH - GetStringWidth(FONT_NORMAL_COPY_1, questNameArray[QUEST_ARRAY_COUNT], 0)) / 2;
-
-	LogbookMenu_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_1,
+	DrawUiHintHeader(2, gText_PickOKExit, 8, 10, 0, FALSE);
+	LogbookMenu_AddTextPrinterParameterized(2, FONT_NORMAL,
 	                                      questNameArray[QUEST_ARRAY_COUNT],
-	                                      x, 1, 0, 1, 0, 0);
+	                                      8, 1, 0, 0, 0, 0);
+	CopyWindowToVram(2, COPYWIN_GFX);
 }
 
 static void Task_Main(u8 taskId)
