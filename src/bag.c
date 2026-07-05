@@ -225,7 +225,10 @@ void InitBagWindows(void)
     for (i = 0; i < 4; i++)
     {
         FillWindowPixelBuffer(i, 0x00);
-        PutWindowTilemap(i);
+        if (i == 2 && gBagMenuState.location != ITEMMENULOCATION_ITEMPC)
+            ClearWindowTilemap(i);
+        else
+            PutWindowTilemap(i);
     }
     ScheduleBgCopyTilemapToVram(0);
     for (i = 0; i < 11; i++)
