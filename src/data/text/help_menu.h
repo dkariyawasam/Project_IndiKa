@@ -1,19 +1,19 @@
-const u8 gTeachyTvString_TeachBattle[] = _("Battling");
-const u8 gTeachyTvString_StatusProblems[] = _("Status Conditions");
-const u8 gTeachyTvString_TypeMatchups[] = _("Type Matchups");
-const u8 gTeachyTvString_CatchPkmn[] = _("Catching");
-const u8 gTeachyTvString_Training[] = _("Training");
-const u8 gTeachyTvString_AboutTMs[] = _("Teach me about TMs.");
-const u8 gTeachyTvString_Demonstration[] = _("Demonstration");
-const u8 gTeachyTvString_Theory[] = _("Theory");
-const u8 gTeachyTvText_PokedudeSaysHello[] = _(
+const u8 gHelpMenuString_TeachBattle[] = _("Battling");
+const u8 gHelpMenuString_StatusProblems[] = _("Status Conditions");
+const u8 gHelpMenuString_TypeMatchups[] = _("Type Matchups");
+const u8 gHelpMenuString_CatchPkmn[] = _("Catching");
+const u8 gHelpMenuString_Training[] = _("Training");
+const u8 gHelpMenuString_AboutTMs[] = _("Teach me about TMs.");
+const u8 gHelpMenuString_Demonstration[] = _("Demonstration");
+const u8 gHelpMenuString_Theory[] = _("Theory");
+const u8 gHelpMenuText_PokedudeSaysHello[] = _(
     "Hey, all you TRAINERS out there!\n"
     "HELLO, TRAINERS!\p"
     "……… ……… ………\p"
     "Come on, let me hear you!\n"
     "HELLO, TRAINERS!\l"
     "It's me, the POKé DUDE!\p");
-const u8 gTeachyTvText_BattleScript1[] = _(
+const u8 gHelpMenuText_BattleScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "tell you about how you can battle\l"
     "POKéMON!\p"
@@ -28,7 +28,7 @@ const u8 gTeachyTvText_BattleScript1[] = _(
     "All righty, here goes!\p"
     "Keep your eyes glued to the super\n"
     "POKé DUDE SHOW!");
-const u8 gTeachyTvText_BattleScript2[] = _(
+const u8 gHelpMenuText_BattleScript2[] = _(
     "Well, did you get that?\p"
     "Even if your own POKéMON's HP\n"
     "falls to zero, and it becomes\l"
@@ -38,7 +38,7 @@ const u8 gTeachyTvText_BattleScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
-const u8 gTeachyTvText_BattleTheoryScript1[] = _(
+const u8 gHelpMenuText_BattleTheoryScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "explain battles!\p"
     "In a battle, each TRAINER sends\n"
@@ -52,7 +52,7 @@ const u8 gTeachyTvText_BattleTheoryScript1[] = _(
     "In single battles, timing matters.\n"
     "Switch if your matchup is bad,\l"
     "or attack if you have the edge!");
-const u8 gTeachyTvText_BattleTheoryScript2[] = _(
+const u8 gHelpMenuText_BattleTheoryScript2[] = _(
     "Some battles are DOUBLE BATTLES.\n"
     "Two POKéMON fight on each side.\p"
     "In double battles, moves can hit\n"
@@ -64,7 +64,7 @@ const u8 gTeachyTvText_BattleTheoryScript2[] = _(
     "Whether single or double, watch HP,\n"
     "status, type matchups, and speed.\p"
     "That's how real strategy begins!");
-const u8 gTeachyTvText_StatusScript1[] = _(
+const u8 gHelpMenuText_StatusScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "tell you about status problems!\p"
     "Status problems include poisoning,\n"
@@ -81,7 +81,7 @@ const u8 gTeachyTvText_StatusScript1[] = _(
     "All righty, here goes!\p"
     "Keep your eyes glued to the super\n"
     "POKé DUDE SHOW!");
-const u8 gTeachyTvText_StatusScript2[] = _(
+const u8 gHelpMenuText_StatusScript2[] = _(
     "Poisoning or paralysis don't go\n"
     "away after a battle.\p"
     "If a POKéMON is poisoned, it loses\n"
@@ -94,7 +94,7 @@ const u8 gTeachyTvText_StatusScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
-const u8 gTeachyTvText_StatusTheoryScript1[] = _(
+const u8 gHelpMenuText_StatusTheoryScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "explain status conditions!\p"
     "Some conditions stay after battle.\n"
@@ -105,7 +105,7 @@ const u8 gTeachyTvText_StatusTheoryScript1[] = _(
     "attacks.\p"
     "PARALYSIS can stop a POKéMON from\n"
     "moving and lowers its SPEED.");
-const u8 gTeachyTvText_StatusTheoryScript2[] = _(
+const u8 gHelpMenuText_StatusTheoryScript2[] = _(
     "SLEEP stops a POKéMON from acting\n"
     "until it wakes up.\p"
     "FREEZE stops a POKéMON until it\n"
@@ -116,7 +116,7 @@ const u8 gTeachyTvText_StatusTheoryScript2[] = _(
     "Use items, BERRIES, or a POKéMON\n"
     "CENTER to heal lasting conditions.\p"
     "Take care of your team!");
-const u8 gTeachyTvText_MatchupsScript1[] = _(
+const u8 gHelpMenuText_MatchupsScript1[] = _(
     "Does everyone know about type\n"
     "matchups?\p"
     "POKéMON and their moves all\n"
@@ -138,7 +138,7 @@ const u8 gTeachyTvText_MatchupsScript1[] = _(
     "All righty, here goes!\p"
     "Keep your eyes glued to the super\n"
     "POKé DUDE SHOW!");
-const u8 gTeachyTvText_MatchupsScript2[] = _(
+const u8 gHelpMenuText_MatchupsScript2[] = _(
     "Is it possible to launch an attack\n"
     "that will inflict heavy damage?\p"
     "Does the opposing POKéMON pose\n"
@@ -153,7 +153,7 @@ const u8 gTeachyTvText_MatchupsScript2[] = _(
     "up perfectly!\p"
     "Remember, a good deed a day\n"
     "brings happiness to stay!");
-const u8 gTeachyTvText_MatchupsTheoryScript1[] = _(
+const u8 gHelpMenuText_MatchupsTheoryScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "explain type matchups!\p"
     "Depending on the matchup of the\n"
@@ -174,7 +174,7 @@ const u8 gTeachyTvText_MatchupsTheoryScript1[] = _(
     "FIGHTING: NORMAL, ICE, ROCK,\n"
     "DARK, STEEL\p"
     "POISON: GRASS");
-const u8 gTeachyTvText_MatchupsTheoryScript2[] = _(
+const u8 gHelpMenuText_MatchupsTheoryScript2[] = _(
     "GROUND: FIRE, ELECTRIC, POISON,\n"
     "ROCK, STEEL\p"
     "FLYING: GRASS, FIGHTING, BUG\p"
@@ -190,7 +190,7 @@ const u8 gTeachyTvText_MatchupsTheoryScript2[] = _(
     "moves or switching POKéMON.\p"
     "A smart matchup can turn a battle\n"
     "around in one move!");
-const u8 gTeachyTvText_CatchingScript1[] = _(
+const u8 gHelpMenuText_CatchingScript1[] = _(
     "Today, the POKé DUDE's going to\n"
     "show you how to catch POKéMON!\p"
     "Just imagine… A groovy POKéMON\n"
@@ -204,7 +204,7 @@ const u8 gTeachyTvText_CatchingScript1[] = _(
     "All righty, here goes!\p"
     "Keep your eyes glued to the super\n"
     "POKé DUDE SHOW!");
-const u8 gTeachyTvText_CatchingScript2[] = _(
+const u8 gHelpMenuText_CatchingScript2[] = _(
     "If your first POKé BALL fails to\n"
     "catch the POKéMON, don't give up!\p"
     "Keep throwing POKé BALLS…\n"
@@ -212,7 +212,7 @@ const u8 gTeachyTvText_CatchingScript2[] = _(
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"
     "a day brings happiness to stay!");
-const u8 gTeachyTvText_CatchingTheoryScript1[] = _(
+const u8 gHelpMenuText_CatchingTheoryScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "explain catching POKéMON!\p"
     "A POKé BALL works best when the\n"
@@ -223,7 +223,7 @@ const u8 gTeachyTvText_CatchingTheoryScript1[] = _(
     "Status conditions can help, too.\n"
     "Sleep and paralysis are especially\l"
     "useful when catching POKéMON.");
-const u8 gTeachyTvText_CatchingTheoryScript2[] = _(
+const u8 gHelpMenuText_CatchingTheoryScript2[] = _(
     "Different POKé BALLS suit different\n"
     "situations.\p"
     "GREAT BALLS and ULTRA BALLS are\n"
@@ -234,7 +234,7 @@ const u8 gTeachyTvText_CatchingTheoryScript2[] = _(
     "So weaken them carefully, choose\n"
     "the right BALL, and keep trying!\p"
     "That's the catching spirit!");
-const u8 gTeachyTvText_TrainingScript1[] = _(
+const u8 gHelpMenuText_TrainingScript1[] = _(
     "Today, the POKé DUDE's here to\n"
     "explain training POKéMON!\p"
     "POKéMON grow by gaining EXP. from\n"
@@ -246,7 +246,7 @@ const u8 gTeachyTvText_TrainingScript1[] = _(
     "Some POKéMON can evolve as they\n"
     "grow, or when special conditions\l"
     "are met.");
-const u8 gTeachyTvText_TrainingScript2[] = _(
+const u8 gHelpMenuText_TrainingScript2[] = _(
     "POKéMON also learn moves as they\n"
     "train.\p"
     "If a POKéMON already knows four\n"
@@ -258,7 +258,7 @@ const u8 gTeachyTvText_TrainingScript2[] = _(
     "A good TRAINER watches stats,\n"
     "moves, abilities, and evolution.\p"
     "That's how a partner grows strong!");
-const u8 gTeachyTvText_TMsScript1[] = _(
+const u8 gHelpMenuText_TMsScript1[] = _(
     "Hey, everyone!\n"
     "Do you all have TMs?\p"
     "A TM, Technical Machine, is an\n"
@@ -292,7 +292,7 @@ const u8 gPokedudeText_ReadTMDescription[] = _(
     "bird or fish POKéMON can learn.\p"
     "So, try using it on POKéMON with\n"
     "arms that can throw punches!");
-const u8 gTeachyTvText_TMsScript2[] = _(
+const u8 gHelpMenuText_TMsScript2[] = _(
     "Wow, I talked a lot today!\n"
     "All righty, be seeing you!\p"
     "Remember, TRAINERS, a good deed\n"

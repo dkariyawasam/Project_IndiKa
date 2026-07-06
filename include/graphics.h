@@ -2744,31 +2744,11 @@ extern const u16 gStandardMenuPalette[];
 extern const u32 gTradeGba2_Pal[];
 extern const u32 gTradeGba_Gfx[];
 
-// teachy_tv
-extern const u8 gTeachyTv_Gfx[];
-extern const u8 gTeachyTvScreen_Tilemap[];
-extern const u8 gTeachyTvTitle_Tilemap[];
-extern const u32 gTeachyTv_Pal[];
-
-// berry_fix_program
-extern const u8 gBerryFixGameboy_Gfx[];
-extern const u8 gBerryFixGameboy_Tilemap[];
-extern const u8 gBerryFixGameboy_Pal[];
-extern const u8 gBerryFixGameboyLogo_Gfx[];
-extern const u8 gBerryFixGameboyLogo_Tilemap[];
-extern const u8 gBerryFixGameboyLogo_Pal[];
-extern const u8 gBerryFixGbaTransfer_Gfx[];
-extern const u8 gBerryFixGbaTransfer_Tilemap[];
-extern const u8 gBerryFixGbaTransfer_Pal[];
-extern const u8 gBerryFixGbaTransferHighlight_Gfx[];
-extern const u8 gBerryFixGbaTransferHighlight_Tilemap[];
-extern const u8 gBerryFixGbaTransferHighlight_Pal[];
-extern const u8 gBerryFixGbaTransferError_Gfx[];
-extern const u8 gBerryFixGbaTransferError_Tilemap[];
-extern const u8 gBerryFixGbaTransferError_Pal[];
-extern const u8 gBerryFixWindow_Gfx[];
-extern const u8 gBerryFixWindow_Tilemap[];
-extern const u8 gBerryFixWindow_Pal[];
+// help_menu
+extern const u8 gHelpMenu_Gfx[];
+extern const u8 gHelpMenuScreen_Tilemap[];
+extern const u8 gHelpMenuTitle_Tilemap[];
+extern const u32 gHelpMenu_Pal[];
 
 // item_pc
 extern const u8 gItemPcTiles[];

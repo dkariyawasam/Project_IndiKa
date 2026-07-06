@@ -337,7 +337,7 @@
 #define MUS_MYSTERY_GIFT          329 // MUS_OKURIMONO
 #define MUS_UNUSED_330            330
 #define MUS_SEVII_CAVE            331 // MUS_NANADUNGEON
-#define MUS_TEACHY_TV_SHOW        332 // MUS_OSHIE_TV
+#define MUS_HELP_MENU_SHOW        332 // MUS_OSHIE_TV
 #define MUS_SEVII_ROUTE           333 // MUS_NANASHIMA
 #define MUS_SEVII_DUNGEON         334 // MUS_NANAISEKI
 #define MUS_SEVII_123             335 // MUS_NANA123
@@ -351,7 +351,7 @@
 #define MUS_ENCOUNTER_DEOXYS      343 // MUS_DEOEYE
 #define MUS_ROCKET_LEAGUE         344 // MUS_T_TOWER
 #define MUS_SLOW_PALLET           345 // MUS_SLOWMASARA
-#define MUS_TEACHY_TV_MENU        346 // MUS_TVNOIZE
+#define MUS_HELP_MENU_MENU        346 // MUS_TVNOIZE
 
 #define MUS_NONE                    0xFFFF
 

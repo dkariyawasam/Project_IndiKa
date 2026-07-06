@@ -16,7 +16,7 @@
 #include "battle_interface.h"
 #include "battle_message.h"
 #include "reshow_battle_screen.h"
-#include "teachy_tv.h"
+#include "help_menu.h"
 #include "constants/songs.h"
 #include "constants/moves.h"
 #include "constants/pokemon.h"
@@ -361,12 +361,12 @@ static void OpenBagAndChooseItem(void)
         FreeAllWindowBuffers();
         switch (gSpecialVar_0x8004)
         {
-        case TTVSCR_STATUS:
+        case HELPSCR_STATUS:
         default:
-            callbackId = ITEMMENULOCATION_TTVSCR_STATUS;
+            callbackId = ITEMMENULOCATION_HELPSCR_STATUS;
             break;
-        case TTVSCR_CATCHING:
-            callbackId = ITEMMENULOCATION_TTVSCR_CATCHING;
+        case HELPSCR_CATCHING:
+            callbackId = ITEMMENULOCATION_HELPSCR_CATCHING;
             break;
         }
         InitPokedudeBag(callbackId);
@@ -2061,10 +2061,10 @@ static const struct PokedudeInputScript sInputScripts_ChooseAction_Catching[] =
 
 static const struct PokedudeInputScript *const sInputScripts_ChooseAction[] =
 {
-    [TTVSCR_BATTLE]   = sInputScripts_ChooseAction_Battle,
-    [TTVSCR_STATUS]   = sInputScripts_ChooseAction_Status,
-    [TTVSCR_MATCHUPS] = sInputScripts_ChooseAction_Matchups,
-    [TTVSCR_CATCHING] = sInputScripts_ChooseAction_Catching,
+    [HELPSCR_BATTLE]   = sInputScripts_ChooseAction_Battle,
+    [HELPSCR_STATUS]   = sInputScripts_ChooseAction_Status,
+    [HELPSCR_MATCHUPS] = sInputScripts_ChooseAction_Matchups,
+    [HELPSCR_CATCHING] = sInputScripts_ChooseAction_Catching,
 };
 
 static const struct PokedudeInputScript sInputScripts_ChooseMove_Battle[] =
@@ -2137,10 +2137,10 @@ static const struct PokedudeInputScript sInputScripts_ChooseMove_Catching[] =
 
 static const struct PokedudeInputScript *const sInputScripts_ChooseMove[] =
 {
-    [TTVSCR_BATTLE]   = sInputScripts_ChooseMove_Battle,
-    [TTVSCR_STATUS]   = sInputScripts_ChooseMove_Status,
-    [TTVSCR_MATCHUPS] = sInputScripts_ChooseMove_Matchups,
-    [TTVSCR_CATCHING] = sInputScripts_ChooseMove_Catching,
+    [HELPSCR_BATTLE]   = sInputScripts_ChooseMove_Battle,
+    [HELPSCR_STATUS]   = sInputScripts_ChooseMove_Status,
+    [HELPSCR_MATCHUPS] = sInputScripts_ChooseMove_Matchups,
+    [HELPSCR_CATCHING] = sInputScripts_ChooseMove_Catching,
 };
 
 static const struct PokedudeTextScriptHeader sPokedudeTextScripts_Battle[] =
@@ -2279,10 +2279,10 @@ static const struct PokedudeTextScriptHeader sPokedudeTextScripts_Catching[] =
 
 static const struct PokedudeTextScriptHeader *const sPokedudeTextScripts[] =
 {
-    [TTVSCR_BATTLE]   = sPokedudeTextScripts_Battle,
-    [TTVSCR_STATUS]   = sPokedudeTextScripts_Status,
-    [TTVSCR_MATCHUPS] = sPokedudeTextScripts_Matchups,
-    [TTVSCR_CATCHING] = sPokedudeTextScripts_Catching,
+    [HELPSCR_BATTLE]   = sPokedudeTextScripts_Battle,
+    [HELPSCR_STATUS]   = sPokedudeTextScripts_Status,
+    [HELPSCR_MATCHUPS] = sPokedudeTextScripts_Matchups,
+    [HELPSCR_CATCHING] = sPokedudeTextScripts_Catching,
 };
 
 static const u8 *const sPokedudeTexts_Battle[] =
@@ -2418,10 +2418,10 @@ static const struct PokedudeBattlePartyInfo sParties_Catching[] =
 
 static const struct PokedudeBattlePartyInfo *const sPokedudeBattlePartyPointers[] =
 {
-    [TTVSCR_BATTLE]   = sParties_Battle,
-    [TTVSCR_STATUS]   = sParties_Status,
-    [TTVSCR_MATCHUPS] = sParties_Matchups,
-    [TTVSCR_CATCHING] = sParties_Catching,
+    [HELPSCR_BATTLE]   = sParties_Battle,
+    [HELPSCR_STATUS]   = sParties_Status,
+    [HELPSCR_MATCHUPS] = sParties_Matchups,
+    [HELPSCR_CATCHING] = sParties_Catching,
 };
 
 COMMON_DATA struct PokedudeBattlerState *gPokedudeBattlerStates[MAX_BATTLERS_COUNT] = {0};
@@ -2660,14 +2660,14 @@ static const u8 *GetPokedudeText(void)
 {
     switch (gBattleStruct->pdScriptNum)
     {
-    case TTVSCR_BATTLE:
+    case HELPSCR_BATTLE:
     default:
         return sPokedudeTexts_Battle[gBattleStruct->pdMessageNo - 1];
-    case TTVSCR_STATUS:
+    case HELPSCR_STATUS:
         return sPokedudeTexts_Status[gBattleStruct->pdMessageNo - 1];
-    case TTVSCR_MATCHUPS:
+    case HELPSCR_MATCHUPS:
         return sPokedudeTexts_TypeMatchup[gBattleStruct->pdMessageNo - 1];
-    case TTVSCR_CATCHING:
+    case HELPSCR_CATCHING:
         return sPokedudeTexts_Catching[gBattleStruct->pdMessageNo - 1];
     }
 }

@@ -424,7 +424,7 @@
 #define ITEM_APEX_LOG 351
 #define ITEM_TM_CASE 352
 #define ITEM_BERRY_POUCH 353
-#define ITEM_TEACHY_TV 354
+#define ITEM_HELP_MENU 354
 #define ITEM_0x163 355
 #define ITEM_0x164 356
 #define ITEM_TEA 357

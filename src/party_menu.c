@@ -49,7 +49,7 @@
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
-#include "teachy_tv.h"
+#include "help_menu.h"
 #include "text_window.h"
 #include "ui_hint_header.h"
 #include "trade.h"
@@ -1967,8 +1967,8 @@ static void PartyMenuHandlePokedudeCancel(void)
 {
     FreeRestoreBattleData();
     LoadPlayerParty();
-    SetTeachyTvControllerModeToResume();
-    SetMainCallback2(CB2_ReturnToTeachyTV);
+    SetHelpMenuControllerModeToResume();
+    SetMainCallback2(CB2_ReturnToHelpMenu);
 }
 
 // Pokedude uses item on his own Pokemon
