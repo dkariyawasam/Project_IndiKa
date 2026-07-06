@@ -124,7 +124,7 @@ void NewGameInitData(void)
     InitEventData();
     FlagSet(FLAG_SYS_CAN_LINK_WITH_RS);
     FlagSet(FLAG_HIDE_PALLET_FAT_MAN);
-    ResetFameChecker();
+    ResetApexLog();
     SetMoney(&gSaveBlock1Ptr->money, 3000);
     ResetGameStats();
     ClearPlayerLinkBattleRecords();

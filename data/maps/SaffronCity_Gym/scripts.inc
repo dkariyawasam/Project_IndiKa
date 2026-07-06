@@ -50,7 +50,7 @@ SaffronCity_Gym_EventScript_GymGuideInterceptSabrinaAway::
 	end
 
 SaffronCity_Gym_EventScript_Sabrina::
-	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_SABRINA, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_SABRINA, SaffronCity_Gym_EventScript_SabrinaPostFieldVictory
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, SaffronCity_Gym_EventScript_SabrinaChallenge1
@@ -104,8 +104,8 @@ SaffronCity_Gym_EventScript_SabrinaChallenge7::
 	end
 
 SaffronCity_Gym_EventScript_DefeatedSabrina::
-	famechecker FAMECHECKER_SABRINA, 2
-	famechecker FAMECHECKER_SABRINA, 3
+	apexlog APEX_LOG_PERSON_SABRINA, 2
+	apexlog APEX_LOG_PERSON_SABRINA, 3
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
@@ -126,7 +126,7 @@ SaffronCity_Gym_EventScript_Johan::
 
 SaffronCity_Gym_EventScript_Tyron::
 	trainerbattle_single TRAINER_SAILOR_TYRON, SaffronCity_Gym_Text_TyronIntro, SaffronCity_Gym_Text_TyronDefeat
-	famechecker FAMECHECKER_SABRINA, 5
+	apexlog APEX_LOG_PERSON_SABRINA, 5
 	msgbox SaffronCity_Gym_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
 	end
 

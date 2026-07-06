@@ -33,7 +33,7 @@ PokemonTower_4F_EventScript_HideOsscythe::
 PokemonTower_4F_EventScript_MrFuji::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_MRFUJI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_MRFUJI, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	setflag FLAG_HIDE_TOWER_FUJI
 	clearflag FLAG_HIDE_POKEHOUSE_FUJI
 	setflag FLAG_RESCUED_MR_FUJI

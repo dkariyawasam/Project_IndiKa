@@ -2,7 +2,7 @@ ViridianCity_Gym_MapScripts::
 	.byte 0
 
 ViridianCity_Gym_EventScript_Giovanni::
-	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_GIOVANNI, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_double TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	closemessage
@@ -13,7 +13,7 @@ ViridianCity_Gym_EventScript_Giovanni::
 	end
 
 ViridianCity_Gym_EventScript_DefeatedGiovanni::
-	famechecker FAMECHECKER_GIOVANNI, 3
+	apexlog APEX_LOG_PERSON_GIOVANNI, 3
 	setflag FLAG_HIDE_MISC_KANTO_ROCKETS
 	setflag FLAG_DEFEATED_LEADER_GIOVANNI
 	setflag FLAG_BADGE08_GET
@@ -35,7 +35,7 @@ ViridianCity_Gym_EventScript_GymGuy::
 	end
 
 ViridianCity_Gym_EventScript_GymGuyPostVictory::
-	famechecker FAMECHECKER_GIOVANNI, 4
+	apexlog APEX_LOG_PERSON_GIOVANNI, 4
 	msgbox ViridianCity_Gym_Text_GymGuyPostVictory
 	release
 	end

@@ -45,7 +45,7 @@ CeruleanCity_EventScript_Rival::
 	call_if_eq VAR_STARTER_MON, 2, CeruleanCity_EventScript_RivalSquirtle
 	call_if_eq VAR_STARTER_MON, 1, CeruleanCity_EventScript_RivalBulbasaur
 	call_if_eq VAR_STARTER_MON, 0, CeruleanCity_EventScript_RivalCharmander
-	famechecker FAMECHECKER_BILL, 0
+	apexlog APEX_LOG_PERSON_BILL, 0
 	msgbox CeruleanCity_Text_RivalPostBattle
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
@@ -54,7 +54,7 @@ CeruleanCity_EventScript_Rival::
 	call_if_eq VAR_TEMP_1, 2, CeruleanCity_EventScript_RivalStartExitRight
 	msgbox CeruleanCity_Text_OhRightLittlePresentAsFavor
 	setvar VAR_MAP_SCENE_CERULEAN_CITY_RIVAL, 1
-	msgbox CeruleanCity_Text_ExplainFameCheckerSmellYa
+	msgbox CeruleanCity_Text_ExplainApexLogSmellYa
 	closemessage
 	applymovement LOCALID_CERULEAN_RIVAL, CeruleanCity_Movement_RivalExit
 	waitmovement 0
@@ -280,7 +280,7 @@ CeruleanCity_EventScript_BikeShopSign::
 
 CeruleanCity_EventScript_GymSign::
 	lockall
-	famechecker FAMECHECKER_MISTY, 0
+	apexlog APEX_LOG_PERSON_MISTY, 0
 	msgbox CeruleanCity_Text_GymSign
 	releaseall
 	end

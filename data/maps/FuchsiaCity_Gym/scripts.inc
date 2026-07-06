@@ -57,7 +57,7 @@ FuchsiaCity_Gym_EventScript_Koga::
 	lock
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_KOGA, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_eq VAR_KOGA_TRIAL_STATE, 4, FuchsiaCity_Gym_EventScript_KogaReward
 	goto_if_set FLAG_BADGE05_GET, FuchsiaCity_Gym_EventScript_KogaPostReward
 	msgbox FuchsiaCity_Gym_Text_KogaWaitingForChallenge
@@ -195,8 +195,8 @@ FuchsiaCity_Gym_EventScript_KogaPostQuestComplete::
 	end
 
 FuchsiaCity_Gym_EventScript_DefeatedKoga::
-	famechecker FAMECHECKER_KOGA, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
+	apexlog APEX_LOG_PERSON_KOGA, 1
+	clearflag FLAG_HIDE_APEX_LOG_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 5
@@ -216,7 +216,7 @@ FuchsiaCity_Gym_EventScript_Edgar::
 
 FuchsiaCity_Gym_EventScript_Kirk::
 	trainerbattle_single TRAINER_JUGGLER_KIRK, FuchsiaCity_Gym_Text_KirkIntro, FuchsiaCity_Gym_Text_KirkDefeat
-	famechecker FAMECHECKER_KOGA, 2
+	apexlog APEX_LOG_PERSON_KOGA, 2
 	msgbox FuchsiaCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 

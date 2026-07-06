@@ -162,9 +162,9 @@
 #define FLAG_0x097                                         0x097
 #define FLAG_0x098                                         0x098
 #define FLAG_HIDE_POSTGAME_GOSSIPERS                       0x09D
-#define FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS              0x09E
-#define FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL                0x09F
-#define FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL            0x0A0
+#define FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS              0x09E
+#define FLAG_HIDE_APEX_LOG_KOGA_JOURNAL                0x09F
+#define FLAG_HIDE_APEX_LOG_LT_SURGE_JOURNAL            0x0A0
 #define FLAG_HIDE_VERMILION_CITY_OAKS_AIDE                 0x0A1
 #define FLAG_HIDE_CINNABAR_POKECENTER_BILL                 0x0A2
 #define FLAG_HIDE_CREDITS_RIVAL                            0x0A3
@@ -675,7 +675,7 @@
 #define FLAG_GAVE_FRESH_WATER_TO_THIRSTY_GIRL            0x296
 #define FLAG_GOT_CASCADE_BOARD_FROM_MISTY                0x297
 #define FLAG_GOT_GOLBAT_FROM_KOGA                        0x298
-#define FLAG_0x299                                       0x299
+#define FLAG_GOT_PORYGON_FROM_BLAINE                    0x299
 #define FLAG_0x29A                                       0x29A
 #define FLAG_GOT_APEX_LOG                                0x29B
 #define FLAG_GOT_RECORD_SETTING_MAGIKARP                 0x29C

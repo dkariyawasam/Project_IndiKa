@@ -273,6 +273,7 @@ gSpecials::
 	def_special GetInGameTradeSpeciesInfo
 	def_special CreateInGameTradePokemon
 	def_special DoInGameTradeScene
+	def_special DoGeneratedPokemonReceiveScene
 	def_special GetTradeSpecies
 	def_special NullFieldSpecial  @ Misc Hoenn specials
 	def_special NullFieldSpecial
@@ -399,13 +400,13 @@ gSpecials::
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
-	def_special ValidateSavedWonderCard
+	def_special NullFieldSpecial
 	def_special SetUnlockedPokedexFlags
 	def_special InitUnionRoom
 	def_special BufferUnionRoomPlayerName
 	def_special GetMartClerkObjectId
-	def_special GetMysteryGiftCardStat
-	def_special WonderNews_GetRewardInfo
+	def_special NullFieldSpecial
+	def_special NullFieldSpecial
 	def_special GetPCBoxToSendMon
 	def_special OpenMuseumFossilPic
 	def_special CloseMuseumFossilPic

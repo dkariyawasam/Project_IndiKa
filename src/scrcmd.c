@@ -1,7 +1,6 @@
 #include "global.h"
 #include "gflib.h"
 #include "script.h"
-#include "mystery_event_script.h"
 #include "event_data.h"
 #include "random.h"
 #include "item.h"
@@ -269,7 +268,7 @@ bool8 ScrCmd_endram(struct ScriptContext * ctx)
 
 bool8 ScrCmd_setmysteryeventstatus(struct ScriptContext * ctx)
 {
-    SetMysteryEventScriptStatus(ScriptReadByte(ctx));
+    ScriptReadByte(ctx);
     return FALSE;
 }
 

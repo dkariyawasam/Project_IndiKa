@@ -87,24 +87,8 @@
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz6Left"
-    },
-    {
-      "type": "sign",
       "x": 5,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "CinnabarIsland_Gym_EventScript_Quiz6Right"
-    },
-    {
-      "type": "sign",
-      "x": 6,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "CinnabarIsland_Gym_EventScript_BlaineFujiPhoto"

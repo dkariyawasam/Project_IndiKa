@@ -154,7 +154,7 @@ PalletTown_EventScript_OakTriggerRight::
 	end
 
 PalletTown_EventScript_OakTrigger::
-	famechecker FAMECHECKER_OAK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_OAK, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	delay 30
 	playbgm MUS_OAK, 0
@@ -303,7 +303,7 @@ PalletTown_EventScript_FatMan::
 
 PalletTown_EventScript_OaksLabSign::
 	lockall
-	famechecker FAMECHECKER_OAK, 0
+	apexlog APEX_LOG_PERSON_OAK, 0
 	msgbox PalletTown_Text_OakPokemonResearchLab
 	releaseall
 	end
