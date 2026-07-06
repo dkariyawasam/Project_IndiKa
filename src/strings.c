@@ -919,7 +919,7 @@ const u8 gStartMenuDesc_Bag[] = _("Equipped with pockets for storing items\nyou 
 const u8 gStartMenuDesc_Player[] = _("Check your money and other game data.");
 const u8 gStartMenuDesc_Save[] = _("Save your game with a complete record\nof your progress to take a break.");
 const u8 gStartMenuDesc_Settings[] = _("Adjust game settings such as text speed,\nsound, battle rules, and window frame.");
-const u8 gStartMenuDesc_Option[] = _("Open TEACHY TV lessons on catching,\nbattling, training, status, and types.");
+const u8 gStartMenuDesc_Option[] = _("Open HELP lessons on catching,\nbattling, training, status, and types.");
 const u8 gStartMenuDesc_Exit[] = _("Close this MENU window.");
 const u8 gStartMenuDesc_Retire[] = _("Retire from the SAFARI GAME and return to\nthe registration counter.");
 
@@ -998,10 +998,10 @@ const u8 gText_NickHatchPrompt[] = _("Would you like to nickname the newly\nhatc
 const u8 gString_OutOfCoins[] = _("You've run out of COINS.\nGame over!");
 const u8 gString_QuitPlaying[] = _("Quit playing?");
 const u8 gString_SlotMachineControls[] = _("{DPAD_LEFTRIGHT}COMBOS {DPAD_DOWN}WAGER {A_BUTTON}STOP {B_BUTTON}EXIT");
-const u8 gText_TeachyTV[] = _("おしえテレビ");
+const u8 gText_HelpMenu[] = _("おしえテレビ");
 const u8 gText_End[] = _("おしまい");
 
-#include "data/text/teachy_tv.h"
+#include "data/text/help_menu.h"
 
 const u8 gString_Bill[] = _("BILL");
 const u8 gString_Someone[] = _("SOMEONE");

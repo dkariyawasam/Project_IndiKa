@@ -29,7 +29,7 @@
 #include "script.h"
 #include "shop.h"
 #include "strings.h"
-#include "teachy_tv.h"
+#include "help_menu.h"
 #include "constants/field_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
@@ -157,9 +157,9 @@ static bool8 BagIsTutorial(void);
 static void Task_Bag_OldManTutorial(u8 taskId);
 static void Task_Pokedude_FadeFromBag(u8 taskId);
 static void Task_Pokedude_WaitFadeAndExitBag(u8 taskId);
-static void Task_Bag_TeachyTvCatching(u8 taskId);
-static void Task_Bag_TeachyTvStatus(u8 taskId);
-static void Task_Bag_TeachyTvTMs(u8 taskId);
+static void Task_Bag_HelpMenuCatching(u8 taskId);
+static void Task_Bag_HelpMenuStatus(u8 taskId);
+static void Task_Bag_HelpMenuTMs(u8 taskId);
 
 static const struct BgTemplate sBgTemplates[2] = {
     {
@@ -303,6 +303,9 @@ static const struct YesNoFuncTable sYesNoMenu_Sell = {
 
 static const u8 sListItemTextColor_RegularItem[] = _("{COLOR_HIGHLIGHT_SHADOW DARK_GRAY TRANSPARENT LIGHT_GRAY}");
 
+#define BAG_NOTCH_SELECTED_TILE 39
+#define BAG_NOTCH_INACTIVE_TILE 41
+
 static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .firstArrowType = SCROLL_ARROW_LEFT,
     .firstX = 8,
@@ -318,6 +321,7 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
 };
 
 static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/interface/select_button.4bpp");
+static const u8 sBagBgTiles[] = INCBIN_U8("graphics/item_menu/bg.4bpp");
 
 #define tSwitchDir     data[11]
 #define tSwitchCounter data[12]
@@ -627,12 +631,12 @@ static u8 CreateBagInputHandlerTask(u8 location)
     {
     case ITEMMENULOCATION_OLD_MAN:
         return CreateTask(Task_Bag_OldManTutorial, 0);
-    case ITEMMENULOCATION_TTVSCR_TMS:
-        return CreateTask(Task_Bag_TeachyTvTMs, 0);
-    case ITEMMENULOCATION_TTVSCR_STATUS:
-        return CreateTask(Task_Bag_TeachyTvStatus, 0);
-    case ITEMMENULOCATION_TTVSCR_CATCHING:
-        return CreateTask(Task_Bag_TeachyTvCatching, 0);
+    case ITEMMENULOCATION_HELPSCR_TMS:
+        return CreateTask(Task_Bag_HelpMenuTMs, 0);
+    case ITEMMENULOCATION_HELPSCR_STATUS:
+        return CreateTask(Task_Bag_HelpMenuStatus, 0);
+    case ITEMMENULOCATION_HELPSCR_CATCHING:
+        return CreateTask(Task_Bag_HelpMenuCatching, 0);
     default:
         return CreateTask(Task_BagMenu_HandleInput, 0);
     }
@@ -652,7 +656,7 @@ static bool8 TryAllocListMenuBuffers(void)
 
 static bool8 IsDeprecatedPocketLauncher(u16 itemId)
 {
-    return itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_TEACHY_TV;
+    return itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_HELP_MENU;
 }
 
 static void Bag_BuildListMenuTemplate(u8 pocket)
@@ -804,17 +808,15 @@ static void DrawBagPocketNotches(u8 windowId)
 {
     u8 i;
     u8 x;
-    u8 color;
+    const u8 *notch;
 
     for (i = 0; i < NUM_VISIBLE_BAG_POCKETS; i++)
     {
         x = 84 + i * 12;
-        color = i == gBagMenuState.pocket ? 1 : 9;
+        notch = sBagBgTiles + (i == gBagMenuState.pocket ? BAG_NOTCH_SELECTED_TILE : BAG_NOTCH_INACTIVE_TILE) * TILE_SIZE_4BPP;
 
         FillWindowPixelRect(windowId, PIXEL_FILL(0), x, 0, 8, 16);
-        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 2, 4, 4, 1);
-        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 1, 5, 6, 6);
-        FillWindowPixelRect(windowId, PIXEL_FILL(color), x + 2, 11, 4, 1);
+        BlitBitmapToWindow(windowId, notch, x, 0, 8, 16);
     }
 }
 
@@ -1256,7 +1258,7 @@ static void SwitchPockets(u8 taskId, s16 direction, bool16 a2)
         DestroyItemMenuIcon(sBagMenuDisplay->itemMenuIcon ^ 1);
         BagDestroyPocketScrollArrowPair();
     }
-    FillBgTilemapBufferRect_Palette0(1, 0x02D, 11, 3, LIST_TILES_WIDTH, LIST_TILES_HEIGHT);
+    FillBgTilemapBufferRect_Palette0(1, 32, 11, 3, LIST_TILES_WIDTH, LIST_TILES_HEIGHT);
     ScheduleBgCopyTilemapToVram(1);
     SetBagVisualPocketId(gBagMenuState.pocket + direction);
     SetTaskFuncWithFollowupFunc(taskId, Task_AnimateSwitchPockets, gTasks[taskId].func);
@@ -1438,7 +1440,7 @@ static void OpenContextMenu(u8 taskId)
     switch (gBagMenuState.location)
     {
     case ITEMMENULOCATION_BATTLE:
-    case ITEMMENULOCATION_TTVSCR_STATUS:
+    case ITEMMENULOCATION_HELPSCR_STATUS:
         if (ItemId_GetBattleUsage(gSpecialVar_ItemId))
         {
             sContextMenuItemsPtr = sContextMenuItems_BattleUse;
@@ -1451,7 +1453,7 @@ static void OpenContextMenu(u8 taskId)
         }
         break;
     case ITEMMENULOCATION_OLD_MAN:
-    case ITEMMENULOCATION_TTVSCR_CATCHING:
+    case ITEMMENULOCATION_HELPSCR_CATCHING:
         sContextMenuItemsPtr = sContextMenuItems_BattleUse;
         sContextMenuNumItems = 2;
         break;
@@ -2101,10 +2103,10 @@ bool8 UseRegisteredKeyItemOnField(void)
 static bool8 BagIsTutorial(void)
 {
     if (
-        gBagMenuState.location == ITEMMENULOCATION_OLD_MAN 
-     || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_CATCHING 
-     || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_STATUS 
-     || gBagMenuState.location == ITEMMENULOCATION_TTVSCR_TMS
+        gBagMenuState.location == ITEMMENULOCATION_OLD_MAN
+     || gBagMenuState.location == ITEMMENULOCATION_HELPSCR_CATCHING
+     || gBagMenuState.location == ITEMMENULOCATION_HELPSCR_STATUS
+     || gBagMenuState.location == ITEMMENULOCATION_HELPSCR_TMS
     )
         return TRUE;
     return FALSE;
@@ -2231,28 +2233,28 @@ void InitPokedudeBag(u8 a0)
     switch (a0)
     {
     default:
-        cb2 = CB2_ReturnToTeachyTV;
+        cb2 = CB2_ReturnToHelpMenu;
         location = a0;
         break;
     case 7:
         cb2 = SetCB2ToReshowScreenAfterMenu2;
-        location = ITEMMENULOCATION_TTVSCR_STATUS;
+        location = ITEMMENULOCATION_HELPSCR_STATUS;
         break;
     case 8:
         cb2 = SetCB2ToReshowScreenAfterMenu2;
-        location = ITEMMENULOCATION_TTVSCR_CATCHING;
+        location = ITEMMENULOCATION_HELPSCR_CATCHING;
         break;
     }
-    GoToBagMenu(location, location == ITEMMENULOCATION_TTVSCR_TMS ? OPEN_BAG_TMS : OPEN_BAG_ITEMS, cb2);
+    GoToBagMenu(location, location == ITEMMENULOCATION_HELPSCR_TMS ? OPEN_BAG_TMS : OPEN_BAG_ITEMS, cb2);
 }
 
-static bool8 Task_BButtonInterruptTeachyTv(u8 taskId)
+static bool8 Task_BButtonInterruptHelpMenu(u8 taskId)
 {
     if (JOY_NEW(B_BUTTON))
     {
         RestorePlayerBag();
-        SetTeachyTvControllerModeToResume();
-        sBagMenuDisplay->exitCB = CB2_ReturnToTeachyTV;
+        SetHelpMenuControllerModeToResume();
+        sBagMenuDisplay->exitCB = CB2_ReturnToHelpMenu;
         gTasks[taskId].func = Task_Pokedude_FadeFromBag;
         return TRUE;
     }
@@ -2262,12 +2264,12 @@ static bool8 Task_BButtonInterruptTeachyTv(u8 taskId)
     }
 }
 
-static void Task_Bag_TeachyTvCatching(u8 taskId)
+static void Task_Bag_HelpMenuCatching(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     if (!gPaletteFade.active)
     {
-        if (Task_BButtonInterruptTeachyTv(taskId) == TRUE)
+        if (Task_BButtonInterruptHelpMenu(taskId) == TRUE)
         {
             FreeRestoreBattleData();
             LoadPlayerParty();
@@ -2316,12 +2318,12 @@ static void Task_Bag_TeachyTvCatching(u8 taskId)
     }
 }
 
-static void Task_Bag_TeachyTvStatus(u8 taskId)
+static void Task_Bag_HelpMenuStatus(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     if (!gPaletteFade.active)
     {
-        if (Task_BButtonInterruptTeachyTv(taskId) == TRUE)
+        if (Task_BButtonInterruptHelpMenu(taskId) == TRUE)
         {
             FreeRestoreBattleData();
             LoadPlayerParty();
@@ -2359,10 +2361,10 @@ static void Task_Bag_TeachyTvStatus(u8 taskId)
     }
 }
 
-static void Task_Bag_TeachyTvTMs(u8 taskId)
+static void Task_Bag_HelpMenuTMs(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (!gPaletteFade.active && Task_BButtonInterruptTeachyTv(taskId) != TRUE)
+    if (!gPaletteFade.active && Task_BButtonInterruptHelpMenu(taskId) != TRUE)
     {
         switch (data[8])
         {
@@ -2382,7 +2384,7 @@ static void Task_Bag_TeachyTvTMs(u8 taskId)
             CopyWindowToVram(0, COPYWIN_MAP);
             DestroyListMenuTask(data[0], NULL, NULL);
             RestorePlayerBag();
-            sBagMenuDisplay->exitCB = CB2_ReturnToTeachyTV;
+            sBagMenuDisplay->exitCB = CB2_ReturnToHelpMenu;
             gTasks[taskId].func = Task_Pokedude_FadeFromBag;
             return;
         }

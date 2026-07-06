@@ -125,5 +125,5 @@
 	.include "src/mystery_gift_show_card.o"
 	.include "src/mystery_gift_show_news.o"
 	.include "src/seagallop.o"
-	.include "src/teachy_tv.o"
+	.include "src/help_menu.o"
 	.include "src/digit_obj_util.o"
