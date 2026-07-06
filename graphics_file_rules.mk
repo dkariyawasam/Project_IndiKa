@@ -179,6 +179,9 @@ $(BATTRANSGFXDIR)/vs_frame.4bpp: %.4bpp: %.png
 $(PARTYMENUGFXDIR)/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 62 -Wnum_tiles
 
+graphics/logbook_menu/menu.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 39 -Wnum_tiles
+
 $(FIELDEFFECTSGFXDIR)/pics/underwater_bubbles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
@@ -222,7 +225,10 @@ $(SLOTMACHINEGFXDIR)/leafgreen/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 134 -Wnum_tiles
 
 $(HELPMENUGFXDIR)/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 204 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 186 -Wnum_tiles
+
+graphics/pokemon_storage/menu.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 142 -Wnum_tiles
 
 $(SSANNEGFXDIR)/smoke.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 17 -Wnum_tiles
