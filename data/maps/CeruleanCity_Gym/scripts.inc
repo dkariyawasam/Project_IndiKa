@@ -40,7 +40,7 @@ CeruleanCity_Gym_EventScript_GymGuideInterceptMistyAway::
 	end
 
 CeruleanCity_Gym_EventScript_Misty::
-	famechecker FAMECHECKER_MISTY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_MISTY, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 10, CeruleanCity_Gym_EventScript_MistyGyaradosCheck
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 11, CeruleanCity_Gym_EventScript_MistyTradeDone
 	goto_if_set FLAG_DEFEATED_MISTY, CeruleanCity_Gym_EventScript_MistyPostBattle
@@ -87,7 +87,7 @@ CeruleanCity_Gym_EventScript_MistyPostBattle::
 	end
 
 CeruleanCity_Gym_EventScript_MistyDefeated::
-	famechecker FAMECHECKER_MISTY, 1
+	apexlog APEX_LOG_PERSON_MISTY, 1
 	setflag FLAG_DEFEATED_MISTY
 	setflag FLAG_BADGE02_GET
 	setvar VAR_MISTY_TRIAL_STATE, 10
@@ -143,7 +143,7 @@ CeruleanCity_Gym_EventScript_Diana::
 
 CeruleanCity_Gym_EventScript_Luis::
 	trainerbattle_single TRAINER_SWIMMER_MALE_LUIS, CeruleanCity_Gym_Text_LuisIntro, CeruleanCity_Gym_Text_LuisDefeat
-	famechecker FAMECHECKER_MISTY, 2
+	apexlog APEX_LOG_PERSON_MISTY, 2
 	msgbox CeruleanCity_Gym_Text_LuisPostBattle, MSGBOX_AUTOCLOSE
 	end
 

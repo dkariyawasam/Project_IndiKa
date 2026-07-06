@@ -664,8 +664,8 @@ const u32 gItemIconPalette_TownMap[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIcon_VSSeeker[] = INCBIN_U32("graphics/items/icons/vs_seeker.4bpp.lz");
 const u32 gItemIconPalette_VSSeeker[] = INCBIN_U32("graphics/items/icon_palettes/vs_seeker.gbapal.lz");
 
-const u32 gItemIcon_ApexLog[] = INCBIN_U32("graphics/items/icons/fame_checker.4bpp.lz");
-const u32 gItemIconPalette_ApexLog[] = INCBIN_U32("graphics/items/icon_palettes/fame_checker.gbapal.lz");
+const u32 gItemIcon_ApexLog[] = INCBIN_U32("graphics/items/icons/apex_log.4bpp.lz");
+const u32 gItemIconPalette_ApexLog[] = INCBIN_U32("graphics/items/icon_palettes/apex_log.gbapal.lz");
 
 const u32 gItemIcon_Tea[] = INCBIN_U32("graphics/items/icons/tea.4bpp.lz");
 const u32 gItemIconPalette_Tea[] = INCBIN_U32("graphics/items/icon_palettes/tea.gbapal.lz");

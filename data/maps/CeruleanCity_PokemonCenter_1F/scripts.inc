@@ -25,7 +25,7 @@ CeruleanCity_PokemonCenter_1F_EventScript_Rocker::
 CeruleanCity_PokemonCenter_1F_EventScript_Youngster::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BILL, 1
+	apexlog APEX_LOG_PERSON_BILL, 1
 	msgbox CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons
 	release
 	end

@@ -25,14 +25,63 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
     .string "The VOLCANOBADGE proves you\n"
     .string "survived CINNABAR GYM's heat.$"
 
-CinnabarIsland_Gym_Text_UnusedBlaineReward::
-    .string "{PLAYER} received something\n"
-    .string "from BLAINE.$"
+CinnabarIsland_Gym_Text_BlaineUnlockPorygonMachine::
+    .string "But a BADGE is only proof of what\n"
+    .string "you have already survived.\p"
+    .string "Progress asks what you can build\n"
+    .string "next!\p"
+    .string "The machine by my desk can compile\n"
+    .string "a POKéMON from research data.\p"
+    .string "Answer its sequence correctly, and\n"
+    .string "generate PORYGON yourself!$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
     .string "Fire is the engine of progress!\p"
     .string "Treat it with discipline, and it\n"
     .string "can light the way to tomorrow.$"
+
+CinnabarIsland_Gym_Text_BlainePorygonMachineAvailable::
+    .string "The machine by my desk is ready.\p"
+    .string "Go on!\n"
+    .string "Turn research into a POKéMON!$"
+
+CinnabarIsland_Gym_Text_PorygonMachineInitialize::
+    .string "PORYGON generator online.\p"
+    .string "Initialize build sequence?$"
+
+CinnabarIsland_Gym_Text_PorygonMachineRules::
+    .string "Build a stable virtual POKéMON by\n"
+    .string "choosing the correct parameters.$"
+
+CinnabarIsland_Gym_Text_PorygonMachineQuestionStablePattern::
+    .string "Should the base form be coded from\n"
+    .string "a stable geometric pattern?$"
+
+CinnabarIsland_Gym_Text_PorygonMachineQuestionRandomNoise::
+    .string "Should random noise overwrite the\n"
+    .string "core data?$"
+
+CinnabarIsland_Gym_Text_PorygonMachineQuestionProjection::
+    .string "Should the completed data receive\n"
+    .string "a physical projection?$"
+
+CinnabarIsland_Gym_Text_PorygonMachineParameterAccepted::
+    .string "Parameter accepted.$"
+
+CinnabarIsland_Gym_Text_PorygonMachineBuildFailed::
+    .string "Parameter rejected!\p"
+    .string "The build collapsed into static.$"
+
+CinnabarIsland_Gym_Text_PorygonMachineGenerated::
+    .string "The machine compiled the data into\n"
+    .string "PORYGON!$"
+
+CinnabarIsland_Gym_Text_PorygonMachineAlreadyGenerated::
+    .string "The PORYGON generator hums quietly.\p"
+    .string "Its last pattern is safely archived.$"
+
+CinnabarIsland_Gym_Text_PorygonMachineCancel::
+    .string "Sequence cancelled.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"

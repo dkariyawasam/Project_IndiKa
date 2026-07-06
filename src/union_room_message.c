@@ -1,7 +1,5 @@
 #include "global.h"
 #include "link_rfu.h"
-#include "mystery_gift_server.h"
-#include "mystery_gift_client.h"
 #include "constants/union_room.h"
 
 ALIGNED(4) const u8 gText_UR_EmptyString[] = _("");
@@ -472,8 +470,6 @@ ALIGNED(4) static const u8 sText_ChooseTrainerSingleBattle[] = _("Please choose 
 ALIGNED(4) static const u8 sText_ChooseTrainerDoubleBattle[] = _("Please choose a TRAINER for\na DOUBLE BATTLE.");
 ALIGNED(4) static const u8 sText_ChooseLeaderMultiBattle[] = _("Please choose the LEADER\nfor a MULTI BATTLE.");
 ALIGNED(4) static const u8 sText_ChooseTrainerToTradeWith[] = _("Please choose the TRAINER to\ntrade with.");
-ALIGNED(4) static const u8 sText_ChooseTrainerToShareWonderCards[] = _("Please choose the TRAINER who is\nsharing WONDER CARDS.");
-ALIGNED(4) static const u8 sText_ChooseTrainerToShareWonderNews[] = _("Please choose the TRAINER who is\nsharing WONDER NEWS.");
 
 const u8 *const gTexts_UR_ChooseTrainer[] = {
     [LINK_GROUP_SINGLE_BATTLE] = sText_ChooseTrainerSingleBattle,
@@ -483,8 +479,8 @@ const u8 *const gTexts_UR_ChooseTrainer[] = {
     [LINK_GROUP_UNUSED_4]      = gText_UR_EmptyString,
     [LINK_GROUP_UNUSED_5]      = gText_UR_EmptyString,
     [LINK_GROUP_UNUSED_6]      = gText_UR_EmptyString,
-    [LINK_GROUP_WONDER_CARD]   = sText_ChooseTrainerToShareWonderCards,
-    [LINK_GROUP_WONDER_NEWS]   = sText_ChooseTrainerToShareWonderNews
+    [LINK_GROUP_WONDER_CARD]   = gText_UR_EmptyString,
+    [LINK_GROUP_WONDER_NEWS]   = gText_UR_EmptyString
 };
 
 ALIGNED(4) const u8 gText_UR_SearchingForWirelessSystemWait[] = _("Searching for a WIRELESS\nCOMMUNICATION SYSTEM. Wait...");
@@ -493,14 +489,6 @@ ALIGNED(4) const u8 gText_UR_AwaitingPlayersResponse[] = _("Awaiting {STR_VAR_1}
 ALIGNED(4) const u8 gText_UR_PlayerHasBeenAskedToRegisterYouPleaseWait[] = _("{STR_VAR_1} has been asked to register\nyou as a member. Please wait.");
 ALIGNED(4) const u8 gText_UR_AwaitingResponseFromWirelessSystem[] = _("Awaiting a response from the\nWIRELESS COMMUNICATION SYSTEM.");
 ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("ほかの さんかしゃが そろうまで\nしょうしょう おまちください");
-
-ALIGNED(4) static const u8 sText_NoCardsSharedRightNow[] = _("No CARDS appear to be shared \nright now.");
-ALIGNED(4) static const u8 sText_NoNewsSharedRightNow[] = _("No NEWS appears to be shared\nright now.");
-
-const u8 *const gTexts_UR_NoWonderShared[] = {
-    sText_NoCardsSharedRightNow,
-    sText_NoNewsSharedRightNow
-};
 
 ALIGNED(4) const u8 gText_UR_Battle[] = _("BATTLE");
 ALIGNED(4) const u8 gText_UR_Chat2[] = _("CHAT");
@@ -517,8 +505,6 @@ ALIGNED(4) const u8 gText_UR_MultiBattle[] = _("MULTI BATTLE");
 ALIGNED(4) const u8 gText_UR_PokemonTrades[] = _("POKéMON TRADES");
 ALIGNED(4) const u8 gText_UR_Chat[] = _("CHAT");
 ALIGNED(4) const u8 gText_UR_Cards[] = _("CARDS");
-ALIGNED(4) const u8 gText_UR_WonderCards[] = _("WONDER CARDS");
-ALIGNED(4) const u8 gText_UR_WonderNews[] = _("WONDER NEWS");
 ALIGNED(4) const u8 gText_UR_Search[] = _("SEARCH");
 ALIGNED(4) const u8 gText_UR_SpinTrade[] = _("ぐるぐるこうかん");
 ALIGNED(4) const u8 gText_UR_ItemTrade[] = _("アイテムトレード");
@@ -548,20 +534,3 @@ const u8 *const gTexts_UR_GladToMeetYou[GENDER_COUNT] = {
 };
 
 ALIGNED(4) const u8 gText_UR_FinishedCheckingPlayersTrainerCard[] = _("Finished checking {DYNAMIC 1}'s\nTRAINER CARD.{PAUSE 60}");
-ALIGNED(4) static const u8 sText_CanceledReadingCard[] = _("Canceled reading the Card.");
-
-static const struct MysteryGiftClientCmd sClientScript_DynamicError[] = {
-    {CLI_RECV, MG_LINKID_DYNAMIC_MSG},
-    {CLI_COPY_MSG},
-    {CLI_SEND_READY_END},
-    {CLI_RETURN, CLI_MSG_BUFFER_FAILURE}
-};
-
-const struct MysteryGiftServerCmd gServerScript_ClientCanceledCard[] = {
-    {SVR_LOAD_CLIENT_SCRIPT, PTR_ARG(sClientScript_DynamicError)},
-    {SVR_SEND},
-    {SVR_LOAD_MSG, PTR_ARG(sText_CanceledReadingCard)},
-    {SVR_SEND},
-    {SVR_RECV, MG_LINKID_READY_END},
-    {SVR_RETURN, SVR_MSG_CLIENT_CANCELED}
-};

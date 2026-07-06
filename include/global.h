@@ -115,7 +115,7 @@
 #define T2_READ_PTR(ptr) (void *) T2_READ_32(ptr)
 
 // This macro is required to prevent the compiler from optimizing
-// a dpad up/down check in sub_812CAD8 (fame_checker.c).
+// a dpad up/down check in sub_812CAD8 (apex_log.c).
 #define TEST_BUTTON(field, button) ({(field) & (button);})
 #define JOY_NEW(button)      TEST_BUTTON(gMain.newKeys,  button)
 #define JOY_HELD(button)     TEST_BUTTON(gMain.heldKeys, button)
@@ -620,9 +620,9 @@ struct QuestLogScene
     /*0x0668*/ u16 end[0];
 };
 
-#include "fame_checker.h"
+#include "apex_log.h"
 
-struct FameCheckerSaveData
+struct ApexLogSaveData
 {
     /*3a54*/ u16 pickState:2;
     u16 flavorTextFlags:12;
@@ -791,7 +791,7 @@ struct SaveBlock1
     /*0x3A08*/ struct RecordMixingGift recordMixingGift; // unused
     /*0x3A18*/ u8 seen2[DEX_FLAGS_NO];
     /*0x3A4C*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
-    /*0x3A54*/ struct FameCheckerSaveData fameChecker[NUM_FAMECHECKER_PERSONS];
+    /*0x3A54*/ struct ApexLogSaveData apexLog[NUM_APEX_LOG_PERSONS];
     /*0x3A94*/ u8 unused_3A94[64];
     /*0x3AD4*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
     /*0x3BA8*/ struct TrainerNameRecord trainerNameRecords[20];

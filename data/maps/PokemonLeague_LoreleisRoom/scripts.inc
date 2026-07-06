@@ -50,10 +50,10 @@ PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_LORELEI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_LORELEI, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
-	famechecker FAMECHECKER_LORELEI, 0
-	famechecker FAMECHECKER_LORELEI, 1
+	apexlog APEX_LOG_PERSON_LORELEI, 0
+	apexlog APEX_LOG_PERSON_LORELEI, 1
 	call PokemonLeague_LoreleisRoom_EventScript_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5

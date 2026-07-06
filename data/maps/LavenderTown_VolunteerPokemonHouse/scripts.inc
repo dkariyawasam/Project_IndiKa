@@ -27,7 +27,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_NoRoomForPokeFlute::
 LavenderTown_VolunteerPokemonHouse_EventScript_LittleGirl::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_MRFUJI, 0
+	apexlog APEX_LOG_PERSON_MRFUJI, 0
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons
 	release
 	end
@@ -71,7 +71,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Psyduck::
 
 LavenderTown_VolunteerPokemonHouse_EventScript_PokemonFanMagazine::
 	lockall
-	famechecker FAMECHECKER_MRFUJI, 2
+	apexlog APEX_LOG_PERSON_MRFUJI, 2
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped
 	releaseall
 	end

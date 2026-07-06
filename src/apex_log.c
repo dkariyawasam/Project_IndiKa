@@ -16,7 +16,7 @@
 #include "event_object_movement.h"
 #include "menu_indicators.h"
 #include "text_window.h"
-#include "fame_checker.h"
+#include "apex_log.h"
 #include "quests.h"
 #include "strings.h"
 #include "constants/event_objects.h"
@@ -33,17 +33,17 @@
 #define SPRITETAG_BILL 1009
 #define SPRITETAG_APEX_SILHOUETTE 1010
 
-#define FC_NONTRAINER_START 0xFE00
-#define FC_ICON_X_LEFT 0x72
-#define FC_ICON_Y_TOP 0x2F
-#define FC_ICON_X_SPACING 47
-#define FC_ICON_Y_SPACING 27
-#define FC_APEX_DOSSIER_ICON_X_LEFT 73
-#define FC_APEX_DOSSIER_ICON_Y_TOP FC_ICON_Y_TOP
-#define FC_APEX_DOSSIER_ICONDESC_LEFT 10
-#define FC_APEX_DOSSIER_INFOBOX_LEFT 9
+#define ApexLog_NONTRAINER_START 0xFE00
+#define ApexLog_ICON_X_LEFT 0x72
+#define ApexLog_ICON_Y_TOP 0x2F
+#define ApexLog_ICON_X_SPACING 47
+#define ApexLog_ICON_Y_SPACING 27
+#define ApexLog_APEX_DOSSIER_ICON_X_LEFT 73
+#define ApexLog_APEX_DOSSIER_ICON_Y_TOP ApexLog_ICON_Y_TOP
+#define ApexLog_APEX_DOSSIER_ICONDESC_LEFT 10
+#define ApexLog_APEX_DOSSIER_INFOBOX_LEFT 9
 
-struct FameCheckerData
+struct ApexLogData
 {
     MainCallback savedCallback;
     u16 listMenuTopIdx;
@@ -55,7 +55,7 @@ struct FameCheckerData
     u8 listMenuCurIdx;
     u8 listMenuTopIdx2;
     u8 listMenuDrawnSelIdx;
-    u8 unlockedPersons[NUM_FAMECHECKER_PERSONS + 1];
+    u8 unlockedPersons[NUM_APEX_LOG_PERSONS + 1];
     u8 spriteIds[6];
     u8 viewingFlavorText:1;
     u8 unk_23_1:1; // unused
@@ -78,14 +78,14 @@ struct ApexRumorDossierEntry
 static EWRAM_DATA u16 * sBg3TilemapBuffer = NULL;
 static EWRAM_DATA u16 * sBg1TilemapBuffer = NULL;
 static EWRAM_DATA u16 * sBg2TilemapBuffer = NULL;
-static EWRAM_DATA struct FameCheckerData * sFameCheckerData = NULL;
+static EWRAM_DATA struct ApexLogData * sApexLogData = NULL;
 static EWRAM_DATA struct ListMenuItem * sListMenuItems = NULL;
 static EWRAM_DATA s32 sLastMenuIdx = 0;
 
-COMMON_DATA struct ListMenuTemplate gFameChecker_ListMenuTemplate = {0};
+COMMON_DATA struct ListMenuTemplate gApexLog_ListMenuTemplate = {0};
 COMMON_DATA u8 gIconDescriptionBoxIsOpen = 0;
 
-static void MainCB2_LoadFameChecker(void);
+static void MainCB2_LoadApexLog(void);
 static void LoadUISpriteSheetsAndPalettes(void);
 static void Task_WaitFadeOnInit(u8 taskId);
 static void Task_TopMenuHandleInput(u8 taskId);
@@ -94,17 +94,17 @@ static void MessageBoxPrintEmptyText(void);
 static void Task_EnterPickMode(u8 taskId);
 static void Task_ExitPickMode(u8 taskId);
 static void Task_FlavorTextDisplayHandleInput(u8 taskId);
-static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound);
-static void FC_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy);
+static void ApexLog_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound);
+static void ApexLog_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy);
 static void GetPickModeText(void);
 static void PrintSelectedNameInBrightGreen(u8 taskId);
 static void WipeMsgBoxAndTransfer(void);
 static void Setup_DrawMsgAndListBoxes(void);
-static void FC_PutWindowTilemapAndCopyWindowToVramMode3(u8 windowId);
+static void ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(u8 windowId);
 static bool8 SetMessageSelectorIconObjMode(u8 taskId, u8 objMode);
-static void Task_StartToCloseFameChecker(u8 taskId);
-static void Task_DestroyAssetsAndCloseFameChecker(u8 taskId);
-static void FC_DestroyWindow(u8 windowId);
+static void Task_StartToCloseApexLog(u8 taskId);
+static void Task_DestroyAssetsAndCloseApexLog(u8 taskId);
+static void ApexLog_DestroyWindow(u8 windowId);
 static void PrintUIHelp(u8 state);
 static bool8 CreateAllFlavorTextIcons(u8 who);
 static void FCSetup_ClearVideoRegisters(void);
@@ -114,8 +114,8 @@ static void FCSetup_ResetBGCoords(void);
 static bool8 HasUnlockedAllFlavorTextsForCurrentPerson(void);
 static void FreeSelectionCursorSpriteResources(void);
 static u8 CreateFlavorTextIconSelectorCursorSprite(s16 where);
-static s16 FC_GetFlavorTextIconX(u8 slot);
-static s16 FC_GetFlavorTextIconY(u8 slot);
+static s16 ApexLog_GetFlavorTextIconX(u8 slot);
+static s16 ApexLog_GetFlavorTextIconY(u8 slot);
 static void SpriteCB_DestroyFlavorTextIconSelectorCursor(struct Sprite *sprite);
 static void FreeQuestionMarkSpriteResources(void);
 static u8 PlaceQuestionMarkTile(u8 x, u8 y);
@@ -127,46 +127,46 @@ static u8 CreatePersonPicSprite(u8 fcPersonIdx);
 static void DestroyPersonPicSprite(u8 taskId, u16 who);
 static void UpdateIconDescriptionBox(u8 whichText);
 static void UpdateIconDescriptionBoxOff(void);
-static void FC_CreateListMenu(void);
+static void ApexLog_CreateListMenu(void);
 static void SpriteCB_FCSpinningPokeball(struct Sprite *sprite);
 static void InitListMenuTemplate(void);
-static void FC_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu * list);
+static void ApexLog_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu * list);
 static void Task_SwitchToPickMode(u8 taskId);
 static void PrintCancelDescription(void);
-static void FC_DoMoveCursor(s32 itemIndex, bool8 onInit);
-static u8 FC_PopulateListMenu(void);
-static bool8 FC_HasApexDossierRumor(u8 rumor);
-static bool8 FC_HasEncounteredApexDossierMon(void);
-static bool8 FC_IsApexDossierMonSlot(u8 slot);
-static bool8 FC_IsApexDossierWitnessSlot(u8 slot);
-static u8 FC_GetApexDossierRumorForSlot(u8 slot);
+static void ApexLog_DoMoveCursor(s32 itemIndex, bool8 onInit);
+static u8 ApexLog_PopulateListMenu(void);
+static bool8 ApexLog_HasApexDossierRumor(u8 rumor);
+static bool8 ApexLog_HasEncounteredApexDossierMon(void);
+static bool8 ApexLog_IsApexDossierMonSlot(u8 slot);
+static bool8 ApexLog_IsApexDossierWitnessSlot(u8 slot);
+static u8 ApexLog_GetApexDossierRumorForSlot(u8 slot);
 static void SetApexDossierSilhouettePalette(u8 spriteId);
-static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot);
-static void FC_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId);
-static void FC_CreateScrollIndicatorArrowPair(void);
+static void ApexLog_MoveApexDossierCursor(u8 taskId, u8 newSlot);
+static void ApexLog_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId);
+static void ApexLog_CreateScrollIndicatorArrowPair(void);
 static void FreeListMenuSelectorArrowPairResources(void);
-static u16 FameCheckerGetCursorY(void);
+static u16 ApexLogGetCursorY(void);
 static void HandleFlavorTextModeSwitch(bool8 state);
 static void Task_FCOpenOrCloseInfoBox(u8 taskId);
 static void UpdateInfoBoxTilemap(u8 bg, s16 state);
 static void PlaceListMenuCursor(bool8 isActive);
 
-static const u16 sFameCheckerTilemap[] = INCBIN_U16("graphics/fame_checker/tilemap1.bin");
-static const u8 sQuestionMarkSpriteGfx[] = INCBIN_U8("graphics/fame_checker/question_mark.4bpp");
-static const u8 sSpinningPokeballSpriteGfx[] = INCBIN_U8("graphics/fame_checker/spinning_pokeball.4bpp");
-static const u16 sSpinningPokeballSpritePalette[] = INCBIN_U16("graphics/fame_checker/spinning_pokeball.gbapal");
-static const u8 sSelectorCursorSpriteGfx[] = INCBIN_U8("graphics/fame_checker/cursor.4bpp");
-static const u16 sSelectorCursorSpritePalette[] = INCBIN_U16("graphics/fame_checker/cursor.gbapal");
-static const u8 sFujiSpriteGfx[] = INCBIN_U8("graphics/fame_checker/mr_fuji.4bpp");
-static const u16 sFujiSpritePalette[] = INCBIN_U16("graphics/fame_checker/mr_fuji.gbapal");
-static const u8 sBillSpriteGfx[] = INCBIN_U8("graphics/fame_checker/bill.4bpp");
-static const u16 sBillSpritePalette[] = INCBIN_U16("graphics/fame_checker/bill.gbapal");
-static const u8 sDaisySpriteGfx[] = INCBIN_U8("graphics/fame_checker/daisy.4bpp");
-static const u16 sDaisySpritePalette[] = INCBIN_U16("graphics/fame_checker/daisy.gbapal");
-static const u8 sOakSpriteGfx[] = INCBIN_U8("graphics/fame_checker/prof_oak.4bpp");
-static const u16 sOakSpritePalette[] = INCBIN_U16("graphics/fame_checker/prof_oak.gbapal");
-static const u16 sUnkPalette[] = INCBIN_U16("graphics/fame_checker/unk.gbapal"); // unused?
-static const u16 sSilhouettePalette[] = INCBIN_U16("graphics/fame_checker/silhouette.gbapal");
+static const u16 sApexLogTilemap[] = INCBIN_U16("graphics/apex_log/tilemap1.bin");
+static const u8 sQuestionMarkSpriteGfx[] = INCBIN_U8("graphics/apex_log/question_mark.4bpp");
+static const u8 sSpinningPokeballSpriteGfx[] = INCBIN_U8("graphics/apex_log/spinning_pokeball.4bpp");
+static const u16 sSpinningPokeballSpritePalette[] = INCBIN_U16("graphics/apex_log/spinning_pokeball.gbapal");
+static const u8 sSelectorCursorSpriteGfx[] = INCBIN_U8("graphics/apex_log/cursor.4bpp");
+static const u16 sSelectorCursorSpritePalette[] = INCBIN_U16("graphics/apex_log/cursor.gbapal");
+static const u8 sFujiSpriteGfx[] = INCBIN_U8("graphics/apex_log/mr_fuji.4bpp");
+static const u16 sFujiSpritePalette[] = INCBIN_U16("graphics/apex_log/mr_fuji.gbapal");
+static const u8 sBillSpriteGfx[] = INCBIN_U8("graphics/apex_log/bill.4bpp");
+static const u16 sBillSpritePalette[] = INCBIN_U16("graphics/apex_log/bill.gbapal");
+static const u8 sDaisySpriteGfx[] = INCBIN_U8("graphics/apex_log/daisy.4bpp");
+static const u16 sDaisySpritePalette[] = INCBIN_U16("graphics/apex_log/daisy.gbapal");
+static const u8 sOakSpriteGfx[] = INCBIN_U8("graphics/apex_log/prof_oak.4bpp");
+static const u16 sOakSpritePalette[] = INCBIN_U16("graphics/apex_log/prof_oak.gbapal");
+static const u16 sUnkPalette[] = INCBIN_U16("graphics/apex_log/unk.gbapal"); // unused?
+static const u16 sSilhouettePalette[] = INCBIN_U16("graphics/apex_log/silhouette.gbapal");
 
 static const u8 sTextColor_White[3]  = {0, 1, 2};
 static const u8 sTextColor_DkGrey[3] = {0, 2, 3};
@@ -337,132 +337,132 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
     },
 };
 
-#define FAME_CHECKER_PROF_OAK  (FC_NONTRAINER_START + 0)
-#define FAME_CHECKER_DAISY_OAK (FC_NONTRAINER_START + 1)
-#define FAME_CHECKER_BILL      (FC_NONTRAINER_START + 2)
-#define FAME_CHECKER_MR_FUJI   (FC_NONTRAINER_START + 3)
+#define APEX_LOG_PROF_OAK  (ApexLog_NONTRAINER_START + 0)
+#define APEX_LOG_DAISY_OAK (ApexLog_NONTRAINER_START + 1)
+#define APEX_LOG_BILL      (ApexLog_NONTRAINER_START + 2)
+#define APEX_LOG_MR_FUJI   (ApexLog_NONTRAINER_START + 3)
 
 static const u16 sTrainerIdxs[] = {
-    [FAMECHECKER_OAK]      = FAME_CHECKER_PROF_OAK,
-    [FAMECHECKER_DAISY]    = FAME_CHECKER_DAISY_OAK,
-    [FAMECHECKER_BROCK]    = TRAINER_LEADER_BROCK_1,
-    [FAMECHECKER_MISTY]    = TRAINER_LEADER_MISTY,
-    [FAMECHECKER_LTSURGE]  = TRAINER_LEADER_LT_SURGE,
-    [FAMECHECKER_ERIKA]    = TRAINER_LEADER_ERIKA,
-    [FAMECHECKER_KOGA]     = TRAINER_LEADER_KOGA,
-    [FAMECHECKER_SABRINA]  = TRAINER_LEADER_SABRINA,
-    [FAMECHECKER_BLAINE]   = TRAINER_LEADER_BLAINE,
-    [FAMECHECKER_LORELEI]  = TRAINER_ELITE_FOUR_LORELEI,
-    [FAMECHECKER_BRUNO]    = TRAINER_ELITE_FOUR_BRUNO,
-    [FAMECHECKER_AGATHA]   = TRAINER_ELITE_FOUR_AGATHA,
-    [FAMECHECKER_LANCE]    = TRAINER_ELITE_FOUR_LANCE,
-    [FAMECHECKER_BILL]     = FAME_CHECKER_BILL,
-    [FAMECHECKER_MRFUJI]   = FAME_CHECKER_MR_FUJI,
-    [FAMECHECKER_GIOVANNI] = TRAINER_LEADER_GIOVANNI
+    [APEX_LOG_PERSON_OAK]      = APEX_LOG_PROF_OAK,
+    [APEX_LOG_PERSON_DAISY]    = APEX_LOG_DAISY_OAK,
+    [APEX_LOG_PERSON_BROCK]    = TRAINER_LEADER_BROCK_1,
+    [APEX_LOG_PERSON_MISTY]    = TRAINER_LEADER_MISTY,
+    [APEX_LOG_PERSON_LTSURGE]  = TRAINER_LEADER_LT_SURGE,
+    [APEX_LOG_PERSON_ERIKA]    = TRAINER_LEADER_ERIKA,
+    [APEX_LOG_PERSON_KOGA]     = TRAINER_LEADER_KOGA,
+    [APEX_LOG_PERSON_SABRINA]  = TRAINER_LEADER_SABRINA,
+    [APEX_LOG_PERSON_BLAINE]   = TRAINER_LEADER_BLAINE,
+    [APEX_LOG_PERSON_LORELEI]  = TRAINER_ELITE_FOUR_LORELEI,
+    [APEX_LOG_PERSON_BRUNO]    = TRAINER_ELITE_FOUR_BRUNO,
+    [APEX_LOG_PERSON_AGATHA]   = TRAINER_ELITE_FOUR_AGATHA,
+    [APEX_LOG_PERSON_LANCE]    = TRAINER_ELITE_FOUR_LANCE,
+    [APEX_LOG_PERSON_BILL]     = APEX_LOG_BILL,
+    [APEX_LOG_PERSON_MRFUJI]   = APEX_LOG_MR_FUJI,
+    [APEX_LOG_PERSON_GIOVANNI] = TRAINER_LEADER_GIOVANNI
 };
 
 static const u8 *const sNonTrainerNamePointers[] = {
-    gFameCheckerOakName,
-    gFameCheckerDaisyName,
-    gFameCheckerBillName,
-    gFameCheckerMrFujiName
+    gApexLogOakName,
+    gApexLogDaisyName,
+    gApexLogBillName,
+    gApexLogMrFujiName
 };
 
-static const u8 sFameCheckerTrainerPicIdxs[] = {
-    [FAMECHECKER_OAK]      = TRAINER_PIC_CAMPER,
-    [FAMECHECKER_DAISY]    = TRAINER_PIC_LASS,
-    [FAMECHECKER_BROCK]    = TRAINER_PIC_LEADER_BROCK,
-    [FAMECHECKER_MISTY]    = TRAINER_PIC_LEADER_MISTY,
-    [FAMECHECKER_LTSURGE]  = TRAINER_PIC_LEADER_LT_SURGE,
-    [FAMECHECKER_ERIKA]    = TRAINER_PIC_LEADER_ERIKA,
-    [FAMECHECKER_KOGA]     = TRAINER_PIC_LEADER_KOGA,
-    [FAMECHECKER_SABRINA]  = TRAINER_PIC_LEADER_SABRINA,
-    [FAMECHECKER_BLAINE]   = TRAINER_PIC_LEADER_BLAINE,
-    [FAMECHECKER_LORELEI]  = TRAINER_PIC_ELITE_FOUR_LORELEI,
-    [FAMECHECKER_BRUNO]    = TRAINER_PIC_ELITE_FOUR_BRUNO,
-    [FAMECHECKER_AGATHA]   = TRAINER_PIC_ELITE_FOUR_AGATHA,
-    [FAMECHECKER_LANCE]    = TRAINER_PIC_ELITE_FOUR_LANCE,
-    [FAMECHECKER_BILL]     = TRAINER_PIC_PSYCHIC_M,
-    [FAMECHECKER_MRFUJI]   = TRAINER_PIC_GENTLEMAN,
-    [FAMECHECKER_GIOVANNI] = TRAINER_PIC_LEADER_GIOVANNI,
+static const u8 sApexLogTrainerPicIdxs[] = {
+    [APEX_LOG_PERSON_OAK]      = TRAINER_PIC_CAMPER,
+    [APEX_LOG_PERSON_DAISY]    = TRAINER_PIC_LASS,
+    [APEX_LOG_PERSON_BROCK]    = TRAINER_PIC_LEADER_BROCK,
+    [APEX_LOG_PERSON_MISTY]    = TRAINER_PIC_LEADER_MISTY,
+    [APEX_LOG_PERSON_LTSURGE]  = TRAINER_PIC_LEADER_LT_SURGE,
+    [APEX_LOG_PERSON_ERIKA]    = TRAINER_PIC_LEADER_ERIKA,
+    [APEX_LOG_PERSON_KOGA]     = TRAINER_PIC_LEADER_KOGA,
+    [APEX_LOG_PERSON_SABRINA]  = TRAINER_PIC_LEADER_SABRINA,
+    [APEX_LOG_PERSON_BLAINE]   = TRAINER_PIC_LEADER_BLAINE,
+    [APEX_LOG_PERSON_LORELEI]  = TRAINER_PIC_ELITE_FOUR_LORELEI,
+    [APEX_LOG_PERSON_BRUNO]    = TRAINER_PIC_ELITE_FOUR_BRUNO,
+    [APEX_LOG_PERSON_AGATHA]   = TRAINER_PIC_ELITE_FOUR_AGATHA,
+    [APEX_LOG_PERSON_LANCE]    = TRAINER_PIC_ELITE_FOUR_LANCE,
+    [APEX_LOG_PERSON_BILL]     = TRAINER_PIC_PSYCHIC_M,
+    [APEX_LOG_PERSON_MRFUJI]   = TRAINER_PIC_GENTLEMAN,
+    [APEX_LOG_PERSON_GIOVANNI] = TRAINER_PIC_LEADER_GIOVANNI,
 };
 
-static const u8 sFameCheckerTrainerGenders_Unused[] = {
-    [FAMECHECKER_OAK]      = MALE,
-    [FAMECHECKER_DAISY]    = FEMALE,
-    [FAMECHECKER_BROCK]    = MALE,
-    [FAMECHECKER_MISTY]    = FEMALE,
-    [FAMECHECKER_LTSURGE]  = MALE,
-    [FAMECHECKER_ERIKA]    = FEMALE,
-    [FAMECHECKER_KOGA]     = MALE,
-    [FAMECHECKER_SABRINA]  = FEMALE,
-    [FAMECHECKER_BLAINE]   = MALE,
-    [FAMECHECKER_LORELEI]  = FEMALE,
-    [FAMECHECKER_BRUNO]    = MALE,
-    [FAMECHECKER_AGATHA]   = FEMALE,
-    [FAMECHECKER_LANCE]    = MALE,
-    [FAMECHECKER_BILL]     = MALE,
-    [FAMECHECKER_MRFUJI]   = MALE,
-    [FAMECHECKER_GIOVANNI] = MALE,
+static const u8 sApexLogTrainerGenders_Unused[] = {
+    [APEX_LOG_PERSON_OAK]      = MALE,
+    [APEX_LOG_PERSON_DAISY]    = FEMALE,
+    [APEX_LOG_PERSON_BROCK]    = MALE,
+    [APEX_LOG_PERSON_MISTY]    = FEMALE,
+    [APEX_LOG_PERSON_LTSURGE]  = MALE,
+    [APEX_LOG_PERSON_ERIKA]    = FEMALE,
+    [APEX_LOG_PERSON_KOGA]     = MALE,
+    [APEX_LOG_PERSON_SABRINA]  = FEMALE,
+    [APEX_LOG_PERSON_BLAINE]   = MALE,
+    [APEX_LOG_PERSON_LORELEI]  = FEMALE,
+    [APEX_LOG_PERSON_BRUNO]    = MALE,
+    [APEX_LOG_PERSON_AGATHA]   = FEMALE,
+    [APEX_LOG_PERSON_LANCE]    = MALE,
+    [APEX_LOG_PERSON_BILL]     = MALE,
+    [APEX_LOG_PERSON_MRFUJI]   = MALE,
+    [APEX_LOG_PERSON_GIOVANNI] = MALE,
 };
 
-static const u8 *const sFameCheckerNameAndQuotesPointers[2 * NUM_FAMECHECKER_PERSONS] =
+static const u8 *const sApexLogNameAndQuotesPointers[2 * NUM_APEX_LOG_PERSONS] =
 {
-    gFameCheckerPersonName_ProfOak,
-    gFameCheckerPersonName_Daisy,
-    gFameCheckerPersonName_Brock,
-    gFameCheckerPersonName_Misty,
-    gFameCheckerPersonName_LtSurge,
-    gFameCheckerPersonName_Erika,
-    gFameCheckerPersonName_Koga,
-    gFameCheckerPersonName_Sabrina,
-    gFameCheckerPersonName_Blaine,
-    gFameCheckerPersonName_Lorelei,
-    gFameCheckerPersonName_Bruno,
-    gFameCheckerPersonName_Agatha,
-    gFameCheckerPersonName_Lance,
-    gFameCheckerPersonName_Bill,
-    gFameCheckerPersonName_MrFuji,
-    gFameCheckerPersonName_Giovanni,
+    gApexLogPersonName_ProfOak,
+    gApexLogPersonName_Daisy,
+    gApexLogPersonName_Brock,
+    gApexLogPersonName_Misty,
+    gApexLogPersonName_LtSurge,
+    gApexLogPersonName_Erika,
+    gApexLogPersonName_Koga,
+    gApexLogPersonName_Sabrina,
+    gApexLogPersonName_Blaine,
+    gApexLogPersonName_Lorelei,
+    gApexLogPersonName_Bruno,
+    gApexLogPersonName_Agatha,
+    gApexLogPersonName_Lance,
+    gApexLogPersonName_Bill,
+    gApexLogPersonName_MrFuji,
+    gApexLogPersonName_Giovanni,
 
-    gFameCheckerPersonQuote_ProfOak,
-    gFameCheckerPersonQuote_Daisy,
-    gFameCheckerPersonQuote_Brock,
-    gFameCheckerPersonQuote_Misty,
-    gFameCheckerPersonQuote_LtSurge,
-    gFameCheckerPersonQuote_Erika,
-    gFameCheckerPersonQuote_Koga,
-    gFameCheckerPersonQuote_Sabrina,
-    gFameCheckerPersonQuote_Blaine,
-    gFameCheckerPersonQuote_Lorelei,
-    gFameCheckerPersonQuote_Bruno,
-    gFameCheckerPersonQuote_Agatha,
-    gFameCheckerPersonQuote_Lance,
-    gFameCheckerPersonQuote_Bill,
-    gFameCheckerPersonQuote_MrFuji,
-    gFameCheckerPersonQuote_Giovanni
+    gApexLogPersonQuote_ProfOak,
+    gApexLogPersonQuote_Daisy,
+    gApexLogPersonQuote_Brock,
+    gApexLogPersonQuote_Misty,
+    gApexLogPersonQuote_LtSurge,
+    gApexLogPersonQuote_Erika,
+    gApexLogPersonQuote_Koga,
+    gApexLogPersonQuote_Sabrina,
+    gApexLogPersonQuote_Blaine,
+    gApexLogPersonQuote_Lorelei,
+    gApexLogPersonQuote_Bruno,
+    gApexLogPersonQuote_Agatha,
+    gApexLogPersonQuote_Lance,
+    gApexLogPersonQuote_Bill,
+    gApexLogPersonQuote_MrFuji,
+    gApexLogPersonQuote_Giovanni
 };
 
-static const u8 *const sFameCheckerFlavorTextPointers[] = {
-    gFameCheckerFlavorText_ProfOak0, gFameCheckerFlavorText_ProfOak1, gFameCheckerFlavorText_ProfOak2, gFameCheckerFlavorText_ProfOak3, gFameCheckerFlavorText_ProfOak4, gFameCheckerFlavorText_ProfOak5,
-    gFameCheckerFlavorText_Daisy0, gFameCheckerFlavorText_Daisy1, gFameCheckerFlavorText_Daisy2, gFameCheckerFlavorText_Daisy3, gFameCheckerFlavorText_Daisy4, gFameCheckerFlavorText_Daisy5,
-    gFameCheckerFlavorText_Brock0, gFameCheckerFlavorText_Brock1, gFameCheckerFlavorText_Brock2, gFameCheckerFlavorText_Brock3, gFameCheckerFlavorText_Brock4, gFameCheckerFlavorText_Brock5,
-    gFameCheckerFlavorText_Misty0, gFameCheckerFlavorText_Misty1, gFameCheckerFlavorText_Misty2, gFameCheckerFlavorText_Misty3, gFameCheckerFlavorText_Misty4, gFameCheckerFlavorText_Misty5,
-    gFameCheckerFlavorText_LtSurge0, gFameCheckerFlavorText_LtSurge1, gFameCheckerFlavorText_LtSurge2, gFameCheckerFlavorText_LtSurge3, gFameCheckerFlavorText_LtSurge4, gFameCheckerFlavorText_LtSurge5,
-    gFameCheckerFlavorText_Erika0, gFameCheckerFlavorText_Erika1, gFameCheckerFlavorText_Erika2, gFameCheckerFlavorText_Erika3, gFameCheckerFlavorText_Erika4, gFameCheckerFlavorText_Erika5,
-    gFameCheckerFlavorText_Koga0, gFameCheckerFlavorText_Koga1, gFameCheckerFlavorText_Koga2, gFameCheckerFlavorText_Koga3, gFameCheckerFlavorText_Koga4, gFameCheckerFlavorText_Koga5,
-    gFameCheckerFlavorText_Sabrina0, gFameCheckerFlavorText_Sabrina1, gFameCheckerFlavorText_Sabrina2, gFameCheckerFlavorText_Sabrina3, gFameCheckerFlavorText_Sabrina4, gFameCheckerFlavorText_Sabrina5,
-    gFameCheckerFlavorText_Blaine0, gFameCheckerFlavorText_Blaine1, gFameCheckerFlavorText_Blaine2, gFameCheckerFlavorText_Blaine3, gFameCheckerFlavorText_Blaine4, gFameCheckerFlavorText_Blaine5,
-    gFameCheckerFlavorText_Lorelei0, gFameCheckerFlavorText_Lorelei1, gFameCheckerFlavorText_Lorelei2, gFameCheckerFlavorText_Lorelei3, gFameCheckerFlavorText_Lorelei4, gFameCheckerFlavorText_Lorelei5,
-    gFameCheckerFlavorText_Bruno0, gFameCheckerFlavorText_Bruno1, gFameCheckerFlavorText_Bruno2, gFameCheckerFlavorText_Bruno3, gFameCheckerFlavorText_Bruno4, gFameCheckerFlavorText_Bruno5,
-    gFameCheckerFlavorText_Agatha0, gFameCheckerFlavorText_Agatha1, gFameCheckerFlavorText_Agatha2, gFameCheckerFlavorText_Agatha3, gFameCheckerFlavorText_Agatha4, gFameCheckerFlavorText_Agatha5,
-    gFameCheckerFlavorText_Lance0, gFameCheckerFlavorText_Lance1, gFameCheckerFlavorText_Lance2, gFameCheckerFlavorText_Lance3, gFameCheckerFlavorText_Lance4, gFameCheckerFlavorText_Lance5,
-    gFameCheckerFlavorText_Bill0, gFameCheckerFlavorText_Bill1, gFameCheckerFlavorText_Bill2, gFameCheckerFlavorText_Bill3, gFameCheckerFlavorText_Bill4, gFameCheckerFlavorText_Bill5,
-    gFameCheckerFlavorText_MrFuji0, gFameCheckerFlavorText_MrFuji1, gFameCheckerFlavorText_MrFuji2, gFameCheckerFlavorText_MrFuji3, gFameCheckerFlavorText_MrFuji4, gFameCheckerFlavorText_MrFuji5,
-    gFameCheckerFlavorText_Giovanni0, gFameCheckerFlavorText_Giovanni1, gFameCheckerFlavorText_Giovanni2, gFameCheckerFlavorText_Giovanni3, gFameCheckerFlavorText_Giovanni4, gFameCheckerFlavorText_Giovanni5
+static const u8 *const sApexLogFlavorTextPointers[] = {
+    gApexLogFlavorText_ProfOak0, gApexLogFlavorText_ProfOak1, gApexLogFlavorText_ProfOak2, gApexLogFlavorText_ProfOak3, gApexLogFlavorText_ProfOak4, gApexLogFlavorText_ProfOak5,
+    gApexLogFlavorText_Daisy0, gApexLogFlavorText_Daisy1, gApexLogFlavorText_Daisy2, gApexLogFlavorText_Daisy3, gApexLogFlavorText_Daisy4, gApexLogFlavorText_Daisy5,
+    gApexLogFlavorText_Brock0, gApexLogFlavorText_Brock1, gApexLogFlavorText_Brock2, gApexLogFlavorText_Brock3, gApexLogFlavorText_Brock4, gApexLogFlavorText_Brock5,
+    gApexLogFlavorText_Misty0, gApexLogFlavorText_Misty1, gApexLogFlavorText_Misty2, gApexLogFlavorText_Misty3, gApexLogFlavorText_Misty4, gApexLogFlavorText_Misty5,
+    gApexLogFlavorText_LtSurge0, gApexLogFlavorText_LtSurge1, gApexLogFlavorText_LtSurge2, gApexLogFlavorText_LtSurge3, gApexLogFlavorText_LtSurge4, gApexLogFlavorText_LtSurge5,
+    gApexLogFlavorText_Erika0, gApexLogFlavorText_Erika1, gApexLogFlavorText_Erika2, gApexLogFlavorText_Erika3, gApexLogFlavorText_Erika4, gApexLogFlavorText_Erika5,
+    gApexLogFlavorText_Koga0, gApexLogFlavorText_Koga1, gApexLogFlavorText_Koga2, gApexLogFlavorText_Koga3, gApexLogFlavorText_Koga4, gApexLogFlavorText_Koga5,
+    gApexLogFlavorText_Sabrina0, gApexLogFlavorText_Sabrina1, gApexLogFlavorText_Sabrina2, gApexLogFlavorText_Sabrina3, gApexLogFlavorText_Sabrina4, gApexLogFlavorText_Sabrina5,
+    gApexLogFlavorText_Blaine0, gApexLogFlavorText_Blaine1, gApexLogFlavorText_Blaine2, gApexLogFlavorText_Blaine3, gApexLogFlavorText_Blaine4, gApexLogFlavorText_Blaine5,
+    gApexLogFlavorText_Lorelei0, gApexLogFlavorText_Lorelei1, gApexLogFlavorText_Lorelei2, gApexLogFlavorText_Lorelei3, gApexLogFlavorText_Lorelei4, gApexLogFlavorText_Lorelei5,
+    gApexLogFlavorText_Bruno0, gApexLogFlavorText_Bruno1, gApexLogFlavorText_Bruno2, gApexLogFlavorText_Bruno3, gApexLogFlavorText_Bruno4, gApexLogFlavorText_Bruno5,
+    gApexLogFlavorText_Agatha0, gApexLogFlavorText_Agatha1, gApexLogFlavorText_Agatha2, gApexLogFlavorText_Agatha3, gApexLogFlavorText_Agatha4, gApexLogFlavorText_Agatha5,
+    gApexLogFlavorText_Lance0, gApexLogFlavorText_Lance1, gApexLogFlavorText_Lance2, gApexLogFlavorText_Lance3, gApexLogFlavorText_Lance4, gApexLogFlavorText_Lance5,
+    gApexLogFlavorText_Bill0, gApexLogFlavorText_Bill1, gApexLogFlavorText_Bill2, gApexLogFlavorText_Bill3, gApexLogFlavorText_Bill4, gApexLogFlavorText_Bill5,
+    gApexLogFlavorText_MrFuji0, gApexLogFlavorText_MrFuji1, gApexLogFlavorText_MrFuji2, gApexLogFlavorText_MrFuji3, gApexLogFlavorText_MrFuji4, gApexLogFlavorText_MrFuji5,
+    gApexLogFlavorText_Giovanni0, gApexLogFlavorText_Giovanni1, gApexLogFlavorText_Giovanni2, gApexLogFlavorText_Giovanni3, gApexLogFlavorText_Giovanni4, gApexLogFlavorText_Giovanni5
 };
 
-static const u8 sFameCheckerArrayNpcGraphicsIds[] = {
+static const u8 sApexLogArrayNpcGraphicsIds[] = {
     // OAK
     OBJ_EVENT_GFX_SIGN,
     OBJ_EVENT_GFX_PROF_OAK,
@@ -578,41 +578,41 @@ static const u8 sFameCheckerArrayNpcGraphicsIds[] = {
 };
 
 static const u8 *const sFlavorTextOriginLocationTexts[] = {
-    gFameCheckerFlavorTextOriginLocation_ProfOak0, gFameCheckerFlavorTextOriginLocation_ProfOak1, gFameCheckerFlavorTextOriginLocation_ProfOak2, gFameCheckerFlavorTextOriginLocation_ProfOak3, gFameCheckerFlavorTextOriginLocation_ProfOak4, gFameCheckerFlavorTextOriginLocation_ProfOak5,
-    gFameCheckerFlavorTextOriginLocation_Daisy0, gFameCheckerFlavorTextOriginLocation_Daisy1, gFameCheckerFlavorTextOriginLocation_Daisy2, gFameCheckerFlavorTextOriginLocation_Daisy3, gFameCheckerFlavorTextOriginLocation_Daisy4, gFameCheckerFlavorTextOriginLocation_Daisy5,
-    gFameCheckerFlavorTextOriginLocation_Brock0, gFameCheckerFlavorTextOriginLocation_Brock1, gFameCheckerFlavorTextOriginLocation_Brock2, gFameCheckerFlavorTextOriginLocation_Brock3, gFameCheckerFlavorTextOriginLocation_Brock4, gFameCheckerFlavorTextOriginLocation_Brock5,
-    gFameCheckerFlavorTextOriginLocation_Misty0, gFameCheckerFlavorTextOriginLocation_Misty1, gFameCheckerFlavorTextOriginLocation_Misty2, gFameCheckerFlavorTextOriginLocation_Misty3, gFameCheckerFlavorTextOriginLocation_Misty4, gFameCheckerFlavorTextOriginLocation_Misty5,
-    gFameCheckerFlavorTextOriginLocation_LtSurge0, gFameCheckerFlavorTextOriginLocation_LtSurge1, gFameCheckerFlavorTextOriginLocation_LtSurge2, gFameCheckerFlavorTextOriginLocation_LtSurge3, gFameCheckerFlavorTextOriginLocation_LtSurge4, gFameCheckerFlavorTextOriginLocation_LtSurge5,
-    gFameCheckerFlavorTextOriginLocation_Erika0, gFameCheckerFlavorTextOriginLocation_Erika1, gFameCheckerFlavorTextOriginLocation_Erika2, gFameCheckerFlavorTextOriginLocation_Erika3, gFameCheckerFlavorTextOriginLocation_Erika4, gFameCheckerFlavorTextOriginLocation_Erika5,
-    gFameCheckerFlavorTextOriginLocation_Koga0, gFameCheckerFlavorTextOriginLocation_Koga1, gFameCheckerFlavorTextOriginLocation_Koga2, gFameCheckerFlavorTextOriginLocation_Koga3, gFameCheckerFlavorTextOriginLocation_Koga4, gFameCheckerFlavorTextOriginLocation_Koga5,
-    gFameCheckerFlavorTextOriginLocation_Sabrina0, gFameCheckerFlavorTextOriginLocation_Sabrina1, gFameCheckerFlavorTextOriginLocation_Sabrina2, gFameCheckerFlavorTextOriginLocation_Sabrina3, gFameCheckerFlavorTextOriginLocation_Sabrina4, gFameCheckerFlavorTextOriginLocation_Sabrina5,
-    gFameCheckerFlavorTextOriginLocation_Blaine0, gFameCheckerFlavorTextOriginLocation_Blaine1, gFameCheckerFlavorTextOriginLocation_Blaine2, gFameCheckerFlavorTextOriginLocation_Blaine3, gFameCheckerFlavorTextOriginLocation_Blaine4, gFameCheckerFlavorTextOriginLocation_Blaine5,
-    gFameCheckerFlavorTextOriginLocation_Lorelei0, gFameCheckerFlavorTextOriginLocation_Lorelei1, gFameCheckerFlavorTextOriginLocation_Lorelei2, gFameCheckerFlavorTextOriginLocation_Lorelei3, gFameCheckerFlavorTextOriginLocation_Lorelei4, gFameCheckerFlavorTextOriginLocation_Lorelei5,
-    gFameCheckerFlavorTextOriginLocation_Bruno0, gFameCheckerFlavorTextOriginLocation_Bruno1, gFameCheckerFlavorTextOriginLocation_Bruno2, gFameCheckerFlavorTextOriginLocation_Bruno3, gFameCheckerFlavorTextOriginLocation_Bruno4, gFameCheckerFlavorTextOriginLocation_Bruno5,
-    gFameCheckerFlavorTextOriginLocation_Agatha0, gFameCheckerFlavorTextOriginLocation_Agatha1, gFameCheckerFlavorTextOriginLocation_Agatha2, gFameCheckerFlavorTextOriginLocation_Agatha3, gFameCheckerFlavorTextOriginLocation_Agatha4, gFameCheckerFlavorTextOriginLocation_Agatha5,
-    gFameCheckerFlavorTextOriginLocation_Lance0, gFameCheckerFlavorTextOriginLocation_Lance1, gFameCheckerFlavorTextOriginLocation_Lance2, gFameCheckerFlavorTextOriginLocation_Lance3, gFameCheckerFlavorTextOriginLocation_Lance4, gFameCheckerFlavorTextOriginLocation_Lance5,
-    gFameCheckerFlavorTextOriginLocation_Bill0, gFameCheckerFlavorTextOriginLocation_Bill1, gFameCheckerFlavorTextOriginLocation_Bill2, gFameCheckerFlavorTextOriginLocation_Bill3, gFameCheckerFlavorTextOriginLocation_Bill4, gFameCheckerFlavorTextOriginLocation_Bill5,
-    gFameCheckerFlavorTextOriginLocation_MrFuji0, gFameCheckerFlavorTextOriginLocation_MrFuji1, gFameCheckerFlavorTextOriginLocation_MrFuji2, gFameCheckerFlavorTextOriginLocation_MrFuji3, gFameCheckerFlavorTextOriginLocation_MrFuji4, gFameCheckerFlavorTextOriginLocation_MrFuji5,
-    gFameCheckerFlavorTextOriginLocation_Giovanni0, gFameCheckerFlavorTextOriginLocation_Giovanni1, gFameCheckerFlavorTextOriginLocation_Giovanni2, gFameCheckerFlavorTextOriginLocation_Giovanni3, gFameCheckerFlavorTextOriginLocation_Giovanni4, gFameCheckerFlavorTextOriginLocation_Giovanni5
+    gApexLogFlavorTextOriginLocation_ProfOak0, gApexLogFlavorTextOriginLocation_ProfOak1, gApexLogFlavorTextOriginLocation_ProfOak2, gApexLogFlavorTextOriginLocation_ProfOak3, gApexLogFlavorTextOriginLocation_ProfOak4, gApexLogFlavorTextOriginLocation_ProfOak5,
+    gApexLogFlavorTextOriginLocation_Daisy0, gApexLogFlavorTextOriginLocation_Daisy1, gApexLogFlavorTextOriginLocation_Daisy2, gApexLogFlavorTextOriginLocation_Daisy3, gApexLogFlavorTextOriginLocation_Daisy4, gApexLogFlavorTextOriginLocation_Daisy5,
+    gApexLogFlavorTextOriginLocation_Brock0, gApexLogFlavorTextOriginLocation_Brock1, gApexLogFlavorTextOriginLocation_Brock2, gApexLogFlavorTextOriginLocation_Brock3, gApexLogFlavorTextOriginLocation_Brock4, gApexLogFlavorTextOriginLocation_Brock5,
+    gApexLogFlavorTextOriginLocation_Misty0, gApexLogFlavorTextOriginLocation_Misty1, gApexLogFlavorTextOriginLocation_Misty2, gApexLogFlavorTextOriginLocation_Misty3, gApexLogFlavorTextOriginLocation_Misty4, gApexLogFlavorTextOriginLocation_Misty5,
+    gApexLogFlavorTextOriginLocation_LtSurge0, gApexLogFlavorTextOriginLocation_LtSurge1, gApexLogFlavorTextOriginLocation_LtSurge2, gApexLogFlavorTextOriginLocation_LtSurge3, gApexLogFlavorTextOriginLocation_LtSurge4, gApexLogFlavorTextOriginLocation_LtSurge5,
+    gApexLogFlavorTextOriginLocation_Erika0, gApexLogFlavorTextOriginLocation_Erika1, gApexLogFlavorTextOriginLocation_Erika2, gApexLogFlavorTextOriginLocation_Erika3, gApexLogFlavorTextOriginLocation_Erika4, gApexLogFlavorTextOriginLocation_Erika5,
+    gApexLogFlavorTextOriginLocation_Koga0, gApexLogFlavorTextOriginLocation_Koga1, gApexLogFlavorTextOriginLocation_Koga2, gApexLogFlavorTextOriginLocation_Koga3, gApexLogFlavorTextOriginLocation_Koga4, gApexLogFlavorTextOriginLocation_Koga5,
+    gApexLogFlavorTextOriginLocation_Sabrina0, gApexLogFlavorTextOriginLocation_Sabrina1, gApexLogFlavorTextOriginLocation_Sabrina2, gApexLogFlavorTextOriginLocation_Sabrina3, gApexLogFlavorTextOriginLocation_Sabrina4, gApexLogFlavorTextOriginLocation_Sabrina5,
+    gApexLogFlavorTextOriginLocation_Blaine0, gApexLogFlavorTextOriginLocation_Blaine1, gApexLogFlavorTextOriginLocation_Blaine2, gApexLogFlavorTextOriginLocation_Blaine3, gApexLogFlavorTextOriginLocation_Blaine4, gApexLogFlavorTextOriginLocation_Blaine5,
+    gApexLogFlavorTextOriginLocation_Lorelei0, gApexLogFlavorTextOriginLocation_Lorelei1, gApexLogFlavorTextOriginLocation_Lorelei2, gApexLogFlavorTextOriginLocation_Lorelei3, gApexLogFlavorTextOriginLocation_Lorelei4, gApexLogFlavorTextOriginLocation_Lorelei5,
+    gApexLogFlavorTextOriginLocation_Bruno0, gApexLogFlavorTextOriginLocation_Bruno1, gApexLogFlavorTextOriginLocation_Bruno2, gApexLogFlavorTextOriginLocation_Bruno3, gApexLogFlavorTextOriginLocation_Bruno4, gApexLogFlavorTextOriginLocation_Bruno5,
+    gApexLogFlavorTextOriginLocation_Agatha0, gApexLogFlavorTextOriginLocation_Agatha1, gApexLogFlavorTextOriginLocation_Agatha2, gApexLogFlavorTextOriginLocation_Agatha3, gApexLogFlavorTextOriginLocation_Agatha4, gApexLogFlavorTextOriginLocation_Agatha5,
+    gApexLogFlavorTextOriginLocation_Lance0, gApexLogFlavorTextOriginLocation_Lance1, gApexLogFlavorTextOriginLocation_Lance2, gApexLogFlavorTextOriginLocation_Lance3, gApexLogFlavorTextOriginLocation_Lance4, gApexLogFlavorTextOriginLocation_Lance5,
+    gApexLogFlavorTextOriginLocation_Bill0, gApexLogFlavorTextOriginLocation_Bill1, gApexLogFlavorTextOriginLocation_Bill2, gApexLogFlavorTextOriginLocation_Bill3, gApexLogFlavorTextOriginLocation_Bill4, gApexLogFlavorTextOriginLocation_Bill5,
+    gApexLogFlavorTextOriginLocation_MrFuji0, gApexLogFlavorTextOriginLocation_MrFuji1, gApexLogFlavorTextOriginLocation_MrFuji2, gApexLogFlavorTextOriginLocation_MrFuji3, gApexLogFlavorTextOriginLocation_MrFuji4, gApexLogFlavorTextOriginLocation_MrFuji5,
+    gApexLogFlavorTextOriginLocation_Giovanni0, gApexLogFlavorTextOriginLocation_Giovanni1, gApexLogFlavorTextOriginLocation_Giovanni2, gApexLogFlavorTextOriginLocation_Giovanni3, gApexLogFlavorTextOriginLocation_Giovanni4, gApexLogFlavorTextOriginLocation_Giovanni5
 };
 
 static const u8 *const sFlavorTextOriginObjectNameTexts[] = {
-    gFameCheckerFlavorTextOriginObjectName_ProfOak0, gFameCheckerFlavorTextOriginObjectName_ProfOak1, gFameCheckerFlavorTextOriginObjectName_ProfOak2, gFameCheckerFlavorTextOriginObjectName_ProfOak3, gFameCheckerFlavorTextOriginObjectName_ProfOak4, gFameCheckerFlavorTextOriginObjectName_ProfOak5,
-    gFameCheckerFlavorTextOriginObjectName_Daisy0, gFameCheckerFlavorTextOriginObjectName_Daisy1, gFameCheckerFlavorTextOriginObjectName_Daisy2, gFameCheckerFlavorTextOriginObjectName_Daisy3, gFameCheckerFlavorTextOriginObjectName_Daisy4, gFameCheckerFlavorTextOriginObjectName_Daisy5,
-    gFameCheckerFlavorTextOriginObjectName_Brock0, gFameCheckerFlavorTextOriginObjectName_Brock1, gFameCheckerFlavorTextOriginObjectName_Brock2, gFameCheckerFlavorTextOriginObjectName_Brock3, gFameCheckerFlavorTextOriginObjectName_Brock4, gFameCheckerFlavorTextOriginObjectName_Brock5,
-    gFameCheckerFlavorTextOriginObjectName_Misty0, gFameCheckerFlavorTextOriginObjectName_Misty1, gFameCheckerFlavorTextOriginObjectName_Misty2, gFameCheckerFlavorTextOriginObjectName_Misty3, gFameCheckerFlavorTextOriginObjectName_Misty4, gFameCheckerFlavorTextOriginObjectName_Misty5,
-    gFameCheckerFlavorTextOriginObjectName_LtSurge0, gFameCheckerFlavorTextOriginObjectName_LtSurge1, gFameCheckerFlavorTextOriginObjectName_LtSurge2, gFameCheckerFlavorTextOriginObjectName_LtSurge3, gFameCheckerFlavorTextOriginObjectName_LtSurge4, gFameCheckerFlavorTextOriginObjectName_LtSurge5,
-    gFameCheckerFlavorTextOriginObjectName_Erika0, gFameCheckerFlavorTextOriginObjectName_Erika1, gFameCheckerFlavorTextOriginObjectName_Erika2, gFameCheckerFlavorTextOriginObjectName_Erika3, gFameCheckerFlavorTextOriginObjectName_Erika4, gFameCheckerFlavorTextOriginObjectName_Erika5,
-    gFameCheckerFlavorTextOriginObjectName_Koga0, gFameCheckerFlavorTextOriginObjectName_Koga1, gFameCheckerFlavorTextOriginObjectName_Koga2, gFameCheckerFlavorTextOriginObjectName_Koga3, gFameCheckerFlavorTextOriginObjectName_Koga4, gFameCheckerFlavorTextOriginObjectName_Koga5,
-    gFameCheckerFlavorTextOriginObjectName_Sabrina0, gFameCheckerFlavorTextOriginObjectName_Sabrina1, gFameCheckerFlavorTextOriginObjectName_Sabrina2, gFameCheckerFlavorTextOriginObjectName_Sabrina3, gFameCheckerFlavorTextOriginObjectName_Sabrina4, gFameCheckerFlavorTextOriginObjectName_Sabrina5,
-    gFameCheckerFlavorTextOriginObjectName_Blaine0, gFameCheckerFlavorTextOriginObjectName_Blaine1, gFameCheckerFlavorTextOriginObjectName_Blaine2, gFameCheckerFlavorTextOriginObjectName_Blaine3, gFameCheckerFlavorTextOriginObjectName_Blaine4, gFameCheckerFlavorTextOriginObjectName_Blaine5,
-    gFameCheckerFlavorTextOriginObjectName_Lorelei0, gFameCheckerFlavorTextOriginObjectName_Lorelei1, gFameCheckerFlavorTextOriginObjectName_Lorelei2, gFameCheckerFlavorTextOriginObjectName_Lorelei3, gFameCheckerFlavorTextOriginObjectName_Lorelei4, gFameCheckerFlavorTextOriginObjectName_Lorelei5,
-    gFameCheckerFlavorTextOriginObjectName_Bruno0, gFameCheckerFlavorTextOriginObjectName_Bruno1, gFameCheckerFlavorTextOriginObjectName_Bruno2, gFameCheckerFlavorTextOriginObjectName_Bruno3, gFameCheckerFlavorTextOriginObjectName_Bruno4, gFameCheckerFlavorTextOriginObjectName_Bruno5,
-    gFameCheckerFlavorTextOriginObjectName_Agatha0, gFameCheckerFlavorTextOriginObjectName_Agatha1, gFameCheckerFlavorTextOriginObjectName_Agatha2, gFameCheckerFlavorTextOriginObjectName_Agatha3, gFameCheckerFlavorTextOriginObjectName_Agatha4, gFameCheckerFlavorTextOriginObjectName_Agatha5,
-    gFameCheckerFlavorTextOriginObjectName_Lance0, gFameCheckerFlavorTextOriginObjectName_Lance1, gFameCheckerFlavorTextOriginObjectName_Lance2, gFameCheckerFlavorTextOriginObjectName_Lance3, gFameCheckerFlavorTextOriginObjectName_Lance4, gFameCheckerFlavorTextOriginObjectName_Lance5,
-    gFameCheckerFlavorTextOriginObjectName_Bill0, gFameCheckerFlavorTextOriginObjectName_Bill1, gFameCheckerFlavorTextOriginObjectName_Bill2, gFameCheckerFlavorTextOriginObjectName_Bill3, gFameCheckerFlavorTextOriginObjectName_Bill4, gFameCheckerFlavorTextOriginObjectName_Bill5,
-    gFameCheckerFlavorTextOriginObjectName_MrFuji0, gFameCheckerFlavorTextOriginObjectName_MrFuji1, gFameCheckerFlavorTextOriginObjectName_MrFuji2, gFameCheckerFlavorTextOriginObjectName_MrFuji3, gFameCheckerFlavorTextOriginObjectName_MrFuji4, gFameCheckerFlavorTextOriginObjectName_MrFuji5,
-    gFameCheckerFlavorTextOriginObjectName_Giovanni0, gFameCheckerFlavorTextOriginObjectName_Giovanni1, gFameCheckerFlavorTextOriginObjectName_Giovanni2, gFameCheckerFlavorTextOriginObjectName_Giovanni3, gFameCheckerFlavorTextOriginObjectName_Giovanni4, gFameCheckerFlavorTextOriginObjectName_Giovanni5
+    gApexLogFlavorTextOriginObjectName_ProfOak0, gApexLogFlavorTextOriginObjectName_ProfOak1, gApexLogFlavorTextOriginObjectName_ProfOak2, gApexLogFlavorTextOriginObjectName_ProfOak3, gApexLogFlavorTextOriginObjectName_ProfOak4, gApexLogFlavorTextOriginObjectName_ProfOak5,
+    gApexLogFlavorTextOriginObjectName_Daisy0, gApexLogFlavorTextOriginObjectName_Daisy1, gApexLogFlavorTextOriginObjectName_Daisy2, gApexLogFlavorTextOriginObjectName_Daisy3, gApexLogFlavorTextOriginObjectName_Daisy4, gApexLogFlavorTextOriginObjectName_Daisy5,
+    gApexLogFlavorTextOriginObjectName_Brock0, gApexLogFlavorTextOriginObjectName_Brock1, gApexLogFlavorTextOriginObjectName_Brock2, gApexLogFlavorTextOriginObjectName_Brock3, gApexLogFlavorTextOriginObjectName_Brock4, gApexLogFlavorTextOriginObjectName_Brock5,
+    gApexLogFlavorTextOriginObjectName_Misty0, gApexLogFlavorTextOriginObjectName_Misty1, gApexLogFlavorTextOriginObjectName_Misty2, gApexLogFlavorTextOriginObjectName_Misty3, gApexLogFlavorTextOriginObjectName_Misty4, gApexLogFlavorTextOriginObjectName_Misty5,
+    gApexLogFlavorTextOriginObjectName_LtSurge0, gApexLogFlavorTextOriginObjectName_LtSurge1, gApexLogFlavorTextOriginObjectName_LtSurge2, gApexLogFlavorTextOriginObjectName_LtSurge3, gApexLogFlavorTextOriginObjectName_LtSurge4, gApexLogFlavorTextOriginObjectName_LtSurge5,
+    gApexLogFlavorTextOriginObjectName_Erika0, gApexLogFlavorTextOriginObjectName_Erika1, gApexLogFlavorTextOriginObjectName_Erika2, gApexLogFlavorTextOriginObjectName_Erika3, gApexLogFlavorTextOriginObjectName_Erika4, gApexLogFlavorTextOriginObjectName_Erika5,
+    gApexLogFlavorTextOriginObjectName_Koga0, gApexLogFlavorTextOriginObjectName_Koga1, gApexLogFlavorTextOriginObjectName_Koga2, gApexLogFlavorTextOriginObjectName_Koga3, gApexLogFlavorTextOriginObjectName_Koga4, gApexLogFlavorTextOriginObjectName_Koga5,
+    gApexLogFlavorTextOriginObjectName_Sabrina0, gApexLogFlavorTextOriginObjectName_Sabrina1, gApexLogFlavorTextOriginObjectName_Sabrina2, gApexLogFlavorTextOriginObjectName_Sabrina3, gApexLogFlavorTextOriginObjectName_Sabrina4, gApexLogFlavorTextOriginObjectName_Sabrina5,
+    gApexLogFlavorTextOriginObjectName_Blaine0, gApexLogFlavorTextOriginObjectName_Blaine1, gApexLogFlavorTextOriginObjectName_Blaine2, gApexLogFlavorTextOriginObjectName_Blaine3, gApexLogFlavorTextOriginObjectName_Blaine4, gApexLogFlavorTextOriginObjectName_Blaine5,
+    gApexLogFlavorTextOriginObjectName_Lorelei0, gApexLogFlavorTextOriginObjectName_Lorelei1, gApexLogFlavorTextOriginObjectName_Lorelei2, gApexLogFlavorTextOriginObjectName_Lorelei3, gApexLogFlavorTextOriginObjectName_Lorelei4, gApexLogFlavorTextOriginObjectName_Lorelei5,
+    gApexLogFlavorTextOriginObjectName_Bruno0, gApexLogFlavorTextOriginObjectName_Bruno1, gApexLogFlavorTextOriginObjectName_Bruno2, gApexLogFlavorTextOriginObjectName_Bruno3, gApexLogFlavorTextOriginObjectName_Bruno4, gApexLogFlavorTextOriginObjectName_Bruno5,
+    gApexLogFlavorTextOriginObjectName_Agatha0, gApexLogFlavorTextOriginObjectName_Agatha1, gApexLogFlavorTextOriginObjectName_Agatha2, gApexLogFlavorTextOriginObjectName_Agatha3, gApexLogFlavorTextOriginObjectName_Agatha4, gApexLogFlavorTextOriginObjectName_Agatha5,
+    gApexLogFlavorTextOriginObjectName_Lance0, gApexLogFlavorTextOriginObjectName_Lance1, gApexLogFlavorTextOriginObjectName_Lance2, gApexLogFlavorTextOriginObjectName_Lance3, gApexLogFlavorTextOriginObjectName_Lance4, gApexLogFlavorTextOriginObjectName_Lance5,
+    gApexLogFlavorTextOriginObjectName_Bill0, gApexLogFlavorTextOriginObjectName_Bill1, gApexLogFlavorTextOriginObjectName_Bill2, gApexLogFlavorTextOriginObjectName_Bill3, gApexLogFlavorTextOriginObjectName_Bill4, gApexLogFlavorTextOriginObjectName_Bill5,
+    gApexLogFlavorTextOriginObjectName_MrFuji0, gApexLogFlavorTextOriginObjectName_MrFuji1, gApexLogFlavorTextOriginObjectName_MrFuji2, gApexLogFlavorTextOriginObjectName_MrFuji3, gApexLogFlavorTextOriginObjectName_MrFuji4, gApexLogFlavorTextOriginObjectName_MrFuji5,
+    gApexLogFlavorTextOriginObjectName_Giovanni0, gApexLogFlavorTextOriginObjectName_Giovanni1, gApexLogFlavorTextOriginObjectName_Giovanni2, gApexLogFlavorTextOriginObjectName_Giovanni3, gApexLogFlavorTextOriginObjectName_Giovanni4, gApexLogFlavorTextOriginObjectName_Giovanni5
 };
 
 static const struct SpriteSheet sUISpriteSheets[] = {
@@ -808,14 +808,14 @@ static const struct SpriteTemplate sBillSpriteTemplate = {
     SPRITETAG_BILL, 0xffff, &sDaisyFujiOakBillOamData, sDaisyFujiOakBillAnims, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy
 };
 
-static void FC_VBlankCallback(void)
+static void ApexLog_VBlankCallback(void)
 {
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
 }
 
-static void MainCB2_FameCheckerMain(void)
+static void MainCB2_ApexLogMain(void)
 {
     RunTasks();
     AnimateSprites();
@@ -826,14 +826,14 @@ static void MainCB2_FameCheckerMain(void)
 void UseApexLog(MainCallback savedCallback)
 {
     SetVBlankCallback(NULL);
-    sFameCheckerData = AllocZeroed(sizeof(struct FameCheckerData));
-    sFameCheckerData->savedCallback = savedCallback;
-    sFameCheckerData->listMenuCurIdx = 0;
-    sFameCheckerData->listMenuTopIdx2 = 0;
-    sFameCheckerData->listMenuDrawnSelIdx = 0;
-    sFameCheckerData->viewingFlavorText = FALSE;
+    sApexLogData = AllocZeroed(sizeof(struct ApexLogData));
+    sApexLogData->savedCallback = savedCallback;
+    sApexLogData->listMenuCurIdx = 0;
+    sApexLogData->listMenuTopIdx2 = 0;
+    sApexLogData->listMenuDrawnSelIdx = 0;
+    sApexLogData->viewingFlavorText = FALSE;
     PlaySE(SE_M_SWIFT);
-    SetMainCallback2(MainCB2_LoadFameChecker);
+    SetMainCallback2(MainCB2_LoadApexLog);
 }
 
 void UseApexRumorDossier(MainCallback savedCallback, u8 apexSubquest)
@@ -842,19 +842,19 @@ void UseApexRumorDossier(MainCallback savedCallback, u8 apexSubquest)
         apexSubquest = SUB_QUEST_APEX_TANGROWTH;
 
     SetVBlankCallback(NULL);
-    sFameCheckerData = AllocZeroed(sizeof(struct FameCheckerData));
-    sFameCheckerData->savedCallback = savedCallback;
-    sFameCheckerData->listMenuCurIdx = 0;
-    sFameCheckerData->listMenuTopIdx2 = 0;
-    sFameCheckerData->listMenuDrawnSelIdx = 0;
-    sFameCheckerData->viewingFlavorText = FALSE;
-    sFameCheckerData->isApexDossier = TRUE;
-    sFameCheckerData->apexSubquest = apexSubquest;
+    sApexLogData = AllocZeroed(sizeof(struct ApexLogData));
+    sApexLogData->savedCallback = savedCallback;
+    sApexLogData->listMenuCurIdx = 0;
+    sApexLogData->listMenuTopIdx2 = 0;
+    sApexLogData->listMenuDrawnSelIdx = 0;
+    sApexLogData->viewingFlavorText = FALSE;
+    sApexLogData->isApexDossier = TRUE;
+    sApexLogData->apexSubquest = apexSubquest;
     PlaySE(SE_M_SWIFT);
-    SetMainCallback2(MainCB2_LoadFameChecker);
+    SetMainCallback2(MainCB2_LoadApexLog);
 }
 
-static void MainCB2_LoadFameChecker(void)
+static void MainCB2_LoadApexLog(void)
 {
     switch (gMain.state)
     {
@@ -880,22 +880,22 @@ static void MainCB2_LoadFameChecker(void)
             gMain.state++;
             break;
         case 3:
-            LoadBgTiles(3, gFameCheckerBgTiles, sizeof(gFameCheckerBgTiles), 0);
-            CopyToBgTilemapBufferRect(3, gFameCheckerBg3Tilemap, 0, 0, 32, 32);
-            LoadPalette(&gFameCheckerBgPals[0], BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
-            LoadPalette(&gFameCheckerBgPals[1], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
-            CopyToBgTilemapBufferRect(2, gFameCheckerBg2Tilemap, 0, 0, 32, 32);
-            if (sFameCheckerData->isApexDossier)
+            LoadBgTiles(3, gApexLogBgTiles, sizeof(gApexLogBgTiles), 0);
+            CopyToBgTilemapBufferRect(3, gApexLogBg3Tilemap, 0, 0, 32, 32);
+            LoadPalette(&gApexLogBgPals[0], BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
+            LoadPalette(&gApexLogBgPals[1], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+            CopyToBgTilemapBufferRect(2, gApexLogBg2Tilemap, 0, 0, 32, 32);
+            if (sApexLogData->isApexDossier)
             {
                 FillBgTilemapBufferRect(2, 0x000, 0, 2, 10, 12, 0);
                 FillBgTilemapBufferRect(2, 0x000, 14, 9, 13, 1, 0);
                 FillBgTilemapBufferRect(2, 0x000, 14, 10, 13, 3, 0);
                 FillBgTilemapBufferRect(2, 0x000, 14, 13, 13, 1, 0);
-                CopyToBgTilemapBufferRect(2, &gFameCheckerBg2Tilemap[9 * 32 + 14], FC_APEX_DOSSIER_INFOBOX_LEFT, 9, 13, 1);
-                CopyToBgTilemapBufferRect(2, &gFameCheckerBg2Tilemap[13 * 32 + 14], FC_APEX_DOSSIER_INFOBOX_LEFT, 13, 13, 1);
+                CopyToBgTilemapBufferRect(2, &gApexLogBg2Tilemap[9 * 32 + 14], ApexLog_APEX_DOSSIER_INFOBOX_LEFT, 9, 13, 1);
+                CopyToBgTilemapBufferRect(2, &gApexLogBg2Tilemap[13 * 32 + 14], ApexLog_APEX_DOSSIER_INFOBOX_LEFT, 13, 13, 1);
                 UpdateInfoBoxTilemap(2, 2);
             }
-            CopyToBgTilemapBufferRect_ChangePalette(1, sFameCheckerTilemap, 30, 0, 32, 32, 0x11);
+            CopyToBgTilemapBufferRect_ChangePalette(1, sApexLogTilemap, 30, 0, 32, 32, 0x11);
             LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
             gMain.state++;
             break;
@@ -914,20 +914,20 @@ static void MainCB2_LoadFameChecker(void)
             break;
         case 5:
             InitWindows(sUIWindowTemplates);
-            if (sFameCheckerData->isApexDossier)
-                SetWindowAttribute(FCWINDOWID_ICONDESC, WINDOW_TILEMAP_LEFT, FC_APEX_DOSSIER_ICONDESC_LEFT);
+            if (sApexLogData->isApexDossier)
+                SetWindowAttribute(FCWINDOWID_ICONDESC, WINDOW_TILEMAP_LEFT, ApexLog_APEX_DOSSIER_ICONDESC_LEFT);
             DeactivateAllTextPrinters();
             Setup_DrawMsgAndListBoxes();
-            if (!sFameCheckerData->isApexDossier)
+            if (!sApexLogData->isApexDossier)
             {
                 sListMenuItems = AllocZeroed(17 * sizeof(struct ListMenuItem));
-                FC_CreateListMenu();
+                ApexLog_CreateListMenu();
             }
             gMain.state++;
             break;
         case 6:
             LoadUISpriteSheetsAndPalettes();
-            CreateAllFlavorTextIcons(FAMECHECKER_OAK);
+            CreateAllFlavorTextIcons(APEX_LOG_PERSON_OAK);
             WipeMsgBoxAndTransfer();
             BeginNormalPaletteFade(PALETTES_ALL,0, 16, 0, 0);
             gMain.state++;
@@ -937,15 +937,15 @@ static void MainCB2_LoadFameChecker(void)
             SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_BG1 | BLDCNT_TGT2_BG2 | BLDCNT_TGT2_BG3 | BLDCNT_TGT2_OBJ | BLDCNT_TGT2_BD);
             SetGpuReg(REG_OFFSET_BLDALPHA, 0x07);
             SetGpuReg(REG_OFFSET_BLDY, 0x08);
-            SetVBlankCallback(FC_VBlankCallback);
-            if (!sFameCheckerData->isApexDossier)
+            SetVBlankCallback(ApexLog_VBlankCallback);
+            if (!sApexLogData->isApexDossier)
             {
-                sFameCheckerData->listMenuTopIdx = 0;
-                FC_CreateScrollIndicatorArrowPair();
+                sApexLogData->listMenuTopIdx = 0;
+                ApexLog_CreateScrollIndicatorArrowPair();
             }
             UpdateInfoBoxTilemap(1, 4);
             CreateTask(Task_WaitFadeOnInit, 0x08);
-            SetMainCallback2(MainCB2_FameCheckerMain);
+            SetMainCallback2(MainCB2_ApexLogMain);
             gMain.state = 0;
             break;
     }
@@ -961,8 +961,8 @@ static void Task_WaitFadeOnInit(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        if (sFameCheckerData->isApexDossier && sFameCheckerData->personHasUnlockedPanels)
-            FC_EnterFlavorTextSelection(taskId, 1, FALSE);
+        if (sApexLogData->isApexDossier && sApexLogData->personHasUnlockedPanels)
+            ApexLog_EnterFlavorTextSelection(taskId, 1, FALSE);
         else
             gTasks[taskId].func = Task_TopMenuHandleInput;
     }
@@ -975,24 +975,24 @@ static void Task_TopMenuHandleInput(u8 taskId)
     if (FindTaskIdByFunc(Task_FCOpenOrCloseInfoBox) == 0xFF)
     {
         RunTextPrinters();
-        if ((JOY_NEW(SELECT_BUTTON)) && !sFameCheckerData->inPickMode && sFameCheckerData->savedCallback != CB2_BagMenuFromStartMenu)
-            task->func = Task_StartToCloseFameChecker;
-        else if (JOY_NEW(START_BUTTON) && !sFameCheckerData->isApexDossier)
+        if ((JOY_NEW(SELECT_BUTTON)) && !sApexLogData->inPickMode && sApexLogData->savedCallback != CB2_BagMenuFromStartMenu)
+            task->func = Task_StartToCloseApexLog;
+        else if (JOY_NEW(START_BUTTON) && !sApexLogData->isApexDossier)
         {
-            cursorPos = FameCheckerGetCursorY();
+            cursorPos = ApexLogGetCursorY();
             if (TryExitPickMode(taskId) == TRUE)
             {
                 PlaySE(SE_M_LOCK_ON);
             }
-            else if (cursorPos != sFameCheckerData->numUnlockedPersons - 1) // anything but CANCEL
+            else if (cursorPos != sApexLogData->numUnlockedPersons - 1) // anything but CANCEL
             {
                 PlaySE(SE_M_LOCK_ON);
                 FillWindowPixelRect(FCWINDOWID_ICONDESC, PIXEL_FILL(0), 0, 0, 88, 32);
-                FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_ICONDESC);
+                ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_ICONDESC);
                 UpdateInfoBoxTilemap(2, 4);
                 UpdateInfoBoxTilemap(1, 5);
                 PrintUIHelp(1);
-                task->data[2] = CreatePersonPicSprite(sFameCheckerData->unlockedPersons[cursorPos]);
+                task->data[2] = CreatePersonPicSprite(sApexLogData->unlockedPersons[cursorPos]);
                 gSprites[task->data[2]].x2 = 0xF0;
                 gSprites[task->data[2]].data[0] = 1;
                 task->data[3] = CreateSpinningPokeballSprite();
@@ -1004,29 +1004,29 @@ static void Task_TopMenuHandleInput(u8 taskId)
         else if (JOY_NEW(A_BUTTON))
         {
             cursorPos = ListMenu_ProcessInput(0);
-            if (cursorPos == sFameCheckerData->numUnlockedPersons - 1) // CANCEL
-                task->func = Task_StartToCloseFameChecker;
-            else if (sFameCheckerData->inPickMode)
+            if (cursorPos == sApexLogData->numUnlockedPersons - 1) // CANCEL
+                task->func = Task_StartToCloseApexLog;
+            else if (sApexLogData->inPickMode)
             {
                 if (!IsTextPrinterActive(2) && HasUnlockedAllFlavorTextsForCurrentPerson() == TRUE)
                     GetPickModeText();
             }
-            else if (sFameCheckerData->personHasUnlockedPanels)
+            else if (sApexLogData->personHasUnlockedPanels)
             {
-                FC_EnterFlavorTextSelection(taskId, sFameCheckerData->isApexDossier ? 1 : task->data[1], TRUE);
+                ApexLog_EnterFlavorTextSelection(taskId, sApexLogData->isApexDossier ? 1 : task->data[1], TRUE);
             }
         }
         else if (JOY_NEW(B_BUTTON))
         {
             if (TryExitPickMode(taskId) != TRUE)
-                task->func = Task_StartToCloseFameChecker;
+                task->func = Task_StartToCloseApexLog;
         }
         else
             ListMenu_ProcessInput(0);
     }
 }
 
-static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound)
+static void ApexLog_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSound)
 {
     u8 i;
     struct Task *task = &gTasks[taskId];
@@ -1039,13 +1039,13 @@ static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSou
     for (i = 0; i < 6; i++)
     {
         if (i != task->data[1])
-            SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_BLEND);
+            SetMessageSelectorIconObjMode(sApexLogData->spriteIds[i], ST_OAM_OBJ_BLEND);
     }
     gIconDescriptionBoxIsOpen = 0xFF;
-    if (!sFameCheckerData->isApexDossier)
+    if (!sApexLogData->isApexDossier)
         PlaceListMenuCursor(FALSE);
     PrintUIHelp(2);
-    if (gSprites[sFameCheckerData->spriteIds[task->data[1]]].data[1] != 0xFF) // not a ? tile
+    if (gSprites[sApexLogData->spriteIds[task->data[1]]].data[1] != 0xFF) // not a ? tile
     {
         PrintSelectedNameInBrightGreen(taskId);
         UpdateIconDescriptionBox(task->data[1]);
@@ -1057,7 +1057,7 @@ static void FC_EnterFlavorTextSelection(u8 taskId, u8 initialSlot, bool8 playSou
 static bool8 TryExitPickMode(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
-    if (sFameCheckerData->inPickMode)
+    if (sApexLogData->inPickMode)
     {
         gSprites[task->data[2]].data[0] = 2;
         gSprites[task->data[2]].x2 += 10;
@@ -1066,7 +1066,7 @@ static bool8 TryExitPickMode(u8 taskId)
         WipeMsgBoxAndTransfer();
         task->func = Task_ExitPickMode;
         MessageBoxPrintEmptyText();
-        sFameCheckerData->pickModeOverCancel = FALSE;
+        sApexLogData->pickModeOverCancel = FALSE;
         return TRUE;
     }
     return FALSE;
@@ -1074,7 +1074,7 @@ static bool8 TryExitPickMode(u8 taskId)
 
 static void MessageBoxPrintEmptyText(void)
 {
-    AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gFameCheckerText_ClearTextbox, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gApexLogText_ClearTextbox, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 }
 
 static void Task_EnterPickMode(u8 taskId)
@@ -1083,7 +1083,7 @@ static void Task_EnterPickMode(u8 taskId)
     if (gSprites[task->data[2]].data[0] == 0)
     {
         GetPickModeText();
-        sFameCheckerData->inPickMode = TRUE;
+        sApexLogData->inPickMode = TRUE;
         task->func = Task_TopMenuHandleInput;
     }
     else
@@ -1099,12 +1099,12 @@ static void Task_ExitPickMode(u8 taskId)
         ChangeBgX(1, 0x000, 0);
     if (gSprites[task->data[2]].data[0] == 0)
     {
-        if (sFameCheckerData->personHasUnlockedPanels)
+        if (sApexLogData->personHasUnlockedPanels)
             PrintUIHelp(0);
         UpdateInfoBoxTilemap(1, 4);
         UpdateInfoBoxTilemap(2, 2);
-        sFameCheckerData->inPickMode = FALSE;
-        DestroyPersonPicSprite(taskId, FameCheckerGetCursorY());
+        sApexLogData->inPickMode = FALSE;
+        DestroyPersonPicSprite(taskId, ApexLogGetCursorY());
         task->func = Task_TopMenuHandleInput;
         gSprites[task->data[3]].callback = SpriteCB_DestroySpinningPokeball;
     }
@@ -1118,89 +1118,89 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     RunTextPrinters();
     if (JOY_NEW(A_BUTTON) && !IsTextPrinterActive(2))
     {
-        u8 spriteId = sFameCheckerData->spriteIds[data[1]];
+        u8 spriteId = sApexLogData->spriteIds[data[1]];
         if (gSprites[spriteId].data[1] != 0xFF)
             PrintSelectedNameInBrightGreen(taskId);
     }
     if (JOY_NEW(B_BUTTON))
     {
         u8 i;
-        if (sFameCheckerData->isApexDossier)
+        if (sApexLogData->isApexDossier)
         {
             gSprites[task->data[0]].callback = SpriteCB_DestroyFlavorTextIconSelectorCursor;
-            Task_StartToCloseFameChecker(taskId);
+            Task_StartToCloseApexLog(taskId);
             return;
         }
 
         PlaySE(SE_SELECT);
         for (i = 0; i < 6; i++)
-            SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_NORMAL);
+            SetMessageSelectorIconObjMode(sApexLogData->spriteIds[i], ST_OAM_OBJ_NORMAL);
         WipeMsgBoxAndTransfer();
         gSprites[task->data[0]].callback = SpriteCB_DestroyFlavorTextIconSelectorCursor;
         if (gIconDescriptionBoxIsOpen != 0xFF)
             UpdateIconDescriptionBoxOff();
         PlaceListMenuCursor(TRUE);
         PrintUIHelp(0);
-        FC_CreateScrollIndicatorArrowPair();
+        ApexLog_CreateScrollIndicatorArrowPair();
         MessageBoxPrintEmptyText();
         task->func = Task_TopMenuHandleInput;
     }
     else if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
     {
-        if (sFameCheckerData->isApexDossier)
+        if (sApexLogData->isApexDossier)
         {
-            FC_MoveApexDossierCursor(taskId, FC_IsApexDossierMonSlot(task->data[1]) ? 4 : 1);
+            ApexLog_MoveApexDossierCursor(taskId, ApexLog_IsApexDossierMonSlot(task->data[1]) ? 4 : 1);
         }
         else if (task->data[1] >= 3)
         {
             task->data[1] -= 3;
-            FC_MoveSelectorCursor(taskId, 0, -0x1b);
+            ApexLog_MoveSelectorCursor(taskId, 0, -0x1b);
         }
         else
         {
             task->data[1] += 3;
-            FC_MoveSelectorCursor(taskId, 0, +0x1b);
+            ApexLog_MoveSelectorCursor(taskId, 0, +0x1b);
         }
     }
     else if (JOY_NEW(DPAD_LEFT))
     {
-        if (sFameCheckerData->isApexDossier)
+        if (sApexLogData->isApexDossier)
         {
             if (task->data[1] > 3)
-                FC_MoveApexDossierCursor(taskId, task->data[1] - 1);
+                ApexLog_MoveApexDossierCursor(taskId, task->data[1] - 1);
         }
         else if (task->data[1] == 0 || task->data[1] % 3 == 0)
         {
             task->data[1] += 2;
-            FC_MoveSelectorCursor(taskId, +0x5e, 0);
+            ApexLog_MoveSelectorCursor(taskId, +0x5e, 0);
         }
         else
         {
             task->data[1]--;
-            FC_MoveSelectorCursor(taskId, -0x2f, 0);
+            ApexLog_MoveSelectorCursor(taskId, -0x2f, 0);
         }
     }
     else if (JOY_NEW(DPAD_RIGHT))
     {
-        if (sFameCheckerData->isApexDossier)
+        if (sApexLogData->isApexDossier)
         {
             if (task->data[1] >= 3 && task->data[1] < 5)
-                FC_MoveApexDossierCursor(taskId, task->data[1] + 1);
+                ApexLog_MoveApexDossierCursor(taskId, task->data[1] + 1);
         }
         else if ((task->data[1] + 1) % 3 == 0)
         {
             task->data[1] -= 2;
-            FC_MoveSelectorCursor(taskId, -0x5e, 0);
+            ApexLog_MoveSelectorCursor(taskId, -0x5e, 0);
         }
         else
         {
             task->data[1]++;
-            FC_MoveSelectorCursor(taskId, +0x2f, 0);
+            ApexLog_MoveSelectorCursor(taskId, +0x2f, 0);
         }
     }
 }
 
-static void FC_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy)
+static void ApexLog_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy)
 {
     u8 i;
     s16 *data = gTasks[taskId].data;
@@ -1208,10 +1208,10 @@ static void FC_MoveSelectorCursor(u8 taskId, s8 dx, s8 dy)
     gSprites[data[0]].x += dx;
     gSprites[data[0]].y += dy;
     for (i = 0; i < 6; i++)
-        SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[i], ST_OAM_OBJ_BLEND);
+        SetMessageSelectorIconObjMode(sApexLogData->spriteIds[i], ST_OAM_OBJ_BLEND);
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
     MessageBoxPrintEmptyText();
-    if (SetMessageSelectorIconObjMode(sFameCheckerData->spriteIds[data[1]], ST_OAM_OBJ_NORMAL) == TRUE)
+    if (SetMessageSelectorIconObjMode(sApexLogData->spriteIds[data[1]], ST_OAM_OBJ_NORMAL) == TRUE)
     {
         PrintSelectedNameInBrightGreen(taskId);
         UpdateIconDescriptionBox(data[1]);
@@ -1225,15 +1225,15 @@ static void GetPickModeText(void)
     s32 whichText = 0;
     u16 who;
 
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
     {
         WipeMsgBoxAndTransfer();
         MessageBoxPrintEmptyText();
         return;
     }
 
-    who = FameCheckerGetCursorY();
-    if (gSaveBlock1Ptr->fameChecker[sFameCheckerData->unlockedPersons[who]].pickState != FCPICKSTATE_COLORED)
+    who = ApexLogGetCursorY();
+    if (gSaveBlock1Ptr->apexLog[sApexLogData->unlockedPersons[who]].pickState != APEX_LOG_PICK_STATE_COLORED)
     {
         WipeMsgBoxAndTransfer();
         MessageBoxPrintEmptyText();
@@ -1242,10 +1242,10 @@ static void GetPickModeText(void)
     {
         FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
         if (HasUnlockedAllFlavorTextsForCurrentPerson() == TRUE)
-            whichText = NUM_FAMECHECKER_PERSONS;
-        StringExpandPlaceholders(gStringVar4, sFameCheckerNameAndQuotesPointers[sFameCheckerData->unlockedPersons[who] + whichText]);
+            whichText = NUM_APEX_LOG_PERSONS;
+        StringExpandPlaceholders(gStringVar4, sApexLogNameAndQuotesPointers[sApexLogData->unlockedPersons[who] + whichText]);
         AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-        FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+        ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
     }
 }
 
@@ -1254,15 +1254,15 @@ static void PrintSelectedNameInBrightGreen(u8 taskId)
     s16 *data = gTasks[taskId].data;
     u16 cursorPos;
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
     {
-        if (FC_IsApexDossierMonSlot(data[1]))
+        if (ApexLog_IsApexDossierMonSlot(data[1]))
         {
-            StringExpandPlaceholders(gStringVar4, FC_HasEncounteredApexDossierMon() ? sApexMonRecorded : sApexMonUnknown);
+            StringExpandPlaceholders(gStringVar4, ApexLog_HasEncounteredApexDossierMon() ? sApexMonRecorded : sApexMonUnknown);
         }
-        else if (FC_IsApexDossierWitnessSlot(data[1]) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(data[1])))
+        else if (ApexLog_IsApexDossierWitnessSlot(data[1]) && ApexLog_HasApexDossierRumor(ApexLog_GetApexDossierRumorForSlot(data[1])))
         {
-            StringExpandPlaceholders(gStringVar4, sApexRumorDossierEntries[sFameCheckerData->apexSubquest].rumors[FC_GetApexDossierRumorForSlot(data[1])]);
+            StringExpandPlaceholders(gStringVar4, sApexRumorDossierEntries[sApexLogData->apexSubquest].rumors[ApexLog_GetApexDossierRumorForSlot(data[1])]);
         }
         else
         {
@@ -1271,29 +1271,29 @@ static void PrintSelectedNameInBrightGreen(u8 taskId)
     }
     else
     {
-        cursorPos = FameCheckerGetCursorY();
-        StringExpandPlaceholders(gStringVar4, sFameCheckerFlavorTextPointers[sFameCheckerData->unlockedPersons[cursorPos] * 6 + data[1]]);
+        cursorPos = ApexLogGetCursorY();
+        StringExpandPlaceholders(gStringVar4, sApexLogFlavorTextPointers[sApexLogData->unlockedPersons[cursorPos] * 6 + data[1]]);
     }
     AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gStringVar4, GetTextSpeedSetting(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
 }
 
 static void WipeMsgBoxAndTransfer(void)
 {
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
 }
 
 static void Setup_DrawMsgAndListBoxes(void)
 {
     LoadStdWindowFrameGfx();
     DrawDialogueFrame(FCWINDOWID_MSGBOX, TRUE);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
-    if (!sFameCheckerData->isApexDossier)
-        FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_LIST);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+    if (!sApexLogData->isApexDossier)
+        ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_LIST);
 }
 
-static void FC_PutWindowTilemapAndCopyWindowToVramMode3(u8 windowId)
+static void ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(u8 windowId)
 {
     PutWindowTilemap(windowId);
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -1309,59 +1309,59 @@ static bool8 SetMessageSelectorIconObjMode(u8 spriteId, u8 objMode)
     return FALSE;
 }
 
-static void Task_StartToCloseFameChecker(u8 taskId)
+static void Task_StartToCloseApexLog(u8 taskId)
 {
     PlaySE(SE_M_SWIFT);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, 0);
-    gTasks[taskId].func = Task_DestroyAssetsAndCloseFameChecker;
+    gTasks[taskId].func = Task_DestroyAssetsAndCloseApexLog;
 }
 
-static void Task_DestroyAssetsAndCloseFameChecker(u8 taskId)
+static void Task_DestroyAssetsAndCloseApexLog(u8 taskId)
 {
     u8 i;
     bool8 isApexDossier;
 
     if (!gPaletteFade.active)
     {
-        isApexDossier = sFameCheckerData->isApexDossier;
-        if (sFameCheckerData->inPickMode)
+        isApexDossier = sApexLogData->isApexDossier;
+        if (sApexLogData->inPickMode)
         {
-            DestroyPersonPicSprite(taskId, FameCheckerGetCursorY());
+            DestroyPersonPicSprite(taskId, ApexLogGetCursorY());
             FreeSpriteOamMatrix(&gSprites[gTasks[taskId].data[3]]);
             DestroySprite(&gSprites[gTasks[taskId].data[3]]);
         }
         for (i = 0; i < 6; i++)
         {
-            DestroySprite(&gSprites[sFameCheckerData->spriteIds[i]]);
+            DestroySprite(&gSprites[sApexLogData->spriteIds[i]]);
         }
         FreeNonTrainerPicTiles();
         FreeSpinningPokeballSpriteResources();
         FreeSelectionCursorSpriteResources();
         FreeQuestionMarkSpriteResources();
         FreeListMenuSelectorArrowPairResources();
-        SetMainCallback2(sFameCheckerData->savedCallback);
+        SetMainCallback2(sApexLogData->savedCallback);
         if (!isApexDossier)
-            DestroyListMenuTask(sFameCheckerData->listMenuTaskId, NULL, NULL);
+            DestroyListMenuTask(sApexLogData->listMenuTaskId, NULL, NULL);
         Free(sBg3TilemapBuffer);
         Free(sBg1TilemapBuffer);
         Free(sBg2TilemapBuffer);
-        Free(sFameCheckerData);
+        Free(sApexLogData);
         if (sListMenuItems != NULL)
         {
             Free(sListMenuItems);
             sListMenuItems = NULL;
         }
         if (!isApexDossier)
-            FC_DestroyWindow(FCWINDOWID_LIST);
-        FC_DestroyWindow(FCWINDOWID_UIHELP);
-        FC_DestroyWindow(FCWINDOWID_MSGBOX);
-        FC_DestroyWindow(FCWINDOWID_ICONDESC);
+            ApexLog_DestroyWindow(FCWINDOWID_LIST);
+        ApexLog_DestroyWindow(FCWINDOWID_UIHELP);
+        ApexLog_DestroyWindow(FCWINDOWID_MSGBOX);
+        ApexLog_DestroyWindow(FCWINDOWID_ICONDESC);
         FreeAllWindowBuffers();
         DestroyTask(taskId);
     }
 }
 
-static void FC_DestroyWindow(u8 windowId)
+static void ApexLog_DestroyWindow(u8 windowId)
 {
     FillWindowPixelBuffer(windowId, 0);
     ClearWindowTilemap(windowId);
@@ -1374,7 +1374,7 @@ static u8 AdjustGiovanniIndexIfBeatenInGym(u8 a0)
     if (HasTrainerBeenFought(TRAINER_LEADER_GIOVANNI) == TRUE)
     {
         if (a0 == 9)
-            return FAMECHECKER_GIOVANNI;
+            return APEX_LOG_PERSON_GIOVANNI;
         if (a0 > 9)
             return a0 - 1;
     }
@@ -1384,20 +1384,20 @@ static u8 AdjustGiovanniIndexIfBeatenInGym(u8 a0)
 static void PrintUIHelp(u8 state)
 {
     s32 width;
-    const u8 * src = gFameCheckerText_MainScreenUI;
+    const u8 * src = gApexLogText_MainScreenUI;
 
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
         src = sApexDossierText_UI;
     else if (state != 0)
     {
-        src = gFameCheckerText_FlavorTextUI;
+        src = gApexLogText_FlavorTextUI;
         if (state == 1)
-            src = gFameCheckerText_PickScreenUI;
+            src = gApexLogText_PickScreenUI;
     }
     width = GetStringWidth(FONT_SMALL, src, 0);
     FillWindowPixelRect(FCWINDOWID_UIHELP, PIXEL_FILL(0), 0, 0, 0xc0, 0x10);
     AddTextPrinterParameterized4(FCWINDOWID_UIHELP, FONT_SMALL, 188 - width, 0, 0, 2, sTextColor_White, -1, src);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_UIHELP);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_UIHELP);
 }
 
 static void DestroyAllFlavorTextIcons(void)
@@ -1405,7 +1405,7 @@ static void DestroyAllFlavorTextIcons(void)
     u8 i;
     for (i = 0; i < 6; i++)
     {
-        DestroySprite(&gSprites[sFameCheckerData->spriteIds[i]]);
+        DestroySprite(&gSprites[sApexLogData->spriteIds[i]]);
     }
 }
 
@@ -1414,119 +1414,119 @@ static bool8 CreateAllFlavorTextIcons(u8 who)
     bool8 result = FALSE;
     u8 i;
 
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
     {
         for (i = 0; i < 6; i++)
         {
-            if (FC_IsApexDossierMonSlot(i))
+            if (ApexLog_IsApexDossierMonSlot(i))
             {
-                sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
-                    sApexRumorDossierEntries[sFameCheckerData->apexSubquest].apexGraphicsId,
+                sApexLogData->spriteIds[i] = CreateApexLogObject(
+                    sApexRumorDossierEntries[sApexLogData->apexSubquest].apexGraphicsId,
                     i,
-                    FC_GetFlavorTextIconX(i),
-                    FC_GetFlavorTextIconY(i)
+                    ApexLog_GetFlavorTextIconX(i),
+                    ApexLog_GetFlavorTextIconY(i)
                 );
-                if (!FC_HasEncounteredApexDossierMon())
-                    SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
+                if (!ApexLog_HasEncounteredApexDossierMon())
+                    SetApexDossierSilhouettePalette(sApexLogData->spriteIds[i]);
                 result = TRUE;
             }
-            else if (FC_IsApexDossierWitnessSlot(i) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(i)))
+            else if (ApexLog_IsApexDossierWitnessSlot(i) && ApexLog_HasApexDossierRumor(ApexLog_GetApexDossierRumorForSlot(i)))
             {
-                sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
-                    sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
+                sApexLogData->spriteIds[i] = CreateApexLogObject(
+                    sApexRumorDossierEntries[sApexLogData->apexSubquest].graphicsIds[ApexLog_GetApexDossierRumorForSlot(i)],
                     i,
-                    FC_GetFlavorTextIconX(i),
-                    FC_GetFlavorTextIconY(i)
+                    ApexLog_GetFlavorTextIconX(i),
+                    ApexLog_GetFlavorTextIconY(i)
                 );
                 result = TRUE;
             }
             else
             {
-                if (FC_IsApexDossierWitnessSlot(i))
+                if (ApexLog_IsApexDossierWitnessSlot(i))
                 {
-                    sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
-                        sApexRumorDossierEntries[sFameCheckerData->apexSubquest].graphicsIds[FC_GetApexDossierRumorForSlot(i)],
+                    sApexLogData->spriteIds[i] = CreateApexLogObject(
+                        sApexRumorDossierEntries[sApexLogData->apexSubquest].graphicsIds[ApexLog_GetApexDossierRumorForSlot(i)],
                         i,
-                        FC_GetFlavorTextIconX(i),
-                        FC_GetFlavorTextIconY(i)
+                        ApexLog_GetFlavorTextIconX(i),
+                        ApexLog_GetFlavorTextIconY(i)
                     );
-                    SetApexDossierSilhouettePalette(sFameCheckerData->spriteIds[i]);
+                    SetApexDossierSilhouettePalette(sApexLogData->spriteIds[i]);
                 }
                 else
                 {
-                    sFameCheckerData->spriteIds[i] = PlaceQuestionMarkTile(
-                        FC_GetFlavorTextIconX(i),
-                        FC_GetFlavorTextIconY(i) - 16
+                    sApexLogData->spriteIds[i] = PlaceQuestionMarkTile(
+                        ApexLog_GetFlavorTextIconX(i),
+                        ApexLog_GetFlavorTextIconY(i) - 16
                     );
-                    gSprites[sFameCheckerData->spriteIds[i]].invisible = TRUE;
+                    gSprites[sApexLogData->spriteIds[i]].invisible = TRUE;
                 }
-                gSprites[sFameCheckerData->spriteIds[i]].data[1] = 0xFF;
+                gSprites[sApexLogData->spriteIds[i]].data[1] = 0xFF;
             }
         }
 
-        sFameCheckerData->personHasUnlockedPanels = result;
+        sApexLogData->personHasUnlockedPanels = result;
         PrintUIHelp(result ? 0 : 1);
         return result;
     }
 
     for (i = 0; i < 6; i++)
     {
-        if ((gSaveBlock1Ptr->fameChecker[sFameCheckerData->unlockedPersons[who]].flavorTextFlags >> i) & 1)
+        if ((gSaveBlock1Ptr->apexLog[sApexLogData->unlockedPersons[who]].flavorTextFlags >> i) & 1)
         {
-            sFameCheckerData->spriteIds[i] = CreateFameCheckerObject(
-                sFameCheckerArrayNpcGraphicsIds[sFameCheckerData->unlockedPersons[who] * 6 + i],
+            sApexLogData->spriteIds[i] = CreateApexLogObject(
+                sApexLogArrayNpcGraphicsIds[sApexLogData->unlockedPersons[who] * 6 + i],
                 i,
-                FC_GetFlavorTextIconX(i),
-                FC_GetFlavorTextIconY(i)
+                ApexLog_GetFlavorTextIconX(i),
+                ApexLog_GetFlavorTextIconY(i)
             );
             result = TRUE;
         }
         else
         {
-            sFameCheckerData->spriteIds[i] = PlaceQuestionMarkTile(
-                FC_GetFlavorTextIconX(i),
-                FC_GetFlavorTextIconY(i) - 16
+            sApexLogData->spriteIds[i] = PlaceQuestionMarkTile(
+                ApexLog_GetFlavorTextIconX(i),
+                ApexLog_GetFlavorTextIconY(i) - 16
             );
-            gSprites[sFameCheckerData->spriteIds[i]].data[1] = 0xFF;
+            gSprites[sApexLogData->spriteIds[i]].data[1] = 0xFF;
         }
     }
     if (result == TRUE)
     {
-        sFameCheckerData->personHasUnlockedPanels = TRUE;
-        if (sFameCheckerData->inPickMode)
+        sApexLogData->personHasUnlockedPanels = TRUE;
+        if (sApexLogData->inPickMode)
             PrintUIHelp(1);
         else
             PrintUIHelp(0);
     }
     else
     {
-        sFameCheckerData->personHasUnlockedPanels = FALSE;
+        sApexLogData->personHasUnlockedPanels = FALSE;
         PrintUIHelp(1);
     }
     return result;
 }
 
-void ResetFameChecker(void)
+void ResetApexLog(void)
 {
     u8 i;
-    for (i = 0; i < NUM_FAMECHECKER_PERSONS; i++)
+    for (i = 0; i < NUM_APEX_LOG_PERSONS; i++)
     {
-        gSaveBlock1Ptr->fameChecker[i].pickState = FCPICKSTATE_NO_DRAW;
-        gSaveBlock1Ptr->fameChecker[i].flavorTextFlags = 0;
-        gSaveBlock1Ptr->fameChecker[i].unk_0_E = 0;
+        gSaveBlock1Ptr->apexLog[i].pickState = APEX_LOG_PICK_STATE_NO_DRAW;
+        gSaveBlock1Ptr->apexLog[i].flavorTextFlags = 0;
+        gSaveBlock1Ptr->apexLog[i].unk_0_E = 0;
     }
-    gSaveBlock1Ptr->fameChecker[FAMECHECKER_OAK].pickState = FCPICKSTATE_COLORED;
+    gSaveBlock1Ptr->apexLog[APEX_LOG_PERSON_OAK].pickState = APEX_LOG_PICK_STATE_COLORED;
 }
 
-void FullyUnlockFameChecker(void)
+void FullyUnlockApexLog(void)
 {
     u8 i, j;
-    for (i = 0; i < NUM_FAMECHECKER_PERSONS; i++)
+    for (i = 0; i < NUM_APEX_LOG_PERSONS; i++)
     {
-        gSaveBlock1Ptr->fameChecker[i].pickState = FCPICKSTATE_COLORED;
+        gSaveBlock1Ptr->apexLog[i].pickState = APEX_LOG_PICK_STATE_COLORED;
         for (j = 0; j < 6; j++)
         {
-            gSaveBlock1Ptr->fameChecker[i].flavorTextFlags |= (1 << j);
+            gSaveBlock1Ptr->apexLog[i].flavorTextFlags |= (1 << j);
         }
     }
 }
@@ -1590,35 +1590,35 @@ static void FCSetup_ResetBGCoords(void)
 
 void SetFlavorTextFlagFromSpecialVars(void)
 {
-    if (gSpecialVar_0x8004 < NUM_FAMECHECKER_PERSONS && gSpecialVar_0x8005 < 6)
+    if (gSpecialVar_0x8004 < NUM_APEX_LOG_PERSONS && gSpecialVar_0x8005 < 6)
     {
-        gSaveBlock1Ptr->fameChecker[gSpecialVar_0x8004].flavorTextFlags |= (1 << gSpecialVar_0x8005);
-        gSpecialVar_0x8005 = FCPICKSTATE_SILHOUETTE;
+        gSaveBlock1Ptr->apexLog[gSpecialVar_0x8004].flavorTextFlags |= (1 << gSpecialVar_0x8005);
+        gSpecialVar_0x8005 = APEX_LOG_PICK_STATE_SILHOUETTE;
         UpdatePickStateFromSpecialVar8005();
     }
 }
 
 void UpdatePickStateFromSpecialVar8005(void)
 {
-    if (gSpecialVar_0x8004 < NUM_FAMECHECKER_PERSONS && gSpecialVar_0x8005 < 3)
+    if (gSpecialVar_0x8004 < NUM_APEX_LOG_PERSONS && gSpecialVar_0x8005 < 3)
     {
-        if (gSpecialVar_0x8005 == FCPICKSTATE_NO_DRAW)
+        if (gSpecialVar_0x8005 == APEX_LOG_PICK_STATE_NO_DRAW)
             return;
-        if (   gSpecialVar_0x8005 == FCPICKSTATE_SILHOUETTE
-            && gSaveBlock1Ptr->fameChecker[gSpecialVar_0x8004].pickState == FCPICKSTATE_COLORED
+        if (   gSpecialVar_0x8005 == APEX_LOG_PICK_STATE_SILHOUETTE
+            && gSaveBlock1Ptr->apexLog[gSpecialVar_0x8004].pickState == APEX_LOG_PICK_STATE_COLORED
            )
             return;
-        gSaveBlock1Ptr->fameChecker[gSpecialVar_0x8004].pickState = gSpecialVar_0x8005;
+        gSaveBlock1Ptr->apexLog[gSpecialVar_0x8004].pickState = gSpecialVar_0x8005;
     }
 }
 
 static bool8 HasUnlockedAllFlavorTextsForCurrentPerson(void)
 {
     u8 i;
-    u8 who = sFameCheckerData->unlockedPersons[FameCheckerGetCursorY()];
+    u8 who = sApexLogData->unlockedPersons[ApexLogGetCursorY()];
     for (i = 0; i < 6; i++)
     {
-        if (!((gSaveBlock1Ptr->fameChecker[who].flavorTextFlags >> i) & 1))
+        if (!((gSaveBlock1Ptr->apexLog[who].flavorTextFlags >> i) & 1))
             return FALSE;
     }
     return TRUE;
@@ -1632,23 +1632,23 @@ static void FreeSelectionCursorSpriteResources(void)
 
 static u8 CreateFlavorTextIconSelectorCursorSprite(s16 where)
 {
-    s16 x = FC_GetFlavorTextIconX(where);
-    s16 y = FC_GetFlavorTextIconY(where) - 13;
+    s16 x = ApexLog_GetFlavorTextIconX(where);
+    s16 y = ApexLog_GetFlavorTextIconY(where) - 13;
     return CreateSprite(&sSpriteTemplate_SelectorCursor, x, y, 0);
 }
 
-static s16 FC_GetFlavorTextIconX(u8 slot)
+static s16 ApexLog_GetFlavorTextIconX(u8 slot)
 {
-    if (sFameCheckerData->isApexDossier)
-        return FC_APEX_DOSSIER_ICON_X_LEFT + FC_ICON_X_SPACING * (slot % 3);
-    return FC_ICON_X_LEFT + FC_ICON_X_SPACING * (slot % 3);
+    if (sApexLogData->isApexDossier)
+        return ApexLog_APEX_DOSSIER_ICON_X_LEFT + ApexLog_ICON_X_SPACING * (slot % 3);
+    return ApexLog_ICON_X_LEFT + ApexLog_ICON_X_SPACING * (slot % 3);
 }
 
-static s16 FC_GetFlavorTextIconY(u8 slot)
+static s16 ApexLog_GetFlavorTextIconY(u8 slot)
 {
-    if (sFameCheckerData->isApexDossier)
-        return FC_APEX_DOSSIER_ICON_Y_TOP + FC_ICON_Y_SPACING * (slot / 3);
-    return FC_ICON_Y_TOP + FC_ICON_Y_SPACING * (slot / 3);
+    if (sApexLogData->isApexDossier)
+        return ApexLog_APEX_DOSSIER_ICON_Y_TOP + ApexLog_ICON_Y_SPACING * (slot / 3);
+    return ApexLog_ICON_Y_TOP + ApexLog_ICON_Y_SPACING * (slot / 3);
 }
 
 static void SpriteCB_DestroyFlavorTextIconSelectorCursor(struct Sprite *sprite)
@@ -1726,28 +1726,28 @@ static void SpriteCB_FCSpinningPokeball(struct Sprite *sprite)
 static u8 CreatePersonPicSprite(u8 fcPersonIdx)
 {
     u8 spriteId;
-    if (sFameCheckerData->isApexDossier)
-        fcPersonIdx = FAMECHECKER_OAK;
+    if (sApexLogData->isApexDossier)
+        fcPersonIdx = APEX_LOG_PERSON_OAK;
 
-    if (fcPersonIdx == FAMECHECKER_DAISY)
+    if (fcPersonIdx == APEX_LOG_PERSON_DAISY)
     {
         spriteId = CreateSprite(&sDaisySpriteTemplate, PERSON_X, PERSON_Y, 0);
         LoadPalette(sDaisySpritePalette, OBJ_PLTT_ID(PERSON_PAL_NUM), sizeof(sDaisySpritePalette));
         gSprites[spriteId].oam.paletteNum = PERSON_PAL_NUM;
     }
-    else if (fcPersonIdx == FAMECHECKER_MRFUJI)
+    else if (fcPersonIdx == APEX_LOG_PERSON_MRFUJI)
     {
         spriteId = CreateSprite(&sFujiSpriteTemplate, PERSON_X, PERSON_Y, 0);
         LoadPalette(sFujiSpritePalette, OBJ_PLTT_ID(PERSON_PAL_NUM), sizeof(sFujiSpritePalette));
         gSprites[spriteId].oam.paletteNum = PERSON_PAL_NUM;
     }
-    else if (fcPersonIdx == FAMECHECKER_OAK)
+    else if (fcPersonIdx == APEX_LOG_PERSON_OAK)
     {
         spriteId = CreateSprite(&sOakSpriteTemplate, PERSON_X, PERSON_Y, 0);
         LoadPalette(sOakSpritePalette, OBJ_PLTT_ID(PERSON_PAL_NUM), sizeof(sOakSpritePalette));
         gSprites[spriteId].oam.paletteNum = PERSON_PAL_NUM;
     }
-    else if (fcPersonIdx == FAMECHECKER_BILL)
+    else if (fcPersonIdx == APEX_LOG_PERSON_BILL)
     {
         spriteId = CreateSprite(&sBillSpriteTemplate, PERSON_X, PERSON_Y, 0);
         LoadPalette(sBillSpritePalette, OBJ_PLTT_ID(PERSON_PAL_NUM), sizeof(sBillSpritePalette));
@@ -1755,10 +1755,10 @@ static u8 CreatePersonPicSprite(u8 fcPersonIdx)
     }
     else
     {
-        spriteId = CreateTrainerPicSprite(sFameCheckerTrainerPicIdxs[fcPersonIdx], TRUE, PERSON_X, PERSON_Y, PERSON_PAL_NUM, TAG_NONE);
+        spriteId = CreateTrainerPicSprite(sApexLogTrainerPicIdxs[fcPersonIdx], TRUE, PERSON_X, PERSON_Y, PERSON_PAL_NUM, TAG_NONE);
     }
     gSprites[spriteId].callback = SpriteCB_FCSpinningPokeball;
-    if (gSaveBlock1Ptr->fameChecker[fcPersonIdx].pickState == FCPICKSTATE_SILHOUETTE)
+    if (gSaveBlock1Ptr->apexLog[fcPersonIdx].pickState == APEX_LOG_PICK_STATE_SILHOUETTE)
         LoadPalette(sSilhouettePalette, OBJ_PLTT_ID(PERSON_PAL_NUM), sizeof(sSilhouettePalette));
     return spriteId;
 }
@@ -1767,12 +1767,12 @@ static void DestroyPersonPicSprite(u8 taskId, u16 who)
 {
     s16 * data = gTasks[taskId].data;
     u16 who_copy = who;
-    if (who == sFameCheckerData->numUnlockedPersons - 1)
+    if (who == sApexLogData->numUnlockedPersons - 1)
         who_copy = who - 1;
-    if (   sFameCheckerData->unlockedPersons[who_copy] == FAMECHECKER_DAISY
-        || sFameCheckerData->unlockedPersons[who_copy] == FAMECHECKER_MRFUJI
-        || sFameCheckerData->unlockedPersons[who_copy] == FAMECHECKER_OAK
-        || sFameCheckerData->unlockedPersons[who_copy] == FAMECHECKER_BILL
+    if (   sApexLogData->unlockedPersons[who_copy] == APEX_LOG_PERSON_DAISY
+        || sApexLogData->unlockedPersons[who_copy] == APEX_LOG_PERSON_MRFUJI
+        || sApexLogData->unlockedPersons[who_copy] == APEX_LOG_PERSON_OAK
+        || sApexLogData->unlockedPersons[who_copy] == APEX_LOG_PERSON_BILL
     )
         DestroySprite(&gSprites[data[2]]);
     else
@@ -1782,25 +1782,25 @@ static void DestroyPersonPicSprite(u8 taskId, u16 who)
 static void UpdateIconDescriptionBox(u8 whichText)
 {
     s32 width;
-    u32 idx = 6 * sFameCheckerData->unlockedPersons[FameCheckerGetCursorY()] + whichText;
+    u32 idx = 6 * sApexLogData->unlockedPersons[ApexLogGetCursorY()] + whichText;
     HandleFlavorTextModeSwitch(TRUE);
     gIconDescriptionBoxIsOpen = 1;
     FillWindowPixelRect(FCWINDOWID_ICONDESC, PIXEL_FILL(0), 0, 0, 0x58, 0x20);
 
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
     {
         const u8 *location = sApexRumorLocationUnknown;
         const u8 *source = sApexRumorSourceUnknown;
 
-        if (FC_IsApexDossierMonSlot(whichText))
+        if (ApexLog_IsApexDossierMonSlot(whichText))
         {
             location = sApexLoc_Apex;
-            source = FC_HasEncounteredApexDossierMon() ? sApexSrc_FieldRecord : sApexRumorSourceUnknown;
+            source = ApexLog_HasEncounteredApexDossierMon() ? sApexSrc_FieldRecord : sApexRumorSourceUnknown;
         }
-        else if (FC_IsApexDossierWitnessSlot(whichText) && FC_HasApexDossierRumor(FC_GetApexDossierRumorForSlot(whichText)))
+        else if (ApexLog_IsApexDossierWitnessSlot(whichText) && ApexLog_HasApexDossierRumor(ApexLog_GetApexDossierRumorForSlot(whichText)))
         {
-            location = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].locations[FC_GetApexDossierRumorForSlot(whichText)];
-            source = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].sources[FC_GetApexDossierRumorForSlot(whichText)];
+            location = sApexRumorDossierEntries[sApexLogData->apexSubquest].locations[ApexLog_GetApexDossierRumorForSlot(whichText)];
+            source = sApexRumorDossierEntries[sApexLogData->apexSubquest].sources[ApexLog_GetApexDossierRumorForSlot(whichText)];
         }
 
         width = (0x54 - GetStringWidth(FONT_SMALL, location, 0)) / 2;
@@ -1816,7 +1816,7 @@ static void UpdateIconDescriptionBox(u8 whichText)
 
     width = (0x54 - GetStringWidth(FONT_SMALL, gStringVar1, 0)) / 2;
     AddTextPrinterParameterized4(FCWINDOWID_ICONDESC, FONT_SMALL, width, 10, 0, 2, sTextColor_DkGrey, -1, gStringVar1);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_ICONDESC);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_ICONDESC);
 }
 
 static void UpdateIconDescriptionBoxOff(void)
@@ -1825,59 +1825,59 @@ static void UpdateIconDescriptionBoxOff(void)
     gIconDescriptionBoxIsOpen = 0xFF;
 }
 
-static void FC_CreateListMenu(void)
+static void ApexLog_CreateListMenu(void)
 {
     InitListMenuTemplate();
-    sFameCheckerData->numUnlockedPersons = FC_PopulateListMenu();
-    sFameCheckerData->listMenuTaskId = ListMenuInit(&gFameChecker_ListMenuTemplate, 0, 0);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3_2(FCWINDOWID_LIST);
+    sApexLogData->numUnlockedPersons = ApexLog_PopulateListMenu();
+    sApexLogData->listMenuTaskId = ListMenuInit(&gApexLog_ListMenuTemplate, 0, 0);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3_2(FCWINDOWID_LIST);
 }
 
 static void InitListMenuTemplate(void)
 {
-    gFameChecker_ListMenuTemplate.items = sListMenuItems;
-    gFameChecker_ListMenuTemplate.moveCursorFunc = FC_MoveCursorFunc;
-    gFameChecker_ListMenuTemplate.itemPrintFunc = NULL;
-    gFameChecker_ListMenuTemplate.totalItems = 1;
-    gFameChecker_ListMenuTemplate.maxShowed = 1;
-    gFameChecker_ListMenuTemplate.windowId = FCWINDOWID_LIST;
-    gFameChecker_ListMenuTemplate.header_X = 0;
-    gFameChecker_ListMenuTemplate.item_X = 8;
-    gFameChecker_ListMenuTemplate.cursor_X = 0;
-    gFameChecker_ListMenuTemplate.upText_Y = 4;
-    gFameChecker_ListMenuTemplate.cursorPal = 2;
-    gFameChecker_ListMenuTemplate.fillValue = 0;
-    gFameChecker_ListMenuTemplate.cursorShadowPal = 3;
-    gFameChecker_ListMenuTemplate.lettersSpacing = 0;
-    gFameChecker_ListMenuTemplate.itemVerticalPadding = 0;
-    gFameChecker_ListMenuTemplate.scrollMultiple = 0;
-    gFameChecker_ListMenuTemplate.fontId = FONT_NORMAL;
-    gFameChecker_ListMenuTemplate.cursorKind = 0;
+    gApexLog_ListMenuTemplate.items = sListMenuItems;
+    gApexLog_ListMenuTemplate.moveCursorFunc = ApexLog_MoveCursorFunc;
+    gApexLog_ListMenuTemplate.itemPrintFunc = NULL;
+    gApexLog_ListMenuTemplate.totalItems = 1;
+    gApexLog_ListMenuTemplate.maxShowed = 1;
+    gApexLog_ListMenuTemplate.windowId = FCWINDOWID_LIST;
+    gApexLog_ListMenuTemplate.header_X = 0;
+    gApexLog_ListMenuTemplate.item_X = 8;
+    gApexLog_ListMenuTemplate.cursor_X = 0;
+    gApexLog_ListMenuTemplate.upText_Y = 4;
+    gApexLog_ListMenuTemplate.cursorPal = 2;
+    gApexLog_ListMenuTemplate.fillValue = 0;
+    gApexLog_ListMenuTemplate.cursorShadowPal = 3;
+    gApexLog_ListMenuTemplate.lettersSpacing = 0;
+    gApexLog_ListMenuTemplate.itemVerticalPadding = 0;
+    gApexLog_ListMenuTemplate.scrollMultiple = 0;
+    gApexLog_ListMenuTemplate.fontId = FONT_NORMAL;
+    gApexLog_ListMenuTemplate.cursorKind = 0;
 }
 
-static void FC_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
+static void ApexLog_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
     u16 listMenuTopIdx;
     u8 taskId;
     u16 personIdx;
     sLastMenuIdx = 0;
-    personIdx = sFameCheckerData->listMenuTopIdx2 + sFameCheckerData->listMenuDrawnSelIdx;
-    FC_DoMoveCursor(itemIndex, onInit);
+    personIdx = sApexLogData->listMenuTopIdx2 + sApexLogData->listMenuDrawnSelIdx;
+    ApexLog_DoMoveCursor(itemIndex, onInit);
     taskId = FindTaskIdByFunc(Task_TopMenuHandleInput);
     if (taskId != 0xFF)
     {
         struct Task *task = &gTasks[taskId];
         PlaySE(SE_SELECT);
         task->data[1] = 0;
-        ListMenuGetScrollAndRow(sFameCheckerData->listMenuTaskId, &listMenuTopIdx, NULL);
-        sFameCheckerData->listMenuTopIdx = listMenuTopIdx;
-        if (itemIndex != sFameCheckerData->numUnlockedPersons - 1)
+        ListMenuGetScrollAndRow(sApexLogData->listMenuTaskId, &listMenuTopIdx, NULL);
+        sApexLogData->listMenuTopIdx = listMenuTopIdx;
+        if (itemIndex != sApexLogData->numUnlockedPersons - 1)
         {
             DestroyAllFlavorTextIcons();
             CreateAllFlavorTextIcons(itemIndex);
-            if (sFameCheckerData->inPickMode)
+            if (sApexLogData->inPickMode)
             {
-                if (!sFameCheckerData->pickModeOverCancel)
+                if (!sApexLogData->pickModeOverCancel)
                 {
                     DestroyPersonPicSprite(taskId, personIdx);
                     sLastMenuIdx = itemIndex;
@@ -1886,7 +1886,7 @@ static void FC_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list
                 else
                 {
                     gSprites[task->data[2]].invisible = FALSE;
-                    sFameCheckerData->pickModeOverCancel = FALSE;
+                    sApexLogData->pickModeOverCancel = FALSE;
                     gSprites[task->data[2]].data[0] = 0;
                     GetPickModeText();
                 }
@@ -1894,23 +1894,23 @@ static void FC_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list
             else
             {
                 FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
-                FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+                ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
             }
         }
         else
         {
             PrintCancelDescription();
-            if (sFameCheckerData->inPickMode)
+            if (sApexLogData->inPickMode)
             {
                 gSprites[task->data[2]].invisible = TRUE;
-                sFameCheckerData->pickModeOverCancel = TRUE;
+                sApexLogData->pickModeOverCancel = TRUE;
             }
             else
             {
                 u8 i;
                 for (i = 0; i < 6; i++)
                 {
-                    gSprites[sFameCheckerData->spriteIds[i]].invisible = TRUE;
+                    gSprites[sApexLogData->spriteIds[i]].invisible = TRUE;
                 }
             }
         }
@@ -1920,7 +1920,7 @@ static void FC_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list
 static void Task_SwitchToPickMode(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
-    task->data[2] = CreatePersonPicSprite(sFameCheckerData->unlockedPersons[sLastMenuIdx]);
+    task->data[2] = CreatePersonPicSprite(sApexLogData->unlockedPersons[sLastMenuIdx]);
     gSprites[task->data[2]].data[0] = 0;
     GetPickModeText();
     task->func = Task_TopMenuHandleInput;
@@ -1929,104 +1929,104 @@ static void Task_SwitchToPickMode(u8 taskId)
 static void PrintCancelDescription(void)
 {
     FillWindowPixelRect(FCWINDOWID_MSGBOX, PIXEL_FILL(1), 0, 0, 0xd0, 0x20);
-    AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gFameCheckerText_FameCheckerWillBeClosed, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-    FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
+    AddTextPrinterParameterized2(FCWINDOWID_MSGBOX, FONT_NORMAL, gApexLogText_ApexLogWillBeClosed, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    ApexLog_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_MSGBOX);
 }
 
-static void FC_DoMoveCursor(s32 itemIndex, bool8 onInit)
+static void ApexLog_DoMoveCursor(s32 itemIndex, bool8 onInit)
 {
     u16 listY;
     u16 cursorY;
     u16 who;
-    ListMenuGetScrollAndRow(sFameCheckerData->listMenuTaskId, &listY, &cursorY);
+    ListMenuGetScrollAndRow(sApexLogData->listMenuTaskId, &listY, &cursorY);
     who = listY + cursorY;
     AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 8, 14 * cursorY + 4, 0, 0, sTextColor_Green, 0, sListMenuItems[itemIndex].label);
     if (!onInit)
     {
-        if (listY < sFameCheckerData->listMenuTopIdx2)
-            sFameCheckerData->listMenuDrawnSelIdx++;
-        else if (listY > sFameCheckerData->listMenuTopIdx2 && who != sFameCheckerData->numUnlockedPersons - 1)
-            sFameCheckerData->listMenuDrawnSelIdx--;
-        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 8, 14 * sFameCheckerData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sFameCheckerData->listMenuCurIdx].label);
+        if (listY < sApexLogData->listMenuTopIdx2)
+            sApexLogData->listMenuDrawnSelIdx++;
+        else if (listY > sApexLogData->listMenuTopIdx2 && who != sApexLogData->numUnlockedPersons - 1)
+            sApexLogData->listMenuDrawnSelIdx--;
+        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 8, 14 * sApexLogData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sApexLogData->listMenuCurIdx].label);
 
     }
-    sFameCheckerData->listMenuCurIdx = itemIndex;
-    sFameCheckerData->listMenuDrawnSelIdx = cursorY;
-    sFameCheckerData->listMenuTopIdx2 = listY;
+    sApexLogData->listMenuCurIdx = itemIndex;
+    sApexLogData->listMenuDrawnSelIdx = cursorY;
+    sApexLogData->listMenuTopIdx2 = listY;
 }
 
-static u8 FC_PopulateListMenu(void)
+static u8 ApexLog_PopulateListMenu(void)
 {
     u8 nitems = 0;
     u8 i;
 
-    if (sFameCheckerData->isApexDossier)
+    if (sApexLogData->isApexDossier)
     {
-        sListMenuItems[nitems].label = sApexRumorDossierEntries[sFameCheckerData->apexSubquest].name;
+        sListMenuItems[nitems].label = sApexRumorDossierEntries[sApexLogData->apexSubquest].name;
         sListMenuItems[nitems].index = nitems;
-        sFameCheckerData->unlockedPersons[nitems] = FAMECHECKER_OAK;
+        sApexLogData->unlockedPersons[nitems] = APEX_LOG_PERSON_OAK;
         nitems++;
-        sListMenuItems[nitems].label = gFameCheckerText_Cancel;
+        sListMenuItems[nitems].label = gApexLogText_Cancel;
         sListMenuItems[nitems].index = nitems;
-        sFameCheckerData->unlockedPersons[nitems] = 0xFF;
+        sApexLogData->unlockedPersons[nitems] = 0xFF;
         nitems++;
-        gFameChecker_ListMenuTemplate.totalItems = nitems;
-        gFameChecker_ListMenuTemplate.maxShowed = nitems;
+        gApexLog_ListMenuTemplate.totalItems = nitems;
+        gApexLog_ListMenuTemplate.maxShowed = nitems;
         return nitems;
     }
 
-    for (i = 0; i < NUM_FAMECHECKER_PERSONS; i++)
+    for (i = 0; i < NUM_APEX_LOG_PERSONS; i++)
     {
-        u8 fameCheckerIdx = AdjustGiovanniIndexIfBeatenInGym(i);
-        if (gSaveBlock1Ptr->fameChecker[fameCheckerIdx].pickState != FCPICKSTATE_NO_DRAW)
+        u8 apexLogIdx = AdjustGiovanniIndexIfBeatenInGym(i);
+        if (gSaveBlock1Ptr->apexLog[apexLogIdx].pickState != APEX_LOG_PICK_STATE_NO_DRAW)
         {
-            if (sTrainerIdxs[fameCheckerIdx] < FC_NONTRAINER_START)
+            if (sTrainerIdxs[apexLogIdx] < ApexLog_NONTRAINER_START)
             {
-                sListMenuItems[nitems].label = gTrainers[sTrainerIdxs[fameCheckerIdx]].trainerName;
+                sListMenuItems[nitems].label = gTrainers[sTrainerIdxs[apexLogIdx]].trainerName;
                 sListMenuItems[nitems].index = nitems;
             }
             else
             {
-                sListMenuItems[nitems].label = sNonTrainerNamePointers[sTrainerIdxs[fameCheckerIdx] - FC_NONTRAINER_START];
+                sListMenuItems[nitems].label = sNonTrainerNamePointers[sTrainerIdxs[apexLogIdx] - ApexLog_NONTRAINER_START];
                 sListMenuItems[nitems].index = nitems;
             }
-            sFameCheckerData->unlockedPersons[nitems] = fameCheckerIdx;
+            sApexLogData->unlockedPersons[nitems] = apexLogIdx;
             nitems++;
         }
     }
-    sListMenuItems[nitems].label = gFameCheckerText_Cancel;
+    sListMenuItems[nitems].label = gApexLogText_Cancel;
     sListMenuItems[nitems].index = nitems;
-    sFameCheckerData->unlockedPersons[nitems] = 0xFF;
+    sApexLogData->unlockedPersons[nitems] = 0xFF;
     nitems++;
-    gFameChecker_ListMenuTemplate.totalItems = nitems;
+    gApexLog_ListMenuTemplate.totalItems = nitems;
     if (nitems < 5)
-        gFameChecker_ListMenuTemplate.maxShowed = nitems;
+        gApexLog_ListMenuTemplate.maxShowed = nitems;
     else
-        gFameChecker_ListMenuTemplate.maxShowed = 5;
+        gApexLog_ListMenuTemplate.maxShowed = 5;
     return nitems;
 }
 
-static bool8 FC_HasApexDossierRumor(u8 rumor)
+static bool8 ApexLog_HasApexDossierRumor(u8 rumor)
 {
-    return LogbookMenu_HasHeardApexRumor(sFameCheckerData->apexSubquest, rumor);
+    return LogbookMenu_HasHeardApexRumor(sApexLogData->apexSubquest, rumor);
 }
 
-static bool8 FC_HasEncounteredApexDossierMon(void)
+static bool8 ApexLog_HasEncounteredApexDossierMon(void)
 {
-    return FlagGet(sApexRumorDossierEntries[sFameCheckerData->apexSubquest].apexInteractedFlag);
+    return FlagGet(sApexRumorDossierEntries[sApexLogData->apexSubquest].apexInteractedFlag);
 }
 
-static bool8 FC_IsApexDossierMonSlot(u8 slot)
+static bool8 ApexLog_IsApexDossierMonSlot(u8 slot)
 {
     return slot == 1;
 }
 
-static bool8 FC_IsApexDossierWitnessSlot(u8 slot)
+static bool8 ApexLog_IsApexDossierWitnessSlot(u8 slot)
 {
     return slot >= 3 && slot < 6;
 }
 
-static u8 FC_GetApexDossierRumorForSlot(u8 slot)
+static u8 ApexLog_GetApexDossierRumorForSlot(u8 slot)
 {
     return slot - 3;
 }
@@ -2039,7 +2039,7 @@ static void SetApexDossierSilhouettePalette(u8 spriteId)
         gSprites[spriteId].oam.paletteNum = paletteNum;
 }
 
-static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot)
+static void ApexLog_MoveApexDossierCursor(u8 taskId, u8 newSlot)
 {
     s16 *data = gTasks[taskId].data;
     s16 oldX = 47 * (data[1] % 3) + 0x72;
@@ -2048,16 +2048,16 @@ static void FC_MoveApexDossierCursor(u8 taskId, u8 newSlot)
     s16 newY = 27 * (newSlot / 3) + 0x2F;
 
     data[1] = newSlot;
-    FC_MoveSelectorCursor(taskId, newX - oldX, newY - oldY);
+    ApexLog_MoveSelectorCursor(taskId, newX - oldX, newY - oldY);
 }
 
-static void FC_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId)
+static void ApexLog_PutWindowTilemapAndCopyWindowToVramMode3_2(u8 windowId)
 {
     PutWindowTilemap(windowId);
     CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
-static void FC_CreateScrollIndicatorArrowPair(void)
+static void ApexLog_CreateScrollIndicatorArrowPair(void)
 {
     struct ScrollArrowsTemplate template = {
           2,
@@ -2073,30 +2073,30 @@ static void FC_CreateScrollIndicatorArrowPair(void)
           1,
     };
 
-    if (sFameCheckerData->numUnlockedPersons > 5)
+    if (sApexLogData->numUnlockedPersons > 5)
     {
         template.fullyUpThreshold = 0;
-        template.fullyDownThreshold = sFameCheckerData->numUnlockedPersons - 5;
-        sFameCheckerData->scrollIndicatorPairTaskId = AddScrollIndicatorArrowPair(&template, &sFameCheckerData->listMenuTopIdx);
+        template.fullyDownThreshold = sApexLogData->numUnlockedPersons - 5;
+        sApexLogData->scrollIndicatorPairTaskId = AddScrollIndicatorArrowPair(&template, &sApexLogData->listMenuTopIdx);
     }
 }
 
 static void FreeListMenuSelectorArrowPairResources(void)
 {
-    if (sFameCheckerData->numUnlockedPersons > 5)
-        RemoveScrollIndicatorArrowPair(sFameCheckerData->scrollIndicatorPairTaskId);
+    if (sApexLogData->numUnlockedPersons > 5)
+        RemoveScrollIndicatorArrowPair(sApexLogData->scrollIndicatorPairTaskId);
 }
 
-static u16 FameCheckerGetCursorY(void)
+static u16 ApexLogGetCursorY(void)
 {
     u16 listY, cursorY;
-    ListMenuGetScrollAndRow(sFameCheckerData->listMenuTaskId, &listY, &cursorY);
+    ListMenuGetScrollAndRow(sApexLogData->listMenuTaskId, &listY, &cursorY);
     return listY + cursorY;
 }
 
 static void HandleFlavorTextModeSwitch(bool8 state)
 {
-    if (sFameCheckerData->viewingFlavorText != state)
+    if (sApexLogData->viewingFlavorText != state)
     {
         u8 taskId = FindTaskIdByFunc(Task_FCOpenOrCloseInfoBox);
         if (taskId == 0xFF)
@@ -2106,12 +2106,12 @@ static void HandleFlavorTextModeSwitch(bool8 state)
         if (state == TRUE)
         {
             gTasks[taskId].data[2] = 1;
-            sFameCheckerData->viewingFlavorText = TRUE;
+            sApexLogData->viewingFlavorText = TRUE;
         }
         else
         {
             gTasks[taskId].data[2] = 4;
-            sFameCheckerData->viewingFlavorText = FALSE;
+            sApexLogData->viewingFlavorText = FALSE;
         }
     }
 }
@@ -2141,7 +2141,7 @@ static void Task_FCOpenOrCloseInfoBox(u8 taskId)
 
 static void UpdateInfoBoxTilemap(u8 bg, s16 state)
 {
-    u8 left = (sFameCheckerData != NULL && sFameCheckerData->isApexDossier) ? FC_APEX_DOSSIER_INFOBOX_LEFT : 14;
+    u8 left = (sApexLogData != NULL && sApexLogData->isApexDossier) ? ApexLog_APEX_DOSSIER_INFOBOX_LEFT : 14;
 
     if (state == 0 || state == 3)
     {
@@ -2205,7 +2205,7 @@ static void UpdateInfoBoxTilemap(u8 bg, s16 state)
 
 static void PlaceListMenuCursor(bool8 isActive)
 {
-    u16 cursorY = ListMenuGetYCoordForPrintingArrowCursor(sFameCheckerData->listMenuTaskId);
+    u16 cursorY = ListMenuGetYCoordForPrintingArrowCursor(sApexLogData->listMenuTaskId);
     if (isActive == TRUE)
         AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 0, cursorY, 0, 0, sTextColor_DkGrey, 0, gText_SelectorArrow2);
     else

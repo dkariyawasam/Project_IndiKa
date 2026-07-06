@@ -485,7 +485,7 @@ PewterCity_Movement_MuseumGuideExit::
 PewterCity_EventScript_FatMan::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BROCK, 2
+	apexlog APEX_LOG_PERSON_BROCK, 2
 	msgbox PewterCity_Text_BrockOnlySeriousTrainerHere
 	release
 	end
@@ -514,7 +514,7 @@ PewterCity_EventScript_MuseumSign::
 
 PewterCity_EventScript_GymSign::
 	lockall
-	famechecker FAMECHECKER_BROCK, 0
+	apexlog APEX_LOG_PERSON_BROCK, 0
 	msgbox PewterCity_Text_GymSign
 	releaseall
 	end

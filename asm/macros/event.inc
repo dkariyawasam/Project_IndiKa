@@ -2002,8 +2002,8 @@
 	msgreceiveditem \msg, \item, \amount, \fanfare
 	.endm
 
-	@ Depends on the provided function. With the default argument, unlocks the specified entry in the Fame Checker.
-	.macro famechecker person:req, index:req, function=SetFlavorTextFlagFromSpecialVars
+	@ Depends on the provided function. With the default argument, unlocks the specified entry in the Apex Log.
+	.macro apexlog person:req, index:req, function=SetFlavorTextFlagFromSpecialVars
 	setvar VAR_0x8004, \person
 	setvar VAR_0x8005, \index
 	special \function

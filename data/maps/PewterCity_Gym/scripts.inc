@@ -30,7 +30,7 @@ PewterCity_Gym_EventScript_GymGuyInterceptBrockAway::
 	end
 
 PewterCity_Gym_EventScript_Brock::
-	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_BROCK, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 3, PewterCity_Gym_EventScript_BrockBattlePicker
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 4, PewterCity_Gym_EventScript_BrockRelicanthCheck
 	goto_if_eq VAR_BROCK_TRIAL_STATE, 5, PewterCity_Gym_EventScript_BrockTradeDone
@@ -77,7 +77,7 @@ PewterCity_Gym_EventScript_BrockBattlSixBadges::
 	end
 
 PewterCity_Gym_EventScript_DefeatedBrock::
-	famechecker FAMECHECKER_BROCK, 1
+	apexlog APEX_LOG_PERSON_BROCK, 1
 	setflag FLAG_DEFEATED_BROCK
 	setflag FLAG_BADGE01_GET
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 1

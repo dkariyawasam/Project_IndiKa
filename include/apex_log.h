@@ -1,8 +1,8 @@
-#ifndef GUARD_FAME_CHECKER_H
-#define GUARD_FAME_CHECKER_H
+#ifndef GUARD_APEX_LOG_H
+#define GUARD_APEX_LOG_H
 
 #include "main.h"
-#include "constants/fame_checker.h"
+#include "constants/apex_log.h"
 
 enum {
     FCWINDOWID_LIST,
@@ -11,14 +11,14 @@ enum {
     FCWINDOWID_ICONDESC
 };
 
-extern struct ListMenuTemplate gFameChecker_ListMenuTemplate;
+extern struct ListMenuTemplate gApexLog_ListMenuTemplate;
 extern u8 gIconDescriptionBoxIsOpen;
 
-void ResetFameChecker(void);
-void FullyUnlockFameChecker(void);
+void ResetApexLog(void);
+void FullyUnlockApexLog(void);
 void UseApexLog(MainCallback savedCallback);
 void UseApexRumorDossier(MainCallback savedCallback, u8 apexSubquest);
 void SetFlavorTextFlagFromSpecialVars(void);
 void UpdatePickStateFromSpecialVar8005(void);
 
-#endif //GUARD_FAME_CHECKER_H
+#endif //GUARD_APEX_LOG_H

@@ -34,7 +34,7 @@ CeruleanCity_Text_OhRightLittlePresentAsFavor::
     .string "So here, I'll give you a little\n"
     .string "advice as a favor.$"
 
-CeruleanCity_Text_ExplainFameCheckerSmellYa::
+CeruleanCity_Text_ExplainApexLogSmellYa::
     .string "That LOGBOOK tracks rumours\n"
     .string "you've picked up.\p"
     .string "I won't need hints. I'll find\n"

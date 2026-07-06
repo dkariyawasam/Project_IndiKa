@@ -126,6 +126,8 @@ static void SpriteCB_CableEndReceiving(struct Sprite *sprite);
 static void SpriteCB_GbaScreen(struct Sprite *sprite);
 static void TradeAnimInit_LoadGfx(void);
 static void CB2_InGameTrade(void);
+static void CB2_InitGeneratedPokemonReceive(void);
+static void CB2_GeneratedPokemonReceive(void);
 static void SetTradeSequenceBgGpuRegs(u8 idx);
 static void LoadTradeGbaSpriteGfx(void);
 static void TradeBufferOTnameAndNicknames(void);
@@ -149,6 +151,7 @@ static void Task_OpenCenterWhiteColumn(u8 taskId);
 static void Task_CloseCenterWhiteColumn(u8 taskId);
 
 static const u16 sPokeball_Pal[]                    = INCBIN_U16("graphics/trade/pokeball.gbapal");
+static const u8 sText_Machine[]                     = _("MACHINE");
 static const u8 sPokeball_Gfx[]                     = INCBIN_U8("graphics/trade/pokeball.4bpp");
 static const u8 sPokeballSymbol_Gfx[]               = INCBIN_U8("graphics/trade/pokeball_symbol.8bpp"); // Unused
 static const u16 sCableCloseup_Map[]                = INCBIN_U16("graphics/trade/cable_closeup_map.bin");
@@ -1330,6 +1333,79 @@ enum {
     STATE_LINK_MON_TRAVEL_OFFSCREEN = 200,
     STATE_WAIT_FOR_MON_CRY = 267,
 };
+
+static void CB2_GeneratedPokemonReceive(void)
+{
+    if (DoTradeAnim() == TRUE)
+    {
+        sTradeAnim->isLinkTrade = FALSE;
+        sTradeAnim->state = STATE_FADE_OUT_END;
+    }
+
+    RunTasks();
+    RunTextPrinters();
+    AnimateSprites();
+    BuildOamBuffer();
+    UpdatePaletteFade();
+}
+
+static void CB2_InitGeneratedPokemonReceive(void)
+{
+    switch (gMain.state)
+    {
+    case 0:
+        gSelectedTradeMonPositions[TRADE_PARTNER] = PARTY_SIZE;
+        StringCopy(gStringVar1, sText_Machine);
+        CreateMon(&gEnemyParty[0], gSpecialVar_0x8004, gSpecialVar_0x8005, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        GetSpeciesName(gStringVar3, gSpecialVar_0x8004);
+        sTradeAnim = AllocZeroed(sizeof(*sTradeAnim));
+        AllocateMonSpritesGfx();
+        ResetTasks();
+        ResetSpriteData();
+        FreeAllSpritePalettes();
+        SetVBlankCallback(VBlankCB_TradeAnim);
+        TradeAnimInit_LoadGfx();
+        sTradeAnim->isLinkTrade = TRUE;
+        sTradeAnim->state = STATE_WAIT_FADE_OUT_TO_NEW_MON;
+        sTradeAnim->bg2texX = 64;
+        sTradeAnim->bg2texY = 64;
+        sTradeAnim->bg2srcX = DISPLAY_WIDTH / 2;
+        sTradeAnim->bg2srcY = DISPLAY_HEIGHT / 2;
+        sTradeAnim->sXY = 256;
+        sTradeAnim->bg2alpha = 0;
+        gMain.state++;
+        break;
+    case 1:
+        LoadTradeMonPic(TRADE_PARTNER, 0);
+        ShowBg(0);
+        gMain.state++;
+        break;
+    case 2:
+        LoadTradeMonPic(TRADE_PARTNER, 1);
+        FillWindowPixelBuffer(0, PIXEL_FILL(15));
+        PutWindowTilemap(0);
+        CopyWindowToVram(0, COPYWIN_FULL);
+        gMain.state++;
+        break;
+    case 3:
+        LoadTradeGbaSpriteGfx();
+        LoadSpriteSheet(&sPokeBallSpriteSheet);
+        LoadSpritePalette(&sTradeBallSpritePal);
+        gMain.state++;
+        break;
+    case 4:
+        SetTradeSequenceBgGpuRegs(5);
+        SetTradeSequenceBgGpuRegs(7);
+        SetMainCallback2(CB2_GeneratedPokemonReceive);
+        break;
+    }
+
+    RunTasks();
+    RunTextPrinters();
+    AnimateSprites();
+    BuildOamBuffer();
+    UpdatePaletteFade();
+}
 
 static bool8 DoTradeAnim_Cable(void)
 {
@@ -2771,6 +2847,16 @@ void DoInGameTradeScene(void)
     LockPlayerFieldControls();
     CreateTask(Task_InGameTrade, 10);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    HelpSystem_Disable();
+}
+
+void DoGeneratedPokemonReceiveScene(void)
+{
+    LockPlayerFieldControls();
+    gMain.state = 0;
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    SetMainCallback2(CB2_InitGeneratedPokemonReceive);
+    gFieldCallback = FieldCB_ContinueScriptHandleMusic;
     HelpSystem_Disable();
 }
 
