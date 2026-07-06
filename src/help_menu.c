@@ -56,7 +56,7 @@ struct HelpMenuBuf
 static EWRAM_DATA struct HelpMenuCtrlBlk sStaticResources = {0};
 static EWRAM_DATA struct HelpMenuBuf * sResources = NULL;
 
-#define HELP_MENU_STATIC_TILE 203
+#define HELP_MENU_STATIC_TILE 185
 
 static void HelpMenuCmd_TransitionRenderBg2HelpMenuGraphicInitNpcPos(u8 taskId);
 static void HelpMenuCmd_ClearBg2HelpMenuGraphic(u8 taskId);
