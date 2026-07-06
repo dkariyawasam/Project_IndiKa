@@ -220,7 +220,7 @@ static const u16 sLogbookMenuWindowPal[] =
 
 //Strings used for the Logbook Menu
 static const u8 sText_Empty[] = _("");
-static const u8 sText_AllHeader[] = _("ALL MISSIONS");
+static const u8 sText_AllHeader[] = _("FIELD NOTES");
 static const u8 sText_QuestNumberDisplay[] =
       _("{STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_Unk[] = _("??????");
