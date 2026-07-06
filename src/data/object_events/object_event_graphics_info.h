@@ -891,7 +891,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fisher = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TeachyTVHost = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HelpMenuHost = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -906,7 +906,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TeachyTVHost = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_TeachyTVHost,
+    .images = sPicTable_HelpMenuHost,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

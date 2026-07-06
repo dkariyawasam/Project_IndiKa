@@ -120,36 +120,36 @@ extern const u8 gFameCheckerDaisyName[]; // "DAISY$"
 extern const u8 gFameCheckerBillName[]; // "BILL$"
 extern const u8 gFameCheckerMrFujiName[]; // "FUJI$"
 
-// teachy_tv
-extern const u8 gTeachyTvString_TeachBattle[];
-extern const u8 gTeachyTvString_StatusProblems[];
-extern const u8 gTeachyTvString_TypeMatchups[];
-extern const u8 gTeachyTvString_CatchPkmn[];
-extern const u8 gTeachyTvString_Training[];
-extern const u8 gTeachyTvString_AboutTMs[];
-extern const u8 gTeachyTvString_Demonstration[];
-extern const u8 gTeachyTvString_Theory[];
-extern const u8 gTeachyTvText_PokedudeSaysHello[];
-extern const u8 gTeachyTvText_BattleScript1[];
-extern const u8 gTeachyTvText_BattleTheoryScript1[];
-extern const u8 gTeachyTvText_StatusScript1[];
-extern const u8 gTeachyTvText_StatusTheoryScript1[];
-extern const u8 gTeachyTvText_MatchupsScript1[];
-extern const u8 gTeachyTvText_CatchingScript1[];
-extern const u8 gTeachyTvText_CatchingTheoryScript1[];
-extern const u8 gTeachyTvText_TrainingScript1[];
-extern const u8 gTeachyTvText_TMsScript1[];
-extern const u8 gTeachyTvText_BattleScript2[];
-extern const u8 gTeachyTvText_BattleTheoryScript2[];
-extern const u8 gTeachyTvText_StatusScript2[];
-extern const u8 gTeachyTvText_StatusTheoryScript2[];
-extern const u8 gTeachyTvText_MatchupsScript2[];
-extern const u8 gTeachyTvText_MatchupsTheoryScript1[];
-extern const u8 gTeachyTvText_MatchupsTheoryScript2[];
-extern const u8 gTeachyTvText_CatchingScript2[];
-extern const u8 gTeachyTvText_CatchingTheoryScript2[];
-extern const u8 gTeachyTvText_TrainingScript2[];
-extern const u8 gTeachyTvText_TMsScript2[];
+// help_menu
+extern const u8 gHelpMenuString_TeachBattle[];
+extern const u8 gHelpMenuString_StatusProblems[];
+extern const u8 gHelpMenuString_TypeMatchups[];
+extern const u8 gHelpMenuString_CatchPkmn[];
+extern const u8 gHelpMenuString_Training[];
+extern const u8 gHelpMenuString_AboutTMs[];
+extern const u8 gHelpMenuString_Demonstration[];
+extern const u8 gHelpMenuString_Theory[];
+extern const u8 gHelpMenuText_PokedudeSaysHello[];
+extern const u8 gHelpMenuText_BattleScript1[];
+extern const u8 gHelpMenuText_BattleTheoryScript1[];
+extern const u8 gHelpMenuText_StatusScript1[];
+extern const u8 gHelpMenuText_StatusTheoryScript1[];
+extern const u8 gHelpMenuText_MatchupsScript1[];
+extern const u8 gHelpMenuText_CatchingScript1[];
+extern const u8 gHelpMenuText_CatchingTheoryScript1[];
+extern const u8 gHelpMenuText_TrainingScript1[];
+extern const u8 gHelpMenuText_TMsScript1[];
+extern const u8 gHelpMenuText_BattleScript2[];
+extern const u8 gHelpMenuText_BattleTheoryScript2[];
+extern const u8 gHelpMenuText_StatusScript2[];
+extern const u8 gHelpMenuText_StatusTheoryScript2[];
+extern const u8 gHelpMenuText_MatchupsScript2[];
+extern const u8 gHelpMenuText_MatchupsTheoryScript1[];
+extern const u8 gHelpMenuText_MatchupsTheoryScript2[];
+extern const u8 gHelpMenuText_CatchingScript2[];
+extern const u8 gHelpMenuText_CatchingTheoryScript2[];
+extern const u8 gHelpMenuText_TrainingScript2[];
+extern const u8 gHelpMenuText_TMsScript2[];
 
 // help_system_812B1E0
 extern const u8 gText_HelpSystemControls_A_Next[];

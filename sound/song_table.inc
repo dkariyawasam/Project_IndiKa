@@ -331,7 +331,7 @@ gSongTable::
 	song mus_mystery_gift, 0, 0
 	song mus_dummy, 0, 0
 	song mus_sevii_cave, 0, 0
-	song mus_teachy_tv_show, 0, 0
+	song mus_help_menu_show, 0, 0
 	song mus_sevii_route, 0, 0
 	song mus_sevii_dungeon, 0, 0
 	song mus_sevii_123, 0, 0
@@ -345,7 +345,7 @@ gSongTable::
 	song mus_encounter_deoxys, 0, 0
 	song mus_rocket_league, 0, 0
 	song mus_slow_pallet, 0, 0
-	song mus_teachy_tv_menu, 0, 0
+	song mus_help_menu_menu, 0, 0
 
 dummy_song_header:
 	.byte 0, 0, 0, 0

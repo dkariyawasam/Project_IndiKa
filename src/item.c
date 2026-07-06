@@ -198,7 +198,7 @@ bool8 AddBagItem(u16 itemId, u16 count)
     u8 pocket;
     s8 idx;
 
-    if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_TEACHY_TV)
+    if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_HELP_MENU)
         return TRUE;
 
     if (ItemId_GetPocket(itemId) == 0)
