@@ -5,8 +5,8 @@ static const u8 *const sLinkGroupActivityNameTexts[] = {
     [ACTIVITY_BATTLE_MULTI]    = gText_UR_MultiBattle,
     [ACTIVITY_TRADE]           = gText_UR_PokemonTrades,
     [ACTIVITY_CHAT]            = gText_UR_Chat,
-    [ACTIVITY_WONDER_CARD_DUP] = gText_UR_WonderCards,
-    [ACTIVITY_WONDER_NEWS_DUP] = gText_UR_WonderNews,
+    [ACTIVITY_WONDER_CARD_DUP] = gText_UR_EmptyString,
+    [ACTIVITY_WONDER_NEWS_DUP] = gText_UR_EmptyString,
     [ACTIVITY_CARD]            = gText_UR_Cards,
     [ACTIVITY_UNUSED_9]        = gText_UR_EmptyString,
     [ACTIVITY_UNUSED_10]       = gText_UR_EmptyString,
@@ -20,8 +20,8 @@ static const u8 *const sLinkGroupActivityNameTexts[] = {
     [ACTIVITY_DECLINE]         = gText_UR_EmptyString,
     [ACTIVITY_NPCTALK]         = gText_UR_EmptyString,
     [ACTIVITY_PLYRTALK]        = gText_UR_EmptyString,
-    [ACTIVITY_WONDER_CARD]     = gText_UR_WonderCards,
-    [ACTIVITY_WONDER_NEWS]     = gText_UR_WonderNews
+    [ACTIVITY_WONDER_CARD]     = gText_UR_EmptyString,
+    [ACTIVITY_WONDER_NEWS]     = gText_UR_EmptyString
 };
 
 static const struct WindowTemplate sWindowTemplate_BButtonCancel = {
@@ -49,8 +49,8 @@ static const u32 sLinkGroupToActivityAndCapacity[] = {
     [LINK_GROUP_UNUSED_4]      = ACTIVITY_NONE,
     [LINK_GROUP_UNUSED_5]      = ACTIVITY_NONE,
     [LINK_GROUP_UNUSED_6]      = ACTIVITY_NONE,
-    [LINK_GROUP_WONDER_CARD]   = ACTIVITY_SPIN_TRADE        | LINK_GROUP_CAPACITY(3, 5),
-    [LINK_GROUP_WONDER_NEWS]   = ACTIVITY_ITEM_TRADE        | LINK_GROUP_CAPACITY(3, 5)
+    [LINK_GROUP_WONDER_CARD]   = ACTIVITY_NONE,
+    [LINK_GROUP_WONDER_NEWS]   = ACTIVITY_NONE
 };
 
 static const struct WindowTemplate sWindowTemplate_List_PossibleGroupMembers = {
@@ -400,8 +400,6 @@ ALIGNED(4) static const u8 sAcceptedActivityIds_SingleBattle[] = {ACTIVITY_BATTL
 ALIGNED(4) static const u8 sAcceptedActivityIds_DoubleBattle[] = {ACTIVITY_BATTLE_DOUBLE, 0xFF};
 ALIGNED(4) static const u8 sAcceptedActivityIds_MultiBattle[] = {ACTIVITY_BATTLE_MULTI, 0xFF};
 ALIGNED(4) static const u8 sAcceptedActivityIds_Trade[] = {ACTIVITY_TRADE, 0xFF};
-ALIGNED(4) static const u8 sAcceptedActivityIds_WonderCard[] = {ACTIVITY_WONDER_CARD, 0xFF};
-ALIGNED(4) static const u8 sAcceptedActivityIds_WonderNews[] = {ACTIVITY_WONDER_NEWS, 0xFF};
 ALIGNED(4) static const u8 sAcceptedActivityIds_Resume[] = {
     IN_UNION_ROOM | ACTIVITY_NONE,
     IN_UNION_ROOM | ACTIVITY_BATTLE_SINGLE,
@@ -420,8 +418,6 @@ ALIGNED(4) static const u8 sAcceptedActivityIds_Unk11[] = {
     ACTIVITY_BATTLE_DOUBLE,
     ACTIVITY_BATTLE_MULTI,
     ACTIVITY_TRADE,
-    ACTIVITY_WONDER_CARD,
-    ACTIVITY_WONDER_NEWS,
     ACTIVITY_SPIN_TRADE,
     0xFF
 };
@@ -441,8 +437,8 @@ static const u8 *const sAcceptedActivityIds[NUM_LINK_GROUP_TYPES] = {
     [LINK_GROUP_UNUSED_4]          = sAcceptedActivityIds_Init,
     [LINK_GROUP_UNUSED_5]          = sAcceptedActivityIds_Init,
     [LINK_GROUP_UNUSED_6]          = sAcceptedActivityIds_Init,
-    [LINK_GROUP_WONDER_CARD]       = sAcceptedActivityIds_WonderCard,
-    [LINK_GROUP_WONDER_NEWS]       = sAcceptedActivityIds_WonderNews,
+    [LINK_GROUP_WONDER_CARD]       = sAcceptedActivityIds_Init,
+    [LINK_GROUP_WONDER_NEWS]       = sAcceptedActivityIds_Init,
     [LINK_GROUP_UNION_ROOM_RESUME] = sAcceptedActivityIds_Resume,
     [LINK_GROUP_UNION_ROOM_INIT]   = sAcceptedActivityIds_Init,
     [LINK_GROUP_UNK_11]            = sAcceptedActivityIds_Unk11,
@@ -457,8 +453,8 @@ static const u8 sLinkGroupToURoomActivity[] = {
     [LINK_GROUP_UNUSED_4]      = ACTIVITY_NONE,
     [LINK_GROUP_UNUSED_5]      = ACTIVITY_NONE,
     [LINK_GROUP_UNUSED_6]      = ACTIVITY_NONE,
-    [LINK_GROUP_WONDER_CARD]   = ACTIVITY_WONDER_CARD,
-    [LINK_GROUP_WONDER_NEWS]   = ACTIVITY_WONDER_NEWS
+    [LINK_GROUP_WONDER_CARD]   = ACTIVITY_NONE,
+    [LINK_GROUP_WONDER_NEWS]   = ACTIVITY_NONE
 };
 
 // Unused

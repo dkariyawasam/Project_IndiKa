@@ -104,8 +104,8 @@ PokemonTower_3F_EventScript_SabrinaChallenge7::
 	end
 
 PokemonTower_3F_EventScript_DefeatedSabrina::
-	famechecker FAMECHECKER_SABRINA, 2
-	famechecker FAMECHECKER_SABRINA, 3
+	apexlog APEX_LOG_PERSON_SABRINA, 2
+	apexlog APEX_LOG_PERSON_SABRINA, 3
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET

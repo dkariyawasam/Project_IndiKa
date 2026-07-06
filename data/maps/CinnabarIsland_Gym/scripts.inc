@@ -46,7 +46,10 @@ CinnabarIsland_Gym_OnLoadOpenDoor6::
 	return
 
 CinnabarIsland_Gym_EventScript_Blaine::
-	famechecker FAMECHECKER_BLAINE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GYM_LEADER_TRIALS
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BLAINE
+	apexlog APEX_LOG_PERSON_BLAINE, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_BLAINE, CinnabarIsland_Gym_EventScript_BlaineAlreadyDefeated
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, CinnabarIsland_Gym_EventScript_BlaineChallenge1
@@ -100,16 +103,24 @@ CinnabarIsland_Gym_EventScript_BlaineChallenge7::
 	end
 
 CinnabarIsland_Gym_EventScript_BlaineAlreadyDefeated::
+	goto_if_unset FLAG_GOT_PORYGON_FROM_BLAINE, CinnabarIsland_Gym_EventScript_BlainePorygonMachineAvailable
 	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
 	release
 	end
 
+CinnabarIsland_Gym_EventScript_BlainePorygonMachineAvailable::
+	msgbox CinnabarIsland_Gym_Text_BlainePorygonMachineAvailable
+	release
+	end
+
 CinnabarIsland_Gym_EventScript_DefeatedBlaine::
-	famechecker FAMECHECKER_BLAINE, 1
+	apexlog APEX_LOG_PERSON_BLAINE, 1
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_BLAINE
 	setflag FLAG_DEFEATED_BLAINE
 	setflag FLAG_BADGE07_GET
 	setrespawn HEAL_LOCATION_CINNABAR_ISLAND
 	msgbox CinnabarIsland_Gym_Text_ExplainVolcanoBadge
+	msgbox CinnabarIsland_Gym_Text_BlaineUnlockPorygonMachine
 	release
 	end
 
@@ -134,7 +145,7 @@ CinnabarIsland_Gym_EventScript_Quiz2CompleteTrainer::
 
 CinnabarIsland_Gym_EventScript_Derek::
 	trainerbattle_single TRAINER_SUPER_NERD_DEREK, CinnabarIsland_Gym_Text_DerekIntro, CinnabarIsland_Gym_Text_DerekDefeat, CinnabarIsland_Gym_EventScript_DefeatedDerek
-	famechecker FAMECHECKER_BLAINE, 2
+	apexlog APEX_LOG_PERSON_BLAINE, 2
 	msgbox CinnabarIsland_Gym_Text_DerekPostBattle, MSGBOX_AUTOCLOSE
 	end
 

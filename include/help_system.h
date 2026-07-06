@@ -10,8 +10,6 @@ void HelpSystem_Disable(void);
 void HelpSystem_Enable(void);
 void HelpSystem_EnableToggleWithRButton(void);
 
-// help_system
-bool8 RunHelpSystemCallback(void);
 void SaveCallbacks(void);
 void SaveMapGPURegs(void);
 void SaveMapTiles(void);

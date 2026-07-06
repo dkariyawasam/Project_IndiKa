@@ -58,7 +58,7 @@ VermilionCity_Gym_EventScript_GymGuyInterceptSurgeAway::
 	end
 
 VermilionCity_Gym_EventScript_LtSurge::
-	famechecker FAMECHECKER_LTSURGE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_LTSURGE, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LT_SURGE, VermilionCity_Gym_EventScript_LtSurgeElectabuzzTrade
 	special GetBadgeCount
 	goto_if_eq VAR_RESULT, 0, VermilionCity_Gym_EventScript_LtSurgeChallenge1
@@ -112,8 +112,8 @@ VermilionCity_Gym_EventScript_LtSurgeChallenge7::
 	end
 
 VermilionCity_Gym_EventScript_DefeatedLtSurge::
-	famechecker FAMECHECKER_LTSURGE, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
+	apexlog APEX_LOG_PERSON_LTSURGE, 1
+	clearflag FLAG_HIDE_APEX_LOG_LT_SURGE_JOURNAL
 	setflag FLAG_DEFEATED_LT_SURGE
 	setflag FLAG_BADGE03_GET
 	setvar VAR_LT_SURGE_TRIAL_STATE, 4
@@ -160,7 +160,7 @@ VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone::
 
 VermilionCity_Gym_EventScript_Dwayne::
 	trainerbattle_single TRAINER_SAILOR_DWAYNE, VermilionCity_Gym_Text_DwayneIntro, VermilionCity_Gym_Text_DwayneDefeat
-	famechecker FAMECHECKER_LTSURGE, 4
+	apexlog APEX_LOG_PERSON_LTSURGE, 4
 	msgbox VermilionCity_Gym_Text_DwaynePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -171,12 +171,12 @@ VermilionCity_Gym_EventScript_Baily::
 
 VermilionCity_Gym_EventScript_Tucker::
 	trainerbattle_single TRAINER_GENTLEMAN_TUCKER, VermilionCity_Gym_Text_TuckerIntro, VermilionCity_Gym_Text_TuckerDefeat, VermilionCity_Gym_EventScript_DefeatedTucker
-	famechecker FAMECHECKER_LTSURGE, 3
+	apexlog APEX_LOG_PERSON_LTSURGE, 3
 	msgbox VermilionCity_Gym_Text_TuckerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 VermilionCity_Gym_EventScript_DefeatedTucker::
-	famechecker FAMECHECKER_LTSURGE, 2
+	apexlog APEX_LOG_PERSON_LTSURGE, 2
 	release
 	end
 

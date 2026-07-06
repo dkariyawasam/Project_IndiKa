@@ -108,17 +108,17 @@ extern const u8 gText_ICanPayThisMuch_WouldThatBeOkay[];
 extern const u8 gText_TurnedOverItemsWorthYen[];
 extern const u8 gPokedudeText_TMTypes[];
 extern const u8 gPokedudeText_ReadTMDescription[];
-extern const u8 gFameCheckerText_Cancel[];
+extern const u8 gApexLogText_Cancel[];
 extern const u8 gText_SelectorArrow2[];
-extern const u8 gFameCheckerText_FameCheckerWillBeClosed[];
-extern const u8 gFameCheckerText_ClearTextbox[];
-extern const u8 gFameCheckerText_MainScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {A_BUTTON}OK$"
-extern const u8 gFameCheckerText_PickScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {B_BUTTON}CANCEL$"
-extern const u8 gFameCheckerText_FlavorTextUI[]; // "{START_BUTTON}PICK {A_BUTTON}READ {B_BUTTON}CANCEL$"
-extern const u8 gFameCheckerOakName[]; // "OAK$"
-extern const u8 gFameCheckerDaisyName[]; // "DAISY$"
-extern const u8 gFameCheckerBillName[]; // "BILL$"
-extern const u8 gFameCheckerMrFujiName[]; // "FUJI$"
+extern const u8 gApexLogText_ApexLogWillBeClosed[];
+extern const u8 gApexLogText_ClearTextbox[];
+extern const u8 gApexLogText_MainScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {A_BUTTON}OK$"
+extern const u8 gApexLogText_PickScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {B_BUTTON}CANCEL$"
+extern const u8 gApexLogText_FlavorTextUI[]; // "{START_BUTTON}PICK {A_BUTTON}READ {B_BUTTON}CANCEL$"
+extern const u8 gApexLogOakName[]; // "OAK$"
+extern const u8 gApexLogDaisyName[]; // "DAISY$"
+extern const u8 gApexLogBillName[]; // "BILL$"
+extern const u8 gApexLogMrFujiName[]; // "FUJI$"
 
 // help_menu
 extern const u8 gHelpMenuString_TeachBattle[];
@@ -151,17 +151,10 @@ extern const u8 gHelpMenuText_CatchingTheoryScript2[];
 extern const u8 gHelpMenuText_TrainingScript2[];
 extern const u8 gHelpMenuText_TMsScript2[];
 
-// help_system_812B1E0
-extern const u8 gText_HelpSystemControls_A_Next[];
-extern const u8 gText_HelpSystemControls_PickOkEnd[];
-extern const u8 gText_HelpSystemControls_AorBtoCancel[];
-extern const u8 gText_HelpSystemControls_PickOkCancel[];
-
 // help_system
 extern const u8 gString_Bill[];
 extern const u8 gString_Someone[];
 extern const u8 gString_Help[];
-extern const u8 gString_HelpSystem_ClearTo8[];
 
 extern const u8 gText_Var1IsSelected[];
 extern const u8 gOtherText_WhereShouldTheStrVar1BePlaced[];
@@ -504,9 +497,7 @@ extern const u8 gText_SaveFileHasBeenDeleted[];
 extern const u8 gText_1MSubCircuitBoardNotInstalled[];
 extern const u8 gText_NewGame[];
 extern const u8 gText_Continue[];
-extern const u8 gText_MysteryGift[];
 extern const u8 gText_WirelessNotConnected[];
-extern const u8 gText_MysteryGiftCantUse[];
 extern const u8 gText_Player[];
 extern const u8 gText_Time[];
 extern const u8 gText_Colon[];
@@ -516,68 +507,8 @@ extern const u8 gText_Badges[];
 extern const u8 gTextJPDummy_Ko[];
 extern const u8 gText_Register[];
 
-// mystery_gift_menu
+// menu hints
 extern const u8 gText_PickOKExit[];
-extern const u8 gText_PickOKCancel[];
-extern const u8 gText_MysteryGift2[];
-extern const u8 gJPText_MysteryGift[];
-extern const u8 gJPText_DecideStop[];
-extern const u8 gText_WhatToDoWithCards[];
-extern const u8 gText_WhatToDoWithNews[];
-extern const u8 gText_OkayToDiscardNews[];
-extern const u8 gText_IfThrowAwayCardEventWontHappen[];
-extern const u8 gText_WonderCardThrownAway[];
-extern const u8 gText_WonderNewsThrownAway[];
-extern const u8 gText_DataWillBeSaved[];
-extern const u8 gText_SaveCompletedPressA[];
-extern const u8 gText_WonderCards[];
-extern const u8 gText_WonderNews[];
-extern const u8 gText_Exit3[];
-extern const u8 gText_WirelessCommunication[];
-extern const u8 gText_Friend2[];
-extern const u8 gText_Receive[];
-extern const u8 gText_Send[];
-extern const u8 gText_Toss[];
-extern const u8 gText_VarietyOfEventsImportedWireless[];
-extern const u8 gText_WonderCardsInPossession[];
-extern const u8 gText_ReadNewsThatArrived[];
-extern const u8 gText_ReturnToTitle[];
-extern const u8 gText_NothingSentOver[];
-extern const u8 gText_RecordUploadedViaWireless[];
-extern const u8 gText_WonderCardReceived[];
-extern const u8 gText_WonderCardReceivedFrom[];
-extern const u8 gText_WonderNewsReceived[];
-extern const u8 gText_WonderNewsReceivedFrom[];
-extern const u8 gText_NewStampReceived[];
-extern const u8 gText_AlreadyHadCard[];
-extern const u8 gText_AlreadyHadStamp[];
-extern const u8 gText_AlreadyHadNews[];
-extern const u8 gText_NoMoreRoomForStamps[];
-extern const u8 gText_CommunicationCanceled[];
-extern const u8 gText_CantAcceptCardFromTrainer[];
-extern const u8 gText_CantAcceptNewsFromTrainer[];
-extern const u8 gText_CommunicationError[];
-extern const u8 gText_NewTrainerReceived[];
-extern const u8 gText_WonderCardSentTo[];
-extern const u8 gText_WonderNewsSentTo[];
-extern const u8 gText_StampSentTo[];
-extern const u8 gText_OtherTrainerHasCard[];
-extern const u8 gText_OtherTrainerHasStamp[];
-extern const u8 gText_OtherTrainerHasNews[];
-extern const u8 gText_OtherTrainerCanceled[];
-extern const u8 gText_GiftSentTo[];
-extern const u8 gText_CantSendGiftToTrainer[];
-extern const u8 gText_DontHaveCardNewOneInput[];
-extern const u8 gText_DontHaveNewsNewOneInput[];
-extern const u8 gText_WhereShouldCardBeAccessed[];
-extern const u8 gText_WhereShouldNewsBeAccessed[];
-extern const u8 gText_Communicating[];
-extern const u8 gText_ThrowAwayWonderCard[];
-extern const u8 gText_HaventReceivedCardsGift[];
-extern const u8 gText_CommunicationCompleted[];
-extern const u8 gText_HaventReceivedGiftOkayToDiscard[];
-extern const u8 gText_SendingWonderCard[];
-extern const u8 gText_SendingWonderNews[];
 
 // player_pc
 extern const u8 gText_WhatWouldYouLikeToDo[];

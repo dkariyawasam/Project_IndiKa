@@ -211,7 +211,7 @@ SECTIONS {
         src/palette_util.o(.text);
         src/cable_car_util.o(.text);
         src/save.o(.text);
-        src/mystery_event_script.o(.text);
+        src/mystery_gift_stub.o(.text);
         src/field_effect_helpers.o(.text);
         src/battle_anim_sound_tasks.o(.text);
         src/battle_controller_safari.o(.text);
@@ -263,7 +263,7 @@ SECTIONS {
         src/union_room_chat_display.o(.text);
         src/union_room_chat_objects.o(.text);
         src/help_system.o(.text);
-        src/fame_checker.o(.text);
+        src/apex_log.o(.text);
         src/menu2.o(.text);
         src/oak_speech.o(.text);
         src/menu_indicators.o(.text);
@@ -276,15 +276,6 @@ SECTIONS {
         src/buy_menu_helpers.o(.text);
         src/slot_machine.o(.text);
         src/roamer.o(.text);
-        src/mystery_gift_menu.o(.text);
-        src/ereader_screen.o(.text);
-        src/mystery_gift.o(.text);
-        src/mystery_gift_link.o(.text);
-        src/mystery_gift_client.o(.text);
-        src/mystery_gift_server.o(.text);
-        src/mystery_gift_show_card.o(.text);
-        src/mystery_gift_show_news.o(.text);
-        src/wonder_news.o(.text);
         src/seagallop.o(.text);
         src/wireless_communication_status_screen.o(.text);
         src/braille_text.o(.text);
@@ -293,7 +284,6 @@ SECTIONS {
         src/battle_controller_pokedude.o(.text);
         src/quest_log_objects.o(.text);
         src/help_menu.o(.text);
-        src/ereader_helpers.o(.text);
         src/digit_obj_util.o(.text);
         src/ss_anne.o(.text);
         src/renewable_hidden_items.o(.text);
@@ -308,7 +298,6 @@ SECTIONS {
         data/field_effect_scripts.o(script_data);
         data/battle_scripts_2.o(script_data);
         data/battle_ai_scripts.o(script_data);
-        data/mystery_event_script_cmd_table.o(script_data);
     } > ROM =0
 
     lib_text :
@@ -545,7 +534,7 @@ SECTIONS {
         src/union_room_chat_display.o(.rodata);
         src/union_room_chat_objects.o(.rodata);
         src/help_system.o(.rodata);
-        src/fame_checker.o(.rodata);
+        src/apex_log.o(.rodata);
         src/menu2.o(.rodata);
         src/oak_speech.o(.rodata);
         src/menu_indicators.o(.rodata);
@@ -558,17 +547,6 @@ SECTIONS {
         src/buy_menu_helpers.o(.rodata);
         src/slot_machine.o(.rodata);
         src/roamer.o(.rodata);
-        src/mystery_gift_menu.o(.rodata);
-        src/ereader_screen.o(.rodata);
-        src/mystery_gift.o(.rodata);
-        src/mystery_gift_link.o(.rodata);
-        src/mystery_gift_client.o(.rodata);
-        src/mystery_gift_server.o(.rodata);
-        src/mystery_gift_show_card.o(.rodata);
-        src/mystery_gift_show_news.o(.rodata);
-        src/mystery_gift_scripts.o(.rodata);
-        src/wonder_news.o(.rodata);
-        src/wonder_news.o(.rodata.str1.4);
         src/seagallop.o(.rodata);
         src/wireless_communication_status_screen.o(.rodata);
         src/braille_text.o(.rodata);
@@ -583,8 +561,6 @@ SECTIONS {
         src/move_descriptions.o(.rodata);
 
         /* These should not be moved to C files */
-        src/mystery_event_msg.o(.rodata);
-        data/mystery_event_msg.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
     } > ROM =0
@@ -916,8 +892,8 @@ SECTIONS {
         sound/songs/midi/mus_new_game_intro.o(.rodata);
         sound/songs/midi/mus_new_game_exit.o(.rodata);
         sound/songs/midi/mus_union_room.o(.rodata);
-        sound/songs/midi/mus_net_center.o(.rodata);
         sound/songs/midi/mus_mystery_gift.o(.rodata);
+        sound/songs/midi/mus_net_center.o(.rodata);
         sound/songs/midi/mus_sevii_cave.o(.rodata);
         sound/songs/midi/mus_help_menu_show.o(.rodata);
         sound/songs/midi/mus_sevii_route.o(.rodata);
@@ -992,7 +968,6 @@ SECTIONS {
     multiboot_data :
     ALIGN(4)
     {
-        data/multiboot_ereader.o(.rodata);
         data/multiboot_pokemon_colosseum.o(.rodata);
     } > ROM =0
 

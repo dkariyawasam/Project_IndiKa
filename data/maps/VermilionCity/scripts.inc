@@ -88,7 +88,7 @@ VermilionCity_EventScript_PokemonFanClubSign::
 
 VermilionCity_EventScript_GymSign::
 	lockall
-	famechecker FAMECHECKER_LTSURGE, 0
+	apexlog APEX_LOG_PERSON_LTSURGE, 0
 	msgbox VermilionCity_Text_GymSign
 	releaseall
 	end

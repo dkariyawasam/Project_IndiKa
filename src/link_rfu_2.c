@@ -238,7 +238,6 @@ static const struct BlockRequest sBlockRequests[] = {
 
 static const u16 sAcceptedSerialNos[] = {
     RFU_SERIAL_GAME,
-    RFU_SERIAL_WONDER_DISTRIBUTOR,
     RFU_SERIAL_END
 };
 
@@ -2849,11 +2848,6 @@ static void Task_RfuReconnectWithParent(u8 taskId)
                 gRfu.reconnectParentId = id;
                 if (TryReconnectParent())
                     DestroyTask(taskId);
-            }
-            else if (GetHostRfuGameData()->activity == ACTIVITY_WONDER_CARD
-                  || GetHostRfuGameData()->activity == ACTIVITY_WONDER_NEWS)
-            {
-                tTime++;
             }
             else
             {

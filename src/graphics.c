@@ -1204,10 +1204,10 @@ const u16 gTradeUnused_Tilemap[] = INCBIN_U16("graphics/trade/unused.bin");
 const u16 gTradeMenu_Tilemap[] = INCBIN_U16("graphics/trade/menu.bin");
 const u16 gTradeMenuMonBox_Tilemap[] = INCBIN_U16("graphics/trade/menu_mon_box.bin");
 
-const u16 gFameCheckerBgPals[][16] = INCBIN_U16("graphics/fame_checker/bg.gbapal");
-const u16 gFameCheckerBgTiles[] = INCBIN_U16("graphics/fame_checker/bg.4bpp");
-const u16 gFameCheckerBg3Tilemap[] = INCBIN_U16("graphics/fame_checker/tilemap3.bin");
-const u16 gFameCheckerBg2Tilemap[] = INCBIN_U16("graphics/fame_checker/tilemap2.bin");
+const u16 gApexLogBgPals[][16] = INCBIN_U16("graphics/apex_log/bg.gbapal");
+const u16 gApexLogBgTiles[] = INCBIN_U16("graphics/apex_log/bg.4bpp");
+const u16 gApexLogBg3Tilemap[] = INCBIN_U16("graphics/apex_log/tilemap3.bin");
+const u16 gApexLogBg2Tilemap[] = INCBIN_U16("graphics/apex_log/tilemap2.bin");
 
 const u16 gUnionRoomChat_Bg_Pal[] = INCBIN_U16("graphics/union_room_chat/bg.gbapal");
 const u32 gUnionRoomChat_Bg_Gfx[] = INCBIN_U32("graphics/union_room_chat/bg.4bpp.lz");

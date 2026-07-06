@@ -1,6 +1,6 @@
 TILESETGFXDIR := data/tilesets
 FONTGFXDIR := graphics/fonts
-FAMECHECKERGFXDIR := graphics/fame_checker
+APEXLOGGFXDIR := graphics/apex_log
 INTERFACEGFXDIR := graphics/interface
 PARTYMENUGFXDIR := graphics/party_menu
 BTLANMSPRGFXDIR := graphics/battle_anims/sprites
@@ -197,10 +197,10 @@ $(FIELDEFFECTSGFXDIR)/pics/tree_disguise.4bpp: %.4bpp: %.png
 $(INTERFACEGFXDIR)/selector_outline.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 8 -Wnum_tiles
 
-$(FAMECHECKERGFXDIR)/spinning_pokeball.4bpp: %.4bpp: %.png
+$(APEXLOGGFXDIR)/spinning_pokeball.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 15 -Wnum_tiles
 
-$(FAMECHECKERGFXDIR)/bg.4bpp: %.4bpp: %.png
+$(APEXLOGGFXDIR)/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 165 -Wnum_tiles
 
 graphics/seagallop/water.4bpp: %.4bpp: %.png

@@ -43,7 +43,7 @@ VermilionCity_PokemonFanClub_EventScript_WorkerF::
 	end
 
 VermilionCity_PokemonFanClub_EventScript_WorkerFGameClear::
-	famechecker FAMECHECKER_DAISY, 1
+	apexlog APEX_LOG_PERSON_DAISY, 1
 	msgbox VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons
 	release
 	end

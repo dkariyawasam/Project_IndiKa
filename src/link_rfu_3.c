@@ -914,23 +914,6 @@ bool8 Rfu_GetCompatiblePlayerData(struct RfuGameData *gameData, u8 *username, u8
     return retVal;
 }
 
-bool8 Rfu_GetWonderDistributorPlayerData(struct RfuGameData *gameData, u8 *username, u8 idx)
-{
-    bool8 retVal = FALSE;
-    if (gRfuLinkStatus->partner[idx].serialNo == RFU_SERIAL_WONDER_DISTRIBUTOR)
-    {
-        memcpy(gameData, gRfuLinkStatus->partner[idx].gname, RFU_GAME_NAME_LENGTH);
-        memcpy(username, gRfuLinkStatus->partner[idx].uname, RFU_USER_NAME_LENGTH);
-        retVal = TRUE;
-    }
-    else
-    {
-        memset(gameData, 0, RFU_GAME_NAME_LENGTH);
-        memset(username, 0, RFU_USER_NAME_LENGTH);
-    }
-    return retVal;
-}
-
 void CopyHostRfuGameDataAndUsername(struct RfuGameData *gameData, u8 *username)
 {
     memcpy(gameData, &gHostRfuGameData, RFU_GAME_NAME_LENGTH);

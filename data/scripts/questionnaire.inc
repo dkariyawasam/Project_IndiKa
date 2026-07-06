@@ -9,27 +9,13 @@ EventScript_Questionnaire::
 	faceplayer
 	specialvar VAR_0x8008, GetMartClerkObjectId
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	goto_if_eq VAR_0x8004, 0, EventScript_EnableMysteryGift
+	goto_if_eq VAR_0x8004, 0, EventScript_TookQuestionnaire
 	goto_if_eq VAR_RESULT, 0, EventScript_DeclineQuestionnaire
 	goto_if_eq VAR_RESULT, 1, EventScript_TookQuestionnaire
 	end
 
 EventScript_EnableMysteryGift::
-	applymovement VAR_0x8008, Common_Movement_FaceDown
-	waitmovement 0
-	playse SE_PIN
-	applymovement VAR_0x8008, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement VAR_0x8008, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Text_YouKnowThoseWords
-	setflag FLAG_SYS_MYSTERY_GIFT_ENABLED
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	special DisableMsgBoxWalkaway
-	signmsg
-	msgbox Text_YouCanAccessMysteryGift
-	normalmsg
-	releaseall
+	goto EventScript_TookQuestionnaire
 	end
 
 EventScript_DeclineQuestionnaire::

@@ -106,7 +106,7 @@ SaffronCity_EventScript_DojoSign::
 
 SaffronCity_EventScript_GymSign::
 	lockall
-	famechecker FAMECHECKER_SABRINA, 0
+	apexlog APEX_LOG_PERSON_SABRINA, 0
 	msgbox SaffronCity_Text_GymSign
 	releaseall
 	end

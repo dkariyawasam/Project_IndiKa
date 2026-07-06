@@ -581,7 +581,7 @@ bool8 BuyMenuBuildListMenuTemplate(void)
     {
         PokeMartWriteNameAndIdAt(&sShopMenuListMenu[i], sShopData.itemList[i], sShopMenuItemStrings[i]);
     }
-    StringCopy(sShopMenuItemStrings[i], gFameCheckerText_Cancel);
+    StringCopy(sShopMenuItemStrings[i], gApexLogText_Cancel);
     sShopMenuListMenu[i].label = sShopMenuItemStrings[i];
     sShopMenuListMenu[i].index = -2;
     gMultiuseListMenuTemplate.items = sShopMenuListMenu;

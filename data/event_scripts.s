@@ -17,7 +17,7 @@
 #include "constants/heal_locations.h"
 #include "constants/field_effects.h"
 #include "constants/trainers.h"
-#include "constants/fame_checker.h"
+#include "constants/apex_log.h"
 #include "constants/seagallop.h"
 #include "constants/game_stat.h"
 #include "constants/coins.h"
@@ -34,7 +34,6 @@
 #include "constants/easy_chat.h"
 #include "constants/trainer_card.h"
 #include "constants/trainer_fan_club.h"
-#include "constants/mystery_gift.h"
 #include "constants/quests.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
@@ -853,9 +852,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LORELEIS_HOUSE_PIDGEOT_DOLL
 	setflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
 	setflag FLAG_HIDE_POSTGAME_GOSSIPERS
-	setflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
-	setflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
-	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
+	setflag FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS
+	setflag FLAG_HIDE_APEX_LOG_KOGA_JOURNAL
+	setflag FLAG_HIDE_APEX_LOG_LT_SURGE_JOURNAL
 	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
@@ -1128,8 +1127,8 @@ Text_TestMsg::
 	.string "テストよう　メッセージです！\n"
 	.string "ポケモンの　せかいへ　ようこそ！$"
 
-	.include "data/scripts/fame_checker.inc"
-	.include "data/text/fame_checker.inc"
+	.include "data/scripts/apex_log.inc"
+	.include "data/text/apex_log.inc"
 	.include "data/text/trainer_card.inc"
 	.include "data/scripts/trainer_card.inc"
 	.include "data/scripts/cable_club.inc"

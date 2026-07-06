@@ -154,8 +154,8 @@ ViridianForest_EventScript_NeedTwoPokemon::
 	end
 
 ViridianForest_EventScript_DefeatedErika::
-	famechecker FAMECHECKER_ERIKA, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	apexlog APEX_LOG_PERSON_ERIKA, 1
+	clearflag FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
 	setvar VAR_ERIKA_TRIAL_STATE, 4

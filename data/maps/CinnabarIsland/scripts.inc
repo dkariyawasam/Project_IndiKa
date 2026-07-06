@@ -34,7 +34,7 @@ CinnabarIsland_Movement_ForcePlayerFromDoor::
 CinnabarIsland_EventScript_Woman::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BLAINE, 3
+	apexlog APEX_LOG_PERSON_BLAINE, 3
 	msgbox CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab
 	release
 	end
@@ -56,7 +56,7 @@ CinnabarIsland_EventScript_PokemonLabSign::
 
 CinnabarIsland_EventScript_GymSign::
 	lockall
-	famechecker FAMECHECKER_BLAINE, 0
+	apexlog APEX_LOG_PERSON_BLAINE, 0
 	msgbox CinnabarIsland_Text_GymSign
 	releaseall
 	end

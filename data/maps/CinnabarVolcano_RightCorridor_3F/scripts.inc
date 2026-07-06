@@ -178,8 +178,8 @@ CinnabarVolcano_RightCorridor_3F_EventScript_KogaChallenge7::
 	end
 
 CinnabarVolcano_RightCorridor_3F_EventScript_DefeatedKoga::
-	famechecker FAMECHECKER_KOGA, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
+	apexlog APEX_LOG_PERSON_KOGA, 1
+	clearflag FLAG_HIDE_APEX_LOG_KOGA_JOURNAL
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
 	setvar VAR_KOGA_TRIAL_STATE, 4
