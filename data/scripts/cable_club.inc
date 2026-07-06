@@ -1,11 +1,9 @@
 CableClub_OnTransition::
-	call CableClub_EventScript_HideOrShowMysteryGiftMan
+	call EventScript_HideMysteryGiftMan
 	end
 
 CableClub_EventScript_HideOrShowMysteryGiftMan::
-	specialvar VAR_RESULT, ValidateSavedWonderCard
-	goto_if_eq VAR_RESULT, FALSE, EventScript_HideMysteryGiftMan
-	clearflag FLAG_HIDE_MG_DELIVERYMEN
+	call EventScript_HideMysteryGiftMan
 	return
 
 EventScript_HideMysteryGiftMan::
@@ -13,11 +11,10 @@ EventScript_HideMysteryGiftMan::
 	return
 
 CableClub_EventScript_MysteryGiftMan::
-	trywondercardscript
+	end
 
 @ Unused
 EventScript_MysteryGiftThankYou::
-	msgbox Text_ThankYouForAccessingMysteryGift, MSGBOX_NPC
 	end
 
 CableClub_OnWarp::

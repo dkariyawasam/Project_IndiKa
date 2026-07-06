@@ -64,8 +64,8 @@ CeladonCity_Gym_EventScript_Erika::
 	end
 
 CeladonCity_Gym_EventScript_ErikaReward::
-	famechecker FAMECHECKER_ERIKA, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	apexlog APEX_LOG_PERSON_ERIKA, 1
+	clearflag FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
 	msgbox CeladonCity_Gym_Text_ErikaReward
@@ -143,16 +143,16 @@ CeladonCity_Gym_EventScript_ErikaPostQuestComplete::
 	end
 
 CeladonCity_Gym_EventScript_ErikaBattleFallback::
-	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_ERIKA, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_double TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaIntro, CeladonCity_Gym_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle, CeladonCity_Gym_EventScript_DefeatedErika, NO_MUSIC
-	famechecker FAMECHECKER_ERIKA, 4
+	apexlog APEX_LOG_PERSON_ERIKA, 4
 	msgbox CeladonCity_Gym_Text_ErikaPostBattle
 	release
 	end
 
 CeladonCity_Gym_EventScript_DefeatedErika::
-	famechecker FAMECHECKER_ERIKA, 1
-	clearflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	apexlog APEX_LOG_PERSON_ERIKA, 1
+	clearflag FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
 	setvar VAR_ERIKA_TRIAL_STATE, 5
@@ -197,7 +197,7 @@ CeladonCity_Gym_EventScript_Kay::
 
 CeladonCity_Gym_EventScript_Lisa::
 	trainerbattle_single TRAINER_LASS_LISA, CeladonCity_Gym_Text_LisaIntro, CeladonCity_Gym_Text_LisaDefeat
-	famechecker FAMECHECKER_ERIKA, 2
+	apexlog APEX_LOG_PERSON_ERIKA, 2
 	msgbox CeladonCity_Gym_Text_LisaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -213,7 +213,7 @@ CeladonCity_Gym_EventScript_Bridget::
 
 CeladonCity_Gym_EventScript_Tamia::
 	trainerbattle_single TRAINER_BEAUTY_TAMIA, CeladonCity_Gym_Text_TamiaIntro, CeladonCity_Gym_Text_TamiaDefeat
-	famechecker FAMECHECKER_ERIKA, 3
+	apexlog APEX_LOG_PERSON_ERIKA, 3
 	msgbox CeladonCity_Gym_Text_TamiaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

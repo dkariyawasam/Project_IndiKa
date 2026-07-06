@@ -24,7 +24,7 @@
 #include "task.h"
 #include "text_window.h"
 #include "quests.h"
-#include "fame_checker.h"
+#include "apex_log.h"
 #include "overworld.h"
 #include "event_data.h"
 #include "new_menu_helpers.h"
@@ -2011,9 +2011,6 @@ static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex)
 
 static bool8 IsGymTrialTraded(u8 subquestId)
 {
-    if (LogbookMenu_GetSetSubquestState(QUEST_GYM_LEADER_TRIALS, FLAG_GET_COMPLETED, subquestId))
-        return TRUE;
-
     switch (subquestId)
     {
     case SUB_QUEST_BROCK:
@@ -2028,6 +2025,8 @@ static bool8 IsGymTrialTraded(u8 subquestId)
         return VarGet(VAR_KOGA_TRIAL_STATE) >= 6;
     case SUB_QUEST_SABRINA:
         return VarGet(VAR_SABRINA_TRIAL_STATE) >= 5;
+    case SUB_QUEST_BLAINE:
+        return FlagGet(FLAG_GOT_PORYGON_FROM_BLAINE);
     default:
         return FALSE;
     }
@@ -2209,7 +2208,8 @@ static bool8 DoesSelectedRowAcceptA(s32 questId)
 	if (!IsSubquestMode())
 		return DoesQuestHaveChildrenAndNotInactive(questId);
 
-	return sStateDataPtr->parentQuest == QUEST_APEX_POKEMON;
+	return sStateDataPtr->parentQuest == QUEST_APEX_POKEMON
+	    && LogbookMenu_GetSetSubquestState(sStateDataPtr->parentQuest, FLAG_GET_UNLOCKED, questId);
 }
 
 static void Task_Main(u8 taskId)
@@ -2249,8 +2249,7 @@ static void Task_Main(u8 taskId)
 				{
 					EnterSubquestModeAndCleanUp(taskId, data, input);
 				}
-				else if (sStateDataPtr->parentQuest == QUEST_APEX_POKEMON
-				         && !CheckSelectedIsCancel(selectedQuestId))
+				else if (DoesSelectedRowAcceptA(selectedQuestId))
 				{
 					OpenApexDossierAndCleanUp(taskId, selectedQuestId);
 				}

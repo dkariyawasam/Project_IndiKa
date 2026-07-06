@@ -99,10 +99,10 @@ PokemonLeague_LancesRoom_Movement_WalkThroughCorridor::
 PokemonLeague_LancesRoom_EventScript_Lance::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_LANCE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	apexlog APEX_LOG_PERSON_LANCE, APEX_LOG_PICK_STATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LANCE, PokemonLeague_LancesRoom_EventScript_PostBattle
-	famechecker FAMECHECKER_LANCE, 0
-	famechecker FAMECHECKER_LANCE, 1
+	apexlog APEX_LOG_PERSON_LANCE, 0
+	apexlog APEX_LOG_PERSON_LANCE, 1
 	call PokemonLeague_LancesRoom_EventScript_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5

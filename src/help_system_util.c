@@ -28,11 +28,6 @@ static EWRAM_DATA struct HelpSystemVideoState sVideoState = {0};
 
 static void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, u8 x, u8 y, u8 width, u8 height);
 
-u8 RunHelpSystemCallback(void)
-{
-    return 0;
-}
-
 void SaveCallbacks(void)
 {
     vu16 *dma;

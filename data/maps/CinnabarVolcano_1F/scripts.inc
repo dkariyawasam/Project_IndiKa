@@ -31,7 +31,7 @@ CinnabarVolcano_1F_EventScript_OldWoman::
 CinnabarVolcano_1F_EventScript_BlackBelt::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_BRUNO, 3
+	apexlog APEX_LOG_PERSON_BRUNO, 3
 	msgbox CinnabarVolcano_1F_Text_BrunoVisitsSpaOnOccasion
 	release
 	end

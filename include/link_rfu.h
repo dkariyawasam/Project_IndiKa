@@ -22,7 +22,6 @@
 #define RFUCMD_DISCONNECT_PARENT   0xEE00
 
 #define RFU_SERIAL_GAME                0x0002 // Serial number for Pokémon game (FRLG or Emerald)
-#define RFU_SERIAL_WONDER_DISTRIBUTOR  0x7F7D // Serial number for distributing Wonder Cards / News
 #define RFU_SERIAL_END                 0xFFFF
 
 #define COMM_SLOT_LENGTH 14
@@ -238,9 +237,6 @@ void MG_DrawCheckerboardPattern(void);
 void Rfu_SetCloseLinkCallback(void);
 bool8 IsLinkRfuTaskFinished(void);
 void DestroyWirelessStatusIndicatorSprite(void);
-void CreateTask_LinkMysteryGiftWithFriend(u32 activity);
-void CreateTask_LinkMysteryGiftOverWireless(u32 activity);
-void CreateTask_SendMysteryGift(u32 activity);
 void Rfu_SendPacket(void *data);
 u8 CreateTask_ListenToWireless(void);
 void DestroyTask_RfuIdle(void);
@@ -316,7 +312,6 @@ void Rfu_DisconnectPlayerById(u32 playerIdx);
 void TryConnectToUnionRoomParent(const u8 *name, struct RfuGameData *parent, u8 activity);
 bool32 PlayerHasMetTrainerBefore(u16 id, u8 *name);
 bool8 Rfu_GetCompatiblePlayerData(struct RfuGameData *gameData, u8 *username, u8 idx);
-bool8 Rfu_GetWonderDistributorPlayerData(struct RfuGameData *gameData, u8 *username, u8 idx);
 bool32 Rfu_IsPlayerExchangeActive(void);
 void Rfu_StopPartnerSearch(void);
 void RfuSetNormalDisconnectMode(void);
@@ -333,8 +328,5 @@ void DestroyTask_RfuReconnectWithParent(void);
 void RfuReloadSave(void);
 void RfuSoftReset(void);
 #endif
-
-#include "mystery_gift_server.h"
-extern const struct MysteryGiftServerCmd gServerScript_ClientCanceledCard[];
 
 #endif //GUARD_LINK_RFU_H
