@@ -798,7 +798,7 @@ static void PrintBagControlHints(void)
 
 static void DrawBagHeader(void)
 {
-    DrawUiHintHeader(3, gText_PickOKExit, 0, 10, 0, FALSE);
+    DrawUiHintHeader(3, gText_DPadAnyPickOKBack, 0, 10, 0, FALSE);
     BagPrintTextOnWindow(3, FONT_NORMAL, sPocketNames[gBagMenuState.pocket], 8, 1, 1, 0, 0, 0);
     DrawBagPocketNotches(3);
     CopyWindowToVram(3, COPYWIN_GFX);

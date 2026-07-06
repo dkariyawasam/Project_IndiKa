@@ -702,7 +702,7 @@ static void PartyPaletteBufferCopy(u8 offset)
 
 static void PrintPartyMenuControlHints(void)
 {
-    DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, gText_PickOKExit, 8, 10, 0, TRUE);
+    DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, gText_DPadAnyPickOKBack, 8, 10, 0, TRUE);
     ScheduleBgCopyTilemapToVram(0);
 }
 

@@ -509,6 +509,7 @@ extern const u8 gText_Register[];
 
 // menu hints
 extern const u8 gText_PickOKExit[];
+extern const u8 gText_DPadAnyPickOKBack[];
 
 // player_pc
 extern const u8 gText_WhatWouldYouLikeToDo[];

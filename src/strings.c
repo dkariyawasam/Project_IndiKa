@@ -77,6 +77,7 @@ const u8 gText_NumericalModeNational[] = _("Numerical");
 const u8 gText_PokemonListNoColor[] = _("POKéMON LIST");
 const u8 gText_SearchNoColor[] = _("SEARCH");
 const u8 gText_PickOKExit[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+const u8 gText_DPadAnyPickOKBack[] = _("{DPAD_ANY}PICK {A_BUTTON}OK {B_BUTTON}BACK");
 const u8 gText_5Dashes[] = _("-----");
 const u8 gText_PickFlipPageCheckCancel[] = _("{DPAD_LEFTRIGHT}PICK{PLUS}FLIP PAGE {A_BUTTON}CHECK {B_BUTTON}CANCEL");
 const u8 gText_PokedexPokemon[] = _(" POKéMON");
