@@ -1249,9 +1249,9 @@ const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
 
 //names
-const u8 gText_QuestTheNatureOfEvolutionName_1[] = _("The Nature of Evolution");
-const u8 gText_SideQuestName_2[] = _("Gym Leader Trials");
-const u8 gText_SideQuestName_3[] = _("Apex Pokémon");
+const u8 gText_QuestTheNatureOfEvolutionName_1[] = _("THE NATURE OF EVOLUTION");
+const u8 gText_SideQuestName_2[] = _("GYM LEADER TRIALS");
+const u8 gText_SideQuestName_3[] = _("APEX POKéMON");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
 const u8 gText_SideQuestName_6[] = _("Side Quest 6");
@@ -1377,9 +1377,9 @@ const u8 gText_SideQuestMap29[] = _("Map 29");
 const u8 gText_SideQuestMap30[] = _("Map 30");
 
 //subquests
-const u8 gText_SubQuest1_Name1[] = _("Evolution Through Bond");
-const u8 gText_SubQuest1_Name2[] = _("Evolution Through Instinct");
-const u8 gText_SubQuest1_Name3[] = _("Evolution Through Design");
+const u8 gText_SubQuest1_Name1[] = _("EVOLUTION BY BOND");
+const u8 gText_SubQuest1_Name2[] = _("EVOLUTION BY INSTINCT");
+const u8 gText_SubQuest1_Name3[] = _("EVOLUTION BY DESIGN");
 
 const u8 gText_SubQuest2_Name1[] = _("BROCK");
 const u8 gText_SubQuest2_Name2[] = _("MISTY");
