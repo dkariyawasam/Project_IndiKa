@@ -5725,7 +5725,7 @@
     },
     {
       "english": "????????",
-      "itemId": "ITEM_TEACHY_TV",
+      "itemId": "ITEM_HELP_MENU",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,

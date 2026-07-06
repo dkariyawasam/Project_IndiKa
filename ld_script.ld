@@ -292,12 +292,11 @@ SECTIONS {
         src/quest_log_player.o(.text);
         src/battle_controller_pokedude.o(.text);
         src/quest_log_objects.o(.text);
-        src/teachy_tv.o(.text);
+        src/help_menu.o(.text);
         src/ereader_helpers.o(.text);
         src/digit_obj_util.o(.text);
         src/ss_anne.o(.text);
         src/renewable_hidden_items.o(.text);
-        src/berry_fix_program.o(.text);
     } > ROM =0
 
     script_data :
@@ -576,11 +575,10 @@ SECTIONS {
         src/text_window_graphics.o(.rodata);
         src/quest_log_player.o(.rodata);
         src/battle_controller_pokedude.o(.rodata);
-        src/teachy_tv.o(.rodata);
+        src/help_menu.o(.rodata);
         src/digit_obj_util.o(.rodata);
         src/ss_anne.o(.rodata);
         src/renewable_hidden_items.o(.rodata);
-        src/berry_fix_program.o(.rodata);
         src/keyboard_text.o(.rodata);
         src/move_descriptions.o(.rodata);
 
@@ -921,7 +919,7 @@ SECTIONS {
         sound/songs/midi/mus_net_center.o(.rodata);
         sound/songs/midi/mus_mystery_gift.o(.rodata);
         sound/songs/midi/mus_sevii_cave.o(.rodata);
-        sound/songs/midi/mus_teachy_tv_show.o(.rodata);
+        sound/songs/midi/mus_help_menu_show.o(.rodata);
         sound/songs/midi/mus_sevii_route.o(.rodata);
         sound/songs/midi/mus_sevii_dungeon.o(.rodata);
         sound/songs/midi/mus_sevii_123.o(.rodata);
@@ -935,7 +933,7 @@ SECTIONS {
         sound/songs/midi/mus_encounter_deoxys.o(.rodata);
         sound/songs/midi/mus_slow_pallet.o(.rodata);
         sound/songs/midi/mus_rocket_league.o(.rodata);
-        sound/songs/midi/mus_teachy_tv_menu.o(.rodata);
+        sound/songs/midi/mus_help_menu_menu.o(.rodata);
     } > ROM =0
 
     lib_rodata :
@@ -995,7 +993,6 @@ SECTIONS {
     ALIGN(4)
     {
         data/multiboot_ereader.o(.rodata);
-        data/multiboot_berry_glitch_fix.o(.rodata);
         data/multiboot_pokemon_colosseum.o(.rodata);
     } > ROM =0
 

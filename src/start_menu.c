@@ -34,7 +34,7 @@
 #include "trainer_card.h"
 #include "option_menu.h"
 #include "save_menu_util.h"
-#include "teachy_tv.h"
+#include "help_menu.h"
 #include "constants/songs.h"
 #include "constants/field_weather.h"
 #include "sloopsvc.h"
@@ -1731,7 +1731,7 @@ static bool8 StartMenuOptionCallback(void)
         DestroyRadialStartMenuWindows(FALSE);
         CleanupOverworldWindowsAndTilemaps();
         SetStartMenuReturnItem(STARTMENU_OPTION);
-        InitTeachyTvController(0, CB2_ReturnToFieldWithOpenMenu);
+        InitHelpMenuController(0, CB2_ReturnToFieldWithOpenMenu);
         return TRUE;
     }
     return FALSE;

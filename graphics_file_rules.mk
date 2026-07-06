@@ -12,7 +12,7 @@ SLOTMACHINEGFXDIR := graphics/slot_machine
 FIELDEFFECTSGFXDIR := graphics/field_effects
 MISCGFXDIR := graphics/misc
 TEXTWINDOWGFXDIR := graphics/text_window
-TEACHYTVGFXDIR := graphics/teachy_tv
+HELPMENUGFXDIR := graphics/help_menu
 SSANNEGFXDIR := graphics/ss_anne
 ITEMPCGFXDIR := graphics/item_pc
 TITLESCREENGFXDIR := graphics/title_screen
@@ -221,8 +221,8 @@ $(SLOTMACHINEGFXDIR)/firered/bg.4bpp: %.4bpp: %.png
 $(SLOTMACHINEGFXDIR)/leafgreen/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 134 -Wnum_tiles
 
-$(TEACHYTVGFXDIR)/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 233 -Wnum_tiles
+$(HELPMENUGFXDIR)/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 204 -Wnum_tiles
 
 $(SSANNEGFXDIR)/smoke.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 17 -Wnum_tiles
@@ -269,7 +269,7 @@ graphics/misc/emoticons.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
 $(ITEMMENUGFXDIR)/bg.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 55 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 43 -Wnum_tiles
 
 $(INTROGFXDIR)/scene_1/grass.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 397 -Wnum_tiles
