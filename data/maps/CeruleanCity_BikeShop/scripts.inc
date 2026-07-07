@@ -1,11 +1,12 @@
 CeruleanCity_BikeShop_MapScripts::
 	.byte 0
 
+.set BICYCLE_PRICE, 50000
+
 CeruleanCity_BikeShop_EventScript_Clerk::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_BICYCLE, CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle
-	goto_if_set FLAG_GOT_BIKE_VOUCHER, CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher
 	showmoneybox 0, 0
 	message CeruleanCity_BikeShop_Text_WelcomeToBikeShop
 	waitmessage
@@ -16,9 +17,28 @@ CeruleanCity_BikeShop_EventScript_Clerk::
 	case 127, CeruleanCity_BikeShop_EventScript_ClerkGoodbye
 	end
 
-@ The Bicycle price / players money is never actually checked
 CeruleanCity_BikeShop_EventScript_TryPurchaseBicycle::
+	checkmoney BICYCLE_PRICE
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_BikeShop_EventScript_NotEnoughMoney
+	checkitemspace ITEM_BICYCLE
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_BikeShop_EventScript_NoRoomForBicyclePurchase
+	removemoney BICYCLE_PRICE
+	updatemoneybox
+	msgreceiveditem CeruleanCity_BikeShop_Text_ReceivedBicycle, ITEM_BICYCLE, 1, MUS_OBTAIN_KEY_ITEM
+	additem ITEM_BICYCLE
+	setflag FLAG_GOT_BICYCLE
+	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain
+	hidemoneybox
+	release
+	end
+
+CeruleanCity_BikeShop_EventScript_NotEnoughMoney::
 	msgbox CeruleanCity_BikeShop_Text_SorryYouCantAffordIt
+	goto CeruleanCity_BikeShop_EventScript_ClerkGoodbye
+	end
+
+CeruleanCity_BikeShop_EventScript_NoRoomForBicyclePurchase::
+	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle
 	goto CeruleanCity_BikeShop_EventScript_ClerkGoodbye
 	end
 
@@ -28,24 +48,8 @@ CeruleanCity_BikeShop_EventScript_ClerkGoodbye::
 	release
 	end
 
-CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
-	msgbox CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo
-	msgreceiveditem CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle, ITEM_BICYCLE, 1, MUS_OBTAIN_KEY_ITEM
-	setflag FLAG_GOT_BICYCLE
-	additem ITEM_BICYCLE
-	removeitem ITEM_BIKE_VOUCHER
-	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain
-	release
-	end
-
 CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	msgbox CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle
-	release
-	end
-
-@ Unused
-CeruleanCity_BikeShop_EventScript_NoRoomForBicycle::
-	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle
 	release
 	end
 

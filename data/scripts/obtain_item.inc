@@ -195,7 +195,6 @@ EventScript_NoRoomForHiddenItem::
 	end
 
 EventScript_TryPickUpHiddenCoins::
-	goto_if_unset FLAG_GOT_COIN_CASE, EventScript_NoCaseForHiddenCoins
 	checkcoins VAR_RESULT
 	specialvar VAR_RESULT, CheckAddCoins
 	goto_if_eq VAR_RESULT, FALSE, EventScript_HiddenCoinsButCaseIsFull
@@ -205,7 +204,7 @@ EventScript_TryPickUpHiddenCoins::
 	call EventScript_FoundCoins
 	waitfanfare
 	waitmessage
-	msgbox Text_PutCoinsAwayInCoinCase
+	msgbox Text_PutCoinsAway
 	special SetHiddenItemFlag
 	releaseall
 	end
@@ -214,16 +213,8 @@ EventScript_HiddenCoinsButCaseIsFull::
 	buffernumberstring STR_VAR_1, VAR_0x8006
 	bufferstdstring STR_VAR_2, STDSTRING_COINS
 	msgbox Text_FoundXCoins
-	msgbox Text_CoinCaseIsFull
+	msgbox Text_CoinPouchIsFull
 	setvar VAR_RESULT, 0
 	releaseall
 	end
-
-EventScript_NoCaseForHiddenCoins::
-	buffernumberstring STR_VAR_1, VAR_0x8006
-	bufferstdstring STR_VAR_2, STDSTRING_COINS
-	msgbox Text_FoundXCoins
-	msgbox Text_NothingToPutThemIn
-	setvar VAR_RESULT, 0
-	releaseall
 	end

@@ -3104,8 +3104,6 @@ extern const u32 gItemIconPalette_GreenScarf[];
 extern const u32 gItemIconPalette_YellowScarf[];
 extern const u32 gItemIcon_MachBike[];
 extern const u32 gItemIconPalette_MachBike[];
-extern const u32 gItemIcon_CoinCase[];
-extern const u32 gItemIconPalette_CoinCase[];
 extern const u32 gItemIcon_Itemfinder[];
 extern const u32 gItemIconPalette_Itemfinder[];
 extern const u32 gItemIcon_BoulderKey[];
@@ -3173,8 +3171,6 @@ extern const u32 gItemIconPalette_FlyingTMHM[];
 // FireRed/LeafGreen key items
 extern const u32 gItemIcon_PokeFlute[];
 extern const u32 gItemIconPalette_PokeFlute[];
-extern const u32 gItemIcon_BikeVoucher[];
-extern const u32 gItemIconPalette_BikeVoucher[];
 extern const u32 gItemIcon_GoldTeeth[];
 extern const u32 gItemIconPalette_GoldTeeth[];
 extern const u32 gItemIcon_OldAmber[];

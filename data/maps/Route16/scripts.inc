@@ -4,8 +4,13 @@ Route16_MapScripts::
 	.byte 0
 
 Route16_OnTransition::
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route16_EventScript_ForceRentalBike
 	call_if_eq VAR_MAP_SCENE_ROUTE16, 1, Route16_OnTransitionCyclingRoad
 	end
+
+Route16_EventScript_ForceRentalBike::
+	special ForcePlayerOntoBike
+	return
 
 Route16_OnTransitionCyclingRoad::
 	setflag FLAG_SYS_ON_CYCLING_ROAD

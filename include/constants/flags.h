@@ -587,9 +587,9 @@
 #define FLAG_0x23E                                       0x23E
 #define FLAG_0x23F                                      0x23F
 #define FLAG_0x240                                       0x240
-#define FLAG_GOT_BIKE_VOUCHER                            0x241
-#define FLAG_0x242                                       0x242
-#define FLAG_GOT_COIN_CASE                               0x243
+#define FLAG_HEARD_FAN_CLUB_CHAIRMAN_STORY               0x241
+#define FLAG_BIKE_RENTAL_ACTIVE                         0x242
+#define FLAG_0x243                                       0x243
 #define FLAG_0x244                                       0x244
 #define FLAG_0x245                                       0x245
 #define FLAG_GOT_LAPRAS_FROM_SILPH                       0x246

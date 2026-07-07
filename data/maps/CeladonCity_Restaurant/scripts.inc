@@ -9,25 +9,10 @@ CeladonCity_Restaurant_EventScript_Woman::
 	msgbox CeladonCity_Restaurant_Text_OftenGoToDrugstore, MSGBOX_NPC
 	end
 
-CeladonCity_Restaurant_EventScript_CoinCaseMan::
+CeladonCity_Restaurant_EventScript_BustedGambler::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_COIN_CASE, CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase
 	msgbox CeladonCity_Restaurant_Text_TakeThisImBusted
-	checkitemspace ITEM_COIN_CASE
-	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Restaurant_EventScript_NoRoomForCoinCase
-	giveitem_msg CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan, ITEM_COIN_CASE
-	setflag FLAG_GOT_COIN_CASE
-	release
-	end
-
-CeladonCity_Restaurant_EventScript_NoRoomForCoinCase::
-	msgbox CeladonCity_Restaurant_Text_MakeRoomForThis
-	release
-	end
-
-CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase::
-	msgbox CeladonCity_Restaurant_Text_ThoughtIdWinItBack
 	release
 	end
 
