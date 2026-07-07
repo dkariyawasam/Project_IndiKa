@@ -12,13 +12,9 @@ CeladonCity_GameCorner_Text_ComePlaySometime::
     .string "No?\n"
     .string "Please come play sometime!$"
 
-CeladonCity_GameCorner_Text_SorryDontHaveCoinCase::
-    .string "Oh, I'm sorry.\n"
-    .string "You don't have a COIN CASE.$"
-
-CeladonCity_GameCorner_Text_CoinCaseIsFull::
+CeladonCity_GameCorner_Text_CantHoldMoreCoins::
     .string "Whoops!\n"
-    .string "Your COIN CASE is full.$"
+    .string "You can't hold more COINS.$"
 
 CeladonCity_GameCorner_Text_CantAffordCoins::
     .string "You can't afford the COINS.$"
@@ -129,13 +125,6 @@ CeladonCity_GameCorner_Text_RocketLeagueGrunt::
     .string "ROCKET LEAGUE.\p"
     .string "Win there, and you'll walk out\n"
     .string "with a pile of COINS.$"
-
-CeladonCity_GameCorner_Text_CoinCaseIsRequired::
-    .string "A COIN CASE is required…$"
-
-CeladonCity_GameCorner_Text_DontHaveCoinCase::
-    .string "Oops!\n"
-    .string "Don't have the COIN CASE!$"
 
 CeladonCity_GameCorner_Text_SlotMachineWantToPlay::
     .string "A slot machine!\n"

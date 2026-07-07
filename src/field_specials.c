@@ -5,6 +5,7 @@
 #include "diploma.h"
 #include "script.h"
 #include "field_player_avatar.h"
+#include "item.h"
 #include "overworld.h"
 #include "field_message_box.h"
 #include "event_data.h"
@@ -39,6 +40,7 @@
 #include "constants/moves.h"
 #include "constants/menu.h"
 #include "constants/event_objects.h"
+#include "constants/flags.h"
 #include "constants/metatile_labels.h"
 
 static EWRAM_DATA u8 sElevatorCurrentFloorWindowId = 0;
@@ -76,6 +78,7 @@ static void ChangePokemonNickname_CB(void);
 static void Task_RunPokemonLeagueLightingEffect(u8 taskId);
 static void Task_CancelPokemonLeagueLightingEffect(u8 taskId);
 static void Task_WingFlapSound(u8 taskId);
+u8 GetPlayerAvatarBike(void);
 
 static u8 *const sStringVarPtrs[] = {
     gStringVar1,
@@ -96,6 +99,16 @@ void ForcePlayerOntoBike(void)
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
     Overworld_SetSavedMusic(MUS_CYCLING);
     Overworld_ChangeMusicTo(MUS_CYCLING);
+}
+
+void EndBikeRental(void)
+{
+    FlagClear(FLAG_BIKE_RENTAL_ACTIVE);
+    if (!CheckBagHasItem(ITEM_BICYCLE, 1) && GetPlayerAvatarBike() != 0)
+    {
+        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
+        Overworld_ChangeMusicToDefault();
+    }
 }
 
 void ResetCyclingRoadChallengeData(void)

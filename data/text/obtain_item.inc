@@ -19,17 +19,13 @@ Text_FoundXCoins::
 	.string "{PLAYER} found\n"
 	.string "{STR_VAR_1} {STR_VAR_2}!$"
 
-Text_PutCoinsAwayInCoinCase::
+Text_PutCoinsAway::
 	.string "{PLAYER} put the COINS away in\n"
-	.string "the COIN CASE.$"
+	.string "the COIN POUCH.$"
 
-Text_CoinCaseIsFull::
+Text_CoinPouchIsFull::
 	.string "Too bad!\n"
-	.string "The COIN CASE is full…$"
-
-Text_NothingToPutThemIn::
-	.string "Too bad!\n"
-	.string "There's nothing to put them in…$"
+	.string "The COIN POUCH is full…$"
 
 Text_FoundXItems::
 	.string "{PLAYER} found\n"

@@ -2,7 +2,6 @@
 #include "gflib.h"
 #include "battle.h"
 #include "bike.h"
-#include "coins.h"
 #include "event_data.h"
 #include "field_effect.h"
 #include "field_fadetransition.h"
@@ -316,16 +315,6 @@ void ItemUseOutOfBattle_Itemfinder(u8 taskId)
     IncrementGameStat(GAME_STAT_USED_ITEMFINDER);
     sItemUseOnFieldCB = ItemUseOnFieldCB_Itemfinder;
     SetUpItemUseOnFieldCallback(taskId);
-}
-
-void FieldUseFunc_CoinCase(u8 taskId)
-{
-    ConvertIntToDecimalStringN(gStringVar1, GetCoins(), STR_CONV_MODE_LEFT_ALIGN, 4);
-    StringExpandPlaceholders(gStringVar4, gText_CoinCase);
-    if (gTasks[taskId].data[3] == 0)
-        DisplayItemMessageInBag(taskId, FONT_NORMAL, gStringVar4, Task_ReturnToBagFromContextMenu);
-    else
-        DisplayItemMessageOnField(taskId, FONT_NORMAL, gStringVar4, Task_ItemUse_CloseMessageBoxAndReturnToField);
 }
 
 void FieldUseFunc_PokeFlute(u8 taskId)

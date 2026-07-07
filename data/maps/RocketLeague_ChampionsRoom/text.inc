@@ -17,12 +17,11 @@ RocketLeague_ChampionsRoom_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"
     .string "as a ROCKET LEAGUE prize.$"
 
-RocketLeague_ChampionsRoom_Text_CoinCaseFull::
-    .string "Your COIN CASE is full.\p"
+RocketLeague_ChampionsRoom_Text_CoinPouchFull::
+    .string "You can't hold more COINS.\p"
     .string "You couldn't receive the prize\n"
     .string "COINS.$"
 
 RocketLeague_ChampionsRoom_Text_NotReady::
     .string "The ROCKET LEAGUE CHAMPION\n"
     .string "is not waiting here yet.$"
-

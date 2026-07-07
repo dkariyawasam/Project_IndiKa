@@ -145,7 +145,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_LAND",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_WATER",
       "x": 68,
       "y": 12,
       "elevation": 1,
@@ -160,8 +160,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 78,
-      "y": 10,
+      "x": 77,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -173,7 +173,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_LAND",
+      "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_WATER",
       "x": 101,
       "y": 8,
       "elevation": 1,
@@ -232,8 +232,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F_WATER",
-      "x": 75,
-      "y": 10,
+      "x": 66,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,

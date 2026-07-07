@@ -115,7 +115,7 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE16",
       "var_value": "1",
-      "script": "EventScript_SetExitingCyclingRoad"
+      "script": "Route18_EastEntrance_1F_EventScript_ReturnBikeTriggerMid"
     },
     {
       "type": "trigger",
@@ -124,7 +124,7 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE16",
       "var_value": "1",
-      "script": "EventScript_SetExitingCyclingRoad"
+      "script": "Route18_EastEntrance_1F_EventScript_ReturnBikeTriggerTop"
     },
     {
       "type": "trigger",
@@ -133,7 +133,7 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE16",
       "var_value": "1",
-      "script": "EventScript_SetExitingCyclingRoad"
+      "script": "Route18_EastEntrance_1F_EventScript_ReturnBikeTriggerBottom"
     },
     {
       "type": "trigger",

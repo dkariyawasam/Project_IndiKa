@@ -68,22 +68,7 @@ VermilionCity_PokemonFanClub_Text_ChairmansStory::
     .string "ravishing…\l"
     .string "…Oops! Look at the time!\l"
     .string "I kept you too long!\p"
-    .string "Thanks for hearing me out!\n"
-    .string "I want you to have this!$"
-
-VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman::
-    .string "{PLAYER} received a BIKE VOUCHER\n"
-    .string "from the CHAIRMAN.$"
-
-VermilionCity_PokemonFanClub_Text_ExplainBikeVoucher::
-    .string "Take that BIKE VOUCHER to the\n"
-    .string "BIKE SHOP in CERULEAN CITY.\p"
-    .string "Exchange that for a BICYCLE\n"
-    .string "free of charge!\p"
-    .string "Don't worry, my favorite FEAROW\n"
-    .string "will FLY me anywhere I need to go.\p"
-    .string "So, I have no need for a BICYCLE.\p"
-    .string "I hope you like cycling!$"
+    .string "Thanks for hearing me out!$"
 
 VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
     .string "Oh. Come back when you want to\n"
@@ -95,9 +80,6 @@ VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain::
     .string "POKéMON again?\p"
     .string "No?\n"
     .string "Too bad!$"
-
-VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
-    .string "Make room for this!$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon::
     .string "Our CHAIRMAN is very vocal about\n"

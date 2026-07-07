@@ -322,7 +322,7 @@ RocketLeague_Arena_EventScript_FinishCoinReward::
 
 RocketLeague_Arena_EventScript_CoinRewardFull::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox RocketLeague_Arena_Text_CoinCaseFull
+	msgbox RocketLeague_Arena_Text_CoinPouchFull
 	closemessage
 	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
 	waitmovement 0
