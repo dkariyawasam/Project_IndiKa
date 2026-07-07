@@ -71,7 +71,7 @@ RocketLeague_ChampionsRoom_EventScript_FinishCoinReward::
 RocketLeague_ChampionsRoom_EventScript_CoinRewardFull::
 	setvar VAR_ROCKET_LEAGUE_PRIZE_TIER, 0
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox RocketLeague_ChampionsRoom_Text_CoinCaseFull
+	msgbox RocketLeague_ChampionsRoom_Text_CoinPouchFull
 	closemessage
 	setvar VAR_TEMP_1, 1
 	warp MAP_ROCKET_LEAGUE_LOBBY, 9, 2

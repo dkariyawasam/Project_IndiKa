@@ -701,6 +701,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAriana = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ROCKET_ARIANA,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Nurse,
+    .images = sPicTable_RocketNurse,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
@@ -2021,6 +2040,7 @@ DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Kindler, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanM, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_PokefanM);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanF, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_PokefanF);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_RuinManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY, PALSLOT_NPC_DYNAMIC, sPicTable_RichBoy);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMLand);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFLand);

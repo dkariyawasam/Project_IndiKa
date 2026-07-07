@@ -272,7 +272,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     // Contest hold items
     // Key items
     [ITEM_0FE]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_COIN_CASE]      = {gItemIcon_CoinCase, gItemIconPalette_CoinCase},
+    [ITEM_0FF]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_MARSH_FINDER]   = {gItemIcon_Itemfinder, gItemIconPalette_Itemfinder},
     [ITEM_BOULDER_KEY]    = {gItemIcon_BoulderKey, gItemIconPalette_OldRod},
     [ITEM_CASCADE_BOARD]  = {gItemIcon_CascadeBoard, gItemIconPalette_CascadeBoard},
@@ -359,7 +359,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_15C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // FireRed/LeafGreen key items
     [ITEM_POKE_FLUTE]     = {gItemIcon_PokeFlute, gItemIconPalette_PokeFlute},
-    [ITEM_BIKE_VOUCHER]   = {gItemIcon_BikeVoucher, gItemIconPalette_BikeVoucher},
+    [ITEM_152]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_GOLD_TEETH]     = {gItemIcon_GoldTeeth, gItemIconPalette_GoldTeeth},
     [ITEM_OLD_AMBER]      = {gItemIcon_OldAmber, gItemIconPalette_OldAmber},
     [ITEM_CARD_KEY]       = {gItemIcon_CardKey, gItemIconPalette_CardKey},

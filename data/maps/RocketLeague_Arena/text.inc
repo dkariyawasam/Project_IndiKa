@@ -137,7 +137,7 @@ RocketLeague_Arena_Text_ReceivedTierThreeCoins::
     .string "{PLAYER} received 3,000 COINS\n"
     .string "as a ROCKET LEAGUE prize.$"
 
-RocketLeague_Arena_Text_CoinCaseFull::
-    .string "Your COIN CASE is full.\p"
+RocketLeague_Arena_Text_CoinPouchFull::
+    .string "You can't hold more COINS.\p"
     .string "You couldn't receive the prize\n"
     .string "COINS.$"

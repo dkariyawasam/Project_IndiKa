@@ -366,6 +366,7 @@ gSpecials::
 	def_special RecordApexRumor
 	def_special IsApexRevealed
 	def_special ForcePlayerOntoBike
+	def_special EndBikeRental
 	def_special ListMenu
 	def_special ReturnToListMenu
 	def_special DoPicboxCancel

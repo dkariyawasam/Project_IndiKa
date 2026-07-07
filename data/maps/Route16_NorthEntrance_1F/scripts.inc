@@ -4,15 +4,57 @@ Route16_NorthEntrance_1F_MapScripts::
 
 Route16_NorthEntrance_1F_OnTransition::
 	clearflag FLAG_SYS_ON_CYCLING_ROAD
-	call_if_set FLAG_GOT_BICYCLE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	setvar VAR_TEMP_1, 0
+	call Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
 	end
+
+Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike::
+	checkitem ITEM_BICYCLE, 1
+	call_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	return
 
 Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger::
 	setvar VAR_TEMP_1, 1
 	return
 
 Route16_NorthEntrance_1F_EventScript_Guard::
-	msgbox Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse, MSGBOX_NPC
+	lock
+	faceplayer
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_GuardOwnBike
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_GuardRentalActive
+	msgbox Route16_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route16_NorthEntrance_1F_EventScript_GuardDeclineRental
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, Route16_NorthEntrance_1F_EventScript_GuardNotEnoughMoney
+	removemoney 500
+	playse SE_SHOP
+	setflag FLAG_BIKE_RENTAL_ACTIVE
+	setvar VAR_TEMP_1, 1
+	msgbox Route16_NorthEntrance_1F_Text_RentalStarted
+	release
+	end
+
+Route16_NorthEntrance_1F_EventScript_GuardOwnBike::
+	msgbox Route16_NorthEntrance_1F_Text_OwnBike
+	release
+	end
+
+Route16_NorthEntrance_1F_EventScript_GuardRentalActive::
+	msgbox Route16_NorthEntrance_1F_Text_RentalActive
+	release
+	end
+
+Route16_NorthEntrance_1F_EventScript_GuardDeclineRental::
+	msgbox Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse
+	release
+	end
+
+Route16_NorthEntrance_1F_EventScript_GuardNotEnoughMoney::
+	msgbox Route16_NorthEntrance_1F_Text_NotEnoughMoney
+	release
 	end
 
 Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerTop::
@@ -45,7 +87,62 @@ Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerBottom::
 	goto Route16_NorthEntrance_1F_EventScript_NeedBikeTrigger
 	end
 
+Route16_NorthEntrance_1F_EventScript_ReturnBikeTriggerTop::
+	lockall
+	setvar VAR_0x8008, 0
+	goto Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+	end
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeTriggerMid::
+	lockall
+	setvar VAR_0x8008, 1
+	goto Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+	end
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeTriggerBottom::
+	lockall
+	setvar VAR_0x8008, 2
+	goto Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+	end
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, EventScript_SetExitingCyclingRoad
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, FALSE, EventScript_SetExitingCyclingRoad
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	call_if_eq VAR_0x8008, 0, Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardTop
+	call_if_eq VAR_0x8008, 1, Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardMid
+	call_if_eq VAR_0x8008, 2, Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardBottom
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	setvar VAR_MAP_SCENE_ROUTE16, 0
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_ReturnBikeWalkOut
+	waitmovement 0
+	warp MAP_ROUTE16, 25, 18
+	waitstate
+	end
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardTop::
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_ReturnBikeTopToGuard
+	waitmovement 0
+	return
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardMid::
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_ReturnBikeMidToGuard
+	waitmovement 0
+	return
+
+Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardBottom::
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_ReturnBikeBottomToGuard
+	waitmovement 0
+	return
+
 Route16_NorthEntrance_1F_EventScript_NeedBikeTrigger::
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox Route16_NorthEntrance_1F_Text_ExcuseMeWaitUp
 	closemessage
@@ -56,10 +153,41 @@ Route16_NorthEntrance_1F_EventScript_NeedBikeTrigger::
 	call_if_eq VAR_0x8008, 2, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterMid
 	call_if_eq VAR_0x8008, 3, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterMidBottom
 	call_if_eq VAR_0x8008, 4, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterBottom
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	msgbox Route16_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerRent
+Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce::
 	msgbox Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad
 	closemessage
 	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_WalkRight
 	waitmovement 0
+	releaseall
+	end
+
+Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerRent::
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerNotEnoughMoney
+	removemoney 500
+	playse SE_SHOP
+	setflag FLAG_BIKE_RENTAL_ACTIVE
+	msgbox Route16_NorthEntrance_1F_Text_RentalStarted
+	closemessage
+	setvar VAR_TEMP_1, 1
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_RentalStepOut
+	waitmovement 0
+	setvar VAR_MAP_SCENE_ROUTE16, 1
+	warp MAP_ROUTE16, 18, 18
+	waitstate
+	end
+
+Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerNotEnoughMoney::
+	msgbox Route16_NorthEntrance_1F_Text_NotEnoughMoney
+	closemessage
+	goto Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce
+
+Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow::
+	setvar VAR_TEMP_1, 1
 	releaseall
 	end
 
@@ -107,6 +235,62 @@ Route16_NorthEntrance_1F_Movement_WalkUp4::
 
 Route16_NorthEntrance_1F_Movement_WalkRight::
 	walk_right
+	step_end
+
+Route16_NorthEntrance_1F_Movement_RentalStepOut::
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+Route16_NorthEntrance_1F_Movement_ReturnBikeTopToGuard::
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+Route16_NorthEntrance_1F_Movement_ReturnBikeMidToGuard::
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+Route16_NorthEntrance_1F_Movement_ReturnBikeBottomToGuard::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+Route16_NorthEntrance_1F_Movement_ReturnBikeWalkOut::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 Route16_NorthEntrance_1F_EventScript_OldMan::

@@ -261,7 +261,7 @@
 #define ITEM_0FC 250
 #define ITEM_0FD 251
 #define ITEM_0FE 252
-#define ITEM_COIN_CASE 253
+#define ITEM_0FF 253
 #define ITEM_MARSH_FINDER 254
 #define ITEM_BOULDER_KEY 255
 #define ITEM_CASCADE_BOARD 256
@@ -408,7 +408,7 @@
 // FireRed/LeafGreen
 #define ITEM_POKE_FLUTE 336
 #define ITEM_151 337
-#define ITEM_BIKE_VOUCHER 338
+#define ITEM_152 338
 #define ITEM_GOLD_TEETH 339
 #define ITEM_OLD_AMBER 340
 #define ITEM_CARD_KEY 341
