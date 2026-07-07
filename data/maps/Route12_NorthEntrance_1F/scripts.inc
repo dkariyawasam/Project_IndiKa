@@ -1,6 +1,196 @@
 Route12_NorthEntrance_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route12_NorthEntrance_1F_OnTransition
 	.byte 0
 
-Route12_NorthEntrance_1F_EventScript_Guard::
-	msgbox Route12_NorthEntrance_1F_Text_LookoutSpotUpstairs, MSGBOX_NPC
+Route12_NorthEntrance_1F_OnTransition::
+	setvar VAR_TEMP_1, 0
+	call Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
 	end
+
+Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike::
+	checkitem ITEM_BICYCLE, 1
+	call_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	return
+
+Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger::
+	setvar VAR_TEMP_1, 1
+	return
+
+Route12_NorthEntrance_1F_EventScript_Guard::
+	lock
+	faceplayer
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_GuardOwnBike
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_GuardRentalActive
+	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route12_NorthEntrance_1F_EventScript_GuardDeclineRental
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, Route12_NorthEntrance_1F_EventScript_GuardNotEnoughMoney
+	removemoney 500
+	playse SE_SHOP
+	setflag FLAG_BIKE_RENTAL_ACTIVE
+	setvar VAR_TEMP_1, 1
+	msgbox Route12_NorthEntrance_1F_Text_RentalStarted
+	release
+	end
+
+Route12_NorthEntrance_1F_EventScript_GuardOwnBike::
+	msgbox Route12_NorthEntrance_1F_Text_OwnBike
+	release
+	end
+
+Route12_NorthEntrance_1F_EventScript_GuardRentalActive::
+	msgbox Route12_NorthEntrance_1F_Text_RentalActive
+	release
+	end
+
+Route12_NorthEntrance_1F_EventScript_GuardDeclineRental::
+	msgbox Route12_NorthEntrance_1F_Text_LookoutSpotUpstairs
+	release
+	end
+
+Route12_NorthEntrance_1F_EventScript_GuardNotEnoughMoney::
+	msgbox Route12_NorthEntrance_1F_Text_NotEnoughMoney
+	release
+	end
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerLeft::
+	lockall
+	setvar VAR_0x8008, 0
+	goto Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRight::
+	lockall
+	setvar VAR_0x8008, 1
+	goto Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeTriggerLeft::
+	lockall
+	setvar VAR_0x8008, 0
+	goto Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+	end
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeTriggerRight::
+	lockall
+	setvar VAR_0x8008, 1
+	goto Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+	end
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger::
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox Route18_EastEntrance_1F_Text_ExcuseMe
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 20
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce::
+	msgbox Route12_NorthEntrance_1F_Text_NeedBicycleForCoastalRoutes
+	closemessage
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent::
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerNotEnoughMoney
+	removemoney 500
+	playse SE_SHOP
+	setflag FLAG_BIKE_RENTAL_ACTIVE
+	msgbox Route12_NorthEntrance_1F_Text_RentalStarted
+	closemessage
+	setvar VAR_TEMP_1, 1
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_RentalStepOut
+	waitmovement 0
+	setvar VAR_MAP_SCENE_ROUTE16, 1
+	warp MAP_ROUTE12, 14, 21
+	waitstate
+	end
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerNotEnoughMoney::
+	msgbox Route12_NorthEntrance_1F_Text_NotEnoughMoney
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce
+
+Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow::
+	setvar VAR_TEMP_1, 1
+	releaseall
+	end
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, EventScript_SetExitingCyclingRoad
+	checkflag FLAG_BIKE_RENTAL_ACTIVE
+	goto_if_eq VAR_RESULT, FALSE, EventScript_SetExitingCyclingRoad
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	call_if_eq VAR_0x8008, 0, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft
+	call_if_eq VAR_0x8008, 1, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardRight
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	setvar VAR_MAP_SCENE_ROUTE16, 0
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut
+	waitmovement 0
+	warp MAP_ROUTE12, 14, 15
+	waitstate
+	end
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeLeftToGuard
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardRight::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeRightToGuard
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_Movement_WalkUp::
+	walk_up
+	step_end
+
+Route12_NorthEntrance_1F_Movement_RentalStepOut::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route12_NorthEntrance_1F_Movement_ReturnBikeLeftToGuard::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_Movement_ReturnBikeRightToGuard::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut::
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end

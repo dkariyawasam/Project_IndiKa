@@ -828,7 +828,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SS_ANNE_RIVAL
 	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
 	setflag FLAG_HIDE_SAFFRON_CIVILIANS
-	setflag FLAG_HIDE_ROUTE_22_RIVAL
 	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
 	setflag FLAG_HIDE_CREDITS_RIVAL
 	setflag FLAG_HIDE_CREDITS_OAK
@@ -940,13 +939,17 @@ EventScript_SetResultFalse::
 EventScript_SetExitingCyclingRoad::
 	lockall
 	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
 	setvar VAR_MAP_SCENE_ROUTE16, 0
 	releaseall
 	end
 
 EventScript_SetEnteringCyclingRoad::
 	lockall
+	checkitem ITEM_BICYCLE, 1
+	goto_if_eq VAR_RESULT, TRUE, EventScript_SetEnteringCyclingRoad_OwnBike
 	setvar VAR_MAP_SCENE_ROUTE16, 1
+EventScript_SetEnteringCyclingRoad_OwnBike::
 	releaseall
 	end
 

@@ -188,6 +188,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celebi;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabuto;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RichBoy;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -344,6 +346,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_ItemBall,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
+    [OBJ_EVENT_GFX_ROCKET_NURSE]             = &gObjectEventGraphicsInfo_RocketNurse,
+    [OBJ_EVENT_GFX_RICH_BOY]                 = &gObjectEventGraphicsInfo_RichBoy,
     [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,
     [OBJ_EVENT_GFX_POKEMON_RANGER_M]         = &gObjectEventGraphicsInfo_PokemonRangerM,
     [OBJ_EVENT_GFX_POKEMON_RANGER_F]         = &gObjectEventGraphicsInfo_PokemonRangerF,

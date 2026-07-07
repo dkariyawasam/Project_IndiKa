@@ -61,20 +61,6 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_VOLTORB",
-      "x": 33,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "0"
-    },
-    {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 33,
       "y": 11,
@@ -113,20 +99,6 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FuchsiaCity_EventScript_LittleBoy",
-      "flag": "0"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LAPRAS",
-      "x": 12,
-      "y": 20,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 2,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
       "flag": "0"
     },
     {
@@ -209,15 +181,15 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 33,
+      "x": 34,
       "y": 31,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_WARDENS_HOUSE",
       "dest_warp_id": "1"
     },
     {
-      "x": 11,
-      "y": 15,
+      "x": 25,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_MART",
       "dest_warp_id": "1"
@@ -251,21 +223,21 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 38,
+      "x": 39,
       "y": 31,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_HOUSE2",
       "dest_warp_id": "1"
     },
     {
-      "x": 39,
+      "x": 40,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_CITY_HOUSE2",
       "dest_warp_id": "3"
     },
     {
-      "x": 39,
+      "x": 40,
       "y": 29,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_CITY_HOUSE2",
@@ -284,15 +256,15 @@
     {
       "type": "sign",
       "x": 31,
-      "y": 18,
+      "y": 19,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_CitySign"
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 18,
+      "x": 16,
+      "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_SafariZoneSign"
@@ -307,59 +279,11 @@
     },
     {
       "type": "sign",
-      "x": 31,
+      "x": 32,
       "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_WardensHomeSign"
-    },
-    {
-      "type": "sign",
-      "x": 35,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_VoltorbSign"
-    },
-    {
-      "type": "sign",
-      "x": 38,
-      "y": 16,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_SlowpokeSign"
-    },
-    {
-      "type": "sign",
-      "x": 41,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_ChanseySign"
-    },
-    {
-      "type": "sign",
-      "x": 17,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_KangaskhanSign"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_FossilMonSign"
-    },
-    {
-      "type": "sign",
-      "x": 17,
-      "y": 18,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FuchsiaCity_EventScript_LaprasSign"
     },
     {
       "type": "sign",

@@ -6,9 +6,6 @@ CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
     .string "Gahaha! I raked it in today!\n"
     .string "If only every day were like this…$"
 
-CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired::
-    .string "A COIN CASE is required…$"
-
 CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes::
     .string "We exchange your COINS for prizes.$"
 
@@ -34,4 +31,3 @@ CeladonCity_GameCorner_PrizeRoom_Text_OopsNotEnoughRoom::
 
 CeladonCity_GameCorner_PrizeRoom_Text_OhFineThen::
     .string "あっ そう$"
-

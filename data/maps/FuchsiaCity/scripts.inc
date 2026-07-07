@@ -3,6 +3,7 @@ FuchsiaCity_MapScripts::
 	.byte 0
 
 FuchsiaCity_OnTransition::
+	special EndBikeRental
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
 	end
 

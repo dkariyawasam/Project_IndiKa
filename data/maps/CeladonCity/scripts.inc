@@ -3,6 +3,7 @@ CeladonCity_MapScripts::
 	.byte 0
 
 CeladonCity_OnTransition::
+	special EndBikeRental
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
 	end
 
