@@ -118,6 +118,18 @@ SaffronCity_Dojo_EventScript_Hitoshi::
 	msgbox SaffronCity_Dojo_Text_HitoshiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+SaffronCity_Dojo_EventScript_Carly::
+	trainerbattle_single TRAINER_CHANNELER_CARLY, SaffronCity_Dojo_Text_CarlyIntro, SaffronCity_Dojo_Text_CarlyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_CarlyRematch
+	msgbox SaffronCity_Dojo_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Dojo_EventScript_CarlyRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_CARLY, SaffronCity_Dojo_Text_CarlyIntro, SaffronCity_Dojo_Text_CarlyDefeat
+	msgbox SaffronCity_Dojo_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 SaffronCity_Dojo_EventScript_Hideki::
 	trainerbattle_single TRAINER_BLACK_BELT_HIDEKI, SaffronCity_Dojo_Text_HidekiIntro, SaffronCity_Dojo_Text_HidekiDefeat
 	msgbox SaffronCity_Dojo_Text_HidekiPostBattle, MSGBOX_AUTOCLOSE

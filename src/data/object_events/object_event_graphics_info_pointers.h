@@ -46,6 +46,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Collector;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gamer;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Juggler;
@@ -189,6 +190,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celebi;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabuto;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketPetrel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RichBoy;
 
 
@@ -347,11 +349,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
     [OBJ_EVENT_GFX_ROCKET_NURSE]             = &gObjectEventGraphicsInfo_RocketNurse,
+    [OBJ_EVENT_GFX_ROCKET_PETREL]            = &gObjectEventGraphicsInfo_RocketPetrel,
     [OBJ_EVENT_GFX_RICH_BOY]                 = &gObjectEventGraphicsInfo_RichBoy,
     [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,
     [OBJ_EVENT_GFX_POKEMON_RANGER_M]         = &gObjectEventGraphicsInfo_PokemonRangerM,
     [OBJ_EVENT_GFX_POKEMON_RANGER_F]         = &gObjectEventGraphicsInfo_PokemonRangerF,
-    [OBJ_EVENT_GFX_POKEMON_BREEDER]          = &gObjectEventGraphicsInfo_PokemonBreeder,
+    [OBJ_EVENT_GFX_BREEDER]          = &gObjectEventGraphicsInfo_PokemonBreeder,
     [OBJ_EVENT_GFX_BERRY_SOIL]               = &gObjectEventGraphicsInfo_BerrySoil,
     [OBJ_EVENT_GFX_SITRUS_BERRY_GROWING]     = &gObjectEventGraphicsInfo_SitrusBerryGrowing,
     [OBJ_EVENT_GFX_SITRUS_BERRY_RIPE]        = &gObjectEventGraphicsInfo_SitrusBerryRipe,
@@ -368,7 +371,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUG_MANIAC]               = &gObjectEventGraphicsInfo_BugManiac,
     [OBJ_EVENT_GFX_BURGLAR]                  = &gObjectEventGraphicsInfo_Burglar,
     [OBJ_EVENT_GFX_COLLECTOR]                = &gObjectEventGraphicsInfo_Collector,
-    [OBJ_EVENT_GFX_EXPERT]                   = &gObjectEventGraphicsInfo_Expert,
+    [OBJ_EVENT_GFX_EXPERT_M]                   = &gObjectEventGraphicsInfo_Expert,
+    [OBJ_EVENT_GFX_EXPERT_F]                 = &gObjectEventGraphicsInfo_ExpertF,
     [OBJ_EVENT_GFX_GAMER]                    = &gObjectEventGraphicsInfo_Gamer,
     [OBJ_EVENT_GFX_HEX_MANIAC]               = &gObjectEventGraphicsInfo_HexManiac,
     [OBJ_EVENT_GFX_JUGGLER]                  = &gObjectEventGraphicsInfo_Juggler,
