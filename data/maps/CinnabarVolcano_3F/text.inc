@@ -22,3 +22,17 @@ CinnabarVolcano_3F_Text_EliasDefeat::
 CinnabarVolcano_3F_Text_EliasPostBattle::
     .string "Volcanic rock tells the story\n"
     .string "of how CINNABAR was formed.$"
+
+CinnabarVolcano_3F_Text_KarinaIntro::
+    .string "A master stance should hold\n"
+    .string "even in this heat.\p"
+    .string "Let's see if yours does.$"
+
+CinnabarVolcano_3F_Text_KarinaDefeat::
+    .string "You did not waver.$"
+
+CinnabarVolcano_3F_Text_KarinaPostBattle::
+    .string "The volcano teaches the same\n"
+    .string "lesson as the dojo.\p"
+    .string "Breathe, root yourself, then\n"
+    .string "strike with purpose.$"
