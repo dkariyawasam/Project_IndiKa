@@ -60,6 +60,18 @@ CinnabarVolcano_3F_EventScript_EliasRematch::
 	msgbox CinnabarVolcano_3F_Text_EliasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+CinnabarVolcano_3F_EventScript_Karina::
+	trainerbattle_single TRAINER_CHANNELER_KARINA, CinnabarVolcano_3F_Text_KarinaIntro, CinnabarVolcano_3F_Text_KarinaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CinnabarVolcano_3F_EventScript_KarinaRematch
+	msgbox CinnabarVolcano_3F_Text_KarinaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_EventScript_KarinaRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_KARINA, CinnabarVolcano_3F_Text_KarinaIntro, CinnabarVolcano_3F_Text_KarinaDefeat
+	msgbox CinnabarVolcano_3F_Text_KarinaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 CinnabarVolcano_3F_EventScript_Moltres::
 	lock
 	faceplayer

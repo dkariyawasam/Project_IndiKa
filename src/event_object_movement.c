@@ -487,6 +487,18 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_MIME_SR                     0x112A
 #define OBJ_EVENT_PAL_TAG_RIVAL                       0x112B
 #define OBJ_EVENT_PAL_TAG_RICH_BOY                    0x112C
+#define OBJ_EVENT_PAL_TAG_BURGLAR                     0x112D
+#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC                 0x112E
+#define OBJ_EVENT_PAL_TAG_KINDLER                     0x112F
+#define OBJ_EVENT_PAL_TAG_HIKER                       0x1130
+#define OBJ_EVENT_PAL_TAG_ENGINEER                    0x1131
+#define OBJ_EVENT_PAL_TAG_EXPERT                      0x1132
+#define OBJ_EVENT_PAL_TAG_EXPERT_F                    0x1133
+#define OBJ_EVENT_PAL_TAG_BLACK_BELT                  0x1134
+#define OBJ_EVENT_PAL_TAG_SCIENTIST                   0x1135
+#define OBJ_EVENT_PAL_TAG_POKE_MANIAC                 0x1136
+#define OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND              0x1137
+#define OBJ_EVENT_PAL_TAG_ROCKET_PETREL               0x1138
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -533,6 +545,18 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_MimeSr,                  OBJ_EVENT_PAL_TAG_MIME_SR},
     {gObjectEventPal_Rival,                   OBJ_EVENT_PAL_TAG_RIVAL},
     {gObjectEventPal_RichBoy,                 OBJ_EVENT_PAL_TAG_RICH_BOY},
+    {gObjectEventPal_Burglar,                 OBJ_EVENT_PAL_TAG_BURGLAR},
+    {gObjectEventPal_RuinManiac,              OBJ_EVENT_PAL_TAG_RUIN_MANIAC},
+    {gObjectEventPal_Kindler,                 OBJ_EVENT_PAL_TAG_KINDLER},
+    {gObjectEventPal_Hiker,                   OBJ_EVENT_PAL_TAG_HIKER},
+    {gObjectEventPal_Engineer,                OBJ_EVENT_PAL_TAG_ENGINEER},
+    {gObjectEventPal_Expert,                  OBJ_EVENT_PAL_TAG_EXPERT},
+    {gObjectEventPal_ExpertF,                 OBJ_EVENT_PAL_TAG_EXPERT_F},
+    {gObjectEventPal_BlackBelt,               OBJ_EVENT_PAL_TAG_BLACK_BELT},
+    {gObjectEventPal_Scientist,               OBJ_EVENT_PAL_TAG_SCIENTIST},
+    {gObjectEventPal_PokeManiac,              OBJ_EVENT_PAL_TAG_POKE_MANIAC},
+    {gObjectEventPal_SwimmerFLand,            OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND},
+    {gObjectEventPal_RocketPetrel,            OBJ_EVENT_PAL_TAG_ROCKET_PETREL},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {},
 };

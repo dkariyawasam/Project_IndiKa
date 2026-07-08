@@ -72,6 +72,20 @@ SaffronCity_Dojo_Text_HitoshiPostBattle::
     .string "The prime fighters across the land\n"
     .string "train here.$"
 
+SaffronCity_Dojo_Text_CarlyIntro::
+    .string "Black belts master technique.\p"
+    .string "Experts master when to use it.\n"
+    .string "Show me your judgment.$"
+
+SaffronCity_Dojo_Text_CarlyDefeat::
+    .string "A clean finish.$"
+
+SaffronCity_Dojo_Text_CarlyPostBattle::
+    .string "Power without timing is only\n"
+    .string "noise.\p"
+    .string "A true martial artist makes one\n"
+    .string "motion answer everything.$"
+
 SaffronCity_Dojo_Text_YouWantHitmonlee::
     .string "You want the hard-kicking\n"
     .string "HITMONLEE?$"

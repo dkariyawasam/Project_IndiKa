@@ -155,7 +155,6 @@
 #define TRAINER_BUG_CATCHER_CALE                 110
 #define TRAINER_CHANNELER_PATRICIA_2               TRAINER_BUG_CATCHER_CALE
 #define TRAINER_BUG_CATCHER_KEIGO                111
-#define TRAINER_CHANNELER_CARLY_2                  TRAINER_BUG_CATCHER_KEIGO
 #define TRAINER_UNDERGROUND_COLLECTOR_NOLAN        TRAINER_BUG_CATCHER_KEIGO
 #define TRAINER_BUG_CATCHER_ELIJAH               112
 #define TRAINER_CHANNELER_HOPE_2                   TRAINER_BUG_CATCHER_ELIJAH
@@ -1094,12 +1093,13 @@
 #define TRAINER_LEADER_SABRINA_7                 TRAINER_PSYCHIC_RODETTE_2
 #define TRAINER_ROUTE11_POKEMANIAC_CHAPLIN      781
 #define TRAINER_ROUTE11_POKEMANIAC_CHAPLIN_2    782
+#define TRAINER_CHANNELER_CARLY_2               783
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             783
-#define MAX_TRAINERS_COUNT                       784
+#define NUM_TRAINERS                             784
+#define MAX_TRAINERS_COUNT                       785
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

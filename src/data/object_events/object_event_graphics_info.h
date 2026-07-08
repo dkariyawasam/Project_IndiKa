@@ -627,12 +627,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerF = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeManiac = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_PINK,
+    .paletteTag = OBJ_EVENT_PAL_TAG_POKE_MANIAC,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_2,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -720,6 +720,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketPetrel = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ROCKET_PETREL,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_RocketPetrel,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
@@ -779,12 +798,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMLand = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_1,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -798,12 +817,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BLACK_BELT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_4,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -817,12 +836,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SCIENTIST,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_4,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -1007,12 +1026,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFLand = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hiker = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_HIKER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_4,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -2030,22 +2049,60 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = {    \
 }
 
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSLOT_NPC_BESPOKE_5, sPicTable_BugManiac);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Burglar, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Burglar);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Burglar, OBJ_EVENT_PAL_TAG_BURGLAR, PALSLOT_NPC_DYNAMIC, sPicTable_Burglar);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Collector, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Collector);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Expert, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Expert);
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_EXPERT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Expert,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_EXPERT_F,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_ExpertF,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Gamer, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Gamer);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(HexManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_HexManiac);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Juggler, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_Juggler);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Kindler, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_Kindler);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Kindler, OBJ_EVENT_PAL_TAG_KINDLER, PALSLOT_NPC_DYNAMIC, sPicTable_Kindler);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanM, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_PokefanM);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanF, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_PokefanF);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_RuinManiac);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_RUIN_MANIAC, PALSLOT_NPC_DYNAMIC, sPicTable_RuinManiac);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY, PALSLOT_NPC_DYNAMIC, sPicTable_RichBoy);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMLand);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFLand);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BirdKeeper, OBJ_EVENT_PAL_TAG_BIRD_KEEPER, PALSLOT_NPC_DYNAMIC, sPicTable_BirdKeeper);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Engineer, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_Engineer);
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Engineer, OBJ_EVENT_PAL_TAG_ENGINEER, PALSLOT_NPC_DYNAMIC, sPicTable_Engineer);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMWater);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFWater);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMCycling, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMCycling);

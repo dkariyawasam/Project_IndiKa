@@ -7,6 +7,7 @@ RocketLeague_Arena_MapScripts::
 RocketLeague_Arena_OnTransition::
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_M
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	removeobject LOCALID_ROCKET_LEAGUE_PETREL
 	end
 
 RocketLeague_Arena_OnResume::
@@ -99,7 +100,7 @@ RocketLeague_Arena_EventScript_StartChallenge::
 	return
 
 RocketLeague_Arena_EventScript_BattlePetrel::
-	call RocketLeague_Arena_EventScript_AdminMEnter
+	call RocketLeague_Arena_EventScript_PetrelEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_PetrelIntro
 	playbgm MUS_ENCOUNTER_ROCKET, 0
@@ -107,7 +108,7 @@ RocketLeague_Arena_EventScript_BattlePetrel::
 	trainerbattle_no_intro TRAINER_ROCKET_ADMIN_PETREL, RocketLeague_Arena_Text_PetrelDefeat
 	msgbox RocketLeague_Arena_Text_PetrelPostBattle
 	special AdvanceLeagueChallengeRound
-	call RocketLeague_Arena_EventScript_AdminMExit
+	call RocketLeague_Arena_EventScript_PetrelExit
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleArcher::
@@ -264,6 +265,13 @@ RocketLeague_Arena_EventScript_AdminFEnter::
 	waitmovement 0
 	return
 
+RocketLeague_Arena_EventScript_PetrelEnter::
+	setobjectxyperm LOCALID_ROCKET_LEAGUE_PETREL, 6, 1
+	addobject LOCALID_ROCKET_LEAGUE_PETREL
+	applymovement LOCALID_ROCKET_LEAGUE_PETREL, RocketLeague_Arena_Movement_AdminEnter
+	waitmovement 0
+	return
+
 RocketLeague_Arena_EventScript_AdminMExit::
 	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_M, RocketLeague_Arena_Movement_AdminExit
 	waitmovement 0
@@ -274,6 +282,12 @@ RocketLeague_Arena_EventScript_AdminFExit::
 	applymovement LOCALID_ROCKET_LEAGUE_ADMIN_F, RocketLeague_Arena_Movement_AdminExit
 	waitmovement 0
 	removeobject LOCALID_ROCKET_LEAGUE_ADMIN_F
+	return
+
+RocketLeague_Arena_EventScript_PetrelExit::
+	applymovement LOCALID_ROCKET_LEAGUE_PETREL, RocketLeague_Arena_Movement_AdminExit
+	waitmovement 0
+	removeobject LOCALID_ROCKET_LEAGUE_PETREL
 	return
 
 RocketLeague_Arena_EventScript_GiveCoinReward::

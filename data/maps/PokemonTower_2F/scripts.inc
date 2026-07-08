@@ -13,18 +13,6 @@ PokemonTower_2F_EventScript_PatriciaRematch::
 	msgbox PokemonTower_2F_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_2F_EventScript_Carly::
-	trainerbattle_single TRAINER_CHANNELER_CARLY, PokemonTower_2F_Text_CarlyIntro, PokemonTower_2F_Text_CarlyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, PokemonTower_2F_EventScript_CarlyRematch
-	msgbox PokemonTower_2F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_2F_EventScript_CarlyRematch::
-	trainerbattle_rematch TRAINER_CHANNELER_CARLY, PokemonTower_2F_Text_CarlyIntro, PokemonTower_2F_Text_CarlyDefeat
-	msgbox PokemonTower_2F_Text_CarlyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 PokemonTower_2F_EventScript_Hope::
 	trainerbattle_single TRAINER_CHANNELER_HOPE, PokemonTower_2F_Text_HopeIntro, PokemonTower_2F_Text_HopeDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

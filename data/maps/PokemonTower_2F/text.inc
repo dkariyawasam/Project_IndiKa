@@ -10,18 +10,6 @@ PokemonTower_2F_Text_HopePostBattle::
     .string "The ghosts can be identified\n"
     .string "clearly now.$"
 
-PokemonTower_2F_Text_CarlyIntro::
-    .string "Kekeke…\n"
-    .string "Kwaaah!$"
-
-PokemonTower_2F_Text_CarlyDefeat::
-    .string "Hmm?\n"
-    .string "What am I doing?$"
-
-PokemonTower_2F_Text_CarlyPostBattle::
-    .string "Sorry!\n"
-    .string "I was possessed!$"
-
 PokemonTower_2F_Text_PatriciaIntro::
     .string "Be gone!\n"
     .string "Malevolent spirit!$"

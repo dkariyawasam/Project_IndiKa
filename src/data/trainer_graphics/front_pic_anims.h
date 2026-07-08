@@ -1,23 +1,3 @@
-static const union AnimCmd *const sAnims_AromaLadyRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_RuinManiacRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_TuberFRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_TuberMRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_AceTrainerMRS[] =
 {
     sAnim_GeneralFrame0,
@@ -38,27 +18,7 @@ static const union AnimCmd *const sAnims_LadyRS[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_BeautyRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_RichBoy[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_PokeManiacRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_SwimmerMRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_BlackBeltMRS[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -73,22 +33,7 @@ static const union AnimCmd *const sAnims_Kindler[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_ScoutMRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_BugManiac[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_PsychicMRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_PsychicFRS[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -133,11 +78,6 @@ static const union AnimCmd *const sAnims_SchoolKidF[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_SrAndJr[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_PokefanM[] =
 {
     sAnim_GeneralFrame0,
@@ -158,17 +98,7 @@ static const union AnimCmd *const sAnims_ExpertF[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_YoungsterRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_ChampionSteven[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_FishermanRS[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -203,32 +133,12 @@ static const union AnimCmd *const sAnims_TriathleteFWater[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_BirdKeeperRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_NinjaBoy[] =
 {
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_BlackBeltFRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_ParasolLady[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_SwimmerFRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_ScoutFRS[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -263,42 +173,12 @@ static const union AnimCmd *const sAnims_PokemonBreederFRS[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_PokemonRangerMRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_PokemonRangerFRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_LassRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_BugCatcherRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_HikerRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_YoungCoupleRS[] =
 {
     sAnim_GeneralFrame0,
 };
 
 static const union AnimCmd *const sAnims_OldCouple[] =
-{
-    sAnim_GeneralFrame0,
-};
-
-static const union AnimCmd *const sAnims_SisAndBroRS[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -623,6 +503,11 @@ static const union AnimCmd *const sAnims_TuberF[] =
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_TuberM[] =
+{
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_PokemonBreeder[] =
 {
     sAnim_GeneralFrame0,
@@ -660,58 +545,34 @@ static const union AnimCmd *const sAnims_Painter[] =
 
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
-    [TRAINER_PIC_AROMA_LADY_RS]         = sAnims_AromaLadyRS,
-    [TRAINER_PIC_RUIN_MANIAC_RS]        = sAnims_RuinManiacRS,
-    [TRAINER_PIC_TUBER_F_RS]            = sAnims_TuberFRS,
-    [TRAINER_PIC_TUBER_M_RS]            = sAnims_TuberMRS,
     [TRAINER_PIC_HEX_MANIAC]            = sAnims_HexManiac,
     [TRAINER_PIC_LADY_RS]               = sAnims_LadyRS,
-    [TRAINER_PIC_BEAUTY_RS]             = sAnims_BeautyRS,
     [TRAINER_PIC_RICH_BOY]              = sAnims_RichBoy,
-    [TRAINER_PIC_POKEMANIAC_RS]         = sAnims_PokeManiacRS,
-    [TRAINER_PIC_SWIMMER_M_RS]          = sAnims_SwimmerMRS,
-    [TRAINER_PIC_BLACK_BELT_M_RS]       = sAnims_BlackBeltMRS,
     [TRAINER_PIC_GUITARIST]             = sAnims_Guitarist,
     [TRAINER_PIC_KINDLER]               = sAnims_Kindler,
-    [TRAINER_PIC_SCOUT_M_RS]            = sAnims_ScoutMRS,
     [TRAINER_PIC_BUG_MANIAC]            = sAnims_BugManiac,
-    [TRAINER_PIC_PSYCHIC_M_RS]          = sAnims_PsychicMRS,
-    [TRAINER_PIC_PSYCHIC_F_RS]          = sAnims_PsychicFRS,
     [TRAINER_PIC_GENTLEMAN_RS]          = sAnims_GentlemanRS,
     [TRAINER_PIC_SCHOOL_KID_M]          = sAnims_SchoolKidM,
     [TRAINER_PIC_SCHOOL_KID_F]          = sAnims_SchoolKidF,
-    [TRAINER_PIC_SR_AND_JR]             = sAnims_SrAndJr,
     [TRAINER_PIC_POKEFAN_M]             = sAnims_PokefanM,
     [TRAINER_PIC_POKEFAN_F]             = sAnims_PokefanF,
     [TRAINER_PIC_EXPERT_M]              = sAnims_ExpertM,
     [TRAINER_PIC_EXPERT_F]              = sAnims_ExpertF,
-    [TRAINER_PIC_YOUNGSTER_RS]          = sAnims_YoungsterRS,
-    [TRAINER_PIC_FISHERMAN_RS]          = sAnims_FishermanRS,
     [TRAINER_PIC_TRIATHLETE_M_CYCLING]  = sAnims_TriathleteMCycling,
     [TRAINER_PIC_TRIATHLETE_F_CYCLING]  = sAnims_TriathleteFCycling,
     [TRAINER_PIC_TRIATHLETE_M_LAND]  = sAnims_TriathleteMLand,
     [TRAINER_PIC_TRIATHLETE_F_LAND]  = sAnims_TriathleteFLand,
     [TRAINER_PIC_TRIATHLETE_M_WATER] = sAnims_TriathleteMWater,
     [TRAINER_PIC_TRIATHLETE_F_WATER] = sAnims_TriathleteFWater,
-    [TRAINER_PIC_BIRD_KEEPER_RS]        = sAnims_BirdKeeperRS,
     [TRAINER_PIC_NINJA_BOY]             = sAnims_NinjaBoy,
-    [TRAINER_PIC_BLACK_BELT_F_RS]       = sAnims_BlackBeltFRS,
     [TRAINER_PIC_PARASOL_LADY]          = sAnims_ParasolLady,
-    [TRAINER_PIC_SWIMMER_F_RS]          = sAnims_SwimmerFRS,
-    [TRAINER_PIC_SCOUT_F_RS]            = sAnims_ScoutFRS,
     [TRAINER_PIC_TWINS_RS]              = sAnims_TwinsRS,
     [TRAINER_PIC_SAILOR_RS]             = sAnims_SailorRS,
     [TRAINER_PIC_COLLECTOR]             = sAnims_Collector,
     [TRAINER_PIC_POKEMON_BREEDER_M_RS]  = sAnims_PokemonBreederMRS,
     [TRAINER_PIC_POKEMON_BREEDER_F_RS]  = sAnims_PokemonBreederFRS,
-    [TRAINER_PIC_POKEMON_RANGER_M_RS]   = sAnims_PokemonRangerMRS,
-    [TRAINER_PIC_POKEMON_RANGER_F_RS]   = sAnims_PokemonRangerFRS,
-    [TRAINER_PIC_LASS_RS]               = sAnims_LassRS,
-    [TRAINER_PIC_BUG_CATCHER_RS]        = sAnims_BugCatcherRS,
-    [TRAINER_PIC_HIKER_RS]              = sAnims_HikerRS,
     [TRAINER_PIC_YOUNG_COUPLE_RS]       = sAnims_YoungCoupleRS,
     [TRAINER_PIC_OLD_COUPLE]            = sAnims_OldCouple,
-    [TRAINER_PIC_SIS_AND_BRO_RS]        = sAnims_SisAndBroRS,
     [TRAINER_PIC_YOUNGSTER]             = sAnims_Youngster,
     [TRAINER_PIC_BUG_CATCHER]           = sAnims_BugCatcher,
     [TRAINER_PIC_LASS]                  = sAnims_Lass,
@@ -769,6 +630,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_PSYCHIC_F]             = sAnims_PsychicF,
     [TRAINER_PIC_BLACK_BELT_F]          = sAnims_BlackBeltF,
     [TRAINER_PIC_TUBER_F]               = sAnims_TuberF,
+    [TRAINER_PIC_TUBER_M]               = sAnims_TuberM,
     [TRAINER_PIC_POKEMON_BREEDER]       = sAnims_PokemonBreeder,
     [TRAINER_PIC_POKEMON_RANGER_M]      = sAnims_PokemonRangerM,
     [TRAINER_PIC_POKEMON_RANGER_F]      = sAnims_PokemonRangerF,
