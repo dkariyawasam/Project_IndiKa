@@ -159,7 +159,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER",
       "x": 28,
       "y": 55,
       "elevation": 3,

@@ -65,9 +65,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RematchPokemonTowerChann
     { .iv = 45, .lvl = 30, .species = SPECIES_MISDREAVUS, },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RematchPokemonTowerExpert[] = {
-    { .iv = 50, .lvl = 30, .species = SPECIES_KADABRA, },
-    { .iv = 50, .lvl = 32, .species = SPECIES_HYPNO, },
+static const struct TrainerMonNoItemDefaultMoves sParty_RematchMartialArtsExpert[] = {
+    { .iv = 80, .lvl = 42, .species = SPECIES_HITMONTOP, },
+    { .iv = 80, .lvl = 43, .species = SPECIES_HERACROSS, },
+    { .iv = 80, .lvl = 44, .species = SPECIES_MACHAMP, },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchFuchsiaJuggler[] = {
@@ -7668,11 +7669,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerPatricia[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerCarly[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ExpertCarly[] = {
     {
-        .iv = 0,
-        .lvl = 24,
-        .species = SPECIES_DROWZEE,
+        .iv = 70,
+        .lvl = 38,
+        .species = SPECIES_MACHOKE,
+    },
+    {
+        .iv = 70,
+        .lvl = 39,
+        .species = SPECIES_HITMONTOP,
+    },
+    {
+        .iv = 70,
+        .lvl = 40,
+        .species = SPECIES_PRIMEAPE,
     },
 };
 
@@ -7729,11 +7740,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerRuth[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerKarina[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ExpertKarina[] = {
     {
-        .iv = 0,
-        .lvl = 24,
-        .species = SPECIES_KADABRA,
+        .iv = 70,
+        .lvl = 36,
+        .species = SPECIES_HERACROSS,
+    },
+    {
+        .iv = 70,
+        .lvl = 37,
+        .species = SPECIES_HITMONLEE,
+    },
+    {
+        .iv = 70,
+        .lvl = 37,
+        .species = SPECIES_HITMONCHAN,
     },
 };
 
