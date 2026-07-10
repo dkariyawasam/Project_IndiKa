@@ -571,12 +571,13 @@ gApexLogFlavorText_MrFuji5:: @ 0x81AFDC4
 	.string "and respected in LAVENDER TOWN.$"
 
 gApexLogFlavorText_Giovanni0:: @ 0x81AFE68
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}TEAM ROCKET captures POKéMON from\n"
-	.string "around the world.\p"
-	.string "They're important tools for keeping\n"
-	.string "our criminal enterprise going.\p"
-	.string "I am the leader, GIOVANNI!$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person seek?\p"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This shattered vat was meant to\n"
+	.string "hold the perfect POKéMON.\p"
+	.string "Power without waste. Power without\n"
+	.string "weakness.\p"
+	.string "MEWTWO broke free before it could\n"
+	.string "be claimed.$"
 
 gApexLogFlavorText_Giovanni1:: @ 0x81AFF23
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
@@ -593,20 +594,27 @@ gApexLogFlavorText_Giovanni2:: @ 0x81AFFA8
 	.string "be used.$"
 
 gApexLogFlavorText_Giovanni3:: @ 0x81B0022
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Welcome to my hideout!\p"
-	.string "It shall be so until I can restore\n"
-	.string "TEAM ROCKET to its former glory.$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person seek?\p"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SILPH's MASTER BALL is no mere\n"
+	.string "product.\p"
+	.string "It is control made mechanical.\n"
+	.string "Command made perfect.\p"
+	.string "GIOVANNI wanted its process to\n"
+	.string "reclaim MEWTWO.$"
 
 gApexLogFlavorText_Giovanni4:: @ 0x81B00A6
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! GIOVANNI was the\n"
-	.string "GYM LEADER of VIRIDIAN?$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What did this person learn?\p"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I poured wealth, science, and will\n"
+	.string "into creating absolute power.\p"
+	.string "Yet when it stood before me, no\n"
+	.string "order I gave could bind it.$"
 
 gApexLogFlavorText_Giovanni5:: @ 0x81B0106
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No one knows where GIOVANNI\n"
-	.string "went after leaving VIRIDIAN GYM.$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What did this person learn?\p"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A TRAINER is not made great by\n"
+	.string "possessing the strongest thing.\p"
+	.string "Trust your team and do your best.\n"
+	.string "That was enough to defeat me.$"
 
 
 gApexLogPersonName_ProfOak:: @ 0x81B0188
@@ -1066,7 +1074,7 @@ gApexLogFlavorTextOriginLocation_MrFuji5::
 	.string "CINNABAR ISLAND$"
 
 gApexLogFlavorTextOriginLocation_Giovanni0::
-	.string "ROCKET LEAGUE$"
+	.string "POKéMON MANSION$"
 
 gApexLogFlavorTextOriginLocation_Giovanni1::
 	.string "SILPH CO.$"
@@ -1075,10 +1083,10 @@ gApexLogFlavorTextOriginLocation_Giovanni2::
 	.string "SILPH CO.$"
 
 gApexLogFlavorTextOriginLocation_Giovanni3::
-	.string "VIRIDIAN GYM$"
+	.string "SILPH CO.$"
 
 gApexLogFlavorTextOriginLocation_Giovanni4::
-	.string "VIRIDIAN GYM$"
+	.string "CERULEAN CAVE$"
 
 gApexLogFlavorTextOriginLocation_Giovanni5::
 	.string "VIRIDIAN GYM$"
@@ -1366,10 +1374,10 @@ gApexLogFlavorTextOriginObjectName_Giovanni3::
 	.string "GIOVANNI$"
 
 gApexLogFlavorTextOriginObjectName_Giovanni4::
-	.string "MAN$"
+	.string "GIOVANNI$"
 
 gApexLogFlavorTextOriginObjectName_Giovanni5::
-	.string "MAN$"
+	.string "GIOVANNI$"
 
 PokemonJournal_Text_SpecialFeatureBrock::
 	.string "POKéMON JOURNAL\p"

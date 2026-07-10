@@ -32,7 +32,7 @@
     {
       "local_id": "LOCALID_VERMILION_GYM_GUY",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_POLICEMAN",
       "x": 4,
       "y": 13,
       "elevation": 3,

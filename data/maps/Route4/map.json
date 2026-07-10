@@ -28,7 +28,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_WOMAN_1",
       "x": 9,
       "y": 8,
       "elevation": 3,
@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_BOY",
       "x": 15,
       "y": 14,
       "elevation": 3,

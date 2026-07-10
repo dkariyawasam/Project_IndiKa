@@ -1990,8 +1990,8 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_ELECTIVIRE] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .size = MON_COORDS_SIZE(64, 48),
+        .y_offset = 8,
     },
     [SPECIES_AMBIPOM] =
     {
@@ -2475,8 +2475,8 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_TANGROWTH] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .size = MON_COORDS_SIZE(64, 40),
+        .y_offset = 12,
     },
     [SPECIES_HAPPINY] =
     {

@@ -18,7 +18,7 @@
     {
       "local_id": "LOCALID_ROUTE10_HEALER",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_OLD_WOMAN",
       "x": 4,
       "y": 4,
       "elevation": 3,
@@ -46,7 +46,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_MAN_2",
       "x": 6,
       "y": 4,
       "elevation": 3,

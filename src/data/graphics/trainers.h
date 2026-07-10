@@ -91,8 +91,8 @@ const u32 gTrainerPalette_BugCatcher[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerFrontPic_Lass[] = INCBIN_U32("graphics/trainers/front_pics/lass_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Lass[] = INCBIN_U32("graphics/trainers/palettes/lass.gbapal.lz");
 
-const u32 gTrainerFrontPic_Sailor[] = INCBIN_U32("graphics/trainers/front_pics/sailor_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Sailor[] = INCBIN_U32("graphics/trainers/palettes/sailor.gbapal.lz");
+const u32 gTrainerFrontPic_Sailor[] = INCBIN_U32("graphics/trainers/front_pics/sailor_rs_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Sailor[] = INCBIN_U32("graphics/trainers/palettes/sailor_rs.gbapal.lz");
 
 const u32 gTrainerFrontPic_ScoutM[] = INCBIN_U32("graphics/trainers/front_pics/scout_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_ScoutM[] = INCBIN_U32("graphics/trainers/palettes/scout_m.gbapal.lz");
