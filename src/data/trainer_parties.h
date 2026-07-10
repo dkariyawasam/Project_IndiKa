@@ -6545,7 +6545,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika7[] = {
     {
         .iv = 0,
         .lvl = 47,
-        .species = SPECIES_TANGROWTH,
+        .species = SPECIES_TANGELA,
         .moves = {MOVE_SLEEP_POWDER, MOVE_TICKLE, MOVE_MEGA_DRAIN, MOVE_BODY_SLAM},
     },
 };
@@ -12433,8 +12433,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAceVex[] = {
     {
         .iv = 120,
         .lvl = 37,
-        .species = SPECIES_MIME_SR,
-        .moves = {MOVE_DAZZLING_GLEAM, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_LIGHT_SCREEN},
+        .species = SPECIES_GRANBULL,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_CRUNCH, MOVE_ROAR, MOVE_SCARY_FACE},
     },
     {
         .iv = 120,
@@ -12565,7 +12565,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAceSable[] = {
     {
         .iv = 120,
         .lvl = 39,
-        .species = SPECIES_LICKILICKY,
+        .species = SPECIES_LICKITUNG,
         .moves = {MOVE_BODY_SLAM, MOVE_REST, MOVE_SHADOW_BALL, MOVE_BRICK_BREAK},
     },
 };

@@ -13,17 +13,32 @@ CeladonCity_EventScript_RemoveRival::
 	removeobject LOCALID_CELADON_RIVAL
 	end
 
+CeladonCity_EventScript_RivalEvolutionTrigger38::
+	setvar VAR_TEMP_1, 0
+	goto CeladonCity_EventScript_RivalEvolutionTrigger
+
+CeladonCity_EventScript_RivalEvolutionTrigger39::
+	setvar VAR_TEMP_1, 1
+	goto CeladonCity_EventScript_RivalEvolutionTrigger
+
+CeladonCity_EventScript_RivalEvolutionTrigger40::
+	setvar VAR_TEMP_1, 2
+	goto CeladonCity_EventScript_RivalEvolutionTrigger
+
 CeladonCity_EventScript_RivalEvolutionTrigger::
 	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lockall
 	playbgm MUS_ENCOUNTER_RIVAL, 0
+	call_if_eq VAR_TEMP_1, 0, CeladonCity_EventScript_RivalApproach38
+	call_if_eq VAR_TEMP_1, 1, CeladonCity_EventScript_RivalApproach39
+	call_if_eq VAR_TEMP_1, 2, CeladonCity_EventScript_RivalApproach40
 	applymovement LOCALID_CELADON_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
-	applymovement LOCALID_CELADON_RIVAL, Common_Movement_FaceDown
+	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalFaceUp
 	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	call CeladonCity_EventScript_RivalEvolutionScene
 	releaseall
@@ -49,12 +64,27 @@ CeladonCity_EventScript_RivalEvolutionScene::
 	playbgm MUS_RIVAL_EXIT, 0
 	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalExitEvolution
 	applymovement LOCALID_PLAYER, CeladonCity_Movement_PlayerWatchRivalExitEvolution
-	waitmovement 0
+	waitmovement LOCALID_CELADON_RIVAL
 	setflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
 	setvar VAR_MAP_SCENE_CELADON_RIVAL, 1
 	setvar VAR_MAP_SCENE_CERULEAN_CITY_RIVAL, 1
 	removeobject LOCALID_CELADON_RIVAL
 	fadedefaultbgm
+	return
+
+CeladonCity_EventScript_RivalApproach38::
+	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalApproach38
+	waitmovement 0
+	return
+
+CeladonCity_EventScript_RivalApproach39::
+	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalApproach39
+	waitmovement 0
+	return
+
+CeladonCity_EventScript_RivalApproach40::
+	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalApproach40
+	waitmovement 0
 	return
 
 CeladonCity_EventScript_RivalSquirtle::
@@ -69,15 +99,64 @@ CeladonCity_EventScript_RivalCharmander::
 	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN_CHARMANDER, CeladonCity_Text_RivalDefeat
 	return
 
+CeladonCity_Movement_RivalApproach38::
+	set_visible
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+CeladonCity_Movement_RivalApproach39::
+	set_visible
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+CeladonCity_Movement_RivalApproach40::
+	set_visible
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+CeladonCity_Movement_RivalFaceUp::
+	face_up
+	step_end
+
 CeladonCity_Movement_RivalExitEvolution::
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_left
-	walk_left
-	walk_left
-	walk_left
+	set_invisible
 	step_end
 
 CeladonCity_Movement_PlayerWatchRivalExitEvolution::
-	face_left
+	face_up
 	delay_16
 	delay_16
 	delay_16
