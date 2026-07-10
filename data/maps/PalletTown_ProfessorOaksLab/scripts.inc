@@ -471,6 +471,8 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_OAKS_LAB_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCallPlayerAndRivalOver
 	closemessage
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5

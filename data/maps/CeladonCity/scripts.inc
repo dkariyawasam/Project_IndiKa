@@ -36,6 +36,7 @@ CeladonCity_EventScript_RivalEvolutionTrigger::
 	applymovement LOCALID_CELADON_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
 	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalFaceUp
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
