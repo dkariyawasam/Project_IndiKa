@@ -172,10 +172,10 @@
       "local_id": "LOCALID_CELADON_RIVAL",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "x": 32,
+      "x": 30,
       "y": 36,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -301,7 +301,25 @@
       "elevation": 3,
       "var": "VAR_MAP_SCENE_CELADON_RIVAL",
       "var_value": "0",
-      "script": "CeladonCity_EventScript_RivalEvolutionTrigger"
+      "script": "CeladonCity_EventScript_RivalEvolutionTrigger38"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 35,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_CELADON_RIVAL",
+      "var_value": "0",
+      "script": "CeladonCity_EventScript_RivalEvolutionTrigger39"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 35,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_CELADON_RIVAL",
+      "var_value": "0",
+      "script": "CeladonCity_EventScript_RivalEvolutionTrigger40"
     }
   ],
   "bg_events": [

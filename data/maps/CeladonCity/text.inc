@@ -10,6 +10,8 @@ CeladonCity_Text_RivalEvolutionIntro::
 	.string "You noticed the GYM, right?\n"
 	.string "Or did the giant building still\l"
 	.string "need a sign just for you?\p"
+	.string "I already got what I needed from\n"
+	.string "ERIKA. Try not to look impressed.\p"
 	.string "Before you go asking ERIKA for\n"
 	.string "field notes, let's see if your\l"
 	.string "team can keep up with mine.$"
@@ -25,9 +27,11 @@ CeladonCity_Text_RivalEvolutionPostBattle::
 	.string "people train with them.\p"
 	.string "ERIKA studies that bond up close.\n"
 	.string "Try listening for once.\p"
-	.string "I'll get the useful notes before\n"
-	.string "you even work out which door is\l"
-	.string "the GYM.$"
+	.string "If you beat a GYM LEADER, don't\n"
+	.string "get too excited.\p"
+	.string "They're testing you, so they adjust\n"
+	.string "their teams to how many BADGES you\l"
+	.string "have.$"
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "Heheh! This GYM is great!\n"
