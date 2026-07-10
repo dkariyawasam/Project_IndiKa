@@ -27,6 +27,7 @@ Route2_EventScript_RivalFieldworkTrigger::
 	applymovement LOCALID_ROUTE2_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
 	applymovement LOCALID_ROUTE2_RIVAL, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
@@ -50,7 +51,7 @@ Route2_EventScript_RivalFieldworkScene::
 	playbgm MUS_RIVAL_EXIT, 0
 	applymovement LOCALID_ROUTE2_RIVAL, Route2_Movement_RivalExitFieldwork
 	applymovement LOCALID_PLAYER, Route2_Movement_PlayerWatchRivalExitFieldwork
-	waitmovement 0
+	waitmovement LOCALID_ROUTE2_RIVAL
 	setflag FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK
 	setvar VAR_MAP_SCENE_ROUTE2_RIVAL, 1
 	removeobject LOCALID_ROUTE2_RIVAL
