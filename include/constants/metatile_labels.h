@@ -152,6 +152,10 @@
 #define METATILE_PokemonMansion_Barrier_Vertical_TopWall                 0x350
 #define METATILE_PokemonMansion_BasementFloor                            0x286
 #define METATILE_PokemonMansion_BasementFloor_ShadeFull                  0x287
+#define METATILE_PokemonMansion_BrokenVat_BottomLeft                     0x3FE
+#define METATILE_PokemonMansion_BrokenVat_BottomRight                    0x3FF
+#define METATILE_PokemonMansion_BrokenVat_TopLeft                        0x3FC
+#define METATILE_PokemonMansion_BrokenVat_TopRight                       0x3FD
 #define METATILE_PokemonMansion_Floor                                    0x284
 #define METATILE_PokemonMansion_Floor_ShadeFull                          0x285
 #define METATILE_PokemonMansion_Statue_BlackEyes                         0x314
