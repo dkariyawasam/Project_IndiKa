@@ -36,9 +36,9 @@ static const u8 sUnionRoomObjGfxIds[GENDER_COUNT][NUM_UNION_ROOM_CLASSES + 2] = 
         OBJ_EVENT_GFX_BLACK_BELT,
         OBJ_EVENT_GFX_SCOUT_M,
         OBJ_EVENT_GFX_YOUNGSTER,
-        OBJ_EVENT_GFX_BOY,
+        OBJ_EVENT_GFX_CIV_BOY,
         OBJ_EVENT_GFX_BUG_CATCHER,
-        OBJ_EVENT_GFX_MAN,
+        OBJ_EVENT_GFX_CIV_MAN,
         OBJ_EVENT_GFX_ROCKER
     },
     [FEMALE] = {
@@ -46,9 +46,9 @@ static const u8 sUnionRoomObjGfxIds[GENDER_COUNT][NUM_UNION_ROOM_CLASSES + 2] = 
         OBJ_EVENT_GFX_CHANNELER,
         OBJ_EVENT_GFX_SCOUT_F,
         OBJ_EVENT_GFX_LASS,
-        OBJ_EVENT_GFX_WOMAN_1,
+        OBJ_EVENT_GFX_CIV_WOMAN_1,
         OBJ_EVENT_GFX_CRUSH_GIRL,
-        OBJ_EVENT_GFX_WOMAN_2,
+        OBJ_EVENT_GFX_CIV_WOMAN_2,
         OBJ_EVENT_GFX_BEAUTY
     }
 };
@@ -414,7 +414,7 @@ void CreateUnionRoomPlayerSprites(u8 * spriteIds, s32 leaderId)
     for (memberId = 0; memberId < MAX_RFU_PLAYERS; memberId++)
     {
         s32 id = UR_PLAYER_SPRITE_ID(leaderId, memberId);
-        spriteIds[id] = CreateVirtualObject(OBJ_EVENT_GFX_MAN,
+        spriteIds[id] = CreateVirtualObject(OBJ_EVENT_GFX_CIV_MAN,
                                                  id - UR_SPRITE_START_ID,
                                                  sUnionRoomPlayerCoords[leaderId][0] + sUnionRoomGroupOffsets[memberId][0],
                                                  sUnionRoomPlayerCoords[leaderId][1] + sUnionRoomGroupOffsets[memberId][1],

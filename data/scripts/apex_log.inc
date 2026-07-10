@@ -303,11 +303,11 @@ IndigoPlateau_PokemonCenter_1F_EventScript_AceTrainerM::
 	release
 	end
 
-LavenderTown_PokemonCenter_1F_EventScript_BaldingMan::
+LavenderTown_VolunteerPokemonHouse_EventScript_MrFujiRumorMan::
 	lock
 	faceplayer
 	apexlog APEX_LOG_PERSON_MRFUJI, 3
-	msgbox LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere
+	msgbox LavenderTown_VolunteerPokemonHouse_Text_HearMrFujiNotFromAroundHere
 	release
 	end
 

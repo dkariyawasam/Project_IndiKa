@@ -37,8 +37,8 @@
       "map": "MAP_LAVENDER_TOWN",
       "x": 5,
       "y": 6,
-      "respawn_map": "MAP_LAVENDER_TOWN_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_LAVENDER_NURSE"
+      "respawn_map": "MAP_LAVENDER_TOWN_HEALING_HOUSE",
+      "respawn_npc": "LOCALID_LAVENDER_HEALER"
     },
     {
       "id": "HEAL_LOCATION_VERMILION_CITY",

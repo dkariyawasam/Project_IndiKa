@@ -256,12 +256,9 @@ gStdScriptsEnd::
 	.include "data/maps/CeruleanCity_Mart/scripts.inc"
 	.include "data/maps/CeruleanCity_House4/scripts.inc"
 	.include "data/maps/CeruleanCity_House5/scripts.inc"
-	.include "data/maps/LavenderTown_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/LavenderTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/LavenderTown_VolunteerPokemonHouse/scripts.inc"
 	.include "data/maps/LavenderTown_House1/scripts.inc"
 	.include "data/maps/LavenderTown_House2/scripts.inc"
-	.include "data/maps/LavenderTown_Mart/scripts.inc"
 	.include "data/maps/VermilionCity_House1/scripts.inc"
 	.include "data/maps/VermilionCity_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/VermilionCity_PokemonCenter_2F/scripts.inc"
@@ -323,8 +320,8 @@ gStdScriptsEnd::
 	.include "data/maps/SaffronCity_PokemonTrainerFanClub/scripts.inc"
 	.include "data/maps/Route2_ViridianForest_SouthEntrance/scripts.inc"
 	.include "data/maps/Route2_House/scripts.inc"
-	.include "data/maps/Route2_EastBuilding/scripts.inc"
 	.include "data/maps/Route2_ViridianForest_NorthEntrance/scripts.inc"
+	.include "data/maps/LavenderTown_HealingHouse/scripts.inc"
 	.include "data/maps/Route4_HealingHouse/scripts.inc"
 	.include "data/maps/Route5_PokemonDayCare/scripts.inc"
 	.include "data/maps/Route5_SouthEntrance/scripts.inc"
@@ -493,11 +490,9 @@ gStdScriptsEnd::
 	.include "data/maps/CeruleanCity_Mart/text.inc"
 	.include "data/maps/CeruleanCity_House4/text.inc"
 	.include "data/maps/CeruleanCity_House5/text.inc"
-	.include "data/maps/LavenderTown_PokemonCenter_1F/text.inc"
 	.include "data/maps/LavenderTown_VolunteerPokemonHouse/text.inc"
 	.include "data/maps/LavenderTown_House1/text.inc"
 	.include "data/maps/LavenderTown_House2/text.inc"
-	.include "data/maps/LavenderTown_Mart/text.inc"
 	.include "data/maps/VermilionCity_House1/text.inc"
 	.include "data/maps/VermilionCity_PokemonCenter_1F/text.inc"
 	.include "data/maps/VermilionCity_PokemonFanClub/text.inc"
@@ -551,8 +546,8 @@ gStdScriptsEnd::
 	.include "data/maps/SaffronCity_PokemonTrainerFanClub/text.inc"
 	.include "data/maps/Route2_ViridianForest_SouthEntrance/text.inc"
 	.include "data/maps/Route2_House/text.inc"
-	.include "data/maps/Route2_EastBuilding/text.inc"
 	.include "data/maps/Route2_ViridianForest_NorthEntrance/text.inc"
+	.include "data/maps/LavenderTown_HealingHouse/text.inc"
 	.include "data/maps/Route4_HealingHouse/text.inc"
 	.include "data/maps/Route5_SouthEntrance/text.inc"
 	.include "data/maps/Route6_NorthEntrance/text.inc"
@@ -825,7 +820,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_POKEHOUSE_FUJI
 	setflag FLAG_HIDE_LIFT_KEY
 	setflag FLAG_HIDE_CERULEAN_RIVAL
-	setflag FLAG_HIDE_SS_ANNE_RIVAL
 	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
 	setflag FLAG_HIDE_SAFFRON_CIVILIANS
 	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM

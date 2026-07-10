@@ -1,4 +1,4 @@
-LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
+LavenderTown_VolunteerPokemonHouse_Text_HearMrFujiNotFromAroundHere::
     .string "I recently moved to this town.\p"
     .string "I hear that MR. FUJI's not from\n"
     .string "these parts originally, either.$"
@@ -64,4 +64,3 @@ LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
     .string "POKéMON magazines line the shelf.\p"
     .string "POKéMON INSIDER…\p"
     .string "POKéMON FAN…$"
-
