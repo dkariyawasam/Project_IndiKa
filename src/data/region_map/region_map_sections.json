@@ -439,6 +439,10 @@
     {
       "id": "MAPSEC_VERMILION_HARBOR",
       "name": "VERMILION HARBOR"
+    },
+    {
+      "id": "MAPSEC_VIRIDIAN_CHANNEL",
+      "name": "VIRIDIAN CHANNEL"
     }
   ]
 }
