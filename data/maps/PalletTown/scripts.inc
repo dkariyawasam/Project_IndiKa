@@ -320,6 +320,10 @@ PalletTown_EventScript_TownSign::
 	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
 	end
 
+PalletTown_EventScript_FerryLandingSign::
+	msgbox Route21_North_Text_FerryLandingSign, MSGBOX_SIGN
+	end
+
 PalletTown_Eventscript_DegbugDANSign::
 	lock
 	setflag FLAG_SYS_POKEDEX_GET

@@ -3,6 +3,32 @@ CeladonCity_Text_GotMyKoffingInCinnabar::
     .string "It's usually nice, but it breathes\n"
     .string "poison when it's angry.$"
 
+CeladonCity_Text_RivalEvolutionIntro::
+	.string "{RIVAL}: There you are.\n"
+	.string "Took you long enough to reach\l"
+	.string "CELADON.\p"
+	.string "You noticed the GYM, right?\n"
+	.string "Or did the giant building still\l"
+	.string "need a sign just for you?\p"
+	.string "Before you go asking ERIKA for\n"
+	.string "field notes, let's see if your\l"
+	.string "team can keep up with mine.$"
+
+CeladonCity_Text_RivalDefeat::
+	.string "Hey!\n"
+	.string "I was testing you!\l"
+	.string "Obviously.$"
+
+CeladonCity_Text_RivalEvolutionPostBattle::
+	.string "GYM LEADERS aren't just strong.\n"
+	.string "They know how POKéMON change when\l"
+	.string "people train with them.\p"
+	.string "ERIKA studies that bond up close.\n"
+	.string "Try listening for once.\p"
+	.string "I'll get the useful notes before\n"
+	.string "you even work out which door is\l"
+	.string "the GYM.$"
+
 CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "Heheh! This GYM is great!\n"
     .string "It's full of women!$"

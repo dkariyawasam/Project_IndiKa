@@ -29,7 +29,7 @@
     {
       "local_id": "LOCALID_ROUTE24_REWARD_GIVER",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_MAN",
       "x": 12,
       "y": 15,
       "elevation": 3,

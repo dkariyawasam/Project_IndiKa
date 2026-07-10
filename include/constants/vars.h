@@ -161,11 +161,11 @@
 #define VAR_MAP_SCENE_CINNABAR_ISLAND                                          0x4071
 #define VAR_MAP_SCENE_ROUTE21_NORTH                                            0x4072
 #define VAR_MAP_SCENE_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB                    0x4073
-#define VAR_MAP_SCENE_0x4074                                                   0x4074
-#define VAR_MAP_SCENE_0x4075                                                   0x4075
-#define VAR_MAP_SCENE_0x4076                                                   0x4076
+#define VAR_MAP_SCENE_ROUTE2_RIVAL                                             0x4074
+#define VAR_MAP_SCENE_ROUTE11_RIVAL                                            0x4075
+#define VAR_MAP_SCENE_CELADON_RIVAL                                            0x4076
 #define VAR_MAP_SCENE_ROUTE20                                                  0x4077
-#define VAR_MAP_SCENE_0x4078                                                   0x4078
+#define VAR_MAP_SCENE_CINNABAR_RIVAL                                           0x4078
 #define VAR_MAP_SCENE_0x4079                                                   0x4079
 #define VAR_MAP_SCENE_ROUTE19                                                  0x407A
 #define VAR_MAP_SCENE_0x407B                                                   0x407B

@@ -43,7 +43,7 @@
     {
       "local_id": "LOCALID_PEWTER_MUSEUM_GUIDE",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_MAN",
       "x": 33,
       "y": 17,
       "elevation": 3,
@@ -57,7 +57,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_MAN_2",
       "x": 21,
       "y": 28,
       "elevation": 3,

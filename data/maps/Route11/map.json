@@ -43,10 +43,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
-      "x": 8,
-      "y": 8,
+      "x": 13,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -193,6 +193,21 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "EventScript_ForestTrainer_PICNICKER_REMI",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE11_RIVAL",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 13,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route11_EventScript_RivalRumors",
+      "flag": "FLAG_HIDE_ROUTE11_RIVAL_RUMORS"
     }
   ],
   "warp_events": [
@@ -218,7 +233,35 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE11_RIVAL",
+      "var_value": "0",
+      "script": "Route11_EventScript_RivalRumorsTriggerTop"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE11_RIVAL",
+      "var_value": "0",
+      "script": "Route11_EventScript_RivalRumorsTriggerMiddle"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE11_RIVAL",
+      "var_value": "0",
+      "script": "Route11_EventScript_RivalRumorsTriggerBottom"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

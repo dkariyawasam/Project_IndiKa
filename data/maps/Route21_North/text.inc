@@ -49,6 +49,10 @@ Route21_North_Text_SeagallopSailorAllAboard::
 	.string "Alright, all aboard!\n"
 	.string "We set sail!$"
 
+Route21_North_Text_FerryLandingSign::
+	.string "PALLET TOWN - ROUTE 21\n"
+	.string "FERRY LANDING$"
+
 Route21_North_Text_FatManNeedPokemon::
 	.string "I got too excited about going to\n"
 	.string "the beach...\p"

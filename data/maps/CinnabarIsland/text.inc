@@ -7,6 +7,23 @@ CinnabarIsland_Text_PokemonLabAccessGranted::
     .string "Access granted using the\n"
     .string "BOULDER KEY.$"
 
+CinnabarIsland_Text_RivalMansion::
+	.string "{RIVAL}: Hah!\n"
+	.string "So you figured out the ferry after\l"
+	.string "all.\p"
+	.string "Don't get smug. I got here first.\p"
+	.string "People on this island keep talking\n"
+	.string "about that wrecked MANSION.\p"
+	.string "It wasn't just some rich guy's old\n"
+	.string "house. It was a lab.\p"
+	.string "Something broke out of there.\n"
+	.string "And someone powerful seems\l"
+	.string "implicated.\p"
+	.string "Powerful enough to chase it\n"
+	.string "personally.\p"
+	.string "Sounds important, so obviously I'm\n"
+	.string "checking it before you do.$"
+
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
     .string "CINNABAR GYM's BLAINE is quite the\n"
     .string "odd fellow.\p"

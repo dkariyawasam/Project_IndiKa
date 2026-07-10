@@ -992,18 +992,18 @@ static u8 GetRunningBehaviorFromGraphicsId(u8 graphicsId)
 {
     switch (graphicsId)
     {
-        case OBJ_EVENT_GFX_LITTLE_GIRL:
+        case OBJ_EVENT_GFX_CIV_LITTLE_GIRL:
         case OBJ_EVENT_GFX_YOUNGSTER:
-        case OBJ_EVENT_GFX_BOY:
+        case OBJ_EVENT_GFX_CIV_BOY:
         case OBJ_EVENT_GFX_BUG_CATCHER:
         case OBJ_EVENT_GFX_LASS:
-        case OBJ_EVENT_GFX_WOMAN_1:
+        case OBJ_EVENT_GFX_CIV_WOMAN_1:
         case OBJ_EVENT_GFX_CRUSH_GIRL:
-        case OBJ_EVENT_GFX_MAN:
+        case OBJ_EVENT_GFX_CIV_MAN:
         case OBJ_EVENT_GFX_ROCKER:
-        case OBJ_EVENT_GFX_WOMAN_2:
+        case OBJ_EVENT_GFX_CIV_WOMAN_2:
         case OBJ_EVENT_GFX_BEAUTY:
-        case OBJ_EVENT_GFX_BALDING_MAN:
+        case OBJ_EVENT_GFX_CIV_MAN_3:
         case OBJ_EVENT_GFX_TUBER_F:
         case OBJ_EVENT_GFX_SCOUT_M:
         case OBJ_EVENT_GFX_SCOUT_F:

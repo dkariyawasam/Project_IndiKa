@@ -111,3 +111,21 @@ Route11_Text_DavePostBattle::
 Route11_Text_DiglettsCave::
     .string "DIGLETT'S CAVE$"
 
+Route11_Text_RivalRumors::
+	.string "{RIVAL}: Hah!\n"
+	.string "Took you long enough, {PLAYER}.\p"
+	.string "I already checked DIGLETT'S CAVE.\n"
+	.string "Obviously.\p"
+	.string "People around here keep whining\n"
+	.string "that the MR. MIME vanished.\p"
+	.string "One guy even says they put up\n"
+	.string "invisible walls to avoid training.\p"
+	.string "Sounds fake...\n"
+	.string "which means Gramps will want it\l"
+	.string "written down.\p"
+	.string "So listen carefully for once.\p"
+	.string "If three people repeat the same\n"
+	.string "rumour, put it in your LOGBOOK.\p"
+	.string "Try not to make me explain\n"
+	.string "fieldwork twice.\p"
+	.string "Smell ya later.$"

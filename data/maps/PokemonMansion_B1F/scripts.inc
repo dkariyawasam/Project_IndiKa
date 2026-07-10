@@ -20,6 +20,26 @@ PokemonMansion_B1F_EventScript_DiarySep1st::
 	msgbox PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful, MSGBOX_SIGN
 	end
 
+PokemonMansion_B1F_EventScript_Giovanni::
+	lock
+	faceplayer
+	apexlog APEX_LOG_PERSON_GIOVANNI, 0
+	msgbox PokemonMansion_B1F_Text_GiovanniIntro
+	closemessage
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
+	waitmovement 0
+	setflag FLAG_SAW_GIOVANNI_POKEMON_MANSION
+	setflag FLAG_HIDE_POKEMON_MANSION_GIOVANNI
+	removeobject LOCALID_POKEMON_MANSION_GIOVANNI
+	release
+	end
+
+PokemonMansion_B1F_Movement_GiovanniExit::
+	walk_in_place_faster_down
+	delay_16
+	delay_16
+	step_end
+
 PokemonMansion_B1F_EventScript_Lewis::
 	trainerbattle_single TRAINER_BURGLAR_LEWIS, PokemonMansion_B1F_Text_LewisIntro, PokemonMansion_B1F_Text_LewisDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

@@ -27,11 +27,13 @@ EventScript_RecordApexRumorWithFeedback::
     waitmovement 0
     goto_if_eq VAR_RESULT, 1, EventScript_ApexRumorRecorded
     msgbox Text_ApexRumorUpdated
+    closemessage
     delay 40
     return
 
 EventScript_ApexRumorRecorded::
     msgbox Text_ApexRumorRecorded
+    closemessage
     delay 40
     return
 

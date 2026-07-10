@@ -131,6 +131,7 @@ static u8 sRfuKeepAliveTimer;
 static u8 CountBadgesForOverworldWhiteOutLossCalculation(void);
 static void Overworld_ResetStateAfterWhitingOut(void);
 static void Overworld_SetWhiteoutRespawnPoint(void);
+static void RecallSeagallopToWhiteoutRespawnPoint(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, u16 metatileBehavior, u8 mapType);
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, u8 transitionFlags, u16 metatileBehavior, u8 mapType);
 static u16 GetCenterScreenMetatileBehavior(void);
@@ -281,7 +282,85 @@ static void DoWhiteOut(void)
     HealPlayerParty();
     Overworld_ResetStateAfterWhitingOut();
     Overworld_SetWhiteoutRespawnPoint();
+    RecallSeagallopToWhiteoutRespawnPoint();
     WarpIntoMap();
+}
+
+static bool8 IsMap(u8 mapGroup, u8 mapNum, u16 map)
+{
+    return mapGroup == MAP_GROUP(map) && mapNum == MAP_NUM(map);
+}
+
+static bool8 IsCurrentMapInSeagallopNetwork(void)
+{
+    u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    u8 mapNum = gSaveBlock1Ptr->location.mapNum;
+
+    return IsMap(mapGroup, mapNum, MAP_ROUTE19)
+        || IsMap(mapGroup, mapNum, MAP_ROUTE20)
+        || IsMap(mapGroup, mapNum, MAP_ROUTE21_NORTH)
+        || IsMap(mapGroup, mapNum, MAP_ROUTE21_SOUTH)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_GYM)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_MART)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_CENTER_2F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_LAB_LOUNGE)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_LAB_RESEARCH_ROOM)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_LAB_EXPERIMENT_ROOM)
+        || IsMap(mapGroup, mapNum, MAP_POKEMON_MANSION_1F)
+        || IsMap(mapGroup, mapNum, MAP_POKEMON_MANSION_2F)
+        || IsMap(mapGroup, mapNum, MAP_POKEMON_MANSION_3F)
+        || IsMap(mapGroup, mapNum, MAP_POKEMON_MANSION_B1F)
+        || IsMap(mapGroup, mapNum, MAP_SEAFOAM_ISLANDS_1F)
+        || IsMap(mapGroup, mapNum, MAP_SEAFOAM_ISLANDS_B1F)
+        || IsMap(mapGroup, mapNum, MAP_SEAFOAM_ISLANDS_B2F)
+        || IsMap(mapGroup, mapNum, MAP_SEAFOAM_ISLANDS_B3F)
+        || IsMap(mapGroup, mapNum, MAP_SEAFOAM_ISLANDS_B4F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_1F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_3F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F)
+        || IsMap(mapGroup, mapNum, MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F);
+}
+
+static void HideAllSeagallopDocks(void)
+{
+    FlagSet(FLAG_HIDE_ROUTE21_NORTH_SEAGALLOP);
+    FlagSet(FLAG_HIDE_ROUTE21_NORTH_SAILOR);
+    FlagSet(FLAG_HIDE_ROUTE21_SOUTH_SEAGALLOP);
+    FlagSet(FLAG_HIDE_ROUTE21_SOUTH_SAILOR);
+    FlagSet(FLAG_HIDE_ROUTE20_SEAGALLOP);
+    FlagSet(FLAG_HIDE_ROUTE20_SAILOR);
+    FlagSet(FLAG_HIDE_ROUTE19_SEAGALLOP);
+    FlagSet(FLAG_HIDE_ROUTE19_SAILOR);
+}
+
+static void ShowSeagallopDock(u16 ferryFlag, u16 sailorFlag)
+{
+    HideAllSeagallopDocks();
+    FlagClear(ferryFlag);
+    FlagClear(sailorFlag);
+}
+
+static void RecallSeagallopToWhiteoutRespawnPoint(void)
+{
+    u8 mapGroup = sWarpDestination.mapGroup;
+    u8 mapNum = sWarpDestination.mapNum;
+
+    if (!IsCurrentMapInSeagallopNetwork())
+        return;
+
+    if (IsMap(mapGroup, mapNum, MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F))
+        ShowSeagallopDock(FLAG_HIDE_ROUTE21_SOUTH_SEAGALLOP, FLAG_HIDE_ROUTE21_SOUTH_SAILOR);
+    else if (IsMap(mapGroup, mapNum, MAP_FUCHSIA_CITY_POKEMON_CENTER_1F))
+        ShowSeagallopDock(FLAG_HIDE_ROUTE19_SEAGALLOP, FLAG_HIDE_ROUTE19_SAILOR);
+    else
+        ShowSeagallopDock(FLAG_HIDE_ROUTE21_NORTH_SEAGALLOP, FLAG_HIDE_ROUTE21_NORTH_SAILOR);
 }
 
 u32 ComputeWhiteOutMoneyLoss(void)

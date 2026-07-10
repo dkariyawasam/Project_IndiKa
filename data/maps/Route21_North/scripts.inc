@@ -36,6 +36,10 @@ Route21_North_EventScript_FatMan::
 	release
 	end
 
+Route21_North_EventScript_FerryLandingSign::
+	msgbox Route21_North_Text_FerryLandingSign, MSGBOX_SIGN
+	end
+
 Route21_North_EventScript_SeagallopSailor::
 	lock
 	faceplayer

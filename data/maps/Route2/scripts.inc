@@ -1,5 +1,15 @@
 Route2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route2_OnTransition
 	.byte 0
+
+Route2_OnTransition::
+	goto_if_set FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK, Route2_EventScript_RemoveRival
+	goto_if_unset FLAG_SYS_POKEDEX_GET, Route2_EventScript_RemoveRival
+	end
+
+Route2_EventScript_RemoveRival::
+	removeobject LOCALID_ROUTE2_RIVAL
+	end
 
 Route2_EventScript_RouteSign::
 	msgbox Route2_Text_RouteSign, MSGBOX_SIGN
@@ -8,6 +18,96 @@ Route2_EventScript_RouteSign::
 Route2_EventScript_DiglettsCaveSign::
 	msgbox Route2_Text_DiglettsCave, MSGBOX_SIGN
 	end
+
+Route2_EventScript_RivalFieldworkTrigger::
+	goto_if_set FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK, EventScript_Return
+	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
+	lockall
+	playbgm MUS_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_ROUTE2_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	applymovement LOCALID_ROUTE2_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	call Route2_EventScript_RivalFieldworkScene
+	releaseall
+	end
+
+Route2_EventScript_RivalFieldwork::
+	goto_if_set FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK, EventScript_Return
+	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
+	lock
+	faceplayer
+	call Route2_EventScript_RivalFieldworkScene
+	release
+	end
+
+Route2_EventScript_RivalFieldworkScene::
+	call Route2_EventScript_RivalFieldworkMessage
+	closemessage
+	playbgm MUS_RIVAL_EXIT, 0
+	applymovement LOCALID_ROUTE2_RIVAL, Route2_Movement_RivalExitFieldwork
+	applymovement LOCALID_PLAYER, Route2_Movement_PlayerWatchRivalExitFieldwork
+	waitmovement 0
+	setflag FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK
+	setvar VAR_MAP_SCENE_ROUTE2_RIVAL, 1
+	removeobject LOCALID_ROUTE2_RIVAL
+	fadedefaultbgm
+	return
+
+Route2_EventScript_RivalFieldworkMessage::
+	goto_if_set FLAG_HIDE_ROUTE11_RIVAL_RUMORS, Route2_EventScript_RivalFieldworkMessage_NoDiglett
+	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, Route2_EventScript_RivalFieldworkMessage_DiglettNoCeladon
+	goto_if_set FLAG_HIDE_CINNABAR_RIVAL_MANSION, Route2_EventScript_RivalFieldworkMessage_DiglettCeladonNoCinnabar
+	msgbox Route2_Text_RivalFieldworkAllLeads
+	return
+
+Route2_EventScript_RivalFieldworkMessage_DiglettCeladonNoCinnabar::
+	msgbox Route2_Text_RivalFieldworkDiglettCeladon
+	return
+
+Route2_EventScript_RivalFieldworkMessage_DiglettNoCeladon::
+	goto_if_set FLAG_HIDE_CINNABAR_RIVAL_MANSION, Route2_EventScript_RivalFieldworkMessage_OnlyDiglett
+	msgbox Route2_Text_RivalFieldworkDiglettCinnabar
+	return
+
+Route2_EventScript_RivalFieldworkMessage_OnlyDiglett::
+	msgbox Route2_Text_RivalFieldworkOnlyDiglett
+	return
+
+Route2_EventScript_RivalFieldworkMessage_NoDiglett::
+	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, Route2_EventScript_RivalFieldworkMessage_NoDiglettNoCeladon
+	goto_if_set FLAG_HIDE_CINNABAR_RIVAL_MANSION, Route2_EventScript_RivalFieldworkMessage_OnlyCeladon
+	msgbox Route2_Text_RivalFieldworkCeladonCinnabar
+	return
+
+Route2_EventScript_RivalFieldworkMessage_OnlyCeladon::
+	msgbox Route2_Text_RivalFieldworkOnlyCeladon
+	return
+
+Route2_EventScript_RivalFieldworkMessage_NoDiglettNoCeladon::
+	goto_if_set FLAG_HIDE_CINNABAR_RIVAL_MANSION, Route2_EventScript_RivalFieldworkMessageNoLeads
+	msgbox Route2_Text_RivalFieldworkOnlyCinnabar
+	return
+
+Route2_EventScript_RivalFieldworkMessageNoLeads::
+	msgbox Route2_Text_RivalFieldworkNoLeads
+	return
+
+Route2_Movement_RivalExitFieldwork::
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route2_Movement_PlayerWatchRivalExitFieldwork::
+	face_up
+	delay_16
+	delay_16
+	delay_16
+	step_end
 
 Route2_EventScript_BugCatcherGarret::
 	trainerbattle_single TRAINER_BUG_CATCHER_GARRET, Route2_Text_GarretIntro, Route2_Text_GarretDefeat

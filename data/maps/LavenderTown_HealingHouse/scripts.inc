@@ -1,0 +1,36 @@
+LavenderTown_HealingHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_HealingHouse_OnTransition
+	.byte 0
+
+LavenderTown_HealingHouse_OnTransition::
+	setrespawn HEAL_LOCATION_LAVENDER_TOWN
+	end
+
+LavenderTown_HealingHouse_EventScript_Healer::
+	lock
+	faceplayer
+	msgbox LavenderTown_HealingHouse_Text_RestHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavenderTown_HealingHouse_EventScript_Goodbye
+	message LavenderTown_HealingHouse_Text_TakeShortRest
+	waitmessage
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	msgbox LavenderTown_HealingHouse_Text_Rested
+	release
+	end
+
+LavenderTown_HealingHouse_EventScript_Goodbye::
+	msgbox LavenderTown_HealingHouse_Text_Goodbye
+	release
+	end
+
+LavenderTown_HealingHouse_EventScript_Gentleman::
+	msgbox LavenderTown_HealingHouse_Text_RocketsDoAnythingForMoney, MSGBOX_NPC
+	end
+
+LavenderTown_HealingHouse_EventScript_Lass::
+	msgbox LavenderTown_HealingHouse_Text_CubonesMotherKilledByRockets, MSGBOX_NPC
+	end
+
+LavenderTown_HealingHouse_EventScript_Youngster::
+	msgbox LavenderTown_HealingHouse_Text_PeoplePayForCuboneSkulls, MSGBOX_NPC
+	end

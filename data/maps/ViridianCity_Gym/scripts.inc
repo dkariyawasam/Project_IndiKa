@@ -13,7 +13,7 @@ ViridianCity_Gym_EventScript_Giovanni::
 	end
 
 ViridianCity_Gym_EventScript_DefeatedGiovanni::
-	apexlog APEX_LOG_PERSON_GIOVANNI, 3
+	apexlog APEX_LOG_PERSON_GIOVANNI, 5
 	setflag FLAG_HIDE_MISC_KANTO_ROCKETS
 	setflag FLAG_DEFEATED_LEADER_GIOVANNI
 	setflag FLAG_BADGE08_GET
@@ -35,7 +35,6 @@ ViridianCity_Gym_EventScript_GymGuy::
 	end
 
 ViridianCity_Gym_EventScript_GymGuyPostVictory::
-	apexlog APEX_LOG_PERSON_GIOVANNI, 4
 	msgbox ViridianCity_Gym_Text_GymGuyPostVictory
 	release
 	end

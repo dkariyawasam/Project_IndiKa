@@ -12,25 +12,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFish;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeeker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeekerBike;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleBoy;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleGirl;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivLittleBoy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivLittleGirl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Youngster;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivBoy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcher;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SittingBoy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWoman1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrushGirl;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FatMan;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWoman2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BaldingMan;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman3;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan1;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan2;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWoman3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivOldMan1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivOldMan2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivOldWoman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMLand;
@@ -69,12 +69,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWater;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMLand;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWorkerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWorkerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAriana;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GBAKid;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivGBAKid;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt;
@@ -82,17 +82,16 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hiker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fisher;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Channeler;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chef;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Policeman;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivChef;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivPoliceman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sailor;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Captain;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableClubReceptionist;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnionRoomReceptionist;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivCaptain;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivNurse;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivCableClubReceptionist;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivUnionRoomReceptionist;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMaleReceptionist;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clerk;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MGDeliveryman;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivClerk;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketLeagueDude;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
@@ -209,25 +208,25 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GREEN_FISH]               = &gObjectEventGraphicsInfo_GreenFish,
     [OBJ_EVENT_GFX_GREEN_VS_SEEKER]          = &gObjectEventGraphicsInfo_GreenVSSeeker,
     [OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE]     = &gObjectEventGraphicsInfo_GreenVSSeekerBike,
-    [OBJ_EVENT_GFX_LITTLE_BOY]               = &gObjectEventGraphicsInfo_LittleBoy,
-    [OBJ_EVENT_GFX_LITTLE_GIRL]              = &gObjectEventGraphicsInfo_LittleGirl,
+    [OBJ_EVENT_GFX_CIV_LITTLE_BOY]               = &gObjectEventGraphicsInfo_CivLittleBoy,
+    [OBJ_EVENT_GFX_CIV_LITTLE_GIRL]              = &gObjectEventGraphicsInfo_CivLittleGirl,
     [OBJ_EVENT_GFX_YOUNGSTER]                = &gObjectEventGraphicsInfo_Youngster,
-    [OBJ_EVENT_GFX_BOY]                      = &gObjectEventGraphicsInfo_Boy,
+    [OBJ_EVENT_GFX_CIV_BOY]                      = &gObjectEventGraphicsInfo_CivBoy,
     [OBJ_EVENT_GFX_BUG_CATCHER]              = &gObjectEventGraphicsInfo_BugCatcher,
     [OBJ_EVENT_GFX_SITTING_BOY]              = &gObjectEventGraphicsInfo_SittingBoy,
     [OBJ_EVENT_GFX_LASS]                     = &gObjectEventGraphicsInfo_Lass,
-    [OBJ_EVENT_GFX_WOMAN_1]                  = &gObjectEventGraphicsInfo_Woman1,
+    [OBJ_EVENT_GFX_CIV_WOMAN_1]                  = &gObjectEventGraphicsInfo_CivWoman1,
     [OBJ_EVENT_GFX_CRUSH_GIRL]               = &gObjectEventGraphicsInfo_CrushGirl,
-    [OBJ_EVENT_GFX_MAN]                      = &gObjectEventGraphicsInfo_Man,
+    [OBJ_EVENT_GFX_CIV_MAN]                      = &gObjectEventGraphicsInfo_CivMan,
     [OBJ_EVENT_GFX_ROCKER]                   = &gObjectEventGraphicsInfo_Rocker,
-    [OBJ_EVENT_GFX_FAT_MAN]                  = &gObjectEventGraphicsInfo_FatMan,
-    [OBJ_EVENT_GFX_WOMAN_2]                  = &gObjectEventGraphicsInfo_Woman2,
+    [OBJ_EVENT_GFX_CIV_MAN_2]                    = &gObjectEventGraphicsInfo_CivMan2,
+    [OBJ_EVENT_GFX_CIV_WOMAN_2]                  = &gObjectEventGraphicsInfo_CivWoman2,
     [OBJ_EVENT_GFX_BEAUTY]                   = &gObjectEventGraphicsInfo_Beauty,
-    [OBJ_EVENT_GFX_BALDING_MAN]              = &gObjectEventGraphicsInfo_BaldingMan,
-    [OBJ_EVENT_GFX_WOMAN_3]                  = &gObjectEventGraphicsInfo_Woman3,
-    [OBJ_EVENT_GFX_OLD_MAN_1]                = &gObjectEventGraphicsInfo_OldMan1,
-    [OBJ_EVENT_GFX_OLD_MAN_2]                = &gObjectEventGraphicsInfo_OldMan2,
-    [OBJ_EVENT_GFX_OLD_WOMAN]                = &gObjectEventGraphicsInfo_OldWoman,
+    [OBJ_EVENT_GFX_CIV_MAN_3]                    = &gObjectEventGraphicsInfo_CivMan3,
+    [OBJ_EVENT_GFX_CIV_WOMAN_3]                  = &gObjectEventGraphicsInfo_CivWoman3,
+    [OBJ_EVENT_GFX_CIV_OLD_MAN_1]                = &gObjectEventGraphicsInfo_CivOldMan1,
+    [OBJ_EVENT_GFX_CIV_OLD_MAN_2]                = &gObjectEventGraphicsInfo_CivOldMan2,
+    [OBJ_EVENT_GFX_CIV_OLD_WOMAN]                = &gObjectEventGraphicsInfo_CivOldWoman,
     [OBJ_EVENT_GFX_TUBER_M_WATER]            = &gObjectEventGraphicsInfo_TuberMWater,
     [OBJ_EVENT_GFX_TUBER_F_WATER]            = &gObjectEventGraphicsInfo_TuberFWater,
     [OBJ_EVENT_GFX_TUBER_M_LAND]             = &gObjectEventGraphicsInfo_TuberMLand,
@@ -239,11 +238,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWIMMER_F_WATER]          = &gObjectEventGraphicsInfo_SwimmerFWater,
     [OBJ_EVENT_GFX_SWIMMER_M_LAND]           = &gObjectEventGraphicsInfo_SwimmerMLand,
     [OBJ_EVENT_GFX_SWIMMER_F_LAND]           = &gObjectEventGraphicsInfo_SwimmerFLand,
-    [OBJ_EVENT_GFX_WORKER_M]                 = &gObjectEventGraphicsInfo_WorkerM,
-    [OBJ_EVENT_GFX_WORKER_F]                 = &gObjectEventGraphicsInfo_WorkerF,
+    [OBJ_EVENT_GFX_CIV_WORKER_M]                 = &gObjectEventGraphicsInfo_CivWorkerM,
+    [OBJ_EVENT_GFX_CIV_WORKER_F]                 = &gObjectEventGraphicsInfo_CivWorkerF,
     [OBJ_EVENT_GFX_ROCKET_M]                 = &gObjectEventGraphicsInfo_RocketM,
     [OBJ_EVENT_GFX_ROCKET_F]                 = &gObjectEventGraphicsInfo_RocketF,
-    [OBJ_EVENT_GFX_GBA_KID]                  = &gObjectEventGraphicsInfo_GBAKid,
+    [OBJ_EVENT_GFX_CIV_GBA_KID]                  = &gObjectEventGraphicsInfo_CivGBAKid,
     [OBJ_EVENT_GFX_POKE_MANIAC]              = &gObjectEventGraphicsInfo_PokeManiac,
     [OBJ_EVENT_GFX_BIKER]                    = &gObjectEventGraphicsInfo_Biker,
     [OBJ_EVENT_GFX_BLACK_BELT]               = &gObjectEventGraphicsInfo_BlackBelt,
@@ -251,17 +250,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HIKER]                    = &gObjectEventGraphicsInfo_Hiker,
     [OBJ_EVENT_GFX_FISHER]                   = &gObjectEventGraphicsInfo_Fisher,
     [OBJ_EVENT_GFX_CHANNELER]                = &gObjectEventGraphicsInfo_Channeler,
-    [OBJ_EVENT_GFX_CHEF]                     = &gObjectEventGraphicsInfo_Chef,
-    [OBJ_EVENT_GFX_POLICEMAN]                = &gObjectEventGraphicsInfo_Policeman,
+    [OBJ_EVENT_GFX_CIV_CHEF]                     = &gObjectEventGraphicsInfo_CivChef,
+    [OBJ_EVENT_GFX_CIV_POLICEMAN]                = &gObjectEventGraphicsInfo_CivPoliceman,
     [OBJ_EVENT_GFX_GENTLEMAN]                = &gObjectEventGraphicsInfo_Gentleman,
     [OBJ_EVENT_GFX_SAILOR]                   = &gObjectEventGraphicsInfo_Sailor,
-    [OBJ_EVENT_GFX_CAPTAIN]                  = &gObjectEventGraphicsInfo_Captain,
-    [OBJ_EVENT_GFX_NURSE]                    = &gObjectEventGraphicsInfo_Nurse,
-    [OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST]  = &gObjectEventGraphicsInfo_CableClubReceptionist,
-    [OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST]  = &gObjectEventGraphicsInfo_UnionRoomReceptionist,
+    [OBJ_EVENT_GFX_CIV_CAPTAIN]                  = &gObjectEventGraphicsInfo_CivCaptain,
+    [OBJ_EVENT_GFX_CIV_NURSE]                    = &gObjectEventGraphicsInfo_CivNurse,
+    [OBJ_EVENT_GFX_CIV_CABLE_CLUB_RECEPTIONIST]  = &gObjectEventGraphicsInfo_CivCableClubReceptionist,
+    [OBJ_EVENT_GFX_CIV_UNION_ROOM_RECEPTIONIST]  = &gObjectEventGraphicsInfo_CivUnionRoomReceptionist,
     [OBJ_EVENT_GFX_UNUSED_MALE_RECEPTIONIST] = &gObjectEventGraphicsInfo_UnusedMaleReceptionist,
-    [OBJ_EVENT_GFX_CLERK]                    = &gObjectEventGraphicsInfo_Clerk,
-    [OBJ_EVENT_GFX_MG_DELIVERYMAN]           = &gObjectEventGraphicsInfo_MGDeliveryman,
+    [OBJ_EVENT_GFX_CIV_CLERK]                    = &gObjectEventGraphicsInfo_CivClerk,
+    [OBJ_EVENT_GFX_UNUSED_69]                    = &gObjectEventGraphicsInfo_UnusedMaleReceptionist,
     [OBJ_EVENT_GFX_ROCKET_LEAGUE_DUDE]       = &gObjectEventGraphicsInfo_RocketLeagueDude,
     [OBJ_EVENT_GFX_PROF_OAK]                 = &gObjectEventGraphicsInfo_ProfOak,
     [OBJ_EVENT_GFX_BLUE]                     = &gObjectEventGraphicsInfo_Blue,
