@@ -139,44 +139,44 @@ CinnabarIsland_EventScript_RivalApproach39::
 
 CinnabarIsland_EventScript_RivalExitMansion34::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion34
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalExitMansion35::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion35
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalExitMansion36::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion36
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalExitMansion37::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion37
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalExitMansion38::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion38
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalExitMansion39::
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalExitMansion39
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	call CinnabarIsland_EventScript_RivalEnterMansion
 	return
 
 CinnabarIsland_EventScript_RivalEnterMansion::
 	playse SE_EXIT
 	applymovement LOCALID_CINNABAR_RIVAL, CinnabarIsland_Movement_RivalEnterMansion
-	waitmovement 0
+	waitmovement LOCALID_CINNABAR_RIVAL
 	return
 
 CinnabarIsland_Movement_RivalStepOutGymDoor::

@@ -90,19 +90,19 @@ Route11_EventScript_RivalApproachBottom::
 Route11_EventScript_RivalExitTop::
 	applymovement LOCALID_ROUTE11_RIVAL, Route11_Movement_RivalExitTop
 	applymovement LOCALID_PLAYER, Route11_Movement_PlayerWatchRivalExitDown
-	waitmovement 0
+	waitmovement LOCALID_ROUTE11_RIVAL
 	return
 
 Route11_EventScript_RivalExitMiddle::
 	applymovement LOCALID_ROUTE11_RIVAL, Route11_Movement_RivalExitMiddle
 	applymovement LOCALID_PLAYER, Route11_Movement_PlayerWatchRivalExitDown
-	waitmovement 0
+	waitmovement LOCALID_ROUTE11_RIVAL
 	return
 
 Route11_EventScript_RivalExitBottom::
 	applymovement LOCALID_ROUTE11_RIVAL, Route11_Movement_RivalExitBottom
 	applymovement LOCALID_PLAYER, Route11_Movement_PlayerWatchRivalExitUp
-	waitmovement 0
+	waitmovement LOCALID_ROUTE11_RIVAL
 	return
 
 Route11_Movement_RivalFaceDown::
