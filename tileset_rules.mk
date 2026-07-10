@@ -10,7 +10,7 @@ $(TILESETGFXDIR)/secondary/pallet_town/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 76 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lavender_town/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 256 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 344 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/cinnabar_island/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
@@ -58,7 +58,7 @@ $(TILESETGFXDIR)/secondary/pokemon_league/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 340 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/viridian_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 112 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 344 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/vermilion_city/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 140 -Wnum_tiles
@@ -112,7 +112,7 @@ $(TILESETGFXDIR)/secondary/pewter_city/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 280 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/celadon_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 244 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 344 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/saffron_city/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 262 -Wnum_tiles
