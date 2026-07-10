@@ -42,25 +42,33 @@ SilphCo_11F_Text_ThanksForRescuingUs::
     .string "are indebted to you.$"
 
 SilphCo_11F_Text_GiovanniIntro::
-    .string "Ah, {PLAYER}!\n"
-    .string "So we meet again!\p"
-    .string "The PRESIDENT and I are discussing\n"
-    .string "a vital business proposition.\p"
-    .string "Keep your nose out of grown-up\n"
-    .string "matters…\p"
-    .string "Or, experience a world of pain!$"
+    .string "GIOVANNI: So, you followed me\n"
+    .string "from CINNABAR.\p"
+    .string "SILPH's MASTER BALL is no mere\n"
+    .string "product.\p"
+    .string "It is control made mechanical.\n"
+    .string "Command made perfect.\p"
+    .string "With its plans, TEAM ROCKET will\n"
+    .string "manufacture the means to reclaim\l"
+    .string "MEWTWO.\p"
+    .string "Stand aside, {PLAYER}.\p"
+    .string "I will not allow sentiment to\n"
+    .string "interrupt absolute power.$"
 
 SilphCo_11F_Text_GiovanniDefeat::
-    .string "Arrgh!!\n"
-    .string "I lost again!?$"
+    .string "No…\n"
+    .string "The plan was flawless!$"
 
 SilphCo_11F_Text_GiovanniPostBattle::
-    .string "Blast it all!\n"
-    .string "You ruined our plans for SILPH!\p"
-    .string "But, TEAM ROCKET will never fall!\p"
-    .string "{PLAYER}! Never forget that all\n"
-    .string "POKéMON exist for TEAM ROCKET!\p"
-    .string "I must go, but I shall return!$"
+    .string "GIOVANNI: Without SILPH's process,\n"
+    .string "the MASTER BALL cannot be produced\l"
+    .string "for TEAM ROCKET.\p"
+    .string "You have delayed me.\n"
+    .string "Nothing more.\p"
+    .string "MEWTWO exists because I demanded\n"
+    .string "that power answer to me.\p"
+    .string "It will answer.\n"
+    .string "Or it will be made to.$"
 
 SilphCo_11F_Text_Grunt2Intro::
     .string "Stop right there!\n"
@@ -91,4 +99,3 @@ SilphCo_11F_Text_MonitorHasMonsOnIt::
 SilphCo_11F_Text_FloorSign::
     .string "SILPH CO. HEAD OFFICE\n"
     .string "11F$"
-

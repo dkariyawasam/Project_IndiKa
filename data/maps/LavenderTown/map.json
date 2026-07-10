@@ -33,7 +33,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_LITTLE_GIRL",
       "x": 19,
       "y": 10,
       "elevation": 3,
@@ -47,7 +47,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_WORKER_M",
       "x": 12,
       "y": 12,
       "elevation": 3,
@@ -61,7 +61,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_BOY",
       "x": 10,
       "y": 7,
       "elevation": 3,
@@ -86,7 +86,7 @@
       "x": 5,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN_POKEMON_CENTER_1F",
+      "dest_map": "MAP_LAVENDER_TOWN_HEALING_HOUSE",
       "dest_warp_id": "1"
     },
     {

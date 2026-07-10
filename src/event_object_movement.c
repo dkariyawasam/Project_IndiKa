@@ -499,6 +499,8 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_POKE_MANIAC                 0x1136
 #define OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND              0x1137
 #define OBJ_EVENT_PAL_TAG_ROCKET_PETREL               0x1138
+#define OBJ_EVENT_PAL_TAG_LASS                        0x1139
+#define OBJ_EVENT_PAL_TAG_GENTLEMAN                   0x113A
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -558,6 +560,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SwimmerFLand,            OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND},
     {gObjectEventPal_RocketPetrel,            OBJ_EVENT_PAL_TAG_ROCKET_PETREL},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
+    {gObjectEventPal_Lass,                    OBJ_EVENT_PAL_TAG_LASS},
+    {gObjectEventPal_Gentleman,               OBJ_EVENT_PAL_TAG_GENTLEMAN},
     {},
 };
 
@@ -2095,7 +2099,7 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u8 graphicsId)
         graphicsId = VarGetObjectEventGraphicsId(graphicsId - OBJ_EVENT_GFX_VARS);
     
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
-        graphicsId = OBJ_EVENT_GFX_LITTLE_BOY;
+        graphicsId = OBJ_EVENT_GFX_CIV_LITTLE_BOY;
     
     return gObjectEventGraphicsInfoPointers[graphicsId];
 }

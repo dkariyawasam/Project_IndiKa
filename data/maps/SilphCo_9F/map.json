@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_CIV_WOMAN_2",
       "x": 2,
       "y": 16,
       "elevation": 0,
