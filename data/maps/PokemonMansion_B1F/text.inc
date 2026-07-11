@@ -26,15 +26,16 @@ PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
     .string "We have failed to curb its vicious\n"
     .string "tendencies…$"
 
-PokemonMansion_B1F_Text_GiovanniIntro::
-    .string "GIOVANNI: Empty…\n"
+PokemonMansion_B1F_Text_GiovanniOverheard::
+    .string "????: Empty…\n"
     .string "After all these years, empty.\p"
-    .string "This shattered vat was meant to\n"
-    .string "hold the perfect POKéMON.\p"
+    .string "MEWTWO was perfect power.\p"
     .string "Power without waste.\n"
-    .string "Power without weakness.\p"
-    .string "MEWTWO broke free before it could\n"
-    .string "be claimed.\p"
+    .string "Power without weakness.$"
+
+PokemonMansion_B1F_Text_GiovanniAddressed::
+    .string "MEWTWO broke free before that\n"
+    .string "power could be claimed.\p"
     .string "No matter.\n"
     .string "I built that power once.\p"
     .string "I will retrieve it, perfect it,\n"

@@ -89,6 +89,54 @@ static u16 TintColorNight(u16 color)
     return RGB(r, g, b);
 }
 
+static u16 TintColorCreepy(u16 color)
+{
+    u8 r = color & 0x1F;
+    u8 g = (color >> 5) & 0x1F;
+    u8 b = (color >> 10) & 0x1F;
+
+    // Dark blue bias for abandoned or ominous interiors.
+    r = (r * 6 + 1 * 10) / 16;
+    g = (g * 6 + 2 * 10) / 16;
+    b = (b * 14 + 13 * 2) / 16;
+
+    return RGB(r, g, b);
+}
+
+static bool8 DoesCurrentMapUseCreepyPalette(void)
+{
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    u8 num = gSaveBlock1Ptr->location.mapNum;
+
+    if (group == MAP_GROUP(MAP_POKEMON_MANSION_B1F)
+     && num == MAP_NUM(MAP_POKEMON_MANSION_B1F))
+        return TRUE;
+
+    if (group == MAP_GROUP(MAP_POWER_PLANT)
+     && num == MAP_NUM(MAP_POWER_PLANT)
+     && VarGet(VAR_MISTY_TRIAL_STATE) < 9)
+        return TRUE;
+
+    return FALSE;
+}
+
+static bool8 ApplyCreepyPaletteToCurrentMapBuffers(void)
+{
+    int i;
+
+    if (!DoesCurrentMapUseCreepyPalette())
+        return FALSE;
+
+    for (i = 0; i < NUM_PALS_TOTAL * 16; i++)
+    {
+        u16 tinted = TintColorCreepy(gPlttBufferUnfaded[i]);
+        gPlttBufferUnfaded[i] = tinted;
+        gPlttBufferFaded[i] = tinted;
+    }
+
+    return TRUE;
+}
+
 void ApplyNightPaletteToCurrentMap(void)
 {
     int i;
@@ -103,6 +151,7 @@ void ApplyNightPaletteToCurrentMap(void)
         gPlttBufferFaded[i] = tinted;
     }
 
+    ApplyCreepyPaletteToCurrentMapBuffers();
     CpuFastCopy(gPlttBufferFaded, (void *)BG_PLTT, NUM_PALS_TOTAL * 16 * sizeof(u16));
 }
 
@@ -113,6 +162,7 @@ void RestoreDayPaletteForCurrentMap(void)
 
     CpuFastCopy(sBaseMapPalettes, gPlttBufferUnfaded, NUM_PALS_TOTAL * 16 * sizeof(u16));
     CpuFastCopy(sBaseMapPalettes, gPlttBufferFaded,   NUM_PALS_TOTAL * 16 * sizeof(u16));
+    ApplyCreepyPaletteToCurrentMapBuffers();
     CpuFastCopy(gPlttBufferFaded, (void *)BG_PLTT, NUM_PALS_TOTAL * 16 * sizeof(u16));
 }
 
@@ -123,6 +173,7 @@ void RestoreDayPaletteBuffersForCurrentMap(void)
 
     CpuFastCopy(sBaseMapPalettes, gPlttBufferUnfaded, NUM_PALS_TOTAL * 16 * sizeof(u16));
     CpuFastCopy(sBaseMapPalettes, gPlttBufferFaded,   NUM_PALS_TOTAL * 16 * sizeof(u16));
+    ApplyCreepyPaletteToCurrentMapBuffers();
 }
 
 void RefreshCurrentMapNightPalette(void)
@@ -296,6 +347,7 @@ static void ApplyTimeBlendToCurrentMap(u8 blend, u8 maxBlend)
         gPlttBufferFaded[i] = color;
     }
 
+    ApplyCreepyPaletteToCurrentMapBuffers();
     CpuFastCopy(gPlttBufferFaded, (void *)BG_PLTT, NUM_PALS_TOTAL * 16 * sizeof(u16));
 }
 

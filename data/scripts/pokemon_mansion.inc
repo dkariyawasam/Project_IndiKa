@@ -8,7 +8,6 @@ PokemonMansion_EventScript_SecretSwitch::
 	case 0, PokemonMansion_EventScript_PressSwitch_1F
 	case 1, PokemonMansion_EventScript_PressSwitch_2F
 	case 2, PokemonMansion_EventScript_PressSwitch_3F
-	case 3, PokemonMansion_EventScript_PressSwitch_B1F
 	end
 
 PokemonMansion_EventScript_ResetSwitch::
@@ -17,7 +16,6 @@ PokemonMansion_EventScript_ResetSwitch::
 	case 0, PokemonMansion_EventScript_ResetSwitch_1F
 	case 1, PokemonMansion_EventScript_ResetSwitch_2F
 	case 2, PokemonMansion_EventScript_ResetSwitch_3F
-	case 3, PokemonMansion_EventScript_ResetSwitch_B1F
 	end
 
 PokemonMansion_EventScript_DontPressSwitch::
@@ -149,58 +147,4 @@ PokemonMansion_EventScript_ResetSwitch_3F::
 	setmetatile 21,  7, METATILE_PokemonMansion_Floor, 0
 	setmetatile 21,  8, METATILE_PokemonMansion_Wall_EndCap, 0
 	setmetatile 12,  4, METATILE_PokemonMansion_Statue_BlackEyes, 0
-	return
-
-PokemonMansion_EventScript_PressSwitch_B1F::
-	setmetatile 33, 20, METATILE_PokemonMansion_Barrier_Horizontal_TopLeft, 1
-	setmetatile 34, 20, METATILE_PokemonMansion_Barrier_Horizontal_TopMid, 1
-	setmetatile 35, 20, METATILE_PokemonMansion_Barrier_Horizontal_TopRight, 1
-	setmetatile 33, 21, METATILE_PokemonMansion_Barrier_Horizontal_BottomLeft_Basement, 1
-	setmetatile 34, 21, METATILE_PokemonMansion_Barrier_Horizontal_BottomMid_Basement, 1
-	setmetatile 35, 21, METATILE_PokemonMansion_Barrier_Horizontal_BottomRight_Basement, 1
-	setmetatile 16, 26, METATILE_PokemonMansion_Barrier_Vertical_TopWall, 1
-	setmetatile 16, 27, METATILE_PokemonMansion_Barrier_Vertical_TopBase, 1
-	setmetatile 16, 28, METATILE_PokemonMansion_Barrier_Vertical_MidShadow_Basement, 1
-	setmetatile 16, 29, METATILE_PokemonMansion_Barrier_Vertical_Mid_Basement, 1
-	setmetatile 16, 30, METATILE_PokemonMansion_Barrier_Vertical_Bottom_Basement, 1
-	setmetatile 12,  8, METATILE_PokemonMansion_Wall_EndPost_Mid, 1
-	setmetatile 12,  9, METATILE_PokemonMansion_Wall_EndPost_Bottom, 1
-	setmetatile 12, 10, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 12, 11, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 12, 12, METATILE_PokemonMansion_Wall_EndCap_Basement, 0
-	setmetatile 20, 22, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 21, 22, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 22, 22, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 20, 23, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 21, 23, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 22, 23, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 24, 28, METATILE_PokemonMansion_Statue_RedEyes_Basement, 0
-	setmetatile 27,  4, METATILE_PokemonMansion_Statue_RedEyes_Basement, 0
-	return
-
-PokemonMansion_EventScript_ResetSwitch_B1F::
-	setmetatile 33, 20, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 34, 20, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 35, 20, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 33, 21, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 34, 21, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 35, 21, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 16, 26, METATILE_PokemonMansion_Wall_EndPost_Mid, 1
-	setmetatile 16, 27, METATILE_PokemonMansion_Wall_EndPost_Bottom, 1
-	setmetatile 16, 28, METATILE_PokemonMansion_BasementFloor_ShadeFull, 0
-	setmetatile 16, 29, METATILE_PokemonMansion_BasementFloor, 0
-	setmetatile 16, 30, METATILE_PokemonMansion_Wall_EndCap_Basement, 0
-	setmetatile 12,  8, METATILE_PokemonMansion_Barrier_Vertical_TopWall, 1
-	setmetatile 12,  9, METATILE_PokemonMansion_Barrier_Vertical_TopBase, 1
-	setmetatile 12, 10, METATILE_PokemonMansion_Barrier_Vertical_MidShadow_Basement, 1
-	setmetatile 12, 11, METATILE_PokemonMansion_Barrier_Vertical_Mid_Basement, 1
-	setmetatile 12, 12, METATILE_PokemonMansion_Barrier_Vertical_Bottom_Basement, 1
-	setmetatile 20, 22, METATILE_PokemonMansion_Barrier_Horizontal_TopLeft, 1
-	setmetatile 21, 22, METATILE_PokemonMansion_Barrier_Horizontal_TopMid, 1
-	setmetatile 22, 22, METATILE_PokemonMansion_Barrier_Horizontal_TopRight, 1
-	setmetatile 20, 23, METATILE_PokemonMansion_Barrier_Horizontal_BottomLeft_Basement, 1
-	setmetatile 21, 23, METATILE_PokemonMansion_Barrier_Horizontal_BottomMid_Basement, 1
-	setmetatile 22, 23, METATILE_PokemonMansion_Barrier_Horizontal_BottomRight_Basement, 1
-	setmetatile 24, 28, METATILE_PokemonMansion_Statue_BlackEyes_Basement, 0
-	setmetatile 27,  4, METATILE_PokemonMansion_Statue_BlackEyes_Basement, 0
 	return
