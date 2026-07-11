@@ -155,6 +155,7 @@ static void DoMapLoadLoop(u8 *state);
 static void MoveSaveBlocks_ResetHeap_(void);
 static void ResetScreenForMapLoad(void);
 static void InitViewGraphics(void);
+static void ApplyFlashMaskColor(void);
 static void InitOverworldGraphicsRegisters(void);
 static void ResumeMap(bool32 inLink);
 static void InitObjectEventsLink(void);
@@ -2173,6 +2174,18 @@ static void InitViewGraphics(void)
     InitCurrentFlashLevelScanlineEffect();
     InitOverworldGraphicsRegisters();
     InitMapView();
+    ApplyFlashMaskColor();
+}
+
+static void ApplyFlashMaskColor(void)
+{
+    static const u16 sFlashMaskColor = RGB(3, 4, 10);
+
+    if (Overworld_GetFlashLevel() != 0)
+    {
+        LoadPalette(&sFlashMaskColor, 0, PLTT_SIZEOF(1));
+        CpuCopy16(&sFlashMaskColor, (void *)PLTT, PLTT_SIZEOF(1));
+    }
 }
 
 static void InitOverworldGraphicsRegisters(void)
