@@ -1,43 +1,96 @@
 PokemonMansion_B1F_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, PokemonMansion_B1F_OnLoad
 	.byte 0
-
-PokemonMansion_B1F_OnLoad::
-	call_if_set FLAG_POKEMON_MANSION_SWITCH_STATE, PokemonMansion_EventScript_PressSwitch_B1F
-	end
-
-PokemonMansion_B1F_EventScript_Statue::
-	lockall
-	setvar VAR_0x8004, 3
-	call PokemonMansion_EventScript_SecretSwitch
-	playse SE_UNLOCK
-	special DrawWholeMapView
-	waitse
-	releaseall
-	end
 
 PokemonMansion_B1F_EventScript_DiarySep1st::
 	msgbox PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful, MSGBOX_SIGN
 	end
 
+PokemonMansion_B1F_EventScript_GiovanniTrigger::
+	goto_if_set FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
+	lockall
+	call PokemonMansion_B1F_EventScript_GiovanniScene
+	releaseall
+	end
+
 PokemonMansion_B1F_EventScript_Giovanni::
+	goto_if_set FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
 	lock
-	faceplayer
-	apexlog APEX_LOG_PERSON_GIOVANNI, 0
-	msgbox PokemonMansion_B1F_Text_GiovanniIntro
-	closemessage
-	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
-	waitmovement 0
-	setflag FLAG_SAW_GIOVANNI_POKEMON_MANSION
-	setflag FLAG_HIDE_POKEMON_MANSION_GIOVANNI
-	removeobject LOCALID_POKEMON_MANSION_GIOVANNI
+	call PokemonMansion_B1F_EventScript_GiovanniScene
 	release
 	end
 
+PokemonMansion_B1F_EventScript_GiovanniScene::
+	apexlog APEX_LOG_PERSON_GIOVANNI, 0
+	msgbox PokemonMansion_B1F_Text_GiovanniOverheard
+	playse SE_PIN
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
+	getplayerxy VAR_0x8008, VAR_0x8009
+	goto_if_eq VAR_0x8009, 20, PokemonMansion_B1F_EventScript_GiovanniStepBesideDirect
+	goto_if_eq VAR_0x8008, 7, PokemonMansion_B1F_EventScript_GiovanniStepBesideLeft
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniStepBesideRight
+	waitmovement 0
+	msgbox PokemonMansion_B1F_Text_GiovanniAddressed
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
+	waitmovement 0
+	goto PokemonMansion_B1F_EventScript_GiovanniGone
+
+PokemonMansion_B1F_EventScript_GiovanniStepBesideLeft::
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniStepBesideLeft
+	waitmovement 0
+	msgbox PokemonMansion_B1F_Text_GiovanniAddressed
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
+	waitmovement 0
+	goto PokemonMansion_B1F_EventScript_GiovanniGone
+
+PokemonMansion_B1F_EventScript_GiovanniStepBesideDirect::
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniStepBesideDirect
+	waitmovement 0
+	msgbox PokemonMansion_B1F_Text_GiovanniAddressed
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
+	waitmovement 0
+	goto PokemonMansion_B1F_EventScript_GiovanniGone
+
+PokemonMansion_B1F_EventScript_GiovanniExit::
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniExit
+	waitmovement 0
+PokemonMansion_B1F_EventScript_GiovanniGone::
+	setflag FLAG_SAW_GIOVANNI_POKEMON_MANSION
+	setflag FLAG_HIDE_POKEMON_MANSION_GIOVANNI
+	removeobject LOCALID_POKEMON_MANSION_GIOVANNI
+	setvar VAR_0x8004, SUB_QUEST_APEX_MEWTWO
+	setvar VAR_0x8005, 0
+	call EventScript_RecordApexRumorWithFeedback
+	return
+
+PokemonMansion_B1F_Movement_GiovanniFaceDown::
+	face_down
+	step_end
+
+PokemonMansion_B1F_Movement_GiovanniStepBesideRight::
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+PokemonMansion_B1F_Movement_GiovanniStepBesideLeft::
+	walk_down
+	face_down
+	step_end
+
+PokemonMansion_B1F_Movement_GiovanniStepBesideDirect::
+	face_down
+	step_end
+
 PokemonMansion_B1F_Movement_GiovanniExit::
-	walk_in_place_faster_down
-	delay_16
-	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 PokemonMansion_B1F_EventScript_Lewis::
