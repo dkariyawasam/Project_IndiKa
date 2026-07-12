@@ -7175,69 +7175,69 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanWalter[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneSquirtle[] = {
     {
         .iv = 50,
-        .lvl = 19,
-        .species = SPECIES_PIDGEOTTO,
+        .lvl = 36,
+        .species = SPECIES_PIDGEOT,
     },
     {
         .iv = 50,
-        .lvl = 16,
+        .lvl = 34,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 35,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 20,
-        .species = SPECIES_WARTORTLE,
+        .lvl = 38,
+        .species = SPECIES_BLASTOISE,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneBulbasaur[] = {
     {
         .iv = 50,
-        .lvl = 19,
-        .species = SPECIES_PIDGEOTTO,
+        .lvl = 36,
+        .species = SPECIES_PIDGEOT,
     },
     {
         .iv = 50,
-        .lvl = 16,
+        .lvl = 34,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 35,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 20,
-        .species = SPECIES_IVYSAUR,
+        .lvl = 38,
+        .species = SPECIES_VENUSAUR,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneCharmander[] = {
     {
         .iv = 50,
-        .lvl = 19,
-        .species = SPECIES_PIDGEOTTO,
+        .lvl = 36,
+        .species = SPECIES_PIDGEOT,
     },
     {
         .iv = 50,
-        .lvl = 16,
+        .lvl = 34,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 35,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 20,
-        .species = SPECIES_CHARMELEON,
+        .lvl = 38,
+        .species = SPECIES_CHARIZARD,
     },
 };
 

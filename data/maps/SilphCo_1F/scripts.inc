@@ -4,6 +4,7 @@ SilphCo_1F_MapScripts::
 
 SilphCo_1F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SILPH_CO_1F
+	call EventScript_UpdateSaffronRocketTakeoverState
 	end
 
 SilphCo_1F_EventScript_Receptionist::

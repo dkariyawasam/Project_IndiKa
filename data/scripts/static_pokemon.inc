@@ -40,6 +40,26 @@ EventScript_ApexRumorRecorded::
 EventScript_RecordApexRumorWithFeedbackDone::
     return
 
+EventScript_UpdateSaffronRocketTakeoverState::
+	goto_if_ge VAR_MAP_SCENE_SILPH_CO_11F, 1, EventScript_SaffronRocketTakeoverCleared
+	goto_if_unset FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_SaffronRocketTakeoverNotStarted
+	clearflag FLAG_HIDE_SAFFRON_ROCKETS
+	clearflag FLAG_HIDE_SILPH_ROCKETS
+	setflag FLAG_HIDE_SAFFRON_CIVILIANS
+	return
+
+EventScript_SaffronRocketTakeoverNotStarted::
+	setflag FLAG_HIDE_SAFFRON_ROCKETS
+	setflag FLAG_HIDE_SILPH_ROCKETS
+	clearflag FLAG_HIDE_SAFFRON_CIVILIANS
+	return
+
+EventScript_SaffronRocketTakeoverCleared::
+	setflag FLAG_HIDE_SAFFRON_ROCKETS
+	setflag FLAG_HIDE_SILPH_ROCKETS
+	clearflag FLAG_HIDE_SAFFRON_CIVILIANS
+	return
+
 EventScript_RemoveStaticMon::
     fadescreen FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
