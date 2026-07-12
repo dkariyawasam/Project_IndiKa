@@ -212,8 +212,8 @@
 #define FLAG_HIDE_ROUTE11_RIVAL_RUMORS                0x0CB
 #define FLAG_HIDE_CELADON_RIVAL_EVOLUTION             0x0CC
 #define FLAG_HIDE_CINNABAR_RIVAL_MANSION              0x0CD
-#define FLAG_0x0CE               0x0CE
-#define FLAG_0x0CF               0x0CF
+#define FLAG_HIDE_POKEMON_MANSION_3F_RIVAL            0x0CE
+#define FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL         0x0CF
 #define FLAG_0x0D0               0x0D0
 #define FLAG_0x0D1               0x0D1
 #define FLAG_0x0D2               0x0D2
