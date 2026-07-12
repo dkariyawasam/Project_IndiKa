@@ -20,13 +20,15 @@ PokemonMansion_B1F_EventScript_Giovanni::
 	end
 
 PokemonMansion_B1F_EventScript_GiovanniScene::
-	apexlog APEX_LOG_PERSON_GIOVANNI, 0
 	msgbox PokemonMansion_B1F_Text_GiovanniOverheard
 	playse SE_PIN
 	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, Common_Movement_ExclamationMark
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
 	delay 12
+	applymovement LOCALID_POKEMON_MANSION_GIOVANNI, PokemonMansion_B1F_Movement_GiovanniFaceDown
+	waitmovement 0
+	delay 8
 	getplayerxy VAR_0x8008, VAR_0x8009
 	goto_if_eq VAR_0x8009, 20, PokemonMansion_B1F_EventScript_GiovanniStepBesideDirect
 	goto_if_eq VAR_0x8008, 7, PokemonMansion_B1F_EventScript_GiovanniStepBesideLeft
@@ -58,8 +60,12 @@ PokemonMansion_B1F_EventScript_GiovanniExit::
 	waitmovement 0
 PokemonMansion_B1F_EventScript_GiovanniGone::
 	setflag FLAG_SAW_GIOVANNI_POKEMON_MANSION
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GIOVANNIS_AMBITION
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_MANSION
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_MANSION
 	setflag FLAG_HIDE_POKEMON_MANSION_GIOVANNI
 	removeobject LOCALID_POKEMON_MANSION_GIOVANNI
+	apexlog APEX_LOG_PERSON_GIOVANNI, 0
 	setvar VAR_0x8004, SUB_QUEST_APEX_MEWTWO
 	setvar VAR_0x8005, 0
 	call EventScript_RecordApexRumorWithFeedback

@@ -159,6 +159,7 @@ static void LogbookMenu_DestroySprite(u8 idx);
 static void GenerateStateAndPrint(u8 windowId, u32 itemId, u8 y);
 static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex);
 static bool8 TryGenerateGymTrialState(u8 subquestId, u8 *colorIndex);
+static bool8 TryGenerateGiovanniSubquestState(u8 subquestId, u8 *colorIndex);
 static u8 GenerateSubquestState(u8 questId);
 static u8 GenerateQuestState(u8 questId);
 static void PrintQuestState(u8 windowId, u8 y, u8 colorIndex);
@@ -468,6 +469,49 @@ static const struct SubQuest sSubQuests3[QUEST_3_SUB_COUNT] =
 	)
 };
 
+static const struct SubQuest sSubQuests4[QUEST_4_SUB_COUNT] =
+{
+	sub_quest(
+	      19,
+	      gText_SubQuest4_Name1,
+	      gText_SubQuest4_Desc1,
+	      gText_SubQuest4_Map1,
+	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJECT,
+	      sText_CompletedCaps
+	),
+
+	sub_quest(
+	      20,
+	      gText_SubQuest4_Name2,
+	      gText_SubQuest4_Desc2,
+	      gText_SubQuest4_Map2,
+	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJECT,
+	      sText_CompletedCaps
+	),
+
+	sub_quest(
+	      21,
+	      gText_SubQuest4_Name3,
+	      gText_SubQuest4_Desc3,
+	      gText_SubQuest4_Map3,
+	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJECT,
+	      sText_CompletedCaps
+	),
+
+	sub_quest(
+	      22,
+	      gText_SubQuest4_Name4,
+	      gText_SubQuest4_Desc4,
+	      gText_SubQuest4_Map4,
+	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJECT,
+	      sText_CompletedCaps
+	),
+};
+
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -513,16 +557,26 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_4,
 	      gText_SideQuestDoneDesc_4,
 	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_BLUE,
+	      OBJ_EVENT_GFX_GIOVANNI,
 	      OBJECT,
-	      NULL,
-	      0
+	      sSubQuests4,
+	      QUEST_4_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_5,
 	      gText_SideQuestDesc_5,
 	      gText_SideQuestDoneDesc_5,
 	      gText_SideQuestMap5,
+	      OBJ_EVENT_GFX_BLUE,
+	      OBJECT,
+	      NULL,
+	      0
+	),
+	side_quest(
+	      gText_SideQuestName_6,
+	      gText_SideQuestDesc_6,
+	      gText_SideQuestDoneDesc_6,
+	      gText_SideQuestMap6,
 	      OBJ_EVENT_GFX_BLUE,
 	      OBJECT,
 	      NULL,
@@ -2081,6 +2135,25 @@ static bool8 TryGenerateGymTrialState(u8 subquestId, u8 *colorIndex)
     return TRUE;
 }
 
+static bool8 TryGenerateGiovanniSubquestState(u8 subquestId, u8 *colorIndex)
+{
+    if (!LogbookMenu_GetSetSubquestState(QUEST_GIOVANNIS_AMBITION, FLAG_GET_UNLOCKED, subquestId))
+        return FALSE;
+
+    if (LogbookMenu_GetSetSubquestState(QUEST_GIOVANNIS_AMBITION, FLAG_GET_COMPLETED, subquestId))
+    {
+        StringCopy(gStringVar4, sText_CompletedCaps);
+        *colorIndex = 2;
+    }
+    else
+    {
+        StringCopy(gStringVar4, sText_InProgress);
+        *colorIndex = 3;
+    }
+
+    return TRUE;
+}
+
 u8 GenerateSubquestState(u8 questId)
 {
 	u8 parentQuest = sStateDataPtr->parentQuest;
@@ -2093,6 +2166,11 @@ u8 GenerateSubquestState(u8 questId)
     }
     else if (parentQuest == QUEST_GYM_LEADER_TRIALS
           && TryGenerateGymTrialState(questId, &colorIndex))
+    {
+        return colorIndex;
+    }
+    else if (parentQuest == QUEST_GIOVANNIS_AMBITION
+          && TryGenerateGiovanniSubquestState(questId, &colorIndex))
     {
         return colorIndex;
     }
@@ -2116,7 +2194,12 @@ u8 GenerateSubquestState(u8 questId)
 
 u8 GenerateQuestState(u8 questId)
 {
-	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+	if (questId == QUEST_GIOVANNIS_AMBITION && FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI))
+	{
+		StringCopy(gStringVar4, sText_Complete);
+		return 2;
+	}
+	else if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
 	{
 		StringCopy(gStringVar4, sText_Complete);
 		return 2;
