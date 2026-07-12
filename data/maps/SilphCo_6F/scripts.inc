@@ -3,6 +3,7 @@ SilphCo_6F_MapScripts::
 	.byte 0
 
 SilphCo_6F_OnLoad::
+	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_unset FLAG_SILPH_6F_DOOR, EventScript_Close6FDoor
 	end
 

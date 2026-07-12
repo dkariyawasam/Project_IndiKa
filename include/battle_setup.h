@@ -7,7 +7,6 @@ void StartWildBattle(void);
 void StartRoamerBattle(void);
 void StartOldManTutorialBattle(void);
 void StartScriptedWildBattle(void);
-void StartMarowakBattle(void);
 void StartSouthernIslandBattle(void);
 void StartApexBattle(void);
 void StartGroudonKyogreBattle(void);

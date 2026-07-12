@@ -64,7 +64,6 @@ static void CB2_EndWildBattle(void);
 static u8 GetWildBattleTransition(void);
 static u8 GetTrainerBattleTransition(void);
 static void CB2_EndScriptedWildBattle(void);
-static void CB2_EndMarowakBattle(void);
 static bool32 IsPlayerDefeated(u32 battleOutcome);
 static void CB2_EndTrainerBattle(void);
 static const u8 *GetIntroSpeechOfApproachingTrainer(void);
@@ -298,18 +297,6 @@ void StartScriptedWildBattle(void)
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }
 
-void StartMarowakBattle(void)
-{
-    LockPlayerFieldControls();
-    gMain.savedCallback = CB2_EndMarowakBattle;
-    gBattleTypeFlags = BATTLE_TYPE_GHOST | BATTLE_TYPE_GHOST_UNVEILED;
-    CreateMonWithGenderNatureLetter(gEnemyParty, SPECIES_MAROWAK, 30, 31, MON_FEMALE, NATURE_SERIOUS, 0);
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
-    SetMonData(&gEnemyParty[0], MON_DATA_NICKNAME, gText_Ghost);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-}
-
 void StartSouthernIslandBattle(void)
 {
     LockPlayerFieldControls();
@@ -411,25 +398,6 @@ static void CB2_EndScriptedWildBattle(void)
         SetMainCallback2(CB2_WhiteOut);
     else
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-}
-
-static void CB2_EndMarowakBattle(void)
-{
-    CpuFill16(0, (void *)BG_PLTT, BG_PLTT_SIZE);
-    ResetOamRange(0, 128);
-    if (IsPlayerDefeated(gBattleOutcome))
-    {
-        SetMainCallback2(CB2_WhiteOut);
-    }
-    else
-    {
-        // If result is TRUE player didnt defeat Marowak, force player back from stairs
-        if (gBattleOutcome == B_OUTCOME_WON)
-            gSpecialVar_Result = FALSE;
-        else
-            gSpecialVar_Result = TRUE;
-        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-    }
 }
 
 u8 BattleSetup_GetTerrainId(void)

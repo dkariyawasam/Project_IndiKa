@@ -197,6 +197,7 @@ static const u8 sApexLoc_Route10[] = _("ROUTE 10");
 static const u8 sApexLoc_Route20[] = _("ROUTE 20");
 static const u8 sApexLoc_Seafoam[] = _("SEAFOAM");
 static const u8 sApexLoc_Unknown[] = _("UNKNOWN");
+static const u8 sApexLoc_PokemonMansion[] = _("POKEMON MANSION");
 static const u8 sApexLoc_Saffron[] = _("SAFFRON");
 static const u8 sApexLoc_Lavender[] = _("LAVENDER");
 static const u8 sApexLoc_PokemonTower[] = _("POKEMON TOWER");
@@ -218,6 +219,7 @@ static const u8 sApexSrc_Swimmer[] = _("Swimmer");
 static const u8 sApexSrc_Trainer[] = _("Trainer");
 static const u8 sApexSrc_Explorer[] = _("Explorer");
 static const u8 sApexSrc_NoWitness[] = _("No witness");
+static const u8 sApexSrc_Giovanni[] = _("Giovanni");
 static const u8 sApexSrc_Rocket[] = _("Rocket");
 static const u8 sApexSrc_TownLocal[] = _("Town local");
 static const u8 sApexSrc_Mourner[] = _("Mourner");
@@ -237,7 +239,7 @@ static const u8 sApexRumor_Zapdos2[] = _("A flash crossed the sky, and the\nwhol
 static const u8 sApexRumor_Articuno0[] = _("SEAFOAM changed all at once.\nA volcanic place became cold as\nice.");
 static const u8 sApexRumor_Articuno1[] = _("I heard SEAFOAM fractured when\nthe spirit of ice settled in the\ncaves.");
 static const u8 sApexRumor_Articuno2[] = _("This whole area used to be lava.\nThen everything changed in a\nsingle burst.");
-static const u8 sApexRumor_Mewtwo0[] = _("No witness statement has been\nrecorded.");
+static const u8 sApexRumor_Mewtwo0[] = _("GIOVANNI stood beside an empty\nvat, calling MEWTWO perfect\npower.");
 static const u8 sApexRumor_Mewtwo1[] = _("No witness statement has been\nrecorded.");
 static const u8 sApexRumor_Mewtwo2[] = _("No witness statement has been\nrecorded.");
 static const u8 sApexRumor_Osscythe0[] = _("A ROCKET took a CUBONE from\nits mother. The poor thing only\ncries.");
@@ -289,9 +291,9 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
     {
         sApexDossierName_Mewtwo,
         {sApexRumor_Mewtwo0, sApexRumor_Mewtwo1, sApexRumor_Mewtwo2},
-        {sApexLoc_Unknown, sApexLoc_Unknown, sApexLoc_Unknown},
-        {sApexSrc_NoWitness, sApexSrc_NoWitness, sApexSrc_NoWitness},
-        {OBJ_EVENT_GFX_CLIPBOARD, OBJ_EVENT_GFX_CLIPBOARD, OBJ_EVENT_GFX_CLIPBOARD},
+        {sApexLoc_PokemonMansion, sApexLoc_Unknown, sApexLoc_Unknown},
+        {sApexSrc_Giovanni, sApexSrc_NoWitness, sApexSrc_NoWitness},
+        {OBJ_EVENT_GFX_GIOVANNI, OBJ_EVENT_GFX_CLIPBOARD, OBJ_EVENT_GFX_CLIPBOARD},
         OBJ_EVENT_GFX_MEWTWO,
         FLAG_INTERACTED_APEX_MEWTWO
     },

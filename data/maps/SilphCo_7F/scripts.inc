@@ -4,12 +4,14 @@ SilphCo_7F_MapScripts::
 	.byte 0
 
 SilphCo_7F_OnLoad::
+	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_unset FLAG_SILPH_7F_DOOR_1, EventScript_Close7FDoor1
 	call_if_unset FLAG_SILPH_7F_DOOR_2, EventScript_Close7FDoor2
 	call_if_unset FLAG_SILPH_7F_DOOR_3, EventScript_Close7FDoor3
 	end
 
 SilphCo_7F_OnTransition::
+	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_ge VAR_MAP_SCENE_SILPH_CO_11F, 1, SilphCo_7F_EventScript_SetObjRocketsGone
 	end
 

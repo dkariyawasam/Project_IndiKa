@@ -3,6 +3,7 @@ SilphCo_8F_MapScripts::
 	.byte 0
 
 SilphCo_8F_OnLoad::
+	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_unset FLAG_SILPH_8F_DOOR, EventScript_Close8FDoor
 	end
 

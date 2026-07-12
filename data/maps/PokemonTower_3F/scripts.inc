@@ -188,35 +188,6 @@ PokemonTower_3F_Movement_SabrinaLeave::
 	walk_right
 	step_end
 
-PokemonTower_3F_EventScript_MarowakGhost::
-	lockall
-	textcolor NPC_TEXT_COLOR_MON
-	msgbox PokemonTower_3F_Text_BeGoneIntruders
-	setwildbattle SPECIES_MAROWAK, 30
-	special StartMarowakBattle
-	waitstate
-	goto_if_eq VAR_RESULT, FALSE, PokemonTower_3F_EventScript_DefeatedMarowakGhost  @ VAR_RESULT set by CB2_EndMarowakBattle
-	applymovement LOCALID_PLAYER, PokemonTower_3F_Movement_ForcePlayerUp
-	waitmovement 0
-	releaseall
-	end
-
-PokemonTower_3F_EventScript_DefeatedMarowakGhost::
-	message PokemonTower_3F_Text_GhostWasCubonesMother
-	waitmessage
-	waitse
-	playmoncry SPECIES_MAROWAK, CRY_MODE_NORMAL
-	waitbuttonpress
-	waitmoncry
-	msgbox PokemonTower_3F_Text_MothersSpiritWasCalmed
-	setvar VAR_MAP_SCENE_POKEMON_TOWER_3F, 1
-	releaseall
-	end
-
-PokemonTower_3F_Movement_ForcePlayerUp::
-	walk_up
-	step_end
-
 PokemonTower_3F_EventScript_Angelica::
 	trainerbattle_single TRAINER_CHANNELER_ANGELICA, PokemonTower_3F_Text_AngelicaIntro, PokemonTower_3F_Text_AngelicaDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

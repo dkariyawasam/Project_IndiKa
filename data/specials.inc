@@ -361,7 +361,6 @@ gSpecials::
 	def_special DoesPartyHaveEnigmaBerry
 	def_special NullFieldSpecial
 	def_special SetPostgameFlags
-	def_special StartMarowakBattle
 	def_special TryCompleteApexInstinctQuest
 	def_special RecordApexRumor
 	def_special IsApexRevealed

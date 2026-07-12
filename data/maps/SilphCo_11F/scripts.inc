@@ -3,6 +3,7 @@ SilphCo_11F_MapScripts::
 	.byte 0
 
 SilphCo_11F_OnLoad::
+	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_unset FLAG_SILPH_11F_DOOR, EventScript_Close11FDoor
 	end
 
@@ -69,6 +70,10 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	apexlog APEX_LOG_PERSON_GIOVANNI, 3
 	msgbox SilphCo_11F_Text_GiovanniPostBattle
 	closemessage
+	setflag FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GIOVANNIS_AMBITION
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_SILPH_SIGNAL
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_SILPH_SIGNAL
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_SILPH_CO_GIOVANNI
 	removeobject LOCALID_SILPH_CO_11F_GRUNT1
@@ -76,6 +81,7 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_MAP_SCENE_SILPH_CO_11F, 1
 	setflag FLAG_HIDE_SAFFRON_ROCKETS
+	setflag FLAG_HIDE_SILPH_ROCKETS
 	clearflag FLAG_HIDE_SAFFRON_CIVILIANS
 	releaseall
 	end

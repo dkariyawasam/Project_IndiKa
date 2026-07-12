@@ -4,7 +4,94 @@ PokemonMansion_3F_MapScripts::
 
 PokemonMansion_3F_OnLoad::
 	call_if_set FLAG_POKEMON_MANSION_SWITCH_STATE, PokemonMansion_EventScript_PressSwitch_3F
+	call_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, PokemonMansion_3F_EventScript_RemoveRival
 	end
+
+PokemonMansion_3F_EventScript_RemoveRival::
+	removeobject LOCALID_POKEMON_MANSION_3F_RIVAL
+	end
+
+PokemonMansion_3F_EventScript_RivalTrigger18::
+	setvar VAR_TEMP_1, 0
+	goto PokemonMansion_3F_EventScript_RivalTrigger
+
+PokemonMansion_3F_EventScript_RivalTrigger19::
+	setvar VAR_TEMP_1, 1
+	goto PokemonMansion_3F_EventScript_RivalTrigger
+
+PokemonMansion_3F_EventScript_RivalTrigger20::
+	setvar VAR_TEMP_1, 2
+	goto PokemonMansion_3F_EventScript_RivalTrigger
+
+PokemonMansion_3F_EventScript_RivalTrigger::
+	goto_if_set FLAG_HIDE_POKEMON_MANSION_3F_RIVAL, EventScript_Return
+	goto_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, EventScript_Return
+	lockall
+	playbgm MUS_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_POKEMON_MANSION_3F_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
+	applymovement LOCALID_POKEMON_MANSION_3F_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	call PokemonMansion_3F_EventScript_RivalReadyScene
+	releaseall
+	end
+
+PokemonMansion_3F_EventScript_RivalReady::
+	goto_if_set FLAG_HIDE_POKEMON_MANSION_3F_RIVAL, EventScript_Return
+	goto_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, EventScript_Return
+	lock
+	faceplayer
+	call PokemonMansion_3F_EventScript_RivalReadyScene
+	release
+	end
+
+PokemonMansion_3F_EventScript_RivalReadyScene::
+	msgbox PokemonMansion_3F_Text_RivalReady, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq PokemonMansion_3F_EventScript_RivalNotReady
+	msgbox PokemonMansion_3F_Text_RivalBattleIntro
+	closemessage
+	call_if_eq VAR_STARTER_MON, 2, PokemonMansion_3F_EventScript_RivalSquirtle
+	call_if_eq VAR_STARTER_MON, 1, PokemonMansion_3F_EventScript_RivalBulbasaur
+	call_if_eq VAR_STARTER_MON, 0, PokemonMansion_3F_EventScript_RivalCharmander
+	msgbox PokemonMansion_3F_Text_RivalPostBattle
+	closemessage
+	playbgm MUS_RIVAL_EXIT, 0
+	applymovement LOCALID_POKEMON_MANSION_3F_RIVAL, PokemonMansion_3F_Movement_RivalExit
+	waitmovement LOCALID_POKEMON_MANSION_3F_RIVAL
+	setflag FLAG_HIDE_POKEMON_MANSION_3F_RIVAL
+	setvar VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1
+	removeobject LOCALID_POKEMON_MANSION_3F_RIVAL
+	fadedefaultbgm
+	return
+
+PokemonMansion_3F_EventScript_RivalNotReady::
+	msgbox PokemonMansion_3F_Text_RivalNotReady
+	fadedefaultbgm
+	return
+
+PokemonMansion_3F_EventScript_RivalSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_SQUIRTLE, PokemonMansion_3F_Text_RivalDefeat
+	return
+
+PokemonMansion_3F_EventScript_RivalBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_BULBASAUR, PokemonMansion_3F_Text_RivalDefeat
+	return
+
+PokemonMansion_3F_EventScript_RivalCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_CHARMANDER, PokemonMansion_3F_Text_RivalDefeat
+	return
+
+PokemonMansion_3F_Movement_RivalExit::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 
 PokemonMansion_3F_EventScript_Statue::
 	lockall
