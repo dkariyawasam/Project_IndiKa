@@ -16,21 +16,26 @@
   "connections": [
     {
       "map": "MAP_CELADON_CITY",
-      "offset": -10,
+      "offset": 50,
       "direction": "left"
     },
     {
       "map": "MAP_SAFFRON_CITY_CONNECTION",
-      "offset": -10,
+      "offset": 50,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE4",
+      "offset": -84,
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 6,
-      "y": 7,
+      "x": 4,
+      "y": 58,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -43,8 +48,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 11,
-      "y": 11,
+      "x": 18,
+      "y": 59,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -57,12 +62,12 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCOUT_F",
-      "x": 17,
-      "y": 14,
+      "x": 16,
+      "y": 73,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "EventScript_RouteTrainer_PICNICKER_SOFIA",
@@ -71,8 +76,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 8,
-      "y": 16,
+      "x": 6,
+      "y": 75,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -81,30 +86,157 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "EventScript_GymAdjacent_PSYCHIC_CAMERON",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_AGATHA",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_AGATHA",
+      "x": 6,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route7_EventScript_AgathaAftermath",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_BRUNO",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BRUNO",
+      "x": 14,
+      "y": 45,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route7_EventScript_BrunoAftermath",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_LANCE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 9,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route7_EventScript_LanceAftermath",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_LORELEI",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LORELEI",
+      "x": 7,
+      "y": 56,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route7_EventScript_LoreleiAftermath",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_MEWTWO",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MEWTWO",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_GIOVANNI",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "x": 10,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 7,
-      "y": 14,
+      "y": 74,
       "elevation": 0,
       "dest_map": "MAP_UNDERGROUND_PATH_WEST_ENTRANCE",
       "dest_warp_id": "1"
     },
     {
       "x": 15,
-      "y": 10,
+      "y": 70,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7_EAST_ENTRANCE",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
+      "var_value": "0",
+      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
+      "var_value": "0",
+      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
+      "var_value": "0",
+      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
+      "var_value": "0",
+      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
       "x": 5,
-      "y": 14,
+      "y": 74,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_EventScript_UndergroundPathSign"
@@ -112,7 +244,7 @@
     {
       "type": "hidden_item",
       "x": 16,
-      "y": 15,
+      "y": 75,
       "elevation": 3,
       "item": "ITEM_WEPEAR_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY",
