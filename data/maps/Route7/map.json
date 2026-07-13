@@ -100,7 +100,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route7_EventScript_AgathaAftermath",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_AGATHA"
     },
     {
       "local_id": "LOCALID_ROUTE7_BRUNO",
@@ -115,7 +115,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route7_EventScript_BrunoAftermath",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_BRUNO"
     },
     {
       "local_id": "LOCALID_ROUTE7_LANCE",
@@ -145,7 +145,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route7_EventScript_LoreleiAftermath",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_LORELEI"
     },
     {
       "local_id": "LOCALID_ROUTE7_MEWTWO",
