@@ -11,12 +11,17 @@ Route7_Text_LoreleiAftermath::
 
 Route7_Text_LoreleiFlashback::
 	.string "LORELEI remembered...\p"
+	.string "GIOVANNI: MEWTWO.\p"
+	.string "Destroy the ELITE FOUR.\n"
+	.string "Show them perfected power.$"
+
+Route7_Text_LoreleiFlashbackBeam::
 	.string "LORELEI: MEWTWO!\n"
 	.string "Stop!\p"
 	.string "Its mind was frozen with\n"
 	.string "anger, not ice.\p"
 	.string "GIOVANNI: The signal holds.\n"
-	.string "Increase the output.$"
+	.string "Fire.$"
 
 Route7_Text_LoreleiRepeat::
 	.string "LORELEI: That is what I saw.\p"

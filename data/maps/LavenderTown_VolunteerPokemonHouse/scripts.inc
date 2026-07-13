@@ -39,12 +39,6 @@ LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy::
 LavenderTown_VolunteerPokemonHouse_EventScript_Youngster::
 	lock
 	faceplayer
-	goto_if_set FLAG_RESCUED_MR_FUJI, LavenderTown_VolunteerPokemonHouse_EventScript_YoungsterFujiBack
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo
-	release
-	end
-
-LavenderTown_VolunteerPokemonHouse_EventScript_YoungsterFujiBack::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother
 	release
 	end

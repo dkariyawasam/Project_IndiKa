@@ -82,6 +82,8 @@ PokemonMansion_B1F_Movement_GiovanniStepBesideRight::
 	step_end
 
 PokemonMansion_B1F_Movement_GiovanniStepBesideLeft::
+	walk_left
+	walk_down
 	walk_down
 	face_down
 	step_end

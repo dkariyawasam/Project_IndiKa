@@ -3,10 +3,6 @@ LavenderTown_VolunteerPokemonHouse_Text_HearMrFujiNotFromAroundHere::
     .string "I hear that MR. FUJI's not from\n"
     .string "these parts originally, either.$"
 
-LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
-    .string "That's odd, MR. FUJI isn't here.\n"
-    .string "Where'd he go?$"
-
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
     .string "MR. FUJI had been praying alone\n"
     .string "for CUBONE's mother.$"

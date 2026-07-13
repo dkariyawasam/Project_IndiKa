@@ -30,6 +30,7 @@
 #include "menu.h"
 #include "mystery_gift.h"
 #include "naming_screen.h"
+#include "palette.h"
 #include "party_menu.h"
 #include "dynamic_placeholder_text_util.h"
 #include "new_menu_helpers.h"
@@ -2078,4 +2079,15 @@ static void Task_WingFlapSound(u8 taskId)
     }
     if (data[0] == gSpecialVar_0x8004 - 1)
         DestroyTask(taskId);
+}
+
+void ApplyFlashbackGreyscaleTint(void)
+{
+    CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_SIZE);
+    TintPalette_GrayScale(gPlttBufferFaded, PLTT_BUFFER_SIZE);
+}
+
+void RestoreFlashbackGreyscaleTint(void)
+{
+    CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_SIZE);
 }

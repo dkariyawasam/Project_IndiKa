@@ -5,7 +5,9 @@ SaffronCity_MapScripts::
 SaffronCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SAFFRON_CITY
 	call EventScript_UpdateSaffronRocketTakeoverState
+	goto_if_set FLAG_SAW_GIOVANNI_POKEMON_MANSION, SaffronCity_EventScript_EndTransition
 	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
+SaffronCity_EventScript_EndTransition::
 	end
 
 SaffronCity_EventScript_MoveDoorGuardGrunt::
