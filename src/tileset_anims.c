@@ -90,6 +90,18 @@ static const u16 *const sTilesetAnims_CeladonCity_Fountain[] = {
     sTilesetAnims_CeladonCity_Fountain_Frame4
 };
 
+static const u16 sTilesetAnims_CeladonCity_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/celadon_city/anim/steam/0.4bpp");
+static const u16 sTilesetAnims_CeladonCity_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/celadon_city/anim/steam/1.4bpp");
+static const u16 sTilesetAnims_CeladonCity_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/celadon_city/anim/steam/2.4bpp");
+static const u16 sTilesetAnims_CeladonCity_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/celadon_city/anim/steam/3.4bpp");
+
+static const u16 *const sTilesetAnims_CeladonCity_Steam[] = {
+    sTilesetAnims_CeladonCity_Steam_Frame0,
+    sTilesetAnims_CeladonCity_Steam_Frame1,
+    sTilesetAnims_CeladonCity_Steam_Frame2,
+    sTilesetAnims_CeladonCity_Steam_Frame3
+};
+
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/silph_co/anim/fountain/0.4bpp");
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/silph_co/anim/fountain/1.4bpp");
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame2[] = INCBIN_U16("data/tilesets/secondary/silph_co/anim/fountain/2.4bpp");
@@ -242,16 +254,24 @@ static void QueueAnimTiles_CeladonCity_Fountain(u16 timer)
     AppendTilesetAnimToBuffer(sTilesetAnims_CeladonCity_Fountain[timer % ARRAY_COUNT(sTilesetAnims_CeladonCity_Fountain)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(744)), 8 * TILE_SIZE_4BPP);
 }
 
+static void QueueAnimTiles_CeladonCity_Steam(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_CeladonCity_Steam[timer % ARRAY_COUNT(sTilesetAnims_CeladonCity_Steam)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(896)), 8 * TILE_SIZE_4BPP);
+}
+
 static void TilesetAnim_CeladonCity(u16 timer)
 {
     if (timer % 12 == 0)
         QueueAnimTiles_CeladonCity_Fountain(timer / 12);
+
+    if (timer % 16 == 0)
+        QueueAnimTiles_CeladonCity_Steam(timer / 16);
 }
 
 void InitTilesetAnim_CeladonCity(void)
 {
     sSecondaryTilesetAnimCounter = 0;
-    sSecondaryTilesetAnimCounterMax = 120;
+    sSecondaryTilesetAnimCounterMax = 960;
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonCity;
 }
 
