@@ -65,8 +65,8 @@
 #define FLAG_HIDE_NUGGET_BRIDGE_REWARD_GIVER              0x031
 #define FLAG_HIDE_BILL_CLEFAIRY                            0x032
 #define FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE                   0x033
-#define FLAG_HIDE_TOWER_FUJI                               0x034
-#define FLAG_HIDE_POKEHOUSE_FUJI                           0x035
+#define FLAG_0x034                                         0x034
+#define FLAG_0x035                                         0x035
 #define FLAG_HIDE_LIFT_KEY                                 0x036
 #define FLAG_0x037                                        0x037
 #define FLAG_0x038                                         0x038
@@ -214,9 +214,9 @@
 #define FLAG_HIDE_CINNABAR_RIVAL_MANSION              0x0CD
 #define FLAG_HIDE_POKEMON_MANSION_3F_RIVAL            0x0CE
 #define FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL         0x0CF
-#define FLAG_0x0D0               0x0D0
-#define FLAG_0x0D1               0x0D1
-#define FLAG_0x0D2               0x0D2
+#define FLAG_HIDE_ROUTE7_AGATHA                        0x0D0
+#define FLAG_HIDE_ROUTE7_BRUNO                         0x0D1
+#define FLAG_HIDE_ROUTE7_LORELEI                       0x0D2
 #define FLAG_0x0D3               0x0D3
 #define FLAG_0x0D4               0x0D4
 #define FLAG_0x0D5               0x0D5
