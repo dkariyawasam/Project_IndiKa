@@ -496,7 +496,7 @@ static const struct SubQuest sSubQuests4[QUEST_4_SUB_COUNT] =
 	      gText_SubQuest4_Name3,
 	      gText_SubQuest4_Desc3,
 	      gText_SubQuest4_Map3,
-	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJ_EVENT_GFX_MEWTWO,
 	      OBJECT,
 	      sText_CompletedCaps
 	),
@@ -506,6 +506,16 @@ static const struct SubQuest sSubQuests4[QUEST_4_SUB_COUNT] =
 	      gText_SubQuest4_Name4,
 	      gText_SubQuest4_Desc4,
 	      gText_SubQuest4_Map4,
+	      OBJ_EVENT_GFX_GIOVANNI,
+	      OBJECT,
+	      sText_CompletedCaps
+	),
+
+	sub_quest(
+	      23,
+	      gText_SubQuest4_Name5,
+	      gText_SubQuest4_Desc5,
+	      gText_SubQuest4_Map5,
 	      OBJ_EVENT_GFX_GIOVANNI,
 	      OBJECT,
 	      sText_CompletedCaps
