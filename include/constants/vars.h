@@ -168,7 +168,7 @@
 #define VAR_MAP_SCENE_CINNABAR_RIVAL                                           0x4078
 #define VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL                                 0x4079
 #define VAR_MAP_SCENE_ROUTE19                                                  0x407A
-#define VAR_MAP_SCENE_0x407B                                                   0x407B
+#define VAR_MAP_SCENE_ROUTE7_RAMPAGE                                           0x407B
 #define VAR_MAP_SCENE_POKEMON_CENTER_TEALA                                     0x407C
 #define VAR_ROCKET_LEAGUE_PRIZE_TIER                                           0x407D
 #define VAR_MAP_SCENE_VERMILION_CITY                                           0x407E

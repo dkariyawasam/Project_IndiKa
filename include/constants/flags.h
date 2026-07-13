@@ -760,6 +760,7 @@
 #define FLAG_SAW_GIOVANNI_POKEMON_MANSION             0x2EF
 #define FLAG_SAW_GIOVANNI_CERULEAN_CAVE               0x2F0
 #define FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE            0x2F1
+#define FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE              0x2F2
 #define FLAG_OAK_SAW_DEX_COMPLETION                      0x2F4
 #define FLAG_TALKED_TO_TEA_LADY_AFTER_HOF                0x2F8
 #define FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION            0x2F9
@@ -771,10 +772,10 @@
 #define FLAG_OAKS_RATING_IS_VIA_PC                       0x2FF
 
 // Unused?
-#define FLAG_0x300               0x300
-#define FLAG_0x301               0x301
-#define FLAG_0x302               0x302
-#define FLAG_0x303               0x303
+#define FLAG_SAW_ROUTE7_LORELEI_FLASHBACK              0x300
+#define FLAG_SAW_ROUTE7_BRUNO_FLASHBACK                0x301
+#define FLAG_SAW_ROUTE7_AGATHA_FLASHBACK               0x302
+#define FLAG_SAW_ROUTE7_LANCE_FLASHBACK                0x303
 #define FLAG_0x304               0x304
 #define FLAG_0x305               0x305
 #define FLAG_0x306               0x306

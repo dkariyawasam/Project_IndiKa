@@ -154,31 +154,17 @@
     },
     {
       "x": 18,
-      "y": 11,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 25,
-      "y": 11,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 18,
-      "y": 18,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 25,
-      "y": 18,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],
