@@ -42,7 +42,9 @@ SilphCo_7F_EventScript_RivalScene::
 	msgbox SilphCo_7F_Text_RivalWhatKeptYou
 	call_if_eq VAR_TEMP_1, 0, SilphCo_7F_EventScript_RivalApproachTop
 	call_if_eq VAR_TEMP_1, 1, SilphCo_7F_EventScript_RivalApproachBottom
-	msgbox SilphCo_7F_Text_RivalIntro
+	msgbox SilphCo_7F_Text_RivalIntro, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SilphCo_7F_EventScript_RivalNotReady
 	setvar VAR_LAST_TALKED, LOCALID_SILPH_CO_RIVAL
 	call_if_eq VAR_STARTER_MON, 2, SilphCo_7F_EventScript_RivalSquirtle
 	call_if_eq VAR_STARTER_MON, 1, SilphCo_7F_EventScript_RivalBulbasaur
@@ -60,6 +62,17 @@ SilphCo_7F_EventScript_RivalScene::
 	releaseall
 	end
 
+SilphCo_7F_EventScript_RivalNotReady::
+	msgbox SilphCo_7F_Text_RivalNotReady
+	closemessage
+	applymovement LOCALID_PLAYER, SilphCo_7F_Movement_PlayerStepBackRight
+	waitmovement 0
+	call_if_eq VAR_TEMP_1, 0, SilphCo_7F_EventScript_RivalReturnTop
+	call_if_eq VAR_TEMP_1, 1, SilphCo_7F_EventScript_RivalReturnBottom
+	fadedefaultbgm
+	releaseall
+	end
+
 SilphCo_7F_EventScript_RivalApproachTop::
 	closemessage
 	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalApproachTop
@@ -67,6 +80,9 @@ SilphCo_7F_EventScript_RivalApproachTop::
 	return
 
 SilphCo_7F_EventScript_RivalApproachBottom::
+	closemessage
+	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalApproachBottom
+	waitmovement 0
 	return
 
 SilphCo_7F_EventScript_RivalSquirtle::
@@ -91,8 +107,46 @@ SilphCo_7F_EventScript_RivalExitBottom::
 	waitmovement 0
 	return
 
+SilphCo_7F_EventScript_RivalReturnTop::
+	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalReturnTop
+	waitmovement 0
+	return
+
+SilphCo_7F_EventScript_RivalReturnBottom::
+	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalReturnBottom
+	waitmovement 0
+	return
+
 SilphCo_7F_Movement_RivalApproachTop::
+	walk_right
+	walk_right
 	walk_up
+	walk_up
+	step_end
+
+SilphCo_7F_Movement_RivalApproachBottom::
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+SilphCo_7F_Movement_PlayerStepBackRight::
+	walk_right
+	step_end
+
+SilphCo_7F_Movement_RivalReturnTop::
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	face_right
+	step_end
+
+SilphCo_7F_Movement_RivalReturnBottom::
+	walk_down
+	walk_left
+	walk_left
+	face_right
 	step_end
 
 SilphCo_7F_Movement_RivalExitTop::
