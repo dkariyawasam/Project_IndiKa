@@ -104,20 +104,34 @@ SilphCo_7F_Text_Grunt2PostBattle::
     .string "ticked off!$"
 
 SilphCo_7F_Text_RivalWhatKeptYou::
-    .string "{RIVAL}: What kept you, {PLAYER}?$"
+    .string "{RIVAL}: Ha!\n"
+    .string "Took you long enough, {PLAYER}.\p"
+    .string "Don't tell me the ROCKETS\n"
+    .string "actually slowed you down.$"
 
 SilphCo_7F_Text_RivalIntro::
-    .string "{RIVAL}: Hahaha! I thought you'd\n"
-    .string "turn up if I waited here!\p"
-    .string "I guess TEAM ROCKET slowed you\n"
-    .string "down! Not that I care!\p"
-    .string "I saw you in SAFFRON, so I decided\n"
-    .string "to see if you got better!$"
+    .string "{RIVAL}: I figured out why\n"
+    .string "they're here before you did,\l"
+    .string "obviously.\p"
+    .string "SILPH isn't just money.\n"
+    .string "It's capture tech.\p"
+    .string "A MASTER BALL that can catch\n"
+    .string "anything...\p"
+    .string "Someone powerful would burn down\n"
+    .string "SAFFRON for that.\p"
+    .string "You're going upstairs, right?\n"
+    .string "Ready to prove you won't fold\l"
+    .string "when it matters?$"
+
+SilphCo_7F_Text_RivalNotReady::
+    .string "{RIVAL}: Figures.\p"
+    .string "Try not to spend all day hiding\n"
+    .string "behind me.$"
 
 SilphCo_7F_Text_RivalDefeat::
-    .string "Oh, man!\n"
-    .string "So, you are ready for BOSS\l"
-    .string "ROCKET!$"
+    .string "Tch!\n"
+    .string "You might actually make it\l"
+    .string "to the top floor.$"
 
 SilphCo_7F_Text_RivalVictory::
     .string "{RIVAL}“おまえなあ‥\p"
@@ -126,21 +140,18 @@ SilphCo_7F_Text_RivalVictory::
     .string "いちにんまえ　とは　いえないぜ$"
 
 SilphCo_7F_Text_RivalPostBattle::
-    .string "Well, {PLAYER}!\n"
-    .string "I'm moving on up and ahead!\p"
-    .string "By checking my POKéDEX, I'm\n"
-    .string "starting to see what's strong and\l"
-    .string "how they evolve!\p"
-    .string "Am I a genius or what?\p"
-    .string "I'm going to the POKéMON LEAGUE to\n"
-    .string "boot out the ELITE FOUR.\p"
-    .string "I'll become the world's most\n"
-    .string "powerful TRAINER!\p"
-    .string "{PLAYER}, well, good luck to you!\n"
-    .string "Don't sweat it!\l"
+    .string "Fine. You can handle yourself.\p"
+    .string "But don't get excited.\n"
+    .string "I already knew this was bigger\l"
+    .string "than a robbery.\p"
+    .string "Whoever is pulling TEAM ROCKET's\n"
+    .string "strings wants control.\p"
+    .string "Not money. Not badges.\n"
+    .string "Control.\p"
+    .string "I'm finding my own way through.\n"
+    .string "Try not to trail too far behind.\p"
     .string "Smell ya!$"
 
 SilphCo_7F_Text_FloorSign::
     .string "SILPH CO. HEAD OFFICE\n"
     .string "7F$"
-
