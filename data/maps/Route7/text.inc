@@ -18,10 +18,10 @@ Route7_Text_LoreleiFlashback::
 Route7_Text_LoreleiFlashbackBeam::
 	.string "LORELEI: MEWTWO!\n"
 	.string "Stop!\p"
-	.string "Its mind was frozen with\n"
-	.string "anger, not ice.\p"
 	.string "GIOVANNI: The signal holds.\n"
-	.string "Fire.$"
+	.string "Fire.\p"
+	.string "A sphere of light gathered\n"
+	.string "before MEWTWO.$"
 
 Route7_Text_LoreleiRepeat::
 	.string "LORELEI: That is what I saw.\p"

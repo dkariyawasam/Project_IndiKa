@@ -50,21 +50,40 @@ SilphCo_11F_EventScript_GiovanniTriggerLeft::
 	goto SilphCo_11F_EventScript_BattleGiovanni
 	end
 
-SilphCo_11F_EventScript_GiovanniTriggerRight::
+SilphCo_11F_EventScript_GiovanniTriggerMiddle::
 	lockall
 	setvar VAR_TEMP_1, 1
 	goto SilphCo_11F_EventScript_BattleGiovanni
 	end
 
+SilphCo_11F_EventScript_GiovanniTriggerRight::
+	lockall
+	setvar VAR_TEMP_1, 2
+	goto SilphCo_11F_EventScript_BattleGiovanni
+	end
+
 SilphCo_11F_EventScript_BattleGiovanni::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox SilphCo_11F_Text_PresidentInterruptsGiovanni
+	msgbox SilphCo_11F_Text_GiovanniScoffs
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_SILPH_CO_GIOVANNI, Common_Movement_ExclamationMark
+	applymovement LOCALID_SILPH_CO_PRESIDENT, Common_Movement_ExclamationMark
+	applymovement LOCALID_SILPH_CO_SECRETARY, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
 	applymovement LOCALID_SILPH_CO_GIOVANNI, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	delay 25
+	delay 8
 	msgbox SilphCo_11F_Text_GiovanniIntro
 	closemessage
-	call_if_eq VAR_TEMP_1, 0, SilphCo_11F_EventScript_GiovanniApproachLeft
-	call_if_eq VAR_TEMP_1, 1, SilphCo_11F_EventScript_GiovanniApproachRight
+	call_if_eq VAR_TEMP_1, 0, SilphCo_11F_EventScript_PlayerApproachGiovanniLeft
+	call_if_eq VAR_TEMP_1, 1, SilphCo_11F_EventScript_PlayerApproachGiovanniMiddle
+	call_if_eq VAR_TEMP_1, 2, SilphCo_11F_EventScript_PlayerApproachGiovanniRight
+	msgbox SilphCo_11F_Text_GiovanniChallenge
+	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_SILPH_CO_GIOVANNI
 	trainerbattle_no_intro TRAINER_BOSS_GIOVANNI_2, SilphCo_11F_Text_GiovanniDefeat
 	apexlog APEX_LOG_PERSON_GIOVANNI, 3
@@ -87,38 +106,44 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	releaseall
 	end
 
-SilphCo_11F_EventScript_GiovanniApproachLeft::
-	applymovement LOCALID_SILPH_CO_GIOVANNI, SilphCo_11F_Movement_GiovanniApproachLeft
-	applymovement LOCALID_PLAYER, SilphCo_11F_Movement_PlayerFaceGiovanni
+SilphCo_11F_EventScript_PlayerApproachGiovanniLeft::
+	applymovement LOCALID_PLAYER, SilphCo_11F_Movement_PlayerApproachGiovanniLeft
 	waitmovement 0
 	return
 
-SilphCo_11F_EventScript_GiovanniApproachRight::
-	applymovement LOCALID_SILPH_CO_GIOVANNI, SilphCo_11F_Movement_GiovanniApproachRight
+SilphCo_11F_EventScript_PlayerApproachGiovanniMiddle::
+	applymovement LOCALID_PLAYER, SilphCo_11F_Movement_PlayerApproachGiovanniMiddle
 	waitmovement 0
 	return
 
-SilphCo_11F_Movement_GiovanniApproachLeft::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_in_place_faster_left
-	step_end
+SilphCo_11F_EventScript_PlayerApproachGiovanniRight::
+	applymovement LOCALID_PLAYER, SilphCo_11F_Movement_PlayerApproachGiovanniRight
+	waitmovement 0
+	return
 
-SilphCo_11F_Movement_GiovanniApproachRight::
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-SilphCo_11F_Movement_PlayerFaceGiovanni::
-	delay_16
-	delay_16
-	delay_16
-	delay_8
-	delay_4
+SilphCo_11F_Movement_PlayerApproachGiovanniLeft::
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
 	walk_in_place_faster_right
+	step_end
+
+SilphCo_11F_Movement_PlayerApproachGiovanniMiddle::
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_in_place_faster_right
+	step_end
+
+SilphCo_11F_Movement_PlayerApproachGiovanniRight::
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_in_place_faster_left
 	step_end
 
 @ Unused

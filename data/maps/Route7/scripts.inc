@@ -162,8 +162,8 @@ Route7_EventScript_ShowLoreleiFlashback::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	call Route7_EventScript_SetupLoreleiFlashbackScene
-	fadescreen FADE_FROM_BLACK
 	special ApplyFlashbackGreyscaleTint
+	fadescreen FADE_FROM_BLACK
 	delay 16
 	msgbox Route7_Text_LoreleiFlashback, MSGBOX_DEFAULT
 	playse SE_PIN
@@ -171,7 +171,13 @@ Route7_EventScript_ShowLoreleiFlashback::
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
 	delay 12
+	call Route7_EventScript_ChargeMewtwoEnergy
 	msgbox Route7_Text_LoreleiFlashbackBeam, MSGBOX_DEFAULT
+	playse SE_M_EXPLOSION
+	fadescreen FADE_TO_WHITE
+	delay 8
+	fadescreen FADE_FROM_WHITE
+	delay 8
 	fadescreen FADE_TO_BLACK
 	special RestoreFlashbackGreyscaleTint
 	call Route7_EventScript_RestoreAfterLoreleiFlashback
@@ -182,8 +188,8 @@ Route7_EventScript_ShowLoreleiFlashback::
 Route7_EventScript_ShowBrunoFlashback::
 	closemessage
 	fadescreen FADE_TO_BLACK
-	fadescreen FADE_FROM_BLACK
 	special ApplyFlashbackGreyscaleTint
+	fadescreen FADE_FROM_BLACK
 	msgbox Route7_Text_BrunoFlashback, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special RestoreFlashbackGreyscaleTint
@@ -194,8 +200,8 @@ Route7_EventScript_ShowBrunoFlashback::
 Route7_EventScript_ShowAgathaFlashback::
 	closemessage
 	fadescreen FADE_TO_BLACK
-	fadescreen FADE_FROM_BLACK
 	special ApplyFlashbackGreyscaleTint
+	fadescreen FADE_FROM_BLACK
 	msgbox Route7_Text_AgathaFlashback, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special RestoreFlashbackGreyscaleTint
@@ -206,8 +212,8 @@ Route7_EventScript_ShowAgathaFlashback::
 Route7_EventScript_ShowLanceFlashback::
 	closemessage
 	fadescreen FADE_TO_BLACK
-	fadescreen FADE_FROM_BLACK
 	special ApplyFlashbackGreyscaleTint
+	fadescreen FADE_FROM_BLACK
 	msgbox Route7_Text_LanceFlashback, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special RestoreFlashbackGreyscaleTint
@@ -229,28 +235,31 @@ Route7_EventScript_ReturnFromFlashbackCheck::
 
 Route7_EventScript_SetupLoreleiFlashbackScene::
 	call Route7_EventScript_RestoreBeamTrees
-	setobjectxyperm LOCALID_ROUTE7_AGATHA, 6, 57
-	setobjectxyperm LOCALID_ROUTE7_BRUNO, 8, 57
-	setobjectxyperm LOCALID_ROUTE7_LANCE, 7, 55
-	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 54
-	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 56
+	setobjectxyperm LOCALID_ROUTE7_LORELEI, 8, 58
+	setobjectxyperm LOCALID_ROUTE7_BRUNO, 9, 58
+	setobjectxyperm LOCALID_ROUTE7_AGATHA, 10, 58
+	setobjectxyperm LOCALID_ROUTE7_LANCE, 11, 58
+	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 61
+	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 62
 	clearflag FLAG_HIDE_ROUTE7_AGATHA
 	clearflag FLAG_HIDE_ROUTE7_BRUNO
 	clearflag FLAG_HIDE_ROUTE7_LORELEI
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
 	removeobject LOCALID_ROUTE7_LANCE
+	removeobject LOCALID_ROUTE7_LORELEI
 	removeobject LOCALID_ROUTE7_MEWTWO
 	removeobject LOCALID_ROUTE7_GIOVANNI
+	addobject LOCALID_ROUTE7_LORELEI
 	addobject LOCALID_ROUTE7_AGATHA
 	addobject LOCALID_ROUTE7_BRUNO
 	addobject LOCALID_ROUTE7_LANCE
 	addobject LOCALID_ROUTE7_MEWTWO
 	addobject LOCALID_ROUTE7_GIOVANNI
-	applymovement LOCALID_ROUTE7_AGATHA, Route7_Movement_FaceUp
-	applymovement LOCALID_ROUTE7_BRUNO, Route7_Movement_FaceUp
-	applymovement LOCALID_ROUTE7_LANCE, Route7_Movement_FaceUp
-	applymovement LOCALID_ROUTE7_LORELEI, Route7_Movement_FaceUp
+	applymovement LOCALID_ROUTE7_AGATHA, Route7_Movement_FaceDown
+	applymovement LOCALID_ROUTE7_BRUNO, Route7_Movement_FaceDown
+	applymovement LOCALID_ROUTE7_LANCE, Route7_Movement_FaceDown
+	applymovement LOCALID_ROUTE7_LORELEI, Route7_Movement_FaceDown
 	applymovement LOCALID_ROUTE7_MEWTWO, Route7_Movement_FaceUp
 	applymovement LOCALID_ROUTE7_GIOVANNI, Route7_Movement_FaceUp
 	waitmovement 0
@@ -261,18 +270,72 @@ Route7_EventScript_RestoreAfterLoreleiFlashback::
 	setobjectxyperm LOCALID_ROUTE7_AGATHA, 6, 27
 	setobjectxyperm LOCALID_ROUTE7_BRUNO, 14, 45
 	setobjectxyperm LOCALID_ROUTE7_LANCE, 9, 15
+	setobjectxyperm LOCALID_ROUTE7_LORELEI, 7, 56
 	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 14
 	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 15
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
 	removeobject LOCALID_ROUTE7_LANCE
+	removeobject LOCALID_ROUTE7_LORELEI
 	removeobject LOCALID_ROUTE7_MEWTWO
 	removeobject LOCALID_ROUTE7_GIOVANNI
 	addobject LOCALID_ROUTE7_AGATHA
 	addobject LOCALID_ROUTE7_BRUNO
 	addobject LOCALID_ROUTE7_LANCE
+	addobject LOCALID_ROUTE7_LORELEI
 	removeobject LOCALID_ROUTE7_MEWTWO
 	removeobject LOCALID_ROUTE7_GIOVANNI
+	return
+
+Route7_EventScript_ChargeMewtwoEnergy::
+	call Route7_EventScript_MewtwoPressureDust
+	setfieldeffectargument 0, 10
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	dofieldeffect FLDEFF_SPARKLE
+	delay 4
+	call Route7_EventScript_MewtwoPressureDust
+	setfieldeffectargument 0, 9
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	dofieldeffect FLDEFF_SPARKLE
+	delay 4
+	setfieldeffectargument 0, 11
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	dofieldeffect FLDEFF_SPARKLE
+	delay 4
+	call Route7_EventScript_MewtwoPressureDust
+	setfieldeffectargument 0, 10
+	setfieldeffectargument 1, 59
+	setfieldeffectargument 2, 1
+	dofieldeffect FLDEFF_SPARKLE
+	delay 8
+	setfieldeffectargument 0, 10
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	dofieldeffect FLDEFF_SPARKLE
+	delay 12
+	return
+
+Route7_EventScript_MewtwoPressureDust::
+	setfieldeffectargument 0, 9
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_DUST
+	delay 2
+	setfieldeffectargument 0, 11
+	setfieldeffectargument 1, 60
+	setfieldeffectargument 2, 1
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_DUST
+	delay 2
+	setfieldeffectargument 0, 10
+	setfieldeffectargument 1, 59
+	setfieldeffectargument 2, 1
+	setfieldeffectargument 3, 2
+	dofieldeffect FLDEFF_DUST
 	return
 
 Route7_EventScript_GiovanniChasesMewtwoTrigger::
@@ -320,6 +383,10 @@ Route7_Movement_GiovanniChasesMewtwo::
 
 Route7_Movement_FaceUp::
 	face_up
+	step_end
+
+Route7_Movement_FaceDown::
+	face_down
 	step_end
 
 Route7_EventScript_UndergroundPathSign::
