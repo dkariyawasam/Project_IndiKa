@@ -50,9 +50,21 @@ SilphCo_11F_Text_ThanksForRescuingUs::
     .string "We, from the PRESIDENT down,\n"
     .string "are indebted to you.$"
 
+SilphCo_11F_Text_PresidentInterruptsGiovanni::
+    .string "PRESIDENT: GIOVANNI, stop this!\p"
+    .string "The MASTER BALL was never meant\n"
+    .string "to enslave POKEMON.\p"
+    .string "If you force that power on MEWTWO,\n"
+    .string "you'll bring ruin on us all.$"
+
+SilphCo_11F_Text_GiovanniScoffs::
+    .string "GIOVANNI: Hmph.$"
+
 SilphCo_11F_Text_GiovanniIntro::
-    .string "GIOVANNI: So, you followed me\n"
-    .string "from CINNABAR.\p"
+    .string "GIOVANNI: You're the child from\n"
+    .string "POKEMON MANSION...\p"
+    .string "So, you followed me from\n"
+    .string "CINNABAR ISLAND.\p"
     .string "SILPH's MASTER BALL is no mere\n"
     .string "product.\p"
     .string "It is control made mechanical.\n"
@@ -60,7 +72,10 @@ SilphCo_11F_Text_GiovanniIntro::
     .string "With its plans, TEAM ROCKET will\n"
     .string "manufacture the means to reclaim\l"
     .string "MEWTWO.\p"
-    .string "Stand aside, {PLAYER}.\p"
+    .string "Come forth.\n"
+    .string "I'll deal with you now.$"
+
+SilphCo_11F_Text_GiovanniChallenge::
     .string "I will not allow sentiment to\n"
     .string "interrupt absolute power.$"
 
