@@ -16,6 +16,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SILPH_CO_PRESIDENT",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CIV_OLD_MAN_2",
       "x": 9,
@@ -30,6 +31,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SILPH_CO_SECRETARY",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CIV_WORKER_F",
       "x": 11,
@@ -130,7 +132,7 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 15,
+      "y": 12,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_SILPH_CO_11F",
       "var_value": "0",
@@ -139,7 +141,16 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 15,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_SILPH_CO_11F",
+      "var_value": "0",
+      "script": "SilphCo_11F_EventScript_GiovanniTriggerMiddle"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 12,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_SILPH_CO_11F",
       "var_value": "0",
