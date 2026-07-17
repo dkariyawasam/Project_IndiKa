@@ -18,6 +18,10 @@
 #include "battle_tower.h"
 #include "field_camera.h"
 #include "field_effect.h"
+#include "field_effect_helpers.h"
+#include "field_weather.h"
+#include "day_night.h"
+#include "event_object_lock.h"
 #include "event_object_movement.h"
 #include "menu_indicators.h"
 #include "random.h"
@@ -44,6 +48,18 @@
 #include "constants/flags.h"
 #include "constants/metatile_labels.h"
 
+#define TAG_MEWTWO_FLASHBACK_BEAM      0x1260
+#define PAL_TAG_MEWTWO_FLASHBACK_BEAM  0x1261
+#define TAG_MEWTWO_FLASHBACK_CIRCLE    0x1262
+#define PAL_TAG_MEWTWO_FLASHBACK_CIRCLE 0x1263
+#define MEWTWO_FLASHBACK_BEAM_SPRITE_COUNT 2
+#define FLASHBACK_BG_GREYSCALE_PALETTE_COUNT 13
+#define MEWTWO_FLASHBACK_EFFECT_X 10
+#define MEWTWO_FLASHBACK_EFFECT_Y 59
+#define MEWTWO_FLASHBACK_EFFECT_PRIORITY 1
+#define MEWTWO_FLASHBACK_CIRCLE_SCREEN_X 120
+#define MEWTWO_FLASHBACK_CIRCLE_SCREEN_Y 56
+
 static EWRAM_DATA u8 sElevatorCurrentFloorWindowId = 0;
 static EWRAM_DATA u16 sElevatorScroll = 0;
 static EWRAM_DATA u16 sElevatorCursorPos = 0;
@@ -51,11 +67,28 @@ static EWRAM_DATA struct ListMenuItem * sListMenuItems = NULL;
 static EWRAM_DATA u16 sListMenuLastScrollPosition = 0;
 static EWRAM_DATA u8 sPCBoxToSendMon = 0;
 static EWRAM_DATA u8 sBrailleTextCursorSpriteID = 0;
+static EWRAM_DATA u16 sFlashbackPaletteBackup[PLTT_BUFFER_SIZE] = {0};
+static EWRAM_DATA bool8 sFlashbackPaletteBackupValid = FALSE;
+static EWRAM_DATA u16 sFlashbackCameraFocusX = 0;
+static EWRAM_DATA u16 sFlashbackCameraFocusY = 0;
+static EWRAM_DATA bool8 sFlashbackCameraFocusValid = FALSE;
+static EWRAM_DATA s16 sFlashbackPlayerX = 0;
+static EWRAM_DATA s16 sFlashbackPlayerY = 0;
+static EWRAM_DATA u8 sFlashbackPlayerDirection = DIR_SOUTH;
+static EWRAM_DATA u16 sFlashbackPlayerTransitionFlags = PLAYER_AVATAR_FLAG_ON_FOOT;
+static EWRAM_DATA bool8 sFlashbackPlayerPositionValid = FALSE;
+static EWRAM_DATA bool8 sFlashbackSuppressTerrainEffects = FALSE;
+static EWRAM_DATA u8 sMewtwoFlashbackBeamSpriteIds[MEWTWO_FLASHBACK_BEAM_SPRITE_COUNT] = {MAX_SPRITES, MAX_SPRITES};
+static EWRAM_DATA u8 sMewtwoFlashbackChargeCircleSpriteId = MAX_SPRITES;
 
 COMMON_DATA struct ListMenuTemplate sFieldSpecialsListMenuTemplate = {0};
 COMMON_DATA u16 sFieldSpecialsListMenuScrollBuffer = 0;
 
 static void Task_AnimatePcTurnOn(u8 taskId);
+void HideMewtwoFlashbackBeam(void);
+void HoldFlashbackFadeWhite(void);
+void SuppressFlashbackPlayerGroundEffects(void);
+void RestoreFlashbackPlayerGroundEffects(void);
 static void PcTurnOnUpdateMetatileId(bool16 flag);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
@@ -79,7 +112,103 @@ static void ChangePokemonNickname_CB(void);
 static void Task_RunPokemonLeagueLightingEffect(u8 taskId);
 static void Task_CancelPokemonLeagueLightingEffect(u8 taskId);
 static void Task_WingFlapSound(u8 taskId);
+static void Task_MewtwoFlashbackSparkleLoop(u8 taskId);
+static void Task_RevealMewtwoFlashbackBeam(u8 taskId);
+static void SpawnMewtwoFlashbackSparkle(s16 x, s16 y, u8 priority);
+static void SpawnMewtwoFlashbackDust(s16 x, s16 y, u8 priority);
+void ShowMewtwoFlashbackChargeCircle(void);
+static void HideMewtwoFlashbackChargeCircle(void);
+static void RetintFlashbackEffectPalettes(void);
+static void TintFlashbackPaletteBuffer(u16 *palette);
+static void RestoreFlashbackFieldEffectPalettes(void);
+static void RestoreFlashbackFieldEffectPalette(const struct SpritePalette *spritePalette);
+static void WhitenFlashbackFieldEffectPalettes(void);
+static void WhitenFlashbackFieldEffectPalette(const struct SpritePalette *spritePalette);
+static bool8 IsFlashbackFieldEffectSprite(const struct Sprite *sprite);
+static void ClearFlashbackTerrainFieldEffects(void);
+static void CacheFlashbackPlayerPosition(void);
+static void RestoreFlashbackPlayerObjectEvents(void);
+static void ResetFlashbackPlayerGroundEffectState(struct ObjectEvent *playerObj, struct Sprite *playerSprite);
+static u16 GetFlashbackPlayerTransitionFlags(void);
 u8 GetPlayerAvatarBike(void);
+
+static const u16 sMewtwoFlashbackBeamGfx[] = INCBIN_U16("graphics/field_effects/pics/mewtwo_flashback_beam.4bpp");
+static const u16 sMewtwoFlashbackChargeCircleGfx[] = INCBIN_U16("graphics/battle_anims/sprites/bluegreen_orb.4bpp");
+static const u16 sMewtwoFlashbackChargeCirclePal[] = INCBIN_U16("graphics/battle_anims/sprites/bluegreen_orb.gbapal");
+static const u16 sMewtwoFlashbackBeamPal[] = {
+    RGB(0, 0, 0), RGB(5, 15, 23), RGB(12, 24, 29), RGB(22, 30, 31),
+    RGB(31, 31, 31), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0),
+    RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0),
+    RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0)
+};
+
+static const struct SpriteSheet sMewtwoFlashbackBeamSpriteSheet = {
+    .data = sMewtwoFlashbackBeamGfx,
+    .size = 0x400,
+    .tag = TAG_MEWTWO_FLASHBACK_BEAM
+};
+
+static const struct SpritePalette sMewtwoFlashbackBeamSpritePalette = {
+    .data = sMewtwoFlashbackBeamPal,
+    .tag = PAL_TAG_MEWTWO_FLASHBACK_BEAM
+};
+
+static const struct SpriteSheet sMewtwoFlashbackChargeCircleSpriteSheet = {
+    .data = sMewtwoFlashbackChargeCircleGfx,
+    .size = 0x80,
+    .tag = TAG_MEWTWO_FLASHBACK_CIRCLE
+};
+
+static const struct SpritePalette sMewtwoFlashbackChargeCircleSpritePalette = {
+    .data = sMewtwoFlashbackChargeCirclePal,
+    .tag = PAL_TAG_MEWTWO_FLASHBACK_CIRCLE
+};
+
+static const struct OamData sMewtwoFlashbackBeamOam = {
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x64),
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x64),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0
+};
+
+static const struct OamData sMewtwoFlashbackChargeCircleOam = {
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(16x16),
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(16x16),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0
+};
+
+static const struct SpriteTemplate sMewtwoFlashbackBeamTemplate = {
+    .tileTag = TAG_MEWTWO_FLASHBACK_BEAM,
+    .paletteTag = PAL_TAG_MEWTWO_FLASHBACK_BEAM,
+    .oam = &sMewtwoFlashbackBeamOam,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct SpriteTemplate sMewtwoFlashbackChargeCircleTemplate = {
+    .tileTag = TAG_MEWTWO_FLASHBACK_CIRCLE,
+    .paletteTag = PAL_TAG_MEWTWO_FLASHBACK_CIRCLE,
+    .oam = &sMewtwoFlashbackChargeCircleOam,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
 
 static u8 *const sStringVarPtrs[] = {
     gStringVar1,
@@ -330,6 +459,514 @@ void SpawnCameraObject(void)
     u8 objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER, 8, LOCALID_CAMERA, gSaveBlock1Ptr->pos.x + MAP_OFFSET, gSaveBlock1Ptr->pos.y + MAP_OFFSET, 3);
     gObjectEvents[objectEventId].invisible = TRUE;
     CameraObjectSetFollowedObjectId(gObjectEvents[objectEventId].spriteId);
+}
+
+void SetFlashbackCameraToCoords(void)
+{
+    u8 objectEventId;
+    u16 focusX = gSpecialVar_0x8004 + MAP_OFFSET;
+    u16 focusY = gSpecialVar_0x8005 + MAP_OFFSET;
+
+    ClearFlashbackTerrainFieldEffects();
+    HideMewtwoFlashbackBeam();
+    CacheFlashbackPlayerPosition();
+    GetCameraFocusCoords(&sFlashbackCameraFocusX, &sFlashbackCameraFocusY);
+    sFlashbackCameraFocusValid = TRUE;
+    ResetCameraUpdateInfo();
+
+    SetCameraFocusCoords(focusX, focusY);
+    DrawWholeMapView();
+
+    objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER, 8, LOCALID_CAMERA, focusX, focusY, 3);
+    if (objectEventId != OBJECT_EVENTS_COUNT)
+    {
+        gObjectEvents[objectEventId].invisible = TRUE;
+        gSprites[gObjectEvents[objectEventId].spriteId].invisible = TRUE;
+        CameraObjectSetFollowedObjectId(gObjectEvents[objectEventId].spriteId);
+    }
+
+    ClearFlashbackTerrainFieldEffects();
+}
+
+void RestoreFlashbackCamera(void)
+{
+    ClearFlashbackTerrainFieldEffects();
+    HideMewtwoFlashbackBeam();
+    CameraObjectSetFollowedObjectId(GetPlayerAvatarObjectId());
+    RemoveObjectEventByLocalIdAndMap(LOCALID_CAMERA, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+
+    if (sFlashbackCameraFocusValid)
+    {
+        SetCameraFocusCoords(sFlashbackCameraFocusX, sFlashbackCameraFocusY);
+        sFlashbackCameraFocusValid = FALSE;
+    }
+
+    ResetCameraUpdateInfo();
+    RestoreFlashbackPlayerObjectEvents();
+    DrawWholeMapView();
+    CameraObjectSetFollowedObjectId(GetPlayerAvatarObjectId());
+    CameraObjectReset1();
+    RestoreFlashbackFieldEffectPalettes();
+}
+
+static void RestoreFlashbackPlayerObjectEvents(void)
+{
+    struct ObjectEvent *playerObj = NULL;
+
+    if (sFlashbackPlayerPositionValid)
+    {
+        if (gPlayerAvatar.objectEventId < OBJECT_EVENTS_COUNT)
+        {
+            struct ObjectEvent *oldPlayerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+            if (oldPlayerObj->spriteId < MAX_SPRITES && gSprites[oldPlayerObj->spriteId].inUse)
+                DestroySprite(&gSprites[oldPlayerObj->spriteId]);
+
+            oldPlayerObj->active = FALSE;
+            oldPlayerObj->isPlayer = FALSE;
+        }
+
+        ClearPlayerAvatarInfo();
+        InitPlayerAvatar(sFlashbackPlayerX, sFlashbackPlayerY, sFlashbackPlayerDirection, gSaveBlock2Ptr->playerGender);
+    }
+
+    if (gPlayerAvatar.objectEventId < OBJECT_EVENTS_COUNT)
+    {
+        u8 metatileBehavior;
+
+        playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+        metatileBehavior = MapGridGetMetatileBehaviorAt(playerObj->currentCoords.x, playerObj->currentCoords.y);
+        playerObj->previousCoords = playerObj->currentCoords;
+        playerObj->currentMetatileBehavior = metatileBehavior;
+        playerObj->previousMetatileBehavior = metatileBehavior;
+    }
+
+    SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | sFlashbackPlayerTransitionFlags);
+
+    if (gPlayerAvatar.spriteId < MAX_SPRITES)
+    {
+        InitCameraUpdateCallback(gPlayerAvatar.spriteId);
+        CameraObjectSetFollowedObjectId(gPlayerAvatar.spriteId);
+        SetPlayerInvisibility(FALSE);
+        gSprites[gPlayerAvatar.spriteId].invisible = FALSE;
+        gSprites[gPlayerAvatar.spriteId].coordOffsetEnabled = TRUE;
+        gSprites[gPlayerAvatar.spriteId].x2 = 0;
+        gSprites[gPlayerAvatar.spriteId].y2 = 0;
+        if (playerObj != NULL)
+            ResetFlashbackPlayerGroundEffectState(playerObj, &gSprites[gPlayerAvatar.spriteId]);
+        CameraObjectReset1();
+    }
+
+    sFlashbackPlayerPositionValid = FALSE;
+    ClearPlayerHeldMovementAndUnfreezeObjectEvents();
+    UnlockPlayerFieldControls();
+}
+
+static void ResetFlashbackPlayerGroundEffectState(struct ObjectEvent *playerObj, struct Sprite *playerSprite)
+{
+    static const u8 sDefaultSubspriteTableByElevation[] = {
+        1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 0, 1,
+    };
+    const struct ObjectEventGraphicsInfo *graphicsInfo = GetObjectEventGraphicsInfo(playerObj->graphicsId);
+    u8 elevation = playerObj->previousElevation;
+
+    playerObj->singleMovementActive = FALSE;
+    playerObj->triggerGroundEffectsOnMove = TRUE;
+    playerObj->triggerGroundEffectsOnStop = TRUE;
+    playerObj->disableCoveringGroundEffects = FALSE;
+    playerObj->hasShadow = FALSE;
+    playerObj->hasReflection = FALSE;
+    playerObj->inShortGrass = FALSE;
+    playerObj->inShallowFlowingWater = FALSE;
+    playerObj->inSandPile = FALSE;
+    playerObj->inHotSprings = FALSE;
+    ObjectEventClearHeldMovement(playerObj);
+
+    if (elevation >= NELEMS(sDefaultSubspriteTableByElevation))
+        elevation = 0;
+
+    if (graphicsInfo->subspriteTables != NULL)
+    {
+        SetSubspriteTables(playerSprite, graphicsInfo->subspriteTables);
+        playerSprite->subspriteMode = SUBSPRITES_IGNORE_PRIORITY;
+        playerSprite->subspriteTableNum = sDefaultSubspriteTableByElevation[elevation];
+    }
+    else
+    {
+        playerSprite->subspriteMode = SUBSPRITES_OFF;
+        playerSprite->subspriteTableNum = 0;
+    }
+}
+
+static void CacheFlashbackPlayerPosition(void)
+{
+    struct ObjectEvent *playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+    sFlashbackPlayerX = playerObj->currentCoords.x;
+    sFlashbackPlayerY = playerObj->currentCoords.y;
+    sFlashbackPlayerDirection = playerObj->facingDirection;
+    sFlashbackPlayerTransitionFlags = GetFlashbackPlayerTransitionFlags();
+    sFlashbackPlayerPositionValid = TRUE;
+}
+
+static u16 GetFlashbackPlayerTransitionFlags(void)
+{
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE))
+        return PLAYER_AVATAR_FLAG_MACH_BIKE;
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
+        return PLAYER_AVATAR_FLAG_ACRO_BIKE;
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        return PLAYER_AVATAR_FLAG_SURFING;
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_UNDERWATER))
+        return PLAYER_AVATAR_FLAG_UNDERWATER;
+    return PLAYER_AVATAR_FLAG_ON_FOOT;
+}
+
+static void ClearFlashbackTerrainFieldEffects(void)
+{
+    u8 i;
+
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        if (!gSprites[i].inUse)
+            continue;
+
+        if (gSprites[i].callback == UpdateTallGrassFieldEffect)
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], FLDEFF_TALL_GRASS);
+        }
+        else if (gSprites[i].callback == UpdateLongGrassFieldEffect)
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], FLDEFF_LONG_GRASS);
+        }
+        else if (gSprites[i].callback == UpdateShortGrassFieldEffect)
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], FLDEFF_SHORT_GRASS);
+        }
+        else if (gSprites[i].callback == UpdateShadowFieldEffect
+              && gSprites[i].data[0] == LOCALID_PLAYER)
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], FLDEFF_SHADOW);
+        }
+        else if (gSprites[i].callback == UpdateJumpImpactEffect
+              && (gSprites[i].data[1] == FLDEFF_JUMP_TALL_GRASS
+               || gSprites[i].data[1] == FLDEFF_JUMP_LONG_GRASS
+               || gSprites[i].data[1] == FLDEFF_DUST))
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], gSprites[i].data[1]);
+        }
+        else if (gSprites[i].callback == UpdateSparkleFieldEffect)
+        {
+            gSprites[i].invisible = TRUE;
+            FieldEffectStop(&gSprites[i], FLDEFF_SPARKLE);
+        }
+        else if (IsFlashbackFieldEffectSprite(&gSprites[i]))
+        {
+            gSprites[i].invisible = TRUE;
+        }
+    }
+
+    FieldEffectActiveListRemove(FLDEFF_JUMP_TALL_GRASS);
+    FieldEffectActiveListRemove(FLDEFF_JUMP_LONG_GRASS);
+    FieldEffectActiveListRemove(FLDEFF_DUST);
+    FieldEffectActiveListRemove(FLDEFF_SPARKLE);
+    FieldEffectActiveListRemove(FLDEFF_TALL_GRASS);
+    FieldEffectActiveListRemove(FLDEFF_LONG_GRASS);
+    FieldEffectActiveListRemove(FLDEFF_SHORT_GRASS);
+    FieldEffectActiveListRemove(FLDEFF_SHADOW);
+}
+
+static bool8 IsFlashbackFieldEffectSprite(const struct Sprite *sprite)
+{
+    u8 general0Slot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_GENERAL_0);
+    u8 general1Slot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_GENERAL_1);
+
+    return (general0Slot != 0xFF && sprite->oam.paletteNum == general0Slot)
+        || (general1Slot != 0xFF && sprite->oam.paletteNum == general1Slot);
+}
+
+static void SpawnMewtwoFlashbackSparkle(s16 x, s16 y, u8 priority)
+{
+    gFieldEffectArguments[0] = x;
+    gFieldEffectArguments[1] = y;
+    gFieldEffectArguments[2] = priority;
+    FieldEffectStart(FLDEFF_SPARKLE);
+    RetintFlashbackEffectPalettes();
+}
+
+static void SpawnMewtwoFlashbackDust(s16 x, s16 y, u8 priority)
+{
+    gFieldEffectArguments[0] = x;
+    gFieldEffectArguments[1] = y;
+    gFieldEffectArguments[2] = priority;
+    gFieldEffectArguments[3] = 1;
+    FieldEffectStart(FLDEFF_DUST);
+    RetintFlashbackEffectPalettes();
+}
+
+static void RetintFlashbackEffectPalettes(void)
+{
+    if (sFlashbackPaletteBackupValid)
+    {
+        TintFlashbackPaletteBuffer(gPlttBufferUnfaded);
+        TintFlashbackPaletteBuffer(gPlttBufferFaded);
+    }
+}
+
+static void TintFlashbackPaletteBuffer(u16 *palette)
+{
+    TintPalette_GrayScale(&palette[BG_PLTT_ID(0)], FLASHBACK_BG_GREYSCALE_PALETTE_COUNT * 16);
+    TintPalette_GrayScale(&palette[OBJ_PLTT_ID(0)], OBJ_PLTT_SIZE / sizeof(u16));
+}
+
+static void RestoreFlashbackFieldEffectPalettes(void)
+{
+    RestoreFlashbackFieldEffectPalette(&gSpritePalette_GeneralFieldEffect0);
+    RestoreFlashbackFieldEffectPalette(&gSpritePalette_GeneralFieldEffect1);
+}
+
+static void RestoreFlashbackFieldEffectPalette(const struct SpritePalette *spritePalette)
+{
+    u8 paletteSlot = IndexOfSpritePaletteTag(spritePalette->tag);
+    u16 paletteOffset;
+
+    if (paletteSlot == 0xFF)
+        return;
+
+    paletteOffset = OBJ_PLTT_ID(paletteSlot);
+    CpuFastCopy(spritePalette->data, &gPlttBufferUnfaded[paletteOffset], PLTT_SIZE_4BPP);
+    CpuFastCopy(spritePalette->data, &gPlttBufferFaded[paletteOffset], PLTT_SIZE_4BPP);
+    ApplyGlobalFieldPaletteTint(paletteSlot);
+    UpdateSpritePaletteWithWeather(paletteSlot);
+    if (spritePalette->tag == FLDEFF_PAL_TAG_GENERAL_0)
+        ApplyNightTintToSandFootprintsEffect();
+    else if (spritePalette->tag == FLDEFF_PAL_TAG_GENERAL_1)
+        ApplyNightTintToTallGrassEffect();
+    CpuFastCopy(&gPlttBufferFaded[paletteOffset], (void *)(OBJ_PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
+}
+
+static void WhitenFlashbackFieldEffectPalettes(void)
+{
+    WhitenFlashbackFieldEffectPalette(&gSpritePalette_GeneralFieldEffect0);
+    WhitenFlashbackFieldEffectPalette(&gSpritePalette_GeneralFieldEffect1);
+}
+
+static void WhitenFlashbackFieldEffectPalette(const struct SpritePalette *spritePalette)
+{
+    u8 paletteSlot = IndexOfSpritePaletteTag(spritePalette->tag);
+    u16 paletteOffset;
+
+    if (paletteSlot == 0xFF)
+        return;
+
+    paletteOffset = OBJ_PLTT_ID(paletteSlot);
+    CpuFastFill16(RGB_WHITE, &gPlttBufferUnfaded[paletteOffset], PLTT_SIZE_4BPP);
+    CpuFastFill16(RGB_WHITE, &gPlttBufferFaded[paletteOffset], PLTT_SIZE_4BPP);
+    CpuFastFill16(RGB_WHITE, (void *)(OBJ_PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
+}
+
+void StartMewtwoFlashbackSparkleLoop(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_MewtwoFlashbackSparkleLoop);
+
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
+
+    taskId = CreateTask(Task_MewtwoFlashbackSparkleLoop, 8);
+    gTasks[taskId].data[0] = 0;
+    gTasks[taskId].data[1] = MEWTWO_FLASHBACK_EFFECT_X;
+    gTasks[taskId].data[2] = MEWTWO_FLASHBACK_EFFECT_Y;
+    gTasks[taskId].data[3] = MEWTWO_FLASHBACK_EFFECT_PRIORITY;
+    gTasks[taskId].data[4] = 48;
+    SpawnMewtwoFlashbackSparkle(gTasks[taskId].data[1], gTasks[taskId].data[2], gTasks[taskId].data[3]);
+    SpawnMewtwoFlashbackDust(gTasks[taskId].data[1], gTasks[taskId].data[2], gTasks[taskId].data[3]);
+}
+
+void AccelerateMewtwoFlashbackSparkleLoop(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_MewtwoFlashbackSparkleLoop);
+
+    if (taskId != TASK_NONE)
+    {
+        gTasks[taskId].data[0] = 0;
+        gTasks[taskId].data[4] = 16;
+        SpawnMewtwoFlashbackSparkle(gTasks[taskId].data[1], gTasks[taskId].data[2], gTasks[taskId].data[3]);
+        SpawnMewtwoFlashbackDust(gTasks[taskId].data[1], gTasks[taskId].data[2], gTasks[taskId].data[3]);
+    }
+}
+
+void StopMewtwoFlashbackSparkleLoop(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_MewtwoFlashbackSparkleLoop);
+
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
+}
+
+void ShowMewtwoFlashbackChargeCircle(void)
+{
+    HideMewtwoFlashbackChargeCircle();
+    LoadSpriteSheet(&sMewtwoFlashbackChargeCircleSpriteSheet);
+    LoadSpritePalette(&sMewtwoFlashbackChargeCircleSpritePalette);
+
+    sMewtwoFlashbackChargeCircleSpriteId = CreateSprite(&sMewtwoFlashbackChargeCircleTemplate,
+                                                        MEWTWO_FLASHBACK_CIRCLE_SCREEN_X,
+                                                        MEWTWO_FLASHBACK_CIRCLE_SCREEN_Y,
+                                                        0);
+    if (sMewtwoFlashbackChargeCircleSpriteId != MAX_SPRITES)
+        gSprites[sMewtwoFlashbackChargeCircleSpriteId].oam.priority = 0;
+
+    RetintFlashbackEffectPalettes();
+}
+
+static void HideMewtwoFlashbackChargeCircle(void)
+{
+    if (sMewtwoFlashbackChargeCircleSpriteId != MAX_SPRITES)
+    {
+        DestroySprite(&gSprites[sMewtwoFlashbackChargeCircleSpriteId]);
+        sMewtwoFlashbackChargeCircleSpriteId = MAX_SPRITES;
+    }
+    FreeSpriteTilesByTag(TAG_MEWTWO_FLASHBACK_CIRCLE);
+    FreeSpritePaletteByTag(PAL_TAG_MEWTWO_FLASHBACK_CIRCLE);
+}
+
+void ShowMewtwoFlashbackBeam(void)
+{
+    u8 i;
+
+    HideMewtwoFlashbackBeam();
+    LoadSpriteSheet(&sMewtwoFlashbackBeamSpriteSheet);
+    LoadSpritePalette(&sMewtwoFlashbackBeamSpritePalette);
+
+    for (i = 0; i < MEWTWO_FLASHBACK_BEAM_SPRITE_COUNT; i++)
+    {
+        sMewtwoFlashbackBeamSpriteIds[i] = CreateSprite(&sMewtwoFlashbackBeamTemplate, 120, 24 - i * 64, 0);
+        if (sMewtwoFlashbackBeamSpriteIds[i] != MAX_SPRITES)
+        {
+            gSprites[sMewtwoFlashbackBeamSpriteIds[i]].oam.priority = 0;
+            gSprites[sMewtwoFlashbackBeamSpriteIds[i]].invisible = TRUE;
+        }
+    }
+    ShowMewtwoFlashbackChargeCircle();
+    RetintFlashbackEffectPalettes();
+    CreateTask(Task_RevealMewtwoFlashbackBeam, 8);
+}
+
+void HideMewtwoFlashbackBeam(void)
+{
+    u8 i;
+    u8 taskId = FindTaskIdByFunc(Task_RevealMewtwoFlashbackBeam);
+
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
+
+    for (i = 0; i < MEWTWO_FLASHBACK_BEAM_SPRITE_COUNT; i++)
+    {
+        if (sMewtwoFlashbackBeamSpriteIds[i] != MAX_SPRITES)
+        {
+            DestroySprite(&gSprites[sMewtwoFlashbackBeamSpriteIds[i]]);
+            sMewtwoFlashbackBeamSpriteIds[i] = MAX_SPRITES;
+        }
+    }
+    FreeSpriteTilesByTag(TAG_MEWTWO_FLASHBACK_BEAM);
+    FreeSpritePaletteByTag(PAL_TAG_MEWTWO_FLASHBACK_BEAM);
+    HideMewtwoFlashbackChargeCircle();
+}
+
+void HoldFlashbackFadeWhite(void)
+{
+    ClearFlashbackTerrainFieldEffects();
+    WhitenFlashbackFieldEffectPalettes();
+    CpuFastFill16(RGB_WHITE, gPlttBufferFaded, PLTT_SIZE);
+    CpuFastFill16(RGB_WHITE, (void *)PLTT, PLTT_SIZE);
+}
+
+void SuppressFlashbackPlayerGroundEffects(void)
+{
+    u8 i;
+
+    sFlashbackSuppressTerrainEffects = TRUE;
+    WhitenFlashbackFieldEffectPalettes();
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (!gObjectEvents[i].active)
+            continue;
+
+        gObjectEvents[i].triggerGroundEffectsOnMove = FALSE;
+        gObjectEvents[i].triggerGroundEffectsOnStop = FALSE;
+        gObjectEvents[i].disableCoveringGroundEffects = TRUE;
+        gObjectEvents[i].inShortGrass = FALSE;
+        gObjectEvents[i].inShallowFlowingWater = FALSE;
+        gObjectEvents[i].inSandPile = FALSE;
+        gObjectEvents[i].inHotSprings = FALSE;
+    }
+
+    ClearFlashbackTerrainFieldEffects();
+}
+
+void RestoreFlashbackPlayerGroundEffects(void)
+{
+    u8 i;
+
+    ClearFlashbackTerrainFieldEffects();
+    RestoreFlashbackFieldEffectPalettes();
+    sFlashbackSuppressTerrainEffects = FALSE;
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (!gObjectEvents[i].active)
+            continue;
+
+        gObjectEvents[i].triggerGroundEffectsOnMove = TRUE;
+        gObjectEvents[i].triggerGroundEffectsOnStop = TRUE;
+        gObjectEvents[i].disableCoveringGroundEffects = FALSE;
+    }
+}
+
+bool8 AreFlashbackTerrainFieldEffectsSuppressed(void)
+{
+    return sFlashbackSuppressTerrainEffects;
+}
+
+static void Task_RevealMewtwoFlashbackBeam(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 spriteId;
+
+    if (data[0] == 0)
+    {
+        spriteId = sMewtwoFlashbackBeamSpriteIds[0];
+        if (spriteId != MAX_SPRITES)
+            gSprites[spriteId].invisible = FALSE;
+    }
+    else if (data[0] == 4)
+    {
+        spriteId = sMewtwoFlashbackBeamSpriteIds[1];
+        if (spriteId != MAX_SPRITES)
+            gSprites[spriteId].invisible = FALSE;
+        DestroyTask(taskId);
+        return;
+    }
+
+    data[0]++;
+}
+
+static void Task_MewtwoFlashbackSparkleLoop(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (++data[0] >= data[4])
+    {
+        data[0] = 0;
+        SpawnMewtwoFlashbackSparkle(data[1], data[2], data[3]);
+        SpawnMewtwoFlashbackDust(data[1], data[2], data[3]);
+    }
 }
 
 void RemoveCameraObject(void)
@@ -2083,11 +2720,21 @@ static void Task_WingFlapSound(u8 taskId)
 
 void ApplyFlashbackGreyscaleTint(void)
 {
+    CpuFastCopy(gPlttBufferUnfaded, sFlashbackPaletteBackup, PLTT_SIZE);
+    sFlashbackPaletteBackupValid = TRUE;
+
+    TintFlashbackPaletteBuffer(gPlttBufferUnfaded);
     CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_SIZE);
-    TintPalette_GrayScale(gPlttBufferFaded, PLTT_BUFFER_SIZE);
 }
 
 void RestoreFlashbackGreyscaleTint(void)
 {
-    CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_SIZE);
+    if (sFlashbackPaletteBackupValid)
+    {
+        CpuFastCopy(sFlashbackPaletteBackup, gPlttBufferUnfaded, PLTT_SIZE);
+        sFlashbackPaletteBackupValid = FALSE;
+    }
+
+    RestoreFlashbackFieldEffectPalettes();
+    HoldFlashbackFadeWhite();
 }

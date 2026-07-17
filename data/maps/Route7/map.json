@@ -118,11 +118,11 @@
       "flag": "FLAG_HIDE_ROUTE7_BRUNO"
     },
     {
-      "local_id": "LOCALID_ROUTE7_LANCE",
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_LANCE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LANCE",
-      "x": 9,
-      "y": 15,
+      "x": 4,
+      "y": 1,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -130,7 +130,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route7_EventScript_LanceAftermath",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_LANCE"
     },
     {
       "local_id": "LOCALID_ROUTE7_LORELEI",
@@ -148,11 +148,11 @@
       "flag": "FLAG_HIDE_ROUTE7_LORELEI"
     },
     {
-      "local_id": "LOCALID_ROUTE7_MEWTWO",
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_LORELEI",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MEWTWO",
-      "x": 10,
-      "y": 14,
+      "graphics_id": "OBJ_EVENT_GFX_LORELEI",
+      "x": 1,
+      "y": 1,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -160,14 +160,14 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_LORELEI"
     },
     {
-      "local_id": "LOCALID_ROUTE7_GIOVANNI",
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_MEWTWO",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
-      "x": 10,
-      "y": 15,
+      "graphics_id": "OBJ_EVENT_GFX_MEWTWO",
+      "x": 2,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -175,7 +175,52 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_GIOVANNI",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_BRUNO",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BRUNO",
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_BRUNO"
+    },
+    {
+      "local_id": "LOCALID_ROUTE7_FLASHBACK_AGATHA",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_AGATHA",
+      "x": 3,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ROUTE7_FLASHBACK_AGATHA"
     }
   ],
   "warp_events": [
@@ -194,44 +239,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 16,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
-      "var_value": "0",
-      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 16,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
-      "var_value": "0",
-      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 16,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
-      "var_value": "0",
-      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 16,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE7_RAMPAGE",
-      "var_value": "0",
-      "script": "Route7_EventScript_GiovanniChasesMewtwoTrigger"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
