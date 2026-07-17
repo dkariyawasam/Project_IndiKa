@@ -501,6 +501,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_ROCKET_PETREL               0x1138
 #define OBJ_EVENT_PAL_TAG_LASS                        0x1139
 #define OBJ_EVENT_PAL_TAG_GENTLEMAN                   0x113A
+#define OBJ_EVENT_PAL_TAG_MEWTWO                      0x113B
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -545,6 +546,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Osscythe,                OBJ_EVENT_PAL_TAG_OSSCYTHE},
     {gObjectEventPal_Annihilape,              OBJ_EVENT_PAL_TAG_ANNIHILAPE},
     {gObjectEventPal_MimeSr,                  OBJ_EVENT_PAL_TAG_MIME_SR},
+    {gObjectEventPal_Mewtwo,                  OBJ_EVENT_PAL_TAG_MEWTWO},
     {gObjectEventPal_Rival,                   OBJ_EVENT_PAL_TAG_RIVAL},
     {gObjectEventPal_RichBoy,                 OBJ_EVENT_PAL_TAG_RICH_BOY},
     {gObjectEventPal_Burglar,                 OBJ_EVENT_PAL_TAG_BURGLAR},
@@ -1590,6 +1592,18 @@ void RemoveObjectEventByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
         FlagSet(GetObjectEventFlagIdByObjectEventId(objectEventId));
         RemoveObjectEvent(&gObjectEvents[objectEventId]);
     }
+}
+
+void RemoveAllActiveObjectEventsWithoutSettingFlags(void)
+{
+    u8 i;
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (gObjectEvents[i].active)
+            RemoveObjectEvent(&gObjectEvents[i]);
+    }
+    ClearPlayerAvatarInfo();
 }
 
 static void RemoveObjectEventInternal(struct ObjectEvent *objectEvent)
