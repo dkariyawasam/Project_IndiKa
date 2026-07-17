@@ -8,6 +8,7 @@ void SetPlayerAvatarExtraStateTransition(u8, u8);
 u8 GetPlayerAvatarGenderByGraphicsId(u8);
 bool8 TestPlayerAvatarFlags(u8);
 void PlayerGetDestCoords(s16 *, s16 *);
+void MovePlayerToMapCoords(s16 x, s16 y);
 u8 GetPlayerFacingDirection(void);
 u8 GetPlayerMovementDirection(void);
 u8 PlayerGetCopyableMovement(void);

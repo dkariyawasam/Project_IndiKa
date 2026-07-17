@@ -267,6 +267,9 @@ u32 FldEff_TallGrass(void)
     u8 spriteId;
     struct Sprite *sprite;
 
+    if (AreFlashbackTerrainFieldEffectsSuppressed())
+        return 0;
+
     x = gFieldEffectArguments[0];
     y = gFieldEffectArguments[1];
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
@@ -313,7 +316,7 @@ void UpdateTallGrassFieldEffect(struct Sprite *sprite)
     mapNum = sprite->data[3];
     mapGroup = sprite->data[4];
     metatileBehavior = MapGridGetMetatileBehaviorAt(sprite->data[1], sprite->data[2]);
-    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !MetatileBehavior_IsTallGrass(metatileBehavior) || (sprite->data[7] && sprite->animEnded))
+    if (AreFlashbackTerrainFieldEffectsSuppressed() || TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !MetatileBehavior_IsTallGrass(metatileBehavior) || (sprite->data[7] && sprite->animEnded))
     {
         FieldEffectStop(sprite, FLDEFF_TALL_GRASS);
     }
@@ -337,6 +340,9 @@ u32 FldEff_JumpTallGrass(void)
 {
     u8 spriteId;
     struct Sprite *sprite;
+
+    if (AreFlashbackTerrainFieldEffectsSuppressed())
+        return 0;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 12);
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_JUMP_TALL_GRASS], gFieldEffectArguments[0], gFieldEffectArguments[1], 0);
@@ -375,6 +381,9 @@ u32 FldEff_LongGrass(void)
     s16 y;
     u8 spriteId;
     struct Sprite *sprite;
+
+    if (AreFlashbackTerrainFieldEffectsSuppressed())
+        return 0;
 
     x = gFieldEffectArguments[0];
     y = gFieldEffectArguments[1];
@@ -420,7 +429,7 @@ void UpdateLongGrassFieldEffect(struct Sprite *sprite)
     mapNum = sprite->data[3];
     mapGroup = sprite->data[4];
     metatileBehavior = MapGridGetMetatileBehaviorAt(sprite->data[1], sprite->data[2]);
-    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !MetatileBehavior_IsLongGrass(metatileBehavior) || (sprite->data[7] && sprite->animEnded))
+    if (AreFlashbackTerrainFieldEffectsSuppressed() || TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !MetatileBehavior_IsLongGrass(metatileBehavior) || (sprite->data[7] && sprite->animEnded))
     {
         FieldEffectStop(sprite, FLDEFF_LONG_GRASS);
     }
@@ -441,6 +450,9 @@ u32 FldEff_JumpLongGrass(void)
     u8 spriteId;
     struct Sprite *sprite;
 
+    if (AreFlashbackTerrainFieldEffectsSuppressed())
+        return 0;
+
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_JUMP_LONG_GRASS], gFieldEffectArguments[0], gFieldEffectArguments[1], 0);
     if (spriteId != MAX_SPRITES)
@@ -460,6 +472,9 @@ u32 FldEff_ShortGrass(void)
     struct ObjectEvent * objectEvent;
     u8 spriteId;
     struct Sprite *sprite;
+
+    if (AreFlashbackTerrainFieldEffectsSuppressed())
+        return 0;
 
     objectEventId = GetObjectEventIdByLocalIdAndMap(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     objectEvent = &gObjectEvents[objectEventId];
@@ -486,7 +501,7 @@ void UpdateShortGrassFieldEffect(struct Sprite *sprite)
     const struct ObjectEventGraphicsInfo * graphicsInfo;
     struct Sprite *linkedSprite;
 
-    if (TryGetObjectEventIdByLocalIdAndMap(sprite->data[0], sprite->data[1], sprite->data[2], &objectEventId) || !gObjectEvents[objectEventId].inShortGrass)
+    if (AreFlashbackTerrainFieldEffectsSuppressed() || TryGetObjectEventIdByLocalIdAndMap(sprite->data[0], sprite->data[1], sprite->data[2], &objectEventId) || !gObjectEvents[objectEventId].inShortGrass)
     {
         FieldEffectStop(sprite, FLDEFF_SHORT_GRASS);
     }

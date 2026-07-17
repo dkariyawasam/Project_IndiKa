@@ -10,18 +10,17 @@ Route7_Text_LoreleiAftermath::
 	.string "At first.$"
 
 Route7_Text_LoreleiFlashback::
-	.string "LORELEI remembered...\p"
 	.string "GIOVANNI: MEWTWO.\p"
 	.string "Destroy the ELITE FOUR.\n"
 	.string "Show them perfected power.$"
 
-Route7_Text_LoreleiFlashbackBeam::
+Route7_Text_LoreleiFlashbackFire::
 	.string "LORELEI: MEWTWO!\n"
-	.string "Stop!\p"
+	.string "Stop!$"
+
+Route7_Text_LoreleiFlashbackSignal::
 	.string "GIOVANNI: The signal holds.\n"
-	.string "Fire.\p"
-	.string "A sphere of light gathered\n"
-	.string "before MEWTWO.$"
+	.string "Fire.$"
 
 Route7_Text_LoreleiRepeat::
 	.string "LORELEI: That is what I saw.\p"
@@ -35,7 +34,6 @@ Route7_Text_BrunoAftermath::
 	.string "I was mist.$"
 
 Route7_Text_BrunoFlashback::
-	.string "BRUNO remembered...\p"
 	.string "BRUNO: Hah!\n"
 	.string "Then strike me!\p"
 	.string "MEWTWO raised one hand.\p"
@@ -54,7 +52,6 @@ Route7_Text_AgathaAftermath::
 	.string "Always the same mistake.$"
 
 Route7_Text_AgathaFlashback::
-	.string "AGATHA remembered...\p"
 	.string "AGATHA: You don't command\n"
 	.string "a spirit like that.\p"
 	.string "GIOVANNI: It is not spirit.\n"
@@ -71,7 +68,6 @@ Route7_Text_LanceAftermath::
 	.string "itself.$"
 
 Route7_Text_LanceFlashback::
-	.string "LANCE remembered...\p"
 	.string "LANCE: GIOVANNI!\n"
 	.string "Release it!\p"
 	.string "MEWTWO: GYAAOOO!\p"

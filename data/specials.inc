@@ -295,6 +295,20 @@ gSpecials::
 	def_special AnimateElevator
 	def_special NullFieldSpecial  @ ShowGlassWorkshopMenu
 	def_special SpawnCameraObject
+	def_special SetFlashbackCameraToCoords
+	def_special RestoreFlashbackCamera
+	def_special SuppressFlashbackPlayerGroundEffects
+	def_special RestoreFlashbackPlayerGroundEffects
+	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
+	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
+	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
+	def_special StartMewtwoFlashbackSparkleLoop
+	def_special AccelerateMewtwoFlashbackSparkleLoop
+	def_special StopMewtwoFlashbackSparkleLoop
+	def_special ShowMewtwoFlashbackChargeCircle
+	def_special ShowMewtwoFlashbackBeam
+	def_special HideMewtwoFlashbackBeam
+	def_special HoldFlashbackFadeWhite
 	def_special RemoveCameraObject
 	def_special NullFieldSpecial  @ Misc Hoenn specials
 	def_special NullFieldSpecial

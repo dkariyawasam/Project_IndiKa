@@ -268,6 +268,9 @@ graphics/object_events/pics/people/pokemon_ranger_f.4bpp: graphics/object_events
 graphics/object_events/pics/people/triathlete_f.4bpp: graphics/object_events/pics/people/triathlete_f.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+graphics/object_events/pics/pokemon/mewtwo.4bpp: graphics/object_events/pics/pokemon/mewtwo.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 %.1bpp:   %.png  ; $(GFX) $< $@
 %.4bpp:   %.png  ; $(GFX) $< $@
 %.8bpp:   %.png  ; $(GFX) $< $@

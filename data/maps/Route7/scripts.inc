@@ -66,20 +66,35 @@ Route7_EventScript_ClearBeamTrees::
 
 Route7_EventScript_RemoveMewtwoRampageScene::
 	call Route7_EventScript_HideEliteFourAftermath
+	call Route7_EventScript_HideFlashbackActors
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
-	removeobject LOCALID_ROUTE7_LANCE
 	removeobject LOCALID_ROUTE7_LORELEI
-	removeobject LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_GIOVANNI
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	end
 
 Route7_EventScript_RemoveMewtwoAndGiovanni::
-	removeobject LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_GIOVANNI
+	call Route7_EventScript_HideFlashbackActors
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	end
 
 Route7_EventScript_ShowEliteFourAftermath::
+	setobjectxyperm LOCALID_ROUTE7_AGATHA, 6, 27
+	setobjectxyperm LOCALID_ROUTE7_BRUNO, 14, 45
+	setobjectxyperm LOCALID_ROUTE7_LORELEI, 7, 56
+	removeobject LOCALID_ROUTE7_AGATHA
+	removeobject LOCALID_ROUTE7_BRUNO
+	removeobject LOCALID_ROUTE7_LORELEI
 	clearflag FLAG_HIDE_ROUTE7_AGATHA
 	clearflag FLAG_HIDE_ROUTE7_BRUNO
 	clearflag FLAG_HIDE_ROUTE7_LORELEI
@@ -92,6 +107,24 @@ Route7_EventScript_HideEliteFourAftermath::
 	setflag FLAG_HIDE_ROUTE7_AGATHA
 	setflag FLAG_HIDE_ROUTE7_BRUNO
 	setflag FLAG_HIDE_ROUTE7_LORELEI
+	return
+
+Route7_EventScript_ShowFlashbackActors::
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_LORELEI
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_AGATHA
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_BRUNO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_LANCE
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
+	return
+
+Route7_EventScript_HideFlashbackActors::
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_LORELEI
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_AGATHA
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_BRUNO
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_LANCE
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
 	return
 
 Route7_EventScript_LoreleiAftermath::
@@ -160,65 +193,98 @@ Route7_EventScript_LanceRepeat::
 
 Route7_EventScript_ShowLoreleiFlashback::
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
+	setvar VAR_0x8004, 10
+	setvar VAR_0x8005, 61
+	special SetFlashbackCameraToCoords
 	call Route7_EventScript_SetupLoreleiFlashbackScene
+	call Route7_EventScript_RevealLoreleiFlashbackActors
 	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_BLACK
+	special HoldFlashbackFadeWhite
 	delay 16
+	fadescreen FADE_FROM_WHITE
 	msgbox Route7_Text_LoreleiFlashback, MSGBOX_DEFAULT
 	playse SE_PIN
-	applymovement LOCALID_ROUTE7_MEWTWO, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Common_Movement_ExclamationMark
 	waitmovement 0
 	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
 	delay 12
+	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_FaceUp
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoWalkInPlace
 	call Route7_EventScript_ChargeMewtwoEnergy
-	msgbox Route7_Text_LoreleiFlashbackBeam, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE7_FLASHBACK_LORELEI, Route7_Movement_LoreleiWalkInPlace
+	waitmovement LOCALID_ROUTE7_FLASHBACK_LORELEI
+	msgbox Route7_Text_LoreleiFlashbackFire, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI, Route7_Movement_GiovanniWalkInPlace
+	waitmovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	msgbox Route7_Text_LoreleiFlashbackSignal, MSGBOX_DEFAULT
+	special AccelerateMewtwoFlashbackSparkleLoop
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoWalkInPlace
+	closemessage
+	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
+	special ShowMewtwoFlashbackChargeCircle
+	delay 8
+	special ShowMewtwoFlashbackBeam
 	playse SE_M_EXPLOSION
 	fadescreen FADE_TO_WHITE
-	delay 8
-	fadescreen FADE_FROM_WHITE
-	delay 8
-	fadescreen FADE_TO_BLACK
+	delay 60
+	special HideMewtwoFlashbackBeam
+	special StopMewtwoFlashbackSparkleLoop
+	delay 16
 	special RestoreFlashbackGreyscaleTint
 	call Route7_EventScript_RestoreAfterLoreleiFlashback
+	special HoldFlashbackFadeWhite
+	special RestoreFlashbackCamera
+	special SuppressFlashbackPlayerGroundEffects
+	special HoldFlashbackFadeWhite
+	call Route7_EventScript_ShowEliteFourAftermath
+	special HoldFlashbackFadeWhite
+	special DrawWholeMapView
+	special HoldFlashbackFadeWhite
 	closemessage
-	fadescreen FADE_FROM_BLACK
+	delay 20
+	special HoldFlashbackFadeWhite
+	special SuppressFlashbackPlayerGroundEffects
+	fadescreen FADE_FROM_WHITE
+	special RestoreFlashbackPlayerGroundEffects
 	return
 
 Route7_EventScript_ShowBrunoFlashback::
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	msgbox Route7_Text_BrunoFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special RestoreFlashbackGreyscaleTint
 	closemessage
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	return
 
 Route7_EventScript_ShowAgathaFlashback::
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	msgbox Route7_Text_AgathaFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special RestoreFlashbackGreyscaleTint
 	closemessage
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	return
 
 Route7_EventScript_ShowLanceFlashback::
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	msgbox Route7_Text_LanceFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+	fadescreen FADE_TO_WHITE
 	special RestoreFlashbackGreyscaleTint
 	closemessage
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_FROM_WHITE
 	return
 
 Route7_EventScript_CheckAllFlashbacks::
@@ -234,108 +300,56 @@ Route7_EventScript_ReturnFromFlashbackCheck::
 	return
 
 Route7_EventScript_SetupLoreleiFlashbackScene::
-	call Route7_EventScript_RestoreBeamTrees
-	setobjectxyperm LOCALID_ROUTE7_LORELEI, 8, 58
-	setobjectxyperm LOCALID_ROUTE7_BRUNO, 9, 58
-	setobjectxyperm LOCALID_ROUTE7_AGATHA, 10, 58
-	setobjectxyperm LOCALID_ROUTE7_LANCE, 11, 58
-	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 61
-	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 62
-	clearflag FLAG_HIDE_ROUTE7_AGATHA
-	clearflag FLAG_HIDE_ROUTE7_BRUNO
-	clearflag FLAG_HIDE_ROUTE7_LORELEI
+	call Route7_EventScript_HideEliteFourAftermath
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
-	removeobject LOCALID_ROUTE7_LANCE
 	removeobject LOCALID_ROUTE7_LORELEI
-	removeobject LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_GIOVANNI
-	addobject LOCALID_ROUTE7_LORELEI
-	addobject LOCALID_ROUTE7_AGATHA
-	addobject LOCALID_ROUTE7_BRUNO
-	addobject LOCALID_ROUTE7_LANCE
-	addobject LOCALID_ROUTE7_MEWTWO
-	addobject LOCALID_ROUTE7_GIOVANNI
-	applymovement LOCALID_ROUTE7_AGATHA, Route7_Movement_FaceDown
-	applymovement LOCALID_ROUTE7_BRUNO, Route7_Movement_FaceDown
-	applymovement LOCALID_ROUTE7_LANCE, Route7_Movement_FaceDown
-	applymovement LOCALID_ROUTE7_LORELEI, Route7_Movement_FaceDown
-	applymovement LOCALID_ROUTE7_MEWTWO, Route7_Movement_FaceUp
-	applymovement LOCALID_ROUTE7_GIOVANNI, Route7_Movement_FaceUp
-	waitmovement 0
+	call Route7_EventScript_RestoreBeamTrees
+	special DrawWholeMapView
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_LORELEI, 8, 58
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_BRUNO, 9, 58
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_AGATHA, 10, 58
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_LANCE, 11, 58
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_MEWTWO, 10, 61
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_GIOVANNI, 10, 62
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	return
+
+Route7_EventScript_RevealLoreleiFlashbackActors::
+	call Route7_EventScript_ShowFlashbackActors
+	addobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	addobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	addobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	addobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	addobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	addobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	turnobject LOCALID_ROUTE7_FLASHBACK_LORELEI, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_AGATHA, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_BRUNO, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_LANCE, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI, DIR_NORTH
 	return
 
 Route7_EventScript_RestoreAfterLoreleiFlashback::
 	call Route7_EventScript_ClearBeamTrees
-	setobjectxyperm LOCALID_ROUTE7_AGATHA, 6, 27
-	setobjectxyperm LOCALID_ROUTE7_BRUNO, 14, 45
-	setobjectxyperm LOCALID_ROUTE7_LANCE, 9, 15
-	setobjectxyperm LOCALID_ROUTE7_LORELEI, 7, 56
-	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 14
-	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 15
-	removeobject LOCALID_ROUTE7_AGATHA
-	removeobject LOCALID_ROUTE7_BRUNO
-	removeobject LOCALID_ROUTE7_LANCE
-	removeobject LOCALID_ROUTE7_LORELEI
-	removeobject LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_GIOVANNI
-	addobject LOCALID_ROUTE7_AGATHA
-	addobject LOCALID_ROUTE7_BRUNO
-	addobject LOCALID_ROUTE7_LANCE
-	addobject LOCALID_ROUTE7_LORELEI
-	removeobject LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_GIOVANNI
+	call Route7_EventScript_HideFlashbackActors
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	return
 
 Route7_EventScript_ChargeMewtwoEnergy::
-	call Route7_EventScript_MewtwoPressureDust
-	setfieldeffectargument 0, 10
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	dofieldeffect FLDEFF_SPARKLE
-	delay 4
-	call Route7_EventScript_MewtwoPressureDust
-	setfieldeffectargument 0, 9
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	dofieldeffect FLDEFF_SPARKLE
-	delay 4
-	setfieldeffectargument 0, 11
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	dofieldeffect FLDEFF_SPARKLE
-	delay 4
-	call Route7_EventScript_MewtwoPressureDust
-	setfieldeffectargument 0, 10
-	setfieldeffectargument 1, 59
-	setfieldeffectargument 2, 1
-	dofieldeffect FLDEFF_SPARKLE
-	delay 8
-	setfieldeffectargument 0, 10
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	dofieldeffect FLDEFF_SPARKLE
+	special StartMewtwoFlashbackSparkleLoop
 	delay 12
-	return
-
-Route7_EventScript_MewtwoPressureDust::
-	setfieldeffectargument 0, 9
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	setfieldeffectargument 3, 2
-	dofieldeffect FLDEFF_DUST
-	delay 2
-	setfieldeffectargument 0, 11
-	setfieldeffectargument 1, 60
-	setfieldeffectargument 2, 1
-	setfieldeffectargument 3, 2
-	dofieldeffect FLDEFF_DUST
-	delay 2
-	setfieldeffectargument 0, 10
-	setfieldeffectargument 1, 59
-	setfieldeffectargument 2, 1
-	setfieldeffectargument 3, 2
-	dofieldeffect FLDEFF_DUST
 	return
 
 Route7_EventScript_GiovanniChasesMewtwoTrigger::
@@ -346,17 +360,21 @@ Route7_EventScript_GiovanniChasesMewtwoTrigger::
 	goto_if_unset FLAG_SAW_ROUTE7_AGATHA_FLASHBACK, EventScript_Return
 	goto_if_unset FLAG_SAW_ROUTE7_LANCE_FLASHBACK, EventScript_Return
 	lockall
-	setobjectxyperm LOCALID_ROUTE7_MEWTWO, 10, 14
-	setobjectxyperm LOCALID_ROUTE7_GIOVANNI, 10, 15
-	addobject LOCALID_ROUTE7_MEWTWO
-	addobject LOCALID_ROUTE7_GIOVANNI
-	applymovement LOCALID_ROUTE7_MEWTWO, Route7_Movement_MewtwoFleesNorth
-	waitmovement LOCALID_ROUTE7_MEWTWO
-	removeobject LOCALID_ROUTE7_MEWTWO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_MEWTWO, 10, 14
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_GIOVANNI, 10, 15
+	addobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	addobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoFleesNorth
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
 	msgbox Route7_Text_GiovanniChasingMewtwo, MSGBOX_DEFAULT
-	applymovement LOCALID_ROUTE7_GIOVANNI, Route7_Movement_GiovanniChasesMewtwo
-	waitmovement LOCALID_ROUTE7_GIOVANNI
-	removeobject LOCALID_ROUTE7_GIOVANNI
+	applymovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI, Route7_Movement_GiovanniChasesMewtwo
+	waitmovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	setflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	msgbox Route7_Text_Route7FullPicture, MSGBOX_DEFAULT
 	setflag FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE
 	setvar VAR_MAP_SCENE_ROUTE7_RAMPAGE, 1
@@ -379,6 +397,83 @@ Route7_Movement_GiovanniChasesMewtwo::
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	step_end
+
+Route7_Movement_LoreleiWalkInPlace::
+	walk_in_place_down
+	walk_in_place_down
+	step_end
+
+Route7_Movement_GiovanniWalkInPlace::
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+Route7_Movement_MewtwoWalkInPlace::
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
 	step_end
 
 Route7_Movement_FaceUp::

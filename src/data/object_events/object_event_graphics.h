@@ -127,6 +127,7 @@ const u16 gObjectEventPal_Annihilape[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPic_Annihilape[] = INCBIN_U16("graphics/object_events/pics/pokemon/annihilape.4bpp");
 const u16 gObjectEventPal_MimeSr[] = INCBIN_U16("graphics/object_events/palettes/mime_sr.gbapal");
 const u16 gObjectEventPic_MimeSr[] = INCBIN_U16("graphics/object_events/pics/pokemon/mime_sr.4bpp");
+const u16 gObjectEventPal_Mewtwo[] = INCBIN_U16("graphics/object_events/palettes/mewtwo.gbapal");
 const u16 gObjectEventPic_Psyduck[] = INCBIN_U16("graphics/object_events/pics/pokemon/psyduck.4bpp");
 const u16 gObjectEventPal_PokeManiac[] = INCBIN_U16("graphics/object_events/palettes/poke_maniac.gbapal");
 const u16 gObjectEventPic_PokeManiac[] = INCBIN_U16("graphics/object_events/pics/people/poke_maniac.4bpp");
