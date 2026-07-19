@@ -120,6 +120,7 @@ static void Task_MewtwoFlashbackSparkleLoop(u8 taskId);
 static void Task_RevealMewtwoFlashbackBeam(u8 taskId);
 static void SpawnMewtwoFlashbackSparkle(s16 x, s16 y, u8 priority);
 static void SpawnMewtwoFlashbackDust(s16 x, s16 y, u8 priority);
+static void SpriteCB_MewtwoFlashbackDust(struct Sprite *sprite);
 void ShowMewtwoFlashbackChargeCircle(void);
 static void HideMewtwoFlashbackChargeCircle(void);
 static void RetintFlashbackEffectPalettes(void);
@@ -714,17 +715,28 @@ static void SpawnMewtwoFlashbackDust(s16 x, s16 y, u8 priority)
     u8 spriteId;
     struct Sprite *sprite;
 
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 12);
+    LoadSpritePalette(&gSpritePalette_GeneralFieldEffect0);
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_GROUND_IMPACT_DUST], x, y, 0x51);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->oam.priority = priority;
-        sprite->data[0] = 3;
+        sprite->callback = SpriteCB_MewtwoFlashbackDust;
         sprite->data[1] = FLDEFF_DUST;
     }
     RetintFlashbackEffectPalettes();
+}
+
+static void SpriteCB_MewtwoFlashbackDust(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroySprite(sprite);
+    else
+        UpdateObjectEventSpriteInvisibility(sprite, FALSE);
 }
 
 static void RetintFlashbackEffectPalettes(void)
@@ -898,7 +910,7 @@ void HideMewtwoFlashbackBeam(void)
 
 void SpawnFlashbackDustAtCoords(void)
 {
-    SpawnMewtwoFlashbackDust(gSpecialVar_0x8004, gSpecialVar_0x8005, MEWTWO_FLASHBACK_EFFECT_PRIORITY);
+    SpawnMewtwoFlashbackDust(gSpecialVar_0x8004, gSpecialVar_0x8005, 0);
 }
 
 void HoldFlashbackFadeWhite(void)
