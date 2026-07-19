@@ -26,6 +26,7 @@
 #include "menu_indicators.h"
 #include "random.h"
 #include "mail_data.h"
+#include "m4a.h"
 #include "pokemon_storage_system.h"
 #include "script_menu.h"
 #include "data.h"
@@ -87,6 +88,9 @@ COMMON_DATA u16 sFieldSpecialsListMenuScrollBuffer = 0;
 static void Task_AnimatePcTurnOn(u8 taskId);
 void HideMewtwoFlashbackBeam(void);
 void HoldFlashbackFadeWhite(void);
+void SpawnFlashbackDustAtCoords(void);
+void SlowEliteFourFlashbackMusic(void);
+void RestoreEliteFourFlashbackMusic(void);
 void SuppressFlashbackPlayerGroundEffects(void);
 void RestoreFlashbackPlayerGroundEffects(void);
 static void PcTurnOnUpdateMetatileId(bool16 flag);
@@ -127,20 +131,16 @@ static void WhitenFlashbackFieldEffectPalette(const struct SpritePalette *sprite
 static bool8 IsFlashbackFieldEffectSprite(const struct Sprite *sprite);
 static void ClearFlashbackTerrainFieldEffects(void);
 static void CacheFlashbackPlayerPosition(void);
+static void ParkFlashbackPlayerObject(void);
 static void RestoreFlashbackPlayerObjectEvents(void);
 static void ResetFlashbackPlayerGroundEffectState(struct ObjectEvent *playerObj, struct Sprite *playerSprite);
 static u16 GetFlashbackPlayerTransitionFlags(void);
 u8 GetPlayerAvatarBike(void);
 
+extern const u16 gFieldEffectPal_SmallSparkle[];
+
 static const u16 sMewtwoFlashbackBeamGfx[] = INCBIN_U16("graphics/field_effects/pics/mewtwo_flashback_beam.4bpp");
-static const u16 sMewtwoFlashbackChargeCircleGfx[] = INCBIN_U16("graphics/battle_anims/sprites/bluegreen_orb.4bpp");
-static const u16 sMewtwoFlashbackChargeCirclePal[] = INCBIN_U16("graphics/battle_anims/sprites/bluegreen_orb.gbapal");
-static const u16 sMewtwoFlashbackBeamPal[] = {
-    RGB(0, 0, 0), RGB(5, 15, 23), RGB(12, 24, 29), RGB(22, 30, 31),
-    RGB(31, 31, 31), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0),
-    RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0),
-    RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0), RGB(0, 0, 0)
-};
+static const u16 sMewtwoFlashbackChargeCircleGfx[] = INCBIN_U16("graphics/field_effects/pics/mewtwo_flashback_charge_circle.4bpp");
 
 static const struct SpriteSheet sMewtwoFlashbackBeamSpriteSheet = {
     .data = sMewtwoFlashbackBeamGfx,
@@ -149,7 +149,7 @@ static const struct SpriteSheet sMewtwoFlashbackBeamSpriteSheet = {
 };
 
 static const struct SpritePalette sMewtwoFlashbackBeamSpritePalette = {
-    .data = sMewtwoFlashbackBeamPal,
+    .data = gFieldEffectPal_SmallSparkle,
     .tag = PAL_TAG_MEWTWO_FLASHBACK_BEAM
 };
 
@@ -160,7 +160,7 @@ static const struct SpriteSheet sMewtwoFlashbackChargeCircleSpriteSheet = {
 };
 
 static const struct SpritePalette sMewtwoFlashbackChargeCircleSpritePalette = {
-    .data = sMewtwoFlashbackChargeCirclePal,
+    .data = gFieldEffectPal_SmallSparkle,
     .tag = PAL_TAG_MEWTWO_FLASHBACK_CIRCLE
 };
 
@@ -485,6 +485,7 @@ void SetFlashbackCameraToCoords(void)
         CameraObjectSetFollowedObjectId(gObjectEvents[objectEventId].spriteId);
     }
 
+    ParkFlashbackPlayerObject();
     ClearFlashbackTerrainFieldEffects();
 }
 
@@ -609,6 +610,15 @@ static void CacheFlashbackPlayerPosition(void)
     sFlashbackPlayerPositionValid = TRUE;
 }
 
+static void ParkFlashbackPlayerObject(void)
+{
+    if (gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT)
+        return;
+
+    MoveObjectEventToMapCoords(&gObjectEvents[gPlayerAvatar.objectEventId], MAP_OFFSET, MAP_OFFSET);
+    ClearFlashbackTerrainFieldEffects();
+}
+
 static u16 GetFlashbackPlayerTransitionFlags(void)
 {
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE))
@@ -701,11 +711,19 @@ static void SpawnMewtwoFlashbackSparkle(s16 x, s16 y, u8 priority)
 
 static void SpawnMewtwoFlashbackDust(s16 x, s16 y, u8 priority)
 {
-    gFieldEffectArguments[0] = x;
-    gFieldEffectArguments[1] = y;
-    gFieldEffectArguments[2] = priority;
-    gFieldEffectArguments[3] = 1;
-    FieldEffectStart(FLDEFF_DUST);
+    u8 spriteId;
+    struct Sprite *sprite;
+
+    SetSpritePosToOffsetMapCoords(&x, &y, 8, 12);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_GROUND_IMPACT_DUST], x, y, 0x51);
+    if (spriteId != MAX_SPRITES)
+    {
+        sprite = &gSprites[spriteId];
+        sprite->coordOffsetEnabled = TRUE;
+        sprite->oam.priority = priority;
+        sprite->data[0] = 3;
+        sprite->data[1] = FLDEFF_DUST;
+    }
     RetintFlashbackEffectPalettes();
 }
 
@@ -878,12 +896,27 @@ void HideMewtwoFlashbackBeam(void)
     HideMewtwoFlashbackChargeCircle();
 }
 
+void SpawnFlashbackDustAtCoords(void)
+{
+    SpawnMewtwoFlashbackDust(gSpecialVar_0x8004, gSpecialVar_0x8005, MEWTWO_FLASHBACK_EFFECT_PRIORITY);
+}
+
 void HoldFlashbackFadeWhite(void)
 {
     ClearFlashbackTerrainFieldEffects();
     WhitenFlashbackFieldEffectPalettes();
     CpuFastFill16(RGB_WHITE, gPlttBufferFaded, PLTT_SIZE);
     CpuFastFill16(RGB_WHITE, (void *)PLTT, PLTT_SIZE);
+}
+
+void SlowEliteFourFlashbackMusic(void)
+{
+    m4aMPlayTempoControl(&gMPlayInfo_BGM, 0x40);
+}
+
+void RestoreEliteFourFlashbackMusic(void)
+{
+    m4aMPlayTempoControl(&gMPlayInfo_BGM, 0x100);
 }
 
 void SuppressFlashbackPlayerGroundEffects(void)

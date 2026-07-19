@@ -5,9 +5,8 @@ Route7_Text_UndergroundPathSign::
 Route7_Text_LoreleiAftermath::
 	.string "LORELEI: You're late.\n"
 	.string "We all were.\p"
-	.string "Something tore through here\n"
-	.string "under GIOVANNI's command...\p"
-	.string "At first.$"
+	.string "It tore through here\n"
+	.string "under GIOVANNI's command...$"
 
 Route7_Text_LoreleiFlashback::
 	.string "GIOVANNI: MEWTWO.\p"
@@ -33,12 +32,9 @@ Route7_Text_BrunoAftermath::
 	.string "It pushed through me like\n"
 	.string "I was mist.$"
 
-Route7_Text_BrunoFlashback::
+Route7_Text_BrunoFlashbackChallenge::
 	.string "BRUNO: Hah!\n"
-	.string "Then strike me!\p"
-	.string "MEWTWO raised one hand.\p"
-	.string "The ground split before\n"
-	.string "I could move.$"
+	.string "Then strike me!$"
 
 Route7_Text_BrunoRepeat::
 	.string "BRUNO: I felt no discipline\n"
