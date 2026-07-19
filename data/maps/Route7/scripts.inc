@@ -408,9 +408,6 @@ Route7_EventScript_ChargeMewtwoEnergy::
 	return
 
 Route7_EventScript_ShoveBrunoRight::
-	setvar VAR_0x8004, 10
-	setvar VAR_0x8005, 44
-	special SpawnFlashbackDustAtCoords
 	playse SE_M_STRENGTH
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, 1
@@ -418,7 +415,12 @@ Route7_EventScript_ShoveBrunoRight::
 	setvar VAR_0x8007, 5
 	applymovement LOCALID_ROUTE7_FLASHBACK_BRUNO, Route7_Movement_BrunoShovedRight
 	waitmovement LOCALID_ROUTE7_FLASHBACK_BRUNO
-	delay 2
+	setvar VAR_0x8004, 13
+	setvar VAR_0x8005, 44
+	special SpawnFlashbackDustAtCoords
+	delay 8
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
 	special ShakeScreen
 	waitstate
 	return
