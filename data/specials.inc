@@ -299,9 +299,9 @@ gSpecials::
 	def_special RestoreFlashbackCamera
 	def_special SuppressFlashbackPlayerGroundEffects
 	def_special RestoreFlashbackPlayerGroundEffects
-	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
-	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
-	def_special NullFieldSpecial  @ Reserved flashback cleanup slot
+	def_special SlowEliteFourFlashbackMusic
+	def_special RestoreEliteFourFlashbackMusic
+	def_special SpawnFlashbackDustAtCoords
 	def_special StartMewtwoFlashbackSparkleLoop
 	def_special AccelerateMewtwoFlashbackSparkleLoop
 	def_special StopMewtwoFlashbackSparkleLoop

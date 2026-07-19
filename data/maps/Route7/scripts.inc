@@ -42,26 +42,26 @@ Route7_EventScript_RestoreBeamTrees::
 	return
 
 Route7_EventScript_ClearBeamTrees::
-	setmetatile 8, 51, 0x008, FALSE
-	setmetatile 9, 51, 0x009, FALSE
-	setmetatile 10, 51, 0x008, FALSE
-	setmetatile 11, 51, 0x008, FALSE
-	setmetatile 8, 52, 0x010, FALSE
-	setmetatile 9, 52, 0x011, FALSE
-	setmetatile 10, 52, 0x010, FALSE
-	setmetatile 11, 52, 0x008, FALSE
-	setmetatile 8, 53, 0x008, FALSE
-	setmetatile 9, 53, 0x009, FALSE
-	setmetatile 10, 53, 0x008, FALSE
-	setmetatile 11, 53, 0x008, FALSE
-	setmetatile 8, 54, 0x008, FALSE
-	setmetatile 9, 54, 0x009, FALSE
-	setmetatile 10, 54, 0x008, FALSE
-	setmetatile 11, 54, 0x008, FALSE
-	setmetatile 8, 55, 0x010, FALSE
-	setmetatile 9, 55, 0x011, FALSE
-	setmetatile 10, 55, 0x010, FALSE
-	setmetatile 11, 55, 0x008, FALSE
+	setmetatile 8, 51, 0x0D8, FALSE
+	setmetatile 9, 51, 0x0D9, FALSE
+	setmetatile 10, 51, 0x107, FALSE
+	setmetatile 11, 51, 0x0E2, FALSE
+	setmetatile 8, 52, 0x0D8, FALSE
+	setmetatile 9, 52, 0x39E, FALSE
+	setmetatile 10, 52, 0x0FF, FALSE
+	setmetatile 11, 52, 0x0D2, FALSE
+	setmetatile 8, 53, 0x0E0, FALSE
+	setmetatile 9, 53, 0x106, FALSE
+	setmetatile 10, 53, 0x0D9, FALSE
+	setmetatile 11, 53, 0x0DA, FALSE
+	setmetatile 8, 54, 0x009, FALSE
+	setmetatile 9, 54, 0x0D8, FALSE
+	setmetatile 10, 54, 0x107, FALSE
+	setmetatile 11, 54, 0x0E2, FALSE
+	setmetatile 8, 55, 0x008, FALSE
+	setmetatile 9, 55, 0x0E0, FALSE
+	setmetatile 10, 55, 0x0E2, FALSE
+	setmetatile 11, 55, 0x009, FALSE
 	return
 
 Route7_EventScript_RemoveMewtwoRampageScene::
@@ -192,17 +192,8 @@ Route7_EventScript_LanceRepeat::
 	end
 
 Route7_EventScript_ShowLoreleiFlashback::
-	closemessage
-	fadescreen FADE_TO_WHITE
-	setvar VAR_0x8004, 10
-	setvar VAR_0x8005, 61
-	special SetFlashbackCameraToCoords
-	call Route7_EventScript_SetupLoreleiFlashbackScene
-	call Route7_EventScript_RevealLoreleiFlashbackActors
-	special ApplyFlashbackGreyscaleTint
-	special HoldFlashbackFadeWhite
-	delay 16
-	fadescreen FADE_FROM_WHITE
+	call Route7_EventScript_BeginEliteFourFlashbackScene
+	special SlowEliteFourFlashbackMusic
 	msgbox Route7_Text_LoreleiFlashback, MSGBOX_DEFAULT
 	playse SE_PIN
 	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Common_Movement_ExclamationMark
@@ -233,8 +224,78 @@ Route7_EventScript_ShowLoreleiFlashback::
 	special HideMewtwoFlashbackBeam
 	special StopMewtwoFlashbackSparkleLoop
 	delay 16
+	call Route7_EventScript_RestoreEliteFourFlashbackSceneFromWhite
+	return
+
+Route7_EventScript_ShowBrunoFlashback::
+	call Route7_EventScript_BeginBrunoFlashbackScene
+	special SlowEliteFourFlashbackMusic
+	applymovement LOCALID_ROUTE7_FLASHBACK_BRUNO, Route7_Movement_BrunoWalkInPlace
+	waitmovement LOCALID_ROUTE7_FLASHBACK_BRUNO
+	msgbox Route7_Text_BrunoFlashbackChallenge, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoWalkInPlaceShort
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	call Route7_EventScript_ShoveBrunoRight
+	delay 16
+	fadescreen FADE_TO_WHITE
+	delay 40
+	call Route7_EventScript_RestoreEliteFourFlashbackSceneFromWhite
+	return
+
+Route7_EventScript_ShowAgathaFlashback::
+	call Route7_EventScript_BeginEliteFourFlashbackScene
+	special SlowEliteFourFlashbackMusic
+	msgbox Route7_Text_AgathaFlashback, MSGBOX_DEFAULT
+	call Route7_EventScript_EndEliteFourFlashbackScene
+	return
+
+Route7_EventScript_ShowLanceFlashback::
+	call Route7_EventScript_BeginEliteFourFlashbackScene
+	msgbox Route7_Text_LanceFlashback, MSGBOX_DEFAULT
+	call Route7_EventScript_EndEliteFourFlashbackScene
+	return
+
+Route7_EventScript_BeginEliteFourFlashbackScene::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	setvar VAR_0x8004, 10
+	setvar VAR_0x8005, 61
+	special SetFlashbackCameraToCoords
+	call Route7_EventScript_SetupEliteFourFlashbackScene
+	call Route7_EventScript_RevealEliteFourFlashbackActors
+	special ApplyFlashbackGreyscaleTint
+	special HoldFlashbackFadeWhite
+	delay 16
+	fadescreen FADE_FROM_WHITE
+	return
+
+Route7_EventScript_BeginBrunoFlashbackScene::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	setvar VAR_0x8004, 10
+	setvar VAR_0x8005, 46
+	special SetFlashbackCameraToCoords
+	call Route7_EventScript_SetupBrunoFlashbackScene
+	call Route7_EventScript_RevealBrunoFlashbackActors
+	special ApplyFlashbackGreyscaleTint
+	special HoldFlashbackFadeWhite
+	delay 16
+	fadescreen FADE_FROM_WHITE
+	return
+
+Route7_EventScript_EndEliteFourFlashbackScene::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	delay 16
+	call Route7_EventScript_RestoreEliteFourFlashbackSceneFromWhite
+	return
+
+Route7_EventScript_RestoreEliteFourFlashbackSceneFromWhite::
+	special HideMewtwoFlashbackBeam
+	special StopMewtwoFlashbackSparkleLoop
+	special RestoreEliteFourFlashbackMusic
 	special RestoreFlashbackGreyscaleTint
-	call Route7_EventScript_RestoreAfterLoreleiFlashback
+	call Route7_EventScript_RestoreAfterEliteFourFlashback
 	special HoldFlashbackFadeWhite
 	special RestoreFlashbackCamera
 	special SuppressFlashbackPlayerGroundEffects
@@ -251,42 +312,6 @@ Route7_EventScript_ShowLoreleiFlashback::
 	special RestoreFlashbackPlayerGroundEffects
 	return
 
-Route7_EventScript_ShowBrunoFlashback::
-	closemessage
-	fadescreen FADE_TO_WHITE
-	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_WHITE
-	msgbox Route7_Text_BrunoFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_WHITE
-	special RestoreFlashbackGreyscaleTint
-	closemessage
-	fadescreen FADE_FROM_WHITE
-	return
-
-Route7_EventScript_ShowAgathaFlashback::
-	closemessage
-	fadescreen FADE_TO_WHITE
-	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_WHITE
-	msgbox Route7_Text_AgathaFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_WHITE
-	special RestoreFlashbackGreyscaleTint
-	closemessage
-	fadescreen FADE_FROM_WHITE
-	return
-
-Route7_EventScript_ShowLanceFlashback::
-	closemessage
-	fadescreen FADE_TO_WHITE
-	special ApplyFlashbackGreyscaleTint
-	fadescreen FADE_FROM_WHITE
-	msgbox Route7_Text_LanceFlashback, MSGBOX_DEFAULT
-	fadescreen FADE_TO_WHITE
-	special RestoreFlashbackGreyscaleTint
-	closemessage
-	fadescreen FADE_FROM_WHITE
-	return
-
 Route7_EventScript_CheckAllFlashbacks::
 	goto_if_unset FLAG_SAW_ROUTE7_LORELEI_FLASHBACK, Route7_EventScript_ReturnFromFlashbackCheck
 	goto_if_unset FLAG_SAW_ROUTE7_BRUNO_FLASHBACK, Route7_EventScript_ReturnFromFlashbackCheck
@@ -299,7 +324,7 @@ Route7_EventScript_CheckAllFlashbacks::
 Route7_EventScript_ReturnFromFlashbackCheck::
 	return
 
-Route7_EventScript_SetupLoreleiFlashbackScene::
+Route7_EventScript_SetupEliteFourFlashbackScene::
 	call Route7_EventScript_HideEliteFourAftermath
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
@@ -320,7 +345,25 @@ Route7_EventScript_SetupLoreleiFlashbackScene::
 	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	return
 
-Route7_EventScript_RevealLoreleiFlashbackActors::
+Route7_EventScript_SetupBrunoFlashbackScene::
+	call Route7_EventScript_HideEliteFourAftermath
+	removeobject LOCALID_ROUTE7_AGATHA
+	removeobject LOCALID_ROUTE7_BRUNO
+	removeobject LOCALID_ROUTE7_LORELEI
+	call Route7_EventScript_ClearBeamTrees
+	special DrawWholeMapView
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_BRUNO, 10, 44
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_MEWTWO, 10, 46
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_GIOVANNI, 10, 47
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	return
+
+Route7_EventScript_RevealEliteFourFlashbackActors::
 	call Route7_EventScript_ShowFlashbackActors
 	addobject LOCALID_ROUTE7_FLASHBACK_LORELEI
 	addobject LOCALID_ROUTE7_FLASHBACK_AGATHA
@@ -336,7 +379,19 @@ Route7_EventScript_RevealLoreleiFlashbackActors::
 	turnobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI, DIR_NORTH
 	return
 
-Route7_EventScript_RestoreAfterLoreleiFlashback::
+Route7_EventScript_RevealBrunoFlashbackActors::
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_BRUNO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
+	addobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	addobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	addobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	turnobject LOCALID_ROUTE7_FLASHBACK_BRUNO, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI, DIR_NORTH
+	return
+
+Route7_EventScript_RestoreAfterEliteFourFlashback::
 	call Route7_EventScript_ClearBeamTrees
 	call Route7_EventScript_HideFlashbackActors
 	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
@@ -350,6 +405,22 @@ Route7_EventScript_RestoreAfterLoreleiFlashback::
 Route7_EventScript_ChargeMewtwoEnergy::
 	special StartMewtwoFlashbackSparkleLoop
 	delay 12
+	return
+
+Route7_EventScript_ShoveBrunoRight::
+	setvar VAR_0x8004, 10
+	setvar VAR_0x8005, 44
+	special SpawnFlashbackDustAtCoords
+	playse SE_M_STRENGTH
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 5
+	applymovement LOCALID_ROUTE7_FLASHBACK_BRUNO, Route7_Movement_BrunoShovedRight
+	waitmovement LOCALID_ROUTE7_FLASHBACK_BRUNO
+	delay 2
+	special ShakeScreen
+	waitstate
 	return
 
 Route7_EventScript_GiovanniChasesMewtwoTrigger::
@@ -404,7 +475,27 @@ Route7_Movement_LoreleiWalkInPlace::
 	walk_in_place_down
 	step_end
 
+Route7_Movement_BrunoWalkInPlace::
+	walk_in_place_down
+	walk_in_place_down
+	step_end
+
+Route7_Movement_BrunoShovedRight::
+	face_down
+	lock_facing_direction
+	walk_slower_right
+	walk_slower_right
+	walk_slower_right
+	unlock_facing_direction
+	face_down
+	step_end
+
 Route7_Movement_GiovanniWalkInPlace::
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+Route7_Movement_MewtwoWalkInPlaceShort::
 	walk_in_place_up
 	walk_in_place_up
 	step_end
