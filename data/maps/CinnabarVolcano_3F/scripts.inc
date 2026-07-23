@@ -23,7 +23,9 @@ CinnabarVolcano_3F_EventScript_TryRemoveMoltres::
 	return
 
 CinnabarVolcano_3F_EventScript_ShowMoltres::
+	removeobject 4
 	clearflag FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES
+	addobject 4
 	return
 
 CinnabarVolcano_3F_EventScript_HideMoltres::

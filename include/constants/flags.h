@@ -223,10 +223,10 @@
 #define FLAG_HIDE_ROUTE7_FLASHBACK_LANCE               0x0D6
 #define FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO              0x0D7
 #define FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI            0x0D8
-#define FLAG_0x0D9               0x0D9
-#define FLAG_0x0DA               0x0DA
-#define FLAG_0x0DB               0x0DB
-#define FLAG_0x0DC               0x0DC
+#define FLAG_HIDE_CELADON_CAVE_LANCE                   0x0D9
+#define FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO        0x0DA
+#define FLAG_HIDE_CELADON_CAVE_FLASHBACK_GIOVANNI      0x0DB
+#define FLAG_HIDE_CELADON_CAVE_FLASHBACK_LANCE         0x0DC
 #define FLAG_0x0DD               0x0DD
 #define FLAG_0x0DE               0x0DE
 #define FLAG_0x0DF               0x0DF

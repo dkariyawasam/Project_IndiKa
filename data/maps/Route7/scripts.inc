@@ -133,6 +133,7 @@ Route7_EventScript_LoreleiAftermath::
 	goto_if_set FLAG_SAW_ROUTE7_LORELEI_FLASHBACK, Route7_EventScript_LoreleiRepeat
 	msgbox Route7_Text_LoreleiAftermath, MSGBOX_DEFAULT
 	call Route7_EventScript_ShowLoreleiFlashback
+	msgbox Route7_Text_LoreleiRepeat, MSGBOX_DEFAULT
 	setflag FLAG_SAW_ROUTE7_LORELEI_FLASHBACK
 	call Route7_EventScript_CheckAllFlashbacks
 	release
@@ -149,6 +150,7 @@ Route7_EventScript_BrunoAftermath::
 	goto_if_set FLAG_SAW_ROUTE7_BRUNO_FLASHBACK, Route7_EventScript_BrunoRepeat
 	msgbox Route7_Text_BrunoAftermath, MSGBOX_DEFAULT
 	call Route7_EventScript_ShowBrunoFlashback
+	msgbox Route7_Text_BrunoRepeat, MSGBOX_DEFAULT
 	setflag FLAG_SAW_ROUTE7_BRUNO_FLASHBACK
 	call Route7_EventScript_CheckAllFlashbacks
 	release
@@ -165,6 +167,7 @@ Route7_EventScript_AgathaAftermath::
 	goto_if_set FLAG_SAW_ROUTE7_AGATHA_FLASHBACK, Route7_EventScript_AgathaRepeat
 	msgbox Route7_Text_AgathaAftermath, MSGBOX_DEFAULT
 	call Route7_EventScript_ShowAgathaFlashback
+	msgbox Route7_Text_AgathaRepeat, MSGBOX_DEFAULT
 	setflag FLAG_SAW_ROUTE7_AGATHA_FLASHBACK
 	call Route7_EventScript_CheckAllFlashbacks
 	release
@@ -243,10 +246,40 @@ Route7_EventScript_ShowBrunoFlashback::
 	return
 
 Route7_EventScript_ShowAgathaFlashback::
-	call Route7_EventScript_BeginEliteFourFlashbackScene
+	call Route7_EventScript_BeginAgathaFlashbackScene
 	special SlowEliteFourFlashbackMusic
-	msgbox Route7_Text_AgathaFlashback, MSGBOX_DEFAULT
-	call Route7_EventScript_EndEliteFourFlashbackScene
+	msgbox Route7_Text_AgathaFlashbackCommand, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoResistsControl
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	applymovement LOCALID_ROUTE7_FLASHBACK_AGATHA, Route7_Movement_AgathaWalkInPlace
+	waitmovement LOCALID_ROUTE7_FLASHBACK_AGATHA
+	msgbox Route7_Text_AgathaFlashbackWaning, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI, Route7_Movement_GiovanniWalkInPlace
+	waitmovement LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	msgbox Route7_Text_AgathaFlashbackSignal, MSGBOX_DEFAULT
+	msgbox Route7_Text_AgathaFlashbackStrike, MSGBOX_DEFAULT
+	playse SE_M_PSYBEAM
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoForcedStrike
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	delay 8
+	playse SE_FAILURE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 5
+	special ShakeScreen
+	waitstate
+	applymovement LOCALID_ROUTE7_FLASHBACK_MEWTWO, Route7_Movement_MewtwoRejectsSignal
+	waitmovement LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	msgbox Route7_Text_AgathaFlashbackWarning, MSGBOX_DEFAULT
+	fadescreen FADE_TO_WHITE
+	delay 40
+	call Route7_EventScript_RestoreEliteFourFlashbackSceneFromWhite
 	return
 
 Route7_EventScript_ShowLanceFlashback::
@@ -277,6 +310,20 @@ Route7_EventScript_BeginBrunoFlashbackScene::
 	special SetFlashbackCameraToCoords
 	call Route7_EventScript_SetupBrunoFlashbackScene
 	call Route7_EventScript_RevealBrunoFlashbackActors
+	special ApplyFlashbackGreyscaleTint
+	special HoldFlashbackFadeWhite
+	delay 16
+	fadescreen FADE_FROM_WHITE
+	return
+
+Route7_EventScript_BeginAgathaFlashbackScene::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	setvar VAR_0x8004, 10
+	setvar VAR_0x8005, 31
+	special SetFlashbackCameraToCoords
+	call Route7_EventScript_SetupAgathaFlashbackScene
+	call Route7_EventScript_RevealAgathaFlashbackActors
 	special ApplyFlashbackGreyscaleTint
 	special HoldFlashbackFadeWhite
 	delay 16
@@ -363,6 +410,24 @@ Route7_EventScript_SetupBrunoFlashbackScene::
 	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	return
 
+Route7_EventScript_SetupAgathaFlashbackScene::
+	call Route7_EventScript_HideEliteFourAftermath
+	removeobject LOCALID_ROUTE7_AGATHA
+	removeobject LOCALID_ROUTE7_BRUNO
+	removeobject LOCALID_ROUTE7_LORELEI
+	call Route7_EventScript_ClearBeamTrees
+	special DrawWholeMapView
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_AGATHA, 10, 29
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_MEWTWO, 10, 31
+	setobjectxyperm LOCALID_ROUTE7_FLASHBACK_GIOVANNI, 10, 32
+	removeobject LOCALID_ROUTE7_FLASHBACK_LORELEI
+	removeobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	removeobject LOCALID_ROUTE7_FLASHBACK_BRUNO
+	removeobject LOCALID_ROUTE7_FLASHBACK_LANCE
+	removeobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	removeobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	return
+
 Route7_EventScript_RevealEliteFourFlashbackActors::
 	call Route7_EventScript_ShowFlashbackActors
 	addobject LOCALID_ROUTE7_FLASHBACK_LORELEI
@@ -387,6 +452,18 @@ Route7_EventScript_RevealBrunoFlashbackActors::
 	addobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
 	addobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
 	turnobject LOCALID_ROUTE7_FLASHBACK_BRUNO, DIR_SOUTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
+	turnobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI, DIR_NORTH
+	return
+
+Route7_EventScript_RevealAgathaFlashbackActors::
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_AGATHA
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_MEWTWO
+	clearflag FLAG_HIDE_ROUTE7_FLASHBACK_GIOVANNI
+	addobject LOCALID_ROUTE7_FLASHBACK_AGATHA
+	addobject LOCALID_ROUTE7_FLASHBACK_MEWTWO
+	addobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI
+	turnobject LOCALID_ROUTE7_FLASHBACK_AGATHA, DIR_SOUTH
 	turnobject LOCALID_ROUTE7_FLASHBACK_MEWTWO, DIR_NORTH
 	turnobject LOCALID_ROUTE7_FLASHBACK_GIOVANNI, DIR_NORTH
 	return
@@ -419,6 +496,7 @@ Route7_EventScript_ShoveBrunoRight::
 	setvar VAR_0x8005, 44
 	special SpawnFlashbackDustAtCoords
 	delay 8
+	playse SE_M_MEGA_KICK2
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, 1
 	special ShakeScreen
@@ -482,6 +560,11 @@ Route7_Movement_BrunoWalkInPlace::
 	walk_in_place_down
 	step_end
 
+Route7_Movement_AgathaWalkInPlace::
+	walk_in_place_down
+	walk_in_place_down
+	step_end
+
 Route7_Movement_BrunoShovedRight::
 	face_down
 	lock_facing_direction
@@ -498,6 +581,34 @@ Route7_Movement_GiovanniWalkInPlace::
 	step_end
 
 Route7_Movement_MewtwoWalkInPlaceShort::
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+Route7_Movement_MewtwoResistsControl::
+	face_left
+	delay_8
+	face_right
+	delay_8
+	face_up
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+Route7_Movement_MewtwoForcedStrike::
+	face_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+Route7_Movement_MewtwoRejectsSignal::
+	face_right
+	delay_8
+	face_left
+	delay_8
+	face_up
 	walk_in_place_up
 	walk_in_place_up
 	step_end

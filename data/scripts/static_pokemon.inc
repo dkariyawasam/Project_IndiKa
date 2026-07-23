@@ -21,11 +21,13 @@ EventScript_ApexEncounterShake::
 
 EventScript_RecordApexRumorWithFeedback::
     special RecordApexRumor
-    goto_if_eq VAR_RESULT, 0, EventScript_RecordApexRumorWithFeedbackDone
+    copyvar VAR_0x8006, VAR_RESULT
+    special TryRevealApexObjectOnCurrentMap
+    goto_if_eq VAR_0x8006, 0, EventScript_RecordApexRumorWithFeedbackDone
     playse SE_PIN
     applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
     waitmovement 0
-    goto_if_eq VAR_RESULT, 1, EventScript_ApexRumorRecorded
+    goto_if_eq VAR_0x8006, 1, EventScript_ApexRumorRecorded
     msgbox Text_ApexRumorUpdated
     closemessage
     delay 40

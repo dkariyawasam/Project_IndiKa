@@ -24,7 +24,9 @@ PowerPlant_EventScript_ZapdosHidden::
 	end
 
 PowerPlant_EventScript_ShowZapdos::
+	removeobject 6
 	clearflag FLAG_HIDE_ZAPDOS
+	addobject 6
 	return
 
 PowerPlant_EventScript_HideZapdos::

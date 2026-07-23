@@ -32,6 +32,7 @@
 #include "constants/items.h"
 #include "constants/field_weather.h"
 #include "constants/flags.h"
+#include "constants/maps.h"
 #include "constants/quests.h"
 #include "constants/vars.h"
 #include "constants/songs.h"
@@ -617,6 +618,41 @@ static u8 GetApexRumorCount(u8 apexSubquest)
     return count;
 }
 
+static void TryRevealCurrentMapApexObject(u8 apexSubquest)
+{
+    static const struct
+    {
+        u8 subquest;
+        u16 map;
+        u16 hideFlag;
+        u8 localId;
+    } sApexObjectData[] =
+    {
+        {SUB_QUEST_APEX_TANGROWTH,  MAP_VIRIDIAN_FOREST,      FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH, 12},
+        {SUB_QUEST_APEX_ZAPDOS,     MAP_POWER_PLANT,          FLAG_HIDE_ZAPDOS,                    6},
+        {SUB_QUEST_APEX_ARTICUNO,   MAP_SEAFOAM_ISLANDS_B4F,  FLAG_HIDE_ARTICUNO,                  3},
+        {SUB_QUEST_APEX_MEWTWO,     MAP_CERULEAN_CAVE_B1F,    FLAG_HIDE_MEWTWO,                    3},
+        {SUB_QUEST_APEX_OSSCYTHE,   MAP_POKEMON_TOWER_4F,     FLAG_HIDE_POKEMON_TOWER_OSSCYTHE,    1},
+        {SUB_QUEST_APEX_MOLTRES,    MAP_CINNABAR_VOLCANO_3F,  FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES,  4},
+        {SUB_QUEST_APEX_MIME_SR,    MAP_DIGLETTS_CAVE_B2F,    FLAG_HIDE_DIGLETTS_CAVE_MIME_SR,     1},
+        {SUB_QUEST_APEX_ANNIHILAPE, MAP_MT_MOON_B2F,          FLAG_HIDE_MT_MOON_ANNIHILAPE,        5},
+    };
+    u8 i;
+
+    for (i = 0; i < NELEMS(sApexObjectData); i++)
+    {
+        if (sApexObjectData[i].subquest == apexSubquest
+         && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(sApexObjectData[i].map)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(sApexObjectData[i].map))
+        {
+            RemoveObjectEventByLocalIdAndMap(sApexObjectData[i].localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+            FlagClear(sApexObjectData[i].hideFlag);
+            TrySpawnObjectEvent(sApexObjectData[i].localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+            return;
+        }
+    }
+}
+
 bool8 LogbookMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor)
 {
     u8 bit;
@@ -661,6 +697,17 @@ void RecordApexRumor(void)
         LogbookMenu_GetSetQuestState(QUEST_APEX_POKEMON, FLAG_SET_ACTIVE);
     LogbookMenu_GetSetSubquestState(QUEST_APEX_POKEMON, FLAG_SET_UNLOCKED, apexSubquest);
     gSpecialVar_Result = oldCount == 0 ? APEX_RUMOR_RESULT_RECORDED : APEX_RUMOR_RESULT_UPDATED;
+}
+
+void TryRevealApexObjectOnCurrentMap(void)
+{
+    u8 apexSubquest = VarGet(VAR_0x8004);
+
+    if (apexSubquest >= QUEST_3_SUB_COUNT)
+        return;
+
+    if (GetApexRumorCount(apexSubquest) >= APEX_RUMORS_REQUIRED)
+        TryRevealCurrentMapApexObject(apexSubquest);
 }
 
 u16 IsApexRevealed(void)
