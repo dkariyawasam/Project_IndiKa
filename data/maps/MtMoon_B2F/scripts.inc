@@ -23,7 +23,9 @@ MtMoon_B2F_EventScript_TryRemoveAnnihilape::
 	return
 
 MtMoon_B2F_EventScript_ShowAnnihilape::
+	removeobject 5
 	clearflag FLAG_HIDE_MT_MOON_ANNIHILAPE
+	addobject 5
 	return
 
 MtMoon_B2F_EventScript_HideAnnihilape::

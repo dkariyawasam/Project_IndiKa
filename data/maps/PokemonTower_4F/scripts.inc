@@ -23,7 +23,9 @@ PokemonTower_4F_EventScript_TryRemoveOsscythe::
 	return
 
 PokemonTower_4F_EventScript_ShowOsscythe::
+	removeobject 1
 	clearflag FLAG_HIDE_POKEMON_TOWER_OSSCYTHE
+	addobject 1
 	return
 
 PokemonTower_4F_EventScript_HideOsscythe::

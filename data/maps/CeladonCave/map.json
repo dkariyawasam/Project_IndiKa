@@ -1,0 +1,97 @@
+{
+  "id": "MAP_CELADON_CAVE",
+  "name": "CeladonCave",
+  "layout": "LAYOUT_CELADON_CAVE",
+  "music": "MUS_MT_MOON",
+  "region_map_section": "MAPSEC_CELADON_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 1,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_CELADON_CAVE_LANCE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 10,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CeladonCave_EventScript_LanceAftermath",
+      "flag": "FLAG_HIDE_CELADON_CAVE_LANCE"
+    },
+    {
+      "local_id": "LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MEWTWO",
+      "x": 1,
+      "y": 1,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Return",
+      "flag": "FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO"
+    },
+    {
+      "local_id": "LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "x": 1,
+      "y": 1,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Return",
+      "flag": "FLAG_HIDE_CELADON_CAVE_FLASHBACK_GIOVANNI"
+    },
+    {
+      "local_id": "LOCALID_CELADON_CAVE_FLASHBACK_LANCE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 1,
+      "y": 1,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Return",
+      "flag": "FLAG_HIDE_CELADON_CAVE_FLASHBACK_LANCE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 24,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE7",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

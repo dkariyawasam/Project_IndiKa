@@ -179,6 +179,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE4_HEALING_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 93,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_CELADON_CAVE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
