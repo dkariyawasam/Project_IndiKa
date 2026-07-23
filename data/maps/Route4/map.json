@@ -188,7 +188,17 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 93,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route4_EventScript_WarpToCeladonCave"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
