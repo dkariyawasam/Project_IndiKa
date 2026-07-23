@@ -47,11 +47,27 @@ Route7_Text_AgathaAftermath::
 	.string "trust.\p"
 	.string "Always the same mistake.$"
 
-Route7_Text_AgathaFlashback::
-	.string "AGATHA: You don't command\n"
-	.string "a spirit like that.\p"
-	.string "GIOVANNI: It is not spirit.\n"
-	.string "It is power.$"
+Route7_Text_AgathaFlashbackCommand::
+	.string "GIOVANNI: MEWTWO.\p"
+	.string "Again.\n"
+	.string "Obey.$"
+
+Route7_Text_AgathaFlashbackWaning::
+	.string "AGATHA: Hah.\p"
+	.string "Hear that silence?\p"
+	.string "It is already choosing\n"
+	.string "whether to listen.$"
+
+Route7_Text_AgathaFlashbackSignal::
+	.string "GIOVANNI: The signal\n"
+	.string "still holds.\p"
+	.string "MEWTWO obeys me.$"
+
+Route7_Text_AgathaFlashbackStrike::
+	.string "GIOVANNI: Then strike her.$"
+
+Route7_Text_AgathaFlashbackWarning::
+	.string "AGATHA: Not for long.$"
 
 Route7_Text_AgathaRepeat::
 	.string "AGATHA: He learned nothing.\p"

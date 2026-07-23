@@ -24,7 +24,9 @@ DiglettsCave_B2F_EventScript_TryRemoveMimeSr::
 	return
 
 DiglettsCave_B2F_EventScript_ShowMimeSr::
+	removeobject 1
 	clearflag FLAG_HIDE_DIGLETTS_CAVE_MIME_SR
+	addobject 1
 	return
 
 DiglettsCave_B2F_EventScript_HideMimeSr::

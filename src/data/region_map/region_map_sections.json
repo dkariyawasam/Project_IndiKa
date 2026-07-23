@@ -443,6 +443,14 @@
     {
       "id": "MAPSEC_VIRIDIAN_CHANNEL",
       "name": "VIRIDIAN CHANNEL"
+    },
+    {
+      "id": "MAPSEC_CELADON_CAVE",
+      "name": "CELADON CAVE",
+      "x": 12,
+      "y": 5,
+      "width": 1,
+      "height": 1
     }
   ]
 }

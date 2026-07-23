@@ -377,6 +377,7 @@ gSpecials::
 	def_special SetPostgameFlags
 	def_special TryCompleteApexInstinctQuest
 	def_special RecordApexRumor
+	def_special TryRevealApexObjectOnCurrentMap
 	def_special IsApexRevealed
 	def_special ForcePlayerOntoBike
 	def_special EndBikeRental

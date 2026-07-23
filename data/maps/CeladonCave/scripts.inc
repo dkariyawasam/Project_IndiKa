@@ -1,0 +1,174 @@
+CeladonCave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCave_OnTransition
+	.byte 0
+
+CeladonCave_OnTransition::
+	call CeladonCave_EventScript_HideFlashbackActors
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_LANCE
+	goto_if_unset FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL, CeladonCave_EventScript_HideLance
+	call CeladonCave_EventScript_ShowLance
+	end
+
+CeladonCave_EventScript_HideLance::
+	setflag FLAG_HIDE_CELADON_CAVE_LANCE
+	removeobject LOCALID_CELADON_CAVE_LANCE
+	end
+
+CeladonCave_EventScript_ShowLance::
+	removeobject LOCALID_CELADON_CAVE_LANCE
+	clearflag FLAG_HIDE_CELADON_CAVE_LANCE
+	addobject LOCALID_CELADON_CAVE_LANCE
+	return
+
+CeladonCave_EventScript_HideFlashbackActors::
+	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO
+	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_GIOVANNI
+	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_LANCE
+	return
+
+CeladonCave_EventScript_RevealFlashbackActors::
+	clearflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO
+	clearflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_GIOVANNI
+	clearflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_LANCE
+	addobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	addobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	addobject LOCALID_CELADON_CAVE_FLASHBACK_LANCE
+	turnobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO, DIR_NORTH
+	turnobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI, DIR_NORTH
+	turnobject LOCALID_CELADON_CAVE_FLASHBACK_LANCE, DIR_EAST
+	return
+
+CeladonCave_EventScript_LanceAftermath::
+	lock
+	faceplayer
+	goto_if_set FLAG_SAW_ROUTE7_LANCE_FLASHBACK, CeladonCave_EventScript_LanceRepeat
+	msgbox CeladonCave_Text_LanceAftermath, MSGBOX_DEFAULT
+	call CeladonCave_EventScript_ShowLanceFlashback
+	msgbox CeladonCave_Text_LanceRepeat, MSGBOX_DEFAULT
+	setflag FLAG_SAW_ROUTE7_LANCE_FLASHBACK
+	setflag FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE
+	setvar VAR_MAP_SCENE_ROUTE7_RAMPAGE, 1
+	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_GIOVANNIS_AMBITION
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_ROUTE7_RAMPAGE
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_ROUTE7_RAMPAGE
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_CERULEAN_CAVE
+	release
+	end
+
+CeladonCave_EventScript_LanceRepeat::
+	msgbox CeladonCave_Text_LanceRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+CeladonCave_EventScript_ShowLanceFlashback::
+	call CeladonCave_EventScript_BeginLanceFlashbackScene
+	special SlowEliteFourFlashbackMusic
+	msgbox CeladonCave_Text_LanceFlashbackControl, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
+	applymovement LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO, CeladonCave_Movement_MewtwoResistsControl
+	waitmovement LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	msgbox CeladonCave_Text_LanceFlashbackBreaksFree, MSGBOX_DEFAULT
+	playse SE_M_PSYBEAM
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 5
+	special ShakeScreen
+	waitstate
+	closemessage
+	applymovement LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO, CeladonCave_Movement_MewtwoFleesNorth
+	waitmovement LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	msgbox CeladonCave_Text_LanceFlashbackGiovanniChase, MSGBOX_DEFAULT
+	applymovement LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI, CeladonCave_Movement_GiovanniChasesMewtwo
+	waitmovement LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_GIOVANNI
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	fadescreen FADE_TO_WHITE
+	delay 40
+	call CeladonCave_EventScript_RestoreLanceFlashbackSceneFromWhite
+	return
+
+CeladonCave_EventScript_BeginLanceFlashbackScene::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	setvar VAR_0x8004, 9
+	setvar VAR_0x8005, 8
+	special SetFlashbackCameraToCoords
+	call CeladonCave_EventScript_SetupLanceFlashbackScene
+	call CeladonCave_EventScript_RevealFlashbackActors
+	special ApplyFlashbackGreyscaleTint
+	special HoldFlashbackFadeWhite
+	delay 16
+	fadescreen FADE_FROM_WHITE
+	return
+
+CeladonCave_EventScript_SetupLanceFlashbackScene::
+	setflag FLAG_HIDE_CELADON_CAVE_LANCE
+	removeobject LOCALID_CELADON_CAVE_LANCE
+	special DrawWholeMapView
+	setobjectxyperm LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO, 9, 8
+	setobjectxyperm LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI, 9, 9
+	setobjectxyperm LOCALID_CELADON_CAVE_FLASHBACK_LANCE, 7, 8
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_LANCE
+	return
+
+CeladonCave_EventScript_RestoreLanceFlashbackSceneFromWhite::
+	special RestoreEliteFourFlashbackMusic
+	special RestoreFlashbackGreyscaleTint
+	call CeladonCave_EventScript_HideFlashbackActors
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
+	removeobject LOCALID_CELADON_CAVE_FLASHBACK_LANCE
+	special HoldFlashbackFadeWhite
+	special RestoreFlashbackCamera
+	special SuppressFlashbackPlayerGroundEffects
+	special HoldFlashbackFadeWhite
+	call CeladonCave_EventScript_ShowLance
+	special HoldFlashbackFadeWhite
+	special DrawWholeMapView
+	special HoldFlashbackFadeWhite
+	closemessage
+	delay 20
+	special HoldFlashbackFadeWhite
+	special SuppressFlashbackPlayerGroundEffects
+	fadescreen FADE_FROM_WHITE
+	special RestoreFlashbackPlayerGroundEffects
+	return
+
+CeladonCave_Movement_MewtwoResistsControl::
+	face_left
+	delay_8
+	face_right
+	delay_8
+	face_up
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+CeladonCave_Movement_MewtwoFleesNorth::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+CeladonCave_Movement_GiovanniChasesMewtwo::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
