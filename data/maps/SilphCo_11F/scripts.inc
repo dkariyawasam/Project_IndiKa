@@ -18,6 +18,7 @@ SilphCo_11F_EventScript_President::
 	goto_if_eq VAR_RESULT, FALSE, SilphCo_11F_EventScript_NoRoomForMasterBall
 	giveitem_msg SilphCo_11F_Text_ObtainedMasterBallFromPresident, ITEM_MASTER_BALL, 1, MUS_OBTAIN_KEY_ITEM
 	msgbox SilphCo_11F_Text_ThatsOurSecretPrototype
+	call SilphCo_11F_EventScript_RecordMewtwoSilphRumor
 	setflag FLAG_GOT_MASTER_BALL_FROM_SILPH
 	release
 	end
@@ -37,8 +38,15 @@ SilphCo_11F_EventScript_NoRoomForMasterBall::
 
 SilphCo_11F_EventScript_AlreadyGotMasterBall::
 	msgbox SilphCo_11F_Text_ThatsOurSecretPrototype
+	call SilphCo_11F_EventScript_RecordMewtwoSilphRumor
 	release
 	end
+
+SilphCo_11F_EventScript_RecordMewtwoSilphRumor::
+	setvar VAR_0x8004, SUB_QUEST_APEX_MEWTWO
+	setvar VAR_0x8005, 1
+	call EventScript_RecordApexRumorWithFeedback
+	return
 
 SilphCo_11F_EventScript_Secretary::
 	msgbox SilphCo_11F_Text_ThanksForRescuingUs, MSGBOX_NPC

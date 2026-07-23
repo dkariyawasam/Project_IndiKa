@@ -134,6 +134,7 @@ static void Overworld_SetWhiteoutRespawnPoint(void);
 static void RecallSeagallopToWhiteoutRespawnPoint(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, u16 metatileBehavior, u8 mapType);
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, u8 transitionFlags, u16 metatileBehavior, u8 mapType);
+static bool8 IsRoute4CeladonCaveExitWarp(void);
 static u16 GetCenterScreenMetatileBehavior(void);
 static void SetDefaultFlashLevel(void);
 static void Overworld_TryMapConnectionMusicTransition(void);
@@ -1021,6 +1022,8 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
 {
     if (FlagGet(FLAG_SYS_CRUISE_MODE) && mapType == MAP_TYPE_OCEAN_ROUTE)
         return DIR_EAST;
+    else if (IsRoute4CeladonCaveExitWarp())
+        return DIR_NORTH;
     else if (MetatileBehavior_IsDeepSouthWarp(metatileBehavior) == TRUE)
         return DIR_NORTH;
     else if (MetatileBehavior_IsNonAnimDoor(metatileBehavior) == TRUE || MetatileBehavior_IsWarpDoor_2(metatileBehavior) == TRUE)
@@ -1046,6 +1049,14 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
         return playerStruct->direction;
     else
         return DIR_SOUTH;
+}
+
+static bool8 IsRoute4CeladonCaveExitWarp(void)
+{
+    return gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE4)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE4)
+        && gSaveBlock1Ptr->pos.x == 93
+        && gSaveBlock1Ptr->pos.y == 19;
 }
 
 static u16 GetCenterScreenMetatileBehavior(void)

@@ -67,6 +67,7 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Added a Silph Co Giovanni scene that connects Silph's Master Ball technology to Mewtwo control.
 - Rewrote Silph Co Giovanni dialogue around control, command, and reclaiming Mewtwo.
 - Added President and assistant reactions in the Silph Co confrontation.
+- Made the Silph president record Mewtwo's second Apex dossier entry after Giovanni is defeated.
 - Made the player approach Giovanni only after Giovanni tells them to come forth.
 - Added Giovanni's Ambition as a Logbook quest with subquests rather than a single dynamic description.
 - Set Team Rocket in Saffron to appear only after the Pokemon Mansion Giovanni scene.
@@ -151,6 +152,7 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Shows Lance already on the ground when the memory begins, implying Mewtwo attacked him before the visible moment.
 - Shows Mewtwo going rogue and Giovanni pursuing it north after losing control.
 - Uses the shared Elite Four flashback transition plumbing.
+- Records Lance as Mewtwo's third Apex dossier witness after talking to him.
 
 ## Celadon Cave / Tunnel
 
@@ -816,6 +818,8 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Celadon Cave / Tunnel creation and Lance flashback.
 - Giovanni/Mewtwo story integration.
 - Route 7 to Route 4 path of destruction.
+- Route 7 to Celadon Cave / Tunnel to Route 4 chain confirmed working in playtest.
+- Cerulean Cave Giovanni/Mewtwo confrontation now appears only after the Route 7 rampage beat.
 - Mewtwo flashback assets:
   - `mewtwo_flashback_beam`.
   - `mewtwo_flashback_charge_circle`.
@@ -825,7 +829,6 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 
 ## Known Pinned / Remaining Work
 
-- Playtest the full Route 7 to Celadon Cave to Route 4 story sequence in one continuous run.
 - Finish the later Giovanni/Mewtwo sequence:
   - Post-Silph retreat.
   - Cerulean Cave confrontation.

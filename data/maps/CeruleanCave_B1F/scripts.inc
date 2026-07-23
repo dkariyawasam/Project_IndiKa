@@ -14,10 +14,17 @@ CeruleanCave_B1F_EventScript_TryRemoveMewtwo::
 	return
 
 CeruleanCave_B1F_OnTransition::
+	call_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_HideMewtwo
+	call_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_HideGiovanni
+	goto_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_EndTransition
 	call_if_unset FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_ShowMewtwo
+	call CeruleanCave_B1F_EventScript_ShowGiovanni
 	call_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_MoveGiovanniAside
 	call_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_HideGiovanni
 	call_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_HideGiovanni
+	end
+
+CeruleanCave_B1F_EventScript_EndTransition::
 	end
 
 CeruleanCave_B1F_EventScript_ShowMewtwo::
@@ -26,8 +33,22 @@ CeruleanCave_B1F_EventScript_ShowMewtwo::
 	addobject 3
 	return
 
+CeruleanCave_B1F_EventScript_HideMewtwo::
+	setflag FLAG_HIDE_MEWTWO
+	removeobject 3
+	return
+
+CeruleanCave_B1F_EventScript_ShowGiovanni::
+	goto_if_set FLAG_FOUGHT_MEWTWO, EventScript_Return
+	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, EventScript_Return
+	removeobject LOCALID_CERULEAN_CAVE_GIOVANNI
+	clearflag FLAG_HIDE_CERULEAN_CAVE_GIOVANNI
+	addobject LOCALID_CERULEAN_CAVE_GIOVANNI
+	return
+
 CeruleanCave_B1F_EventScript_HideGiovanni::
 	setflag FLAG_HIDE_CERULEAN_CAVE_GIOVANNI
+	removeobject LOCALID_CERULEAN_CAVE_GIOVANNI
 	return
 
 CeruleanCave_B1F_EventScript_MoveGiovanniAside::

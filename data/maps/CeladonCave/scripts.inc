@@ -1,8 +1,32 @@
 CeladonCave_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CeladonCave_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCave_OnTransition
 	.byte 0
 
+CeladonCave_OnFrame::
+	map_script_2 VAR_TEMP_0, 1, CeladonCave_EventScript_WalkInFromRoute7
+	map_script_2 VAR_TEMP_0, 2, CeladonCave_EventScript_WalkInFromRoute4
+	.2byte 0
+
 CeladonCave_OnTransition::
+	goto CeladonCave_EventScript_SetupOnTransition
+
+CeladonCave_EventScript_SetupOnTransition::
+	setvar VAR_TEMP_0, 0
+	getplayerxy VAR_0x8004, VAR_0x8005
+	compare VAR_0x8004, 9
+	goto_if_ne CeladonCave_EventScript_SetupLanceState
+	compare VAR_0x8005, 24
+	goto_if_ne CeladonCave_EventScript_CheckRoute4Entry
+	setvar VAR_TEMP_0, 1
+	goto CeladonCave_EventScript_SetupLanceState
+
+CeladonCave_EventScript_CheckRoute4Entry::
+	compare VAR_0x8005, 1
+	goto_if_ne CeladonCave_EventScript_SetupLanceState
+	setvar VAR_TEMP_0, 2
+
+CeladonCave_EventScript_SetupLanceState::
 	call CeladonCave_EventScript_HideFlashbackActors
 	removeobject LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
 	removeobject LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI
@@ -21,6 +45,22 @@ CeladonCave_EventScript_ShowLance::
 	clearflag FLAG_HIDE_CELADON_CAVE_LANCE
 	addobject LOCALID_CELADON_CAVE_LANCE
 	return
+
+CeladonCave_EventScript_WalkInFromRoute7::
+	setvar VAR_TEMP_0, 0
+	lockall
+	applymovement LOCALID_PLAYER, CeladonCave_Movement_PlayerWalkInFromRoute7
+	waitmovement 0
+	releaseall
+	end
+
+CeladonCave_EventScript_WalkInFromRoute4::
+	setvar VAR_TEMP_0, 0
+	lockall
+	applymovement LOCALID_PLAYER, CeladonCave_Movement_PlayerWalkInFromRoute4
+	waitmovement 0
+	releaseall
+	end
 
 CeladonCave_EventScript_HideFlashbackActors::
 	setflag FLAG_HIDE_CELADON_CAVE_FLASHBACK_MEWTWO
@@ -47,6 +87,7 @@ CeladonCave_EventScript_LanceAftermath::
 	msgbox CeladonCave_Text_LanceAftermath, MSGBOX_DEFAULT
 	call CeladonCave_EventScript_ShowLanceFlashback
 	msgbox CeladonCave_Text_LanceRepeat, MSGBOX_DEFAULT
+	call CeladonCave_EventScript_RecordMewtwoLanceRumor
 	setflag FLAG_SAW_ROUTE7_LANCE_FLASHBACK
 	setflag FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE
 	setvar VAR_MAP_SCENE_ROUTE7_RAMPAGE, 1
@@ -59,8 +100,15 @@ CeladonCave_EventScript_LanceAftermath::
 
 CeladonCave_EventScript_LanceRepeat::
 	msgbox CeladonCave_Text_LanceRepeat, MSGBOX_DEFAULT
+	call CeladonCave_EventScript_RecordMewtwoLanceRumor
 	release
 	end
+
+CeladonCave_EventScript_RecordMewtwoLanceRumor::
+	setvar VAR_0x8004, SUB_QUEST_APEX_MEWTWO
+	setvar VAR_0x8005, 2
+	call EventScript_RecordApexRumorWithFeedback
+	return
 
 CeladonCave_EventScript_ShowLanceFlashback::
 	call CeladonCave_EventScript_BeginLanceFlashbackScene
@@ -162,6 +210,14 @@ CeladonCave_Movement_MewtwoFleesNorth::
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	step_end
+
+CeladonCave_Movement_PlayerWalkInFromRoute7::
+	walk_up
+	step_end
+
+CeladonCave_Movement_PlayerWalkInFromRoute4::
+	face_down
 	step_end
 
 CeladonCave_Movement_GiovanniChasesMewtwo::

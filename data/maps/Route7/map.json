@@ -241,7 +241,7 @@
     {
       "x": 9,
       "y": 22,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_CELADON_CAVE",
       "dest_warp_id": "0"
     }
