@@ -90,7 +90,7 @@ Route7_EventScript_RemoveMewtwoAndGiovanni::
 
 Route7_EventScript_ShowEliteFourAftermath::
 	setobjectxyperm LOCALID_ROUTE7_AGATHA, 6, 27
-	setobjectxyperm LOCALID_ROUTE7_BRUNO, 14, 45
+	setobjectxyperm LOCALID_ROUTE7_BRUNO, 13, 44
 	setobjectxyperm LOCALID_ROUTE7_LORELEI, 7, 56
 	removeobject LOCALID_ROUTE7_AGATHA
 	removeobject LOCALID_ROUTE7_BRUNO
