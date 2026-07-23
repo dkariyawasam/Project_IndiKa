@@ -21,7 +21,9 @@ CeruleanCave_B1F_OnTransition::
 	end
 
 CeruleanCave_B1F_EventScript_ShowMewtwo::
+	removeobject 3
 	clearflag FLAG_HIDE_MEWTWO
+	addobject 3
 	return
 
 CeruleanCave_B1F_EventScript_HideGiovanni::

@@ -1190,6 +1190,18 @@
       "blockdata_filepath": "data/layouts/CeruleanCave_1F/map.bin"
     },
     {
+      "id": "LAYOUT_CELADON_CAVE",
+      "name": "CeladonCave_Layout",
+      "width": 24,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CeladonCave/border.bin",
+      "blockdata_filepath": "data/layouts/CeladonCave/map.bin"
+    },
+    {
       "id": "LAYOUT_CERULEAN_CAVE_2F",
       "name": "CeruleanCave_2F_Layout",
       "width": 40,

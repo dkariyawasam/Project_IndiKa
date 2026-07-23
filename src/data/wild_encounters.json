@@ -2403,6 +2403,75 @@
           }
         },
         {
+          "map": "MAP_CELADON_CAVE",
+          "base_label": "sCeladonCave",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_WOBBUFFET"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_LICKITUNG"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_AEROPTERYX"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_LICKITUNG"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_WOBBUFFET"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ROCK_TUNNEL_1F",
           "base_label": "sRockTunnel1F",
           "land_mons": {

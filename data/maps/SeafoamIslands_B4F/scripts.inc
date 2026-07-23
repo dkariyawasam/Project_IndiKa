@@ -45,7 +45,9 @@ SeafoamIslands_B4F_EventScript_SetNoCurrentLayout::
 	return
 
 SeafoamIslands_B4F_EventScript_ShowArticuno::
+	removeobject 3
 	clearflag FLAG_HIDE_ARTICUNO
+	addobject 3
 	return
 
 SeafoamIslands_B4F_EventScript_HideArticuno::
