@@ -50,7 +50,9 @@ src/data/region_map/region_map_entry_strings.h
 src/data/region_map/porymap_config.json
 tags
 tools/agbcc
+tools/agbcc-src
 tools/binutils
+tools/porymap
 types_*.taghl
 !.github/calcrom/calcrom.pl
 !sound/programmable_wave_samples/*.pcm
