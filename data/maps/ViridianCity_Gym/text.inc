@@ -48,19 +48,6 @@ ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "POKéMON LEAGUE.\p"
     .string "Go. Your path lies ahead.$"
 
-ViridianCity_Gym_Text_UnusedGiovanniReward::
-    .string "{PLAYER} received something\n"
-    .string "from GIOVANNI.$"
-
-ViridianCity_Gym_Text_ExplainEarthquake::
-    .string "EARTHQUAKE is a powerful attack\n"
-    .string "that causes a massive tremor.\p"
-    .string "I made it when I ran the GYM here,\n"
-    .string "far too long ago… $"
-
-ViridianCity_Gym_Text_YouDoNotHaveSpace::
-    .string "You do not have space for this!$"
-
 ViridianCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
