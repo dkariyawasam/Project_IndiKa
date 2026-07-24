@@ -4407,6 +4407,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_BossGiovanni2[] = {
     {
         .iv = 250,
         .lvl = 43,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_THRASH, MOVE_BITE, MOVE_DRAGON_RAGE},
+    },
+    {
+        .iv = 250,
+        .lvl = 43,
         .species = SPECIES_RHYDON,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
     },
