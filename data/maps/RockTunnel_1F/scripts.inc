@@ -60,15 +60,36 @@ RockTunnel_1F_EventScript_AshtonRematch::
 
 RockTunnel_1F_EventScript_Leah::
 	trainerbattle_single TRAINER_PICNICKER_LEAH, RockTunnel_1F_Text_LeahIntro, RockTunnel_1F_Text_LeahDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_LeahRematch
+	msgbox RockTunnel_1F_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_LeahRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_LEAH, RockTunnel_1F_Text_LeahIntro, RockTunnel_1F_Text_LeahDefeat
 	msgbox RockTunnel_1F_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_1F_EventScript_Ariana::
 	trainerbattle_single TRAINER_PICNICKER_ARIANA, RockTunnel_1F_Text_ArianaIntro, RockTunnel_1F_Text_ArianaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_ArianaRematch
+	msgbox RockTunnel_1F_Text_ArianaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_ArianaRematch::
+	trainerbattle_rematch TRAINER_PICNICKER_ARIANA, RockTunnel_1F_Text_ArianaIntro, RockTunnel_1F_Text_ArianaDefeat
 	msgbox RockTunnel_1F_Text_ArianaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RockTunnel_1F_EventScript_Dana::
 	trainerbattle_single TRAINER_FISHERMAN_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, RockTunnel_1F_EventScript_DanaRematch
+	msgbox RockTunnel_1F_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RockTunnel_1F_EventScript_DanaRematch::
+	trainerbattle_rematch TRAINER_FISHERMAN_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
 	msgbox RockTunnel_1F_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
 	end
