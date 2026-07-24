@@ -571,13 +571,13 @@ static u8 GetRadialStartMenuPreferredSlot(u8 menuItem)
     case STARTMENU_PLAYER2:
         return 5;
     case STARTMENU_MAP:
-        return 6;
-    case STARTMENU_SETTINGS:
         return 2;
-    case STARTMENU_OPTION:
+    case STARTMENU_SETTINGS:
         return 4;
-    case STARTMENU_QUEST:
+    case STARTMENU_OPTION:
         return 3;
+    case STARTMENU_QUEST:
+        return 6;
     case STARTMENU_EXIT:
         return 1;
     case STARTMENU_RETIRE:
@@ -738,9 +738,9 @@ static s16 GetRadialStartMenuSpriteX(u8 slot)
 {
     s16 x = DISPLAY_WIDTH / 2 + sRadialStartMenuWindowXOffsets[slot] + 40;
 
-    if (sRadialStartMenuSlotToItem[slot] == STARTMENU_MAP)
+    if (sRadialStartMenuSlotToItem[slot] == STARTMENU_QUEST)
         x -= 10;
-    else if (sRadialStartMenuSlotToItem[slot] == STARTMENU_SETTINGS)
+    else if (sRadialStartMenuSlotToItem[slot] == STARTMENU_MAP)
         x += 10;
 
     return x;
@@ -758,10 +758,10 @@ static s16 GetRadialStartMenuSpriteY(u8 slot)
     else if (menuItem == STARTMENU_PLAYER2
           || menuItem == STARTMENU_PLAYER
           || menuItem == STARTMENU_OPTION
-          || menuItem == STARTMENU_QUEST)
+          || menuItem == STARTMENU_SETTINGS)
         y += 7;
 
-    if (menuItem == STARTMENU_MAP || menuItem == STARTMENU_SETTINGS)
+    if (menuItem == STARTMENU_MAP || menuItem == STARTMENU_QUEST)
         y += 12;
 
     return y;
@@ -1241,17 +1241,17 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     s16 fromY = sRadialStartMenuSlotYs[sRadialStartMenuCursorSlot];
 
     if ((currentItem == STARTMENU_POKEDEX && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_OPTION && dx == 0 && dy > 0)
+     || (currentItem == STARTMENU_SETTINGS && dx == 0 && dy > 0)
      || (currentItem == STARTMENU_POKEMON && dx < 0 && dy == 0)
      || (currentItem == STARTMENU_POKEMON && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_MAP && dx < 0 && dy == 0)
+     || (currentItem == STARTMENU_QUEST && dx < 0 && dy == 0)
      || (currentItem == STARTMENU_BAG && dx > 0 && dy == 0)
      || (currentItem == STARTMENU_BAG && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_SETTINGS && dx > 0 && dy == 0)
+     || (currentItem == STARTMENU_MAP && dx > 0 && dy == 0)
      || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx < 0 && dy == 0)
      || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx == 0 && dy > 0)
-     || (currentItem == STARTMENU_QUEST && dx > 0 && dy == 0)
-     || (currentItem == STARTMENU_QUEST && dx == 0 && dy > 0))
+     || (currentItem == STARTMENU_OPTION && dx > 0 && dy == 0)
+     || (currentItem == STARTMENU_OPTION && dx == 0 && dy > 0))
         return sRadialStartMenuCursorSlot;
 
     if (currentItem == STARTMENU_POKEDEX)
@@ -1261,7 +1261,7 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
         else if (dx > 0 && dy == 0)
             targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
         else if (dx == 0 && dy > 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
         else
             targetSlot = 0xFF;
 
@@ -1271,15 +1271,9 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     if (currentItem == STARTMENU_OPTION)
     {
         if (dx < 0 && dy == 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-        }
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
         else if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
         else
             targetSlot = 0xFF;
 
@@ -1292,7 +1286,7 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
             targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
         else if (dx == 0 && dy > 0)
         {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
             if (targetSlot == 0xFF)
             {
                 targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
@@ -1309,15 +1303,11 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     if (currentItem == STARTMENU_MAP)
     {
         if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
         else if (dx == 0 && dy > 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-        }
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else if (dx < 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
         else
             targetSlot = 0xFF;
 
@@ -1330,9 +1320,9 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
             targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
         else if (dx == 0 && dy > 0)
         {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
             if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
         }
         else
             targetSlot = 0xFF;
@@ -1342,12 +1332,16 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     }
     if (currentItem == STARTMENU_SETTINGS)
     {
-        if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
-        else if (dx == 0 && dy > 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
-        else if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
+        if (dx < 0 && dy == 0)
+        {
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
+            if (targetSlot == 0xFF)
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
+        }
+        else if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        else if (dx == 0 && dy < 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
         else
             targetSlot = 0xFF;
 
@@ -1356,13 +1350,15 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     }
     if (currentItem == STARTMENU_QUEST)
     {
-        if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+        if (dx > 0 && dy == 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
         else if (dx == 0 && dy < 0)
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
+        else if (dx == 0 && dy > 0)
         {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
             if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
+                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
         }
         else
             targetSlot = 0xFF;
@@ -1374,12 +1370,12 @@ static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
     {
         if (dx == 0 && dy < 0)
         {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
             if (targetSlot == 0xFF)
                 targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
         }
         else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
+            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
         else
             targetSlot = 0xFF;
 
