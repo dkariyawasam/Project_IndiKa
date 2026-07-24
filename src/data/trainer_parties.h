@@ -4379,59 +4379,75 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_BossGiovanni2[] = {
     {
         .iv = 250,
-        .lvl = 37,
-        .species = SPECIES_NIDORINO,
-    },
-    {
-        .iv = 250,
-        .lvl = 35,
-        .species = SPECIES_KANGASKHAN,
-    },
-    {
-        .iv = 250,
-        .lvl = 37,
-        .species = SPECIES_RHYHORN,
+        .lvl = 40,
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_FAINT_ATTACK, MOVE_SLASH, MOVE_TAUNT, MOVE_FRUSTRATION},
     },
     {
         .iv = 250,
         .lvl = 41,
+        .species = SPECIES_KANGASKHAN,
+        .moves = {MOVE_DIZZY_PUNCH, MOVE_FAKE_OUT, MOVE_BRICK_BREAK, MOVE_FRUSTRATION},
+    },
+    {
+        .iv = 250,
+        .lvl = 42,
         .species = SPECIES_NIDOQUEEN,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLUDGE_BOMB, MOVE_BODY_SLAM, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 42,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLUDGE_BOMB, MOVE_THRASH, MOVE_MEGAHORN},
+    },
+    {
+        .iv = 250,
+        .lvl = 43,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
     },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderGiovanni[] = {
     {
-        .iv = 0,
-        .lvl = 45,
-        .species = SPECIES_RHYHORN,
-        .moves = {MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_EARTHQUAKE},
+        .iv = 180,
+        .lvl = 47,
+        .species = SPECIES_SANDSLASH,
+        .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_SWORDS_DANCE, MOVE_EARTHQUAKE},
     },
     {
-        .iv = 0,
-        .lvl = 42,
+        .iv = 180,
+        .lvl = 47,
         .species = SPECIES_DUGTRIO,
         .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_MUD_SLAP, MOVE_EARTHQUAKE},
     },
     {
-        .iv = 0,
-        .lvl = 44,
+        .iv = 180,
+        .lvl = 48,
+        .species = SPECIES_MAROWAK,
+        .moves = {MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_FOCUS_ENERGY, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 180,
+        .lvl = 49,
         .species = SPECIES_NIDOQUEEN,
         .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_EARTHQUAKE},
     },
     {
-        .iv = 0,
-        .lvl = 45,
+        .iv = 180,
+        .lvl = 49,
         .species = SPECIES_NIDOKING,
         .moves = {MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_EARTHQUAKE},
     },
     {
-        .iv = 0,
+        .iv = 180,
         .lvl = 50,
-        .species = SPECIES_RHYHORN,
-        .moves = {MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_EARTHQUAKE},
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_TAKE_DOWN, MOVE_ROCK_SLIDE, MOVE_SCARY_FACE, MOVE_EARTHQUAKE},
     },
 };
 
@@ -12614,40 +12630,40 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAceViper[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_RocketLeagueChampionGiovanni[] = {
     {
-        .iv = 180,
-        .lvl = 41,
-        .species = SPECIES_PERSIAN,
-        .moves = {MOVE_FAINT_ATTACK, MOVE_SLASH, MOVE_TAUNT, MOVE_SHADOW_BALL},
-    },
-    {
-        .iv = 180,
-        .lvl = 42,
-        .species = SPECIES_DUGTRIO,
-        .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_SAND_TOMB, MOVE_ROCK_TOMB},
-    },
-    {
-        .iv = 180,
-        .lvl = 43,
-        .species = SPECIES_NIDOQUEEN,
-        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_SLUDGE_BOMB},
-    },
-    {
-        .iv = 180,
-        .lvl = 43,
-        .species = SPECIES_NIDOKING,
-        .moves = {MOVE_EARTHQUAKE, MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_SLUDGE_BOMB},
-    },
-    {
-        .iv = 180,
-        .lvl = 44,
-        .species = SPECIES_KANGASKHAN,
-        .moves = {MOVE_DIZZY_PUNCH, MOVE_SHADOW_BALL, MOVE_BRICK_BREAK, MOVE_FAKE_OUT},
-    },
-    {
-        .iv = 180,
+        .iv = 220,
         .lvl = 45,
-        .species = SPECIES_RHYDON,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_SCARY_FACE},
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_FAINT_ATTACK, MOVE_SLASH, MOVE_TAUNT, MOVE_RETURN},
+    },
+    {
+        .iv = 220,
+        .lvl = 46,
+        .species = SPECIES_CROBAT,
+        .moves = {MOVE_AERIAL_ACE, MOVE_CONFUSE_RAY, MOVE_BITE, MOVE_STEEL_WING},
+    },
+    {
+        .iv = 220,
+        .lvl = 47,
+        .species = SPECIES_HONCHKROW,
+        .moves = {MOVE_AERIAL_ACE, MOVE_FAINT_ATTACK, MOVE_TAUNT, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 220,
+        .lvl = 48,
+        .species = SPECIES_NIDOQUEEN,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLUDGE_BOMB, MOVE_BODY_SLAM, MOVE_PROTECT},
+    },
+    {
+        .iv = 220,
+        .lvl = 48,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLUDGE_BOMB, MOVE_MEGAHORN, MOVE_PROTECT},
+    },
+    {
+        .iv = 220,
+        .lvl = 50,
+        .species = SPECIES_RHYPERIOR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_MEGAHORN, MOVE_TAKE_DOWN},
     },
 };
 

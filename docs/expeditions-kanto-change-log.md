@@ -71,12 +71,25 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Made the player approach Giovanni only after Giovanni tells them to come forth.
 - Added Giovanni's Ambition as a Logbook quest with subquests rather than a single dynamic description.
 - Set Team Rocket in Saffron to appear only after the Pokemon Mansion Giovanni scene.
-- Planned the later flow:
+- Continued the later flow:
   - Giovanni fails to get full Master Ball manufacturing control.
   - Giovanni activates or uses a control device.
   - Mewtwo clashes with the Elite Four on Route 7.
   - Mewtwo breaks free and retreats toward Cerulean Cave.
-  - Giovanni follows and eventually loses faith in absolute power after the player's later victories.
+  - Giovanni follows it north.
+- Added the Cerulean Cave Giovanni/Mewtwo confrontation:
+  - Giovanni waits near Mewtwo before the encounter.
+  - The player is stopped by an exclamation-mark trigger before approaching.
+  - Giovanni's defeated dialogue now frames him as losing faith in absolute power.
+  - Giovanni walks away after the Mewtwo encounter instead of disappearing.
+- Completed the Viridian Gym Giovanni resolution:
+  - Giovanni reflects on the Mansion, Silph, Mewtwo, and his pursuit of command.
+  - He recognizes that trust, not possession of power, made the player stronger.
+  - He disbands Team Rocket and leaves as a trainer rather than a boss.
+- Reworked Giovanni's battle teams around his arc:
+  - Silph Co uses an aggressive Team Rocket boss team at the height of his pursuit of control.
+  - Viridian Gym uses an official monotype Ground leader team.
+  - Rocket League champion Giovanni uses a reformed Rocket leader team built around loyalty, future direction, and Team Rocket identity.
 
 ## Route 7 Mewtwo Aftermath
 
@@ -820,6 +833,8 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Route 7 to Route 4 path of destruction.
 - Route 7 to Celadon Cave / Tunnel to Route 4 chain confirmed working in playtest.
 - Cerulean Cave Giovanni/Mewtwo confrontation now appears only after the Route 7 rampage beat.
+- Cerulean Cave Giovanni retreat and defeated dialogue are now in place.
+- Viridian Gym Giovanni resolution and Team Rocket disbanding are now in place.
 - Mewtwo flashback assets:
   - `mewtwo_flashback_beam`.
   - `mewtwo_flashback_charge_circle`.
@@ -829,12 +844,10 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 
 ## Known Pinned / Remaining Work
 
-- Finish the later Giovanni/Mewtwo sequence:
-  - Post-Silph retreat.
-  - Cerulean Cave confrontation.
-  - Mewtwo encounter.
-  - Giovanni retreat to Viridian Gym.
-  - Viridian Gym resolution and Team Rocket disbanding.
+- Finalize any last Giovanni/Mewtwo polish after playtesting:
+  - Silph-to-Route 7 signposting.
+  - Cerulean Cave approach/retreat feel.
+  - Viridian Gym final-scene pacing.
 - Finalize any last Celadon Cave/Tunnel map polish after playtesting:
   - Collision.
   - Encounter feel.
