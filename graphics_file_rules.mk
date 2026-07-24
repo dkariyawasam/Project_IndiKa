@@ -254,6 +254,24 @@ $(TITLESCREENGFXDIR)/firered/grass.gbapal: %.gbapal: %.pal
 $(TITLESCREENGFXDIR)/leafgreen/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 123 -Wnum_tiles
 
+STARTMENUGFXDIR := graphics/start_menu
+
+STARTMENUICONFILES := \
+	$(STARTMENUGFXDIR)/pokedex.4bpp \
+	$(STARTMENUGFXDIR)/pokemon.4bpp \
+	$(STARTMENUGFXDIR)/bag.4bpp \
+	$(STARTMENUGFXDIR)/logbook.4bpp \
+	$(STARTMENUGFXDIR)/card.4bpp \
+	$(STARTMENUGFXDIR)/help.4bpp \
+	$(STARTMENUGFXDIR)/map.4bpp \
+	$(STARTMENUGFXDIR)/settings.4bpp
+
+$(STARTMENUICONFILES): %.4bpp: %.png
+	$(GFX) $< $@
+
+$(STARTMENUGFXDIR)/icons.4bpp: $(STARTMENUICONFILES)
+	cat $^ > $@
+
 POKEDEXAREAMARKERSDATADIR := graphics/pokedex/area_markers
 
 POKEDEXAREAMARKERFILES := \
