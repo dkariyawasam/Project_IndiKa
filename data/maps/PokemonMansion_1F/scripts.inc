@@ -35,5 +35,12 @@ PokemonMansion_1F_EventScript_TedRematch::
 
 PokemonMansion_1F_EventScript_Johnson::
 	trainerbattle_single TRAINER_CAMPER_JOHNSON, PokemonMansion_1F_Text_JohnsonIntro, PokemonMansion_1F_Text_JohnsonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PokemonMansion_1F_EventScript_JohnsonRematch
+	msgbox PokemonMansion_1F_Text_JohnsonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_1F_EventScript_JohnsonRematch::
+	trainerbattle_rematch TRAINER_CAMPER_JOHNSON, PokemonMansion_1F_Text_JohnsonIntro, PokemonMansion_1F_Text_JohnsonDefeat
 	msgbox PokemonMansion_1F_Text_JohnsonPostBattle, MSGBOX_AUTOCLOSE
 	end
