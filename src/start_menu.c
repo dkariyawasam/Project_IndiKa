@@ -262,10 +262,9 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 #define START_MENU_CENTER_LABEL_TOP 3
 #define START_MENU_CENTER_LABEL_HEIGHT 10
 #define START_MENU_SELECTED_ICON_BOB_INTERVAL 8
-#define START_MENU_BACKDROP_OBJ_PAL_SLOT 14
 #define START_MENU_ICON_OBJ_PAL_SLOT 15
-#define START_MENU_OBJ_PAL_BACKUP_START START_MENU_BACKDROP_OBJ_PAL_SLOT
-#define START_MENU_OBJ_PAL_BACKUP_COUNT 2
+#define START_MENU_OBJ_PAL_BACKUP_START START_MENU_ICON_OBJ_PAL_SLOT
+#define START_MENU_OBJ_PAL_BACKUP_COUNT 1
 
 static const s8 sRadialStartMenuWindowXOffsets[] = { -40, -16, -16, -16, -40, -64, -64, -64 };
 static const s8 sRadialStartMenuWindowYOffsets[] = { -20, -10, -6, 20, 32, 20, -6, -10 };
@@ -282,7 +281,6 @@ static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 #define TAG_START_MENU_BACKDROP     0x1257
 
 static const u32 sRadialStartMenuBackdropGfx[] = INCBIN_U32("graphics/start_menu/backdrop.4bpp.lz");
-static const u32 sRadialStartMenuBackdropPal[] = INCBIN_U32("graphics/start_menu/backdrop.gbapal.lz");
 static const u32 sRadialStartMenuButtonIconGfx[] = INCBIN_U32("graphics/start_menu/button.4bpp.lz");
 static const u32 sRadialStartMenuPokemonIconGfx[] = INCBIN_U32("graphics/start_menu/pokemon.4bpp.lz");
 static const u32 sRadialStartMenuSettingsIconGfx[] = INCBIN_U32("graphics/start_menu/settings.4bpp.lz");
@@ -1014,8 +1012,6 @@ static void BackupRadialStartMenuObjPalettes(void)
 
 static void LoadRadialStartMenuObjPalettes(void)
 {
-    LZ77UnCompWram(sRadialStartMenuBackdropPal, gDecompressionBuffer);
-    LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(START_MENU_BACKDROP_OBJ_PAL_SLOT), PLTT_SIZE_4BPP);
     LZ77UnCompWram(sRadialStartMenuSettingsIconPal, gDecompressionBuffer);
     LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(START_MENU_ICON_OBJ_PAL_SLOT), PLTT_SIZE_4BPP);
 }
@@ -1120,7 +1116,7 @@ static void CreateRadialStartMenuSprites(void)
     sRadialStartMenuIconsVisible = FALSE;
     sRadialStartMenuBackdropSpriteId = CreateSprite(&sSpriteTemplate_RadialStartMenuBackdrop, DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 4);
     if (sRadialStartMenuBackdropSpriteId != MAX_SPRITES)
-        gSprites[sRadialStartMenuBackdropSpriteId].oam.paletteNum = START_MENU_BACKDROP_OBJ_PAL_SLOT;
+        gSprites[sRadialStartMenuBackdropSpriteId].oam.paletteNum = START_MENU_ICON_OBJ_PAL_SLOT;
 
     for (i = 0; i < NELEMS(sRadialStartMenuSpriteIds); i++)
     {
