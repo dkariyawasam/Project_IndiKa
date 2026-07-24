@@ -20,7 +20,6 @@ CeruleanCave_B1F_OnTransition::
 	call_if_unset FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_ShowMewtwo
 	call CeruleanCave_B1F_EventScript_ShowGiovanni
 	call_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_MoveGiovanniAside
-	call_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_HideGiovanni
 	call_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_HideGiovanni
 	end
 
@@ -39,7 +38,6 @@ CeruleanCave_B1F_EventScript_HideMewtwo::
 	return
 
 CeruleanCave_B1F_EventScript_ShowGiovanni::
-	goto_if_set FLAG_FOUGHT_MEWTWO, EventScript_Return
 	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, EventScript_Return
 	removeobject LOCALID_CERULEAN_CAVE_GIOVANNI
 	clearflag FLAG_HIDE_CERULEAN_CAVE_GIOVANNI
@@ -52,21 +50,26 @@ CeruleanCave_B1F_EventScript_HideGiovanni::
 	return
 
 CeruleanCave_B1F_EventScript_MoveGiovanniAside::
-	setobjectxyperm LOCALID_CERULEAN_CAVE_GIOVANNI, 8, 13
-	setobjectxy LOCALID_CERULEAN_CAVE_GIOVANNI, 8, 13
+	setobjectxyperm LOCALID_CERULEAN_CAVE_GIOVANNI, 9, 16
+	setobjectxy LOCALID_CERULEAN_CAVE_GIOVANNI, 9, 16
 	setobjectmovementtype LOCALID_CERULEAN_CAVE_GIOVANNI, MOVEMENT_TYPE_FACE_LEFT
 	return
 
 CeruleanCave_B1F_EventScript_Giovanni::
 	lock
 	faceplayer
+	goto_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoTalk
 	goto_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_GiovanniWaits
+	goto CeruleanCave_B1F_EventScript_GiovanniFirstEncounter
+
+CeruleanCave_B1F_EventScript_GiovanniFirstEncounter::
 	apexlog APEX_LOG_PERSON_GIOVANNI, 4
 	msgbox CeruleanCave_B1F_Text_GiovanniMewtwoFailure
 	closemessage
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniStepsAside
 	waitmovement 0
-	setobjectxyperm LOCALID_CERULEAN_CAVE_GIOVANNI, 8, 13
+	setobjectxyperm LOCALID_CERULEAN_CAVE_GIOVANNI, 9, 16
+	setobjectxy LOCALID_CERULEAN_CAVE_GIOVANNI, 9, 16
 	setobjectmovementtype LOCALID_CERULEAN_CAVE_GIOVANNI, MOVEMENT_TYPE_FACE_LEFT
 	setflag FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE
 	release
@@ -77,8 +80,39 @@ CeruleanCave_B1F_EventScript_GiovanniWaits::
 	release
 	end
 
+CeruleanCave_B1F_EventScript_GiovanniApproachTrigger::
+	goto_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
+	goto_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
+	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
+	setvar VAR_TEMP_0, 1
+	lock
+	playse SE_PIN
+	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitfieldeffect FLDEFF_EXCLAMATION_MARK_ICON
+	delay 12
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject LOCALID_CERULEAN_CAVE_GIOVANNI, DIR_WEST
+	goto CeruleanCave_B1F_EventScript_GiovanniFirstEncounter
+
+CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd::
+	end
+
+CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoTalk::
+	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoAlreadyGone
+	call CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo
+	release
+	end
+
+CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoAlreadyGone::
+	release
+	end
+
 CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo::
 	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, EventScript_Return
+	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniApproachesPlayerAfterMewtwo
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	msgbox CeruleanCave_B1F_Text_GiovanniAfterMewtwo
 	closemessage
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniLeaves
@@ -92,14 +126,25 @@ CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo::
 	return
 
 CeruleanCave_B1F_Movement_GiovanniStepsAside::
-	walk_right
 	walk_in_place_faster_left
 	step_end
 
+CeruleanCave_B1F_Movement_GiovanniApproachesPlayerAfterMewtwo::
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
 CeruleanCave_B1F_Movement_GiovanniLeaves::
-	walk_in_place_faster_down
-	delay_16
-	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 CeruleanCave_B1F_EventScript_Mewtwo::
@@ -173,5 +218,5 @@ CeruleanCave_B1F_Text_GiovanniAfterMewtwo:
 	.string "You faced it as a TRAINER.\p"
 	.string "Perhaps absolute power was never\n"
 	.string "something a person could own.\p"
-	.string "I have nothing more to take from\n"
-	.string "this place.$"
+	.string "There is nothing left for me\n"
+	.string "to take from this place.$"
