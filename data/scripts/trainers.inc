@@ -4431,37 +4431,39 @@ EventScript_GymAdjacent_AROMA_LADY_VIOLET_Text_PostBattle::
     .string "VIRIDIAN FOREST has more to teach\n"
     .string "than one battle can show.$"
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_Intro::
-    .string "This ENGINEER knows\n"
-    .string "POWER PLANT well!$"
+    .string "I helped restart this place.\p"
+    .string "That charge still runs through\n"
+    .string "my team!$"
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_RematchIntro::
-    .string "Back on POWER PLANT?\n"
-    .string "Then we battle again!$"
+    .string "The turbines are steady.\p"
+    .string "Let's see if you can keep up!$"
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_Defeat::
-    .string "POWER PLANT wins today!$"
+    .string "You grounded me!$"
 EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle::
     .string "Even when the generators quiet\n"
     .string "down, the air still crackles.\p"
     .string "It feels like the power is coming\n"
     .string "from the sky itself.$"
 EventScript_GymAdjacent_ENGINEER_BERNIE_Text_Intro::
-    .string "This ENGINEER knows\n"
-    .string "POWER PLANT well!$"
+    .string "Generators hate silence.\p"
+    .string "I'll make this room crackle!$"
 EventScript_GymAdjacent_ENGINEER_BERNIE_Text_RematchIntro::
-    .string "Back on POWER PLANT?\n"
-    .string "Then we battle again!$"
+    .string "Hear the crackle again?\p"
+    .string "That's my cue!$"
 EventScript_GymAdjacent_ENGINEER_BERNIE_Text_Defeat::
-    .string "POWER PLANT wins today!$"
+    .string "The spark went out!$"
 EventScript_GymAdjacent_ENGINEER_BERNIE_Text_PostBattle::
-    .string "POWER PLANT has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Electricity has a temper.\p"
+    .string "Treat it rough, and it answers\n"
+    .string "back.$"
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Intro::
-    .string "This ENGINEER knows\n"
-    .string "POWER PLANT well!$"
+    .string "Loose wires. Live floors.\p"
+    .string "One careless step and zap!$"
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_RematchIntro::
-    .string "Back on POWER PLANT?\n"
-    .string "Then we battle again!$"
+    .string "Careful where you stand.\p"
+    .string "This floor still bites!$"
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_Defeat::
-    .string "POWER PLANT wins today!$"
+    .string "Shorted out!$"
 EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle::
     .string "I saw lightning gather here\n"
     .string "without a cloud overhead.\p"
@@ -4531,115 +4533,141 @@ EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_PostBattle::
     .string "CERULEAN CAVE has more to teach\n"
     .string "than one battle can show.$"
 EventScript_Mansion_BURGLAR_EGAN_Text_Intro::
-    .string "This BURGLAR knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "This place is abandoned?\p"
+    .string "Then nobody will miss what I\n"
+    .string "pocket!$"
 EventScript_Mansion_BURGLAR_EGAN_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "Back for more treasure?\p"
+    .string "Too bad. I saw it first!$"
 EventScript_Mansion_BURGLAR_EGAN_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "Hands off my haul!$"
 EventScript_Mansion_BURGLAR_EGAN_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Every cracked floorboard here\n"
+    .string "hides a secret.\p"
+    .string "Or a trap. Usually both.$"
 EventScript_Mansion_BURGLAR_FLINT_Text_Intro::
-    .string "This BURGLAR knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "Ashes, old notes, broken locks...\p"
+    .string "This mansion is my kind of\n"
+    .string "museum!$"
 EventScript_Mansion_BURGLAR_FLINT_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "Still poking through the ashes?\p"
+    .string "Let's see what turns up!$"
 EventScript_Mansion_BURGLAR_FLINT_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "Burned again!$"
 EventScript_Mansion_BURGLAR_FLINT_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The fire didn't take everything.\p"
+    .string "Some things survived because\n"
+    .string "they were buried deep.$"
 EventScript_Mansion_BURGLAR_KNOX_Text_Intro::
-    .string "This BURGLAR knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "You heard something too?\p"
+    .string "Good. I hate searching alone!$"
 EventScript_Mansion_BURGLAR_KNOX_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "If that noise comes back,\n"
+    .string "I'm blaming you!$"
 EventScript_Mansion_BURGLAR_KNOX_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "That scared me straight!$"
 EventScript_Mansion_BURGLAR_KNOX_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The walls creak like something\n"
+    .string "is still moving inside them.$"
 EventScript_Mansion_BURGLAR_PIKE_Text_Intro::
-    .string "This BURGLAR knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "Old labs mean old valuables.\p"
+    .string "Don't get in my way!$"
 EventScript_Mansion_BURGLAR_PIKE_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "Same halls. Same dust.\p"
+    .string "Maybe a better fight this time!$"
 EventScript_Mansion_BURGLAR_PIKE_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "Nothing worth stealing here!$"
 EventScript_Mansion_BURGLAR_PIKE_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "The best stuff is always behind\n"
+    .string "locked doors.\p"
+    .string "The worst stuff too.$"
 EventScript_Mansion_SCIENTIST_LENOX_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "These journals are damaged,\n"
+    .string "but the formulas remain!$"
 EventScript_Mansion_SCIENTIST_LENOX_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "I restored another page.\p"
+    .string "Care to test the theory?$"
 EventScript_Mansion_SCIENTIST_LENOX_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "My theory collapsed!$"
 EventScript_Mansion_SCIENTIST_LENOX_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Whatever was created here, it\n"
+    .string "was planned with awful precision.$"
 EventScript_Mansion_SCIENTIST_MIRA_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "This lab held impossible research.\p"
+    .string "Stand still. I need a comparison!$"
 EventScript_Mansion_SCIENTIST_MIRA_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "Your POKEMON's responses\n"
+    .string "may clarify my notes!$"
 EventScript_Mansion_SCIENTIST_MIRA_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "The results oppose me!$"
 EventScript_Mansion_SCIENTIST_MIRA_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Power without ethics is still\n"
+    .string "science.\p"
+    .string "That's what makes it dangerous.$"
 EventScript_Mansion_SCIENTIST_NILES_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "The equipment is ruined,\n"
+    .string "but the readings linger!$"
 EventScript_Mansion_SCIENTIST_NILES_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "Residual energy remains.\p"
+    .string "Let's provoke it again!$"
 EventScript_Mansion_SCIENTIST_NILES_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "Readings lost!$"
 EventScript_Mansion_SCIENTIST_NILES_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Some instruments failed all at\n"
+    .string "once, as if something woke up\n"
+    .string "angry.$"
 EventScript_Mansion_SCIENTIST_ORIN_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POKEMON MANSION well!$"
+    .string "I came for answers.\p"
+    .string "This mansion only asks louder\n"
+    .string "questions!$"
 EventScript_Mansion_SCIENTIST_ORIN_Text_RematchIntro::
-    .string "Back on POKEMON MANSION?\n"
-    .string "Then we battle again!$"
+    .string "The questions remain.\p"
+    .string "Maybe battle will sharpen them!$"
 EventScript_Mansion_SCIENTIST_ORIN_Text_Defeat::
-    .string "POKEMON MANSION wins today!$"
+    .string "No conclusion!$"
 EventScript_Mansion_SCIENTIST_ORIN_Text_PostBattle::
-    .string "POKEMON MANSION has more to teach\n"
-    .string "than one battle can show.$"
+    .string "There is a difference between\n"
+    .string "discovery and control.\p"
+    .string "This place forgot that.$"
 EventScript_PowerPlant_SCIENTIST_JIRO_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POWER PLANT well!$"
+    .string "These magnets are acting strange.\p"
+    .string "Your POKEMON might be the reason!$"
 EventScript_PowerPlant_SCIENTIST_JIRO_Text_RematchIntro::
-    .string "Back on POWER PLANT?\n"
-    .string "Then we battle again!$"
+    .string "The readings changed again.\p"
+    .string "I need another battle sample!$"
 EventScript_PowerPlant_SCIENTIST_JIRO_Text_Defeat::
-    .string "POWER PLANT wins today!$"
+    .string "My data scattered!$"
 EventScript_PowerPlant_SCIENTIST_JIRO_Text_PostBattle::
-    .string "POWER PLANT has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Power draws POKEMON in.\p"
+    .string "The stronger the current, the\n"
+    .string "stranger the readings.$"
 EventScript_PowerPlant_SCIENTIST_SOREN_Text_Intro::
-    .string "This SCIENTIST knows\n"
-    .string "POWER PLANT well!$"
+    .string "Don't touch anything glowing.\p"
+    .string "Unless you're ready to battle!$"
 EventScript_PowerPlant_SCIENTIST_SOREN_Text_RematchIntro::
-    .string "Back on POWER PLANT?\n"
-    .string "Then we battle again!$"
+    .string "The glow is stable now.\p"
+    .string "Let's test your team against it!$"
 EventScript_PowerPlant_SCIENTIST_SOREN_Text_Defeat::
-    .string "POWER PLANT wins today!$"
+    .string "Overexposed!$"
 EventScript_PowerPlant_SCIENTIST_SOREN_Text_PostBattle::
-    .string "POWER PLANT has more to teach\n"
-    .string "than one battle can show.$"
+    .string "Some lights in here are warnings.\p"
+    .string "Some are invitations. Scientists\n"
+    .string "argue which is which.$"
+EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_Intro::
+    .string "Hear that hum?\p"
+    .string "The whole plant is charging\n"
+    .string "up again!$"
+EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_RematchIntro::
+    .string "Back for another surge?\p"
+    .string "I've tuned my rhythm to\n"
+    .string "the generators!$"
+EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_Defeat::
+    .string "The circuit broke!$"
+EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_PostBattle::
+    .string "A power plant is never\n"
+    .string "really quiet.\p"
+    .string "Every wire tells you what\n"
+    .string "it's carrying.$"
 EventScript_RouteTrainer_AROMA_LADY_BETH_Text_Intro::
     .string "The DIGLETT stir the soil\n"
     .string "under this route.\p"
@@ -6337,15 +6365,15 @@ EventScript_GymAdjacent_ENGINEER_BERNIERematch::
 	end
 
 EventScript_PowerPlant_ELECTRICIAN_CLEM::
-	trainerbattle_single TRAINER_POWER_PLANT_ELECTRICIAN_CLEM, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
+	trainerbattle_single TRAINER_POWER_PLANT_ELECTRICIAN_CLEM, EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_Intro, EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_PowerPlant_ELECTRICIAN_CLEMRematch
-	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
+	msgbox EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_PowerPlant_ELECTRICIAN_CLEMRematch::
-	trainerbattle_rematch TRAINER_POWER_PLANT_ELECTRICIAN_CLEM, PowerPlant_Text_ElectricianLucaIntro, PowerPlant_Text_ElectricianLucaDefeat
-	msgbox PowerPlant_Text_ElectricianLucaPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_rematch TRAINER_POWER_PLANT_ELECTRICIAN_CLEM, EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_RematchIntro, EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_Defeat
+	msgbox EventScript_PowerPlant_ELECTRICIAN_CLEM_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_PowerPlant_SCIENTIST_JIRO::
