@@ -93,6 +93,14 @@ struct
     [CHAR_DPAD_UPDOWN]    = { 0x20,  8, 12 },
     [CHAR_DPAD_LEFTRIGHT] = { 0x21,  8, 12 },
     [CHAR_DPAD_NONE]      = { 0x22,  8, 12 },
+    [CHAR_DPAD_LEFTDOWN]      = { 0x23,  8, 12 },
+    [CHAR_DPAD_RIGHTDOWN]     = { 0x24,  8, 12 },
+    [CHAR_DPAD_LEFTRIGHTDOWN] = { 0x25,  8, 12 },
+    [CHAR_DPAD_LEFTRIGHTUP]   = { 0x26,  8, 12 },
+    [CHAR_DPAD_LEFTUP]        = { 0x27,  8, 12 },
+    [CHAR_DPAD_RIGHTUP]       = { 0x28,  8, 12 },
+    [CHAR_DPAD_LEFTUPDOWN]    = { 0x29,  8, 12 },
+    [CHAR_DPAD_RIGHTUPDOWN]   = { 0x2A,  8, 12 },
 };
 
 const u8 gKeypadIconTiles[] = INCBIN_U8("graphics/fonts/keypad_icons.4bpp");
