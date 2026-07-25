@@ -192,9 +192,17 @@
 #define CHAR_DPAD_DOWN      0x07
 #define CHAR_DPAD_LEFT      0x08
 #define CHAR_DPAD_RIGHT     0x09
-#define CHAR_DPAD_UPDOWN    0x0A
-#define CHAR_DPAD_LEFTRIGHT 0x0B
-#define CHAR_DPAD_NONE      0x0C
+#define CHAR_DPAD_UPDOWN        0x0A
+#define CHAR_DPAD_LEFTRIGHT     0x0B
+#define CHAR_DPAD_NONE          0x0C
+#define CHAR_DPAD_LEFTDOWN      0x0D
+#define CHAR_DPAD_RIGHTDOWN     0x0E
+#define CHAR_DPAD_LEFTRIGHTDOWN 0x0F
+#define CHAR_DPAD_LEFTRIGHTUP   0x10
+#define CHAR_DPAD_LEFTUP        0x11
+#define CHAR_DPAD_RIGHTUP       0x12
+#define CHAR_DPAD_LEFTUPDOWN    0x13
+#define CHAR_DPAD_RIGHTUPDOWN   0x14
 
 // CHAR_EXTRA_SYMBOL chars
 #define CHAR_UP_ARROW_2        0x00
