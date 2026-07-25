@@ -100,7 +100,21 @@ static bool8 sSaveDialogIsPrinting;
 
 static const u8 gText_MenuQuest[] = _("LOGBOOK");
 static const u8 sStartMenuDesc_Quest[] = _("Review your FIELD AIDE research,\nrumours, and active assignments.");
-static const u8 sText_StartMenuHeaderHints[] = _("{L_BUTTON}SAVE {DPAD_ANY}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeft[] = _("{L_BUTTON}SAVE {DPAD_LEFT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsRight[] = _("{L_BUTTON}SAVE {DPAD_RIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsUp[] = _("{L_BUTTON}SAVE {DPAD_UP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsDown[] = _("{L_BUTTON}SAVE {DPAD_DOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsAny[] = _("{L_BUTTON}SAVE {DPAD_ANY}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsUpDown[] = _("{L_BUTTON}SAVE {DPAD_UPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftRight[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftUp[] = _("{L_BUTTON}SAVE {DPAD_LEFTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsRightUp[] = _("{L_BUTTON}SAVE {DPAD_RIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsRightDown[] = _("{L_BUTTON}SAVE {DPAD_RIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftRightDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftRightUp[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsLeftUpDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_StartMenuHeaderHintsRightUpDown[] = _("{L_BUTTON}SAVE {DPAD_RIGHTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
 static const u8 sText_MenuCard[] = _("CARD");
 static const u8 sText_MenuMap[] = _("MAP");
 static const u8 sStartMenuDesc_Map[] = _("View the KANTO region map.");
@@ -150,6 +164,7 @@ static void SetRadialStartMenuIconsVisible(bool8 visible);
 static u8 GetRadialStartMenuIconIndex(u8 item);
 static void SpriteCB_RadialStartMenuBackdrop(struct Sprite *sprite);
 static void SpriteCB_RadialStartMenuIcon(struct Sprite *sprite);
+static const u8 *GetStartMenuHeaderHints(void);
 static void UpdateRadialStartMenuSelection(u8 newSlot);
 static u8 FindNextRadialStartMenuSlot(s8 step);
 static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy);
@@ -860,7 +875,7 @@ static void DestroyStartMenuHeaderWindow(bool8 copyToVram)
 
 static void PrintStartMenuHeaderWindow(void)
 {
-    DrawUiHintHeader(sStartMenuHeaderWindowId, sText_StartMenuHeaderHints, 15, 0, 0, FALSE);
+    DrawUiHintHeader(sStartMenuHeaderWindowId, GetStartMenuHeaderHints(), 15, 0, 0, FALSE);
 }
 
 static void CreateStartMenuCenterLabelWindow(void)
@@ -1187,6 +1202,60 @@ static void RefreshStartMenuHelpText(void)
     DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
 }
 
+static const u8 *GetStartMenuHeaderHints(void)
+{
+    enum {
+        DIR_LEFT  = 1 << 0,
+        DIR_RIGHT = 1 << 1,
+        DIR_UP    = 1 << 2,
+        DIR_DOWN  = 1 << 3,
+    };
+    u8 dirMask = 0;
+
+    if (FindRadialStartMenuSlotInDirection(-1, 0) != sRadialStartMenuCursorSlot)
+        dirMask |= DIR_LEFT;
+    if (FindRadialStartMenuSlotInDirection(1, 0) != sRadialStartMenuCursorSlot)
+        dirMask |= DIR_RIGHT;
+    if (FindRadialStartMenuSlotInDirection(0, -1) != sRadialStartMenuCursorSlot)
+        dirMask |= DIR_UP;
+    if (FindRadialStartMenuSlotInDirection(0, 1) != sRadialStartMenuCursorSlot)
+        dirMask |= DIR_DOWN;
+
+    switch (dirMask)
+    {
+    case DIR_LEFT:
+        return sText_StartMenuHeaderHintsLeft;
+    case DIR_RIGHT:
+        return sText_StartMenuHeaderHintsRight;
+    case DIR_UP:
+        return sText_StartMenuHeaderHintsUp;
+    case DIR_DOWN:
+        return sText_StartMenuHeaderHintsDown;
+    case DIR_UP | DIR_DOWN:
+        return sText_StartMenuHeaderHintsUpDown;
+    case DIR_LEFT | DIR_RIGHT:
+        return sText_StartMenuHeaderHintsLeftRight;
+    case DIR_LEFT | DIR_UP:
+        return sText_StartMenuHeaderHintsLeftUp;
+    case DIR_RIGHT | DIR_UP:
+        return sText_StartMenuHeaderHintsRightUp;
+    case DIR_LEFT | DIR_DOWN:
+        return sText_StartMenuHeaderHintsLeftDown;
+    case DIR_RIGHT | DIR_DOWN:
+        return sText_StartMenuHeaderHintsRightDown;
+    case DIR_LEFT | DIR_RIGHT | DIR_DOWN:
+        return sText_StartMenuHeaderHintsLeftRightDown;
+    case DIR_LEFT | DIR_RIGHT | DIR_UP:
+        return sText_StartMenuHeaderHintsLeftRightUp;
+    case DIR_LEFT | DIR_UP | DIR_DOWN:
+        return sText_StartMenuHeaderHintsLeftUpDown;
+    case DIR_RIGHT | DIR_UP | DIR_DOWN:
+        return sText_StartMenuHeaderHintsRightUpDown;
+    default:
+        return sText_StartMenuHeaderHintsAny;
+    }
+}
+
 static void UpdateRadialStartMenuSelection(u8 newSlot)
 {
     u8 oldSlot;
@@ -1200,6 +1269,8 @@ static void UpdateRadialStartMenuSelection(u8 newSlot)
     PrintRadialStartMenuItem(oldSlot);
     PrintRadialStartMenuItem(newSlot);
     PrintStartMenuCenterLabel();
+    if (sStartMenuHeaderWindowId != WINDOW_NONE)
+        PrintStartMenuHeaderWindow();
     UpdateRadialStartMenuSpriteStates();
     RefreshStartMenuHelpText();
 }
