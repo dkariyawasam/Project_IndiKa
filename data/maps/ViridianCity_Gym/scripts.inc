@@ -21,6 +21,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	logbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION
 	setflag FLAG_BADGE08_GET
 	setvar VAR_MAP_SCENE_ROUTE22, 3
+	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
 	closemessage
 	fadescreen FADE_TO_BLACK

@@ -10,6 +10,13 @@ RocketLeague_Arena_Text_ChampionRoomLocked::
     .string "The ROCKET LEAGUE CHAMPION\n"
     .string "is not receiving challengers yet.$"
 
+RocketLeague_Arena_Text_GiovanniAway::
+    .string "The door is locked.\p"
+    .string "GIOVANNI is away on\n"
+    .string "important business.\p"
+    .string "The ROCKET LEAGUE CHAMPION\n"
+    .string "is not receiving challengers.$"
+
 RocketLeague_Arena_Text_ChampionAwaits::
     .string "The ROCKET LEAGUE CHAMPION\n"
     .string "awaits you in the next room.$"

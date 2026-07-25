@@ -8,12 +8,7 @@ ViridianCity_OnTransition::
 	end
 
 ViridianCity_EventScript_TryUnlockGym::
-	goto_if_unset FLAG_BADGE02_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE03_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE04_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE05_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE06_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE07_GET, EventScript_Return
+	goto_if_unset FLAG_SAW_GIOVANNI_CERULEAN_CAVE, EventScript_Return
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 1
 	return
 

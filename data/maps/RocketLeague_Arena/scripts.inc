@@ -46,8 +46,12 @@ RocketLeague_Arena_EventScript_TryEnterChampionRoom::
 	special IsLeagueChallengeActive
 	goto_if_eq VAR_RESULT, 0, RocketLeague_Arena_EventScript_ChampionRoomLocked
 	special GetLeagueChallengeCurrentTrainer
-	goto_if_eq VAR_RESULT, TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_EventScript_WarpToChampionRoom
+	goto_if_eq VAR_RESULT, TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI, RocketLeague_Arena_EventScript_TryWarpToChampionRoom
 	goto RocketLeague_Arena_EventScript_ChampionRoomLocked
+
+RocketLeague_Arena_EventScript_TryWarpToChampionRoom::
+	goto_if_unset FLAG_DEFEATED_LEADER_GIOVANNI, RocketLeague_Arena_EventScript_GiovanniAway
+	goto RocketLeague_Arena_EventScript_WarpToChampionRoom
 
 RocketLeague_Arena_EventScript_WarpToChampionRoom::
 	warp MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM, 6, 19
@@ -57,6 +61,14 @@ RocketLeague_Arena_EventScript_WarpToChampionRoom::
 
 RocketLeague_Arena_EventScript_ChampionRoomLocked::
 	msgbox RocketLeague_Arena_Text_ChampionRoomLocked
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromChampionRoom
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Arena_EventScript_GiovanniAway::
+	msgbox RocketLeague_Arena_Text_GiovanniAway
 	closemessage
 	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromChampionRoom
 	waitmovement 0
@@ -244,7 +256,16 @@ RocketLeague_Arena_EventScript_BattleViper::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_ChampionAwaits::
+	goto_if_unset FLAG_DEFEATED_LEADER_GIOVANNI, RocketLeague_Arena_EventScript_GiovanniAwayFromArena
 	msgbox RocketLeague_Arena_Text_ChampionAwaits
+	closemessage
+	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
+	waitmovement 0
+	releaseall
+	end
+
+RocketLeague_Arena_EventScript_GiovanniAwayFromArena::
+	msgbox RocketLeague_Arena_Text_GiovanniAway
 	closemessage
 	applymovement LOCALID_PLAYER, RocketLeague_Arena_Movement_StepBackFromArena
 	waitmovement 0
