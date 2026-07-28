@@ -477,6 +477,7 @@ static const struct SpriteFrameImage sPicTable_Expert[] = {
     overworld_frame(gObjectEventPic_Expert, 2, 4, 6),
     overworld_frame(gObjectEventPic_Expert, 2, 4, 7),
     overworld_frame(gObjectEventPic_Expert, 2, 4, 8),
+    overworld_frame(gObjectEventPic_Expert, 2, 4, 9),
 };
 
 static const struct SpriteFrameImage sPicTable_ExpertF[] = {
@@ -489,6 +490,7 @@ static const struct SpriteFrameImage sPicTable_ExpertF[] = {
     overworld_frame(gObjectEventPic_ExpertF, 2, 4, 6),
     overworld_frame(gObjectEventPic_ExpertF, 2, 4, 7),
     overworld_frame(gObjectEventPic_ExpertF, 2, 4, 8),
+    overworld_frame(gObjectEventPic_ExpertF, 2, 4, 9),
 };
 
 static const struct SpriteFrameImage sPicTable_ScoutM[] = {
