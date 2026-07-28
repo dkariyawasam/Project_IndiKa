@@ -103,6 +103,7 @@ const u16 gObjectEventPic_HexManiac[] = INCBIN_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_Juggler[] = INCBIN_U16("graphics/object_events/pics/people/juggler.4bpp");
 const u16 gObjectEventPal_Kindler[] = INCBIN_U16("graphics/object_events/palettes/kindler.gbapal");
 const u16 gObjectEventPic_Kindler[] = INCBIN_U16("graphics/object_events/pics/people/kindler.4bpp");
+const u16 gObjectEventPal_PokefanM[] = INCBIN_U16("graphics/object_events/palettes/pokefan_m.gbapal");
 const u16 gObjectEventPic_PokefanM[] = INCBIN_U16("graphics/object_events/pics/people/pokefan_m.4bpp");
 const u16 gObjectEventPic_PokefanF[] = INCBIN_U16("graphics/object_events/pics/people/pokefan_f.4bpp");
 const u16 gObjectEventPal_RuinManiac[] = INCBIN_U16("graphics/object_events/palettes/ruin_maniac.gbapal");
