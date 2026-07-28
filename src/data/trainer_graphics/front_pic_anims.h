@@ -433,7 +433,7 @@ static const union AnimCmd *const sAnims_RivalLate[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_ChampionRival[] =
+static const union AnimCmd *const sAnims_RivalChampion[] =
 {
     sAnim_GeneralFrame0,
 };
@@ -616,7 +616,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_LEADER_SABRINA]        = sAnims_LeaderSabrina,
     [TRAINER_PIC_GENTLEMAN]             = sAnims_Gentleman,
     [TRAINER_PIC_RIVAL_LATE]            = sAnims_RivalLate,
-    [TRAINER_PIC_CHAMPION_RIVAL]        = sAnims_ChampionRival,
+    [TRAINER_PIC_CHAMPION_RIVAL]        = sAnims_RivalChampion,
     [TRAINER_PIC_CHANNELER]             = sAnims_Channeler,
     [TRAINER_PIC_TWINS]                 = sAnims_Twins,
     [TRAINER_PIC_COOL_COUPLE]           = sAnims_CoolCouple,

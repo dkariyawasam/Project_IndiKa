@@ -323,7 +323,7 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(LEADER_SABRINA, gTrainerPalette_LeaderSabrina),
     TRAINER_PAL(GENTLEMAN, gTrainerPalette_Gentleman),
     TRAINER_PAL(RIVAL_LATE, gTrainerPalette_RivalLate),
-    TRAINER_PAL(CHAMPION_RIVAL, gTrainerPalette_ChampionRival),
+    TRAINER_PAL(CHAMPION_RIVAL, gTrainerPalette_RivalChampion),
     TRAINER_PAL(CHANNELER, gTrainerPalette_Channeler),
     TRAINER_PAL(TWINS, gTrainerPalette_Twins),
     TRAINER_PAL(COOL_COUPLE, gTrainerPalette_CoolCouple),
