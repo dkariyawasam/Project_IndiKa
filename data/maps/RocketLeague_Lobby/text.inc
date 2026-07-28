@@ -5,7 +5,7 @@ RocketLeague_Lobby_Text_ExplainEntry::
     .string "members and win COINS.\p"
     .string "Win four consecutive matches,\n"
     .string "and you'll face the champion\l"
-    .string "of the league, GIOVANNI.\p"
+    .string "of the league.\p"
     .string "Would you like to enter?$"
 
 RocketLeague_Lobby_Text_WonderWhatKindsOfTrainers::

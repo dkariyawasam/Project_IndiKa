@@ -85,7 +85,9 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Completed the Viridian Gym Giovanni resolution:
   - Giovanni reflects on the Mansion, Silph, Mewtwo, and his pursuit of command.
   - He recognizes that trust, not possession of power, made the player stronger.
-  - He disbands Team Rocket and leaves as a trainer rather than a boss.
+  - He changes Team Rocket's direction rather than disbanding it, leaving room for his later Rocket League champion role.
+- Locked Giovanni out of the Rocket League champion slot until the Giovanni/Mewtwo quest is complete.
+- After the Cerulean Cave Giovanni/Mewtwo scene, Viridian Gym opens and Giovanni's Gym Leader Trial subquest unlocks.
 - Reworked Giovanni's battle teams around his arc:
   - Silph Co uses an aggressive Team Rocket boss team at the height of his pursuit of control.
   - Viridian Gym uses an official monotype Ground leader team.
@@ -172,6 +174,7 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Added a new cave map connected to Route 7 and Route 4.
 - Chose a compact 24x26 footprint based on the carved-out cave space.
 - Added a south entrance at x:9 and a north exit at x:9.
+- Added cave-style entry/exit step behavior for Route 7, Route 4, and Celadon Cave transitions.
 - Switched the cave to use a Sevii-style cave tileset.
 - Added a vertical corridor layout from bottom to top.
 - Began adding walls, floor variation, and cave features.
@@ -834,7 +837,8 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Route 7 to Celadon Cave / Tunnel to Route 4 chain confirmed working in playtest.
 - Cerulean Cave Giovanni/Mewtwo confrontation now appears only after the Route 7 rampage beat.
 - Cerulean Cave Giovanni retreat and defeated dialogue are now in place.
-- Viridian Gym Giovanni resolution and Team Rocket disbanding are now in place.
+- Viridian Gym Giovanni resolution and Team Rocket redirection are now in place.
+- Giovanni is gated out of Rocket League champion availability until his arc is complete.
 - Mewtwo flashback assets:
   - `mewtwo_flashback_beam`.
   - `mewtwo_flashback_charge_circle`.
@@ -844,28 +848,8 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 
 ## Known Pinned / Remaining Work
 
-- Finalize any last Giovanni/Mewtwo polish after playtesting:
-  - Silph-to-Route 7 signposting.
-  - Cerulean Cave approach/retreat feel.
-  - Viridian Gym final-scene pacing.
-- Finalize any last Celadon Cave/Tunnel map polish after playtesting:
-  - Collision.
-  - Encounter feel.
-  - Exit/entrance framing.
-  - Map section behavior.
-- Do a final Apex encounter pass:
-  - Rumour NPCs.
-  - Spawn visibility.
-  - Logbook state.
-  - Unique roar text.
-  - Battle setup.
+- Giovanni/Mewtwo chain, Apex encounter pass, shared menu UI regression, and early-route progression QA have been playtested and marked done.
 - Finalize missing trainer overworlds and palette cleanup.
 - Finalize trainer front sprite cleanup and class naming consistency.
 - Do a complete Pokedex/habitat availability audit after removals.
-- Do a final Bag/Pokedex/Pokemon/Card/Logbook/Help UI consistency pass.
-- Do a full route progression playtest from all early route choices:
-  - Viridian/Pewter path.
-  - Viridian Channel/Celadon path.
-  - Diglett/Vermilion path.
-  - Ferry/Cinnabar path.
 - Run a clean build and regression pass before release.

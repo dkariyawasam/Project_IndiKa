@@ -100,9 +100,9 @@ This file consolidates the useful context from the local Codex sessions related 
 - The Rocket League lobby has/should have:
   - TM prize seller replacing old mart behavior.
   - Game Corner TM prize seller removed from Game Corner prize building so Rocket League lobby can be the only seller.
-  - North-door lady explaining single battle format, Team Rocket opponents, coin winnings, and 4 consecutive wins leading to Giovanni.
+  - North-door lady explaining single battle format, Team Rocket opponents, coin winnings, and 4 consecutive wins leading to the league champion.
   - YES/NO prompt and auto-trigger behavior near the north door.
-- Remaining noted work: Giovanni / Rocket League champion trigger after four wins/admins needs a proper final pass.
+- Giovanni is gated from the champion room until his Viridian Gym resolution; before then, the arena reports he is away on important business.
 
 ## Trainer Work
 
@@ -158,7 +158,7 @@ The project is in consolidation/QA rather than foundation-building. Best next ta
 
 1. Verify and finish title screen logo alignment.
 2. Do a new-save playthrough QA for badge order, gym reward loops, quest log phases, and progression gates.
-3. Finalize Rocket League four-win/Giovanni champion trigger.
+3. Playtest Rocket League four-win champion access after Giovanni's arc completion.
 4. Check/polish Blaine's final gym-only flow.
 5. QA map traversal:
    - Viridian Channel.

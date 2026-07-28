@@ -212,7 +212,7 @@ const u32 gTrainerFrontPic_RivalLate[] = INCBIN_U32("graphics/trainers/front_pic
 const u32 gTrainerPalette_RivalLate[] = INCBIN_U32("graphics/trainers/palettes/rival_late.gbapal.lz");
 
 const u32 gTrainerFrontPic_RivalChampion[] = INCBIN_U32("graphics/trainers/front_pics/rival_champion_front_pic.4bpp.lz");
-const u32 gTrainerPalette_ChampionRival[] = INCBIN_U32("graphics/trainers/palettes/champion_rival.gbapal.lz");
+const u32 gTrainerPalette_RivalChampion[] = INCBIN_U32("graphics/trainers/palettes/rival_champion.gbapal.lz");
 
 const u32 gTrainerFrontPic_Channeler[] = INCBIN_U32("graphics/trainers/front_pics/channeler_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Channeler[] = INCBIN_U32("graphics/trainers/palettes/channeler.gbapal.lz");

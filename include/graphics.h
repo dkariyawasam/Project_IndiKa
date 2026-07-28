@@ -2655,7 +2655,7 @@ extern const u32 gTrainerPalette_LeaderBlaine[];
 extern const u32 gTrainerPalette_LeaderSabrina[];
 extern const u32 gTrainerPalette_Gentleman[];
 extern const u32 gTrainerPalette_RivalLate[];
-extern const u32 gTrainerPalette_ChampionRival[];
+extern const u32 gTrainerPalette_RivalChampion[];
 extern const u32 gTrainerPalette_Channeler[];
 extern const u32 gTrainerPalette_Twins[];
 extern const u32 gTrainerPalette_CoolCouple[];
