@@ -5,6 +5,13 @@ Route2_Text_RouteSign::
 Route2_Text_DiglettsCave::
     .string "DIGLETT'S CAVE$"
 
+Route2_Text_ForestComesAlive::
+    .string "I'm too scared to enter\n"
+    .string "VIRIDIAN FOREST.\p"
+    .string "Legends tell of the forest\n"
+    .string "coming alive and ensnaring the\l"
+    .string "wicked, never to be seen again.$"
+
 Route2_Text_RivalFieldworkAllLeads::
 	.string "{RIVAL}: Ha! Hey, {PLAYER}.\n"
 	.string "Bet you're heading to PEWTER!\p"

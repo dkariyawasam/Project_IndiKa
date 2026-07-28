@@ -2388,6 +2388,18 @@
       "secondary_tileset": "gTileset_CeladonGym",
       "border_filepath": "data/layouts/CeladonCity_BerryPatch/border.bin",
       "blockdata_filepath": "data/layouts/CeladonCity_BerryPatch/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVENDER_TOWN_HEALING_HOUSE",
+      "name": "LavenderTown_HealingHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/LavenderTown_HealingHouse/border.bin",
+      "blockdata_filepath": "data/layouts/LavenderTown_HealingHouse/map.bin"
     }
   ]
 }

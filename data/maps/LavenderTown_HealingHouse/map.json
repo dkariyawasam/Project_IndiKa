@@ -1,7 +1,7 @@
 {
   "id": "MAP_LAVENDER_TOWN_HEALING_HOUSE",
   "name": "LavenderTown_HealingHouse",
-  "layout": "LAYOUT_ROUTE2_ENTRANCE",
+  "layout": "LAYOUT_LAVENDER_TOWN_HEALING_HOUSE",
   "music": "MUS_LAVENDER",
   "region_map_section": "MAPSEC_LAVENDER_TOWN",
   "requires_flash": false,
