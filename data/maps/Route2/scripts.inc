@@ -19,6 +19,13 @@ Route2_EventScript_DiglettsCaveSign::
 	msgbox Route2_Text_DiglettsCave, MSGBOX_SIGN
 	end
 
+Route2_EventScript_TangrowthRumorWoman::
+	msgbox Route2_Text_ForestComesAlive, MSGBOX_NPC
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	setvar VAR_0x8005, 1
+	call EventScript_RecordApexRumorWithFeedback
+	end
+
 Route2_EventScript_RivalFieldworkTrigger::
 	goto_if_set FLAG_HIDE_ROUTE2_RIVAL_FIELDWORK, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
