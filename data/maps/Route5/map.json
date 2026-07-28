@@ -20,8 +20,8 @@
       "direction": "up"
     },
     {
-      "map": "MAP_SAFFRON_CITY_CONNECTION",
-      "offset": 0,
+      "map": "MAP_SAFFRON_CITY",
+      "offset": -4,
       "direction": "down"
     }
   ],
@@ -196,27 +196,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE5_POKEMON_DAY_CARE",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 24,
-      "y": 32,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE5_SOUTH_ENTRANCE",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 25,
-      "y": 32,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE5_SOUTH_ENTRANCE",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 32,
+      "x": 33,
       "y": 32,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

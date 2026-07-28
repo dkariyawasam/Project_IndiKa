@@ -446,18 +446,6 @@
       "blockdata_filepath": "data/layouts/IndigoPlateau_Exterior/map.bin"
     },
     {
-      "id": "LAYOUT_SAFFRON_CITY_CONNECTION",
-      "name": "SaffronCity_Connection_Layout",
-      "width": 48,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SaffronCity",
-      "border_filepath": "data/layouts/SaffronCity_Connection/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_Connection/map.bin"
-    },
-    {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
       "width": 24,
@@ -509,7 +497,7 @@
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
       "width": 48,
-      "height": 40,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -521,7 +509,7 @@
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
       "width": 24,
-      "height": 40,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -532,7 +520,7 @@
     {
       "id": "LAYOUT_ROUTE7",
       "name": "Route7_Layout",
-      "width": 24,
+      "width": 20,
       "height": 80,
       "border_width": 2,
       "border_height": 2,
@@ -544,7 +532,7 @@
     {
       "id": "LAYOUT_ROUTE8",
       "name": "Route8_Layout",
-      "width": 72,
+      "width": 65,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -1804,8 +1792,8 @@
     {
       "id": "LAYOUT_SAFFRON_CITY",
       "name": "SaffronCity_Layout",
-      "width": 66,
-      "height": 55,
+      "width": 59,
+      "height": 52,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",

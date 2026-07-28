@@ -20,8 +20,8 @@
       "direction": "left"
     },
     {
-      "map": "MAP_SAFFRON_CITY_CONNECTION",
-      "offset": 50,
+      "map": "MAP_SAFFRON_CITY",
+      "offset": 44,
       "direction": "right"
     },
     {
@@ -230,13 +230,6 @@
       "elevation": 0,
       "dest_map": "MAP_UNDERGROUND_PATH_WEST_ENTRANCE",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 15,
-      "y": 70,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE7_EAST_ENTRANCE",
-      "dest_warp_id": "0"
     },
     {
       "x": 9,
