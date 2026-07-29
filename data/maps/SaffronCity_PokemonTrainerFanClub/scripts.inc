@@ -128,8 +128,8 @@ SaffronCity_PokemonTrainerFanClub_EventScript_MoveMember4ToFarTable::
 	return
 
 SaffronCity_PokemonTrainerFanClub_EventScript_MoveMember5ToFarTable::
-	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_ROCKER, 4, 6
-	setobjectmovementtype LOCALID_TRAINER_FAN_CLUB_ROCKER, MOVEMENT_TYPE_FACE_UP
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_ELECTRICIAN, 4, 6
+	setobjectmovementtype LOCALID_TRAINER_FAN_CLUB_ELECTRICIAN, MOVEMENT_TYPE_FACE_UP
 	return
 
 SaffronCity_PokemonTrainerFanClub_EventScript_MoveMember6ToFarTable::
@@ -329,32 +329,32 @@ SaffronCity_PokemonTrainerFanClub_EventScript_WomanOnlyNonFan::
 	release
 	end
 
-SaffronCity_PokemonTrainerFanClub_EventScript_Rocker::
+SaffronCity_PokemonTrainerFanClub_EventScript_Electrician::
 	lock
 	faceplayer
 	setvar VAR_0x8004, FANCLUB_MEMBER5
 	special Script_BufferFanClubTrainerName
 	specialvar VAR_RESULT, Script_IsFanClubMemberFanOfPlayer
-	goto_if_eq VAR_RESULT, TRUE, SaffronCity_PokemonTrainerFanClub_EventScript_RockerPlayersFan
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianPlayersFan
 	specialvar VAR_RESULT, Script_GetNumFansOfPlayerInTrainerFanClub
-	goto_if_eq VAR_RESULT, (NUM_TRAINER_FAN_CLUB_MEMBERS - 1), SaffronCity_PokemonTrainerFanClub_EventScript_RockerOnlyNonFan
+	goto_if_eq VAR_RESULT, (NUM_TRAINER_FAN_CLUB_MEMBERS - 1), SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianOnlyNonFan
 	msgbox SaffronCity_PokemonTrainerFanClub_Text_LoveWayTrainerTalks
 	release
 	end
 
-SaffronCity_PokemonTrainerFanClub_EventScript_RockerPlayersFan::
+SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianPlayersFan::
 	specialvar VAR_RESULT, Script_GetNumFansOfPlayerInTrainerFanClub
-	goto_if_eq VAR_RESULT, 1, SaffronCity_PokemonTrainerFanClub_EventScript_RockerOnlyFan
+	goto_if_eq VAR_RESULT, 1, SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianOnlyFan
 	msgbox SaffronCity_PokemonTrainerFanClub_Text_TheWayYouBattleIsCool
 	release
 	end
 
-SaffronCity_PokemonTrainerFanClub_EventScript_RockerOnlyFan::
+SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianOnlyFan::
 	msgbox SaffronCity_PokemonTrainerFanClub_Text_ImOnlyOneLeftOfYourFans
 	release
 	end
 
-SaffronCity_PokemonTrainerFanClub_EventScript_RockerOnlyNonFan::
+SaffronCity_PokemonTrainerFanClub_EventScript_ElectricianOnlyNonFan::
 	msgbox SaffronCity_PokemonTrainerFanClub_Text_ImLoneTrainerFan
 	release
 	end
