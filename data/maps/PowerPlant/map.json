@@ -143,7 +143,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "graphics_id": "OBJ_EVENT_GFX_ELECTRICIAN",
       "x": 18,
       "y": 18,
       "elevation": 3,
@@ -185,7 +185,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "graphics_id": "OBJ_EVENT_GFX_ELECTRICIAN",
       "x": 32,
       "y": 27,
       "elevation": 3,

@@ -101,7 +101,7 @@
 #define TRAINER_PIC_BEAUTY                 98
 #define TRAINER_PIC_SWIMMER_F              99
 #define TRAINER_PIC_PSYCHIC_M             100
-#define TRAINER_PIC_ROCKER                101
+#define TRAINER_PIC_ELECTRICIAN                101
 #define TRAINER_PIC_JUGGLER               102
 #define TRAINER_PIC_TAMER                 103
 #define TRAINER_PIC_BIRD_KEEPER           104
@@ -207,7 +207,7 @@
 #define TRAINER_CLASS_BEAUTY              73
 #define TRAINER_CLASS_SWIMMER_F           74
 #define TRAINER_CLASS_PSYCHIC             75
-#define TRAINER_CLASS_ROCKER              76
+#define TRAINER_CLASS_ELECTRICIAN              76
 #define TRAINER_CLASS_JUGGLER             77
 #define TRAINER_CLASS_TAMER               78
 #define TRAINER_CLASS_BIRD_KEEPER         79
@@ -361,7 +361,7 @@
 #define FACILITY_CLASS_BEAUTY                 104
 #define FACILITY_CLASS_SWIMMER_F              105
 #define FACILITY_CLASS_PSYCHIC_M              106
-#define FACILITY_CLASS_ROCKER                 107
+#define FACILITY_CLASS_ELECTRICIAN                 107
 #define FACILITY_CLASS_JUGGLER                108
 #define FACILITY_CLASS_TAMER                  109
 #define FACILITY_CLASS_BIRD_KEEPER            110

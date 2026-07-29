@@ -1,7 +1,7 @@
 SafariZone_East_RestHouse_MapScripts::
 	.byte 0
 
-SafariZone_East_RestHouse_EventScript_Rocker::
+SafariZone_East_RestHouse_EventScript_Electrician::
 	msgbox SafariZone_East_Text_CaughtChanseyAllWorthwhile, MSGBOX_NPC
 	end
 

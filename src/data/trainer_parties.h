@@ -3336,7 +3336,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PsychicPreston[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RockerRandall[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ElectricianRandall[] = {
     {
         .iv = 0,
         .lvl = 20,
@@ -3354,7 +3354,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RockerRandall[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RockerLuca[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ElectricianLuca[] = {
     {
         .iv = 0,
         .lvl = 29,
@@ -10794,7 +10794,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanElliot2[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RockerLuca2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ElectricianLuca2[] = {
     {
         .iv = 60,
         .lvl = 33,

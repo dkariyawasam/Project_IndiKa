@@ -22,7 +22,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWoman1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrushGirl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Electrician;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWoman2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty;
@@ -37,7 +37,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMLand;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Breeder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLady;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScoutF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerM;
@@ -45,7 +45,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Collector;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gamer;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
@@ -218,7 +218,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CIV_WOMAN_1]                  = &gObjectEventGraphicsInfo_CivWoman1,
     [OBJ_EVENT_GFX_CRUSH_GIRL]               = &gObjectEventGraphicsInfo_CrushGirl,
     [OBJ_EVENT_GFX_CIV_MAN]                      = &gObjectEventGraphicsInfo_CivMan,
-    [OBJ_EVENT_GFX_ROCKER]                   = &gObjectEventGraphicsInfo_Rocker,
+    [OBJ_EVENT_GFX_ELECTRICIAN]                   = &gObjectEventGraphicsInfo_Electrician,
     [OBJ_EVENT_GFX_CIV_MAN_2]                    = &gObjectEventGraphicsInfo_CivMan2,
     [OBJ_EVENT_GFX_CIV_WOMAN_2]                  = &gObjectEventGraphicsInfo_CivWoman2,
     [OBJ_EVENT_GFX_BEAUTY]                   = &gObjectEventGraphicsInfo_Beauty,
@@ -353,7 +353,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,
     [OBJ_EVENT_GFX_POKEMON_RANGER_M]         = &gObjectEventGraphicsInfo_PokemonRangerM,
     [OBJ_EVENT_GFX_POKEMON_RANGER_F]         = &gObjectEventGraphicsInfo_PokemonRangerF,
-    [OBJ_EVENT_GFX_BREEDER]          = &gObjectEventGraphicsInfo_PokemonBreeder,
+    [OBJ_EVENT_GFX_BREEDER]          = &gObjectEventGraphicsInfo_Breeder,
     [OBJ_EVENT_GFX_BERRY_SOIL]               = &gObjectEventGraphicsInfo_BerrySoil,
     [OBJ_EVENT_GFX_SITRUS_BERRY_GROWING]     = &gObjectEventGraphicsInfo_SitrusBerryGrowing,
     [OBJ_EVENT_GFX_SITRUS_BERRY_RIPE]        = &gObjectEventGraphicsInfo_SitrusBerryRipe,
@@ -370,7 +370,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUG_MANIAC]               = &gObjectEventGraphicsInfo_BugManiac,
     [OBJ_EVENT_GFX_BURGLAR]                  = &gObjectEventGraphicsInfo_Burglar,
     [OBJ_EVENT_GFX_COLLECTOR]                = &gObjectEventGraphicsInfo_Collector,
-    [OBJ_EVENT_GFX_EXPERT_M]                   = &gObjectEventGraphicsInfo_Expert,
+    [OBJ_EVENT_GFX_EXPERT_M]                   = &gObjectEventGraphicsInfo_ExpertM,
     [OBJ_EVENT_GFX_EXPERT_F]                 = &gObjectEventGraphicsInfo_ExpertF,
     [OBJ_EVENT_GFX_GAMER]                    = &gObjectEventGraphicsInfo_Gamer,
     [OBJ_EVENT_GFX_HEX_MANIAC]               = &gObjectEventGraphicsInfo_HexManiac,

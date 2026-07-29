@@ -18,7 +18,7 @@ CeruleanCity_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac, MSGBOX_NPC
 	end
 
-CeruleanCity_PokemonCenter_1F_EventScript_Rocker::
+CeruleanCity_PokemonCenter_1F_EventScript_Electrician::
 	msgbox CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons, MSGBOX_NPC
 	end
 

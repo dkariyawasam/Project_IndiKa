@@ -139,8 +139,8 @@ const u32 gTrainerPalette_SwimmerF[] = INCBIN_U32("graphics/trainers/palettes/sw
 const u32 gTrainerFrontPic_PsychicM[] = INCBIN_U32("graphics/trainers/front_pics/psychic_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_PsychicM[] = INCBIN_U32("graphics/trainers/palettes/psychic_m.gbapal.lz");
 
-const u32 gTrainerFrontPic_Rocker[] = INCBIN_U32("graphics/trainers/front_pics/rocker_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Rocker[] = INCBIN_U32("graphics/trainers/palettes/rocker.gbapal.lz");
+const u32 gTrainerFrontPic_Electrician[] = INCBIN_U32("graphics/trainers/front_pics/electrician_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Electrician[] = INCBIN_U32("graphics/trainers/palettes/electrician.gbapal.lz");
 
 const u32 gTrainerFrontPic_Juggler[] = INCBIN_U32("graphics/trainers/front_pics/juggler_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Juggler[] = INCBIN_U32("graphics/trainers/palettes/juggler.gbapal.lz");

@@ -91,9 +91,9 @@
       "flag": "FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN"
     },
     {
-      "local_id": "LOCALID_TRAINER_FAN_CLUB_ROCKER",
+      "local_id": "LOCALID_TRAINER_FAN_CLUB_ELECTRICIAN",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "graphics_id": "OBJ_EVENT_GFX_ELECTRICIAN",
       "x": 7,
       "y": 12,
       "elevation": 3,
@@ -102,8 +102,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SaffronCity_PokemonTrainerFanClub_EventScript_Rocker",
-      "flag": "FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER"
+      "script": "SaffronCity_PokemonTrainerFanClub_EventScript_Electrician",
+      "flag": "FLAG_HIDE_SAFFRON_FAN_CLUB_ELECTRICIAN"
     },
     {
       "local_id": "LOCALID_TRAINER_FAN_CLUB_BEAUTY",
