@@ -443,10 +443,10 @@
 #define TRAINER_SAILOR_TYRON                    281
 #define TRAINER_PSYCHIC_CAMERON                  282
 #define TRAINER_PSYCHIC_PRESTON                  283
-#define TRAINER_ROCKER_RANDALL                   284
-#define TRAINER_LASS_NADIA_2 TRAINER_ROCKER_RANDALL
-#define TRAINER_ROCKER_LUCA                      285
-#define TRAINER_POWER_PLANT_ELECTRICIAN_LUCA     TRAINER_ROCKER_LUCA
+#define TRAINER_ELECTRICIAN_RANDALL                   284
+#define TRAINER_LASS_NADIA_2 TRAINER_ELECTRICIAN_RANDALL
+#define TRAINER_ELECTRICIAN_LUCA                      285
+#define TRAINER_POWER_PLANT_ELECTRICIAN_LUCA     TRAINER_ELECTRICIAN_LUCA
 #define TRAINER_JUGGLER_DALTON                   286
 #define TRAINER_JUGGLER_NELSON                   287
 #define TRAINER_JUGGLER_KIRK                     288
@@ -859,7 +859,7 @@
 #define TRAINER_GAMER_RICH_2                     657
 #define TRAINER_BIKER_JAREN_2                    658
 #define TRAINER_FISHERMAN_ELLIOT_2               659
-#define TRAINER_ROCKER_LUCA_2                    660
+#define TRAINER_ELECTRICIAN_LUCA_2                    660
 #define TRAINER_BEAUTY_SHEILA_2                  661
 #define TRAINER_BIRD_KEEPER_ROBERT_2             662
 #define TRAINER_BIRD_KEEPER_ROBERT_3             663

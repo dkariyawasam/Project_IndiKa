@@ -215,7 +215,7 @@ static const u8 sApexSrc_OldTale[] = _("Old tale");
 static const u8 sApexSrc_ScaredLocal[] = _("Scared local");
 static const u8 sApexSrc_FlowerWatcher[] = _("Flower watcher");
 static const u8 sApexSrc_Engineer[] = _("Engineer");
-static const u8 sApexSrc_Rocker[] = _("Rocker");
+static const u8 sApexSrc_Electrician[] = _("Electrician");
 static const u8 sApexSrc_Picnicker[] = _("Picnicker");
 static const u8 sApexSrc_Swimmer[] = _("Swimmer");
 static const u8 sApexSrc_Trainer[] = _("Trainer");
@@ -276,7 +276,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         sApexDossierName_Zapdos,
         {sApexRumor_Zapdos0, sApexRumor_Zapdos1, sApexRumor_Zapdos2},
         {sApexLoc_PowerPlant, sApexLoc_Route10, sApexLoc_Route10},
-        {sApexSrc_Engineer, sApexSrc_Rocker, sApexSrc_Picnicker},
+        {sApexSrc_Engineer, sApexSrc_Electrician, sApexSrc_Picnicker},
         {OBJ_EVENT_GFX_SWIMMER_M_LAND, OBJ_EVENT_GFX_ENGINEER, OBJ_EVENT_GFX_ENGINEER},
         OBJ_EVENT_GFX_ZAPDOS,
         FLAG_INTERACTED_APEX_ZAPDOS
@@ -514,7 +514,7 @@ static const u8 sApexLogArrayNpcGraphicsIds[] = {
     // KOGA
     OBJ_EVENT_GFX_GYM_SIGN,
     OBJ_EVENT_GFX_KOGA,
-    OBJ_EVENT_GFX_ROCKER,
+    OBJ_EVENT_GFX_ELECTRICIAN,
     OBJ_EVENT_GFX_LASS,
     OBJ_EVENT_GFX_CLIPBOARD,
     OBJ_EVENT_GFX_CIV_MAN_3,

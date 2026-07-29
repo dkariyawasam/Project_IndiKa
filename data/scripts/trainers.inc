@@ -881,14 +881,14 @@ Route12_EventScript_AndrewRematch::
 	end
 
 Route12_EventScript_Luca::
-	trainerbattle_single TRAINER_ROCKER_LUCA, Route12_Text_LucaIntro, Route12_Text_LucaDefeat
+	trainerbattle_single TRAINER_ELECTRICIAN_LUCA, Route12_Text_LucaIntro, Route12_Text_LucaDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route12_EventScript_LucaRematch
 	msgbox Route12_Text_LucaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route12_EventScript_LucaRematch::
-	trainerbattle_rematch TRAINER_ROCKER_LUCA, Route12_Text_LucaRematchIntro, Route12_Text_LucaDefeat
+	trainerbattle_rematch TRAINER_ELECTRICIAN_LUCA, Route12_Text_LucaRematchIntro, Route12_Text_LucaDefeat
 	msgbox Route12_Text_LucaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
