@@ -64,7 +64,7 @@ static void UpdateTrainerFanClubGameClear(struct TrainerFanClub *fanClub)
         SetInitialFansOfPlayer(fanClub);
         VarSet(VAR_FANCLUB_LOSE_FAN_TIMER, gSaveBlock2Ptr->playTimeHours);
         FlagClear(FLAG_HIDE_SAFFRON_FAN_CLUB_BLACK_BELT);
-        FlagClear(FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER);
+        FlagClear(FLAG_HIDE_SAFFRON_FAN_CLUB_ELECTRICIAN);
         FlagClear(FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN);
         FlagClear(FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY);
         VarSet(VAR_MAP_SCENE_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB, 1);

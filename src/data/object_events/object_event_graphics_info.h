@@ -530,7 +530,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Breeder = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_POKEMON_BREEDER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -545,7 +545,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonBreeder = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_PokemonBreeder,
+    .images = sPicTable_Breeder,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -1176,7 +1176,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivMan = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Electrician = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1191,7 +1191,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Rocker,
+    .images = sPicTable_Electrician,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -2033,7 +2033,7 @@ DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSL
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Burglar, OBJ_EVENT_PAL_TAG_BURGLAR, PALSLOT_NPC_DYNAMIC, sPicTable_Burglar);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Collector, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Collector);
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertM = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_EXPERT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -2048,7 +2048,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Expert = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = gObjectEventSpriteOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Expert,
+    .images = sPicTable_ExpertM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -2082,7 +2082,24 @@ DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY, PALSLOT_N
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMLand);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFLand);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BirdKeeper, OBJ_EVENT_PAL_TAG_BIRD_KEEPER, PALSLOT_NPC_DYNAMIC, sPicTable_BirdKeeper);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BIRD_KEEPER,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_BirdKeeper,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Engineer, OBJ_EVENT_PAL_TAG_ENGINEER, PALSLOT_NPC_DYNAMIC, sPicTable_Engineer);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMWater);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFWater);

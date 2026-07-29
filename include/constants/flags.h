@@ -121,7 +121,7 @@
 #define FLAG_HIDE_UNION_ROOM_PLAYER_8                      0x06A
 #define FLAG_0x06B                                         0x06B
 #define FLAG_HIDE_SAFFRON_FAN_CLUB_BLACK_BELT               0x06C
-#define FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER                  0x06D
+#define FLAG_HIDE_SAFFRON_FAN_CLUB_ELECTRICIAN                  0x06D
 #define FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN                   0x06E
 #define FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY                  0x06F
 #define FLAG_HIDE_MG_DELIVERYMEN                           0x070
