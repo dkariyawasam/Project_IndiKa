@@ -8,25 +8,6 @@ ViridianCity_School_EventScript_PokemonJournal::
 	release
 	end
 
-EventScript_PokemonJournalUnused1::
-	lock
-	faceplayer
-	apexlog APEX_LOG_PERSON_DAISY, 1
-	apexlog APEX_LOG_PERSON_OAK, 4
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureProfOak
-	release
-	end
-
-EventScript_PokemonJournalUnused2::
-	lock
-	faceplayer
-	apexlog APEX_LOG_PERSON_DAISY, 4
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonJournal_Text_SpecialFeatureProfOak
-	release
-	end
-
 Route4_EventScript_Boy::
 	lock
 	faceplayer
@@ -251,22 +232,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
 	apexlog APEX_LOG_PERSON_AGATHA, 1
 	apexlog APEX_LOG_PERSON_AGATHA, 2
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs
-	release
-	end
-
-EventScript_LanceUnused::
-	lock
-	faceplayer
-	apexlog APEX_LOG_PERSON_LANCE, 0
-	msgbox gApexLogFlavorText_Lance0
-	release
-	end
-
-SaffronCity_EventScript_CrushGirlUnused::
-	lock
-	faceplayer
-	apexlog APEX_LOG_PERSON_LANCE, 1
-	msgbox SaffronCity_Text_HowCanClubNotRecognizeLance
 	release
 	end
 
