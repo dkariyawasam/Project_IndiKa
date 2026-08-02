@@ -119,42 +119,6 @@ SaffronCity_Gym_EventScript_SabrinaPostFieldVictory::
 	release
 	end
 
-SaffronCity_Gym_EventScript_Johan::
-	trainerbattle_single TRAINER_PSYCHIC_JOHAN, SaffronCity_Gym_Text_JohanIntro, SaffronCity_Gym_Text_JohanDefeat
-	msgbox SaffronCity_Gym_Text_JohanPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Tyron::
-	trainerbattle_single TRAINER_SAILOR_TYRON, SaffronCity_Gym_Text_TyronIntro, SaffronCity_Gym_Text_TyronDefeat
-	apexlog APEX_LOG_PERSON_SABRINA, 5
-	msgbox SaffronCity_Gym_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Cameron::
-	trainerbattle_single TRAINER_PSYCHIC_CAMERON, SaffronCity_Gym_Text_CameronIntro, SaffronCity_Gym_Text_CameronDefeat
-	msgbox SaffronCity_Gym_Text_CameronPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Preston::
-	trainerbattle_single TRAINER_PSYCHIC_PRESTON, SaffronCity_Gym_Text_PrestonIntro, SaffronCity_Gym_Text_PrestonDefeat
-	msgbox SaffronCity_Gym_Text_PrestonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Amanda::
-	trainerbattle_single TRAINER_CHANNELER_AMANDA, SaffronCity_Gym_Text_AmandaIntro, SaffronCity_Gym_Text_AmandaDefeat
-	msgbox SaffronCity_Gym_Text_AmandaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Stacy::
-	trainerbattle_single TRAINER_CHANNELER_STACY, SaffronCity_Gym_Text_StacyIntro, SaffronCity_Gym_Text_StacyDefeat
-	msgbox SaffronCity_Gym_Text_StacyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Gym_EventScript_Tasha::
-	trainerbattle_single TRAINER_CHANNELER_TASHA, SaffronCity_Gym_Text_TashaIntro, SaffronCity_Gym_Text_TashaDefeat
-	msgbox SaffronCity_Gym_Text_TashaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SaffronCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
