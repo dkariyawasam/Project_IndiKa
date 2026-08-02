@@ -171,12 +171,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Youngster = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_RICH_BOY,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_1,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -2074,10 +2074,44 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF = {
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Gamer, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Gamer);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(HexManiac, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_HexManiac);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Juggler, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_Juggler);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Kindler, OBJ_EVENT_PAL_TAG_KINDLER, PALSLOT_NPC_DYNAMIC, sPicTable_Kindler);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanM, OBJ_EVENT_PAL_TAG_POKEFAN_M, PALSLOT_NPC_2, sPicTable_PokefanM);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kindler = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_KINDLER,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Kindler,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanM, OBJ_EVENT_PAL_TAG_POKEFAN_M, PALSLOT_NPC_DYNAMIC, sPicTable_PokefanM);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PokefanF, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_PokefanF);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RuinManiac, OBJ_EVENT_PAL_TAG_RUIN_MANIAC, PALSLOT_NPC_DYNAMIC, sPicTable_RuinManiac);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_RUIN_MANIAC,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_RuinManiac,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(RichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY, PALSLOT_NPC_DYNAMIC, sPicTable_RichBoy);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMLand);
