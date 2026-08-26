@@ -39,7 +39,7 @@ SilphCo_5F_EventScript_FloorSign::
 	end
 
 SilphCo_5F_EventScript_Beau::
-	trainerbattle_single TRAINER_SCIENTIST_BEAU, SilphCo_5F_Text_BeauIntro, SilphCo_5F_Text_BeauDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_BEAU, SilphCo_5F_Text_BeauIntro, SilphCo_5F_Text_BeauDefeat
 	msgbox SilphCo_5F_Text_BeauPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -54,6 +54,6 @@ SilphCo_5F_EventScript_Grunt2::
 	end
 
 SilphCo_5F_EventScript_Dalton::
-	trainerbattle_single TRAINER_JUGGLER_DALTON, SilphCo_5F_Text_DaltonIntro, SilphCo_5F_Text_DaltonDefeat
+	trainerbattle_rematch TRAINER_JUGGLER_DALTON, SilphCo_5F_Text_DaltonIntro, SilphCo_5F_Text_DaltonDefeat
 	msgbox SilphCo_5F_Text_DaltonPostBattle, MSGBOX_AUTOCLOSE
 	end

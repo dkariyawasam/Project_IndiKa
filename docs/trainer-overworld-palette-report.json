@@ -786,7 +786,7 @@
     },
     {
       "name": "Expert",
-      "source": "graphics/object_events/pics/people/expert.png",
+      "source": "graphics/object_events/pics/people/expert_m.png",
       "dimensions": "144x32",
       "colorCount": 12,
       "uniqueColorCount": 0,
