@@ -31,7 +31,7 @@ SilphCo_9F_EventScript_FloorSign::
 	end
 
 SilphCo_9F_EventScript_Ed::
-	trainerbattle_single TRAINER_SCIENTIST_ED, SilphCo_9F_Text_EdIntro, SilphCo_9F_Text_EdDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_ED, SilphCo_9F_Text_EdIntro, SilphCo_9F_Text_EdDefeat
 	msgbox SilphCo_9F_Text_EdPostBattle, MSGBOX_AUTOCLOSE
 	end
 
