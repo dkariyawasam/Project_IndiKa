@@ -17,12 +17,12 @@ SilphCo_2F_EventScript_FloorSign::
 	end
 
 SilphCo_2F_EventScript_Connor::
-	trainerbattle_single TRAINER_SCIENTIST_CONNOR, SilphCo_2F_Text_ConnorIntro, SilphCo_2F_Text_ConnorDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_CONNOR, SilphCo_2F_Text_ConnorIntro, SilphCo_2F_Text_ConnorDefeat
 	msgbox SilphCo_2F_Text_ConnorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 SilphCo_2F_EventScript_Jerry::
-	trainerbattle_single TRAINER_SCIENTIST_JERRY, SilphCo_2F_Text_JerryIntro, SilphCo_2F_Text_JerryDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_JERRY, SilphCo_2F_Text_JerryIntro, SilphCo_2F_Text_JerryDefeat
 	msgbox SilphCo_2F_Text_JerryPostBattle, MSGBOX_AUTOCLOSE
 	end
 

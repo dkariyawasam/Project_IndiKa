@@ -25,7 +25,7 @@ SilphCo_10F_EventScript_FloorSign::
 	end
 
 SilphCo_10F_EventScript_Travis::
-	trainerbattle_single TRAINER_SCIENTIST_TRAVIS, SilphCo_10F_Text_TravisIntro, SilphCo_10F_Text_TravisDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_TRAVIS, SilphCo_10F_Text_TravisIntro, SilphCo_10F_Text_TravisDefeat
 	msgbox SilphCo_10F_Text_TravisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
