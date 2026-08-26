@@ -62,6 +62,17 @@ He does not stop being Giovanni. He stops mistaking absolute power for strength.
 
 That matters because he can later appear as the Rocket League champion with a new outlook.
 
+## Current Build Notes
+
+Giovanni's arc now has four playable beats:
+
+- Pokemon Mansion introduces the broken vat and records the first Mewtwo Apex Log entry after Giovanni leaves.
+- Silph Co reframes the Master Ball as mechanical control, then records the second Mewtwo entry through the president.
+- Route 7 and Celadon Cave show the aftermath through Elite Four flashbacks, with Lance recording the third Mewtwo entry.
+- Cerulean Cave and Viridian Gym close the loop: Giovanni sees the player handle Mewtwo, returns to his gym, and changes Team Rocket's direction after defeat.
+
+Giovanni also now has distinct team identities: a full Silph Co team at his most ruthless, a formal Ground-type Gym Leader team, and a reformed Rocket League champion team. The Rocket League champion room stays locked until this arc is complete.
+
 ## Screenshot And Art Checklist
 
 - [ ] Broken vat in Pokemon Mansion.

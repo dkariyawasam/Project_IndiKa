@@ -72,6 +72,22 @@ Every removed system leaves behind possible:
 
 The cleanup work is slow because the game remembers everything.
 
+## Current Build Notes
+
+Recent cleanup removed several systems that no longer fit Expeditions Kanto:
+
+- Mystery Gift.
+- Pokemon Jump.
+- Dodrio Berry Picking.
+- Berry Crush.
+- Berry Fix.
+- L/R Help System entry points.
+- Teachy TV as an item and starter gift.
+- Fame Checker as an item.
+- Coin Case and Bike Voucher.
+
+Some systems survived, but changed jobs. Teachy TV became the Help menu, Fame Checker became the Apex Log, and the old quest menu became the Logbook.
+
 ## Screenshot And Art Checklist
 
 - [ ] Removed gatehouse comparison.

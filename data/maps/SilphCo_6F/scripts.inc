@@ -77,7 +77,7 @@ SilphCo_6F_EventScript_FloorSign::
 	end
 
 SilphCo_6F_EventScript_Taylor::
-	trainerbattle_single TRAINER_SCIENTIST_TAYLOR, SilphCo_6F_Text_TaylorIntro, SilphCo_6F_Text_TaylorDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_TAYLOR, SilphCo_6F_Text_TaylorIntro, SilphCo_6F_Text_TaylorDefeat
 	msgbox SilphCo_6F_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE
 	end
 

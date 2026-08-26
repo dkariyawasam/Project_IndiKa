@@ -1,0 +1,290 @@
+{
+  "summary": {
+    "maps_scanned": 253,
+    "trainer_object_events": 299,
+    "matched": 299
+  },
+  "mismatches": [],
+  "skipped_multi_trainer_scripts": [],
+  "skipped_dynamic_graphics": [],
+  "aliases": {
+    "ARCHER": [
+      "ARCHER",
+      "ROCKET_ARCHER"
+    ],
+    "ARIANA": [
+      "ARIANA",
+      "ROCKET_ARIANA"
+    ],
+    "BLACK_BELT": [
+      "BLACK_BELT",
+      "BLACK_BELT_M"
+    ],
+    "BLACK_BELT_F": [
+      "BLACK_BELT_F",
+      "CRUSH_GIRL"
+    ],
+    "BLACK_BELT_M": [
+      "BLACK_BELT",
+      "BLACK_BELT_M"
+    ],
+    "BREEDER": [
+      "BREEDER",
+      "PKMN_BREEDER",
+      "POKEMON_BREEDER"
+    ],
+    "COOL_COUPLE": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "COOL_COUPLE"
+    ],
+    "CRUSH_GIRL": [
+      "BLACK_BELT_F",
+      "CRUSH_GIRL"
+    ],
+    "CUE_BALL": [
+      "CUE_BALL",
+      "ROUGHNECK"
+    ],
+    "ELECTRICIAN": [
+      "ELECTRICIAN"
+    ],
+    "FISHER": [
+      "FISHER",
+      "FISHERMAN"
+    ],
+    "FISHERMAN": [
+      "FISHER",
+      "FISHERMAN"
+    ],
+    "GIOVANNI": [
+      "GIOVANNI",
+      "LEADER_GIOVANNI"
+    ],
+    "LEADER_GIOVANNI": [
+      "GIOVANNI",
+      "LEADER_GIOVANNI"
+    ],
+    "PETREL": [
+      "PETREL",
+      "ROCKET_PETREL"
+    ],
+    "PKMN_BREEDER": [
+      "BREEDER",
+      "PKMN_BREEDER",
+      "POKEMON_BREEDER"
+    ],
+    "POKEFAN": [
+      "POKEFAN",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMANIAC",
+      "POKE_MANIAC"
+    ],
+    "POKEFAN_F": [
+      "POKEFAN",
+      "POKEFAN_F",
+      "POKEMANIAC",
+      "POKE_MANIAC"
+    ],
+    "POKEFAN_M": [
+      "POKEFAN",
+      "POKEFAN_M",
+      "POKEMANIAC",
+      "POKE_MANIAC"
+    ],
+    "POKEMANIAC": [
+      "POKEFAN",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMANIAC",
+      "POKE_MANIAC"
+    ],
+    "POKEMON_BREEDER": [
+      "BREEDER",
+      "PKMN_BREEDER",
+      "POKEMON_BREEDER"
+    ],
+    "POKE_MANIAC": [
+      "POKEFAN",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMANIAC",
+      "POKE_MANIAC"
+    ],
+    "PROTON": [
+      "PROTON",
+      "ROCKET_PROTON"
+    ],
+    "PSYCHIC_F": [
+      "CHANNELER",
+      "PSYCHIC_F"
+    ],
+    "PSYCHIC_M": [
+      "CHANNELER",
+      "PSYCHIC_M"
+    ],
+    "ROCKET": [
+      "ROCKET",
+      "ROCKET_F",
+      "ROCKET_GRUNT_F",
+      "ROCKET_GRUNT_M",
+      "ROCKET_M",
+      "TEAM_ROCKET_F",
+      "TEAM_ROCKET_M"
+    ],
+    "ROCKET_ARCHER": [
+      "ARCHER",
+      "ROCKET_ARCHER"
+    ],
+    "ROCKET_ARIANA": [
+      "ARIANA",
+      "ROCKET_ARIANA"
+    ],
+    "ROCKET_F": [
+      "ROCKET",
+      "ROCKET_F",
+      "ROCKET_GRUNT_F",
+      "TEAM_ROCKET_F"
+    ],
+    "ROCKET_GRUNT_F": [
+      "ROCKET",
+      "ROCKET_F",
+      "ROCKET_GRUNT_F",
+      "TEAM_ROCKET_F"
+    ],
+    "ROCKET_GRUNT_M": [
+      "ROCKET",
+      "ROCKET_GRUNT_M",
+      "ROCKET_M",
+      "TEAM_ROCKET_M"
+    ],
+    "ROCKET_M": [
+      "ROCKET",
+      "ROCKET_GRUNT_M",
+      "ROCKET_M",
+      "TEAM_ROCKET_M"
+    ],
+    "ROCKET_PETREL": [
+      "PETREL",
+      "ROCKET_PETREL"
+    ],
+    "ROCKET_PROTON": [
+      "PROTON",
+      "ROCKET_PROTON"
+    ],
+    "ROUGHNECK": [
+      "CUE_BALL",
+      "ROUGHNECK"
+    ],
+    "RS_PSYCHIC": [
+      "CHANNELER",
+      "PSYCHIC_F",
+      "PSYCHIC_M"
+    ],
+    "RS_TUBER_F": [
+      "RS_TUBER_F",
+      "TUBER_F",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ],
+    "RS_TUBER_M": [
+      "RS_TUBER_M",
+      "TUBER_M",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ],
+    "SIS_AND_BRO": [
+      "SIS_AND_BRO",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ],
+    "SWIMMER_F": [
+      "SWIMMER_F",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER"
+    ],
+    "SWIMMER_F_LAND": [
+      "SWIMMER_F",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER"
+    ],
+    "SWIMMER_F_WATER": [
+      "SWIMMER_F",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER"
+    ],
+    "SWIMMER_M": [
+      "SWIMMER_M",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ],
+    "SWIMMER_M_LAND": [
+      "SWIMMER_M",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ],
+    "SWIMMER_M_WATER": [
+      "SWIMMER_M",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ],
+    "TEAM_ROCKET_F": [
+      "ROCKET",
+      "ROCKET_F",
+      "ROCKET_GRUNT_F",
+      "TEAM_ROCKET_F"
+    ],
+    "TEAM_ROCKET_M": [
+      "ROCKET",
+      "ROCKET_GRUNT_M",
+      "ROCKET_M",
+      "TEAM_ROCKET_M"
+    ],
+    "TRIATHLETE_F_WATER": [
+      "TRIATHLETE_F",
+      "TRIATHLETE_F_WATER"
+    ],
+    "TRIATHLETE_M_WATER": [
+      "TRIATHLETE_M",
+      "TRIATHLETE_M_WATER"
+    ],
+    "TUBER_F": [
+      "TUBER_F",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ],
+    "TUBER_F_LAND": [
+      "TUBER_F",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ],
+    "TUBER_F_WATER": [
+      "TUBER_F",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ],
+    "TUBER_M": [
+      "TUBER_M",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ],
+    "TUBER_M_LAND": [
+      "TUBER_M",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ],
+    "TUBER_M_WATER": [
+      "TUBER_M",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ],
+    "YOUNG_COUPLE": [
+      "BEAUTY",
+      "RICH_BOY",
+      "YOUNG_COUPLE"
+    ]
+  }
+}

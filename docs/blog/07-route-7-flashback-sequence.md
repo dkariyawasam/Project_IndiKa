@@ -60,6 +60,19 @@ Problems included:
 
 The final solution uses reusable transition helpers, white overlay coverage, careful field effect cleanup, and dedicated flashback object slots.
 
+## Current Build Notes
+
+The four flashbacks now form a sequence:
+
+- Lorelei shows Giovanni trying to command Mewtwo's beam attack.
+- Bruno shows Mewtwo slamming him aside with an impact sound, dust, and screen shake.
+- Agatha shows the control over Mewtwo starting to fail.
+- Lance, inside Celadon Cave, shows Mewtwo fully breaking loose while Giovanni gives chase.
+
+All four use the same white-flash transition language, greyscale memory tint, and post-flashback dialogue structure. The player and present-day NPCs are kept out of the staged flashback space, then restored cleanly afterward.
+
+The beam-cut path now uses rough terrain rather than grass, and Celadon Cave connects Route 7 to Route 4 as the wound Mewtwo leaves behind.
+
 ## Screenshot And Art Checklist
 
 - [ ] Route 7 beam cut.

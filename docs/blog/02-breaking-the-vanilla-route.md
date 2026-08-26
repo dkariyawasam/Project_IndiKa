@@ -63,6 +63,16 @@ So some entrances became direct connections instead:
 
 That makes movement feel more natural, but it also means every connection strip has to line up tile-wise and palette-wise. Tiny map edge mistakes become very visible.
 
+## Current Build Notes
+
+Route 2's Viridian Forest gatehouses have now been removed entirely. The forest entrances behave like direct route connections instead of extra rooms, which better matches the new open-route philosophy.
+
+Saffron's tea blockade has also been removed. The city now connects directly to the surrounding routes, and the connection strips have been retiled so the entrances no longer read as blocked.
+
+The bike is now a purchased or rented travel tool rather than a voucher reward. The cycling-road guard houses can rent one, owned bikes bypass the rental scripts, and the Bike Voucher has been removed.
+
+Route 7 has become the clearest expression of the new structure: it is no longer just a pass-through route, but the aftermath of Giovanni and Mewtwo tearing a path north toward Celadon Cave.
+
 ## Screenshot And Art Checklist
 
 - [ ] Route 2 path choice.

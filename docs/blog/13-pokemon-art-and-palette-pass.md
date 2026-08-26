@@ -76,6 +76,12 @@ Footprints needed their own pass too. Some were missing, copied from earlier for
 
 Ambipom and Lopunny received official-style footprints, and the footprint rendering issues were debugged until they displayed correctly in-game.
 
+## Current Build Notes
+
+The art pass has moved from adding sprites to making the Pokedex feel palette-coherent. Several evolution lines now share palettes where it makes sense, including Buneary/Lopunny, Aipom/Ambipom, Starly/Staravia/Staraptor, Kricketot/Kricketune, Bronzor/Bronzong, Sentret/Furret, and parts of the Electabuzz, Magneton, and Lickitung lines.
+
+Menu icons and footprints were filled in for newer species, while custom palettes were softened toward FireRed-style colours when they felt too saturated or too flat.
+
 ## Screenshot And Art Checklist
 
 - [ ] Palette comparison grid.

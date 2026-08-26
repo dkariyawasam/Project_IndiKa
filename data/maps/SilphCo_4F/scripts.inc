@@ -26,7 +26,7 @@ SilphCo_4F_EventScript_FloorSign::
 	end
 
 SilphCo_4F_EventScript_Rodney::
-	trainerbattle_single TRAINER_SCIENTIST_RODNEY, SilphCo_4F_Text_RodneyIntro, SilphCo_4F_Text_RodneyDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_RODNEY, SilphCo_4F_Text_RodneyIntro, SilphCo_4F_Text_RodneyDefeat
 	msgbox SilphCo_4F_Text_RodneyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -50,6 +50,14 @@ TMs moved into their own pocket, which revealed issues around teaching moves, li
 
 This was one of those "the feature works until you actually press A" problems.
 
+## Current Build Notes
+
+The bag now uses five pockets: Items, Berries, Poke Balls, TMs, and Key Items.
+
+The old CANCEL list rows have been removed because the common hint header now teaches `B BACK`. The pocket name and page notches live in that header, matching the Pokemon summary screen's page language.
+
+Berries now have modernised effects where FireRed only had placeholder or powder-machine behaviour, and berry use in battle has been repaired. Fossils correctly show quantities, coins no longer require the Coin Case, and the Bike Voucher has been removed now that bicycles can be bought or rented.
+
 ## Screenshot And Art Checklist
 
 - [ ] Bag pocket overview.

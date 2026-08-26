@@ -60,6 +60,14 @@ Examples:
 - Help and Logbook sit in the lower tool group.
 - The D-pad glyph changes based on available directions.
 
+## Current Build Notes
+
+The radial menu now has eight entries: Pokedex, Pokemon, Bag, Card, Map, Settings, Help, and Logbook.
+
+The icons are packed into one sheet with a shared palette, and the directional glyph changes depending on which neighbouring entries are available. `L SAVE` now lives in the common blue header instead of being a separate floating label.
+
+The menu still opens with its backdrop scaling into place, then the icons appear once the backdrop has settled. The save overwrite warning has also been removed so saving feels less fussy.
+
 ## Screenshot And Art Checklist
 
 - [ ] Closed overworld before opening menu.

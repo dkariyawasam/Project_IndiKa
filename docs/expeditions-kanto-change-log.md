@@ -853,3 +853,27 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Finalize trainer front sprite cleanup and class naming consistency.
 - Do a complete Pokedex/habitat availability audit after removals.
 - Run a clean build and regression pass before release.
+
+## Current Devlog Sync
+
+- Blog devlogs updated for the current build state:
+  - `02-breaking-the-vanilla-route.md`
+  - `04-rumour-system.md`
+  - `06-giovanni-and-mewtwo.md`
+  - `07-route-7-flashback-sequence.md`
+  - `08-new-start-menu.md`
+  - `09-rebuilding-the-bag.md`
+  - `10-making-menus-feel-like-one-game.md`
+  - `11-trainer-identity.md`
+  - `12-cleaning-up-firered.md`
+  - `13-pokemon-art-and-palette-pass.md`
+- Devlogs now mention:
+  - Direct Route 2/Viridian Forest and Saffron route connections.
+  - Bike purchase/rental flow and Bike Voucher removal.
+  - Mewtwo Apex Log entries from Giovanni, Silph's president, and Lance.
+  - The four Elite Four flashbacks and Celadon Cave.
+  - Eight-entry radial menu, shared icon sheet, and common hint headers.
+  - Bag pocket expansion, modern berry effects, and removed CANCEL rows.
+  - Trainer overworld/Porymap audit work.
+  - Pokemon art, icon, footprint, and palette polish.
+  - Repurposed Help, Logbook, and Apex Log systems.

@@ -54,6 +54,14 @@ Most of this was not "draw a UI once." It was tile surgery:
 - Avoiding transparent colours.
 - Making the same visual idea work across very different screens.
 
+## Current Build Notes
+
+The shared menu language now covers Bag, Pokedex, Pokemon, Trainer Card, Logbook, and Help.
+
+Paged menus use a blue hint header with the screen label, notches, and compact controls such as `A OK`, `A FLIP`, `B BACK`, or `+ PICK` depending on the screen. Non-selectable Logbook entries hide `A OK` so the header does not promise an action that is not there.
+
+The Trainer Card now flips with `A` and exits with `B`, while the header stays fixed instead of flipping with the card. The Pokemon summary uses shorter page labels: INFO, STATS, and MOVESET.
+
 ## Screenshot And Art Checklist
 
 - [ ] Bag header.

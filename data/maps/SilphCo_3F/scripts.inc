@@ -26,7 +26,7 @@ SilphCo_3F_EventScript_FloorSign::
 	end
 
 SilphCo_3F_EventScript_Jose::
-	trainerbattle_single TRAINER_SCIENTIST_JOSE, SilphCo_3F_Text_JoseIntro, SilphCo_3F_Text_JoseDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_JOSE, SilphCo_3F_Text_JoseIntro, SilphCo_3F_Text_JoseDefeat
 	msgbox SilphCo_3F_Text_JosePostBattle, MSGBOX_AUTOCLOSE
 	end
 

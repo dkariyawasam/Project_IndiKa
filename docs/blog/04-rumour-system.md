@@ -65,6 +65,14 @@ Examples:
 - Tangrowth rumours feel like local urban legends.
 - Mewtwo rumours are tied to Giovanni's ambition.
 
+## Current Build Notes
+
+The old Fame Checker has been repurposed internally as the Apex Log. It is no longer a key item the player receives; it lives under the Logbook, where it can show the NPC witnesses tied to each Apex Pokemon.
+
+Mewtwo now follows the same logic, but through Giovanni's story. The first entry comes from Giovanni at the broken vat in Pokemon Mansion, the second from Silph's president after the Silph Co confrontation, and the third from Lance after the Route 7 aftermath.
+
+Rumours now refresh visible Apex objects immediately when the third rumour is recorded, so the player no longer has to leave and re-enter the map before an Apex appears.
+
 ## Screenshot And Art Checklist
 
 - [ ] NPC before and after rumour discovery.

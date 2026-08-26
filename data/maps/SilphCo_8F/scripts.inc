@@ -25,7 +25,7 @@ SilphCo_8F_EventScript_FloorSign::
 	end
 
 SilphCo_8F_EventScript_Parker::
-	trainerbattle_single TRAINER_SCIENTIST_PARKER, SilphCo_8F_Text_ParkerIntro, SilphCo_8F_Text_ParkerDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_PARKER, SilphCo_8F_Text_ParkerIntro, SilphCo_8F_Text_ParkerDefeat
 	msgbox SilphCo_8F_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
