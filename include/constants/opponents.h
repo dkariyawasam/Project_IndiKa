@@ -794,8 +794,7 @@
 #define TRAINER_AROMA_LADY_MIAH                  594
 #define TRAINER_GAMER_DIRK_2 TRAINER_AROMA_LADY_MIAH
 #define TRAINER_YOUNG_COUPLE_EVE_JON             595
-#define TRAINER_JUGGLER_MASON                    596
-#define TRAINER_SUPER_NERD_LESLIE_2 TRAINER_JUGGLER_MASON
+#define TRAINER_PSYCHIC_LUCIAN                   596
 #define TRAINER_CRUSH_GIRL_CYNDY                 597
 #define TRAINER_CRUSH_GIRL_JOCELYN               598
 #define TRAINER_BUG_MANIAC_EVAN                  599
@@ -917,7 +916,7 @@
 #define TRAINER_BIRD_KEEPER_CHAZ_2               715
 #define TRAINER_BIRD_KEEPER_HAROLD_2             716
 #define TRAINER_SWIMMER_FEMALE_NICOLE_2          717
-#define TRAINER_PSYCHIC_JACLYN_2                 718
+#define TRAINER_PSYCHIC_PRESTON_2                718
 #define TRAINER_SWIMMER_MALE_SAMIR_2             719
 #define TRAINER_HIKER_EARL_2                     720
 #define TRAINER_RUIN_MANIAC_LARRY_2              721
@@ -925,7 +924,7 @@
 #define TRAINER_POKEMANIAC_HECTOR_2              722
 #define TRAINER_PSYCHIC_DARIO_2                  723
 #define TRAINER_PSYCHIC_RODETTE_2                724
-#define TRAINER_JUGGLER_MASON_2                  725
+#define TRAINER_PSYCHIC_LUCIAN_2                 725
 #define TRAINER_PKMN_RANGER_NICOLAS_2            726
 #define TRAINER_BIKER_HIDEO_2 TRAINER_PKMN_RANGER_NICOLAS_2
 #define TRAINER_PKMN_RANGER_MADELINE_2           727

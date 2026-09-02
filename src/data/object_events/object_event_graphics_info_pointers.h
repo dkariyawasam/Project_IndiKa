@@ -192,6 +192,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketPetrel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RichBoy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lady;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -393,4 +394,5 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRIATHLETE_F_CYCLING]     = &gObjectEventGraphicsInfo_TriathleteFCycling,
     [OBJ_EVENT_GFX_TUBER_F_LAND]             = &gObjectEventGraphicsInfo_TuberFLand,
     [OBJ_EVENT_GFX_LADY]                    = &gObjectEventGraphicsInfo_Lady,
+    [OBJ_EVENT_GFX_PSYCHIC_M] = &gObjectEventGraphicsInfo_PsychicM,
 };

@@ -505,6 +505,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_POKEFAN_M                  0x113C
 #define OBJ_EVENT_PAL_TAG_POKEFAN_F                  0x113F
 #define OBJ_EVENT_PAL_TAG_LADY                       0x113D
+#define OBJ_EVENT_PAL_TAG_PSYCHIC_M       0x1140
 #define OBJ_EVENT_PAL_TAG_ELECTRICIAN                0x113E
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 

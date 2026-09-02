@@ -595,6 +595,7 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 ## Species, Pokedex, Habitats, And Availability
 
 - Reworked habitat lists to support Kanto native, Johto/non-native, safari/gift/trainer-only reserve logic.
+- Added `docs/trainer-habitat-ruleset.md` as the living ruleset for trainer habitat placement, class hierarchy, roster legality, rematches, and sprite expectations.
 - Established non-native habitat as a compatibility bucket for future Expeditions: Johto trading.
 - Moved Johto wild/gift/safari species into non-native where appropriate.
 - Ensured Pokemon past Mew are not treated as ordinary Kanto wild Pokemon unless deliberately added.
@@ -758,10 +759,17 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
   - Saffron Dojo trainers.
   - Silph Co Rocket trainers.
   - Elite Four.
+- Updated the trainer habitat audit to count default VS Seeker fallback rematches as valid coverage, separate from bespoke rematch chains.
 - Fixed trainer placements so trainers are on walkable areas.
 - Audited Route 1 and Route 2 trainer placement, movement, and sight ranges.
 - Updated Experts as martial arts experts, higher level than Black Belts, with Fighting-type teams/dialogue.
 - Added Experts to Saffron Dojo and Cinnabar Volcano.
+- Expanded Saffron's Psychic presence to four surrounding-route trainers:
+  - Johan on Route 8.
+  - Cameron on Route 7.
+  - Preston on Route 5.
+  - Lucian on Route 6.
+- Added bespoke VS Seeker rematches and local dialogue for Preston and Lucian.
 - Ensured no trainer has Apex Pokemon in their roster.
 
 ## Trainer And NPC Overworlds

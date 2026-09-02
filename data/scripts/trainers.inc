@@ -6576,6 +6576,13 @@ EventScript_GymAdjacent_AROMA_LADY_ROSERematch::
 
 EventScript_GymAdjacent_PSYCHIC_JOHAN::
 	trainerbattle_single TRAINER_PSYCHIC_JOHAN, EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Intro, EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_PSYCHIC_JOHANRematch
+	msgbox EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_JOHANRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_JOHAN, EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_RematchIntro, EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Defeat
 	msgbox EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -6605,7 +6612,26 @@ EventScript_GymAdjacent_PSYCHIC_CAMERONRematch::
 
 EventScript_GymAdjacent_PSYCHIC_PRESTON::
 	trainerbattle_single TRAINER_PSYCHIC_PRESTON, EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Intro, EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_PSYCHIC_PRESTONRematch
 	msgbox EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_PRESTONRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_PRESTON, EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_RematchIntro, EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Defeat
+	msgbox EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_LUCIAN::
+	trainerbattle_single TRAINER_PSYCHIC_LUCIAN, EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_Intro, EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, EventScript_GymAdjacent_PSYCHIC_LUCIANRematch
+	msgbox EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_GymAdjacent_PSYCHIC_LUCIANRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_LUCIAN, EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_RematchIntro, EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_Defeat
+	msgbox EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 @ Localized trainer text generated from former shared trainer dialogue.
@@ -6685,6 +6711,10 @@ EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Intro::
     .string "PSYCHIC JOHAN knows\n"
     .string "SAFFRON's streets well!$"
 
+EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_RematchIntro::
+    .string "The paths around SAFFRON\n"
+    .string "are clear in my mind!$"
+
 EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Defeat::
     .string "You know the path\n"
     .string "better than I thought!$"
@@ -6694,16 +6724,38 @@ EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Intro::
-    .string "PSYCHIC PRESTON knows\n"
-    .string "SAFFRON's streets well!$"
+    .string "Close to SAFFRON,\n"
+    .string "you can feel thoughts\n"
+    .string "getting louder.$"
+
+EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_RematchIntro::
+    .string "Let's quiet the noise\n"
+    .string "with another battle.$"
 
 EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Defeat::
-    .string "You know the path\n"
-    .string "better than I thought!$"
+    .string "My focus scattered!$"
 
 EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_PostBattle::
-    .string "Saffron's streets change\n"
-    .string "with every journey.$"
+    .string "SAFFRON's PSYCHICS\n"
+    .string "train the mind before\n"
+    .string "the POKEMON.$"
+
+EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_Intro::
+    .string "The path to SAFFRON\n"
+    .string "sharpens every sense.$"
+
+EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_RematchIntro::
+    .string "I foresaw another\n"
+    .string "battle here.$"
+
+EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_Defeat::
+    .string "That future slipped\n"
+    .string "away.$"
+
+EventScript_GymAdjacent_PSYCHIC_LUCIAN_Text_PostBattle::
+    .string "Power like this belongs\n"
+    .string "around SAFFRON. The city\n"
+    .string "hums with it.$"
 
 EventScript_RouteTrainer_AROMA_LADY_ROSE_Text_Intro::
     .string "AROMA LADY ROSE knows\n"

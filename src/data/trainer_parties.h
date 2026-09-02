@@ -9598,21 +9598,39 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_GAMER_DIRK_2[] =
 };
 
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_SUPER_NERD_LESLIE_2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_PRESTON_2[] = {
+    {
+        .iv = 30,
+        .lvl = 38,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 30,
+        .lvl = 40,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 30,
+        .lvl = 42,
+        .species = SPECIES_XATU,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rematch_PSYCHIC_LUCIAN_2[] = {
     {
         .iv = 30,
         .lvl = 39,
-        .species = SPECIES_MAGNEMITE,
+        .species = SPECIES_KADABRA,
     },
     {
         .iv = 30,
         .lvl = 41,
-        .species = SPECIES_VOLTORB,
+        .species = SPECIES_MR_MIME,
     },
     {
         .iv = 30,
         .lvl = 43,
-        .species = SPECIES_MAGNETON,
+        .species = SPECIES_HYPNO,
     },
 };
 
