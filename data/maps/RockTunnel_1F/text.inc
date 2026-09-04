@@ -58,17 +58,6 @@ RockTunnel_1F_Text_LeahDefeat::
 RockTunnel_1F_Text_LeahPostBattle::
     .string "I saw a MACHOP in this tunnel.$"
 
-RockTunnel_1F_Text_DanaIntro::
-    .string "I came this far looking for wild\n"
-    .string "POKéMON.$"
-
-RockTunnel_1F_Text_DanaDefeat::
-    .string "I'm out of POKéMON!$"
-
-RockTunnel_1F_Text_DanaPostBattle::
-    .string "You looked cute and harmless.\n"
-    .string "Was I ever wrong!$"
-
 RockTunnel_1F_Text_ArianaIntro::
     .string "You have POKéMON!\n"
     .string "Let's start!$"

@@ -1,0 +1,3215 @@
+[
+  {
+    "hex": "#605050",
+    "rgb": [
+      96,
+      80,
+      80
+    ],
+    "hue": 0.0,
+    "saturation": 0.1667,
+    "value": 0.3765,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#6B4A4A",
+    "rgb": [
+      107,
+      74,
+      74
+    ],
+    "hue": 0.0,
+    "saturation": 0.3084,
+    "value": 0.4196,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#483030",
+    "rgb": [
+      72,
+      48,
+      48
+    ],
+    "hue": 0.0,
+    "saturation": 0.3333,
+    "value": 0.2824,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BREEDER",
+      "JUGGLER",
+      "LADY",
+      "LASS",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#FF9C9C",
+    "rgb": [
+      255,
+      156,
+      156
+    ],
+    "hue": 0.0,
+    "saturation": 0.3882,
+    "value": 1.0,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#784040",
+    "rgb": [
+      120,
+      64,
+      64
+    ],
+    "hue": 0.0,
+    "saturation": 0.4667,
+    "value": 0.4706,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AGATHA",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BIKER",
+      "BIRD_KEEPER",
+      "BLACK_BELT",
+      "BREEDER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "BURGLAR",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "ENGINEER",
+      "EXPERT_F",
+      "EXPERT_M",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "HIKER",
+      "JUGGLER",
+      "KINDLER",
+      "LADY",
+      "LANCE",
+      "LASS",
+      "LORELEI",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "POKE_MANIAC",
+      "PSYCHIC_M",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "RUIN_MANIAC",
+      "SAILOR",
+      "SCIENTIST",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#C54242",
+    "rgb": [
+      197,
+      66,
+      66
+    ],
+    "hue": 0.0,
+    "saturation": 0.665,
+    "value": 0.7725,
+    "overworlds": [
+      "EXPERT_F"
+    ]
+  },
+  {
+    "hex": "#FF615A",
+    "rgb": [
+      255,
+      97,
+      90
+    ],
+    "hue": 2.55,
+    "saturation": 0.6471,
+    "value": 1.0,
+    "overworlds": [
+      "BLACK_BELT",
+      "EXPERT_F"
+    ]
+  },
+  {
+    "hex": "#AC4139",
+    "rgb": [
+      172,
+      65,
+      57
+    ],
+    "hue": 4.17,
+    "saturation": 0.6686,
+    "value": 0.6745,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "BEAUTY",
+      "JUGGLER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER"
+    ]
+  },
+  {
+    "hex": "#943929",
+    "rgb": [
+      148,
+      57,
+      41
+    ],
+    "hue": 8.97,
+    "saturation": 0.723,
+    "value": 0.5804,
+    "overworlds": [
+      "CHANNELER",
+      "CRUSH_GIRL",
+      "FISHER",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "ROCKET_F",
+      "ROCKET_M",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#943A29",
+    "rgb": [
+      148,
+      58,
+      41
+    ],
+    "hue": 9.53,
+    "saturation": 0.723,
+    "value": 0.5804,
+    "overworlds": [
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#521000",
+    "rgb": [
+      82,
+      16,
+      0
+    ],
+    "hue": 11.71,
+    "saturation": 1.0,
+    "value": 0.3216,
+    "overworlds": [
+      "BIRD_KEEPER",
+      "CHANNELER",
+      "CRUSH_GIRL",
+      "FISHER",
+      "HEX_MANIAC",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "ROCKET_F",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#E66A4A",
+    "rgb": [
+      230,
+      106,
+      74
+    ],
+    "hue": 12.31,
+    "saturation": 0.6783,
+    "value": 0.902,
+    "overworlds": [
+      "BIRD_KEEPER",
+      "CHANNELER",
+      "CRUSH_GIRL",
+      "FISHER",
+      "HEX_MANIAC",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "ROCKET_F",
+      "ROCKET_M",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#B07361",
+    "rgb": [
+      176,
+      115,
+      97
+    ],
+    "hue": 13.67,
+    "saturation": 0.4489,
+    "value": 0.6902,
+    "overworlds": [
+      "GENTLEMAN"
+    ]
+  },
+  {
+    "hex": "#EE7341",
+    "rgb": [
+      238,
+      115,
+      65
+    ],
+    "hue": 17.34,
+    "saturation": 0.7269,
+    "value": 0.9333,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "BEAUTY",
+      "ELECTRICIAN",
+      "JUGGLER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER"
+    ]
+  },
+  {
+    "hex": "#D89070",
+    "rgb": [
+      216,
+      144,
+      112
+    ],
+    "hue": 18.46,
+    "saturation": 0.4815,
+    "value": 0.8471,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AGATHA",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BIKER",
+      "BIRD_KEEPER",
+      "BREEDER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "BURGLAR",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "ENGINEER",
+      "EXPERT_F",
+      "EXPERT_M",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "JUGGLER",
+      "KINDLER",
+      "LADY",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "POKE_MANIAC",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "RUIN_MANIAC",
+      "SAILOR",
+      "SCIENTIST",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#3A2921",
+    "rgb": [
+      58,
+      41,
+      33
+    ],
+    "hue": 19.2,
+    "saturation": 0.431,
+    "value": 0.2275,
+    "overworlds": [
+      "BIKER",
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#ED7539",
+    "rgb": [
+      237,
+      117,
+      57
+    ],
+    "hue": 20.0,
+    "saturation": 0.7595,
+    "value": 0.9294,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#382820",
+    "rgb": [
+      56,
+      40,
+      32
+    ],
+    "hue": 20.0,
+    "saturation": 0.4286,
+    "value": 0.2196,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#402110",
+    "rgb": [
+      64,
+      33,
+      16
+    ],
+    "hue": 21.25,
+    "saturation": 0.75,
+    "value": 0.251,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#946B52",
+    "rgb": [
+      148,
+      107,
+      82
+    ],
+    "hue": 22.73,
+    "saturation": 0.4459,
+    "value": 0.5804,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#EF8442",
+    "rgb": [
+      239,
+      132,
+      66
+    ],
+    "hue": 22.89,
+    "saturation": 0.7238,
+    "value": 0.9373,
+    "overworlds": [
+      "POKEFAN_M",
+      "POKE_MANIAC"
+    ]
+  },
+  {
+    "hex": "#D89870",
+    "rgb": [
+      216,
+      152,
+      112
+    ],
+    "hue": 23.08,
+    "saturation": 0.4815,
+    "value": 0.8471,
+    "overworlds": [
+      "BLACK_BELT",
+      "HIKER",
+      "LASS",
+      "PSYCHIC_M",
+      "SCIENTIST",
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#F7BD94",
+    "rgb": [
+      247,
+      189,
+      148
+    ],
+    "hue": 24.85,
+    "saturation": 0.4008,
+    "value": 0.9686,
+    "overworlds": [
+      "BIRD_KEEPER",
+      "BURGLAR",
+      "EXPERT_F",
+      "EXPERT_M",
+      "KINDLER",
+      "POKEFAN_M",
+      "POKE_MANIAC",
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#F0B890",
+    "rgb": [
+      240,
+      184,
+      144
+    ],
+    "hue": 25.0,
+    "saturation": 0.4,
+    "value": 0.9412,
+    "overworlds": [
+      "ENGINEER",
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#986038",
+    "rgb": [
+      152,
+      96,
+      56
+    ],
+    "hue": 25.0,
+    "saturation": 0.6316,
+    "value": 0.5961,
+    "overworlds": [
+      "LADY",
+      "LASS"
+    ]
+  },
+  {
+    "hex": "#F6BD94",
+    "rgb": [
+      246,
+      189,
+      148
+    ],
+    "hue": 25.1,
+    "saturation": 0.3984,
+    "value": 0.9647,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AGATHA",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BIKER",
+      "BREEDER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "JUGGLER",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "ROCKET_F",
+      "ROCKET_M",
+      "SAILOR",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#EBB890",
+    "rgb": [
+      235,
+      184,
+      144
+    ],
+    "hue": 26.37,
+    "saturation": 0.3872,
+    "value": 0.9216,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#FFD5B4",
+    "rgb": [
+      255,
+      213,
+      180
+    ],
+    "hue": 26.4,
+    "saturation": 0.2941,
+    "value": 1.0,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AGATHA",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BIKER",
+      "BREEDER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "GAMER",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "JUGGLER",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_F",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "ROUGHNECK",
+      "SAILOR",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#F8D0B0",
+    "rgb": [
+      248,
+      208,
+      176
+    ],
+    "hue": 26.67,
+    "saturation": 0.2903,
+    "value": 0.9725,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#FFD6B5",
+    "rgb": [
+      255,
+      214,
+      181
+    ],
+    "hue": 26.76,
+    "saturation": 0.2902,
+    "value": 1.0,
+    "overworlds": [
+      "BIRD_KEEPER",
+      "EXPERT_F",
+      "EXPERT_M",
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#E69757",
+    "rgb": [
+      230,
+      151,
+      87
+    ],
+    "hue": 26.85,
+    "saturation": 0.6217,
+    "value": 0.902,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#89674B",
+    "rgb": [
+      137,
+      103,
+      75
+    ],
+    "hue": 27.1,
+    "saturation": 0.4526,
+    "value": 0.5373,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#AD672D",
+    "rgb": [
+      173,
+      103,
+      45
+    ],
+    "hue": 27.19,
+    "saturation": 0.7399,
+    "value": 0.6784,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#F0C098",
+    "rgb": [
+      240,
+      192,
+      152
+    ],
+    "hue": 27.27,
+    "saturation": 0.3667,
+    "value": 0.9412,
+    "overworlds": [
+      "BLACK_BELT",
+      "HIKER",
+      "LASS",
+      "PSYCHIC_M",
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#D08848",
+    "rgb": [
+      208,
+      136,
+      72
+    ],
+    "hue": 28.24,
+    "saturation": 0.6538,
+    "value": 0.8157,
+    "overworlds": [
+      "LADY",
+      "LASS"
+    ]
+  },
+  {
+    "hex": "#EEC39A",
+    "rgb": [
+      238,
+      195,
+      154
+    ],
+    "hue": 29.29,
+    "saturation": 0.3529,
+    "value": 0.9333,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#403830",
+    "rgb": [
+      64,
+      56,
+      48
+    ],
+    "hue": 30.0,
+    "saturation": 0.25,
+    "value": 0.251,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#F8D8B8",
+    "rgb": [
+      248,
+      216,
+      184
+    ],
+    "hue": 30.0,
+    "saturation": 0.2581,
+    "value": 0.9725,
+    "overworlds": [
+      "BLACK_BELT",
+      "LASS",
+      "PSYCHIC_M",
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#FFB56B",
+    "rgb": [
+      255,
+      181,
+      107
+    ],
+    "hue": 30.0,
+    "saturation": 0.5804,
+    "value": 1.0,
+    "overworlds": [
+      "POKEFAN_M",
+      "POKE_MANIAC"
+    ]
+  },
+  {
+    "hex": "#9C4E00",
+    "rgb": [
+      156,
+      78,
+      0
+    ],
+    "hue": 30.0,
+    "saturation": 1.0,
+    "value": 0.6118,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#D9A066",
+    "rgb": [
+      217,
+      160,
+      102
+    ],
+    "hue": 30.26,
+    "saturation": 0.53,
+    "value": 0.851,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#6B3A08",
+    "rgb": [
+      107,
+      58,
+      8
+    ],
+    "hue": 30.3,
+    "saturation": 0.9252,
+    "value": 0.4196,
+    "overworlds": [
+      "POKEFAN_M",
+      "POKE_MANIAC"
+    ]
+  },
+  {
+    "hex": "#C7831E",
+    "rgb": [
+      199,
+      131,
+      30
+    ],
+    "hue": 35.86,
+    "saturation": 0.8492,
+    "value": 0.7804,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#FFD078",
+    "rgb": [
+      255,
+      208,
+      120
+    ],
+    "hue": 39.11,
+    "saturation": 0.5294,
+    "value": 1.0,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#AD8231",
+    "rgb": [
+      173,
+      130,
+      49
+    ],
+    "hue": 39.19,
+    "saturation": 0.7168,
+    "value": 0.6784,
+    "overworlds": [
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#E8B443",
+    "rgb": [
+      232,
+      180,
+      67
+    ],
+    "hue": 41.09,
+    "saturation": 0.7112,
+    "value": 0.9098,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#CDAC62",
+    "rgb": [
+      205,
+      172,
+      98
+    ],
+    "hue": 41.5,
+    "saturation": 0.522,
+    "value": 0.8039,
+    "overworlds": [
+      "CRUSH_GIRL",
+      "FISHER",
+      "POKEFAN_F",
+      "SUPER_NERD",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#6B4A00",
+    "rgb": [
+      107,
+      74,
+      0
+    ],
+    "hue": 41.5,
+    "saturation": 1.0,
+    "value": 0.4196,
+    "overworlds": [
+      "BIKER",
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#887038",
+    "rgb": [
+      136,
+      112,
+      56
+    ],
+    "hue": 42.0,
+    "saturation": 0.5882,
+    "value": 0.5333,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#8A6F30",
+    "rgb": [
+      138,
+      111,
+      48
+    ],
+    "hue": 42.0,
+    "saturation": 0.6522,
+    "value": 0.5412,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#C9AA60",
+    "rgb": [
+      201,
+      170,
+      96
+    ],
+    "hue": 42.29,
+    "saturation": 0.5224,
+    "value": 0.7882,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#D6B25A",
+    "rgb": [
+      214,
+      178,
+      90
+    ],
+    "hue": 42.58,
+    "saturation": 0.5794,
+    "value": 0.8392,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#D8B048",
+    "rgb": [
+      216,
+      176,
+      72
+    ],
+    "hue": 43.33,
+    "saturation": 0.6667,
+    "value": 0.8471,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#836200",
+    "rgb": [
+      131,
+      98,
+      0
+    ],
+    "hue": 44.89,
+    "saturation": 1.0,
+    "value": 0.5137,
+    "overworlds": [
+      "BEAUTY",
+      "JUGGLER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#A48320",
+    "rgb": [
+      164,
+      131,
+      32
+    ],
+    "hue": 45.0,
+    "saturation": 0.8049,
+    "value": 0.6431,
+    "overworlds": [
+      "BUG_CATCHER",
+      "SCOUT_F"
+    ]
+  },
+  {
+    "hex": "#C8B068",
+    "rgb": [
+      200,
+      176,
+      104
+    ],
+    "hue": 45.0,
+    "saturation": 0.48,
+    "value": 0.7843,
+    "overworlds": [
+      "GENTLEMAN",
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#806000",
+    "rgb": [
+      128,
+      96,
+      0
+    ],
+    "hue": 45.0,
+    "saturation": 1.0,
+    "value": 0.502,
+    "overworlds": [
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#755800",
+    "rgb": [
+      117,
+      88,
+      0
+    ],
+    "hue": 45.13,
+    "saturation": 1.0,
+    "value": 0.4588,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#8C846B",
+    "rgb": [
+      140,
+      132,
+      107
+    ],
+    "hue": 45.45,
+    "saturation": 0.2357,
+    "value": 0.549,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#FFE384",
+    "rgb": [
+      255,
+      227,
+      132
+    ],
+    "hue": 46.34,
+    "saturation": 0.4824,
+    "value": 1.0,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#D5AC20",
+    "rgb": [
+      213,
+      172,
+      32
+    ],
+    "hue": 46.41,
+    "saturation": 0.8498,
+    "value": 0.8353,
+    "overworlds": [
+      "BEAUTY",
+      "JUGGLER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#947300",
+    "rgb": [
+      148,
+      115,
+      0
+    ],
+    "hue": 46.62,
+    "saturation": 1.0,
+    "value": 0.5804,
+    "overworlds": [
+      "BIKER",
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#D1B552",
+    "rgb": [
+      209,
+      181,
+      82
+    ],
+    "hue": 46.77,
+    "saturation": 0.6077,
+    "value": 0.8196,
+    "overworlds": [
+      "BUG_CATCHER"
+    ]
+  },
+  {
+    "hex": "#D4BF72",
+    "rgb": [
+      212,
+      191,
+      114
+    ],
+    "hue": 47.14,
+    "saturation": 0.4623,
+    "value": 0.8314,
+    "overworlds": [
+      "BUG_MANIAC"
+    ]
+  },
+  {
+    "hex": "#E6E2D3",
+    "rgb": [
+      230,
+      226,
+      211
+    ],
+    "hue": 47.37,
+    "saturation": 0.0826,
+    "value": 0.902,
+    "overworlds": [
+      "AGATHA"
+    ]
+  },
+  {
+    "hex": "#877B4E",
+    "rgb": [
+      135,
+      123,
+      78
+    ],
+    "hue": 47.37,
+    "saturation": 0.4222,
+    "value": 0.5294,
+    "overworlds": [
+      "BUG_MANIAC"
+    ]
+  },
+  {
+    "hex": "#DEBD41",
+    "rgb": [
+      222,
+      189,
+      65
+    ],
+    "hue": 47.39,
+    "saturation": 0.7072,
+    "value": 0.8706,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "SWIMMER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#F8D850",
+    "rgb": [
+      248,
+      216,
+      80
+    ],
+    "hue": 48.57,
+    "saturation": 0.6774,
+    "value": 0.9725,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#FFDE4A",
+    "rgb": [
+      255,
+      222,
+      74
+    ],
+    "hue": 49.06,
+    "saturation": 0.7098,
+    "value": 1.0,
+    "overworlds": [
+      "BEAUTY",
+      "JUGGLER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#7B734A",
+    "rgb": [
+      123,
+      115,
+      74
+    ],
+    "hue": 50.2,
+    "saturation": 0.3984,
+    "value": 0.4824,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#EDE6C0",
+    "rgb": [
+      237,
+      230,
+      192
+    ],
+    "hue": 50.67,
+    "saturation": 0.1899,
+    "value": 0.9294,
+    "overworlds": [
+      "BUG_CATCHER"
+    ]
+  },
+  {
+    "hex": "#787040",
+    "rgb": [
+      120,
+      112,
+      64
+    ],
+    "hue": 51.43,
+    "saturation": 0.4667,
+    "value": 0.4706,
+    "overworlds": [
+      "GENTLEMAN",
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#7B7341",
+    "rgb": [
+      123,
+      115,
+      65
+    ],
+    "hue": 51.72,
+    "saturation": 0.4715,
+    "value": 0.4824,
+    "overworlds": [
+      "BRUNO",
+      "CRUSH_GIRL",
+      "FISHER",
+      "POKEFAN_F",
+      "SUPER_NERD",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#5A5210",
+    "rgb": [
+      90,
+      82,
+      16
+    ],
+    "hue": 53.51,
+    "saturation": 0.8222,
+    "value": 0.3529,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#8C8431",
+    "rgb": [
+      140,
+      132,
+      49
+    ],
+    "hue": 54.73,
+    "saturation": 0.65,
+    "value": 0.549,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#FBF236",
+    "rgb": [
+      251,
+      242,
+      54
+    ],
+    "hue": 57.26,
+    "saturation": 0.7849,
+    "value": 0.9843,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#DEDEBD",
+    "rgb": [
+      222,
+      222,
+      189
+    ],
+    "hue": 60.0,
+    "saturation": 0.1486,
+    "value": 0.8706,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#F8F8D0",
+    "rgb": [
+      248,
+      248,
+      208
+    ],
+    "hue": 60.0,
+    "saturation": 0.1613,
+    "value": 0.9725,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#B5B58C",
+    "rgb": [
+      181,
+      181,
+      140
+    ],
+    "hue": 60.0,
+    "saturation": 0.2265,
+    "value": 0.7098,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#B5B563",
+    "rgb": [
+      181,
+      181,
+      99
+    ],
+    "hue": 60.0,
+    "saturation": 0.453,
+    "value": 0.7098,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#3A3A19",
+    "rgb": [
+      58,
+      58,
+      25
+    ],
+    "hue": 60.0,
+    "saturation": 0.569,
+    "value": 0.2275,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#393918",
+    "rgb": [
+      57,
+      57,
+      24
+    ],
+    "hue": 60.0,
+    "saturation": 0.5789,
+    "value": 0.2235,
+    "overworlds": [
+      "BRUNO",
+      "CHANNELER",
+      "CRUSH_GIRL",
+      "FISHER",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "LORELEI",
+      "POKEFAN_F",
+      "ROCKET_F",
+      "ROCKET_M",
+      "SUPER_NERD",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#525220",
+    "rgb": [
+      82,
+      82,
+      32
+    ],
+    "hue": 60.0,
+    "saturation": 0.6098,
+    "value": 0.3216,
+    "overworlds": [
+      "BUG_CATCHER",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SWIMMER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#83CD31",
+    "rgb": [
+      131,
+      205,
+      49
+    ],
+    "hue": 88.46,
+    "saturation": 0.761,
+    "value": 0.8039,
+    "overworlds": [
+      "SCOUT_F",
+      "SCOUT_M",
+      "SWIMMER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#9ED666",
+    "rgb": [
+      158,
+      214,
+      102
+    ],
+    "hue": 90.0,
+    "saturation": 0.5234,
+    "value": 0.8392,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#398B00",
+    "rgb": [
+      57,
+      139,
+      0
+    ],
+    "hue": 95.4,
+    "saturation": 1.0,
+    "value": 0.5451,
+    "overworlds": [
+      "SCOUT_F",
+      "SCOUT_M",
+      "SWIMMER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#204110",
+    "rgb": [
+      32,
+      65,
+      16
+    ],
+    "hue": 100.41,
+    "saturation": 0.7538,
+    "value": 0.2549,
+    "overworlds": [
+      "SCOUT_F",
+      "SCOUT_M",
+      "SWIMMER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#2FA138",
+    "rgb": [
+      47,
+      161,
+      56
+    ],
+    "hue": 124.74,
+    "saturation": 0.7081,
+    "value": 0.6314,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#206040",
+    "rgb": [
+      32,
+      96,
+      64
+    ],
+    "hue": 150.0,
+    "saturation": 0.6667,
+    "value": 0.3765,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#323C39",
+    "rgb": [
+      50,
+      60,
+      57
+    ],
+    "hue": 162.0,
+    "saturation": 0.1667,
+    "value": 0.2353,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#143D34",
+    "rgb": [
+      20,
+      61,
+      52
+    ],
+    "hue": 166.83,
+    "saturation": 0.6721,
+    "value": 0.2392,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#6F8787",
+    "rgb": [
+      111,
+      135,
+      135
+    ],
+    "hue": 180.0,
+    "saturation": 0.1778,
+    "value": 0.5294,
+    "overworlds": [
+      "BUG_MANIAC"
+    ]
+  },
+  {
+    "hex": "#495959",
+    "rgb": [
+      73,
+      89,
+      89
+    ],
+    "hue": 180.0,
+    "saturation": 0.1798,
+    "value": 0.349,
+    "overworlds": [
+      "BUG_MANIAC"
+    ]
+  },
+  {
+    "hex": "#84C3CE",
+    "rgb": [
+      132,
+      195,
+      206
+    ],
+    "hue": 188.92,
+    "saturation": 0.3592,
+    "value": 0.8078,
+    "overworlds": [
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#63A2AD",
+    "rgb": [
+      99,
+      162,
+      173
+    ],
+    "hue": 188.92,
+    "saturation": 0.4277,
+    "value": 0.6784,
+    "overworlds": [
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#214A52",
+    "rgb": [
+      33,
+      74,
+      82
+    ],
+    "hue": 189.8,
+    "saturation": 0.5976,
+    "value": 0.3216,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#3A7B8C",
+    "rgb": [
+      58,
+      123,
+      140
+    ],
+    "hue": 192.44,
+    "saturation": 0.5857,
+    "value": 0.549,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#73B5CE",
+    "rgb": [
+      115,
+      181,
+      206
+    ],
+    "hue": 196.48,
+    "saturation": 0.4417,
+    "value": 0.8078,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#40A8D0",
+    "rgb": [
+      64,
+      168,
+      208
+    ],
+    "hue": 196.67,
+    "saturation": 0.6923,
+    "value": 0.8157,
+    "overworlds": [
+      "LADY",
+      "LASS"
+    ]
+  },
+  {
+    "hex": "#60AAC9",
+    "rgb": [
+      96,
+      170,
+      201
+    ],
+    "hue": 197.71,
+    "saturation": 0.5224,
+    "value": 0.7882,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#3579A1",
+    "rgb": [
+      53,
+      121,
+      161
+    ],
+    "hue": 202.22,
+    "saturation": 0.6708,
+    "value": 0.6314,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#306082",
+    "rgb": [
+      48,
+      96,
+      130
+    ],
+    "hue": 204.88,
+    "saturation": 0.6308,
+    "value": 0.5098,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#94C5EE",
+    "rgb": [
+      148,
+      197,
+      238
+    ],
+    "hue": 207.33,
+    "saturation": 0.3782,
+    "value": 0.9333,
+    "overworlds": [
+      "BUG_MANIAC",
+      "ELECTRICIAN",
+      "GAMER"
+    ]
+  },
+  {
+    "hex": "#354F68",
+    "rgb": [
+      53,
+      79,
+      104
+    ],
+    "hue": 209.41,
+    "saturation": 0.4904,
+    "value": 0.4078,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#6BA5DE",
+    "rgb": [
+      107,
+      165,
+      222
+    ],
+    "hue": 209.74,
+    "saturation": 0.518,
+    "value": 0.8706,
+    "overworlds": [
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#737B83",
+    "rgb": [
+      115,
+      123,
+      131
+    ],
+    "hue": 210.0,
+    "saturation": 0.1221,
+    "value": 0.5137,
+    "overworlds": [
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#637384",
+    "rgb": [
+      99,
+      115,
+      132
+    ],
+    "hue": 210.91,
+    "saturation": 0.25,
+    "value": 0.5176,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#315A8C",
+    "rgb": [
+      49,
+      90,
+      140
+    ],
+    "hue": 212.97,
+    "saturation": 0.65,
+    "value": 0.549,
+    "overworlds": [
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#5A84BD",
+    "rgb": [
+      90,
+      132,
+      189
+    ],
+    "hue": 214.55,
+    "saturation": 0.5238,
+    "value": 0.7412,
+    "overworlds": [
+      "EXPERT_F",
+      "EXPERT_M"
+    ]
+  },
+  {
+    "hex": "#4068A0",
+    "rgb": [
+      64,
+      104,
+      160
+    ],
+    "hue": 215.0,
+    "saturation": 0.6,
+    "value": 0.6275,
+    "overworlds": [
+      "LADY",
+      "LASS"
+    ]
+  },
+  {
+    "hex": "#42526B",
+    "rgb": [
+      66,
+      82,
+      107
+    ],
+    "hue": 216.59,
+    "saturation": 0.3832,
+    "value": 0.4196,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#639BFF",
+    "rgb": [
+      99,
+      155,
+      255
+    ],
+    "hue": 218.46,
+    "saturation": 0.6118,
+    "value": 1.0,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#C0C8D8",
+    "rgb": [
+      192,
+      200,
+      216
+    ],
+    "hue": 220.0,
+    "saturation": 0.1111,
+    "value": 0.8471,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#A8B0C0",
+    "rgb": [
+      168,
+      176,
+      192
+    ],
+    "hue": 220.0,
+    "saturation": 0.125,
+    "value": 0.7529,
+    "overworlds": [
+      "LASS"
+    ]
+  },
+  {
+    "hex": "#CEDEFF",
+    "rgb": [
+      206,
+      222,
+      255
+    ],
+    "hue": 220.41,
+    "saturation": 0.1922,
+    "value": 1.0,
+    "overworlds": [
+      "BIRD_KEEPER"
+    ]
+  },
+  {
+    "hex": "#425A8C",
+    "rgb": [
+      66,
+      90,
+      140
+    ],
+    "hue": 220.54,
+    "saturation": 0.5286,
+    "value": 0.549,
+    "overworlds": [
+      "EXPERT_F",
+      "EXPERT_M"
+    ]
+  },
+  {
+    "hex": "#6283CD",
+    "rgb": [
+      98,
+      131,
+      205
+    ],
+    "hue": 221.5,
+    "saturation": 0.522,
+    "value": 0.8039,
+    "overworlds": [
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "COLLECTOR",
+      "ELECTRICIAN",
+      "GAMER",
+      "ROUGHNECK",
+      "SAILOR"
+    ]
+  },
+  {
+    "hex": "#313A52",
+    "rgb": [
+      49,
+      58,
+      82
+    ],
+    "hue": 223.64,
+    "saturation": 0.4024,
+    "value": 0.3216,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#8C94AD",
+    "rgb": [
+      140,
+      148,
+      173
+    ],
+    "hue": 225.45,
+    "saturation": 0.1908,
+    "value": 0.6784,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#737B94",
+    "rgb": [
+      115,
+      123,
+      148
+    ],
+    "hue": 225.45,
+    "saturation": 0.223,
+    "value": 0.5804,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#242A3D",
+    "rgb": [
+      36,
+      42,
+      61
+    ],
+    "hue": 225.6,
+    "saturation": 0.4098,
+    "value": 0.2392,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#A8ADBD",
+    "rgb": [
+      168,
+      173,
+      189
+    ],
+    "hue": 225.71,
+    "saturation": 0.1111,
+    "value": 0.7412,
+    "overworlds": [
+      "BUG_CATCHER"
+    ]
+  },
+  {
+    "hex": "#676F89",
+    "rgb": [
+      103,
+      111,
+      137
+    ],
+    "hue": 225.88,
+    "saturation": 0.2482,
+    "value": 0.5373,
+    "overworlds": [
+      "BUG_CATCHER"
+    ]
+  },
+  {
+    "hex": "#4D5263",
+    "rgb": [
+      77,
+      82,
+      99
+    ],
+    "hue": 226.36,
+    "saturation": 0.2222,
+    "value": 0.3882,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#8088A8",
+    "rgb": [
+      128,
+      136,
+      168
+    ],
+    "hue": 228.0,
+    "saturation": 0.2381,
+    "value": 0.6588,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#384060",
+    "rgb": [
+      56,
+      64,
+      96
+    ],
+    "hue": 228.0,
+    "saturation": 0.4167,
+    "value": 0.3765,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#586088",
+    "rgb": [
+      88,
+      96,
+      136
+    ],
+    "hue": 230.0,
+    "saturation": 0.3529,
+    "value": 0.5333,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#404870",
+    "rgb": [
+      64,
+      72,
+      112
+    ],
+    "hue": 230.0,
+    "saturation": 0.4286,
+    "value": 0.4392,
+    "overworlds": [
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#E7E7FF",
+    "rgb": [
+      231,
+      231,
+      255
+    ],
+    "hue": 240.0,
+    "saturation": 0.0941,
+    "value": 1.0,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#C6C6E7",
+    "rgb": [
+      198,
+      198,
+      231
+    ],
+    "hue": 240.0,
+    "saturation": 0.1429,
+    "value": 0.9059,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#292931",
+    "rgb": [
+      41,
+      41,
+      49
+    ],
+    "hue": 240.0,
+    "saturation": 0.1633,
+    "value": 0.1922,
+    "overworlds": [
+      "BURGLAR"
+    ]
+  },
+  {
+    "hex": "#4A4A5A",
+    "rgb": [
+      74,
+      74,
+      90
+    ],
+    "hue": 240.0,
+    "saturation": 0.1778,
+    "value": 0.3529,
+    "overworlds": [
+      "AGATHA",
+      "BIKER",
+      "BRUNO",
+      "CHANNELER",
+      "COLLECTOR",
+      "ELECTRICIAN",
+      "EXPERT_F",
+      "EXPERT_M",
+      "FISHER",
+      "GAMER",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "LANCE",
+      "LORELEI",
+      "POKEFAN_M",
+      "POKE_MANIAC",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "SAILOR",
+      "SUPER_NERD",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ]
+  },
+  {
+    "hex": "#484858",
+    "rgb": [
+      72,
+      72,
+      88
+    ],
+    "hue": 240.0,
+    "saturation": 0.1818,
+    "value": 0.3451,
+    "overworlds": [
+      "BLACK_BELT",
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#39394A",
+    "rgb": [
+      57,
+      57,
+      74
+    ],
+    "hue": 240.0,
+    "saturation": 0.2297,
+    "value": 0.2902,
+    "overworlds": [
+      "AGATHA",
+      "BUG_MANIAC",
+      "COLLECTOR",
+      "GAMER",
+      "ROUGHNECK",
+      "SAILOR"
+    ]
+  },
+  {
+    "hex": "#484870",
+    "rgb": [
+      72,
+      72,
+      112
+    ],
+    "hue": 240.0,
+    "saturation": 0.3571,
+    "value": 0.4392,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#383858",
+    "rgb": [
+      56,
+      56,
+      88
+    ],
+    "hue": 240.0,
+    "saturation": 0.3636,
+    "value": 0.3451,
+    "overworlds": [
+      "ENGINEER"
+    ]
+  },
+  {
+    "hex": "#3F3F74",
+    "rgb": [
+      63,
+      63,
+      116
+    ],
+    "hue": 240.0,
+    "saturation": 0.4569,
+    "value": 0.4549,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#4A495A",
+    "rgb": [
+      74,
+      73,
+      90
+    ],
+    "hue": 243.53,
+    "saturation": 0.1889,
+    "value": 0.3529,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#222034",
+    "rgb": [
+      34,
+      32,
+      52
+    ],
+    "hue": 246.0,
+    "saturation": 0.3846,
+    "value": 0.2039,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#2B2652",
+    "rgb": [
+      43,
+      38,
+      82
+    ],
+    "hue": 246.82,
+    "saturation": 0.5366,
+    "value": 0.3216,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#6960A6",
+    "rgb": [
+      105,
+      96,
+      166
+    ],
+    "hue": 247.71,
+    "saturation": 0.4217,
+    "value": 0.651,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#5448A1",
+    "rgb": [
+      84,
+      72,
+      161
+    ],
+    "hue": 248.09,
+    "saturation": 0.5528,
+    "value": 0.6314,
+    "overworlds": [
+      "BUG_CATCHER"
+    ]
+  },
+  {
+    "hex": "#4E496E",
+    "rgb": [
+      78,
+      73,
+      110
+    ],
+    "hue": 248.11,
+    "saturation": 0.3364,
+    "value": 0.4314,
+    "overworlds": [
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M"
+    ]
+  },
+  {
+    "hex": "#C6C3D6",
+    "rgb": [
+      198,
+      195,
+      214
+    ],
+    "hue": 249.47,
+    "saturation": 0.0888,
+    "value": 0.8392,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#413962",
+    "rgb": [
+      65,
+      57,
+      98
+    ],
+    "hue": 251.71,
+    "saturation": 0.4184,
+    "value": 0.3843,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "BEAUTY",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ]
+  },
+  {
+    "hex": "#6A52BD",
+    "rgb": [
+      106,
+      82,
+      189
+    ],
+    "hue": 253.46,
+    "saturation": 0.5661,
+    "value": 0.7412,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#A48BEE",
+    "rgb": [
+      164,
+      139,
+      238
+    ],
+    "hue": 255.15,
+    "saturation": 0.416,
+    "value": 0.9333,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "BEAUTY",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#0C0911",
+    "rgb": [
+      12,
+      9,
+      17
+    ],
+    "hue": 262.5,
+    "saturation": 0.4706,
+    "value": 0.0667,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#76428A",
+    "rgb": [
+      118,
+      66,
+      138
+    ],
+    "hue": 283.33,
+    "saturation": 0.5217,
+    "value": 0.5412,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#683571",
+    "rgb": [
+      104,
+      53,
+      113
+    ],
+    "hue": 291.0,
+    "saturation": 0.531,
+    "value": 0.4431,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#A878A8",
+    "rgb": [
+      168,
+      120,
+      168
+    ],
+    "hue": 300.0,
+    "saturation": 0.2857,
+    "value": 0.6588,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#996091",
+    "rgb": [
+      153,
+      96,
+      145
+    ],
+    "hue": 308.42,
+    "saturation": 0.3725,
+    "value": 0.6,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#45283C",
+    "rgb": [
+      69,
+      40,
+      60
+    ],
+    "hue": 318.62,
+    "saturation": 0.4203,
+    "value": 0.2706,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#C989B2",
+    "rgb": [
+      201,
+      137,
+      178
+    ],
+    "hue": 321.56,
+    "saturation": 0.3184,
+    "value": 0.7882,
+    "overworlds": [
+      "PSYCHIC_M"
+    ]
+  },
+  {
+    "hex": "#42383E",
+    "rgb": [
+      66,
+      56,
+      62
+    ],
+    "hue": 324.0,
+    "saturation": 0.1515,
+    "value": 0.2588,
+    "overworlds": [
+      "GENTLEMAN",
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#DE94BD",
+    "rgb": [
+      222,
+      148,
+      189
+    ],
+    "hue": 326.76,
+    "saturation": 0.3333,
+    "value": 0.8706,
+    "overworlds": [
+      "SCOUT_F",
+      "SCOUT_M"
+    ]
+  },
+  {
+    "hex": "#52424A",
+    "rgb": [
+      82,
+      66,
+      74
+    ],
+    "hue": 330.0,
+    "saturation": 0.1951,
+    "value": 0.3216,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#A34165",
+    "rgb": [
+      163,
+      65,
+      101
+    ],
+    "hue": 337.96,
+    "saturation": 0.6012,
+    "value": 0.6392,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#BD6B84",
+    "rgb": [
+      189,
+      107,
+      132
+    ],
+    "hue": 341.71,
+    "saturation": 0.4339,
+    "value": 0.7412,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#7A092B",
+    "rgb": [
+      122,
+      9,
+      43
+    ],
+    "hue": 341.95,
+    "saturation": 0.9262,
+    "value": 0.4784,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#7D4757",
+    "rgb": [
+      125,
+      71,
+      87
+    ],
+    "hue": 342.22,
+    "saturation": 0.432,
+    "value": 0.4902,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#8B4152",
+    "rgb": [
+      139,
+      65,
+      82
+    ],
+    "hue": 346.22,
+    "saturation": 0.5324,
+    "value": 0.5451,
+    "overworlds": [
+      "AGATHA",
+      "COLLECTOR",
+      "SAILOR"
+    ]
+  },
+  {
+    "hex": "#D56A7B",
+    "rgb": [
+      213,
+      106,
+      123
+    ],
+    "hue": 350.47,
+    "saturation": 0.5023,
+    "value": 0.8353,
+    "overworlds": [
+      "AGATHA",
+      "SAILOR"
+    ]
+  },
+  {
+    "hex": "#FA6173",
+    "rgb": [
+      250,
+      97,
+      115
+    ],
+    "hue": 352.94,
+    "saturation": 0.612,
+    "value": 0.9804,
+    "overworlds": [
+      "AROMA_LADY"
+    ]
+  },
+  {
+    "hex": "#DE6973",
+    "rgb": [
+      222,
+      105,
+      115
+    ],
+    "hue": 354.87,
+    "saturation": 0.527,
+    "value": 0.8706,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#FFA2A5",
+    "rgb": [
+      255,
+      162,
+      165
+    ],
+    "hue": 358.06,
+    "saturation": 0.3647,
+    "value": 1.0,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#6B494A",
+    "rgb": [
+      107,
+      73,
+      74
+    ],
+    "hue": 358.24,
+    "saturation": 0.3178,
+    "value": 0.4196,
+    "overworlds": [
+      "GENTLEMAN",
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#AD494A",
+    "rgb": [
+      173,
+      73,
+      74
+    ],
+    "hue": 359.4,
+    "saturation": 0.578,
+    "value": 0.6784,
+    "overworlds": [
+      "SWIMMER_F_LAND"
+    ]
+  },
+  {
+    "hex": "#000000",
+    "rgb": [
+      0,
+      0,
+      0
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.0,
+    "overworlds": [
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M",
+      "AGATHA",
+      "AROMA_LADY",
+      "BEAUTY",
+      "BIKER",
+      "BIRD_KEEPER",
+      "BLACK_BELT",
+      "BREEDER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "BURGLAR",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "EXPERT_F",
+      "EXPERT_M",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "HIKER",
+      "JUGGLER",
+      "KINDLER",
+      "LANCE",
+      "LASS",
+      "LORELEI",
+      "POKEFAN_F",
+      "POKEFAN_M",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "POKE_MANIAC",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "RUIN_MANIAC",
+      "SAILOR",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_LAND",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_CYCLING",
+      "TRIATHLETE_F_LAND",
+      "TRIATHLETE_F_WATER",
+      "TRIATHLETE_M_CYCLING",
+      "TRIATHLETE_M_LAND",
+      "TRIATHLETE_M_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
+    ]
+  },
+  {
+    "hex": "#101010",
+    "rgb": [
+      16,
+      16,
+      16
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.0627,
+    "overworlds": [
+      "ENGINEER",
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#595652",
+    "rgb": [
+      89,
+      86,
+      82
+    ],
+    "hue": 34.29,
+    "saturation": 0.0787,
+    "value": 0.349,
+    "overworlds": [
+      "RICH_BOY"
+    ]
+  },
+  {
+    "hex": "#636163",
+    "rgb": [
+      99,
+      97,
+      99
+    ],
+    "hue": 300.0,
+    "saturation": 0.0202,
+    "value": 0.3882,
+    "overworlds": [
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#889090",
+    "rgb": [
+      136,
+      144,
+      144
+    ],
+    "hue": 180.0,
+    "saturation": 0.0556,
+    "value": 0.5647,
+    "overworlds": [
+      "BLACK_BELT"
+    ]
+  },
+  {
+    "hex": "#8B8B94",
+    "rgb": [
+      139,
+      139,
+      148
+    ],
+    "hue": 240.0,
+    "saturation": 0.0608,
+    "value": 0.5804,
+    "overworlds": [
+      "BIKER",
+      "BRUNO",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "LANCE",
+      "LORELEI",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "SAILOR",
+      "SUPER_NERD",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ]
+  },
+  {
+    "hex": "#94928B",
+    "rgb": [
+      148,
+      146,
+      139
+    ],
+    "hue": 46.67,
+    "saturation": 0.0608,
+    "value": 0.5804,
+    "overworlds": [
+      "AGATHA"
+    ]
+  },
+  {
+    "hex": "#8C8C94",
+    "rgb": [
+      140,
+      140,
+      148
+    ],
+    "hue": 240.0,
+    "saturation": 0.0541,
+    "value": 0.5804,
+    "overworlds": [
+      "EXPERT_F",
+      "EXPERT_M",
+      "POKEFAN_M",
+      "POKE_MANIAC"
+    ]
+  },
+  {
+    "hex": "#949294",
+    "rgb": [
+      148,
+      146,
+      148
+    ],
+    "hue": 300.0,
+    "saturation": 0.0135,
+    "value": 0.5804,
+    "overworlds": [
+      "HIKER"
+    ]
+  },
+  {
+    "hex": "#8C8A94",
+    "rgb": [
+      140,
+      138,
+      148
+    ],
+    "hue": 252.0,
+    "saturation": 0.0676,
+    "value": 0.5804,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#9C9C9C",
+    "rgb": [
+      156,
+      156,
+      156
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.6118,
+    "overworlds": [
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#ABABAB",
+    "rgb": [
+      171,
+      171,
+      171
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.6706,
+    "overworlds": [
+      "BREEDER"
+    ]
+  },
+  {
+    "hex": "#CECECE",
+    "rgb": [
+      206,
+      206,
+      206
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.8078,
+    "overworlds": [
+      "BURGLAR",
+      "RUIN_MANIAC"
+    ]
+  },
+  {
+    "hex": "#CFD4CD",
+    "rgb": [
+      207,
+      212,
+      205
+    ],
+    "hue": 102.86,
+    "saturation": 0.033,
+    "value": 0.8314,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  },
+  {
+    "hex": "#C5C5D5",
+    "rgb": [
+      197,
+      197,
+      213
+    ],
+    "hue": 240.0,
+    "saturation": 0.0751,
+    "value": 0.8353,
+    "overworlds": [
+      "BIKER",
+      "BRUNO",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "LORELEI",
+      "POKEFAN_F",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "SAILOR",
+      "SUPER_NERD",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER"
+    ]
+  },
+  {
+    "hex": "#C5C5D6",
+    "rgb": [
+      197,
+      197,
+      214
+    ],
+    "hue": 240.0,
+    "saturation": 0.0794,
+    "value": 0.8392,
+    "overworlds": [
+      "EXPERT_F",
+      "EXPERT_M",
+      "POKEFAN_M",
+      "POKE_MANIAC"
+    ]
+  },
+  {
+    "hex": "#D0D8E0",
+    "rgb": [
+      208,
+      216,
+      224
+    ],
+    "hue": 210.0,
+    "saturation": 0.0714,
+    "value": 0.8784,
+    "overworlds": [
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#F7F7E6",
+    "rgb": [
+      247,
+      247,
+      230
+    ],
+    "hue": 60.0,
+    "saturation": 0.0688,
+    "value": 0.9686,
+    "overworlds": [
+      "KINDLER"
+    ]
+  },
+  {
+    "hex": "#F0F0F8",
+    "rgb": [
+      240,
+      240,
+      248
+    ],
+    "hue": 240.0,
+    "saturation": 0.0323,
+    "value": 0.9725,
+    "overworlds": [
+      "LADY"
+    ]
+  },
+  {
+    "hex": "#FFFFFF",
+    "rgb": [
+      255,
+      255,
+      255
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 1.0,
+    "overworlds": [
+      "AGATHA",
+      "BEAUTY",
+      "BLACK_BELT",
+      "BREEDER",
+      "BUG_MANIAC",
+      "CHANNELER",
+      "COLLECTOR",
+      "CRUSH_GIRL",
+      "ELECTRICIAN",
+      "EXPERT_F",
+      "EXPERT_M",
+      "FISHER",
+      "GAMER",
+      "GENTLEMAN",
+      "GIOVANNI",
+      "HEX_MANIAC",
+      "JUGGLER",
+      "LORELEI",
+      "POKEFAN_M",
+      "POKE_MANIAC",
+      "RICH_BOY",
+      "ROCKET_F",
+      "ROCKET_M",
+      "ROUGHNECK",
+      "SAILOR",
+      "SCOUT_F",
+      "SCOUT_M",
+      "SUPER_NERD",
+      "SWIMMER_F_WATER",
+      "SWIMMER_M_LAND",
+      "SWIMMER_M_WATER",
+      "TRIATHLETE_F_WATER",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER"
+    ]
+  },
+  {
+    "hex": "#FFFBFF",
+    "rgb": [
+      255,
+      251,
+      255
+    ],
+    "hue": 300.0,
+    "saturation": 0.0157,
+    "value": 1.0,
+    "overworlds": [
+      "SCIENTIST"
+    ]
+  }
+]

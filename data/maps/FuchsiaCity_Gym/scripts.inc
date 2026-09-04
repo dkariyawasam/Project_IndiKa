@@ -205,12 +205,12 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	end
 
 FuchsiaCity_Gym_EventScript_Phil::
-	trainerbattle_single TRAINER_TAMER_PHIL, FuchsiaCity_Gym_Text_PhilIntro, FuchsiaCity_Gym_Text_PhilDefeat
+	trainerbattle_single TRAINER_NINJA_BOY_PHIL, FuchsiaCity_Gym_Text_PhilIntro, FuchsiaCity_Gym_Text_PhilDefeat
 	msgbox FuchsiaCity_Gym_Text_PhilPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FuchsiaCity_Gym_EventScript_Edgar::
-	trainerbattle_single TRAINER_TAMER_EDGAR, FuchsiaCity_Gym_Text_EdgarIntro, FuchsiaCity_Gym_Text_EdgarDefeat
+	trainerbattle_single TRAINER_NINJA_BOY_EDGAR, FuchsiaCity_Gym_Text_EdgarIntro, FuchsiaCity_Gym_Text_EdgarDefeat
 	msgbox FuchsiaCity_Gym_Text_EdgarPostBattle, MSGBOX_AUTOCLOSE
 	end
 

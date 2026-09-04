@@ -10,7 +10,6 @@ EventScript_SetGymTrainers::
 	end
 
 EventScript_SetCeruleanGymTrainers::
-	settrainerflag TRAINER_SWIMMER_MALE_LUIS
 	return
 
 EventScript_SetVermilionGymTrainers::
@@ -23,12 +22,11 @@ EventScript_SetCeladonGymTrainers::
 	settrainerflag TRAINER_BEAUTY_BRIDGET
 	settrainerflag TRAINER_BEAUTY_TAMIA
 	settrainerflag TRAINER_BEAUTY_LORI
-	settrainerflag TRAINER_ACE_TRAINER_MARY
 	return
 
 EventScript_SetFuchsiaGymTrainers::
-	settrainerflag TRAINER_TAMER_PHIL
-	settrainerflag TRAINER_TAMER_EDGAR
+	settrainerflag TRAINER_NINJA_BOY_PHIL
+	settrainerflag TRAINER_NINJA_BOY_EDGAR
 	settrainerflag TRAINER_JUGGLER_KIRK
 	settrainerflag TRAINER_JUGGLER_SHAWN
 	settrainerflag TRAINER_JUGGLER_KAYDEN
@@ -49,7 +47,7 @@ EventScript_SetCinnabarGymTrainers::
 	return
 
 EventScript_SetViridianGymTrainers::
-	settrainerflag TRAINER_TAMER_JASON
+	settrainerflag TRAINER_NINJA_BOY_JASON
 	settrainerflag TRAINER_BLACK_BELT_ATSUSHI
 	settrainerflag TRAINER_BLACK_BELT_KIYO
 	settrainerflag TRAINER_BLACK_BELT_TAKASHI
