@@ -155,7 +155,6 @@ const struct MonCoords gTrainerFrontPicCoords[] =
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
 {
     TRAINER_SPRITE(HEX_MANIAC, gTrainerFrontPic_HexManiac, 0x800),
-    TRAINER_SPRITE(LADY_RS, gTrainerFrontPic_LadyRS, 0x800),
     TRAINER_SPRITE(RICH_BOY, gTrainerFrontPic_RichBoy, 0x800),
     TRAINER_SPRITE(GUITARIST, gTrainerFrontPic_Guitarist, 0x800),
     TRAINER_SPRITE(KINDLER, gTrainerFrontPic_Kindler, 0x800),
@@ -180,7 +179,6 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(COLLECTOR, gTrainerFrontPic_Collector, 0x800),
     TRAINER_SPRITE(POKEMON_BREEDER_M_RS, gTrainerFrontPic_PokemonBreederMRS, 0x800),
     TRAINER_SPRITE(POKEMON_BREEDER_F_RS, gTrainerFrontPic_PokemonBreederFRS, 0x800),
-    TRAINER_SPRITE(YOUNG_COUPLE_RS, gTrainerFrontPic_YoungCoupleRS, 0x800),
     TRAINER_SPRITE(OLD_COUPLE, gTrainerFrontPic_OldCouple, 0x800),
     TRAINER_SPRITE(YOUNGSTER, gTrainerFrontPic_Youngster, 0x800),
     TRAINER_SPRITE(BUG_CATCHER, gTrainerFrontPic_BugCatcher, 0x800),
@@ -203,7 +201,6 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(PSYCHIC_M, gTrainerFrontPic_PsychicM, 0x800),
     TRAINER_SPRITE(ELECTRICIAN, gTrainerFrontPic_Electrician, 0x800),
     TRAINER_SPRITE(JUGGLER, gTrainerFrontPic_Juggler, 0x800),
-    TRAINER_SPRITE(TAMER, gTrainerFrontPic_Tamer, 0x800),
     TRAINER_SPRITE(BIRD_KEEPER, gTrainerFrontPic_BirdKeeper, 0x800),
     TRAINER_SPRITE(BLACK_BELT_M, gTrainerFrontPic_BlackBeltM, 0x800),
     TRAINER_SPRITE(RIVAL_EARLY, gTrainerFrontPic_RivalEarly, 0x800),
@@ -229,7 +226,6 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(CHANNELER, gTrainerFrontPic_Channeler, 0x800),
     TRAINER_SPRITE(TWINS, gTrainerFrontPic_Twins, 0x800),
     TRAINER_SPRITE(COOL_COUPLE, gTrainerFrontPic_CoolCouple, 0x800),
-    TRAINER_SPRITE(YOUNG_COUPLE, gTrainerFrontPic_YoungCouple, 0x800),
     TRAINER_SPRITE(CRUSH_KIN, gTrainerFrontPic_CrushKin, 0x800),
     TRAINER_SPRITE(SIS_AND_BRO, gTrainerFrontPic_SisAndBro, 0x800),
     TRAINER_SPRITE(PROFESSOR_OAK, gTrainerFrontPic_ProfessorOak, 0x800),
@@ -253,7 +249,6 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
 {
     TRAINER_PAL(HEX_MANIAC, gTrainerPalette_HexManiac),
-    TRAINER_PAL(LADY_RS, gTrainerPalette_LadyRS),
     TRAINER_PAL(RICH_BOY, gTrainerPalette_RichBoy),
     TRAINER_PAL(GUITARIST, gTrainerPalette_Guitarist),
     TRAINER_PAL(KINDLER, gTrainerPalette_Kindler),
@@ -278,7 +273,6 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(COLLECTOR, gTrainerPalette_Collector),
     TRAINER_PAL(POKEMON_BREEDER_M_RS, gTrainerPalette_PokemonBreederMRS),
     TRAINER_PAL(POKEMON_BREEDER_F_RS, gTrainerPalette_PokemonBreederFRS),
-    TRAINER_PAL(YOUNG_COUPLE_RS, gTrainerPalette_YoungCoupleRS),
     TRAINER_PAL(OLD_COUPLE, gTrainerPalette_OldCouple),
     TRAINER_PAL(YOUNGSTER, gTrainerPalette_Youngster),
     TRAINER_PAL(BUG_CATCHER, gTrainerPalette_BugCatcher),
@@ -301,7 +295,6 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(PSYCHIC_M, gTrainerPalette_PsychicM),
     TRAINER_PAL(ELECTRICIAN, gTrainerPalette_Electrician),
     TRAINER_PAL(JUGGLER, gTrainerPalette_Juggler),
-    TRAINER_PAL(TAMER, gTrainerPalette_Tamer),
     TRAINER_PAL(BIRD_KEEPER, gTrainerPalette_BirdKeeper),
     TRAINER_PAL(BLACK_BELT_M, gTrainerPalette_BlackBeltM),
     TRAINER_PAL(RIVAL_EARLY, gTrainerPalette_RivalEarly),
@@ -327,7 +320,6 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(CHANNELER, gTrainerPalette_Channeler),
     TRAINER_PAL(TWINS, gTrainerPalette_Twins),
     TRAINER_PAL(COOL_COUPLE, gTrainerPalette_CoolCouple),
-    TRAINER_PAL(YOUNG_COUPLE, gTrainerPalette_YoungCouple),
     TRAINER_PAL(CRUSH_KIN, gTrainerPalette_CrushKin),
     TRAINER_PAL(SIS_AND_BRO, gTrainerPalette_SisAndBro),
     TRAINER_PAL(PROFESSOR_OAK, gTrainerPalette_ProfessorOak),

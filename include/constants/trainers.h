@@ -23,7 +23,7 @@
 #define TRAINER_PIC_UNUSED_8                8
 #define TRAINER_PIC_UNUSED_9                9
 #define TRAINER_PIC_HEX_MANIAC             10
-#define TRAINER_PIC_LADY_RS                11
+#define TRAINER_PIC_LADY_RS                TRAINER_PIC_LADY
 #define TRAINER_PIC_RICH_BOY               13
 #define TRAINER_PIC_GUITARIST              17
 #define TRAINER_PIC_KINDLER                18
@@ -66,7 +66,7 @@
 #define TRAINER_PIC_UNUSED_62     62
 #define TRAINER_PIC_UNUSED_63          63
 #define TRAINER_PIC_UNUSED_64          64
-#define TRAINER_PIC_YOUNG_COUPLE_RS        68
+#define TRAINER_PIC_YOUNG_COUPLE_RS        TRAINER_PIC_COOL_COUPLE
 #define TRAINER_PIC_OLD_COUPLE             69
 #define TRAINER_PIC_UNUSED_71           71
 #define TRAINER_PIC_UNUSED_72           72
@@ -103,7 +103,7 @@
 #define TRAINER_PIC_PSYCHIC_M             100
 #define TRAINER_PIC_ELECTRICIAN                101
 #define TRAINER_PIC_JUGGLER               102
-#define TRAINER_PIC_TAMER                 103
+#define TRAINER_PIC_TAMER                 TRAINER_PIC_GENTLEMAN
 #define TRAINER_PIC_BIRD_KEEPER           104
 #define TRAINER_PIC_BLACK_BELT_M          105
 #define TRAINER_PIC_BLACK_BELT            TRAINER_PIC_BLACK_BELT_M
@@ -132,7 +132,7 @@
 #define TRAINER_PIC_CHANNELER             126
 #define TRAINER_PIC_TWINS                 127
 #define TRAINER_PIC_COOL_COUPLE           128
-#define TRAINER_PIC_YOUNG_COUPLE          129
+#define TRAINER_PIC_YOUNG_COUPLE          TRAINER_PIC_COOL_COUPLE
 #define TRAINER_PIC_CRUSH_KIN             130
 #define TRAINER_PIC_SIS_AND_BRO           131
 #define TRAINER_PIC_PROFESSOR_OAK         132
@@ -191,8 +191,9 @@
 #define TRAINER_CLASS_SAILOR              60
 #define TRAINER_CLASS_SCOUT_M             61
 #define TRAINER_CLASS_SCOUT_F             62
-#define TRAINER_CLASS_CAMPER              TRAINER_CLASS_SCOUT_M
-#define TRAINER_CLASS_PICNICKER           TRAINER_CLASS_SCOUT_F
+#define TRAINER_CLASS_SCOUT               TRAINER_CLASS_SCOUT_M
+#define TRAINER_CLASS_CAMPER              TRAINER_CLASS_SCOUT
+#define TRAINER_CLASS_PICNICKER           TRAINER_CLASS_SCOUT
 #define TRAINER_CLASS_POKEMANIAC          63
 #define TRAINER_CLASS_SUPER_NERD          64
 #define TRAINER_CLASS_HIKER               65
@@ -201,6 +202,7 @@
 #define TRAINER_CLASS_ENGINEER            68
 #define TRAINER_CLASS_FISHERMAN           69
 #define TRAINER_CLASS_SWIMMER_M           70
+#define TRAINER_CLASS_SWIMMER             TRAINER_CLASS_SWIMMER_M
 #define TRAINER_CLASS_ROUGHNECK           71
 #define TRAINER_CLASS_CUE_BALL            TRAINER_CLASS_ROUGHNECK
 #define TRAINER_CLASS_GAMER               72
@@ -232,7 +234,7 @@
 #define TRAINER_CLASS_SIS_AND_BRO         96
 #define TRAINER_CLASS_PLAYER              98
 #define TRAINER_CLASS_BLACK_BELT_F        99
-#define TRAINER_CLASS_CRUSH_GIRL          TRAINER_CLASS_BLACK_BELT_F
+#define TRAINER_CLASS_CRUSH_GIRL          TRAINER_CLASS_BLACK_BELT
 #define TRAINER_CLASS_TUBER               100
 #define TRAINER_CLASS_PKMN_BREEDER        101
 #define TRAINER_CLASS_PKMN_RANGER         102

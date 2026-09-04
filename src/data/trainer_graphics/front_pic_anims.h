@@ -13,11 +13,6 @@ static const union AnimCmd *const sAnims_HexManiac[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_LadyRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_RichBoy[] =
 {
     sAnim_GeneralFrame0,
@@ -173,11 +168,6 @@ static const union AnimCmd *const sAnims_PokemonBreederFRS[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_YoungCoupleRS[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_OldCouple[] =
 {
     sAnim_GeneralFrame0,
@@ -323,11 +313,6 @@ static const union AnimCmd *const sAnims_Juggler[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_Tamer[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_BirdKeeper[] =
 {
     sAnim_GeneralFrame0,
@@ -453,11 +438,6 @@ static const union AnimCmd *const sAnims_CoolCouple[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_YoungCouple[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_CrushKin[] =
 {
     sAnim_GeneralFrame0,
@@ -546,7 +526,6 @@ static const union AnimCmd *const sAnims_Painter[] =
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HEX_MANIAC]            = sAnims_HexManiac,
-    [TRAINER_PIC_LADY_RS]               = sAnims_LadyRS,
     [TRAINER_PIC_RICH_BOY]              = sAnims_RichBoy,
     [TRAINER_PIC_GUITARIST]             = sAnims_Guitarist,
     [TRAINER_PIC_KINDLER]               = sAnims_Kindler,
@@ -571,7 +550,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_COLLECTOR]             = sAnims_Collector,
     [TRAINER_PIC_POKEMON_BREEDER_M_RS]  = sAnims_PokemonBreederMRS,
     [TRAINER_PIC_POKEMON_BREEDER_F_RS]  = sAnims_PokemonBreederFRS,
-    [TRAINER_PIC_YOUNG_COUPLE_RS]       = sAnims_YoungCoupleRS,
     [TRAINER_PIC_OLD_COUPLE]            = sAnims_OldCouple,
     [TRAINER_PIC_YOUNGSTER]             = sAnims_Youngster,
     [TRAINER_PIC_BUG_CATCHER]           = sAnims_BugCatcher,
@@ -594,7 +572,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_PSYCHIC_M]             = sAnims_PsychicM,
     [TRAINER_PIC_ELECTRICIAN]                = sAnims_Electrician,
     [TRAINER_PIC_JUGGLER]               = sAnims_Juggler,
-    [TRAINER_PIC_TAMER]                 = sAnims_Tamer,
     [TRAINER_PIC_BIRD_KEEPER]           = sAnims_BirdKeeper,
     [TRAINER_PIC_BLACK_BELT_M]          = sAnims_BlackBeltM,
     [TRAINER_PIC_RIVAL_EARLY]           = sAnims_RivalEarly,
@@ -620,7 +597,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_CHANNELER]             = sAnims_Channeler,
     [TRAINER_PIC_TWINS]                 = sAnims_Twins,
     [TRAINER_PIC_COOL_COUPLE]           = sAnims_CoolCouple,
-    [TRAINER_PIC_YOUNG_COUPLE]          = sAnims_YoungCouple,
     [TRAINER_PIC_CRUSH_KIN]             = sAnims_CrushKin,
     [TRAINER_PIC_SIS_AND_BRO]           = sAnims_SisAndBro,
     [TRAINER_PIC_PROFESSOR_OAK]         = sAnims_ProfessorOak,

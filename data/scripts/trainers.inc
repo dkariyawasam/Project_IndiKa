@@ -1336,6 +1336,18 @@ Route15_EventScript_OliviaRematch::
 	msgbox Route15_Text_OliviaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route15_EventScript_Claire::
+	trainerbattle_single TRAINER_ROUTE15_BEAUTY_CLAIRE, Route15_Text_ClaireIntro, Route15_Text_ClaireDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route15_EventScript_ClaireRematch
+	msgbox Route15_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route15_EventScript_ClaireRematch::
+	trainerbattle_rematch TRAINER_ROUTE15_BEAUTY_CLAIRE, Route15_Text_ClaireRematchIntro, Route15_Text_ClaireDefeat
+	msgbox Route15_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route15_EventScript_Edwin::
 	trainerbattle_single TRAINER_BIRD_KEEPER_EDWIN, Route15_Text_EdwinIntro, Route15_Text_EdwinDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -1756,6 +1768,18 @@ Route17_EventScript_MiloRematch::
 	msgbox Route17_EventScript_Milo_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route17_EventScript_Nico::
+	trainerbattle_single TRAINER_ROUTE17_YOUNGSTER_NICO, Route17_EventScript_Nico_Text_Intro, Route17_EventScript_Nico_Text_Defeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route17_EventScript_NicoRematch
+	msgbox Route17_EventScript_Nico_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route17_EventScript_NicoRematch::
+	trainerbattle_rematch TRAINER_ROUTE17_YOUNGSTER_NICO, Route17_EventScript_Nico_Text_RematchIntro, Route17_EventScript_Nico_Text_Defeat
+	msgbox Route17_EventScript_Nico_Text_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route17_EventScript_Tess::
 	trainerbattle_single TRAINER_URBAN_LASS_TESS, Route17_EventScript_Tess_Text_Intro, Route17_EventScript_Tess_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -2170,16 +2194,28 @@ Route20_EventScript_MarinerRematch::
 	call EventScript_RecordApexRumorWithFeedback
 	end
 
-Route20_EventScript_Tiffany::
-	trainerbattle_single TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyIntro, Route20_Text_TiffanyDefeat
+Route20_EventScript_Tyler::
+	trainerbattle_single TRAINER_ROUTE20_SWIMMER_TYLER, Route20_Text_TylerIntro, Route20_Text_TylerDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_TiffanyRematch
-	msgbox Route20_Text_TiffanyPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_TylerRematch
+	msgbox Route20_Text_TylerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route20_EventScript_TiffanyRematch::
-	trainerbattle_rematch TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyRematchIntro, Route20_Text_TiffanyDefeat
-	msgbox Route20_Text_TiffanyPostBattle, MSGBOX_AUTOCLOSE
+Route20_EventScript_TylerRematch::
+	trainerbattle_rematch TRAINER_ROUTE20_SWIMMER_TYLER, Route20_Text_TylerRematchIntro, Route20_Text_TylerDefeat
+	msgbox Route20_Text_TylerPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_EventScript_Luis::
+	trainerbattle_single TRAINER_ROUTE20_SWIMMER_LUIS, Route20_Text_LuisIntro, Route20_Text_LuisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_LuisRematch
+	msgbox Route20_Text_LuisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_EventScript_LuisRematch::
+	trainerbattle_rematch TRAINER_ROUTE20_SWIMMER_LUIS, Route20_Text_LuisRematchIntro, Route20_Text_LuisDefeat
+	msgbox Route20_Text_LuisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route20_EventScript_Nora::
@@ -5039,11 +5075,11 @@ EventScript_RouteTrainer_ROUTE16_LASS_JULIA_Text_PostBattle::
     .string "One side is city streets, the\n"
     .string "other is rushing downhill.$"
 EventScript_RouteTrainer_ROUTE16_SCOUT_ARIANA_Text_Intro::
-    .string "A good SCOUT checks the ground\n"
+    .string "A good rider checks the ground\n"
     .string "before a long ride.\p"
     .string "Let's check your team, too!$"
 EventScript_RouteTrainer_ROUTE16_SCOUT_ARIANA_Text_RematchIntro::
-    .string "Still scouting the top of\n"
+    .string "Still training at the top of\n"
     .string "CYCLING ROAD?\p"
     .string "Then I'll check your team again!$"
 EventScript_RouteTrainer_ROUTE16_SCOUT_ARIANA_Text_Defeat::
@@ -5858,15 +5894,29 @@ Route17_EventScript_Milo_Text_PostBattle::
     .string "This route is long enough for a\n"
     .string "race and narrow enough for a\n"
     .string "battle.$"
+Route17_EventScript_Nico_Text_Intro::
+    .string "Everyone says CYCLING ROAD is\n"
+    .string "for BIKERS.\p"
+    .string "I'm proving runners can keep up!$"
+Route17_EventScript_Nico_Text_RematchIntro::
+    .string "Back for another downhill race?\p"
+    .string "Good! I've still got breath for\n"
+    .string "one more battle.$"
+Route17_EventScript_Nico_Text_Defeat::
+    .string "Outpaced!$"
+Route17_EventScript_Nico_Text_PostBattle::
+    .string "If I can keep my footing here,\n"
+    .string "FUCHSIA's flat roads will feel\n"
+    .string "easy.$"
 Route17_EventScript_Mina_Text_Intro::
     .string "Near the bottom, everyone thinks\n"
-    .string "the hard part is over.\p"
-    .string "That's when I battle them!$"
+    .string "the race is over.\p"
+    .string "That's when I sprint ahead!$"
 Route17_EventScript_Mina_Text_RematchIntro::
     .string "You came back to the lower road?\p"
-    .string "Then don't relax yet. Battle me!$"
+    .string "Then don't relax yet. Race me!$"
 Route17_EventScript_Mina_Text_Defeat::
-    .string "You didn't relax!$"
+    .string "You kept up!$"
 Route17_EventScript_Mina_Text_PostBattle::
     .string "FUCHSIA feels close from here,\n"
     .string "but ROUTE 17 still has teeth.$"
@@ -5888,7 +5938,7 @@ Route17_EventScript_Orson_Text_PostBattle::
 Route17_EventScript_Tess_Text_Intro::
     .string "I count BIKERS as they pass.\p"
     .string "You're trainer number too many\n"
-    .string "to ignore!$"
+    .string "not to challenge!$"
 Route17_EventScript_Tess_Text_RematchIntro::
     .string "I counted you coming back.\p"
     .string "That means I get another battle!$"
@@ -5939,7 +5989,7 @@ EventScript_RouteTrainer_ROUTE17_LASS_KAY_Text_PostBattle::
     .string "but everyone finds a pace.\p"
     .string "Even watching has a rhythm.$"
 EventScript_RouteTrainer_ROUTE17_SCOUT_LEAH_Text_Intro::
-    .string "A SCOUT marks safe places to\n"
+    .string "A good rider marks places to\n"
     .string "pause on a long route.\p"
     .string "This one has room for a battle!$"
 EventScript_RouteTrainer_ROUTE17_SCOUT_LEAH_Text_RematchIntro::

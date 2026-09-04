@@ -108,19 +108,6 @@ CeruleanCity_Gym_Text_DianaPostBattle::
     .string "You have to face other TRAINERS\n"
     .string "to see how good you really are.$"
 
-CeruleanCity_Gym_Text_LuisIntro::
-    .string "Splash!\p"
-    .string "I'm first up!\n"
-    .string "Let's do it!$"
-
-CeruleanCity_Gym_Text_LuisDefeat::
-    .string "That can't be!$"
-
-CeruleanCity_Gym_Text_LuisPostBattle::
-    .string "MISTY is a TRAINER who's going to\n"
-    .string "keep improving.\p"
-    .string "She won't lose to someone like you!$"
-
 CeruleanCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
