@@ -141,12 +141,6 @@ CeruleanCity_Gym_EventScript_Diana::
 	msgbox CeruleanCity_Gym_Text_DianaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-CeruleanCity_Gym_EventScript_Luis::
-	trainerbattle_single TRAINER_SWIMMER_MALE_LUIS, CeruleanCity_Gym_Text_LuisIntro, CeruleanCity_Gym_Text_LuisDefeat
-	apexlog APEX_LOG_PERSON_MISTY, 2
-	msgbox CeruleanCity_Gym_Text_LuisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 CeruleanCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer

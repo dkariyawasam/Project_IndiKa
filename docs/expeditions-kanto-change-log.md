@@ -770,6 +770,16 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
   - Preston on Route 5.
   - Lucian on Route 6.
 - Added bespoke VS Seeker rematches and local dialogue for Preston and Lucian.
+- Replaced active Tamer usage with more fitting Expedition-era classes:
+  - Phil, Edgar, and Jason are now Ninja Boys for Koga/Fuchsia Gym context.
+  - Vincent is now fully named and rematched as a Ruin Maniac for Victory Road.
+- Retired remaining Tamer facility/UI fallback paths by remapping them to Gentleman while keeping the old numeric slots reserved for engine-table stability.
+- Repointed the retired Tamer trainer-pic, palette, and animation table entries to Gentleman assets so the old Tamer art is no longer code-reachable.
+- Replaced Silph Co 5F's lone Juggler presentation with Scientist Dalton while preserving his psychic-leaning party.
+- Renamed Victory Road Nelson and Gregory's legacy Juggler constants and party labels to Ace Trainer names to match their active class and overworld/front-sprite presentation.
+- Rebalanced Scout representation by converting Route 5's Mae to Scout M Max and Route 11's Remi to Scout M Remy.
+- Collapsed active RS Tuber trainer classes into the regular Tuber class while preserving the gendered Tuber F/M trainer pics.
+- Unified active Scout, Swimmer, and Black Belt trainer classes into role-based class constants while preserving gendered battle/front and overworld sprites.
 - Ensured no trainer has Apex Pokemon in their roster.
 
 ## Trainer And NPC Overworlds
@@ -853,6 +863,21 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Small sparkle palette reuse for flashback effects.
 - Celadon Cave wild encounter setup using Mt. Moon and Cerulean Cave-style encounters.
 - Reusable white-overlay flashback transitions and cleanup for player/NPC/field-effect state.
+- Removed leftover Luis trainer content from Cerulean Gym, moved Luis into Route 20, and converted Tiffany into Tyler so active Swimmer battle sprites and placed overworlds now split evenly at 15 male / 15 female.
+- Collapsed active RS Psychic trainers into the standard Psychic class while preserving the existing Psychic M front sprite presentation.
+- Documented the trainer class rule that similar gender variants should generally share one semantic trainer class, with visible differences handled by battle/front and overworld sprites.
+- Balanced mirror class counts by converting two Cycling Road Lasses into Youngsters, adding Youngster Nico to Route 17, and adding Beauty Claire to Route 15, bringing Youngster/Lass to 7/7 and Gentleman/Beauty to 5/5.
+- Removed the stale Ace Trainer Mary battle hook from Celadon Gym and shortened the displayed Ninja Boy class name to Ninja.
+- Cleaned up the trainer habitat audit so it now reports no hard violations, no deprecated classes, no VS Seeker gaps, and no habitat warnings:
+  - Removed stale Mt. Moon and Rock Tunnel local trainer scripts/text for no-longer-placed trainers.
+  - Restored Mt. Moon Kent and Robby to Bug Catcher presentation.
+  - Converted Cycling Road spectator-style Youngster/Lass/Scout presentations into Triathletes with matching cycling overworlds.
+  - Reworked Route 22 Jaren into a land Triathlete and Route 23's rougher road trainers into Victory Road-appropriate Ace Trainer/Black Belt presentations.
+  - Split Route 12 Fisherman Andrew away from Naomi's rematch slot.
+  - Updated the habitat ruleset to recognize intentional shoreline, cave, volcano, Saffron-adjacent, and rough-road placements.
+- Ran the trainer front sprite/overworld consistency pass and fixed the remaining visible mismatches:
+  - Swapped Route 5 Heidi and Max to the correct Scout F/M overworlds.
+  - Restored Route 7 Chad to Youngster presentation and overworld after an old Robby rematch alias leaked into his slot.
 
 ## Known Pinned / Remaining Work
 

@@ -222,11 +222,6 @@ CeladonCity_Gym_EventScript_Lori::
 	msgbox CeladonCity_Gym_Text_LoriPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-CeladonCity_Gym_EventScript_Mary::
-	trainerbattle_single TRAINER_ACE_TRAINER_MARY, CeladonCity_Gym_Text_MaryIntro, CeladonCity_Gym_Text_MaryDefeat
-	msgbox CeladonCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 CeladonCity_Gym_EventScript_GymStatue::
 	lockall
 	goto_if_set FLAG_BADGE04_GET, CeladonCity_Gym_EventScript_GymStatuePostVictory

@@ -79,6 +79,20 @@ Route15_Text_OliviaPostBattle::
     .string "ROUTE 15 gives you road, grass,\n"
     .string "and city edge all at once.$"
 
+Route15_Text_ClaireIntro::
+    .string "FUCHSIA's just ahead, but I never\n"
+    .string "rush past a good battle.\p"
+    .string "Let's make this road memorable!$"
+
+Route15_Text_ClaireDefeat::
+    .string "Memorable for you!$"
+
+Route15_Text_ClairePostBattle::
+    .string "The city edge has the best mix\n"
+    .string "of travelers.\p"
+    .string "You see everyone just before\n"
+    .string "they decide where to go next.$"
+
 Route15_Text_ErnestIntro::
     .string "This last run before FUCHSIA is\n"
     .string "all grit and open throttle.\p"

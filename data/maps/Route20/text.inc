@@ -25,19 +25,32 @@ Route20_Text_ShirleyPostBattle::
     .string "You can feel the cold water\n"
     .string "moving through them.$"
 
-Route20_Text_TiffanyIntro::
+Route20_Text_TylerIntro::
     .string "I like floating where the waves\n"
     .string "split around SEAFOAM.\p"
     .string "Battle me before I drift off!$"
 
-Route20_Text_TiffanyDefeat::
+Route20_Text_TylerDefeat::
     .string "Drifted too far!$"
 
-Route20_Text_TiffanyPostBattle::
+Route20_Text_TylerPostBattle::
     .string "Fish POKéMON gather where the\n"
     .string "currents slow.\p"
     .string "Everything else has to work to\n"
     .string "hold its place.$"
+
+Route20_Text_LuisIntro::
+    .string "SEAFOAM's cold current keeps\n"
+    .string "trying to push me back.\p"
+    .string "A battle ought to warm us up!$"
+
+Route20_Text_LuisDefeat::
+    .string "Washed out!$"
+
+Route20_Text_LuisPostBattle::
+    .string "The current here is rough, but\n"
+    .string "it teaches you how to keep your\n"
+    .string "line in open water.$"
 
 Route20_Text_IreneIntro::
     .string "The sea is rough enough to make\n"

@@ -54,6 +54,6 @@ SilphCo_5F_EventScript_Grunt2::
 	end
 
 SilphCo_5F_EventScript_Dalton::
-	trainerbattle_rematch TRAINER_JUGGLER_DALTON, SilphCo_5F_Text_DaltonIntro, SilphCo_5F_Text_DaltonDefeat
+	trainerbattle_rematch TRAINER_SCIENTIST_DALTON, SilphCo_5F_Text_DaltonIntro, SilphCo_5F_Text_DaltonDefeat
 	msgbox SilphCo_5F_Text_DaltonPostBattle, MSGBOX_AUTOCLOSE
 	end

@@ -413,6 +413,11 @@ Route15_Text_OliviaRematchIntro::
 	.string "Let's see if you can break it\n"
 	.string "again!$"
 
+Route15_Text_ClaireRematchIntro::
+	.string "Back on the city-edge road?\p"
+	.string "Good. Let's make this battle\n"
+	.string "memorable too!$"
+
 Route15_Text_ErnestRematchIntro::
 	.string "Back on the rough run?\p"
 	.string "Then throttle up and battle!$"
@@ -615,10 +620,15 @@ Route20_Text_ShirleyRematchIntro::
 	.string "The current still has teeth.\p"
 	.string "So do I!$"
 
-Route20_Text_TiffanyRematchIntro::
-	.string "I drifted back into position.\p"
-	.string "That means it's time for another\n"
-	.string "battle among the waves!$"
+Route20_Text_TylerRematchIntro::
+	.string "Back around SEAFOAM?\p"
+	.string "Let's see if I can hold my line\n"
+	.string "better this time!$"
+
+Route20_Text_LuisRematchIntro::
+	.string "Back in the cold current?\p"
+	.string "Good. I could use another\n"
+	.string "warm-up battle!$"
 
 Route20_Text_IreneRematchIntro::
 	.string "SEAFOAM is still my turn marker.\p"

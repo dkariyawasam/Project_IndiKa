@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -12,10 +13,13 @@ TRAINERS_PATH = ROOT / "src/data/trainers.h"
 PARTIES_PATH = ROOT / "src/data/trainer_parties.h"
 OPPONENTS_PATH = ROOT / "include/constants/opponents.h"
 MAPS_DIR = ROOT / "data/maps"
+SHARED_TRAINER_SCRIPTS_PATH = ROOT / "data/scripts/trainers.inc"
 REPORT_PATH = ROOT / "docs/trainer-habitat-ruleset-audit.md"
 TRAINER_ID_RE = re.compile(r"\bTRAINER_[A-Z0-9_]+\b")
 TRAINER_BATTLE_RE = re.compile(r"^\s*trainerbattle\w*\b")
 TRAINER_ALIAS_RE = re.compile(r"^\s*#define\s+(TRAINER_[A-Z0-9_]+)\s+(TRAINER_[A-Z0-9_]+)\b")
+TRAINER_VALUE_RE = re.compile(r"^\s*#define\s+(TRAINER_[A-Z0-9_]+)\s+(\d+)\b")
+SCRIPT_LABEL_RE = re.compile(r"^([A-Za-z0-9_]+)::")
 
 
 APEX_SPECIES = {
@@ -68,26 +72,39 @@ DEPRECATED_CLASSES = {
 HABITAT_ALLOWED_CLASS_PARTS = {
     "Field/Route": {
         "AROMA_LADY",
+        "BIKER",
+        "BEAUTY",
         "BIRD_KEEPER",
+        "BLACK_BELT",
         "BUG_CATCHER",
         "BUG_MANIAC",
+        "CHANNELER",
         "ELECTRICIAN",
+        "EXPERT",
         "FISHERMAN",
         "GENTLEMAN",
+        "HEX_MANIAC",
         "HIKER",
         "LADY",
         "LASS",
         "POKEFAN",
         "POKEMANIAC",
+        "PKMN_BREEDER",
+        "PSYCHIC",
         "RANGER",
         "RICH_BOY",
+        "ROUGHNECK",
         "RUIN_MANIAC",
         "SCOUT",
+        "SAILOR",
+        "SWIMMER",
         "TRIATHLETE",
+        "TUBER",
         "YOUNGSTER",
     },
     "Cave/Ruins": {
         "BLACK_BELT",
+        "BUG_CATCHER",
         "BURGLAR",
         "CHANNELER",
         "EXPERT",
@@ -98,6 +115,7 @@ HABITAT_ALLOWED_CLASS_PARTS = {
         "PSYCHIC",
         "ROCKET",
         "RUIN_MANIAC",
+        "SCOUT",
         "SCIENTIST",
     },
     "Water/Shore": {
@@ -105,9 +123,19 @@ HABITAT_ALLOWED_CLASS_PARTS = {
         "BIRD_KEEPER",
         "FISHERMAN",
         "SAILOR",
+        "SIS_AND_BRO",
         "SWIMMER",
         "TRIATHLETE",
         "TUBER",
+    },
+    "Victory Approach": {
+        "ACE",
+        "BIRD_KEEPER",
+        "BLACK_BELT",
+        "HIKER",
+        "POKEMANIAC",
+        "RUIN_MANIAC",
+        "TRIATHLETE",
     },
     "Urban": {
         "BEAUTY",
@@ -147,6 +175,7 @@ HABITAT_ALLOWED_CLASS_PARTS = {
     },
     "Volcano": {
         "BIKER",
+        "BLACK_BELT",
         "BURGLAR",
         "ELECTRICIAN",
         "ENGINEER",
@@ -157,12 +186,14 @@ HABITAT_ALLOWED_CLASS_PARTS = {
         "ROCKET",
         "ROUGHNECK",
         "RUIN_MANIAC",
+        "SCOUT",
         "SCIENTIST",
     },
     "Cycling": {
         "BIKER",
         "ROUGHNECK",
         "TRIATHLETE",
+        "YOUNG_COUPLE",
     },
 }
 
@@ -300,15 +331,90 @@ def parse_active_trainer_uses() -> list[TrainerUse]:
             match = TRAINER_ID_RE.search(line)
             if match and match.group(0) != "TRAINER_NONE":
                 uses.append(TrainerUse(match.group(0), script.parent.name, index + 1, script))
+    uses.extend(parse_shared_object_trainer_uses())
     return uses
 
 
-def parse_trainer_aliases() -> dict[str, str]:
+def parse_shared_object_trainer_uses() -> list[TrainerUse]:
+    script_to_maps: dict[str, set[str]] = defaultdict(set)
+    for map_json_path in sorted(MAPS_DIR.glob("*/map.json")):
+        map_data = json.loads(read_text(map_json_path))
+        map_name = map_json_path.parent.name
+        for obj_event in map_data.get("object_events", []):
+            if obj_event.get("trainer_type") in (None, "TRAINER_TYPE_NONE"):
+                continue
+            script = obj_event.get("script")
+            if script:
+                script_to_maps[script].add(map_name)
+
+    if not SHARED_TRAINER_SCRIPTS_PATH.exists():
+        return []
+
+    trainer_script_uses: dict[str, tuple[str, int]] = {}
+    current_label = ""
+    lines = read_text(SHARED_TRAINER_SCRIPTS_PATH).splitlines()
+    for index, line in enumerate(lines):
+        label_match = SCRIPT_LABEL_RE.match(line)
+        if label_match:
+            current_label = label_match.group(1)
+            continue
+
+        if not current_label or not TRAINER_BATTLE_RE.match(line):
+            continue
+
+        trainer_match = TRAINER_ID_RE.search(line)
+        if trainer_match and trainer_match.group(0) != "TRAINER_NONE":
+            trainer_script_uses[current_label] = (trainer_match.group(0), index + 1)
+
+    uses: list[TrainerUse] = []
+    for script, map_names in script_to_maps.items():
+        if script not in trainer_script_uses:
+            continue
+        trainer_id, line_no = trainer_script_uses[script]
+        for map_name in sorted(map_names):
+            uses.append(TrainerUse(trainer_id, map_name, line_no, SHARED_TRAINER_SCRIPTS_PATH))
+
+    return uses
+
+
+def parse_trainer_aliases(trainers: dict[str, Trainer]) -> dict[str, str]:
     aliases: dict[str, str] = {}
+    numeric_values: dict[str, int] = {}
     for line in read_text(OPPONENTS_PATH).splitlines():
         match = TRAINER_ALIAS_RE.match(line)
         if match:
             aliases[match.group(1)] = match.group(2)
+            continue
+
+        value_match = TRAINER_VALUE_RE.match(line)
+        if value_match:
+            numeric_values[value_match.group(1)] = int(value_match.group(2))
+
+    def resolve_numeric_value(trainer_id: str) -> int | None:
+        current = trainer_id
+        seen: set[str] = set()
+        while current not in seen:
+            seen.add(current)
+            if current in numeric_values:
+                return numeric_values[current]
+            if current not in aliases:
+                return None
+            current = aliases[current]
+        return None
+
+    trainer_by_value: dict[int, str] = {}
+    for trainer_id in trainers:
+        value = resolve_numeric_value(trainer_id)
+        if value is not None:
+            trainer_by_value[value] = trainer_id
+
+    for trainer_id in set(numeric_values) | set(aliases):
+        if trainer_id in trainers:
+            continue
+        value = resolve_numeric_value(trainer_id)
+        if value is not None and value in trainer_by_value:
+            aliases[trainer_id] = trainer_by_value[value]
+
     return aliases
 
 
@@ -353,8 +459,10 @@ def classify_map(map_name: str) -> str:
         "SSTidal",
     )):
         return "Facility"
-    if map_name in {"Route12", "Route19", "Route20", "Route21", "VermilionHarbor"}:
+    if map_name in {"Route12", "Route19", "Route20", "Route21", "Route21_North", "Route21_South", "VermilionHarbor"}:
         return "Water/Shore"
+    if map_name == "Route23":
+        return "Victory Approach"
     if map_name in {"Route16", "Route17", "Route18"}:
         return "Cycling"
     if "Forest" in map_name or map_name.startswith("Route"):
@@ -437,7 +545,7 @@ def collapse_habitat_warnings(warnings: list[HabitatWarning]) -> list[str]:
 def main() -> None:
     trainers = parse_trainers()
     parties = parse_parties()
-    aliases = parse_trainer_aliases()
+    aliases = parse_trainer_aliases(trainers)
     uses = parse_active_trainer_uses()
     active_use_ids = sorted({use.trainer_id for use in uses})
 

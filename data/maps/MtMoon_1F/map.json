@@ -17,7 +17,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SCOUT_M",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 36,
       "y": 30,
       "elevation": 3,
@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SCOUT_M",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 7,
       "y": 26,
       "elevation": 3,

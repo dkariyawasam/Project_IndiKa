@@ -11,31 +11,6 @@ MtMoon_1F_Text_MarcosPostBattle::
     .string "Kids like you shouldn't be\n"
     .string "wandering around here in the dark.$"
 
-MtMoon_1F_Text_JoshIntro::
-    .string "Did you come to explore the cave,\n"
-    .string "too?$"
-
-MtMoon_1F_Text_JoshDefeat::
-    .string "Losing stinks!\n"
-    .string "It's so uncool.$"
-
-MtMoon_1F_Text_JoshPostBattle::
-    .string "I came all the way down here to\n"
-    .string "show off to girls.$"
-
-MtMoon_1F_Text_MiriamIntro::
-    .string "Wow! It's way bigger in here than\n"
-    .string "I thought!$"
-
-MtMoon_1F_Text_MiriamDefeat::
-    .string "Oh!\n"
-    .string "This cave really is full of\n"
-    .string "surprises.$"
-
-MtMoon_1F_Text_MiriamPostBattle::
-    .string "How do you get out of here?\n"
-    .string "It's so big, I may get lost.$"
-
 MtMoon_1F_Text_JovanIntro::
     .string "What!\n"
     .string "Don't sneak up on me!$"
@@ -46,19 +21,6 @@ MtMoon_1F_Text_JovanDefeat::
 MtMoon_1F_Text_JovanPostBattle::
     .string "I have to find stronger POKéMON.\n"
     .string "Where might they be?$"
-
-MtMoon_1F_Text_IrisIntro::
-    .string "What?\n"
-    .string "I'm waiting for my friends to find\l"
-    .string "me here.$"
-
-MtMoon_1F_Text_IrisDefeat::
-    .string "I waited here and still wasn't\n"
-    .string "ready for you.$"
-
-MtMoon_1F_Text_IrisPostBattle::
-    .string "I came because I heard there are\n"
-    .string "some very rare fossils here.$"
 
 MtMoon_1F_Text_KentIntro::
     .string "I heard rare fossils are in here.\n"

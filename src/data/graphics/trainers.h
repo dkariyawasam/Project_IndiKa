@@ -1,8 +1,6 @@
 const u32 gTrainerFrontPic_HexManiac[] = INCBIN_U32("graphics/trainers/front_pics/hex_maniac_front_pic.4bpp.lz");
 const u32 gTrainerPalette_HexManiac[] = INCBIN_U32("graphics/trainers/palettes/hex_maniac.gbapal.lz");
 
-const u32 gTrainerFrontPic_LadyRS[] = INCBIN_U32("graphics/trainers/front_pics/lady_rs_front_pic.4bpp.lz");
-const u32 gTrainerPalette_LadyRS[] = INCBIN_U32("graphics/trainers/palettes/lady_rs.gbapal.lz");
 
 const u32 gTrainerFrontPic_RichBoy[] = INCBIN_U32("graphics/trainers/front_pics/rich_boy_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RichBoy[] = INCBIN_U32("graphics/trainers/palettes/rich_boy.gbapal.lz");
@@ -76,8 +74,6 @@ const u32 gTrainerPalette_PokemonBreederMRS[] = INCBIN_U32("graphics/trainers/pa
 const u32 gTrainerFrontPic_PokemonBreederFRS[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f_rs_front_pic.4bpp.lz");
 const u32 gTrainerPalette_PokemonBreederFRS[] = INCBIN_U32("graphics/trainers/palettes/pokemon_breeder_f_rs.gbapal.lz");
 
-const u32 gTrainerFrontPic_YoungCoupleRS[] = INCBIN_U32("graphics/trainers/front_pics/young_couple_rs_front_pic.4bpp.lz");
-const u32 gTrainerPalette_YoungCoupleRS[] = INCBIN_U32("graphics/trainers/palettes/young_couple_rs.gbapal.lz");
 
 const u32 gTrainerFrontPic_OldCouple[] = INCBIN_U32("graphics/trainers/front_pics/old_couple_front_pic.4bpp.lz");
 const u32 gTrainerPalette_OldCouple[] = INCBIN_U32("graphics/trainers/palettes/old_couple.gbapal.lz");
@@ -144,9 +140,6 @@ const u32 gTrainerPalette_Electrician[] = INCBIN_U32("graphics/trainers/palettes
 
 const u32 gTrainerFrontPic_Juggler[] = INCBIN_U32("graphics/trainers/front_pics/juggler_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Juggler[] = INCBIN_U32("graphics/trainers/palettes/juggler.gbapal.lz");
-
-const u32 gTrainerFrontPic_Tamer[] = INCBIN_U32("graphics/trainers/front_pics/tamer_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Tamer[] = INCBIN_U32("graphics/trainers/palettes/tamer.gbapal.lz");
 
 const u32 gTrainerFrontPic_BirdKeeper[] = INCBIN_U32("graphics/trainers/front_pics/bird_keeper_front_pic.4bpp.lz");
 const u32 gTrainerPalette_BirdKeeper[] = INCBIN_U32("graphics/trainers/palettes/bird_keeper.gbapal.lz");
@@ -223,8 +216,6 @@ const u32 gTrainerPalette_Twins[] = INCBIN_U32("graphics/trainers/palettes/twins
 const u32 gTrainerFrontPic_CoolCouple[] = INCBIN_U32("graphics/trainers/front_pics/cool_couple_front_pic.4bpp.lz");
 const u32 gTrainerPalette_CoolCouple[] = INCBIN_U32("graphics/trainers/palettes/cool_couple.gbapal.lz");
 
-const u32 gTrainerFrontPic_YoungCouple[] = INCBIN_U32("graphics/trainers/front_pics/young_couple_front_pic.4bpp.lz");
-const u32 gTrainerPalette_YoungCouple[] = INCBIN_U32("graphics/trainers/palettes/young_couple.gbapal.lz");
 
 const u32 gTrainerFrontPic_CrushKin[] = INCBIN_U32("graphics/trainers/front_pics/crush_kin_front_pic.4bpp.lz");
 const u32 gTrainerPalette_CrushKin[] = INCBIN_U32("graphics/trainers/palettes/crush_kin.gbapal.lz");

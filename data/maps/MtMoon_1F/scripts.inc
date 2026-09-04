@@ -22,42 +22,6 @@ MtMoon_1F_EventScript_MarcosRematch::
 	msgbox MtMoon_1F_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtMoon_1F_EventScript_Josh::
-	trainerbattle_single TRAINER_YOUNGSTER_JOSH, MtMoon_1F_Text_JoshIntro, MtMoon_1F_Text_JoshDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_JoshRematch
-	msgbox MtMoon_1F_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtMoon_1F_EventScript_JoshRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_JOSH, MtMoon_1F_Text_JoshIntro, MtMoon_1F_Text_JoshDefeat
-	msgbox MtMoon_1F_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtMoon_1F_EventScript_Miriam::
-	trainerbattle_single TRAINER_LASS_MIRIAM, MtMoon_1F_Text_MiriamIntro, MtMoon_1F_Text_MiriamDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_MiriamRematch
-	msgbox MtMoon_1F_Text_MiriamPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtMoon_1F_EventScript_MiriamRematch::
-	trainerbattle_rematch TRAINER_LASS_MIRIAM, MtMoon_1F_Text_MiriamIntro, MtMoon_1F_Text_MiriamDefeat
-	msgbox MtMoon_1F_Text_MiriamPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtMoon_1F_EventScript_Iris::
-	trainerbattle_single TRAINER_TUBER_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_IrisRematch
-	msgbox MtMoon_1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtMoon_1F_EventScript_IrisRematch::
-	trainerbattle_rematch TRAINER_TUBER_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
-	msgbox MtMoon_1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 MtMoon_1F_EventScript_Jovan::
 	trainerbattle_single TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
