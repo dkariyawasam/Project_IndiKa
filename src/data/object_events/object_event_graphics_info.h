@@ -2048,8 +2048,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar = {
     .images = sPicTable_Burglar,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Collector, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Collector);
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertM = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_EXPERT,

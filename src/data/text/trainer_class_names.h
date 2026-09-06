@@ -14,7 +14,6 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_EXPERT]              = _("EXPERT"),
     [TRAINER_CLASS_TRIATHLETE]          = _("TRIATHLETE"),
     [TRAINER_CLASS_NINJA_BOY]           = _("NINJA"),
-    [TRAINER_CLASS_COLLECTOR]           = _("COLLECTOR"),
     [TRAINER_CLASS_OLD_COUPLE]          = _("OLD COUPLE"),
     [TRAINER_CLASS_YOUNGSTER]           = _("YOUNGSTER"),
     [TRAINER_CLASS_BUG_CATCHER]         = _("BUG CATCHER"),

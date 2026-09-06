@@ -44,7 +44,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Collector;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gamer;
@@ -371,7 +370,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TAMATO_BERRY_RIPE]        = &gObjectEventGraphicsInfo_TamatoBerryRipe,
     [OBJ_EVENT_GFX_BUG_MANIAC]               = &gObjectEventGraphicsInfo_BugManiac,
     [OBJ_EVENT_GFX_BURGLAR]                  = &gObjectEventGraphicsInfo_Burglar,
-    [OBJ_EVENT_GFX_COLLECTOR]                = &gObjectEventGraphicsInfo_Collector,
     [OBJ_EVENT_GFX_EXPERT_M]                   = &gObjectEventGraphicsInfo_ExpertM,
     [OBJ_EVENT_GFX_EXPERT_F]                 = &gObjectEventGraphicsInfo_ExpertF,
     [OBJ_EVENT_GFX_GAMER]                    = &gObjectEventGraphicsInfo_Gamer,
