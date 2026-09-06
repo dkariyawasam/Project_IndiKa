@@ -26,8 +26,12 @@ GFX_STEMS = {
     "CRUSH_GIRL": "crush_girl",
     "ROCKET_M": "rocket_m",
     "ROCKET_F": "rocket_f",
+    "ROCKET_ADMIN_ARCHER": "rocket_m",
     "ROCKET_ARIANA": "rocket_ariana",
+    "ROCKET_ADMIN_ARIANA": "rocket_ariana",
     "ROCKET_PETREL": "rocket_petrel",
+    "ROCKET_ADMIN_PETREL": "rocket_petrel",
+    "ROCKET_ADMIN_PROTON": "rocket_m",
     "ROUGHNECK": "cue_ball",
     "SCOUT_F": "picnicker",
     "SCOUT_M": "camper",
@@ -48,6 +52,14 @@ PIC_TO_GFX = {
     "POKEMANIAC": "POKE_MANIAC",
     "ROCKET_GRUNT_M": "ROCKET_M",
     "ROCKET_GRUNT_F": "ROCKET_F",
+    "ROCKET_ADMIN_ARIANA": "ROCKET_ADMIN_ARIANA",
+    "LEADER_BROCK": "BROCK",
+    "LEADER_MISTY": "MISTY",
+    "LEADER_LT_SURGE": "LT_SURGE",
+    "LEADER_ERIKA": "ERIKA",
+    "LEADER_KOGA": "KOGA",
+    "LEADER_BLAINE": "BLAINE",
+    "LEADER_SABRINA": "SABRINA",
     "LEADER_GIOVANNI": "GIOVANNI",
     "ELITE_FOUR_AGATHA": "AGATHA",
     "ELITE_FOUR_BRUNO": "BRUNO",
@@ -64,6 +76,50 @@ PIC_TO_GFX = {
     "SWIMMING_TRIATHLETE_M": "TRIATHLETE_M_WATER",
     "SWIMMING_TRIATHLETE_F": "TRIATHLETE_F_WATER",
 }
+
+
+EXTRA_NAMED_ROWS = [
+    {
+        "label": "ROCKET_ADMIN_PETREL",
+        "class": "ROCKET_ADMIN",
+        "pic": "ROCKET_GRUNT_M",
+        "gfx": "ROCKET_ADMIN_PETREL",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["PETREL"],
+        "maps": [],
+    },
+    {
+        "label": "ROCKET_ADMIN_ARCHER",
+        "class": "ROCKET_ADMIN",
+        "pic": "ROCKET_GRUNT_M",
+        "gfx": "ROCKET_ADMIN_ARCHER",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["ARCHER"],
+        "maps": [],
+    },
+    {
+        "label": "ROCKET_ADMIN_ARIANA",
+        "class": "ROCKET_ADMIN",
+        "pic": "ROCKET_ADMIN_ARIANA",
+        "gfx": "ROCKET_ADMIN_ARIANA",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["ARIANA"],
+        "maps": [],
+    },
+    {
+        "label": "ROCKET_ADMIN_PROTON",
+        "class": "ROCKET_ADMIN",
+        "pic": "ROCKET_GRUNT_M",
+        "gfx": "ROCKET_ADMIN_PROTON",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["PROTON"],
+        "maps": [],
+    },
+]
 
 
 def load_audit_module():
@@ -183,7 +239,10 @@ def collect_rows() -> list[dict[str, object]]:
             }
         )
 
-    return sorted(output, key=lambda row: (str(row["class"]), str(row["pic"]), str(row["gfx"])))
+    output = [row for row in output if row["class"] != "ROCKET_ADMIN"]
+    output.extend(dict(row) for row in EXTRA_NAMED_ROWS)
+
+    return sorted(output, key=lambda row: (str(row.get("label", row["class"])), str(row["pic"]), str(row["gfx"])))
 
 
 def load_sprite(gfx: str) -> Image.Image:
@@ -269,7 +328,8 @@ def make_sheet(rows: list[dict[str, object]]) -> None:
         sheet.paste(sprite, (sx, sy), sprite)
 
         label_y = y + 12 + 32 * scale + 7
-        for line in wrap(draw, str(row["class"]), label_font, cell_w - 24)[:2]:
+        label = str(row.get("label", row["class"]))
+        for line in wrap(draw, label, label_font, cell_w - 24)[:2]:
             tw = draw.textbbox((0, 0), line, font=label_font)[2]
             draw.text((x + (cell_w - tw) // 2, label_y), line, fill="#111827", font=label_font)
             label_y += 15

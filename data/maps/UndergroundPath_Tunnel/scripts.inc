@@ -30,28 +30,28 @@ UndergroundPath_Tunnel_EventScript_PokefanMiraRematch::
 	msgbox UndergroundPath_Tunnel_Text_PokefanMiraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_CollectorNolan::
-	trainerbattle_single TRAINER_UNDERGROUND_COLLECTOR_NOLAN, UndergroundPath_Tunnel_Text_CollectorNolanIntro, UndergroundPath_Tunnel_Text_CollectorNolanDefeat
+UndergroundPath_Tunnel_EventScript_PokemaniacNolan::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEMANIAC_NOLAN, UndergroundPath_Tunnel_Text_PokemaniacNolanIntro, UndergroundPath_Tunnel_Text_PokemaniacNolanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_CollectorNolanRematch
-	msgbox UndergroundPath_Tunnel_Text_CollectorNolanPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokemaniacNolanRematch
+	msgbox UndergroundPath_Tunnel_Text_PokemaniacNolanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_CollectorNolanRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_COLLECTOR_NOLAN, UndergroundPath_Tunnel_Text_CollectorNolanIntro, UndergroundPath_Tunnel_Text_CollectorNolanDefeat
-	msgbox UndergroundPath_Tunnel_Text_CollectorNolanPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokemaniacNolanRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEMANIAC_NOLAN, UndergroundPath_Tunnel_Text_PokemaniacNolanIntro, UndergroundPath_Tunnel_Text_PokemaniacNolanDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokemaniacNolanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_CollectorRicardo::
-	trainerbattle_single TRAINER_UNDERGROUND_COLLECTOR_RICARDO, UndergroundPath_Tunnel_Text_CollectorRicardoIntro, UndergroundPath_Tunnel_Text_CollectorRicardoDefeat
+UndergroundPath_Tunnel_EventScript_PokemaniacRicardo::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEMANIAC_RICARDO, UndergroundPath_Tunnel_Text_PokemaniacRicardoIntro, UndergroundPath_Tunnel_Text_PokemaniacRicardoDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_CollectorRicardoRematch
-	msgbox UndergroundPath_Tunnel_Text_CollectorRicardoPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokemaniacRicardoRematch
+	msgbox UndergroundPath_Tunnel_Text_PokemaniacRicardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_CollectorRicardoRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_COLLECTOR_RICARDO, UndergroundPath_Tunnel_Text_CollectorRicardoIntro, UndergroundPath_Tunnel_Text_CollectorRicardoDefeat
-	msgbox UndergroundPath_Tunnel_Text_CollectorRicardoPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokemaniacRicardoRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEMANIAC_RICARDO, UndergroundPath_Tunnel_Text_PokemaniacRicardoIntro, UndergroundPath_Tunnel_Text_PokemaniacRicardoDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokemaniacRicardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 UndergroundPath_Tunnel_EventScript_SuperNerdVance::
@@ -169,26 +169,26 @@ UndergroundPath_Tunnel_Text_PokefanMiraPostBattle:
 	.string "I like hearing footsteps before\n"
 	.string "I see who is coming.$"
 
-UndergroundPath_Tunnel_Text_CollectorNolanIntro:
+UndergroundPath_Tunnel_Text_PokemaniacNolanIntro:
 	.string "Shortcuts collect stories.\n"
 	.string "That makes this tunnel valuable.$"
 
-UndergroundPath_Tunnel_Text_CollectorNolanDefeat:
+UndergroundPath_Tunnel_Text_PokemaniacNolanDefeat:
 	.string "A rare loss for my records!$"
 
-UndergroundPath_Tunnel_Text_CollectorNolanPostBattle:
+UndergroundPath_Tunnel_Text_PokemaniacNolanPostBattle:
 	.string "I catalogue every trainer who\n"
 	.string "passes under SAFFRON.$"
 
-UndergroundPath_Tunnel_Text_CollectorRicardoIntro:
+UndergroundPath_Tunnel_Text_PokemaniacRicardoIntro:
 	.string "People drop odd things when they\n"
 	.string "duck underground.\p"
 	.string "I collect battles, too!$"
 
-UndergroundPath_Tunnel_Text_CollectorRicardoDefeat:
+UndergroundPath_Tunnel_Text_PokemaniacRicardoDefeat:
 	.string "I'll file that under defeat.$"
 
-UndergroundPath_Tunnel_Text_CollectorRicardoPostBattle:
+UndergroundPath_Tunnel_Text_PokemaniacRicardoPostBattle:
 	.string "The path above belongs to traffic.\n"
 	.string "This path belongs to finds.$"
 

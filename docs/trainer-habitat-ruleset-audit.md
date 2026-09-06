@@ -234,8 +234,6 @@ These trainers do not have bespoke higher-level rematch parties, but `src/vs_see
 - SWIMMER DANE (TRAINER_TUBER_AMIRA_2) at `VermilionHarbor` (`data/scripts/trainers.inc:4086`).
 - TUBER DAN (TRAINER_TUBER_DAN) at `Route6` (`data/scripts/trainers.inc:2679`).
 - TUBER NOAH (TRAINER_TUBER_NOAH) at `Route20` (`data/scripts/trainers.inc:3858`).
-- COLLECTOR NOLAN (TRAINER_UNDERGROUND_COLLECTOR_NOLAN) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:34`).
-- COLLECTOR RICARDO (TRAINER_UNDERGROUND_COLLECTOR_RICARDO) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:46`).
 - GAMER ELLIOT (TRAINER_UNDERGROUND_GAMER_ELLIOT) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:94`).
 - GAMER HUGO (TRAINER_UNDERGROUND_GAMER_HUGO) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:82`).
 - JUGGLER RICH (TRAINER_UNDERGROUND_JUGGLER_RICH) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:106`).
@@ -244,6 +242,8 @@ These trainers do not have bespoke higher-level rematch parties, but `src/vs_see
 - POKEFAN MARLO (TRAINER_UNDERGROUND_POKEFAN_MIRA) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:22`).
 - POKEMANIAC DIRK (TRAINER_UNDERGROUND_POKEMANIAC_DIRK) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:130`).
 - POKEMANIAC HIDEO (TRAINER_UNDERGROUND_POKEMANIAC_HIDEO) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:142`).
+- POKEMANIAC NOLAN (TRAINER_UNDERGROUND_POKEMANIAC_NOLAN) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:34`).
+- POKEMANIAC RICARDO (TRAINER_UNDERGROUND_POKEMANIAC_RICARDO) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:46`).
 - SUPER_NERD LESLIE (TRAINER_UNDERGROUND_SUPER_NERD_LESLIE) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:70`).
 - SUPER_NERD VANCE (TRAINER_UNDERGROUND_SUPER_NERD_VANCE) at `UndergroundPath_Tunnel` (`data/maps/UndergroundPath_Tunnel/scripts.inc:58`).
 - BIKER MILES (TRAINER_URBAN_BIKER_MILES) at `Route17` (`data/scripts/trainers.inc:1808`).
@@ -378,13 +378,13 @@ These trainers do not have bespoke higher-level rematch parties, but `src/vs_see
 - `ELITE_FOUR`: 6
 - `JUGGLER`: 6
 - `RIVAL_EARLY`: 6
+- `POKEMANIAC`: 6
 - `SUPER_NERD`: 6
 - `BEAUTY`: 5
 - `GENTLEMAN`: 5
 - `PKMN_RANGER`: 5
 - `PSYCHIC`: 4
 - `ROCKET_ADMIN`: 4
-- `POKEMANIAC`: 4
 - `YOUNGSTER`: 4
 - `EXPERT`: 3
 - `ENGINEER`: 3
@@ -395,7 +395,6 @@ These trainers do not have bespoke higher-level rematch parties, but `src/vs_see
 - `ELECTRICIAN`: 2
 - `SIS_AND_BRO`: 2
 - `LADY`: 2
-- `COLLECTOR`: 2
 - `GAMER`: 2
 - `POKEFAN`: 2
 - `KINDLER`: 2

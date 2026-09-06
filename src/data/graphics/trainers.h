@@ -65,9 +65,6 @@ const u32 gTrainerPalette_TwinsRS[] = INCBIN_U32("graphics/trainers/palettes/twi
 const u32 gTrainerFrontPic_SailorRS[] = INCBIN_U32("graphics/trainers/front_pics/sailor_rs_front_pic.4bpp.lz");
 const u32 gTrainerPalette_SailorRS[] = INCBIN_U32("graphics/trainers/palettes/sailor_rs.gbapal.lz");
 
-const u32 gTrainerFrontPic_Collector[] = INCBIN_U32("graphics/trainers/front_pics/collector_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Collector[] = INCBIN_U32("graphics/trainers/palettes/collector.gbapal.lz");
-
 const u32 gTrainerFrontPic_PokemonBreederMRS[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_m_rs_front_pic.4bpp.lz");
 const u32 gTrainerPalette_PokemonBreederMRS[] = INCBIN_U32("graphics/trainers/palettes/pokemon_breeder_m_rs.gbapal.lz");
 

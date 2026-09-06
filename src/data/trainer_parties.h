@@ -185,7 +185,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundPokefanMira[]
     { .iv = 30, .lvl = 20, .species = SPECIES_JIGGLYPUFF, },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundCollectorNolan[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundPokemaniacNolan[] = {
     { .iv = 40, .lvl = 20, .species = SPECIES_MAGNEMITE, },
     { .iv = 40, .lvl = 21, .species = SPECIES_VOLTORB, },
     { .iv = 40, .lvl = 22, .species = SPECIES_PORYGON, },
@@ -225,7 +225,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundSuperNerdLesl
     { .iv = 45, .lvl = 25, .species = SPECIES_PORYGON, },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundCollectorRicardo[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundPokemaniacRicardo[] = {
     { .iv = 45, .lvl = 24, .species = SPECIES_PORYGON, },
     { .iv = 45, .lvl = 25, .species = SPECIES_DITTO, },
 };

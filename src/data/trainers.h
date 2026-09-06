@@ -539,15 +539,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_WatersEdgeFisherman),
     },
-    [TRAINER_UNDERGROUND_COLLECTOR_NOLAN] = {
-        .trainerClass = TRAINER_CLASS_COLLECTOR,
+    [TRAINER_UNDERGROUND_POKEMANIAC_NOLAN] = {
+        .trainerClass = TRAINER_CLASS_POKEMANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerPic = TRAINER_PIC_POKEMANIAC,
         .trainerName = _("NOLAN"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_UndergroundCollectorNolan),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_UndergroundPokemaniacNolan),
     },
     [TRAINER_UNDERGROUND_SUPER_NERD_VANCE] = {
         .trainerClass = TRAINER_CLASS_SUPER_NERD,
@@ -4949,15 +4949,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_CamperJohnson),
     },
-    [TRAINER_UNDERGROUND_COLLECTOR_RICARDO] = {
-        .trainerClass = TRAINER_CLASS_COLLECTOR,
+    [TRAINER_UNDERGROUND_POKEMANIAC_RICARDO] = {
+        .trainerClass = TRAINER_CLASS_POKEMANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerPic = TRAINER_PIC_POKEMANIAC,
         .trainerName = _("RICARDO"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_UndergroundCollectorRicardo),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_UndergroundPokemaniacRicardo),
     },
     [TRAINER_BIKER_JAREN] = {
         .trainerClass = TRAINER_CLASS_TRIATHLETE,

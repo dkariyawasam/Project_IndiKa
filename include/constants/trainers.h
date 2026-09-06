@@ -57,7 +57,7 @@
 #define TRAINER_PIC_PARASOL_LADY           49
 #define TRAINER_PIC_TWINS_RS               52
 #define TRAINER_PIC_SAILOR_RS              53
-#define TRAINER_PIC_COLLECTOR              54
+#define TRAINER_PIC_UNUSED_54              54
 #define TRAINER_PIC_UNUSED_55              55
 #define TRAINER_PIC_UNUSED_56              56
 #define TRAINER_PIC_UNUSED_57              57
@@ -183,7 +183,7 @@
 #define TRAINER_CLASS_EXPERT              28
 #define TRAINER_CLASS_TRIATHLETE          32
 #define TRAINER_CLASS_NINJA_BOY           35
-#define TRAINER_CLASS_COLLECTOR           43
+#define TRAINER_CLASS_UNUSED_43           43
 #define TRAINER_CLASS_OLD_COUPLE          53
 #define TRAINER_CLASS_YOUNGSTER           57
 #define TRAINER_CLASS_BUG_CATCHER         58
@@ -309,7 +309,7 @@
 #define FACILITY_CLASS_RS_PICNICKER           FACILITY_CLASS_SCOUT_F_RS
 #define FACILITY_CLASS_RS_TWINS               52
 #define FACILITY_CLASS_RS_SAILOR              53
-#define FACILITY_CLASS_COLLECTOR              56
+#define FACILITY_CLASS_UNUSED_56              56
 #define FACILITY_CLASS_PKMN_TRAINER_WALLY     57
 #define FACILITY_CLASS_UNUSED_58              58
 #define FACILITY_CLASS_UNUSED_59              59

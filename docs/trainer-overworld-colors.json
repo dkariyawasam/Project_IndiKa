@@ -1,19 +1,5 @@
 [
   {
-    "hex": "#605050",
-    "rgb": [
-      96,
-      80,
-      80
-    ],
-    "hue": 0.0,
-    "saturation": 0.1667,
-    "value": 0.3765,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
     "hex": "#6B4A4A",
     "rgb": [
       107,
@@ -24,6 +10,9 @@
     "saturation": 0.3084,
     "value": 0.4196,
     "overworlds": [
+      "ENGINEER",
+      "GENTLEMAN",
+      "HIKER",
       "RUIN_MANIAC"
     ]
   },
@@ -43,29 +32,18 @@
       "AROMA_LADY",
       "BEAUTY",
       "BREEDER",
+      "ERIKA",
       "JUGGLER",
       "LADY",
       "LASS",
+      "MISTY",
+      "SABRINA",
       "TRIATHLETE_F_CYCLING",
       "TRIATHLETE_F_LAND",
       "TRIATHLETE_F_WATER",
       "TUBER_M_LAND",
       "TUBER_M_WATER",
       "YOUNGSTER"
-    ]
-  },
-  {
-    "hex": "#FF9C9C",
-    "rgb": [
-      255,
-      156,
-      156
-    ],
-    "hue": 0.0,
-    "saturation": 0.3882,
-    "value": 1.0,
-    "overworlds": [
-      "AROMA_LADY"
     ]
   },
   {
@@ -87,16 +65,17 @@
       "BIKER",
       "BIRD_KEEPER",
       "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
       "BURGLAR",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
       "ENGINEER",
+      "ERIKA",
       "EXPERT_F",
       "EXPERT_M",
       "FISHER",
@@ -107,10 +86,13 @@
       "HIKER",
       "JUGGLER",
       "KINDLER",
+      "KOGA",
       "LADY",
       "LANCE",
       "LASS",
       "LORELEI",
+      "LT_SURGE",
+      "MISTY",
       "POKEFAN_F",
       "POKEFAN_M",
       "POKEMON_RANGER_F",
@@ -121,6 +103,7 @@
       "ROCKET_M",
       "ROUGHNECK",
       "RUIN_MANIAC",
+      "SABRINA",
       "SAILOR",
       "SCIENTIST",
       "SCOUT_F",
@@ -144,6 +127,20 @@
     ]
   },
   {
+    "hex": "#753737",
+    "rgb": [
+      117,
+      55,
+      55
+    ],
+    "hue": 0.0,
+    "saturation": 0.5299,
+    "value": 0.4588,
+    "overworlds": [
+      "BROCK"
+    ]
+  },
+  {
     "hex": "#C54242",
     "rgb": [
       197,
@@ -158,6 +155,20 @@
     ]
   },
   {
+    "hex": "#461414",
+    "rgb": [
+      70,
+      20,
+      20
+    ],
+    "hue": 0.0,
+    "saturation": 0.7143,
+    "value": 0.2745,
+    "overworlds": [
+      "BROCK"
+    ]
+  },
+  {
     "hex": "#FF615A",
     "rgb": [
       255,
@@ -168,6 +179,7 @@
     "saturation": 0.6471,
     "value": 1.0,
     "overworlds": [
+      "AROMA_LADY",
       "BLACK_BELT",
       "EXPERT_F"
     ]
@@ -186,7 +198,10 @@
       "ACE_TRAINER_F",
       "ACE_TRAINER_M",
       "BEAUTY",
+      "ERIKA",
       "JUGGLER",
+      "MISTY",
+      "SABRINA",
       "TRIATHLETE_F_CYCLING",
       "TRIATHLETE_F_LAND",
       "TRIATHLETE_F_WATER",
@@ -206,11 +221,13 @@
     "saturation": 0.723,
     "value": 0.5804,
     "overworlds": [
+      "BIRD_KEEPER",
       "CHANNELER",
       "CRUSH_GIRL",
       "FISHER",
       "GIOVANNI",
       "HEX_MANIAC",
+      "KOGA",
       "LANCE",
       "LORELEI",
       "POKEFAN_F",
@@ -218,20 +235,6 @@
       "ROCKET_M",
       "TUBER_F_LAND",
       "TUBER_F_WATER"
-    ]
-  },
-  {
-    "hex": "#943A29",
-    "rgb": [
-      148,
-      58,
-      41
-    ],
-    "hue": 9.53,
-    "saturation": 0.723,
-    "value": 0.5804,
-    "overworlds": [
-      "BIRD_KEEPER"
     ]
   },
   {
@@ -250,12 +253,27 @@
       "CRUSH_GIRL",
       "FISHER",
       "HEX_MANIAC",
+      "KOGA",
       "LANCE",
       "LORELEI",
       "POKEFAN_F",
       "ROCKET_F",
       "TUBER_F_LAND",
       "TUBER_F_WATER"
+    ]
+  },
+  {
+    "hex": "#7B5A52",
+    "rgb": [
+      123,
+      90,
+      82
+    ],
+    "hue": 11.71,
+    "saturation": 0.3333,
+    "value": 0.4824,
+    "overworlds": [
+      "BROCK"
     ]
   },
   {
@@ -274,6 +292,7 @@
       "CRUSH_GIRL",
       "FISHER",
       "HEX_MANIAC",
+      "KOGA",
       "LANCE",
       "LORELEI",
       "POKEFAN_F",
@@ -298,6 +317,20 @@
     ]
   },
   {
+    "hex": "#DB8765",
+    "rgb": [
+      219,
+      135,
+      101
+    ],
+    "hue": 17.29,
+    "saturation": 0.5388,
+    "value": 0.8588,
+    "overworlds": [
+      "BROCK"
+    ]
+  },
+  {
     "hex": "#EE7341",
     "rgb": [
       238,
@@ -312,7 +345,11 @@
       "ACE_TRAINER_M",
       "BEAUTY",
       "ELECTRICIAN",
+      "ERIKA",
       "JUGGLER",
+      "POKEMON_RANGER_F",
+      "POKEMON_RANGER_M",
+      "SABRINA",
       "TRIATHLETE_F_CYCLING",
       "TRIATHLETE_F_LAND",
       "TRIATHLETE_F_WATER",
@@ -339,16 +376,18 @@
       "BEAUTY",
       "BIKER",
       "BIRD_KEEPER",
+      "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
       "BURGLAR",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
       "ENGINEER",
+      "ERIKA",
       "EXPERT_F",
       "EXPERT_M",
       "FISHER",
@@ -356,25 +395,34 @@
       "GENTLEMAN",
       "GIOVANNI",
       "HEX_MANIAC",
+      "HIKER",
       "JUGGLER",
       "KINDLER",
+      "KOGA",
       "LADY",
       "LANCE",
+      "LASS",
       "LORELEI",
+      "LT_SURGE",
+      "MISTY",
       "POKEFAN_F",
       "POKEFAN_M",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
       "POKE_MANIAC",
+      "PSYCHIC_M",
+      "RICH_BOY",
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
       "RUIN_MANIAC",
+      "SABRINA",
       "SAILOR",
       "SCIENTIST",
       "SCOUT_F",
       "SCOUT_M",
       "SUPER_NERD",
+      "SWIMMER_F_LAND",
       "SWIMMER_F_WATER",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER",
@@ -403,35 +451,7 @@
     "value": 0.2275,
     "overworlds": [
       "BIKER",
-      "BIRD_KEEPER"
-    ]
-  },
-  {
-    "hex": "#ED7539",
-    "rgb": [
-      237,
-      117,
-      57
-    ],
-    "hue": 20.0,
-    "saturation": 0.7595,
-    "value": 0.9294,
-    "overworlds": [
-      "POKEMON_RANGER_F",
-      "POKEMON_RANGER_M"
-    ]
-  },
-  {
-    "hex": "#382820",
-    "rgb": [
-      56,
-      40,
-      32
-    ],
-    "hue": 20.0,
-    "saturation": 0.4286,
-    "value": 0.2196,
-    "overworlds": [
+      "BIRD_KEEPER",
       "ENGINEER"
     ]
   },
@@ -447,21 +467,8 @@
     "value": 0.251,
     "overworlds": [
       "POKEMON_RANGER_F",
-      "POKEMON_RANGER_M"
-    ]
-  },
-  {
-    "hex": "#946B52",
-    "rgb": [
-      148,
-      107,
-      82
-    ],
-    "hue": 22.73,
-    "saturation": 0.4459,
-    "value": 0.5804,
-    "overworlds": [
-      "KINDLER"
+      "POKEMON_RANGER_M",
+      "RICH_BOY"
     ]
   },
   {
@@ -480,58 +487,45 @@
     ]
   },
   {
-    "hex": "#D89870",
+    "hex": "#FFCBA9",
     "rgb": [
-      216,
-      152,
-      112
+      255,
+      203,
+      169
     ],
-    "hue": 23.08,
-    "saturation": 0.4815,
-    "value": 0.8471,
+    "hue": 23.72,
+    "saturation": 0.3373,
+    "value": 1.0,
     "overworlds": [
-      "BLACK_BELT",
-      "HIKER",
-      "LASS",
-      "PSYCHIC_M",
-      "SCIENTIST",
-      "SWIMMER_F_LAND"
+      "BROCK"
     ]
   },
   {
-    "hex": "#F7BD94",
+    "hex": "#C59473",
     "rgb": [
-      247,
-      189,
-      148
+      197,
+      148,
+      115
     ],
-    "hue": 24.85,
-    "saturation": 0.4008,
-    "value": 0.9686,
+    "hue": 24.15,
+    "saturation": 0.4162,
+    "value": 0.7725,
     "overworlds": [
-      "BIRD_KEEPER",
-      "BURGLAR",
-      "EXPERT_F",
-      "EXPERT_M",
-      "KINDLER",
-      "POKEFAN_M",
-      "POKE_MANIAC",
-      "RUIN_MANIAC"
+      "BROCK"
     ]
   },
   {
-    "hex": "#F0B890",
+    "hex": "#EFB187",
     "rgb": [
-      240,
-      184,
-      144
+      239,
+      177,
+      135
     ],
-    "hue": 25.0,
-    "saturation": 0.4,
-    "value": 0.9412,
+    "hue": 24.23,
+    "saturation": 0.4351,
+    "value": 0.9373,
     "overworlds": [
-      "ENGINEER",
-      "LADY"
+      "BROCK"
     ]
   },
   {
@@ -545,6 +539,7 @@
     "saturation": 0.6316,
     "value": 0.5961,
     "overworlds": [
+      "AROMA_LADY",
       "LADY",
       "LASS"
     ]
@@ -566,31 +561,53 @@
       "AROMA_LADY",
       "BEAUTY",
       "BIKER",
+      "BIRD_KEEPER",
+      "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
+      "BURGLAR",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
+      "ENGINEER",
+      "ERIKA",
+      "EXPERT_F",
+      "EXPERT_M",
       "FISHER",
       "GAMER",
       "GENTLEMAN",
       "GIOVANNI",
       "HEX_MANIAC",
+      "HIKER",
       "JUGGLER",
+      "KINDLER",
+      "KOGA",
+      "LADY",
       "LANCE",
+      "LASS",
       "LORELEI",
+      "LT_SURGE",
+      "MISTY",
       "POKEFAN_F",
+      "POKEFAN_M",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
+      "POKE_MANIAC",
+      "PSYCHIC_M",
+      "RICH_BOY",
       "ROCKET_F",
       "ROCKET_M",
+      "RUIN_MANIAC",
+      "SABRINA",
       "SAILOR",
+      "SCIENTIST",
       "SCOUT_F",
       "SCOUT_M",
       "SUPER_NERD",
+      "SWIMMER_F_LAND",
       "SWIMMER_F_WATER",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER",
@@ -605,20 +622,6 @@
       "TUBER_M_LAND",
       "TUBER_M_WATER",
       "YOUNGSTER"
-    ]
-  },
-  {
-    "hex": "#EBB890",
-    "rgb": [
-      235,
-      184,
-      144
-    ],
-    "hue": 26.37,
-    "saturation": 0.3872,
-    "value": 0.9216,
-    "overworlds": [
-      "SCIENTIST"
     ]
   },
   {
@@ -638,28 +641,42 @@
       "AROMA_LADY",
       "BEAUTY",
       "BIKER",
+      "BIRD_KEEPER",
+      "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
+      "ENGINEER",
+      "ERIKA",
+      "EXPERT_F",
+      "EXPERT_M",
       "GAMER",
       "GIOVANNI",
       "HEX_MANIAC",
       "JUGGLER",
+      "KINDLER",
+      "KOGA",
       "LANCE",
+      "LASS",
       "LORELEI",
+      "LT_SURGE",
+      "MISTY",
       "POKEFAN_F",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
+      "PSYCHIC_M",
       "ROUGHNECK",
+      "SABRINA",
       "SAILOR",
       "SCOUT_F",
       "SCOUT_M",
       "SUPER_NERD",
+      "SWIMMER_F_LAND",
       "SWIMMER_F_WATER",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER",
@@ -677,51 +694,6 @@
     ]
   },
   {
-    "hex": "#F8D0B0",
-    "rgb": [
-      248,
-      208,
-      176
-    ],
-    "hue": 26.67,
-    "saturation": 0.2903,
-    "value": 0.9725,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#FFD6B5",
-    "rgb": [
-      255,
-      214,
-      181
-    ],
-    "hue": 26.76,
-    "saturation": 0.2902,
-    "value": 1.0,
-    "overworlds": [
-      "BIRD_KEEPER",
-      "EXPERT_F",
-      "EXPERT_M",
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#E69757",
-    "rgb": [
-      230,
-      151,
-      87
-    ],
-    "hue": 26.85,
-    "saturation": 0.6217,
-    "value": 0.902,
-    "overworlds": [
-      "AROMA_LADY"
-    ]
-  },
-  {
     "hex": "#89674B",
     "rgb": [
       137,
@@ -732,38 +704,7 @@
     "saturation": 0.4526,
     "value": 0.5373,
     "overworlds": [
-      "SWIMMER_F_LAND"
-    ]
-  },
-  {
-    "hex": "#AD672D",
-    "rgb": [
-      173,
-      103,
-      45
-    ],
-    "hue": 27.19,
-    "saturation": 0.7399,
-    "value": 0.6784,
-    "overworlds": [
-      "AROMA_LADY"
-    ]
-  },
-  {
-    "hex": "#F0C098",
-    "rgb": [
-      240,
-      192,
-      152
-    ],
-    "hue": 27.27,
-    "saturation": 0.3667,
-    "value": 0.9412,
-    "overworlds": [
-      "BLACK_BELT",
-      "HIKER",
-      "LASS",
-      "PSYCHIC_M",
+      "KINDLER",
       "SWIMMER_F_LAND"
     ]
   },
@@ -778,53 +719,10 @@
     "saturation": 0.6538,
     "value": 0.8157,
     "overworlds": [
+      "AROMA_LADY",
+      "BREEDER",
       "LADY",
       "LASS"
-    ]
-  },
-  {
-    "hex": "#EEC39A",
-    "rgb": [
-      238,
-      195,
-      154
-    ],
-    "hue": 29.29,
-    "saturation": 0.3529,
-    "value": 0.9333,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#403830",
-    "rgb": [
-      64,
-      56,
-      48
-    ],
-    "hue": 30.0,
-    "saturation": 0.25,
-    "value": 0.251,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#F8D8B8",
-    "rgb": [
-      248,
-      216,
-      184
-    ],
-    "hue": 30.0,
-    "saturation": 0.2581,
-    "value": 0.9725,
-    "overworlds": [
-      "BLACK_BELT",
-      "LASS",
-      "PSYCHIC_M",
-      "SWIMMER_F_LAND"
     ]
   },
   {
@@ -858,20 +756,6 @@
     ]
   },
   {
-    "hex": "#D9A066",
-    "rgb": [
-      217,
-      160,
-      102
-    ],
-    "hue": 30.26,
-    "saturation": 0.53,
-    "value": 0.851,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
     "hex": "#6B3A08",
     "rgb": [
       107,
@@ -887,31 +771,31 @@
     ]
   },
   {
-    "hex": "#C7831E",
+    "hex": "#E6A452",
     "rgb": [
-      199,
-      131,
-      30
+      230,
+      164,
+      82
     ],
-    "hue": 35.86,
-    "saturation": 0.8492,
-    "value": 0.7804,
+    "hue": 33.24,
+    "saturation": 0.6435,
+    "value": 0.902,
     "overworlds": [
-      "BREEDER"
+      "BROCK"
     ]
   },
   {
-    "hex": "#FFD078",
+    "hex": "#AC6A18",
     "rgb": [
-      255,
-      208,
-      120
+      172,
+      106,
+      24
     ],
-    "hue": 39.11,
-    "saturation": 0.5294,
-    "value": 1.0,
+    "hue": 33.24,
+    "saturation": 0.8605,
+    "value": 0.6745,
     "overworlds": [
-      "AROMA_LADY"
+      "BROCK"
     ]
   },
   {
@@ -929,20 +813,6 @@
     ]
   },
   {
-    "hex": "#E8B443",
-    "rgb": [
-      232,
-      180,
-      67
-    ],
-    "hue": 41.09,
-    "saturation": 0.7112,
-    "value": 0.9098,
-    "overworlds": [
-      "BREEDER"
-    ]
-  },
-  {
     "hex": "#CDAC62",
     "rgb": [
       205,
@@ -956,6 +826,7 @@
       "CRUSH_GIRL",
       "FISHER",
       "POKEFAN_F",
+      "PSYCHIC_M",
       "SUPER_NERD",
       "TUBER_F_LAND",
       "TUBER_F_WATER"
@@ -987,35 +858,8 @@
     "saturation": 0.5882,
     "value": 0.5333,
     "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#8A6F30",
-    "rgb": [
-      138,
-      111,
-      48
-    ],
-    "hue": 42.0,
-    "saturation": 0.6522,
-    "value": 0.5412,
-    "overworlds": [
+      "ENGINEER",
       "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#C9AA60",
-    "rgb": [
-      201,
-      170,
-      96
-    ],
-    "hue": 42.29,
-    "saturation": 0.5224,
-    "value": 0.7882,
-    "overworlds": [
-      "PSYCHIC_M"
     ]
   },
   {
@@ -1029,39 +873,10 @@
     "saturation": 0.5794,
     "value": 0.8392,
     "overworlds": [
+      "BREEDER",
+      "BUG_CATCHER",
+      "ENGINEER",
       "SWIMMER_F_LAND"
-    ]
-  },
-  {
-    "hex": "#D8B048",
-    "rgb": [
-      216,
-      176,
-      72
-    ],
-    "hue": 43.33,
-    "saturation": 0.6667,
-    "value": 0.8471,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#836200",
-    "rgb": [
-      131,
-      98,
-      0
-    ],
-    "hue": 44.89,
-    "saturation": 1.0,
-    "value": 0.5137,
-    "overworlds": [
-      "BEAUTY",
-      "JUGGLER",
-      "TUBER_M_LAND",
-      "TUBER_M_WATER",
-      "YOUNGSTER"
     ]
   },
   {
@@ -1076,6 +891,7 @@
     "value": 0.6431,
     "overworlds": [
       "BUG_CATCHER",
+      "LT_SURGE",
       "SCOUT_F"
     ]
   },
@@ -1091,7 +907,9 @@
     "value": 0.7843,
     "overworlds": [
       "GENTLEMAN",
-      "HIKER"
+      "HIKER",
+      "KINDLER",
+      "RUIN_MANIAC"
     ]
   },
   {
@@ -1105,35 +923,15 @@
     "saturation": 1.0,
     "value": 0.502,
     "overworlds": [
-      "LADY"
-    ]
-  },
-  {
-    "hex": "#755800",
-    "rgb": [
-      117,
-      88,
-      0
-    ],
-    "hue": 45.13,
-    "saturation": 1.0,
-    "value": 0.4588,
-    "overworlds": [
-      "BREEDER"
-    ]
-  },
-  {
-    "hex": "#8C846B",
-    "rgb": [
-      140,
-      132,
-      107
-    ],
-    "hue": 45.45,
-    "saturation": 0.2357,
-    "value": 0.549,
-    "overworlds": [
-      "RUIN_MANIAC"
+      "BEAUTY",
+      "BREEDER",
+      "ERIKA",
+      "JUGGLER",
+      "LADY",
+      "MISTY",
+      "TUBER_M_LAND",
+      "TUBER_M_WATER",
+      "YOUNGSTER"
     ]
   },
   {
@@ -1162,7 +960,9 @@
     "value": 0.8353,
     "overworlds": [
       "BEAUTY",
+      "ERIKA",
       "JUGGLER",
+      "MISTY",
       "TUBER_M_LAND",
       "TUBER_M_WATER",
       "YOUNGSTER"
@@ -1181,20 +981,6 @@
     "overworlds": [
       "BIKER",
       "BIRD_KEEPER"
-    ]
-  },
-  {
-    "hex": "#D1B552",
-    "rgb": [
-      209,
-      181,
-      82
-    ],
-    "hue": 46.77,
-    "saturation": 0.6077,
-    "value": 0.8196,
-    "overworlds": [
-      "BUG_CATCHER"
     ]
   },
   {
@@ -1222,7 +1008,8 @@
     "saturation": 0.0826,
     "value": 0.902,
     "overworlds": [
-      "AGATHA"
+      "AGATHA",
+      "KINDLER"
     ]
   },
   {
@@ -1236,7 +1023,8 @@
     "saturation": 0.4222,
     "value": 0.5294,
     "overworlds": [
-      "BUG_MANIAC"
+      "BUG_MANIAC",
+      "RUIN_MANIAC"
     ]
   },
   {
@@ -1250,23 +1038,10 @@
     "saturation": 0.7072,
     "value": 0.8706,
     "overworlds": [
+      "LT_SURGE",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
       "SWIMMER_F_WATER"
-    ]
-  },
-  {
-    "hex": "#F8D850",
-    "rgb": [
-      248,
-      216,
-      80
-    ],
-    "hue": 48.57,
-    "saturation": 0.6774,
-    "value": 0.9725,
-    "overworlds": [
-      "ENGINEER"
     ]
   },
   {
@@ -1280,8 +1055,14 @@
     "saturation": 0.7098,
     "value": 1.0,
     "overworlds": [
+      "AROMA_LADY",
       "BEAUTY",
+      "ENGINEER",
+      "ERIKA",
       "JUGGLER",
+      "MISTY",
+      "RICH_BOY",
+      "SABRINA",
       "YOUNGSTER"
     ]
   },
@@ -1296,7 +1077,14 @@
     "saturation": 0.3984,
     "value": 0.4824,
     "overworlds": [
-      "KINDLER"
+      "BRUNO",
+      "CRUSH_GIRL",
+      "FISHER",
+      "KINDLER",
+      "POKEFAN_F",
+      "SUPER_NERD",
+      "TUBER_F_LAND",
+      "TUBER_F_WATER"
     ]
   },
   {
@@ -1329,124 +1117,6 @@
     ]
   },
   {
-    "hex": "#7B7341",
-    "rgb": [
-      123,
-      115,
-      65
-    ],
-    "hue": 51.72,
-    "saturation": 0.4715,
-    "value": 0.4824,
-    "overworlds": [
-      "BRUNO",
-      "CRUSH_GIRL",
-      "FISHER",
-      "POKEFAN_F",
-      "SUPER_NERD",
-      "TUBER_F_LAND",
-      "TUBER_F_WATER"
-    ]
-  },
-  {
-    "hex": "#5A5210",
-    "rgb": [
-      90,
-      82,
-      16
-    ],
-    "hue": 53.51,
-    "saturation": 0.8222,
-    "value": 0.3529,
-    "overworlds": [
-      "RUIN_MANIAC"
-    ]
-  },
-  {
-    "hex": "#8C8431",
-    "rgb": [
-      140,
-      132,
-      49
-    ],
-    "hue": 54.73,
-    "saturation": 0.65,
-    "value": 0.549,
-    "overworlds": [
-      "RUIN_MANIAC"
-    ]
-  },
-  {
-    "hex": "#FBF236",
-    "rgb": [
-      251,
-      242,
-      54
-    ],
-    "hue": 57.26,
-    "saturation": 0.7849,
-    "value": 0.9843,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#DEDEBD",
-    "rgb": [
-      222,
-      222,
-      189
-    ],
-    "hue": 60.0,
-    "saturation": 0.1486,
-    "value": 0.8706,
-    "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#F8F8D0",
-    "rgb": [
-      248,
-      248,
-      208
-    ],
-    "hue": 60.0,
-    "saturation": 0.1613,
-    "value": 0.9725,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#B5B58C",
-    "rgb": [
-      181,
-      181,
-      140
-    ],
-    "hue": 60.0,
-    "saturation": 0.2265,
-    "value": 0.7098,
-    "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#B5B563",
-    "rgb": [
-      181,
-      181,
-      99
-    ],
-    "hue": 60.0,
-    "saturation": 0.453,
-    "value": 0.7098,
-    "overworlds": [
-      "RUIN_MANIAC"
-    ]
-  },
-  {
     "hex": "#3A3A19",
     "rgb": [
       58,
@@ -1457,26 +1127,13 @@
     "saturation": 0.569,
     "value": 0.2275,
     "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#393918",
-    "rgb": [
-      57,
-      57,
-      24
-    ],
-    "hue": 60.0,
-    "saturation": 0.5789,
-    "value": 0.2235,
-    "overworlds": [
       "BRUNO",
       "CHANNELER",
       "CRUSH_GIRL",
       "FISHER",
       "GIOVANNI",
       "HEX_MANIAC",
+      "KINDLER",
       "LORELEI",
       "POKEFAN_F",
       "ROCKET_F",
@@ -1500,8 +1157,10 @@
     "value": 0.3216,
     "overworlds": [
       "BUG_CATCHER",
+      "LT_SURGE",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
+      "RUIN_MANIAC",
       "SCOUT_F",
       "SCOUT_M",
       "SWIMMER_F_WATER"
@@ -1518,23 +1177,25 @@
     "saturation": 0.761,
     "value": 0.8039,
     "overworlds": [
+      "BREEDER",
+      "LT_SURGE",
       "SCOUT_F",
       "SCOUT_M",
       "SWIMMER_F_WATER"
     ]
   },
   {
-    "hex": "#9ED666",
+    "hex": "#7B9C62",
     "rgb": [
-      158,
-      214,
-      102
+      123,
+      156,
+      98
     ],
-    "hue": 90.0,
-    "saturation": 0.5234,
-    "value": 0.8392,
+    "hue": 94.14,
+    "saturation": 0.3718,
+    "value": 0.6118,
     "overworlds": [
-      "BREEDER"
+      "BROCK"
     ]
   },
   {
@@ -1548,6 +1209,8 @@
     "saturation": 1.0,
     "value": 0.5451,
     "overworlds": [
+      "BREEDER",
+      "LT_SURGE",
       "SCOUT_F",
       "SCOUT_M",
       "SWIMMER_F_WATER"
@@ -1564,65 +1227,11 @@
     "saturation": 0.7538,
     "value": 0.2549,
     "overworlds": [
+      "BREEDER",
+      "LT_SURGE",
       "SCOUT_F",
       "SCOUT_M",
       "SWIMMER_F_WATER"
-    ]
-  },
-  {
-    "hex": "#2FA138",
-    "rgb": [
-      47,
-      161,
-      56
-    ],
-    "hue": 124.74,
-    "saturation": 0.7081,
-    "value": 0.6314,
-    "overworlds": [
-      "BREEDER"
-    ]
-  },
-  {
-    "hex": "#206040",
-    "rgb": [
-      32,
-      96,
-      64
-    ],
-    "hue": 150.0,
-    "saturation": 0.6667,
-    "value": 0.3765,
-    "overworlds": [
-      "BREEDER"
-    ]
-  },
-  {
-    "hex": "#323C39",
-    "rgb": [
-      50,
-      60,
-      57
-    ],
-    "hue": 162.0,
-    "saturation": 0.1667,
-    "value": 0.2353,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#143D34",
-    "rgb": [
-      20,
-      61,
-      52
-    ],
-    "hue": 166.83,
-    "saturation": 0.6721,
-    "value": 0.2392,
-    "overworlds": [
-      "BREEDER"
     ]
   },
   {
@@ -1650,7 +1259,8 @@
     "saturation": 0.1798,
     "value": 0.349,
     "overworlds": [
-      "BUG_MANIAC"
+      "BUG_MANIAC",
+      "RICH_BOY"
     ]
   },
   {
@@ -1682,48 +1292,6 @@
     ]
   },
   {
-    "hex": "#214A52",
-    "rgb": [
-      33,
-      74,
-      82
-    ],
-    "hue": 189.8,
-    "saturation": 0.5976,
-    "value": 0.3216,
-    "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#3A7B8C",
-    "rgb": [
-      58,
-      123,
-      140
-    ],
-    "hue": 192.44,
-    "saturation": 0.5857,
-    "value": 0.549,
-    "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
-    "hex": "#73B5CE",
-    "rgb": [
-      115,
-      181,
-      206
-    ],
-    "hue": 196.48,
-    "saturation": 0.4417,
-    "value": 0.8078,
-    "overworlds": [
-      "KINDLER"
-    ]
-  },
-  {
     "hex": "#40A8D0",
     "rgb": [
       64,
@@ -1749,6 +1317,7 @@
     "saturation": 0.5224,
     "value": 0.7882,
     "overworlds": [
+      "KINDLER",
       "PSYCHIC_M"
     ]
   },
@@ -1763,21 +1332,8 @@
     "saturation": 0.6708,
     "value": 0.6314,
     "overworlds": [
+      "KINDLER",
       "PSYCHIC_M"
-    ]
-  },
-  {
-    "hex": "#306082",
-    "rgb": [
-      48,
-      96,
-      130
-    ],
-    "hue": 204.88,
-    "saturation": 0.6308,
-    "value": 0.5098,
-    "overworlds": [
-      "RICH_BOY"
     ]
   },
   {
@@ -1807,6 +1363,7 @@
     "saturation": 0.4904,
     "value": 0.4078,
     "overworlds": [
+      "KINDLER",
       "PSYCHIC_M"
     ]
   },
@@ -1821,7 +1378,8 @@
     "saturation": 0.518,
     "value": 0.8706,
     "overworlds": [
-      "BIRD_KEEPER"
+      "BIRD_KEEPER",
+      "RICH_BOY"
     ]
   },
   {
@@ -1863,7 +1421,8 @@
     "saturation": 0.65,
     "value": 0.549,
     "overworlds": [
-      "BIRD_KEEPER"
+      "BIRD_KEEPER",
+      "RICH_BOY"
     ]
   },
   {
@@ -1877,8 +1436,15 @@
     "saturation": 0.5238,
     "value": 0.7412,
     "overworlds": [
+      "BLAINE",
+      "BUG_CATCHER",
+      "BUG_MANIAC",
+      "ELECTRICIAN",
       "EXPERT_F",
-      "EXPERT_M"
+      "EXPERT_M",
+      "GAMER",
+      "ROUGHNECK",
+      "SAILOR"
     ]
   },
   {
@@ -1911,48 +1477,6 @@
     ]
   },
   {
-    "hex": "#639BFF",
-    "rgb": [
-      99,
-      155,
-      255
-    ],
-    "hue": 218.46,
-    "saturation": 0.6118,
-    "value": 1.0,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#C0C8D8",
-    "rgb": [
-      192,
-      200,
-      216
-    ],
-    "hue": 220.0,
-    "saturation": 0.1111,
-    "value": 0.8471,
-    "overworlds": [
-      "BLACK_BELT"
-    ]
-  },
-  {
-    "hex": "#A8B0C0",
-    "rgb": [
-      168,
-      176,
-      192
-    ],
-    "hue": 220.0,
-    "saturation": 0.125,
-    "value": 0.7529,
-    "overworlds": [
-      "LASS"
-    ]
-  },
-  {
     "hex": "#CEDEFF",
     "rgb": [
       206,
@@ -1979,26 +1503,6 @@
     "overworlds": [
       "EXPERT_F",
       "EXPERT_M"
-    ]
-  },
-  {
-    "hex": "#6283CD",
-    "rgb": [
-      98,
-      131,
-      205
-    ],
-    "hue": 221.5,
-    "saturation": 0.522,
-    "value": 0.8039,
-    "overworlds": [
-      "BUG_CATCHER",
-      "BUG_MANIAC",
-      "COLLECTOR",
-      "ELECTRICIAN",
-      "GAMER",
-      "ROUGHNECK",
-      "SAILOR"
     ]
   },
   {
@@ -2068,7 +1572,9 @@
     "saturation": 0.1111,
     "value": 0.7412,
     "overworlds": [
-      "BUG_CATCHER"
+      "BREEDER",
+      "BUG_CATCHER",
+      "LASS"
     ]
   },
   {
@@ -2124,6 +1630,7 @@
     "saturation": 0.4167,
     "value": 0.3765,
     "overworlds": [
+      "RICH_BOY",
       "SCIENTIST"
     ]
   },
@@ -2156,31 +1663,17 @@
     ]
   },
   {
-    "hex": "#E7E7FF",
+    "hex": "#4A4A52",
     "rgb": [
-      231,
-      231,
-      255
+      74,
+      74,
+      82
     ],
     "hue": 240.0,
-    "saturation": 0.0941,
-    "value": 1.0,
+    "saturation": 0.0976,
+    "value": 0.3216,
     "overworlds": [
-      "AROMA_LADY"
-    ]
-  },
-  {
-    "hex": "#C6C6E7",
-    "rgb": [
-      198,
-      198,
-      231
-    ],
-    "hue": 240.0,
-    "saturation": 0.1429,
-    "value": 0.9059,
-    "overworlds": [
-      "AROMA_LADY"
+      "BROCK"
     ]
   },
   {
@@ -2194,7 +1687,8 @@
     "saturation": 0.1633,
     "value": 0.1922,
     "overworlds": [
-      "BURGLAR"
+      "BURGLAR",
+      "RICH_BOY"
     ]
   },
   {
@@ -2210,9 +1704,10 @@
     "overworlds": [
       "AGATHA",
       "BIKER",
+      "BLACK_BELT",
+      "BLAINE",
       "BRUNO",
       "CHANNELER",
-      "COLLECTOR",
       "ELECTRICIAN",
       "EXPERT_F",
       "EXPERT_M",
@@ -2220,6 +1715,8 @@
       "GAMER",
       "GIOVANNI",
       "HEX_MANIAC",
+      "HIKER",
+      "KOGA",
       "LANCE",
       "LORELEI",
       "POKEFAN_M",
@@ -2227,25 +1724,12 @@
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
+      "RUIN_MANIAC",
       "SAILOR",
+      "SCIENTIST",
       "SUPER_NERD",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER"
-    ]
-  },
-  {
-    "hex": "#484858",
-    "rgb": [
-      72,
-      72,
-      88
-    ],
-    "hue": 240.0,
-    "saturation": 0.1818,
-    "value": 0.3451,
-    "overworlds": [
-      "BLACK_BELT",
-      "HIKER"
     ]
   },
   {
@@ -2260,81 +1744,13 @@
     "value": 0.2902,
     "overworlds": [
       "AGATHA",
+      "BLAINE",
       "BUG_MANIAC",
-      "COLLECTOR",
+      "ENGINEER",
       "GAMER",
+      "RICH_BOY",
       "ROUGHNECK",
       "SAILOR"
-    ]
-  },
-  {
-    "hex": "#484870",
-    "rgb": [
-      72,
-      72,
-      112
-    ],
-    "hue": 240.0,
-    "saturation": 0.3571,
-    "value": 0.4392,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#383858",
-    "rgb": [
-      56,
-      56,
-      88
-    ],
-    "hue": 240.0,
-    "saturation": 0.3636,
-    "value": 0.3451,
-    "overworlds": [
-      "ENGINEER"
-    ]
-  },
-  {
-    "hex": "#3F3F74",
-    "rgb": [
-      63,
-      63,
-      116
-    ],
-    "hue": 240.0,
-    "saturation": 0.4569,
-    "value": 0.4549,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
-    "hex": "#4A495A",
-    "rgb": [
-      74,
-      73,
-      90
-    ],
-    "hue": 243.53,
-    "saturation": 0.1889,
-    "value": 0.3529,
-    "overworlds": [
-      "SCIENTIST"
-    ]
-  },
-  {
-    "hex": "#222034",
-    "rgb": [
-      34,
-      32,
-      52
-    ],
-    "hue": 246.0,
-    "saturation": 0.3846,
-    "value": 0.2039,
-    "overworlds": [
-      "RICH_BOY"
     ]
   },
   {
@@ -2392,22 +1808,9 @@
     "saturation": 0.3364,
     "value": 0.4314,
     "overworlds": [
+      "ENGINEER",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M"
-    ]
-  },
-  {
-    "hex": "#C6C3D6",
-    "rgb": [
-      198,
-      195,
-      214
-    ],
-    "hue": 249.47,
-    "saturation": 0.0888,
-    "value": 0.8392,
-    "overworlds": [
-      "SCIENTIST"
     ]
   },
   {
@@ -2424,6 +1827,9 @@
       "ACE_TRAINER_F",
       "ACE_TRAINER_M",
       "BEAUTY",
+      "ERIKA",
+      "MISTY",
+      "SABRINA",
       "TRIATHLETE_F_CYCLING",
       "TRIATHLETE_F_LAND",
       "TRIATHLETE_F_WATER",
@@ -2447,6 +1853,9 @@
     "overworlds": [
       "ACE_TRAINER_F",
       "ACE_TRAINER_M",
+      "ERIKA",
+      "MISTY",
+      "SABRINA",
       "TRIATHLETE_M_CYCLING",
       "TRIATHLETE_M_LAND",
       "TRIATHLETE_M_WATER",
@@ -2481,34 +1890,6 @@
     ]
   },
   {
-    "hex": "#0C0911",
-    "rgb": [
-      12,
-      9,
-      17
-    ],
-    "hue": 262.5,
-    "saturation": 0.4706,
-    "value": 0.0667,
-    "overworlds": [
-      "SCIENTIST"
-    ]
-  },
-  {
-    "hex": "#76428A",
-    "rgb": [
-      118,
-      66,
-      138
-    ],
-    "hue": 283.33,
-    "saturation": 0.5217,
-    "value": 0.5412,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
     "hex": "#683571",
     "rgb": [
       104,
@@ -2519,7 +1900,8 @@
     "saturation": 0.531,
     "value": 0.4431,
     "overworlds": [
-      "PSYCHIC_M"
+      "PSYCHIC_M",
+      "RICH_BOY"
     ]
   },
   {
@@ -2551,17 +1933,17 @@
     ]
   },
   {
-    "hex": "#45283C",
+    "hex": "#522041",
     "rgb": [
-      69,
-      40,
-      60
+      82,
+      32,
+      65
     ],
-    "hue": 318.62,
-    "saturation": 0.4203,
-    "value": 0.2706,
+    "hue": 320.4,
+    "saturation": 0.6098,
+    "value": 0.3216,
     "overworlds": [
-      "RICH_BOY"
+      "LT_SURGE"
     ]
   },
   {
@@ -2589,6 +1971,7 @@
     "saturation": 0.1515,
     "value": 0.2588,
     "overworlds": [
+      "ENGINEER",
       "GENTLEMAN",
       "HIKER"
     ]
@@ -2609,20 +1992,6 @@
     ]
   },
   {
-    "hex": "#52424A",
-    "rgb": [
-      82,
-      66,
-      74
-    ],
-    "hue": 330.0,
-    "saturation": 0.1951,
-    "value": 0.3216,
-    "overworlds": [
-      "RUIN_MANIAC"
-    ]
-  },
-  {
     "hex": "#A34165",
     "rgb": [
       163,
@@ -2634,20 +2003,6 @@
     "value": 0.6392,
     "overworlds": [
       "BLACK_BELT"
-    ]
-  },
-  {
-    "hex": "#BD6B84",
-    "rgb": [
-      189,
-      107,
-      132
-    ],
-    "hue": 341.71,
-    "saturation": 0.4339,
-    "value": 0.7412,
-    "overworlds": [
-      "AROMA_LADY"
     ]
   },
   {
@@ -2665,20 +2020,6 @@
     ]
   },
   {
-    "hex": "#7D4757",
-    "rgb": [
-      125,
-      71,
-      87
-    ],
-    "hue": 342.22,
-    "saturation": 0.432,
-    "value": 0.4902,
-    "overworlds": [
-      "AROMA_LADY"
-    ]
-  },
-  {
     "hex": "#8B4152",
     "rgb": [
       139,
@@ -2690,7 +2031,8 @@
     "value": 0.5451,
     "overworlds": [
       "AGATHA",
-      "COLLECTOR",
+      "AROMA_LADY",
+      "BLAINE",
       "SAILOR"
     ]
   },
@@ -2706,34 +2048,8 @@
     "value": 0.8353,
     "overworlds": [
       "AGATHA",
-      "SAILOR"
-    ]
-  },
-  {
-    "hex": "#FA6173",
-    "rgb": [
-      250,
-      97,
-      115
-    ],
-    "hue": 352.94,
-    "saturation": 0.612,
-    "value": 0.9804,
-    "overworlds": [
-      "AROMA_LADY"
-    ]
-  },
-  {
-    "hex": "#DE6973",
-    "rgb": [
-      222,
-      105,
-      115
-    ],
-    "hue": 354.87,
-    "saturation": 0.527,
-    "value": 0.8706,
-    "overworlds": [
+      "AROMA_LADY",
+      "SAILOR",
       "SWIMMER_F_LAND"
     ]
   },
@@ -2748,22 +2064,8 @@
     "saturation": 0.3647,
     "value": 1.0,
     "overworlds": [
+      "AROMA_LADY",
       "SWIMMER_F_LAND"
-    ]
-  },
-  {
-    "hex": "#6B494A",
-    "rgb": [
-      107,
-      73,
-      74
-    ],
-    "hue": 358.24,
-    "saturation": 0.3178,
-    "value": 0.4196,
-    "overworlds": [
-      "GENTLEMAN",
-      "HIKER"
     ]
   },
   {
@@ -2781,15 +2083,29 @@
     ]
   },
   {
-    "hex": "#000000",
+    "hex": "#010101",
     "rgb": [
-      0,
-      0,
-      0
+      1,
+      1,
+      1
     ],
     "hue": 0.0,
     "saturation": 0.0,
-    "value": 0.0,
+    "value": 0.0039,
+    "overworlds": [
+      "BROCK"
+    ]
+  },
+  {
+    "hex": "#101010",
+    "rgb": [
+      16,
+      16,
+      16
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "value": 0.0627,
     "overworlds": [
       "ACE_TRAINER_F",
       "ACE_TRAINER_M",
@@ -2799,15 +2115,17 @@
       "BIKER",
       "BIRD_KEEPER",
       "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
       "BURGLAR",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
+      "ENGINEER",
+      "ERIKA",
       "EXPERT_F",
       "EXPERT_M",
       "FISHER",
@@ -2818,19 +2136,26 @@
       "HIKER",
       "JUGGLER",
       "KINDLER",
+      "KOGA",
+      "LADY",
       "LANCE",
       "LASS",
       "LORELEI",
+      "LT_SURGE",
+      "MISTY",
       "POKEFAN_F",
       "POKEFAN_M",
       "POKEMON_RANGER_F",
       "POKEMON_RANGER_M",
       "POKE_MANIAC",
+      "PSYCHIC_M",
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
       "RUIN_MANIAC",
+      "SABRINA",
       "SAILOR",
+      "SCIENTIST",
       "SCOUT_F",
       "SCOUT_M",
       "SUPER_NERD",
@@ -2852,35 +2177,6 @@
     ]
   },
   {
-    "hex": "#101010",
-    "rgb": [
-      16,
-      16,
-      16
-    ],
-    "hue": 0.0,
-    "saturation": 0.0,
-    "value": 0.0627,
-    "overworlds": [
-      "ENGINEER",
-      "LADY"
-    ]
-  },
-  {
-    "hex": "#595652",
-    "rgb": [
-      89,
-      86,
-      82
-    ],
-    "hue": 34.29,
-    "saturation": 0.0787,
-    "value": 0.349,
-    "overworlds": [
-      "RICH_BOY"
-    ]
-  },
-  {
     "hex": "#636163",
     "rgb": [
       99,
@@ -2895,46 +2191,53 @@
     ]
   },
   {
-    "hex": "#889090",
+    "hex": "#7B8383",
     "rgb": [
-      136,
-      144,
-      144
+      123,
+      131,
+      131
     ],
     "hue": 180.0,
-    "saturation": 0.0556,
-    "value": 0.5647,
+    "saturation": 0.0611,
+    "value": 0.5137,
     "overworlds": [
-      "BLACK_BELT"
+      "BROCK"
     ]
   },
   {
-    "hex": "#8B8B94",
+    "hex": "#8C8C94",
     "rgb": [
-      139,
-      139,
+      140,
+      140,
       148
     ],
     "hue": 240.0,
-    "saturation": 0.0608,
+    "saturation": 0.0541,
     "value": 0.5804,
     "overworlds": [
       "BIKER",
+      "BLACK_BELT",
+      "BLAINE",
       "BRUNO",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
+      "EXPERT_F",
+      "EXPERT_M",
       "FISHER",
       "GAMER",
       "GENTLEMAN",
       "GIOVANNI",
       "HEX_MANIAC",
+      "KOGA",
       "LANCE",
       "LORELEI",
+      "POKEFAN_M",
+      "POKE_MANIAC",
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
       "SAILOR",
+      "SCIENTIST",
       "SUPER_NERD",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER"
@@ -2955,23 +2258,6 @@
     ]
   },
   {
-    "hex": "#8C8C94",
-    "rgb": [
-      140,
-      140,
-      148
-    ],
-    "hue": 240.0,
-    "saturation": 0.0541,
-    "value": 0.5804,
-    "overworlds": [
-      "EXPERT_F",
-      "EXPERT_M",
-      "POKEFAN_M",
-      "POKE_MANIAC"
-    ]
-  },
-  {
     "hex": "#949294",
     "rgb": [
       148,
@@ -2982,49 +2268,8 @@
     "saturation": 0.0135,
     "value": 0.5804,
     "overworlds": [
-      "HIKER"
-    ]
-  },
-  {
-    "hex": "#8C8A94",
-    "rgb": [
-      140,
-      138,
-      148
-    ],
-    "hue": 252.0,
-    "saturation": 0.0676,
-    "value": 0.5804,
-    "overworlds": [
-      "SCIENTIST"
-    ]
-  },
-  {
-    "hex": "#9C9C9C",
-    "rgb": [
-      156,
-      156,
-      156
-    ],
-    "hue": 0.0,
-    "saturation": 0.0,
-    "value": 0.6118,
-    "overworlds": [
+      "HIKER",
       "RUIN_MANIAC"
-    ]
-  },
-  {
-    "hex": "#ABABAB",
-    "rgb": [
-      171,
-      171,
-      171
-    ],
-    "hue": 0.0,
-    "saturation": 0.0,
-    "value": 0.6706,
-    "overworlds": [
-      "BREEDER"
     ]
   },
   {
@@ -3067,44 +2312,35 @@
     "saturation": 0.0751,
     "value": 0.8353,
     "overworlds": [
+      "AROMA_LADY",
       "BIKER",
+      "BLACK_BELT",
+      "BLAINE",
       "BRUNO",
       "BUG_CATCHER",
       "BUG_MANIAC",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
+      "EXPERT_F",
+      "EXPERT_M",
       "FISHER",
       "GAMER",
       "GENTLEMAN",
       "GIOVANNI",
       "HEX_MANIAC",
+      "KOGA",
       "LORELEI",
       "POKEFAN_F",
+      "POKEFAN_M",
+      "POKE_MANIAC",
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
       "SAILOR",
+      "SCIENTIST",
       "SUPER_NERD",
       "SWIMMER_M_LAND",
       "SWIMMER_M_WATER"
-    ]
-  },
-  {
-    "hex": "#C5C5D6",
-    "rgb": [
-      197,
-      197,
-      214
-    ],
-    "hue": 240.0,
-    "saturation": 0.0794,
-    "value": 0.8392,
-    "overworlds": [
-      "EXPERT_F",
-      "EXPERT_M",
-      "POKEFAN_M",
-      "POKE_MANIAC"
     ]
   },
   {
@@ -3132,6 +2368,7 @@
     "saturation": 0.0688,
     "value": 0.9686,
     "overworlds": [
+      "ENGINEER",
       "KINDLER"
     ]
   },
@@ -3146,6 +2383,7 @@
     "saturation": 0.0323,
     "value": 0.9725,
     "overworlds": [
+      "AROMA_LADY",
       "LADY"
     ]
   },
@@ -3163,10 +2401,10 @@
       "AGATHA",
       "BEAUTY",
       "BLACK_BELT",
+      "BLAINE",
       "BREEDER",
       "BUG_MANIAC",
       "CHANNELER",
-      "COLLECTOR",
       "CRUSH_GIRL",
       "ELECTRICIAN",
       "EXPERT_F",
@@ -3178,13 +2416,16 @@
       "HEX_MANIAC",
       "JUGGLER",
       "LORELEI",
+      "LT_SURGE",
       "POKEFAN_M",
       "POKE_MANIAC",
       "RICH_BOY",
       "ROCKET_F",
       "ROCKET_M",
       "ROUGHNECK",
+      "SABRINA",
       "SAILOR",
+      "SCIENTIST",
       "SCOUT_F",
       "SCOUT_M",
       "SUPER_NERD",
@@ -3196,20 +2437,6 @@
       "TUBER_F_WATER",
       "TUBER_M_LAND",
       "TUBER_M_WATER"
-    ]
-  },
-  {
-    "hex": "#FFFBFF",
-    "rgb": [
-      255,
-      251,
-      255
-    ],
-    "hue": 300.0,
-    "saturation": 0.0157,
-    "value": 1.0,
-    "overworlds": [
-      "SCIENTIST"
     ]
   }
 ]

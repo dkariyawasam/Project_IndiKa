@@ -148,11 +148,6 @@ static const union AnimCmd *const sAnims_SailorRS[] =
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_Collector[] =
-{
-    sAnim_GeneralFrame0,
-};
-
 static const union AnimCmd *const sAnims_Wally[] =
 {
     sAnim_GeneralFrame0,
@@ -547,7 +542,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_PARASOL_LADY]          = sAnims_ParasolLady,
     [TRAINER_PIC_TWINS_RS]              = sAnims_TwinsRS,
     [TRAINER_PIC_SAILOR_RS]             = sAnims_SailorRS,
-    [TRAINER_PIC_COLLECTOR]             = sAnims_Collector,
     [TRAINER_PIC_POKEMON_BREEDER_M_RS]  = sAnims_PokemonBreederMRS,
     [TRAINER_PIC_POKEMON_BREEDER_F_RS]  = sAnims_PokemonBreederFRS,
     [TRAINER_PIC_OLD_COUPLE]            = sAnims_OldCouple,
