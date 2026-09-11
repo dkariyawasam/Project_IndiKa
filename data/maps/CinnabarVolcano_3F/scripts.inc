@@ -119,3 +119,45 @@ CinnabarVolcano_3F_EventScript_RanFromMoltres::
 
 CinnabarVolcano_3F_Text_MoltresApexCry:
 	.string "KRAAAW!$"
+
+CinnabarVolcano_3F_EventScript_ExpertHugo::
+	trainerbattle_single TRAINER_EXPERT_HUGO, CinnabarVolcano_3F_Text_ExpertHugoIntro, CinnabarVolcano_3F_Text_ExpertHugoDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CinnabarVolcano_3F_EventScript_ExpertHugoRematch
+	msgbox CinnabarVolcano_3F_Text_ExpertHugoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_EventScript_ExpertHugoRematch::
+	trainerbattle_rematch TRAINER_EXPERT_HUGO, CinnabarVolcano_3F_Text_ExpertHugoIntro, CinnabarVolcano_3F_Text_ExpertHugoDefeat
+	msgbox CinnabarVolcano_3F_Text_ExpertHugoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_Text_ExpertHugoIntro::
+	.string "Steady breathing. Steady steps.\nKeep your focus in this heat.$"
+
+CinnabarVolcano_3F_Text_ExpertHugoDefeat::
+	.string "Even experience has its limits!$"
+
+CinnabarVolcano_3F_Text_ExpertHugoPostBattle::
+	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+
+CinnabarVolcano_3F_EventScript_KindlerFlint::
+	trainerbattle_single TRAINER_KINDLER_FLINT, CinnabarVolcano_3F_Text_KindlerFlintIntro, CinnabarVolcano_3F_Text_KindlerFlintDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CinnabarVolcano_3F_EventScript_KindlerFlintRematch
+	msgbox CinnabarVolcano_3F_Text_KindlerFlintPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_EventScript_KindlerFlintRematch::
+	trainerbattle_rematch TRAINER_KINDLER_FLINT, CinnabarVolcano_3F_Text_KindlerFlintIntro, CinnabarVolcano_3F_Text_KindlerFlintDefeat
+	msgbox CinnabarVolcano_3F_Text_KindlerFlintPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_3F_Text_KindlerFlintIntro::
+	.string "Fire rewards a steady hand.\nCan you handle the heat?$"
+
+CinnabarVolcano_3F_Text_KindlerFlintDefeat::
+	.string "My flame went out!$"
+
+CinnabarVolcano_3F_Text_KindlerFlintPostBattle::
+	.string "Control matters more than heat.\nThat goes for battles too.$"

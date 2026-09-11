@@ -153,3 +153,17 @@ SaffronCity_Dojo_EventScript_DefeatedMasterKoichi::
 	setvar VAR_MAP_SCENE_SAFFRON_CITY_DOJO, 1
 	release
 	end
+
+SaffronCity_Dojo_EventScript_ExpertMara::
+	trainerbattle_single TRAINER_EXPERT_MARA, SaffronCity_Dojo_Text_ExpertMaraIntro, SaffronCity_Dojo_Text_ExpertMaraDefeat
+	msgbox SaffronCity_Dojo_Text_ExpertMaraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Dojo_Text_ExpertMaraIntro::
+	.string "Watch your opponent carefully.\nEach move teaches you something.$"
+
+SaffronCity_Dojo_Text_ExpertMaraDefeat::
+	.string "Even experience has its limits!$"
+
+SaffronCity_Dojo_Text_ExpertMaraPostBattle::
+	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"

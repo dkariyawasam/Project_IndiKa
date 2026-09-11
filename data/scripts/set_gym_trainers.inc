@@ -19,18 +19,18 @@ EventScript_SetVermilionGymTrainers::
 	return
 
 EventScript_SetCeladonGymTrainers::
-	settrainerflag TRAINER_BEAUTY_BRIDGET
-	settrainerflag TRAINER_BEAUTY_TAMIA
-	settrainerflag TRAINER_BEAUTY_LORI
+	settrainerflag TRAINER_TRENDSETTERS_BRI_REMI
+	settrainerflag TRAINER_TRENDSETTERS_TAMIA_LEO
+	settrainerflag TRAINER_TRENDSETTER_LORI
 	return
 
 EventScript_SetFuchsiaGymTrainers::
-	settrainerflag TRAINER_NINJA_BOY_PHIL
-	settrainerflag TRAINER_NINJA_BOY_EDGAR
-	settrainerflag TRAINER_JUGGLER_KIRK
-	settrainerflag TRAINER_JUGGLER_SHAWN
-	settrainerflag TRAINER_JUGGLER_KAYDEN
-	settrainerflag TRAINER_JUGGLER_NATE
+	settrainerflag TRAINER_NINJA_PHIL
+	settrainerflag TRAINER_NINJA_EDGAR
+	settrainerflag TRAINER_NINJA_KIRK
+	settrainerflag TRAINER_NINJA_SHAWN
+	settrainerflag TRAINER_NINJA_KAYDEN
+	settrainerflag TRAINER_NINJA_NATE
 	return
 
 EventScript_SetSaffronGymTrainers::
@@ -47,7 +47,7 @@ EventScript_SetCinnabarGymTrainers::
 	return
 
 EventScript_SetViridianGymTrainers::
-	settrainerflag TRAINER_NINJA_BOY_JASON
+	settrainerflag TRAINER_NINJA_JASON
 	settrainerflag TRAINER_BLACK_BELT_ATSUSHI
 	settrainerflag TRAINER_BLACK_BELT_KIYO
 	settrainerflag TRAINER_BLACK_BELT_TAKASHI

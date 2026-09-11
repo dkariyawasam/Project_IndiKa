@@ -110,3 +110,102 @@ VictoryRoad_2F_EventScript_VincentRematch::
 	trainerbattle_rematch TRAINER_RUIN_MANIAC_VINCENT, VictoryRoad_2F_Text_VincentIntro, VictoryRoad_2F_Text_VincentDefeat
 	msgbox VictoryRoad_2F_Text_VincentPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+VictoryRoad_2F_EventScript_KaiTessKai::
+	trainerbattle_double TRAINER_ACES_KAI_TESS, VictoryRoad_2F_Text_KaiTessIntro, VictoryRoad_2F_Text_KaiTessDefeat, VictoryRoad_2F_Text_KaiTessNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_2F_EventScript_KaiTessKaiRematch
+	msgbox VictoryRoad_2F_Text_KaiTessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_KaiTessKaiRematch::
+	trainerbattle_rematch_double TRAINER_ACES_KAI_TESS, VictoryRoad_2F_Text_KaiTessIntro, VictoryRoad_2F_Text_KaiTessDefeat, VictoryRoad_2F_Text_KaiTessNotEnoughMons
+	msgbox VictoryRoad_2F_Text_KaiTessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_KaiTessTess::
+	trainerbattle_double TRAINER_ACES_KAI_TESS, VictoryRoad_2F_Text_KaiTessIntro, VictoryRoad_2F_Text_KaiTessDefeat, VictoryRoad_2F_Text_KaiTessNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_2F_EventScript_KaiTessTessRematch
+	msgbox VictoryRoad_2F_Text_KaiTessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_KaiTessTessRematch::
+	trainerbattle_rematch_double TRAINER_ACES_KAI_TESS, VictoryRoad_2F_Text_KaiTessIntro, VictoryRoad_2F_Text_KaiTessDefeat, VictoryRoad_2F_Text_KaiTessNotEnoughMons
+	msgbox VictoryRoad_2F_Text_KaiTessPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_Text_KaiTessIntro::
+	.string "This cave tests your teamwork.\nShow us how your team works!$"
+
+VictoryRoad_2F_Text_KaiTessDefeat::
+	.string "You make a great team!$"
+
+VictoryRoad_2F_Text_KaiTessPostBattle::
+	.string "We cover each other when\nthe going gets tough.$"
+
+VictoryRoad_2F_Text_KaiTessNotEnoughMons::
+	.string "Bring two ready POKéMON\nso we can battle as a pair!$"
+
+VictoryRoad_2F_EventScript_Stevie::
+	trainerbattle_single TRAINER_POKEMANIAC_STEVE_2, VictoryRoad_2F_Text_StevieIntro, VictoryRoad_2F_Text_StevieDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_2F_EventScript_StevieRematch
+	msgbox VictoryRoad_2F_Text_SteviePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_StevieRematch::
+	trainerbattle_rematch TRAINER_POKEMANIAC_STEVE_2, VictoryRoad_2F_Text_StevieIntro, VictoryRoad_2F_Text_StevieDefeat
+	msgbox VictoryRoad_2F_Text_SteviePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_Text_StevieIntro::
+	.string "Every cave is a training ground.\nShow me your fighting spirit!$"
+
+VictoryRoad_2F_Text_StevieDefeat::
+	.string "My training is far from over!$"
+
+VictoryRoad_2F_Text_SteviePostBattle::
+	.string "Rock Tunnel taught me patience.\nThis road will test my resolve.$"
+
+VictoryRoad_2F_EventScript_AceTrainerFIris::
+	trainerbattle_single TRAINER_ACE_TRAINER_IRIS, VictoryRoad_2F_Text_AceTrainerFIrisIntro, VictoryRoad_2F_Text_AceTrainerFIrisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_2F_EventScript_AceTrainerFIrisRematch
+	msgbox VictoryRoad_2F_Text_AceTrainerFIrisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_AceTrainerFIrisRematch::
+	trainerbattle_rematch TRAINER_ACE_TRAINER_IRIS, VictoryRoad_2F_Text_AceTrainerFIrisIntro, VictoryRoad_2F_Text_AceTrainerFIrisDefeat
+	msgbox VictoryRoad_2F_Text_AceTrainerFIrisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_Text_AceTrainerFIrisIntro::
+	.string "This road tests every weakness.\nHow well do you know your team?$"
+
+VictoryRoad_2F_Text_AceTrainerFIrisDefeat::
+	.string "You know your team well!$"
+
+VictoryRoad_2F_Text_AceTrainerFIrisPostBattle::
+	.string "I want to reach the LEAGUE\nwith a team I can trust.$"
+
+VictoryRoad_2F_EventScript_AceTrainerFThea::
+	trainerbattle_single TRAINER_ACE_TRAINER_THEA, VictoryRoad_2F_Text_AceTrainerFTheaIntro, VictoryRoad_2F_Text_AceTrainerFTheaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_2F_EventScript_AceTrainerFTheaRematch
+	msgbox VictoryRoad_2F_Text_AceTrainerFTheaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_EventScript_AceTrainerFTheaRematch::
+	trainerbattle_rematch TRAINER_ACE_TRAINER_THEA, VictoryRoad_2F_Text_AceTrainerFTheaIntro, VictoryRoad_2F_Text_AceTrainerFTheaDefeat
+	msgbox VictoryRoad_2F_Text_AceTrainerFTheaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_2F_Text_AceTrainerFTheaIntro::
+	.string "Power alone will not be enough.\nMake every move count!$"
+
+VictoryRoad_2F_Text_AceTrainerFTheaDefeat::
+	.string "You made those moves count!$"
+
+VictoryRoad_2F_Text_AceTrainerFTheaPostBattle::
+	.string "The right move at the right time\ncan change the whole battle.$"
