@@ -204,19 +204,6 @@ CeladonCity_Gym_Text_LoriPostBattle::
     .string "I have to learn to be polite,\l"
     .string "especially if I have to battle.$"
 
-CeladonCity_Gym_Text_MaryIntro::
-    .string "Welcome to CELADON GYM!\p"
-    .string "You'd better not underestimate\n"
-    .string "the nice ladies here.$"
-
-CeladonCity_Gym_Text_MaryDefeat::
-    .string "Oh!\n"
-    .string "Beaten!$"
-
-CeladonCity_Gym_Text_MaryPostBattle::
-    .string "I didn't bring my best POKéMON.\n"
-    .string "Wait until next time!$"
-
 CeladonCity_Gym_Text_GymStatue::
     .string "CELADON POKéMON GYM\n"
     .string "LEADER: ERIKA\p"

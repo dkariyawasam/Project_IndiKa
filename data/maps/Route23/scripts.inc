@@ -198,3 +198,102 @@ Route23_EventScript_EarthBadgeGuardTrigger::
 Route23_EventScript_VictoryRoadGateSign::
 	msgbox Route23_Text_VictoryRoadGateSign, MSGBOX_SIGN
 	end
+
+Route23_EventScript_EvanZoeEvan::
+	trainerbattle_double TRAINER_ACES_EVAN_ZOE, Route23_Text_EvanZoeIntro, Route23_Text_EvanZoeDefeat, Route23_Text_EvanZoeNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_EvanZoeEvanRematch
+	msgbox Route23_Text_EvanZoePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_EvanZoeEvanRematch::
+	trainerbattle_rematch_double TRAINER_ACES_EVAN_ZOE, Route23_Text_EvanZoeIntro, Route23_Text_EvanZoeDefeat, Route23_Text_EvanZoeNotEnoughMons
+	msgbox Route23_Text_EvanZoePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_EvanZoeZoe::
+	trainerbattle_double TRAINER_ACES_EVAN_ZOE, Route23_Text_EvanZoeIntro, Route23_Text_EvanZoeDefeat, Route23_Text_EvanZoeNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_EvanZoeZoeRematch
+	msgbox Route23_Text_EvanZoePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_EvanZoeZoeRematch::
+	trainerbattle_rematch_double TRAINER_ACES_EVAN_ZOE, Route23_Text_EvanZoeIntro, Route23_Text_EvanZoeDefeat, Route23_Text_EvanZoeNotEnoughMons
+	msgbox Route23_Text_EvanZoePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_Text_EvanZoeIntro::
+	.string "We are training for the LEAGUE.\nCan you handle both of us?$"
+
+Route23_Text_EvanZoeDefeat::
+	.string "You make a great team!$"
+
+Route23_Text_EvanZoePostBattle::
+	.string "A good partner spots things\nyou might miss on your own.$"
+
+Route23_Text_EvanZoeNotEnoughMons::
+	.string "Bring two ready POKéMON\nso we can battle as a pair!$"
+
+Route23_EventScript_AceTrainerFNora::
+	trainerbattle_single TRAINER_ACE_TRAINER_NORA, Route23_Text_AceTrainerFNoraIntro, Route23_Text_AceTrainerFNoraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_AceTrainerFNoraRematch
+	msgbox Route23_Text_AceTrainerFNoraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_AceTrainerFNoraRematch::
+	trainerbattle_rematch TRAINER_ACE_TRAINER_NORA, Route23_Text_AceTrainerFNoraIntro, Route23_Text_AceTrainerFNoraDefeat
+	msgbox Route23_Text_AceTrainerFNoraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_Text_AceTrainerFNoraIntro::
+	.string "The LEAGUE is our goal.\nEvery battle brings us closer!$"
+
+Route23_Text_AceTrainerFNoraDefeat::
+	.string "A lesson worth learning!$"
+
+Route23_Text_AceTrainerFNoraPostBattle::
+	.string "I keep track of every loss.\nThere is always more to learn.$"
+
+Route23_EventScript_AceTrainerFVera::
+	trainerbattle_single TRAINER_ACE_TRAINER_VERA, Route23_Text_AceTrainerFVeraIntro, Route23_Text_AceTrainerFVeraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_AceTrainerFVeraRematch
+	msgbox Route23_Text_AceTrainerFVeraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_AceTrainerFVeraRematch::
+	trainerbattle_rematch TRAINER_ACE_TRAINER_VERA, Route23_Text_AceTrainerFVeraIntro, Route23_Text_AceTrainerFVeraDefeat
+	msgbox Route23_Text_AceTrainerFVeraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_Text_AceTrainerFVeraIntro::
+	.string "A strong team needs variety.\nLet me show you what I mean!$"
+
+Route23_Text_AceTrainerFVeraDefeat::
+	.string "You found a way through!$"
+
+Route23_Text_AceTrainerFVeraPostBattle::
+	.string "Different strengths make\na team worth relying on.$"
+
+Route23_EventScript_AceTrainerFLena::
+	trainerbattle_single TRAINER_ACE_TRAINER_LENA, Route23_Text_AceTrainerFLenaIntro, Route23_Text_AceTrainerFLenaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route23_EventScript_AceTrainerFLenaRematch
+	msgbox Route23_Text_AceTrainerFLenaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_EventScript_AceTrainerFLenaRematch::
+	trainerbattle_rematch TRAINER_ACE_TRAINER_LENA, Route23_Text_AceTrainerFLenaIntro, Route23_Text_AceTrainerFLenaDefeat
+	msgbox Route23_Text_AceTrainerFLenaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route23_Text_AceTrainerFLenaIntro::
+	.string "I train for tough opponents.\nYou look like a good test!$"
+
+Route23_Text_AceTrainerFLenaDefeat::
+	.string "That was a proper challenge!$"
+
+Route23_Text_AceTrainerFLenaPostBattle::
+	.string "A challenge shows you where\nyour training needs more work.$"

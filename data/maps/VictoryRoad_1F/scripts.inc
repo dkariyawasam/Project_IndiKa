@@ -56,3 +56,45 @@ VictoryRoad_1F_EventScript_RolandoRematch::
 	trainerbattle_rematch TRAINER_ACE_TRAINER_ROLANDO, VictoryRoad_1F_Text_RolandoIntro, VictoryRoad_1F_Text_RolandoDefeat
 	msgbox VictoryRoad_1F_Text_RolandoPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+VictoryRoad_1F_EventScript_ExpertIvo::
+	trainerbattle_single TRAINER_EXPERT_IVO, VictoryRoad_1F_Text_ExpertIvoIntro, VictoryRoad_1F_Text_ExpertIvoDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_1F_EventScript_ExpertIvoRematch
+	msgbox VictoryRoad_1F_Text_ExpertIvoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_1F_EventScript_ExpertIvoRematch::
+	trainerbattle_rematch TRAINER_EXPERT_IVO, VictoryRoad_1F_Text_ExpertIvoIntro, VictoryRoad_1F_Text_ExpertIvoDefeat
+	msgbox VictoryRoad_1F_Text_ExpertIvoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_1F_Text_ExpertIvoIntro::
+	.string "Strength brought you this far.\nNow show me your judgment.$"
+
+VictoryRoad_1F_Text_ExpertIvoDefeat::
+	.string "Even experience has its limits!$"
+
+VictoryRoad_1F_Text_ExpertIvoPostBattle::
+	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+
+VictoryRoad_1F_EventScript_ExpertKarina::
+	trainerbattle_single TRAINER_CHANNELER_KARINA_2, VictoryRoad_1F_Text_ExpertKarinaIntro, VictoryRoad_1F_Text_ExpertKarinaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_1F_EventScript_ExpertKarinaRematch
+	msgbox VictoryRoad_1F_Text_ExpertKarinaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_1F_EventScript_ExpertKarinaRematch::
+	trainerbattle_rematch TRAINER_CHANNELER_KARINA_2, VictoryRoad_1F_Text_ExpertKarinaIntro, VictoryRoad_1F_Text_ExpertKarinaDefeat
+	msgbox VictoryRoad_1F_Text_ExpertKarinaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoad_1F_Text_ExpertKarinaIntro::
+	.string "The road ahead tests us all.\nShow me what you have learned.$"
+
+VictoryRoad_1F_Text_ExpertKarinaDefeat::
+	.string "Even experience has its limits!$"
+
+VictoryRoad_1F_Text_ExpertKarinaPostBattle::
+	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"

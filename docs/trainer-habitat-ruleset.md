@@ -35,19 +35,22 @@ This is the working ruleset for placing trainers, choosing their teams, and deci
 - Bug Catcher -> Bug Maniac
 - Biker -> Roughneck
 - Aroma Lady -> Pokemon Breeder
-- Scout M / Scout F are paired field beginners.
-- Black Belt M / Black Belt F are the main fighting trainer pair.
+- Scout is the field beginner role, with male and female battle/overworld presentation.
+- Black Belt is the main fighting trainer role, with male and female battle/overworld presentation.
 - Expert M / Expert F are martial arts experts above Black Belts, with stronger fighting-type teams.
 - Pokemon Ranger M / Pokemon Ranger F are protected-area specialists.
 - Triathlete M / Triathlete F use Land, Water, and Cycling variants.
 - Electrician replaces Rocker as the electric specialist class.
 - Rocket Grunt -> Rocket Admin -> Rocket Ace -> Rocket Champion is the Team Rocket hierarchy.
+- Similar male/female trainer variants should use one semantic trainer class where possible, with the visible identity handled by trainer front sprites and overworld sprites.
+- Current unified visible-pair roles include Scout, Swimmer, Black Belt, Tuber, and Psychic.
+- Other active visible-pair roles to keep in mind are Ace Trainer, Expert, Pokefan, Pokemon Ranger, and Rocket grunt-style Rocket Ace trainers.
 
 ## Habitat Buckets
 
 ### Forest And Field
 
-Likely classes: Bug Catcher, Bug Maniac, Scout M, Scout F, Pokemon Ranger M, Pokemon Ranger F, Aroma Lady, Pokemon Breeder.
+Likely classes: Bug Catcher, Bug Maniac, Scout, Pokemon Ranger M, Pokemon Ranger F, Aroma Lady, Pokemon Breeder.
 
 Team direction: bug, grass, poison, bird, small mammal, and forest-adjacent Pokemon. Tangrowth belongs here as an Apex encounter, not as a regular trainer Pokemon.
 
@@ -59,7 +62,7 @@ Team direction: rock, ground, cave, ancient, fossil, sturdy, and unusual Pokemon
 
 ### Shore, Sea, And Water Routes
 
-Likely classes: Fisherman, Sailor, Swimmer M, Swimmer F, Tuber M, Tuber F, Triathlete M Water, Triathlete F Water.
+Likely classes: Fisherman, Sailor, Swimmer, Tuber, Triathlete M Water, Triathlete F Water.
 
 Team direction: water, shoreline, fishing, reef, swimmer, and coastal Pokemon. Land and water versions of classes should use the right overworld form.
 

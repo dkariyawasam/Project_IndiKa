@@ -11,6 +11,6 @@ SSAnne_1F_Room2_EventScript_Ann::
 	end
 
 SSAnne_1F_Room2_EventScript_Tyler::
-	trainerbattle_single TRAINER_SS_ANNE_RICH_BOY_TYLER, SSAnne_1F_Room2_Text_TylerIntro, SSAnne_1F_Room2_Text_TylerDefeat
+	trainerbattle_single TRAINER_TRENDSETTER_TYLER, SSAnne_1F_Room2_Text_TylerIntro, SSAnne_1F_Room2_Text_TylerDefeat
 	msgbox SSAnne_1F_Room2_Text_TylerPostBattle, MSGBOX_AUTOCLOSE
 	end

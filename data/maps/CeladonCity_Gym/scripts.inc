@@ -207,24 +207,19 @@ CeladonCity_Gym_EventScript_Tina::
 	end
 
 CeladonCity_Gym_EventScript_Bridget::
-	trainerbattle_single TRAINER_BEAUTY_BRIDGET, CeladonCity_Gym_Text_BridgetIntro, CeladonCity_Gym_Text_BridgetDefeat
+	trainerbattle_single TRAINER_TRENDSETTERS_BRI_REMI, CeladonCity_Gym_Text_BridgetIntro, CeladonCity_Gym_Text_BridgetDefeat
 	msgbox CeladonCity_Gym_Text_BridgetPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 CeladonCity_Gym_EventScript_Tamia::
-	trainerbattle_single TRAINER_BEAUTY_TAMIA, CeladonCity_Gym_Text_TamiaIntro, CeladonCity_Gym_Text_TamiaDefeat
+	trainerbattle_single TRAINER_TRENDSETTERS_TAMIA_LEO, CeladonCity_Gym_Text_TamiaIntro, CeladonCity_Gym_Text_TamiaDefeat
 	apexlog APEX_LOG_PERSON_ERIKA, 3
 	msgbox CeladonCity_Gym_Text_TamiaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 CeladonCity_Gym_EventScript_Lori::
-	trainerbattle_single TRAINER_BEAUTY_LORI, CeladonCity_Gym_Text_LoriIntro, CeladonCity_Gym_Text_LoriDefeat
+	trainerbattle_single TRAINER_TRENDSETTER_LORI, CeladonCity_Gym_Text_LoriIntro, CeladonCity_Gym_Text_LoriDefeat
 	msgbox CeladonCity_Gym_Text_LoriPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-CeladonCity_Gym_EventScript_Mary::
-	trainerbattle_single TRAINER_ACE_TRAINER_MARY, CeladonCity_Gym_Text_MaryIntro, CeladonCity_Gym_Text_MaryDefeat
-	msgbox CeladonCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 CeladonCity_Gym_EventScript_GymStatue::
