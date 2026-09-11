@@ -771,12 +771,12 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
   - Lucian on Route 6.
 - Added bespoke VS Seeker rematches and local dialogue for Preston and Lucian.
 - Replaced active Tamer usage with more fitting Expedition-era classes:
-  - Phil, Edgar, and Jason are now Ninja Boys for Koga/Fuchsia Gym context.
+  - Phil, Edgar, and Jason are now Ninjas for Koga/Fuchsia Gym context.
   - Vincent is now fully named and rematched as a Ruin Maniac for Victory Road.
 - Retired remaining Tamer facility/UI fallback paths by remapping them to Gentleman while keeping the old numeric slots reserved for engine-table stability.
 - Repointed the retired Tamer trainer-pic, palette, and animation table entries to Gentleman assets so the old Tamer art is no longer code-reachable.
-- Replaced Silph Co 5F's lone Juggler presentation with Scientist Dalton while preserving his psychic-leaning party.
-- Renamed Victory Road Nelson and Gregory's legacy Juggler constants and party labels to Ace Trainer names to match their active class and overworld/front-sprite presentation.
+- Replaced Silph Co 5F's lone performer-style presentation with Scientist Dalton while preserving his psychic-leaning party.
+- Renamed Victory Road Nelson and Gregory's legacy performer constants and party labels to Ace Trainer names to match their active class and overworld/front-sprite presentation.
 - Rebalanced Scout representation by converting Route 5's Mae to Scout M Max and Route 11's Remi to Scout M Remy.
 - Collapsed active RS Tuber trainer classes into the regular Tuber class while preserving the gendered Tuber F/M trainer pics.
 - Unified active Scout, Swimmer, and Black Belt trainer classes into role-based class constants while preserving gendered battle/front and overworld sprites.
@@ -867,7 +867,7 @@ This is a living summary of the work done across the Codex Pokemon modding sessi
 - Collapsed active RS Psychic trainers into the standard Psychic class while preserving the existing Psychic M front sprite presentation.
 - Documented the trainer class rule that similar gender variants should generally share one semantic trainer class, with visible differences handled by battle/front and overworld sprites.
 - Balanced mirror class counts by converting two Cycling Road Lasses into Youngsters, adding Youngster Nico to Route 17, and adding Beauty Claire to Route 15, bringing Youngster/Lass to 7/7 and Gentleman/Beauty to 5/5.
-- Removed the stale Ace Trainer Mary battle hook from Celadon Gym and shortened the displayed Ninja Boy class name to Ninja.
+- Removed the stale Ace Trainer Mary battle hook from Celadon Gym and shortened the displayed Ninja class name to Ninja.
 - Cleaned up the trainer habitat audit so it now reports no hard violations, no deprecated classes, no VS Seeker gaps, and no habitat warnings:
   - Removed stale Mt. Moon and Rock Tunnel local trainer scripts/text for no-longer-placed trainers.
   - Restored Mt. Moon Kent and Robby to Bug Catcher presentation.

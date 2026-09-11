@@ -1,13 +1,18 @@
 {
   "summary": {
     "maps_scanned": 253,
-    "trainer_object_events": 301,
-    "matched": 301
+    "trainer_object_events": 331,
+    "matched": 331
   },
   "mismatches": [],
   "skipped_multi_trainer_scripts": [],
   "skipped_dynamic_graphics": [],
   "aliases": {
+    "ACES": [
+      "ACES",
+      "ACE_TRAINER_F",
+      "ACE_TRAINER_M"
+    ],
     "ARCHER": [
       "ARCHER",
       "ROCKET_ARCHER"
@@ -32,11 +37,6 @@
       "BREEDER",
       "PKMN_BREEDER",
       "POKEMON_BREEDER"
-    ],
-    "COOL_COUPLE": [
-      "ACE_TRAINER_F",
-      "ACE_TRAINER_M",
-      "COOL_COUPLE"
     ],
     "CRUSH_GIRL": [
       "BLACK_BELT_F",
@@ -243,6 +243,11 @@
       "ROCKET_M",
       "TEAM_ROCKET_M"
     ],
+    "TRENDSETTERS": [
+      "TRENDSETTERS",
+      "TRENDSETTER_F",
+      "TRENDSETTER_M"
+    ],
     "TRIATHLETE_F_WATER": [
       "TRIATHLETE_F",
       "TRIATHLETE_F_WATER"
@@ -280,11 +285,6 @@
       "TUBER_M",
       "TUBER_M_LAND",
       "TUBER_M_WATER"
-    ],
-    "YOUNG_COUPLE": [
-      "BEAUTY",
-      "RICH_BOY",
-      "YOUNG_COUPLE"
     ]
   }
 }

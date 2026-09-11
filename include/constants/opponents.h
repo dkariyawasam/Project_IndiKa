@@ -2,7 +2,7 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #define TRAINER_NONE                               0
-#define TRAINER_JUGGLER_KAYDEN_2                   TRAINER_NONE
+#define TRAINER_NINJA_KAYDEN_2                   TRAINER_NONE
 // Dummy trainers for all the RS trainer classes
 #define TRAINER_VOLCANO_CAMPER_MASON            1
 #define TRAINER_VOLCANO_PICNICKER_LENA          2
@@ -19,8 +19,7 @@
 #define TRAINER_URBAN_CUE_BALL_WADE                TRAINER_RS_ACE_TRAINER_M
 #define TRAINER_RS_ACE_TRAINER_F                  10
 #define TRAINER_URBAN_BIKER_ORSON                  TRAINER_RS_ACE_TRAINER_F
-#define TRAINER_HEX_MANIAC                        11
-#define TRAINER_URBAN_CUE_BALL_VAUGHN              TRAINER_HEX_MANIAC
+#define TRAINER_URBAN_CUE_BALL_VAUGHN              11
 #define TRAINER_RS_LADY                           12
 #define TRAINER_URBAN_LASS_MINA                    TRAINER_RS_LADY
 #define TRAINER_RS_BEAUTY                         13
@@ -35,30 +34,18 @@
 #define TRAINER_MANSION_BURGLAR_PIKE              TRAINER_RS_BLACK_BELT
 #define TRAINER_GUITARIST                         18
 #define TRAINER_MANSION_SCIENTIST_NILES           TRAINER_GUITARIST
-#define TRAINER_KINDLER                           19
 #define TRAINER_MANSION_SCIENTIST_MIRA            20
-#define TRAINER_BUG_MANIAC                        21
 #define TRAINER_RS_PSYCHIC_M                      22
 #define TRAINER_MANSION_BURGLAR_FLINT             TRAINER_RS_PSYCHIC_M
 #define TRAINER_RS_PSYCHIC_F                      23
 #define TRAINER_MANSION_BURGLAR_KNOX              TRAINER_RS_PSYCHIC_F
 #define TRAINER_RS_GENTLEMAN                      24
 #define TRAINER_MANSION_SCIENTIST_LENOX           TRAINER_RS_GENTLEMAN
-#define TRAINER_ELITE_FOUR_SIDNEY                 25
-#define TRAINER_ELITE_FOUR_PHOEBE                 26
-#define TRAINER_LEADER_ROXANNE                    27
-#define TRAINER_LEADER_BRAWLY                     28
-#define TRAINER_LEADER_TATE_LIZA                  29
-#define TRAINER_SCHOOL_KID_M                      30
-#define TRAINER_MANSION_BURGLAR_EGAN              TRAINER_SCHOOL_KID_M
-#define TRAINER_SCHOOL_KID_F                      31
-#define TRAINER_MANSION_SCIENTIST_ORIN            TRAINER_SCHOOL_KID_F
-#define TRAINER_SR_AND_JR                         32
-#define TRAINER_POKEFAN_M                         33
-#define TRAINER_POKEFAN_F                         34
-#define TRAINER_EXPERT_M                          35
-#define TRAINER_EXPERT_F                          36
-#define TRAINER_RS_YOUNGSTER                      37
+#define TRAINER_MANSION_BURGLAR_EGAN              30
+#define TRAINER_MANSION_SCIENTIST_ORIN            31
+#define TRAINER_EXPERT_MARA                         32
+#define TRAINER_EXPERT_HUGO                          35
+#define TRAINER_EXPERT_IVO                          36
 #define TRAINER_RS_CHAMPION                       38
 #define TRAINER_RS_FISHERMAN                      39
 #define TRAINER_TRIATHLETE_M_CYCLING              40
@@ -75,7 +62,7 @@
 #define TRAINER_SWIMMING_TRIATHLETE_F             TRAINER_TRIATHLETE_F_WATER
 #define TRAINER_DRAGON_TAMER                      46
 #define TRAINER_RS_BIRD_KEEPER                    47
-#define TRAINER_NINJA_BOY                         48
+#define TRAINER_NINJA                         48
 #define TRAINER_BATTLE_GIRL                       49
 #define TRAINER_PARASOL_LADY                      50
 #define TRAINER_RS_SWIMMER_F                      51
@@ -83,7 +70,9 @@
 #define TRAINER_ROUTE17_YOUNGSTER_NICO            TRAINER_PKMN_TRAINER_UNUSED_52
 #define TRAINER_RS_TWINS                          53
 #define TRAINER_RS_SAILOR                         54
-#define TRAINER_UNUSED_57                         57
+#define TRAINER_YOUNGSTER_MIA                     55
+#define TRAINER_YOUNGSTER_ELLA                    56
+#define TRAINER_YOUNGSTER_RUBY                    57
 #define TRAINER_WALLY                             58
 #define TRAINER_VOLCANO_HIKER_NOLAN               59
 #define TRAINER_VOLCANO_BLACK_BELT_REN            60
@@ -95,14 +84,14 @@
 #define TRAINER_RS_PKMN_BREEDER_F                 66
 #define TRAINER_RS_PKMN_RANGER_M                  67
 #define TRAINER_RS_PKMN_RANGER_F                  68
-#define TRAINER_UNDERGROUND_JUGGLER_SOL        69
+#define TRAINER_UNDERGROUND_POKEFAN_SOL      69
 #define TRAINER_WATERS_EDGE_ROUTE10_TUBER_MIKA 70
 #define TRAINER_WATERS_EDGE_ROUTE10_FISHERMAN_PIERCE 71
 #define TRAINER_RS_LASS                           72
 #define TRAINER_RS_BUG_CATCHER                    73
 #define TRAINER_RS_HIKER                          74
 #define TRAINER_RS_YOUNG_COUPLE                   75
-#define TRAINER_OLD_COUPLE                        76
+#define TRAINER_UNUSED_76                        76
 #define TRAINER_RS_SIS_AND_BRO                    77
 #define TRAINER_WATERS_EDGE_ROUTE10_SWIMMER_NOLA 78
 #define TRAINER_WATERS_EDGE_ROUTE10_SAILOR_ARLEN 79
@@ -117,19 +106,18 @@
 #define TRAINER_ELITE_FOUR_DRAKE                  88
 // Actual FRLG trainers start here
 #define TRAINER_YOUNGSTER_BEN                     89
-#define TRAINER_JUGGLER_SHAWN_2                    TRAINER_JUGGLER_EDWARD
+#define TRAINER_NINJA_SHAWN_2                    TRAINER_NINJA_EDWARD
 #define TRAINER_YOUNGSTER_CALVIN                  90
-#define TRAINER_JUGGLER_KIRK_2                     TRAINER_YOUNGSTER_CALVIN
+#define TRAINER_NINJA_KIRK_2                     TRAINER_YOUNGSTER_CALVIN
 #define TRAINER_YOUNGSTER_JOSH                    91
 #define TRAINER_YOUNGSTER_TIMMY                   92
-#define TRAINER_NINJA_BOY_EDGAR_2                  TRAINER_BIRD_KEEPER_BECK
+#define TRAINER_NINJA_EDGAR_2                  TRAINER_BIRD_KEEPER_BECK
 #define TRAINER_YOUNGSTER_JOEY                    93
 #define TRAINER_YOUNGSTER_JOEY_2                   TRAINER_YOUNGSTER_JOEY
 #define TRAINER_TUBER_DAN                     94
 #define TRAINER_YOUNGSTER_CHAD                    95
 #define TRAINER_BUG_CATCHER_ROBBY_2                TRAINER_YOUNGSTER_CHAD
-#define TRAINER_YOUNGSTER_TYLER                   96
-#define TRAINER_SS_ANNE_RICH_BOY_TYLER            TRAINER_YOUNGSTER_TYLER
+#define TRAINER_TRENDSETTER_TYLER                   96
 #define TRAINER_YOUNGSTER_EDDIE                   97
 #define TRAINER_SUPER_NERD_JOVAN_2                 TRAINER_YOUNGSTER_EDDIE
 #define TRAINER_YOUNGSTER_DILLON                  98
@@ -145,21 +133,21 @@
 #define TRAINER_BUG_CATCHER_SAMMY                104
 #define TRAINER_BUG_CATCHER_COLTON               105
 #define TRAINER_BURGLAR_SIMON_2                    TRAINER_BUG_CATCHER_COLTON
-#define TRAINER_UNDERGROUND_POKEFAN_ALTON          TRAINER_BUG_CATCHER_COLTON
+#define TRAINER_UNDERGROUND_POKEFAN_ALTON          TRAINER_BUG_CATCHER_COLTON_2
 #define TRAINER_BUG_CATCHER_GREG                 106
 #define TRAINER_SCIENTIST_BRAYDON_2                TRAINER_BUG_CATCHER_GREG
 #define TRAINER_BUG_CATCHER_JAMES                107
 #define TRAINER_SCIENTIST_IVAN_2                   TRAINER_BUG_CATCHER_JAMES
-#define TRAINER_UNDERGROUND_POKEFAN_MIRA           TRAINER_BUG_CATCHER_JAMES
+#define TRAINER_UNDERGROUND_POKEFAN_MIRA           TRAINER_BUG_CATCHER_COLTON_3
 #define TRAINER_BUG_CATCHER_KENT                 108
 #define TRAINER_BUG_CATCHER_ROBBY                109
 #define TRAINER_BUG_CATCHER_CALE                 110
 #define TRAINER_CHANNELER_PATRICIA_2               TRAINER_BUG_CATCHER_CALE
 #define TRAINER_BUG_CATCHER_KEIGO                111
-#define TRAINER_UNDERGROUND_POKEMANIAC_NOLAN       TRAINER_BUG_CATCHER_KEIGO
+#define TRAINER_UNDERGROUND_POKEMANIAC_NOLAN       TRAINER_BUG_CATCHER_COLTON_4
 #define TRAINER_BUG_CATCHER_ELIJAH               112
 #define TRAINER_CHANNELER_HOPE_2                   TRAINER_BUG_CATCHER_ELIJAH
-#define TRAINER_UNDERGROUND_SUPER_NERD_VANCE       TRAINER_BUG_CATCHER_ELIJAH
+#define TRAINER_UNDERGROUND_SUPER_NERD_VANCE       TRAINER_TEAM_ROCKET_GRUNT_20
 #define TRAINER_BUG_CATCHER_OWEN                 113
 #define TRAINER_CAMPER_LIAM_2 TRAINER_BUG_CATCHER_OWEN
 #define TRAINER_CHANNELER_LAUREL_2                 TRAINER_CAMPER_LIAM_2
@@ -187,8 +175,7 @@
 #define TRAINER_HIKER_OLIVER_2                     TRAINER_LASS_HALEY
 #define TRAINER_LASS_ANN                         126
 #define TRAINER_SS_ANNE_LADY_ANN                 TRAINER_LASS_ANN
-#define TRAINER_LASS_DAWN                        127
-#define TRAINER_SS_ANNE_BEAUTY_DAWN              TRAINER_LASS_DAWN
+#define TRAINER_TRENDSETTER_DAWN                        127
 #define TRAINER_LASS_PAIGE                       128
 #define TRAINER_HIKER_LENNY_2                      TRAINER_LASS_PAIGE
 #define TRAINER_LASS_ANDREA                      129
@@ -260,7 +247,7 @@
 #define TRAINER_BLACK_BELT_AARON_2                 TRAINER_SUPER_NERD_GLENN
 #define TRAINER_SUPER_NERD_LESLIE                173
 #define TRAINER_BLACK_BELT_MIKE_2                  TRAINER_SUPER_NERD_LESLIE
-#define TRAINER_UNDERGROUND_SUPER_NERD_LESLIE      TRAINER_SUPER_NERD_LESLIE
+#define TRAINER_UNDERGROUND_SUPER_NERD_LESLIE      TRAINER_SUPER_NERD_GLENN_2
 #define TRAINER_SUPER_NERD_MARVIN                174
 #define TRAINER_LASS_ANN_2 TRAINER_SUPER_NERD_MARVIN
 #define TRAINER_SUPER_NERD_ELLIOT                175
@@ -307,7 +294,7 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_26_2             TRAINER_YOUNGSTER_CORDELL_2
 #define TRAINER_BIKER_HIDEO                      201
 #define TRAINER_SCIENTIST_RODNEY_2                 TRAINER_BIKER_HIDEO
-#define TRAINER_UNDERGROUND_POKEMANIAC_HIDEO       TRAINER_BIKER_HIDEO
+#define TRAINER_UNDERGROUND_POKEMANIAC_HIDEO       TRAINER_TEAM_ROCKET_GRUNT_21
 #define TRAINER_BIKER_RUBEN                      202
 #define TRAINER_TEAM_ROCKET_GRUNT_29_2             TRAINER_BIKER_RUBEN
 #define TRAINER_BIKER_BILLY                      203
@@ -343,8 +330,7 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_34_2             TRAINER_ENGINEER_BRAXTON
 #define TRAINER_ENGINEER_BERNIE                  222
 #define TRAINER_TEAM_ROCKET_GRUNT_35_2             TRAINER_ENGINEER_BERNIE
-#define TRAINER_FISHERMAN_DALE                   223
-#define TRAINER_SS_ANNE_RICH_BOY_DALE            TRAINER_FISHERMAN_DALE
+#define TRAINER_TRENDSETTER_DALE                   223
 #define TRAINER_FISHERMAN_BARNY                  224
 #define TRAINER_SS_ANNE_LADY_BLAIR               TRAINER_FISHERMAN_BARNY
 #define TRAINER_FISHERMAN_NED                    225
@@ -355,7 +341,7 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_36_2             TRAINER_FISHERMAN_HANK
 #define TRAINER_FISHERMAN_ELLIOT                 228
 #define TRAINER_SCIENTIST_PARKER_2                 TRAINER_FISHERMAN_ELLIOT
-#define TRAINER_UNDERGROUND_GAMER_ELLIOT           TRAINER_FISHERMAN_ELLIOT
+#define TRAINER_UNDERGROUND_POKEFAN_ELLIOT         TRAINER_FISHERMAN_ELLIOT_2
 #define TRAINER_FISHERMAN_RONALD                 229
 #define TRAINER_SCIENTIST_ED_2                     TRAINER_FISHERMAN_RONALD
 #define TRAINER_FISHERMAN_CLAUDE                 230
@@ -387,7 +373,7 @@
 #define TRAINER_SWIMMER_MALE_DEAN                243
 #define TRAINER_ACE_TRAINER_CAROLINE_2             TRAINER_SWIMMER_MALE_DEAN
 #define TRAINER_SWIMMER_MALE_DARRIN              244
-#define TRAINER_COOL_COUPLE_RAY_TYRA_2             TRAINER_SWIMMER_MALE_DARRIN
+#define TRAINER_ACES_RAY_TYRA_2             TRAINER_SWIMMER_MALE_DARRIN
 #define TRAINER_SWIMMER_MALE_SPENCER             245
 #define TRAINER_BLACK_BELT_TAKASHI_2               TRAINER_SWIMMER_MALE_SPENCER
 #define TRAINER_SWIMMER_MALE_JACK                246
@@ -414,20 +400,20 @@
 #define TRAINER_CUE_BALL_CHASE                   257
 #define TRAINER_CAMPER_MARCO_2 TRAINER_CUE_BALL_CHASE
 #define TRAINER_BUG_CATCHER_CHARLIE_2              TRAINER_CAMPER_MARCO_2
-#define TRAINER_GAMER_HUGO                       258
-#define TRAINER_UNDERGROUND_GAMER_HUGO             TRAINER_GAMER_HUGO
-#define TRAINER_GAMER_JASPER                     259
-#define TRAINER_GAMER_DIRK                       260
-#define TRAINER_UNDERGROUND_POKEMANIAC_DIRK        TRAINER_GAMER_DIRK
-#define TRAINER_GAMER_DARIAN                     261
-#define TRAINER_GAMER_STAN                       262
-#define TRAINER_GAMER_RANDALL                    263
-#define TRAINER_TUBER_NOAH_2 TRAINER_GAMER_RANDALL
-#define TRAINER_GAMER_RICH                       264
-#define TRAINER_UNDERGROUND_JUGGLER_RICH           TRAINER_GAMER_RICH
-#define TRAINER_BEAUTY_BRIDGET                   265
-#define TRAINER_BEAUTY_TAMIA                     266
-#define TRAINER_BEAUTY_LORI                      267
+#define TRAINER_GAMBLER_HUGO                       258
+#define TRAINER_UNDERGROUND_POKEFAN_HUGO           TRAINER_GAMBLER_RANDALL
+#define TRAINER_GAMBLER_JASPER                     259
+#define TRAINER_GAMBLER_DIRK                       260
+#define TRAINER_UNDERGROUND_POKEMANIAC_DIRK        TRAINER_GAMBLER_DARIAN_2
+#define TRAINER_GAMBLER_DARIAN                     261
+#define TRAINER_GAMBLER_STAN                       262
+#define TRAINER_GAMBLER_RANDALL                    263
+#define TRAINER_TUBER_NOAH_2 TRAINER_GAMBLER_RANDALL
+#define TRAINER_GAMBLER_RICH                       264
+#define TRAINER_UNDERGROUND_POKEFAN_RICH         TRAINER_GAMBLER_RICH_2
+#define TRAINER_TRENDSETTERS_BRI_REMI                   265
+#define TRAINER_TRENDSETTERS_TAMIA_LEO                     266
+#define TRAINER_TRENDSETTER_LORI                      267
 #define TRAINER_BEAUTY_LOLA                      268
 #define TRAINER_BEAUTY_SHEILA                    269
 #define TRAINER_SWIMMER_FEMALE_TIFFANY           270
@@ -452,15 +438,15 @@
 #define TRAINER_POWER_PLANT_ELECTRICIAN_LUCA     TRAINER_ELECTRICIAN_LUCA
 #define TRAINER_SCIENTIST_DALTON                 286
 #define TRAINER_ACE_TRAINER_NELSON               287
-#define TRAINER_JUGGLER_KIRK                     288
-#define TRAINER_JUGGLER_SHAWN                    289
+#define TRAINER_NINJA_KIRK                     288
+#define TRAINER_NINJA_SHAWN                    289
 #define TRAINER_ACE_TRAINER_GREGORY              290
-#define TRAINER_JUGGLER_EDWARD                   291
-#define TRAINER_JUGGLER_KAYDEN                   292
-#define TRAINER_JUGGLER_NATE                     293
-#define TRAINER_NINJA_BOY_PHIL                  294
-#define TRAINER_NINJA_BOY_EDGAR                 295
-#define TRAINER_NINJA_BOY_JASON                 296
+#define TRAINER_NINJA_EDWARD                   291
+#define TRAINER_NINJA_KAYDEN                   292
+#define TRAINER_NINJA_NATE                     293
+#define TRAINER_NINJA_PHIL                  294
+#define TRAINER_NINJA_EDGAR                 295
+#define TRAINER_NINJA_JASON                 296
 #define TRAINER_ROUTE20_SAILOR_MARINER           297
 #define TRAINER_RUIN_MANIAC_VINCENT              298
 #define TRAINER_TRIATHLETE_MILES_2               299
@@ -684,11 +670,11 @@
 #define TRAINER_GENTLEMAN_BROOKS                 488
 #define TRAINER_GENTLEMAN_LAMAR                  489
 #define TRAINER_TWINS_ELI_ANNE                   490
-#define TRAINER_COOL_COUPLE_RAY_TYRA             491
+#define TRAINER_ACES_RAY_TYRA             491
 #define TRAINER_YOUNG_COUPLE_GIA_JES             492
 #define TRAINER_TWINS_KIRI_JAN                   493
 #define TRAINER_CRUSH_KIN_RON_MYA                494
-#define TRAINER_YOUNG_COUPLE_LEA_JED             495
+#define TRAINER_TRENDSETTERS_LEA_JED             495
 #define TRAINER_SIS_AND_BRO_LIA_LUC              496
 #define TRAINER_SIS_AND_BRO_LIL_IAN              497
 #define TRAINER_BUG_CATCHER_3                    498
@@ -739,7 +725,7 @@
 #define TRAINER_TWINS_ELI_ANNE_2                 539
 #define TRAINER_CAMPER_JOHNSON                   540
 #define TRAINER_BIKER_RICARDO                    541
-#define TRAINER_UNDERGROUND_POKEMANIAC_RICARDO     TRAINER_BIKER_RICARDO
+#define TRAINER_UNDERGROUND_POKEMANIAC_RICARDO     TRAINER_TEAM_ROCKET_GRUNT_22
 #define TRAINER_BIKER_JAREN                      542
 #define TRAINER_TEAM_ROCKET_GRUNT_43             543
 #define TRAINER_TEAM_ROCKET_GRUNT_44             544
@@ -766,8 +752,8 @@
 #define TRAINER_TUBER_ALEXIS                     565
 #define TRAINER_TWINS_JOY_MEG                    566
 #define TRAINER_SWIMMER_FEMALE_TISHA             567
-#define TRAINER_PAINTER_CELINA                   568
-#define TRAINER_PAINTER_RAYNA                    569
+#define TRAINER_ROUTE14_TRIATHLETE_LOLA_BASE     568
+#define TRAINER_ROUTE14_SCOUT_DESTIN_BASE        569
 #define TRAINER_LADY_GILLIAN                     570
 #define TRAINER_CAMPER_DESTIN                    571
 #define TRAINER_SWIMMER_MALE_TOBY                572
@@ -791,11 +777,11 @@
 #define TRAINER_HIKER_DARYL                      590
 #define TRAINER_BUG_CATCHER_ELIJAH_2 TRAINER_HIKER_DARYL
 #define TRAINER_POKEMANIAC_HECTOR                591
-#define TRAINER_GAMER_HUGO_2 TRAINER_POKEMANIAC_HECTOR
+#define TRAINER_GAMBLER_HUGO_2 TRAINER_POKEMANIAC_HECTOR
 #define TRAINER_PSYCHIC_DARIO                    592
 #define TRAINER_PSYCHIC_RODETTE                  593
 #define TRAINER_AROMA_LADY_MIAH                  594
-#define TRAINER_GAMER_DIRK_2 TRAINER_AROMA_LADY_MIAH
+#define TRAINER_GAMBLER_DIRK_2 TRAINER_AROMA_LADY_MIAH
 #define TRAINER_YOUNG_COUPLE_EVE_JON             595
 #define TRAINER_PSYCHIC_LUCIAN                   596
 #define TRAINER_CRUSH_GIRL_CYNDY                 597
@@ -808,7 +794,7 @@
 #define TRAINER_PKMN_RANGER_KATELYN              604
 #define TRAINER_ACE_TRAINER_LEROY                605
 #define TRAINER_ACE_TRAINER_MICHELLE             606
-#define TRAINER_COOL_COUPLE_LEX_NYA              607
+#define TRAINER_ACES_LEX_NYA              607
 #define TRAINER_RUIN_MANIAC_BRANDON              608
 #define TRAINER_RUIN_MANIAC_BENJAMIN             609
 #define TRAINER_PKMN_BREEDER_WREN                610
@@ -843,7 +829,7 @@
 #define TRAINER_YOUNGSTER_YASU_2                 639
 #define TRAINER_YOUNGSTER_YASU_3                 640
 #define TRAINER_ENGINEER_BERNIE_2                641
-#define TRAINER_GAMER_DARIAN_2                   642
+#define TRAINER_GAMBLER_DARIAN_2                   642
 #define TRAINER_CAMPER_CHRIS_2                   643
 #define TRAINER_CAMPER_CHRIS_3                   644
 #define TRAINER_CAMPER_CHRIS_4                   645
@@ -858,7 +844,7 @@
 #define TRAINER_LASS_MEGAN_2                     654
 #define TRAINER_LASS_MEGAN_3                     655
 #define TRAINER_SUPER_NERD_GLENN_2               656
-#define TRAINER_GAMER_RICH_2                     657
+#define TRAINER_GAMBLER_RICH_2                     657
 #define TRAINER_BIKER_JAREN_2                    658
 #define TRAINER_FISHERMAN_ELLIOT_2               659
 #define TRAINER_ELECTRICIAN_LUCA_2                    660
@@ -873,8 +859,7 @@
 #define TRAINER_BIRD_KEEPER_BENNY_3              669
 #define TRAINER_BIRD_KEEPER_MARLON_2             670
 #define TRAINER_BIRD_KEEPER_MARLON_3             671
-#define TRAINER_BEAUTY_GRACE_2                   672
-#define TRAINER_ROUTE15_BEAUTY_CLAIRE            TRAINER_BEAUTY_GRACE_2
+#define TRAINER_TRENDSETTER_CLAIRE                   672
 #define TRAINER_BIRD_KEEPER_CHESTER_2            673
 #define TRAINER_BIRD_KEEPER_CHESTER_3            674
 #define TRAINER_PICNICKER_BECKY_2                675
@@ -911,7 +896,6 @@
 #define TRAINER_CRUSH_KIN_MIK_KIA_3              706
 #define TRAINER_TUBER_AMIRA_2                    707
 #define TRAINER_TWINS_JOY_MEG_2                  708
-#define TRAINER_PAINTER_RAYNA_2                  709
 #define TRAINER_YOUNGSTER_DESTIN_2               710
 #define TRAINER_PKMN_BREEDER_ALIZE_2             711
 #define TRAINER_YOUNG_COUPLE_GIA_JES_2           712
@@ -939,7 +923,7 @@
 #define TRAINER_BLACK_BELT_BRENT                 731
 #define TRAINER_ACE_TRAINER_LEROY_2              732
 #define TRAINER_ACE_TRAINER_MICHELLE_2           733
-#define TRAINER_COOL_COUPLE_LEX_NYA_2            734
+#define TRAINER_ACES_LEX_NYA_2            734
 #define TRAINER_BUG_CATCHER_COLTON_2             735
 #define TRAINER_BUG_CATCHER_COLTON_3             736
 #define TRAINER_BUG_CATCHER_COLTON_4             737
@@ -986,8 +970,8 @@
 #define TRAINER_ROCKET_ACE_SABLE                 778
 #define TRAINER_ROCKET_ACE_JET                   779
 #define TRAINER_ROCKET_ACE_VIPER                 780
-#define TRAINER_ROUTE14_TRIATHLETE_LOLA          TRAINER_PAINTER_CELINA
-#define TRAINER_ROUTE14_SCOUT_DESTIN             TRAINER_PAINTER_RAYNA
+#define TRAINER_ROUTE14_TRIATHLETE_LOLA          TRAINER_ROUTE14_TRIATHLETE_LOLA_BASE
+#define TRAINER_ROUTE14_SCOUT_DESTIN             TRAINER_ROUTE14_SCOUT_DESTIN_BASE
 #define TRAINER_ROUTE14_HIKER_BRICE              TRAINER_LADY_GILLIAN
 #define TRAINER_ROUTE14_TRIATHLETE_IRENE         TRAINER_SWIMMER_MALE_TOBY
 #define TRAINER_ROUTE15_SCOUT_CORDELL            TRAINER_TEAM_ROCKET_GRUNT_49
@@ -1102,7 +1086,23 @@
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             784
+#define TRAINER_TRENDSETTER_ELIO                  784
+
+#define TRAINER_SWIM_SIBS_NIA_FINN               6
+#define TRAINER_ACES_EVAN_ZOE                    19
+#define TRAINER_ACES_KAI_TESS                    709
+
+#define TRAINER_ELECTRICIAN_OTIS                  21
+#define TRAINER_ELECTRICIAN_WADE                  25
+#define TRAINER_KINDLER_FLINT                     26
+#define TRAINER_KINDLER_EMBER                     27
+#define TRAINER_ACE_TRAINER_NORA                  28
+#define TRAINER_ACE_TRAINER_VERA                  29
+#define TRAINER_ACE_TRAINER_LENA                  33
+#define TRAINER_ACE_TRAINER_IRIS                  34
+#define TRAINER_ACE_TRAINER_THEA                  37
+
+#define NUM_TRAINERS                             785
 #define MAX_TRAINERS_COUNT                       785
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

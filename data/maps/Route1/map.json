@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_M",
       "x": 6,
       "y": 8,
       "elevation": 3,
@@ -70,7 +70,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_F",
       "x": 13,
       "y": 8,
       "elevation": 3,

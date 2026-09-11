@@ -89,3 +89,39 @@ Route20_EventScript_SailToFuchsiaShore::
 Route20_EventScript_CancelSail::
 	release
 	end
+
+Route20_EventScript_NiaFinnNia::
+	trainerbattle_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_NiaFinnNiaRematch
+	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_EventScript_NiaFinnNiaRematch::
+	trainerbattle_rematch_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
+	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_EventScript_NiaFinnFinn::
+	trainerbattle_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_NiaFinnFinnRematch
+	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_EventScript_NiaFinnFinnRematch::
+	trainerbattle_rematch_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
+	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route20_Text_NiaFinnIntro::
+	.string "We practice swimming together.\nNow we are practicing battles!$"
+
+Route20_Text_NiaFinnDefeat::
+	.string "You make a great team!$"
+
+Route20_Text_NiaFinnPostBattle::
+	.string "Keeping pace is easy in water.\nBattling together takes work!$"
+
+Route20_Text_NiaFinnNotEnoughMons::
+	.string "Bring two ready POKéMON\nso we can battle as a pair!$"

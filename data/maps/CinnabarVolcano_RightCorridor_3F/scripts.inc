@@ -235,3 +235,24 @@ CinnabarVolcano_RightCorridor_3F_Movement_JanineApproachPlayer::
 	walk_left
 	walk_in_place_faster_left
 	step_end
+
+CinnabarVolcano_RightCorridor_3F_EventScript_KindlerEmber::
+	trainerbattle_single TRAINER_KINDLER_EMBER, CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberIntro, CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CinnabarVolcano_RightCorridor_3F_EventScript_KindlerEmberRematch
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_RightCorridor_3F_EventScript_KindlerEmberRematch::
+	trainerbattle_rematch TRAINER_KINDLER_EMBER, CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberIntro, CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberDefeat
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberIntro::
+	.string "We train where the embers glow.\nLet us light up this battle!$"
+
+CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberDefeat::
+	.string "You cooled us down!$"
+
+CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberPostBattle::
+	.string "A small spark can grow strong.\nSo can a patient trainer.$"

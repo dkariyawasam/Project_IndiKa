@@ -386,7 +386,7 @@ void ChooseNextBattleTowerTrainer(void)
 
 static void SetBattleTowerTrainerGfxId(u8 trainerClass)
 {
-    VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_YOUNGSTER);
+    VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_YOUNGSTER_M);
 }
 
 void SetEReaderTrainerGfxId(void)

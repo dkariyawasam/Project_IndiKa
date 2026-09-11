@@ -60,7 +60,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_M",
       "x": 14,
       "y": 6,
       "elevation": 3,

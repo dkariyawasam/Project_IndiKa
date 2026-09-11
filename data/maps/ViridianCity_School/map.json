@@ -33,7 +33,7 @@
     {
       "local_id": "LOCALID_SCHOOL_LASS",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_F",
       "x": 4,
       "y": 5,
       "elevation": 3,

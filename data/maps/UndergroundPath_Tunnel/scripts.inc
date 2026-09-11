@@ -78,52 +78,52 @@ UndergroundPath_Tunnel_EventScript_SuperNerdLeslieRematch::
 	msgbox UndergroundPath_Tunnel_Text_SuperNerdLesliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_GamerHugo::
-	trainerbattle_single TRAINER_UNDERGROUND_GAMER_HUGO, UndergroundPath_Tunnel_Text_GamerHugoIntro, UndergroundPath_Tunnel_Text_GamerHugoDefeat
+UndergroundPath_Tunnel_EventScript_PokefanHugo::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEFAN_HUGO, UndergroundPath_Tunnel_Text_PokefanHugoIntro, UndergroundPath_Tunnel_Text_PokefanHugoDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_GamerHugoRematch
-	msgbox UndergroundPath_Tunnel_Text_GamerHugoPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokefanHugoRematch
+	msgbox UndergroundPath_Tunnel_Text_PokefanHugoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_GamerHugoRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_GAMER_HUGO, UndergroundPath_Tunnel_Text_GamerHugoIntro, UndergroundPath_Tunnel_Text_GamerHugoDefeat
-	msgbox UndergroundPath_Tunnel_Text_GamerHugoPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokefanHugoRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEFAN_HUGO, UndergroundPath_Tunnel_Text_PokefanHugoIntro, UndergroundPath_Tunnel_Text_PokefanHugoDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokefanHugoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_GamerElliot::
-	trainerbattle_single TRAINER_UNDERGROUND_GAMER_ELLIOT, UndergroundPath_Tunnel_Text_GamerElliotIntro, UndergroundPath_Tunnel_Text_GamerElliotDefeat
+UndergroundPath_Tunnel_EventScript_PokefanElliot::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEFAN_ELLIOT, UndergroundPath_Tunnel_Text_PokefanElliotIntro, UndergroundPath_Tunnel_Text_PokefanElliotDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_GamerElliotRematch
-	msgbox UndergroundPath_Tunnel_Text_GamerElliotPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokefanElliotRematch
+	msgbox UndergroundPath_Tunnel_Text_PokefanElliotPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_GamerElliotRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_GAMER_ELLIOT, UndergroundPath_Tunnel_Text_GamerElliotIntro, UndergroundPath_Tunnel_Text_GamerElliotDefeat
-	msgbox UndergroundPath_Tunnel_Text_GamerElliotPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokefanElliotRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEFAN_ELLIOT, UndergroundPath_Tunnel_Text_PokefanElliotIntro, UndergroundPath_Tunnel_Text_PokefanElliotDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokefanElliotPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_JugglerRich::
-	trainerbattle_single TRAINER_UNDERGROUND_JUGGLER_RICH, UndergroundPath_Tunnel_Text_JugglerRichIntro, UndergroundPath_Tunnel_Text_JugglerRichDefeat
+UndergroundPath_Tunnel_EventScript_PokefanRich::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEFAN_RICH, UndergroundPath_Tunnel_Text_PokefanRichIntro, UndergroundPath_Tunnel_Text_PokefanRichDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_JugglerRichRematch
-	msgbox UndergroundPath_Tunnel_Text_JugglerRichPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokefanRichRematch
+	msgbox UndergroundPath_Tunnel_Text_PokefanRichPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_JugglerRichRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_JUGGLER_RICH, UndergroundPath_Tunnel_Text_JugglerRichIntro, UndergroundPath_Tunnel_Text_JugglerRichDefeat
-	msgbox UndergroundPath_Tunnel_Text_JugglerRichPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokefanRichRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEFAN_RICH, UndergroundPath_Tunnel_Text_PokefanRichIntro, UndergroundPath_Tunnel_Text_PokefanRichDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokefanRichPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_JugglerSol::
-	trainerbattle_single TRAINER_UNDERGROUND_JUGGLER_SOL, UndergroundPath_Tunnel_Text_JugglerSolIntro, UndergroundPath_Tunnel_Text_JugglerSolDefeat
+UndergroundPath_Tunnel_EventScript_PokefanSol::
+	trainerbattle_single TRAINER_UNDERGROUND_POKEFAN_SOL, UndergroundPath_Tunnel_Text_PokefanSolIntro, UndergroundPath_Tunnel_Text_PokefanSolDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_JugglerSolRematch
-	msgbox UndergroundPath_Tunnel_Text_JugglerSolPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, UndergroundPath_Tunnel_EventScript_PokefanSolRematch
+	msgbox UndergroundPath_Tunnel_Text_PokefanSolPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-UndergroundPath_Tunnel_EventScript_JugglerSolRematch::
-	trainerbattle_rematch TRAINER_UNDERGROUND_JUGGLER_SOL, UndergroundPath_Tunnel_Text_JugglerSolIntro, UndergroundPath_Tunnel_Text_JugglerSolDefeat
-	msgbox UndergroundPath_Tunnel_Text_JugglerSolPostBattle, MSGBOX_AUTOCLOSE
+UndergroundPath_Tunnel_EventScript_PokefanSolRematch::
+	trainerbattle_rematch TRAINER_UNDERGROUND_POKEFAN_SOL, UndergroundPath_Tunnel_Text_PokefanSolIntro, UndergroundPath_Tunnel_Text_PokefanSolDefeat
+	msgbox UndergroundPath_Tunnel_Text_PokefanSolPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 UndergroundPath_Tunnel_EventScript_PokemaniacDirk::
@@ -216,51 +216,54 @@ UndergroundPath_Tunnel_Text_SuperNerdLesliePostBattle:
 	.string "Every entrance feeds a different\n"
 	.string "flow of trainers underground.$"
 
-UndergroundPath_Tunnel_Text_GamerHugoIntro:
+UndergroundPath_Tunnel_Text_PokefanHugoIntro:
 	.string "Four exits, one tunnel.\n"
-	.string "Pick wrong and you walk farther.\p"
-	.string "Pick me and you battle!$"
+	.string "Every trainer brings a\n"
+	.string "different partner.\p"
+	.string "Show me yours!$"
 
-UndergroundPath_Tunnel_Text_GamerHugoDefeat:
-	.string "Bad call!$"
+UndergroundPath_Tunnel_Text_PokefanHugoDefeat:
+	.string "That team has spirit!$"
 
-UndergroundPath_Tunnel_Text_GamerHugoPostBattle:
-	.string "The best bets are made where\n"
-	.string "people are trying to pass quickly.$"
+UndergroundPath_Tunnel_Text_PokefanHugoPostBattle:
+	.string "I keep notes on the partners\n"
+	.string "people choose underground.$"
 
-UndergroundPath_Tunnel_Text_GamerElliotIntro:
-	.string "I wagered that trainers cutting\n"
-	.string "under SAFFRON would be strong.$"
+UndergroundPath_Tunnel_Text_PokefanElliotIntro:
+	.string "Rare teams pass under SAFFRON.\n"
+	.string "Let me see yours up close!$"
 
-UndergroundPath_Tunnel_Text_GamerElliotDefeat:
-	.string "That bet paid out for you!$"
+UndergroundPath_Tunnel_Text_PokefanElliotDefeat:
+	.string "That was worth the wait!$"
 
-UndergroundPath_Tunnel_Text_GamerElliotPostBattle:
-	.string "Routes above change with crowds.\n"
-	.string "The tunnel's odds feel steadier.$"
+UndergroundPath_Tunnel_Text_PokefanElliotPostBattle:
+	.string "Aboveground everyone hurries.\n"
+	.string "Down here, I can admire a\n"
+	.string "good team.$"
 
-UndergroundPath_Tunnel_Text_JugglerRichIntro:
-	.string "Balancing balls is easy.\n"
-	.string "Balancing four entrances is art!$"
+UndergroundPath_Tunnel_Text_PokefanRichIntro:
+	.string "I came for the shortcut and\n"
+	.string "stayed for the parade of\n"
+	.string "POKEMON!$"
 
-UndergroundPath_Tunnel_Text_JugglerRichDefeat:
-	.string "I lost the rhythm!$"
+UndergroundPath_Tunnel_Text_PokefanRichDefeat:
+	.string "Your POKEMON stole the show!$"
 
-UndergroundPath_Tunnel_Text_JugglerRichPostBattle:
-	.string "Every echo down here arrives a\n"
-	.string "moment after the throw.$"
+UndergroundPath_Tunnel_Text_PokefanRichPostBattle:
+	.string "Every entrance brings another\n"
+	.string "team to admire.$"
 
-UndergroundPath_Tunnel_Text_JugglerSolIntro:
-	.string "The tunnel bends attention.\n"
-	.string "Look one way, miss another!\p"
-	.string "Can you track my tricks?$"
+UndergroundPath_Tunnel_Text_PokefanSolIntro:
+	.string "Every echo down here sounds\n"
+	.string "like another POKEMON cry.\p"
+	.string "Battle me before I guess wrong!$"
 
-UndergroundPath_Tunnel_Text_JugglerSolDefeat:
-	.string "You tracked them all!$"
+UndergroundPath_Tunnel_Text_PokefanSolDefeat:
+	.string "I heard that loud and clear!$"
 
-UndergroundPath_Tunnel_Text_JugglerSolPostBattle:
-	.string "Underground, even a simple toss\n"
-	.string "feels like stage magic.$"
+UndergroundPath_Tunnel_Text_PokefanSolPostBattle:
+	.string "The tunnel makes every team\n"
+	.string "feel a little mysterious.$"
 
 UndergroundPath_Tunnel_Text_PokemaniacDirkIntro:
 	.string "Rare {PKMN} rumors travel faster\n"

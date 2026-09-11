@@ -457,7 +457,7 @@ void AnimatePcTurnOff()
 
 void SpawnCameraObject(void)
 {
-    u8 objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER, 8, LOCALID_CAMERA, gSaveBlock1Ptr->pos.x + MAP_OFFSET, gSaveBlock1Ptr->pos.y + MAP_OFFSET, 3);
+    u8 objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER_M, 8, LOCALID_CAMERA, gSaveBlock1Ptr->pos.x + MAP_OFFSET, gSaveBlock1Ptr->pos.y + MAP_OFFSET, 3);
     gObjectEvents[objectEventId].invisible = TRUE;
     CameraObjectSetFollowedObjectId(gObjectEvents[objectEventId].spriteId);
 }
@@ -478,7 +478,7 @@ void SetFlashbackCameraToCoords(void)
     SetCameraFocusCoords(focusX, focusY);
     DrawWholeMapView();
 
-    objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER, 8, LOCALID_CAMERA, focusX, focusY, 3);
+    objectEventId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER_M, 8, LOCALID_CAMERA, focusX, focusY, 3);
     if (objectEventId != OBJECT_EVENTS_COUNT)
     {
         gObjectEvents[objectEventId].invisible = TRUE;

@@ -106,3 +106,45 @@ PowerPlant_EventScript_ElectricianLucaRematch::
 
 PowerPlant_Text_ZapdosApexCry:
 	.string "SKREEEAAW!$"
+
+PowerPlant_EventScript_ElectricianOtis::
+	trainerbattle_single TRAINER_ELECTRICIAN_OTIS, PowerPlant_Text_ElectricianOtisIntro, PowerPlant_Text_ElectricianOtisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PowerPlant_EventScript_ElectricianOtisRematch
+	msgbox PowerPlant_Text_ElectricianOtisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_EventScript_ElectricianOtisRematch::
+	trainerbattle_rematch TRAINER_ELECTRICIAN_OTIS, PowerPlant_Text_ElectricianOtisIntro, PowerPlant_Text_ElectricianOtisDefeat
+	msgbox PowerPlant_Text_ElectricianOtisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Text_ElectricianOtisIntro::
+	.string "A good circuit needs balance.\nSo does a good POKéMON team!$"
+
+PowerPlant_Text_ElectricianOtisDefeat::
+	.string "My circuit is broken!$"
+
+PowerPlant_Text_ElectricianOtisPostBattle::
+	.string "One loose connection is enough\nto bring the whole system down.$"
+
+PowerPlant_EventScript_ElectricianWade::
+	trainerbattle_single TRAINER_ELECTRICIAN_WADE, PowerPlant_Text_ElectricianWadeIntro, PowerPlant_Text_ElectricianWadeDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PowerPlant_EventScript_ElectricianWadeRematch
+	msgbox PowerPlant_Text_ElectricianWadePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_EventScript_ElectricianWadeRematch::
+	trainerbattle_rematch TRAINER_ELECTRICIAN_WADE, PowerPlant_Text_ElectricianWadeIntro, PowerPlant_Text_ElectricianWadeDefeat
+	msgbox PowerPlant_Text_ElectricianWadePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Text_ElectricianWadeIntro::
+	.string "Careful around live wires!\nMy team carries quite a charge.$"
+
+PowerPlant_Text_ElectricianWadeDefeat::
+	.string "That was quite a shock!$"
+
+PowerPlant_Text_ElectricianWadePostBattle::
+	.string "We keep this place working.\nMy POKéMON help with that too.$"

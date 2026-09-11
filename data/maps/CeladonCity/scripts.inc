@@ -268,3 +268,35 @@ CeladonCity_EventScript_PrizeExchangeSign::
 CeladonCity_EventScript_GameCornerSign::
 	msgbox CeladonCity_Text_GameCornerSign, MSGBOX_SIGN
 	end
+
+CeladonCity_EventScript_TrendsetterLori::
+	trainerbattle_single TRAINER_TRENDSETTER_LORI, CeladonCity_EventScript_TrendsetterLori_Intro, CeladonCity_EventScript_TrendsetterLori_Defeat
+	msgbox CeladonCity_EventScript_TrendsetterLori_Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_EventScript_TrendsetterLori_Intro::
+    .string "The shops have new arrivals.\nMy team has new moves!$"
+
+CeladonCity_EventScript_TrendsetterLori_Defeat::
+    .string "You have a style all your own!$"
+
+CeladonCity_EventScript_TrendsetterLori_Post::
+    .string "Confidence is always in style.$"
+
+CeladonCity_EventScript_TrendsettersTamiaLeo::
+	trainerbattle_double TRAINER_TRENDSETTERS_TAMIA_LEO, CeladonCity_EventScript_TrendsettersTamiaLeo_Intro, CeladonCity_EventScript_TrendsettersTamiaLeo_Defeat, CeladonCity_EventScript_TrendsettersTamiaLeo_NeedTwo
+	msgbox CeladonCity_EventScript_TrendsettersTamiaLeo_Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_EventScript_TrendsettersTamiaLeo_Intro::
+    .string "Our outfits match.\nOur moves work together too!$"
+
+CeladonCity_EventScript_TrendsettersTamiaLeo_Defeat::
+    .string "You have a style all your own!$"
+
+CeladonCity_EventScript_TrendsettersTamiaLeo_Post::
+    .string "A good partner brings out\nyour best.$"
+
+CeladonCity_EventScript_TrendsettersTamiaLeo_NeedTwo::
+    .string "Bring two POKéMON and show us\nyour best combination!$"
+

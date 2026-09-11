@@ -55,3 +55,27 @@ Route4_Movement_PlayerWalkInFromCeladonCave::
 	walk_up
 	face_up
 	step_end
+
+Route4_EventScript_YoungsterElla::
+	trainerbattle_single TRAINER_YOUNGSTER_ELLA, Route4_Text_YoungsterEllaIntro, Route4_Text_YoungsterEllaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route4_EventScript_YoungsterEllaRematch
+	msgbox Route4_Text_YoungsterEllaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route4_EventScript_YoungsterEllaRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_ELLA, Route4_Text_YoungsterEllaRematchIntro, Route4_Text_YoungsterEllaDefeat
+	msgbox Route4_Text_YoungsterEllaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route4_Text_YoungsterEllaIntro::
+	.string "Timmy spotted you first,\nbut I want a battle too!$"
+
+Route4_Text_YoungsterEllaDefeat::
+	.string "You caught me off guard!$"
+
+Route4_Text_YoungsterEllaPostBattle::
+	.string "My POKéMON and I are getting\nbraver with every battle.$"
+
+Route4_Text_YoungsterEllaRematchIntro::
+	.string "Ready for another battle?$"

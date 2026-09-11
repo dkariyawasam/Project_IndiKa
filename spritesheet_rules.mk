@@ -31,9 +31,6 @@ $(OBJEVENTGFXDIR)/people/electrician.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/gamer.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/hex_maniac.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
-
 $(OBJEVENTGFXDIR)/people/juggler.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
@@ -52,7 +49,7 @@ $(OBJEVENTGFXDIR)/people/crush_girl.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/cue_ball.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/beauty.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/trendsetter_f.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/biker.4bpp: %.4bpp: %.png
@@ -217,7 +214,7 @@ $(OBJEVENTGFXDIR)/people/koga.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/lance.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/lass.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/youngster_f.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/civ_little_boy.4bpp: %.4bpp: %.png
@@ -292,7 +289,7 @@ $(OBJEVENTGFXDIR)/people/red_surf.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/red_vs_seeker_bike.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/rich_boy.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/trendsetter_m.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/rocker.4bpp: %.4bpp: %.png
@@ -304,13 +301,13 @@ $(OBJEVENTGFXDIR)/people/rocket_f.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/ruin_maniac.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/rocket_ariana.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/rocket_admin_ariana.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/rocket_nurse.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/rocket_petrel.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/rocket_admin_petrel.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/rocket_m.4bpp: %.4bpp: %.png
@@ -385,7 +382,7 @@ $(OBJEVENTGFXDIR)/people/civ_worker_f.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/civ_worker_m.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/youngster.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/youngster_m.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/pokemon/chansey.4bpp: %.4bpp: %.png

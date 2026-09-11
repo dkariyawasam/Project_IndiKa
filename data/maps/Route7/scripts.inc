@@ -691,3 +691,55 @@ Route7_Movement_FaceDown::
 Route7_EventScript_UndergroundPathSign::
 	msgbox Route7_Text_UndergroundPathSign, MSGBOX_SIGN
 	end
+
+Route7_EventScript_TrendsetterClaire::
+	trainerbattle_single TRAINER_TRENDSETTER_CLAIRE, Route7_EventScript_TrendsetterClaire_Intro, Route7_EventScript_TrendsetterClaire_Defeat
+	msgbox Route7_EventScript_TrendsetterClaire_Post, MSGBOX_AUTOCLOSE
+	end
+
+Route7_EventScript_TrendsetterClaire_Intro::
+    .string "A new look, a new team!\nCare for a quick battle?$"
+
+Route7_EventScript_TrendsetterClaire_Defeat::
+    .string "You have a style all your own!$"
+
+Route7_EventScript_TrendsetterClaire_Post::
+    .string "Shopping can wait.\nThat battle gave me an idea!$"
+
+Route7_EventScript_TrendsetterElio::
+	trainerbattle_single TRAINER_TRENDSETTER_ELIO, Route7_EventScript_TrendsetterElio_Intro, Route7_EventScript_TrendsetterElio_Defeat
+	msgbox Route7_EventScript_TrendsetterElio_Post, MSGBOX_AUTOCLOSE
+	end
+
+Route7_EventScript_TrendsetterElio_Intro::
+    .string "Celadon sets the trends.\nMy team sets the pace!$"
+
+Route7_EventScript_TrendsetterElio_Defeat::
+    .string "You have a style all your own!$"
+
+Route7_EventScript_TrendsetterElio_Post::
+    .string "Great style means finding\nwhat works for you.$"
+
+Route7_EventScript_YoungsterRuby::
+	trainerbattle_single TRAINER_YOUNGSTER_RUBY, Route7_Text_YoungsterRubyIntro, Route7_Text_YoungsterRubyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route7_EventScript_YoungsterRubyRematch
+	msgbox Route7_Text_YoungsterRubyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route7_EventScript_YoungsterRubyRematch::
+	trainerbattle_rematch TRAINER_YOUNGSTER_RUBY, Route7_Text_YoungsterRubyRematchIntro, Route7_Text_YoungsterRubyDefeat
+	msgbox Route7_Text_YoungsterRubyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_YoungsterRubyIntro::
+	.string "Chad and I train outside town.\nLet me show you our progress!$"
+
+Route7_Text_YoungsterRubyDefeat::
+	.string "We still have lots to learn!$"
+
+Route7_Text_YoungsterRubyPostBattle::
+	.string "There are strong trainers here!\nI want to keep up with them.$"
+
+Route7_Text_YoungsterRubyRematchIntro::
+	.string "Ready for another battle?$"

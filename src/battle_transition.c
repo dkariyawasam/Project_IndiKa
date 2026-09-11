@@ -519,7 +519,7 @@ static const struct OamData sOam_UnusedMugshot =
     .affineParam = 0,
 };
 
-static const struct SpriteFrameImage sImageTable_UnusedLass[] =
+static const struct SpriteFrameImage sImageTable_UnusedYoungsterF[] =
 {
     {
         .data = sUnusedLass_Gfx,
@@ -542,7 +542,7 @@ static const struct SpriteTemplate sSpriteTemplate_UnusedMugshot[] =
         .paletteTag = PALTAG_UNUSED_MUGSHOT,
         .oam = &sOam_UnusedMugshot,
         .anims = sSpriteAnimTable_UnusedMugshot,
-        .images = sImageTable_UnusedLass,
+        .images = sImageTable_UnusedYoungsterF,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCB_MugshotTrainerPic,
     },
@@ -551,7 +551,7 @@ static const struct SpriteTemplate sSpriteTemplate_UnusedMugshot[] =
         .paletteTag = PALTAG_UNUSED_MUGSHOT,
         .oam = &sOam_UnusedMugshot,
         .anims = sSpriteAnimTable_UnusedMugshot,
-        .images = sImageTable_UnusedLass,
+        .images = sImageTable_UnusedYoungsterF,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCB_MugshotTrainerPic,
     },
