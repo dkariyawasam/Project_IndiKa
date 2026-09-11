@@ -449,7 +449,7 @@ static bool8 TrainerSeeFunc_OffscreenAboveTrainerCreateCameraObj(u8 taskId, stru
 {
     int specialObjectId;
     task->tData5 = 0;
-    specialObjectId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER, 7, LOCALID_CAMERA, gSaveBlock1Ptr->pos.x + 7, gSaveBlock1Ptr->pos.y + 7, 3);
+    specialObjectId = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_YOUNGSTER_M, 7, LOCALID_CAMERA, gSaveBlock1Ptr->pos.x + 7, gSaveBlock1Ptr->pos.y + 7, 3);
     gObjectEvents[specialObjectId].invisible = TRUE;
     CameraObjectSetFollowedObjectId(gObjectEvents[specialObjectId].spriteId);
     task->tFuncId++;

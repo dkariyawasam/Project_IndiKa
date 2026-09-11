@@ -103,7 +103,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_M",
       "x": 17,
       "y": 8,
       "elevation": 3,
@@ -117,7 +117,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
       "x": 42,
       "y": 6,
       "elevation": 3,
@@ -155,6 +155,20 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "EventScript_RouteTrainer_PICNICKER_CAITLIN",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_F",
+      "x": 19,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route4_EventScript_YoungsterElla",
       "flag": "0"
     }
   ],

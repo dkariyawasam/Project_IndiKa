@@ -59,12 +59,14 @@ def collect_colors() -> list[dict[str, object]]:
     colors: dict[tuple[int, int, int], set[str]] = defaultdict(set)
 
     for row in lineup.collect_rows():
-        sprite = lineup.load_sprite(str(row["gfx"]))
+        sprite = lineup.load_row_sprite(row)
+        gfx = row["gfx"]
+        gfx_name = "+".join(gfx) if isinstance(gfx, list) else str(gfx)
         pixels = sprite.get_flattened_data() if hasattr(sprite, "get_flattened_data") else sprite.getdata()
         for r, g, b, a in pixels:
             if a == 0:
                 continue
-            colors[(r, g, b)].add(str(row["gfx"]))
+            colors[(r, g, b)].add(gfx_name)
 
     output = []
     for color, gfx_names in colors.items():

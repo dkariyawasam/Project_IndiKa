@@ -431,50 +431,50 @@ Route11_EventScript_BernieRematch::
 	end
 
 Route11_EventScript_Hugo::
-	trainerbattle_single TRAINER_GAMER_HUGO, Route11_Text_HugoIntro, Route11_Text_HugoDefeat
+	trainerbattle_single TRAINER_GAMBLER_HUGO, Route11_Text_HugoIntro, Route11_Text_HugoDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_HugoRematch
 	msgbox Route11_Text_HugoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_HugoRematch::
-	trainerbattle_rematch TRAINER_GAMER_HUGO, Route11_Text_HugoRematchIntro, Route11_Text_HugoDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_HUGO, Route11_Text_HugoRematchIntro, Route11_Text_HugoDefeat
 	msgbox Route11_Text_HugoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Jasper::
-	trainerbattle_single TRAINER_GAMER_JASPER, Route11_Text_JasperIntro, Route11_Text_JasperDefeat
+	trainerbattle_single TRAINER_GAMBLER_JASPER, Route11_Text_JasperIntro, Route11_Text_JasperDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_JasperRematch
 	msgbox Route11_Text_JasperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_JasperRematch::
-	trainerbattle_rematch TRAINER_GAMER_JASPER, Route11_Text_JasperRematchIntro, Route11_Text_JasperDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_JASPER, Route11_Text_JasperRematchIntro, Route11_Text_JasperDefeat
 	msgbox Route11_Text_JasperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Dirk::
-	trainerbattle_single TRAINER_GAMER_DIRK, Route11_Text_DirkIntro, Route11_Text_DirkDefeat
+	trainerbattle_single TRAINER_GAMBLER_DIRK, Route11_Text_DirkIntro, Route11_Text_DirkDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_DirkRematch
 	msgbox Route11_Text_DirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_DirkRematch::
-	trainerbattle_rematch TRAINER_GAMER_DIRK, Route11_Text_DirkRematchIntro, Route11_Text_DirkDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_DIRK, Route11_Text_DirkRematchIntro, Route11_Text_DirkDefeat
 	msgbox Route11_Text_DirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Darian::
-	trainerbattle_single TRAINER_GAMER_DARIAN, Route11_Text_DarianIntro, Route11_Text_DarianDefeat
+	trainerbattle_single TRAINER_GAMBLER_DARIAN, Route11_Text_DarianIntro, Route11_Text_DarianDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_DarianRematch
 	msgbox Route11_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_DarianRematch::
-	trainerbattle_rematch TRAINER_GAMER_DARIAN, Route11_Text_DarianRematchIntro, Route11_Text_DarianDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_DARIAN, Route11_Text_DarianRematchIntro, Route11_Text_DarianDefeat
 	msgbox Route11_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -749,26 +749,26 @@ Route8_EventScript_LeslieRematch::
 	end
 
 Route8_EventScript_Stan::
-	trainerbattle_single TRAINER_GAMER_STAN, Route8_Text_StanIntro, Route8_Text_StanDefeat
+	trainerbattle_single TRAINER_GAMBLER_STAN, Route8_Text_StanIntro, Route8_Text_StanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route8_EventScript_StanRematch
 	msgbox Route8_Text_StanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route8_EventScript_StanRematch::
-	trainerbattle_rematch TRAINER_GAMER_STAN, Route8_Text_StanRematchIntro, Route8_Text_StanDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_STAN, Route8_Text_StanRematchIntro, Route8_Text_StanDefeat
 	msgbox Route8_Text_StanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route8_EventScript_Rich::
-	trainerbattle_single TRAINER_GAMER_RICH, Route8_Text_RichIntro, Route8_Text_RichDefeat
+	trainerbattle_single TRAINER_GAMBLER_RICH, Route8_Text_RichIntro, Route8_Text_RichDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route8_EventScript_RichRematch
 	msgbox Route8_Text_RichPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route8_EventScript_RichRematch::
-	trainerbattle_rematch TRAINER_GAMER_RICH, Route8_Text_RichRematchIntro, Route8_Text_RichDefeat
+	trainerbattle_rematch TRAINER_GAMBLER_RICH, Route8_Text_RichRematchIntro, Route8_Text_RichDefeat
 	msgbox Route8_Text_RichPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -1337,14 +1337,14 @@ Route15_EventScript_OliviaRematch::
 	end
 
 Route15_EventScript_Claire::
-	trainerbattle_single TRAINER_ROUTE15_BEAUTY_CLAIRE, Route15_Text_ClaireIntro, Route15_Text_ClaireDefeat
+	trainerbattle_single TRAINER_TRENDSETTER_CLAIRE, Route15_Text_ClaireIntro, Route15_Text_ClaireDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route15_EventScript_ClaireRematch
 	msgbox Route15_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route15_EventScript_ClaireRematch::
-	trainerbattle_rematch TRAINER_ROUTE15_BEAUTY_CLAIRE, Route15_Text_ClaireRematchIntro, Route15_Text_ClaireDefeat
+	trainerbattle_rematch TRAINER_TRENDSETTER_CLAIRE, Route15_Text_ClaireRematchIntro, Route15_Text_ClaireDefeat
 	msgbox Route15_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -1589,26 +1589,26 @@ Route16_EventScript_CamronRematch::
 	end
 
 Route16_EventScript_Jed::
-	trainerbattle_double TRAINER_YOUNG_COUPLE_LEA_JED, Route16_Text_JedIntro, Route16_Text_JedDefeat, Route16_Text_JedNotEnoughMons
+	trainerbattle_double TRAINER_TRENDSETTERS_LEA_JED, Route16_Text_JedIntro, Route16_Text_JedDefeat, Route16_Text_JedNotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route16_EventScript_JedRematch
 	msgbox Route16_Text_JedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route16_EventScript_JedRematch::
-	trainerbattle_rematch_double TRAINER_YOUNG_COUPLE_LEA_JED, Route16_Text_JedRematchIntro, Route16_Text_JedDefeat, Route16_Text_JedNotEnoughMons
+	trainerbattle_rematch_double TRAINER_TRENDSETTERS_LEA_JED, Route16_Text_JedRematchIntro, Route16_Text_JedDefeat, Route16_Text_JedNotEnoughMons
 	msgbox Route16_Text_JedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route16_EventScript_Lea::
-	trainerbattle_double TRAINER_YOUNG_COUPLE_LEA_JED, Route16_Text_LeaIntro, Route16_Text_LeaDefeat, Route16_Text_LeaNotEnoughMons
+	trainerbattle_double TRAINER_TRENDSETTERS_LEA_JED, Route16_Text_LeaIntro, Route16_Text_LeaDefeat, Route16_Text_LeaNotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route16_EventScript_LeaRematch
 	msgbox Route16_Text_LeaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route16_EventScript_LeaRematch::
-	trainerbattle_rematch_double TRAINER_YOUNG_COUPLE_LEA_JED, Route16_Text_LeaRematchIntro, Route16_Text_LeaDefeat, Route16_Text_LeaNotEnoughMons
+	trainerbattle_rematch_double TRAINER_TRENDSETTERS_LEA_JED, Route16_Text_LeaRematchIntro, Route16_Text_LeaDefeat, Route16_Text_LeaNotEnoughMons
 	msgbox Route16_Text_LeaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -2772,14 +2772,14 @@ EventScript_RouteTrainer_PICNICKER_SOFIARematch::
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_TYLER::
-	trainerbattle_single TRAINER_YOUNGSTER_TYLER, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Intro, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Defeat
+	trainerbattle_single TRAINER_TRENDSETTER_TYLER, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Intro, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_YOUNGSTER_TYLERRematch
 	msgbox EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_YOUNGSTER_TYLERRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_TYLER, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_RematchIntro, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Defeat
+	trainerbattle_rematch TRAINER_TRENDSETTER_TYLER, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_RematchIntro, EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_Defeat
 	msgbox EventScript_RouteTrainer_YOUNGSTER_TYLER_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -5090,7 +5090,7 @@ EventScript_RouteTrainer_ROUTE16_SCOUT_ARIANA_Text_PostBattle::
     .string "After that, your wheels make\n"
     .string "most of the choices.$"
 EventScript_RouteTrainer_LASS_JULIA_Text_Intro::
-    .string "This LASS knows\n"
+    .string "This YOUNGSTER knows\n"
     .string "ROUTE 16 well!$"
 EventScript_RouteTrainer_LASS_JULIA_Text_RematchIntro::
     .string "Back on ROUTE 16?\n"
@@ -5101,7 +5101,7 @@ EventScript_RouteTrainer_LASS_JULIA_Text_PostBattle::
     .string "ROUTE 16 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_LASS_KAY_Text_Intro::
-    .string "This LASS knows\n"
+    .string "This YOUNGSTER knows\n"
     .string "ROUTE 17 well!$"
 EventScript_RouteTrainer_LASS_KAY_Text_RematchIntro::
     .string "Back on ROUTE 17?\n"
@@ -5112,7 +5112,7 @@ EventScript_RouteTrainer_LASS_KAY_Text_PostBattle::
     .string "ROUTE 17 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_LASS_NADIA_Text_Intro::
-    .string "This LASS knows\n"
+    .string "This YOUNGSTER knows\n"
     .string "ROUTE 24 well!$"
 EventScript_RouteTrainer_LASS_NADIA_Text_RematchIntro::
     .string "Back on ROUTE 24?\n"
@@ -6940,7 +6940,7 @@ EventScript_RouteTrainer_CAMPER_SHANE_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_ANDREA_Text_Intro::
-    .string "LASS ANDREA knows\n"
+    .string "YOUNGSTER ANDREA knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_ANDREA_Text_RematchIntro::
@@ -6956,7 +6956,7 @@ EventScript_RouteTrainer_LASS_ANDREA_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_ANN_Text_Intro::
-    .string "LASS ANN knows\n"
+    .string "YOUNGSTER ANN knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_ANN_Text_RematchIntro::
@@ -6972,7 +6972,7 @@ EventScript_RouteTrainer_LASS_ANN_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_DALIA_Text_Intro::
-    .string "LASS DALIA knows\n"
+    .string "YOUNGSTER DALIA knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_DALIA_Text_RematchIntro::
@@ -6988,7 +6988,7 @@ EventScript_RouteTrainer_LASS_DALIA_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_JANICE_Text_Intro::
-    .string "LASS JANICE knows\n"
+    .string "YOUNGSTER JANICE knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_JANICE_Text_RematchIntro::
@@ -7004,7 +7004,7 @@ EventScript_RouteTrainer_LASS_JANICE_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_JOANA_Text_Intro::
-    .string "LASS JOANA knows\n"
+    .string "YOUNGSTER JOANA knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_JOANA_Text_RematchIntro::
@@ -7020,7 +7020,7 @@ EventScript_RouteTrainer_LASS_JOANA_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_LISA_Text_Intro::
-    .string "LASS LISA knows\n"
+    .string "YOUNGSTER LISA knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_LISA_Text_RematchIntro::
@@ -7036,7 +7036,7 @@ EventScript_RouteTrainer_LASS_LISA_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_MEGAN_Text_Intro::
-    .string "LASS MEGAN knows\n"
+    .string "YOUNGSTER MEGAN knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_MEGAN_Text_RematchIntro::
@@ -7052,7 +7052,7 @@ EventScript_RouteTrainer_LASS_MEGAN_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_MIRIAM_Text_Intro::
-    .string "LASS MIRIAM knows\n"
+    .string "YOUNGSTER MIRIAM knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_MIRIAM_Text_RematchIntro::
@@ -7068,7 +7068,7 @@ EventScript_RouteTrainer_LASS_MIRIAM_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_PAIGE_Text_Intro::
-    .string "LASS PAIGE knows\n"
+    .string "YOUNGSTER PAIGE knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_PAIGE_Text_RematchIntro::
@@ -7084,7 +7084,7 @@ EventScript_RouteTrainer_LASS_PAIGE_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_RouteTrainer_LASS_SALLY_Text_Intro::
-    .string "LASS SALLY knows\n"
+    .string "YOUNGSTER SALLY knows\n"
     .string "this route well!$"
 
 EventScript_RouteTrainer_LASS_SALLY_Text_RematchIntro::

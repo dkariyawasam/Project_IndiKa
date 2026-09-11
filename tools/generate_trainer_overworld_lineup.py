@@ -19,37 +19,43 @@ OUT_PNG = ROOT / "docs/trainer-overworld-lineup.png"
 
 
 GFX_STEMS = {
-    "POKE_MANIAC": "poke_maniac",
+    "POKE_MANIAC": "pokemaniac",
+    "POKEMANIAC": "pokemaniac",
     "BREEDER": "pokemon_breeder",
     "POKEMON_BREEDER": "pokemon_breeder",
     "BLACK_BELT": "black_belt",
-    "CRUSH_GIRL": "crush_girl",
+    "BLACK_BELT_F": "black_belt_f",
+    "CRUSH_GIRL": "black_belt_f",
     "ROCKET_M": "rocket_m",
     "ROCKET_F": "rocket_f",
-    "ROCKET_ADMIN_ARCHER": "rocket_m",
-    "ROCKET_ARIANA": "rocket_ariana",
-    "ROCKET_ADMIN_ARIANA": "rocket_ariana",
-    "ROCKET_PETREL": "rocket_petrel",
-    "ROCKET_ADMIN_PETREL": "rocket_petrel",
-    "ROCKET_ADMIN_PROTON": "rocket_m",
+    "ROCKET_ADMIN_ARCHER": "rocket_admin_archer",
+    "ROCKET_ARIANA": "rocket_admin_ariana",
+    "ROCKET_ADMIN_ARIANA": "rocket_admin_ariana",
+    "ROCKET_PETREL": "rocket_admin_petrel",
+    "ROCKET_ADMIN_PETREL": "rocket_admin_petrel",
+    "ROCKET_ADMIN_PROTON": "rocket_admin_proton",
     "ROUGHNECK": "cue_ball",
-    "SCOUT_F": "picnicker",
-    "SCOUT_M": "camper",
+    "FISHER": "fisherman",
+    "FISHERMAN": "fisherman",
+    "SCOUT_F": "scout_f",
+    "SCOUT_M": "scout_m",
     "LT_SURGE": "lt_surge",
     "PSYCHIC_M": "psychic_m",
+    "JANINE": "janine",
+    "MISTY_WATER": "misty_water",
 }
 
 
 PIC_TO_GFX = {
-    "BLACK_BELT_F": "CRUSH_GIRL",
+    "BLACK_BELT_F": "BLACK_BELT_F",
     "BLACK_BELT_M": "BLACK_BELT",
     "BLACK_BELT": "BLACK_BELT",
-    "FISHERMAN": "FISHER",
+    "FISHERMAN": "FISHERMAN",
     "PKMN_BREEDER": "BREEDER",
     "POKEMON_BREEDER": "BREEDER",
     "POKEMON_BREEDER_F_RS": "BREEDER",
     "POKEMON_BREEDER_M_RS": "BREEDER",
-    "POKEMANIAC": "POKE_MANIAC",
+    "POKEMANIAC": "POKEMANIAC",
     "ROCKET_GRUNT_M": "ROCKET_M",
     "ROCKET_GRUNT_F": "ROCKET_F",
     "ROCKET_ADMIN_ARIANA": "ROCKET_ADMIN_ARIANA",
@@ -119,7 +125,46 @@ EXTRA_NAMED_ROWS = [
         "trainer_examples": ["PROTON"],
         "maps": [],
     },
+    {
+        "label": "JANINE",
+        "class": "NINJA",
+        "pic": "NINJA",
+        "gfx": "JANINE",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["JANINE"],
+        "maps": ["CinnabarVolcano_RightCorridor_3F"],
+    },
+    {
+        "label": "MISTY_WATER",
+        "class": "LEADER",
+        "pic": "LEADER_MISTY",
+        "gfx": "MISTY_WATER",
+        "count": 0,
+        "defined_count": 1,
+        "trainer_examples": ["MISTY"],
+        "maps": [],
+    },
 ]
+
+DOUBLE_CLASSES = {
+    "ACES",
+    "CRUSH_KIN",
+    "SIS_AND_BRO",
+    "TWINS",
+    "TRENDSETTERS",
+}
+
+DOUBLE_GFX_ORDER = {
+    "ACES": ["ACE_TRAINER_M", "ACE_TRAINER_F"],
+    "SIS_AND_BRO": ["TUBER_M_WATER", "SWIMMER_F_WATER"],
+    "TRENDSETTERS": ["TRENDSETTER_M", "TRENDSETTER_F"],
+}
+
+DOUBLE_LABELS = {
+    "SIS_AND_BRO": "SWIM_SIBS",
+    "TRENDSETTERS": "TRENDSETTERS",
+}
 
 
 def load_audit_module():
@@ -241,8 +286,54 @@ def collect_rows() -> list[dict[str, object]]:
 
     output = [row for row in output if row["class"] != "ROCKET_ADMIN"]
     output.extend(dict(row) for row in EXTRA_NAMED_ROWS)
+    output = compose_double_rows(output)
 
     return sorted(output, key=lambda row: (str(row.get("label", row["class"])), str(row["pic"]), str(row["gfx"])))
+
+
+def compose_double_rows(rows: list[dict[str, object]]) -> list[dict[str, object]]:
+    single_rows: list[dict[str, object]] = []
+    double_groups: dict[tuple[str, str, tuple[str, ...], tuple[str, ...]], dict[str, object]] = {}
+
+    for row in rows:
+        trainer_class = str(row["class"])
+        if trainer_class not in DOUBLE_CLASSES:
+            single_rows.append(row)
+            continue
+
+        key = (
+            trainer_class,
+            str(row["pic"]),
+            tuple(row.get("trainer_examples", [])),
+            tuple(row.get("maps", [])),
+        )
+        group = double_groups.setdefault(
+            key,
+            {
+                "class": trainer_class,
+                "pic": row["pic"],
+                "gfx": [],
+                "count": 0,
+                "defined_count": row.get("defined_count", 0),
+                "trainer_examples": list(row.get("trainer_examples", [])),
+                "maps": list(row.get("maps", [])),
+            },
+        )
+        group["gfx"].append(str(row["gfx"]))
+        group["count"] = max(int(group.get("count", 0)), int(row.get("count", 0)))
+        group["defined_count"] = max(int(group.get("defined_count", 0)), int(row.get("defined_count", 0)))
+
+    for group in double_groups.values():
+        trainer_class = str(group["class"])
+        preferred = DOUBLE_GFX_ORDER.get(trainer_class, [])
+        present = list(dict.fromkeys(str(gfx) for gfx in group["gfx"]))
+        ordered = [gfx for gfx in preferred if gfx in present]
+        ordered.extend(gfx for gfx in present if gfx not in ordered)
+        group["gfx"] = ordered
+        group["label"] = DOUBLE_LABELS.get(trainer_class, trainer_class)
+        single_rows.append(group)
+
+    return single_rows
 
 
 def load_sprite(gfx: str) -> Image.Image:
@@ -264,6 +355,22 @@ def load_sprite(gfx: str) -> Image.Image:
     frame_w = sprite.width // 10 if sprite.width % 10 == 0 else 16
     frame_w = frame_w if frame_w in {16, 32} else 16
     return sprite.crop((0, 0, min(frame_w, sprite.width), min(32, sprite.height)))
+
+
+def load_row_sprite(row: dict[str, object]) -> Image.Image:
+    gfx = row["gfx"]
+    if not isinstance(gfx, list):
+        return load_sprite(str(gfx))
+
+    sprites = [load_sprite(str(part)) for part in gfx]
+    width = sum(sprite.width for sprite in sprites)
+    height = max(sprite.height for sprite in sprites)
+    composed = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    x = 0
+    for sprite in sprites:
+        composed.paste(sprite, (x, height - sprite.height), sprite)
+        x += sprite.width
+    return composed
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont, width: int) -> list[str]:
@@ -321,7 +428,7 @@ def make_sheet(rows: list[dict[str, object]]) -> None:
 
         draw.rounded_rectangle((x + 4, y + 4, x + cell_w - 8, y + cell_h - 8), radius=8, fill="#ffffff", outline="#d8dde5")
 
-        sprite = load_sprite(str(row["gfx"]))
+        sprite = load_row_sprite(row)
         sprite = sprite.resize((sprite.width * scale, sprite.height * scale), Image.Resampling.NEAREST)
         sx = x + (cell_w - sprite.width) // 2
         sy = y + 12
@@ -334,7 +441,8 @@ def make_sheet(rows: list[dict[str, object]]) -> None:
             draw.text((x + (cell_w - tw) // 2, label_y), line, fill="#111827", font=label_font)
             label_y += 15
 
-        gfx_text = f"gfx: {row['gfx']}"
+        gfx = row["gfx"]
+        gfx_text = f"gfx: {'+'.join(gfx) if isinstance(gfx, list) else gfx}"
         if row["count"]:
             count_text = f"placed: {row['count']}"
         else:

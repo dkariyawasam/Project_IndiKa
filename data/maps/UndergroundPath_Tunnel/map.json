@@ -73,7 +73,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GAMER",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 40,
       "y": 47,
       "elevation": 3,
@@ -82,7 +82,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "UndergroundPath_Tunnel_EventScript_GamerHugo",
+      "script": "UndergroundPath_Tunnel_EventScript_PokefanHugo",
       "flag": "0"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 14,
       "y": 32,
       "elevation": 3,
@@ -110,7 +110,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "UndergroundPath_Tunnel_EventScript_JugglerRich",
+      "script": "UndergroundPath_Tunnel_EventScript_PokefanRich",
       "flag": "0"
     },
     {
@@ -143,7 +143,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GAMER",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
       "x": 47,
       "y": 33,
       "elevation": 3,
@@ -152,12 +152,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "UndergroundPath_Tunnel_EventScript_GamerElliot",
+      "script": "UndergroundPath_Tunnel_EventScript_PokefanElliot",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
       "x": 58,
       "y": 32,
       "elevation": 3,
@@ -166,7 +166,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "UndergroundPath_Tunnel_EventScript_JugglerSol",
+      "script": "UndergroundPath_Tunnel_EventScript_PokefanSol",
       "flag": "0"
     },
     {
