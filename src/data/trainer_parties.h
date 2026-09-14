@@ -9753,3 +9753,65 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AceTrainerFThea[] = {
     { .iv = 80, .lvl = 34, .species = SPECIES_MAWILE, },
     { .iv = 80, .lvl = 35, .species = SPECIES_GRAVELER, },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymFlora[] = {
+    { .iv = 60, .lvl = 25, .species = SPECIES_ODDISH, },
+    { .iv = 60, .lvl = 27, .species = SPECIES_GLOOM, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymDaphne[] = {
+    { .iv = 60, .lvl = 26, .species = SPECIES_BELLSPROUT, },
+    { .iv = 60, .lvl = 28, .species = SPECIES_WEEPINBELL, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymLaurel[] = {
+    { .iv = 60, .lvl = 26, .species = SPECIES_TANGELA, },
+    { .iv = 60, .lvl = 27, .species = SPECIES_ROSELIA, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymViola[] = {
+    { .iv = 60, .lvl = 25, .species = SPECIES_SUNFLORA, },
+    { .iv = 60, .lvl = 27, .species = SPECIES_GLOOM, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymHazel[] = {
+    { .iv = 60, .lvl = 25, .species = SPECIES_BUDEW, },
+    { .iv = 60, .lvl = 27, .species = SPECIES_ROSELIA, },
+    { .iv = 60, .lvl = 26, .species = SPECIES_CHANSEY, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymMabel[] = {
+    { .iv = 60, .lvl = 25, .species = SPECIES_HOPPIP, },
+    { .iv = 60, .lvl = 27, .species = SPECIES_SKIPLOOM, },
+    { .iv = 60, .lvl = 26, .species = SPECIES_BELLSPROUT, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymOrin[] = {
+    { .iv = 60, .lvl = 33, .species = SPECIES_KADABRA, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_HYPNO, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymAlden[] = {
+    { .iv = 60, .lvl = 33, .species = SPECIES_DROWZEE, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_XATU, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymSilas[] = {
+    { .iv = 60, .lvl = 34, .species = SPECIES_MR_MIME, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_KADABRA, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymMira[] = {
+    { .iv = 60, .lvl = 33, .species = SPECIES_SPOINK, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_HYPNO, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymSelene[] = {
+    { .iv = 60, .lvl = 33, .species = SPECIES_EXEGGCUTE, },
+    { .iv = 60, .lvl = 35, .species = SPECIES_KADABRA, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GymLyra[] = {
+    { .iv = 60, .lvl = 34, .species = SPECIES_GIRAFARIG, },
+    { .iv = 60, .lvl = 36, .species = SPECIES_MR_MIME, },
+};

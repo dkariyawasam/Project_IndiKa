@@ -81,10 +81,10 @@ CeruleanCave_B1F_EventScript_GiovanniWaits::
 	end
 
 CeruleanCave_B1F_EventScript_GiovanniApproachTrigger::
+	setvar VAR_TEMP_0, 1
 	goto_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	goto_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
-	setvar VAR_TEMP_0, 1
 	lock
 	playse SE_PIN
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, Common_Movement_ExclamationMark
@@ -113,7 +113,11 @@ CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo::
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniApproachesPlayerAfterMewtwo
 	waitmovement 0
 	turnobject LOCALID_PLAYER, DIR_SOUTH
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoEscaped
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoEscaped
 	msgbox CeruleanCave_B1F_Text_GiovanniAfterMewtwo
+CeruleanCave_B1F_EventScript_GiovanniLeaveAfterMewtwo::
 	closemessage
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniLeaves
 	waitmovement 0
@@ -127,6 +131,10 @@ CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo::
 	setflag FLAG_HIDE_CERULEAN_CAVE_GIOVANNI
 	removeobject LOCALID_CERULEAN_CAVE_GIOVANNI
 	return
+
+CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoEscaped::
+	msgbox CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped
+	goto CeruleanCave_B1F_EventScript_GiovanniLeaveAfterMewtwo
 
 CeruleanCave_B1F_Movement_GiovanniStepsAside::
 	walk_in_place_faster_left
@@ -189,8 +197,16 @@ CeruleanCave_B1F_EventScript_DefeatedMewtwo::
 	end
 
 CeruleanCave_B1F_EventScript_RanFromMewtwo::
-	setvar VAR_0x8004, SPECIES_MEWTWO
-	goto EventScript_MonFlewAway
+	setflag FLAG_FOUGHT_MEWTWO
+	setflag FLAG_HIDE_MEWTWO
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, SPECIES_MEWTWO
+	msgbox Text_MonFlewAway
+	closemessage
+	call CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo
+	release
 	end
 
 CeruleanCave_B1F_Text_MewtwoApexCry:
@@ -222,4 +238,14 @@ CeruleanCave_B1F_Text_GiovanniAfterMewtwo:
 	.string "Perhaps absolute power was never\n"
 	.string "something a person could own.\p"
 	.string "There is nothing left for me\n"
-	.string "to take from this place.$"
+	.string "to take from this place.\p"
+	.string "I will return to VIRIDIAN GYM.$"
+
+CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped:
+	.string "GIOVANNI: Gone.\p"
+	.string "Neither of us could hold it here.\p"
+	.string "Perhaps absolute power was never\n"
+	.string "something a person could own.\p"
+	.string "There is nothing left for me\n"
+	.string "to take from this place.\p"
+	.string "I will return to VIRIDIAN GYM.$"

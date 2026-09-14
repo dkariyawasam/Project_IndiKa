@@ -2077,14 +2077,6 @@ bool8 UseRegisteredKeyItemOnField(void)
     {
         if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
         {
-            if (gSaveBlock1Ptr->registeredItem == ITEM_CASCADE_BOARD
-             && CanUseCascadeBoardOnField() == TRUE)
-            {
-                gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem;
-                gFieldEffectArguments[0] = PARTY_SIZE;
-                FieldEffectStart(FLDEFF_USE_SURF);
-                return TRUE;
-            }
             LockPlayerFieldControls();
             FreezeObjectEvents();
             HandleEnforcedLookDirectionOnPlayerStopMoving();

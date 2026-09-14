@@ -321,6 +321,8 @@ RocketLeague_Arena_EventScript_GiveCoinReward::
 RocketLeague_Arena_EventScript_GiveBaseCoinReward::
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1000, RocketLeague_Arena_EventScript_CoinRewardFull
 	addcoins 1000
+	setvar VAR_0x8004, 1000
+	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ReceivedCoins
 	goto RocketLeague_Arena_EventScript_FinishCoinReward
@@ -328,6 +330,8 @@ RocketLeague_Arena_EventScript_GiveBaseCoinReward::
 RocketLeague_Arena_EventScript_GiveTierOneCoinReward::
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1500, RocketLeague_Arena_EventScript_CoinRewardFull
 	addcoins 1500
+	setvar VAR_0x8004, 1500
+	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ReceivedTierOneCoins
 	goto RocketLeague_Arena_EventScript_FinishCoinReward
@@ -335,6 +339,8 @@ RocketLeague_Arena_EventScript_GiveTierOneCoinReward::
 RocketLeague_Arena_EventScript_GiveTierTwoCoinReward::
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 2000, RocketLeague_Arena_EventScript_CoinRewardFull
 	addcoins 2000
+	setvar VAR_0x8004, 2000
+	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ReceivedTierTwoCoins
 	goto RocketLeague_Arena_EventScript_FinishCoinReward
@@ -342,6 +348,8 @@ RocketLeague_Arena_EventScript_GiveTierTwoCoinReward::
 RocketLeague_Arena_EventScript_GiveTierThreeCoinReward::
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 3000, RocketLeague_Arena_EventScript_CoinRewardFull
 	addcoins 3000
+	setvar VAR_0x8004, 3000
+	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ReceivedTierThreeCoins
 	goto RocketLeague_Arena_EventScript_FinishCoinReward

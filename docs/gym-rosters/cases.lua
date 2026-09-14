@@ -1,0 +1,12 @@
+qa.cases={{name="Flora",g=10,m=16,x=2,y=6,id=3,trainer=38,script=135608420},
+{name="Daphne",g=10,m=16,x=10,y=6,id=4,trainer=39,script=135608482},
+{name="Laurel",g=10,m=16,x=2,y=10,id=5,trainer=40,script=135608544},
+{name="Viola",g=10,m=16,x=10,y=10,id=6,trainer=41,script=135608606},
+{name="Hazel",g=10,m=16,x=3,y=13,id=7,trainer=44,script=135608668},
+{name="Mabel",g=10,m=16,x=9,y=13,id=8,trainer=45,script=135608730},
+{name="Orin",g=14,m=3,x=4,y=6,id=3,trainer=46,script=135618230},
+{name="Alden",g=14,m=3,x=14,y=6,id=4,trainer=47,script=135618292},
+{name="Silas",g=14,m=3,x=24,y=6,id=5,trainer=48,script=135618354},
+{name="Mira",g=14,m=3,x=4,y=14,id=6,trainer=49,script=135618416},
+{name="Selene",g=14,m=3,x=24,y=14,id=7,trainer=50,script=135618478},
+{name="Lyra",g=14,m=3,x=24,y=22,id=8,trainer=51,script=135618540}}

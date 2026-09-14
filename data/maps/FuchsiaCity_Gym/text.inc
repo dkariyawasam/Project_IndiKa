@@ -58,8 +58,8 @@ FuchsiaCity_Gym_Text_ReceivedGolbatFromKoga::
 
 FuchsiaCity_Gym_Text_KogaGolbatAdvice::
     .string "GOLBAT evolves through friendship.\p"
-    .string "Move with it as one, and it may\n"
-    .string "become a CROBAT.$"
+    .string "Earn its trust, then level it up\n"
+    .string "to help it become a CROBAT.$"
 
 FuchsiaCity_Gym_Text_KogaCrobatReminder::
     .string "Train beside GOLBAT and earn\n"
@@ -134,18 +134,18 @@ FuchsiaCity_Gym_Text_NatePostBattle::
 
 FuchsiaCity_Gym_Text_PhilIntro::
     .string "Stop right there!\p"
-    .string "The famed invisible walls of\n"
-    .string "FUCHSIA GYM have you frustrated?$"
+    .string "We train in Master KOGA's gym,\n"
+    .string "wherever his work takes him.\p"
+    .string "Let me test your technique!$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
     .string "Whoa!\n"
     .string "You've got it!$"
 
 FuchsiaCity_Gym_Text_PhilPostBattle::
-    .string "You impressed me!\n"
-    .string "Here's a hint!\p"
-    .string "Look very closely for gaps in the\n"
-    .string "invisible walls!$"
+    .string "You impressed me!\p"
+    .string "Use your VS SEEKER here when\n"
+    .string "you want to train with us again.$"
 
 FuchsiaCity_Gym_Text_EdgarIntro::
     .string "I also study the way of the ninja\n"

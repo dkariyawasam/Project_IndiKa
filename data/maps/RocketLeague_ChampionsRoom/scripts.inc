@@ -53,6 +53,8 @@ RocketLeague_ChampionsRoom_EventScript_GiveCoinReward::
 	checkcoins VAR_TEMP_1
 	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
 	addcoins 1000
+	setvar VAR_0x8004, 1000
+	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_ChampionsRoom_Text_ReceivedCoins
 	goto RocketLeague_ChampionsRoom_EventScript_FinishCoinReward

@@ -7,10 +7,9 @@ DiglettsCave_Southside_B1F_Text_LtSurgeTeachVoltTackle::
     .string "my POKéMON are contained by the\l"
     .string "cave walls.\p"
     .string "While training here, I developed\n"
-    .string "an ELECTRIC-type move.\p"
-    .string "Want me to teach it?\p"
-    .string "You'll need a POKéMON that can\n"
-    .string "learn it.$"
+    .string "VOLT TACKLE, an ELECTRIC move.\p"
+    .string "I'll teach it to an ELECTRIC-type\n"
+    .string "POKéMON. Want to give it a try?$"
 
 DiglettsCave_Southside_B1F_Text_LtSurgeChoosePokemon::
     .string "All right, kid!\n"
@@ -18,8 +17,8 @@ DiglettsCave_Southside_B1F_Text_LtSurgeChoosePokemon::
 
 DiglettsCave_Southside_B1F_Text_LtSurgeComeBackWithPokemon::
     .string "No problem, kid!\p"
-    .string "Come back with a POKéMON that can\n"
-    .string "handle that kind of voltage.$"
+    .string "Come back with an ELECTRIC-type\n"
+    .string "POKéMON ready to train.$"
 
 DiglettsCave_Southside_B1F_Text_LtSurgeTaughtVoltTackle::
     .string "That's VOLT TACKLE!\p"

@@ -309,6 +309,20 @@ struct LeagueChallengeData
     u16 trainerIds[LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT];
 }; /* size = 0x12 */
 
+// Stored in former save padding; all members are 16-bit to preserve alignment.
+struct LeagueRecord
+{
+    u16 wins, losses, championships, streak, bestStreak;
+    u16 lastPoolWins, lastResult;
+    u16 coinsLow, coinsHigh;
+};
+
+struct LeagueRecordsData
+{
+    u16 magic, version;
+    struct LeagueRecord league[2];
+};
+
 // logbook menu
 #include "constants/quests.h"
 
@@ -341,7 +355,8 @@ struct SaveBlock2
     /*0xA98*/ struct LinkBattleRecords linkBattleRecords;
     /*0xAF0*/ u8 filler_AF0[0x10];
     /*0xB00*/ struct LeagueChallengeData leagueChallenge;
-    /*0xB12*/ u8 filler_B12[0x40E];
+    /*0xB12*/ struct LeagueRecordsData leagueRecords;
+    u8 filler_B12[0x40E - sizeof(struct LeagueRecordsData)];
     /*0xF20*/ u32 encryptionKey;
 #define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
 #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)

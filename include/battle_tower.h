@@ -15,16 +15,6 @@ struct BattleTowerTrainer
     u16 greeting[6];
 };
 
-struct BattleTowerPokemonTemplate
-{
-    u16 species;
-    u8 heldItem;
-    u8 teamFlags;
-    u16 moves[4];
-    u8 evSpread;
-    u8 nature;
-};
-
 extern const u16 gBattleTowerBannedSpecies[];
 
 void ClearEReaderTrainer(struct BattleTowerEReaderTrainer *);

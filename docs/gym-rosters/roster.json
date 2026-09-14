@@ -1,0 +1,406 @@
+[
+  {
+    "name": "Flora",
+    "id": 38,
+    "kind": "AROMA_LADY",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      2,
+      5
+    ],
+    "mons": [
+      [
+        25,
+        "ODDISH"
+      ],
+      [
+        27,
+        "GLOOM"
+      ]
+    ],
+    "intro": [
+      "A garden needs patient care.",
+      "So does a winning team!"
+    ],
+    "after": [
+      "ERIKA teaches us to notice",
+      "what each POK\u00e9MON needs."
+    ],
+    "constant": "TRAINER_AROMA_LADY_FLORA",
+    "label": "CeladonCity_Gym_EventScript_Flora",
+    "party": "sParty_GymFlora",
+    "localId": 3
+  },
+  {
+    "name": "Daphne",
+    "id": 39,
+    "kind": "AROMA_LADY",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      10,
+      5
+    ],
+    "mons": [
+      [
+        26,
+        "BELLSPROUT"
+      ],
+      [
+        28,
+        "WEEPINBELL"
+      ]
+    ],
+    "intro": [
+      "A sweet scent can hide",
+      "a sharp strategy!"
+    ],
+    "after": [
+      "Fragrance draws you closer.",
+      "Then the battle begins."
+    ],
+    "constant": "TRAINER_AROMA_LADY_DAPHNE",
+    "label": "CeladonCity_Gym_EventScript_Daphne",
+    "party": "sParty_GymDaphne",
+    "localId": 4
+  },
+  {
+    "name": "Laurel",
+    "id": 40,
+    "kind": "AROMA_LADY",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      2,
+      9
+    ],
+    "mons": [
+      [
+        26,
+        "TANGELA"
+      ],
+      [
+        27,
+        "ROSELIA"
+      ]
+    ],
+    "intro": [
+      "Our training keeps growing,",
+      "even while ERIKA is away."
+    ],
+    "after": [
+      "Use your VS SEEKER here",
+      "when you want another match."
+    ],
+    "constant": "TRAINER_AROMA_LADY_LAUREL",
+    "label": "CeladonCity_Gym_EventScript_Laurel",
+    "party": "sParty_GymLaurel",
+    "localId": 5
+  },
+  {
+    "name": "Viola",
+    "id": 41,
+    "kind": "AROMA_LADY",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      10,
+      9
+    ],
+    "mons": [
+      [
+        25,
+        "SUNFLORA"
+      ],
+      [
+        27,
+        "GLOOM"
+      ]
+    ],
+    "intro": [
+      "Every flower blooms",
+      "at its own pace."
+    ],
+    "after": [
+      "A patient TRAINER knows",
+      "when to make a move."
+    ],
+    "constant": "TRAINER_AROMA_LADY_VIOLA",
+    "label": "CeladonCity_Gym_EventScript_Viola",
+    "party": "sParty_GymViola",
+    "localId": 6
+  },
+  {
+    "name": "Hazel",
+    "id": 44,
+    "kind": "PKMN_BREEDER",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      3,
+      12
+    ],
+    "mons": [
+      [
+        25,
+        "BUDEW"
+      ],
+      [
+        27,
+        "ROSELIA"
+      ],
+      [
+        26,
+        "CHANSEY"
+      ]
+    ],
+    "intro": [
+      "Healthy roots and a kind hand",
+      "help POK\u00e9MON flourish."
+    ],
+    "after": [
+      "Young POK\u00e9MON need care,",
+      "and their TRAINERS need practice."
+    ],
+    "constant": "TRAINER_PKMN_BREEDER_HAZEL",
+    "label": "CeladonCity_Gym_EventScript_Hazel",
+    "party": "sParty_GymHazel",
+    "localId": 7
+  },
+  {
+    "name": "Mabel",
+    "id": 45,
+    "kind": "PKMN_BREEDER",
+    "gender": "F",
+    "map": "CeladonCity_Gym",
+    "pos": [
+      9,
+      12
+    ],
+    "mons": [
+      [
+        25,
+        "HOPPIP"
+      ],
+      [
+        27,
+        "SKIPLOOM"
+      ],
+      [
+        26,
+        "BELLSPROUT"
+      ]
+    ],
+    "intro": [
+      "I raise these POK\u00e9MON",
+      "with ERIKA's lessons in mind."
+    ],
+    "after": [
+      "Friendship grows through",
+      "the little things you do each day."
+    ],
+    "constant": "TRAINER_PKMN_BREEDER_MABEL",
+    "label": "CeladonCity_Gym_EventScript_Mabel",
+    "party": "sParty_GymMabel",
+    "localId": 8
+  },
+  {
+    "name": "Orin",
+    "id": 46,
+    "kind": "PSYCHIC",
+    "gender": "M",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      4,
+      5
+    ],
+    "mons": [
+      [
+        33,
+        "KADABRA"
+      ],
+      [
+        35,
+        "HYPNO"
+      ]
+    ],
+    "intro": [
+      "Focus your thoughts.",
+      "Now, focus your team!"
+    ],
+    "after": [
+      "A calm mind can learn",
+      "even from defeat."
+    ],
+    "constant": "TRAINER_PSYCHIC_ORIN",
+    "label": "SaffronCity_Gym_EventScript_Orin",
+    "party": "sParty_GymOrin",
+    "localId": 3
+  },
+  {
+    "name": "Alden",
+    "id": 47,
+    "kind": "PSYCHIC",
+    "gender": "M",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      14,
+      5
+    ],
+    "mons": [
+      [
+        33,
+        "DROWZEE"
+      ],
+      [
+        35,
+        "XATU"
+      ]
+    ],
+    "intro": [
+      "These rooms test direction.",
+      "I test concentration."
+    ],
+    "after": [
+      "The shortest path is not",
+      "always the clearest one."
+    ],
+    "constant": "TRAINER_PSYCHIC_ALDEN",
+    "label": "SaffronCity_Gym_EventScript_Alden",
+    "party": "sParty_GymAlden",
+    "localId": 4
+  },
+  {
+    "name": "Silas",
+    "id": 48,
+    "kind": "PSYCHIC",
+    "gender": "M",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      24,
+      5
+    ],
+    "mons": [
+      [
+        34,
+        "MR_MIME"
+      ],
+      [
+        35,
+        "KADABRA"
+      ]
+    ],
+    "intro": [
+      "Can you read my next move?",
+      "Let us find out."
+    ],
+    "after": [
+      "Prediction still needs practice.",
+      "Bring your VS SEEKER next time."
+    ],
+    "constant": "TRAINER_PSYCHIC_SILAS",
+    "label": "SaffronCity_Gym_EventScript_Silas",
+    "party": "sParty_GymSilas",
+    "localId": 5
+  },
+  {
+    "name": "Mira",
+    "id": 49,
+    "kind": "PSYCHIC",
+    "gender": "F",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      4,
+      13
+    ],
+    "mons": [
+      [
+        33,
+        "SPOINK"
+      ],
+      [
+        35,
+        "HYPNO"
+      ]
+    ],
+    "intro": [
+      "SABRINA values a steady mind.",
+      "Show me yours in battle."
+    ],
+    "after": [
+      "Our training continues",
+      "while SABRINA is away."
+    ],
+    "constant": "TRAINER_PSYCHIC_MIRA",
+    "label": "SaffronCity_Gym_EventScript_Mira",
+    "party": "sParty_GymMira",
+    "localId": 6
+  },
+  {
+    "name": "Selene",
+    "id": 50,
+    "kind": "PSYCHIC",
+    "gender": "F",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      24,
+      13
+    ],
+    "mons": [
+      [
+        33,
+        "EXEGGCUTE"
+      ],
+      [
+        35,
+        "KADABRA"
+      ]
+    ],
+    "intro": [
+      "Close out the noise.",
+      "Listen to your POK\u00e9MON."
+    ],
+    "after": [
+      "Trust makes it easier",
+      "to understand one another."
+    ],
+    "constant": "TRAINER_PSYCHIC_SELENE",
+    "label": "SaffronCity_Gym_EventScript_Selene",
+    "party": "sParty_GymSelene",
+    "localId": 7
+  },
+  {
+    "name": "Lyra",
+    "id": 51,
+    "kind": "PSYCHIC",
+    "gender": "F",
+    "map": "SaffronCity_Gym",
+    "pos": [
+      24,
+      21
+    ],
+    "mons": [
+      [
+        34,
+        "GIRAFARIG"
+      ],
+      [
+        36,
+        "MR_MIME"
+      ]
+    ],
+    "intro": [
+      "A clear mind and a loyal team.",
+      "That is my kind of strength."
+    ],
+    "after": [
+      "Come back with your VS SEEKER.",
+      "There is always more to learn."
+    ],
+    "constant": "TRAINER_PSYCHIC_LYRA",
+    "label": "SaffronCity_Gym_EventScript_Lyra",
+    "party": "sParty_GymLyra",
+    "localId": 8
+  }
+]

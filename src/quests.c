@@ -33,6 +33,7 @@
 #include "constants/field_weather.h"
 #include "constants/flags.h"
 #include "constants/maps.h"
+#include "constants/map_event_ids.h"
 #include "constants/quests.h"
 #include "constants/vars.h"
 #include "constants/songs.h"
@@ -625,17 +626,18 @@ static void TryRevealCurrentMapApexObject(u8 apexSubquest)
         u8 subquest;
         u16 map;
         u16 hideFlag;
+        u16 foughtFlag;
         u8 localId;
     } sApexObjectData[] =
     {
-        {SUB_QUEST_APEX_TANGROWTH,  MAP_VIRIDIAN_FOREST,      FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH, 12},
-        {SUB_QUEST_APEX_ZAPDOS,     MAP_POWER_PLANT,          FLAG_HIDE_ZAPDOS,                    6},
-        {SUB_QUEST_APEX_ARTICUNO,   MAP_SEAFOAM_ISLANDS_B4F,  FLAG_HIDE_ARTICUNO,                  3},
-        {SUB_QUEST_APEX_MEWTWO,     MAP_CERULEAN_CAVE_B1F,    FLAG_HIDE_MEWTWO,                    3},
-        {SUB_QUEST_APEX_OSSCYTHE,   MAP_POKEMON_TOWER_4F,     FLAG_HIDE_POKEMON_TOWER_OSSCYTHE,    1},
-        {SUB_QUEST_APEX_MOLTRES,    MAP_CINNABAR_VOLCANO_3F,  FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES,  4},
-        {SUB_QUEST_APEX_MIME_SR,    MAP_DIGLETTS_CAVE_B2F,    FLAG_HIDE_DIGLETTS_CAVE_MIME_SR,     1},
-        {SUB_QUEST_APEX_ANNIHILAPE, MAP_MT_MOON_B2F,          FLAG_HIDE_MT_MOON_ANNIHILAPE,        5},
+        {SUB_QUEST_APEX_TANGROWTH,   MAP_VIRIDIAN_FOREST,        FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH,        FLAG_FOUGHT_TANGROWTH,            12},
+        {SUB_QUEST_APEX_ZAPDOS,      MAP_POWER_PLANT,            FLAG_HIDE_ZAPDOS,                           FLAG_FOUGHT_ZAPDOS,               6},
+        {SUB_QUEST_APEX_ARTICUNO,    MAP_SEAFOAM_ISLANDS_B4F,    FLAG_HIDE_ARTICUNO,                         FLAG_FOUGHT_ARTICUNO,             LOCALID_SEAFOAM_ARTICUNO},
+        {SUB_QUEST_APEX_MEWTWO,      MAP_CERULEAN_CAVE_B1F,      FLAG_HIDE_MEWTWO,                           FLAG_FOUGHT_MEWTWO,               3},
+        {SUB_QUEST_APEX_OSSCYTHE,    MAP_POKEMON_TOWER_4F,       FLAG_HIDE_POKEMON_TOWER_OSSCYTHE,           FLAG_FOUGHT_OSSCYTHE,             1},
+        {SUB_QUEST_APEX_MOLTRES,     MAP_CINNABAR_VOLCANO_3F,    FLAG_HIDE_CINNABAR_VOLCANO_MOLTRES,         FLAG_FOUGHT_VOLCANO_MOLTRES,      4},
+        {SUB_QUEST_APEX_MIME_SR,     MAP_DIGLETTS_CAVE_B2F,      FLAG_HIDE_DIGLETTS_CAVE_MIME_SR,            FLAG_FOUGHT_MIME_SR,              1},
+        {SUB_QUEST_APEX_ANNIHILAPE,  MAP_MT_MOON_B2F,            FLAG_HIDE_MT_MOON_ANNIHILAPE,               FLAG_FOUGHT_ANNIHILAPE,           5},
     };
     u8 i;
 
@@ -645,6 +647,9 @@ static void TryRevealCurrentMapApexObject(u8 apexSubquest)
          && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(sApexObjectData[i].map)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(sApexObjectData[i].map))
         {
+            if (FlagGet(sApexObjectData[i].foughtFlag))
+                return;
+
             RemoveObjectEventByLocalIdAndMap(sApexObjectData[i].localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
             FlagClear(sApexObjectData[i].hideFlag);
             TrySpawnObjectEvent(sApexObjectData[i].localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);

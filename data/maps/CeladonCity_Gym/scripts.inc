@@ -248,3 +248,75 @@ CeladonCity_Gym_Movement_GymGuideLeave::
 	walk_down
 	walk_down
 	step_end
+
+CeladonCity_Gym_EventScript_Flora::
+	trainerbattle_single TRAINER_AROMA_LADY_FLORA, CeladonCity_Gym_Text_FloraIntro, CeladonCity_Gym_Text_FloraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_FloraRematch
+	msgbox CeladonCity_Gym_Text_FloraAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_FloraRematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_FLORA, CeladonCity_Gym_Text_FloraIntro, CeladonCity_Gym_Text_FloraDefeat
+	msgbox CeladonCity_Gym_Text_FloraAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_Daphne::
+	trainerbattle_single TRAINER_AROMA_LADY_DAPHNE, CeladonCity_Gym_Text_DaphneIntro, CeladonCity_Gym_Text_DaphneDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_DaphneRematch
+	msgbox CeladonCity_Gym_Text_DaphneAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_DaphneRematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_DAPHNE, CeladonCity_Gym_Text_DaphneIntro, CeladonCity_Gym_Text_DaphneDefeat
+	msgbox CeladonCity_Gym_Text_DaphneAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_Laurel::
+	trainerbattle_single TRAINER_AROMA_LADY_LAUREL, CeladonCity_Gym_Text_LaurelIntro, CeladonCity_Gym_Text_LaurelDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_LaurelRematch
+	msgbox CeladonCity_Gym_Text_LaurelAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_LaurelRematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_LAUREL, CeladonCity_Gym_Text_LaurelIntro, CeladonCity_Gym_Text_LaurelDefeat
+	msgbox CeladonCity_Gym_Text_LaurelAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_Viola::
+	trainerbattle_single TRAINER_AROMA_LADY_VIOLA, CeladonCity_Gym_Text_ViolaIntro, CeladonCity_Gym_Text_ViolaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_ViolaRematch
+	msgbox CeladonCity_Gym_Text_ViolaAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_ViolaRematch::
+	trainerbattle_rematch TRAINER_AROMA_LADY_VIOLA, CeladonCity_Gym_Text_ViolaIntro, CeladonCity_Gym_Text_ViolaDefeat
+	msgbox CeladonCity_Gym_Text_ViolaAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_Hazel::
+	trainerbattle_single TRAINER_PKMN_BREEDER_HAZEL, CeladonCity_Gym_Text_HazelIntro, CeladonCity_Gym_Text_HazelDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_HazelRematch
+	msgbox CeladonCity_Gym_Text_HazelAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_HazelRematch::
+	trainerbattle_rematch TRAINER_PKMN_BREEDER_HAZEL, CeladonCity_Gym_Text_HazelIntro, CeladonCity_Gym_Text_HazelDefeat
+	msgbox CeladonCity_Gym_Text_HazelAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_Mabel::
+	trainerbattle_single TRAINER_PKMN_BREEDER_MABEL, CeladonCity_Gym_Text_MabelIntro, CeladonCity_Gym_Text_MabelDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_MabelRematch
+	msgbox CeladonCity_Gym_Text_MabelAfter, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Gym_EventScript_MabelRematch::
+	trainerbattle_rematch TRAINER_PKMN_BREEDER_MABEL, CeladonCity_Gym_Text_MabelIntro, CeladonCity_Gym_Text_MabelDefeat
+	msgbox CeladonCity_Gym_Text_MabelAfter, MSGBOX_AUTOCLOSE
+	end

@@ -70,6 +70,8 @@
 #define MULTICHOICE_LEFT_RIGHT                                 75
 #define MULTICHOICE_HEAL_CHECK_FRIENDSHIP_CANCEL               76
 
+#define MULTICHOICE_LEAGUE_TERMINAL                           77
+
 #define MULTICHOICE_NONE                                      255
 
 #define LISTMENU_BADGES                    0

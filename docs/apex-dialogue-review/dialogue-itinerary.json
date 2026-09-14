@@ -1,0 +1,212 @@
+[
+  {
+    "label": "PalletTown_ProfessorOaksLab_Text_OakExplainCatching",
+    "source": "data/maps/PalletTown_ProfessorOaksLab/text.inc",
+    "text": "OAK: Pay attention to how the\\nGYM LEADERS treat their POK\u00e9MON.\\pThere is more to learn than\\nstrength alone.\\pI also study rare POK\u00e9MON whose\\ninstincts exceed ordinary limits.\\pI call them APEX POK\u00e9MON.\\pListen to local accounts and\\ncompare three in your LOGBOOK.\\pTogether, they may reveal where\\nan APEX POK\u00e9MON can be found.\\pBe ready before you challenge one.\\nIf you flee from its battle,\\lit will leave for good.$"
+  },
+  {
+    "label": "Text_ApexRumorRecorded",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "Rumour recorded.\\pCompare three accounts in your\\nLOGBOOK to find an APEX POK\u00e9MON.\\pIf you flee from its battle,\\nit will leave for good.$"
+  },
+  {
+    "label": "Route11_Text_RivalRumors",
+    "source": "data/maps/Route11/text.inc",
+    "text": "{RIVAL}: Hah!\\nTook you long enough, {PLAYER}.\\pI already checked DIGLETT'S CAVE.\\nObviously.\\pPeople around here keep whining\\nthat the MR. MIME vanished.\\pOne guy even says they put up\\ninvisible walls to avoid training.\\pSounds fake...\\nwhich means Gramps will want it\\lwritten down.\\pSo listen carefully for once.\\pCompare three local accounts\\nin your LOGBOOK.\\pWork out where they point.\\nThat is where you investigate.\\pTry not to make me explain\\nfieldwork twice.\\pSmell ya later.$"
+  },
+  {
+    "label": "ViridianCity_Text_FatherHeardShadowyFigure",
+    "source": "data/maps/ViridianCity/text.inc",
+    "text": "My father once told me he\\nventured deep into VIRIDIAN\\lFOREST.\\pHe heard the grumbling growls of\\na shadowy figure lurking within.$"
+  },
+  {
+    "label": "Route2_Text_ForestComesAlive",
+    "source": "data/maps/Route2/text.inc",
+    "text": "I'm too scared to enter\\nVIRIDIAN FOREST.\\pLegends tell of the forest\\ncoming alive and ensnaring the\\lwicked, never to be seen again.$"
+  },
+  {
+    "label": "EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle",
+    "source": "data/scripts/trainers.inc",
+    "text": "The flowers in VIRIDIAN FOREST\\nare so beautiful.\\pThey seem more vibrant and grow\\nin number the closer you get to\\lthe centre of the forest.\\pAlmost like something is drawing\\nthem inward.$"
+  },
+  {
+    "label": "Text_OakApexTangrowth",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: The POK\u00e9DEX signal was\\nalmost swallowed by the forest.\\pSo the old stories were not just\\nstories.\\pTANGROWTH may be instinct\\ngiven root and vine.$"
+  },
+  {
+    "label": "MtMoon_1F_Text_AngryPrimalPokemon",
+    "source": "data/maps/MtMoon_1F/text.inc",
+    "text": "There's something furious and\\nhurt deep within this cave.\\pI can feel it losing control.\\nMaybe I should head home.$"
+  },
+  {
+    "label": "CeruleanCity_House2_Text_EnormousPokemonBargedIn",
+    "source": "data/maps/CeruleanCity_House2/text.inc",
+    "text": "An enormous POK\u00e9MON barged in\\nthrough the wall!\\pIt was shaking with rage.\\nCompletely unstoppable!\\pLucky for us, it rampaged out\\nthe door and headed west,\\ltoward MT. MOON.$"
+  },
+  {
+    "label": "Route4_Text_TrippedOverGeodude",
+    "source": "data/maps/Route4/text.inc",
+    "text": "A hulking PRIMEAPE fled in a\\nblind rage and took refuge\\linside MT. MOON.\\pIt was out of control, like its\\nfeelings had boiled over!\\pI've never seen one get that\\nbig before!$"
+  },
+  {
+    "label": "Text_OakApexAnnihilape",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: The POK\u00e9DEX recorded extreme\\nemotional force.\\pANNIHILAPE shows what happens\\nwhen feeling outruns control.\\pBe careful with such power.$"
+  },
+  {
+    "label": "DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel",
+    "source": "data/maps/DiglettsCave_SouthEntrance/text.inc",
+    "text": "Well, isn't this a surprise!\\pMR. MIME have made themselves\\na little home together in\\lDIGLETT CAVE.\\pThey seem intent on keeping it\\nall to themselves.\\pIt leads all the way to PEWTER\\nCITY, wouldn't you know!$"
+  },
+  {
+    "label": "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle",
+    "source": "data/scripts/trainers.inc",
+    "text": "The MR. MIME went into DIGLETT\\nCAVE and erected barriers.\\pIt's like they built their own\\nlittle community and closed the\\lworld out.$"
+  },
+  {
+    "label": "DiglettsCave_NorthEntrance_RockTunnelPitchBlack",
+    "source": "data/maps/DiglettsCave_NorthEntrance/text.inc",
+    "text": "This DIGLETT CAVE extends all\\nthe way to VERMILION CITY.\\pWatch out for invisible walls\\nthough!\\pFeels like something in there\\ndoesn't want visitors.$"
+  },
+  {
+    "label": "Text_OakApexMimeSr",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: Fascinating. The barriers\\nregistered as a social pattern.\\pMIME SR. seems to protect its\\ngroup.\\pIt turns isolation into\\nstructure.$"
+  },
+  {
+    "label": "SaffronCity_Text_TookCuboneFromMother",
+    "source": "data/maps/SaffronCity/text.inc",
+    "text": "I took this CUBONE away from\\nits mother.\\pNow it won't even train with me!\\nBad investment.$"
+  },
+  {
+    "label": "SaffronCity_Text_CuboneCry",
+    "source": "data/maps/SaffronCity/text.inc",
+    "text": "CUBONE: Kyoo!\\pIt keeps crying and looking\\naround, as if searching for\\lsomeone.$"
+  },
+  {
+    "label": "LavenderTown_Text_VengefulSpiritAtopTower",
+    "source": "data/maps/LavenderTown/text.inc",
+    "text": "It's said that inside POK\u00e9MON\\nTOWER is a vengeful spirit.\\pIt howls in anger over the\\nfamily it lost.$"
+  },
+  {
+    "label": "PokemonTower_1F_Text_SpiritSearchingForFamily",
+    "source": "data/maps/PokemonTower_1F/text.inc",
+    "text": "The tower carries the grief of\\nfamilies torn apart.\\pSome say one spirit still waits\\nabove, calling for the family it\\llost.$"
+  },
+  {
+    "label": "Text_OakApexOsscythe",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: I received the tower record.\\pOSSCYTHE's readings are bound to\\ngrief and memory.\\pLoss can shape a life as surely\\nas evolution.$"
+  },
+  {
+    "label": "Route10_Text_MarkPostBattle",
+    "source": "data/maps/Route10/text.inc",
+    "text": "When storms pass over the POWER\\nPLANT, the river keeps buzzing.\\pIt's like nature is feeding it\\npower without end.$"
+  },
+  {
+    "label": "EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle",
+    "source": "data/scripts/trainers.inc",
+    "text": "Even when the generators quiet\\ndown, the air still crackles.\\pIt feels like the power is coming\\nfrom the sky itself.$"
+  },
+  {
+    "label": "EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle",
+    "source": "data/scripts/trainers.inc",
+    "text": "I saw lightning gather here\\nwithout a cloud overhead.\\pNo battery can hold power like\\nthat. It just keeps coming.$"
+  },
+  {
+    "label": "Text_OakApexZapdos",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: Extraordinary! That power\\nreading did not fade after battle.\\pZAPDOS seems less like stored\\nelectricity.\\pIt is more like a source\\nthat renews itself.$"
+  },
+  {
+    "label": "Route20_Text_SeafoamUsedToBeVolcanic",
+    "source": "data/maps/Route20/text.inc",
+    "text": "SEAFOAM ISLANDS used to be\\nvolcanic just like CINNABAR\\lISLAND.\\pThen one day it all changed at\\nonce, and now it's as cold as\\lice!$"
+  },
+  {
+    "label": "Route20_Text_MarinerPostBattle",
+    "source": "data/maps/Route20/text.inc",
+    "text": "You broke me into pieces too!\\pSEAFOAM was split by a sudden\\nfreeze. The caves still hold\\lthat cold.$"
+  },
+  {
+    "label": "SeafoamIslands_1F_Text_UsedToBeFloodedWithLava",
+    "source": "data/maps/SeafoamIslands_1F/scripts.inc",
+    "text": "Can you believe this whole area\\nused to be flooded with lava?\\pOne sudden change, and the\\nwhole cave became something else.\\pThe deeper you go, the sharper\\nthe cold gets.$"
+  },
+  {
+    "label": "Text_OakApexArticuno",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: Your readings show a sudden\\ncollapse in temperature.\\pARTICUNO changes an environment\\nall at once.\\pAdaptation under pressure...\\nremarkable.$"
+  },
+  {
+    "label": "CinnabarIsland_Text_ScientistsExperimentInMansion",
+    "source": "data/maps/CinnabarIsland/text.inc",
+    "text": "After each eruption, the volcano\\nleaves new soil behind.\\pPlants return stronger than before.\\nNature renews itself through fire.$"
+  },
+  {
+    "label": "CinnabarIsland_PokemonLab_ResearchRoom_Text_MoltresRenewingEnergy",
+    "source": "data/maps/CinnabarIsland_PokemonLab_ResearchRoom/text.inc",
+    "text": "Our lab studies how fire can\\nrestore as well as consume.\\pThere are reports of MOLTRES\\nstirring life back into scorched\\lvolcanic earth.$"
+  },
+  {
+    "label": "CinnabarVolcano_3F_Text_BlairPostBattle",
+    "source": "data/maps/CinnabarVolcano_3F/text.inc",
+    "text": "Fire-types love this pressure.\\pDown here, even burned ground\\nfeels alive again.\\pLike the volcano keeps renewing\\nits own energy.$"
+  },
+  {
+    "label": "Text_OakApexMoltres",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: Those volcanic readings are\\nalive with renewal.\\pMOLTRES does not only burn.\\pIt returns spent energy\\nto the world.$"
+  },
+  {
+    "label": "PokemonMansion_B1F_Text_GiovanniOverheard",
+    "source": "data/maps/PokemonMansion_B1F/text.inc",
+    "text": "????: Empty\u2026\\nAfter all these years, empty.\\pMEWTWO was perfect power.\\pPower without waste.\\nPower without weakness.$"
+  },
+  {
+    "label": "PokemonMansion_B1F_Text_GiovanniAddressed",
+    "source": "data/maps/PokemonMansion_B1F/text.inc",
+    "text": "MEWTWO broke free before that\\npower could be claimed.\\pNo matter.\\nI built that power once.\\pI will retrieve it, perfect it,\\nand make it mine.\\pSILPH in SAFFRON has what I need.\\nA BALL that cannot fail.$"
+  },
+  {
+    "label": "SilphCo_11F_Text_PresidentInterruptsGiovanni",
+    "source": "data/maps/SilphCo_11F/text.inc",
+    "text": "PRESIDENT: GIOVANNI, stop this!\\pThe MASTER BALL was never meant\\nto enslave POKEMON.\\pIf you force that power on MEWTWO,\\nyou'll bring ruin on us all.$"
+  },
+  {
+    "label": "SilphCo_11F_Text_GiovanniIntro",
+    "source": "data/maps/SilphCo_11F/text.inc",
+    "text": "GIOVANNI: You're the child from\\nPOKEMON MANSION...\\pSo, you followed me from\\nCINNABAR ISLAND.\\pSILPH's MASTER BALL is no mere\\nproduct.\\pIt is control made mechanical.\\nCommand made perfect.\\pWith its plans, TEAM ROCKET will\\nmanufacture the means to reclaim\\lMEWTWO.\\pCome forth.\\nI'll deal with you now.$"
+  },
+  {
+    "label": "SilphCo_11F_Text_GiovanniPostBattle",
+    "source": "data/maps/SilphCo_11F/text.inc",
+    "text": "GIOVANNI: So SILPH's MASTER BALL\\nwill remain out of reach.\\pNo matter.\\pA BALL is only one way to claim\\npower.\\pSILPH's signal research will\\ncomplete my device.\\pI will call MEWTWO to ROUTE 7.\\pOnce it answers, no LEAGUE,\\nno child, and no bond will stand\\lin my way.\\pTEAM ROCKET, withdraw.\\nWe have what we need.$"
+  },
+  {
+    "label": "SilphCo_11F_Text_ThanksForSavingMeDearBoy",
+    "source": "data/maps/SilphCo_11F/text.inc",
+    "text": "PRESIDENT: Oh, dear boy!\\nThank you for saving SILPH.\\pGIOVANNI failed to take the\\nMASTER BALL plans.\\pBut before he fled, he accessed\\nour signal research.\\pIf he combines it with old\\nCINNABAR records, he may force\\lMEWTWO to respond.\\pPlease, take this.\\nIf he reaches MEWTWO, you may\\lneed it.$"
+  },
+  {
+    "label": "SilphCo_11F_Text_ThatsOurSecretPrototype",
+    "source": "data/maps/SilphCo_11F/text.inc",
+    "text": "PRESIDENT: You can't buy that\\nanywhere.\\pIt's our secret prototype MASTER\\nBALL.\\pIt was built to catch any POK\u00e9MON\\nwithout fail.\\pBut a capture is only a beginning.\\pIt cannot make a POK\u00e9MON trust\\nyou. That part is up to you.$"
+  },
+  {
+    "label": "Text_OakApexMewtwo",
+    "source": "data/scripts/static_pokemon.inc",
+    "text": "OAK: The POK\u00e9DEX is struggling\\nto classify that presence.\\pMEWTWO's power is not natural\\ninstinct alone.\\pIt is a question we created\\nbut do not understand.$"
+  },
+  {
+    "label": "CeruleanCave_B1F_Text_GiovanniAfterMewtwo",
+    "source": "data/maps/CeruleanCave_B1F/scripts.inc",
+    "text": "GIOVANNI: So that is the difference.\\pI tried to possess MEWTWO.\\nYou faced it as a TRAINER.\\pPerhaps absolute power was never\\nsomething a person could own.\\pThere is nothing left for me\\nto take from this place.\\pI will return to VIRIDIAN GYM.$"
+  },
+  {
+    "label": "CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped",
+    "source": "data/maps/CeruleanCave_B1F/scripts.inc",
+    "text": "GIOVANNI: Gone.\\pNeither of us could hold it here.\\pPerhaps absolute power was never\\nsomething a person could own.\\pThere is nothing left for me\\nto take from this place.\\pI will return to VIRIDIAN GYM.$"
+  }
+]

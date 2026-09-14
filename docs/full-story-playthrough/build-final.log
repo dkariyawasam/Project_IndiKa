@@ -1,0 +1,14 @@
+tools/scaninc/scaninc -M build/firered/src/trainer_pokemon_sprites.d -I include -I tools/agbcc/include src/trainer_pokemon_sprites.c
+tools/agbcc/bin/agbcc <flags> -o build/firered/src/trainer_pokemon_sprites.o src/trainer_pokemon_sprites.c
+tools/ramscrgen/ramscrgen COMMON sym_common.txt ENGLISH -c build/firered/src,common_syms > build/firered/sym_common.ld
+arm-none-eabi-ld: warning: ../../pokefirered.elf has a LOAD segment with RWX permissions
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      246112 B       256 KB     93.88%
+           IWRAM:       30064 B        32 KB     91.75%
+             ROM:    15322081 B        32 MB     45.66%
+cd build/firered && arm-none-eabi-ld -Map ../../pokefirered.map -T ../../ld_script.ld --print-memory-usage -o ../../pokefirered.elf <objs> <libs> | cat
+tools/gbafix/gbafix pokefirered.elf -t"POKEMON FIRE" -cBPRE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary --gap-fill 0xFF --pad-to 0x9000000 pokefirered.elf pokefirered.gba
+
+Final up-to-date check:
+make: Nothing to be done for `all'.

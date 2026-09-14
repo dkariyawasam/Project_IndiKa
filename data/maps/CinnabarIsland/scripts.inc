@@ -310,6 +310,9 @@ CinnabarIsland_EventScript_PokemonLabDoor::
 	end
 
 CinnabarIsland_EventScript_PokemonLabAccessGranted::
+	closemessage
+	special PlayFieldItemAnimation
+	waitstate
 	msgbox CinnabarIsland_Text_PokemonLabAccessGranted
 	closemessage
 	warp MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE, 1

@@ -1,7 +1,19 @@
 Route4_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route4_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, Route4_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route4_OnTransition
 	.byte 0
+
+Route4_OnLoad::
+	goto_if_set FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL, Route4_EventScript_EndTransition
+	@ The blast opens this passage; before it, the cliff is unbroken.
+	setmetatile 92, 18, 0x069, TRUE
+	setmetatile 93, 18, 0x069, TRUE
+	setmetatile 94, 18, 0x069, TRUE
+	setmetatile 92, 19, 0x071, TRUE
+	setmetatile 93, 19, 0x071, TRUE
+	setmetatile 94, 19, 0x071, TRUE
+	end
 
 Route4_OnFrame::
 	map_script_2 VAR_TEMP_0, 1, Route4_EventScript_WalkInFromCeladonCave
@@ -28,6 +40,7 @@ Route4_EventScript_WalkInFromCeladonCave::
 	end
 
 Route4_EventScript_WarpToCeladonCave::
+	goto_if_unset FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL, EventScript_Return
 	warp MAP_CELADON_CAVE, 9, 1
 	waitstate
 	end
