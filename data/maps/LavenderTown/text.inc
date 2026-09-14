@@ -17,7 +17,7 @@ LavenderTown_Text_TownKnownAsMonGraveSite::
     .string "POKéMON TOWER.$"
 
 LavenderTown_Text_VengefulSpiritAtopTower::
-    .string "It's said that atop POKéMON\n"
+    .string "It's said that inside POKéMON\n"
     .string "TOWER is a vengeful spirit.\p"
     .string "It howls in anger over the\n"
     .string "family it lost.$"

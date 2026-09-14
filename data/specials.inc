@@ -240,9 +240,9 @@ gSpecials::
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
 	def_special GetLeadMonFriendship
-	def_special BattleTowerMapScript2
-	def_special ChooseNextBattleTowerTrainer
-	def_special CheckPartyBattleTowerBanlist
+	def_special NullFieldSpecial  @ Retired: BattleTowerMapScript2
+	def_special NullFieldSpecial  @ Retired: ChooseNextBattleTowerTrainer
+	def_special NullFieldSpecial  @ Retired: CheckPartyBattleTowerBanlist
 	def_special StartIndigoLeagueChallenge
 	def_special StartRocketLeagueChallenge
 	def_special ResetLeagueChallenge
@@ -252,18 +252,18 @@ gSpecials::
 	def_special GetLeagueChallengeRound
 	def_special GetLeagueChallengeType
 	def_special IsLeagueChallengeActive
-	def_special PrintBattleTowerTrainerGreeting
+	def_special NullFieldSpecial  @ Retired: PrintBattleTowerTrainerGreeting
 	def_special BufferEReaderTrainerGreeting
 	def_special StartSpecialBattle
-	def_special SetBattleTowerProperty
-	def_special BattleTowerUtil
-	def_special SetBattleTowerParty
-	def_special SaveBattleTowerProgress
-	def_special BattleTower_SoftReset
-	def_special DetermineBattleTowerPrize
-	def_special GiveBattleTowerPrize
-	def_special AwardBattleTowerRibbons
-	def_special ChooseBattleTowerPlayerParty
+	def_special NullFieldSpecial  @ Retired: SetBattleTowerProperty
+	def_special NullFieldSpecial  @ Retired: BattleTowerUtil
+	def_special NullFieldSpecial  @ Retired: SetBattleTowerParty
+	def_special NullFieldSpecial  @ Retired: SaveBattleTowerProgress
+	def_special NullFieldSpecial  @ Retired: BattleTower_SoftReset
+	def_special NullFieldSpecial  @ Retired: DetermineBattleTowerPrize
+	def_special NullFieldSpecial  @ Retired: GiveBattleTowerPrize
+	def_special NullFieldSpecial  @ Retired: AwardBattleTowerRibbons
+	def_special NullFieldSpecial  @ Retired: ChooseBattleTowerPlayerParty
 	def_special ValidateEReaderTrainer
 	def_special NullFieldSpecial
 	def_special ReducePlayerPartyToThree
@@ -355,7 +355,7 @@ gSpecials::
 	def_special DoFallWarp
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
-	def_special SetEReaderTrainerGfxId
+	def_special NullFieldSpecial  @ Retired: SetEReaderTrainerGfxId
 	def_special StartSouthernIslandBattle
 	def_special NullFieldSpecial
 	def_special NullFieldSpecial
@@ -371,7 +371,7 @@ gSpecials::
 	def_special HasAllKantoMons
 	def_special IsMonOTNameNotPlayers
 	def_special NullFieldSpecial
-	def_special Dummy_TryEnableBravoTrainerBattleTower
+	def_special NullFieldSpecial  @ Retired: Dummy_TryEnableBravoTrainerBattleTower
 	def_special DoesPartyHaveEnigmaBerry
 	def_special NullFieldSpecial
 	def_special SetPostgameFlags
@@ -460,4 +460,8 @@ gSpecials::
 	def_special SetPartyMonHighFriendship
 	def_special SetBoxMonHighFriendship
 	def_special Script_IsSpeciesCaught
+	def_special ShowLeagueRecords
+	def_special BufferLeagueTerminalStatus
+	def_special RecordRocketLeagueCoins
+	def_special PlayFieldItemAnimation
 gSpecialsEnd::

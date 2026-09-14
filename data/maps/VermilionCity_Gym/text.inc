@@ -63,11 +63,11 @@ VermilionCity_Gym_Text_LtSurgeNotRaichu::
 VermilionCity_Gym_Text_LtSurgeElectabuzzTradeComplete::
     .string "Hah!\n"
     .string "Now that's a power surge!\p"
-    .string "That ELECTIRIZER ought to wake up\n"
-    .string "something fierce in ELECTABUZZ.$"
+    .string "Trading with an ELECTIRIZER\n"
+    .string "turned ELECTABUZZ into ELECTIVIRE!$"
 
 VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone::
-    .string "That ELECTABUZZ was built for\n"
+    .string "That ELECTIVIRE was built for\n"
     .string "serious output.\p"
     .string "Keep it charged, kid!$"
 
@@ -138,10 +138,14 @@ VermilionCity_Gym_Text_GymGuyAdvice::
     .string "POKéMON.\p"
     .string "FLYING/WATER-type POKéMON match\n"
     .string "poorly against the ELECTRIC type.\p"
+    .string "Bring a GROUND-type POKéMON!\p"
+    .string "ELECTRIC moves cannot hit it,\n"
+    .string "and GROUND moves are strong\l"
+    .string "against ELECTRIC types.\p"
     .string "Beware of paralysis, too.\p"
     .string "LT. SURGE is very cautious.\p"
-    .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "His POKéMON fight in pairs.\n"
+    .string "Bring two of your own to fight!$"
 
 VermilionCity_Gym_Text_GymGuySurgeReturned::
     .string "Ah, LT. SURGE is back from\n"

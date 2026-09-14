@@ -9,9 +9,9 @@ RocketLeague_ChampionsRoom_Text_GiovanniDefeat::
     .string "Your ambition has weight.$"
 
 RocketLeague_ChampionsRoom_Text_PostBattle::
-    .string "GIOVANNI: The title remains an\n"
-    .string "instrument of power.\p"
-    .string "Use this victory well.$"
+    .string "GIOVANNI: A title means little\n"
+    .string "without your POKéMON's trust.\p"
+    .string "Keep earning that trust.$"
 
 RocketLeague_ChampionsRoom_Text_ReceivedCoins::
     .string "{PLAYER} received 1,000 COINS\n"

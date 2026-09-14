@@ -1,4 +1,6 @@
 PokemonLeague_BrunosRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, PokemonLeague_BrunosRoom_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonLeague_BrunosRoom_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, PokemonLeague_BrunosRoom_OnResume
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PokemonLeague_BrunosRoom_OnWarp
 	.byte 0
@@ -18,7 +20,7 @@ PokemonLeague_BrunosRoom_EventScript_TurnPlayerNorth::
 
 PokemonLeague_BrunosRoom_EventScript_ReturnToLobby::
 	special ResetLeagueChallenge
-	warp MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F, 9, 2
+	warp MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F, 4, 2
 	waitstate
 	end
 
@@ -65,6 +67,8 @@ PokemonLeague_BrunosRoom_EventScript_ReadyPrompt::
 
 PokemonLeague_BrunosRoom_EventScript_StartIndigoBattle::
 	closemessage
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_BrunosRoom_EventScript_NeedTwoPokemon
 	special IsLeagueChallengeActive
 	call_if_eq VAR_RESULT, 0, PokemonLeague_BrunosRoom_EventScript_StartChallenge
 	special GetLeagueChallengeType
@@ -100,13 +104,32 @@ PokemonLeague_BrunosRoom_EventScript_StartChallenge::
 	return
 
 PokemonLeague_BrunosRoom_EventScript_IndigoIntro::
+	setobjectxyperm LOCALID_INDIGO_LEAGUE_OPPONENT, 6, 3
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_INDIGO_LEAGUE_OPPONENT
+	setvar VAR_LAST_TALKED, LOCALID_INDIGO_LEAGUE_OPPONENT
+	applymovement LOCALID_INDIGO_LEAGUE_OPPONENT, PokemonLeague_BrunosRoom_Movement_OpponentEnter
+	waitmovement 0
 	msgbox PokemonLeague_BrunosRoom_Text_IndigoIntro
 	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	return
 
 PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle::
-	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
 	special AdvanceLeagueChallengeRound
+	applymovement LOCALID_INDIGO_LEAGUE_OPPONENT, PokemonLeague_BrunosRoom_Movement_OpponentExit
+	waitmovement 0
+	setflag FLAG_TEMP_1
+	removeobject LOCALID_INDIGO_LEAGUE_OPPONENT
+	special GetLeagueChallengeRound
+	goto_if_eq VAR_RESULT, 4, PokemonLeague_BrunosRoom_EventScript_OpenChampionDoor
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
+	goto PokemonLeague_BrunosRoom_EventScript_StepBack
+
+PokemonLeague_BrunosRoom_EventScript_OpenChampionDoor::
+	call PokemonLeague_EventScript_OpenDoor
+	msgbox PokemonLeague_BrunosRoom_Text_ChampionAwaits
+PokemonLeague_BrunosRoom_EventScript_StepBack::
 	closemessage
 	applymovement LOCALID_PLAYER, PokemonLeague_BrunosRoom_Movement_StepBackFromArena
 	waitmovement 0
@@ -114,72 +137,84 @@ PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle::
 	end
 
 PokemonLeague_BrunosRoom_EventScript_BattleLorelei::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LORELEI
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_LORELEI
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LORELEI, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBruno::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BRUNO
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_BRUNO
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_BRUNO, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleAgatha::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_AGATHA
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_AGATHA
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_AGATHA, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleLance::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LANCE
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_LANCE
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LANCE, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBrock::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BROCK
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_BROCK_7
 	trainerbattle_no_intro_double TRAINER_LEADER_BROCK_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleMisty::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_MISTY
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_MISTY_7
 	trainerbattle_no_intro_double TRAINER_LEADER_MISTY_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleLtSurge::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LT_SURGE
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_LT_SURGE_7
 	trainerbattle_no_intro_double TRAINER_LEADER_LT_SURGE_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleErika::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ERIKA
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_ERIKA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_ERIKA_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleKoga::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_KOGA
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_KOGA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_KOGA_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBlaine::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BLAINE
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_BLAINE_7
 	trainerbattle_no_intro_double TRAINER_LEADER_BLAINE_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleSabrina::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SABRINA
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_SABRINA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_SABRINA_7, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleGiovanni::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GIOVANNI
 	call PokemonLeague_BrunosRoom_EventScript_IndigoIntro
 	cleartrainerflag TRAINER_LEADER_GIOVANNI
 	trainerbattle_no_intro_double TRAINER_LEADER_GIOVANNI, PokemonLeague_BrunosRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
@@ -200,3 +235,41 @@ PokemonLeague_BrunosRoom_Movement_StepBackFromArena::
 PokemonLeague_BrunosRoom_Movement_StepBackFromChampionRoom::
 	walk_down
 	step_end
+
+PokemonLeague_BrunosRoom_OnTransition::
+	setflag FLAG_TEMP_1
+	removeobject LOCALID_INDIGO_LEAGUE_OPPONENT
+	end
+
+PokemonLeague_BrunosRoom_OnLoad::
+	call PokemonLeague_BrunosRoom_EventScript_UpdateDoor
+	end
+
+PokemonLeague_BrunosRoom_EventScript_UpdateDoor::
+	setmetatile 6, 1, METATILE_PokemonLeague_Door_Top_Closed, 1
+	setmetatile 6, 2, METATILE_PokemonLeague_Door_Mid_Closed, 1
+	special IsLeagueChallengeActive
+	goto_if_eq VAR_RESULT, 0, PokemonLeague_BrunosRoom_EventScript_DoorDone
+	special GetLeagueChallengeType
+	goto_if_ne VAR_RESULT, 1, PokemonLeague_BrunosRoom_EventScript_DoorDone
+	special GetLeagueChallengeRound
+	call_if_eq VAR_RESULT, 4, PokemonLeague_EventScript_SetDoorOpen
+PokemonLeague_BrunosRoom_EventScript_DoorDone::
+	return
+
+PokemonLeague_BrunosRoom_EventScript_Opponent::
+	end
+
+PokemonLeague_BrunosRoom_Movement_OpponentEnter::
+	walk_down
+	walk_down
+	step_end
+
+PokemonLeague_BrunosRoom_Movement_OpponentExit::
+	walk_up
+	walk_up
+	step_end
+
+PokemonLeague_BrunosRoom_EventScript_NeedTwoPokemon::
+	msgbox Common_Text_NeedTwoPokemonForDoubleBattle
+	goto PokemonLeague_BrunosRoom_EventScript_StepBack

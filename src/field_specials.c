@@ -561,7 +561,8 @@ static void RestoreFlashbackPlayerObjectEvents(void)
 
     sFlashbackPlayerPositionValid = FALSE;
     ClearPlayerHeldMovementAndUnfreezeObjectEvents();
-    UnlockPlayerFieldControls();
+    // The calling script still has dialogue and progress updates to finish.
+    LockPlayerFieldControls();
 }
 
 static void ResetFlashbackPlayerGroundEffectState(struct ObjectEvent *playerObj, struct Sprite *playerSprite)

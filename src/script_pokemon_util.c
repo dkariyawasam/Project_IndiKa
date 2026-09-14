@@ -12,7 +12,6 @@
 #include "constants/pokemon.h"
 
 static void CB2_ReturnFromChooseHalfParty(void);
-static void CB2_ReturnFromChooseBattleTowerParty(void);
 
 void HealPlayerParty(void)
 {
@@ -164,29 +163,6 @@ static void CB2_ReturnFromChooseHalfParty(void)
         gSpecialVar_Result = FALSE;
         break;
     default:
-        gSpecialVar_Result = TRUE;
-        break;
-    }
-
-    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-}
-
-void ChooseBattleTowerPlayerParty(void)
-{
-    gMain.savedCallback = CB2_ReturnFromChooseBattleTowerParty;
-    InitChooseMonsForBattle(CHOOSE_MONS_FOR_BATTLE_TOWER);
-}
-
-static void CB2_ReturnFromChooseBattleTowerParty(void)
-{
-    switch (gSelectedOrderFromParty[0])
-    {
-    case 0:
-        LoadPlayerParty();
-        gSpecialVar_Result = FALSE;
-        break;
-    default:
-        ReducePlayerPartyToThree();
         gSpecialVar_Result = TRUE;
         break;
     }

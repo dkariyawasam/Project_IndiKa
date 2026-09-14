@@ -9,7 +9,7 @@ CinnabarIsland_Text_PokemonLabAccessGranted::
 
 CinnabarIsland_Text_RivalMansion::
 	.string "{RIVAL}: Hah!\n"
-	.string "So you figured out the ferry after\l"
+	.string "So you made it to CINNABAR after\l"
 	.string "all.\p"
 	.string "Don't get smug. I got here first.\p"
 	.string "People on this island keep talking\n"

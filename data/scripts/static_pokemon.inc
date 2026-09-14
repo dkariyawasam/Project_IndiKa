@@ -79,7 +79,11 @@ EventScript_MonFlewAway::
     end
 
 Text_ApexRumorRecorded:
-    .string "Rumour recorded.$"
+    .string "Rumour recorded.\p"
+    .string "Compare three accounts in your\n"
+    .string "LOGBOOK to find an APEX POKéMON.\p"
+    .string "If you flee from its battle,\n"
+    .string "it will leave for good.$"
 
 Text_ApexRumorUpdated:
     .string "Rumour updated.$"

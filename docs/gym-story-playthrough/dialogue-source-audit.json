@@ -1,0 +1,1762 @@
+[
+  {
+    "label": "PewterCity_Gym_Text_BrockIntro",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "So, we meet again.\\pBack in MT. MOON, I didn't\\nintroduce myself properly.\\pI'm BROCK.\\nPEWTER CITY's GYM LEADER.\\pYou showed a keen eye for\\nfossils out there.\\pBut finding fragments is only\\npart of the story.\\pUnderstanding how they connect...\\nthat's where true strength lies.\\pThere's something I want to show\\nyou about evolution.\\pBut first-you'll have to\\ndefeat me in battle.\\pLet's see what you've learned!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockNotEnoughPokemon",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "So, we meet again.\\pWait, you don't have enough POK\u00e9MON\\nto battle me.\\pCome back when you have\\nmore POK\u00e9MON in your party.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockDefeat",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "I took you for granted...\\nand I lost.\\pYou understood more than\\njust the battle.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_TakeThisWithYou",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Wait.\\pTake this-\\nthe BOULDERBADGE.\\pAnd with it, the key to\\nthe CINNABAR LAB.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_ReceivedBoulderKeyFromBrock",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "{PLAYER} received the BOULDER KEY\\nfrom BROCK.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_ExplainBoulderBadge",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "The BOULDERBADGE grants access\\nto the CINNABAR LAB.\\pThat's where fossils are studied\\nand restored.\\pBut fossils aren't the only way\\nto study the past.\\pSome POK\u00e9MON never vanished.\\nThey still live... unchanged.\\pDeep below ROCK TUNNEL,\\nancient waters shelter POK\u00e9MON\\lolder than anything restored.\\pFind one. Bring it to me.\\pThen I'll show you another kind\\nof evolution.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockRelicanthReminder",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Deep below ROCK TUNNEL,\\nancient waters still shelter\\lPOK\u00e9MON from another age.\\pFind one and bring it to me.\\nThen I'll show you trade evolution.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockOfferTrade",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Now watch closely.\\pSome evolution happens through\\ninteraction between TRAINERS.\\pWill you trade your ancient\\nPOK\u00e9MON for my GRAVELER?$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockDeclineTrade",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "No rush.\\pWhen you're ready, bring\\nthe ancient POK\u00e9MON back to me.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockTradeComplete",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "There it is...\\nGOLEM.\\pThat's trade evolution.\\pA change brought about by\\nexchange between TRAINERS.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockTradeDone",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "GOLEM is proof that evolution\\ncan be shaped by connection.\\pRemember that as you continue\\nOAK's research.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockPostBattle",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Deep below ROCK TUNNEL,\\nancient waters still shelter\\lPOK\u00e9MON from another age.\\pFind one and bring it to me.\\nThen I'll show you trade evolution.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockNotRelicanth",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "That's not the POK\u00e9MON\\nI was hoping to study.\\pLook for one that has lived\\nunchanged since ancient times.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_GymGuyBrockInMtMoon",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "BROCK's out in MT. MOON right now,\\nsearching for fossils! You should\\lgo find him there.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_GymGuyBrockStillAway",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "BROCK's still away from the GYM.\\nTry looking in MT. MOON.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_LetMeTakeYouToTheTop",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Ah, BROCK's back from MT. MOON!\\pLooks like your fossil hunting\\ngave him something to think about.\\pWant some advice before you\\nchallenge him?$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_LetsGetHappening",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "All right!\\nLet's dig deep!$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_BrockTypeAdvice",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "BROCK uses ROCK-type POK\u00e9MON.\\pThey resist NORMAL and FIRE.\\nDon't rely on brute force.\\pWATER and GRASS moves are\\nespecially effective.\\pGROUND moves can also\\nbreak through their defense.$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_ItsFreeLetsGetHappening",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "All right!\\pThen go show BROCK what you\\nlearned in MT. MOON!$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_YoureChampMaterial",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "Just as I thought!\\nYou're POK\u00e9MON champ material!$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_GymStatue",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "PEWTER POK\u00e9MON GYM\\nLEADER: BROCK\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "PewterCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/PewterCity_Gym/text.inc",
+    "text": "PEWTER POK\u00e9MON GYM\\nLEADER: BROCK\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyIntro",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "Hey! You made it back!\\pThanks for guiding me through\\nROCK TUNNEL's currents.\\pThe POWER PLANT is stable again,\\nand I learned a lot watching how\\lyou handled the flow.\\pWater is beautiful because it\\nchanges without losing itself.\\pNow it's time for an official\\nGYM challenge.\\pMy policy is an all-out offensive\\nwith WATER-type POK\u00e9MON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_ExplainWaterPulse",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "WATER PULSE sends rippling water\\nat the foe.\\pUse it on an aquatic POK\u00e9MON!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_ExplainCascadeBadge",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "That BADGE marks a real change\\nin your journey.\\pKeep building your FIELD AIDE\\nrecord, and outsider POK\u00e9MON\\lwill trust you more.\\pA puny fish can become a mighty,\\nraging POK\u00e9MON.\\pThat's the beauty of change.\\pBring me that GYARADOS.\\nThen I'll show you trade evolution\\lwith a natural held item.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_TakeThisWithYou",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You can have the CASCADEBADGE.\\pAnd with it, take this board.\\nIt will carry you across water.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "{PLAYER} received the CASCADE BOARD\\nfrom MISTY.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_UnusedMistyReward",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "{PLAYER} received something\\nfrom MISTY.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_BetterMakeRoomForThis",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You better make room for this!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyDefeat",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "Wow!\\nYou're too much!\\pAll right!\\pYou can have the CASCADEBADGE to\\nshow you beat me.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyGyaradosReminder",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "A puny fish can become a mighty,\\nraging POK\u00e9MON.\\pThat's the beauty of change.\\pBring me that GYARADOS.\\nThen I'll show you trade evolution\\lwith a natural held item.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyOfferTrade",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You brought GYARADOS?\\nPerfect!\\pSome POK\u00e9MON evolve when traded\\nwhile holding something natural.\\pMy POLIWHIRL is holding a\\nKING'S ROCK.\\pWill you trade GYARADOS\\nfor my POLIWHIRL?$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyDeclineTrade",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "No rush.\\pBring me GYARADOS when you want\\nto see that evolution in motion.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyNotGyarados",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "That's not the mighty POK\u00e9MON\\nthat grows from MAGIKARP.\\pBring me GYARADOS and I'll show\\nyou something interesting.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyTradeComplete",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "There it is...\\nPOLITOED!\\pA POLIWHIRL traded with a\\nKING'S ROCK can change into\\lsomething completely new.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyTradeDone",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "POLITOED is proof that evolution\\ncan follow the flow of an item\\land a trade.\\pKeep watching how beautifully\\nPOK\u00e9MON can change.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_DianaIntro",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "What? You?\\nI'm more than good enough for you!\\pMISTY won't have to be bothered.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_DianaDefeat",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You overwhelmed me!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_DianaPostBattle",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You have to face other TRAINERS\\nto see how good you really are.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "Yo!\\nChamp in the making!\\pLet me give you some advice!\\pThe LEADER, MISTY, is a pro who\\nuses WATER-type POK\u00e9MON.\\pYou can drain all their water with\\nGRASS-type POK\u00e9MON.\\pOr, you might use ELECTRIC-type\\nPOK\u00e9MON and zap them!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_MistyBackFromRockTunnel",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "MISTY's back from ROCK TUNNEL!\\pSounds like guiding her through\\nthose currents helped settle\\lsomething big.\\pWant some advice before you\\nchallenge her?$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymGuyLetsMakeWaves",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "All right!\\nLet's make waves!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymGuyShowMisty",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "All right!\\pThen go show MISTY what you\\nlearned in ROCK TUNNEL!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymGuideMistyAway",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "Hold up!\\pMISTY's away from the GYM.\\nShe's investigating the water\\lcurrents running through\\lROCK TUNNEL.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymGuideMistyStillAway",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "MISTY's still away from the GYM.\\pTry checking the water currents\\ninside ROCK TUNNEL.$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_WeMakePrettyGoodTeam",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "You beat MISTY!\\nSee, what'd I tell ya?\\pYou and me, kid, we make a pretty\\ndarn-good team!$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymStatue",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "CERULEAN POK\u00e9MON GYM\\nLEADER: MISTY\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "CeruleanCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/CeruleanCity_Gym/text.inc",
+    "text": "CERULEAN POK\u00e9MON GYM\\nLEADER: MISTY\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeIntro",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "So, you made it back, kid!\\pI'm LT. SURGE.\\nVERMILION CITY's GYM LEADER.\\pYou handled VOLT TACKLE training\\nwithout flinching.\\pThat takes nerve!\\pPower isn't handed to you.\\nYou train until you can hold it!\\pBut a GYM battle is combat!\\nNo holding back!\\pI tell you, kid, electric POK\u00e9MON\\nsaved me during the war!\\pNow show me you can stand against\\nreal voltage!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgePostBattle",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "A little word of advice, kid!\\pElectricity is sure powerful!\\pBut training is how you make\\nthat power obey!\\pBut, it's useless against GROUND-\\ntype POK\u00e9MON!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_TakeThisWithYou",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "The THUNDERBADGE proves you\\ncleared VERMILION GYM!\\pAnd with it, take this pass.\\nIt'll get you special MART stock.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_ReceivedThunderPassFromLtSurge",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "{PLAYER} received the THUNDER PASS\\nfrom LT. SURGE.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_ExplainThunderBadge",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "That pass unlocks vitamins and\\nbattle items at POK\u00e9MON MARTS.\\pPower isn't handed to you.\\nUse those tools and train until\\lyour POK\u00e9MON can hold it.\\pBring me a RAICHU with real\\nvoltage.\\pThen I'll show you evolution\\nthrough serious output.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Hey, kid!\\pYou've got a RAICHU with real\\nvoltage, right?\\pI've got an ELECTABUZZ holding\\nan ELECTIRIZER.\\pTrade me your RAICHU for it?$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeDeclineElectabuzzTrade",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "No pressure, kid!\\pCome back when you're ready to\\nhandle that kind of power.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeNotRaichu",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "That's not RAICHU, kid!\\pBring me the real lightning rod.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeElectabuzzTradeComplete",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Hah!\\nNow that's a power surge!\\pThat ELECTIRIZER ought to wake up\\nsomething fierce in ELECTABUZZ.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeElectabuzzTradeDone",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "That ELECTABUZZ was built for\\nserious output.\\pKeep it charged, kid!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_UnusedSurgeReward",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "{PLAYER} received something\\nfrom LT. SURGE.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_ExplainShockWave",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "SHOCK WAVE is an ELECTRIC move!\\pTeach it to an ELECTRIC POK\u00e9MON!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_MakeRoomInYourBag",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Yo, kid, make room in your BAG!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_LtSurgeDefeat",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Now that's a shocker!\\pYou're the real deal, kid!\\pFine, then, take the THUNDERBADGE!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_TuckerIntro",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "When I was in the Army, LT. SURGE\\nwas my strict CO.\\pHe was a hard taskmaster.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_TuckerDefeat",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Stop!\\nYou're very good!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_TuckerPostBattle",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "It's not easy opening that door.\\pLT. SURGE was always famous for\\nhis cautious nature in the Army.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_BailyIntro",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "I'm a lightweight, but I'm good\\nwith electricity!\\pThat's why I joined this GYM.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_BailyDefeat",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Fried!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_BailyPostBattle",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Okay, I'll talk!\\pLT. SURGE said he hid door\\nswitches inside something.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_DwayneIntro",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "This is no place for kids!\\nNot even if you're good!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_DwayneDefeat",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Wow!\\nSurprised me!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_DwaynePostBattle",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "LT. SURGE installed the traps in\\nthe GYM himself.\\pHe set up double locks everywhere.\\nLet me give you a hint.\\pWhen you open the first lock, the\\nsecond lock is right next to it.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "LT. SURGE has a nickname.\\pPeople refer to him as the\\nLightning Unovan!\\pHe's an expert on electric\\nPOK\u00e9MON.\\pFLYING/WATER-type POK\u00e9MON match\\npoorly against the ELECTRIC type.\\pBeware of paralysis, too.\\pLT. SURGE is very cautious.\\pHis POK\u00e9MON fight in pairs.\\nBring two of your own to fight!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuySurgeReturned",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Ah, LT. SURGE is back from\\nDIGLETT'S CAVE!\\pSounds like he put you through\\nsome serious training.\\pWant some advice before you\\nchallenge him?$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuyLetsGetCharged",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "All right!\\nLet's get charged up!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuyShowSurge",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "All right!\\pThen go show LT. SURGE what you\\nlearned in DIGLETT'S CAVE!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuySurgeAway",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Hold it, kid!\\pLT. SURGE is away from the GYM.\\nHe's training in DIGLETT'S CAVE.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuySurgeStillAway",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "LT. SURGE is still away from the\\nGYM.\\pTry looking in DIGLETT'S CAVE.$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymGuyPostVictory",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "Whew!\\nThat match was electric!$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymStatue",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "VERMILION POK\u00e9MON GYM\\nLEADER: LT. SURGE\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "VermilionCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/VermilionCity_Gym/text.inc",
+    "text": "VERMILION POK\u00e9MON GYM\\nLEADER: LT. SURGE\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Hello\u2026\\nLovely weather, isn't it?\\lIt's so pleasant\u2026\\p\u2026Oh, dear\u2026\\nI must have dozed off. Welcome.\\pMy name is ERIKA.\\nI am the LEADER of CELADON GYM.\\pI am a student of the art of\\nflower arranging.\\pMy POK\u00e9MON are solely of the\\nGRASS type.\\p\u2026Oh, I'm sorry, I had no idea that\\nyou wished to challenge me.\\pVery well, but I shall not lose.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh!\\nI concede defeat.\\lYou are remarkably strong.\\pI must confer on you the\\nRAINBOWBADGE.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "You are cataloging POK\u00e9MON?\\nI must say I'm impressed.\\pI would never collect POK\u00e9MON if\\nthey were unattractive.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaWaitingForChallenge",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "ERIKA is away from the GYM.\\pPlease look for her in\\nVIRIDIAN FOREST.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaReward",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Thank you for coming.\\pYour challenge in VIRIDIAN FOREST\\nwas witnessed and official.\\pThat forest reminded me that\\ngrowth comes through friendship.\\pSome POK\u00e9MON even evolve when\\nthat friendship is allowed to\\lflourish.\\pWhen people and POK\u00e9MON support\\none another, all may bloom.\\pYou have already earned the\\nRAINBOWBADGE.\\pNow, please accept a POK\u00e9MON\\nthat shows how friendship can\\lhelp life bloom.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Outsider POK\u00e9MON respond to more\\nthan BADGES alone.\\pYour FIELD AIDE record shows how\\ndeeply you understand them.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ReceivedRainbowKeyFromErika",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "{PLAYER} received the RAINBOW KEY\\nfrom ERIKA.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaGiftBudew",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Please also accept this BUDEW.\\pRaise it with kindness, and one\\nday friendship may help it bloom.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ReceivedBudewFromErika",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "{PLAYER} received BUDEW\\nfrom ERIKA.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaBudewAdvice",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "BUDEW evolves through friendship\\nduring the day.\\pCare for it well, and it will show\\nyou how trust becomes growth.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaRoseliaReminder",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Raise BUDEW with kindness during\\nthe day.\\pWhen ROSELIA is recorded in your\\nPOK\u00e9DEX, our lesson will bloom.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ErikaRoseliaConfirmed",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Your POK\u00e9DEX records ROSELIA.\\pFriendship has guided growth into\\nbloom. Wonderful.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymGuideErikaAway",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Excuse me!\\pERIKA is away from the GYM.\\nShe's somewhere in VIRIDIAN\\lFOREST.\\pShe mentioned searching for an\\nENERGY ROOT with healing properties.\\pShe said roots teach how living\\nthings support each other.\\pShe's been gone for some time\u2026\\nI should go find her.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymGuideErikaStillAway",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "ERIKA is still away from the GYM.\\pPlease look for her in\\nVIRIDIAN FOREST.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymGuideErikaImpressed",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "I was honored to witness your\\nbattle with ERIKA.\\pYou and your POK\u00e9MON supported\\none another beautifully.\\pPlease speak with ERIKA.\\nYour reward is waiting.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymGuidePostVictory",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "You bloomed brilliantly against\\nERIKA's garden of POK\u00e9MON.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_UnusedErikaReward",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "{PLAYER} received something\\nfrom ERIKA.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ExplainGigaDrain",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "GIGA DRAIN heals the user for\\nhalf the damage it inflicts.\\pThat strength through renewal is\\na beautiful thing.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_ShouldMakeRoomForThis",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "You should make room for this.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_KayIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "I should tell you about this GYM.\\pOnly real ladies are allowed in\\nhere!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_KayDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "You're too rough!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_KayPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Bleaah!\\nI hope ERIKA wipes you out!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_BridgetIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh, welcome.\\nI was getting bored.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_BridgetDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "My makeup!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_BridgetPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "GRASS-type POK\u00e9MON are tough\\nagainst the WATER type.\\pThey also have an edge on ROCK-\\nand GROUND-type POK\u00e9MON.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TinaIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "\u2026Weren't you peeking in here\\nearlier?$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TinaDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "You're an eye-opener!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TinaPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh, you were looking at ERIKA\u2026\\nYou weren't looking at me\u2026$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TamiaIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Look, look!\\nSee my POK\u00e9MON!\\pI like the GRASS type.\\nI like how they're easy to raise.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TamiaDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "No!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_TamiaPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "We only use GRASS-type POK\u00e9MON at\\nour GYM.\\pWhy? We also use them for making\\nflower arrangements!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LisaIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh, hey!\\pWe don't like BUG- or FIRE-type\\nPOK\u00e9MON in here!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LisaDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh!\\nYou!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LisaPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Our LEADER ERIKA might be quiet,\\nbut she's famous around here.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LoriIntro",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Pleased to meet you.\\nMy hobby is POK\u00e9MON training.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LoriDefeat",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "Oh!\\nSplendid!$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_LoriPostBattle",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "I have a blind date coming up.\\nI have to learn to be polite,\\lespecially if I have to battle.$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymStatue",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "CELADON POK\u00e9MON GYM\\nLEADER: ERIKA\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "CeladonCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/CeladonCity_Gym/text.inc",
+    "text": "CELADON POK\u00e9MON GYM\\nLEADER: ERIKA\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA: Fwahahaha!\\pA mere child like you dares to\\nchallenge me?\\pThe very idea makes me shiver\\nwith mirth!\\pVery well, I shall show you true\\nterror as a ninja master.\\pPoison brings steady doom.\\nSleep renders foes helpless.\\pDespair to the creeping horror of\\nPOISON-type POK\u00e9MON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Humph!\\nYou have proven your worth!\\pHere!\\nTake the SOULBADGE!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "When afflicted by TOXIC, a POK\u00e9MON\\nsuffers more and more.\\pIt suffers worsening damage as the\\nbattle wears on!\\pIt will surely terrorize foes!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaWaitingForChallenge",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA is away from the GYM.\\pPlease look for him in\\nCINNABAR VOLCANO.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaExplainSoulBadge",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Now that you have the SOULBADGE,\\nyou have proven your worth in\\nFUCHSIA GYM.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_ReceivedSoulPassFromKoga",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "{PLAYER} received the SOUL PASS\\nfrom KOGA.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaReward",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA: Fwahahaha!\\pThe LAVIC STONE is secure, and\\nyour challenge was witnessed.\\pYou earned the SOULBADGE in\\nCINNABAR VOLCANO.\\pAccept another tool of\\ntogetherness.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaGiftGolbat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Take this GOLBAT as well.\\pIt has trained beside my clan and\\nunderstands the strength of trust.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_ReceivedGolbatFromKoga",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "{PLAYER} received GOLBAT\\nfrom KOGA.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaGolbatAdvice",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "GOLBAT evolves through friendship.\\pMove with it as one, and it may\\nbecome a CROBAT.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaCrobatReminder",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Train beside GOLBAT and earn\\nits trust.\\pWhen CROBAT is recorded in your\\nPOK\u00e9DEX, the lesson is complete.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaCrobatConfirmed",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA: Fwahahaha!\\pYour POK\u00e9DEX records CROBAT.\\pTrust has sharpened your strength\\ninto something worthy.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaPostReward",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA: True strength is not only\\nhidden in the self.\\pIt sharpens when a community\\nmoves together.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_UnusedKogaReward",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "{PLAYER} received something\\nfrom KOGA.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KogaExplainToxic",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "TOXIC is a poison technique.\\pIt is a secret technique dating\\nback some four hundred years.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_MakeSpaceForThis",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Make space for this, child!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KaydenIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Strength isn't the key for POK\u00e9MON.\\nDo you understand this?\\pPOK\u00e9MON is about strategy!\\pI'll show you how strategy can\\nbeat brute strength.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KaydenDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "What?\\nExtraordinary!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KaydenPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "So, you mix brawn with brains?\\nGood strategy!\\pThat's remarkable for a child\\nTRAINER.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KirkIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I was a magician once upon a time.\\pBut I dreamt of becoming a ninja,\\nso I joined this GYM.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KirkDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I'm done for!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_KirkPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Even though I've lost, I will keep\\ntraining according to the teachings\\lof KOGA, my ninja master.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_NateIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Let's see you beat my special\\ntechniques!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_NateDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "You had me fooled!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_NatePostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I like poison and sleep techniques,\\nas they linger after battle!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_PhilIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Stop right there!\\pThe famed invisible walls of\\nFUCHSIA GYM have you frustrated?$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_PhilDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Whoa!\\nYou've got it!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_PhilPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "You impressed me!\\nHere's a hint!\\pLook very closely for gaps in the\\ninvisible walls!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_EdgarIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I also study the way of the ninja\\nwith Master KOGA!\\pNinja have a long history of using\\nanimals!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_EdgarDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Awoo!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_EdgarPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I still have much to learn.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_ShawnIntro",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Master KOGA comes from a long line\\nof ninjas.\\pWhat did you descend from?$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_ShawnDefeat",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "You're more skilled than I'd\\nthought!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_ShawnPostBattle",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Where there is light, there is\\nshadow!\\pLight and shadow!\\nWhich do you choose?$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "Yo!\\nChamp in the making!\\pFUCHSIA GYM is a tricked-up place.\\nIt's riddled with invisible walls!\\pKOGA might appear close, but he's\\nblocked off.\\pYou have to find gaps in the walls\\nto reach him.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymGuideKogaAway",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "JANINE: My father KOGA disappeared\\nin a puff of smoke before my eyes!\\pBefore he vanished, he spoke of\\ncrafting new tools from volcanic\\lrock found in CINNABAR VOLCANO.\\pI had better hurry and help my\\nfather, our clan leader!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymGuideKogaStillAway",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "KOGA is away searching for\\nvolcanic rock in CINNABAR VOLCANO.\\pI should hurry after my father\\nand help our clan leader.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymGuideKogaImpressed",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "I was honored to witness your\\ntrial with KOGA.\\pThe way you worked together to free\\nthat LAVIC STONE was remarkable.\\pPlease speak with KOGA.\\nYour reward is waiting.$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymGuyPostVictory",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "It's amazing how ninja can terrify,\\neven now!$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymStatue",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "FUCHSIA POK\u00e9MON GYM\\nLEADER: KOGA\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "FuchsiaCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/FuchsiaCity_Gym/text.inc",
+    "text": "FUCHSIA POK\u00e9MON GYM\\nLEADER: KOGA\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_SabrinaIntro",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "I had a vision of your arrival.\\pI am SABRINA.\\nSAFFRON CITY's GYM LEADER.\\pYou kept your mind steady within\\nPOK\u00e9MON TOWER's astral pull.\\pI have had psychic powers since\\nI was a child.\\pIt started when a spoon I\\ncarelessly tossed, bent.\\pI dislike battling, but if you wish,\\nI will show you my powers!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_SabrinaDefeat",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "This loss shocks me!\\nBut, a loss is a loss.\\pI admit, I didn't work hard enough\\nto win.\\pYour victory has earned you the\\nMARSHBADGE.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_SabrinaPostBattle",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "Psychic power isn't something that\\nonly a few people have.\\pEveryone has psychic power.\\nPeople just don't realize it.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_SabrinaPostFieldVictory",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "POK\u00e9MON TOWER's astral pressure\\nhas settled.\\pThe MARSHBADGE is proof that your\\nmind held firm within it.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "A calm mind earns trust from\\neven strong outsider POK\u00e9MON.\\pKeep completing PROF. OAK's\\nsubquests to strengthen that bond.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "{PLAYER} received the MARSH FINDER\\nfrom SABRINA.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_ExplainMarshFinder",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "The MARSH FINDER senses hidden\\nobjects nearby.\\pA calm mind can notice what the\\neyes alone overlook.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "Yo!\\nChamp in the making!\\pSABRINA's POK\u00e9MON use psychic\\npower instead of force.\\pFIGHTING POK\u00e9MON are especially\\nweak against PSYCHIC POK\u00e9MON.\\pThey'll get destroyed before they\\ncan even aim a punch!$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuideSabrinaAway",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "SABRINA left for POK\u00e9MON TOWER\\nafter feeling a psychic pull\\ltoward it.\\pShe said it was likely the\\ngathering of a massive amount\\lof astral energy.\\pI'd better head there myself.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuideSabrinaStillAway",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "SABRINA is at POK\u00e9MON TOWER,\\ndrawn there by astral energy.\\pBring her a POK\u00e9MON that can\\nlearn DREAM EATER.$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuideSabrinaReturned",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "SABRINA is back from\\nPOK\u00e9MON TOWER!\\pShe said you held steady inside\\na powerful astral current.\\pWant some advice before you\\nchallenge her?$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuyFocusYourMind",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "All right!\\nFocus your mind!$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuyShowSabrina",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "All right!\\pThen go show SABRINA what you\\nlearned in POK\u00e9MON TOWER!$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymGuyPostVictory",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "Psychic power, huh?\\pIf I had that, I'd make a bundle\\nat the slots!$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymStatue",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "SAFFRON POK\u00e9MON GYM\\nLEADER: SABRINA\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "SaffronCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/SaffronCity_Gym/text.inc",
+    "text": "SAFFRON POK\u00e9MON GYM\\nLEADER: SABRINA\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_BlaineIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Hah!\\pI am BLAINE, the red-hot LEADER\\nof CINNABAR GYM!\\pFire is more than destruction.\\nProperly handled, it drives\\linnovation and progress!\\pMy fiery POK\u00e9MON are ready to\\ntest your next breakthrough!\\pHah!\\nYou better have BURN HEAL!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_BlaineDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I have burned down to nothing!\\nNot even ashes remain!\\pYou have earned the VOLCANOBADGE.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "FIRE BLAST is the ultimate fire\\ntechnique.\\pDon't waste it on WATER POK\u00e9MON.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ExplainVolcanoBadge",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Hah!\\pThe VOLCANOBADGE proves you\\nsurvived CINNABAR GYM's heat.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_BlaineUnlockPorygonMachine",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "But a BADGE is only proof of what\\nyou have already survived.\\pProgress asks what you can build\\nnext!\\pThe machine by my desk can compile\\na POK\u00e9MON from research data.\\pAnswer its sequence correctly, and\\ngenerate PORYGON yourself!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_BlainePostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Fire is the engine of progress!\\pTreat it with discipline, and it\\ncan light the way to tomorrow.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_BlainePorygonMachineAvailable",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "The machine by my desk is ready.\\pGo on!\\nTurn research into a POK\u00e9MON!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineInitialize",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "PORYGON generator online.\\pInitialize build sequence?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineRules",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Build a stable virtual POK\u00e9MON by\\nchoosing the correct parameters.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineQuestionStablePattern",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Should the base form be coded from\\na stable geometric pattern?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineQuestionRandomNoise",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Should random noise overwrite the\\ncore data?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineQuestionProjection",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Should the completed data receive\\na physical projection?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineParameterAccepted",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Parameter accepted.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineBuildFailed",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Parameter rejected!\\pThe build collapsed into static.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineGenerated",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "The machine compiled the data into\\nPORYGON!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineAlreadyGenerated",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "The PORYGON generator hums quietly.\\pIts last pattern is safely archived.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PorygonMachineCancel",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Sequence cancelled.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_MakeSpaceForThis",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Make space for this, child!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ErikIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Do you know how hot POK\u00e9MON fire\\nbreath can get?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ErikDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Yow!\\nHot, hot, hot!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ErikPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Fire, or to be more precise,\\ncombustion\u2026\\p\u2026Oxygen in the air\u2026\\nBlah, blah, blah, blah\u2026$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuinnIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I was a thief, but I went straight\\nas a TRAINER.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuinnDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I surrender!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuinnPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I get this uncontrollable urge to\\nsteal other people's POK\u00e9MON.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_AveryIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I've studied POK\u00e9MON thoroughly.\\nYou can't win!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_AveryDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Waah!\\nMy studies were insufficient!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_AveryPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "My theories are too complicated\\nfor you to understand.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_RamonIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I like using FIRE-type POK\u00e9MON.\\nI just do.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_RamonDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Too hot to handle!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_RamonPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I wish there were a thief POK\u00e9MON.\\nI'd use that!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DerekIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I know why BLAINE became a\\nTRAINER.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DerekDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Ow!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DerekPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Our LEADER, BLAINE, became lost\\nin the mountains but good.\\pNight fell when a fiery bird\\nPOK\u00e9MON appeared.\\pIts light allowed BLAINE to find\\nhis way down safely.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DustyIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "I've been to many GYMS, but this\\none best suits my style.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DustyDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Yowza!\\nToo hot!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_DustyPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "PONYTA, NINETALES\u2026\\nThose are popular FIRE POK\u00e9MON.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ZacIntro",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Fire is weak against H2O.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ZacDefeat",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Oh!\\nSnuffed out!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_ZacPostBattle",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Water beats fire, of course.\\pBut fire melts ice, so the FIRE\\ntype beats ICE-type POK\u00e9MON.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Yo!\\nChamp in the making!\\pThe hotheaded BLAINE is a FIRE\\nPOK\u00e9MON pro.\\pDouse his spirits with water!\\pYou'd better take some\\nBURN HEALS, too.$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_GymGuyPostVictory",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "{PLAYER}!\\nYou beat that firebrand!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_GymStatue",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "CINNABAR POK\u00e9MON GYM\\nLEADER: BLAINE\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "CINNABAR POK\u00e9MON GYM\\nLEADER: BLAINE\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_PokemonQuizRules",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "POK\u00e9MON Quiz!\\pGet it right, and the door opens to\\nthe next room.\\pGet it wrong, and face a TRAINER!\\pIf you want to conserve your\\nPOK\u00e9MON for the GYM LEADER\u2026\\pThen get it right!\\nHere we go!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion1",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "CATERPIE evolves into METAPOD?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion2",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "There are nine certified POK\u00e9MON\\nLEAGUE BADGES?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion3",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "POLIWAG evolves three times?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion4",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Are electric moves effective\\nagainst GROUND-type POK\u00e9MON?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion5",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "POK\u00e9MON of the same kind and level\\nare not identical?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_QuizQuestion6",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "This contains TOMBSTONY?$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_CorrectGoOnThrough",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "You're absolutely correct!\\pGo on through!$"
+  },
+  {
+    "label": "CinnabarIsland_Gym_Text_SorryBadCall",
+    "source": "data/maps/CinnabarIsland_Gym/text.inc",
+    "text": "Sorry!\\nBad call!$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GiovanniIntro",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "GIOVANNI: You have seen me seek\\npower in ruins, in industry, and\\lbefore MEWTWO itself.\\pEvery time, you stood in my way.\\pVery well.\\nNo machines. No inventions.\\lNo stolen advantage.\\pOnly a TRAINER and his team.\\pFace GIOVANNI, LEADER of the\\nVIRIDIAN GYM!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GiovanniDefeat",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "Ha!\\nThat was a truly intense fight.\\lYou have won!\\pAs proof, here is the EARTHBADGE!\\n{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GiovanniPostBattle",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "GIOVANNI: I chased absolute power\\nbecause I mistook control for\\lstrength.\\pA creature in a vat.\\nA BALL that never fails.\\lA command no one could refuse.\\pBut MEWTWO answered control with\\ndefiance.\\pMy own POK\u00e9MON answered trust.\\pYou stood before power without\\ntrying to own it.\\pYou trusted your team, and they\\ntrusted you.\\pThat is what I had forgotten.\\nThat is what TEAM ROCKET must\\llearn.\\pAs of today, TEAM ROCKET changes\\ncourse.\\pNo more shadows.\\nNo more conquest.\\pI will begin again, not as a tyrant,\\nbut as a TRAINER.\\pFarewell, {PLAYER}.$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "The EARTHBADGE is evidence of\\nyour mastery as a TRAINER.\\pBut obedience is earned through\\nthe trust recorded in your\\lFIELD AIDE work.\\pWith it, you can challenge the\\nPOK\u00e9MON LEAGUE.\\pGo. Your path lies ahead.$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GymGuyAdvice",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "Yo!\\nChamp in the making!\\pEven I don't know the VIRIDIAN\\nLEADER's identity.\\pBut one thing's certain.\\nThis will be the toughest of all\\lthe GYM LEADERS.\\pAlso, I heard that the TRAINERS\\nhere like GROUND-type POK\u00e9MON.$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GymGuyPostVictory",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "Blow me away! GIOVANNI was the\\nGYM LEADER of VIRIDIAN?$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GymStatue",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "VIRIDIAN POK\u00e9MON GYM\\nLEADER: ?\\pWINNING TRAINERS:\\n{RIVAL}$"
+  },
+  {
+    "label": "ViridianCity_Gym_Text_GymStatuePlayerWon",
+    "source": "data/maps/ViridianCity_Gym/text.inc",
+    "text": "VIRIDIAN POK\u00e9MON GYM\\nLEADER: GIOVANNI\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}$"
+  },
+  {
+    "label": "MtMoon_Text_BrockFirstMeeting",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "Hey, watch your step. These tunnels\\nare unstable... but that's where the\\lgood finds are.\\pYou're not just passing through,\\nare you?\\pYou've got that look...\\nlike you're searching for something.\\pThis place is full of them-\\nfragments of ancient POK\u00e9MON.\\pOne fragment on its own doesn't\\ntell you much...\\lbut combine the right ones...\\p...and you might get something close\\nto what used to live here.\\pIf you find a fossil around\\nhere, show it to me.\\lI'd like to see what you're made of!$"
+  },
+  {
+    "label": "MtMoon_Text_BrockStillSearching",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "Still searching?\\nKeep your eyes on the ground.\\pMT. MOON has a way of hiding\\nhistory in plain sight.$"
+  },
+  {
+    "label": "MtMoon_Text_BrockSawHelixShard",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "That's a HELIX FOSSIL!\\pSharp ridges... light structure...\\nThis belonged to something built\\lfor speed.\\pGood eye. You found something\\nwith real historical value.$"
+  },
+  {
+    "label": "MtMoon_Text_BrockGaveDartShard",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "BROCK gave you a\\nDART FOSSIL.$"
+  },
+  {
+    "label": "MtMoon_Text_BrockSawDomeShard",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "That's a DOME FOSSIL!\\pDense curve... strong shell...\\nThis belonged to something built\\lto endure.\\pGood eye. You found something\\nwith real historical value.$"
+  },
+  {
+    "label": "MtMoon_Text_BrockGaveHasteShard",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "BROCK gave you a\\nHASTE FOSSIL.$"
+  },
+  {
+    "label": "MtMoon_Text_BrockReturnToGym",
+    "source": "data/maps/MtMoon_B1F/text.inc",
+    "text": "You've got a good eye.\\pMeet me back at the PEWTER GYM.\\nThere's something I want to show\\lyou about evolution.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyScoutRequest",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "Oh, hey!\\nYou're all the way out here, too?\\pThe POWER PLANT's been having\\nwild electrical surges lately.\\pI think underground currents in\\nROCK TUNNEL are feeding into it.\\pThere's a POWER STATION up ahead,\\nbut this tunnel splits around it.\\pCould you scout ahead and tell me\\nwhich direction I should take?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_ChooseDirection",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "Which way should I take from here?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_TryLeft",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "LEFT?\\nGot it! I'll test that current.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_LeftFailed",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "No good!\\pThe current that way is too strong.\\nIt loops back on itself.\\pWhich way should I try?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_TryRight",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "RIGHT?\\nAll right, I'll follow that flow.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyAtGenerator",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "This must be the generator.\\pThe current brought me right to it.\\nNow we can work out what's wrong.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyGeneratorFixed",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "Thanks for guiding me here!\\pI've got this generator stable\\nagain.\\pBut there are more surges ahead.\\nI'm going to follow the current.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyLowerScoutRequest",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "I can hear you through the wall!\\pThere's a waterfall ahead, and I\\ncan see the current branching.\\pCould you scout for me again and\\ntell me which way to take?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_LowerChooseDirection",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "Which way should I take from here?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_LowerTryLeft",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "LEFT?\\nGot it! I'll check that branch.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_LowerTryRight",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "RIGHT?\\nGot it! I'll check that branch.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_LowerLeftFailed",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "No good!\\pThe current that way is too strong.\\nIt loops back on itself.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyAtSecondGenerator",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "This is the second generator.\\pThe current carried me right to it.\\nI'll check this one too.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistySecondGeneratorFixed",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "That steadied another surge!\\pThere's still one more current\\npulling deeper into the tunnel.\\pI'm going to follow the opening\\nand see where it branches.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyAtThirdSection",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "There you are!\\pThis exit leads past the second\\ngenerator's current.\\pI just need to reach the last\\ngenerator now.\\pWhich way should I take?$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_ThirdTryLeft",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "LEFT?\\nGot it! I'll follow that path.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_ThirdTryRight",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "RIGHT?\\nGot it! I'll test that current.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_ThirdRightFailed",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "No good!\\pThe current that way is too strong.\\nIt loops back on itself.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyAtFinalGenerator",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "That's it!\\pThe POWER PLANT is fixed, and\\nthe currents are calm again.\\pAll this work brought positive\\nchange to ROCK TUNNEL.\\pI'm heading back to the GYM.\\nCome find me there, okay?\\pI've got something interesting\\nabout evolution to show you.$"
+  },
+  {
+    "label": "RockTunnel_B2F_Text_MistyFound",
+    "source": "data/maps/RockTunnel_B2F/scripts.inc",
+    "text": "That's the way through?\\nPerfect, thanks!\\pI'll follow that current and get\\nto the bottom of these surges.\\pMeet me back at CERULEAN GYM\\nwhen you're ready.$"
+  },
+  {
+    "label": "DiglettsCave_Southside_B1F_Text_LtSurgeTeachVoltTackle",
+    "source": "data/maps/DiglettsCave_Southside_B1F/text.inc",
+    "text": "Hey, kid!\\pI come to DIGLETT'S CAVE\\nregularly to train.\\pDown here, I can go all out!\\pThe powerful electric blasts from\\nmy POK\u00e9MON are contained by the\\lcave walls.\\pWhile training here, I developed\\nan ELECTRIC-type move.\\pWant me to teach it?\\pYou'll need a POK\u00e9MON that can\\nlearn it.$"
+  },
+  {
+    "label": "DiglettsCave_Southside_B1F_Text_LtSurgeChoosePokemon",
+    "source": "data/maps/DiglettsCave_Southside_B1F/text.inc",
+    "text": "All right, kid!\\nChoose the POK\u00e9MON to train.$"
+  },
+  {
+    "label": "DiglettsCave_Southside_B1F_Text_LtSurgeComeBackWithPokemon",
+    "source": "data/maps/DiglettsCave_Southside_B1F/text.inc",
+    "text": "No problem, kid!\\pCome back with a POK\u00e9MON that can\\nhandle that kind of voltage.$"
+  },
+  {
+    "label": "DiglettsCave_Southside_B1F_Text_LtSurgeTaughtVoltTackle",
+    "source": "data/maps/DiglettsCave_Southside_B1F/text.inc",
+    "text": "That's VOLT TACKLE!\\pIt's reckless, high-voltage power\\npacked into a full-body charge.\\pHeh!\\nI like you, kid.\\pYou've got the nerve to handle\\nreal voltage.\\pI'll meet you back at VERMILION\\nGYM.\\pI want a battle with you!$"
+  },
+  {
+    "label": "ViridianForest_Text_TangrowthApexCry",
+    "source": "data/maps/ViridianForest/scripts.inc",
+    "text": "GREEEAOW!$"
+  },
+  {
+    "label": "ViridianForest_Text_FriendsItchingToBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "I came here with some friends to\\ncatch us some BUG POK\u00e9MON!\\pThey're all itching to get into\\nsome POK\u00e9MON battles!$"
+  },
+  {
+    "label": "ViridianForest_Text_RickIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Hey! You have POK\u00e9MON!\\nCome on!\\lLet's battle 'em!$"
+  },
+  {
+    "label": "ViridianForest_Text_RickDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "No!\\nCATERPIE got tangled up in the\\nforest pace!$"
+  },
+  {
+    "label": "ViridianForest_Text_RickPostBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Ssh! You'll scare the bugs away.\\nAnother time, okay?$"
+  },
+  {
+    "label": "ViridianForest_Text_DougIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Yo!\\nYou can't jam out if you're a\\lPOK\u00e9MON TRAINER!$"
+  },
+  {
+    "label": "ViridianForest_Text_DougDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Huh?\\nI ran out of POK\u00e9MON!$"
+  },
+  {
+    "label": "ViridianForest_Text_DougPostBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "That totally stinks! I'm going to\\ncatch some stronger ones!$"
+  },
+  {
+    "label": "ViridianForest_Text_SammyIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Hey, wait up!\\nWhat's the hurry? Why the rush?$"
+  },
+  {
+    "label": "ViridianForest_Text_SammyDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "I give!\\nYou're good at this!$"
+  },
+  {
+    "label": "ViridianForest_Text_SammyPostBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Sometimes, you can find stuff on\\nthe ground.\\pI'm looking for the stuff I\\ndropped. Can you help me?$"
+  },
+  {
+    "label": "ViridianForest_Text_AnthonyIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "I might be little, but I won't like\\nit if you go easy on me!$"
+  },
+  {
+    "label": "ViridianForest_Text_AnthonyDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Oh, boo.\\nNothing went right.$"
+  },
+  {
+    "label": "ViridianForest_Text_AnthonyPostBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "I lost some of my allowance\u2026$"
+  },
+  {
+    "label": "ViridianForest_Text_CharlieIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Did you know that POK\u00e9MON evolve?$"
+  },
+  {
+    "label": "ViridianForest_Text_CharlieDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Oh!\\nGuess evolving fast isn't the same\\nas battling well.$"
+  },
+  {
+    "label": "ViridianForest_Text_CharliePostBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "BUG POK\u00e9MON evolve quickly.\\nThey're a lot of fun!$"
+  },
+  {
+    "label": "ViridianForest_Text_RanOutOfPokeBalls",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "I was throwing POK\u00e9 BALLS to\\ncatch POK\u00e9MON, and I ran out.\\pThat's why you can never have too\\nmany POK\u00e9 BALLS.$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaLookingForRoot",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "ERIKA: Oh, hello.\\pI came to VIRIDIAN FOREST in\\nsearch of an ENERGY ROOT.\\pRoots are quiet things, yet they\\nbind a whole garden together.\\pA root grown here is said to heal\\nbecause the forest shares its\\lstrength as one family.\\pI am certain one can be found\\nsomewhere nearby.$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaShownRoot",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "ERIKA: Oh!\\nThat ENERGY ROOT is splendid.\\pSee how many tiny roots gather\\ninto one strong whole?\\pIt reminds me that families,\\nfriends, and communities grow\\lbest together.\\pIf I could find one of my own, I\\nwould gladly return to the GYM.$"
+  },
+  {
+    "label": "ViridianForest_Text_GymGuideFoundErika",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "ERIKA!\\nI am so glad I found you!\\pAnd look, I found an ENERGY ROOT\\non the way here.\\pIt was tucked among other roots,\\nall holding the soil together.$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaChallenge",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "ERIKA: How fortunate.\\nThat is just the lesson I hoped\\lthis forest would offer.\\pSome POK\u00e9MON bloom only when\\nfriendship has taken root.\\pThat kind of evolution is a bond,\\nnot merely a change in form.\\pBefore I return, may I ask you for\\na proper GYM challenge?\\pWith my GYM GUIDE present, the\\nmatch will be official.$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaBattleIntro",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Very well.\\pShow me how friendship has helped\\nyour POK\u00e9MON grow.\\pLet us begin.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaDefeat",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "Oh!\\nI concede defeat.$"
+  },
+  {
+    "label": "ViridianForest_Text_ErikaAfterBattle",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "ERIKA: You are remarkably strong.\\pThis battle was witnessed, so it\\nshall stand as your GYM challenge.\\pI must confer on you the\\nRAINBOWBADGE.\\n{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\pI saw trust in the way your\\nPOK\u00e9MON stood with you.\\pFriendship can guide evolution\\nas surely as sunlight guides\\la bud into bloom.\\pPlease come to CELADON GYM.\\nThere, I will give a reward for\\lthe growth you have shown.$"
+  },
+  {
+    "label": "ViridianForest_Text_ReceivedRainbowKeyFromErika",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "{PLAYER} received the RAINBOW KEY\\nfrom ERIKA.$"
+  },
+  {
+    "label": "ViridianForest_Text_ExplainRainbowKey",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "The RAINBOW KEY opens the\\nBERRY PATCH next door to\\lCELADON GYM.\\pPlease feel free to pick the\\nberries growing there.$"
+  },
+  {
+    "label": "ViridianForest_Text_LeavingViridianForest",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "LEAVING VIRIDIAN FOREST\\nPEWTER CITY AHEAD$"
+  },
+  {
+    "label": "ViridianForest_Text_TangrowthVanished",
+    "source": "data/maps/ViridianForest/text.inc",
+    "text": "TANGROWTH vanished into the\\nflowers!$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_WaterWarmsMeToCore",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "Hm!\\nHaaaaaaaaaaah!\\pAaaah! This is heavenly!\\nThe water warms me to my core!\\pYou should jump in, too.\\pGo to the middle, relax, and get\\ngood and warm!$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_EnjoyBowlOfChowder",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "My favorite part of bathing comes\\nup right after this.\\pI enjoy a bowl of chowder to\\nwarm me from the inside, too!$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_WaterExquisiteFullyRefreshed",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "The water is perfectly warm.\\nIt feels exquisite\u2026\\p{PLAYER} and the POK\u00e9MON were\\nfully refreshed!$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_HotSpringIsTherapeutic",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "Soaking in a hot spring pool is\\ntherapeutic, people say.$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_SeeHowSmoothMySkinIs",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "Have a look at my face.\\nSee how smooth my skin is?\\pThe hot spring's water keeps my\\nskin younger than my age.$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_BrunoVisitsSpaOnOccasion",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "After an honest day of training,\\nnothing beats a relaxing soak in\\lthe hot spring pool.\\pBRUNO, who's a senior ahead of me,\\nvisits the SPA on occasion.\\pHe comes to rehab injuries, both\\nhis own and his POK\u00e9MON's.$"
+  },
+  {
+    "label": "CinnabarVolcano_1F_Text_KogaLookingForLavicStone",
+    "source": "data/maps/CinnabarVolcano_1F/text.inc",
+    "text": "KOGA: Fwahahaha!\\pYou have found me at work,\\n{PLAYER}.\\pI seek a LAVIC STONE, quenched\\nby the thermal waters of this\\lvolcano.\\pSuch stone can be shaped into\\nexcellent ninja tools.\\pBut even a stone born of fire\\nneeds water to become useful.\\pSo it is with people.\\pCommunity is what turns many\\nseparate strengths into one.\\pTogetherness will allow us to\\nreach the stone.\\pI challenge you, {PLAYER}.\\pReach the water source with me,\\nand prove you understand the\\lstrength of moving together!\\pNow, follow if you can!$"
+  },
+  {
+    "label": "CinnabarVolcano_LeftCorridor_2F_Text_GarrettIntro",
+    "source": "data/maps/CinnabarVolcano_LeftCorridor_2F/text.inc",
+    "text": "A volcano's just a mountain\\nwith a temper!$"
+  },
+  {
+    "label": "CinnabarVolcano_LeftCorridor_2F_Text_GarrettDefeat",
+    "source": "data/maps/CinnabarVolcano_LeftCorridor_2F/text.inc",
+    "text": "That shook me loose!$"
+  },
+  {
+    "label": "CinnabarVolcano_LeftCorridor_2F_Text_GarrettPostBattle",
+    "source": "data/maps/CinnabarVolcano_LeftCorridor_2F/text.inc",
+    "text": "Loose stone, hot air, and hard\\nclimbs. That's a real trail.$"
+  },
+  {
+    "label": "CinnabarVolcano_LeftCorridor_2F_Text_KogaCheckpoint",
+    "source": "data/maps/CinnabarVolcano_LeftCorridor_2F/text.inc",
+    "text": "KOGA: Fwahahaha!\\pYou kept pace through the heat\\nand stone.\\pGood.\\nThe water source lies deeper still.\\pA ninja does not simply rush\\ntoward the goal.\\pWe watch the path, trust our allies,\\nand move as one.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberIntro",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/scripts.inc",
+    "text": "We train where the embers glow.\\nLet us light up this battle!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberDefeat",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/scripts.inc",
+    "text": "You cooled us down!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KindlerEmberPostBattle",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/scripts.inc",
+    "text": "A small spark can grow strong.\\nSo can a patient trainer.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KiraIntro",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "Hot ground, narrow path...\\nPerfect footwork practice!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KiraDefeat",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "Clean movement!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KiraPostBattle",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "A battle here teaches balance\\nbetter than any dojo floor.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_ColeIntro",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "Can you handle a little fire\\ninside a volcano?$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_ColeDefeat",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "You smothered my spark!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_ColePostBattle",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "The best flames don't flare up.\\nThey keep burning steady.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaFountain",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Fwahahaha!\\pYou made it this far.\\nTogether, no less.\\pThen the lesson has already\\ntaken root.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaLiftStone",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA grips the LAVIC STONE\\nwith both hands...\\p...But it does not move.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaNeedStrength",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Hmph!\\nEven quenched, it resists me.\\pWe need more strength to lift\\nthis stone from its resting place.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_JanineArrives",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "JANINE: Then I made it in time.\\pFather, you said togetherness\\nwas the point of this trial.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaTryTogether",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Hah!\\nYou are right, JANINE.\\pThen we shall try together.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_PullTogether",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA, JANINE, and {PLAYER}\\npull with all their strength!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_StonePulledFree",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "The LAVIC STONE breaks loose\\nfrom the volcanic rock!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaOfficialChallenge",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Together, we freed the\\nstone.\\pA community does not weaken\\nthe self.\\pIt gives strength somewhere to\\nstand.\\pBack at the GYM, this will become\\nthe heart of new ninja tools.\\pBut before I return, I want to\\nbattle you here.\\pJANINE stands beside me as my\\nGYM aide.\\pThat makes this challenge\\nofficial.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaReadyToBattle",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "Are you ready to battle KOGA?$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaBattleIntro",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Then show me the strength\\nyou bring to your allies!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaDefeat",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "Fwahahaha!\\nA worthy victory!$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaPostJanine",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: The LAVIC STONE waits.\\pWith JANINE here, we may yet\\nmove it.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaPostStone",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Together, even stubborn\\nstone must yield.\\pNow, let us make this trial\\nofficial.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_KogaAfterBattle",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "KOGA: Fwahahaha!\\nYou have earned the SOULBADGE!\\n{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\pReturn to FUCHSIA GYM\\nwhen you are ready.\\pThere, the LAVIC STONE will become\\ntools worthy of our clan.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_JaninePostArrival",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "JANINE: If this is for our clan's\\ntools, then I should help too.$"
+  },
+  {
+    "label": "CinnabarVolcano_RightCorridor_3F_Text_JaninePostStone",
+    "source": "data/maps/CinnabarVolcano_RightCorridor_3F/text.inc",
+    "text": "JANINE: Father never makes these\\nlessons easy.\\pBut I think that was the point.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaTeachDreamEater",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "This circle gathers more than\\nmemory.\\pIt gathers feeling, fear, grief,\\nand the will to remain.\\pI came here because the tower's\\nastral energy called to me.\\pWhile listening to it, I refined\\na PSYCHIC-type move.\\pWould you like me to teach it?\\pYou will need a POK\u00e9MON that can\\nlearn DREAM EATER.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaChoosePokemon",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Very well.\\nChoose the POK\u00e9MON to focus.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaComeBackWithPokemon",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Then return with a POK\u00e9MON whose\\nmind can reach through dreams.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaTaughtDreamEater",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "That is DREAM EATER.\\pIt draws strength from a sleeping\\nfoe through psychic focus.\\pYou remained peaceful inside\\nthe tower's astral pull.\\pThat emotional control is\\nenough for an\\lofficial challenge here.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_GymGuideArrives",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "SABRINA!\\nI felt the tower settle.\\pIf a battle begins here, I will\\nwitness it as your GYM aide.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_GymGuideWaiting",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "The tower is quiet now.\\pI will witness SABRINA's battle\\nwhenever you are ready.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaReadyToBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Peace is not proven by silence\\nalone.\\pLet us see how your focus holds\\nin battle.\\pAre you ready to challenge me?$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaDeclineBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Then steady yourself.\\pWhen your mind is ready, speak\\nto me again.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaBattleIntro",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "In this tower, thought and memory\\npress close.\\pShow me the shape of your will.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaDefeat",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Your focus did not waver.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_SabrinaAfterBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "The MARSHBADGE is yours.\\pYou met the tower's pressure and\\nanswered it with peaceful control.\\pI will return to SAFFRON GYM.\\nCome there when you are ready.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_AngelicaIntro",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Give\u2026me\u2026\\nyour light\u2026$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_AngelicaDefeat",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Groan!\\nThe darkness is lifting.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_AngelicaPostBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "I feel anemic and weak\u2026$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_EmiliaIntro",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Urff\u2026\\nKwaah!$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_EmiliaDefeat",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Something left me!\\nWas that the spirit?$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_EmiliaPostBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "My hair didn't fall out!\\nIt was a malevolent spirit!$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_JenniferIntro",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Ke\u2026ke\u2026ke\u2026\\nke\u2026ke\u2026ke!$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_JenniferDefeat",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "Keee!\\nThe astral pull is breaking.$"
+  },
+  {
+    "label": "PokemonTower_3F_Text_JenniferPostBattle",
+    "source": "data/maps/PokemonTower_3F/text.inc",
+    "text": "What's going on here?$"
+  }
+]

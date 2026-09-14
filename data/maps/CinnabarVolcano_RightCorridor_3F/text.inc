@@ -111,3 +111,12 @@ CinnabarVolcano_RightCorridor_3F_Text_JaninePostStone::
     .string "JANINE: Father never makes these\n"
     .string "lessons easy.\p"
     .string "But I think that was the point.$"
+
+CinnabarVolcano_RightCorridor_3F_Text_GymAideTypeAdvice::
+    .string "JANINE: Father uses POISON types.\p"
+    .string "PSYCHIC and GROUND moves are\n"
+    .string "strong against POISON.\p"
+    .string "But GROUND moves cannot hit\n"
+    .string "FLYING types. Watch for those!\p"
+    .string "Bring antidotes for poison, too.$"
+

@@ -90,9 +90,11 @@ SaffronCity_Gym_Text_GymGuyShowSabrina::
     .string "learned in POKéMON TOWER!$"
 
 SaffronCity_Gym_Text_GymGuyPostVictory::
-    .string "Psychic power, huh?\p"
-    .string "If I had that, I'd make a bundle\n"
-    .string "at the slots!$"
+    .string "I witnessed your victory in\n"
+    .string "POKéMON TOWER. Well done!\p"
+    .string "SABRINA is back in her chamber.\n"
+    .string "Speak with her about friendship\l"
+    .string "and how it changes POKéMON.$"
 
 SaffronCity_Gym_Text_GymStatue::
     .string "SAFFRON POKéMON GYM\n"
@@ -105,3 +107,92 @@ SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
+
+SaffronCity_Gym_Text_OrinIntro::
+    .string "Focus your thoughts.\n"
+    .string "Now, focus your team!$"
+
+SaffronCity_Gym_Text_OrinDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_OrinAfter::
+    .string "A calm mind can learn\n"
+    .string "even from defeat.$"
+
+SaffronCity_Gym_Text_AldenIntro::
+    .string "These rooms test direction.\n"
+    .string "I test concentration.$"
+
+SaffronCity_Gym_Text_AldenDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_AldenAfter::
+    .string "The shortest path is not\n"
+    .string "always the clearest one.$"
+
+SaffronCity_Gym_Text_SilasIntro::
+    .string "Can you read my next move?\n"
+    .string "Let us find out.$"
+
+SaffronCity_Gym_Text_SilasDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_SilasAfter::
+    .string "Prediction still needs practice.\n"
+    .string "Bring your VS SEEKER next time.$"
+
+SaffronCity_Gym_Text_MiraIntro::
+    .string "SABRINA values a steady mind.\n"
+    .string "Show me yours in battle.$"
+
+SaffronCity_Gym_Text_MiraDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_MiraAfter::
+    .string "Our training continues\n"
+    .string "while SABRINA is away.$"
+
+SaffronCity_Gym_Text_SeleneIntro::
+    .string "Close out the noise.\n"
+    .string "Listen to your POKéMON.$"
+
+SaffronCity_Gym_Text_SeleneDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_SeleneAfter::
+    .string "Trust makes it easier\n"
+    .string "to understand one another.$"
+
+SaffronCity_Gym_Text_LyraIntro::
+    .string "A clear mind and a loyal team.\n"
+    .string "That is my kind of strength.$"
+
+SaffronCity_Gym_Text_LyraDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+SaffronCity_Gym_Text_LyraAfter::
+    .string "Come back with your VS SEEKER.\n"
+    .string "There is always more to learn.$"
+
+SaffronCity_Gym_Text_SabrinaGiftChingling::
+    .string "SABRINA: Your calm presence\n"
+    .string "earned this CHINGLING's trust.\p"
+    .string "I would like you to take it\n"
+    .string "with you on your journey.$"
+
+SaffronCity_Gym_Text_ReceivedChinglingFromSabrina::
+    .string "{PLAYER} received CHINGLING\n"
+    .string "from SABRINA!$"
+
+SaffronCity_Gym_Text_SabrinaChinglingAdvice::
+    .string "CHINGLING already feels close\n"
+    .string "to you. Nurture that friendship.\p"
+    .string "When its bond is strong enough,\n"
+    .string "it can evolve into CHIMECHO\l"
+    .string "by leveling up at night.$"

@@ -1,0 +1,26 @@
+item-animation-1 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-1 finished	PASS	Native task ended after 26 pose frames
+Animated Board continuation	PASS	Pose completed before boarding
+item-animation-2 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-2 finished	PASS	Native task ended after 26 pose frames
+Animated Rainbow Key unlock	PASS	Arrived inside berry patch
+item-animation-3 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-3 finished	PASS	Native task ended after 26 pose frames
+Animated Boulder Key unlock	PASS	Arrived inside Cinnabar lab
+item-animation-4 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-4 finished	PASS	Native task ended after 26 pose frames
+Animated Card Key unlock	PASS	Silph door flag set after animation
+Soul Pass cancel skips animation	PASS	No gesture before service selection or on cancellation
+item-animation-5 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-5 finished	PASS	Native task ended after 26 pose frames
+Soul Pass selected service animates	PASS	One gesture for friendship service
+item-animation-6 pose	PASS	Native task reached animation state, original graphics 7
+item-animation-6 finished	PASS	Native task ended after 26 pose frames
+Invalid Board skips animation	PASS	Indoor Board use rejected without pose
+Missing Card Key skips animation	PASS	Locked door stays closed and no pose
+item-animation-7 pose	PASS	Native task reached animation state, original graphics 7
+item-animation-7 finished	PASS	Native task ended after 26 pose frames
+Female animated Board continuation	PASS	Female pose completed and boarding advanced
+item-animation-8 pose	PASS	Native task reached animation state, original graphics 9
+item-animation-8 finished	PASS	Native task ended after 26 pose frames
+Finder restores water travel	PASS	Female riding state restored after Finder scan

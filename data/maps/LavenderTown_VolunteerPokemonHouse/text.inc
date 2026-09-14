@@ -39,8 +39,8 @@ LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
 LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
     .string "Upon hearing the POKé FLUTE,\n"
     .string "sleeping POKéMON will spring awake.\p"
-    .string "Try using it on POKéMON that are\n"
-    .string "sleeping obstacles.$"
+    .string "Use it during battle to wake\n"
+    .string "sleeping POKéMON.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
     .string "You must make room for this!$"

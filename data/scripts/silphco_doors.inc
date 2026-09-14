@@ -512,6 +512,9 @@ EventScript_TryUnlockDoor::
 	end
 
 EventScript_OpenDoor::
+	closemessage
+	special PlayFieldItemAnimation
+	waitstate
 	playfanfare MUS_LEVEL_UP
 	msgbox Text_CardKeyOpenedDoor
 	waitfanfare

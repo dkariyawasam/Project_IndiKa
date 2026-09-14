@@ -20,4 +20,6 @@ SeafoamIslands_1F_Text_UsedToBeFloodedWithLava::
 	.string "Can you believe this whole area\n"
 	.string "used to be flooded with lava?\p"
 	.string "One sudden change, and the\n"
-	.string "whole cave became something else.$"
+	.string "whole cave became something else.\p"
+	.string "The deeper you go, the sharper\n"
+	.string "the cold gets.$"

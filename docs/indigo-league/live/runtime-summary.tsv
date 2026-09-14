@@ -1,0 +1,24 @@
+check	result	detail
+door-locked	PASS	
+doubles	PASS	
+opponent-bag-disabled	PASS	
+six-player-levels-50	PASS	
+six-enemy-levels-50	PASS	
+first-staged-win-return	PASS	
+round-2-won	PASS	
+round-3-won	PASS	
+round-4-won	PASS	
+round-1-won	PASS	
+champion-doubles	PASS	
+champion-restored	PASS	
+loss-resets-run	PASS	
+fresh-entry-walkable	PASS	
+champion-locked-after-reset	PASS	
+exit-destination	PASS	13,0 at 4,2
+player-bag-disabled	PASS	Observed in bag-blocked.png
+round-1-party-restored	PASS	All six decoded party records match baseline
+round-2-party-restored	PASS	All six decoded party records match baseline
+round-3-party-restored	PASS	All six decoded party records match baseline
+round-4-party-restored	PASS	All six decoded party records match baseline
+champion-party-restored	PASS	All six decoded party records match baseline
+loss-party-restored	PASS	All six decoded party records match baseline

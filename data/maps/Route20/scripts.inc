@@ -1,16 +1,10 @@
 Route20_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route20_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route20_OnFrame
 	.byte 0
 
 Route20_OnFrame::
 	map_script_2 VAR_MAP_SCENE_ROUTE20, 1, Route20_EventScript_PlayerStepOffFerry
 	.2byte 0
-
-Route20_OnTransition::
-	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
-	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
-	end
 
 Route20_EventScript_PlayerStepOffFerry::
 	lockall
@@ -23,26 +17,6 @@ Route20_EventScript_PlayerStepOffFerry::
 Route20_Movement_PlayerStepOffFerry::
 	walk_up
 	step_end
-
-Route20_EventScript_ResetSeafoamBouldersForB3F::
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_1
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_2
-	return
-
-Route20_EventScript_ResetSeafoamBouldersForB4F::
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_3
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_4
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_5
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_6
-	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_2
-	return
 
 Route20_EventScript_SeafoamIslandsSign::
 	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN

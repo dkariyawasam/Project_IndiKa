@@ -1,0 +1,15 @@
+dofile("/tmp/gym-rosters/harness.lua")
+dofile("/tmp/gym-rosters/helpers.lua")
+dofile("/tmp/gym-rosters/common.lua")
+dofile("/tmp/apex-story-playthrough/characters.lua")
+dofile("/tmp/gym-rosters/logger.lua")
+qa.run({{kind='press',key=8,frames=30},{kind='text',frames=24000}})
+qa.startWatcher=callbacks:add('frame',function()
+ if emu:read32(0x03003264)==0x08056541 and emu:read8(0x03000f9c)==0 then
+  callbacks:remove(qa.startWatcher)
+  qa.setVar(0x408f,4);qa.setVar(0x4091,4);qa.setFlag(0x292,1)
+  qa.script({0x44,94,1,1,0,0x79,6,0,100,0,0,0,0,0,0,0,0,0,0,0,0x7b,0,0,53,0,0x6c,0x02})
+  qa.run({{kind='wait',frames=60}})
+  dofile('/tmp/gym-rosters/tests.lua')
+ end
+end)

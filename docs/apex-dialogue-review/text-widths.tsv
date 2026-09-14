@@ -1,0 +1,160 @@
+File	Label	Pixels	Line
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	152	LANCE: I followed GIOVANNI
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	146	and MEWTWO into this cave,
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	144	opened by MEWTWO's blast.
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	119	GIOVANNI's signal was
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	48	breaking.
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	129	MEWTWO was beginning to
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceAftermath	98	choose for itself.
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceRepeat	143	LANCE: MEWTWO fled north.
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceRepeat	154	GIOVANNI followed it toward
+data/maps/CeladonCave/text.inc	CeladonCave_Text_LanceRepeat	83	CERULEAN CAVE.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	202	GIOVANNI: So that is the difference.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	146	I tried to possess MEWTWO.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	150	You faced it as a TRAINER.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	183	Perhaps absolute power was never
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	163	something a person could own.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	154	There is nothing left for me
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	133	to take from this place.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwo	170	I will return to VIRIDIAN GYM.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	87	GIOVANNI: Gone.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	185	Neither of us could hold it here.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	183	Perhaps absolute power was never
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	163	something a person could own.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	154	There is nothing left for me
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	133	to take from this place.
+data/maps/CeruleanCave_B1F/scripts.inc	CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped	170	I will return to VIRIDIAN GYM.
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	166	An enormous POKéMON barged in
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	97	through the wall!
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	138	It was shaking with rage.
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	131	Completely unstoppable!
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	164	Lucky for us, it rampaged out
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	144	the door and headed west,
+data/maps/CeruleanCity_House2/text.inc	CeruleanCity_House2_Text_EnormousPokemonBargedIn	92	toward MT. MOON.
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	150	Well, isn't this a surprise!
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	169	MR. MIME have made themselves
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	138	a little home together in
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	77	DIGLETT CAVE.
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	165	They seem intent on keeping it
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	100	all to themselves.
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	173	It leads all the way to PEWTER
+data/maps/DiglettsCave_SouthEntrance/text.inc	DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel	138	CITY, wouldn't you know!
+data/maps/LavenderTown/text.inc	LavenderTown_Text_VengefulSpiritAtopTower	161	It's said that inside POKéMON
+data/maps/LavenderTown/text.inc	LavenderTown_Text_VengefulSpiritAtopTower	148	TOWER is a vengeful spirit.
+data/maps/LavenderTown/text.inc	LavenderTown_Text_VengefulSpiritAtopTower	146	It howls in anger over the
+data/maps/LavenderTown/text.inc	LavenderTown_Text_VengefulSpiritAtopTower	79	family it lost.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	164	OAK: Pay attention to how the
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	184	GYM LEADERS treat their POKéMON.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	151	There is more to learn than
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	82	strength alone.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	179	I also study rare POKéMON whose
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	175	instincts exceed ordinary limits.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	146	I call them APEX POKéMON.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	156	Listen to local accounts and
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	172	compare three in your LOGBOOK.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	179	Together, they may reveal where
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	169	an APEX POKéMON can be found.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	196	Be ready before you challenge one.
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	155	If you flee from its battle,
+data/maps/PalletTown_ProfessorOaksLab/text.inc	PalletTown_ProfessorOaksLab_Text_OakExplainCatching	127	it will leave for good.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	166	MEWTWO broke free before that
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	132	power could be claimed.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	56	No matter.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	135	I built that power once.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	166	I will retrieve it, perfect it,
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	93	and make it mine.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	191	SILPH in SAFFRON has what I need.
+data/maps/PokemonMansion_B1F/text.inc	PokemonMansion_B1F_Text_GiovanniAddressed	134	A BALL that cannot fail.
+data/maps/PokemonTower_1F/text.inc	PokemonTower_1F_Text_SpiritSearchingForFamily	167	The tower carries the grief of
+data/maps/PokemonTower_1F/text.inc	PokemonTower_1F_Text_SpiritSearchingForFamily	107	families torn apart.
+data/maps/PokemonTower_1F/text.inc	PokemonTower_1F_Text_SpiritSearchingForFamily	167	Some say one spirit still waits
+data/maps/PokemonTower_1F/text.inc	PokemonTower_1F_Text_SpiritSearchingForFamily	176	above, calling for the family it
+data/maps/PokemonTower_1F/text.inc	PokemonTower_1F_Text_SpiritSearchingForFamily	26	lost.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	77	WWWWWWW: Hah!
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	174	Took you long enough, WWWWWWW.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	194	I already checked DIGLETT'S CAVE.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	55	Obviously.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	175	People around here keep whining
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	153	that the MR. MIME vanished.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	168	One guy even says they put up
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	180	invisible walls to avoid training.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	77	Sounds fake...
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	171	which means Gramps will want it
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	70	written down.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	160	So listen carefully for once.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	160	Compare three local accounts
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	91	in your LOGBOOK.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	146	Work out where they point.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	166	That is where you investigate.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	147	Try not to make me explain
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	86	fieldwork twice.
+data/maps/Route11/text.inc	Route11_Text_RivalRumors	84	Smell ya later.
+data/maps/Route20/text.inc	Route20_Text_MarinerPostBattle	164	You broke me into pieces too!
+data/maps/Route20/text.inc	Route20_Text_MarinerPostBattle	166	SEAFOAM was split by a sudden
+data/maps/Route20/text.inc	Route20_Text_MarinerPostBattle	157	freeze. The caves still hold
+data/maps/Route20/text.inc	Route20_Text_MarinerPostBattle	56	that cold.
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	158	A hulking PRIMEAPE fled in a
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	146	blind rage and took refuge
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	88	inside MT. MOON.
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	169	It was out of control, like its
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	140	feelings had boiled over!
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	160	I've never seen one get that
+data/maps/Route4/text.inc	Route4_Text_TrippedOverGeodude	62	big before!
+data/maps/Route7/text.inc	Route7_Text_LoreleiAftermath	121	LORELEI: You're late.
+data/maps/Route7/text.inc	Route7_Text_LoreleiAftermath	68	We all were.
+data/maps/Route7/text.inc	Route7_Text_LoreleiAftermath	139	MEWTWO tore through here
+data/maps/Route7/text.inc	Route7_Text_LoreleiAftermath	155	under GIOVANNI's command...
+data/maps/Route7/text.inc	Route7_Text_BrunoAftermath	164	BRUNO: I met MEWTWO head-on.
+data/maps/Route7/text.inc	Route7_Text_BrunoAftermath	43	Foolish.
+data/maps/Route7/text.inc	Route7_Text_BrunoAftermath	142	It pushed through me like
+data/maps/Route7/text.inc	Route7_Text_BrunoAftermath	60	I was mist.
+data/maps/Route7/text.inc	Route7_Text_AgathaAftermath	141	AGATHA: GIOVANNI thought
+data/maps/Route7/text.inc	Route7_Text_AgathaAftermath	130	control was the same as
+data/maps/Route7/text.inc	Route7_Text_AgathaAftermath	31	trust.
+data/maps/Route7/text.inc	Route7_Text_AgathaAftermath	134	Always the same mistake.
+data/maps/Route7/text.inc	Route7_Text_AgathaRepeat	152	AGATHA: He learned nothing.
+data/maps/Route7/text.inc	Route7_Text_AgathaRepeat	124	MEWTWO learned faster.
+data/maps/Route7/text.inc	Route7_Text_AgathaRepeat	159	LANCE followed them into the
+data/maps/Route7/text.inc	Route7_Text_AgathaRepeat	174	cave opened by MEWTWO's blast.
+data/maps/SaffronCity/text.inc	SaffronCity_Text_CuboneCry	77	CUBONE: Kyoo!
+data/maps/SaffronCity/text.inc	SaffronCity_Text_CuboneCry	149	It keeps crying and looking
+data/maps/SaffronCity/text.inc	SaffronCity_Text_CuboneCry	148	around, as if searching for
+data/maps/SaffronCity/text.inc	SaffronCity_Text_CuboneCry	45	someone.
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	176	Can you believe this whole area
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	166	used to be flooded with lava?
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	149	One sudden change, and the
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	189	whole cave became something else.
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	174	The deeper you go, the sharper
+data/maps/SeafoamIslands_1F/scripts.inc	SeafoamIslands_1F_Text_UsedToBeFloodedWithLava	79	the cold gets.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	169	PRESIDENT: You can't buy that
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	51	anywhere.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	183	It's our secret prototype MASTER
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	29	BALL.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	189	It was built to catch any POKéMON
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	69	without fail.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	188	But a capture is only a beginning.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	171	It cannot make a POKéMON trust
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_ThatsOurSecretPrototype	159	you. That part is up to you.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	190	GIOVANNI: So SILPH's MASTER BALL
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	138	will remain out of reach.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	56	No matter.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	176	A BALL is only one way to claim
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	34	power.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	155	SILPH's signal research will
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	109	complete my device.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	172	I will call MEWTWO to ROUTE 7.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	151	Once it answers, no LEAGUE,
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	177	no child, and no bond will stand
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	56	in my way.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	126	TEAM ROCKET, withdraw.
+data/maps/SilphCo_11F/text.inc	SilphCo_11F_Text_GiovanniPostBattle	123	We have what we need.
+data/scripts/static_pokemon.inc	Text_ApexRumorRecorded	92	Rumour recorded.
+data/scripts/static_pokemon.inc	Text_ApexRumorRecorded	170	Compare three accounts in your
+data/scripts/static_pokemon.inc	Text_ApexRumorRecorded	185	LOGBOOK to find an APEX POKéMON.
+data/scripts/static_pokemon.inc	Text_ApexRumorRecorded	155	If you flee from its battle,
+data/scripts/static_pokemon.inc	Text_ApexRumorRecorded	127	it will leave for good.
+data/scripts/trainers.inc	EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle	173	The MR. MIME went into DIGLETT
+data/scripts/trainers.inc	EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle	146	CAVE and erected barriers.
+data/scripts/trainers.inc	EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle	164	It's like they built their own
+data/scripts/trainers.inc	EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle	172	little community and closed the
+data/scripts/trainers.inc	EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle	56	world out.

@@ -467,7 +467,16 @@ static const struct MenuAction sMultichoiceList_Exit[] = {
     { gOtherText_Exit }
 };
 
+static const u8 sLeagueRules[] = _("Rules");
+static const u8 sLeagueCurrent[] = _("Current challenge");
+static const u8 sLeagueRecords[] = _("Records");
+static const u8 sLeagueRewards[] = _("Rewards");
+static const struct MenuAction sMultichoiceList_LeagueTerminal[] = {
+    {sLeagueRules}, {sLeagueCurrent}, {sLeagueRecords}, {sLeagueRewards}, {gOtherText_Exit}
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] = {
+    [MULTICHOICE_LEAGUE_TERMINAL] = MULTICHOICE(sMultichoiceList_LeagueTerminal),
     [MULTICHOICE_YES_NO]                                     = MULTICHOICE(sMultichoiceList_YesNo),
     [MULTICHOICE_EEVEELUTIONS]                               = MULTICHOICE(sMultichoiceList_Eeveelutions),
     [MULTICHOICE_TRAINER_CARD_ICON_TINT]                     = MULTICHOICE(sMultichoiceList_TrainerCardIconTint),

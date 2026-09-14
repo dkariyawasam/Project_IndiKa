@@ -16,8 +16,10 @@ PokemonTower_3F_Text_SabrinaChoosePokemon::
     .string "Choose the POKéMON to focus.$"
 
 PokemonTower_3F_Text_SabrinaComeBackWithPokemon::
-    .string "Then return with a POKéMON whose\n"
-    .string "mind can reach through dreams.$"
+    .string "GASTLY in this tower can learn\n"
+    .string "DREAM EATER.\p"
+    .string "Return with one, or another\n"
+    .string "POKéMON that can learn it.$"
 
 PokemonTower_3F_Text_SabrinaTaughtDreamEater::
     .string "That is DREAM EATER.\p"
@@ -26,7 +28,7 @@ PokemonTower_3F_Text_SabrinaTaughtDreamEater::
     .string "You remained peaceful inside\n"
     .string "the tower's astral pull.\p"
     .string "That emotional control is\n"
-    .string "enough for an\n"
+    .string "enough for an\l"
     .string "official challenge here.$"
 
 PokemonTower_3F_Text_GymGuideArrives::
@@ -100,3 +102,11 @@ PokemonTower_3F_Text_JenniferDefeat::
 
 PokemonTower_3F_Text_JenniferPostBattle::
     .string "What's going on here?$"
+
+PokemonTower_3F_Text_GymAideTypeAdvice::
+    .string "GYM AIDE: SABRINA uses PSYCHIC\n"
+    .string "types. Try BUG, GHOST or DARK\l"
+    .string "moves to hit their weakness.\p"
+    .string "DARK types are immune to\n"
+    .string "PSYCHIC moves, but watch for\l"
+    .string "her other attacks!$"

@@ -1,6 +1,8 @@
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
     .string "{RIVAL}: What, it's only {PLAYER}?\n"
-    .string "Gramps isn't around.$"
+    .string "Gramps isn't around.\p"
+    .string "He went toward ROUTE 1,\n"
+    .string "at the north end of town.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting::
     .string "{RIVAL}: Gramps!\n"
@@ -164,12 +166,24 @@ PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
     .string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "OAK: Furthermore, pay attention\n"
-    .string "to how the GYM LEADERS in\l"
-    .string "KANTO treat their POKéMON.\p"
-    .string "They know more than strength\n"
-    .string "alone.\p"
-    .string "There is much to learn from them.$"
+    .string "OAK: Pay attention to how the\n"
+    .string "GYM LEADERS treat their POKéMON.\p"
+    .string "There is more to learn than\n"
+    .string "strength alone.\p"
+    .string "Even familiar routes can shelter\n"
+    .string "strong, fully grown POKéMON.\p"
+    .string "You can flee ordinary wild\n"
+    .string "battles and return when ready.\p"
+    .string "I also study rare POKéMON whose\n"
+    .string "instincts exceed ordinary limits.\p"
+    .string "I call them APEX POKéMON.\p"
+    .string "Listen to local accounts and\n"
+    .string "compare three in your LOGBOOK.\p"
+    .string "Together, they may reveal where\n"
+    .string "an APEX POKéMON can be found.\p"
+    .string "Be ready before you challenge one.\n"
+    .string "If you flee from its battle,\l"
+    .string "it will leave for good.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
     .string "Now go.\p"

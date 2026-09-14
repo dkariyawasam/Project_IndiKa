@@ -676,7 +676,7 @@
 #define FLAG_GOT_CASCADE_BOARD_FROM_MISTY                0x297
 #define FLAG_GOT_GOLBAT_FROM_KOGA                        0x298
 #define FLAG_GOT_PORYGON_FROM_BLAINE                    0x299
-#define FLAG_0x29A                                       0x29A
+#define FLAG_GOT_CHINGLING_FROM_SABRINA                  0x29A
 #define FLAG_GOT_APEX_LOG                                0x29B
 #define FLAG_GOT_RECORD_SETTING_MAGIKARP                 0x29C
 #define FLAG_0x29D                                       0x29D

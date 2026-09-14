@@ -4847,7 +4847,7 @@ EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat::
     .string "challenged me before they shut\l"
     .string "themselves away.$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle::
-    .string "They have gone into DIGLETT\n"
+    .string "The MR. MIME went into DIGLETT\n"
     .string "CAVE and erected barriers.\p"
     .string "It's like they built their own\n"
     .string "little community and closed the\l"

@@ -13,7 +13,10 @@ SaffronCity_Text_TookCuboneFromMother::
     .string "Bad investment.$"
 
 SaffronCity_Text_CuboneCry::
-    .string "CUBONE: Kyoo!$"
+    .string "CUBONE: Kyoo!\p"
+    .string "It keeps crying and looking\n"
+    .string "around, as if searching for\l"
+    .string "someone.$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
     .string "My life as a criminal makes me feel\n"

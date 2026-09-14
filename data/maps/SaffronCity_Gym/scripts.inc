@@ -8,10 +8,12 @@ SaffronCity_Gym_OnFrame::
 	.2byte 0
 
 SaffronCity_Gym_OnTransition::
+	call_if_set FLAG_BADGE06_GET, SaffronCity_Gym_EventScript_CompleteSabrinaTrial
 	goto_if_eq VAR_SABRINA_TRIAL_STATE, 0, SaffronCity_Gym_EventScript_SetInitialGuideState
 	setflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
 	goto_if_lt VAR_SABRINA_TRIAL_STATE, 4, SaffronCity_Gym_EventScript_HideSabrina
 	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
+	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_GUIDE
 	end
 
 SaffronCity_Gym_EventScript_SetInitialGuideState::
@@ -109,12 +111,68 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
+	call SaffronCity_Gym_EventScript_CompleteSabrinaTrial
 	setvar VAR_SABRINA_TRIAL_STATE, 4
 	msgbox SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis
 	release
 	end
 
 SaffronCity_Gym_EventScript_SabrinaPostFieldVictory::
+	lock
+	faceplayer
+	goto SaffronCity_Gym_EventScript_SabrinaChinglingGift
+
+SaffronCity_Gym_EventScript_SabrinaChinglingGift::
+	goto_if_set FLAG_GOT_CHINGLING_FROM_SABRINA, SaffronCity_Gym_EventScript_SabrinaGiftAlreadyReceived
+	msgbox SaffronCity_Gym_Text_SabrinaGiftChingling
+	setvar VAR_TEMP_1, SPECIES_CHINGLING
+	givemon SPECIES_CHINGLING, 30
+	goto_if_eq VAR_RESULT, 0, SaffronCity_Gym_EventScript_SabrinaReceiveChinglingParty
+	goto_if_eq VAR_RESULT, 1, SaffronCity_Gym_EventScript_SabrinaReceiveChinglingPC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+SaffronCity_Gym_EventScript_SabrinaReceiveChinglingParty::
+	call EventScript_GetGiftMonPartySlot
+	special SetPartyMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message SaffronCity_Gym_Text_ReceivedChinglingFromSabrina
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHINGLING
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SaffronCity_Gym_EventScript_SabrinaSetGotChingling
+	call EventScript_ChangePokemonNickname
+	goto SaffronCity_Gym_EventScript_SabrinaSetGotChingling
+	end
+
+SaffronCity_Gym_EventScript_SabrinaReceiveChinglingPC::
+	special SetBoxMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message SaffronCity_Gym_Text_ReceivedChinglingFromSabrina
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHINGLING
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SaffronCity_Gym_EventScript_SabrinaTransferChinglingToPC
+	call EventScript_NameReceivedBoxMon
+	goto SaffronCity_Gym_EventScript_SabrinaTransferChinglingToPC
+	end
+
+SaffronCity_Gym_EventScript_SabrinaTransferChinglingToPC::
+	call EventScript_TransferredToPC
+	goto SaffronCity_Gym_EventScript_SabrinaSetGotChingling
+	end
+
+SaffronCity_Gym_EventScript_SabrinaSetGotChingling::
+	setflag FLAG_GOT_CHINGLING_FROM_SABRINA
+	setvar VAR_SABRINA_TRIAL_STATE, 5
+	msgbox SaffronCity_Gym_Text_SabrinaChinglingAdvice
+	release
+	end
+
+SaffronCity_Gym_EventScript_SabrinaGiftAlreadyReceived::
 	msgbox SaffronCity_Gym_Text_SabrinaPostFieldVictory
 	release
 	end
@@ -192,3 +250,80 @@ SaffronCity_Gym_Movement_PlayerStepAsideForGuide::
 SaffronCity_Gym_Movement_GymGuyLeave::
 	walk_down
 	step_end
+
+SaffronCity_Gym_EventScript_CompleteSabrinaTrial::
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_SABRINA
+	return
+
+SaffronCity_Gym_EventScript_Orin::
+	trainerbattle_single TRAINER_PSYCHIC_ORIN, SaffronCity_Gym_Text_OrinIntro, SaffronCity_Gym_Text_OrinDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_OrinRematch
+	msgbox SaffronCity_Gym_Text_OrinAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_OrinRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_ORIN, SaffronCity_Gym_Text_OrinIntro, SaffronCity_Gym_Text_OrinDefeat
+	msgbox SaffronCity_Gym_Text_OrinAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_Alden::
+	trainerbattle_single TRAINER_PSYCHIC_ALDEN, SaffronCity_Gym_Text_AldenIntro, SaffronCity_Gym_Text_AldenDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_AldenRematch
+	msgbox SaffronCity_Gym_Text_AldenAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_AldenRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_ALDEN, SaffronCity_Gym_Text_AldenIntro, SaffronCity_Gym_Text_AldenDefeat
+	msgbox SaffronCity_Gym_Text_AldenAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_Silas::
+	trainerbattle_single TRAINER_PSYCHIC_SILAS, SaffronCity_Gym_Text_SilasIntro, SaffronCity_Gym_Text_SilasDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_SilasRematch
+	msgbox SaffronCity_Gym_Text_SilasAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_SilasRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_SILAS, SaffronCity_Gym_Text_SilasIntro, SaffronCity_Gym_Text_SilasDefeat
+	msgbox SaffronCity_Gym_Text_SilasAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_Mira::
+	trainerbattle_single TRAINER_PSYCHIC_MIRA, SaffronCity_Gym_Text_MiraIntro, SaffronCity_Gym_Text_MiraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_MiraRematch
+	msgbox SaffronCity_Gym_Text_MiraAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_MiraRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_MIRA, SaffronCity_Gym_Text_MiraIntro, SaffronCity_Gym_Text_MiraDefeat
+	msgbox SaffronCity_Gym_Text_MiraAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_Selene::
+	trainerbattle_single TRAINER_PSYCHIC_SELENE, SaffronCity_Gym_Text_SeleneIntro, SaffronCity_Gym_Text_SeleneDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_SeleneRematch
+	msgbox SaffronCity_Gym_Text_SeleneAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_SeleneRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_SELENE, SaffronCity_Gym_Text_SeleneIntro, SaffronCity_Gym_Text_SeleneDefeat
+	msgbox SaffronCity_Gym_Text_SeleneAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_Lyra::
+	trainerbattle_single TRAINER_PSYCHIC_LYRA, SaffronCity_Gym_Text_LyraIntro, SaffronCity_Gym_Text_LyraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_LyraRematch
+	msgbox SaffronCity_Gym_Text_LyraAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Gym_EventScript_LyraRematch::
+	trainerbattle_rematch TRAINER_PSYCHIC_LYRA, SaffronCity_Gym_Text_LyraIntro, SaffronCity_Gym_Text_LyraDefeat
+	msgbox SaffronCity_Gym_Text_LyraAfter, MSGBOX_AUTOCLOSE
+	end

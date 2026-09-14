@@ -1,0 +1,19 @@
+door-locked	PASS	
+doubles	PASS	
+opponent-bag-disabled	PASS	
+six-player-levels-50	PASS	
+six-enemy-levels-50	PASS	
+first-native-win	PASS	
+round-2-won	PASS	
+round-3-won	PASS	
+round-4-won	PASS	
+round-1-won	PASS	
+round-2-won	PASS	
+round-3-won	PASS	
+round-4-won	PASS	
+champion-doubles	PASS	
+champion-restored	PASS	
+loss-resets-run	PASS	
+fresh-entry-walkable	PASS	
+champion-locked-after-reset	PASS	
+exit-destination	PASS	13,0 at 4,2

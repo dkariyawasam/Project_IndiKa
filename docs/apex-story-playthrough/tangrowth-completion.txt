@@ -1,0 +1,1 @@
+interacted=1 fought=0 completed=1 (compiled ROM subQuests offset 0xf42)

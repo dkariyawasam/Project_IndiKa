@@ -1,0 +1,16 @@
+Seafoam current stopped	FAIL	Two boulders pushed through holes using learned Strength
+Seafoam current stopped after repair	PASS	Actual repeated two-boulder puzzle with corrected reveal metadata
+Seafoam old B1F redirect	PASS	Old map entry returns to entrance
+Seafoam old B3F redirect	PASS	Old map entry returns to entrance
+Seafoam Articuno hidden before clues	PASS	Zero of three clues in disposable fixture
+Seafoam Articuno current-map reveal	PASS	Three-clue native reveal uses new local ID
+Seafoam lake save/reload	PASS	Reloaded at 12,13 with Surf state
+Seafoam Articuno encounter completion	FAIL	Disposable diagnostic encounter after reaching island
+Seafoam Articuno explicit interaction	PASS	Direct A interaction; preceding completion probe followed a wild battle, not Articuno
+Seafoam Board return crossing	PASS	Used Board through Bag on island; returned to middle floor at 7,17
+Seafoam Strength-free route	PASS	Test fixture has no Strength; FLAG_SYS_USE_STRENGTH was zero
+Seafoam both Route 20 exits	PASS	West-to-east and east-to-west traversal through middle cavern
+Registered Board direct-effect path	FAIL	Left player at shore 10,4; Bag path worked
+Registered Board cleanup-only attempt	FAIL	Still at 10,4
+Registered Board standard item task	PASS	Advanced to water 10,5; return crossing passed
+Relocated items	PASS	Water Stone and Revive collected through normal interaction in final ROM

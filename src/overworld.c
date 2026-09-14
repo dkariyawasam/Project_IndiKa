@@ -262,6 +262,7 @@ static void ResetLeagueChallengeOnWhiteOut(void)
       || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM)
        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROCKET_LEAGUE_CHAMPIONS_ROOM))))
     {
+        RecordLeagueChallengeLoss();
         ResetLeagueChallenge();
         VarSet(VAR_ROCKET_LEAGUE_PRIZE_TIER, 0);
     }
@@ -272,6 +273,7 @@ static void ResetLeagueChallengeOnWhiteOut(void)
            || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
             && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM))))
     {
+        RecordLeagueChallengeLoss();
         ResetLeagueChallenge();
     }
 }
@@ -1010,10 +1012,10 @@ bool8 MetatileBehavior_IsSurfableInSeafoamIslands(u16 metatileBehavior)
 {
     if (MetatileBehavior_IsSurfable(metatileBehavior) != TRUE)
         return FALSE;
-    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SEAFOAM_ISLANDS_B3F)
-          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SEAFOAM_ISLANDS_B3F))
-     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SEAFOAM_ISLANDS_B4F)
-          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SEAFOAM_ISLANDS_B4F)))
+    // Only the retired falling-current floor needs the legacy landing state.
+    // The surviving lake uses ordinary Surf transitions, including save reloads.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SEAFOAM_ISLANDS_B3F)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SEAFOAM_ISLANDS_B3F))
         return TRUE;
     return FALSE;
 }

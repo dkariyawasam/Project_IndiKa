@@ -13,13 +13,14 @@ MtMoon_Text_BrockFirstMeeting::
 	.string "but combine the right ones...\p"
 	.string "...and you might get something close\n"
 	.string "to what used to live here.\p"
-	.string "If you find a fossil around\n"
-	.string "here, show it to me.\l"
+	.string "Check the exposed rocks along\n"
+	.string "these tunnel walls for fossils.\p"
+	.string "If you find one, show it to me.\n"
 	.string "I'd like to see what you're made of!$"
 
 MtMoon_Text_BrockStillSearching::
 	.string "Still searching?\n"
-	.string "Keep your eyes on the ground.\p"
+	.string "Check the exposed tunnel rocks.\p"
 	.string "MT. MOON has a way of hiding\n"
 	.string "history in plain sight.$"
 

@@ -1,0 +1,557 @@
+[
+  {
+    "apex": "SUB_QUEST_APEX_MEWTWO",
+    "rumour": 2,
+    "script": "CeladonCave_EventScript_RecordMewtwoLanceRumor",
+    "source": "data/maps/CeladonCave/scripts.inc:107",
+    "objects": [],
+    "messages": []
+  },
+  {
+    "apex": "SUB_QUEST_APEX_OSSCYTHE",
+    "rumour": 2,
+    "script": "PokemonTower_1F_EventScript_Channeler",
+    "source": "data/maps/PokemonTower_1F/scripts.inc:9",
+    "objects": [
+      {
+        "map": "PokemonTower_1F",
+        "x": 3,
+        "y": 7,
+        "gfx": "OBJ_EVENT_GFX_CHANNELER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "PokemonTower_1F_Text_SpiritSearchingForFamily",
+        "text": ".string \"The tower carries the grief of\\n\"\n    .string \"families torn apart.\\p\"\n    .string \"Some say one spirit still waits\\n\"\n    .string \"above, calling for the family it\\n\"\n    .string \"lost.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_TANGROWTH",
+    "rumour": 0,
+    "script": "ViridianCity_EventScript_Woman",
+    "source": "data/maps/ViridianCity/scripts.inc:83",
+    "objects": [
+      {
+        "map": "ViridianCity",
+        "x": 20,
+        "y": 12,
+        "gfx": "OBJ_EVENT_GFX_CIV_WOMAN_3"
+      }
+    ],
+    "messages": [
+      {
+        "label": "ViridianCity_Text_FatherHeardShadowyFigure",
+        "text": ".string \"My father once told me he\\n\"\n    .string \"ventured deep into VIRIDIAN\\l\"\n    .string \"FOREST.\\p\"\n    .string \"He heard the grumbling growls of\\n\"\n    .string \"a shadowy figure lurking within.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ARTICUNO",
+    "rumour": 2,
+    "script": "SeafoamIslands_1F_EventScript_LavaRumorNpc",
+    "source": "data/maps/SeafoamIslands_1F/scripts.inc:9",
+    "objects": [
+      {
+        "map": "SeafoamIslands_1F",
+        "x": 8,
+        "y": 18,
+        "gfx": "OBJ_EVENT_GFX_CIV_OLD_MAN_1"
+      }
+    ],
+    "messages": [
+      {
+        "label": "SeafoamIslands_1F_Text_UsedToBeFloodedWithLava",
+        "text": ".string \"Can you believe this whole area\\n\"\n\t.string \"used to be flooded with lava?\\p\"\n\t.string \"One sudden change, and the\\n\"\n\t.string \"whole cave became something else.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MIME_SR",
+    "rumour": 2,
+    "script": "DiglettsCave_NorthEntrance_EventScript_Hiker",
+    "source": "data/maps/DiglettsCave_NorthEntrance/scripts.inc:4",
+    "objects": [
+      {
+        "map": "DiglettsCave_NorthEntrance",
+        "x": 4,
+        "y": 4,
+        "gfx": "OBJ_EVENT_GFX_HIKER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "DiglettsCave_NorthEntrance_RockTunnelPitchBlack",
+        "text": ".string \"This DIGLETT CAVE extends all\\n\"\n    .string \"the way to VERMILION CITY.\\p\"\n    .string \"Watch out for invisible walls\\n\"\n    .string \"though!\\p\"\n    .string \"Feels like something in there\\n\"\n    .string \"doesn't want visitors.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_TANGROWTH",
+    "rumour": 1,
+    "script": "Route2_EventScript_TangrowthRumorWoman",
+    "source": "data/maps/Route2/scripts.inc:22",
+    "objects": [
+      {
+        "map": "Route2",
+        "x": 7,
+        "y": 52,
+        "gfx": "OBJ_EVENT_GFX_CIV_WOMAN_2"
+      }
+    ],
+    "messages": [
+      {
+        "label": "Route2_Text_ForestComesAlive",
+        "text": ".string \"I'm too scared to enter\\n\"\n    .string \"VIRIDIAN FOREST.\\p\"\n    .string \"Legends tell of the forest\\n\"\n    .string \"coming alive and ensnaring the\\l\"\n    .string \"wicked, never to be seen again.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ANNIHILAPE",
+    "rumour": 2,
+    "script": "Route4_EventScript_Woman",
+    "source": "data/maps/Route4/scripts.inc:38",
+    "objects": [
+      {
+        "map": "Route4",
+        "x": 9,
+        "y": 8,
+        "gfx": "OBJ_EVENT_GFX_CIV_WOMAN_1"
+      }
+    ],
+    "messages": [
+      {
+        "label": "Route4_Text_TrippedOverGeodude",
+        "text": ".string \"A hulking PRIMEAPE fled in a\\n\"\n    .string \"blind rage and took refuge\\n\"\n    .string \"inside MT. MOON.\\p\"\n    .string \"It was out of control, like its\\n\"\n    .string \"feelings had boiled over!\\p\"\n    .string \"I've never seen one get that\\n\"\n    .string \"big before!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_OSSCYTHE",
+    "rumour": 0,
+    "script": "SaffronCity_EventScript_RocketGrunt4",
+    "source": "data/maps/SaffronCity/scripts.inc:25",
+    "objects": [
+      {
+        "map": "SaffronCity",
+        "x": 21,
+        "y": 21,
+        "gfx": "OBJ_EVENT_GFX_ROCKET_M"
+      }
+    ],
+    "messages": [
+      {
+        "label": "SaffronCity_Text_TookCuboneFromMother",
+        "text": ".string \"I took this CUBONE away from\\n\"\n    .string \"its mother.\\p\"\n    .string \"Now it won't even train with me!\\n\"\n    .string \"Bad investment.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_OSSCYTHE",
+    "rumour": 0,
+    "script": "SaffronCity_EventScript_Cubone",
+    "source": "data/maps/SaffronCity/scripts.inc:32",
+    "objects": [
+      {
+        "map": "SaffronCity",
+        "x": 22,
+        "y": 21,
+        "gfx": "OBJ_EVENT_GFX_CUBONE"
+      }
+    ],
+    "messages": [
+      {
+        "label": "SaffronCity_Text_CuboneCry",
+        "text": ".string \"CUBONE: Kyoo!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MEWTWO",
+    "rumour": 1,
+    "script": "SilphCo_11F_EventScript_RecordMewtwoSilphRumor",
+    "source": "data/maps/SilphCo_11F/scripts.inc:45",
+    "objects": [],
+    "messages": []
+  },
+  {
+    "apex": "SUB_QUEST_APEX_OSSCYTHE",
+    "rumour": 1,
+    "script": "LavenderTown_EventScript_Boy",
+    "source": "data/maps/LavenderTown/scripts.inc:28",
+    "objects": [
+      {
+        "map": "LavenderTown",
+        "x": 10,
+        "y": 7,
+        "gfx": "OBJ_EVENT_GFX_CIV_BOY"
+      }
+    ],
+    "messages": [
+      {
+        "label": "LavenderTown_Text_VengefulSpiritAtopTower",
+        "text": ".string \"It's said that atop POK\u00e9MON\\n\"\n    .string \"TOWER is a vengeful spirit.\\p\"\n    .string \"It howls in anger over the\\n\"\n    .string \"family it lost.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MOLTRES",
+    "rumour": 2,
+    "script": "CinnabarVolcano_3F_EventScript_Blair",
+    "source": "data/maps/CinnabarVolcano_3F/scripts.inc:35",
+    "objects": [
+      {
+        "map": "CinnabarVolcano_3F",
+        "x": 41,
+        "y": 26,
+        "gfx": "OBJ_EVENT_GFX_KINDLER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "CinnabarVolcano_3F_Text_BlairPostBattle",
+        "text": ".string \"Fire-types love this pressure.\\p\"\n    .string \"Down here, even burned ground\\n\"\n    .string \"feels alive again.\\p\"\n    .string \"Like the volcano keeps renewing\\n\"\n    .string \"its own energy.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MOLTRES",
+    "rumour": 2,
+    "script": "CinnabarVolcano_3F_EventScript_BlairRematch",
+    "source": "data/maps/CinnabarVolcano_3F/scripts.inc:45",
+    "objects": [],
+    "messages": [
+      {
+        "label": "CinnabarVolcano_3F_Text_BlairPostBattle",
+        "text": ".string \"Fire-types love this pressure.\\p\"\n    .string \"Down here, even burned ground\\n\"\n    .string \"feels alive again.\\p\"\n    .string \"Like the volcano keeps renewing\\n\"\n    .string \"its own energy.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MOLTRES",
+    "rumour": 0,
+    "script": "CinnabarIsland_EventScript_OldMan",
+    "source": "data/maps/CinnabarIsland/scripts.inc:332",
+    "objects": [
+      {
+        "map": "CinnabarIsland",
+        "x": 35,
+        "y": 11,
+        "gfx": "OBJ_EVENT_GFX_CIV_OLD_MAN_1"
+      }
+    ],
+    "messages": [
+      {
+        "label": "CinnabarIsland_Text_ScientistsExperimentInMansion",
+        "text": ".string \"After each eruption, the volcano\\n\"\n    .string \"leaves new soil behind.\\p\"\n    .string \"Plants return stronger than before.\\n\"\n    .string \"Nature renews itself through fire.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MIME_SR",
+    "rumour": 0,
+    "script": "DiglettsCave_SouthEntrance_EventScript_OldMan",
+    "source": "data/maps/DiglettsCave_SouthEntrance/scripts.inc:4",
+    "objects": [
+      {
+        "map": "DiglettsCave_SouthEntrance",
+        "x": 4,
+        "y": 4,
+        "gfx": "OBJ_EVENT_GFX_CIV_OLD_MAN_1"
+      }
+    ],
+    "messages": [
+      {
+        "label": "DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel",
+        "text": ".string \"Well, isn't this a surprise!\\p\"\n    .string \"MR. MIME have made themselves\\n\"\n    .string \"a little home together in\\n\"\n    .string \"DIGLETT CAVE.\\p\"\n    .string \"They seem intent on keeping it\\n\"\n    .string \"all to themselves.\\p\"\n    .string \"It leads all the way to PEWTER\\n\"\n    .string \"CITY, wouldn't you know!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MOLTRES",
+    "rumour": 1,
+    "script": "CinnabarIsland_PokemonLab_ResearchRoom_EventScript_Scientist",
+    "source": "data/maps/CinnabarIsland_PokemonLab_ResearchRoom/scripts.inc:8",
+    "objects": [
+      {
+        "map": "CinnabarIsland_PokemonLab_ResearchRoom",
+        "x": 10,
+        "y": 3,
+        "gfx": "OBJ_EVENT_GFX_SCIENTIST"
+      }
+    ],
+    "messages": [
+      {
+        "label": "CinnabarIsland_PokemonLab_ResearchRoom_Text_MoltresRenewingEnergy",
+        "text": ".string \"Our lab studies how fire can\\n\"\n    .string \"restore as well as consume.\\p\"\n    .string \"There are reports of MOLTRES\\n\"\n    .string \"stirring life back into scorched\\l\"\n    .string \"volcanic earth.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ANNIHILAPE",
+    "rumour": 1,
+    "script": "CeruleanCity_House2_EventScript_Hiker",
+    "source": "data/maps/CeruleanCity_House2/scripts.inc:4",
+    "objects": [
+      {
+        "map": "CeruleanCity_House2",
+        "x": 1,
+        "y": 2,
+        "gfx": "OBJ_EVENT_GFX_HIKER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "CeruleanCity_House2_Text_EnormousPokemonBargedIn",
+        "text": ".string \"An enormous POK\u00e9MON barged in\\n\"\n    .string \"through the wall!\\p\"\n    .string \"It was shaking with rage.\\n\"\n    .string \"Completely unstoppable!\\p\"\n    .string \"Lucky for us, it rampaged out\\n\"\n    .string \"the door and headed west.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MEWTWO",
+    "rumour": 0,
+    "script": "PokemonMansion_B1F_EventScript_GiovanniGone",
+    "source": "data/maps/PokemonMansion_B1F/scripts.inc:61",
+    "objects": [],
+    "messages": []
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ANNIHILAPE",
+    "rumour": 0,
+    "script": "MtMoon_1F_EventScript_BaldingMan",
+    "source": "data/scripts/apex_log.inc:19",
+    "objects": [
+      {
+        "map": "MtMoon_1F",
+        "x": 42,
+        "y": 7,
+        "gfx": "OBJ_EVENT_GFX_CIV_MAN_3"
+      }
+    ],
+    "messages": [
+      {
+        "label": "MtMoon_1F_Text_AngryPrimalPokemon",
+        "text": ".string \"There's something furious and\\n\"\n    .string \"hurt deep within this cave.\\p\"\n    .string \"I can feel it losing control.\\n\"\n    .string \"Maybe I should head home.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ARTICUNO",
+    "rumour": 0,
+    "script": "Route20_EventScript_Camper",
+    "source": "data/scripts/apex_log.inc:37",
+    "objects": [
+      {
+        "map": "Route20",
+        "x": 61,
+        "y": 10,
+        "gfx": "OBJ_EVENT_GFX_SCOUT_M"
+      }
+    ],
+    "messages": [
+      {
+        "label": "Route20_Text_SeafoamUsedToBeVolcanic",
+        "text": ".string \"SEAFOAM ISLANDS used to be\\n\"\n    .string \"volcanic just like CINNABAR\\l\"\n    .string \"ISLAND.\\p\"\n    .string \"Then one day it all changed at\\n\"\n    .string \"once, and now it's as cold as\\l\"\n    .string \"ice!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 0,
+    "script": "Route10_EventScript_Mark",
+    "source": "data/scripts/trainers.inc:613",
+    "objects": [
+      {
+        "map": "Route10",
+        "x": 13,
+        "y": 54,
+        "gfx": "OBJ_EVENT_GFX_SWIMMER_M_LAND"
+      }
+    ],
+    "messages": [
+      {
+        "label": "Route10_Text_MarkPostBattle",
+        "text": ".string \"When storms pass over the POWER\\n\"\n    .string \"PLANT, the river keeps buzzing.\\p\"\n    .string \"It's like nature is feeding it\\n\"\n    .string \"power without end.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 0,
+    "script": "Route10_EventScript_MarkRematch",
+    "source": "data/scripts/trainers.inc:623",
+    "objects": [],
+    "messages": [
+      {
+        "label": "Route10_Text_MarkPostBattle",
+        "text": ".string \"When storms pass over the POWER\\n\"\n    .string \"PLANT, the river keeps buzzing.\\p\"\n    .string \"It's like nature is feeding it\\n\"\n    .string \"power without end.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ARTICUNO",
+    "rumour": 1,
+    "script": "Route20_EventScript_Mariner",
+    "source": "data/scripts/trainers.inc:2179",
+    "objects": [
+      {
+        "map": "Route20",
+        "x": 77,
+        "y": 9,
+        "gfx": "OBJ_EVENT_GFX_SAILOR"
+      }
+    ],
+    "messages": [
+      {
+        "label": "Route20_Text_MarinerPostBattle",
+        "text": ".string \"You broke me into pieces too!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ARTICUNO",
+    "rumour": 1,
+    "script": "Route20_EventScript_MarinerRematch",
+    "source": "data/scripts/trainers.inc:2189",
+    "objects": [],
+    "messages": [
+      {
+        "label": "Route20_Text_MarinerPostBattle",
+        "text": ".string \"You broke me into pieces too!$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MIME_SR",
+    "rumour": 1,
+    "script": "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN",
+    "source": "data/scripts/trainers.inc:2945",
+    "objects": [
+      {
+        "map": "Route11",
+        "x": 13,
+        "y": 6,
+        "gfx": "OBJ_EVENT_GFX_BUG_MANIAC"
+      }
+    ],
+    "messages": [
+      {
+        "label": "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle",
+        "text": ".string \"They have gone into DIGLETT\\n\"\n    .string \"CAVE and erected barriers.\\p\"\n    .string \"It's like they built their own\\n\"\n    .string \"little community and closed the\\l\"\n    .string \"world out.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_MIME_SR",
+    "rumour": 1,
+    "script": "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLINRematch",
+    "source": "data/scripts/trainers.inc:2955",
+    "objects": [],
+    "messages": [
+      {
+        "label": "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_PostBattle",
+        "text": ".string \"They have gone into DIGLETT\\n\"\n    .string \"CAVE and erected barriers.\\p\"\n    .string \"It's like they built their own\\n\"\n    .string \"little community and closed the\\l\"\n    .string \"world out.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 1,
+    "script": "EventScript_GymAdjacent_ENGINEER_BAILY",
+    "source": "data/scripts/trainers.inc:6369",
+    "objects": [
+      {
+        "map": "PowerPlant",
+        "x": 13,
+        "y": 9,
+        "gfx": "OBJ_EVENT_GFX_ENGINEER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle",
+        "text": ".string \"Even when the generators quiet\\n\"\n    .string \"down, the air still crackles.\\p\"\n    .string \"It feels like the power is coming\\n\"\n    .string \"from the sky itself.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 1,
+    "script": "EventScript_GymAdjacent_ENGINEER_BAILYRematch",
+    "source": "data/scripts/trainers.inc:6379",
+    "objects": [],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_ENGINEER_BAILY_Text_PostBattle",
+        "text": ".string \"Even when the generators quiet\\n\"\n    .string \"down, the air still crackles.\\p\"\n    .string \"It feels like the power is coming\\n\"\n    .string \"from the sky itself.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 2,
+    "script": "EventScript_GymAdjacent_ENGINEER_BRAXTON",
+    "source": "data/scripts/trainers.inc:6387",
+    "objects": [
+      {
+        "map": "PowerPlant",
+        "x": 25,
+        "y": 24,
+        "gfx": "OBJ_EVENT_GFX_ENGINEER"
+      }
+    ],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle",
+        "text": ".string \"I saw lightning gather here\\n\"\n    .string \"without a cloud overhead.\\p\"\n    .string \"No battery can hold power like\\n\"\n    .string \"that. It just keeps coming.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_ZAPDOS",
+    "rumour": 2,
+    "script": "EventScript_GymAdjacent_ENGINEER_BRAXTONRematch",
+    "source": "data/scripts/trainers.inc:6397",
+    "objects": [],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_ENGINEER_BRAXTON_Text_PostBattle",
+        "text": ".string \"I saw lightning gather here\\n\"\n    .string \"without a cloud overhead.\\p\"\n    .string \"No battery can hold power like\\n\"\n    .string \"that. It just keeps coming.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_TANGROWTH",
+    "rumour": 2,
+    "script": "EventScript_GymAdjacent_AROMA_LADY_NIKKI",
+    "source": "data/scripts/trainers.inc:6585",
+    "objects": [
+      {
+        "map": "ViridianForest",
+        "x": 20,
+        "y": 44,
+        "gfx": "OBJ_EVENT_GFX_AROMA_LADY"
+      }
+    ],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle",
+        "text": ".string \"The flowers in VIRIDIAN FOREST\\n\"\n    .string \"are so beautiful.\\p\"\n    .string \"They seem more vibrant and grow\\n\"\n    .string \"in number the closer you get to\\l\"\n    .string \"the centre of the forest.\\p\"\n    .string \"Almost like something is drawing\\n\"\n    .string \"them inward.$\""
+      }
+    ]
+  },
+  {
+    "apex": "SUB_QUEST_APEX_TANGROWTH",
+    "rumour": 2,
+    "script": "EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch",
+    "source": "data/scripts/trainers.inc:6595",
+    "objects": [],
+    "messages": [
+      {
+        "label": "EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_PostBattle",
+        "text": ".string \"The flowers in VIRIDIAN FOREST\\n\"\n    .string \"are so beautiful.\\p\"\n    .string \"They seem more vibrant and grow\\n\"\n    .string \"in number the closer you get to\\l\"\n    .string \"the centre of the forest.\\p\"\n    .string \"Almost like something is drawing\\n\"\n    .string \"them inward.$\""
+      }
+    ]
+  }
+]

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "league_challenge.h"
 #include "gflib.h"
 #include "event_data.h"
 #include "task.h"
@@ -16,6 +17,8 @@
 #include "constants/maps.h"
 
 static EWRAM_DATA u16 * sBg3TilemapBuffer_p = NULL;
+static EWRAM_DATA u8 sLeagueRecordsType = 0;
+static void PrintLeagueRecords(void);
 
 static void MainCB2_SetUp(void);
 static void VBlankCB(void);
@@ -81,6 +84,7 @@ static u8 *const sStringVars[3] = {
 
 void ShowBattleRecords(void)
 {
+    sLeagueRecordsType = 0;
     SetVBlankCallback(NULL);
     SetMainCallback2(MainCB2_SetUp);
 }
@@ -132,7 +136,10 @@ static void MainCB2_SetUp(void)
     case 7:
         EnableDisplay();
         SetVBlankCallback(VBlankCB);
-        PrintBattleRecords();
+        if (sLeagueRecordsType)
+            PrintLeagueRecords();
+        else
+            PrintBattleRecords();
         CreateTask(Task_WaitFadeIn, 8);
         SetMainCallback2(MainCB2);
         gMain.state = 0;
@@ -561,4 +568,49 @@ static void LoadFrameGfxOnBg(u8 bg)
     LoadBgTiles(bg, sTiles, 0xC0, 0);
     CopyToBgTilemapBufferRect(bg, sTilemap, 0, 0, 32, 32);
     LoadPalette(sPalette, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
+}
+
+void ShowLeagueRecords(void)
+{
+    sLeagueRecordsType = gSpecialVar_0x8004;
+    SetVBlankCallback(NULL);
+    SetMainCallback2(MainCB2_SetUp);
+}
+
+static const u8 sLeagueTitleIndigo[] = _("INDIGO LEAGUE RECORDS");
+static const u8 sLeagueTitleRocket[] = _("ROCKET LEAGUE RECORDS");
+static const u8 sLeagueWins[] = _("Battle victories");
+static const u8 sLeagueLosses[] = _("Battle defeats");
+static const u8 sLeagueTitles[] = _("Championships");
+static const u8 sLeagueStreak[] = _("Title streak");
+static const u8 sLeagueBest[] = _("Best title streak");
+static const u8 sLeagueCoins[] = _("Coins earned");
+static const u8 sLeagueRecordExit[] = _("A / B: Return");
+static const u8 *const sLeagueLabels[] = {sLeagueWins, sLeagueLosses, sLeagueTitles, sLeagueStreak, sLeagueBest, sLeagueCoins};
+
+static void PrintLeagueRecords(void)
+{
+    const struct LeagueRecord *record = GetLeagueRecord(sLeagueRecordsType);
+    const u8 *title = sLeagueRecordsType == LEAGUE_CHALLENGE_INDIGO ? sLeagueTitleIndigo : sLeagueTitleRocket;
+    u32 values[6];
+    u8 i, count = sLeagueRecordsType == LEAGUE_CHALLENGE_ROCKET ? 6 : 5;
+    FillWindowPixelBuffer(0, PIXEL_FILL(0));
+    AddTextPrinterParameterized4(0, FONT_NORMAL, (216 - GetStringWidth(FONT_NORMAL, title, 0)) / 2, 4, 0, 2, sTextColor, 0, title);
+    if (record != NULL)
+    {
+        values[0] = record->wins;
+        values[1] = record->losses;
+        values[2] = record->championships;
+        values[3] = record->streak;
+        values[4] = record->bestStreak;
+        values[5] = record->coinsLow | ((u32)record->coinsHigh << 16);
+        for (i = 0; i < count; i++)
+        {
+            AddTextPrinterParameterized4(0, FONT_NORMAL, 4, 26 + i * 16, 0, 2, sTextColor, 0, sLeagueLabels[i]);
+            ConvertIntToDecimalStringN(gStringVar1, values[i], STR_CONV_MODE_LEFT_ALIGN, i == 5 ? 9 : 5);
+            AddTextPrinterParameterized4(0, FONT_NORMAL, 212 - GetStringWidth(FONT_NORMAL, gStringVar1, 0), 26 + i * 16, 0, 2, sTextColor, 0, gStringVar1);
+        }
+    }
+    AddTextPrinterParameterized4(0, FONT_NORMAL, 4, 128, 0, 2, sTextColor, 0, sLeagueRecordExit);
+    CommitWindow(0);
 }

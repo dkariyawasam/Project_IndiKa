@@ -65,6 +65,7 @@ static u8 GetObjectEventIdByLocalIdAndMapInternal(u8, u8, u8);
 static bool8 GetAvailableObjectEventId(u16, u8, u8, u8 *);
 static void SetObjectEventDynamicGraphicsId(struct ObjectEvent *);
 static void RemoveObjectEventInternal(struct ObjectEvent *);
+static void ReleaseUnusedDynamicObjectPalettes(void);
 static u16 GetObjectEventFlagIdByObjectEventId(u8);
 static void UpdateObjectEventVisibility(struct ObjectEvent *, struct Sprite *);
 static void MakeObjectTemplateFromObjectEventTemplate(const struct ObjectEventTemplate *, struct SpriteTemplate *, const struct SubspriteTable **);
@@ -1632,6 +1633,7 @@ static void RemoveObjectEventInternal(struct ObjectEvent *objectEvent)
     image.size = GetObjectEventGraphicsInfo(objectEvent->graphicsId)->size;
     gSprites[objectEvent->spriteId].images = &image;
     DestroySprite(&gSprites[objectEvent->spriteId]);
+    ReleaseUnusedDynamicObjectPalettes();
 }
 
 void Unref_RemoveAllObjectEventsExceptPlayer(void)
@@ -2227,11 +2229,7 @@ static void LoadObjectEventPalette(u16 paletteTag)
 {
     u16 i = FindObjectEventPaletteIndexByTag(paletteTag);
 
-#ifdef BUGFIX
-    if (sObjectEventSpritePalettes[i].tag != OBJ_EVENT_PAL_TAG_NONE)
-#else
-    if (i != OBJ_EVENT_PAL_TAG_NONE) // always true
-#endif
+    if (i != 0xFF)
     {
         TryLoadObjectPalette(&sObjectEventSpritePalettes[i]);
     }
@@ -2262,8 +2260,30 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
 {
     u8 paletteIndex = FindObjectEventPaletteIndexByTag(paletteTag);
 
+    if (paletteIndex == 0xFF)
+        return;
     LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
     ApplyGlobalFieldPaletteTint(paletteSlot);
+}
+
+static void ReleaseUnusedDynamicObjectPalettes(void)
+{
+    u8 slot, spriteId;
+    u16 tag;
+
+    for (slot = OBJ_PALSLOT_COUNT; slot < 16; slot++)
+    {
+        tag = GetSpritePaletteTagByPaletteNum(slot);
+        // Only reclaim object palettes, never palettes owned by field effects.
+        if (tag == TAG_NONE || FindObjectEventPaletteIndexByTag(tag) == 0xFF)
+            continue;
+        for (spriteId = 0; spriteId < MAX_SPRITES; spriteId++)
+            if (gSprites[spriteId].inUse && gSprites[spriteId].oam.paletteNum == slot)
+                break;
+        // Other NPCs and reflection sprites may still share this palette.
+        if (spriteId == MAX_SPRITES)
+            FreeSpritePaletteByTag(tag);
+    }
 }
 
 static u8 LoadDynamicObjectEventPalette(u16 paletteTag)
@@ -2274,6 +2294,7 @@ static u8 LoadDynamicObjectEventPalette(u16 paletteTag)
     if (paletteIndex == 0xFF)
         return PALSLOT_NPC_1;
 
+    ReleaseUnusedDynamicObjectPalettes();
     paletteSlot = TryLoadObjectPalette(&sObjectEventSpritePalettes[paletteIndex]);
     if (paletteSlot == 0xFF)
         paletteSlot = IndexOfSpritePaletteTag(paletteTag);
@@ -2332,9 +2353,11 @@ static u8 FindObjectEventPaletteIndexByTag(u16 tag)
 {
     u8 i;
 
-    for (i = 0; sObjectEventSpritePalettes[i].tag != OBJ_EVENT_PAL_TAG_NONE; i++)
+    // The table ends with a zeroed entry, not OBJ_EVENT_PAL_TAG_NONE.
+    // Field-effect tags may not belong to this table at all.
+    for (i = 0; i < ARRAY_COUNT(sObjectEventSpritePalettes); i++)
     {
-        if (sObjectEventSpritePalettes[i].tag == tag)
+        if (sObjectEventSpritePalettes[i].data != NULL && sObjectEventSpritePalettes[i].tag == tag)
         {
             return i;
         }

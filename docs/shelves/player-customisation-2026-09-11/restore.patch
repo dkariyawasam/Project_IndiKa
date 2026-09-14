@@ -1,0 +1,685 @@
+--- a/include/global.h
++++ b/include/global.h
+@@ -330,7 +330,10 @@
+               u16 optionsBattleSceneOff:1; // whether battle animations are disabled
+               u16 regionMapZoom:1; // whether the map is zoomed in
+     /*0x018*/ struct Pokedex pokedex;
+-    /*0x090*/ u8 filler_90[0x8];
++    /*0x090*/ u8 appearanceVersion;
++    /*0x091*/ u8 hairColor;
++    /*0x092*/ u8 accentColor;
++    /*0x093*/ u8 filler_93[0x5];
+     /*0x098*/ struct Time localTimeOffset;
+     /*0x0A0*/ struct Time lastBerryTreeUpdate;
+     /*0x0A8*/ u32 gcnLinkFlags; // Read by Pokemon Colosseum/XD
+--- a/src/oak_speech.c
++++ b/src/oak_speech.c
+@@ -1,4 +1,6 @@
+ #include "global.h"
++#include "player_appearance.h"
++#include "string_util.h"
+ #include "gflib.h"
+ #include "decompress.h"
+ #include "task.h"
+@@ -21,7 +23,7 @@
+ enum
+ {
+     WIN_INTRO_TEXTBOX,
+-    WIN_INTRO_BOYGIRL,
++    WIN_INTRO_APPEARANCE,
+     WIN_INTRO_YESNO,
+     WIN_INTRO_NAMES,
+     NUM_INTRO_WINDOWS,
+@@ -38,10 +40,15 @@
+     u16 windowIds[NUM_INTRO_WINDOWS];
+     u8 textColor[3];
+     u8 textSpeed;
+-    u8 unused2[0x1800];
++    u8 appearanceRow;
++    // Keep the tilemap buffers word aligned for DMA transfers.
++    u8 unused2[0x17FF];
+     u8 bg2TilemapBuffer[0x400];
+     u8 bg1TilemapBuffer[0x800];
+ };
++
++STATIC_ASSERT(offsetof(struct OakSpeechResources, bg2TilemapBuffer) % 4 == 0, OakSpeechBg2Alignment);
++STATIC_ASSERT(offsetof(struct OakSpeechResources, bg1TilemapBuffer) % 4 == 0, OakSpeechBg1Alignment);
+ 
+ static EWRAM_DATA struct OakSpeechResources *sOakSpeechResources = NULL;
+ 
+@@ -65,10 +72,10 @@
+ static void Task_OakSpeech_ReturnNidoranFToPokeBall(u8);
+ static void Task_OakSpeech_TellMeALittleAboutYourself(u8);
+ static void Task_OakSpeech_FadeOutOak(u8);
+-static void Task_OakSpeech_AskPlayerGender(u8);
+-static void Task_OakSpeech_ShowGenderOptions(u8);
+-static void Task_OakSpeech_HandleGenderInput(u8);
+-static void Task_OakSpeech_ClearGenderWindows(u8);
++static void Task_OakSpeech_AskPlayerAppearance(u8);
++static void Task_OakSpeech_ShowAppearanceOptions(u8);
++static void Task_OakSpeech_HandleAppearanceInput(u8);
++static void Task_OakSpeech_ClearAppearanceWindow(u8);
+ static void Task_OakSpeech_LoadPlayerPic(u8);
+ static void Task_OakSpeech_YourNameWhatIsIt(u8);
+ static void Task_OakSpeech_FadeOutForPlayerNamingScreen(u8);
+@@ -109,8 +116,7 @@
+ extern const u8 gText_Controls[];
+ extern const u8 gText_ABUTTONNext[];
+ extern const u8 gText_ABUTTONNext_BBUTTONBack[];
+-extern const u8 gText_Boy[];
+-extern const u8 gText_Girl[];
++
+ extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_64x64;
+@@ -141,6 +147,24 @@
+ static const u32 sPikachuIntro_PikachuEars_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/ears.4bpp.lz");
+ static const u32 sPikachuIntro_PikachuEyes_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/eyes.4bpp.lz");
+ 
++static const u8 sText_CustomiseAppearance[] = _("Choose your look!\nMake this adventure your own.");
++static const u8 sText_Style1[] = _("STYLE 1");
++static const u8 sText_Style2[] = _("STYLE 2");
++static const u8 sText_Hair[] = _("HAIR: ");
++static const u8 sText_Accent[] = _("ACCENT: ");
++static const u8 sText_Done[] = _("DONE");
++static const u8 sText_Selected[] = _("> ");
++static const u8 sText_Unselected[] = _("  ");
++static const u8 sText_CustomiseControls[] = _("UP/DOWN: choose\nLEFT/RIGHT: change\nA: select  B: back");
++static const u8 sHairNames[][9] = {
++    _("ORIGINAL"), _("BLACK"), _("BROWN"), _("BLOND"),
++    _("AUBURN"), _("BLUE"), _("PURPLE"),
++};
++static const u8 sAccentNames[][9] = {
++    _("ORIGINAL"), _("RED"), _("BLUE"), _("GREEN"),
++    _("PURPLE"), _("ORANGE"), _("TEAL"),
++};
++
+ static const struct BgTemplate sBgTemplates[] =
+ {
+     {
+@@ -298,15 +322,15 @@
+         .paletteNum = 15,
+         .baseBlock = 1
+     },
+-    [WIN_INTRO_BOYGIRL] =
++    [WIN_INTRO_APPEARANCE] =
+     {
+         .bg = 0,
+-        .tilemapLeft = 18,
+-        .tilemapTop = 9,
+-        .width = 9,
+-        .height = 4,
++        .tilemapLeft = 15,
++        .tilemapTop = 1,
++        .width = 14,
++        .height = 15,
+         .paletteNum = 15,
+-        .baseBlock = 372
++        .baseBlock = 1
+     },
+     [WIN_INTRO_YESNO] =
+     {
+@@ -1248,11 +1272,11 @@
+         ClearDialogWindowAndFrame(WIN_INTRO_TEXTBOX, 1);
+         CreateFadeInTask(taskId, 2);
+         tTimer = 48;
+-        gTasks[taskId].func = Task_OakSpeech_AskPlayerGender;
+-    }
+-}
+-
+-static void Task_OakSpeech_AskPlayerGender(u8 taskId)
++        gTasks[taskId].func = Task_OakSpeech_AskPlayerAppearance;
++    }
++}
++
++static void Task_OakSpeech_AskPlayerAppearance(u8 taskId)
+ {
+     s16 *data = gTasks[taskId].data;
+ 
+@@ -1266,62 +1290,112 @@
+         {
+             tTrainerPicPosX = -60;
+             ClearTrainerPic();
+-            OakSpeechPrintMessage(gOakSpeech_Text_AskPlayerGender, sOakSpeechResources->textSpeed);
+-            gTasks[taskId].func = Task_OakSpeech_ShowGenderOptions;
+-        }
+-    }
+-}
+-
+-static void Task_OakSpeech_ShowGenderOptions(u8 taskId)
++            OakSpeechPrintMessage(sText_CustomiseAppearance, sOakSpeechResources->textSpeed);
++            gTasks[taskId].func = Task_OakSpeech_ShowAppearanceOptions;
++        }
++    }
++}
++
++static void DrawAppearanceOptions(u8 taskId)
++{
++    u8 row;
++    u8 text[40];
++    u8 windowId = gTasks[taskId].tMenuWindowId;
++    static const u8 colors[] = {1, 2, 3};
++
++    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
++    for (row = 0; row < 4; row++)
++    {
++        StringCopy(text, row == sOakSpeechResources->appearanceRow ? sText_Selected : sText_Unselected);
++        switch (row)
++        {
++        case 0:
++            StringAppend(text, gSaveBlock2Ptr->playerGender == MALE ? sText_Style1 : sText_Style2);
++            break;
++        case 1:
++            StringAppend(text, sText_Hair);
++            StringAppend(text, sHairNames[gSaveBlock2Ptr->hairColor]);
++            break;
++        case 2:
++            StringAppend(text, sText_Accent);
++            StringAppend(text, sAccentNames[gSaveBlock2Ptr->accentColor]);
++            break;
++        default:
++            StringAppend(text, sText_Done);
++            break;
++        }
++        AddTextPrinterParameterized3(windowId, FONT_SMALL, 2, 2 + row * 20, colors, 0, text);
++    }
++    AddTextPrinterParameterized3(windowId, FONT_SMALL, 2, 80, colors, 0, sText_CustomiseControls);
++    CopyWindowToVram(windowId, COPYWIN_FULL);
++    LoadTrainerPic(gSaveBlock2Ptr->playerGender == MALE ? MALE_PLAYER_PIC : FEMALE_PLAYER_PIC, 0);
++}
++
++static void Task_OakSpeech_ShowAppearanceOptions(u8 taskId)
+ {
+     if (!IsTextPrinterActive(WIN_INTRO_TEXTBOX))
+     {
+-        gTasks[taskId].tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_BOYGIRL]);
++        ClearDialogWindowAndFrame(WIN_INTRO_TEXTBOX, TRUE);
++        FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 30, 20);
++        CopyBgTilemapBufferToVram(0);
++        ResetPlayerAppearance();
++        gSaveBlock2Ptr->playerGender = MALE;
++        sOakSpeechResources->appearanceRow = 0;
++        gTasks[taskId].tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_APPEARANCE]);
+         PutWindowTilemap(gTasks[taskId].tMenuWindowId);
+         DrawStdFrameWithCustomTileAndPalette(gTasks[taskId].tMenuWindowId, TRUE, GetStdWindowBaseTileNum(), 14);
+-        FillWindowPixelBuffer(gTasks[taskId].tMenuWindowId, PIXEL_FILL(1));
+-        sOakSpeechResources->textColor[0] = 1;
+-        sOakSpeechResources->textColor[1] = 2;
+-        sOakSpeechResources->textColor[2] = 3;
+-        AddTextPrinterParameterized3(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 8, 1, sOakSpeechResources->textColor, 0, gText_Boy);
+-        sOakSpeechResources->textColor[0] = 1;
+-        sOakSpeechResources->textColor[1] = 2;
+-        sOakSpeechResources->textColor[2] = 3;
+-        AddTextPrinterParameterized3(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 8, 17, sOakSpeechResources->textColor, 0, gText_Girl);
+-        Menu_InitCursor(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 0, 1, GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) + 2, 2, 0);
+-        CopyWindowToVram(gTasks[taskId].tMenuWindowId, COPYWIN_FULL);
+-        gTasks[taskId].func = Task_OakSpeech_HandleGenderInput;
+-    }
+-}
+-
+-static void Task_OakSpeech_HandleGenderInput(u8 taskId)
+-{
+-    s8 input = Menu_ProcessInputNoWrapAround();
+-    switch (input)
+-    {
+-    case 0: // BOY
+-        gSaveBlock2Ptr->playerGender = MALE;
+-        break;
+-    case 1: // GIRL
+-        gSaveBlock2Ptr->playerGender = FEMALE;
+-        break;
+-    case MENU_B_PRESSED:
+-    case MENU_NOTHING_CHOSEN:
++        ChangeBgX(2, 64 << 8, BG_COORD_SET);
++        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 0));
++        DrawAppearanceOptions(taskId);
++        gTasks[taskId].func = Task_OakSpeech_HandleAppearanceInput;
++    }
++}
++
++static void Task_OakSpeech_HandleAppearanceInput(u8 taskId)
++{
++    u8 *value = NULL;
++    u8 count = 0;
++    s8 direction = 0;
++
++    if (JOY_NEW(DPAD_UP))
++        sOakSpeechResources->appearanceRow = (sOakSpeechResources->appearanceRow + 3) % 4;
++    else if (JOY_NEW(DPAD_DOWN))
++        sOakSpeechResources->appearanceRow = (sOakSpeechResources->appearanceRow + 1) % 4;
++    else if (JOY_NEW(B_BUTTON))
++        sOakSpeechResources->appearanceRow = 0;
++    else if (JOY_NEW(A_BUTTON) && sOakSpeechResources->appearanceRow == 3)
++    {
++        PlaySE(SE_SELECT);
++        gTasks[taskId].func = Task_OakSpeech_ClearAppearanceWindow;
+         return;
+     }
+-    gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows;
+-
+-}
+-
+-static void Task_OakSpeech_ClearGenderWindows(u8 taskId)
+-{
+-    s16 *data = gTasks[taskId].data;
+-    ClearStdWindowAndFrameToTransparent(tMenuWindowId, TRUE);
+-    RemoveWindow(tMenuWindowId);
+-    tMenuWindowId = WIN_INTRO_TEXTBOX;
+-    ClearDialogWindowAndFrame(tMenuWindowId, TRUE);
++    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT | A_BUTTON))
++    {
++        direction = JOY_NEW(DPAD_LEFT) ? -1 : 1;
++        switch (sOakSpeechResources->appearanceRow)
++        {
++        case 0: value = &gSaveBlock2Ptr->playerGender; count = 2; break;
++        case 1: value = &gSaveBlock2Ptr->hairColor; count = PLAYER_HAIR_COLOR_COUNT; break;
++        case 2: value = &gSaveBlock2Ptr->accentColor; count = PLAYER_ACCENT_COLOR_COUNT; break;
++        }
++        if (value != NULL)
++            *value = (*value + count + direction) % count;
++    }
++    else
++        return;
++    PlaySE(SE_SELECT);
++    DrawAppearanceOptions(taskId);
++}
++
++static void Task_OakSpeech_ClearAppearanceWindow(u8 taskId)
++{
++    u8 windowId = gTasks[taskId].tMenuWindowId;
++    ClearStdWindowAndFrame(windowId, TRUE);
++    RemoveWindow(windowId);
+     FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 30, 20);
+     CopyBgTilemapBufferToVram(0);
++    ChangeBgX(2, 0, BG_COORD_SET);
++    gTasks[taskId].tTrainerPicPosX = 0;
+     gTasks[taskId].func = Task_OakSpeech_LoadPlayerPic;
+ }
+ 
+@@ -1955,10 +2029,12 @@
+     {
+     case MALE_PLAYER_PIC:
+         LoadPalette(sOakSpeech_Red_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Red_Pal));
++        ApplyPlayerAppearancePalette(BG_PLTT_ID(4), PLAYER_PALETTE_INTRO);
+         LZ77UnCompVram(sOakSpeech_Red_Tiles, (void *)VRAM + 0x600 + tileOffset);
+         break;
+     case FEMALE_PLAYER_PIC:
+         LoadPalette(sOakSpeech_Leaf_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Leaf_Pal));
++        ApplyPlayerAppearancePalette(BG_PLTT_ID(4), PLAYER_PALETTE_INTRO);
+         LZ77UnCompVram(sOakSpeech_Leaf_Tiles, (void *)VRAM + 0x600 + tileOffset);
+         break;
+     case RIVAL_PIC:
+--- a/src/battle_controller_oak_old_man.c
++++ b/src/battle_controller_oak_old_man.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "task.h"
+ #include "pokeball.h"
+@@ -2087,6 +2088,7 @@
+         StartSpriteAnim(&gSprites[gBattlerSpriteIds[gActiveBattler]], 1);
+         paletteNum = AllocSpritePalette(0xD6F8);
+         LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
++        ApplyPlayerAppearancePalette(OBJ_PLTT_ID(paletteNum), PLAYER_PALETTE_BACK);
+         gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = paletteNum;
+         taskId = CreateTask(Task_StartSendOutAnim, 5);
+         gTasks[taskId].data[0] = gActiveBattler;
+--- a/src/battle_controller_player.c
++++ b/src/battle_controller_player.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "data.h"
+ #include "item.h"
+@@ -2716,6 +2717,7 @@
+     StartSpriteAnim(&gSprites[gBattlerSpriteIds[gActiveBattler]], 1);
+     paletteNum = AllocSpritePalette(0xD6F8);
+     LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
++    ApplyPlayerAppearancePalette(OBJ_PLTT_ID(paletteNum), PLAYER_PALETTE_BACK);
+     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = paletteNum;
+     taskId = CreateTask(Task_StartSendOutAnim, 5);
+     gTasks[taskId].data[0] = gActiveBattler;
+--- a/src/battle_gfx_sfx_util.c
++++ b/src/battle_gfx_sfx_util.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "m4a.h"
+ #include "task.h"
+@@ -450,6 +451,9 @@
+ void DecompressTrainerBackPalette(u16 index, u8 palette)
+ {
+     LoadCompressedPalette(gTrainerBackPicPaletteTable[index].data, OBJ_PLTT_ID2(palette), PLTT_SIZE_4BPP);
++    if (index == gSaveBlock2Ptr->playerGender
++        && (!(gBattleTypeFlags & BATTLE_TYPE_LINK) || GetBattlerPosition(palette) == B_POSITION_PLAYER_LEFT))
++        ApplyPlayerAppearancePalette(OBJ_PLTT_ID2(palette), PLAYER_PALETTE_BACK);
+ }
+ 
+ void BattleGfxSfxDummy3(u8 gender)
+--- a/src/battle_transition.c
++++ b/src/battle_transition.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "sprite.h"
+ #include "task.h"
+ #include "overworld.h"
+@@ -2156,6 +2157,7 @@
+ 
+     opponentSprite = &gSprites[task->tOpponentSpriteId];
+     playerSprite = &gSprites[task->tPlayerSpriteId];
++    ApplyPlayerAppearancePalette(OBJ_PLTT_ID(playerSprite->oam.paletteNum), PLAYER_PALETTE_FRONT);
+ 
+     opponentSprite->callback = SpriteCB_MugshotTrainerPic;
+     playerSprite->callback = SpriteCB_MugshotTrainerPic;
+--- a/src/credits.c
++++ b/src/credits.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "credits.h"
+ #include "task.h"
+@@ -1376,6 +1377,7 @@
+                 sprSheet.tag = data->characterTilesTag;
+                 LoadCompressedSpriteSheet(&sprSheet);
+                 LoadPalette(sPlayerMale_Pal, OBJ_PLTT_ID(15), sizeof(sPlayerMale_Pal));
++                ApplyPlayerAppearancePalette(OBJ_PLTT_ID(15), PLAYER_PALETTE_CREDITS);
+             }
+             else
+             {
+@@ -1384,6 +1386,7 @@
+                 sprSheet.tag = data->characterTilesTag;
+                 LoadCompressedSpriteSheet(&sprSheet);
+                 LoadPalette(sPlayerFemale_Pal, OBJ_PLTT_ID(15), sizeof(sPlayerFemale_Pal));
++                ApplyPlayerAppearancePalette(OBJ_PLTT_ID(15), PLAYER_PALETTE_CREDITS);
+             }
+             break;
+         case 1:
+--- a/src/event_object_movement.c
++++ b/src/event_object_movement.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "event_data.h"
+ #include "event_object_movement.h"
+@@ -2246,6 +2247,12 @@
+     }
+ }
+ 
++static bool8 IsPlayerAppearancePalette(u16 tag)
++{
++    return tag == OBJ_EVENT_PAL_TAG_PLAYER_RED || tag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN
++        || tag == OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION || tag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION;
++}
++
+ static u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette)
+ {
+     if (IndexOfSpritePaletteTag(spritePalette->tag) != 0xFF)
+@@ -2253,7 +2260,12 @@
+         // Already loaded
+         return 0xFF;
+     }
+-    return LoadSpritePalette(spritePalette);
++    {
++        u8 slot = LoadSpritePalette(spritePalette);
++        if (slot != 0xFF && IsPlayerAppearancePalette(spritePalette->tag))
++            ApplyPlayerAppearancePalette(OBJ_PLTT_ID(slot), PLAYER_PALETTE_OVERWORLD);
++        return slot;
++    }
+ }
+ 
+ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
+@@ -2263,6 +2275,8 @@
+     if (paletteIndex == 0xFF)
+         return;
+     LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
++    if (IsPlayerAppearancePalette(paletteTag))
++        ApplyPlayerAppearancePalette(OBJ_PLTT_ID(paletteSlot), PLAYER_PALETTE_OVERWORLD);
+     ApplyGlobalFieldPaletteTint(paletteSlot);
+ }
+ 
+--- a/src/trainer_card.c
++++ b/src/trainer_card.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "player_appearance.h"
+ #include "gflib.h"
+ #include "scanline_effect.h"
+ #include "task.h"
+@@ -1932,6 +1933,8 @@
+                     8, 2);
+         }
+     }
++    if (!sTrainerCardDataPtr->isLink && sTrainerCardDataPtr->cardType == CARD_TYPE_FRLG)
++        ApplyPlayerAppearancePalette(BG_PLTT_ID(8), PLAYER_PALETTE_FRONT);
+ }
+ 
+ // Unused
+--- /dev/null
++++ b/src/player_appearance.c
+@@ -0,0 +1,84 @@
++#include "global.h"
++#include "gflib.h"
++#include "player_appearance.h"
++
++// Index zero retains the original palette, including all its shading.
++static const u16 sHairColors[PLAYER_HAIR_COLOR_COUNT] = {
++    0, RGB(9, 10, 12), RGB(20, 13, 8), RGB(30, 25, 13),
++    RGB(26, 12, 7), RGB(12, 19, 29), RGB(23, 13, 28),
++};
++static const u16 sAccentColors[PLAYER_ACCENT_COLOR_COUNT] = {
++    0, RGB(31, 12, 10), RGB(10, 20, 31), RGB(12, 27, 16),
++    RGB(24, 13, 30), RGB(31, 20, 8), RGB(8, 27, 26),
++};
++
++void ResetPlayerAppearance(void)
++{
++    gSaveBlock2Ptr->appearanceVersion = PLAYER_APPEARANCE_VERSION;
++    gSaveBlock2Ptr->hairColor = 0;
++    gSaveBlock2Ptr->accentColor = 0;
++}
++
++bool8 HasPlayerAppearance(void)
++{
++    return gSaveBlock2Ptr->appearanceVersion == PLAYER_APPEARANCE_VERSION
++        && gSaveBlock2Ptr->hairColor < PLAYER_HAIR_COLOR_COUNT
++        && gSaveBlock2Ptr->accentColor < PLAYER_ACCENT_COLOR_COUNT;
++}
++
++static u16 Shade(u16 color, u8 strength)
++{
++    return RGB(((color & 31) * strength) / 100,
++               (((color >> 5) & 31) * strength) / 100,
++               (((color >> 10) & 31) * strength) / 100);
++}
++
++void ApplyPlayerAppearancePalette(u16 offset, enum PlayerPaletteKind kind)
++{
++    u16 colors[32];
++    u16 hair, accent;
++    u8 i, count = kind == PLAYER_PALETTE_INTRO ? 32 : 16;
++
++    if (!HasPlayerAppearance())
++        return;
++    hair = sHairColors[gSaveBlock2Ptr->hairColor];
++    accent = sAccentColors[gSaveBlock2Ptr->accentColor];
++    if (hair == 0 && accent == 0)
++        return;
++    CpuCopy16(&gPlttBufferUnfaded[offset], colors, count * sizeof(u16));
++    if (kind == PLAYER_PALETTE_INTRO)
++    {
++        if (hair)
++            for (i = 0; i < 4; i++)
++                colors[6 + i] = Shade(hair, 100 - i * 20);
++        if (accent)
++            for (i = 0; i < 5; i++)
++                colors[27 + i] = Shade(accent, 100 - i * 15);
++    }
++    else if (kind == PLAYER_PALETTE_FRONT)
++    {
++        if (hair)
++            colors[4] = Shade(hair, 65);
++        if (accent)
++        {
++            colors[12] = accent;
++            colors[13] = Shade(accent, 65);
++        }
++    }
++    else
++    {
++        if (hair)
++        {
++            colors[1] = hair;
++            colors[4] = Shade(hair, 65);
++            if (kind != PLAYER_PALETTE_CREDITS)
++                colors[8] = Shade(hair, 40);
++        }
++        if (accent)
++        {
++            colors[11] = accent;
++            colors[12] = Shade(accent, 65);
++        }
++    }
++    LoadPalette(colors, offset, count * sizeof(u16));
++}
+--- /dev/null
++++ b/include/player_appearance.h
+@@ -0,0 +1,21 @@
++#ifndef GUARD_PLAYER_APPEARANCE_H
++#define GUARD_PLAYER_APPEARANCE_H
++
++#define PLAYER_APPEARANCE_VERSION 0xA7
++#define PLAYER_HAIR_COLOR_COUNT 7
++#define PLAYER_ACCENT_COLOR_COUNT 7
++
++enum PlayerPaletteKind
++{
++    PLAYER_PALETTE_OVERWORLD,
++    PLAYER_PALETTE_INTRO,
++    PLAYER_PALETTE_FRONT,
++    PLAYER_PALETTE_BACK,
++    PLAYER_PALETTE_CREDITS,
++};
++
++void ResetPlayerAppearance(void);
++bool8 HasPlayerAppearance(void);
++void ApplyPlayerAppearancePalette(u16 offset, enum PlayerPaletteKind kind);
++
++#endif
+--- /dev/null
++++ b/tools/test_player_appearance.py
+@@ -0,0 +1,78 @@
++#!/usr/bin/env python3
++"""Exercise the actual palette code with host-side GBA palette/save stubs."""
++from pathlib import Path
++import subprocess
++import tempfile
++
++ROOT = Path(__file__).resolve().parents[1]
++with tempfile.TemporaryDirectory(prefix='appearance-test-') as temp:
++    work = Path(temp)
++    (work / 'global.h').write_text('''#include <stdint.h>
++#include <string.h>
++typedef uint8_t u8; typedef uint16_t u16; typedef uint8_t bool8;
++#define RGB(r,g,b) ((r) | ((g)<<5) | ((b)<<10))
++struct SaveBlock2 { u8 appearanceVersion, hairColor, accentColor; };
++extern struct SaveBlock2 *gSaveBlock2Ptr;
++extern u16 gPlttBufferUnfaded[512];
++#define CpuCopy16(src,dst,size) memcpy(dst,src,size)
++void LoadPalette(const void *src, u16 offset, u16 size);
++''')
++    (work / 'gflib.h').write_text('')
++    (work / 'test.c').write_text('''#include "global.h"
++#include "player_appearance.h"
++#include <assert.h>
++#include <stdio.h>
++struct SaveBlock2 save, *gSaveBlock2Ptr = &save;
++u16 gPlttBufferUnfaded[512];
++void LoadPalette(const void *src, u16 offset, u16 size) {
++    assert(offset + size / 2 <= 512);
++    memcpy(gPlttBufferUnfaded + offset, src, size);
++}
++int main(void) {
++    u16 original[512];
++    int i, kind, hair, accent;
++    struct SaveBlock2 stored;
++    for (i = 0; i < 512; i++) original[i] = (i * 53) & 0x7FFF;
++    for (kind = 0; kind <= PLAYER_PALETTE_CREDITS; kind++) {
++        memcpy(gPlttBufferUnfaded, original, sizeof(original));
++        memset(&save, 0, sizeof(save));
++        ApplyPlayerAppearancePalette(64, kind);
++        assert(!memcmp(original, gPlttBufferUnfaded, sizeof(original)));
++        ResetPlayerAppearance();
++        ApplyPlayerAppearancePalette(64, kind);
++        assert(!memcmp(original, gPlttBufferUnfaded, sizeof(original)));
++        for (hair = 0; hair < PLAYER_HAIR_COLOR_COUNT; hair++) {
++            for (accent = 0; accent < PLAYER_ACCENT_COLOR_COUNT; accent++) {
++                int count = kind == PLAYER_PALETTE_INTRO ? 32 : 16;
++                memcpy(gPlttBufferUnfaded, original, sizeof(original));
++                save.hairColor = hair; save.accentColor = accent;
++                memcpy(&stored, &save, sizeof(save));
++                memset(&save, 0, sizeof(save));
++                memcpy(&save, &stored, sizeof(save));
++                assert(HasPlayerAppearance());
++                ApplyPlayerAppearancePalette(64, kind);
++                assert(!memcmp(original, gPlttBufferUnfaded, 64 * 2));
++                assert(!memcmp(original + 64 + count, gPlttBufferUnfaded + 64 + count,
++                               (512 - 64 - count) * 2));
++                assert(gPlttBufferUnfaded[64] == original[64]);
++                // Skin highlights remain independent of both chosen colours.
++                assert(gPlttBufferUnfaded[66] == original[66]);
++                assert(gPlttBufferUnfaded[67] == original[67]);
++                for (i = 64; i < 64 + count; i++) assert(gPlttBufferUnfaded[i] <= 0x7FFF);
++            }
++        }
++        memcpy(gPlttBufferUnfaded, original, sizeof(original));
++        save.hairColor = 255;
++        assert(!HasPlayerAppearance());
++        ApplyPlayerAppearancePalette(64, kind);
++        assert(!memcmp(original, gPlttBufferUnfaded, sizeof(original)));
++    }
++    puts("Passed: 245 palette combinations, legacy defaults, invalid values, bounds and save round trips.");
++}
++''')
++    binary = work / 'test'
++    subprocess.run(['cc', '-std=c99', '-Wall', '-Wextra', '-Werror',
++                    '-I'+str(work), '-I'+str(ROOT / 'include'),
++                    str(ROOT / 'src/player_appearance.c'), str(work / 'test.c'),
++                    '-o', str(binary)], check=True)
++    subprocess.run([str(binary)], check=True)
+--- /dev/null
++++ b/docs/player-customisation.md
+@@ -0,0 +1,28 @@
++# Player customisation
++
++New games replace Oak's boy/girl question with a live appearance selector:
++
++- Style 1 and Style 2 use the existing Red and Leaf sprite sets.
++- Hair: Original, Black, Brown, Blond, Auburn, Blue, Purple.
++- Accent: Original, Red, Blue, Green, Purple, Orange, Teal.
++- Up/down selects a row; left/right cycles choices. A cycles the selected choice or confirms Done. B returns to the style row.
++
++The sprite style continues to use the existing `playerGender` field so avatar animations and existing story logic remain compatible. This screen does not add a separate gender-identity field.
++
++Three bytes of the former `SaveBlock2.filler_90` reserve store a version marker and the two colour choices. The reserve remains eight bytes in total, so later fields and save size do not move. Actual offsets depend on this project's expanded Pokédex arrays. Legacy saves and invalid settings use original colours. Starting a new game initializes original colours before selection.
++
++Palette hooks cover Oak's portrait (including after naming), player overworld animations and reflections, the naming icon, local battle back sprites, the local Trainer Card, player battle-transition portraits, and the credits. Original artwork and animation frames are retained. Hair and accent choices replace existing palette ramps; details sharing those palette entries also follow their colour. These are palette-based customisations, not independently masked recolours of every pixel.
++
++The colour selections are local save data; they are not added to the link-trade or remote Trainer Card protocol.
++
++## Validation
++
++Run `python3 -B tools/test_player_appearance.py` for the compiled palette implementation's 245 colour/format combinations, original-colour fallback, invalid settings, palette bounds, and save-record copy round trips. Run `make -j4` for the ROM build.
++
++After building, run `python3 -B tools/test_player_sprite_palettes.py` (requires Pillow) to check every used colour index in all 14 overworld sheets against the shared runtime palette and verify the compiled animation tiles match the source indices. These sheets must retain the canonical `player.pal` index order: PNG optimisers that reorder or compact palettes break the in-game colours even when the PNG itself looks unchanged.
++
++The intro resource structure has compile-time checks for tilemap DMA alignment. The appearance cursor occupies a byte of the existing reserve, keeping both tilemap buffers at their original aligned offsets.
++
++The isolated mGBA test ROM was advanced through the real intro. Live checks covered the default menu, Style 2 with blond hair and a blue accent, Style 1 with black hair and a blue accent, Done, entry into the naming screen, and return to Oak's name confirmation. Runtime assertions verified the saved style and colour bytes. Screenshots are `player-customisation-preview.png` and `player-customisation-style1.png`. The existing player's battery save was not used.
++
++Regression verification used a fresh rebuilt ROM through the full intro into the player's bedroom. The restored background was checked on Oak's dialogue and the appearance menu. Style 2 retained blond hair and a blue accent in the overworld, with both back- and front-facing views checked after directional input. The gameplay screenshot is `player-customisation-overworld.png`. The palette/tile check covers all 14 movement sheets; cycling, surfing and fishing were not separately exercised in the emulator.

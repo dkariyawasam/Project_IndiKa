@@ -1,4 +1,5 @@
 #include "global.h"
+#include "league_challenge.h"
 #include "task.h"
 #include "help_system.h"
 #include "overworld.h"
@@ -834,6 +835,8 @@ void ClearTrainerFlag(u16 trainerId)
 void StartTrainerBattle(void)
 {
     gBattleTypeFlags = BATTLE_TYPE_TRAINER;
+    if (IsIndigoLeagueTrainerBattle())
+        gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
     if (GetTrainerBattleMode() == TRAINER_BATTLE_EARLY_RIVAL && GetRivalBattleFlags() == RIVAL_BATTLE_TUTORIAL)
         gBattleTypeFlags |= BATTLE_TYPE_FIRST_BATTLE;
     gMain.savedCallback = CB2_EndTrainerBattle;

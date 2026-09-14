@@ -48,9 +48,11 @@ ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "But obedience is earned through\n"
     .string "the trust recorded in your\l"
     .string "FIELD AIDE work.\p"
-    .string "With it, you can challenge the\n"
-    .string "POKéMON LEAGUE.\p"
-    .string "Go. Your path lies ahead.$"
+    .string "With all eight BADGES, head west\n"
+    .string "from VIRIDIAN onto ROUTE 22.\p"
+    .string "Then go north through ROUTE 23\n"
+    .string "and VICTORY ROAD to reach\l"
+    .string "the INDIGO LEAGUE.$"
 
 ViridianCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
@@ -61,7 +63,10 @@ ViridianCity_Gym_Text_GymGuyAdvice::
     .string "This will be the toughest of all\l"
     .string "the GYM LEADERS.\p"
     .string "Also, I heard that the TRAINERS\n"
-    .string "here like GROUND-type POKéMON.$"
+    .string "here like GROUND-type POKéMON.\p"
+    .string "Try WATER, GRASS, or ICE moves.\n"
+    .string "ELECTRIC moves cannot hit\l"
+    .string "GROUND-type POKéMON.$"
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
     .string "Blow me away! GIOVANNI was the\n"

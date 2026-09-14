@@ -74,6 +74,8 @@ PowerPlant_EventScript_DefeatedZapdos::
 	end
 
 PowerPlant_EventScript_RanFromZapdos::
+	setflag FLAG_FOUGHT_ZAPDOS
+	setflag FLAG_HIDE_ZAPDOS
 	setvar VAR_0x8004, SPECIES_ZAPDOS
 	goto EventScript_MonFlewAway
 	end

@@ -39,4 +39,6 @@ PokemonMansion_B1F_Text_GiovanniAddressed::
     .string "No matter.\n"
     .string "I built that power once.\p"
     .string "I will retrieve it, perfect it,\n"
-    .string "and make it mine.$"
+    .string "and make it mine.\p"
+    .string "SILPH in SAFFRON has what I need.\n"
+    .string "A BALL that cannot fail.$"

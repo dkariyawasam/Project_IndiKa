@@ -1102,6 +1102,20 @@
 #define TRAINER_ACE_TRAINER_IRIS                  34
 #define TRAINER_ACE_TRAINER_THEA                  37
 
+// Indoor field-leader gym trainees use vacant IDs; preserve save flag offsets.
+#define TRAINER_AROMA_LADY_FLORA                      38
+#define TRAINER_AROMA_LADY_DAPHNE                     39
+#define TRAINER_AROMA_LADY_LAUREL                     40
+#define TRAINER_AROMA_LADY_VIOLA                      41
+#define TRAINER_PKMN_BREEDER_HAZEL                    44
+#define TRAINER_PKMN_BREEDER_MABEL                    45
+#define TRAINER_PSYCHIC_ORIN                          46
+#define TRAINER_PSYCHIC_ALDEN                         47
+#define TRAINER_PSYCHIC_SILAS                         48
+#define TRAINER_PSYCHIC_MIRA                          49
+#define TRAINER_PSYCHIC_SELENE                        50
+#define TRAINER_PSYCHIC_LYRA                          51
+
 #define NUM_TRAINERS                             785
 #define MAX_TRAINERS_COUNT                       785
 

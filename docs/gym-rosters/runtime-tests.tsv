@@ -1,0 +1,38 @@
+Flora-present	PASS	
+Flora-accepts-vs	PASS	Within 1 activations
+Flora-rematch-win	PASS	Opponent 38; outcome 1
+Daphne-present	PASS	
+Daphne-accepts-vs	PASS	Within 1 activations
+Daphne-rematch-win	PASS	Opponent 39; outcome 1
+Laurel-present	PASS	
+Laurel-accepts-vs	PASS	Within 2 activations
+Laurel-rematch-win	PASS	Opponent 40; outcome 1
+Viola-present	PASS	
+Viola-accepts-vs	PASS	Within 1 activations
+Viola-rematch-win	PASS	Opponent 41; outcome 1
+Hazel-present	PASS	
+Hazel-accepts-vs	PASS	Within 1 activations
+Hazel-rematch-win	PASS	Opponent 44; outcome 1
+Mabel-present	PASS	
+Mabel-accepts-vs	PASS	Within 1 activations
+Mabel-rematch-win	PASS	Opponent 45; outcome 1
+Orin-present	PASS	
+Orin-accepts-vs	FAIL	No response
+Orin-present	PASS	
+Orin-accepts-vs	PASS	Within 1 activations
+Orin-rematch-win	PASS	Opponent 46; outcome 1
+Alden-present	PASS	
+Alden-accepts-vs	PASS	Within 1 activations
+Alden-rematch-win	PASS	Opponent 47; outcome 1
+Silas-present	PASS	
+Silas-accepts-vs	PASS	Within 1 activations
+Silas-rematch-win	PASS	Opponent 48; outcome 1
+Mira-present	PASS	
+Mira-accepts-vs	PASS	Within 1 activations
+Mira-rematch-win	PASS	Opponent 49; outcome 1
+Selene-present	PASS	
+Selene-accepts-vs	PASS	Within 1 activations
+Selene-rematch-win	PASS	Opponent 50; outcome 1
+Lyra-present	PASS	
+Lyra-accepts-vs	PASS	Within 1 activations
+Lyra-rematch-win	PASS	Opponent 51; outcome 1

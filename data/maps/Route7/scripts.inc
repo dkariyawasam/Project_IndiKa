@@ -10,6 +10,8 @@ Route7_OnLoad::
 
 Route7_EventScript_OnLoadRestoreBeamTrees::
 	call Route7_EventScript_RestoreBeamTrees
+	@ Celadon Cave does not exist until Mewtwo's blast opens the cliff.
+	setmetatile 9, 22, 0x079, TRUE
 	end
 
 Route7_OnTransition::

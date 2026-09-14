@@ -25,6 +25,9 @@ EventScript_PkmnCenterNurse_ShowSoulPassMenu::
 	end
 
 EventScript_PkmnCenterNurse_CheckFriendship::
+	closemessage
+	special PlayFieldItemAnimation
+	waitstate
 	msgbox Text_NurseCheckLeadMonFriendship
 	specialvar VAR_RESULT, GetLeadMonFriendship
 	switch VAR_RESULT

@@ -1419,7 +1419,7 @@ const u8 gText_SubQuest4_Map4[] = _("CERULEAN CAVE");
 const u8 gText_SubQuest4_Map5[] = _("VIRIDIAN GYM");
 
 const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossils.");
-const u8 gText_BrockTrialPhase2[] = _("BROCK asked you to find and show\nhim a fossil.");
+const u8 gText_BrockTrialPhase2[] = _("Search MT. MOON's exposed rocks\nfor a fossil. Show it to BROCK.");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
 const u8 gText_BrockTrialPhase4[] = _("BROCK wants to study a POKéMON\nthat has lived unchanged since\nancient times.");
 const u8 gText_BrockTrialPhase5[] = _("Trade evolution confirmed through BROCK's GOLEM.");
@@ -1437,7 +1437,7 @@ const u8 gText_LtSurgeTrialPhase4[] = _("LT. SURGE wants to trade for a\nPOKéMO
 const u8 gText_LtSurgeTrialPhase5[] = _("Evolution confirmed through\nLT. SURGE's ELECTIVIRE.");
 
 const u8 gText_ErikaTrialPhase1[] = _("Find ERIKA in\nViridian Forest.");
-const u8 gText_ErikaTrialPhase2[] = _("Bring ERIKA an\nENERGY ROOT.");
+const u8 gText_ErikaTrialPhase2[] = _("Wild ODDISH and BELLSPROUT may\nhold ENERGY ROOTS. Bring one\nto ERIKA in VIRIDIAN FOREST.");
 const u8 gText_ErikaTrialPhase3[] = _("Challenge ERIKA.");
 const u8 gText_ErikaTrialPhase4[] = _("ERIKA returned to CELADON GYM.\nClaim your reward.");
 const u8 gText_ErikaTrialPhase5[] = _("Raise ERIKA's BUDEW into ROSELIA\nthrough friendship.");
@@ -1451,8 +1451,8 @@ const u8 gText_KogaTrialPhase5[] = _("Raise KOGA's GOLBAT into CROBAT\nthrough f
 const u8 gText_SabrinaTrialPhase1[] = _("SABRINA went to POKéMON TOWER\nafter sensing astral energy.");
 const u8 gText_SabrinaTrialPhase2[] = _("Bring SABRINA a POKéMON that\ncan learn DREAM EATER.");
 const u8 gText_SabrinaTrialPhase3[] = _("Challenge SABRINA in\nPOKéMON TOWER.");
-const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.");
-const u8 gText_SabrinaTrialPhase5[] = _("SABRINA recognized your calm\ncontrol under pressure.");
+const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.\nVisit her to receive CHINGLING.");
+const u8 gText_SabrinaTrialPhase5[] = _("Raise CHINGLING's friendship, then\nlevel it up at night to evolve\nit into CHIMECHO.");
 
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by trust\nand friendship.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution shaped by habitat,\ninstinct, and survival.");
@@ -1483,7 +1483,7 @@ const u8 gText_SubQuest3_Desc7[] = _("Record the Apex MIME SR. in\nDIGLETT'S CAV
 const u8 gText_SubQuest3_Desc8[] = _("Record the Apex ANNIHILAPE in\nMT. MOON.");
 const u8 gText_SubQuest4_Desc1[] = _("GIOVANNI found MEWTWO's empty\nvat in POKéMON MANSION.");
 const u8 gText_SubQuest4_Desc2[] = _("GIOVANNI activated a signal\ndevice to call MEWTWO.");
-const u8 gText_SubQuest4_Desc3[] = _("Witness the path left by\nGIOVANNI's signal on ROUTE 7.");
+const u8 gText_SubQuest4_Desc3[] = _("Explore the cave opened by\nMEWTWO's blast on ROUTE 7.");
 const u8 gText_SubQuest4_Desc4[] = _("GIOVANNI reached MEWTWO in\nCERULEAN CAVE.");
 const u8 gText_SubQuest4_Desc5[] = _("Defeat GIOVANNI in VIRIDIAN GYM\nand end his pursuit of power.");
 const u8 gText_SubQuest2_Desc9[] = _("Description Sub 9");

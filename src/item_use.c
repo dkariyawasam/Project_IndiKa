@@ -1,4 +1,5 @@
 #include "global.h"
+#include "field_item_animation.h"
 #include "gflib.h"
 #include "battle.h"
 #include "bike.h"
@@ -45,8 +46,6 @@ static void CB2_CheckMail(void);
 static void ItemUseOnFieldCB_Bicycle(u8 taskId);
 static bool8 CanFish(void);
 static void ItemUseOnFieldCB_Rod(u8 taskId);
-static void Task_PlayPokeFlute(u8 taskId);
-static void Task_DisplayPokeFluteMessage(u8 taskId);
 static void Task_UseRepel(u8 taskId);
 static void RemoveUsedItem(void);
 static void Task_UsedBlackWhiteFlute(u8 taskId);
@@ -310,55 +309,16 @@ static void ItemUseOnFieldCB_Rod(u8 taskId)
     DestroyTask(taskId);
 }
 
+static void ItemUseOnFieldCB_AnimateItemfinder(u8 taskId)
+{
+    StartFieldItemAnimation(taskId, ItemUseOnFieldCB_Itemfinder);
+}
+
 void ItemUseOutOfBattle_Itemfinder(u8 taskId)
 {
     IncrementGameStat(GAME_STAT_USED_ITEMFINDER);
-    sItemUseOnFieldCB = ItemUseOnFieldCB_Itemfinder;
+    sItemUseOnFieldCB = ItemUseOnFieldCB_AnimateItemfinder;
     SetUpItemUseOnFieldCallback(taskId);
-}
-
-void FieldUseFunc_PokeFlute(u8 taskId)
-{
-    bool8 wokeSomeoneUp = FALSE;
-    u8 i;
-
-    for (i = 0; i < CalculatePlayerPartyCount(); i++)
-    {
-        if (!ExecuteTableBasedItemEffect(&gPlayerParty[i], ITEM_AWAKENING, i, 0))
-            wokeSomeoneUp = TRUE;
-    }
-
-    if (wokeSomeoneUp)
-    {
-        if (gTasks[taskId].data[3] == 0)
-            DisplayItemMessageInBag(taskId, FONT_NORMAL, gText_PlayedPokeFlute, Task_PlayPokeFlute);
-        else
-            DisplayItemMessageOnField(taskId, FONT_NORMAL, gText_PlayedPokeFlute, Task_PlayPokeFlute);
-    }
-    else
-    {
-        if (gTasks[taskId].data[3] == 0)
-            DisplayItemMessageInBag(taskId, FONT_NORMAL, gText_PlayedPokeFluteCatchy, Task_ReturnToBagFromContextMenu);
-        else
-            DisplayItemMessageOnField(taskId, FONT_NORMAL, gText_PlayedPokeFluteCatchy, Task_ItemUse_CloseMessageBoxAndReturnToField);
-    }
-}
-
-static void Task_PlayPokeFlute(u8 taskId)
-{
-    PlayFanfareByFanfareNum(FANFARE_POKE_FLUTE);
-    gTasks[taskId].func = Task_DisplayPokeFluteMessage;
-}
-
-static void Task_DisplayPokeFluteMessage(u8 taskId)
-{
-    if (WaitFanfare(FALSE))
-    {
-        if (gTasks[taskId].data[3] == 0)
-            DisplayItemMessageInBag(taskId, FONT_NORMAL, gText_PokeFluteAwakenedMon, Task_ReturnToBagFromContextMenu);
-        else
-            DisplayItemMessageOnField(taskId, FONT_NORMAL, gText_PokeFluteAwakenedMon, Task_ItemUse_CloseMessageBoxAndReturnToField);
-    }
 }
 
 static void DoSetUpItemUseCallback(u8 taskId)
@@ -562,12 +522,20 @@ static void Task_UseApexLogFromField(u8 taskId)
 
 void FieldUseFunc_VsSeeker(u8 taskId)
 {
-    if ((gMapHeader.mapType != MAP_TYPE_ROUTE
+    bool8 isFieldLeaderGym =
+        (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CELADON_CITY_GYM)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_CELADON_CITY_GYM))
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_FUCHSIA_CITY_GYM)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_FUCHSIA_CITY_GYM))
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_GYM)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_GYM));
+
+    if (!isFieldLeaderGym && ((gMapHeader.mapType != MAP_TYPE_ROUTE
       && gMapHeader.mapType != MAP_TYPE_TOWN
       && gMapHeader.mapType != MAP_TYPE_CITY)
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIRIDIAN_FOREST)
 	      && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIRIDIAN_FOREST)
-	       || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_FUCHSIA_FOREST))))
+	       || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_FUCHSIA_FOREST)))))
     {
         PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
     }
@@ -753,6 +721,11 @@ static void ItemUseOnFieldCB_CascadeBoard(u8 taskId)
     DestroyTask(taskId);
 }
 
+static void ItemUseOnFieldCB_AnimateCascadeBoard(u8 taskId)
+{
+    StartFieldItemAnimation(taskId, ItemUseOnFieldCB_CascadeBoard);
+}
+
 bool8 CanUseCascadeBoardOnField(void)
 {
     s16 x, y;
@@ -778,7 +751,7 @@ void ItemUseOutOfBattle_CascadeBoard(u8 taskId)
 {
     if (CanUseCascadeBoardOnField() == TRUE)
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_CascadeBoard;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_AnimateCascadeBoard;
         SetUpItemUseOnFieldCallback(taskId);
     }
     else

@@ -1,0 +1,69 @@
+Brock-leader-present	PASS	
+Brock-battle-and-badge	PASS	Battle outcome 1; trial state 4
+Brock-badge-item	PASS	Item 255
+Misty-leader-present	PASS	
+Misty-battle-and-badge	PASS	Battle outcome 1; trial state 10
+Misty-badge-item	PASS	Item 256
+Surge-leader-present	PASS	
+Surge-battle-and-badge	PASS	Battle outcome 1; trial state 4
+Surge-badge-item	PASS	Item 260
+Erika-leader-present	PASS	
+Erika-battle-and-badge	PASS	Battle outcome 1; trial state 4
+Erika-badge-item	PASS	Item 259
+Koga-leader-present	PASS	
+Koga-battle-and-badge	PASS	Battle outcome 1; trial state 4
+Koga-badge-item	PASS	Item 261
+Sabrina-leader-present	PASS	
+Sabrina-battle-and-badge	PASS	Battle outcome 1; trial state 4
+Sabrina-badge-item	PASS	Item 254
+Blaine-leader-present	PASS	
+Blaine-battle-and-badge	PASS	Battle outcome 1; trial state -1
+Giovanni-leader-present	PASS	
+Giovanni-battle-and-badge	PASS	Battle outcome 1; trial state -1
+Sabrina-research-completion-record	FAIL	Badge 1; completion record 0
+Giovanni-research-completion-record	FAIL	Badge 1; completion record 0
+BROCK-guide	PASS	Expected state 1; actual 1; lock 0
+MISTY-guide	PASS	Expected state 1; actual 1; lock 0
+LT_SURGE-guide	PASS	Expected state 1; actual 1; lock 0
+ERIKA-guide	PASS	Expected state 1; actual 1; lock 0
+KOGA-guide	PASS	Expected state 1; actual 1; lock 0
+SABRINA-guide	PASS	Expected state 1; actual 1; lock 0
+Brock-first-meeting	PASS	Expected state 2; actual 2; lock 0
+Brock-fossil-return	PASS	Expected state 3; actual 3; lock 0
+Misty-first-meeting	PASS	Expected state 2; actual 2; lock 0
+Misty-first-current	PASS	Expected state 3; actual 3; lock 0
+Misty-first-generator	PASS	Expected state 4; actual 4; lock 0
+Misty-lower-request	PASS	Expected state 5; actual 5; lock 0
+Misty-second-current	PASS	Expected state 6; actual 6; lock 0
+Misty-second-generator	PASS	Expected state 7; actual 7; lock 0
+Misty-third-current	PASS	Expected state 8; actual 8; lock 0
+Misty-final-generator	PASS	Expected state 9; actual 9; lock 0
+Surge-tutoring	PASS	Expected state 3; actual 3; lock 0
+Erika-root-request	PASS	Expected state 2; actual 2; lock 0
+Erika-root-shown	PASS	Expected state 3; actual 3; lock 0
+Koga-volcano-request	PASS	Expected state 2; actual 2; lock 0
+Koga-volcano-checkpoint	PASS	Expected state 3; actual 3; lock 0
+Sabrina-tutoring	PASS	Expected state 3; actual 3; lock 0
+Brock-trade	PASS	Reward/trade flag 1; lock 0; trial 5
+Brock-trade-species	PASS	Expected 76; received 76
+Misty-trade	PASS	Reward/trade flag 1; lock 0; trial 11
+Misty-trade-species	FAIL	Expected 186; received 61
+Surge-trade	PASS	Reward/trade flag 1; lock 0; trial 5
+Surge-trade-species	FAIL	Expected 427; received 125
+Erika-gift	PASS	Reward/trade flag 1; lock 0; trial 5
+Erika-gift-species	PASS	Expected 424; received 424
+Koga-gift	PASS	Reward/trade flag 1; lock 0; trial 5
+Koga-gift-species	PASS	Expected 42; received 42
+Blaine-generator	PASS	Reward/trade flag 1; lock 0; trial -1
+Blaine-generator-species	PASS	Expected 137; received 137
+Misty-trade	PASS	Reward/trade flag 1; lock 0; trial 11
+Misty-trade-species	PASS	Expected 186; received 186
+Surge-trade	PASS	Reward/trade flag 1; lock 0; trial 5
+Surge-trade-species	PASS	Expected 427; received 427
+Erika-gift	PASS	Reward/trade flag 1; lock 0; trial 5
+Erika-gift-species	PASS	Expected 424; received 424
+Koga-gift	PASS	Reward/trade flag 1; lock 0; trial 5
+Koga-gift-species	PASS	Expected 42; received 42
+Blaine-generator	PASS	Reward/trade flag 1; lock 0; trial -1
+Blaine-generator-species	PASS	Expected 137; received 137
+Erika-guide-preserved-on-return	FAIL	Guide hide flag 1; trial state 3

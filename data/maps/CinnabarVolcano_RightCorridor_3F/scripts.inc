@@ -94,6 +94,7 @@ CinnabarVolcano_RightCorridor_3F_EventScript_Koga::
 	end
 
 CinnabarVolcano_RightCorridor_3F_EventScript_KogaAskChallenge::
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_GymAideTypeAdvice
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_KogaReadyToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarVolcano_RightCorridor_3F_EventScript_KogaDeclineChallenge
 	goto CinnabarVolcano_RightCorridor_3F_EventScript_KogaBattlePicker
@@ -129,6 +130,7 @@ CinnabarVolcano_RightCorridor_3F_EventScript_Janine::
 
 CinnabarVolcano_RightCorridor_3F_EventScript_JaninePostStone::
 	msgbox CinnabarVolcano_RightCorridor_3F_Text_JaninePostStone
+	msgbox CinnabarVolcano_RightCorridor_3F_Text_GymAideTypeAdvice
 	release
 	end
 
