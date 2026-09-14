@@ -112,7 +112,15 @@ Route20_Text_MarinerDefeat::
     .string "Agh!$"
 
 Route20_Text_MarinerPostBattle::
-    .string "You broke me into pieces too!$"
+    .string "You broke me into pieces too!\p"
+    .string "SEAFOAM was split by a sudden\n"
+    .string "freeze. The caves still hold\l"
+    .string "that cold.\p"
+    .string "The two entrances meet in the\n"
+    .string "cavern below. A deeper stairway\l"
+    .string "leads to an icy lake.\p"
+    .string "Take your CASCADE BOARD if you\n"
+    .string "want to cross that water.$"
 
 Route20_Text_NoraIntro::
     .string "The water here polishes stones\n"

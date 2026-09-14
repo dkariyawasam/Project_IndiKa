@@ -178,6 +178,9 @@ CeladonCity_EventScript_BerryPatchDoor::
 	end
 
 CeladonCity_EventScript_BerryPatchAccessGranted::
+	closemessage
+	special PlayFieldItemAnimation
+	waitstate
 	msgbox CeladonCity_Text_BerryPatchAccessGranted
 	closemessage
 	warp MAP_CELADON_CITY_BERRY_PATCH, 0

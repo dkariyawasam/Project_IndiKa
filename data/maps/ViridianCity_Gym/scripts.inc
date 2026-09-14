@@ -1,4 +1,5 @@
 ViridianCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_Gym_OnTransition
 	.byte 0
 
 ViridianCity_Gym_EventScript_Giovanni::
@@ -20,6 +21,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION, SUB_QUEST_GIOVANNI_VIRIDIAN_GYM
 	logbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GIOVANNIS_AMBITION
 	setflag FLAG_BADGE08_GET
+	call ViridianCity_Gym_EventScript_CompleteGiovanniTrial
 	setvar VAR_MAP_SCENE_ROUTE22, 3
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
@@ -54,3 +56,12 @@ ViridianCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox ViridianCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+ViridianCity_Gym_OnTransition::
+	call_if_set FLAG_BADGE08_GET, ViridianCity_Gym_EventScript_CompleteGiovanniTrial
+	end
+
+ViridianCity_Gym_EventScript_CompleteGiovanniTrial::
+	sublogbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_GIOVANNI
+	sublogbookmenu LOGBOOK_MENU_COMPLETE_QUEST, QUEST_GYM_LEADER_TRIALS, SUB_QUEST_GIOVANNI
+	return

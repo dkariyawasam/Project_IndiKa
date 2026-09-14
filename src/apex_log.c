@@ -204,6 +204,7 @@ static const u8 sApexLoc_Saffron[] = _("SAFFRON");
 static const u8 sApexLoc_Lavender[] = _("LAVENDER");
 static const u8 sApexLoc_PokemonTower[] = _("POKEMON TOWER");
 static const u8 sApexLoc_Cinnabar[] = _("CINNABAR");
+static const u8 sApexLoc_Laboratory[] = _("POKEMON LAB");
 static const u8 sApexLoc_Volcano[] = _("VOLCANO");
 static const u8 sApexLoc_DiglettCave[] = _("DIGLETT CAVE");
 static const u8 sApexLoc_Route11[] = _("ROUTE 11");
@@ -215,43 +216,42 @@ static const u8 sApexSrc_OldTale[] = _("Old tale");
 static const u8 sApexSrc_ScaredLocal[] = _("Scared local");
 static const u8 sApexSrc_FlowerWatcher[] = _("Flower watcher");
 static const u8 sApexSrc_Engineer[] = _("Engineer");
-static const u8 sApexSrc_Electrician[] = _("Electrician");
-static const u8 sApexSrc_Picnicker[] = _("Picnicker");
+static const u8 sApexSrc_Scout[] = _("Scout");
+static const u8 sApexSrc_Sailor[] = _("Sailor");
 static const u8 sApexSrc_Swimmer[] = _("Swimmer");
-static const u8 sApexSrc_Trainer[] = _("Trainer");
-static const u8 sApexSrc_Explorer[] = _("Explorer");
+static const u8 sApexSrc_OldMan[] = _("Old man");
+static const u8 sApexSrc_Kindler[] = _("Kindler");
 static const u8 sApexSrc_NoWitness[] = _("No witness");
 static const u8 sApexSrc_Giovanni[] = _("Giovanni");
 static const u8 sApexSrc_SilphPresident[] = _("President");
 static const u8 sApexSrc_Lance[] = _("Lance");
-static const u8 sApexSrc_Rocket[] = _("Rocket");
+static const u8 sApexSrc_LonelyCubone[] = _("Lonely Cubone");
 static const u8 sApexSrc_TownLocal[] = _("Town local");
 static const u8 sApexSrc_Mourner[] = _("Mourner");
 static const u8 sApexSrc_Scientist[] = _("Scientist");
 static const u8 sApexSrc_Hiker[] = _("Hiker");
-static const u8 sApexSrc_Witness[] = _("Witness");
+static const u8 sApexSrc_Local[] = _("Local");
 static const u8 sApexSrc_CaveVisitor[] = _("Cave visitor");
-static const u8 sApexSrc_Pokemaniac[] = _("Pokemaniac");
-static const u8 sApexSrc_HouseResident[] = _("House resident");
+static const u8 sApexSrc_BugManiac[] = _("Bug Maniac");
 
 static const u8 sApexRumor_Tangrowth0[] = _("My father heard shadowy growls\ndeep in VIRIDIAN FOREST.");
 static const u8 sApexRumor_Tangrowth1[] = _("Legends say VIRIDIAN FOREST\nensnares the wicked.");
 static const u8 sApexRumor_Tangrowth2[] = _("Flowers grow more vibrant\nnear the forest centre.");
-static const u8 sApexRumor_Zapdos0[] = _("Power gathers at the PLANT\nwithout training or limit.");
+static const u8 sApexRumor_Zapdos0[] = _("Storms leave the river buzzing\nnear the POWER PLANT.");
 static const u8 sApexRumor_Zapdos1[] = _("The POWER PLANT crackles\nlike an endless storm.");
-static const u8 sApexRumor_Zapdos2[] = _("A flash crossed the sky, and the\nwhole route shook with thunder.");
+static const u8 sApexRumor_Zapdos2[] = _("Lightning strikes without clouds.\nThe power seems endless.");
 static const u8 sApexRumor_Articuno0[] = _("SEAFOAM changed all at once\nfrom volcanic to ice-cold.");
 static const u8 sApexRumor_Articuno1[] = _("They say the spirit of ice\nfractured SEAFOAM's caves.");
 static const u8 sApexRumor_Articuno2[] = _("This area was once lava.\nThen everything changed.");
 static const u8 sApexRumor_Mewtwo0[] = _("GIOVANNI stood by an empty\nvat, calling MEWTWO power.");
-static const u8 sApexRumor_Mewtwo1[] = _("SILPH's PRESIDENT says the\nsignal forced MEWTWO to respond.");
+static const u8 sApexRumor_Mewtwo1[] = _("GIOVANNI took SILPH's signal\nresearch to reach MEWTWO.");
 static const u8 sApexRumor_Mewtwo2[] = _("LANCE saw MEWTWO reject the\nsignal and flee to CERULEAN CAVE.");
-static const u8 sApexRumor_Osscythe0[] = _("A ROCKET took CUBONE from\nits mother. It only cries.");
-static const u8 sApexRumor_Osscythe1[] = _("Atop POKEMON TOWER, a spirit\nhowls over a tragic loss.");
+static const u8 sApexRumor_Osscythe0[] = _("A lonely CUBONE cries in\nSAFFRON, searching for someone.");
+static const u8 sApexRumor_Osscythe1[] = _("Inside POKEMON TOWER, a spirit\nhowls over a tragic loss.");
 static const u8 sApexRumor_Osscythe2[] = _("Families come here to mourn.\nSome losses refuse quiet.");
 static const u8 sApexRumor_Moltres0[] = _("Something beneath CINNABAR's\nvolcano keeps giving it life.");
 static const u8 sApexRumor_Moltres1[] = _("When old rock breaks, new land\nis born. Renewal.");
-static const u8 sApexRumor_Moltres2[] = _("A firebird cried where the\nvolcano breathes hottest.");
+static const u8 sApexRumor_Moltres2[] = _("Deep volcanic pressure feeds\nenergy that renews the land.");
 static const u8 sApexRumor_MimeSr0[] = _("MR. MIME settled in DIGLETT\nCAVE on the PEWTER path.");
 static const u8 sApexRumor_MimeSr1[] = _("MR. MIME vanished into the\ncave and raised barriers.");
 static const u8 sApexRumor_MimeSr2[] = _("DIGLETT CAVE leads to VERMILION.\nWatch out for invisible walls!");
@@ -275,8 +275,8 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
     {
         sApexDossierName_Zapdos,
         {sApexRumor_Zapdos0, sApexRumor_Zapdos1, sApexRumor_Zapdos2},
-        {sApexLoc_PowerPlant, sApexLoc_Route10, sApexLoc_Route10},
-        {sApexSrc_Engineer, sApexSrc_Electrician, sApexSrc_Picnicker},
+        {sApexLoc_Route10, sApexLoc_PowerPlant, sApexLoc_PowerPlant},
+        {sApexSrc_Swimmer, sApexSrc_Engineer, sApexSrc_Engineer},
         {OBJ_EVENT_GFX_SWIMMER_M_LAND, OBJ_EVENT_GFX_ENGINEER, OBJ_EVENT_GFX_ENGINEER},
         OBJ_EVENT_GFX_ZAPDOS,
         FLAG_INTERACTED_APEX_ZAPDOS
@@ -285,8 +285,8 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
     {
         sApexDossierName_Articuno,
         {sApexRumor_Articuno0, sApexRumor_Articuno1, sApexRumor_Articuno2},
-        {sApexLoc_Route20, sApexLoc_Seafoam, sApexLoc_Seafoam},
-        {sApexSrc_Swimmer, sApexSrc_Trainer, sApexSrc_Explorer},
+        {sApexLoc_Route20, sApexLoc_Route20, sApexLoc_Seafoam},
+        {sApexSrc_Scout, sApexSrc_Sailor, sApexSrc_OldMan},
         {OBJ_EVENT_GFX_SCOUT_M, OBJ_EVENT_GFX_SAILOR, OBJ_EVENT_GFX_CIV_OLD_MAN_1},
         OBJ_EVENT_GFX_ARTICUNO,
         FLAG_INTERACTED_APEX_ARTICUNO
@@ -306,8 +306,8 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         sApexDossierName_Osscythe,
         {sApexRumor_Osscythe0, sApexRumor_Osscythe1, sApexRumor_Osscythe2},
         {sApexLoc_Saffron, sApexLoc_Lavender, sApexLoc_PokemonTower},
-        {sApexSrc_Rocket, sApexSrc_TownLocal, sApexSrc_Mourner},
-        {OBJ_EVENT_GFX_ROCKET_M, OBJ_EVENT_GFX_CIV_BOY, OBJ_EVENT_GFX_CHANNELER},
+        {sApexSrc_LonelyCubone, sApexSrc_TownLocal, sApexSrc_Mourner},
+        {OBJ_EVENT_GFX_CUBONE, OBJ_EVENT_GFX_CIV_BOY, OBJ_EVENT_GFX_CHANNELER},
         OBJ_EVENT_GFX_OSSCYTHE,
         FLAG_INTERACTED_APEX_OSSCYTHE
     },
@@ -315,8 +315,8 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
     {
         sApexDossierName_Moltres,
         {sApexRumor_Moltres0, sApexRumor_Moltres1, sApexRumor_Moltres2},
-        {sApexLoc_Cinnabar, sApexLoc_Volcano, sApexLoc_Volcano},
-        {sApexSrc_Scientist, sApexSrc_Hiker, sApexSrc_Witness},
+        {sApexLoc_Cinnabar, sApexLoc_Laboratory, sApexLoc_Volcano},
+        {sApexSrc_OldMan, sApexSrc_Scientist, sApexSrc_Kindler},
         {OBJ_EVENT_GFX_CIV_OLD_MAN_1, OBJ_EVENT_GFX_SCIENTIST, OBJ_EVENT_GFX_KINDLER},
         OBJ_EVENT_GFX_MOLTRES,
         FLAG_INTERACTED_APEX_MOLTRES
@@ -326,7 +326,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         sApexDossierName_MimeSr,
         {sApexRumor_MimeSr0, sApexRumor_MimeSr1, sApexRumor_MimeSr2},
         {sApexLoc_DiglettCave, sApexLoc_Route11, sApexLoc_DiglettCave},
-        {sApexSrc_CaveVisitor, sApexSrc_Pokemaniac, sApexSrc_CaveVisitor},
+        {sApexSrc_CaveVisitor, sApexSrc_BugManiac, sApexSrc_CaveVisitor},
         {OBJ_EVENT_GFX_CIV_OLD_MAN_1, OBJ_EVENT_GFX_POKE_MANIAC, OBJ_EVENT_GFX_HIKER},
         OBJ_EVENT_GFX_MIME_SR,
         FLAG_INTERACTED_APEX_MIME_SR
@@ -336,7 +336,7 @@ static const struct ApexRumorDossierEntry sApexRumorDossierEntries[QUEST_3_SUB_C
         sApexDossierName_Annihilape,
         {sApexRumor_Annihilape0, sApexRumor_Annihilape1, sApexRumor_Annihilape2},
         {sApexLoc_MtMoon, sApexLoc_Cerulean, sApexLoc_Route4},
-        {sApexSrc_CaveVisitor, sApexSrc_HouseResident, sApexSrc_Hiker},
+        {sApexSrc_CaveVisitor, sApexSrc_Hiker, sApexSrc_Local},
         {OBJ_EVENT_GFX_CIV_MAN_3, OBJ_EVENT_GFX_HIKER, OBJ_EVENT_GFX_CIV_WOMAN_1},
         OBJ_EVENT_GFX_ANNIHILAPE,
         FLAG_INTERACTED_APEX_ANNIHILAPE

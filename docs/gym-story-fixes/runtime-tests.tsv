@@ -1,0 +1,9 @@
+Erika-before-root	PASS	Visible false; position -1,-1; state 2; lock 0
+Erika-root-one-mon	PASS	Visible true; position 4,48; state 3; lock 0
+Erika-return-before-battle	PASS	Visible true; position 4,48; state 3; lock 0
+Erika-after-victory	PASS	Visible false; position -1,-1; state 4; lock 0
+Sabrina-tower-completion	PASS	Completion 1
+Sabrina-gym-completion	PASS	Completion 1
+Giovanni-completion	PASS	Completion 1
+Sabrina-existing-badge-repair	PASS	Completion 1
+Giovanni-existing-badge-repair	PASS	Completion 1

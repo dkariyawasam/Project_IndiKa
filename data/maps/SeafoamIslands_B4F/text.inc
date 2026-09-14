@@ -19,6 +19,6 @@ Text_RockSlideTaught::
     .string "It might be scary to use it in this\n"
     .string "tunnel…$"
 
-SeafoamIslands_B4F_Text_DangerFastCurrent::
-    .string "DANGER\n"
-    .string "Fast current!$"
+SeafoamIslands_B4F_Text_LakeSign::
+    .string "The lake is still and icy.\n"
+    .string "Use your CASCADE BOARD to cross.$"

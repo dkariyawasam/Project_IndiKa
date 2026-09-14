@@ -1,0 +1,20 @@
+ninja-3-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-4-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-5-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-6-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-7-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-8-accepts-rematch	PASS	Accepted within 5 charged activations
+ninja-3-accepts-rematch	PASS	Accepted within 2 charged activations
+ninja-4-accepts-rematch	PASS	Accepted within 2 charged activations
+ninja-5-accepts-rematch	PASS	Accepted within 2 charged activations
+ninja-6-accepts-rematch	PASS	Accepted within 2 charged activations
+ninja-7-accepts-rematch	PASS	Accepted within 2 charged activations
+ninja-8-accepts-rematch	PASS	Accepted within 2 charged activations
+rematch-starts	PASS	Opponent 294
+rematch-completes	PASS	Battle outcome 1
+Celadon-vs-message-observed	PASS	There are no TRAINERS within range / who can battle… / The VS SEEKER was turned off.Ì
+Saffron-vs-message-observed	PASS	There are no TRAINERS within range / who can battle… / The VS SEEKER was turned off.Ì
+Pewter-vs-message-observed	PASS	OAK: AAAAAAA! / This isn’t the time to use that!Ì
+Celadon-vs-policy	PASS	There are no TRAINERS within range / who can battle… / The VS SEEKER was turned off.Ì
+Saffron-vs-policy	PASS	There are no TRAINERS within range / who can battle… / The VS SEEKER was turned off.Ì
+Pewter-vs-policy	PASS	OAK: AAAAAAA! / This isn’t the time to use that!Ì

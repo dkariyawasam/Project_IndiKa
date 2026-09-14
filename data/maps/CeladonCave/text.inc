@@ -1,6 +1,7 @@
 CeladonCave_Text_LanceAftermath::
-	.string "LANCE: This is where\n"
-	.string "I lost sight of them.\p"
+	.string "LANCE: I followed GIOVANNI\n"
+	.string "and MEWTWO into this cave,\l"
+	.string "opened by MEWTWO's blast.\p"
 	.string "GIOVANNI's signal was\n"
 	.string "breaking.\p"
 	.string "MEWTWO was beginning to\n"
@@ -22,6 +23,6 @@ CeladonCave_Text_LanceFlashbackGiovanniChase::
 	.string "Not again!$"
 
 CeladonCave_Text_LanceRepeat::
-	.string "LANCE: It fled north.\p"
+	.string "LANCE: MEWTWO fled north.\p"
 	.string "GIOVANNI followed it toward\n"
 	.string "CERULEAN CAVE.$"

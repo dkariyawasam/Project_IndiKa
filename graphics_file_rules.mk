@@ -478,3 +478,11 @@ $(WALLPAPERGFXDIR)/tiles/tiles.4bpp: %.4bpp: %.png
 
 $(WALLPAPERGFXDIR)/volcano/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 57 -Wnum_tiles
+
+# Ninja overworld sheet: ten 16x32 frames, laid out horizontally.
+graphics/object_events/pics/people/ninja.4bpp: graphics/object_events/pics/people/ninja.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Psychic overworld sheet: ten horizontal 16x32 frames.
+graphics/object_events/pics/people/psychic_m.4bpp: graphics/object_events/pics/people/psychic_m.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

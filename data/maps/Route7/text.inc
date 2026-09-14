@@ -5,7 +5,7 @@ Route7_Text_UndergroundPathSign::
 Route7_Text_LoreleiAftermath::
 	.string "LORELEI: You're late.\n"
 	.string "We all were.\p"
-	.string "It tore through here\n"
+	.string "MEWTWO tore through here\n"
 	.string "under GIOVANNI's command...$"
 
 Route7_Text_LoreleiFlashback::
@@ -27,7 +27,7 @@ Route7_Text_LoreleiRepeat::
 	.string "becomes another storm.$"
 
 Route7_Text_BrunoAftermath::
-	.string "BRUNO: I met it head-on.\p"
+	.string "BRUNO: I met MEWTWO head-on.\p"
 	.string "Foolish.\p"
 	.string "It pushed through me like\n"
 	.string "I was mist.$"
@@ -42,7 +42,7 @@ Route7_Text_BrunoRepeat::
 	.string "Only pressure.$"
 
 Route7_Text_AgathaAftermath::
-	.string "AGATHA: That man thought\n"
+	.string "AGATHA: GIOVANNI thought\n"
 	.string "control was the same as\l"
 	.string "trust.\p"
 	.string "Always the same mistake.$"
@@ -71,7 +71,9 @@ Route7_Text_AgathaFlashbackWarning::
 
 Route7_Text_AgathaRepeat::
 	.string "AGATHA: He learned nothing.\p"
-	.string "MEWTWO learned faster.$"
+	.string "MEWTWO learned faster.\p"
+	.string "LANCE followed them into the\n"
+	.string "cave opened by MEWTWO's blast.$"
 
 Route7_Text_LanceAftermath::
 	.string "LANCE: We slowed it,\n"

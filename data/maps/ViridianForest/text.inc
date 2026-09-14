@@ -83,8 +83,10 @@ ViridianForest_Text_ErikaLookingForRoot::
     .string "A root grown here is said to heal\n"
     .string "because the forest shares its\l"
     .string "strength as one family.\p"
-    .string "I am certain one can be found\n"
-    .string "somewhere nearby.$"
+    .string "Wild ODDISH and BELLSPROUT\n"
+    .string "sometimes carry ENERGY ROOTS.\p"
+    .string "Catch one here and check its\n"
+    .string "held item. Bring a root to me.$"
 
 ViridianForest_Text_ErikaShownRoot::
     .string "ERIKA: Oh!\n"
@@ -162,3 +164,12 @@ ViridianForest_Text_LeavingViridianForest::
 ViridianForest_Text_TangrowthVanished::
     .string "TANGROWTH vanished into the\n"
     .string "flowers!$"
+
+ViridianForest_Text_GymAideTypeAdvice::
+    .string "GYM AIDE: Before you battle,\n"
+    .string "remember ERIKA uses GRASS types.\p"
+    .string "FIRE, ICE, FLYING, BUG and POISON\n"
+    .string "moves are strong against GRASS.\p"
+    .string "A second type can change that.\n"
+    .string "Watch out for status moves, too!$"
+

@@ -1,0 +1,143 @@
+[
+  [
+    "data/maps/PalletTown_ProfessorOaksLab/text.inc",
+    "PalletTown_ProfessorOaksLab_Text_OakExplainCatching",
+    "PalletTown_ProfessorOaksLab_Text_OakExplainCatching::\n    .string \"OAK: Furthermore, pay attention\\n\"\n    .string \"to how the GYM LEADERS in\\l\"\n    .string \"KANTO treat their POK\u00e9MON.\\p\"\n    .string \"They know more than strength\\n\"\n    .string \"alone.\\p\"\n    .string \"There is much to learn from them.$\"\n",
+    "PalletTown_ProfessorOaksLab_Text_OakExplainCatching::\n    .string \"OAK: Pay attention to how the\\n\"\n    .string \"GYM LEADERS treat their POK\u00e9MON.\\p\"\n    .string \"There is more to learn than\\n\"\n    .string \"strength alone.\\p\"\n    .string \"I also study rare POK\u00e9MON whose\\n\"\n    .string \"instincts exceed ordinary limits.\\p\"\n    .string \"I call them APEX POK\u00e9MON.\\p\"\n    .string \"Listen to local accounts and\\n\"\n    .string \"compare three in your LOGBOOK.\\p\"\n    .string \"Together, they may reveal where\\n\"\n    .string \"an APEX POK\u00e9MON can be found.\\p\"\n    .string \"Be ready before you challenge one.\\n\"\n    .string \"If you flee from its battle,\\l\"\n    .string \"it will leave for good.$\"\n"
+  ],
+  [
+    "data/scripts/static_pokemon.inc",
+    "\"Rumour recorded.$\"",
+    "\"Rumour recorded.\\p\"\n    .string \"Compare three accounts in your\\n\"\n    .string \"LOGBOOK to find an APEX POK\u00e9MON.\\p\"\n    .string \"If you flee from its battle,\\n\"\n    .string \"it will leave for good.$\""
+  ],
+  [
+    "data/maps/Route11/text.inc",
+    "\"If three people repeat the same\\n\"\n\t.string \"rumour, put it in your LOGBOOK.\\p\"",
+    "\"Compare three local accounts\\n\"\n\t.string \"in your LOGBOOK.\\p\"\n\t.string \"Work out where they point.\\n\"\n\t.string \"That is where you investigate.\\p\""
+  ],
+  [
+    "data/maps/CeruleanCity_House2/text.inc",
+    "\"the door and headed west.$\"",
+    "\"the door and headed west,\\l\"\n    .string \"toward MT. MOON.$\""
+  ],
+  [
+    "data/scripts/trainers.inc",
+    "\"They have gone into DIGLETT\\n\"\n    .string \"CAVE and erected barriers.\\p\"",
+    "\"The MR. MIME went into DIGLETT\\n\"\n    .string \"CAVE and erected barriers.\\p\""
+  ],
+  [
+    "data/maps/LavenderTown/text.inc",
+    "It's said that atop POK\u00e9MON",
+    "It's said that inside POK\u00e9MON"
+  ],
+  [
+    "data/maps/SaffronCity/text.inc",
+    "\"CUBONE: Kyoo!$\"",
+    "\"CUBONE: Kyoo!\\p\"\n    .string \"It keeps crying and looking\\n\"\n    .string \"around, as if searching for\\l\"\n    .string \"someone.$\""
+  ],
+  [
+    "data/maps/Route20/text.inc",
+    "\"You broke me into pieces too!$\"",
+    "\"You broke me into pieces too!\\p\"\n    .string \"SEAFOAM was split by a sudden\\n\"\n    .string \"freeze. The caves still hold\\l\"\n    .string \"that cold.$\""
+  ],
+  [
+    "data/maps/SeafoamIslands_1F/scripts.inc",
+    "\"whole cave became something else.$\"",
+    "\"whole cave became something else.\\p\"\n\t.string \"The deeper you go, the sharper\\n\"\n\t.string \"the cold gets.$\""
+  ],
+  [
+    "data/maps/PokemonMansion_B1F/text.inc",
+    "\"and make it mine.$\"",
+    "\"and make it mine.\\p\"\n    .string \"SILPH in SAFFRON has what I need.\\n\"\n    .string \"A BALL that cannot fail.$\""
+  ],
+  [
+    "data/maps/SilphCo_11F/text.inc",
+    "\"The device is complete enough.\\n\"\n    .string \"It will call MEWTWO to me.\\p\"",
+    "\"SILPH's signal research will\\n\"\n    .string \"complete my device.\\p\"\n    .string \"I will call MEWTWO to ROUTE 7.\\p\""
+  ],
+  [
+    "data/maps/SilphCo_11F/text.inc",
+    "\"If GIOVANNI truly calls MEWTWO,\\n\"\n    .string \"that may be the only clean way to\\l\"\n    .string \"end this.$\"",
+    "\"But a capture is only a beginning.\\p\"\n    .string \"It cannot make a POK\u00e9MON trust\\n\"\n    .string \"you. That part is up to you.$\""
+  ],
+  [
+    "data/maps/Route7/text.inc",
+    "\"It tore through here\\n\"",
+    "\"MEWTWO tore through here\\n\""
+  ],
+  [
+    "data/maps/Route7/text.inc",
+    "\"BRUNO: I met it head-on.\\p\"",
+    "\"BRUNO: I met MEWTWO head-on.\\p\""
+  ],
+  [
+    "data/maps/Route7/text.inc",
+    "\"AGATHA: That man thought\\n\"",
+    "\"AGATHA: GIOVANNI thought\\n\""
+  ],
+  [
+    "data/maps/Route7/text.inc",
+    "\"MEWTWO learned faster.$\"",
+    "\"MEWTWO learned faster.\\p\"\n\t.string \"LANCE followed them into the\\n\"\n\t.string \"cave opened by MEWTWO's blast.$\""
+  ],
+  [
+    "data/maps/CeladonCave/text.inc",
+    "\"LANCE: This is where\\n\"\n\t.string \"I lost sight of them.\\p\"",
+    "\"LANCE: I followed GIOVANNI\\n\"\n\t.string \"and MEWTWO into this cave,\\l\"\n\t.string \"opened by MEWTWO's blast.\\p\""
+  ],
+  [
+    "data/maps/CeladonCave/text.inc",
+    "\"LANCE: It fled north.\\p\"",
+    "\"LANCE: MEWTWO fled north.\\p\""
+  ],
+  [
+    "data/maps/CeruleanCave_B1F/scripts.inc",
+    "\"to take from this place.$\"",
+    "\"to take from this place.\\p\"\n\t.string \"I will return to VIRIDIAN GYM.$\""
+  ],
+  [
+    "src/apex_log.c",
+    "SILPH's PRESIDENT says the\\nsignal forced MEWTWO to respond.",
+    "GIOVANNI took SILPH's signal\\nresearch to reach MEWTWO."
+  ],
+  [
+    "src/apex_log.c",
+    "Atop POKEMON TOWER, a spirit",
+    "Inside POKEMON TOWER, a spirit"
+  ],
+  [
+    "src/apex_log.c",
+    "A ROCKET took CUBONE from\\nits mother. It only cries.",
+    "A lonely CUBONE cries in\\nSAFFRON, searching for someone."
+  ],
+  [
+    "src/apex_log.c",
+    "sApexSrc_Rocket",
+    "sApexSrc_LonelyCubone"
+  ],
+  [
+    "src/apex_log.c",
+    "_(\"Rocket\")",
+    "_(\"Lonely Cubone\")"
+  ],
+  [
+    "src/apex_log.c",
+    "{OBJ_EVENT_GFX_ROCKET_M, OBJ_EVENT_GFX_CIV_BOY, OBJ_EVENT_GFX_CHANNELER}",
+    "{OBJ_EVENT_GFX_CUBONE, OBJ_EVENT_GFX_CIV_BOY, OBJ_EVENT_GFX_CHANNELER}"
+  ],
+  [
+    "data/maps/Route4/text.inc",
+    "blind rage and took refuge\\n",
+    "blind rage and took refuge\\l"
+  ],
+  [
+    "data/maps/DiglettsCave_SouthEntrance/text.inc",
+    "a little home together in\\n",
+    "a little home together in\\l"
+  ],
+  [
+    "data/maps/PokemonTower_1F/text.inc",
+    "above, calling for the family it\\n",
+    "above, calling for the family it\\l"
+  ]
+]

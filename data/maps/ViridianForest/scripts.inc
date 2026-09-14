@@ -16,6 +16,8 @@ ViridianForest_EventScript_TryRemoveTangrowth::
 ViridianForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
 	setflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	setobjectxyperm LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, 4, 57
+	call_if_eq VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RestoreGymGuide
 	call ViridianForest_EventScript_HideTangrowth
 	goto_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_CheckErika
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
@@ -25,6 +27,11 @@ ViridianForest_EventScript_CheckErika::
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_RemoveErika
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_ERIKA
 	end
+
+ViridianForest_EventScript_RestoreGymGuide::
+	clearflag FLAG_HIDE_CELADON_CITY_GYM_GUIDE
+	setobjectxyperm LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, 4, 48
+	return
 
 ViridianForest_EventScript_ShowTangrowth::
 	removeobject LOCALID_VIRIDIAN_FOREST_TANGROWTH
@@ -81,8 +88,6 @@ ViridianForest_EventScript_ErikaReturnToGym::
 ViridianForest_EventScript_ErikaHasRoot::
 	msgbox ViridianForest_Text_ErikaShownRoot
 	setvar VAR_ERIKA_TRIAL_STATE, 3
-	special HasEnoughMonsForDoubleBattle
-	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, ViridianForest_EventScript_NeedTwoPokemon
 	goto_if_unset FLAG_HIDE_CELADON_CITY_GYM_GUIDE, ViridianForest_EventScript_ErikaAskChallenge
 	closemessage
 	applymovement LOCALID_PLAYER, ViridianForest_Movement_PlayerStepAsideForGuide
@@ -94,6 +99,9 @@ ViridianForest_EventScript_ErikaHasRoot::
 	msgbox ViridianForest_Text_GymGuideFoundErika
 
 ViridianForest_EventScript_ErikaAskChallenge::
+	msgbox ViridianForest_Text_GymAideTypeAdvice
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, ViridianForest_EventScript_NeedTwoPokemon
 	msgbox ViridianForest_Text_ErikaChallenge, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, ViridianForest_EventScript_ErikaDeclineChallenge
 	goto ViridianForest_EventScript_ErikaBattlePicker
@@ -173,7 +181,7 @@ ViridianForest_EventScript_DefeatedErika::
 	end
 
 ViridianForest_EventScript_GymGuide::
-	msgbox ViridianForest_Text_GymGuideFoundErika, MSGBOX_NPC
+	msgbox ViridianForest_Text_GymAideTypeAdvice, MSGBOX_NPC
 	end
 
 ViridianForest_EventScript_ExitSign::
@@ -217,6 +225,8 @@ ViridianForest_EventScript_DefeatedTangrowth::
 	end
 
 ViridianForest_EventScript_RanFromTangrowth::
+	setflag FLAG_FOUGHT_TANGROWTH
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_TANGROWTH
 	fadescreen FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_BLACK

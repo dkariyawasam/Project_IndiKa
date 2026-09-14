@@ -1,0 +1,7 @@
+Lance aftermath flag=1
+Rumour bits=1807,0000
+Tangrowth interacted=1 fought=0 completed=1
+Mewtwo fought=1
+Giovanni cave scene complete=1
+Battle outcome=1
+Viridian Gym door scene=1

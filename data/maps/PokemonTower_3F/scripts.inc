@@ -52,6 +52,7 @@ PokemonTower_3F_EventScript_SabrinaGone::
 	end
 
 PokemonTower_3F_EventScript_SabrinaAskChallenge::
+	msgbox PokemonTower_3F_Text_GymAideTypeAdvice
 	special HasEnoughMonsForDoubleBattle
 	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonTower_3F_EventScript_NeedTwoPokemon
 	msgbox PokemonTower_3F_Text_SabrinaReadyToBattle, MSGBOX_YESNO
@@ -109,6 +110,7 @@ PokemonTower_3F_EventScript_DefeatedSabrina::
 	clearflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
+	call SaffronCity_Gym_EventScript_CompleteSabrinaTrial
 	setvar VAR_SABRINA_TRIAL_STATE, 4
 	msgbox PokemonTower_3F_Text_SabrinaAfterBattle
 	giveitem_msg SaffronCity_Gym_Text_ReceivedMarshFinderFromSabrina, ITEM_MARSH_FINDER, 1, MUS_OBTAIN_KEY_ITEM
@@ -131,6 +133,7 @@ PokemonTower_3F_EventScript_GymGuide::
 	lock
 	faceplayer
 	msgbox PokemonTower_3F_Text_GymGuideWaiting
+	msgbox PokemonTower_3F_Text_GymAideTypeAdvice
 	release
 	end
 
