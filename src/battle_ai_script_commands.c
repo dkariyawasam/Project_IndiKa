@@ -1,4 +1,5 @@
 #include "global.h"
+#include "league_challenge.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "util.h"
@@ -269,6 +270,7 @@ void BattleAI_HandleItemUseBeforeAISetup(void)
 
     // Items are allowed to use in ONLY trainer battles.
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && !IsIndigoLeagueTrainerBattle()
         && (gTrainerBattleOpponent_A != TRAINER_SECRET_BASE)
         && !(gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_SAFARI | BATTLE_TYPE_LINK))
         )

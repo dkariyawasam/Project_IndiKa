@@ -1,13 +1,16 @@
 PokemonLeague_BrunosRoom_Text_AreYouReady::
-    .string "Are you ready?$"
+    .string "Step into the battle area to face\n"
+    .string "your next League opponent.\p"
+    .string "Ready for a DOUBLE BATTLE?$"
 
 PokemonLeague_BrunosRoom_Text_ChampionRoomLocked::
-    .string "The INDIGO LEAGUE CHAMPION\n"
-    .string "is not receiving challengers yet.$"
+    .string "Win four battles in this room\n"
+    .string "to open the CHAMPION's door.$"
 
 PokemonLeague_BrunosRoom_Text_ChampionAwaits::
-    .string "The INDIGO LEAGUE CHAMPION\n"
-    .string "awaits you in the next room.$"
+    .string "All four victories are recorded!\p"
+    .string "The north door is now open.\n"
+    .string "The CHAMPION awaits you.$"
 
 PokemonLeague_BrunosRoom_Text_IndigoIntro::
     .string "Your next INDIGO LEAGUE\n"
@@ -19,6 +22,6 @@ PokemonLeague_BrunosRoom_Text_Defeat::
     .string "That was a worthy battle.$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle::
-    .string "Victory recorded.\p"
-    .string "Return to the mark when you are\n"
-    .string "ready for the next battle.$"
+    .string "Victory {STR_VAR_1} of 4 recorded.\p"
+    .string "Return to the battle area when\n"
+    .string "you are ready for the next match.$"

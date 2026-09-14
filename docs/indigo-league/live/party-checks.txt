@@ -1,0 +1,6 @@
+round-1: all six party records restored exactly
+round-2: all six party records restored exactly
+round-3: all six party records restored exactly
+round-4: all six party records restored exactly
+champion: all six party records restored exactly
+loss: all six party records restored exactly

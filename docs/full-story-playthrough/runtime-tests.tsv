@@ -1,0 +1,100 @@
+Mime Sr. natural clue-chain encounter	PASS	battle outcome=1
+Annihilape natural clue-chain encounter	PASS	battle outcome=1
+Route 4 sealed before Mewtwo blast	PASS	Held south against the restored cliff
+Route 7 sealed before Mewtwo blast	PASS	Held north against the sealed entrance
+Post-blast south cave entrance	PASS	Entered using north input from Route 7
+Post-blast north cave exit	PASS	Returned to Route 4
+Post-blast north cave entrance	PASS	Entered using south input from Route 4
+Post-blast south cave exit	PASS	Corrected exit now returns beside Route 7 entrance
+Continuous story restored after cave fixtures	PASS	Signal flag remains unset at Route 4 checkpoint
+Route 16 upstairs return stair	PASS	Actual up/down staircase round trip
+Route 16 east gate exit	PASS	Screenshot 212 and re-entry used corrected east warp
+Route 16 west gate exit	PASS	Actual west door round trip
+Koga trial complete	PASS	
+Moltres resolved	PASS	
+Koga trial explicit flags	PASS	
+Moltres resolved explicit flag	PASS	
+Giovanni trigger first crossing	PASS	Normal replay and southward crossing after scene
+Giovanni trigger revisit crossing	PASS	Basement reentry and both directions over completed trigger
+Silph signal activated	PASS	Normal Giovanni victory on healed checkpoint replay
+Saffron fan club exit	PASS	Actual entry and exit through corrected destination
+Lance flashback complete	PASS	Actual cave scene and Mewtwo rumor
+Mewtwo battle won	PASS	Live Apex encounter
+Giovanni Viridian handoff	PASS	Mewtwo resolution and return-to-gym dialogue
+Cerulean revisit reproduces trigger stall	PASS	Isolated reload after resolution; held up cannot cross completed trigger
+Cerulean trigger diagnostic releases movement	PASS	Only disabling completed temporary trigger restores movement
+Cerulean completed trigger fixed	PASS	Reloaded real save; crossed in both directions on rebuilt ROM
+Power Plant upper passage	PASS	Walked from entrance through relocated Wade passage to Baily
+Zapdos won	PASS	Won after all three accounts
+Koga gift received	PASS	Full party PC branch and friendship advice
+Seafoam current stopped	FAIL	Two boulders pushed through holes using learned Strength
+Seafoam current stopped after repair	PASS	Actual repeated two-boulder puzzle with corrected reveal metadata
+Articuno won	PASS	Final bird encounter and Oak report
+Giovanni badge	FAIL	Final Gym victory completed
+Victory Road first switch	PASS	Pushed boulder to switch after moving Ivo to nearby open floor
+Giovanni badge corrected address	PASS	Earlier diagnostic used vanilla SYS_FLAGS address; project trainer count shifts system flags by 0x11
+Victory Road second switch	PASS	Actual second-floor Strength puzzle
+Victory Road third switch	PASS	Actual upper-floor Strength puzzle
+Victory Road falling boulder	PASS	Pushed the upper boulder into its hole; lower boulder reveal flag cleared
+Victory Road final switch	PASS	Revealed lower boulder pushed onto final switch
+Indigo match 1 levels	FAIL	Player/enemy levels 90/44,85/45,80/45,75/45,70/45,65/47; trainer 420
+Indigo match 1 party restored	PASS	All 600 bytes match prepared pre-League team; original levels 90/85/80/75/70/65
+Indigo match 2 settled levels	PASS	Player/enemy 50/50,50/50,50/50,50/50,50/50,50/50; enemy count 0; trainer 501
+Indigo match 2 party restored	PASS	All 600 bytes match prepared pre-League team; original levels 90/85/80/75/70/65
+Indigo match 3 settled levels	PASS	Player/enemy 50/50,50/50,50/50,50/50,50/50,50/0; enemy count 0; trainer 410
+Indigo match 3 party restored	PASS	All 600 bytes match prepared pre-League team; original levels 90/85/80/75/70/65
+Indigo match 4 settled levels	PASS	Player/enemy 50/50,50/50,50/50,50/50,50/50,50/0; trainer 412
+Indigo match 4 party restored	PASS	All 600 bytes match prepared pre-League team; original levels 90/85/80/75/70/65
+Indigo four unique opponents	PASS	Observed trainer IDs 420,501,410,412
+Indigo match 5 settled levels	PASS	Player/enemy 50/50,50/50,50/50,50/50,50/50,50/50; trainer 446
+Indigo match 5 party restored	FAIL	All 600 bytes match prepared pre-League team; original levels 90/85/80/75/70/65
+Champion party restoration audited	PASS	All party data, levels, EXP, moves, PP and items restored; only Champion ribbons and ordinary +0/+1 walking friendship changed during ending. Checksums valid.
+Hall of Fame portrait fixed	PASS	Reached player-information screen with dedicated static trainer animation
+525-rocket-round-one actual levels	PASS	90,85,80,75,70,65
+526-rocket-round-two actual levels	PASS	90,85,80,75,70,65
+527-rocket-round-three actual levels	PASS	90,85,80,75,70,65
+528-rocket-round-four actual levels	PASS	90,85,80,75,70,65
+Rocket four unique opponents	FAIL	0,0,0,0
+Rocket four unique opponents corrected layout	PASS	778,757,774,780; preceding probe used stale header offset comment
+Rocket completed run records	FAIL	0,5,0,1,1,1,4,2,5000
+Rocket full base payout	PASS	Coin pouch 5150.0; started 150, received 5000
+Rocket completed run records corrected alignment	PASS	5,0,1,1,1,4,2,5000,0; previous probe omitted record struct tail padding
+Indigo records diagnostic visit	PASS	Native warp used only for postgame terminal UI verification, after both full League runs
+League record screens visually verified	PASS	Both show five wins, zero losses, one championship, streak one; Rocket coins 5000
+Final file hash pokefirered.gba	PASS	78177aa4d1b07b96e5f3db5bcbd05a517239ca90e243acc68925152743772e3e
+Final file hash pokefirered.sav	PASS	816eb072055dad4bbd8ca2b4d596cf468e58b68384664931a91e814dbb824b08
+Final file hash pokefirered-player-customisation.gba	PASS	880e9e2dc73c16084b10dfc3cb13bfa1b3535b637277e02a576fb8aee0194d5b
+Seafoam old B1F redirect	PASS	Old map entry returns to entrance
+Seafoam old B3F redirect	PASS	Old map entry returns to entrance
+Seafoam Articuno hidden before clues	PASS	Zero of three clues in disposable fixture
+Seafoam Articuno current-map reveal	PASS	Three-clue native reveal uses new local ID
+Seafoam lake save/reload	PASS	Reloaded at 12,13 with Surf state
+Seafoam Articuno encounter completion	FAIL	Disposable diagnostic encounter after reaching island
+Seafoam Articuno explicit interaction	PASS	Direct A interaction; preceding completion probe followed a wild battle, not Articuno
+Seafoam registered Board launch	PASS	Standard item action launches from island shore
+item-animation-1 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-1 finished	PASS	Native task ended after 26 pose frames
+Animated Board continuation	PASS	Pose completed before boarding
+item-animation-2 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-2 finished	PASS	Native task ended after 26 pose frames
+Animated Rainbow Key unlock	PASS	Arrived inside berry patch
+item-animation-3 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-3 finished	PASS	Native task ended after 26 pose frames
+Animated Boulder Key unlock	PASS	Arrived inside Cinnabar lab
+item-animation-4 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-4 finished	PASS	Native task ended after 26 pose frames
+Animated Card Key unlock	PASS	Silph door flag set after animation
+Soul Pass cancel skips animation	PASS	No gesture before service selection or on cancellation
+item-animation-5 pose	PASS	Native task reached animation state, original graphics 0
+item-animation-5 finished	PASS	Native task ended after 26 pose frames
+Soul Pass selected service animates	PASS	One gesture for friendship service
+item-animation-6 pose	PASS	Native task reached animation state, original graphics 7
+item-animation-6 finished	PASS	Native task ended after 26 pose frames
+Invalid Board skips animation	PASS	Indoor Board use rejected without pose
+Missing Card Key skips animation	PASS	Locked door stays closed and no pose
+item-animation-7 pose	PASS	Native task reached animation state, original graphics 7
+item-animation-7 finished	PASS	Native task ended after 26 pose frames
+Female animated Board continuation	PASS	Female pose completed and boarding advanced
+item-animation-8 pose	PASS	Native task reached animation state, original graphics 9
+item-animation-8 finished	PASS	Native task ended after 26 pose frames
+Finder restores water travel	PASS	Female riding state restored after Finder scan

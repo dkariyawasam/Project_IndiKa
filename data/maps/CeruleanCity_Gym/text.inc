@@ -33,7 +33,9 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
 CeruleanCity_Gym_Text_TakeThisWithYou::
     .string "You can have the CASCADEBADGE.\p"
     .string "And with it, take this board.\n"
-    .string "It will carry you across water.$"
+    .string "It will carry you across water.\p"
+    .string "Face the water's edge and USE it\n"
+    .string "from KEY ITEMS in your BAG.$"
 
 CeruleanCity_Gym_Text_ReceivedCascadeBoardFromMisty::
     .string "{PLAYER} received the CASCADE BOARD\n"
@@ -62,8 +64,7 @@ CeruleanCity_Gym_Text_MistyGyaradosReminder::
     .string "with a natural held item.$"
 
 CeruleanCity_Gym_Text_MistyOfferTrade::
-    .string "You brought GYARADOS?\n"
-    .string "Perfect!\p"
+    .string "Ready to trade GYARADOS?\p"
     .string "Some POKéMON evolve when traded\n"
     .string "while holding something natural.\p"
     .string "My POLIWHIRL is holding a\n"

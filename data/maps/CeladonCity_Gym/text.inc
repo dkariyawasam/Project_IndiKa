@@ -22,10 +22,10 @@ CeladonCity_Gym_Text_ErikaDefeat::
     .string "RAINBOWBADGE.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
-    .string "You are cataloging POKéMON?\n"
-    .string "I must say I'm impressed.\p"
-    .string "I would never collect POKéMON if\n"
-    .string "they were unattractive.$"
+    .string "Keep caring for your POKéMON\n"
+    .string "as you continue OAK's research.\p"
+    .string "There is beauty in watching\n"
+    .string "a trusted companion grow.$"
 
 CeladonCity_Gym_Text_ErikaWaitingForChallenge::
     .string "ERIKA is away from the GYM.\p"
@@ -69,8 +69,9 @@ CeladonCity_Gym_Text_ReceivedBudewFromErika::
     .string "from ERIKA.$"
 
 CeladonCity_Gym_Text_ErikaBudewAdvice::
-    .string "BUDEW evolves through friendship\n"
-    .string "during the day.\p"
+    .string "When your friendship is strong,\n"
+    .string "level up BUDEW during the day\l"
+    .string "to help it evolve into ROSELIA.\p"
     .string "Care for it well, and it will show\n"
     .string "you how trust becomes growth.$"
 
@@ -215,3 +216,75 @@ CeladonCity_Gym_Text_GymStatuePlayerWon::
     .string "LEADER: ERIKA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
+
+CeladonCity_Gym_Text_FloraIntro::
+    .string "A garden needs patient care.\n"
+    .string "So does a winning team!$"
+
+CeladonCity_Gym_Text_FloraDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_FloraAfter::
+    .string "ERIKA teaches us to notice\n"
+    .string "what each POKéMON needs.$"
+
+CeladonCity_Gym_Text_DaphneIntro::
+    .string "A sweet scent can hide\n"
+    .string "a sharp strategy!$"
+
+CeladonCity_Gym_Text_DaphneDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_DaphneAfter::
+    .string "Fragrance draws you closer.\n"
+    .string "Then the battle begins.$"
+
+CeladonCity_Gym_Text_LaurelIntro::
+    .string "Our training keeps growing,\n"
+    .string "even while ERIKA is away.$"
+
+CeladonCity_Gym_Text_LaurelDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_LaurelAfter::
+    .string "Use your VS SEEKER here\n"
+    .string "when you want another match.$"
+
+CeladonCity_Gym_Text_ViolaIntro::
+    .string "Every flower blooms\n"
+    .string "at its own pace.$"
+
+CeladonCity_Gym_Text_ViolaDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_ViolaAfter::
+    .string "A patient TRAINER knows\n"
+    .string "when to make a move.$"
+
+CeladonCity_Gym_Text_HazelIntro::
+    .string "Healthy roots and a kind hand\n"
+    .string "help POKéMON flourish.$"
+
+CeladonCity_Gym_Text_HazelDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_HazelAfter::
+    .string "Young POKéMON need care,\n"
+    .string "and their TRAINERS need practice.$"
+
+CeladonCity_Gym_Text_MabelIntro::
+    .string "I raise these POKéMON\n"
+    .string "with ERIKA's lessons in mind.$"
+
+CeladonCity_Gym_Text_MabelDefeat::
+    .string "You gave me something\n"
+    .string "new to learn!$"
+
+CeladonCity_Gym_Text_MabelAfter::
+    .string "Friendship grows through\n"
+    .string "the little things you do each day.$"

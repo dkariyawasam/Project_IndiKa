@@ -6,6 +6,8 @@ RocketLeague_Lobby_Text_ExplainEntry::
     .string "Win four consecutive matches,\n"
     .string "and you'll face the champion\l"
     .string "of the league.\p"
+    .string "The CHAMPION only accepts those\n"
+    .string "who have beaten VIRIDIAN GYM.\p"
     .string "Would you like to enter?$"
 
 RocketLeague_Lobby_Text_WonderWhatKindsOfTrainers::
@@ -22,35 +24,35 @@ RocketLeague_Lobby_Text_StairsTougherThanAnyBattle::
 
 RocketLeague_Lobby_Text_PrizeBoardIntro::
     .string "ROCKET LEAGUE PRIZE BOARD\p"
-    .string "Standard prize multiplier:\n"
+    .string "Base prize multiplier:\n"
     .string "x1$"
 
 RocketLeague_Lobby_Text_BetForTierOne::
     .string "Bet 250 COINS to raise your\n"
-    .string "next arena prize to x1.5?$"
+    .string "arena prizes for this run to x1.5?$"
 
 RocketLeague_Lobby_Text_BetForTierTwo::
     .string "Bet 250 COINS to raise your\n"
-    .string "next arena prize to x2?$"
+    .string "arena prizes for this run to x2?$"
 
 RocketLeague_Lobby_Text_BetForTierThree::
     .string "Bet 250 COINS to raise your\n"
-    .string "next arena prize to x3?$"
+    .string "arena prizes for this run to x3?$"
 
 RocketLeague_Lobby_Text_PrizeTierOneSet::
-    .string "Your next arena prize multiplier\n"
+    .string "Your arena prize multiplier\n"
     .string "is x1.5.$"
 
 RocketLeague_Lobby_Text_PrizeTierTwoSet::
-    .string "Your next arena prize multiplier\n"
+    .string "Your arena prize multiplier\n"
     .string "is x2.$"
 
 RocketLeague_Lobby_Text_PrizeTierThreeSet::
-    .string "Your next arena prize multiplier\n"
+    .string "Your arena prize multiplier\n"
     .string "is x3.$"
 
 RocketLeague_Lobby_Text_PrizeBoardMax::
-    .string "Your next arena prize multiplier\n"
+    .string "Your arena prize multiplier\n"
     .string "is already x3.$"
 
 RocketLeague_Lobby_Text_NotEnoughCoinsForBet::

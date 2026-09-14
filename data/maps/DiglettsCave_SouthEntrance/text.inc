@@ -1,7 +1,7 @@
 DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel::
     .string "Well, isn't this a surprise!\p"
     .string "MR. MIME have made themselves\n"
-    .string "a little home together in\n"
+    .string "a little home together in\l"
     .string "DIGLETT CAVE.\p"
     .string "They seem intent on keeping it\n"
     .string "all to themselves.\p"

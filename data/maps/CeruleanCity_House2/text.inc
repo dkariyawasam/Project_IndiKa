@@ -11,7 +11,8 @@ CeruleanCity_House2_Text_EnormousPokemonBargedIn::
     .string "It was shaking with rage.\n"
     .string "Completely unstoppable!\p"
     .string "Lucky for us, it rampaged out\n"
-    .string "the door and headed west.$"
+    .string "the door and headed west,\l"
+    .string "toward MT. MOON.$"
 
 CeruleanCity_House2_Text_RepairWorkIsExhausting::
     .string "Repair work is exhausting.\p"

@@ -1,0 +1,1 @@
+flashback=1 aftermath=1 rumourBit=1 fieldLock=0

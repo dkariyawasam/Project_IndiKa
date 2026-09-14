@@ -4,6 +4,8 @@ IndigoPlateau_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 IndigoPlateau_PokemonCenter_1F_OnTransition::
+	special GetLeagueChallengeType
+	call_if_eq VAR_RESULT, 1, IndigoPlateau_PokemonCenter_1F_EventScript_ResetChallenge
 	setrespawn HEAL_LOCATION_INDIGO_PLATEAU
 	end
 
@@ -47,3 +49,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 	call EventScript_PkmnCenterNurse
 	release
 	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_ResetChallenge::
+	special ResetLeagueChallenge
+	return

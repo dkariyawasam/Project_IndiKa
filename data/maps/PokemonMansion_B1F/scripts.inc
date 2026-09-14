@@ -1,11 +1,18 @@
 PokemonMansion_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonMansion_B1F_OnTransition
 	.byte 0
+
+PokemonMansion_B1F_OnTransition::
+	goto_if_unset FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
+	setvar VAR_TEMP_0, 1
+	end
 
 PokemonMansion_B1F_EventScript_DiarySep1st::
 	msgbox PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful, MSGBOX_SIGN
 	end
 
 PokemonMansion_B1F_EventScript_GiovanniTrigger::
+	setvar VAR_TEMP_0, 1
 	goto_if_set FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
 	lockall
 	call PokemonMansion_B1F_EventScript_GiovanniScene
