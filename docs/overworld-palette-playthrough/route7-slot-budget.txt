@@ -1,0 +1,16 @@
+0	ffff
+1	ffff
+2	ffff
+3	ffff
+4	ffff
+5	ffff
+6	ffff
+7	ffff
+8	ffff
+9	ffff
+10	ffff
+11	ffff
+12	1200
+13	ffff
+14	112c
+15	1005
