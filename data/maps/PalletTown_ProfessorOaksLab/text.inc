@@ -1,8 +1,7 @@
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
-    .string "{RIVAL}: What, it's only {PLAYER}?\n"
-    .string "Gramps isn't around.\p"
-    .string "He went toward ROUTE 1,\n"
-    .string "at the north end of town.$"
+    .string "{RIVAL}: Gramps stepped out.\p"
+    .string "He told me to wait here, but\n"
+    .string "he's taking forever!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting::
     .string "{RIVAL}: Gramps!\n"

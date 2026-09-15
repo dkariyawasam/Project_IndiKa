@@ -1,3 +1,23 @@
+static const struct TrainerMonNoItemDefaultMoves sParty_RematchMtMoonRuinManiacKent[] = {
+    { .iv = 35, .lvl = 20, .species = SPECIES_GRAVELER, },
+    { .iv = 35, .lvl = 22, .species = SPECIES_SANDSLASH, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route3ScoutJanae[] = {
+    { .iv = 10, .lvl = 10, .species = SPECIES_PIDGEY, },
+    { .iv = 10, .lvl = 11, .species = SPECIES_NIDORAN_F, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route4AromaLadyAngelica[] = {
+    { .iv = 10, .lvl = 12, .species = SPECIES_PARAS, },
+    { .iv = 10, .lvl = 13, .species = SPECIES_ODDISH, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_RematchMtMoonHikerRobby[] = {
+    { .iv = 35, .lvl = 20, .species = SPECIES_GRAVELER, },
+    { .iv = 35, .lvl = 22, .species = SPECIES_MACHOKE, },
+};
+
 #define DUMMY_TRAINER_MON           \
     {                               \
         .lvl = 5,                   \
@@ -147,8 +167,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RematchVictoryRoadAces[]
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MtMoonCamperKent[] = {
-    { .iv = 10, .lvl = 10, .species = SPECIES_CLEFFA, },
-    { .iv = 10, .lvl = 12, .species = SPECIES_ZUBAT, },
+    { .iv = 10, .lvl = 10, .species = SPECIES_GEODUDE, },
+    { .iv = 10, .lvl = 12, .species = SPECIES_SANDSHREW, },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MtMoonCamperRobby[] = {

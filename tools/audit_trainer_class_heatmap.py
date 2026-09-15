@@ -47,7 +47,7 @@ def audit():
             label = pretty(suffix)
         classes[resolve(token, class_defs)] = {"id": token, "label": label}
 
-    split_labels = {"Ace Trainer", "Black Belt", "Expert", "Pokéfan", "Pokémon Breeder", "Pokémon Ranger",
+    split_labels = {"Ace Trainer", "Black Belt", "Expert", "Pokéfan", "Pokémon Ranger",
                     "Psychic", "Scout", "Swimmer", "Team Rocket", "Rocket Ace", "Tuber", "Youngster", "Trendsetter", "Triathlete"}
     display_rows = {}
     def row_for(base, gender=None):

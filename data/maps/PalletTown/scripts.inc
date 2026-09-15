@@ -162,13 +162,12 @@ PalletTown_EventScript_OakTrigger::
 	waitmessage
 	delay 85
 	closemessage
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	addobject LOCALID_PALLET_PROF_OAK
 	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_OakEnterLeft
 	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_OakEnterRight
 	delay 30
@@ -195,49 +194,69 @@ PalletTown_EventScript_OakTrigger::
 	end
 
 PalletTown_EventScript_OakEnterLeft::
+	setvar VAR_0x8004, -6
+	setobjectxyperm LOCALID_PALLET_PROF_OAK, 12, VAR_0x8004
+	setobjectmovementtype LOCALID_PALLET_PROF_OAK, MOVEMENT_TYPE_FACE_DOWN
+	addobject LOCALID_PALLET_PROF_OAK
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLeft
 	waitmovement 0
 	return
 
 PalletTown_EventScript_OakEnterRight::
+	setvar VAR_0x8004, -6
+	setobjectxyperm LOCALID_PALLET_PROF_OAK, 13, VAR_0x8004
+	setobjectmovementtype LOCALID_PALLET_PROF_OAK, MOVEMENT_TYPE_FACE_DOWN
+	addobject LOCALID_PALLET_PROF_OAK
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterRight
 	waitmovement 0
 	return
 
 PalletTown_EventScript_OakLeadPlayerToLabLeft::
+	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakPassPlayerLeft
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabLeft
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabLeft
 	waitmovement 0
 	return
 
 PalletTown_EventScript_OakLeadPlayerToLabRight::
+	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakPassPlayerRight
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabRight
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabRight
 	waitmovement 0
 	return
 
+@ Spawn seven tiles north of the player, beyond the top of the screen.
+@ Store the signed coordinate in a variable: literal negatives are interpreted as variable IDs.
+@ Walk south to the adjacent tile, then pass beside the player before leading south.
 PalletTown_Movement_OakEnterLeft::
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	step_end
-
 PalletTown_Movement_OakEnterRight::
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	step_end
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    step_end
+
+PalletTown_Movement_OakPassPlayerLeft::
+    walk_right
+    walk_down
+    walk_down
+    walk_left
+    step_end
+
+PalletTown_Movement_OakPassPlayerRight::
+    walk_left
+    walk_down
+    walk_down
+    walk_right
+    step_end
 
 	.macro walk_to_lab
 	walk_left

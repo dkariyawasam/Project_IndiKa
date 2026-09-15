@@ -116,7 +116,7 @@
 #define TRAINER_YOUNGSTER_JOEY_2                   TRAINER_YOUNGSTER_JOEY
 #define TRAINER_TUBER_DAN                     94
 #define TRAINER_YOUNGSTER_CHAD                    95
-#define TRAINER_BUG_CATCHER_ROBBY_2                TRAINER_YOUNGSTER_CHAD
+#define TRAINER_BUG_CATCHER_ROBBY_2                TRAINER_HIKER_ROBBY_REMATCH
 #define TRAINER_TRENDSETTER_TYLER                   96
 #define TRAINER_YOUNGSTER_EDDIE                   97
 #define TRAINER_SUPER_NERD_JOVAN_2                 TRAINER_YOUNGSTER_EDDIE
@@ -1116,7 +1116,9 @@
 #define TRAINER_PSYCHIC_SELENE                        50
 #define TRAINER_PSYCHIC_LYRA                          51
 
-#define NUM_TRAINERS                             785
-#define MAX_TRAINERS_COUNT                       785
+#define TRAINER_HIKER_ROBBY_REMATCH               785
+
+#define NUM_TRAINERS                             786
+#define MAX_TRAINERS_COUNT                       786
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
