@@ -5272,8 +5272,20 @@ u8 ObjectEventGetHeldMovementActionId(struct ObjectEvent *objectEvent)
     return MOVEMENT_ACTION_NONE;
 }
 
+static void TryRecoverObjectEventPalette(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    const struct ObjectEventGraphicsInfo *graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
+
+    // A full pool can force a newly spawned NPC onto the fallback palette.
+    // Retry until its palette becomes available, including while it is frozen.
+    if (graphicsInfo->paletteSlot == PALSLOT_NPC_DYNAMIC
+     && GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) != graphicsInfo->paletteTag)
+        sprite->oam.paletteNum = LoadDynamicObjectEventPalette(graphicsInfo->paletteTag);
+}
+
 void UpdateObjectEventCurrentMovement(struct ObjectEvent *objectEvent, struct Sprite *sprite, bool8 (*callback)(struct ObjectEvent *, struct Sprite *))
 {
+    TryRecoverObjectEventPalette(objectEvent, sprite);
     DoGroundEffects_OnSpawn(objectEvent, sprite);
     TryEnableObjectEventAnim(objectEvent, sprite);
 
@@ -5291,6 +5303,7 @@ void UpdateObjectEventCurrentMovement(struct ObjectEvent *objectEvent, struct Sp
 
 void QL_UpdateObjectEventCurrentMovement(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
+    TryRecoverObjectEventPalette(objectEvent, sprite);
     DoGroundEffects_OnSpawn(objectEvent, sprite);
     TryEnableObjectEventAnim(objectEvent, sprite);
 

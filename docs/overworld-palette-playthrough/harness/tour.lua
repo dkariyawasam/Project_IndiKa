@@ -1,0 +1,29 @@
+qa.stops={
+ {'05-oaks-lab',4,3,6,9},
+ {'06-route3-youngsters',3,13,18,9},
+ {'07-forest-breeders-scouts',1,0,21,55},
+ {'08-forest-ranger',1,0,54,21},
+ {'09-celadon-trendsetters',3,6,10,18},
+ {'10-celadon-gym',10,16,6,10},
+ {'11-fuchsia-janine-ninjas',11,3,7,12},
+ {'12-saffron-psychics',14,3,14,6},
+ {'13-route9-west',3,19,25,22},
+ {'14-route9-east',3,19,52,22},
+ {'15-route16-cyclists',3,26,12,18},
+ {'16-route23-ace-pair',3,35,10,53},
+ {'17-route23-ace-f',3,35,9,144},
+ {'18-ssanne-pair',1,15,4,5},
+ {'19-ssanne-deck',1,9,10,10},
+ {'20-powerplant-electricians',1,87,17,19},
+ {'21-powerplant-scientists',1,87,39,17},
+ {'22-route19-shore',3,30,11,10},
+ {'23-route19-swimmers',3,30,11,42},
+ {'24-rocket-lobby',2,1,8,10},
+ {'25-lab-return',4,3,6,9},
+}
+qa.tourIndex=1
+qa.tour=callbacks:add('frame',function()
+ if qa.queue[qa.step] then return end
+ local c=qa.stops[qa.tourIndex];if not c then return end
+ qa.tourIndex=qa.tourIndex+1;qa.warp(c[2],c[3],c[4],c[5]);qa.run({{kind='wait',frames=240},{kind='capture',name=c[1]}})
+end)

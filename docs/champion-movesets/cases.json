@@ -1,0 +1,1560 @@
+[
+  {
+    "name": "indigo-champion_first_charmander-baseline-11",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "indigo-champion_first_charmander-improved-11",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "indigo-champion_first_charmander-baseline-37",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "indigo-champion_first_charmander-improved-37",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "indigo-champion_first_charmander-baseline-83",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "indigo-champion_first_charmander-improved-83",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-baseline-11",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-improved-11",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-baseline-37",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-improved-37",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-baseline-83",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ],
+    "mode": "baseline"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-improved-83",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          73
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          57,
+          58,
+          89,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          332,
+          211,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          332
+        ]
+      }
+    ],
+    "mode": "improved"
+  },
+  {
+    "name": "indigo-champion_first_charmander-refined-11",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "indigo-champion_first_charmander-refined-37",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "indigo-champion_first_charmander-refined-83",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-refined-11",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-refined-37",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-refined-83",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "refined"
+  },
+  {
+    "name": "indigo-champion_first_charmander-lead-order-37",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 37,
+    "team": [
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      }
+    ],
+    "mode": "lead_order",
+    "baselineName": "indigo-champion_first_charmander-baseline-37",
+    "order": [
+      4,
+      2,
+      0,
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-lead-order-37",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 37,
+    "team": [
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          245,
+          231,
+          44
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          280,
+          231,
+          98
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          38,
+          332,
+          211,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          157,
+          280,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          58,
+          63,
+          85
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ]
+      }
+    ],
+    "mode": "lead_order",
+    "baselineName": "rocket-rocket_league_champion_giovanni-baseline-37",
+    "order": [
+      5,
+      4,
+      2,
+      3,
+      1,
+      0
+    ]
+  }
+]

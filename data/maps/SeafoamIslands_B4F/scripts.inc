@@ -32,6 +32,9 @@ SeafoamIslands_B4F_EventScript_ShowArticuno::
 SeafoamIslands_B4F_EventScript_Articuno::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_ARTICUNO, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER

@@ -1,0 +1,6 @@
+dofile('/tmp/palette-stress/harness.lua')
+dofile('/tmp/palette-stress/helpers.lua')
+dofile('/tmp/palette-stress/common.lua')
+dofile('/tmp/palette-stress/symbols.lua')
+dofile('/tmp/palette-stress/monitor.lua')
+qa.run({{kind='press',key=8,frames=60},{kind='text',frames=1800}})

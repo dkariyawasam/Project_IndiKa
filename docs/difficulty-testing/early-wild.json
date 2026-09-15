@@ -1,0 +1,724 @@
+[
+  {
+    "map": "MAP_VIRIDIAN_FOREST",
+    "label": "sViridianForest",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_WEEDLE",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_BELLSPROUT",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ODDISH",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_VENONAT",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_TANGELA",
+        "chance": 10
+      },
+      {
+        "min_level": 7,
+        "max_level": 10,
+        "species": "SPECIES_KAKUNA",
+        "chance": 10
+      },
+      {
+        "min_level": 21,
+        "max_level": 24,
+        "species": "SPECIES_WEEPINBELL",
+        "chance": 5
+      },
+      {
+        "min_level": 21,
+        "max_level": 24,
+        "species": "SPECIES_GLOOM",
+        "chance": 5
+      },
+      {
+        "min_level": 31,
+        "max_level": 34,
+        "species": "SPECIES_VENOMOTH",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_AIPOM",
+        "chance": 4
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_VICTREEBEL",
+        "chance": 1
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_BUDEW",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": [
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_VILEPLUME"
+      },
+      {
+        "min_level": 10,
+        "max_level": 13,
+        "species": "SPECIES_BEEDRILL"
+      }
+    ]
+  },
+  {
+    "map": "MAP_MT_MOON_1F",
+    "label": "sMtMoon1F_Daytime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CLEFFA",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_CLEFAIRY",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 10
+      },
+      {
+        "min_level": 22,
+        "max_level": 25,
+        "species": "SPECIES_GOLBAT",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CLEFFA",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_AMUNYTE",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_KINKABUTO",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SOLROCK",
+        "chance": 1
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SOLROCK",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_MT_MOON_1F",
+    "label": "sMtMoon1F_Nighttime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CLEFFA",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_CLEFAIRY",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_ZUBAT",
+        "chance": 10
+      },
+      {
+        "min_level": 22,
+        "max_level": 25,
+        "species": "SPECIES_GOLBAT",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CLEFFA",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_AMUNYTE",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_KINKABUTO",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_LUNATONE",
+        "chance": 1
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_LUNATONE",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE1",
+    "label": "sRoute1_Daytime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_PIDGEY",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_HOPPIP",
+        "chance": 20
+      },
+      {
+        "min_level": 18,
+        "max_level": 21,
+        "species": "SPECIES_PIDGEOTTO",
+        "chance": 10
+      },
+      {
+        "min_level": 18,
+        "max_level": 21,
+        "species": "SPECIES_SKIPLOOM",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SUNKERN",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SUNKERN",
+        "chance": 10
+      },
+      {
+        "min_level": 36,
+        "max_level": 39,
+        "species": "SPECIES_PIDGEOT",
+        "chance": 5
+      },
+      {
+        "min_level": 27,
+        "max_level": 30,
+        "species": "SPECIES_JUMPLUFF",
+        "chance": 5
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SUNFLORA",
+        "chance": 4
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SUNFLORA",
+        "chance": 4
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SUNFLORA",
+        "chance": 1
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SUNFLORA",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE1",
+    "label": "sRoute1_Nighttime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_PIDGEY",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_HOPPIP",
+        "chance": 20
+      },
+      {
+        "min_level": 18,
+        "max_level": 21,
+        "species": "SPECIES_PIDGEOTTO",
+        "chance": 10
+      },
+      {
+        "min_level": 18,
+        "max_level": 21,
+        "species": "SPECIES_SKIPLOOM",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SENTRET",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SENTRET",
+        "chance": 10
+      },
+      {
+        "min_level": 36,
+        "max_level": 39,
+        "species": "SPECIES_PIDGEOT",
+        "chance": 5
+      },
+      {
+        "min_level": 27,
+        "max_level": 30,
+        "species": "SPECIES_JUMPLUFF",
+        "chance": 5
+      },
+      {
+        "min_level": 15,
+        "max_level": 18,
+        "species": "SPECIES_FURRET",
+        "chance": 4
+      },
+      {
+        "min_level": 15,
+        "max_level": 18,
+        "species": "SPECIES_FURRET",
+        "chance": 4
+      },
+      {
+        "min_level": 15,
+        "max_level": 18,
+        "species": "SPECIES_FURRET",
+        "chance": 1
+      },
+      {
+        "min_level": 15,
+        "max_level": 18,
+        "species": "SPECIES_FURRET",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE2",
+    "label": "sRoute2_Daytime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CATERPIE",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_PICHU",
+        "chance": 20
+      },
+      {
+        "min_level": 7,
+        "max_level": 10,
+        "species": "SPECIES_METAPOD",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_PIKACHU",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SEEDOT",
+        "chance": 10
+      },
+      {
+        "min_level": 14,
+        "max_level": 17,
+        "species": "SPECIES_NUZLEAF",
+        "chance": 10
+      },
+      {
+        "min_level": 10,
+        "max_level": 13,
+        "species": "SPECIES_BUTTERFREE",
+        "chance": 5
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_RAICHU",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SEEDOT",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_SEEDOT",
+        "chance": 4
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SHIFTRY",
+        "chance": 1
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_SHIFTRY",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE2",
+    "label": "sRoute2_Nighttime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_CATERPIE",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_PICHU",
+        "chance": 20
+      },
+      {
+        "min_level": 7,
+        "max_level": 10,
+        "species": "SPECIES_METAPOD",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_PIKACHU",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_HOOTHOOT",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_HOOTHOOT",
+        "chance": 10
+      },
+      {
+        "min_level": 10,
+        "max_level": 13,
+        "species": "SPECIES_BUTTERFREE",
+        "chance": 5
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_RAICHU",
+        "chance": 5
+      },
+      {
+        "min_level": 20,
+        "max_level": 23,
+        "species": "SPECIES_NOCTOWL",
+        "chance": 4
+      },
+      {
+        "min_level": 20,
+        "max_level": 23,
+        "species": "SPECIES_NOCTOWL",
+        "chance": 4
+      },
+      {
+        "min_level": 20,
+        "max_level": 23,
+        "species": "SPECIES_NOCTOWL",
+        "chance": 1
+      },
+      {
+        "min_level": 20,
+        "max_level": 23,
+        "species": "SPECIES_NOCTOWL",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE3",
+    "label": "sRoute3_Daytime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_NIDORAN_F",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MANKEY",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_STARLY",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MACHOP",
+        "chance": 10
+      },
+      {
+        "min_level": 16,
+        "max_level": 19,
+        "species": "SPECIES_NIDORINA",
+        "chance": 10
+      },
+      {
+        "min_level": 28,
+        "max_level": 31,
+        "species": "SPECIES_PRIMEAPE",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_JIGGLYPUFF",
+        "chance": 5
+      },
+      {
+        "min_level": 14,
+        "max_level": 17,
+        "species": "SPECIES_STARAVIA",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MACHOP",
+        "chance": 4
+      },
+      {
+        "min_level": 28,
+        "max_level": 31,
+        "species": "SPECIES_PRIMEAPE",
+        "chance": 4
+      },
+      {
+        "min_level": 34,
+        "max_level": 37,
+        "species": "SPECIES_NIDOQUEEN",
+        "chance": 1
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_WIGGLYTUFF",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  },
+  {
+    "map": "MAP_ROUTE3",
+    "label": "sRoute3_Nighttime",
+    "slots": [
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_NIDORAN_M",
+        "chance": 20
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MANKEY",
+        "chance": 20
+      },
+      {
+        "min_level": 16,
+        "max_level": 19,
+        "species": "SPECIES_NIDORINO",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_GEODUDE",
+        "chance": 10
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_JIGGLYPUFF",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MACHOP",
+        "chance": 10
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_IGGLYBUFF",
+        "chance": 5
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_GEODUDE",
+        "chance": 5
+      },
+      {
+        "min_level": 25,
+        "max_level": 28,
+        "species": "SPECIES_JIGGLYPUFF",
+        "chance": 4
+      },
+      {
+        "min_level": 5,
+        "max_level": 8,
+        "species": "SPECIES_MACHOP",
+        "chance": 4
+      },
+      {
+        "min_level": 34,
+        "max_level": 37,
+        "species": "SPECIES_NIDOKING",
+        "chance": 1
+      },
+      {
+        "min_level": 28,
+        "max_level": 31,
+        "species": "SPECIES_PRIMEAPE",
+        "chance": 1
+      }
+    ],
+    "unreachable_extra_slots": []
+  }
+]

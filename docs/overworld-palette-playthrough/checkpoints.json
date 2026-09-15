@@ -1,0 +1,508 @@
+[
+  {
+    "name": "01-route7-north",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      60
+    ]
+  },
+  {
+    "name": "02-route7-south",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      70
+    ]
+  },
+  {
+    "name": "03-route7-return",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      60
+    ]
+  },
+  {
+    "name": "04-route7-repeat",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      70
+    ]
+  },
+  {
+    "name": "05-oaks-lab",
+    "map": [
+      4,
+      3
+    ],
+    "position": [
+      6,
+      9
+    ]
+  },
+  {
+    "name": "06-route3-youngsters",
+    "map": [
+      3,
+      13
+    ],
+    "position": [
+      18,
+      9
+    ]
+  },
+  {
+    "name": "07-forest-breeders-scouts",
+    "map": [
+      1,
+      0
+    ],
+    "position": [
+      21,
+      55
+    ]
+  },
+  {
+    "name": "08-forest-ranger",
+    "map": [
+      1,
+      0
+    ],
+    "position": [
+      54,
+      21
+    ]
+  },
+  {
+    "name": "09-celadon-trendsetters",
+    "map": [
+      3,
+      6
+    ],
+    "position": [
+      10,
+      18
+    ]
+  },
+  {
+    "name": "10-celadon-gym",
+    "map": [
+      10,
+      16
+    ],
+    "position": [
+      6,
+      10
+    ]
+  },
+  {
+    "name": "11-fuchsia-janine-ninjas",
+    "map": [
+      11,
+      3
+    ],
+    "position": [
+      7,
+      12
+    ]
+  },
+  {
+    "name": "12-saffron-psychics",
+    "map": [
+      14,
+      3
+    ],
+    "position": [
+      14,
+      6
+    ]
+  },
+  {
+    "name": "13-route9-west",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      25,
+      22
+    ]
+  },
+  {
+    "name": "14-route9-east",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      52,
+      22
+    ]
+  },
+  {
+    "name": "15-route16-cyclists",
+    "map": [
+      3,
+      26
+    ],
+    "position": [
+      12,
+      18
+    ]
+  },
+  {
+    "name": "16-route23-ace-pair",
+    "map": [
+      3,
+      35
+    ],
+    "position": [
+      10,
+      53
+    ]
+  },
+  {
+    "name": "17-route23-ace-f",
+    "map": [
+      3,
+      35
+    ],
+    "position": [
+      12,
+      80
+    ]
+  },
+  {
+    "name": "18-ssanne-pair",
+    "map": [
+      1,
+      15
+    ],
+    "position": [
+      4,
+      5
+    ]
+  },
+  {
+    "name": "19-ssanne-deck",
+    "map": [
+      1,
+      9
+    ],
+    "position": [
+      10,
+      10
+    ]
+  },
+  {
+    "name": "20-powerplant-electricians",
+    "map": [
+      1,
+      87
+    ],
+    "position": [
+      17,
+      19
+    ]
+  },
+  {
+    "name": "21-powerplant-scientists",
+    "map": [
+      1,
+      87
+    ],
+    "position": [
+      39,
+      17
+    ]
+  },
+  {
+    "name": "22-route19-shore",
+    "map": [
+      3,
+      30
+    ],
+    "position": [
+      11,
+      10
+    ]
+  },
+  {
+    "name": "23-route19-swimmers",
+    "map": [
+      3,
+      30
+    ],
+    "position": [
+      11,
+      42
+    ]
+  },
+  {
+    "name": "24-rocket-lobby",
+    "map": [
+      2,
+      1
+    ],
+    "position": [
+      8,
+      10
+    ]
+  },
+  {
+    "name": "25-lab-return",
+    "map": [
+      4,
+      3
+    ],
+    "position": [
+      6,
+      9
+    ]
+  },
+  {
+    "name": "26-dojo-martial-trainers",
+    "map": [
+      14,
+      2
+    ],
+    "position": [
+      6,
+      12
+    ]
+  },
+  {
+    "name": "27-victoryroad-experts",
+    "map": [
+      1,
+      40
+    ],
+    "position": [
+      12,
+      19
+    ]
+  },
+  {
+    "name": "29-volcano-corridor",
+    "map": [
+      2,
+      9
+    ],
+    "position": [
+      27,
+      11
+    ]
+  },
+  {
+    "name": "30-route9-blackbelt",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      26,
+      12
+    ]
+  },
+  {
+    "name": "31-route9-blackbelt-f",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      49,
+      18
+    ]
+  },
+  {
+    "name": "32-route23-ace-singles",
+    "map": [
+      3,
+      35
+    ],
+    "position": [
+      16,
+      48
+    ]
+  },
+  {
+    "name": "34-volcano-corridor-recheck",
+    "map": [
+      2,
+      9
+    ],
+    "position": [
+      27,
+      11
+    ]
+  },
+  {
+    "name": "35-lab-rival-ready",
+    "map": [
+      4,
+      3
+    ],
+    "position": [
+      6,
+      6
+    ]
+  },
+  {
+    "name": "36-lab-rival-revealed",
+    "map": [
+      4,
+      3
+    ],
+    "position": [
+      6,
+      6
+    ]
+  },
+  {
+    "name": "38-lab-after-battle",
+    "map": [
+      4,
+      3
+    ],
+    "position": [
+      6,
+      6
+    ]
+  },
+  {
+    "name": "39-volcano-settled",
+    "map": [
+      2,
+      5
+    ],
+    "position": [
+      42,
+      28
+    ]
+  },
+  {
+    "name": "40-fuchsia-janine-visible",
+    "map": [
+      11,
+      3
+    ],
+    "position": [
+      7,
+      12
+    ]
+  },
+  {
+    "name": "41-route9-day",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      52,
+      22
+    ]
+  },
+  {
+    "name": "42-route7-day-north",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      60
+    ]
+  },
+  {
+    "name": "43-route7-day-south",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      70
+    ]
+  },
+  {
+    "name": "44-route7-day-repeat",
+    "map": [
+      3,
+      17
+    ],
+    "position": [
+      12,
+      70
+    ]
+  },
+  {
+    "name": "45-fuchsia-janine-post-trial",
+    "map": [
+      11,
+      3
+    ],
+    "position": [
+      7,
+      12
+    ]
+  },
+  {
+    "name": "46-route9-east-walk",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      52,
+      22
+    ]
+  },
+  {
+    "name": "47-route9-west-walk",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      50,
+      22
+    ]
+  },
+  {
+    "name": "48-route9-repeat",
+    "map": [
+      3,
+      19
+    ],
+    "position": [
+      52,
+      22
+    ]
+  },
+  {
+    "name": "49-fuchsia-janine-settled",
+    "map": [
+      11,
+      3
+    ],
+    "position": [
+      7,
+      12
+    ]
+  }
+]

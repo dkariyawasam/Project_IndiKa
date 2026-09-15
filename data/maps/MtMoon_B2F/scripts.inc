@@ -35,6 +35,9 @@ MtMoon_B2F_EventScript_HideAnnihilape::
 MtMoon_B2F_EventScript_Annihilape::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_ANNIHILAPE, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_ANNIHILAPE, CRY_MODE_ENCOUNTER

@@ -35,6 +35,9 @@ PokemonTower_4F_EventScript_HideOsscythe::
 PokemonTower_4F_EventScript_Osscythe::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_OSSCYTHE, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_OSSCYTHE, CRY_MODE_ENCOUNTER

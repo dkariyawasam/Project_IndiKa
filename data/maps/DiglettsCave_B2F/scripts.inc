@@ -36,6 +36,9 @@ DiglettsCave_B2F_EventScript_HideMimeSr::
 DiglettsCave_B2F_EventScript_MimeSr::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_MIME_SR, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_MIME_SR, CRY_MODE_ENCOUNTER

@@ -1,0 +1,626 @@
+[
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "PIDGEOT",
+    "before": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_FEATHER_DANCE",
+      "MOVE_SAND_ATTACK",
+      "MOVE_WHIRLWIND"
+    ],
+    "after": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_STEEL_WING",
+      "MOVE_DOUBLE_EDGE",
+      "MOVE_FEATHER_DANCE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_FUTURE_SIGHT",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "RHYDON",
+    "before": [
+      "MOVE_TAKE_DOWN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_TOMB",
+      "MOVE_SCARY_FACE"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_MEGAHORN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "ARCANINE",
+    "before": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_ROAR",
+      "MOVE_BITE"
+    ],
+    "after": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_IRON_TAIL",
+      "MOVE_BITE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "EXEGGUTOR",
+    "before": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_EGG_BOMB",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_LIGHT_SCREEN"
+    ],
+    "after": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_PSYCHIC",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_LIGHT_SCREEN"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstSquirtle",
+    "species": "BLASTOISE",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_RAIN_DANCE",
+      "MOVE_SKULL_BASH",
+      "MOVE_BITE"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_ICE_BEAM",
+      "MOVE_BITE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "PIDGEOT",
+    "before": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_FEATHER_DANCE",
+      "MOVE_SAND_ATTACK",
+      "MOVE_WHIRLWIND"
+    ],
+    "after": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_STEEL_WING",
+      "MOVE_DOUBLE_EDGE",
+      "MOVE_FEATHER_DANCE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_FUTURE_SIGHT",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "RHYDON",
+    "before": [
+      "MOVE_TAKE_DOWN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_TOMB",
+      "MOVE_SCARY_FACE"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_MEGAHORN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "GYARADOS",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_RAGE",
+      "MOVE_BITE",
+      "MOVE_THRASH"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_ICE_BEAM",
+      "MOVE_RETURN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "ARCANINE",
+    "before": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_ROAR",
+      "MOVE_BITE"
+    ],
+    "after": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_IRON_TAIL",
+      "MOVE_BITE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstBulbasaur",
+    "species": "VENUSAUR",
+    "before": [
+      "MOVE_SOLAR_BEAM",
+      "MOVE_SYNTHESIS",
+      "MOVE_SUNNY_DAY",
+      "MOVE_GROWTH"
+    ],
+    "after": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "PIDGEOT",
+    "before": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_FEATHER_DANCE",
+      "MOVE_SAND_ATTACK",
+      "MOVE_WHIRLWIND"
+    ],
+    "after": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_STEEL_WING",
+      "MOVE_DOUBLE_EDGE",
+      "MOVE_FEATHER_DANCE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_FUTURE_SIGHT",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_RECOVER",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "RHYDON",
+    "before": [
+      "MOVE_TAKE_DOWN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_TOMB",
+      "MOVE_SCARY_FACE"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_MEGAHORN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "EXEGGUTOR",
+    "before": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_EGG_BOMB",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_LIGHT_SCREEN"
+    ],
+    "after": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_PSYCHIC",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_LIGHT_SCREEN"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "GYARADOS",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_RAGE",
+      "MOVE_BITE",
+      "MOVE_THRASH"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_ICE_BEAM",
+      "MOVE_RETURN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionFirstCharmander",
+    "species": "CHARIZARD",
+    "before": [
+      "MOVE_FIRE_BLAST",
+      "MOVE_AERIAL_ACE",
+      "MOVE_SLASH",
+      "MOVE_FIRE_SPIN"
+    ],
+    "after": [
+      "MOVE_FLAMETHROWER",
+      "MOVE_DRAGON_CLAW",
+      "MOVE_AERIAL_ACE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchSquirtle",
+    "species": "HERACROSS",
+    "before": [
+      "MOVE_MEGAHORN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_COUNTER",
+      "MOVE_ROCK_TOMB"
+    ],
+    "after": [
+      "MOVE_MEGAHORN",
+      "MOVE_BRICK_BREAK",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchSquirtle",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHADOW_BALL",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchSquirtle",
+    "species": "TYRANITAR",
+    "before": [
+      "MOVE_CRUNCH",
+      "MOVE_EARTHQUAKE",
+      "MOVE_THUNDERBOLT",
+      "MOVE_AERIAL_ACE"
+    ],
+    "after": [
+      "MOVE_CRUNCH",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_ICE_BEAM",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchSquirtle",
+    "species": "ARCANINE",
+    "before": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_OVERHEAT",
+      "MOVE_AERIAL_ACE",
+      "MOVE_IRON_TAIL"
+    ],
+    "after": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_IRON_TAIL",
+      "MOVE_BITE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchSquirtle",
+    "species": "BLASTOISE",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_ICE_BEAM",
+      "MOVE_EARTHQUAKE",
+      "MOVE_RAIN_DANCE"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_ICE_BEAM",
+      "MOVE_BITE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "HERACROSS",
+    "before": [
+      "MOVE_MEGAHORN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_COUNTER",
+      "MOVE_ROCK_TOMB"
+    ],
+    "after": [
+      "MOVE_MEGAHORN",
+      "MOVE_BRICK_BREAK",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHADOW_BALL",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "TYRANITAR",
+    "before": [
+      "MOVE_CRUNCH",
+      "MOVE_EARTHQUAKE",
+      "MOVE_THUNDERBOLT",
+      "MOVE_AERIAL_ACE"
+    ],
+    "after": [
+      "MOVE_CRUNCH",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_ICE_BEAM",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "GYARADOS",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_DANCE",
+      "MOVE_EARTHQUAKE",
+      "MOVE_HYPER_BEAM"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_DANCE",
+      "MOVE_RETURN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "ARCANINE",
+    "before": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_OVERHEAT",
+      "MOVE_AERIAL_ACE",
+      "MOVE_IRON_TAIL"
+    ],
+    "after": [
+      "MOVE_EXTREME_SPEED",
+      "MOVE_FLAMETHROWER",
+      "MOVE_IRON_TAIL",
+      "MOVE_BITE"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchBulbasaur",
+    "species": "VENUSAUR",
+    "before": [
+      "MOVE_SOLAR_BEAM",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_EARTHQUAKE",
+      "MOVE_SUNNY_DAY"
+    ],
+    "after": [
+      "MOVE_GIGA_DRAIN",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_SLEEP_POWDER",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchCharmander",
+    "species": "HERACROSS",
+    "before": [
+      "MOVE_MEGAHORN",
+      "MOVE_EARTHQUAKE",
+      "MOVE_COUNTER",
+      "MOVE_ROCK_TOMB"
+    ],
+    "after": [
+      "MOVE_MEGAHORN",
+      "MOVE_BRICK_BREAK",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchCharmander",
+    "species": "ALAKAZAM",
+    "before": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHADOW_BALL",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ],
+    "after": [
+      "MOVE_PSYCHIC",
+      "MOVE_SHOCK_WAVE",
+      "MOVE_CALM_MIND",
+      "MOVE_REFLECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchCharmander",
+    "species": "TYRANITAR",
+    "before": [
+      "MOVE_CRUNCH",
+      "MOVE_EARTHQUAKE",
+      "MOVE_THUNDERBOLT",
+      "MOVE_AERIAL_ACE"
+    ],
+    "after": [
+      "MOVE_CRUNCH",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_ICE_BEAM",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchCharmander",
+    "species": "GYARADOS",
+    "before": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_DANCE",
+      "MOVE_EARTHQUAKE",
+      "MOVE_HYPER_BEAM"
+    ],
+    "after": [
+      "MOVE_HYDRO_PUMP",
+      "MOVE_DRAGON_DANCE",
+      "MOVE_RETURN",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_ChampionRematchCharmander",
+    "species": "CHARIZARD",
+    "before": [
+      "MOVE_FIRE_BLAST",
+      "MOVE_DRAGON_CLAW",
+      "MOVE_AERIAL_ACE",
+      "MOVE_EARTHQUAKE"
+    ],
+    "after": [
+      "MOVE_FLAMETHROWER",
+      "MOVE_DRAGON_CLAW",
+      "MOVE_AERIAL_ACE",
+      "MOVE_PROTECT"
+    ]
+  },
+  {
+    "party": "sParty_RocketLeagueChampionGiovanni",
+    "species": "PERSIAN",
+    "before": [
+      "MOVE_FAINT_ATTACK",
+      "MOVE_SLASH",
+      "MOVE_TAUNT",
+      "MOVE_RETURN"
+    ],
+    "after": [
+      "MOVE_SLASH",
+      "MOVE_SHADOW_BALL",
+      "MOVE_THUNDERBOLT",
+      "MOVE_TAUNT"
+    ]
+  },
+  {
+    "party": "sParty_RocketLeagueChampionGiovanni",
+    "species": "CROBAT",
+    "before": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_CONFUSE_RAY",
+      "MOVE_BITE",
+      "MOVE_STEEL_WING"
+    ],
+    "after": [
+      "MOVE_AERIAL_ACE",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_SHADOW_BALL",
+      "MOVE_CONFUSE_RAY"
+    ]
+  },
+  {
+    "party": "sParty_RocketLeagueChampionGiovanni",
+    "species": "NIDOQUEEN",
+    "before": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_BODY_SLAM",
+      "MOVE_PROTECT"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_ICE_BEAM",
+      "MOVE_THUNDERBOLT"
+    ]
+  },
+  {
+    "party": "sParty_RocketLeagueChampionGiovanni",
+    "species": "NIDOKING",
+    "before": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_MEGAHORN",
+      "MOVE_PROTECT"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_SLUDGE_BOMB",
+      "MOVE_MEGAHORN",
+      "MOVE_THUNDERBOLT"
+    ]
+  },
+  {
+    "party": "sParty_RocketLeagueChampionGiovanni",
+    "species": "RHYPERIOR",
+    "before": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_MEGAHORN",
+      "MOVE_TAKE_DOWN"
+    ],
+    "after": [
+      "MOVE_EARTHQUAKE",
+      "MOVE_ROCK_SLIDE",
+      "MOVE_MEGAHORN",
+      "MOVE_BRICK_BREAK"
+    ]
+  }
+]

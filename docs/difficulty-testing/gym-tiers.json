@@ -1,0 +1,786 @@
+[
+  {
+    "leader": "Brock",
+    "badges": 0,
+    "levels": [
+      12,
+      16
+    ],
+    "species": [
+      "GEODUDE",
+      "LARVITAR"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 1,
+    "levels": [
+      18,
+      20,
+      23
+    ],
+    "species": [
+      "LARVITAR",
+      "GEODUDE",
+      "SHUCKLE"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 2,
+    "levels": [
+      22,
+      25,
+      27
+    ],
+    "species": [
+      "SHUCKLE",
+      "GRAVELER",
+      "LARVITAR"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 3,
+    "levels": [
+      28,
+      30,
+      30,
+      32
+    ],
+    "species": [
+      "LARVITAR",
+      "GRAVELER",
+      "SHUCKLE",
+      "KABUTO"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 4,
+    "levels": [
+      32,
+      32,
+      35,
+      38,
+      38
+    ],
+    "species": [
+      "KABUTO",
+      "OMANYTE",
+      "SHUCKLE",
+      "GRAVELER",
+      "LARVITAR"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 5,
+    "levels": [
+      38,
+      38,
+      40,
+      40,
+      42
+    ],
+    "species": [
+      "GRAVELER",
+      "LARVITAR",
+      "OMASTAR",
+      "KABUTOPS",
+      "SHUCKLE"
+    ]
+  },
+  {
+    "leader": "Brock",
+    "badges": 6,
+    "levels": [
+      44,
+      45,
+      45,
+      45,
+      45,
+      47
+    ],
+    "species": [
+      "SHUCKLE",
+      "AERODACTYL",
+      "OMASTAR",
+      "KABUTOPS",
+      "PUPITAR",
+      "GOLEM"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "STARYU",
+      "CHINCHOU"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "CHINCHOU",
+      "POLIWHIRL",
+      "STARYU"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "STARYU",
+      "POLIWHIRL",
+      "LANTURN"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 3,
+    "levels": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "species": [
+      "STARYU",
+      "LANTURN",
+      "POLIWHIRL",
+      "HORSEA"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "HORSEA",
+      "PSYDUCK",
+      "POLIWHIRL",
+      "LANTURN",
+      "STARYU"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "STARYU",
+      "GOLDUCK",
+      "POLIWHIRL",
+      "TENTACRUEL",
+      "LANTURN"
+    ]
+  },
+  {
+    "leader": "Misty",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "TENTACRUEL",
+      "LANTURN",
+      "GOLDUCK",
+      "POLITOED",
+      "STARMIE",
+      "KINGDRA"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "PICHU",
+      "VOLTORB"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "PICHU",
+      "PIKACHU",
+      "VOLTORB"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "PIKACHU",
+      "PLUSLE",
+      "MAGNEMITE"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 3,
+    "levels": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "species": [
+      "PIKACHU",
+      "ELECTABUZZ",
+      "ELECTRODE",
+      "MAGNETON"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "PIKACHU",
+      "ELECTABUZZ",
+      "PLUSLE",
+      "MINUN",
+      "ELECTRODE"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "RAICHU",
+      "ELECTRODE",
+      "MAGNETON",
+      "ELECTABUZZ",
+      "ELECTABUZZ"
+    ]
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "RAICHU",
+      "ELECTRODE",
+      "MAGNETON",
+      "MAGNEZONE",
+      "ELECTABUZZ",
+      "ELECTIVIRE"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "BELLSPROUT",
+      "ODDISH"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "ODDISH",
+      "WEEPINBELL",
+      "TANGELA"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "WEEPINBELL",
+      "GLOOM",
+      "TANGELA"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 3,
+    "levels": [
+      29,
+      24,
+      29,
+      32
+    ],
+    "species": [
+      "VICTREEBEL",
+      "TANGELA",
+      "VILEPLUME",
+      "EXEGGCUTE"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "BELLOSSOM",
+      "EXEGGCUTE",
+      "SEEDOT",
+      "VICTREEBEL",
+      "TANGELA"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "EXEGGUTOR",
+      "SHIFTRY",
+      "VICTREEBEL",
+      "VILEPLUME",
+      "TANGELA"
+    ]
+  },
+  {
+    "leader": "Erika",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "SHIFTRY",
+      "EXEGGUTOR",
+      "BELLOSSOM",
+      "VICTREEBEL",
+      "VILEPLUME",
+      "TANGELA"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "KOFFING",
+      "GRIMER"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "KOFFING",
+      "GOLBAT",
+      "GRIMER"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "GOLBAT",
+      "ARBOK",
+      "KOFFING"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 3,
+    "levels": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "species": [
+      "GOLBAT",
+      "ARBOK",
+      "KOFFING",
+      "GRIMER"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "GOLBAT",
+      "ARBOK",
+      "KOFFING",
+      "GRIMER",
+      "GULPIN"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "CROBAT",
+      "ARBOK",
+      "MUK",
+      "WEEZING",
+      "KOFFING"
+    ]
+  },
+  {
+    "leader": "Koga",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "CROBAT",
+      "ARBOK",
+      "MUK",
+      "WEEZING",
+      "SWALOT",
+      "GENGAR"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "ABRA",
+      "DROWZEE"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "ABRA",
+      "KADABRA",
+      "DROWZEE"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "KADABRA",
+      "HYPNO",
+      "ABRA"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 3,
+    "levels": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "species": [
+      "KADABRA",
+      "HYPNO",
+      "ABRA",
+      "NATU"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "KADABRA",
+      "HYPNO",
+      "ABRA",
+      "NATU",
+      "CHINGLING"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "ALAKAZAM",
+      "HYPNO",
+      "XATU",
+      "KADABRA",
+      "ABRA"
+    ]
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "ALAKAZAM",
+      "HYPNO",
+      "XATU",
+      "CHIMECHO",
+      "CLAYDOL",
+      "BRONZONG"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 0,
+    "levels": [
+      13,
+      16
+    ],
+    "species": [
+      "VULPIX",
+      "GROWLITHE"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 1,
+    "levels": [
+      17,
+      20,
+      23
+    ],
+    "species": [
+      "VULPIX",
+      "MAGMAR",
+      "GROWLITHE"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 2,
+    "levels": [
+      23,
+      25,
+      27
+    ],
+    "species": [
+      "MAGMAR",
+      "RAPIDASH",
+      "VULPIX"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 3,
+    "levels": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "species": [
+      "MAGMAR",
+      "RAPIDASH",
+      "VULPIX",
+      "GROWLITHE"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 4,
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "species": [
+      "MAGMAR",
+      "RAPIDASH",
+      "VULPIX",
+      "GROWLITHE",
+      "SLUGMA"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 5,
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "species": [
+      "ARCANINE",
+      "RAPIDASH",
+      "MAGMAR",
+      "MAGCARGO",
+      "VULPIX"
+    ]
+  },
+  {
+    "leader": "Blaine",
+    "badges": 6,
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ],
+    "species": [
+      "ARCANINE",
+      "NINETALES",
+      "RAPIDASH",
+      "MAGCARGO",
+      "CAMERUPT",
+      "MAGMORTAR"
+    ]
+  }
+]

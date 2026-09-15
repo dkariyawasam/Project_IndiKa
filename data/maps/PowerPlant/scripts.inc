@@ -42,6 +42,9 @@ PowerPlant_EventScript_WarpToRockTunnelB2F::
 PowerPlant_EventScript_Zapdos::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_ZAPDOS, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER

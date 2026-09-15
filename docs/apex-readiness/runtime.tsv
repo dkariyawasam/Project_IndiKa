@@ -1,0 +1,24 @@
+MIME_SR	no	PASS	flags untouched; enemy unchanged; controls released; object available
+MIME_SR	back	PASS	flags untouched; enemy unchanged; controls released; object available
+MIME_SR	yes	PASS	battle entered at level 50
+ANNIHILAPE	no	PASS	flags untouched; enemy unchanged; controls released; object available
+ANNIHILAPE	back	PASS	flags untouched; enemy unchanged; controls released; object available
+ANNIHILAPE	yes	PASS	battle entered at level 50
+OSSCYTHE	no	PASS	flags untouched; enemy unchanged; controls released; object available
+OSSCYTHE	back	PASS	flags untouched; enemy unchanged; controls released; object available
+OSSCYTHE	yes	PASS	battle entered at level 50
+MEWTWO	no	PASS	flags untouched; enemy unchanged; controls released; object available
+MEWTWO	back	PASS	flags untouched; enemy unchanged; controls released; object available
+MEWTWO	yes	PASS	battle entered at level 70
+TANGROWTH	no	PASS	flags untouched; enemy unchanged; controls released; object available
+TANGROWTH	back	PASS	flags untouched; enemy unchanged; controls released; object available
+TANGROWTH	yes	PASS	battle entered at level 50
+MOLTRES	no	PASS	flags untouched; enemy unchanged; controls released; object available
+MOLTRES	back	PASS	flags untouched; enemy unchanged; controls released; object available
+MOLTRES	yes	PASS	battle entered at level 50
+ARTICUNO	no	PASS	flags untouched; enemy unchanged; controls released; object available
+ARTICUNO	back	PASS	flags untouched; enemy unchanged; controls released; object available
+ARTICUNO	yes	PASS	battle entered at level 50
+ZAPDOS	no	PASS	flags untouched; enemy unchanged; controls released; object available
+ZAPDOS	back	PASS	flags untouched; enemy unchanged; controls released; object available
+ZAPDOS	yes	PASS	battle entered at level 50

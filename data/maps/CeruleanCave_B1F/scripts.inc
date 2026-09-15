@@ -161,6 +161,9 @@ CeruleanCave_B1F_Movement_GiovanniLeaves::
 CeruleanCave_B1F_EventScript_Mewtwo::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 70
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
 	message CeruleanCave_B1F_Text_MewtwoApexCry

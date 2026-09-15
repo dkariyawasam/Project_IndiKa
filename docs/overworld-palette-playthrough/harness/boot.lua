@@ -1,0 +1,6 @@
+dofile('/tmp/overworld-palette-playthrough/harness.lua')
+dofile('/tmp/overworld-palette-playthrough/helpers.lua')
+dofile('/tmp/overworld-palette-playthrough/common.lua')
+dofile('/tmp/overworld-palette-playthrough/symbols.lua')
+emu:write32(0x03000f0c,qa.sym.gScriptCmdTable)
+qa.run({{kind='press',key=8,frames=60},{kind='text',frames=1800}})
