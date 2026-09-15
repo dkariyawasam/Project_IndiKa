@@ -7,6 +7,7 @@
 #include "battle_controllers.h"
 #include "battle_interface.h"
 #include "battle_main.h"
+#include "trainer_nicknames.h"
 #include "battle_message.h"
 #include "battle_scripts.h"
 #include "battle_setup.h"
@@ -1483,6 +1484,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 nameHash = 0;
     u32 personalityValue;
+    const u8 *nickname;
     u8 fixedIV;
     s32 i, j;
 
@@ -1577,6 +1579,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 break;
             }
             }
+
+            nickname = GetTrainerPokemonNickname(trainerNum, GetMonData(&party[i], MON_DATA_SPECIES), i);
+            if (nickname != NULL)
+                SetMonData(&party[i], MON_DATA_NICKNAME, nickname);
         }
 
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;

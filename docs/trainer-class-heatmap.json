@@ -129,12 +129,8 @@
       "label": "Pok\u00e9maniac"
     },
     {
-      "id": "CLASS_POK\u00c9MON_BREEDER_F",
-      "label": "Pok\u00e9mon Breeder F"
-    },
-    {
-      "id": "CLASS_POK\u00c9MON_BREEDER_M",
-      "label": "Pok\u00e9mon Breeder M"
+      "id": "CLASS_POK\u00c9MON_BREEDER",
+      "label": "Pok\u00e9mon Breeder"
     },
     {
       "id": "CLASS_POK\u00c9MON_RANGER_F",
@@ -292,6 +288,7 @@
     "Cerulean City",
     "Cinnabar Island",
     "Cinnabar Volcano",
+    "Fuchsia City",
     "Fuchsia Forest",
     "Kanto Victory Road",
     "Mt. Moon",
@@ -345,6 +342,7 @@
       0,
       0,
       0,
+      0,
       4,
       0,
       0,
@@ -396,6 +394,7 @@
       0,
       0,
       0,
+      0,
       4,
       0,
       0,
@@ -447,6 +446,7 @@
       0,
       0,
       0,
+      0,
       2,
       0,
       0,
@@ -470,7 +470,7 @@
       0,
       0,
       0,
-      0,
+      1,
       1,
       0,
       0,
@@ -492,6 +492,7 @@
       0,
       0,
       3,
+      4,
       0,
       0,
       0,
@@ -566,6 +567,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
@@ -617,6 +619,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
@@ -650,6 +653,7 @@
       0,
       0,
       1,
+      0,
       0,
       1,
       0,
@@ -701,6 +705,7 @@
       0,
       0,
       1,
+      0,
       0,
       1,
       0,
@@ -765,6 +770,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0,
@@ -803,9 +809,10 @@
       0,
       0,
       0,
+      0,
       1,
       0,
-      2,
+      0,
       0,
       0,
       0,
@@ -854,6 +861,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0,
@@ -875,6 +883,7 @@
       1
     ],
     [
+      0,
       0,
       0,
       0,
@@ -961,6 +970,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0,
@@ -979,12 +989,13 @@
     [
       0,
       0,
-      1,
-      1,
       0,
       0,
+      0,
+      0,
+      0,
       1,
-      1,
+      0,
       0,
       0,
       0,
@@ -1076,9 +1087,11 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -1165,59 +1178,6 @@
       0,
       0,
       0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       3,
       0,
@@ -1229,54 +1189,6 @@
       0,
       0,
       0,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
       0,
       0,
       0,
@@ -1312,7 +1224,112 @@
       0,
       0,
       0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
       0,
       1,
       0,
@@ -1380,6 +1397,7 @@
       0,
       0,
       0,
+      0,
       2,
       0,
       0
@@ -1433,9 +1451,11 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -1520,6 +1540,7 @@
       0,
       0,
       0,
+      1,
       0,
       0,
       0,
@@ -1586,9 +1607,11 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -1674,6 +1697,7 @@
       0,
       0,
       0,
+      0,
       1,
       1,
       0,
@@ -1721,6 +1745,7 @@
       0,
       0,
       0,
+      6,
       0,
       0,
       0,
@@ -1790,9 +1815,11 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -1888,6 +1915,7 @@
       0,
       0,
       0,
+      0,
       3,
       0,
       0,
@@ -1895,6 +1923,7 @@
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -1947,7 +1976,7 @@
     ],
     [
       0,
-      0,
+      1,
       0,
       0,
       1,
@@ -1971,63 +2000,13 @@
       0,
       0,
       3,
+      2,
       0,
       0,
       0,
       0,
       0,
       1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       0,
       0,
@@ -2053,6 +2032,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -2129,6 +2109,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0,
@@ -2193,6 +2174,7 @@
       0,
       0,
       0,
+      3,
       0,
       0,
       0,
@@ -2244,6 +2226,7 @@
       0,
       0,
       0,
+      3,
       0,
       0,
       0,
@@ -2285,68 +2268,18 @@
       0,
       0,
       0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       1,
-      1,
       0,
       0,
       0,
       0,
       0,
-      1,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -2391,6 +2324,10 @@
       0,
       0,
       0,
+      1,
+      1,
+      0,
+      0,
       0,
       0,
       0,
@@ -2399,12 +2336,10 @@
       0,
       0,
       0,
-      0,
-      0,
-      0,
       0
     ],
     [
+      0,
       0,
       0,
       0,
@@ -2456,6 +2391,59 @@
       0
     ],
     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
       0,
       0,
       0,
@@ -2555,6 +2543,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
@@ -2588,9 +2577,10 @@
       0,
       0,
       1,
+      0,
       0,
       4,
-      2,
+      3,
       0,
       0,
       0,
@@ -2629,6 +2619,7 @@
       0,
       0,
       2,
+      0,
       0,
       0,
       0,
@@ -2696,6 +2687,7 @@
       0,
       0,
       0,
+      0,
       7,
       0,
       2,
@@ -2713,11 +2705,11 @@
     [
       1,
       2,
+      1,
+      1,
+      1,
       0,
-      1,
-      1,
       0,
-      1,
       2,
       1,
       0,
@@ -2741,6 +2733,7 @@
       0,
       0,
       1,
+      0,
       1,
       0,
       0,
@@ -2792,6 +2785,7 @@
       0,
       0,
       1,
+      0,
       1,
       0,
       0,
@@ -2857,6 +2851,7 @@
       0,
       0,
       0,
+      0,
       2,
       0,
       0,
@@ -2912,6 +2907,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
@@ -2939,6 +2935,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -3012,6 +3009,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0
@@ -3065,6 +3063,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     [
@@ -3094,6 +3093,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -3160,6 +3160,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0,
@@ -3177,6 +3178,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -3247,6 +3249,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -3318,6 +3321,7 @@
       0,
       0,
       0,
+      0,
       2,
       0,
       0
@@ -3369,6 +3373,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0
@@ -3398,6 +3403,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -3471,6 +3477,7 @@
       0,
       0,
       0,
+      0,
       1,
       0,
       0
@@ -3524,56 +3531,6 @@
       0,
       0,
       0,
-      0
-    ],
-    [
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       0
     ],
@@ -3585,6 +3542,59 @@
       0,
       0,
       1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
       0,
       0,
       0,
@@ -3653,7 +3663,7 @@
         "object 12 (18,17)"
       ],
       "sources": [
-        "data/maps/CeladonCity/scripts.inc:272"
+        "data/maps/CeladonCity/scripts.inc:275"
       ],
       "conditional": false
     },
@@ -3681,7 +3691,7 @@
         "object 14 (8,17)"
       ],
       "sources": [
-        "data/maps/CeladonCity/scripts.inc:286"
+        "data/maps/CeladonCity/scripts.inc:289"
       ],
       "conditional": false
     },
@@ -3753,6 +3763,168 @@
       "conditional": false
     },
     {
+      "class": "CLASS_AROMA_LADY",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "FLORA"
+      ],
+      "trainer_ids": [
+        38
+      ],
+      "variants": [
+        "TRAINER_AROMA_LADY_FLORA"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_AROMA_LADY"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Flora"
+      ],
+      "origins": [
+        "object 3 (2,5)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:252"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_AROMA_LADY",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "DAPHNE"
+      ],
+      "trainer_ids": [
+        39
+      ],
+      "variants": [
+        "TRAINER_AROMA_LADY_DAPHNE"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_AROMA_LADY"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Daphne"
+      ],
+      "origins": [
+        "object 4 (10,5)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:264"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_AROMA_LADY",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "LAUREL"
+      ],
+      "trainer_ids": [
+        40
+      ],
+      "variants": [
+        "TRAINER_AROMA_LADY_LAUREL"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_AROMA_LADY"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Laurel"
+      ],
+      "origins": [
+        "object 5 (2,9)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:276"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_AROMA_LADY",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "VIOLA"
+      ],
+      "trainer_ids": [
+        41
+      ],
+      "variants": [
+        "TRAINER_AROMA_LADY_VIOLA"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_AROMA_LADY"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Viola"
+      ],
+      "origins": [
+        "object 6 (10,9)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:288"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_POK\u00c9MON_BREEDER",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "HAZEL"
+      ],
+      "trainer_ids": [
+        44
+      ],
+      "variants": [
+        "TRAINER_PKMN_BREEDER_HAZEL"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PKMN_BREEDER"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Hazel"
+      ],
+      "origins": [
+        "object 7 (3,12)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:300"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_POK\u00c9MON_BREEDER",
+      "area": "Celadon City",
+      "map": "CeladonCity_Gym",
+      "names": [
+        "MABEL"
+      ],
+      "trainer_ids": [
+        45
+      ],
+      "variants": [
+        "TRAINER_PKMN_BREEDER_MABEL"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PKMN_BREEDER"
+      ],
+      "roots": [
+        "CeladonCity_Gym_EventScript_Mabel"
+      ],
+      "origins": [
+        "object 8 (9,12)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_Gym/scripts.inc:312"
+      ],
+      "conditional": false
+    },
+    {
       "class": "CLASS_RUIN_MANIAC",
       "area": "Cerulean Cave",
       "map": "CeruleanCave_1F",
@@ -3775,7 +3947,7 @@
         "object 4 (11,17)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6549"
+        "data/scripts/trainers.inc:6548"
       ],
       "conditional": false
     },
@@ -3802,7 +3974,7 @@
         "object 4 (27,16)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6561"
+        "data/scripts/trainers.inc:6560"
       ],
       "conditional": false
     },
@@ -3829,7 +4001,7 @@
         "object 5 (12,7)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6573"
+        "data/scripts/trainers.inc:6572"
       ],
       "conditional": false
     },
@@ -4015,7 +4187,7 @@
         "object 5 (44,29)"
       ],
       "sources": [
-        "data/maps/CinnabarVolcano_3F/scripts.inc:123"
+        "data/maps/CinnabarVolcano_3F/scripts.inc:126"
       ],
       "conditional": false
     },
@@ -4042,7 +4214,7 @@
         "object 6 (42,22)"
       ],
       "sources": [
-        "data/maps/CinnabarVolcano_3F/scripts.inc:144"
+        "data/maps/CinnabarVolcano_3F/scripts.inc:147"
       ],
       "conditional": false
     },
@@ -4297,7 +4469,169 @@
         "object 5 (28,8)"
       ],
       "sources": [
-        "data/maps/CinnabarVolcano_RightCorridor_3F/scripts.inc:239"
+        "data/maps/CinnabarVolcano_RightCorridor_3F/scripts.inc:241"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "PHIL"
+      ],
+      "trainer_ids": [
+        294
+      ],
+      "variants": [
+        "TRAINER_NINJA_PHIL"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Phil"
+      ],
+      "origins": [
+        "object 3 (3,4)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:207"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "EDGAR"
+      ],
+      "trainer_ids": [
+        295
+      ],
+      "variants": [
+        "TRAINER_NINJA_EDGAR"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Edgar"
+      ],
+      "origins": [
+        "object 4 (11,4)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:214"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "KIRK"
+      ],
+      "trainer_ids": [
+        288
+      ],
+      "variants": [
+        "TRAINER_NINJA_KIRK"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Kirk"
+      ],
+      "origins": [
+        "object 5 (3,7)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:221"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "SHAWN"
+      ],
+      "trainer_ids": [
+        289
+      ],
+      "variants": [
+        "TRAINER_NINJA_SHAWN"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Shawn"
+      ],
+      "origins": [
+        "object 6 (11,7)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:229"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "KAYDEN"
+      ],
+      "trainer_ids": [
+        292
+      ],
+      "variants": [
+        "TRAINER_NINJA_KAYDEN"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Kayden"
+      ],
+      "origins": [
+        "object 7 (3,10)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:236"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_NINJA",
+      "area": "Fuchsia City",
+      "map": "FuchsiaCity_Gym",
+      "names": [
+        "NATE"
+      ],
+      "trainer_ids": [
+        293
+      ],
+      "variants": [
+        "TRAINER_NINJA_NATE"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_NINJA"
+      ],
+      "roots": [
+        "FuchsiaCity_Gym_EventScript_Nate"
+      ],
+      "origins": [
+        "object 8 (11,10)"
+      ],
+      "sources": [
+        "data/maps/FuchsiaCity_Gym/scripts.inc:243"
       ],
       "conditional": false
     },
@@ -4437,7 +4771,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Fuchsia Forest",
       "map": "FuchsiaForest",
       "names": [
@@ -4491,7 +4825,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_BUG_CATCHER",
+      "class": "CLASS_HIKER",
       "area": "Mt. Moon",
       "map": "MtMoon_1F",
       "names": [
@@ -4504,7 +4838,7 @@
         "TRAINER_BUG_CATCHER_ROBBY"
       ],
       "encoded_classes": [
-        "TRAINER_CLASS_BUG_CATCHER"
+        "TRAINER_CLASS_HIKER"
       ],
       "roots": [
         "MtMoon_1F_EventScript_Robby"
@@ -4545,7 +4879,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_BUG_CATCHER",
+      "class": "CLASS_RUIN_MANIAC",
       "area": "Mt. Moon",
       "map": "MtMoon_1F",
       "names": [
@@ -4558,7 +4892,7 @@
         "TRAINER_BUG_CATCHER_KENT"
       ],
       "encoded_classes": [
-        "TRAINER_CLASS_BUG_CATCHER"
+        "TRAINER_CLASS_RUIN_MANIAC"
       ],
       "roots": [
         "MtMoon_1F_EventScript_Kent"
@@ -4722,7 +5056,7 @@
         "coord_events (8,8)"
       ],
       "sources": [
-        "data/maps/PokemonLeague_BrunosRoom/scripts.inc:55"
+        "data/maps/PokemonLeague_BrunosRoom/scripts.inc:57"
       ],
       "conditional": true
     },
@@ -4762,7 +5096,7 @@
         "coord_events (8,8)"
       ],
       "sources": [
-        "data/maps/PokemonLeague_BrunosRoom/scripts.inc:55"
+        "data/maps/PokemonLeague_BrunosRoom/scripts.inc:57"
       ],
       "conditional": true
     },
@@ -4907,7 +5241,7 @@
         "object 2 (15,23)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6453"
+        "data/scripts/trainers.inc:6452"
       ],
       "conditional": false
     },
@@ -4934,7 +5268,7 @@
         "object 3 (32,20)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6465"
+        "data/scripts/trainers.inc:6464"
       ],
       "conditional": false
     },
@@ -4988,7 +5322,7 @@
         "object 2 (12,26)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6477"
+        "data/scripts/trainers.inc:6476"
       ],
       "conditional": false
     },
@@ -5015,7 +5349,7 @@
         "object 3 (29,12)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6489"
+        "data/scripts/trainers.inc:6488"
       ],
       "conditional": false
     },
@@ -5096,7 +5430,7 @@
         "object 3 (30,14)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6501"
+        "data/scripts/trainers.inc:6500"
       ],
       "conditional": false
     },
@@ -5123,7 +5457,7 @@
         "object 4 (13,7)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6513"
+        "data/scripts/trainers.inc:6512"
       ],
       "conditional": false
     },
@@ -5190,7 +5524,7 @@
         "object 2 (20,25)"
       ],
       "sources": [
-        "data/maps/PokemonMansion_B1F/scripts.inc:104"
+        "data/maps/PokemonMansion_B1F/scripts.inc:111"
       ],
       "conditional": false
     },
@@ -5217,7 +5551,7 @@
         "object 3 (34,13)"
       ],
       "sources": [
-        "data/maps/PokemonMansion_B1F/scripts.inc:116"
+        "data/maps/PokemonMansion_B1F/scripts.inc:123"
       ],
       "conditional": false
     },
@@ -5244,7 +5578,7 @@
         "object 4 (11,28)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6525"
+        "data/scripts/trainers.inc:6524"
       ],
       "conditional": false
     },
@@ -5271,7 +5605,7 @@
         "object 5 (28,11)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6537"
+        "data/scripts/trainers.inc:6536"
       ],
       "conditional": false
     },
@@ -5386,7 +5720,7 @@
         "object 1 (13,10)"
       ],
       "sources": [
-        "data/maps/PokemonTower_3F/scripts.inc:191"
+        "data/maps/PokemonTower_3F/scripts.inc:194"
       ],
       "conditional": false
     },
@@ -5413,7 +5747,7 @@
         "object 2 (18,6)"
       ],
       "sources": [
-        "data/maps/PokemonTower_3F/scripts.inc:215"
+        "data/maps/PokemonTower_3F/scripts.inc:218"
       ],
       "conditional": false
     },
@@ -5440,7 +5774,7 @@
         "object 3 (9,6)"
       ],
       "sources": [
-        "data/maps/PokemonTower_3F/scripts.inc:203"
+        "data/maps/PokemonTower_3F/scripts.inc:206"
       ],
       "conditional": false
     },
@@ -5506,7 +5840,7 @@
         "object 7 (13,9)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6369"
+        "data/scripts/trainers.inc:6368"
       ],
       "conditional": false
     },
@@ -5533,7 +5867,7 @@
         "object 8 (25,24)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6387"
+        "data/scripts/trainers.inc:6386"
       ],
       "conditional": false
     },
@@ -5560,7 +5894,7 @@
         "object 9 (35,38)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6405"
+        "data/scripts/trainers.inc:6404"
       ],
       "conditional": false
     },
@@ -5587,7 +5921,7 @@
         "object 10 (18,18)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6417"
+        "data/scripts/trainers.inc:6416"
       ],
       "conditional": false
     },
@@ -5614,7 +5948,7 @@
         "object 11 (38,16)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6429"
+        "data/scripts/trainers.inc:6428"
       ],
       "conditional": false
     },
@@ -5641,7 +5975,7 @@
         "object 12 (44,30)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6441"
+        "data/scripts/trainers.inc:6440"
       ],
       "conditional": false
     },
@@ -5668,7 +6002,7 @@
         "object 13 (32,27)"
       ],
       "sources": [
-        "data/maps/PowerPlant/scripts.inc:81"
+        "data/maps/PowerPlant/scripts.inc:86"
       ],
       "conditional": false
     },
@@ -5695,7 +6029,7 @@
         "object 14 (14,18)"
       ],
       "sources": [
-        "data/maps/PowerPlant/scripts.inc:110"
+        "data/maps/PowerPlant/scripts.inc:115"
       ],
       "conditional": false
     },
@@ -5719,10 +6053,10 @@
         "PowerPlant_EventScript_ElectricianWade"
       ],
       "origins": [
-        "object 15 (33,31)"
+        "object 15 (32,32)"
       ],
       "sources": [
-        "data/maps/PowerPlant/scripts.inc:131"
+        "data/maps/PowerPlant/scripts.inc:136"
       ],
       "conditional": false
     },
@@ -6765,7 +7099,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 11",
       "map": "Route11",
       "names": [
@@ -9315,11 +9649,11 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_M",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 2",
       "map": "Route2",
       "names": [
-        "MILO"
+        "MILA"
       ],
       "trainer_ids": [
         362
@@ -9798,8 +10132,8 @@
         "object 19 (38,12)"
       ],
       "sources": [
-        "data/maps/Route20/scripts.inc:105",
-        "data/maps/Route20/scripts.inc:93"
+        "data/maps/Route20/scripts.inc:67",
+        "data/maps/Route20/scripts.inc:79"
       ],
       "conditional": false
     },
@@ -10701,7 +11035,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 25",
       "map": "Route25",
       "names": [
@@ -10728,7 +11062,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 25",
       "map": "Route25",
       "names": [
@@ -11106,7 +11440,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 25",
       "map": "Route25",
       "names": [
@@ -11187,7 +11521,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_CHANNELER",
+      "class": "CLASS_SCOUT_F",
       "area": "Route 3",
       "map": "Route3",
       "names": [
@@ -11200,7 +11534,7 @@
         "TRAINER_LASS_ROBIN"
       ],
       "encoded_classes": [
-        "TRAINER_CLASS_CHANNELER"
+        "TRAINER_CLASS_SCOUT"
       ],
       "roots": [
         "EventScript_RouteTrainer_LASS_ROBIN"
@@ -11268,7 +11602,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_CHANNELER",
+      "class": "CLASS_AROMA_LADY",
       "area": "Route 4",
       "map": "Route4",
       "names": [
@@ -11281,7 +11615,7 @@
         "TRAINER_LASS_CRISSY"
       ],
       "encoded_classes": [
-        "TRAINER_CLASS_CHANNELER"
+        "TRAINER_CLASS_AROMA_LADY"
       ],
       "roots": [
         "EventScript_RouteTrainer_LASS_CRISSY"
@@ -11371,7 +11705,7 @@
         "object 10 (19,10)"
       ],
       "sources": [
-        "data/maps/Route4/scripts.inc:59"
+        "data/maps/Route4/scripts.inc:72"
       ],
       "conditional": false
     },
@@ -11565,7 +11899,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 5",
       "map": "Route5",
       "names": [
@@ -11668,7 +12002,7 @@
         "object 12 (27,28)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6663"
+        "data/scripts/trainers.inc:6662"
       ],
       "conditional": false
     },
@@ -11776,7 +12110,7 @@
         "object 4 (2,21)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6639"
+        "data/scripts/trainers.inc:6638"
       ],
       "conditional": false
     },
@@ -11803,7 +12137,7 @@
         "object 5 (6,6)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6675"
+        "data/scripts/trainers.inc:6674"
       ],
       "conditional": false
     },
@@ -11835,60 +12169,6 @@
       "conditional": false
     },
     {
-      "class": "CLASS_CHANNELER",
-      "area": "Route 7",
-      "map": "Route7",
-      "names": [
-        "JENNIFER"
-      ],
-      "trainer_ids": [
-        122
-      ],
-      "variants": [
-        "TRAINER_LASS_RELI"
-      ],
-      "encoded_classes": [
-        "TRAINER_CLASS_CHANNELER"
-      ],
-      "roots": [
-        "EventScript_RouteTrainer_LASS_RELI"
-      ],
-      "origins": [
-        "object 2 (18,59)"
-      ],
-      "sources": [
-        "data/scripts/trainers.inc:2738"
-      ],
-      "conditional": false
-    },
-    {
-      "class": "CLASS_SCOUT_F",
-      "area": "Route 7",
-      "map": "Route7",
-      "names": [
-        "SOFIA"
-      ],
-      "trainer_ids": [
-        158
-      ],
-      "variants": [
-        "TRAINER_PICNICKER_SOFIA"
-      ],
-      "encoded_classes": [
-        "TRAINER_CLASS_SCOUT"
-      ],
-      "roots": [
-        "EventScript_RouteTrainer_PICNICKER_SOFIA"
-      ],
-      "origins": [
-        "object 3 (16,73)"
-      ],
-      "sources": [
-        "data/scripts/trainers.inc:2762"
-      ],
-      "conditional": false
-    },
-    {
       "class": "CLASS_PSYCHIC_M",
       "area": "Route 7",
       "map": "Route7",
@@ -11908,10 +12188,10 @@
         "EventScript_GymAdjacent_PSYCHIC_CAMERON"
       ],
       "origins": [
-        "object 4 (6,75)"
+        "object 2 (6,75)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6651"
+        "data/scripts/trainers.inc:6650"
       ],
       "conditional": false
     },
@@ -11935,10 +12215,10 @@
         "Route7_EventScript_TrendsetterClaire"
       ],
       "origins": [
-        "object 14 (16,60)"
+        "object 12 (16,60)"
       ],
       "sources": [
-        "data/maps/Route7/scripts.inc:695"
+        "data/maps/Route7/scripts.inc:697"
       ],
       "conditional": false
     },
@@ -11962,10 +12242,10 @@
         "Route7_EventScript_TrendsetterElio"
       ],
       "origins": [
-        "object 15 (11,66)"
+        "object 13 (11,66)"
       ],
       "sources": [
-        "data/maps/Route7/scripts.inc:709"
+        "data/maps/Route7/scripts.inc:711"
       ],
       "conditional": false
     },
@@ -11989,10 +12269,10 @@
         "Route7_EventScript_YoungsterRuby"
       ],
       "origins": [
-        "object 16 (9,60)"
+        "object 14 (9,60)"
       ],
       "sources": [
-        "data/maps/Route7/scripts.inc:723"
+        "data/maps/Route7/scripts.inc:725"
       ],
       "conditional": false
     },
@@ -12024,7 +12304,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_F",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Route 8",
       "map": "Route8",
       "names": [
@@ -12208,7 +12488,7 @@
         "object 8 (10,11)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6627"
+        "data/scripts/trainers.inc:6626"
       ],
       "conditional": false
     },
@@ -13112,9 +13392,171 @@
         "object 1 (14,11)"
       ],
       "sources": [
-        "data/maps/SaffronCity_Gym/scripts.inc:52"
+        "data/maps/SaffronCity_Gym/scripts.inc:54"
       ],
       "conditional": true
+    },
+    {
+      "class": "CLASS_PSYCHIC_M",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "ORIN"
+      ],
+      "trainer_ids": [
+        46
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_ORIN"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Orin"
+      ],
+      "origins": [
+        "object 3 (4,5)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:259"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_PSYCHIC_M",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "ALDEN"
+      ],
+      "trainer_ids": [
+        47
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_ALDEN"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Alden"
+      ],
+      "origins": [
+        "object 4 (14,5)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:271"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_PSYCHIC_M",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "SILAS"
+      ],
+      "trainer_ids": [
+        48
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_SILAS"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Silas"
+      ],
+      "origins": [
+        "object 5 (24,5)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:283"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_PSYCHIC_F",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "MIRA"
+      ],
+      "trainer_ids": [
+        49
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_MIRA"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Mira"
+      ],
+      "origins": [
+        "object 6 (4,13)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:295"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_PSYCHIC_F",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "SELENE"
+      ],
+      "trainer_ids": [
+        50
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_SELENE"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Selene"
+      ],
+      "origins": [
+        "object 7 (24,13)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:307"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_PSYCHIC_F",
+      "area": "Saffron City",
+      "map": "SaffronCity_Gym",
+      "names": [
+        "LYRA"
+      ],
+      "trainer_ids": [
+        51
+      ],
+      "variants": [
+        "TRAINER_PSYCHIC_LYRA"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_PSYCHIC"
+      ],
+      "roots": [
+        "SaffronCity_Gym_EventScript_Lyra"
+      ],
+      "origins": [
+        "object 8 (24,21)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Gym/scripts.inc:319"
+      ],
+      "conditional": false
     },
     {
       "class": "CLASS_TEAM_ROCKET_M",
@@ -14457,7 +14899,7 @@
         "VictoryRoad_1F_EventScript_ExpertIvo"
       ],
       "origins": [
-        "object 8 (18,18)"
+        "object 8 (15,18)"
       ],
       "sources": [
         "data/maps/VictoryRoad_1F/scripts.inc:60"
@@ -14898,7 +15340,7 @@
         "object 1 (2,2)"
       ],
       "sources": [
-        "data/maps/ViridianCity_Gym/scripts.inc:4"
+        "data/maps/ViridianCity_Gym/scripts.inc:5"
       ],
       "conditional": false
     },
@@ -14925,7 +15367,7 @@
         "object 3 (60,45)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:265"
+        "data/maps/ViridianForest/scripts.inc:278"
       ],
       "conditional": false
     },
@@ -14952,7 +15394,7 @@
         "object 4 (60,28)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:277"
+        "data/maps/ViridianForest/scripts.inc:290"
       ],
       "conditional": false
     },
@@ -14979,7 +15421,7 @@
         "object 5 (7,22)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:289"
+        "data/maps/ViridianForest/scripts.inc:302"
       ],
       "conditional": false
     },
@@ -15006,7 +15448,7 @@
         "object 9 (43,6)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:301"
+        "data/maps/ViridianForest/scripts.inc:314"
       ],
       "conditional": false
     },
@@ -15033,7 +15475,7 @@
         "object 10 (16,5)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:313"
+        "data/maps/ViridianForest/scripts.inc:326"
       ],
       "conditional": false
     },
@@ -15072,7 +15514,7 @@
         "object 13 (5,47)"
       ],
       "sources": [
-        "data/maps/ViridianForest/scripts.inc:53"
+        "data/maps/ViridianForest/scripts.inc:60"
       ],
       "conditional": true
     },
@@ -15099,7 +15541,7 @@
         "object 15 (20,44)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6585"
+        "data/scripts/trainers.inc:6584"
       ],
       "conditional": false
     },
@@ -15126,7 +15568,7 @@
         "object 16 (54,31)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6603"
+        "data/scripts/trainers.inc:6602"
       ],
       "conditional": false
     },
@@ -15153,7 +15595,7 @@
         "object 17 (35,45)"
       ],
       "sources": [
-        "data/scripts/trainers.inc:6615"
+        "data/scripts/trainers.inc:6614"
       ],
       "conditional": false
     },
@@ -15239,11 +15681,11 @@
       "conditional": false
     },
     {
-      "class": "CLASS_POK\u00c9MON_BREEDER_M",
+      "class": "CLASS_POK\u00c9MON_BREEDER",
       "area": "Viridian Forest",
       "map": "ViridianForest",
       "names": [
-        "ELI"
+        "ELIN"
       ],
       "trainer_ids": [
         509
@@ -15299,7 +15741,6 @@
   "areas_without_battles": [
     "Celadon Cave",
     "Digletts Cave",
-    "Fuchsia City",
     "Indigo Plateau",
     "Kanto Safari Zone",
     "Lavender Town",
@@ -15480,10 +15921,10 @@
   ],
   "summary": {
     "maps": 253,
-    "classes": 65,
-    "areas": 49,
-    "encounter_sites": 422,
-    "unplaced_classes": 7,
+    "classes": 64,
+    "areas": 50,
+    "encounter_sites": 438,
+    "unplaced_classes": 5,
     "conditional_sites": 19
   }
 }
