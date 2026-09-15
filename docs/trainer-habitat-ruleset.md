@@ -35,6 +35,7 @@ This is the working ruleset for placing trainers, choosing their teams, and deci
 - Bug Catcher -> Bug Maniac
 - Biker -> Roughneck
 - Aroma Lady -> Pokemon Breeder
+- Pokémon Breeder is currently female-only; use one unsuffixed class name and the female portrait, overworld and trainer flag.
 - Scout is the field beginner role, with male and female battle/overworld presentation.
 - Black Belt is the main fighting trainer role, with male and female battle/overworld presentation.
 - Expert M / Expert F are martial arts experts above Black Belts, with stronger fighting-type teams.

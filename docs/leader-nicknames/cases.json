@@ -1,0 +1,826 @@
+[
+  {
+    "trainer": "TRAINER_LEADER_GIOVANNI",
+    "id": 350,
+    "species": [
+      "SPECIES_SANDSLASH",
+      "SPECIES_DUGTRIO",
+      "SPECIES_MAROWAK",
+      "SPECIES_NIDOQUEEN",
+      "SPECIES_NIDOKING",
+      "SPECIES_RHYDON"
+    ],
+    "names": [
+      "SPADE",
+      "TRIO",
+      "KEEPSAKE",
+      "REGINA",
+      "REX",
+      "BASTION"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_1",
+    "id": 414,
+    "species": [
+      "SPECIES_GEODUDE",
+      "SPECIES_LARVITAR"
+    ],
+    "names": [
+      "PEBBLE",
+      "CHIP"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_2",
+    "id": 415,
+    "species": [
+      "SPECIES_LARVITAR",
+      "SPECIES_GEODUDE",
+      "SPECIES_SHUCKLE"
+    ],
+    "names": [
+      "CHIP",
+      "PEBBLE",
+      "PICKLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_3",
+    "id": 416,
+    "species": [
+      "SPECIES_SHUCKLE",
+      "SPECIES_GRAVELER",
+      "SPECIES_LARVITAR"
+    ],
+    "names": [
+      "PICKLE",
+      "PEBBLE",
+      "CHIP"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_4",
+    "id": 417,
+    "species": [
+      "SPECIES_LARVITAR",
+      "SPECIES_GRAVELER",
+      "SPECIES_SHUCKLE",
+      "SPECIES_KABUTO"
+    ],
+    "names": [
+      "CHIP",
+      "PEBBLE",
+      "PICKLE",
+      "CHISEL"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_5",
+    "id": 418,
+    "species": [
+      "SPECIES_KABUTO",
+      "SPECIES_OMANYTE",
+      "SPECIES_SHUCKLE",
+      "SPECIES_GRAVELER",
+      "SPECIES_LARVITAR"
+    ],
+    "names": [
+      "CHISEL",
+      "SPIRAL",
+      "PICKLE",
+      "PEBBLE",
+      "CHIP"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_6",
+    "id": 419,
+    "species": [
+      "SPECIES_GRAVELER",
+      "SPECIES_LARVITAR",
+      "SPECIES_OMASTAR",
+      "SPECIES_KABUTOPS",
+      "SPECIES_SHUCKLE"
+    ],
+    "names": [
+      "PEBBLE",
+      "CHIP",
+      "SPIRAL",
+      "CHISEL",
+      "PICKLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BROCK_7",
+    "id": 420,
+    "species": [
+      "SPECIES_SHUCKLE",
+      "SPECIES_AERODACTYL",
+      "SPECIES_OMASTAR",
+      "SPECIES_KABUTOPS",
+      "SPECIES_PUPITAR",
+      "SPECIES_GOLEM"
+    ],
+    "names": [
+      "PICKLE",
+      "FLINT",
+      "SPIRAL",
+      "CHISEL",
+      "CHIP",
+      "PEBBLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_1",
+    "id": 421,
+    "species": [
+      "SPECIES_STARYU",
+      "SPECIES_CHINCHOU"
+    ],
+    "names": [
+      "TWINKLE",
+      "BEACON"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_2",
+    "id": 749,
+    "species": [
+      "SPECIES_CHINCHOU",
+      "SPECIES_POLIWHIRL",
+      "SPECIES_STARYU"
+    ],
+    "names": [
+      "BEACON",
+      "PUDDLES",
+      "TWINKLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_3",
+    "id": 750,
+    "species": [
+      "SPECIES_STARYU",
+      "SPECIES_POLIWHIRL",
+      "SPECIES_LANTURN"
+    ],
+    "names": [
+      "TWINKLE",
+      "PUDDLES",
+      "BEACON"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_4",
+    "id": 751,
+    "species": [
+      "SPECIES_STARYU",
+      "SPECIES_LANTURN",
+      "SPECIES_POLIWHIRL",
+      "SPECIES_HORSEA"
+    ],
+    "names": [
+      "TWINKLE",
+      "BEACON",
+      "PUDDLES",
+      "SKIPPER"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_5",
+    "id": 752,
+    "species": [
+      "SPECIES_HORSEA",
+      "SPECIES_PSYDUCK",
+      "SPECIES_POLIWHIRL",
+      "SPECIES_LANTURN",
+      "SPECIES_STARYU"
+    ],
+    "names": [
+      "SKIPPER",
+      "DUCKY",
+      "PUDDLES",
+      "BEACON",
+      "TWINKLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_6",
+    "id": 753,
+    "species": [
+      "SPECIES_STARYU",
+      "SPECIES_GOLDUCK",
+      "SPECIES_POLIWHIRL",
+      "SPECIES_TENTACRUEL",
+      "SPECIES_LANTURN"
+    ],
+    "names": [
+      "TWINKLE",
+      "DUCKY",
+      "PUDDLES",
+      "RIBBONS",
+      "BEACON"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_MISTY_7",
+    "id": 754,
+    "species": [
+      "SPECIES_TENTACRUEL",
+      "SPECIES_LANTURN",
+      "SPECIES_GOLDUCK",
+      "SPECIES_POLITOED",
+      "SPECIES_STARMIE",
+      "SPECIES_KINGDRA"
+    ],
+    "names": [
+      "RIBBONS",
+      "BEACON",
+      "DUCKY",
+      "PUDDLES",
+      "TWINKLE",
+      "SKIPPER"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_LT_SURGE_1",
+    "id": 422,
+    "species": [
+      "SPECIES_PICHU",
+      "SPECIES_VOLTORB"
+    ],
+    "names": [
+      "SPARKY",
+      "FUSE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_1",
+    "id": 423,
+    "species": [
+      "SPECIES_BELLSPROUT",
+      "SPECIES_ODDISH"
+    ],
+    "names": [
+      "HONEY",
+      "DAHLIA"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_2",
+    "id": 759,
+    "species": [
+      "SPECIES_ODDISH",
+      "SPECIES_WEEPINBELL",
+      "SPECIES_TANGELA"
+    ],
+    "names": [
+      "DAHLIA",
+      "HONEY",
+      "TANGLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_3",
+    "id": 760,
+    "species": [
+      "SPECIES_WEEPINBELL",
+      "SPECIES_GLOOM",
+      "SPECIES_TANGELA"
+    ],
+    "names": [
+      "HONEY",
+      "DAHLIA",
+      "TANGLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_4",
+    "id": 761,
+    "species": [
+      "SPECIES_VICTREEBEL",
+      "SPECIES_TANGELA",
+      "SPECIES_VILEPLUME",
+      "SPECIES_EXEGGCUTE"
+    ],
+    "names": [
+      "HONEY",
+      "TANGLE",
+      "DAHLIA",
+      "BONSAI"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_5",
+    "id": 762,
+    "species": [
+      "SPECIES_BELLOSSOM",
+      "SPECIES_EXEGGCUTE",
+      "SPECIES_SEEDOT",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_TANGELA"
+    ],
+    "names": [
+      "MARIGOLD",
+      "BONSAI",
+      "MAPLE",
+      "HONEY",
+      "TANGLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_6",
+    "id": 763,
+    "species": [
+      "SPECIES_EXEGGUTOR",
+      "SPECIES_SHIFTRY",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_VILEPLUME",
+      "SPECIES_TANGELA"
+    ],
+    "names": [
+      "BONSAI",
+      "MAPLE",
+      "HONEY",
+      "DAHLIA",
+      "TANGLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_ERIKA_7",
+    "id": 764,
+    "species": [
+      "SPECIES_SHIFTRY",
+      "SPECIES_EXEGGUTOR",
+      "SPECIES_BELLOSSOM",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_VILEPLUME",
+      "SPECIES_TANGELA"
+    ],
+    "names": [
+      "MAPLE",
+      "BONSAI",
+      "MARIGOLD",
+      "HONEY",
+      "DAHLIA",
+      "TANGLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_KOGA_1",
+    "id": 424,
+    "species": [
+      "SPECIES_KOFFING",
+      "SPECIES_GRIMER"
+    ],
+    "names": [
+      "HAZE",
+      "INK"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BLAINE_1",
+    "id": 425,
+    "species": [
+      "SPECIES_VULPIX",
+      "SPECIES_GROWLITHE"
+    ],
+    "names": [
+      "EMBER",
+      "BUNSEN"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_SABRINA_1",
+    "id": 426,
+    "species": [
+      "SPECIES_ABRA",
+      "SPECIES_DROWZEE"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_1",
+    "id": 460,
+    "species": [
+      "SPECIES_PICHU",
+      "SPECIES_PIKACHU",
+      "SPECIES_VOLTORB"
+    ],
+    "names": [
+      "CADET",
+      "SPARKY",
+      "FUSE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_2",
+    "id": 461,
+    "species": [
+      "SPECIES_PIKACHU",
+      "SPECIES_PLUSLE",
+      "SPECIES_MAGNEMITE"
+    ],
+    "names": [
+      "SPARKY",
+      "BOOST",
+      "RIVET"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_3",
+    "id": 462,
+    "species": [
+      "SPECIES_PIKACHU",
+      "SPECIES_ELECTABUZZ",
+      "SPECIES_ELECTRODE",
+      "SPECIES_MAGNETON"
+    ],
+    "names": [
+      "SPARKY",
+      "SARGE",
+      "FUSE",
+      "RIVET"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_4",
+    "id": 463,
+    "species": [
+      "SPECIES_PIKACHU",
+      "SPECIES_ELECTABUZZ",
+      "SPECIES_PLUSLE",
+      "SPECIES_MINUN",
+      "SPECIES_ELECTRODE"
+    ],
+    "names": [
+      "SPARKY",
+      "SARGE",
+      "BOOST",
+      "BUDDY",
+      "FUSE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_5",
+    "id": 464,
+    "species": [
+      "SPECIES_RAICHU",
+      "SPECIES_ELECTRODE",
+      "SPECIES_MAGNETON",
+      "SPECIES_ELECTABUZZ",
+      "SPECIES_ELECTABUZZ"
+    ],
+    "names": [
+      "SPARKY",
+      "FUSE",
+      "RIVET",
+      "SARGE",
+      "MAJOR"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_6",
+    "id": 465,
+    "species": [
+      "SPECIES_RAICHU",
+      "SPECIES_ELECTRODE",
+      "SPECIES_MAGNETON",
+      "SPECIES_MAGNEZONE",
+      "SPECIES_ELECTABUZZ",
+      "SPECIES_ELECTIVIRE"
+    ],
+    "names": [
+      "SPARKY",
+      "FUSE",
+      "RIVET",
+      "RADAR",
+      "SARGE",
+      "MAJOR"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_7",
+    "id": 466,
+    "species": [
+      "SPECIES_KOFFING",
+      "SPECIES_GOLBAT",
+      "SPECIES_GRIMER"
+    ],
+    "names": [
+      "HAZE",
+      "WHISPER",
+      "INK"
+    ]
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_8",
+    "id": 467,
+    "species": [
+      "SPECIES_GOLBAT",
+      "SPECIES_ARBOK",
+      "SPECIES_KOFFING"
+    ],
+    "names": [
+      "WHISPER",
+      "SILK",
+      "HAZE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_3",
+    "id": 498,
+    "species": [
+      "SPECIES_GOLBAT",
+      "SPECIES_ARBOK",
+      "SPECIES_KOFFING",
+      "SPECIES_GRIMER"
+    ],
+    "names": [
+      "WHISPER",
+      "SILK",
+      "HAZE",
+      "INK"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_4",
+    "id": 499,
+    "species": [
+      "SPECIES_GOLBAT",
+      "SPECIES_ARBOK",
+      "SPECIES_KOFFING",
+      "SPECIES_GRIMER",
+      "SPECIES_GULPIN"
+    ],
+    "names": [
+      "WHISPER",
+      "SILK",
+      "HAZE",
+      "INK",
+      "DUMPLING"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_5",
+    "id": 500,
+    "species": [
+      "SPECIES_CROBAT",
+      "SPECIES_ARBOK",
+      "SPECIES_MUK",
+      "SPECIES_WEEZING",
+      "SPECIES_KOFFING"
+    ],
+    "names": [
+      "WHISPER",
+      "SILK",
+      "INK",
+      "HAZE",
+      "PUFF"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_6",
+    "id": 501,
+    "species": [
+      "SPECIES_CROBAT",
+      "SPECIES_ARBOK",
+      "SPECIES_MUK",
+      "SPECIES_WEEZING",
+      "SPECIES_SWALOT",
+      "SPECIES_GENGAR"
+    ],
+    "names": [
+      "WHISPER",
+      "SILK",
+      "INK",
+      "HAZE",
+      "DUMPLING",
+      "SHADE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_7",
+    "id": 502,
+    "species": [
+      "SPECIES_VULPIX",
+      "SPECIES_MAGMAR",
+      "SPECIES_GROWLITHE"
+    ],
+    "names": [
+      "EMBER",
+      "FAHRENHEIT",
+      "BUNSEN"
+    ]
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_8",
+    "id": 503,
+    "species": [
+      "SPECIES_MAGMAR",
+      "SPECIES_RAPIDASH",
+      "SPECIES_VULPIX"
+    ],
+    "names": [
+      "FAHRENHEIT",
+      "COMET",
+      "EMBER"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BLAINE_4",
+    "id": 522,
+    "species": [
+      "SPECIES_MAGMAR",
+      "SPECIES_RAPIDASH",
+      "SPECIES_VULPIX",
+      "SPECIES_GROWLITHE"
+    ],
+    "names": [
+      "FAHRENHEIT",
+      "COMET",
+      "EMBER",
+      "BUNSEN"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BLAINE_5",
+    "id": 547,
+    "species": [
+      "SPECIES_MAGMAR",
+      "SPECIES_RAPIDASH",
+      "SPECIES_VULPIX",
+      "SPECIES_GROWLITHE",
+      "SPECIES_SLUGMA"
+    ],
+    "names": [
+      "FAHRENHEIT",
+      "COMET",
+      "EMBER",
+      "BUNSEN",
+      "SIMMER"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BLAINE_6",
+    "id": 548,
+    "species": [
+      "SPECIES_ARCANINE",
+      "SPECIES_RAPIDASH",
+      "SPECIES_MAGMAR",
+      "SPECIES_MAGCARGO",
+      "SPECIES_VULPIX"
+    ],
+    "names": [
+      "BUNSEN",
+      "COMET",
+      "FAHRENHEIT",
+      "SIMMER",
+      "EMBER"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_BLAINE_7",
+    "id": 549,
+    "species": [
+      "SPECIES_ARCANINE",
+      "SPECIES_NINETALES",
+      "SPECIES_RAPIDASH",
+      "SPECIES_MAGCARGO",
+      "SPECIES_CAMERUPT",
+      "SPECIES_MAGMORTAR"
+    ],
+    "names": [
+      "BUNSEN",
+      "EMBER",
+      "COMET",
+      "SIMMER",
+      "KETTLE",
+      "FAHRENHEIT"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_SABRINA_2",
+    "id": 550,
+    "species": [
+      "SPECIES_ABRA",
+      "SPECIES_KADABRA",
+      "SPECIES_DROWZEE"
+    ],
+    "names": [
+      "WISP",
+      "SAGE",
+      "REVERIE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_LEADER_SABRINA_3",
+    "id": 551,
+    "species": [
+      "SPECIES_KADABRA",
+      "SPECIES_HYPNO",
+      "SPECIES_ABRA"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE",
+      "WISP"
+    ]
+  },
+  {
+    "trainer": "TRAINER_PSYCHIC_DARIO",
+    "id": 592,
+    "species": [
+      "SPECIES_KADABRA",
+      "SPECIES_HYPNO",
+      "SPECIES_ABRA",
+      "SPECIES_NATU"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE",
+      "WISP",
+      "ORACLE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_PSYCHIC_RODETTE",
+    "id": 593,
+    "species": [
+      "SPECIES_KADABRA",
+      "SPECIES_HYPNO",
+      "SPECIES_ABRA",
+      "SPECIES_NATU",
+      "SPECIES_CHINGLING"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE",
+      "WISP",
+      "ORACLE",
+      "ECHO"
+    ]
+  },
+  {
+    "trainer": "TRAINER_PSYCHIC_DARIO_2",
+    "id": 723,
+    "species": [
+      "SPECIES_ALAKAZAM",
+      "SPECIES_HYPNO",
+      "SPECIES_XATU",
+      "SPECIES_KADABRA",
+      "SPECIES_ABRA"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE",
+      "ORACLE",
+      "LUCID",
+      "WISP"
+    ]
+  },
+  {
+    "trainer": "TRAINER_PSYCHIC_RODETTE_2",
+    "id": 724,
+    "species": [
+      "SPECIES_ALAKAZAM",
+      "SPECIES_HYPNO",
+      "SPECIES_XATU",
+      "SPECIES_CHIMECHO",
+      "SPECIES_CLAYDOL",
+      "SPECIES_BRONZONG"
+    ],
+    "names": [
+      "SAGE",
+      "REVERIE",
+      "ORACLE",
+      "ECHO",
+      "ORBIT",
+      "SOLACE"
+    ]
+  },
+  {
+    "trainer": "TRAINER_ROCKET_LEAGUE_CHAMPION_GIOVANNI",
+    "id": 766,
+    "species": [
+      "SPECIES_PERSIAN",
+      "SPECIES_CROBAT",
+      "SPECIES_HONCHKROW",
+      "SPECIES_NIDOQUEEN",
+      "SPECIES_NIDOKING",
+      "SPECIES_RHYPERIOR"
+    ],
+    "names": [
+      "VELVET",
+      "VESPER",
+      "CAPO",
+      "REGINA",
+      "REX",
+      "BASTION"
+    ]
+  }
+]
