@@ -4990,21 +4990,20 @@ EventScript_RouteTrainer_FISHERMAN_FLINT_Text_PostBattle::
     .string "ROUTE 25 has more to teach\n"
     .string "than one battle can show.$"
 EventScript_RouteTrainer_LASS_ALI_Text_Intro::
-    .string "SAFFRON feels busy even from out\n"
-    .string "here.\p"
-    .string "I battle on ROUTE 8 so I can hear\n"
-    .string "myself think!$"
+    .string "I am returning to LAVENDER to\n"
+    .string "pray for departed POKéMON.\p"
+    .string "A quiet battle helps me prepare\n"
+    .string "my mind for the journey.$"
 EventScript_RouteTrainer_LASS_ALI_Text_RematchIntro::
-    .string "Back for another quiet moment\n"
-    .string "outside SAFFRON?\p"
-    .string "Let's fill it with a battle!$"
+    .string "The road to LAVENDER gives me\n"
+    .string "time to reflect.\p"
+    .string "Shall we share another battle?$"
 EventScript_RouteTrainer_LASS_ALI_Text_Defeat::
-    .string "That got loud fast!$"
+    .string "Your bond shines brightly.$"
 EventScript_RouteTrainer_LASS_ALI_Text_PostBattle::
-    .string "The farther east you go, the more\n"
-    .string "the road changes.\p"
-    .string "It feels like KANTO is holding\n"
-    .string "its breath.$"
+    .string "LAVENDER lies east of here.\p"
+    .string "We remember departed POKéMON\n"
+    .string "by caring for those beside us.$"
 EventScript_RouteTrainer_LASS_CRISSY_Text_Intro::
     .string "I came to MT. MOON looking for\n"
     .string "mushroom POKéMON.\p"
