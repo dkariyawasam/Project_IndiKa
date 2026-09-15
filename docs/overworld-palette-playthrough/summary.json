@@ -1,0 +1,18 @@
+{
+  "checkpoints": 46,
+  "maps": 20,
+  "object_observations": 241,
+  "distinct_graphics_ids": 54,
+  "results": {
+    "FIXED": 126,
+    "PASS": 107,
+    "FAIL": 8
+  },
+  "invalid_transition_captures": [
+    "28-volcano-kindlers-experts",
+    "33-volcano-recheck"
+  ],
+  "rom_sha256": "031aed301c3abd88d51f05b563b7127899ee3fe129a6871d2fd84960e7fe3429",
+  "battle_outcome": "1",
+  "protected_files_unchanged": true
+}

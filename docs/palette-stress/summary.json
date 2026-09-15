@@ -1,0 +1,17 @@
+{
+  "checkpoints": 130,
+  "maps": 8,
+  "object_observations": 470,
+  "results": {
+    "FIXED": 287,
+    "PASS": 183
+  },
+  "sampled_field_frames": 53250,
+  "offscreen_mismatch_bounds_samples": 10,
+  "offscreen_mismatch_bottom_range": [
+    -15,
+    -7
+  ],
+  "battle_wins": 2,
+  "rom_unchanged": true
+}

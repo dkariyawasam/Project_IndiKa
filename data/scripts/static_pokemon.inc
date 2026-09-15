@@ -1,3 +1,24 @@
+@ Called before creating an enemy, playing the encounter sequence, or recording interaction.
+EventScript_ConfirmApexEncounter::
+    buffernumberstring STR_VAR_1, VAR_0x8004
+    msgbox Text_ApexEncounterReadiness, MSGBOX_YESNO
+    closemessage
+    return
+
+EventScript_DeclineApexEncounter::
+    release
+    end
+
+Text_ApexEncounterReadiness::
+    .string "This APEX POKéMON is Lv. {STR_VAR_1}.\p"
+    .string "Once battle starts, you have\n"
+    .string "only one chance.\p"
+    .string "If you lose or flee, this\n"
+    .string "encounter will be gone.\p"
+    .string "You can prepare and return\n"
+    .string "before starting the battle.\p"
+    .string "Are you ready to challenge it?$"
+
 EventScript_ApexEncounterShake::
     waitse
     delay 20

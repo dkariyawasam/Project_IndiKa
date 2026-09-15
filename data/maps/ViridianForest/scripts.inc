@@ -191,6 +191,9 @@ ViridianForest_EventScript_ExitSign::
 ViridianForest_EventScript_Tangrowth::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 50
+	call EventScript_ConfirmApexEncounter
+	goto_if_eq VAR_RESULT, NO, EventScript_DeclineApexEncounter
 	seteventmon SPECIES_TANGROWTH, 50
 	call EventScript_ApexEncounterShake
 	playmoncry SPECIES_TANGROWTH, CRY_MODE_ENCOUNTER

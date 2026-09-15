@@ -1,0 +1,6 @@
+dofile('/tmp/palette-recovery/harness.lua')
+dofile('/tmp/palette-recovery/helpers.lua')
+dofile('/tmp/palette-recovery/common.lua')
+dofile('/tmp/palette-recovery/symbols.lua')
+dofile('/tmp/palette-recovery/monitor.lua')
+qa.run({{kind='press',key=8,frames=60},{kind='text',frames=1800}})

@@ -1,0 +1,2851 @@
+[
+  {
+    "name": "brock-11",
+    "leader": "brock",
+    "badges": 0,
+    "trainer": 414,
+    "seed": 11,
+    "team": [
+      {
+        "species": "BULBASAUR",
+        "id": 1,
+        "level": 14
+      },
+      {
+        "species": "BELLSPROUT",
+        "id": 69,
+        "level": 13
+      },
+      {
+        "species": "PIDGEY",
+        "id": 16,
+        "level": 13
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 13
+      }
+    ]
+  },
+  {
+    "name": "brock-37",
+    "leader": "brock",
+    "badges": 0,
+    "trainer": 414,
+    "seed": 37,
+    "team": [
+      {
+        "species": "BULBASAUR",
+        "id": 1,
+        "level": 14
+      },
+      {
+        "species": "BELLSPROUT",
+        "id": 69,
+        "level": 13
+      },
+      {
+        "species": "PIDGEY",
+        "id": 16,
+        "level": 13
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 13
+      }
+    ]
+  },
+  {
+    "name": "brock-83",
+    "leader": "brock",
+    "badges": 0,
+    "trainer": 414,
+    "seed": 83,
+    "team": [
+      {
+        "species": "BULBASAUR",
+        "id": 1,
+        "level": 14
+      },
+      {
+        "species": "BELLSPROUT",
+        "id": 69,
+        "level": 13
+      },
+      {
+        "species": "PIDGEY",
+        "id": 16,
+        "level": 13
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 13
+      }
+    ]
+  },
+  {
+    "name": "misty-11",
+    "leader": "misty",
+    "badges": 1,
+    "trainer": 749,
+    "seed": 11,
+    "team": [
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 22
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 21
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 21
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 21
+      },
+      {
+        "species": "GEODUDE",
+        "id": 74,
+        "level": 21
+      }
+    ]
+  },
+  {
+    "name": "misty-37",
+    "leader": "misty",
+    "badges": 1,
+    "trainer": 749,
+    "seed": 37,
+    "team": [
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 22
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 21
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 21
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 21
+      },
+      {
+        "species": "GEODUDE",
+        "id": 74,
+        "level": 21
+      }
+    ]
+  },
+  {
+    "name": "misty-83",
+    "leader": "misty",
+    "badges": 1,
+    "trainer": 749,
+    "seed": 83,
+    "team": [
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 22
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 21
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 21
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 21
+      },
+      {
+        "species": "GEODUDE",
+        "id": 74,
+        "level": 21
+      }
+    ]
+  },
+  {
+    "name": "surge-11",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "surge-37",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "surge-83",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "erika-11",
+    "leader": "erika",
+    "badges": 3,
+    "trainer": 761,
+    "seed": 11,
+    "team": [
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 31
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 31
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 31
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 30
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 30
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 30
+      }
+    ]
+  },
+  {
+    "name": "erika-37",
+    "leader": "erika",
+    "badges": 3,
+    "trainer": 761,
+    "seed": 37,
+    "team": [
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 31
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 31
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 31
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 30
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 30
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 30
+      }
+    ]
+  },
+  {
+    "name": "erika-83",
+    "leader": "erika",
+    "badges": 3,
+    "trainer": 761,
+    "seed": 83,
+    "team": [
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 31
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 31
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 31
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 30
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 30
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 30
+      }
+    ]
+  },
+  {
+    "name": "koga-11",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "koga-37",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "koga-83",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "sabrina-11",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "sabrina-37",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "sabrina-83",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "blaine-11",
+    "leader": "blaine",
+    "badges": 6,
+    "trainer": 549,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 46
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 46
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 45
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 45
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 45
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "blaine-37",
+    "leader": "blaine",
+    "badges": 6,
+    "trainer": 549,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 46
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 46
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 45
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 45
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 45
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "blaine-83",
+    "leader": "blaine",
+    "badges": 6,
+    "trainer": 549,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 46
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 46
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 45
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 45
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 45
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "giovanni-11",
+    "leader": "giovanni",
+    "badges": 7,
+    "trainer": 350,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 49
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 49
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 48
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 48
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 48
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "giovanni-37",
+    "leader": "giovanni",
+    "badges": 7,
+    "trainer": 350,
+    "seed": 37,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 49
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 49
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 48
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 48
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 48
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "giovanni-83",
+    "leader": "giovanni",
+    "badges": 7,
+    "trainer": 350,
+    "seed": 83,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 49
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 49
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 48
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 48
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 48
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "apex-tangrowth",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 421,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-annihilape",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 429,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-mime_sr",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 435,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-osscythe",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 439,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-articuno",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 144,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-zapdos",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 145,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-moltres",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 146,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "apex-mewtwo",
+    "leader": "apex",
+    "badges": 8,
+    "apex": 150,
+    "enemyLevel": 70,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 60,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 60,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 60,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 60,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 60,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 60,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_lorelei",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 410,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_bruno",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 411,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_agatha",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 412,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_lance",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 413,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-champion_first_charmander",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_admin_petrel",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 755,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_admin_archer",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 756,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_admin_ariana",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 757,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_admin_proton",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 758,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "early-tangrowth",
+    "leader": "apex",
+    "badges": 0,
+    "apex": 421,
+    "enemyLevel": 50,
+    "seed": 11,
+    "team": [
+      {
+        "species": "BULBASAUR",
+        "id": 1,
+        "level": 14
+      },
+      {
+        "species": "BELLSPROUT",
+        "id": 69,
+        "level": 13
+      },
+      {
+        "species": "PIDGEY",
+        "id": 16,
+        "level": 13
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 13
+      }
+    ]
+  },
+  {
+    "name": "early-erika",
+    "leader": "erika-first",
+    "badges": 0,
+    "trainer": 423,
+    "seed": 11,
+    "team": [
+      {
+        "species": "CHARMANDER",
+        "id": 4,
+        "level": 14
+      },
+      {
+        "species": "PIDGEY",
+        "id": 16,
+        "level": 14
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 14
+      },
+      {
+        "species": "BELLSPROUT",
+        "id": 69,
+        "level": 14
+      }
+    ]
+  },
+  {
+    "name": "misty-37-ability-aware",
+    "leader": "misty",
+    "badges": 1,
+    "trainer": 749,
+    "seed": 37,
+    "team": [
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 22
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 21
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 21
+      },
+      {
+        "species": "BUTTERFREE",
+        "id": 12,
+        "level": 21
+      },
+      {
+        "species": "GEODUDE",
+        "id": 74,
+        "level": 21
+      }
+    ]
+  },
+  {
+    "name": "koga-11-ability-aware",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "koga-37-ability-aware",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "koga-83-ability-aware",
+    "leader": "koga",
+    "badges": 4,
+    "trainer": 499,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 37
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 37
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 36
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 36
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 36
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_agatha-ability-aware",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 412,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-champion_first_charmander-ability-aware",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 50,
+        "moves": [
+          17,
+          98,
+          297,
+          97
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 50,
+        "moves": [
+          89,
+          88,
+          222,
+          111
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-elite_four_agatha-coverage",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 412,
+    "seed": 11,
+    "team": [
+      {
+        "species": "KADABRA",
+        "id": 64,
+        "level": 50,
+        "moves": [
+          94,
+          105,
+          115,
+          248
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "LAPRAS",
+        "id": 131,
+        "level": 50,
+        "moves": [
+          58,
+          34,
+          109,
+          56
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "indigo-champion_first_charmander-coverage",
+    "leader": "league",
+    "league": 1,
+    "badges": 8,
+    "trainer": 446,
+    "seed": 11,
+    "team": [
+      {
+        "species": "KADABRA",
+        "id": 64,
+        "level": 50,
+        "moves": [
+          94,
+          105,
+          115,
+          248
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "LAPRAS",
+        "id": 131,
+        "level": 50,
+        "moves": [
+          58,
+          34,
+          109,
+          56
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rocket-rocket_league_champion_giovanni-coverage",
+    "leader": "league",
+    "league": 2,
+    "badges": 8,
+    "trainer": 766,
+    "seed": 11,
+    "team": [
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 50,
+        "moves": [
+          53,
+          44,
+          245,
+          46
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 50,
+        "moves": [
+          85,
+          86,
+          98,
+          104
+        ]
+      },
+      {
+        "species": "KADABRA",
+        "id": 64,
+        "level": 50,
+        "moves": [
+          94,
+          105,
+          115,
+          248
+        ]
+      },
+      {
+        "species": "LAPRAS",
+        "id": 131,
+        "level": 50,
+        "moves": [
+          58,
+          34,
+          109,
+          56
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 50,
+        "moves": [
+          56,
+          44,
+          82,
+          349
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 50,
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      }
+    ]
+  }
+]
