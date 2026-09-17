@@ -1537,6 +1537,7 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
             player_step(fieldInput.dpadDirection, newKeys, heldKeys);
         }
     }
+    UpdateInteractionPrompt();
     UpdateTimeOfDayTransition();
     RunQuestLogCB();
 }

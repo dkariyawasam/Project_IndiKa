@@ -72,6 +72,13 @@ for gfx, symbol in entries:
         if moved >= 6 and worst_error <= 17 and original_error > max(100, remapped_error * 4):
             errors.append(f'Scrambled index order: {gfx}: {path}')
 
+# Standard NPC slots 2-5 are preloaded; a custom tag does not replace them.
+# This catches the water Swimmer F / Electrician fixed-slot mismatch class.
+standard_tags = struct.unpack_from('<11H', rom, symbols['sObjectPaletteTags0'])
+for gfx, (tag, slot) in slots.items():
+    if 2 <= slot <= 5 and tag != standard_tags[slot]:
+        errors.append(f'Wrong standard palette slot: {gfx}, slot {slot}, tag {tag:#x}, expected {standard_tags[slot]:#x}')
+
 watch = []
 for path in sorted((ROOT / 'data/maps').glob('*/map.json')):
     data = json.loads(path.read_text())

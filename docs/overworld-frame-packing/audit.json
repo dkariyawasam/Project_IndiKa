@@ -1,0 +1,1429 @@
+{
+  "sheets": {
+    "graphics/object_events/pics/people/ace_trainer_f.png": {
+      "symbol": "gObjectEventPic_AceTrainerF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/ace_trainer_m.png": {
+      "symbol": "gObjectEventPic_AceTrainerM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/agatha.png": {
+      "symbol": "gObjectEventPic_Agatha",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/annihilape.png": {
+      "symbol": "gObjectEventPic_Annihilape",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/aroma_lady.png": {
+      "symbol": "gObjectEventPic_AromaLady",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/articuno.png": {
+      "symbol": "gObjectEventPic_Articuno",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/berry_plant.png": {
+      "symbol": "gObjectEventPic_BerryPlant",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 19,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/biker.png": {
+      "symbol": "gObjectEventPic_Biker",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/bill.png": {
+      "symbol": "gObjectEventPic_Bill",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/bird_keeper.png": {
+      "symbol": "gObjectEventPic_BirdKeeper",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/black_belt.png": {
+      "symbol": "gObjectEventPic_BlackBelt",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/blaine.png": {
+      "symbol": "gObjectEventPic_Blaine",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/blue.png": {
+      "symbol": "gObjectEventPic_Blue",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/brock.png": {
+      "symbol": "gObjectEventPic_Brock",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/bruno.png": {
+      "symbol": "gObjectEventPic_Bruno",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/bug_catcher.png": {
+      "symbol": "gObjectEventPic_BugCatcher",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/bug_maniac.png": {
+      "symbol": "gObjectEventPic_BugManiac",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/burglar.png": {
+      "symbol": "gObjectEventPic_Burglar",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/celebi.png": {
+      "symbol": "gObjectEventPic_Celebi",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/celio.png": {
+      "symbol": "gObjectEventPic_Celio",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/channeler.png": {
+      "symbol": "gObjectEventPic_Channeler",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/chansey.png": {
+      "symbol": "gObjectEventPic_Chansey",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_boy.png": {
+      "symbol": "gObjectEventPic_CivBoy",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_cable_club_receptionist.png": {
+      "symbol": "gObjectEventPic_CivCableClubReceptionist",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_captain.png": {
+      "symbol": "gObjectEventPic_CivCaptain",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_chef.png": {
+      "symbol": "gObjectEventPic_CivChef",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_clerk.png": {
+      "symbol": "gObjectEventPic_CivClerk",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_gba_kid.png": {
+      "symbol": "gObjectEventPic_CivGBAKid",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_little_boy.png": {
+      "symbol": "gObjectEventPic_CivLittleBoy",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_little_girl.png": {
+      "symbol": "gObjectEventPic_CivLittleGirl",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_man.png": {
+      "symbol": "gObjectEventPic_CivMan",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_man_2.png": {
+      "symbol": "gObjectEventPic_CivMan2",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_man_3.png": {
+      "symbol": "gObjectEventPic_CivMan3",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_nurse.png": {
+      "symbol": "gObjectEventPic_CivNurse",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 4,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_old_man_1.png": {
+      "symbol": "gObjectEventPic_CivOldMan1",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_old_man_2.png": {
+      "symbol": "gObjectEventPic_CivOldMan2",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_old_woman.png": {
+      "symbol": "gObjectEventPic_CivOldWoman",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_policeman.png": {
+      "symbol": "gObjectEventPic_CivPoliceman",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_union_room_receptionist.png": {
+      "symbol": "gObjectEventPic_CivUnionRoomReceptionist",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_woman_1.png": {
+      "symbol": "gObjectEventPic_CivWoman1",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_woman_2.png": {
+      "symbol": "gObjectEventPic_CivWoman2",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_woman_3.png": {
+      "symbol": "gObjectEventPic_CivWoman3",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_worker_f.png": {
+      "symbol": "gObjectEventPic_CivWorkerF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/civ_worker_m.png": {
+      "symbol": "gObjectEventPic_CivWorkerM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/clefairy.png": {
+      "symbol": "gObjectEventPic_Clefairy",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/clipboard.png": {
+      "symbol": "gObjectEventPic_Clipboard",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/black_belt_f.png": {
+      "symbol": "gObjectEventPic_CrushGirl",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/cubone.png": {
+      "symbol": "gObjectEventPic_Cubone",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/cue_ball.png": {
+      "symbol": "gObjectEventPic_CueBall",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/cut_tree.png": {
+      "symbol": "gObjectEventPic_CutTree",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 4,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/daisy.png": {
+      "symbol": "gObjectEventPic_Daisy",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/doduo.png": {
+      "symbol": "gObjectEventPic_Doduo",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/electrician.png": {
+      "symbol": "gObjectEventPic_Electrician",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/engineer.png": {
+      "symbol": "gObjectEventPic_Engineer",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/entei.png": {
+      "symbol": "gObjectEventPic_Entei",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/erika.png": {
+      "symbol": "gObjectEventPic_Erika",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/expert_f.png": {
+      "symbol": "gObjectEventPic_ExpertF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/expert_m.png": {
+      "symbol": "gObjectEventPic_ExpertM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/fearow.png": {
+      "symbol": "gObjectEventPic_Fearow",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/fisherman.png": {
+      "symbol": "gObjectEventPic_Fisher",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/fossil.png": {
+      "symbol": "gObjectEventPic_Fossil",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/gambler.png": {
+      "symbol": "gObjectEventPic_Gambler",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/gentleman.png": {
+      "symbol": "gObjectEventPic_Gentleman",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/giovanni.png": {
+      "symbol": "gObjectEventPic_Giovanni",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_bike.png": {
+      "symbol": "gObjectEventPic_GreenBike",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_fish.png": {
+      "symbol": "gObjectEventPic_GreenFish",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 12,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_item.png": {
+      "symbol": "gObjectEventPic_GreenItem",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_normal.png": {
+      "symbol": "gObjectEventPic_GreenNormal",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_surf_run.png": {
+      "symbol": "gObjectEventPic_GreenSurfRun",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 14,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/green_vs_seeker_bike.png": {
+      "symbol": "gObjectEventPic_GreenVSSeekerBike",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 6,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/gym_guy.png": {
+      "symbol": "gObjectEventPic_GymGuy",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/gym_sign.png": {
+      "symbol": "gObjectEventPic_GymSign",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/help_menu_host.png": {
+      "symbol": "gObjectEventPic_HelpMenuHost",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/hiker.png": {
+      "symbol": "gObjectEventPic_Hiker",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/ho_oh.png": {
+      "symbol": "gObjectEventPic_HoOh",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 2,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/item_ball.png": {
+      "symbol": "gObjectEventPic_ItemBall",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/janine.png": {
+      "symbol": "gObjectEventPic_Janine",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/jigglypuff.png": {
+      "symbol": "gObjectEventPic_Jigglypuff",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/kabuto.png": {
+      "symbol": "gObjectEventPic_Kabuto",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/kangaskhan.png": {
+      "symbol": "gObjectEventPic_Kangaskhan",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/kindler.png": {
+      "symbol": "gObjectEventPic_Kindler",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/koga.png": {
+      "symbol": "gObjectEventPic_Koga",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/lady.png": {
+      "symbol": "gObjectEventPic_Lady",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/lance.png": {
+      "symbol": "gObjectEventPic_Lance",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/lapras.png": {
+      "symbol": "gObjectEventPic_Lapras",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/lapras_doll.png": {
+      "symbol": "gObjectEventPic_LaprasDoll",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/lorelei.png": {
+      "symbol": "gObjectEventPic_Lorelei",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/lt_surge.png": {
+      "symbol": "gObjectEventPic_LtSurge",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/lugia.png": {
+      "symbol": "gObjectEventPic_Lugia",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 2,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/machoke.png": {
+      "symbol": "gObjectEventPic_Machoke",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/machop.png": {
+      "symbol": "gObjectEventPic_Machop",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/meowth.png": {
+      "symbol": "gObjectEventPic_Meowth",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/mew.png": {
+      "symbol": "gObjectEventPic_Mew",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/mewtwo.png": {
+      "symbol": "gObjectEventPic_Mewtwo",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/mime_sr.png": {
+      "symbol": "gObjectEventPic_MimeSr",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/misty.png": {
+      "symbol": "gObjectEventPic_Misty",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/misty_water.png": {
+      "symbol": "gObjectEventPic_MistyWater",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/moltres.png": {
+      "symbol": "gObjectEventPic_Moltres",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/mom.png": {
+      "symbol": "gObjectEventPic_Mom",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/mr_fuji.png": {
+      "symbol": "gObjectEventPic_MrFuji",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/nidoran_f.png": {
+      "symbol": "gObjectEventPic_NidoranF",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/nidoran_m.png": {
+      "symbol": "gObjectEventPic_NidoranM",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/nidorino.png": {
+      "symbol": "gObjectEventPic_Nidorino",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/ninja.png": {
+      "symbol": "gObjectEventPic_Ninja",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/old_amber.png": {
+      "symbol": "gObjectEventPic_OldAmber",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/omanyte.png": {
+      "symbol": "gObjectEventPic_Omanyte",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/osscythe.png": {
+      "symbol": "gObjectEventPic_Osscythe",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/pidgeot.png": {
+      "symbol": "gObjectEventPic_Pidgeot",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/pidgey.png": {
+      "symbol": "gObjectEventPic_Pidgey",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/pikachu.png": {
+      "symbol": "gObjectEventPic_Pikachu",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokemaniac.png": {
+      "symbol": "gObjectEventPic_PokeManiac",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/pokedex.png": {
+      "symbol": "gObjectEventPic_Pokedex",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokefan_f.png": {
+      "symbol": "gObjectEventPic_PokefanF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokefan_m.png": {
+      "symbol": "gObjectEventPic_PokefanM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokemon_breeder.png": {
+      "symbol": "gObjectEventPic_PokemonBreeder",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokemon_ranger_f.png": {
+      "symbol": "gObjectEventPic_PokemonRangerF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/pokemon_ranger_m.png": {
+      "symbol": "gObjectEventPic_PokemonRangerM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/poliwrath.png": {
+      "symbol": "gObjectEventPic_Poliwrath",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/prof_oak.png": {
+      "symbol": "gObjectEventPic_ProfOak",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/psychic_m.png": {
+      "symbol": "gObjectEventPic_PsychicM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/psyduck.png": {
+      "symbol": "gObjectEventPic_Psyduck",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/raikou.png": {
+      "symbol": "gObjectEventPic_Raikou",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_bike.png": {
+      "symbol": "gObjectEventPic_RedBike",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_fish.png": {
+      "symbol": "gObjectEventPic_RedFish",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 12,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_item.png": {
+      "symbol": "gObjectEventPic_RedItem",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_normal.png": {
+      "symbol": "gObjectEventPic_RedNormal",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_surf_run.png": {
+      "symbol": "gObjectEventPic_RedSurfRun",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 14,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/red_vs_seeker_bike.png": {
+      "symbol": "gObjectEventPic_RedVSSeekerBike",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 6,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/rock_smash_rock.png": {
+      "symbol": "gObjectEventPic_RockSmashRock",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 4,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/rocket_admin_ariana.png": {
+      "symbol": "gObjectEventPic_RocketAriana",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/rocket_f.png": {
+      "symbol": "gObjectEventPic_RocketF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/rocket_league_dude.png": {
+      "symbol": "gObjectEventPic_RocketLeagueDude",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/rocket_m.png": {
+      "symbol": "gObjectEventPic_RocketM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/rocket_nurse.png": {
+      "symbol": "gObjectEventPic_RocketNurse",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/rocket_admin_petrel.png": {
+      "symbol": "gObjectEventPic_RocketPetrel",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/ruby.png": {
+      "symbol": "gObjectEventPic_Ruby",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/ruin_maniac.png": {
+      "symbol": "gObjectEventPic_RuinManiac",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/sabrina.png": {
+      "symbol": "gObjectEventPic_Sabrina",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/sailor.png": {
+      "symbol": "gObjectEventPic_Sailor",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/sapphire.png": {
+      "symbol": "gObjectEventPic_Sapphire",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/scientist.png": {
+      "symbol": "gObjectEventPic_Scientist",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/scout_f.png": {
+      "symbol": "gObjectEventPic_ScoutF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/scout_m.png": {
+      "symbol": "gObjectEventPic_ScoutM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/seel.png": {
+      "symbol": "gObjectEventPic_Seel",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/sign.png": {
+      "symbol": "gObjectEventPic_Sign",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/sitting_boy.png": {
+      "symbol": "gObjectEventPic_SittingBoy",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/slowbro.png": {
+      "symbol": "gObjectEventPic_Slowbro",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/slowpoke.png": {
+      "symbol": "gObjectEventPic_Slowpoke",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/spearow.png": {
+      "symbol": "gObjectEventPic_Spearow",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/strength_boulder.png": {
+      "symbol": "gObjectEventPic_StrengthBoulder",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/suicune.png": {
+      "symbol": "gObjectEventPic_Suicune",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/super_nerd.png": {
+      "symbol": "gObjectEventPic_SuperNerd",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/swimmer_f_land.png": {
+      "symbol": "gObjectEventPic_SwimmerFLand",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/swimmer_f_water.png": {
+      "symbol": "gObjectEventPic_SwimmerFWater",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/swimmer_m_land.png": {
+      "symbol": "gObjectEventPic_SwimmerMLand",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/swimmer_m_water.png": {
+      "symbol": "gObjectEventPic_SwimmerMWater",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/tangrowth.png": {
+      "symbol": "gObjectEventPic_Tangrowth",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/trendsetter_f.png": {
+      "symbol": "gObjectEventPic_TrendsetterF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/trendsetter_m.png": {
+      "symbol": "gObjectEventPic_TrendsetterM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_f_cycling.png": {
+      "symbol": "gObjectEventPic_TriathleteFCycling",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_f_land.png": {
+      "symbol": "gObjectEventPic_TriathleteFLand",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_f_water.png": {
+      "symbol": "gObjectEventPic_TriathleteFWater",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_m_cycling.png": {
+      "symbol": "gObjectEventPic_TriathleteMCycling",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_m_land.png": {
+      "symbol": "gObjectEventPic_TriathleteMLand",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/triathlete_m_water.png": {
+      "symbol": "gObjectEventPic_TriathleteMWater",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/tuber_f_land.png": {
+      "symbol": "gObjectEventPic_TuberFLand",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/tuber_f_water.png": {
+      "symbol": "gObjectEventPic_TuberFWater",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/tuber_m_land.png": {
+      "symbol": "gObjectEventPic_TuberMLand",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/tuber_m_water.png": {
+      "symbol": "gObjectEventPic_TuberMWater",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/civilians/unused_male_receptionist.png": {
+      "symbol": "gObjectEventPic_UnusedMaleReceptionist",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/voltorb.png": {
+      "symbol": "gObjectEventPic_Voltorb",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/wigglytuff.png": {
+      "symbol": "gObjectEventPic_Wigglytuff",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/misc/wooden_sign.png": {
+      "symbol": "gObjectEventPic_WoodenSign",
+      "tile_width": 2,
+      "tile_height": 2,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/youngster_f.png": {
+      "symbol": "gObjectEventPic_YoungsterF",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/youngster_m.png": {
+      "symbol": "gObjectEventPic_YoungsterM",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/zapdos.png": {
+      "symbol": "gObjectEventPic_Zapdos",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 1,
+      "bad_pixels": 0,
+      "bad_frames": []
+    }
+  },
+  "skipped": [
+    [
+      "gObjectEventPic_SSAnne",
+      0,
+      "special frame geometry"
+    ],
+    [
+      "gObjectEventPic_Seagallop",
+      0,
+      "special frame geometry"
+    ],
+    [
+      "gObjectEventPic_TownMap",
+      0,
+      "special frame geometry"
+    ]
+  ]
+}

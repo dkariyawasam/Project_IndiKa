@@ -364,7 +364,9 @@
 #define MOVE_MOONBLAST 360
 #define MOVE_BABY_DOLL_EYES 361
 
-#define MOVES_COUNT 362
+#define MOVE_RETREAT 362
+
+#define MOVES_COUNT 363
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

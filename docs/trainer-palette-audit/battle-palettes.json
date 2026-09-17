@@ -1,0 +1,437 @@
+[
+  {
+    "pic": "UNUSED_10",
+    "palette": "gTrainerPalette_Channeler",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRENDSETTER_M",
+    "palette": "gTrainerPalette_TrendsetterM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "GUITARIST",
+    "palette": "gTrainerPalette_Guitarist",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "KINDLER",
+    "palette": "gTrainerPalette_Kindler",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BUG_MANIAC",
+    "palette": "gTrainerPalette_BugManiac",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "GENTLEMAN_RS",
+    "palette": "gTrainerPalette_GentlemanRS",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "UNUSED_29",
+    "palette": "gTrainerPalette_YoungsterM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "UNUSED_30",
+    "palette": "gTrainerPalette_YoungsterF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEFAN_M",
+    "palette": "gTrainerPalette_PokefanM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEFAN_F",
+    "palette": "gTrainerPalette_PokefanF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "EXPERT_M",
+    "palette": "gTrainerPalette_ExpertM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "EXPERT_F",
+    "palette": "gTrainerPalette_ExpertF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_M_CYCLING",
+    "palette": "gTrainerPalette_TriathleteMCycling",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_F_CYCLING",
+    "palette": "gTrainerPalette_TriathleteFCycling",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_M_LAND",
+    "palette": "gTrainerPalette_TriathleteMLand",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_F_LAND",
+    "palette": "gTrainerPalette_TriathleteFLand",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_M_WATER",
+    "palette": "gTrainerPalette_TriathleteMWater",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRIATHLETE_F_WATER",
+    "palette": "gTrainerPalette_TriathleteFWater",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "NINJA",
+    "palette": "gTrainerPalette_Ninja",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "PARASOL_LADY",
+    "palette": "gTrainerPalette_ParasolLady",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TWINS_RS",
+    "palette": "gTrainerPalette_TwinsRS",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SAILOR_RS",
+    "palette": "gTrainerPalette_SailorRS",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMON_BREEDER_M_RS",
+    "palette": "gTrainerPalette_PokemonBreederMRS",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMON_BREEDER_F_RS",
+    "palette": "gTrainerPalette_PokemonBreederFRS",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "UNUSED_69",
+    "palette": "gTrainerPalette_Aces",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "YOUNGSTER_M",
+    "palette": "gTrainerPalette_YoungsterM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BUG_CATCHER",
+    "palette": "gTrainerPalette_BugCatcher",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "YOUNGSTER_F",
+    "palette": "gTrainerPalette_YoungsterF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SAILOR",
+    "palette": "gTrainerPalette_Sailor",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SCOUT_M",
+    "palette": "gTrainerPalette_ScoutM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SCOUT_F",
+    "palette": "gTrainerPalette_ScoutF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMANIAC",
+    "palette": "gTrainerPalette_PokeManiac",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SUPER_NERD",
+    "palette": "gTrainerPalette_SuperNerd",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "HIKER",
+    "palette": "gTrainerPalette_Hiker",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BIKER",
+    "palette": "gTrainerPalette_Biker",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BURGLAR",
+    "palette": "gTrainerPalette_Burglar",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ENGINEER",
+    "palette": "gTrainerPalette_Engineer",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "FISHERMAN",
+    "palette": "gTrainerPalette_Fisherman",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SWIMMER_M",
+    "palette": "gTrainerPalette_SwimmerM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROUGHNECK",
+    "palette": "gTrainerPalette_Roughneck",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "GAMBLER",
+    "palette": "gTrainerPalette_Gambler",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TRENDSETTER_F",
+    "palette": "gTrainerPalette_TrendsetterF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SWIMMER_F",
+    "palette": "gTrainerPalette_SwimmerF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "PSYCHIC_M",
+    "palette": "gTrainerPalette_PsychicM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ELECTRICIAN",
+    "palette": "gTrainerPalette_Electrician",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BIRD_KEEPER",
+    "palette": "gTrainerPalette_BirdKeeper",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BLACK_BELT_M",
+    "palette": "gTrainerPalette_BlackBeltM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "RIVAL_EARLY",
+    "palette": "gTrainerPalette_RivalEarly",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SCIENTIST",
+    "palette": "gTrainerPalette_Scientist",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_GIOVANNI",
+    "palette": "gTrainerPalette_LeaderGiovanni",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROCKET_GRUNT_M",
+    "palette": "gTrainerPalette_RocketGruntM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ACE_TRAINER_M",
+    "palette": "gTrainerPalette_AceTrainerM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ACE_TRAINER_F",
+    "palette": "gTrainerPalette_AceTrainerF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ELITE_FOUR_LORELEI",
+    "palette": "gTrainerPalette_EliteFourLorelei",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ELITE_FOUR_BRUNO",
+    "palette": "gTrainerPalette_EliteFourBruno",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ELITE_FOUR_AGATHA",
+    "palette": "gTrainerPalette_EliteFourAgatha",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ELITE_FOUR_LANCE",
+    "palette": "gTrainerPalette_EliteFourLance",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_BROCK",
+    "palette": "gTrainerPalette_LeaderBrock",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_MISTY",
+    "palette": "gTrainerPalette_LeaderMisty",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_LT_SURGE",
+    "palette": "gTrainerPalette_LeaderLtSurge",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_ERIKA",
+    "palette": "gTrainerPalette_LeaderErika",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_KOGA",
+    "palette": "gTrainerPalette_LeaderKoga",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_BLAINE",
+    "palette": "gTrainerPalette_LeaderBlaine",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEADER_SABRINA",
+    "palette": "gTrainerPalette_LeaderSabrina",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "GENTLEMAN",
+    "palette": "gTrainerPalette_Gentleman",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "RIVAL_LATE",
+    "palette": "gTrainerPalette_RivalLate",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "CHAMPION_RIVAL",
+    "palette": "gTrainerPalette_RivalChampion",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "CHANNELER",
+    "palette": "gTrainerPalette_Channeler",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TWINS",
+    "palette": "gTrainerPalette_Twins",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ACES",
+    "palette": "gTrainerPalette_Aces",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "CRUSH_KIN",
+    "palette": "gTrainerPalette_CrushKin",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "SIS_AND_BRO",
+    "palette": "gTrainerPalette_SisAndBro",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "PROFESSOR_OAK",
+    "palette": "gTrainerPalette_ProfessorOak",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "RED",
+    "palette": "gTrainerPalette_Red",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LEAF",
+    "palette": "gTrainerPalette_Leaf",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROCKET_GRUNT_F",
+    "palette": "gTrainerPalette_RocketGruntF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "PSYCHIC_F",
+    "palette": "gTrainerPalette_PsychicF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "BLACK_BELT_F",
+    "palette": "gTrainerPalette_BlackBeltF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TUBER_F",
+    "palette": "gTrainerPalette_TuberF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "TUBER_M",
+    "palette": "gTrainerPalette_TuberM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMON_BREEDER",
+    "palette": "gTrainerPalette_PokemonBreeder",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMON_RANGER_M",
+    "palette": "gTrainerPalette_PokemonRangerM",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "POKEMON_RANGER_F",
+    "palette": "gTrainerPalette_PokemonRangerF",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "AROMA_LADY",
+    "palette": "gTrainerPalette_AromaLady",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "RUIN_MANIAC",
+    "palette": "gTrainerPalette_RuinManiac",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "LADY",
+    "palette": "gTrainerPalette_Lady",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROCKET_ADMIN_ARIANA",
+    "palette": "gTrainerPalette_RocketAdminAriana",
+    "mismatched_indices": []
+  }
+]

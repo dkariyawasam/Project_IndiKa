@@ -113,8 +113,13 @@ PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
     .string "the GRASS POKéMON BULBASAUR?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
-    .string "This POKéMON is really quite\n"
-    .string "energetic!$"
+    .string "OAK: This partner knows RETREAT.\p"
+    .string "Use it to escape wild POKéMON\n"
+    .string "before they can attack!\p"
+    .string "It works even if you are trapped.\n"
+    .string "Keep some PP for the way home.\p"
+    .string "It cannot end a TRAINER battle\n"
+    .string "or an APEX encounter.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
     .string "{PLAYER} received the {STR_VAR_1}\n"

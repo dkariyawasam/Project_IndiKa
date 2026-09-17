@@ -486,3 +486,23 @@ graphics/object_events/pics/people/ninja.4bpp: graphics/object_events/pics/peopl
 # Psychic overworld sheet: ten horizontal 16x32 frames.
 graphics/object_events/pics/people/psychic_m.4bpp: graphics/object_events/pics/people/psychic_m.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Fisherman overworld sheet: ten horizontal 16x32 frames.
+graphics/object_events/pics/people/fisherman.4bpp: graphics/object_events/pics/people/fisherman.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Horizontal 16x32 overworld frames.
+graphics/object_events/pics/people/gambler.4bpp: graphics/object_events/pics/people/gambler.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Horizontal 16x32 overworld frames.
+graphics/object_events/pics/people/janine.4bpp: graphics/object_events/pics/people/janine.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Horizontal 16x32 overworld frames.
+graphics/object_events/pics/people/pokemaniac.4bpp: graphics/object_events/pics/people/pokemaniac.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+# Horizontal 16x32 overworld frames.
+graphics/object_events/pics/people/civilians/rocket_league_dude.4bpp: graphics/object_events/pics/people/civilians/rocket_league_dude.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

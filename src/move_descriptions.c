@@ -363,6 +363,8 @@ const u8 gMoveDescription_PlayRough[] = _("The user plays rough\nand may lower t
 const u8 gMoveDescription_Moonblast[] = _("The foe is attacked\nwith lunar power.\nIt may lower SP. ATK.");
 const u8 gMoveDescription_BabyDollEyes[] = _("The user stares\ncutely to lower the\nfoe's ATTACK.");
 
+const u8 gMoveDescription_Retreat[] = _("Escapes wild foes\nfirst, even if\ntrapped. Fails on\nTRAINERS and APEX.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -725,4 +727,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_PLAY_ROUGH    - 1] = gMoveDescription_PlayRough,
     [MOVE_MOONBLAST     - 1] = gMoveDescription_Moonblast,
     [MOVE_BABY_DOLL_EYES - 1] = gMoveDescription_BabyDollEyes,
+    [MOVE_RETREAT - 1] = gMoveDescription_Retreat,
 };

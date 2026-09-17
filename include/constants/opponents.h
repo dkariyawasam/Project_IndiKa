@@ -1118,7 +1118,11 @@
 
 #define TRAINER_HIKER_ROBBY_REMATCH               785
 
-#define NUM_TRAINERS                             786
-#define MAX_TRAINERS_COUNT                       786
+#define TRAINER_CHANNEL_FEN 786
+#define TRAINER_CHANNEL_HARLAN 787
+#define TRAINER_CHANNEL_CORAL 788
+
+#define NUM_TRAINERS                             789
+#define MAX_TRAINERS_COUNT                       789
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

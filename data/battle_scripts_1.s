@@ -1923,15 +1923,23 @@ BattleScript_EffectTeleport::
 	attackstring
 	ppreduce
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_ButItFailed
+	jumpifhalfword CMP_EQUAL, gCurrentMove, MOVE_RETREAT, BattleScript_RetreatCheckEncounter
 	getifcantrunfrombattle BS_ATTACKER
 	jumpifbyte CMP_EQUAL, gBattleCommunication, 1, BattleScript_ButItFailed
 	jumpifbyte CMP_EQUAL, gBattleCommunication, 2, BattleScript_PrintAbilityMadeIneffective
+BattleScript_TeleportEscape::
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNFLEDFROMBATTLE
 	waitmessage B_WAIT_TIME_LONG
 	setbyte gBattleOutcome, B_OUTCOME_PLAYER_TELEPORTED
 	goto BattleScript_MoveEnd
+
+@ Apex encounters use both legendary flags. No escape-roll or trapping check
+@ for RETREAT, but trainer and Apex battles retain their encounter rules.
+BattleScript_RetreatCheckEncounter::
+    jumpifbattletype BATTLE_TYPE_LEGENDARY_FRLG, BattleScript_ButItFailed
+    goto BattleScript_TeleportEscape
 
 BattleScript_EffectBeatUp::
 	attackcanceler

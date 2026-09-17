@@ -1,3 +1,18 @@
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelFen[] = {
+    { .iv = 0, .lvl = 7, .species = SPECIES_GOLDEEN, },
+    { .iv = 0, .lvl = 8, .species = SPECIES_POLIWAG, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelHarlan[] = {
+    { .iv = 0, .lvl = 9, .species = SPECIES_MAGIKARP, },
+    { .iv = 0, .lvl = 10, .species = SPECIES_GOLDEEN, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelCoral[] = {
+    { .iv = 0, .lvl = 9, .species = SPECIES_STARYU, },
+    { .iv = 0, .lvl = 10, .species = SPECIES_HORSEA, },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchMtMoonRuinManiacKent[] = {
     { .iv = 35, .lvl = 20, .species = SPECIES_GRAVELER, },
     { .iv = 35, .lvl = 22, .species = SPECIES_SANDSLASH, },
