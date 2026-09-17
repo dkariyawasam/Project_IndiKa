@@ -4705,4 +4705,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 1,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
+    [MOVE_RETREAT] =
+    {
+        .effect = EFFECT_TELEPORT,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 7,
+        .flags = 0,
+    },
 };
