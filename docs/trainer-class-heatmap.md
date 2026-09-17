@@ -28,7 +28,7 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 | Engineer | 3 | Power Plant (3) |
 | Expert F | 3 | Cinnabar Volcano (1), Kanto Victory Road (1), Saffron City (1) |
 | Expert M | 3 | Cinnabar Volcano (1), Kanto Victory Road (1), Saffron City (1) |
-| Fisherman | 20 | Route 6 (1), Route 10 (2), Route 12 (6), Route 21 (4), Route 24 (1), Route 25 (4), Vermilion Harbor (2) |
+| Fisherman | 22 | Route 6 (1), Route 10 (2), Route 12 (6), Route 21 (4), Route 24 (1), Route 25 (4), Vermilion Harbor (2), Viridian Channel (2) |
 | Gambler | 0 |  |
 | Gentleman | 4 | S.S. Anne (4) |
 | Hiker | 21 | Route 3 (1), Route 9 (3), Route 10 (2), Route 13 (1), Route 14 (1), Route 15 (2), Route 22 (1), Route 23 (1), Cinnabar Volcano (2), Mt. Moon (1), Rock Tunnel (6) |
@@ -58,7 +58,7 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 | Scout M | 19 | Route 1 (2), Route 2 (2), Route 5 (2), Route 8 (2), Route 9 (1), Route 11 (1), Route 13 (1), Route 14 (1), Route 15 (1), Route 22 (1), Route 25 (2), Cinnabar Volcano (1), Fuchsia Forest (1), Viridian Forest (1) |
 | Super Nerd | 2 | Underground Path (2) |
 | Swim Sibs | 3 | Route 19 (1), Route 20 (1), Route 21 (1) |
-| Swimmer F | 15 | Route 10 (3), Route 12 (3), Route 19 (2), Route 20 (3), Route 21 (2), Route 24 (1), Vermilion Harbor (1) |
+| Swimmer F | 16 | Route 10 (3), Route 12 (3), Route 19 (2), Route 20 (3), Route 21 (2), Route 24 (1), Vermilion Harbor (1), Viridian Channel (1) |
 | Swimmer M | 15 | Route 10 (1), Route 19 (4), Route 20 (5), Route 21 (4), Vermilion Harbor (1) |
 | Team Rocket F | 0 |  |
 | Team Rocket M | 20 | Celadon City (1), Silph Co. (19) |
@@ -75,7 +75,7 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 
 ## Coverage
 
-{"maps": 253, "classes": 64, "areas": 50, "encounter_sites": 438, "unplaced_classes": 5, "conditional_sites": 19}
+{"maps": 253, "classes": 64, "areas": 51, "encounter_sites": 441, "unplaced_classes": 5, "conditional_sites": 19}
 
 Unresolved map-root scripts: 0. Dynamic battle references: 0. Duplicate trainer-table numeric entries: 0 (last definition wins, matching C).
 

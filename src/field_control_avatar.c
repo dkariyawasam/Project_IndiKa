@@ -51,6 +51,7 @@ static const u8 *GetInteractedObjectEventScript(struct MapPosition * position, u
 static const u8 *GetInteractedBackgroundEventScript(struct MapPosition * position, u8 metatileBehavior, u8 playerDirection);
 static const struct BgEvent *GetBackgroundEventAtPosition(struct MapHeader *, u16, u16, u8);
 static const u8 *GetInteractedMetatileScript(struct MapPosition * position, u8 metatileBehavior, u8 playerDirection);
+static const u8 *GetMetatileInteractionScript(u8 metatileBehavior, u8 direction);
 static const u8 *GetInteractedWaterScript(struct MapPosition * position, u8 metatileBehavior, u8 playerDirection);
 static bool8 TryStartStepBasedScript(struct MapPosition * position, u16 metatileBehavior, u16 playerDirection);
 static bool8 TryStartCoordEventScript(struct MapPosition * position);
@@ -515,7 +516,20 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
 
 static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 metatileBehavior, u8 direction)
 {
+    const u8 *script = GetMetatileInteractionScript(metatileBehavior, direction);
+
     gSpecialVar_Facing = direction;
+    if (script == EventScript_Indigo_UltimateGoal
+     || script == EventScript_Indigo_HighestAuthority
+     || script == EventScript_PokemartSign
+     || script == EventScript_PokecenterSign)
+        MsgSetSignpost();
+    return script;
+}
+
+// Shared, side-effect-free lookup for both A-button dispatch and the hint.
+static const u8 *GetMetatileInteractionScript(u8 metatileBehavior, u8 direction)
+{
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
         return EventScript_PC;
     if (MetatileBehavior_IsRegionMap(metatileBehavior) == TRUE)
@@ -576,22 +590,18 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return CableClub_EventScript_ShowBattleRecords;
     if (MetatileBehavior_IsIndigoPlateauSign1(metatileBehavior) == TRUE)
     {
-        MsgSetSignpost();
         return EventScript_Indigo_UltimateGoal;
     }
     if (MetatileBehavior_IsIndigoPlateauSign2(metatileBehavior) == TRUE)
     {
-        MsgSetSignpost();
         return EventScript_Indigo_HighestAuthority;
     }
     if (MetatileBehavior_IsPlayerFacingPokeMartSign(metatileBehavior, direction) == TRUE)
     {
-        MsgSetSignpost();
         return EventScript_PokemartSign;
     }
     if (MetatileBehavior_IsPlayerFacingPokemonCenterSign(metatileBehavior, direction) == TRUE)
     {
-        MsgSetSignpost();
         return EventScript_PokecenterSign;
     }
     return NULL;
@@ -1179,4 +1189,205 @@ int SetCableClubWarp(void)
     MapGridGetMetatileBehaviorAt(position.x, position.y);  // unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
+}
+
+// Read-only interaction hint. Never call the interaction dispatchers here: they
+// select objects, alter special variables and set signpost message state.
+static EWRAM_DATA u8 sInteractionPromptTiles[128] = {0};
+static EWRAM_DATA s16 sInteractionPromptX = 0;
+static EWRAM_DATA s16 sInteractionPromptY = 0;
+static EWRAM_DATA u8 sInteractionPromptDirection = 0;
+static const struct OamData sInteractionPromptOam = {
+    .shape = SPRITE_SHAPE(16x16), .size = SPRITE_SIZE(16x16), .priority = 0
+};
+static const struct SpriteFrameImage sInteractionPromptImages[] = {
+    {sInteractionPromptTiles, sizeof(sInteractionPromptTiles)}
+};
+// A frame command is required to upload the image tiles to OBJ VRAM.
+// gDummySpriteAnimTable only ends the animation and never uploads an image.
+static const union AnimCmd sInteractionPromptAnim[] = {
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END
+};
+static const union AnimCmd *const sInteractionPromptAnims[] = {
+    sInteractionPromptAnim
+};
+static const struct SpriteTemplate sInteractionPromptTemplate = {
+    .tileTag = TAG_NONE, .paletteTag = TAG_NONE,
+    .oam = &sInteractionPromptOam, .anims = sInteractionPromptAnims,
+    .images = sInteractionPromptImages, .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+// Read the displayed 4bpp frame, so transparent padding does not affect the gap.
+static u16 GetInteractionTargetVisibleTop(const struct Sprite *sprite, u8 graphicsId)
+{
+    const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(graphicsId);
+    const u8 *tiles = (const u8 *)OBJ_VRAM0 + sprite->oam.tileNum * 32;
+    u16 x, y;
+
+    for (y = 0; y < info->height; y++)
+        for (x = 0; x < info->width; x++)
+        {
+            u16 offset = ((y / 8) * (info->width / 8) + x / 8) * 32
+                       + (y % 8) * 4 + (x % 8) / 2;
+            if ((tiles[offset] >> ((x & 1) * 4)) & 15)
+                return y;
+        }
+    return 0;
+}
+
+// Signs are background metatiles, not object sprites. Ignore the transparent
+// padding in their foreground layer rather than borrowing the player's height.
+static u16 GetInteractionMetatileVisibleTop(s16 mapX, s16 mapY)
+{
+    u16 id = MapGridGetMetatileIdAt(mapX, mapY);
+    const u16 *tiles;
+    u16 x, y;
+
+    if (id >= NUM_METATILES_TOTAL)
+        return 0;
+    if (id < NUM_METATILES_IN_PRIMARY)
+        tiles = gMapHeader.mapLayout->primaryTileset->metatiles + id * NUM_TILES_PER_METATILE;
+    else
+        tiles = gMapHeader.mapLayout->secondaryTileset->metatiles + (id - NUM_METATILES_IN_PRIMARY) * NUM_TILES_PER_METATILE;
+    for (y = 0; y < 16; y++)
+        for (x = 0; x < 16; x++)
+        {
+            u16 tile = tiles[4 + (y / 8) * 2 + x / 8];
+            u16 tx = (tile & 0x400) ? 7 - x % 8 : x % 8;
+            u16 ty = (tile & 0x800) ? 7 - y % 8 : y % 8;
+            const u8 *pixels = (const u8 *)BG_VRAM + (tile & 0x3FF) * 32;
+            if ((pixels[ty * 4 + tx / 2] >> ((tx & 1) * 4)) & 15)
+                return y;
+        }
+    return 0;
+}
+
+void UpdateInteractionPrompt(void)
+{
+    struct MapPosition pos;
+    const struct BgEvent *bg;
+    struct Sprite *player;
+    u8 i, id = MAX_SPRITES, objectId, direction, palette, dark = 1, light = 1;
+    u16 behavior, min = 0xFFFF, max = 0;
+    s16 dx, dy;
+    bool8 eligible = FALSE;
+
+
+    // Find by template rather than keeping a sprite ID across map/battle resets.
+    for (i = 0; i < MAX_SPRITES; i++)
+        if (gSprites[i].inUse && gSprites[i].template == &sInteractionPromptTemplate)
+            id = i;
+    if (ArePlayerFieldControlsLocked() || gPaletteFade.active
+     || gQuestLogPlaybackState == QL_PLAYBACK_STATE_RUNNING
+     || gPlayerAvatar.runningState != NOT_MOVING
+     || gPlayerAvatar.tileTransitionState != T_NOT_MOVING
+     || (gMain.heldKeys & (DPAD_ANY | A_BUTTON | B_BUTTON | START_BUTTON)))
+        goto hide;
+    direction = GetPlayerFacingDirection();
+    GetInFrontOfPlayerPosition(&pos);
+    behavior = MapGridGetMetatileBehaviorAt(pos.x, pos.y);
+    objectId = GetObjectEventIdByPosition(pos.x, pos.y, pos.elevation);
+    if (objectId == OBJECT_EVENTS_COUNT && MetatileBehavior_IsCounter(behavior))
+    {
+        pos.x += gDirectionToVectors[direction].x;
+        pos.y += gDirectionToVectors[direction].y;
+        objectId = GetObjectEventIdByPosition(pos.x, pos.y, pos.elevation);
+    }
+    if (objectId != OBJECT_EVENTS_COUNT)
+    {
+        if (gObjectEvents[objectId].localId != LOCALID_PLAYER
+         && !gSprites[gObjectEvents[objectId].spriteId].invisible
+         && (!InUnionRoom() || ObjectEventCheckHeldMovementStatus(&gObjectEvents[objectId])))
+            eligible = GetObjectEventScriptPointerByObjectEventId(objectId) != NULL;
+    }
+    else
+    {
+        GetInFrontOfPlayerPosition(&pos);
+        bg = GetBackgroundEventAtPosition(&gMapHeader, pos.x - MAP_OFFSET, pos.y - MAP_OFFSET, pos.elevation);
+        if (bg != NULL && bg->kind <= BG_EVENT_PLAYER_FACING_WEST)
+        {
+            eligible = bg->kind == BG_EVENT_PLAYER_FACING_ANY
+                || (bg->kind == BG_EVENT_PLAYER_FACING_NORTH && direction == DIR_NORTH)
+                || (bg->kind == BG_EVENT_PLAYER_FACING_SOUTH && direction == DIR_SOUTH)
+                || (bg->kind == BG_EVENT_PLAYER_FACING_EAST && direction == DIR_EAST)
+                || (bg->kind == BG_EVENT_PLAYER_FACING_WEST && direction == DIR_WEST);
+        }
+    }
+    if (!eligible)
+    {
+        GetInFrontOfPlayerPosition(&pos);
+        bg = GetBackgroundEventAtPosition(&gMapHeader, pos.x - MAP_OFFSET, pos.y - MAP_OFFSET, pos.elevation);
+        // Never advertise secret/hidden background events, even on a readable tile.
+        if (bg == NULL || bg->kind <= BG_EVENT_PLAYER_FACING_WEST)
+        {
+            eligible = GetMetatileInteractionScript(behavior, direction) != NULL
+                || GetInteractedWaterScript(&pos, behavior, direction) != NULL;
+            if (eligible)
+                objectId = OBJECT_EVENTS_COUNT;
+        }
+    }
+    if (!eligible)
+        goto hide;
+    if (pos.x != sInteractionPromptX || pos.y != sInteractionPromptY || direction != sInteractionPromptDirection)
+    {
+        sInteractionPromptX = pos.x;
+        sInteractionPromptY = pos.y;
+        sInteractionPromptDirection = direction;
+        if (id != MAX_SPRITES)
+            gSprites[id].invisible = TRUE;
+    }
+    player = &gSprites[gPlayerAvatar.spriteId];
+    palette = player->oam.paletteNum;
+    if (id == MAX_SPRITES)
+    {
+        u16 x, y;
+        // Use the darkest/lightest opaque colours already in the player palette.
+        for (i = 1; i < 16; i++)
+        {
+            u16 c = gPlttBufferUnfaded[256 + palette * 16 + i];
+            u16 luminance = (c & 31) * 3 + ((c >> 5) & 31) * 6 + ((c >> 10) & 31);
+            if (luminance < min) { min = luminance; dark = i; }
+            if (luminance > max) { max = luminance; light = i; }
+        }
+        memset(sInteractionPromptTiles, 0, sizeof(sInteractionPromptTiles));
+        // CHAR_A_BUTTON is the first 8x12 icon in the menu's 128px-wide sheet.
+        // Center it in our 16x16 sprite, preserving the original menu artwork.
+        for (y = 0; y < 12; y++)
+            for (x = 0; x < 8; x++)
+            {
+                u16 source = (y / 8) * 16 * 32 + (y % 8) * 4 + x / 2;
+                u8 pixel = (gKeypadIconTiles[source] >> ((x & 1) * 4)) & 15;
+                u8 colour = pixel == 1 ? light : pixel == 2 ? dark : 0;
+                u16 destX = x + 4;
+                u16 offset = ((y / 8) * 2 + destX / 8) * 32 + (y % 8) * 4 + (destX % 8) / 2;
+                sInteractionPromptTiles[offset] |= colour << ((destX & 1) * 4);
+            }
+        id = CreateSprite(&sInteractionPromptTemplate, 0, 0, 0);
+        if (id == MAX_SPRITES)
+            return;
+    }
+    dx = gDirectionToVectors[direction].x * 16;
+    dy = gDirectionToVectors[direction].y * 16;
+    gSprites[id].coordOffsetEnabled = player->coordOffsetEnabled;
+    gSprites[id].x = player->x + player->x2 + dx;
+    gSprites[id].y = player->y + player->y2 + dy - 16 - player->centerToCornerVecY
+                   + GetInteractionMetatileVisibleTop(pos.x, pos.y) - 6;
+    if (objectId != OBJECT_EVENTS_COUNT)
+    {
+        struct Sprite *target = &gSprites[gObjectEvents[objectId].spriteId];
+        gSprites[id].coordOffsetEnabled = target->coordOffsetEnabled;
+        gSprites[id].x = target->x + target->x2;
+        // The menu glyph's last opaque row is 11: 3px below our sprite centre.
+        // Put that row three pixels before the target top, leaving two empty rows.
+        gSprites[id].y = target->y + target->y2 + target->centerToCornerVecY
+                       + GetInteractionTargetVisibleTop(target, gObjectEvents[objectId].graphicsId) - 6;
+    }
+    gSprites[id].oam.paletteNum = palette;
+    gSprites[id].invisible = FALSE;
+    return;
+hide:
+    if (id != MAX_SPRITES)
+        DestroySprite(&gSprites[id]);
 }
