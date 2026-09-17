@@ -512,7 +512,9 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if ((heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    // Running is available from the start, including saves made before the
+    // bedroom script granted B_DASH. Map and terrain restrictions still apply.
+    if ((heldKeys & B_BUTTON)
         && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
     {
         if (PlayerIsMovingOnRockStairs(direction))

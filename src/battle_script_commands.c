@@ -708,6 +708,7 @@ static const u16 sProtectSuccessRates[] = {USHRT_MAX, USHRT_MAX / 2, USHRT_MAX /
 
 static const u16 sMovesForbiddenToCopy[] =
 {
+    MOVE_RETREAT,
     MOVE_METRONOME,
     MOVE_STRUGGLE,
     MOVE_SKETCH,

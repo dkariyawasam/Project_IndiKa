@@ -382,7 +382,8 @@ gBattleAnims_Moves::
 	.4byte Move_PLAY_ROUGH
 	.4byte Move_MOONBLAST
 	.4byte Move_BABY_DOLL_EYES
-	.4byte Move_COUNT @ cannot be reached, because last move is Baby-Doll Eyes
+	.4byte Move_TELEPORT @ RETREAT reuses the escape animation
+	.4byte Move_COUNT @ sentinel after the final move
 
 	.align 2
 gBattleAnims_StatusConditions::
