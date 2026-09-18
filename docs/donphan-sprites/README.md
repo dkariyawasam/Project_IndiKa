@@ -1,0 +1,1 @@
+Donphan normal recolour: carapace slots 2–5 changed from green-grey to neutral charcoal-grey; skin slots 6–9 changed from warm grey to cool blue-grey. Whites, tusks, eye/mouth accents, outlines, indices and shiny palette retained. Both views updated. Original assets retained in before/. Official reference page: https://www.pokemon.com/es/pokedex/donphan

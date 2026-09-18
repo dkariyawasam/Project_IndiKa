@@ -1,5 +1,6 @@
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
-    .string "{RIVAL}: Gramps stepped out.\p"
+    .string "{RIVAL}: Gramps stepped out.\n"
+    .string "He went to check ROUTE 1.\p"
     .string "He told me to wait here, but\n"
     .string "he's taking forever!$"
 
