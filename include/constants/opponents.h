@@ -1122,7 +1122,12 @@
 #define TRAINER_CHANNEL_HARLAN 787
 #define TRAINER_CHANNEL_CORAL 788
 
-#define NUM_TRAINERS                             789
-#define MAX_TRAINERS_COUNT                       789
+#define TRAINER_GAME_CORNER_OSWIN 789
+#define TRAINER_GAME_CORNER_BASIL 790
+
+#define TRAINER_DOJO_CRUSH_KIN_REN_MEI            791
+
+#define NUM_TRAINERS                             792
+#define MAX_TRAINERS_COUNT                       792
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
