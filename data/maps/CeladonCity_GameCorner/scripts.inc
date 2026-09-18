@@ -436,3 +436,27 @@ CeladonCity_GameCorner_EventScript_UnusableSlotMachine2::
 CeladonCity_GameCorner_EventScript_UnusableSlotMachine3::
 	msgbox CeladonCity_GameCorner_Text_SomeonesKeys, MSGBOX_SIGN
 	end
+
+CeladonCity_GameCorner_EventScript_GamblerOswin::
+    trainerbattle_single TRAINER_GAME_CORNER_OSWIN, CeladonCity_GameCorner_Text_GamblerOswinIntro, CeladonCity_GameCorner_Text_GamblerOswinDefeat
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+    goto_if_eq VAR_RESULT, TRUE, CeladonCity_GameCorner_EventScript_GamblerOswinRematch
+    msgbox CeladonCity_GameCorner_Text_GamblerOswinAfter, MSGBOX_AUTOCLOSE
+    end
+
+CeladonCity_GameCorner_EventScript_GamblerOswinRematch::
+    trainerbattle_rematch TRAINER_GAME_CORNER_OSWIN, CeladonCity_GameCorner_Text_GamblerOswinRematch, CeladonCity_GameCorner_Text_GamblerOswinDefeat
+    msgbox CeladonCity_GameCorner_Text_GamblerOswinAfter, MSGBOX_AUTOCLOSE
+    end
+
+CeladonCity_GameCorner_EventScript_GamblerBasil::
+    trainerbattle_single TRAINER_GAME_CORNER_BASIL, CeladonCity_GameCorner_Text_GamblerBasilIntro, CeladonCity_GameCorner_Text_GamblerBasilDefeat
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+    goto_if_eq VAR_RESULT, TRUE, CeladonCity_GameCorner_EventScript_GamblerBasilRematch
+    msgbox CeladonCity_GameCorner_Text_GamblerBasilAfter, MSGBOX_AUTOCLOSE
+    end
+
+CeladonCity_GameCorner_EventScript_GamblerBasilRematch::
+    trainerbattle_rematch TRAINER_GAME_CORNER_BASIL, CeladonCity_GameCorner_Text_GamblerBasilRematch, CeladonCity_GameCorner_Text_GamblerBasilDefeat
+    msgbox CeladonCity_GameCorner_Text_GamblerBasilAfter, MSGBOX_AUTOCLOSE
+    end

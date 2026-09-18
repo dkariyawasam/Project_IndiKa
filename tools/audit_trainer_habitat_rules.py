@@ -478,7 +478,9 @@ def is_story_exempt(trainer: Trainer, map_name: str) -> bool:
     return any(part in text for part in STORY_EXEMPT_PARTS) or any(part in map_name for part in STORY_EXEMPT_MAP_PARTS)
 
 
-def habitat_allows(trainer_class: str, habitat: str) -> bool:
+def habitat_allows(trainer_class: str, habitat: str, map_name: str = "") -> bool:
+    if map_name == "CeladonCity_GameCorner" and trainer_class == "TRAINER_CLASS_GAMBLER":
+        return True
     if habitat in {"Gym/Dojo", "Other"}:
         return True
     label = class_label(trainer_class)
@@ -591,7 +593,7 @@ def main() -> None:
             habitat_counts[habitat] += 1
             if is_story_exempt(trainer, use.map_name):
                 continue
-            if not habitat_allows(trainer.trainer_class, habitat):
+            if not habitat_allows(trainer.trainer_class, habitat, use.map_name):
                 habitat_warnings.append(
                     HabitatWarning(
                         use_id=use_id,

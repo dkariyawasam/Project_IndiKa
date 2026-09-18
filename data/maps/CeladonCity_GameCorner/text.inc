@@ -143,3 +143,35 @@ CeladonCity_GameCorner_Text_OutToLunch::
 CeladonCity_GameCorner_Text_SomeonesKeys::
     .string "Someone's keys!\n"
     .string "They'll be back.$"
+
+CeladonCity_GameCorner_Text_GamblerOswinIntro::
+    .string "I am taking a break from the slots.\n"
+    .string "Care to test your luck in battle?$"
+
+CeladonCity_GameCorner_Text_GamblerOswinDefeat::
+    .string "That was more than luck!$"
+
+CeladonCity_GameCorner_Text_GamblerOswinAfter::
+    .string "The machines leave plenty to luck.\n"
+    .string "In battle, I can learn from\p"
+    .string "the choices I make.$"
+
+CeladonCity_GameCorner_Text_GamblerOswinRematch::
+    .string "Another battle?\n"
+    .string "Let us see if I learned anything!$"
+
+CeladonCity_GameCorner_Text_GamblerBasilIntro::
+    .string "I set my last few COINS aside.\n"
+    .string "There is always a POKéMON battle!$"
+
+CeladonCity_GameCorner_Text_GamblerBasilDefeat::
+    .string "You knew when to make your move!$"
+
+CeladonCity_GameCorner_Text_GamblerBasilAfter::
+    .string "A winning streak never lasts\n"
+    .string "forever. Know when to stop.\p"
+    .string "My POKéMON enjoy the break too.$"
+
+CeladonCity_GameCorner_Text_GamblerBasilRematch::
+    .string "My POKéMON are ready again.\n"
+    .string "Let us have another friendly match!$"

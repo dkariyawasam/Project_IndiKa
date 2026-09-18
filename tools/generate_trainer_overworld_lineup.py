@@ -19,6 +19,7 @@ OUT_PNG = ROOT / "docs/trainer-overworld-lineup.png"
 
 
 GFX_STEMS = {
+    "CIV_WOMAN_1": "civilians/civ_woman_1",
     "POKE_MANIAC": "pokemaniac",
     "POKEMANIAC": "pokemaniac",
     "BREEDER": "pokemon_breeder",
@@ -393,7 +394,7 @@ def make_sheet(rows: list[dict[str, object]]) -> None:
     scale = 4
     cols = 5
     cell_w = 210
-    cell_h = 162
+    cell_h = 220
     pad = 16
     title_h = 54
     rows_n = math.ceil(len(rows) / cols)

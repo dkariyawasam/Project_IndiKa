@@ -506,3 +506,9 @@ graphics/object_events/pics/people/pokemaniac.4bpp: graphics/object_events/pics/
 # Horizontal 16x32 overworld frames.
 graphics/object_events/pics/people/civilians/rocket_league_dude.4bpp: graphics/object_events/pics/people/civilians/rocket_league_dude.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+graphics/object_events/pics/people/tuber_m_land.4bpp: graphics/object_events/pics/people/tuber_m_land.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
+graphics/object_events/pics/people/tuber_m_water.4bpp: graphics/object_events/pics/people/tuber_m_water.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
