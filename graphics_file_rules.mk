@@ -512,3 +512,6 @@ graphics/object_events/pics/people/tuber_m_land.4bpp: graphics/object_events/pic
 
 graphics/object_events/pics/people/tuber_m_water.4bpp: graphics/object_events/pics/people/tuber_m_water.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
+
+graphics/object_events/pics/people/psychic_f.4bpp: graphics/object_events/pics/people/psychic_f.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

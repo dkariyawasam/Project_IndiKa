@@ -15,7 +15,7 @@ Route4_HealingHouse_EventScript_Healer::
 	goto_if_eq VAR_RESULT, NO, Route4_HealingHouse_EventScript_Goodbye
 	message Route4_HealingHouse_Text_TakeShortRest
 	waitmessage
-	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	call EventScript_OutOfCenterPartyHeal
 	msgbox Route4_HealingHouse_Text_Rested
 	release
 	end

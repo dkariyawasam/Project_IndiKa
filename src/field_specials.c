@@ -1288,10 +1288,12 @@ static u16 SamplePokemonRequestMon(void)
     for (i = 0; i < 100; i++)
     {
         species = (Random() % (NUM_SPECIES - 1)) + 1;
-        if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), 0) == TRUE)
+        if (gSpeciesInfo[species].baseHP != 0
+         && GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), 0) == TRUE)
             return species;
     }
-    while (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), 0) != TRUE)
+    while (gSpeciesInfo[species].baseHP == 0
+        || GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), 0) != TRUE)
     {
         if (species == SPECIES_BULBASAUR)
             species = NUM_SPECIES - 1;
