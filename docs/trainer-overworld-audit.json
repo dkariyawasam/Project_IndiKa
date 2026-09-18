@@ -2,65 +2,9 @@
   "summary": {
     "maps_scanned": 253,
     "trainer_object_events": 354,
-    "matched": 351,
-    "mismatches": 3
+    "matched": 354
   },
-  "mismatches": [
-    {
-      "map": "SaffronCity_Gym",
-      "object": 6,
-      "x": 4,
-      "y": 13,
-      "script": "SaffronCity_Gym_EventScript_Mira",
-      "trainer": "TRAINER_PSYCHIC_MIRA",
-      "trainer_name": "MIRA",
-      "trainer_class": "TRAINER_CLASS_PSYCHIC",
-      "trainer_pic": "TRAINER_PIC_PSYCHIC_F",
-      "graphics_id": "OBJ_EVENT_GFX_CIV_WOMAN_1",
-      "actual_suffix": "CIV_WOMAN_1",
-      "expected_suffixes": [
-        "CHANNELER",
-        "PSYCHIC",
-        "PSYCHIC_F"
-      ]
-    },
-    {
-      "map": "SaffronCity_Gym",
-      "object": 7,
-      "x": 24,
-      "y": 13,
-      "script": "SaffronCity_Gym_EventScript_Selene",
-      "trainer": "TRAINER_PSYCHIC_SELENE",
-      "trainer_name": "SELENE",
-      "trainer_class": "TRAINER_CLASS_PSYCHIC",
-      "trainer_pic": "TRAINER_PIC_PSYCHIC_F",
-      "graphics_id": "OBJ_EVENT_GFX_CIV_WOMAN_1",
-      "actual_suffix": "CIV_WOMAN_1",
-      "expected_suffixes": [
-        "CHANNELER",
-        "PSYCHIC",
-        "PSYCHIC_F"
-      ]
-    },
-    {
-      "map": "SaffronCity_Gym",
-      "object": 8,
-      "x": 24,
-      "y": 21,
-      "script": "SaffronCity_Gym_EventScript_Lyra",
-      "trainer": "TRAINER_PSYCHIC_LYRA",
-      "trainer_name": "LYRA",
-      "trainer_class": "TRAINER_CLASS_PSYCHIC",
-      "trainer_pic": "TRAINER_PIC_PSYCHIC_F",
-      "graphics_id": "OBJ_EVENT_GFX_CIV_WOMAN_1",
-      "actual_suffix": "CIV_WOMAN_1",
-      "expected_suffixes": [
-        "CHANNELER",
-        "PSYCHIC",
-        "PSYCHIC_F"
-      ]
-    }
-  ],
+  "mismatches": [],
   "skipped_multi_trainer_scripts": [],
   "skipped_dynamic_graphics": [],
   "aliases": {

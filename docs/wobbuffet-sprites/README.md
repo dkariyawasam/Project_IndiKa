@@ -1,0 +1,1 @@
+Wobbuffet shares Wynaut normal and shiny palettes. Both views remapped by colour role: body 6/7/8/9/10 -> 1/1/2/3/4; mouth 2/3/4/5 -> 13/5/6/6; outline 12 -> 14; greys 13/14 -> 7/8; white 15 -> 11. The two deepest body shades merge to avoid Wynaut slot 12, which turns brown in its shiny palette. Original sprites and palettes retained under before/.

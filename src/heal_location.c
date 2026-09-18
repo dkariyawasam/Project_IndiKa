@@ -59,6 +59,13 @@ const struct HealLocation * GetHealLocation(u32 idx)
     return &sHealLocations[idx - 1];
 }
 
+bool8 IsHealingHouseMap(u16 mapGroup, u16 mapNum)
+{
+    return (mapGroup == MAP_GROUP(MAP_LAVENDER_TOWN_HEALING_HOUSE) && mapNum == MAP_NUM(MAP_LAVENDER_TOWN_HEALING_HOUSE))
+        || (mapGroup == MAP_GROUP(MAP_ROUTE4_HEALING_HOUSE) && mapNum == MAP_NUM(MAP_ROUTE4_HEALING_HOUSE))
+        || (mapGroup == MAP_GROUP(MAP_ROUTE10_HEALING_HOUSE) && mapNum == MAP_NUM(MAP_ROUTE10_HEALING_HOUSE));
+}
+
 void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
 {
     u32 healLocationIdx;
@@ -87,6 +94,12 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
     {
         warp->x = 4;
         warp->y = 8;
+    }
+    else if (IsHealingHouseMap(warp->mapGroup, warp->mapNum))
+    {
+        // All three house healers stand at (4, 4), facing south.
+        warp->x = 4;
+        warp->y = 5;
     }
     else
     {

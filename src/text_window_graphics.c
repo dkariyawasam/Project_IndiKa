@@ -40,11 +40,11 @@ const u16 gTextWindowPalettes[][16] = {
 };
 
 const struct TextWindowGraphics gUserFrames[] = {
-    {sUserFrame_Type1_Gfx,  sUserFrame_Type1_Pal},
+    {sUserFrame_Type5_Gfx,  sUserFrame_Type5_Pal},
     {sUserFrame_Type2_Gfx,  sUserFrame_Type2_Pal},
     {sUserFrame_Type3_Gfx,  sUserFrame_Type3_Pal},
     {sUserFrame_Type4_Gfx,  sUserFrame_Type4_Pal},
-    {sUserFrame_Type5_Gfx,  sUserFrame_Type5_Pal},
+    {sUserFrame_Type1_Gfx,  sUserFrame_Type1_Pal},
     {sUserFrame_Type6_Gfx,  sUserFrame_Type6_Pal},
     {sUserFrame_Type7_Gfx,  sUserFrame_Type7_Pal},
     {sUserFrame_Type8_Gfx,  sUserFrame_Type8_Pal},

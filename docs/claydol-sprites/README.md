@@ -1,0 +1,3 @@
+Claydol normal palette contrast pass. Body/outline uses Houndoom slots 15,4,3,5; markings use Onix slots 12,11 and Eevee slots 2,3; eye rings use Chimecho slots 2,11,12. All selected RGB colours already exist in project FRLG palettes. Normal front/back indices and geometry unchanged; shiny palette retained. Original assets preserved in before/.
+
+Warmth refinement: body main/highlight use Wynaut 7 and Dodrio 13; markings use Marowak 3/2 and Cubone 9; eye rings use Diglett 2/3 and Gastly 4 for warm coral instead of pink. All colours drawn from existing FRLG palettes, keeping dark outline and shadow contrast.

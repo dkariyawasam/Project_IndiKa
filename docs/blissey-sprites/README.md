@@ -1,0 +1,1 @@
+Blissey normal body pink slots 6–10 use Chansey slots 11–15 respectively. White/grey areas, separate mouth colours, outlines, sprite indices and shiny palette are unchanged. Both front and back updated.

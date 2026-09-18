@@ -37,8 +37,8 @@ Route1_Text_BenDefeat::
     .string "Fieldwork can be tough!$"
 
 Route1_Text_BenPostBattle::
-    .string "The grass here is gentle, but it\n"
-    .string "still teaches you to pay attention.$"
+    .string "The grass here hides surprises.\n"
+    .string "It pays to watch where you step.$"
 
 Route1_Text_JaniceIntro::
     .string "I like watching the aides from\n"

@@ -450,7 +450,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_PORYGON_Z] = gMonFootprint_PorygonZ,
     [SPECIES_LEAFEON] = gMonFootprint_Leafeon,
     [SPECIES_GLACEON] = gMonFootprint_Glaceon,
-    [SPECIES_SYLVEON] = gMonFootprint_QuestionMark,
+    [SPECIES_SYLVEON] = gMonFootprint_Sylveon,
     [SPECIES_FARFETCHD_GALARIAN] = gMonFootprint_QuestionMark,
     [SPECIES_TYNAMO] = gMonFootprint_Tynamo,
     [SPECIES_EELEKTRIK] = gMonFootprint_Eelektrik,
@@ -487,6 +487,6 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_KRICKETUNE] = gMonFootprint_Kricketune,
     [SPECIES_HAPPINY] = gMonFootprint_Happiny,
     [SPECIES_LICKILICKY] = gMonFootprint_Lickilicky,
-    [SPECIES_GALLADE] = gMonFootprint_QuestionMark,
+    [SPECIES_GALLADE] = gMonFootprint_Gallade,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

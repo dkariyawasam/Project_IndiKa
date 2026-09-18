@@ -392,6 +392,13 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
     switch (gTasks[taskId].tState)
     {
     case 0:
+        if (IsHealingHouseMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
+        {
+            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_NORTH);
+            FadeInFromBlack();
+            gTasks[taskId].tState = 3;
+            break;
+        }
         windowId = AddWindow(&sWindowTemplate_WhiteoutText);
         gTasks[taskId].tWindowId = windowId;
         Menu_LoadStdPalAt(BG_PLTT_ID(15));
@@ -438,7 +445,10 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
         {
             DestroyTask(taskId);
-            ScriptContext_SetupScript(EventScript_AfterWhiteOutHeal);
+            if (IsHealingHouseMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
+                ScriptContext_SetupScript(EventScript_AfterWhiteOutHouseHeal);
+            else
+                ScriptContext_SetupScript(EventScript_AfterWhiteOutHeal);
         }
         break;
     case 6:

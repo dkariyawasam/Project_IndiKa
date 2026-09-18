@@ -164,7 +164,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NidoranM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nidorino;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meowth;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seel;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Voltorb;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowpoke;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowbro;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
@@ -172,12 +171,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wigglytuff;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Doduo;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machoke;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lapras;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zapdos;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Moltres;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Articuno;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mew;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Entei;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Suicune;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Raikou;
@@ -194,7 +191,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
 
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicF;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
+    [OBJ_EVENT_GFX_PSYCHIC_F] = &gObjectEventGraphicsInfo_PsychicF,
     [OBJ_EVENT_GFX_RED_NORMAL]               = &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE]                 = &gObjectEventGraphicsInfo_RedBike,
     [OBJ_EVENT_GFX_RED_SURF]                 = &gObjectEventGraphicsInfo_RedSurf,
@@ -322,7 +322,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_NIDORINO]                 = &gObjectEventGraphicsInfo_Nidorino,
     [OBJ_EVENT_GFX_MEOWTH]                   = &gObjectEventGraphicsInfo_Meowth,
     [OBJ_EVENT_GFX_SEEL]                     = &gObjectEventGraphicsInfo_Seel,
-    [OBJ_EVENT_GFX_VOLTORB]                  = &gObjectEventGraphicsInfo_Voltorb,
+    [OBJ_EVENT_GFX_UNUSED_127] = &gObjectEventGraphicsInfo_ItemBall,
     [OBJ_EVENT_GFX_SLOWPOKE]                 = &gObjectEventGraphicsInfo_Slowpoke,
     [OBJ_EVENT_GFX_SLOWBRO]                  = &gObjectEventGraphicsInfo_Slowbro,
     [OBJ_EVENT_GFX_MACHOP]                   = &gObjectEventGraphicsInfo_Machop,
@@ -330,12 +330,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DODUO]                    = &gObjectEventGraphicsInfo_Doduo,
     [OBJ_EVENT_GFX_FEAROW]                   = &gObjectEventGraphicsInfo_Fearow,
     [OBJ_EVENT_GFX_MACHOKE]                  = &gObjectEventGraphicsInfo_Machoke,
-    [OBJ_EVENT_GFX_LAPRAS]                   = &gObjectEventGraphicsInfo_Lapras,
+    [OBJ_EVENT_GFX_UNUSED_135] = &gObjectEventGraphicsInfo_ItemBall,
     [OBJ_EVENT_GFX_ZAPDOS]                   = &gObjectEventGraphicsInfo_Zapdos,
     [OBJ_EVENT_GFX_MOLTRES]                  = &gObjectEventGraphicsInfo_Moltres,
     [OBJ_EVENT_GFX_ARTICUNO]                 = &gObjectEventGraphicsInfo_Articuno,
     [OBJ_EVENT_GFX_MEWTWO]                   = &gObjectEventGraphicsInfo_Mewtwo,
-    [OBJ_EVENT_GFX_MEW]                      = &gObjectEventGraphicsInfo_Mew,
+    [OBJ_EVENT_GFX_UNUSED_140] = &gObjectEventGraphicsInfo_ItemBall,
     [OBJ_EVENT_GFX_ENTEI]                    = &gObjectEventGraphicsInfo_Entei,
     [OBJ_EVENT_GFX_SUICUNE]                  = &gObjectEventGraphicsInfo_Suicune,
     [OBJ_EVENT_GFX_RAIKOU]                   = &gObjectEventGraphicsInfo_Raikou,

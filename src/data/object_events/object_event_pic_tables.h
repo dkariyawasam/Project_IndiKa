@@ -1793,17 +1793,6 @@ static const struct SpriteFrameImage sPicTable_Seel[] = {
     overworld_frame(gObjectEventPic_Seel, 2, 2, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_Voltorb[] = {
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Voltorb, 2, 2, 2),
-};
 
 static const struct SpriteFrameImage sPicTable_Slowpoke[] = {
     overworld_frame(gObjectEventPic_Slowpoke, 2, 2, 0),
@@ -1877,17 +1866,6 @@ static const struct SpriteFrameImage sPicTable_Fearow[] = {
     overworld_frame(gObjectEventPic_Fearow, 2, 2, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_Lapras[] = {
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Lapras, 2, 2, 2),
-};
 
 static const struct SpriteFrameImage sPicTable_Zapdos[] = {
     overworld_frame(gObjectEventPic_Zapdos, 4, 4, 0),
@@ -1937,17 +1915,6 @@ static const struct SpriteFrameImage sPicTable_Mewtwo[] = {
     overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 8),
 };
 
-static const struct SpriteFrameImage sPicTable_Mew[] = {
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Mew, 2, 2, 0),
-};
 
 static const struct SpriteFrameImage sPicTable_Entei[] = {
     overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
@@ -2187,4 +2154,17 @@ static const struct SpriteFrameImage sPicTable_Mom[] = {
     overworld_frame(gObjectEventPic_Mom, 2, 4, 1),
     overworld_frame(gObjectEventPic_Mom, 2, 4, 2),
     overworld_frame(gObjectEventPic_Mom, 2, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_PsychicF[] = {
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 8),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 0), // Safe fallback for ANIM_RAISE_HAND.
 };

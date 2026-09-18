@@ -2260,6 +2260,8 @@ DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, 
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMCycling, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMCycling);
 DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFCycling, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFCycling);
 
+DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PsychicF, OBJ_EVENT_PAL_TAG_PSYCHIC_M, PALSLOT_NPC_DYNAMIC, sPicTable_PsychicF);
+
 #undef DEFINE_TRAINER_OBJ_EVENT_GFX_INFO
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall = {
@@ -2642,24 +2644,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seel = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Voltorb = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 128,
-    .width = 16,
-    .height = 16,
-    .paletteSlot = PALSLOT_NPC_4,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .disableReflectionPaletteLoad = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = gObjectEventSpriteOamTables_16x16,
-    .anims = sAnimTable_Standard,
-    .images = sPicTable_Voltorb,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowpoke = {
     .tileTag = TAG_NONE,
@@ -2775,24 +2759,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fearow = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lapras = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_PINK,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 128,
-    .width = 16,
-    .height = 16,
-    .paletteSlot = PALSLOT_NPC_2,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .disableReflectionPaletteLoad = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = gObjectEventSpriteOamTables_16x16,
-    .anims = sAnimTable_Standard,
-    .images = sPicTable_Lapras,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zapdos = {
     .tileTag = TAG_NONE,
@@ -2870,24 +2836,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mew = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 128,
-    .width = 16,
-    .height = 16,
-    .paletteSlot = PALSLOT_NPC_3,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .disableReflectionPaletteLoad = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = gObjectEventSpriteOamTables_16x16,
-    .anims = sAnimTable_Standard,
-    .images = sPicTable_Mew,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Entei = {
     .tileTag = TAG_NONE,

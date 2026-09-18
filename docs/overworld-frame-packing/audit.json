@@ -176,6 +176,14 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/chingling.png": {
+      "symbol": "gObjectEventPic_Chingling",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/civilians/civ_boy.png": {
       "symbol": "gObjectEventPic_CivBoy",
       "tile_width": 2,
@@ -416,6 +424,30 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/dusknoir.png": {
+      "symbol": "gObjectEventPic_Dusknoir",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/eelektrik.png": {
+      "symbol": "gObjectEventPic_Eelektrik",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/eelektross.png": {
+      "symbol": "gObjectEventPic_Eelektross",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/electrician.png": {
       "symbol": "gObjectEventPic_Electrician",
       "tile_width": 2,
@@ -488,6 +520,22 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/froslass.png": {
+      "symbol": "gObjectEventPic_Froslass",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/gallade.png": {
+      "symbol": "gObjectEventPic_Gallade",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/gambler.png": {
       "symbol": "gObjectEventPic_Gambler",
       "tile_width": 2,
@@ -509,6 +557,14 @@
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/glaceon.png": {
+      "symbol": "gObjectEventPic_Glaceon",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
       "bad_pixels": 0,
       "bad_frames": []
     },
@@ -688,6 +744,14 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/leafeon.png": {
+      "symbol": "gObjectEventPic_Leafeon",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/lorelei.png": {
       "symbol": "gObjectEventPic_Lorelei",
       "tile_width": 2,
@@ -725,6 +789,14 @@
       "tile_width": 2,
       "tile_height": 2,
       "frames": 3,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/pokemon/mamoswine.png": {
+      "symbol": "gObjectEventPic_Mamoswine",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
       "bad_pixels": 0,
       "bad_frames": []
     },
@@ -944,8 +1016,24 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/porygon_z.png": {
+      "symbol": "gObjectEventPic_PorygonZ",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/civilians/prof_oak.png": {
       "symbol": "gObjectEventPic_ProfOak",
+      "tile_width": 2,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
+    "graphics/object_events/pics/people/psychic_f.png": {
+      "symbol": "gObjectEventPic_PsychicF",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 9,
@@ -1192,6 +1280,14 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/spiritomb.png": {
+      "symbol": "gObjectEventPic_Spiritomb",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/misc/strength_boulder.png": {
       "symbol": "gObjectEventPic_StrengthBoulder",
       "tile_width": 2,
@@ -1352,6 +1448,14 @@
       "bad_pixels": 0,
       "bad_frames": []
     },
+    "graphics/object_events/pics/pokemon/tynamo.png": {
+      "symbol": "gObjectEventPic_Tynamo",
+      "tile_width": 4,
+      "tile_height": 4,
+      "frames": 9,
+      "bad_pixels": 0,
+      "bad_frames": []
+    },
     "graphics/object_events/pics/people/civilians/unused_male_receptionist.png": {
       "symbol": "gObjectEventPic_UnusedMaleReceptionist",
       "tile_width": 2,
@@ -1419,6 +1523,51 @@
       "gObjectEventPic_Seagallop",
       0,
       "special frame geometry"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      0,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      1,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      2,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      3,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      4,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      5,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      6,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      7,
+      "no compiled image/source mapping"
+    ],
+    [
+      "gObjectEventPic_Sylveon",
+      8,
+      "no compiled image/source mapping"
     ],
     [
       "gObjectEventPic_TownMap",

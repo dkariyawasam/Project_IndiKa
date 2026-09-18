@@ -64,3 +64,16 @@ EventScript_FieldWhiteOutFade::
 	special SetCB2WhiteOut
 	waitstate
 	end
+
+EventScript_AfterWhiteOutHouseHeal::
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox Text_HadQuiteAnExperienceTakeRest
+	call EventScript_OutOfCenterPartyHeal
+	call_if_unset FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsgPreBrock
+	call_if_set FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsg
+	fadedefaultbgm
+	releaseall
+	end
