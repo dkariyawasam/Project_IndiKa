@@ -1,0 +1,12 @@
+map,table,method,slot,species,min_level,max_level,evolution_level,affected_levels
+MAP_VIRIDIAN_FOREST,sViridianForest,land_mons,1,WEEDLE,5,8,7,7–8
+MAP_VIRIDIAN_FOREST,sViridianForest,land_mons,6,KAKUNA,7,10,10,10–10
+MAP_CELADON_CAVE,sCeladonCave,land_mons,1,ZUBAT,18,22,22,22–22
+MAP_ROUTE2,sRoute2_Daytime,land_mons,1,CATERPIE,5,8,7,7–8
+MAP_ROUTE2,sRoute2_Daytime,land_mons,3,METAPOD,7,10,10,10–10
+MAP_ROUTE2,sRoute2_Nighttime,land_mons,1,CATERPIE,5,8,7,7–8
+MAP_ROUTE2,sRoute2_Nighttime,land_mons,3,METAPOD,7,10,10,10–10
+MAP_ROUTE5,sRoute5_Daytime,land_mons,1,WURMPLE,5,8,7,7–8
+MAP_ROUTE5,sRoute5_Daytime,land_mons,7,WURMPLE,5,8,7,7–8
+MAP_ROUTE5,sRoute5_Nighttime,land_mons,1,WURMPLE,5,8,7,7–8
+MAP_ROUTE5,sRoute5_Nighttime,land_mons,7,WURMPLE,5,8,7,7–8

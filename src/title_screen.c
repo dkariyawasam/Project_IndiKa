@@ -645,6 +645,12 @@ static void SetTitleScreenScene_FlashSprite(s16 *data)
 
 static void SetTitleScreenScene_FadeIn(s16 *data)
 {
+#if defined(FIRERED)
+    const u32 revealPalettes = (1 << 13) | (1 << 14) | (1 << 15);
+#else
+    const u32 revealPalettes = 1 << 13;
+#endif
+
     switch (tState)
     {
     case 0:
@@ -656,6 +662,10 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
         if (data[2] > 10)
         {
             TintPalette_GrayScale2(&gPlttBufferUnfaded[BG_PLTT_ID(13)], 16);
+#if defined(FIRERED)
+            // The foreground foliage must remain monochrome with the mascot.
+            TintPalette_GrayScale2(&gPlttBufferUnfaded[BG_PLTT_ID(14)], 32);
+#endif
             BeginNormalPaletteFade(1 << 13, 9, 16, 0, RGB_BLACK);
             tState++;
         }
@@ -681,7 +691,7 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
     case 4:
         if (!IsBlendPalettesGraduallyTaskActive(0) && !IsBlendPalettesGraduallyTaskActive(1))
         {
-            BlendPalettesGradually(1 << 13, -4, 15, 0, RGB(30, 30, 31), 0, 0);
+            BlendPalettesGradually(revealPalettes, -4, 15, 0, RGB(30, 30, 31), 0, 0);
             tState++;
         }
         break;
@@ -690,14 +700,14 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
         if (data[2] > 20)
         {
             data[2] = 0;
-            BlendPalettesGradually(1 << 13, -4, 1, 16, RGB(30, 30, 31), 0, 0);
+            BlendPalettesGradually(revealPalettes, -4, 1, 16, RGB(30, 30, 31), 0, 0);
             tState++;
         }
         break;
     case 6:
         if (!IsBlendPalettesGraduallyTaskActive(0))
         {
-            BlendPalettesGradually(1 << 13, -4, 15, 0, RGB(30, 30, 31), 0, 0);
+            BlendPalettesGradually(revealPalettes, -4, 15, 0, RGB(30, 30, 31), 0, 0);
             tState++;
         }
         break;
@@ -706,7 +716,7 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
         if (data[2] > 20)
         {
             data[2] = 0;
-            BlendPalettesGradually(1 << 13, -3, 0, 16, RGB(30, 30, 31), 0, 0);
+            BlendPalettesGradually(revealPalettes, -3, 0, 16, RGB(30, 30, 31), 0, 0);
             tState++;
         }
         break;
@@ -720,7 +730,11 @@ static void SetTitleScreenScene_FadeIn(s16 *data)
             BeginNormalPaletteFade(palettes, 1, 16, 0, RGB(30, 30, 31));
             ShowBg(0);
             CpuCopy16(gGraphics_TitleScreen_BoxArtMonPals, &gPlttBufferUnfaded[BG_PLTT_ID(13)], PLTT_SIZE_4BPP);
-            BlendPalettesGradually(1 << 13, 1, 15, 0, RGB(30, 30, 31), 0, 0);
+#if defined(FIRERED)
+            CpuCopy16(sGrassPal, &gPlttBufferUnfaded[BG_PLTT_ID(14)], PLTT_SIZE_4BPP);
+            CpuCopy16(gGraphics_TitleScreen_BackgroundPals, &gPlttBufferUnfaded[BG_PLTT_ID(15)], PLTT_SIZE_4BPP);
+#endif
+            BlendPalettesGradually(revealPalettes, 1, 15, 0, RGB(30, 30, 31), 0, 0);
             tState++;
         }
         break;

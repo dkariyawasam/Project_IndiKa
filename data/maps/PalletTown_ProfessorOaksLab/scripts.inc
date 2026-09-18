@@ -468,6 +468,7 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	special HealPlayerParty
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon
 	closemessage
+	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_OAKS_LAB_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -684,7 +685,6 @@ PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 
 PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	delay 30
-	playse SE_PIN
 	waitmovement 0
 	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_Delay48
 	waitmovement 0
@@ -818,13 +818,13 @@ PalletTown_ProfessorOaksLab_EventScript_DexSceneOakWalkToDeskWest::
 PalletTown_ProfessorOaksLab_Movement_WatchOakWalkToDeskEast::
 	delay_16
 	delay_8
-	walk_in_place_faster_up
+	face_up
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_WatchOakWalkToDesk::
 	delay_16
 	delay_8
-	walk_in_place_faster_left
+	face_left
 	step_end
 
 PalletTown_ProfessorOaksLab_Movement_OakWalkToDesk::
@@ -1097,7 +1097,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalExit::
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_DexSceneOakFacePlayerAndRivalNorth::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerFaceUp
 	waitmovement 0
 	return
 
@@ -1350,3 +1350,7 @@ PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 PalletTown_ProfessorOaksLab_EventScript_Computer::
 	msgbox PalletTown_ProfessorOaksLab_Text_EmailMessage, MSGBOX_SIGN
 	end
+
+PalletTown_ProfessorOaksLab_Movement_PlayerFaceUp::
+	face_up
+	step_end
