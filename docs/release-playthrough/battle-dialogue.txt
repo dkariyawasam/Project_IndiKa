@@ -1,0 +1,201 @@
+|いいHOPPIP|あこ♀
+Wild　HOPPIP　appeared！|
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+What　will|BULBASAUR　do？
+|いいHOPPIP|あこ♀
+RED　used|POKひ　BALL！
+Oh,　no！|The　POKひMON　broke　free！
+Wild　HOPPIP　used|SPLASH！
+But　nothing　happened！
+What　will|BULBASAUR　do？
+|いいHOPPIP|あこ♀
+What　will|BULBASAUR　do？
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|TACKLE！
+Wild　HOPPIP　used|SPLASH！
+But　nothing　happened！
+What　will|BULBASAUR　do？
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|TACKLE！
+Wild　HOPPIP　used|TAIL　WHIP！
+BULBASAUR\'s　DEFENSE|fell！
+What　will|BULBASAUR　do？
+|いいHOPPIP|あこ♀
+RED　used|POKひ　BALL！
+Gotcha！|HOPPIP　was　caught！|こ|さぢあ|
+BULBASAUR　gained|52　EXP。　Points！|
+|いいBULBASAUR|あさ♂
+BULBASAUR　grew　to|LV。　8！|こ|
+HOPPIP\'s　data　was|added　to　the　POKひDEX。|
+Give　a　nickname　to　the|captured　HOPPIP？
+|いいPIDGEOTTO|あこ♀
+Wild　PIDGEOTTO　appeared！|
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|RETREAT！
+BULBASAUR　fled　from|battle！
+|いいPIDGEY|あこ♀
+YOUNGSTER　JANICE|would　like　to　battle！|
+YOUNGSTER　JANICE　sent|out　PIDGEY！|くざ
+|いいPIDGEY|あこ♀
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+What　will|BULBASAUR　do？
+TYPE/|かあ|おお|えすせそNORMAL
+TYPE/|かあ|おお|えすせそGRASS
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+BULBASAUR　used|LEECH　SEED！
+Foe　PIDGEY　was　seeded！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|BULBASAUR　do？
+Foe　PIDGEY　used|TACKLE！
+BULBASAUR　used|GROWL！
+Foe　PIDGEY\'s　ATTACK|fell！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|BULBASAUR　do？
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+BULBASAUR|fainted！|
+
+|いいPIDGEY|あこ♀
+Go！　HOPPIP！
+|いいHOPPIP|あこ♀
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|HOPPIP　do？
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+HOPPIP　used|SYNTHESIS！
+HOPPIP　regained|health！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|HOPPIP　do？
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+HOPPIP　used|SYNTHESIS！
+HOPPIP　regained|health！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|HOPPIP　do？
+Foe　PIDGEY　used|SANDーATTACK！
+HOPPIP\'s　accuracy|fell！
+HOPPIP　used|SYNTHESIS！
+HOPPIP　regained|health！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+What　will|HOPPIP　do？
+Foe　PIDGEY　used|SANDーATTACK！
+HOPPIP\'s　accuracy|fell！
+HOPPIP　used|SYNTHESIS！
+HOPPIP\'s|HP　is　full！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+TYPE/|かあ|おお|えすせそGRASS
+Foe　PIDGEY　used|TACKLE！
+HOPPIP　used|SYNTHESIS！
+HOPPIP　regained|health！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+TYPE/|かあ|おお|えすせそGRASS
+Foe　PIDGEY　used|SANDーATTACK！
+HOPPIP\'s　accuracy|fell！
+HOPPIP　used|SPLASH！
+But　nothing　happened！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+TYPE/|かあ|おお|えすせそNORMAL
+Foe　PIDGEY　used|SANDーATTACK！
+HOPPIP\'s　accuracy|fell！
+HOPPIP　used|SPLASH！
+But　nothing　happened！
+Foe　PIDGEY\'s　health　is|sapped　by　LEECH　SEED！
+Foe　PIDGEY|fainted！|
+HOPPIP　gained|117　EXP。　Points！|
+|いいHOPPIP|あこ♀
+HOPPIP　grew　to|LV。　6！|こ|
+|いいHOPPIP|あこ♀
+HOPPIP　grew　to|LV。　7！|こ|
+YOUNGSTER　JANICE　sent|out　PIDGEY！
+|いいPIDGEY|あこ♀
+TYPE/|かあ|おお|えすせそNORMAL
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+HOPPIP　used|SPLASH！
+But　nothing　happened！
+TYPE/|かあ|おお|えすせそNORMAL
+Foe　PIDGEY　used|GUST！
+It\'s　super　effective！
+HOPPIP|fainted！|
+RED　is　out　of|usable　POKひMON！|Player　lost　against|YOUNGSTER　JANICE！|け
+RED　paid　¥64　as　the　prize|money‥|‥　‥　‥　‥|RED　whited　out！|け
+|いいWEEDLE|あこ♀
+Wild　WEEDLE　appeared！|
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+What　will|BULBASAUR　do？
+Wild　WEEDLE　used|STRING　SHOT！
+BULBASAUR\'s　SPEED|fell！
+BULBASAUR　used|TACKLE！
+What　will|BULBASAUR　do？
+RED　used|POKひ　BALL！
+Aargh！|Almost　had　it！
+Wild　WEEDLE　used|POISON　STING！
+What　will|BULBASAUR　do？
+Wild　WEEDLE　used|STRING　SHOT！
+BULBASAUR\'s　SPEED|fell！
+BULBASAUR　used|TACKLE！
+What　will|BULBASAUR　do？
+|いいWEEDLE|あこ♀
+RED　used|POKひ　BALL！
+Aww！|It　appeared　to　be　caught！
+Wild　WEEDLE　used|POISON　STING！
+What　will|BULBASAUR　do？
+|いいWEEDLE|あこ♀
+RED　used|POKひ　BALL！
+Gotcha！|WEEDLE　was　caught！|こ|さぢあ|
+BULBASAUR　gained|59　EXP。　Points！|
+WEEDLE\'s　data　was|added　to　the　POKひDEX。|
+Give　a　nickname　to　the|captured　WEEDLE？
+|いいWEEDLE|あこ♀
+Wild　WEEDLE　appeared！|
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|TACKLE！
+Wild　WEEDLE　used|STRING　SHOT！
+BULBASAUR\'s　SPEED|fell！
+TYPE/|かあ|おお|えすせそNORMAL
+Wild　WEEDLE　used|POISON　STING！
+BULBASAUR　used|TACKLE！
+What　will|BULBASAUR　do？
+Wild　WEEDLE　used|STRING　SHOT！
+BULBASAUR\'s　SPEED|fell！
+BULBASAUR　used|TACKLE！
+Wild　WEEDLE|fainted！|
+BULBASAUR　gained|37　EXP。　Points！|
+|いいBULBASAUR|あさ♂
+BULBASAUR　grew　to|LV。　9！|こ|
+|いいWEEDLE|あさ♂
+BUG　CATCHER　SAMMY|would　like　to　battle！|
+BUG　CATCHER　SAMMY　sent|out　WEEDLE！|くざ
+Go！　BULBASAUR！
+What　will|BULBASAUR　do？
+BULBASAUR　used|TACKLE！
+Foe　WEEDLE　used|POISON　STING！
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|TACKLE！
+Foe　WEEDLE　used|POISON　STING！
+What　will|BULBASAUR　do？
+BULBASAUR　used|TACKLE！
+A　critical　hit！
+Foe　WEEDLE　used|POISON　STING！
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|TACKLE！
+Foe　WEEDLE|fainted！|
+BULBASAUR　gained|99　EXP。　Points！|
+Player　defeated|BUG　CATCHER　SAMMY！|
+I　give！|You\'re　good　at　this！|け
+RED　got　¥108|for　winning！|
+|いいPIKACHU|あこ♀
+Wild　PIKACHU　appeared！|
+Go！　BULBASAUR！
+|いいBULBASAUR|あさ♂
+TYPE/|かあ|おお|えすせそNORMAL
+BULBASAUR　used|RETREAT！
+BULBASAUR　fled　from|battle！

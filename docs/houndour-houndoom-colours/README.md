@@ -1,0 +1,1 @@
+Normal orange slots 6–9 in both Houndour and Houndoom now use Growlithe FRLG normal slots 11–14: highlight 255,197,82; main 238,139,74; shade 197,82,32; deepest 115,57,16. Other palette slots, indices, geometry and shiny palettes remain unchanged. Both front/back previews refreshed.
