@@ -57,10 +57,6 @@
       "label": "Channeler"
     },
     {
-      "id": "CLASS_CRUSH_KIN",
-      "label": "Crush Kin"
-    },
-    {
       "id": "CLASS_ELECTRICIAN",
       "label": "Electrician"
     },
@@ -191,6 +187,10 @@
     {
       "id": "CLASS_SCOUT_M",
       "label": "Scout M"
+    },
+    {
+      "id": "CLASS_SPARRING_DUO",
+      "label": "Sparring Duo"
     },
     {
       "id": "CLASS_SUPER_NERD",
@@ -1093,59 +1093,6 @@
       0,
       0,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       4,
       0,
       0,
@@ -1450,7 +1397,7 @@
       0,
       0,
       0,
-      0,
+      2,
       0,
       0,
       0,
@@ -2899,6 +2846,59 @@
       0,
       0,
       0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       2,
@@ -3093,6 +3093,7 @@
       0,
       0,
       0,
+      1,
       0,
       0,
       0,
@@ -3111,8 +3112,7 @@
       0,
       0,
       0,
-      0,
-      0,
+      9,
       0,
       0,
       0,
@@ -3146,7 +3146,6 @@
       0,
       0,
       0,
-      1,
       0,
       0,
       0,
@@ -3165,7 +3164,8 @@
       0,
       0,
       0,
-      19,
+      0,
+      10,
       0,
       0,
       0,
@@ -3801,7 +3801,61 @@
       "conditional": true
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_GAMBLER",
+      "area": "Celadon City",
+      "map": "CeladonCity_GameCorner",
+      "names": [
+        "OSWIN"
+      ],
+      "trainer_ids": [
+        789
+      ],
+      "variants": [
+        "TRAINER_GAME_CORNER_OSWIN"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_GAMBLER"
+      ],
+      "roots": [
+        "CeladonCity_GameCorner_EventScript_GamblerOswin"
+      ],
+      "origins": [
+        "object 4 (2,12)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_GameCorner/scripts.inc:440"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_GAMBLER",
+      "area": "Celadon City",
+      "map": "CeladonCity_GameCorner",
+      "names": [
+        "BASIL"
+      ],
+      "trainer_ids": [
+        790
+      ],
+      "variants": [
+        "TRAINER_GAME_CORNER_BASIL"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_GAMBLER"
+      ],
+      "roots": [
+        "CeladonCity_GameCorner_EventScript_GamblerBasil"
+      ],
+      "origins": [
+        "object 8 (15,12)"
+      ],
+      "sources": [
+        "data/maps/CeladonCity_GameCorner/scripts.inc:452"
+      ],
+      "conditional": false
+    },
+    {
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Celadon City",
       "map": "CeladonCity_GameCorner",
       "names": [
@@ -9082,7 +9136,7 @@
         "Route17_EventScript_Nico"
       ],
       "origins": [
-        "object 17 (11,91)"
+        "object 17 (11,93)"
       ],
       "sources": [
         "data/scripts/trainers.inc:1771"
@@ -9976,7 +10030,7 @@
         "Route20_EventScript_Darrin"
       ],
       "origins": [
-        "object 7 (43,10)"
+        "object 7 (43,12)"
       ],
       "sources": [
         "data/scripts/trainers.inc:2167"
@@ -13423,6 +13477,36 @@
       "conditional": false
     },
     {
+      "class": "CLASS_SPARRING_DUO",
+      "area": "Saffron City",
+      "map": "SaffronCity_Dojo",
+      "names": [
+        "REN & MEI"
+      ],
+      "trainer_ids": [
+        791
+      ],
+      "variants": [
+        "TRAINER_DOJO_CRUSH_KIN_REN_MEI"
+      ],
+      "encoded_classes": [
+        "TRAINER_CLASS_CRUSH_KIN"
+      ],
+      "roots": [
+        "SaffronCity_Dojo_EventScript_CrushKinMei",
+        "SaffronCity_Dojo_EventScript_CrushKinRen"
+      ],
+      "origins": [
+        "object 11 (9,5)",
+        "object 12 (10,5)"
+      ],
+      "sources": [
+        "data/maps/SaffronCity_Dojo/scripts.inc:171",
+        "data/maps/SaffronCity_Dojo/scripts.inc:183"
+      ],
+      "conditional": false
+    },
+    {
       "class": "CLASS_LEADER",
       "area": "Saffron City",
       "map": "SaffronCity_Gym",
@@ -13678,7 +13762,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_11F",
       "names": [
@@ -13738,7 +13822,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_2F",
       "names": [
@@ -13792,7 +13876,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_3F",
       "names": [
@@ -13819,7 +13903,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_4F",
       "names": [
@@ -13873,7 +13957,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_5F",
       "names": [
@@ -13954,7 +14038,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_6F",
       "names": [
@@ -14008,7 +14092,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_7F",
       "names": [
@@ -14123,7 +14207,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_8F",
       "names": [
@@ -14150,7 +14234,7 @@
       "conditional": false
     },
     {
-      "class": "CLASS_TEAM_ROCKET_M",
+      "class": "CLASS_TEAM_ROCKET_F",
       "area": "Silph Co.",
       "map": "SilphCo_9F",
       "names": [
@@ -16068,8 +16152,8 @@
     "maps": 253,
     "classes": 64,
     "areas": 51,
-    "encounter_sites": 441,
-    "unplaced_classes": 5,
+    "encounter_sites": 444,
+    "unplaced_classes": 2,
     "conditional_sites": 19
   }
 }
