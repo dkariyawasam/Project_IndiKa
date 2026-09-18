@@ -167,3 +167,27 @@ SaffronCity_Dojo_Text_ExpertMaraDefeat::
 
 SaffronCity_Dojo_Text_ExpertMaraPostBattle::
 	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+
+SaffronCity_Dojo_EventScript_CrushKinRen::
+	trainerbattle_double TRAINER_DOJO_CRUSH_KIN_REN_MEI, SaffronCity_Dojo_Text_CrushKinIntro, SaffronCity_Dojo_Text_CrushKinDefeat, SaffronCity_Dojo_Text_CrushKinNeedTwo
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_CrushKinRenRematch
+	msgbox SaffronCity_Dojo_Text_CrushKinAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Dojo_EventScript_CrushKinRenRematch::
+	trainerbattle_rematch_double TRAINER_DOJO_CRUSH_KIN_REN_MEI, SaffronCity_Dojo_Text_CrushKinIntro, SaffronCity_Dojo_Text_CrushKinDefeat, SaffronCity_Dojo_Text_CrushKinNeedTwo
+	msgbox SaffronCity_Dojo_Text_CrushKinAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Dojo_EventScript_CrushKinMei::
+	trainerbattle_double TRAINER_DOJO_CRUSH_KIN_REN_MEI, SaffronCity_Dojo_Text_CrushKinIntro, SaffronCity_Dojo_Text_CrushKinDefeat, SaffronCity_Dojo_Text_CrushKinNeedTwo
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_CrushKinMeiRematch
+	msgbox SaffronCity_Dojo_Text_CrushKinAfter, MSGBOX_AUTOCLOSE
+	end
+
+SaffronCity_Dojo_EventScript_CrushKinMeiRematch::
+	trainerbattle_rematch_double TRAINER_DOJO_CRUSH_KIN_REN_MEI, SaffronCity_Dojo_Text_CrushKinIntro, SaffronCity_Dojo_Text_CrushKinDefeat, SaffronCity_Dojo_Text_CrushKinNeedTwo
+	msgbox SaffronCity_Dojo_Text_CrushKinAfter, MSGBOX_AUTOCLOSE
+	end

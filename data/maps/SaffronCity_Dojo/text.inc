@@ -131,3 +131,20 @@ Text_SwordsDanceWhichMon::
 
 Text_SwordsDanceTaught::
     .string "Good. Keep that rhythm sharp.$"
+
+SaffronCity_Dojo_Text_CrushKinIntro::
+	.string "We train together as siblings!\n"
+	.string "Our POKéMON follow our rhythm.\p"
+	.string "Show us how your team works\n"
+	.string "in a DOUBLE BATTLE!$"
+
+SaffronCity_Dojo_Text_CrushKinDefeat::
+	.string "You found our opening!$"
+
+SaffronCity_Dojo_Text_CrushKinAfter::
+	.string "We grew up training side by side.\n"
+	.string "Now our POKéMON do the same!$"
+
+SaffronCity_Dojo_Text_CrushKinNeedTwo::
+	.string "Bring two POKéMON that can battle.\n"
+	.string "We always train as a pair!$"

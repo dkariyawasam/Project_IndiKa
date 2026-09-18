@@ -1,3 +1,13 @@
+static const struct TrainerMonNoItemDefaultMoves sParty_GameCornerOswin[] = {
+    { .iv = 15, .lvl = 18, .species = SPECIES_MEOWTH, },
+    { .iv = 15, .lvl = 19, .species = SPECIES_VOLTORB, },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_GameCornerBasil[] = {
+    { .iv = 15, .lvl = 19, .species = SPECIES_POLIWAG, },
+    { .iv = 15, .lvl = 20, .species = SPECIES_GROWLITHE, },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_ChannelFen[] = {
     { .iv = 0, .lvl = 7, .species = SPECIES_GOLDEEN, },
     { .iv = 0, .lvl = 8, .species = SPECIES_POLIWAG, },
@@ -9849,4 +9859,9 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GymSelene[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GymLyra[] = {
     { .iv = 60, .lvl = 34, .species = SPECIES_GIRAFARIG, },
     { .iv = 60, .lvl = 36, .species = SPECIES_MR_MIME, },
+};
+
+static const struct TrainerMonItemDefaultMoves sParty_DojoCrushKinRenMei[] = {
+    { .iv = 100, .lvl = 31, .species = SPECIES_PRIMEAPE, .heldItem = ITEM_BLACK_BELT, },
+    { .iv = 100, .lvl = 31, .species = SPECIES_MACHOKE, .heldItem = ITEM_BLACK_BELT, },
 };
