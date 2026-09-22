@@ -21,6 +21,7 @@
 #include "strings.h"
 #include "menu_helpers.h"
 #include "palette.h"
+#include "util.h"
 #include "text_window.h"
 #include "field_fadetransition.h"
 #include "field_player_avatar.h"
@@ -70,6 +71,10 @@ enum SaveCBReturn
     SAVECB_RETURN_ERROR
 };
 
+#define START_MENU_ICON_OBJ_PAL_SLOT 15
+#define START_MENU_OBJ_PAL_BACKUP_START START_MENU_ICON_OBJ_PAL_SLOT
+#define START_MENU_OBJ_PAL_BACKUP_COUNT 1
+
 static EWRAM_DATA bool8 (*sStartMenuCallback)(void) = NULL;
 static EWRAM_DATA u8 sStartMenuCursorPos = 0;
 static EWRAM_DATA u8 sNumStartMenuItems = 0;
@@ -88,9 +93,10 @@ static EWRAM_DATA u8 sStartMenuHeaderWindowId = WINDOW_NONE;
 static EWRAM_DATA u8 sStartMenuCenterLabelWindowId = WINDOW_NONE;
 static EWRAM_DATA u16 sStartMenuHeaderBgBackup[30 * 2] = {};
 static EWRAM_DATA u16 sStartMenuCenterLabelBgBackup[9 * 2] = {};
-static EWRAM_DATA u16 sRadialStartMenuObjPalBackupUnfaded[2 * 16] = {};
-static EWRAM_DATA u16 sRadialStartMenuObjPalBackupFaded[2 * 16] = {};
+static EWRAM_DATA u16 sRadialStartMenuObjPalBackupUnfaded[START_MENU_OBJ_PAL_BACKUP_COUNT * 16] = {};
+static EWRAM_DATA u16 sRadialStartMenuObjPalBackupFaded[START_MENU_OBJ_PAL_BACKUP_COUNT * 16] = {};
 static EWRAM_DATA bool8 sRadialStartMenuObjPalBackupValid = FALSE;
+static EWRAM_DATA bool8 sRadialStartMenuLeavingOverworld = FALSE;
 static EWRAM_DATA u8 sSafariZoneStatsWindowId = 0;
 static ALIGNED(4) EWRAM_DATA u8 sSaveStatsWindowId = WINDOW_NONE;
 
@@ -285,9 +291,6 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 #define START_MENU_CENTER_LABEL_TOP 3
 #define START_MENU_CENTER_LABEL_HEIGHT 10
 #define START_MENU_SELECTED_ICON_BOB_INTERVAL 8
-#define START_MENU_ICON_OBJ_PAL_SLOT 15
-#define START_MENU_OBJ_PAL_BACKUP_START START_MENU_ICON_OBJ_PAL_SLOT
-#define START_MENU_OBJ_PAL_BACKUP_COUNT 1
 #define START_MENU_HEADER_LEFT 0
 #define START_MENU_HEADER_TOP 0
 #define START_MENU_HEADER_WIDTH 30
@@ -1020,10 +1023,17 @@ static void RestoreRadialStartMenuObjPalettes(void)
     CpuCopy16(sRadialStartMenuObjPalBackupUnfaded,
               &gPlttBufferUnfaded[OBJ_PLTT_ID(START_MENU_OBJ_PAL_BACKUP_START)],
               sizeof(sRadialStartMenuObjPalBackupUnfaded));
-    CpuCopy16(sRadialStartMenuObjPalBackupFaded,
-              &gPlttBufferFaded[OBJ_PLTT_ID(START_MENU_OBJ_PAL_BACKUP_START)],
-              sizeof(sRadialStartMenuObjPalBackupFaded));
+    // Submenus destroy the radial menu after its fade has finished. Do not
+    // bring the borrowed OBJ palette back to full brightness on that frame.
+    if (sRadialStartMenuLeavingOverworld)
+        BlendPalette(OBJ_PLTT_ID(START_MENU_OBJ_PAL_BACKUP_START),
+                     START_MENU_OBJ_PAL_BACKUP_COUNT * 16, 16, RGB_BLACK);
+    else
+        CpuCopy16(sRadialStartMenuObjPalBackupFaded,
+                  &gPlttBufferFaded[OBJ_PLTT_ID(START_MENU_OBJ_PAL_BACKUP_START)],
+                  sizeof(sRadialStartMenuObjPalBackupFaded));
     sRadialStartMenuObjPalBackupValid = FALSE;
+    sRadialStartMenuLeavingOverworld = FALSE;
 }
 
 static void CreateRadialStartMenuSprites(void)
@@ -1033,6 +1043,7 @@ static void CreateRadialStartMenuSprites(void)
     if (sRadialStartMenuSpritesLoaded)
         return;
 
+    sRadialStartMenuLeavingOverworld = FALSE;
     BackupRadialStartMenuObjPalettes();
     LoadRadialStartMenuObjPalettes();
 
@@ -1644,6 +1655,7 @@ static void StartMenu_FadeScreenIfLeavingOverworld(void)
      && sStartMenuCallback != StartMenuExitCallback
      && sStartMenuCallback != StartMenuSafariZoneRetireCallback)
     {
+        sRadialStartMenuLeavingOverworld = TRUE;
         StopPokemonLeagueLightingEffectTask();
         FadeScreen(FADE_TO_BLACK, 0);
     }

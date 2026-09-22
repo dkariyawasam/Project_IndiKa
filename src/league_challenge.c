@@ -120,21 +120,12 @@ static u16 GetIndigoChampionTrainerId(void)
     switch (VarGet(VAR_STARTER_MON))
     {
     case 0:
-        if (FlagGet(FLAG_SYS_GAME_CLEAR))
-            return TRAINER_CHAMPION_REMATCH_CHARMANDER;
-        else
-            return TRAINER_CHAMPION_FIRST_CHARMANDER;
+        return TRAINER_CHAMPION_FIRST_CHARMANDER;
     case 1:
-        if (FlagGet(FLAG_SYS_GAME_CLEAR))
-            return TRAINER_CHAMPION_REMATCH_BULBASAUR;
-        else
-            return TRAINER_CHAMPION_FIRST_BULBASAUR;
+        return TRAINER_CHAMPION_FIRST_BULBASAUR;
     case 2:
     default:
-        if (FlagGet(FLAG_SYS_GAME_CLEAR))
-            return TRAINER_CHAMPION_REMATCH_SQUIRTLE;
-        else
-            return TRAINER_CHAMPION_FIRST_SQUIRTLE;
+        return TRAINER_CHAMPION_FIRST_SQUIRTLE;
     }
 }
 
@@ -235,6 +226,16 @@ void ResetLeagueChallenge(void)
     gSpecialVar_Result = 0;
 }
 
+// Resolve the champion from the current roster, including League runs saved before
+// the alternate Champion parties were removed.
+static u16 GetLeagueTrainerId(u8 round)
+{
+    if (gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_INDIGO
+     && round == LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT - 1)
+        return GetIndigoChampionTrainerId();
+    return gSaveBlock2Ptr->leagueChallenge.trainerIds[round];
+}
+
 void AdvanceLeagueChallengeRound(void)
 {
     if (!gSaveBlock2Ptr->leagueChallenge.active)
@@ -247,7 +248,7 @@ void AdvanceLeagueChallengeRound(void)
     if (gSaveBlock2Ptr->leagueChallenge.round < LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT - 1)
     {
         gSaveBlock2Ptr->leagueChallenge.round++;
-        gSpecialVar_Result = gSaveBlock2Ptr->leagueChallenge.trainerIds[gSaveBlock2Ptr->leagueChallenge.round];
+        gSpecialVar_Result = GetLeagueTrainerId(gSaveBlock2Ptr->leagueChallenge.round);
     }
     else
     {
@@ -262,7 +263,7 @@ void GetLeagueChallengeCurrentTrainer(void)
     if (!gSaveBlock2Ptr->leagueChallenge.active)
         gSpecialVar_Result = 0;
     else
-        gSpecialVar_Result = gSaveBlock2Ptr->leagueChallenge.trainerIds[gSaveBlock2Ptr->leagueChallenge.round];
+        gSpecialVar_Result = GetLeagueTrainerId(gSaveBlock2Ptr->leagueChallenge.round);
 }
 
 void GetLeagueChallengeTrainerForRound(void)
@@ -270,7 +271,7 @@ void GetLeagueChallengeTrainerForRound(void)
     if (gSpecialVar_0x8004 >= LEAGUE_CHALLENGE_TOTAL_BATTLE_COUNT)
         gSpecialVar_Result = 0;
     else
-        gSpecialVar_Result = gSaveBlock2Ptr->leagueChallenge.trainerIds[gSpecialVar_0x8004];
+        gSpecialVar_Result = GetLeagueTrainerId(gSpecialVar_0x8004);
 }
 
 void GetLeagueChallengeRound(void)

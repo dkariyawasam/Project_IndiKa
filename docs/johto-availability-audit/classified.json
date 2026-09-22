@@ -1,0 +1,470 @@
+[
+  {
+    "species": "ABSOL",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / dark-cave / walk; heartgold / ice-path / walk; heartgold / johto-route-47 / walk; heartgold / mt-mortar / walk; heartgold / mt-silver / walk; heartgold / slowpoke-well / walk; heartgold / tohjo-falls / walk; heartgold / union-cave / walk; heartgold / whirl-islands / walk; soulsilver / dark-cave / walk; soulsilver / ice-path / walk; soulsilver / johto-route-47 / walk; soulsilver / mt-mortar / walk; soulsilver / mt-silver / walk; soulsilver / slowpoke-well / walk; soulsilver / tohjo-falls / walk; soulsilver / union-cave / walk; soulsilver / whirl-islands / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "AMPHAROS",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve FLAAFFY. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from FLAAFFY"
+  },
+  {
+    "species": "ANORITH",
+    "category": "HGSS Kanto source or revival",
+    "official_evidence": "Claw Fossil can be found in Johto Cliff Cave; revival is in Pewter City, Kanto.",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "ARMALDO",
+    "category": "HGSS Kanto source or revival",
+    "official_evidence": "Evolution of a Pok\u00e9mon obtained or revived in Kanto in HGSS.",
+    "project_note": "Evolves from ANORITH"
+  },
+  {
+    "species": "AZUMARILL",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve MARILL. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from MARILL"
+  },
+  {
+    "species": "AZURILL",
+    "category": "Excluded Johto Safari source",
+    "official_evidence": "Only Johto Safari Zone evidence found for this Pok\u00e9mon or its pre-evolutions; excluded by the project source rule.",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "BARBOACH",
+    "category": "Excluded Johto Safari source",
+    "official_evidence": "Only Johto Safari Zone evidence found for this Pok\u00e9mon or its pre-evolutions; excluded by the project source rule.",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "BAYLEEF",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve CHIKORITA. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from CHIKORITA"
+  },
+  {
+    "species": "CELEBI",
+    "category": "Johto event",
+    "official_evidence": "crystal / ilex-forest / static",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "CHIKORITA",
+    "category": "Johto gift",
+    "official_evidence": "crystal / new-bark-town / gift; gold / new-bark-town / gift; heartgold / new-bark-town / gift; silver / new-bark-town / gift; soulsilver / new-bark-town / gift",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "CRADILY",
+    "category": "HGSS Kanto source or revival",
+    "official_evidence": "Evolution of a Pok\u00e9mon obtained or revived in Kanto in HGSS.",
+    "project_note": "Evolves from LILEEP"
+  },
+  {
+    "species": "CROCONAW",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve TOTODILE. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from TOTODILE"
+  },
+  {
+    "species": "CYNDAQUIL",
+    "category": "Johto gift",
+    "official_evidence": "crystal / new-bark-town / gift; gold / new-bark-town / gift; heartgold / new-bark-town / gift; silver / new-bark-town / gift; soulsilver / new-bark-town / gift",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "DELIBIRD",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / ice-path / walk; silver / ice-path / walk; soulsilver / ice-path / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "DRAGONAIR",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / dragons-den / super-rod; crystal / johto-route-45 / super-rod; gold / dragons-den / super-rod; gold / johto-route-45 / super-rod; heartgold / dragons-den / super-rod; silver / dragons-den / super-rod; silver / johto-route-45 / super-rod; soulsilver / dragons-den / super-rod",
+    "project_note": "Evolves from DRATINI"
+  },
+  {
+    "species": "DRATINI",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / dragons-den / gift; crystal / dragons-den / good-rod; crystal / dragons-den / super-rod; crystal / dragons-den / surf; crystal / johto-route-45 / good-rod; crystal / johto-route-45 / super-rod; gold / dragons-den / good-rod; gold / dragons-den / super-rod; gold / dragons-den / surf; gold / goldenrod-city / gift; gold / johto-route-45 / good-rod; gold / johto-route-45 / super-rod; heartgold / dragons-den / gift; heartgold / dragons-den / good-rod; heartgold / dragons-den / super-rod; heartgold / dragons-den / surf; heartgold / goldenrod-city / gift; silver / dragons-den / good-rod; silver / dragons-den / super-rod; silver / dragons-den / surf; silver / goldenrod-city / gift; silver / johto-route-45 / good-rod; silver / johto-route-45 / super-rod; soulsilver / dragons-den / gift; soulsilver / dragons-den / good-rod; soulsilver / dragons-den / super-rod; soulsilver / dragons-den / surf; soulsilver / goldenrod-city / gift",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "DUNSPARCE",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / dark-cave / walk; gold / dark-cave / walk; heartgold / dark-cave / rock-smash; heartgold / dark-cave / walk; silver / dark-cave / walk; soulsilver / dark-cave / rock-smash; soulsilver / dark-cave / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "ENTEI",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / roaming-johto / roaming-grass; gold / roaming-johto / roaming-grass; heartgold / roaming-johto / roaming-grass; silver / roaming-johto / roaming-grass; soulsilver / roaming-johto / roaming-grass",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "EXPLOUD",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve WHISMUR. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from LOUDRED"
+  },
+  {
+    "species": "FARFETCHD",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-43 / walk; gold / johto-route-38 / walk; gold / johto-route-39 / walk; heartgold / johto-route-38 / walk; heartgold / johto-route-39 / walk; heartgold / johto-route-47 / walk; heartgold / johto-route-48 / walk; silver / johto-route-38 / walk; silver / johto-route-39 / walk; soulsilver / johto-route-38 / walk; soulsilver / johto-route-39 / walk; soulsilver / johto-route-47 / walk; soulsilver / johto-route-48 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "FARFETCHD_GALARIAN",
+    "category": "Later generation/form",
+    "official_evidence": "Introduced after the Johto games; no GSC/HGSS encounter.",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "FERALIGATR",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve TOTODILE. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from CROCONAW"
+  },
+  {
+    "species": "FLAAFFY",
+    "category": "Johto encounter",
+    "official_evidence": "gold / johto-route-42 / walk; gold / johto-route-43 / walk; heartgold / johto-route-42 / walk; heartgold / johto-route-43 / walk; silver / johto-route-42 / walk; silver / johto-route-43 / walk; soulsilver / johto-route-42 / walk; soulsilver / johto-route-43 / walk",
+    "project_note": "Evolves from MAREEP"
+  },
+  {
+    "species": "GALLADE",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve RALTS. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from KIRLIA"
+  },
+  {
+    "species": "GARDEVOIR",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve RALTS. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from KIRLIA"
+  },
+  {
+    "species": "GLIGAR",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-45 / walk; gold / johto-route-45 / walk; heartgold / johto-route-45 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "GRUMPIG",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve SPOINK. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from SPOINK"
+  },
+  {
+    "species": "HARIYAMA",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve MAKUHITA. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from MAKUHITA"
+  },
+  {
+    "species": "HO_OH",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / bell-tower / static; gold / bell-tower / static; heartgold / bell-tower / static; silver / bell-tower / static; soulsilver / bell-tower / static",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "ILLUMISE",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / national-park / walk; soulsilver / national-park / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "KABUSTAR",
+    "category": "Custom species",
+    "official_evidence": "No official-game counterpart.",
+    "project_note": "No incoming evolution in project table; Cinnabar fossil gift exists"
+  },
+  {
+    "species": "KIRLIA",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve RALTS. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from RALTS"
+  },
+  {
+    "species": "LILEEP",
+    "category": "HGSS Kanto source or revival",
+    "official_evidence": "Root Fossil can be found in Johto Cliff Cave; revival is in Pewter City, Kanto.",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "LINOONE",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / johto-route-30 / walk; heartgold / johto-route-31 / walk; heartgold / johto-route-32 / walk; heartgold / johto-route-34 / walk; heartgold / johto-route-35 / walk; heartgold / johto-route-42 / walk; heartgold / johto-route-43 / walk; heartgold / johto-route-44 / walk; heartgold / johto-route-45 / walk; heartgold / johto-route-47 / walk; heartgold / mt-silver / walk; heartgold / ruins-of-alph / walk; soulsilver / johto-route-30 / walk; soulsilver / johto-route-31 / walk; soulsilver / johto-route-32 / walk; soulsilver / johto-route-34 / walk; soulsilver / johto-route-35 / walk; soulsilver / johto-route-42 / walk; soulsilver / johto-route-43 / walk; soulsilver / johto-route-44 / walk; soulsilver / johto-route-45 / walk; soulsilver / johto-route-47 / walk; soulsilver / mt-silver / walk; soulsilver / ruins-of-alph / walk",
+    "project_note": "Evolves from ZIGZAGOON"
+  },
+  {
+    "species": "LOUDRED",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve WHISMUR. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from WHISMUR"
+  },
+  {
+    "species": "LUGIA",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / whirl-islands / static; gold / whirl-islands / static; heartgold / whirl-islands / static; silver / whirl-islands / static; soulsilver / whirl-islands / static",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "MAKUHITA",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / dark-cave / walk; heartgold / ice-path / walk; heartgold / johto-route-47 / walk; heartgold / mt-mortar / walk; heartgold / mt-silver / walk; heartgold / slowpoke-well / walk; heartgold / tohjo-falls / walk; heartgold / union-cave / walk; heartgold / whirl-islands / walk; soulsilver / dark-cave / walk; soulsilver / ice-path / walk; soulsilver / johto-route-47 / walk; soulsilver / mt-mortar / walk; soulsilver / mt-silver / walk; soulsilver / slowpoke-well / walk; soulsilver / tohjo-falls / walk; soulsilver / union-cave / walk; soulsilver / whirl-islands / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "MANTINE",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-sea-route-41 / surf; gold / johto-sea-route-41 / surf; heartgold / johto-sea-route-41 / surf",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "MAREEP",
+    "category": "Johto encounter",
+    "official_evidence": "gold / johto-route-32 / walk; gold / johto-route-42 / walk; gold / johto-route-43 / walk; heartgold / johto-route-32 / walk; heartgold / johto-route-42 / walk; heartgold / johto-route-43 / walk; heartgold / violet-city / gift-egg; silver / johto-route-32 / walk; silver / johto-route-42 / walk; silver / johto-route-43 / walk; soulsilver / johto-route-32 / walk; soulsilver / johto-route-42 / walk; soulsilver / johto-route-43 / walk; soulsilver / violet-city / gift-egg",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "MARILL",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-42 / walk; crystal / mt-mortar / surf; crystal / mt-mortar / walk; gold / mt-mortar / surf; gold / mt-mortar / walk; heartgold / mt-mortar / walk; silver / mt-mortar / surf; silver / mt-mortar / walk; soulsilver / mt-mortar / walk",
+    "project_note": "Evolves from AZURILL"
+  },
+  {
+    "species": "MEDICHAM",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve MEDITITE. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from MEDITITE"
+  },
+  {
+    "species": "MEDITITE",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / bell-tower / walk; heartgold / burned-tower / walk; heartgold / sprout-tower / walk; soulsilver / bell-tower / walk; soulsilver / burned-tower / walk; soulsilver / sprout-tower / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "MEGANIUM",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve CHIKORITA. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from BAYLEEF"
+  },
+  {
+    "species": "MILTANK",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-38 / walk; crystal / johto-route-39 / walk; gold / johto-route-38 / walk; gold / johto-route-39 / walk; heartgold / johto-route-38 / walk; heartgold / johto-route-39 / walk; heartgold / johto-route-47 / walk; silver / johto-route-38 / walk; silver / johto-route-39 / walk; soulsilver / johto-route-38 / walk; soulsilver / johto-route-39 / walk; soulsilver / johto-route-47 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "NINCADA",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / national-park / walk; soulsilver / national-park / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "NINJASK",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve NINCADA. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from NINCADA"
+  },
+  {
+    "species": "OCTILLERY",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve REMORAID. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from REMORAID"
+  },
+  {
+    "species": "OMATO",
+    "category": "Custom species",
+    "official_evidence": "No official-game counterpart.",
+    "project_note": "No incoming evolution in project table; Cinnabar fossil gift exists"
+  },
+  {
+    "species": "PINSIR",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / national-park / walk; soulsilver / national-park / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "QUILAVA",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve CYNDAQUIL. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from CYNDAQUIL"
+  },
+  {
+    "species": "RAIKOU",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / roaming-johto / roaming-grass; gold / roaming-johto / roaming-grass; heartgold / roaming-johto / roaming-grass; silver / roaming-johto / roaming-grass; soulsilver / roaming-johto / roaming-grass",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "RALTS",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / johto-route-34 / walk; soulsilver / johto-route-34 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "REMORAID",
+    "category": "Johto encounter",
+    "official_evidence": "gold / johto-route-44 / good-rod; gold / johto-route-44 / old-rod; gold / johto-route-44 / super-rod; heartgold / johto-route-44 / good-rod; heartgold / johto-route-44 / old-rod; heartgold / johto-route-44 / super-rod; silver / johto-route-44 / good-rod; silver / johto-route-44 / old-rod; silver / johto-route-44 / super-rod; soulsilver / johto-route-44 / good-rod; soulsilver / johto-route-44 / old-rod; soulsilver / johto-route-44 / super-rod",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SCIZOR",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve SCYTHER. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from SCYTHER"
+  },
+  {
+    "species": "SCYTHER",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / national-park / walk; soulsilver / national-park / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SHEDINJA",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve NINCADA. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from NINCADA"
+  },
+  {
+    "species": "SKARMORY",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-45 / walk; silver / johto-route-45 / walk; soulsilver / johto-route-45 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SMEARGLE",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / ruins-of-alph / walk; gold / ruins-of-alph / walk; heartgold / ruins-of-alph / walk; silver / ruins-of-alph / walk; soulsilver / ruins-of-alph / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SNUBBULL",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-34 / walk; crystal / johto-route-35 / walk; gold / johto-route-38 / walk; heartgold / johto-route-38 / walk; silver / johto-route-38 / walk; soulsilver / johto-route-38 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SPINDA",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / bell-tower / walk; heartgold / burned-tower / walk; heartgold / sprout-tower / walk; soulsilver / bell-tower / walk; soulsilver / burned-tower / walk; soulsilver / sprout-tower / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "STANTLER",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-37 / walk; gold / johto-route-36 / walk; gold / johto-route-37 / walk; heartgold / johto-route-36 / walk; heartgold / johto-route-37 / walk; silver / johto-route-36 / walk; silver / johto-route-37 / walk; soulsilver / johto-route-36 / walk; soulsilver / johto-route-37 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SUICUNE",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / bell-tower / static; gold / roaming-johto / roaming-grass; silver / roaming-johto / roaming-grass",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SWABLU",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / johto-route-45 / walk; soulsilver / johto-route-45 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "SWELLOW",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve TAILLOW. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from TAILLOW"
+  },
+  {
+    "species": "SWINUB",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / ice-path / walk; gold / ice-path / walk; heartgold / ice-path / walk; silver / ice-path / walk; soulsilver / ice-path / walk",
+    "project_note": "No incoming evolution in project table; Johto line by design; all three grouped in non-native habitat."
+  },
+  {
+    "species": "TAILLOW",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / cherrygrove-city / headbutt; soulsilver / cherrygrove-city / headbutt",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "TAUROS",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-38 / walk; crystal / johto-route-39 / walk; gold / johto-route-38 / walk; gold / johto-route-39 / walk; heartgold / johto-route-38 / walk; heartgold / johto-route-39 / walk; heartgold / johto-route-48 / walk; silver / johto-route-38 / walk; silver / johto-route-39 / walk; soulsilver / johto-route-38 / walk; soulsilver / johto-route-39 / walk; soulsilver / johto-route-48 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "TOGEPI",
+    "category": "Johto gift",
+    "official_evidence": "crystal / violet-city / gift-egg; gold / violet-city / gift-egg; heartgold / violet-city / gift-egg; silver / violet-city / gift-egg; soulsilver / violet-city / gift-egg",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "TOGETIC",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve TOGEPI. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from TOGEPI"
+  },
+  {
+    "species": "TOTODILE",
+    "category": "Johto gift",
+    "official_evidence": "crystal / new-bark-town / gift; gold / new-bark-town / gift; heartgold / new-bark-town / gift; silver / new-bark-town / gift; soulsilver / new-bark-town / gift",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "TYPHLOSION",
+    "category": "Evolution of Johto source",
+    "official_evidence": "Evolve CYNDAQUIL. Evolution may require trading or an item; this does not claim a wild encounter.",
+    "project_note": "Evolves from QUILAVA"
+  },
+  {
+    "species": "TYROGUE",
+    "category": "Johto gift",
+    "official_evidence": "crystal / johto-route-34 / gift-egg; crystal / mt-mortar / gift; gold / mt-mortar / gift; heartgold / mt-mortar / gift; silver / mt-mortar / gift; soulsilver / mt-mortar / gift",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "UNOWN",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / ruins-of-alph / walk; gold / ruins-of-alph / walk; heartgold / ruins-of-alph / walk; silver / ruins-of-alph / walk; soulsilver / ruins-of-alph / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "VOLBEAT",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / national-park / walk; soulsilver / national-park / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "WHISCASH",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / violet-city / good-rod; heartgold / violet-city / old-rod; heartgold / violet-city / super-rod; soulsilver / violet-city / good-rod; soulsilver / violet-city / old-rod; soulsilver / violet-city / super-rod",
+    "project_note": "Evolves from BARBOACH"
+  },
+  {
+    "species": "WHISMUR",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / johto-route-30 / walk; heartgold / johto-route-31 / walk; heartgold / johto-route-32 / walk; heartgold / johto-route-34 / walk; heartgold / johto-route-35 / walk; heartgold / johto-route-42 / walk; heartgold / johto-route-43 / walk; heartgold / johto-route-44 / walk; heartgold / johto-route-45 / walk; heartgold / johto-route-47 / walk; heartgold / mt-silver / walk; heartgold / ruins-of-alph / walk; soulsilver / johto-route-30 / walk; soulsilver / johto-route-31 / walk; soulsilver / johto-route-32 / walk; soulsilver / johto-route-34 / walk; soulsilver / johto-route-35 / walk; soulsilver / johto-route-42 / walk; soulsilver / johto-route-43 / walk; soulsilver / johto-route-44 / walk; soulsilver / johto-route-45 / walk; soulsilver / johto-route-47 / walk; soulsilver / mt-silver / walk; soulsilver / ruins-of-alph / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "YANMA",
+    "category": "Johto encounter",
+    "official_evidence": "crystal / johto-route-35 / walk; gold / johto-route-35 / walk; heartgold / johto-route-35 / walk; silver / johto-route-35 / walk; soulsilver / johto-route-35 / walk",
+    "project_note": "No incoming evolution in project table"
+  },
+  {
+    "species": "ZIGZAGOON",
+    "category": "Johto encounter",
+    "official_evidence": "heartgold / bell-tower / walk; heartgold / burned-tower / walk; heartgold / sprout-tower / walk; soulsilver / bell-tower / walk; soulsilver / burned-tower / walk; soulsilver / sprout-tower / walk",
+    "project_note": "No incoming evolution in project table"
+  }
+]

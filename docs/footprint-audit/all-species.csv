@@ -1,0 +1,444 @@
+species,symbol,path,issues,reference
+SENTRET,gMonFootprint_Sentret,graphics/pokemon/sentret/footprint.png,,match
+FURRET,gMonFootprint_Furret,graphics/pokemon/furret/footprint.png,,match
+SUNKERN,gMonFootprint_Sunkern,graphics/pokemon/sunkern/footprint.png,blank (may be correct for footless species),match
+SUNFLORA,gMonFootprint_Sunflora,graphics/pokemon/sunflora/footprint.png,,match
+HOPPIP,gMonFootprint_Hoppip,graphics/pokemon/hoppip/footprint.png,,match
+SKIPLOOM,gMonFootprint_Skiploom,graphics/pokemon/skiploom/footprint.png,,match
+JUMPLUFF,gMonFootprint_Jumpluff,graphics/pokemon/jumpluff/footprint.png,,match
+BUNEARY,gMonFootprint_Buneary,graphics/pokemon/buneary/footprint.png,,match
+LOPUNNY,gMonFootprint_Lopunny,graphics/pokemon/lopunny/footprint.png,,match
+NIDORAN_F,gMonFootprint_NidoranF,graphics/pokemon/nidoran_f/footprint.png,,match
+NIDORINA,gMonFootprint_Nidorina,graphics/pokemon/nidorina/footprint.png,,match
+NIDOQUEEN,gMonFootprint_Nidoqueen,graphics/pokemon/nidoqueen/footprint.png,,match
+NIDORAN_M,gMonFootprint_NidoranM,graphics/pokemon/nidoran_m/footprint.png,,match
+NIDORINO,gMonFootprint_Nidorino,graphics/pokemon/nidorino/footprint.png,,match
+NIDOKING,gMonFootprint_Nidoking,graphics/pokemon/nidoking/footprint.png,,match
+PIDGEY,gMonFootprint_Pidgey,graphics/pokemon/pidgey/footprint.png,,match
+PIDGEOTTO,gMonFootprint_Pidgeotto,graphics/pokemon/pidgeotto/footprint.png,,match
+PIDGEOT,gMonFootprint_Pidgeot,graphics/pokemon/pidgeot/footprint.png,,match
+SPEAROW,gMonFootprint_Spearow,graphics/pokemon/spearow/footprint.png,,match
+FEAROW,gMonFootprint_Fearow,graphics/pokemon/fearow/footprint.png,,match
+HOOTHOOT,gMonFootprint_Hoothoot,graphics/pokemon/hoothoot/footprint.png,,match
+NOCTOWL,gMonFootprint_Noctowl,graphics/pokemon/noctowl/footprint.png,,match
+STARLY,gMonFootprint_Starly,graphics/pokemon/starly/footprint.png,,match
+STARAVIA,gMonFootprint_Staravia,graphics/pokemon/staravia/footprint.png,,match
+STARAPTOR,gMonFootprint_Staraptor,graphics/pokemon/staraptor/footprint.png,,match
+DODUO,gMonFootprint_Doduo,graphics/pokemon/doduo/footprint.png,,match
+DODRIO,gMonFootprint_Dodrio,graphics/pokemon/dodrio/footprint.png,,match
+CATERPIE,gMonFootprint_Caterpie,graphics/pokemon/caterpie/footprint.png,,match
+METAPOD,gMonFootprint_Metapod,graphics/pokemon/metapod/footprint.png,blank (may be correct for footless species),match
+BUTTERFREE,gMonFootprint_Butterfree,graphics/pokemon/butterfree/footprint.png,,match
+WEEDLE,gMonFootprint_Weedle,graphics/pokemon/weedle/footprint.png,,match
+KAKUNA,gMonFootprint_Kakuna,graphics/pokemon/kakuna/footprint.png,blank (may be correct for footless species),match
+BEEDRILL,gMonFootprint_Beedrill,graphics/pokemon/beedrill/footprint.png,,match
+LEDYBA,gMonFootprint_Ledyba,graphics/pokemon/ledyba/footprint.png,,match
+LEDIAN,gMonFootprint_Ledian,graphics/pokemon/ledian/footprint.png,,match
+SPINARAK,gMonFootprint_Spinarak,graphics/pokemon/spinarak/footprint.png,,match
+ARIADOS,gMonFootprint_Ariados,graphics/pokemon/ariados/footprint.png,,match
+KRICKETOT,gMonFootprint_Kricketot,graphics/pokemon/kricketot/footprint.png,,match
+KRICKETUNE,gMonFootprint_Kricketune,graphics/pokemon/kricketune/footprint.png,,match
+WURMPLE,gMonFootprint_Wurmple,graphics/pokemon/wurmple/footprint.png,,match
+SILCOON,gMonFootprint_Silcoon,graphics/pokemon/silcoon/footprint.png,blank (may be correct for footless species),match
+BEAUTIFLY,gMonFootprint_Beautifly,graphics/pokemon/beautifly/footprint.png,,match
+CASCOON,gMonFootprint_Cascoon,graphics/pokemon/cascoon/footprint.png,blank (may be correct for footless species),match
+DUSTOX,gMonFootprint_Dustox,graphics/pokemon/dustox/footprint.png,,match
+VENONAT,gMonFootprint_Venonat,graphics/pokemon/venonat/footprint.png,,match
+VENOMOTH,gMonFootprint_Venomoth,graphics/pokemon/venomoth/footprint.png,,match
+COMBEE,gMonFootprint_Combee,graphics/pokemon/combee/footprint.png,blank (may be correct for footless species),match
+VESPIQUEN,gMonFootprint_Vespiquen,graphics/pokemon/vespiquen/footprint.png,blank (may be correct for footless species),match
+PINECO,gMonFootprint_Pineco,graphics/pokemon/pineco/footprint.png,blank (may be correct for footless species),match
+FORRETRESS,gMonFootprint_Forretress,graphics/pokemon/forretress/footprint.png,blank (may be correct for footless species),match
+PARAS,gMonFootprint_Paras,graphics/pokemon/paras/footprint.png,,match
+PARASECT,gMonFootprint_Parasect,graphics/pokemon/parasect/footprint.png,,match
+BELLSPROUT,gMonFootprint_Bellsprout,graphics/pokemon/bellsprout/footprint.png,,match
+WEEPINBELL,gMonFootprint_Weepinbell,graphics/pokemon/weepinbell/footprint.png,blank (may be correct for footless species),match
+VICTREEBEL,gMonFootprint_Victreebel,graphics/pokemon/victreebel/footprint.png,blank (may be correct for footless species),match
+ODDISH,gMonFootprint_Oddish,graphics/pokemon/oddish/footprint.png,,match
+GLOOM,gMonFootprint_Gloom,graphics/pokemon/gloom/footprint.png,,match
+VILEPLUME,gMonFootprint_Vileplume,graphics/pokemon/vileplume/footprint.png,,match
+BELLOSSOM,gMonFootprint_Bellossom,graphics/pokemon/bellossom/footprint.png,blank (may be correct for footless species),match
+BUDEW,gMonFootprint_Budew,graphics/pokemon/budew/footprint.png,,match
+ROSELIA,gMonFootprint_Roselia,graphics/pokemon/roselia/footprint.png,,match
+ROSERADE,gMonFootprint_Roserade,graphics/pokemon/roserade/footprint.png,,match
+EXEGGCUTE,gMonFootprint_Exeggcute,graphics/pokemon/exeggcute/footprint.png,blank (may be correct for footless species),match
+EXEGGUTOR,gMonFootprint_Exeggutor,graphics/pokemon/exeggutor/footprint.png,,match
+SEEDOT,gMonFootprint_Seedot,graphics/pokemon/seedot/footprint.png,,match
+NUZLEAF,gMonFootprint_Nuzleaf,graphics/pokemon/nuzleaf/footprint.png,,match
+SHIFTRY,gMonFootprint_Shiftry,graphics/pokemon/shiftry/footprint.png,,match
+TANGELA,gMonFootprint_Tangela,graphics/pokemon/tangela/footprint.png,,match
+TANGROWTH,gMonFootprint_Tangrowth,graphics/pokemon/tangrowth/footprint.png,,match
+PICHU,gMonFootprint_Pichu,graphics/pokemon/pichu/footprint.png,,match
+PIKACHU,gMonFootprint_Pikachu,graphics/pokemon/pikachu/footprint.png,,match
+RAICHU,gMonFootprint_Raichu,graphics/pokemon/raichu/footprint.png,,match
+PLUSLE,gMonFootprint_Plusle,graphics/pokemon/plusle/footprint.png,,match
+MINUN,gMonFootprint_Minun,graphics/pokemon/minun/footprint.png,,match
+VOLTORB,gMonFootprint_Voltorb,graphics/pokemon/voltorb/footprint.png,blank (may be correct for footless species),match
+ELECTRODE,gMonFootprint_Electrode,graphics/pokemon/electrode/footprint.png,blank (may be correct for footless species),match
+MAGNEMITE,gMonFootprint_Magnemite,graphics/pokemon/magnemite/footprint.png,,match
+MAGNETON,gMonFootprint_Magneton,graphics/pokemon/magneton/footprint.png,,match
+MAGNEZONE,gMonFootprint_Magnezone,graphics/pokemon/magnezone/footprint.png,blank (may be correct for footless species),match
+ELEKID,gMonFootprint_Elekid,graphics/pokemon/elekid/footprint.png,,match
+ELECTABUZZ,gMonFootprint_Electabuzz,graphics/pokemon/electabuzz/footprint.png,,match
+ELECTIVIRE,gMonFootprint_Electivire,graphics/pokemon/electivire/footprint.png,,match
+RATTATA,gMonFootprint_Rattata,graphics/pokemon/rattata/footprint.png,,match
+RATICATE,gMonFootprint_Raticate,graphics/pokemon/raticate/footprint.png,,match
+HAPPINY,gMonFootprint_Happiny,graphics/pokemon/happiny/footprint.png,,match
+CHANSEY,gMonFootprint_Chansey,graphics/pokemon/chansey/footprint.png,,match
+BLISSEY,gMonFootprint_Blissey,graphics/pokemon/blissey/footprint.png,,match
+LICKITUNG,gMonFootprint_Lickitung,graphics/pokemon/lickitung/footprint.png,,match
+LICKILICKY,gMonFootprint_Lickilicky,graphics/pokemon/lickilicky/footprint.png,,match
+MEOWTH,gMonFootprint_Meowth,graphics/pokemon/meowth/footprint.png,,match
+PERSIAN,gMonFootprint_Persian,graphics/pokemon/persian/footprint.png,,match
+AIPOM,gMonFootprint_Aipom,graphics/pokemon/aipom/footprint.png,,match
+AMBIPOM,gMonFootprint_Ambipom,graphics/pokemon/ambipom/footprint.png,,match
+TEDDIURSA,gMonFootprint_Teddiursa,graphics/pokemon/teddiursa/footprint.png,,match
+URSARING,gMonFootprint_Ursaring,graphics/pokemon/ursaring/footprint.png,,match
+KANGASKHAN,gMonFootprint_Kangaskhan,graphics/pokemon/kangaskhan/footprint.png,,match
+TAUROS,gMonFootprint_Tauros,graphics/pokemon/tauros/footprint.png,,match
+MAREEP,gMonFootprint_Mareep,graphics/pokemon/mareep/footprint.png,,match
+FLAAFFY,gMonFootprint_Flaaffy,graphics/pokemon/flaaffy/footprint.png,,match
+AMPHAROS,gMonFootprint_Ampharos,graphics/pokemon/ampharos/footprint.png,,match
+MARILL,gMonFootprint_Marill,graphics/pokemon/marill/footprint.png,,match
+AZUMARILL,gMonFootprint_Azumarill,graphics/pokemon/azumarill/footprint.png,,match
+AZURILL,gMonFootprint_Azurill,graphics/pokemon/azurill/footprint.png,,match
+SMEARGLE,gMonFootprint_Smeargle,graphics/pokemon/smeargle/footprint.png,,match
+MILTANK,gMonFootprint_Miltank,graphics/pokemon/miltank/footprint.png,,match
+FARFETCHD,gMonFootprint_Farfetchd,graphics/pokemon/farfetchd/footprint.png,,match
+GIRAFARIG,gMonFootprint_Girafarig,graphics/pokemon/girafarig/footprint.png,,match
+SLAKOTH,gMonFootprint_Slakoth,graphics/pokemon/slakoth/footprint.png,,match
+VIGOROTH,gMonFootprint_Vigoroth,graphics/pokemon/vigoroth/footprint.png,,match
+SLAKING,gMonFootprint_Slaking,graphics/pokemon/slaking/footprint.png,,match
+SHROOMISH,gMonFootprint_Shroomish,graphics/pokemon/shroomish/footprint.png,,match-original-firered
+BRELOOM,gMonFootprint_Breloom,graphics/pokemon/breloom/footprint.png,,match
+MANKEY,gMonFootprint_Mankey,graphics/pokemon/mankey/footprint.png,,match
+PRIMEAPE,gMonFootprint_Primeape,graphics/pokemon/primeape/footprint.png,,match
+ANNIHILAPE,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,different
+MACHOP,gMonFootprint_Machop,graphics/pokemon/machop/footprint.png,,match
+MACHOKE,gMonFootprint_Machoke,graphics/pokemon/machoke/footprint.png,,match
+MACHAMP,gMonFootprint_Machamp,graphics/pokemon/machamp/footprint.png,,match
+HERACROSS,gMonFootprint_Heracross,graphics/pokemon/heracross/footprint.png,,match
+EKANS,gMonFootprint_Ekans,graphics/pokemon/ekans/footprint.png,blank (may be correct for footless species),match
+ARBOK,gMonFootprint_Arbok,graphics/pokemon/arbok/footprint.png,blank (may be correct for footless species),match
+GRIMER,gMonFootprint_Grimer,graphics/pokemon/grimer/footprint.png,blank (may be correct for footless species),match
+MUK,gMonFootprint_Muk,graphics/pokemon/muk/footprint.png,blank (may be correct for footless species),match
+KOFFING,gMonFootprint_Koffing,graphics/pokemon/koffing/footprint.png,blank (may be correct for footless species),match
+WEEZING,gMonFootprint_Weezing,graphics/pokemon/weezing/footprint.png,blank (may be correct for footless species),match
+ZUBAT,gMonFootprint_Zubat,graphics/pokemon/zubat/footprint.png,blank (may be correct for footless species),match
+GOLBAT,gMonFootprint_Golbat,graphics/pokemon/golbat/footprint.png,,match
+CROBAT,gMonFootprint_Crobat,graphics/pokemon/crobat/footprint.png,blank (may be correct for footless species),match
+GULPIN,gMonFootprint_Gulpin,graphics/pokemon/gulpin/footprint.png,blank (may be correct for footless species),match
+SWALOT,gMonFootprint_Swalot,graphics/pokemon/swalot/footprint.png,blank (may be correct for footless species),match
+HOUNDOUR,gMonFootprint_Houndour,graphics/pokemon/houndour/footprint.png,,match
+HOUNDOOM,gMonFootprint_Houndoom,graphics/pokemon/houndoom/footprint.png,,match
+POOCHYENA,gMonFootprint_Poochyena,graphics/pokemon/poochyena/footprint.png,,match
+MIGHTYENA,gMonFootprint_Mightyena,graphics/pokemon/mightyena/footprint.png,,match
+MURKROW,gMonFootprint_Murkrow,graphics/pokemon/murkrow/footprint.png,,match
+HONCHKROW,gMonFootprint_Honchkrow,graphics/pokemon/honchkrow/footprint.png,,match
+ABRA,gMonFootprint_Abra,graphics/pokemon/abra/footprint.png,,match
+KADABRA,gMonFootprint_Kadabra,graphics/pokemon/kadabra/footprint.png,,match
+ALAKAZAM,gMonFootprint_Alakazam,graphics/pokemon/alakazam/footprint.png,,match
+DROWZEE,gMonFootprint_Drowzee,graphics/pokemon/drowzee/footprint.png,,match
+HYPNO,gMonFootprint_Hypno,graphics/pokemon/hypno/footprint.png,,match
+WYNAUT,gMonFootprint_Wynaut,graphics/pokemon/wynaut/footprint.png,,match
+WOBBUFFET,gMonFootprint_Wobbuffet,graphics/pokemon/wobbuffet/footprint.png,,match
+NATU,gMonFootprint_Natu,graphics/pokemon/natu/footprint.png,,match
+XATU,gMonFootprint_Xatu,graphics/pokemon/xatu/footprint.png,,match
+CHINGLING,gMonFootprint_Chingling,graphics/pokemon/chingling/footprint.png,,match
+CHIMECHO,gMonFootprint_Chimecho,graphics/pokemon/chimecho/footprint.png,blank (may be correct for footless species),match
+BALTOY,gMonFootprint_Baltoy,graphics/pokemon/baltoy/footprint.png,,match
+CLAYDOL,gMonFootprint_Claydol,graphics/pokemon/claydol/footprint.png,,match
+LUNATONE,gMonFootprint_Lunatone,graphics/pokemon/lunatone/footprint.png,blank (may be correct for footless species),match
+SOLROCK,gMonFootprint_Solrock,graphics/pokemon/solrock/footprint.png,blank (may be correct for footless species),match
+BRONZOR,gMonFootprint_Bronzor,graphics/pokemon/bronzor/footprint.png,blank (may be correct for footless species),match
+BRONZONG,gMonFootprint_Bronzong,graphics/pokemon/bronzong/footprint.png,blank (may be correct for footless species),match
+MIME_JR,gMonFootprint_MimeJr,graphics/pokemon/mime_jr/footprint.png,,match
+MR_MIME,gMonFootprint_Mrmime,graphics/pokemon/mr_mime/footprint.png,,match
+MIME_SR,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+GASTLY,gMonFootprint_Gastly,graphics/pokemon/gastly/footprint.png,blank (may be correct for footless species),match
+HAUNTER,gMonFootprint_Haunter,graphics/pokemon/haunter/footprint.png,blank (may be correct for footless species),match
+GENGAR,gMonFootprint_Gengar,graphics/pokemon/gengar/footprint.png,,match
+MISDREAVUS,gMonFootprint_Misdreavus,graphics/pokemon/misdreavus/footprint.png,blank (may be correct for footless species),match
+MISMAGIUS,gMonFootprint_Mismagius,graphics/pokemon/mismagius/footprint.png,blank (may be correct for footless species),match
+SPIRITOMB,gMonFootprint_Spiritomb,graphics/pokemon/spiritomb/footprint.png,blank (may be correct for footless species),match
+SABLEYE,gMonFootprint_Sableye,graphics/pokemon/sableye/footprint.png,,match
+DUSKULL,gMonFootprint_Duskull,graphics/pokemon/duskull/footprint.png,blank (may be correct for footless species),match
+DUSCLOPS,gMonFootprint_Dusclops,graphics/pokemon/dusclops/footprint.png,,match
+DUSKNOIR,gMonFootprint_Dusknoir,graphics/pokemon/dusknoir/footprint.png,blank (may be correct for footless species),match
+CUBONE,gMonFootprint_Cubone,graphics/pokemon/cubone/footprint.png,,match
+MAROWAK,gMonFootprint_Marowak,graphics/pokemon/marowak/footprint.png,,match
+OSSCYTHE,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+CLEFFA,gMonFootprint_Cleffa,graphics/pokemon/cleffa/footprint.png,,match
+CLEFAIRY,gMonFootprint_Clefairy,graphics/pokemon/clefairy/footprint.png,,match
+CLEFABLE,gMonFootprint_Clefable,graphics/pokemon/clefable/footprint.png,,match
+IGGLYBUFF,gMonFootprint_Igglybuff,graphics/pokemon/igglybuff/footprint.png,,match
+JIGGLYPUFF,gMonFootprint_Jigglypuff,graphics/pokemon/jigglypuff/footprint.png,,match
+WIGGLYTUFF,gMonFootprint_Wigglytuff,graphics/pokemon/wigglytuff/footprint.png,,match
+GEODUDE,gMonFootprint_Geodude,graphics/pokemon/geodude/footprint.png,blank (may be correct for footless species),match
+GRAVELER,gMonFootprint_Graveler,graphics/pokemon/graveler/footprint.png,,match
+GOLEM,gMonFootprint_Golem,graphics/pokemon/golem/footprint.png,,match-original-firered
+ONIX,gMonFootprint_Onix,graphics/pokemon/onix/footprint.png,blank (may be correct for footless species),match
+STEELIX,gMonFootprint_Steelix,graphics/pokemon/steelix/footprint.png,blank (may be correct for footless species),match
+RHYHORN,gMonFootprint_Rhyhorn,graphics/pokemon/rhyhorn/footprint.png,,match
+RHYDON,gMonFootprint_Rhydon,graphics/pokemon/rhydon/footprint.png,,match
+RHYPERIOR,gMonFootprint_Rhyperior,graphics/pokemon/rhyperior/footprint.png,,match
+SANDSHREW,gMonFootprint_Sandshrew,graphics/pokemon/sandshrew/footprint.png,,match
+SANDSLASH,gMonFootprint_Sandslash,graphics/pokemon/sandslash/footprint.png,,match
+DIGLETT,gMonFootprint_Diglett,graphics/pokemon/diglett/footprint.png,blank (may be correct for footless species),match
+DUGTRIO,gMonFootprint_Dugtrio,graphics/pokemon/dugtrio/footprint.png,blank (may be correct for footless species),match
+PHANPY,gMonFootprint_Phanpy,graphics/pokemon/phanpy/footprint.png,,match
+DONPHAN,gMonFootprint_Donphan,graphics/pokemon/donphan/footprint.png,,match
+SHUCKLE,gMonFootprint_Shuckle,graphics/pokemon/shuckle/footprint.png,,match
+LARVITAR,gMonFootprint_Larvitar,graphics/pokemon/larvitar/footprint.png,,match
+PUPITAR,gMonFootprint_Pupitar,graphics/pokemon/pupitar/footprint.png,blank (may be correct for footless species),match
+TYRANITAR,gMonFootprint_Tyranitar,graphics/pokemon/tyranitar/footprint.png,,match
+MAWILE,gMonFootprint_Mawile,graphics/pokemon/mawile/footprint.png,,match-original-firered
+WOOPER,gMonFootprint_Wooper,graphics/pokemon/wooper/footprint.png,,match
+QUAGSIRE,gMonFootprint_Quagsire,graphics/pokemon/quagsire/footprint.png,,match
+POLIWAG,gMonFootprint_Poliwag,graphics/pokemon/poliwag/footprint.png,,match
+POLIWHIRL,gMonFootprint_Poliwhirl,graphics/pokemon/poliwhirl/footprint.png,,match
+POLIWRATH,gMonFootprint_Poliwrath,graphics/pokemon/poliwrath/footprint.png,,match
+POLITOED,gMonFootprint_Politoed,graphics/pokemon/politoed/footprint.png,,match
+SLOWPOKE,gMonFootprint_Slowpoke,graphics/pokemon/slowpoke/footprint.png,,match
+SLOWBRO,gMonFootprint_Slowbro,graphics/pokemon/slowbro/footprint.png,,match
+SLOWKING,gMonFootprint_Slowking,graphics/pokemon/slowking/footprint.png,,match
+SHELLDER,gMonFootprint_Shellder,graphics/pokemon/shellder/footprint.png,blank (may be correct for footless species),match
+CLOYSTER,gMonFootprint_Cloyster,graphics/pokemon/cloyster/footprint.png,blank (may be correct for footless species),match
+KRABBY,gMonFootprint_Krabby,graphics/pokemon/krabby/footprint.png,,match
+KINGLER,gMonFootprint_Kingler,graphics/pokemon/kingler/footprint.png,,match
+PSYDUCK,gMonFootprint_Psyduck,graphics/pokemon/psyduck/footprint.png,,match
+GOLDUCK,gMonFootprint_Golduck,graphics/pokemon/golduck/footprint.png,,match
+HORSEA,gMonFootprint_Horsea,graphics/pokemon/horsea/footprint.png,blank (may be correct for footless species),match
+SEADRA,gMonFootprint_Seadra,graphics/pokemon/seadra/footprint.png,blank (may be correct for footless species),match
+KINGDRA,gMonFootprint_Kingdra,graphics/pokemon/kingdra/footprint.png,blank (may be correct for footless species),match
+GOLDEEN,gMonFootprint_Goldeen,graphics/pokemon/goldeen/footprint.png,blank (may be correct for footless species),match
+SEAKING,gMonFootprint_Seaking,graphics/pokemon/seaking/footprint.png,blank (may be correct for footless species),match
+LUVDISC,gMonFootprint_Luvdisc,graphics/pokemon/luvdisc/footprint.png,blank (may be correct for footless species),match
+CLAMPERL,gMonFootprint_Clamperl,graphics/pokemon/clamperl/footprint.png,blank (may be correct for footless species),match
+HUNTAIL,gMonFootprint_Huntail,graphics/pokemon/huntail/footprint.png,blank (may be correct for footless species),match
+GOREBYSS,gMonFootprint_Gorebyss,graphics/pokemon/gorebyss/footprint.png,blank (may be correct for footless species),match
+MAGIKARP,gMonFootprint_Magikarp,graphics/pokemon/magikarp/footprint.png,blank (may be correct for footless species),match
+GYARADOS,gMonFootprint_Gyarados,graphics/pokemon/gyarados/footprint.png,blank (may be correct for footless species),match
+FEEBAS,gMonFootprint_Feebas,graphics/pokemon/feebas/footprint.png,blank (may be correct for footless species),match
+MILOTIC,gMonFootprint_Milotic,graphics/pokemon/milotic/footprint.png,blank (may be correct for footless species),match
+RELICANTH,gMonFootprint_Relicanth,graphics/pokemon/relicanth/footprint.png,blank (may be correct for footless species),match
+CINNABAR_MAGIKARP,gMonFootprint_CinnabarMagikarp,graphics/pokemon/cinnabar_magikarp/footprint.png,,unavailable
+CINNABAR_FEEBAS,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+STARYU,gMonFootprint_Staryu,graphics/pokemon/staryu/footprint.png,,match
+STARMIE,gMonFootprint_Starmie,graphics/pokemon/starmie/footprint.png,,match
+CHINCHOU,gMonFootprint_Chinchou,graphics/pokemon/chinchou/footprint.png,blank (may be correct for footless species),match
+LANTURN,gMonFootprint_Lanturn,graphics/pokemon/lanturn/footprint.png,blank (may be correct for footless species),match
+WINGULL,gMonFootprint_Wingull,graphics/pokemon/wingull/footprint.png,,match
+PELIPPER,gMonFootprint_Pelipper,graphics/pokemon/pelipper/footprint.png,,match
+TENTACOOL,gMonFootprint_Tentacool,graphics/pokemon/tentacool/footprint.png,blank (may be correct for footless species),match
+TENTACRUEL,gMonFootprint_Tentacruel,graphics/pokemon/tentacruel/footprint.png,blank (may be correct for footless species),match
+QWILFISH,gMonFootprint_Qwilfish,graphics/pokemon/qwilfish/footprint.png,blank (may be correct for footless species),match
+CORSOLA,gMonFootprint_Corsola,graphics/pokemon/corsola/footprint.png,,match
+SEEL,gMonFootprint_Seel,graphics/pokemon/seel/footprint.png,blank (may be correct for footless species),match
+DEWGONG,gMonFootprint_Dewgong,graphics/pokemon/dewgong/footprint.png,blank (may be correct for footless species),match
+SNEASEL,gMonFootprint_Sneasel,graphics/pokemon/sneasel/footprint.png,,match
+WEAVILE,gMonFootprint_Weavile,graphics/pokemon/weavile/footprint.png,,match
+SWINUB,gMonFootprint_Swinub,graphics/pokemon/swinub/footprint.png,,match
+PILOSWINE,gMonFootprint_Piloswine,graphics/pokemon/piloswine/footprint.png,,match
+MAMOSWINE,gMonFootprint_Mamoswine,graphics/pokemon/mamoswine/footprint.png,,match
+SNORUNT,gMonFootprint_Snorunt,graphics/pokemon/snorunt/footprint.png,,match
+GLALIE,gMonFootprint_Glalie,graphics/pokemon/glalie/footprint.png,blank (may be correct for footless species),match
+FROSLASS,gMonFootprint_Froslass,graphics/pokemon/froslass/footprint.png,blank (may be correct for footless species),match
+SMOOCHUM,gMonFootprint_Smoochum,graphics/pokemon/smoochum/footprint.png,,match
+JYNX,gMonFootprint_Jynx,graphics/pokemon/jynx/footprint.png,blank (may be correct for footless species),match
+VULPIX,gMonFootprint_Vulpix,graphics/pokemon/vulpix/footprint.png,,match
+NINETALES,gMonFootprint_Ninetales,graphics/pokemon/ninetales/footprint.png,,match
+GROWLITHE,gMonFootprint_Growlithe,graphics/pokemon/growlithe/footprint.png,,match
+ARCANINE,gMonFootprint_Arcanine,graphics/pokemon/arcanine/footprint.png,,match
+PONYTA,gMonFootprint_Ponyta,graphics/pokemon/ponyta/footprint.png,,match
+RAPIDASH,gMonFootprint_Rapidash,graphics/pokemon/rapidash/footprint.png,,match
+SLUGMA,gMonFootprint_Slugma,graphics/pokemon/slugma/footprint.png,blank (may be correct for footless species),match
+MAGCARGO,gMonFootprint_Magcargo,graphics/pokemon/magcargo/footprint.png,blank (may be correct for footless species),match
+NUMEL,gMonFootprint_Numel,graphics/pokemon/numel/footprint.png,,match
+CAMERUPT,gMonFootprint_Camerupt,graphics/pokemon/camerupt/footprint.png,,match
+MAGBY,gMonFootprint_Magby,graphics/pokemon/magby/footprint.png,,match
+MAGMAR,gMonFootprint_Magmar,graphics/pokemon/magmar/footprint.png,,match
+MAGMORTAR,gMonFootprint_Magmortar,graphics/pokemon/magmortar/footprint.png,,match
+OMANYTE,gMonFootprint_Omanyte,graphics/pokemon/omanyte/footprint.png,,match
+OMASTAR,gMonFootprint_Omastar,graphics/pokemon/omastar/footprint.png,,match
+OMATO,gMonFootprint_Omato,graphics/pokemon/omato/footprint.png,,unavailable
+OMATOPS,gMonFootprint_Omatops,graphics/pokemon/omatops/footprint.png,,unavailable
+KABUTO,gMonFootprint_Kabuto,graphics/pokemon/kabuto/footprint.png,,match
+KABUTOPS,gMonFootprint_Kabutops,graphics/pokemon/kabutops/footprint.png,,match
+KABUSTAR,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+KABUKNIGHT,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+AERODACTYL,gMonFootprint_Aerodactyl,graphics/pokemon/aerodactyl/footprint.png,,match
+AMUNYTE,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+KINKABUTO,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+AEROPTERYX,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+PORYGON,gMonFootprint_Porygon,graphics/pokemon/porygon/footprint.png,,match
+PORYGON2,gMonFootprint_Porygon2,graphics/pokemon/porygon2/footprint.png,,match
+PORYGON_Z,gMonFootprint_PorygonZ,graphics/pokemon/porygon_z/footprint.png,,match
+DITTO,gMonFootprint_Ditto,graphics/pokemon/ditto/footprint.png,blank (may be correct for footless species),match
+ARTICUNO,gMonFootprint_Articuno,graphics/pokemon/articuno/footprint.png,,match
+ZAPDOS,gMonFootprint_Zapdos,graphics/pokemon/zapdos/footprint.png,,match
+MOLTRES,gMonFootprint_Moltres,graphics/pokemon/moltres/footprint.png,,match
+MEWTWO,gMonFootprint_Mewtwo,graphics/pokemon/mewtwo/footprint.png,,match
+MEW,gMonFootprint_Mew,graphics/pokemon/mew/footprint.png,,match
+EEVEE,gMonFootprint_Eevee,graphics/pokemon/eevee/footprint.png,,match
+VAPOREON,gMonFootprint_Vaporeon,graphics/pokemon/vaporeon/footprint.png,,match
+JOLTEON,gMonFootprint_Jolteon,graphics/pokemon/jolteon/footprint.png,,match
+FLAREON,gMonFootprint_Flareon,graphics/pokemon/flareon/footprint.png,,match
+ESPEON,gMonFootprint_Espeon,graphics/pokemon/espeon/footprint.png,,match
+UMBREON,gMonFootprint_Umbreon,graphics/pokemon/umbreon/footprint.png,,match
+LEAFEON,gMonFootprint_Leafeon,graphics/pokemon/leafeon/footprint.png,,match
+GLACEON,gMonFootprint_Glaceon,graphics/pokemon/glaceon/footprint.png,,match
+TYROGUE,gMonFootprint_Tyrogue,graphics/pokemon/tyrogue/footprint.png,,match
+HITMONLEE,gMonFootprint_Hitmonlee,graphics/pokemon/hitmonlee/footprint.png,,match
+HITMONCHAN,gMonFootprint_Hitmonchan,graphics/pokemon/hitmonchan/footprint.png,,match
+HITMONTOP,gMonFootprint_Hitmontop,graphics/pokemon/hitmontop/footprint.png,,match
+LAPRAS,gMonFootprint_Lapras,graphics/pokemon/lapras/footprint.png,blank (may be correct for footless species),match
+DRATINI,gMonFootprint_Dratini,graphics/pokemon/dratini/footprint.png,blank (may be correct for footless species),match
+DRAGONAIR,gMonFootprint_Dragonair,graphics/pokemon/dragonair/footprint.png,blank (may be correct for footless species),match
+DRAGONITE,gMonFootprint_Dragonite,graphics/pokemon/dragonite/footprint.png,,match
+BULBASAUR,gMonFootprint_Bulbasaur,graphics/pokemon/bulbasaur/footprint.png,,match
+IVYSAUR,gMonFootprint_Ivysaur,graphics/pokemon/ivysaur/footprint.png,,match
+VENUSAUR,gMonFootprint_Venusaur,graphics/pokemon/venusaur/footprint.png,,match
+CHARMANDER,gMonFootprint_Charmander,graphics/pokemon/charmander/footprint.png,,match
+CHARMELEON,gMonFootprint_Charmeleon,graphics/pokemon/charmeleon/footprint.png,,match
+CHARIZARD,gMonFootprint_Charizard,graphics/pokemon/charizard/footprint.png,,match
+SQUIRTLE,gMonFootprint_Squirtle,graphics/pokemon/squirtle/footprint.png,,match
+WARTORTLE,gMonFootprint_Wartortle,graphics/pokemon/wartortle/footprint.png,,match
+BLASTOISE,gMonFootprint_Blastoise,graphics/pokemon/blastoise/footprint.png,,match
+SCYTHER,gMonFootprint_Scyther,graphics/pokemon/scyther/footprint.png,,match
+PINSIR,gMonFootprint_Pinsir,graphics/pokemon/pinsir/footprint.png,,match
+CYNDAQUIL,gMonFootprint_Cyndaquil,graphics/pokemon/cyndaquil/footprint.png,,match
+QUILAVA,gMonFootprint_Quilava,graphics/pokemon/quilava/footprint.png,,match
+TYPHLOSION,gMonFootprint_Typhlosion,graphics/pokemon/typhlosion/footprint.png,,match
+TOTODILE,gMonFootprint_Totodile,graphics/pokemon/totodile/footprint.png,,match
+CROCONAW,gMonFootprint_Croconaw,graphics/pokemon/croconaw/footprint.png,,match
+FERALIGATR,gMonFootprint_Feraligatr,graphics/pokemon/feraligatr/footprint.png,,match
+TOGEPI,gMonFootprint_Togepi,graphics/pokemon/togepi/footprint.png,,match
+TOGETIC,gMonFootprint_Togetic,graphics/pokemon/togetic/footprint.png,,match
+YANMA,gMonFootprint_Yanma,graphics/pokemon/yanma/footprint.png,,match
+UNOWN,gMonFootprint_Unown,graphics/pokemon/unown/footprint.png,blank (may be correct for footless species),match
+DUNSPARCE,gMonFootprint_Dunsparce,graphics/pokemon/dunsparce/footprint.png,blank (may be correct for footless species),match
+GLIGAR,gMonFootprint_Gligar,graphics/pokemon/gligar/footprint.png,,match
+SNUBBULL,gMonFootprint_Snubbull,graphics/pokemon/snubbull/footprint.png,,match
+GRANBULL,gMonFootprint_Granbull,graphics/pokemon/granbull/footprint.png,,match
+SCIZOR,gMonFootprint_Scizor,graphics/pokemon/scizor/footprint.png,,match
+REMORAID,gMonFootprint_Remoraid,graphics/pokemon/remoraid/footprint.png,blank (may be correct for footless species),match
+OCTILLERY,gMonFootprint_Octillery,graphics/pokemon/octillery/footprint.png,,match
+DELIBIRD,gMonFootprint_Delibird,graphics/pokemon/delibird/footprint.png,,match
+MANTINE,gMonFootprint_Mantine,graphics/pokemon/mantine/footprint.png,blank (may be correct for footless species),match
+SKARMORY,gMonFootprint_Skarmory,graphics/pokemon/skarmory/footprint.png,,match
+STANTLER,gMonFootprint_Stantler,graphics/pokemon/stantler/footprint.png,,match
+RAIKOU,gMonFootprint_Raikou,graphics/pokemon/raikou/footprint.png,,match
+ENTEI,gMonFootprint_Entei,graphics/pokemon/entei/footprint.png,,match
+SUICUNE,gMonFootprint_Suicune,graphics/pokemon/suicune/footprint.png,,match
+LUGIA,gMonFootprint_Lugia,graphics/pokemon/lugia/footprint.png,,match
+HO_OH,gMonFootprint_HoOh,graphics/pokemon/ho_oh/footprint.png,,match
+CELEBI,gMonFootprint_Celebi,graphics/pokemon/celebi/footprint.png,,match
+ZIGZAGOON,gMonFootprint_Zigzagoon,graphics/pokemon/zigzagoon/footprint.png,,match
+LINOONE,gMonFootprint_Linoone,graphics/pokemon/linoone/footprint.png,,match
+LOTAD,gMonFootprint_Lotad,graphics/pokemon/lotad/footprint.png,,match
+LOMBRE,gMonFootprint_Lombre,graphics/pokemon/lombre/footprint.png,,match
+LUDICOLO,gMonFootprint_Ludicolo,graphics/pokemon/ludicolo/footprint.png,,match-original-firered
+TAILLOW,gMonFootprint_Taillow,graphics/pokemon/taillow/footprint.png,,match
+SWELLOW,gMonFootprint_Swellow,graphics/pokemon/swellow/footprint.png,,match
+RALTS,gMonFootprint_Ralts,graphics/pokemon/ralts/footprint.png,,match
+KIRLIA,gMonFootprint_Kirlia,graphics/pokemon/kirlia/footprint.png,,match
+GARDEVOIR,gMonFootprint_Gardevoir,graphics/pokemon/gardevoir/footprint.png,,match
+GALLADE,gMonFootprint_Gallade,graphics/pokemon/gallade/footprint.png,,match
+SURSKIT,gMonFootprint_Surskit,graphics/pokemon/surskit/footprint.png,,match
+MASQUERAIN,gMonFootprint_Masquerain,graphics/pokemon/masquerain/footprint.png,blank (may be correct for footless species),match
+NINCADA,gMonFootprint_Nincada,graphics/pokemon/nincada/footprint.png,,match
+NINJASK,gMonFootprint_Ninjask,graphics/pokemon/ninjask/footprint.png,,match
+SHEDINJA,gMonFootprint_Shedinja,graphics/pokemon/shedinja/footprint.png,,match
+WHISMUR,gMonFootprint_Whismur,graphics/pokemon/whismur/footprint.png,,match
+LOUDRED,gMonFootprint_Loudred,graphics/pokemon/loudred/footprint.png,,match
+EXPLOUD,gMonFootprint_Exploud,graphics/pokemon/exploud/footprint.png,,match
+MAKUHITA,gMonFootprint_Makuhita,graphics/pokemon/makuhita/footprint.png,,match
+HARIYAMA,gMonFootprint_Hariyama,graphics/pokemon/hariyama/footprint.png,,match
+NOSEPASS,gMonFootprint_Nosepass,graphics/pokemon/nosepass/footprint.png,,match
+MEDITITE,gMonFootprint_Meditite,graphics/pokemon/meditite/footprint.png,,match
+MEDICHAM,gMonFootprint_Medicham,graphics/pokemon/medicham/footprint.png,,match
+ELECTRIKE,gMonFootprint_Electrike,graphics/pokemon/electrike/footprint.png,,match
+MANECTRIC,gMonFootprint_Manectric,graphics/pokemon/manectric/footprint.png,,match
+VOLBEAT,gMonFootprint_Volbeat,graphics/pokemon/volbeat/footprint.png,,match
+ILLUMISE,gMonFootprint_Illumise,graphics/pokemon/illumise/footprint.png,,match
+TORKOAL,gMonFootprint_Torkoal,graphics/pokemon/torkoal/footprint.png,,match
+SPOINK,gMonFootprint_Spoink,graphics/pokemon/spoink/footprint.png,blank (may be correct for footless species),match
+GRUMPIG,gMonFootprint_Grumpig,graphics/pokemon/grumpig/footprint.png,,match
+SPINDA,gMonFootprint_Spinda,graphics/pokemon/spinda/footprint.png,,match
+TRAPINCH,gMonFootprint_Trapinch,graphics/pokemon/trapinch/footprint.png,,match
+VIBRAVA,gMonFootprint_Vibrava,graphics/pokemon/vibrava/footprint.png,,match
+FLYGON,gMonFootprint_Flygon,graphics/pokemon/flygon/footprint.png,,match
+CACNEA,gMonFootprint_Cacnea,graphics/pokemon/cacnea/footprint.png,,match
+CACTURNE,gMonFootprint_Cacturne,graphics/pokemon/cacturne/footprint.png,,match
+SWABLU,gMonFootprint_Swablu,graphics/pokemon/swablu/footprint.png,,match
+ALTARIA,gMonFootprint_Altaria,graphics/pokemon/altaria/footprint.png,,match
+ZANGOOSE,gMonFootprint_Zangoose,graphics/pokemon/zangoose/footprint.png,,match
+SEVIPER,gMonFootprint_Seviper,graphics/pokemon/seviper/footprint.png,blank (may be correct for footless species),match
+BARBOACH,gMonFootprint_Barboach,graphics/pokemon/barboach/footprint.png,blank (may be correct for footless species),match
+WHISCASH,gMonFootprint_Whiscash,graphics/pokemon/whiscash/footprint.png,blank (may be correct for footless species),match
+CORPHISH,gMonFootprint_Corphish,graphics/pokemon/corphish/footprint.png,,match
+CRAWDAUNT,gMonFootprint_Crawdaunt,graphics/pokemon/crawdaunt/footprint.png,,match
+LILEEP,gMonFootprint_Lileep,graphics/pokemon/lileep/footprint.png,,match
+CRADILY,gMonFootprint_Cradily,graphics/pokemon/cradily/footprint.png,,match
+ANORITH,gMonFootprint_Anorith,graphics/pokemon/anorith/footprint.png,blank (may be correct for footless species),match
+ARMALDO,gMonFootprint_Armaldo,graphics/pokemon/armaldo/footprint.png,,match
+SHUPPET,gMonFootprint_Shuppet,graphics/pokemon/shuppet/footprint.png,blank (may be correct for footless species),match
+BANETTE,gMonFootprint_Banette,graphics/pokemon/banette/footprint.png,,match
+ABSOL,gMonFootprint_Absol,graphics/pokemon/absol/footprint.png,,match
+SPHEAL,gMonFootprint_Spheal,graphics/pokemon/spheal/footprint.png,blank (may be correct for footless species),match
+SEALEO,gMonFootprint_Sealeo,graphics/pokemon/sealeo/footprint.png,blank (may be correct for footless species),match
+WALREIN,gMonFootprint_Walrein,graphics/pokemon/walrein/footprint.png,blank (may be correct for footless species),match
+BAGON,gMonFootprint_Bagon,graphics/pokemon/bagon/footprint.png,,match
+SHELGON,gMonFootprint_Shelgon,graphics/pokemon/shelgon/footprint.png,,match
+SALAMENCE,gMonFootprint_Salamence,graphics/pokemon/salamence/footprint.png,,match
+BELDUM,gMonFootprint_Beldum,graphics/pokemon/beldum/footprint.png,,match
+METANG,gMonFootprint_Metang,graphics/pokemon/metang/footprint.png,,match
+METAGROSS,gMonFootprint_Metagross,graphics/pokemon/metagross/footprint.png,,match
+SYLVEON,gMonFootprint_Sylveon,graphics/pokemon/sylveon/footprint.png,,match
+FARFETCHD_GALARIAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+TYNAMO,gMonFootprint_Tynamo,graphics/pokemon/tynamo/footprint.png,blank (may be correct for footless species),match
+EELEKTRIK,gMonFootprint_Eelektrik,graphics/pokemon/eelektrik/footprint.png,blank (may be correct for footless species),match
+EELEKTROSS,gMonFootprint_Eelektross,graphics/pokemon/eelektross/footprint.png,blank (may be correct for footless species),match
+RATTATA_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+RATICATE_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+PICHU_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+PIKACHU_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+RAICHU_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+SANDSHREW_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+SANDSLASH_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+DIGLETT_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+DUGTRIO_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+MEOWTH_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+PERSIAN_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+MEOWTH_GALARIAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+PERRSERKER,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,different
+GEODUDE_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+GRAVELER_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+GOLEM_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+GRIMER_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+MUK_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+VULPIX_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+NINETALES_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+EXEGGCUTE_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+EXEGGUTOR_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+CUBONE_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+MAROWAK_ALOLAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+CORSOLA_GALARIAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+CURSOLA,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,different
+KOFFING_GALARIAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+WEEZING_GALARIAN,gMonFootprint_QuestionMark,graphics/pokemon/question_mark/footprint.png,question-mark placeholder,unavailable
+BAYLEEF,gMonFootprint_Bayleef,graphics/pokemon/bayleef/footprint.png,,match
+MEGANIUM,gMonFootprint_Meganium,graphics/pokemon/meganium/footprint.png,,match
+SKITTY,gMonFootprint_Skitty,graphics/pokemon/skitty/footprint.png,,match
+DELCATTY,gMonFootprint_Delcatty,graphics/pokemon/delcatty/footprint.png,,match
+CARVANHA,gMonFootprint_Carvanha,graphics/pokemon/carvanha/footprint.png,blank (may be correct for footless species),match
+SHARPEDO,gMonFootprint_Sharpedo,graphics/pokemon/sharpedo/footprint.png,blank (may be correct for footless species),match
+WAILMER,gMonFootprint_Wailmer,graphics/pokemon/wailmer/footprint.png,blank (may be correct for footless species),match
+WAILORD,gMonFootprint_Wailord,graphics/pokemon/wailord/footprint.png,blank (may be correct for footless species),match
+CASTFORM,gMonFootprint_Castform,graphics/pokemon/castform/footprint.png,blank (may be correct for footless species),match
+KECLEON,gMonFootprint_Kecleon,graphics/pokemon/kecleon/footprint.png,,match
+TROPIUS,gMonFootprint_Tropius,graphics/pokemon/tropius/footprint.png,,match
+REGIROCK,gMonFootprint_Regirock,graphics/pokemon/regirock/footprint.png,,match
+REGICE,gMonFootprint_Regice,graphics/pokemon/regice/footprint.png,,match
+REGISTEEL,gMonFootprint_Registeel,graphics/pokemon/registeel/footprint.png,,match

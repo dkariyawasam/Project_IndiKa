@@ -1,0 +1,1 @@
+Muted normal palette, selecting colors from vanilla FRLG Pokemon palettes. Front and back share the new palette; pixel indices, silhouettes and shiny palette are unchanged. Preview: previous front, muted front, muted back.

@@ -1,0 +1,135 @@
+[
+  {
+    "species": "BUNEARY",
+    "symbol": "gMonFootprint_Buneary",
+    "path": "graphics/pokemon/buneary/footprint.png",
+    "issues": "",
+    "reference": "different"
+  },
+  {
+    "species": "LOPUNNY",
+    "symbol": "gMonFootprint_Lopunny",
+    "path": "graphics/pokemon/lopunny/footprint.png",
+    "issues": "",
+    "reference": "different"
+  },
+  {
+    "species": "STARLY",
+    "symbol": "gMonFootprint_Starly",
+    "path": "graphics/pokemon/starly/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "STARAVIA",
+    "symbol": "gMonFootprint_Staravia",
+    "path": "graphics/pokemon/staravia/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "STARAPTOR",
+    "symbol": "gMonFootprint_Staraptor",
+    "path": "graphics/pokemon/staraptor/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "KRICKETOT",
+    "symbol": "gMonFootprint_Kricketot",
+    "path": "graphics/pokemon/kricketot/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "KRICKETUNE",
+    "symbol": "gMonFootprint_Kricketune",
+    "path": "graphics/pokemon/kricketune/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "BUDEW",
+    "symbol": "gMonFootprint_Budew",
+    "path": "graphics/pokemon/budew/footprint.png",
+    "issues": "",
+    "reference": "different"
+  },
+  {
+    "species": "ROSERADE",
+    "symbol": "gMonFootprint_Roserade",
+    "path": "graphics/pokemon/roserade/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "TANGROWTH",
+    "symbol": "gMonFootprint_Tangrowth",
+    "path": "graphics/pokemon/tangrowth/footprint.png",
+    "issues": "",
+    "reference": "different"
+  },
+  {
+    "species": "ELECTIVIRE",
+    "symbol": "gMonFootprint_Electivire",
+    "path": "graphics/pokemon/electivire/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "HAPPINY",
+    "symbol": "gMonFootprint_Happiny",
+    "path": "graphics/pokemon/happiny/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "LICKILICKY",
+    "symbol": "gMonFootprint_Lickilicky",
+    "path": "graphics/pokemon/lickilicky/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "AMBIPOM",
+    "symbol": "gMonFootprint_Ambipom",
+    "path": "graphics/pokemon/ambipom/footprint.png",
+    "issues": "",
+    "reference": "different"
+  },
+  {
+    "species": "HONCHKROW",
+    "symbol": "gMonFootprint_Honchkrow",
+    "path": "graphics/pokemon/honchkrow/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "MIME_JR",
+    "symbol": "gMonFootprint_MimeJr",
+    "path": "graphics/pokemon/mime_jr/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "RHYPERIOR",
+    "symbol": "gMonFootprint_Rhyperior",
+    "path": "graphics/pokemon/rhyperior/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "WEAVILE",
+    "symbol": "gMonFootprint_Weavile",
+    "path": "graphics/pokemon/weavile/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  },
+  {
+    "species": "MAGMORTAR",
+    "symbol": "gMonFootprint_Magmortar",
+    "path": "graphics/pokemon/magmortar/footprint.png",
+    "issues": "blank (may be correct for footless species)",
+    "reference": "different"
+  }
+]

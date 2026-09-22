@@ -61,6 +61,7 @@ Route11_EventScript_RivalRumors::
 
 Route11_EventScript_RivalRumorsScene::
 	msgbox Route11_Text_RivalRumors
+	call EventScript_RivalApexReflection
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
 	call_if_eq VAR_TEMP_1, 0, Route11_EventScript_RivalExitTop

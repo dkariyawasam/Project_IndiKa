@@ -184,6 +184,23 @@ static const u8 sApexDossierName_Annihilape[] = _("ANNIHILAPE");
 static const u8 sApexRumorUnknown[] = _("No rumour recorded yet.");
 static const u8 sApexMonUnknown[] = _("The APEX POKEMON has not been\nencountered yet.");
 static const u8 sApexMonRecorded[] = _("The APEX POKEMON has been\nrecorded.");
+static const u8 sApexEvolution_Tangrowth[] = _("Discovery unlocked evolution!\nTANGELA must know ANCIENTPOWER.\pLevel it up anywhere within\nVIRIDIAN FOREST to evolve.");
+static const u8 sApexEvolution_Annihilape[] = _("Discovery unlocked evolution!\nPRIMEAPE must know RAGE FIST.\pLevel it up anywhere within\nMT. MOON to evolve.");
+static const u8 sApexEvolution_MimeSr[] = _("Discovery unlocked evolution!\nMR. MIME must know BARRIER.\pLevel it up anywhere within\nDIGLETT'S CAVE to evolve.");
+static const u8 sApexEvolution_Osscythe[] = _("Discovery unlocked evolution!\nMAROWAK must know BONE RUSH.\pLevel it up anywhere within\nPOKEMON TOWER to evolve.");
+
+static const u8 *ApexLog_GetRecordedMonText(u16 subquest)
+{
+    switch (subquest)
+    {
+    case SUB_QUEST_APEX_TANGROWTH: return sApexEvolution_Tangrowth;
+    case SUB_QUEST_APEX_ANNIHILAPE: return sApexEvolution_Annihilape;
+    case SUB_QUEST_APEX_MIME_SR: return sApexEvolution_MimeSr;
+    case SUB_QUEST_APEX_OSSCYTHE: return sApexEvolution_Osscythe;
+    default: return sApexMonRecorded;
+    }
+}
+
 static const u8 sApexDossierText_UI[] = _("{DPAD_ANY}PICK {B_BUTTON}CANCEL");
 static const u8 sApexRumorSourceUnknown[] = _("Unrecorded");
 static const u8 sApexRumorLocationUnknown[] = _("????");
@@ -1264,7 +1281,7 @@ static void PrintSelectedNameInBrightGreen(u8 taskId)
     {
         if (ApexLog_IsApexDossierMonSlot(data[1]))
         {
-            StringExpandPlaceholders(gStringVar4, ApexLog_HasEncounteredApexDossierMon() ? sApexMonRecorded : sApexMonUnknown);
+            StringExpandPlaceholders(gStringVar4, ApexLog_HasEncounteredApexDossierMon() ? ApexLog_GetRecordedMonText(sApexLogData->apexSubquest) : sApexMonUnknown);
         }
         else if (ApexLog_IsApexDossierWitnessSlot(data[1]) && ApexLog_HasApexDossierRumor(ApexLog_GetApexDossierRumorForSlot(data[1])))
         {

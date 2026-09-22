@@ -1,6 +1,9 @@
 #ifndef GUARD_POKEDEX_H
 #define GUARD_POKEDEX_H
 
+bool8 IsActivePokedexSpecies(u16 nationalDexNo);
+u16 GetActivePokedexCount(void);
+
 enum
 {
     DEX_MODE_KANTO,

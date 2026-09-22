@@ -1,0 +1,2844 @@
+{
+  "missing": [
+    "ABSOL",
+    "AMPHAROS",
+    "ANORITH",
+    "ARMALDO",
+    "AZUMARILL",
+    "AZURILL",
+    "BARBOACH",
+    "BAYLEEF",
+    "CELEBI",
+    "CHIKORITA",
+    "CRADILY",
+    "CROCONAW",
+    "CYNDAQUIL",
+    "DELIBIRD",
+    "DRAGONAIR",
+    "DRATINI",
+    "DUNSPARCE",
+    "ENTEI",
+    "EXPLOUD",
+    "FARFETCHD",
+    "FARFETCHD_GALARIAN",
+    "FERALIGATR",
+    "FLAAFFY",
+    "GALLADE",
+    "GARDEVOIR",
+    "GLIGAR",
+    "GRUMPIG",
+    "HARIYAMA",
+    "HO_OH",
+    "ILLUMISE",
+    "KABUSTAR",
+    "KIRLIA",
+    "LILEEP",
+    "LINOONE",
+    "LOUDRED",
+    "LUGIA",
+    "MAKUHITA",
+    "MANTINE",
+    "MAREEP",
+    "MARILL",
+    "MEDICHAM",
+    "MEDITITE",
+    "MEGANIUM",
+    "MILTANK",
+    "NINCADA",
+    "NINJASK",
+    "OCTILLERY",
+    "OMATO",
+    "PINSIR",
+    "QUILAVA",
+    "RAIKOU",
+    "RALTS",
+    "REMORAID",
+    "SCIZOR",
+    "SCYTHER",
+    "SHEDINJA",
+    "SKARMORY",
+    "SMEARGLE",
+    "SNUBBULL",
+    "SPINDA",
+    "STANTLER",
+    "SUICUNE",
+    "SWABLU",
+    "SWELLOW",
+    "SWINUB",
+    "TAILLOW",
+    "TAUROS",
+    "TOGEPI",
+    "TOGETIC",
+    "TOTODILE",
+    "TYPHLOSION",
+    "TYROGUE",
+    "UNOWN",
+    "VOLBEAT",
+    "WHISCASH",
+    "WHISMUR",
+    "YANMA",
+    "ZIGZAGOON"
+  ],
+  "johto": {
+    "ABRA": [
+      "goldenrod-city",
+      "johto-route-34",
+      "johto-route-35"
+    ],
+    "ABSOL": [
+      "dark-cave",
+      "ice-path",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "AIPOM": [
+      "azalea-town",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-46",
+      "mt-silver"
+    ],
+    "ARBOK": [
+      "johto-route-42",
+      "mt-silver"
+    ],
+    "ARIADOS": [
+      "johto-route-37"
+    ],
+    "BEAUTIFLY": [
+      "national-park"
+    ],
+    "BEEDRILL": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "BELLSPROUT": [
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-36",
+      "johto-route-44"
+    ],
+    "BIDOOF": [
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph"
+    ],
+    "BRONZOR": [
+      "dark-cave",
+      "ice-path",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "BUDEW": [
+      "ilex-forest"
+    ],
+    "BUIZEL": [
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph"
+    ],
+    "BURMY": [
+      "johto-route-38"
+    ],
+    "BUTTERFREE": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "CARNIVINE": [
+      "ilex-forest"
+    ],
+    "CASCOON": [
+      "national-park"
+    ],
+    "CATERPIE": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "CELEBI": [
+      "ilex-forest"
+    ],
+    "CHATOT": [
+      "bell-tower",
+      "burned-tower",
+      "sprout-tower"
+    ],
+    "CHERUBI": [
+      "national-park"
+    ],
+    "CHIKORITA": [
+      "new-bark-town"
+    ],
+    "CHINCHOU": [
+      "johto-route-47",
+      "johto-sea-route-41",
+      "new-bark-town"
+    ],
+    "CHINGLING": [
+      "dark-cave",
+      "ice-path",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "CLEFFA": [
+      "johto-route-34"
+    ],
+    "COMBEE": [
+      "national-park"
+    ],
+    "CORSOLA": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "johto-route-34",
+      "johto-sea-route-40",
+      "olivine-city",
+      "union-cave"
+    ],
+    "CUBONE": [
+      "goldenrod-city"
+    ],
+    "CYNDAQUIL": [
+      "new-bark-town"
+    ],
+    "DELIBIRD": [
+      "ice-path"
+    ],
+    "DIALGA": [
+      "sinjoh-ruins"
+    ],
+    "DIGLETT": [
+      "johto-route-48"
+    ],
+    "DITTO": [
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-47"
+    ],
+    "DODRIO": [
+      "blackthorn-city",
+      "mt-silver"
+    ],
+    "DODUO": [
+      "mt-silver"
+    ],
+    "DONPHAN": [
+      "johto-route-45",
+      "mt-silver"
+    ],
+    "DRAGONAIR": [
+      "dragons-den",
+      "johto-route-45"
+    ],
+    "DRATINI": [
+      "dragons-den",
+      "goldenrod-city",
+      "johto-route-45"
+    ],
+    "DROWZEE": [
+      "johto-route-34",
+      "johto-route-35"
+    ],
+    "DUNSPARCE": [
+      "dark-cave"
+    ],
+    "DUSTOX": [
+      "national-park"
+    ],
+    "EEVEE": [
+      "goldenrod-city"
+    ],
+    "EKANS": [
+      "azalea-town",
+      "goldenrod-city",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-42"
+    ],
+    "ELECTRODE": [
+      "team-rocket-hq"
+    ],
+    "ELEKID": [
+      "johto-route-34"
+    ],
+    "ENTEI": [
+      "roaming-johto"
+    ],
+    "EXEGGCUTE": [
+      "azalea-town",
+      "cherrygrove-city",
+      "ecruteak-city",
+      "ilex-forest",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43",
+      "johto-route-47",
+      "johto-route-48",
+      "lake-of-rage",
+      "national-park",
+      "new-bark-town",
+      "violet-city"
+    ],
+    "FARFETCHD": [
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43",
+      "johto-route-47",
+      "johto-route-48"
+    ],
+    "FEAROW": [
+      "johto-route-42",
+      "johto-route-47",
+      "johto-route-48"
+    ],
+    "FLAAFFY": [
+      "johto-route-42",
+      "johto-route-43"
+    ],
+    "FURRET": [
+      "johto-route-43"
+    ],
+    "GASTLY": [
+      "bell-tower",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-36",
+      "sprout-tower"
+    ],
+    "GEODUDE": [
+      "dark-cave",
+      "johto-route-33",
+      "johto-route-45",
+      "johto-route-46",
+      "johto-route-47",
+      "mt-mortar",
+      "ruins-of-alph",
+      "team-rocket-hq",
+      "union-cave"
+    ],
+    "GIRAFARIG": [
+      "johto-route-43",
+      "johto-route-48"
+    ],
+    "GIRATINA_ALTERED": [
+      "sinjoh-ruins"
+    ],
+    "GLIGAR": [
+      "johto-route-45"
+    ],
+    "GLOOM": [
+      "johto-route-47",
+      "johto-route-48"
+    ],
+    "GOLBAT": [
+      "dark-cave",
+      "ice-path",
+      "johto-route-42",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "GOLDEEN": [
+      "dark-cave",
+      "johto-route-42",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave"
+    ],
+    "GOLDUCK": [
+      "ilex-forest",
+      "johto-route-35",
+      "mt-silver"
+    ],
+    "GRAVELER": [
+      "dark-cave",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver"
+    ],
+    "GROUDON": [
+      "embedded-tower"
+    ],
+    "GROWLITHE": [
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-48"
+    ],
+    "GYARADOS": [
+      "lake-of-rage",
+      "mt-silver"
+    ],
+    "HERACROSS": [
+      "azalea-town",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-46",
+      "johto-route-47",
+      "mt-silver"
+    ],
+    "HOOTHOOT": [
+      "cherrygrove-city",
+      "ecruteak-city",
+      "ilex-forest",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43",
+      "johto-route-47",
+      "johto-route-48",
+      "lake-of-rage",
+      "national-park",
+      "new-bark-town",
+      "violet-city"
+    ],
+    "HOPPIP": [
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-48"
+    ],
+    "HORSEA": [
+      "whirl-islands"
+    ],
+    "HO_OH": [
+      "bell-tower"
+    ],
+    "IGGLYBUFF": [
+      "johto-route-34"
+    ],
+    "ILLUMISE": [
+      "national-park"
+    ],
+    "JIGGLYPUFF": [
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-46"
+    ],
+    "JYNX": [
+      "ice-path"
+    ],
+    "KAKUNA": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "KINGLER": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "johto-route-34",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "olivine-city",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "KOFFING": [
+      "burned-tower",
+      "team-rocket-hq"
+    ],
+    "KRABBY": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "dark-cave",
+      "johto-route-34",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "olivine-city",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "KRICKETOT": [
+      "national-park"
+    ],
+    "KRICKETUNE": [
+      "national-park"
+    ],
+    "KYOGRE": [
+      "embedded-tower"
+    ],
+    "LANTURN": [
+      "johto-route-47",
+      "johto-sea-route-41",
+      "new-bark-town"
+    ],
+    "LAPRAS": [
+      "union-cave"
+    ],
+    "LARVITAR": [
+      "mt-silver"
+    ],
+    "LATIAS": [
+      "roaming-johto"
+    ],
+    "LATIOS": [
+      "roaming-johto"
+    ],
+    "LEDYBA": [
+      "cherrygrove-city",
+      "ecruteak-city",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "johto-route-48",
+      "national-park",
+      "new-bark-town"
+    ],
+    "LICKITUNG": [
+      "johto-route-44"
+    ],
+    "LINOONE": [
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph"
+    ],
+    "LUGIA": [
+      "whirl-islands"
+    ],
+    "MACHOKE": [
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver"
+    ],
+    "MACHOP": [
+      "goldenrod-city",
+      "johto-route-47",
+      "mt-mortar"
+    ],
+    "MAGBY": [
+      "johto-route-34"
+    ],
+    "MAGIKARP": [
+      "blackthorn-city",
+      "cherrygrove-city",
+      "cianwood-city",
+      "dark-cave",
+      "dragons-den",
+      "ecruteak-city",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "johto-sea-route-41",
+      "lake-of-rage",
+      "mt-mortar",
+      "mt-silver",
+      "new-bark-town",
+      "olivine-city",
+      "ruins-of-alph",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "violet-city",
+      "whirl-islands"
+    ],
+    "MAGMAR": [
+      "burned-tower",
+      "mt-silver"
+    ],
+    "MAGNEMITE": [
+      "johto-route-38",
+      "johto-route-39"
+    ],
+    "MAKUHITA": [
+      "dark-cave",
+      "ice-path",
+      "johto-route-47",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "MANAPHY": [
+      "johto-pokemart"
+    ],
+    "MANKEY": [
+      "johto-route-42"
+    ],
+    "MANTINE": [
+      "johto-sea-route-41"
+    ],
+    "MAREEP": [
+      "johto-route-32",
+      "johto-route-42",
+      "johto-route-43",
+      "violet-city"
+    ],
+    "MARILL": [
+      "johto-route-42",
+      "mt-mortar"
+    ],
+    "MEDITITE": [
+      "bell-tower",
+      "burned-tower",
+      "sprout-tower"
+    ],
+    "MEOWTH": [
+      "johto-route-35",
+      "johto-route-38",
+      "johto-route-39"
+    ],
+    "METAPOD": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "MILTANK": [
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47"
+    ],
+    "MINUN": [
+      "johto-route-29",
+      "johto-route-33",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-46",
+      "johto-route-48",
+      "national-park"
+    ],
+    "MISDREAVUS": [
+      "johto-route-47",
+      "mt-silver"
+    ],
+    "MOLTRES": [
+      "mt-silver"
+    ],
+    "NATU": [
+      "mt-silver",
+      "ruins-of-alph"
+    ],
+    "NIDORAN_F": [
+      "johto-route-35",
+      "johto-route-36",
+      "national-park"
+    ],
+    "NIDORAN_M": [
+      "johto-route-35",
+      "johto-route-36",
+      "national-park"
+    ],
+    "NINCADA": [
+      "national-park"
+    ],
+    "NOCTOWL": [
+      "ilex-forest",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43",
+      "johto-route-47"
+    ],
+    "NUMEL": [
+      "ilex-forest"
+    ],
+    "ODDISH": [
+      "ilex-forest"
+    ],
+    "ONIX": [
+      "johto-route-47",
+      "mt-silver",
+      "union-cave",
+      "violet-city"
+    ],
+    "PALKIA": [
+      "sinjoh-ruins"
+    ],
+    "PARAS": [
+      "ilex-forest",
+      "national-park"
+    ],
+    "PARASECT": [
+      "mt-silver"
+    ],
+    "PHANPY": [
+      "johto-route-45",
+      "johto-route-46",
+      "mt-silver"
+    ],
+    "PICHU": [
+      "johto-route-34"
+    ],
+    "PIDGEOTTO": [
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43"
+    ],
+    "PIDGEY": [
+      "ilex-forest",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "national-park"
+    ],
+    "PINECO": [
+      "azalea-town",
+      "cherrygrove-city",
+      "ecruteak-city",
+      "ilex-forest",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-43",
+      "johto-route-47",
+      "johto-route-48",
+      "lake-of-rage",
+      "national-park",
+      "new-bark-town",
+      "violet-city"
+    ],
+    "PINSIR": [
+      "national-park"
+    ],
+    "PLUSLE": [
+      "johto-route-29",
+      "johto-route-33",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-46",
+      "johto-route-48",
+      "national-park"
+    ],
+    "POLIWAG": [
+      "blackthorn-city",
+      "ecruteak-city",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-35",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph",
+      "violet-city"
+    ],
+    "POLIWHIRL": [
+      "ecruteak-city",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-44",
+      "mt-silver",
+      "violet-city"
+    ],
+    "PONYTA": [
+      "mt-silver"
+    ],
+    "PSYDUCK": [
+      "ilex-forest",
+      "johto-route-35",
+      "national-park"
+    ],
+    "PUPITAR": [
+      "mt-silver"
+    ],
+    "QUAGSIRE": [
+      "johto-route-32",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph",
+      "union-cave"
+    ],
+    "QWILFISH": [
+      "johto-route-32"
+    ],
+    "RAIKOU": [
+      "roaming-johto"
+    ],
+    "RALTS": [
+      "johto-route-34"
+    ],
+    "RAPIDASH": [
+      "mt-silver"
+    ],
+    "RATICATE": [
+      "burned-tower",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-47",
+      "mt-mortar",
+      "tohjo-falls",
+      "union-cave"
+    ],
+    "RATTATA": [
+      "bell-tower",
+      "burned-tower",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-34",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-42",
+      "johto-route-46",
+      "mt-mortar",
+      "sprout-tower",
+      "tohjo-falls",
+      "union-cave"
+    ],
+    "RAYQUAZA": [
+      "embedded-tower"
+    ],
+    "REMORAID": [
+      "johto-route-44"
+    ],
+    "RHYDON": [
+      "blackthorn-city"
+    ],
+    "SANDSHREW": [
+      "goldenrod-city",
+      "union-cave"
+    ],
+    "SCYTHER": [
+      "national-park"
+    ],
+    "SEADRA": [
+      "whirl-islands"
+    ],
+    "SEAKING": [
+      "dark-cave",
+      "johto-route-42",
+      "mt-mortar",
+      "mt-silver",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave"
+    ],
+    "SEEL": [
+      "johto-route-47",
+      "whirl-islands"
+    ],
+    "SENTRET": [
+      "johto-route-29",
+      "johto-route-43"
+    ],
+    "SHELLDER": [
+      "johto-route-47",
+      "johto-sea-route-41",
+      "new-bark-town"
+    ],
+    "SHINX": [
+      "johto-route-29",
+      "johto-route-33",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-46",
+      "johto-route-48",
+      "national-park"
+    ],
+    "SHUCKLE": [
+      "cianwood-city",
+      "dark-cave",
+      "johto-sea-route-40"
+    ],
+    "SILCOON": [
+      "national-park"
+    ],
+    "SKARMORY": [
+      "johto-route-45"
+    ],
+    "SLOWBRO": [
+      "slowpoke-well"
+    ],
+    "SLOWPOKE": [
+      "slowpoke-well",
+      "tohjo-falls"
+    ],
+    "SLUGMA": [
+      "violet-city"
+    ],
+    "SMEARGLE": [
+      "ruins-of-alph"
+    ],
+    "SMOOCHUM": [
+      "johto-route-34"
+    ],
+    "SNEASEL": [
+      "ice-path",
+      "mt-silver"
+    ],
+    "SNUBBULL": [
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-38"
+    ],
+    "SPEAROW": [
+      "azalea-town",
+      "goldenrod-city",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-46",
+      "johto-route-47"
+    ],
+    "SPINARAK": [
+      "cherrygrove-city",
+      "ecruteak-city",
+      "johto-route-29",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-47",
+      "johto-route-48",
+      "national-park",
+      "new-bark-town"
+    ],
+    "SPINDA": [
+      "bell-tower",
+      "burned-tower",
+      "sprout-tower"
+    ],
+    "SPOINK": [
+      "ilex-forest"
+    ],
+    "STANTLER": [
+      "johto-route-36",
+      "johto-route-37"
+    ],
+    "STARYU": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "johto-route-34",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "olivine-city",
+      "union-cave"
+    ],
+    "STEELIX": [
+      "johto-route-47",
+      "mt-silver",
+      "olivine-city"
+    ],
+    "SUDOWOODO": [
+      "johto-route-36"
+    ],
+    "SUICUNE": [
+      "bell-tower",
+      "roaming-johto"
+    ],
+    "SUNKERN": [
+      "national-park"
+    ],
+    "SWABLU": [
+      "johto-route-45"
+    ],
+    "SWINUB": [
+      "ice-path"
+    ],
+    "TAILLOW": [
+      "cherrygrove-city"
+    ],
+    "TANGELA": [
+      "johto-route-44",
+      "mt-silver"
+    ],
+    "TAUROS": [
+      "johto-route-38",
+      "johto-route-39",
+      "johto-route-48"
+    ],
+    "TEDDIURSA": [
+      "dark-cave",
+      "johto-route-45",
+      "mt-silver"
+    ],
+    "TENTACOOL": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "johto-sea-route-41",
+      "new-bark-town",
+      "olivine-city",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "TENTACRUEL": [
+      "cherrygrove-city",
+      "cianwood-city",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-47",
+      "johto-sea-route-40",
+      "johto-sea-route-41",
+      "new-bark-town",
+      "olivine-city",
+      "union-cave",
+      "whirl-islands"
+    ],
+    "TOGEPI": [
+      "violet-city"
+    ],
+    "TOTODILE": [
+      "new-bark-town"
+    ],
+    "TYROGUE": [
+      "johto-route-34",
+      "mt-mortar"
+    ],
+    "UNOWN": [
+      "ruins-of-alph"
+    ],
+    "URSARING": [
+      "dark-cave",
+      "mt-silver"
+    ],
+    "VENOMOTH": [
+      "johto-route-43"
+    ],
+    "VENONAT": [
+      "ilex-forest",
+      "johto-route-43",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "VOLBEAT": [
+      "national-park"
+    ],
+    "VOLTORB": [
+      "olivine-city",
+      "team-rocket-hq"
+    ],
+    "VULPIX": [
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-48"
+    ],
+    "WEEDLE": [
+      "azalea-town",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-36",
+      "johto-route-37",
+      "johto-route-38",
+      "johto-route-39",
+      "lake-of-rage",
+      "national-park"
+    ],
+    "WEEPINBELL": [
+      "johto-route-44"
+    ],
+    "WEEZING": [
+      "burned-tower"
+    ],
+    "WHISCASH": [
+      "violet-city"
+    ],
+    "WHISMUR": [
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-34",
+      "johto-route-35",
+      "johto-route-42",
+      "johto-route-43",
+      "johto-route-44",
+      "johto-route-45",
+      "johto-route-47",
+      "mt-silver",
+      "ruins-of-alph"
+    ],
+    "WOBBUFFET": [
+      "dark-cave",
+      "goldenrod-city"
+    ],
+    "WOOPER": [
+      "johto-route-32",
+      "johto-route-47",
+      "ruins-of-alph",
+      "union-cave",
+      "violet-city"
+    ],
+    "WURMPLE": [
+      "national-park"
+    ],
+    "YANMA": [
+      "johto-route-35"
+    ],
+    "ZIGZAGOON": [
+      "bell-tower",
+      "burned-tower",
+      "sprout-tower"
+    ],
+    "ZUBAT": [
+      "burned-tower",
+      "dark-cave",
+      "ice-path",
+      "ilex-forest",
+      "johto-route-30",
+      "johto-route-31",
+      "johto-route-32",
+      "johto-route-33",
+      "johto-route-42",
+      "johto-route-47",
+      "mt-mortar",
+      "slowpoke-well",
+      "tohjo-falls",
+      "union-cave",
+      "whirl-islands"
+    ]
+  },
+  "other": {
+    "POLIWAG": [
+      "cerulean-cave",
+      "kanto-route-22",
+      "kanto-route-28",
+      "kanto-route-6",
+      "mt-moon",
+      "viridian-city"
+    ],
+    "MAGIKARP": [
+      "cerulean-cave",
+      "cerulean-city",
+      "cinnabar-island",
+      "fuchsia-city",
+      "kanto-route-10",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-22",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-9",
+      "kanto-sea-route-19",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "mt-moon",
+      "pallet-town",
+      "seafoam-islands",
+      "vermilion-city",
+      "viridian-city"
+    ],
+    "ZUBAT": [
+      "kanto-route-10",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-9",
+      "mt-moon",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "GOLBAT": [
+      "cerulean-cave",
+      "kanto-route-28",
+      "kanto-victory-road-1",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "PSYDUCK": [
+      "cerulean-cave",
+      "kanto-route-6",
+      "seafoam-islands"
+    ],
+    "ABSOL": [
+      "cerulean-cave",
+      "digletts-cave",
+      "kanto-victory-road-1",
+      "mt-moon",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "BRONZOR": [
+      "cerulean-cave",
+      "digletts-cave",
+      "kanto-victory-road-1",
+      "mt-moon",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "MAKUHITA": [
+      "cerulean-cave",
+      "digletts-cave",
+      "kanto-victory-road-1",
+      "mt-moon",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "CHINGLING": [
+      "cerulean-cave",
+      "digletts-cave",
+      "kanto-victory-road-1",
+      "mt-moon",
+      "rock-tunnel",
+      "seafoam-islands"
+    ],
+    "GOLDUCK": [
+      "cerulean-cave",
+      "kanto-route-6",
+      "seafoam-islands"
+    ],
+    "SEEL": [
+      "seafoam-islands"
+    ],
+    "DEWGONG": [
+      "seafoam-islands"
+    ],
+    "JYNX": [
+      "seafoam-islands"
+    ],
+    "HORSEA": [
+      "seafoam-islands"
+    ],
+    "SLOWBRO": [
+      "seafoam-islands"
+    ],
+    "KRABBY": [
+      "kanto-sea-route-19",
+      "seafoam-islands"
+    ],
+    "GYARADOS": [
+      "cerulean-cave",
+      "fuchsia-city",
+      "seafoam-islands"
+    ],
+    "KINGLER": [
+      "kanto-sea-route-19",
+      "seafoam-islands"
+    ],
+    "SEADRA": [
+      "seafoam-islands"
+    ],
+    "TENTACOOL": [
+      "cinnabar-island",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-19",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "vermilion-city"
+    ],
+    "QUAGSIRE": [
+      "kanto-route-10",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-26",
+      "kanto-route-27"
+    ],
+    "TENTACRUEL": [
+      "cinnabar-island",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-19",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "vermilion-city"
+    ],
+    "RELICANTH": [
+      "kanto-route-12"
+    ],
+    "QWILFISH": [
+      "kanto-route-12",
+      "kanto-route-13"
+    ],
+    "CLAMPERL": [
+      "kanto-sea-route-19"
+    ],
+    "CORSOLA": [
+      "kanto-sea-route-19"
+    ],
+    "STARYU": [
+      "kanto-sea-route-19"
+    ],
+    "CHINCHOU": [
+      "cinnabar-island",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "vermilion-city"
+    ],
+    "SHELLDER": [
+      "cinnabar-island",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "vermilion-city"
+    ],
+    "LANTURN": [
+      "cinnabar-island",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-20",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "vermilion-city"
+    ],
+    "POLIWHIRL": [
+      "cerulean-cave",
+      "kanto-route-22",
+      "kanto-route-28",
+      "viridian-city"
+    ],
+    "GOLDEEN": [
+      "cerulean-cave",
+      "cerulean-city",
+      "kanto-route-10",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-4",
+      "kanto-route-9"
+    ],
+    "SEAKING": [
+      "cerulean-city",
+      "kanto-route-10",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-4",
+      "kanto-route-9"
+    ],
+    "DIGLETT": [
+      "digletts-cave",
+      "vermilion-city"
+    ],
+    "SHUCKLE": [
+      "vermilion-city"
+    ],
+    "WINGULL": [
+      "vermilion-city"
+    ],
+    "GRIMER": [
+      "celadon-city",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18"
+    ],
+    "MUK": [
+      "celadon-city",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18"
+    ],
+    "DODUO": [
+      "kanto-route-22",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28"
+    ],
+    "RATICATE": [
+      "kanto-route-1",
+      "kanto-route-10",
+      "kanto-route-11",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "SANDSLASH": [
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-victory-road-1",
+      "mt-moon"
+    ],
+    "WHISMUR": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-22",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "BUIZEL": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-22",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "PONYTA": [
+      "kanto-route-22",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28"
+    ],
+    "LINOONE": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-22",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "BIDOOF": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-22",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "DODRIO": [
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28"
+    ],
+    "LUVDISC": [
+      "kanto-route-27"
+    ],
+    "TANGELA": [
+      "fuchsia-city",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-18",
+      "kanto-route-28",
+      "kanto-sea-route-21"
+    ],
+    "DONPHAN": [
+      "kanto-route-28",
+      "kanto-victory-road-1"
+    ],
+    "RAPIDASH": [
+      "kanto-route-28",
+      "pewter-city"
+    ],
+    "SNEASEL": [
+      "kanto-route-28"
+    ],
+    "GEODUDE": [
+      "cerulean-cave",
+      "kanto-victory-road-1",
+      "mt-moon",
+      "rock-tunnel"
+    ],
+    "SANDSHREW": [
+      "mt-moon"
+    ],
+    "PARAS": [
+      "mt-moon"
+    ],
+    "CLEFAIRY": [
+      "kanto-route-3",
+      "kanto-route-4",
+      "mt-moon"
+    ],
+    "CUBONE": [
+      "rock-tunnel"
+    ],
+    "MACHOP": [
+      "rock-tunnel"
+    ],
+    "MACHOKE": [
+      "cerulean-cave",
+      "rock-tunnel"
+    ],
+    "ONIX": [
+      "kanto-victory-road-1",
+      "rock-tunnel"
+    ],
+    "MAROWAK": [
+      "kanto-route-10",
+      "kanto-route-9",
+      "rock-tunnel"
+    ],
+    "KANGASKHAN": [
+      "rock-tunnel"
+    ],
+    "GRAVELER": [
+      "cerulean-cave",
+      "kanto-victory-road-1"
+    ],
+    "RHYHORN": [
+      "digletts-cave",
+      "kanto-victory-road-1"
+    ],
+    "PIDGEY": [
+      "kanto-route-1",
+      "kanto-route-2",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-6",
+      "viridian-forest"
+    ],
+    "HOOTHOOT": [
+      "cerulean-city",
+      "fuchsia-city",
+      "kanto-route-1",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-22",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-8",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "pewter-city",
+      "viridian-city",
+      "viridian-forest"
+    ],
+    "POOCHYENA": [
+      "kanto-route-1"
+    ],
+    "RATTATA": [
+      "kanto-route-1",
+      "kanto-route-11",
+      "kanto-route-22",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8",
+      "kanto-route-9",
+      "kanto-sea-route-21"
+    ],
+    "PLUSLE": [
+      "kanto-route-1",
+      "kanto-route-11",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-3",
+      "kanto-route-5",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "SHINX": [
+      "kanto-route-1",
+      "kanto-route-11",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-3",
+      "kanto-route-5",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "SENTRET": [
+      "kanto-route-1"
+    ],
+    "MINUN": [
+      "kanto-route-1",
+      "kanto-route-11",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-3",
+      "kanto-route-5",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "FURRET": [
+      "kanto-route-1"
+    ],
+    "CATERPIE": [
+      "kanto-route-2",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "SPINARAK": [
+      "fuchsia-city",
+      "kanto-route-1",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-22",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "viridian-city",
+      "viridian-forest"
+    ],
+    "METAPOD": [
+      "kanto-route-2",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "BUTTERFREE": [
+      "kanto-route-2",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "NOCTOWL": [
+      "kanto-route-11",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-2",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-5",
+      "kanto-route-8",
+      "viridian-forest"
+    ],
+    "PIDGEOTTO": [
+      "kanto-route-11",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-2",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-8",
+      "viridian-forest"
+    ],
+    "ARIADOS": [
+      "kanto-route-2",
+      "viridian-forest"
+    ],
+    "SPEAROW": [
+      "celadon-city",
+      "kanto-route-10",
+      "kanto-route-11",
+      "kanto-route-16",
+      "kanto-route-22",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-7",
+      "kanto-route-9",
+      "vermilion-city"
+    ],
+    "BALTOY": [
+      "kanto-route-3"
+    ],
+    "JIGGLYPUFF": [
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "ODDISH": [
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-6"
+    ],
+    "BELLSPROUT": [
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-6"
+    ],
+    "GLOOM": [
+      "kanto-route-24",
+      "kanto-route-5"
+    ],
+    "ABRA": [
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "MAGNEMITE": [
+      "kanto-route-11",
+      "kanto-route-6"
+    ],
+    "MURKROW": [
+      "kanto-route-16",
+      "kanto-route-18",
+      "kanto-route-7"
+    ],
+    "GROWLITHE": [
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "HOUNDOUR": [
+      "kanto-route-7"
+    ],
+    "HAUNTER": [
+      "kanto-route-8",
+      "rock-tunnel"
+    ],
+    "KADABRA": [
+      "cerulean-cave",
+      "kanto-route-8"
+    ],
+    "MANKEY": [
+      "kanto-route-9"
+    ],
+    "SABLEYE": [
+      "kanto-route-9"
+    ],
+    "FEAROW": [
+      "kanto-route-10",
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18",
+      "kanto-route-22",
+      "kanto-route-9"
+    ],
+    "PRIMEAPE": [
+      "cerulean-cave",
+      "kanto-route-9"
+    ],
+    "VOLTORB": [
+      "kanto-route-10"
+    ],
+    "ELECTABUZZ": [
+      "kanto-route-10"
+    ],
+    "DROWZEE": [
+      "kanto-route-11",
+      "kanto-route-6"
+    ],
+    "HYPNO": [
+      "kanto-route-11"
+    ],
+    "NIDORINA": [
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15"
+    ],
+    "CHANSEY": [
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15"
+    ],
+    "NIDORINO": [
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15"
+    ],
+    "HOPPIP": [
+      "kanto-route-11",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15"
+    ],
+    "SKIPLOOM": [
+      "kanto-route-14"
+    ],
+    "SLUGMA": [
+      "kanto-route-16",
+      "kanto-route-17",
+      "kanto-route-18"
+    ],
+    "MR_MIME": [
+      "celadon-city",
+      "kanto-sea-route-21"
+    ],
+    "VENONAT": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-9"
+    ],
+    "SUNKERN": [
+      "kanto-route-24"
+    ],
+    "WEEPINBELL": [
+      "kanto-route-24",
+      "kanto-route-25"
+    ],
+    "VENOMOTH": [
+      "kanto-route-10",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-24",
+      "kanto-route-25",
+      "kanto-route-9"
+    ],
+    "BUNEARY": [
+      "kanto-route-25"
+    ],
+    "DUGTRIO": [
+      "digletts-cave"
+    ],
+    "KRICKETOT": [
+      "viridian-forest"
+    ],
+    "SPOINK": [
+      "viridian-forest"
+    ],
+    "BUDEW": [
+      "viridian-forest"
+    ],
+    "NUMEL": [
+      "viridian-forest"
+    ],
+    "CARNIVINE": [
+      "viridian-forest"
+    ],
+    "PIKACHU": [
+      "celadon-city",
+      "kanto-route-2",
+      "saffron-city",
+      "viridian-forest"
+    ],
+    "PARASECT": [
+      "cerulean-cave"
+    ],
+    "MAGNETON": [
+      "cerulean-cave",
+      "kanto-power-plant"
+    ],
+    "DITTO": [
+      "cerulean-cave"
+    ],
+    "ELECTRODE": [
+      "cerulean-cave"
+    ],
+    "WOBBUFFET": [
+      "cerulean-cave"
+    ],
+    "ARBOK": [
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-28",
+      "kanto-route-3",
+      "kanto-route-4"
+    ],
+    "URSARING": [
+      "kanto-route-28",
+      "kanto-victory-road-1"
+    ],
+    "LEDYBA": [
+      "fuchsia-city",
+      "kanto-route-1",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-22",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "viridian-city",
+      "viridian-forest"
+    ],
+    "WEEDLE": [
+      "kanto-route-2",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "KAKUNA": [
+      "kanto-route-2",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "BEEDRILL": [
+      "kanto-route-2",
+      "kanto-route-26",
+      "kanto-route-27",
+      "viridian-forest"
+    ],
+    "LEDIAN": [
+      "kanto-route-2",
+      "viridian-forest"
+    ],
+    "GULPIN": [
+      "kanto-route-3"
+    ],
+    "EKANS": [
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-3",
+      "kanto-route-4"
+    ],
+    "MEOWTH": [
+      "kanto-route-11",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "VULPIX": [
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "PERSIAN": [
+      "cerulean-cave",
+      "kanto-route-7"
+    ],
+    "MAWILE": [
+      "kanto-route-9"
+    ],
+    "BULBASAUR": [
+      "pallet-town"
+    ],
+    "CHARMANDER": [
+      "pallet-town"
+    ],
+    "SQUIRTLE": [
+      "pallet-town"
+    ],
+    "SNUBBULL": [
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8"
+    ],
+    "GRANBULL": [
+      "kanto-route-6"
+    ],
+    "RHYDON": [
+      "kanto-victory-road-1"
+    ],
+    "MEWTWO": [
+      "cerulean-cave"
+    ],
+    "ARTICUNO": [
+      "seafoam-islands"
+    ],
+    "ZAPDOS": [
+      "kanto-route-10"
+    ],
+    "EXEGGCUTE": [
+      "kanto-route-26",
+      "kanto-route-27"
+    ],
+    "PINECO": [
+      "cerulean-city",
+      "kanto-route-1",
+      "kanto-route-2",
+      "kanto-route-22",
+      "kanto-route-25",
+      "kanto-route-26",
+      "kanto-route-27",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-8",
+      "pallet-town",
+      "pewter-city",
+      "viridian-city"
+    ],
+    "SNORLAX": [
+      "kanto-route-11",
+      "kanto-route-12",
+      "vermilion-city"
+    ],
+    "SUICUNE": [
+      "kanto-route-25"
+    ],
+    "TREECKO": [
+      "saffron-city"
+    ],
+    "TORCHIC": [
+      "saffron-city"
+    ],
+    "MUDKIP": [
+      "saffron-city"
+    ],
+    "EEVEE": [
+      "celadon-city"
+    ],
+    "PORYGON": [
+      "celadon-city"
+    ],
+    "LARVITAR": [
+      "celadon-city"
+    ],
+    "AERODACTYL": [
+      "kanto-route-14",
+      "pewter-city"
+    ],
+    "XATU": [
+      "pewter-city"
+    ],
+    "OMANYTE": [
+      "pewter-city"
+    ],
+    "KABUTO": [
+      "pewter-city"
+    ],
+    "LILEEP": [
+      "pewter-city"
+    ],
+    "ANORITH": [
+      "pewter-city"
+    ],
+    "CRANIDOS": [
+      "pewter-city"
+    ],
+    "SHIELDON": [
+      "pewter-city"
+    ],
+    "WURMPLE": [
+      "fuchsia-city",
+      "kanto-route-1",
+      "kanto-route-12",
+      "kanto-route-13",
+      "kanto-route-14",
+      "kanto-route-15",
+      "kanto-route-18",
+      "kanto-route-2",
+      "kanto-route-22",
+      "kanto-route-3",
+      "kanto-route-4",
+      "kanto-sea-route-21",
+      "pallet-town",
+      "pewter-city",
+      "viridian-city"
+    ],
+    "COMBEE": [
+      "celadon-city",
+      "cerulean-city",
+      "kanto-route-11",
+      "kanto-route-16",
+      "kanto-route-25",
+      "kanto-route-5",
+      "kanto-route-6",
+      "kanto-route-7",
+      "kanto-route-8",
+      "vermilion-city"
+    ],
+    "HERACROSS": [
+      "celadon-city",
+      "kanto-route-11",
+      "kanto-route-16",
+      "kanto-route-28",
+      "kanto-route-7",
+      "vermilion-city"
+    ],
+    "SLAKOTH": [
+      "kanto-route-25"
+    ],
+    "AIPOM": [
+      "kanto-route-28"
+    ],
+    "NATU": [
+      "kanto-route-28"
+    ],
+    "STARLY": [
+      "pewter-city"
+    ],
+    "SEEDOT": [
+      "viridian-forest"
+    ],
+    "SHROOMISH": [
+      "viridian-forest"
+    ],
+    "BELDUM": [
+      "saffron-city"
+    ]
+  },
+  "static_excluded": [
+    "ANNIHILAPE",
+    "ARTICUNO",
+    "MEW",
+    "MEWTWO",
+    "MIME_SR",
+    "MOLTRES",
+    "OSSCYTHE",
+    "TANGROWTH",
+    "ZAPDOS"
+  ],
+  "evolution_excluded": {
+    "AMBIPOM": [
+      "AIPOM",
+      "AMBIPOM"
+    ],
+    "ESPEON": [
+      "EEVEE",
+      "ESPEON"
+    ],
+    "FLAREON": [
+      "EEVEE",
+      "FLAREON"
+    ],
+    "GLACEON": [
+      "EEVEE",
+      "GLACEON"
+    ],
+    "GOREBYSS": [
+      "CLAMPERL",
+      "GOREBYSS"
+    ],
+    "HUNTAIL": [
+      "CLAMPERL",
+      "HUNTAIL"
+    ],
+    "JOLTEON": [
+      "EEVEE",
+      "JOLTEON"
+    ],
+    "KABUKNIGHT": [
+      "KABUSTAR",
+      "KABUKNIGHT"
+    ],
+    "LEAFEON": [
+      "EEVEE",
+      "LEAFEON"
+    ],
+    "LICKILICKY": [
+      "LICKITUNG",
+      "LICKILICKY"
+    ],
+    "LOPUNNY": [
+      "BUNEARY",
+      "LOPUNNY"
+    ],
+    "OMATOPS": [
+      "OMATO",
+      "OMATOPS"
+    ],
+    "PORYGON2": [
+      "PORYGON",
+      "PORYGON2"
+    ],
+    "PORYGON_Z": [
+      "PORYGON",
+      "PORYGON2",
+      "PORYGON_Z"
+    ],
+    "ROSERADE": [
+      "BUDEW",
+      "ROSELIA",
+      "ROSERADE"
+    ],
+    "VAPOREON": [
+      "EEVEE",
+      "VAPOREON"
+    ]
+  },
+  "excluded_johto_safari": {
+    "ABRA": [
+      "johto-safari-zone"
+    ],
+    "ARBOK": [
+      "johto-safari-zone"
+    ],
+    "ARON": [
+      "johto-safari-zone"
+    ],
+    "AZURILL": [
+      "johto-safari-zone"
+    ],
+    "BAGON": [
+      "johto-safari-zone"
+    ],
+    "BANETTE": [
+      "johto-safari-zone"
+    ],
+    "BARBOACH": [
+      "johto-safari-zone"
+    ],
+    "BELDUM": [
+      "johto-safari-zone"
+    ],
+    "BELLSPROUT": [
+      "johto-safari-zone"
+    ],
+    "BIDOOF": [
+      "johto-safari-zone"
+    ],
+    "BRELOOM": [
+      "johto-safari-zone"
+    ],
+    "BRONZONG": [
+      "johto-safari-zone"
+    ],
+    "BRONZOR": [
+      "johto-safari-zone"
+    ],
+    "BUDEW": [
+      "johto-safari-zone"
+    ],
+    "BUIZEL": [
+      "johto-safari-zone"
+    ],
+    "CACNEA": [
+      "johto-safari-zone"
+    ],
+    "CACTURNE": [
+      "johto-safari-zone"
+    ],
+    "CARNIVINE": [
+      "johto-safari-zone"
+    ],
+    "CHANSEY": [
+      "johto-safari-zone"
+    ],
+    "CHIMECHO": [
+      "johto-safari-zone"
+    ],
+    "CHINGLING": [
+      "johto-safari-zone"
+    ],
+    "CLEFAIRY": [
+      "johto-safari-zone"
+    ],
+    "CORPHISH": [
+      "johto-safari-zone"
+    ],
+    "CROAGUNK": [
+      "johto-safari-zone"
+    ],
+    "CUBONE": [
+      "johto-safari-zone"
+    ],
+    "DIGLETT": [
+      "johto-safari-zone"
+    ],
+    "DITTO": [
+      "johto-safari-zone"
+    ],
+    "DODRIO": [
+      "johto-safari-zone"
+    ],
+    "DODUO": [
+      "johto-safari-zone"
+    ],
+    "DRAGONAIR": [
+      "johto-safari-zone"
+    ],
+    "DRATINI": [
+      "johto-safari-zone"
+    ],
+    "DROWZEE": [
+      "johto-safari-zone"
+    ],
+    "DUSCLOPS": [
+      "johto-safari-zone"
+    ],
+    "DUSKULL": [
+      "johto-safari-zone"
+    ],
+    "EKANS": [
+      "johto-safari-zone"
+    ],
+    "ELECTABUZZ": [
+      "johto-safari-zone"
+    ],
+    "ELECTRIKE": [
+      "johto-safari-zone"
+    ],
+    "EXEGGCUTE": [
+      "safari-zone-gate"
+    ],
+    "FARFETCHD": [
+      "johto-safari-zone"
+    ],
+    "FEAROW": [
+      "johto-safari-zone"
+    ],
+    "FLOATZEL": [
+      "johto-safari-zone"
+    ],
+    "FURRET": [
+      "johto-safari-zone"
+    ],
+    "GASTLY": [
+      "johto-safari-zone"
+    ],
+    "GEODUDE": [
+      "johto-safari-zone"
+    ],
+    "GIBLE": [
+      "johto-safari-zone"
+    ],
+    "GIRAFARIG": [
+      "johto-safari-zone"
+    ],
+    "GLOOM": [
+      "johto-safari-zone"
+    ],
+    "GOLBAT": [
+      "johto-safari-zone"
+    ],
+    "GOLDEEN": [
+      "johto-safari-zone"
+    ],
+    "GOLDUCK": [
+      "johto-safari-zone"
+    ],
+    "GOLEM": [
+      "johto-safari-zone"
+    ],
+    "GRIMER": [
+      "johto-safari-zone"
+    ],
+    "GYARADOS": [
+      "johto-safari-zone"
+    ],
+    "HAUNTER": [
+      "johto-safari-zone"
+    ],
+    "HIPPOPOTAS": [
+      "johto-safari-zone"
+    ],
+    "HOOTHOOT": [
+      "safari-zone-gate"
+    ],
+    "HOPPIP": [
+      "johto-safari-zone"
+    ],
+    "HOUNDOOM": [
+      "johto-safari-zone"
+    ],
+    "HOUNDOUR": [
+      "johto-safari-zone"
+    ],
+    "HYPNO": [
+      "johto-safari-zone"
+    ],
+    "ILLUMISE": [
+      "johto-safari-zone"
+    ],
+    "JIGGLYPUFF": [
+      "johto-safari-zone"
+    ],
+    "JUMPLUFF": [
+      "johto-safari-zone"
+    ],
+    "KANGASKHAN": [
+      "johto-safari-zone"
+    ],
+    "KINGLER": [
+      "johto-safari-zone"
+    ],
+    "KOFFING": [
+      "johto-safari-zone"
+    ],
+    "KRABBY": [
+      "johto-safari-zone"
+    ],
+    "LAIRON": [
+      "johto-safari-zone"
+    ],
+    "LAPRAS": [
+      "johto-safari-zone"
+    ],
+    "LARVITAR": [
+      "johto-safari-zone"
+    ],
+    "LEDYBA": [
+      "safari-zone-gate"
+    ],
+    "LICKITUNG": [
+      "johto-safari-zone"
+    ],
+    "LINOONE": [
+      "johto-safari-zone"
+    ],
+    "LOMBRE": [
+      "johto-safari-zone"
+    ],
+    "LOTAD": [
+      "johto-safari-zone"
+    ],
+    "LUNATONE": [
+      "johto-safari-zone"
+    ],
+    "LUXIO": [
+      "johto-safari-zone"
+    ],
+    "MACHOKE": [
+      "johto-safari-zone"
+    ],
+    "MACHOP": [
+      "johto-safari-zone"
+    ],
+    "MAGIKARP": [
+      "johto-safari-zone"
+    ],
+    "MAGMAR": [
+      "johto-safari-zone"
+    ],
+    "MAGNEMITE": [
+      "johto-safari-zone"
+    ],
+    "MAGNETON": [
+      "johto-safari-zone"
+    ],
+    "MANECTRIC": [
+      "johto-safari-zone"
+    ],
+    "MAREEP": [
+      "johto-safari-zone"
+    ],
+    "MARILL": [
+      "johto-safari-zone"
+    ],
+    "MAROWAK": [
+      "johto-safari-zone"
+    ],
+    "MASQUERAIN": [
+      "johto-safari-zone"
+    ],
+    "MEDICHAM": [
+      "johto-safari-zone"
+    ],
+    "MEDITITE": [
+      "johto-safari-zone"
+    ],
+    "METANG": [
+      "johto-safari-zone"
+    ],
+    "MISDREAVUS": [
+      "johto-safari-zone"
+    ],
+    "MR_MIME": [
+      "johto-safari-zone"
+    ],
+    "MUK": [
+      "johto-safari-zone"
+    ],
+    "MURKROW": [
+      "johto-safari-zone"
+    ],
+    "NIDORAN_F": [
+      "johto-safari-zone"
+    ],
+    "NIDORINA": [
+      "johto-safari-zone"
+    ],
+    "NIDORINO": [
+      "johto-safari-zone"
+    ],
+    "NOSEPASS": [
+      "johto-safari-zone"
+    ],
+    "NUZLEAF": [
+      "johto-safari-zone"
+    ],
+    "ODDISH": [
+      "johto-safari-zone"
+    ],
+    "ONIX": [
+      "johto-safari-zone"
+    ],
+    "PACHIRISU": [
+      "johto-safari-zone"
+    ],
+    "PARAS": [
+      "johto-safari-zone"
+    ],
+    "PARASECT": [
+      "johto-safari-zone"
+    ],
+    "PIDGEOTTO": [
+      "johto-safari-zone"
+    ],
+    "PIDGEY": [
+      "johto-safari-zone"
+    ],
+    "PINECO": [
+      "safari-zone-gate"
+    ],
+    "POLIWAG": [
+      "johto-safari-zone"
+    ],
+    "POLIWHIRL": [
+      "johto-safari-zone"
+    ],
+    "PONYTA": [
+      "johto-safari-zone"
+    ],
+    "PSYDUCK": [
+      "johto-safari-zone"
+    ],
+    "QUAGSIRE": [
+      "johto-safari-zone"
+    ],
+    "RATICATE": [
+      "johto-safari-zone"
+    ],
+    "RHYDON": [
+      "johto-safari-zone"
+    ],
+    "RHYHORN": [
+      "johto-safari-zone"
+    ],
+    "RIOLU": [
+      "johto-safari-zone"
+    ],
+    "ROSELIA": [
+      "johto-safari-zone"
+    ],
+    "SANDSHREW": [
+      "johto-safari-zone"
+    ],
+    "SANDSLASH": [
+      "johto-safari-zone"
+    ],
+    "SEAKING": [
+      "johto-safari-zone"
+    ],
+    "SEALEO": [
+      "johto-safari-zone"
+    ],
+    "SEEDOT": [
+      "johto-safari-zone"
+    ],
+    "SENTRET": [
+      "johto-safari-zone"
+    ],
+    "SEVIPER": [
+      "johto-safari-zone"
+    ],
+    "SHELGON": [
+      "johto-safari-zone"
+    ],
+    "SHINX": [
+      "johto-safari-zone"
+    ],
+    "SHROOMISH": [
+      "johto-safari-zone"
+    ],
+    "SHUCKLE": [
+      "johto-safari-zone"
+    ],
+    "SHUPPET": [
+      "johto-safari-zone"
+    ],
+    "SKIPLOOM": [
+      "johto-safari-zone"
+    ],
+    "SKORUPI": [
+      "johto-safari-zone"
+    ],
+    "SLOWBRO": [
+      "johto-safari-zone"
+    ],
+    "SLOWPOKE": [
+      "johto-safari-zone"
+    ],
+    "SMEARGLE": [
+      "johto-safari-zone"
+    ],
+    "SOLROCK": [
+      "johto-safari-zone"
+    ],
+    "SPEAROW": [
+      "johto-safari-zone"
+    ],
+    "SPHEAL": [
+      "johto-safari-zone"
+    ],
+    "SPINARAK": [
+      "safari-zone-gate"
+    ],
+    "SPINDA": [
+      "johto-safari-zone"
+    ],
+    "STANTLER": [
+      "johto-safari-zone"
+    ],
+    "SUNKERN": [
+      "johto-safari-zone"
+    ],
+    "SURSKIT": [
+      "johto-safari-zone"
+    ],
+    "TAUROS": [
+      "johto-safari-zone"
+    ],
+    "TORKOAL": [
+      "johto-safari-zone"
+    ],
+    "TRAPINCH": [
+      "johto-safari-zone"
+    ],
+    "VIBRAVA": [
+      "johto-safari-zone"
+    ],
+    "VIGOROTH": [
+      "johto-safari-zone"
+    ],
+    "VOLBEAT": [
+      "johto-safari-zone"
+    ],
+    "VOLTORB": [
+      "johto-safari-zone"
+    ],
+    "WEEPINBELL": [
+      "johto-safari-zone"
+    ],
+    "WEEZING": [
+      "johto-safari-zone"
+    ],
+    "WOBBUFFET": [
+      "johto-safari-zone"
+    ],
+    "WOOPER": [
+      "johto-safari-zone"
+    ],
+    "ZANGOOSE": [
+      "johto-safari-zone"
+    ],
+    "ZIGZAGOON": [
+      "johto-safari-zone"
+    ],
+    "ZUBAT": [
+      "johto-safari-zone"
+    ]
+  },
+  "gift_evolution_sources": [
+    "AERODACTYL",
+    "BUDEW",
+    "CHINGLING",
+    "EEVEE",
+    "GOLBAT",
+    "KABUSTAR",
+    "KABUTO",
+    "LAPRAS",
+    "MAGIKARP",
+    "OMANYTE",
+    "OMATO",
+    "PORYGON"
+  ]
+}

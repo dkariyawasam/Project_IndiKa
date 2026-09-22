@@ -1,0 +1,2552 @@
+[
+  {
+    "species": "farfetchd_galarian",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            88,
+            72,
+            72
+          ],
+          "to": [
+            90,
+            74,
+            74
+          ],
+          "reference": "DUSTOX"
+        },
+        {
+          "from": [
+            64,
+            48,
+            56
+          ],
+          "to": [
+            57,
+            49,
+            57
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            40,
+            88,
+            24
+          ],
+          "to": [
+            49,
+            82,
+            16
+          ],
+          "reference": "SPINARAK"
+        },
+        {
+          "from": [
+            120,
+            104,
+            96
+          ],
+          "to": [
+            123,
+            106,
+            98
+          ],
+          "reference": "CLEFABLE"
+        },
+        {
+          "from": [
+            184,
+            136,
+            96
+          ],
+          "to": [
+            180,
+            139,
+            90
+          ],
+          "reference": "POOCHYENA"
+        },
+        {
+          "from": [
+            208,
+            208,
+            208
+          ],
+          "to": [
+            208,
+            208,
+            212
+          ],
+          "reference": "RHYPERIOR"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            192,
+            176,
+            152
+          ],
+          "to": [
+            197,
+            172,
+            148
+          ],
+          "reference": "SLAKING"
+        },
+        {
+          "from": [
+            248,
+            216,
+            104
+          ],
+          "to": [
+            255,
+            213,
+            106
+          ],
+          "reference": "WEEPINBELL"
+        },
+        {
+          "from": [
+            240,
+            176,
+            64
+          ],
+          "to": [
+            238,
+            172,
+            65
+          ],
+          "reference": "WEEDLE"
+        },
+        {
+          "from": [
+            184,
+            112,
+            24
+          ],
+          "to": [
+            180,
+            106,
+            32
+          ],
+          "reference": "VILEPLUME"
+        },
+        {
+          "from": [
+            232,
+            232,
+            216
+          ],
+          "to": [
+            230,
+            230,
+            213
+          ],
+          "reference": "NIDOKING"
+        },
+        {
+          "from": [
+            88,
+            152,
+            72
+          ],
+          "to": [
+            98,
+            148,
+            74
+          ],
+          "reference": "ROSELIA"
+        },
+        {
+          "from": [
+            128,
+            208,
+            104
+          ],
+          "to": [
+            123,
+            205,
+            98
+          ],
+          "reference": "ROSELIA"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            96,
+            72,
+            80
+          ],
+          "to": [
+            90,
+            74,
+            74
+          ],
+          "reference": "DUSTOX"
+        },
+        {
+          "from": [
+            72,
+            56,
+            64
+          ],
+          "to": [
+            74,
+            57,
+            65
+          ],
+          "reference": "SEEDOT"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            40,
+            88,
+            24
+          ],
+          "to": [
+            49,
+            82,
+            16
+          ],
+          "reference": "SPINARAK"
+        },
+        {
+          "from": [
+            128,
+            96,
+            96
+          ],
+          "to": [
+            123,
+            98,
+            90
+          ],
+          "reference": "RELICANTH"
+        },
+        {
+          "from": [
+            184,
+            136,
+            96
+          ],
+          "to": [
+            180,
+            139,
+            90
+          ],
+          "reference": "POOCHYENA"
+        },
+        {
+          "from": [
+            208,
+            208,
+            208
+          ],
+          "to": [
+            208,
+            208,
+            212
+          ],
+          "reference": "RHYPERIOR"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            200,
+            176,
+            112
+          ],
+          "to": [
+            205,
+            180,
+            115
+          ],
+          "reference": "GROWLITHE"
+        },
+        {
+          "from": [
+            248,
+            216,
+            104
+          ],
+          "to": [
+            255,
+            213,
+            106
+          ],
+          "reference": "WEEPINBELL"
+        },
+        {
+          "from": [
+            240,
+            176,
+            64
+          ],
+          "to": [
+            238,
+            172,
+            65
+          ],
+          "reference": "WEEDLE"
+        },
+        {
+          "from": [
+            184,
+            112,
+            24
+          ],
+          "to": [
+            180,
+            106,
+            32
+          ],
+          "reference": "VILEPLUME"
+        },
+        {
+          "from": [
+            240,
+            216,
+            176
+          ],
+          "to": [
+            238,
+            213,
+            172
+          ],
+          "reference": "FEAROW"
+        },
+        {
+          "from": [
+            88,
+            152,
+            72
+          ],
+          "to": [
+            98,
+            148,
+            74
+          ],
+          "reference": "ROSELIA"
+        },
+        {
+          "from": [
+            128,
+            208,
+            104
+          ],
+          "to": [
+            123,
+            205,
+            98
+          ],
+          "reference": "ROSELIA"
+        }
+      ]
+    }
+  },
+  {
+    "species": "meowth_galarian",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            24,
+            24,
+            24
+          ],
+          "to": [
+            24,
+            24,
+            24
+          ],
+          "reference": "SPEAROW"
+        },
+        {
+          "from": [
+            56,
+            64,
+            64
+          ],
+          "to": [
+            65,
+            65,
+            65
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            128,
+            112,
+            104
+          ],
+          "to": [
+            123,
+            115,
+            98
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            88,
+            72,
+            72
+          ],
+          "to": [
+            90,
+            74,
+            74
+          ],
+          "reference": "DUSTOX"
+        },
+        {
+          "from": [
+            168,
+            160,
+            152
+          ],
+          "to": [
+            172,
+            156,
+            156
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            152,
+            160,
+            144
+          ],
+          "to": [
+            156,
+            156,
+            148
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            32,
+            40,
+            40
+          ],
+          "to": [
+            32,
+            32,
+            41
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            240,
+            216,
+            24
+          ],
+          "to": [
+            230,
+            222,
+            16
+          ],
+          "reference": "SANDSHREW"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            32,
+            32,
+            24
+          ],
+          "to": [
+            32,
+            26,
+            28
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            72,
+            64,
+            56
+          ],
+          "to": [
+            74,
+            65,
+            65
+          ],
+          "reference": "DUSKULL"
+        },
+        {
+          "from": [
+            184,
+            152,
+            72
+          ],
+          "to": [
+            180,
+            156,
+            74
+          ],
+          "reference": "EXEGGUTOR"
+        },
+        {
+          "from": [
+            136,
+            96,
+            32
+          ],
+          "to": [
+            131,
+            98,
+            32
+          ],
+          "reference": "NATU"
+        },
+        {
+          "from": [
+            248,
+            232,
+            104
+          ],
+          "to": [
+            246,
+            230,
+            106
+          ],
+          "reference": "PIDGEOTTO"
+        },
+        {
+          "from": [
+            152,
+            160,
+            144
+          ],
+          "to": [
+            156,
+            156,
+            148
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            48,
+            40,
+            40
+          ],
+          "to": [
+            41,
+            41,
+            41
+          ],
+          "reference": "NATU"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ]
+    }
+  },
+  {
+    "species": "perrserker",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            96,
+            112,
+            104
+          ],
+          "to": [
+            98,
+            106,
+            106
+          ],
+          "reference": "AMPHAROS"
+        },
+        {
+          "from": [
+            184,
+            192,
+            184
+          ],
+          "to": [
+            189,
+            189,
+            180
+          ],
+          "reference": "KABUTOPS"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            24,
+            24,
+            24
+          ],
+          "to": [
+            24,
+            24,
+            24
+          ],
+          "reference": "SPEAROW"
+        },
+        {
+          "from": [
+            136,
+            152,
+            144
+          ],
+          "to": [
+            139,
+            164,
+            148
+          ],
+          "reference": "CLAMPERL"
+        },
+        {
+          "from": [
+            56,
+            64,
+            64
+          ],
+          "to": [
+            65,
+            65,
+            65
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            32,
+            40,
+            40
+          ],
+          "to": [
+            32,
+            32,
+            41
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            232,
+            152,
+            80
+          ],
+          "to": [
+            238,
+            156,
+            74
+          ],
+          "reference": "VULPIX"
+        },
+        {
+          "from": [
+            216,
+            88,
+            48
+          ],
+          "to": [
+            213,
+            90,
+            57
+          ],
+          "reference": "MEOWTH"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            152,
+            160,
+            144
+          ],
+          "to": [
+            156,
+            156,
+            148
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            88,
+            72,
+            72
+          ],
+          "to": [
+            90,
+            74,
+            74
+          ],
+          "reference": "DUSTOX"
+        },
+        {
+          "from": [
+            128,
+            112,
+            104
+          ],
+          "to": [
+            123,
+            115,
+            98
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            168,
+            160,
+            152
+          ],
+          "to": [
+            172,
+            156,
+            156
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            120,
+            80,
+            32
+          ],
+          "to": [
+            115,
+            82,
+            24
+          ],
+          "reference": "TAUROS"
+        },
+        {
+          "from": [
+            200,
+            136,
+            64
+          ],
+          "to": [
+            189,
+            131,
+            65
+          ],
+          "reference": "RAICHU"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            24,
+            24,
+            24
+          ],
+          "to": [
+            24,
+            24,
+            24
+          ],
+          "reference": "SPEAROW"
+        },
+        {
+          "from": [
+            168,
+            112,
+            40
+          ],
+          "to": [
+            164,
+            115,
+            49
+          ],
+          "reference": "MAROWAK"
+        },
+        {
+          "from": [
+            56,
+            64,
+            64
+          ],
+          "to": [
+            65,
+            65,
+            65
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            32,
+            40,
+            40
+          ],
+          "to": [
+            32,
+            32,
+            41
+          ],
+          "reference": "SENTRET"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            160,
+            160,
+            160
+          ],
+          "to": [
+            164,
+            164,
+            164
+          ],
+          "reference": "SKIPLOOM"
+        },
+        {
+          "from": [
+            240,
+            240,
+            240
+          ],
+          "to": [
+            238,
+            238,
+            238
+          ],
+          "reference": "ELECTRODE"
+        },
+        {
+          "from": [
+            152,
+            160,
+            144
+          ],
+          "to": [
+            156,
+            156,
+            148
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            136,
+            96,
+            32
+          ],
+          "to": [
+            131,
+            98,
+            32
+          ],
+          "reference": "NATU"
+        },
+        {
+          "from": [
+            184,
+            152,
+            72
+          ],
+          "to": [
+            180,
+            156,
+            74
+          ],
+          "reference": "EXEGGUTOR"
+        },
+        {
+          "from": [
+            248,
+            232,
+            104
+          ],
+          "to": [
+            246,
+            230,
+            106
+          ],
+          "reference": "PIDGEOTTO"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ]
+    }
+  },
+  {
+    "species": "corsola_galarian",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            152,
+            144,
+            160
+          ],
+          "to": [
+            149,
+            140,
+            164
+          ],
+          "reference": "RHYPERIOR"
+        },
+        {
+          "from": [
+            232,
+            224,
+            232
+          ],
+          "to": [
+            230,
+            222,
+            230
+          ],
+          "reference": "FEEBAS"
+        },
+        {
+          "from": [
+            112,
+            104,
+            120
+          ],
+          "to": [
+            106,
+            106,
+            123
+          ],
+          "reference": "TEDDIURSA"
+        },
+        {
+          "from": [
+            184,
+            176,
+            192
+          ],
+          "to": [
+            180,
+            180,
+            189
+          ],
+          "reference": "TEDDIURSA"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        },
+        {
+          "from": [
+            224,
+            192,
+            240
+          ],
+          "to": [
+            222,
+            205,
+            238
+          ],
+          "reference": "DROWZEE"
+        },
+        {
+          "from": [
+            200,
+            192,
+            208
+          ],
+          "to": [
+            197,
+            189,
+            205
+          ],
+          "reference": "POOCHYENA"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            168,
+            152,
+            152
+          ],
+          "to": [
+            172,
+            156,
+            156
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            248,
+            160,
+            192
+          ],
+          "to": [
+            255,
+            164,
+            189
+          ],
+          "reference": "ROSELIA"
+        },
+        {
+          "from": [
+            224,
+            96,
+            144
+          ],
+          "to": [
+            213,
+            98,
+            148
+          ],
+          "reference": "GOREBYSS"
+        },
+        {
+          "from": [
+            112,
+            104,
+            104
+          ],
+          "to": [
+            112,
+            103,
+            98
+          ],
+          "reference": "OMATO"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        },
+        {
+          "from": [
+            152,
+            144,
+            160
+          ],
+          "to": [
+            149,
+            140,
+            164
+          ],
+          "reference": "RHYPERIOR"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            152,
+            144,
+            160
+          ],
+          "to": [
+            149,
+            140,
+            164
+          ],
+          "reference": "RHYPERIOR"
+        },
+        {
+          "from": [
+            232,
+            224,
+            232
+          ],
+          "to": [
+            230,
+            222,
+            230
+          ],
+          "reference": "FEEBAS"
+        },
+        {
+          "from": [
+            112,
+            104,
+            120
+          ],
+          "to": [
+            106,
+            106,
+            123
+          ],
+          "reference": "TEDDIURSA"
+        },
+        {
+          "from": [
+            184,
+            176,
+            192
+          ],
+          "to": [
+            180,
+            180,
+            189
+          ],
+          "reference": "TEDDIURSA"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        },
+        {
+          "from": [
+            208,
+            192,
+            216
+          ],
+          "to": [
+            205,
+            189,
+            213
+          ],
+          "reference": "PIDGEOTTO"
+        },
+        {
+          "from": [
+            168,
+            160,
+            168
+          ],
+          "to": [
+            164,
+            164,
+            164
+          ],
+          "reference": "SKIPLOOM"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            160,
+            152,
+            160
+          ],
+          "to": [
+            156,
+            156,
+            156
+          ],
+          "reference": "VESPIQUEN"
+        },
+        {
+          "from": [
+            192,
+            160,
+            248
+          ],
+          "to": [
+            189,
+            148,
+            255
+          ],
+          "reference": "ARIADOS"
+        },
+        {
+          "from": [
+            144,
+            96,
+            224
+          ],
+          "to": [
+            148,
+            90,
+            238
+          ],
+          "reference": "ARIADOS"
+        },
+        {
+          "from": [
+            96,
+            88,
+            96
+          ],
+          "to": [
+            90,
+            90,
+            98
+          ],
+          "reference": "RHYDON"
+        },
+        {
+          "from": [
+            192,
+            192,
+            200
+          ],
+          "to": [
+            189,
+            189,
+            197
+          ],
+          "reference": "GOLDEEN"
+        },
+        {
+          "from": [
+            136,
+            136,
+            136
+          ],
+          "to": [
+            139,
+            139,
+            139
+          ],
+          "reference": "MAGNEMITE"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ]
+    }
+  },
+  {
+    "species": "cursola",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            184,
+            184,
+            184
+          ],
+          "to": [
+            180,
+            180,
+            180
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        },
+        {
+          "from": [
+            120,
+            120,
+            120
+          ],
+          "to": [
+            123,
+            123,
+            123
+          ],
+          "reference": "HOOTHOOT"
+        },
+        {
+          "from": [
+            216,
+            216,
+            216
+          ],
+          "to": [
+            213,
+            213,
+            213
+          ],
+          "reference": "SKIPLOOM"
+        },
+        {
+          "from": [
+            200,
+            192,
+            200
+          ],
+          "to": [
+            197,
+            197,
+            197
+          ],
+          "reference": "NIDORINO"
+        },
+        {
+          "from": [
+            144,
+            136,
+            144
+          ],
+          "to": [
+            139,
+            139,
+            148
+          ],
+          "reference": "SILCOON"
+        },
+        {
+          "from": [
+            200,
+            192,
+            208
+          ],
+          "to": [
+            197,
+            189,
+            205
+          ],
+          "reference": "POOCHYENA"
+        },
+        {
+          "from": [
+            224,
+            96,
+            144
+          ],
+          "to": [
+            213,
+            98,
+            148
+          ],
+          "reference": "GOREBYSS"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            248,
+            160,
+            192
+          ],
+          "to": [
+            255,
+            164,
+            189
+          ],
+          "reference": "ROSELIA"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            192,
+            184,
+            200
+          ],
+          "to": [
+            189,
+            180,
+            197
+          ],
+          "reference": "SHIFTRY"
+        },
+        {
+          "from": [
+            120,
+            128,
+            104
+          ],
+          "to": [
+            123,
+            131,
+            106
+          ],
+          "reference": "ONIX"
+        },
+        {
+          "from": [
+            168,
+            152,
+            152
+          ],
+          "to": [
+            172,
+            156,
+            156
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            145,
+            145,
+            145
+          ],
+          "to": [
+            148,
+            148,
+            148
+          ],
+          "reference": "PLUSLE"
+        },
+        {
+          "from": [
+            248,
+            240,
+            248
+          ],
+          "to": [
+            246,
+            238,
+            255
+          ],
+          "reference": "WINGULL"
+        },
+        {
+          "from": [
+            120,
+            120,
+            120
+          ],
+          "to": [
+            123,
+            123,
+            123
+          ],
+          "reference": "HOOTHOOT"
+        },
+        {
+          "from": [
+            224,
+            216,
+            224
+          ],
+          "to": [
+            222,
+            222,
+            222
+          ],
+          "reference": "EXEGGCUTE"
+        },
+        {
+          "from": [
+            208,
+            200,
+            208
+          ],
+          "to": [
+            205,
+            205,
+            205
+          ],
+          "reference": "NIDORAN_M"
+        },
+        {
+          "from": [
+            92,
+            92,
+            92
+          ],
+          "to": [
+            90,
+            90,
+            90
+          ],
+          "reference": "MILTANK"
+        },
+        {
+          "from": [
+            184,
+            176,
+            184
+          ],
+          "to": [
+            180,
+            180,
+            180
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            192,
+            96,
+            224
+          ],
+          "to": [
+            180,
+            98,
+            230
+          ],
+          "reference": "AIPOM"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            221,
+            173,
+            237
+          ],
+          "to": [
+            230,
+            172,
+            238
+          ],
+          "reference": "NIDORINO"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            72,
+            72,
+            72
+          ],
+          "to": [
+            74,
+            74,
+            74
+          ],
+          "reference": "FLAAFFY"
+        },
+        {
+          "from": [
+            56,
+            56,
+            56
+          ],
+          "to": [
+            57,
+            57,
+            57
+          ],
+          "reference": "KAKUNA"
+        },
+        {
+          "from": [
+            168,
+            152,
+            152
+          ],
+          "to": [
+            172,
+            156,
+            156
+          ],
+          "reference": "STARLY"
+        },
+        {
+          "from": [
+            104,
+            112,
+            112
+          ],
+          "to": [
+            106,
+            106,
+            115
+          ],
+          "reference": "SILCOON"
+        }
+      ]
+    }
+  },
+  {
+    "species": "weezing_galarian",
+    "palettes": {
+      "normal": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            144,
+            176,
+            88
+          ],
+          "to": [
+            148,
+            164,
+            98
+          ],
+          "reference": "GOLEM"
+        },
+        {
+          "from": [
+            184,
+            208,
+            136
+          ],
+          "to": [
+            180,
+            205,
+            131
+          ],
+          "reference": "SEEDOT"
+        },
+        {
+          "from": [
+            104,
+            112,
+            72
+          ],
+          "to": [
+            106,
+            106,
+            82
+          ],
+          "reference": "KANGASKHAN"
+        },
+        {
+          "from": [
+            216,
+            216,
+            208
+          ],
+          "to": [
+            213,
+            213,
+            213
+          ],
+          "reference": "SKIPLOOM"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            40,
+            40,
+            40
+          ],
+          "to": [
+            41,
+            41,
+            41
+          ],
+          "reference": "NATU"
+        },
+        {
+          "from": [
+            152,
+            152,
+            144
+          ],
+          "to": [
+            156,
+            156,
+            148
+          ],
+          "reference": "KRICKETOT"
+        },
+        {
+          "from": [
+            80,
+            80,
+            80
+          ],
+          "to": [
+            82,
+            82,
+            82
+          ],
+          "reference": "HOOTHOOT"
+        },
+        {
+          "from": [
+            104,
+            104,
+            104
+          ],
+          "to": [
+            104,
+            104,
+            104
+          ],
+          "reference": "MAGMORTAR"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            176,
+            176,
+            176
+          ],
+          "to": [
+            176,
+            176,
+            176
+          ],
+          "reference": "TANGROWTH"
+        },
+        {
+          "from": [
+            136,
+            40,
+            64
+          ],
+          "to": [
+            139,
+            49,
+            65
+          ],
+          "reference": "SLAKOTH"
+        },
+        {
+          "from": [
+            184,
+            168,
+            72
+          ],
+          "to": [
+            189,
+            164,
+            74
+          ],
+          "reference": "PERSIAN"
+        },
+        {
+          "from": [
+            176,
+            80,
+            96
+          ],
+          "to": [
+            184,
+            64,
+            104
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ],
+      "shiny": [
+        {
+          "from": [
+            152,
+            208,
+            160
+          ],
+          "to": [
+            152,
+            208,
+            160
+          ],
+          "reference": "transparent"
+        },
+        {
+          "from": [
+            144,
+            176,
+            88
+          ],
+          "to": [
+            148,
+            164,
+            98
+          ],
+          "reference": "GOLEM"
+        },
+        {
+          "from": [
+            184,
+            208,
+            136
+          ],
+          "to": [
+            180,
+            205,
+            131
+          ],
+          "reference": "SEEDOT"
+        },
+        {
+          "from": [
+            104,
+            112,
+            72
+          ],
+          "to": [
+            106,
+            106,
+            82
+          ],
+          "reference": "KANGASKHAN"
+        },
+        {
+          "from": [
+            216,
+            216,
+            208
+          ],
+          "to": [
+            213,
+            213,
+            213
+          ],
+          "reference": "SKIPLOOM"
+        },
+        {
+          "from": [
+            248,
+            248,
+            248
+          ],
+          "to": [
+            248,
+            248,
+            248
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            48,
+            32,
+            24
+          ],
+          "to": [
+            41,
+            32,
+            32
+          ],
+          "reference": "HOUNDOUR"
+        },
+        {
+          "from": [
+            168,
+            120,
+            104
+          ],
+          "to": [
+            164,
+            131,
+            106
+          ],
+          "reference": "VENOMOTH"
+        },
+        {
+          "from": [
+            96,
+            64,
+            56
+          ],
+          "to": [
+            98,
+            65,
+            49
+          ],
+          "reference": "PIDGEOT"
+        },
+        {
+          "from": [
+            112,
+            80,
+            72
+          ],
+          "to": [
+            106,
+            82,
+            65
+          ],
+          "reference": "RELICANTH"
+        },
+        {
+          "from": [
+            16,
+            16,
+            16
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "reference": "SUNKERN"
+        },
+        {
+          "from": [
+            192,
+            144,
+            128
+          ],
+          "to": [
+            189,
+            156,
+            115
+          ],
+          "reference": "CINNABAR_MAGIKARP"
+        },
+        {
+          "from": [
+            136,
+            40,
+            64
+          ],
+          "to": [
+            139,
+            49,
+            65
+          ],
+          "reference": "SLAKOTH"
+        },
+        {
+          "from": [
+            184,
+            168,
+            72
+          ],
+          "to": [
+            189,
+            164,
+            74
+          ],
+          "reference": "PERSIAN"
+        },
+        {
+          "from": [
+            176,
+            80,
+            96
+          ],
+          "to": [
+            184,
+            64,
+            104
+          ],
+          "reference": "ROSERADE"
+        },
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0,
+            0,
+            0
+          ],
+          "reference": "BUNEARY"
+        }
+      ]
+    }
+  }
+]

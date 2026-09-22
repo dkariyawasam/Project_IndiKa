@@ -460,10 +460,13 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script)
 {
     const struct SpritePalette * spritePalette = (const struct SpritePalette * )FieldEffectScript_ReadWord(script);
     u8 idx = IndexOfSpritePaletteTag(spritePalette->tag);
-    LoadSpritePalette(spritePalette);
-    if (idx == 0xFF)
-        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(spritePalette->tag));
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(spritePalette->tag));
+    u8 loadedIdx = LoadSpritePalette(spritePalette);
+    if (loadedIdx != 0xFF)
+    {
+        if (idx == 0xFF)
+            ApplyGlobalFieldPaletteTint(loadedIdx);
+        UpdateSpritePaletteWithWeather(loadedIdx);
+    }
     *script += sizeof(u32);
 }
 
@@ -471,9 +474,9 @@ static void FieldEffectScript_LoadPal(const u8 **script)
 {
     const struct SpritePalette * spritePalette = (const struct SpritePalette * )FieldEffectScript_ReadWord(script);
     u8 idx = IndexOfSpritePaletteTag(spritePalette->tag);
-    LoadSpritePalette(spritePalette);
-    if (idx != 0xFF)
-        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(spritePalette->tag));
+    u8 loadedIdx = LoadSpritePalette(spritePalette);
+    if (loadedIdx != 0xFF && idx != 0xFF)
+        ApplyGlobalFieldPaletteTint(loadedIdx);
     *script += sizeof(u32);
 }
 

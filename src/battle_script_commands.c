@@ -1798,6 +1798,19 @@ static void Cmd_datahpupdate(void)
             }
             else // hp goes down
             {
+                // Count each real attack hit, not substitutes, recoil, status,
+                // confusion self-hits, or HP redistribution such as PAIN SPLIT.
+                if (gBattleMoveDamage > 0 && gBattleMons[gActiveBattler].hp != 0
+                 && gBattlescriptCurrInstr[1] == BS_TARGET
+                 && gActiveBattler != gBattlerAttacker
+                 && !(gHitMarker & (HITMARKER_PASSIVE_DAMAGE | HITMARKER_SKIP_DMG_TRACK))
+                 && gBattleMoves[gCurrentMove].power != 0
+                 && gCurrentMove != MOVE_PAIN_SPLIT)
+                {
+                    u8 *hits = &gBattleStruct->rageFistHits[GetBattlerSide(gActiveBattler)][gBattlerPartyIndexes[gActiveBattler]];
+                    if (*hits < 6)
+                        (*hits)++;
+                }
                 if (gHitMarker & HITMARKER_SKIP_DMG_TRACK)
                 {
                     gHitMarker &= ~HITMARKER_SKIP_DMG_TRACK;

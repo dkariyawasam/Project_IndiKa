@@ -17,3 +17,7 @@ Shell/tail refinement: normal shell palette slots 11–14 use Slowbro slots 9,8,
 Tail clarity refinement: replaced the exposed front-view tail with a rounded upward curve and continuous outline, using lighter pink indices 7/2/3 instead of the prior 7/5/4 ramp. The palette and body are unchanged. Reproducible edit and preview: tail-refinement/redraw.py.
 
 Latest palette refinement: shell slots 14/13/12 shift to the previous 13/12/11 colours, with a new deepest olive shadow (49,65,24). Snout/belly slots 8/9/10 use Slowpoke normal slots 6/5/4. Both views updated; sprite geometry and shiny palette unchanged.
+
+Front body polish: added 12 small white highlight pixels on forehead, shoulder, belly and flank, inspired by Slowbro/Slowpoke; added 11 sparse dither pixels along body shadow boundaries. Shell, snout, tail, outlines and palettes retained. Reproducible edit and before/after comparison in body-highlights/.
+
+Tail tip refinement: tapered the upper tail diagonally to a single outline pixel, using existing pink indices 7 and 2. No white added; tail root and all rows below 44 unchanged.

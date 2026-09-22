@@ -283,7 +283,14 @@
 #define EVO_LEVEL_ITEM_NIGHT 17 // Pokémon levels up at night while holding the specified item
 #define EVO_ITEM_MALE        18 // specified item is used on a male Pokémon
 
-#define EVOS_PER_MON 7
+#define EVO_FRIENDSHIP_MOVE_TYPE 19 // Friendship >= 220 and knows a move of the specified type
+
+#define EVO_APEX_MOVE 20 // Known move, discovered Apex, and its habitat
+#define EVO_LEVEL_NIGHT 21 // Specified level, at night
+#define EVO_LEVEL_FEMALE 22 // Specified level, female only
+#define EVO_LEVEL_MOVE 23 // Levels up knowing the specified move
+
+#define EVOS_PER_MON 8
 
 #define EVO_MODE_NORMAL     0
 #define EVO_MODE_TRADE      1

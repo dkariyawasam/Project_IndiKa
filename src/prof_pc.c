@@ -84,7 +84,7 @@ static const u8 *GetProfOaksRatingMessageByCount(u16 count)
     if (count < 150)
         return PokedexRating_Text_LessThan150;
 
-    if (count == KANTO_DEX_COUNT - 1)
+    if (count == GetActivePokedexCount() - 1)
     {
         // Mew doesn't count for completing the pokedex
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MEW), 1))
@@ -94,13 +94,13 @@ static const u8 *GetProfOaksRatingMessageByCount(u16 count)
         return PokedexRating_Text_Complete;
     }
 
-    if (count == KANTO_DEX_COUNT)
+    if (count == GetActivePokedexCount())
     {
         gSpecialVar_Result = TRUE;
         return PokedexRating_Text_Complete;
     }
 
-    return PokedexRating_Text_LessThan10;
+    return PokedexRating_Text_LessThan150;
 }
 
 void GetProfOaksRatingMessage(void)

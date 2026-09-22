@@ -102,3 +102,45 @@ PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe::
     .string "POKéMON is marvelous.\p"
     .string "{PLAYER}!\n"
     .string "Come with me!$"
+
+PokemonLeague_ChampionsRoom_Text_StoriesIntro::
+    .string "{RIVAL}: There you are, {PLAYER}.\n"
+    .string "We've covered a lot of ground.\p"
+    .string "From that MANSION to SILPH...\n"
+    .string "GIOVANNI wanted control.\p"
+    .string "And those APEX investigations?\n"
+    .string "Wild POKéMON finding ways to grow.\p"
+    .string "The GYM LEADERS showed us what\n"
+    .string "growing alongside a team can mean.\p"
+    .string "I still want to be the best.\n"
+    .string "You know that hasn't changed!\p"
+    .string "But my team got me here.\n"
+    .string "Now we're taking you on together!\p"
+    .string "Come on, {PLAYER}!\n"
+    .string "Show us everything you've learned!$"
+
+PokemonLeague_ChampionsRoom_Text_StoriesDefeat::
+    .string "You got us...\n"
+    .string "We gave you everything we had!$"
+
+PokemonLeague_ChampionsRoom_Text_StoriesPostBattle::
+    .string "{RIVAL}: I thought we had you.\n"
+    .string "I really did.\p"
+    .string "But I saw how your team responded.\n"
+    .string "You knew what they could do.\p"
+    .string "We've both learned a lot since\n"
+    .string "that first battle at the lab.\p"
+    .string "Today, you were better.\n"
+    .string "You've earned this, {PLAYER}.\p"
+    .string "Don't get too comfortable, though.\n"
+    .string "My team and I aren't done growing!$"
+
+PokemonLeague_ChampionsRoom_Text_StoriesOakRival::
+    .string "OAK: {RIVAL}, look at your team.\n"
+    .string "They gave you their best.\p"
+    .string "You listened to them, and you\n"
+    .string "trusted them. That matters.\p"
+    .string "You both brought back discoveries\n"
+    .string "and grew alongside your POKéMON.\p"
+    .string "Be proud of how far you've come.\n"
+    .string "There is still so much to learn!$"

@@ -1,15 +1,27 @@
 PokemonMansion_3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonMansion_3F_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonMansion_3F_OnTransition
 	.byte 0
 
 PokemonMansion_3F_OnLoad::
 	call_if_set FLAG_POKEMON_MANSION_SWITCH_STATE, PokemonMansion_EventScript_PressSwitch_3F
-	call_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, PokemonMansion_3F_EventScript_RemoveRival
 	end
 
-PokemonMansion_3F_EventScript_RemoveRival::
-	removeobject LOCALID_POKEMON_MANSION_3F_RIVAL
+PokemonMansion_3F_OnTransition::
+	call PokemonMansion_3F_EventScript_UpdateRivalVisibility
 	end
+
+PokemonMansion_3F_EventScript_UpdateRivalVisibility::
+	goto_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, PokemonMansion_3F_EventScript_HidePendingRival
+	goto_if_ge VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, PokemonMansion_3F_EventScript_HidePendingRival
+	clearflag FLAG_HIDE_POKEMON_MANSION_3F_RIVAL
+	addobject LOCALID_POKEMON_MANSION_3F_RIVAL
+	return
+
+PokemonMansion_3F_EventScript_HidePendingRival::
+	removeobject LOCALID_POKEMON_MANSION_3F_RIVAL
+	setflag FLAG_HIDE_POKEMON_MANSION_3F_RIVAL
+	return
 
 PokemonMansion_3F_EventScript_RivalTrigger18::
 	setvar VAR_TEMP_1, 0
@@ -24,7 +36,7 @@ PokemonMansion_3F_EventScript_RivalTrigger20::
 	goto PokemonMansion_3F_EventScript_RivalTrigger
 
 PokemonMansion_3F_EventScript_RivalTrigger::
-	goto_if_set FLAG_HIDE_POKEMON_MANSION_3F_RIVAL, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, EventScript_Return
 	goto_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, EventScript_Return
 	lockall
 	playbgm MUS_ENCOUNTER_RIVAL, 0
@@ -56,7 +68,7 @@ PokemonMansion_3F_EventScript_RivalApproachDone::
 	end
 
 PokemonMansion_3F_EventScript_RivalReady::
-	goto_if_set FLAG_HIDE_POKEMON_MANSION_3F_RIVAL, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, EventScript_Return
 	goto_if_unset FLAG_HIDE_CINNABAR_RIVAL_MANSION, EventScript_Return
 	lock
 	faceplayer

@@ -1,0 +1,1 @@
+Sparse highlight-edge dithering on front crest and upper orange body only. Existing palette, alpha, outlines, eyes, mouth and thin fins preserved. Preview: before, after, Relicanth. 44 pixels changed.

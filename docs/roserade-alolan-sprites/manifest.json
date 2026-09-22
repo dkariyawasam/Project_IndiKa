@@ -1,0 +1,97 @@
+[
+  {
+    "species": "ROSERADE",
+    "name": "roserade",
+    "icon_palette": 0
+  },
+  {
+    "species": "RATTATA_ALOLAN",
+    "name": "rattata_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "RATICATE_ALOLAN",
+    "name": "raticate_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "RAICHU_ALOLAN",
+    "name": "raichu_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "SANDSHREW_ALOLAN",
+    "name": "sandshrew_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "SANDSLASH_ALOLAN",
+    "name": "sandslash_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "DIGLETT_ALOLAN",
+    "name": "diglett_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "DUGTRIO_ALOLAN",
+    "name": "dugtrio_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "MEOWTH_ALOLAN",
+    "name": "meowth_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "PERSIAN_ALOLAN",
+    "name": "persian_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "GEODUDE_ALOLAN",
+    "name": "geodude_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "GRAVELER_ALOLAN",
+    "name": "graveler_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "GOLEM_ALOLAN",
+    "name": "golem_alolan",
+    "icon_palette": 2
+  },
+  {
+    "species": "GRIMER_ALOLAN",
+    "name": "grimer_alolan",
+    "icon_palette": 1
+  },
+  {
+    "species": "MUK_ALOLAN",
+    "name": "muk_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "VULPIX_ALOLAN",
+    "name": "vulpix_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "NINETALES_ALOLAN",
+    "name": "ninetales_alolan",
+    "icon_palette": 0
+  },
+  {
+    "species": "EXEGGUTOR_ALOLAN",
+    "name": "exeggutor_alolan",
+    "icon_palette": 1
+  },
+  {
+    "species": "MAROWAK_ALOLAN",
+    "name": "marowak_alolan",
+    "icon_palette": 1
+  }
+]

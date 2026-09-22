@@ -190,6 +190,7 @@ CeruleanCave_B1F_EventScript_Mewtwo::
 	end
 
 CeruleanCave_B1F_EventScript_DefeatedMewtwo::
+	setflag FLAG_DEFEATED_APEX_MEWTWO
 	setflag FLAG_FOUGHT_MEWTWO
 	pokedexmsg Text_OakApexMewtwo
 	fadescreen FADE_TO_BLACK

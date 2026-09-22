@@ -1,0 +1,1 @@
+Reference at left, imported sprite at right. All 15 source opaque shades retained separately, rounded only to GBA RGB555. Exact 64x64 silhouette and alpha preserved. Palette slot15 restores the previously merged medium brown; four back-sprite dark-grey pixels remapped to grey slot14. Shiny slot15 uses its existing brown slot7. No AI redraw used.

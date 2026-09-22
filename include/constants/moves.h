@@ -366,7 +366,11 @@
 
 #define MOVE_RETREAT 362
 
-#define MOVES_COUNT 363
+#define MOVE_RAGE_FIST 363
+
+#define MOVE_DOUBLE_HIT 364
+
+#define MOVES_COUNT 365
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

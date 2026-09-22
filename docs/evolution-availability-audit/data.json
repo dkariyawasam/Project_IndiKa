@@ -1,0 +1,1318 @@
+{
+  "active_species": 399,
+  "links": [
+    {
+      "base": "BRONZOR",
+      "method": "EVO_LEVEL",
+      "parameter": "33",
+      "target": "BRONZONG"
+    },
+    {
+      "base": "CHIKORITA",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "BAYLEEF"
+    },
+    {
+      "base": "BAYLEEF",
+      "method": "EVO_LEVEL",
+      "parameter": "32",
+      "target": "MEGANIUM"
+    },
+    {
+      "base": "BULBASAUR",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "IVYSAUR"
+    },
+    {
+      "base": "IVYSAUR",
+      "method": "EVO_LEVEL",
+      "parameter": "32",
+      "target": "VENUSAUR"
+    },
+    {
+      "base": "CHARMANDER",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "CHARMELEON"
+    },
+    {
+      "base": "CHARMELEON",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "CHARIZARD"
+    },
+    {
+      "base": "SQUIRTLE",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "WARTORTLE"
+    },
+    {
+      "base": "WARTORTLE",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "BLASTOISE"
+    },
+    {
+      "base": "CATERPIE",
+      "method": "EVO_LEVEL",
+      "parameter": "7",
+      "target": "METAPOD"
+    },
+    {
+      "base": "METAPOD",
+      "method": "EVO_LEVEL",
+      "parameter": "10",
+      "target": "BUTTERFREE"
+    },
+    {
+      "base": "WEEDLE",
+      "method": "EVO_LEVEL",
+      "parameter": "7",
+      "target": "KAKUNA"
+    },
+    {
+      "base": "KAKUNA",
+      "method": "EVO_LEVEL",
+      "parameter": "10",
+      "target": "BEEDRILL"
+    },
+    {
+      "base": "PIDGEY",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "PIDGEOTTO"
+    },
+    {
+      "base": "PIDGEOTTO",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "PIDGEOT"
+    },
+    {
+      "base": "RATTATA",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "RATICATE"
+    },
+    {
+      "base": "SPEAROW",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "FEAROW"
+    },
+    {
+      "base": "EKANS",
+      "method": "EVO_LEVEL",
+      "parameter": "22",
+      "target": "ARBOK"
+    },
+    {
+      "base": "PIKACHU",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_THUNDER_STONE",
+      "target": "RAICHU"
+    },
+    {
+      "base": "SANDSHREW",
+      "method": "EVO_LEVEL",
+      "parameter": "22",
+      "target": "SANDSLASH"
+    },
+    {
+      "base": "NIDORAN_F",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "NIDORINA"
+    },
+    {
+      "base": "NIDORINA",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_MOON_STONE",
+      "target": "NIDOQUEEN"
+    },
+    {
+      "base": "NIDORAN_M",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "NIDORINO"
+    },
+    {
+      "base": "NIDORINO",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_MOON_STONE",
+      "target": "NIDOKING"
+    },
+    {
+      "base": "CLEFAIRY",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_MOON_STONE",
+      "target": "CLEFABLE"
+    },
+    {
+      "base": "VULPIX",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_FIRE_STONE",
+      "target": "NINETALES"
+    },
+    {
+      "base": "JIGGLYPUFF",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_MOON_STONE",
+      "target": "WIGGLYTUFF"
+    },
+    {
+      "base": "ZUBAT",
+      "method": "EVO_LEVEL",
+      "parameter": "22",
+      "target": "GOLBAT"
+    },
+    {
+      "base": "GOLBAT",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "CROBAT"
+    },
+    {
+      "base": "ODDISH",
+      "method": "EVO_LEVEL",
+      "parameter": "21",
+      "target": "GLOOM"
+    },
+    {
+      "base": "GLOOM",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "VILEPLUME"
+    },
+    {
+      "base": "GLOOM",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_SUN_STONE",
+      "target": "BELLOSSOM"
+    },
+    {
+      "base": "PARAS",
+      "method": "EVO_LEVEL",
+      "parameter": "24",
+      "target": "PARASECT"
+    },
+    {
+      "base": "VENONAT",
+      "method": "EVO_LEVEL",
+      "parameter": "31",
+      "target": "VENOMOTH"
+    },
+    {
+      "base": "DIGLETT",
+      "method": "EVO_LEVEL",
+      "parameter": "26",
+      "target": "DUGTRIO"
+    },
+    {
+      "base": "MEOWTH",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "PERSIAN"
+    },
+    {
+      "base": "PSYDUCK",
+      "method": "EVO_LEVEL",
+      "parameter": "33",
+      "target": "GOLDUCK"
+    },
+    {
+      "base": "MANKEY",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "PRIMEAPE"
+    },
+    {
+      "base": "GROWLITHE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_FIRE_STONE",
+      "target": "ARCANINE"
+    },
+    {
+      "base": "POLIWAG",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "POLIWHIRL"
+    },
+    {
+      "base": "POLIWHIRL",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_WATER_STONE",
+      "target": "POLIWRATH"
+    },
+    {
+      "base": "POLIWHIRL",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_KINGS_ROCK",
+      "target": "POLITOED"
+    },
+    {
+      "base": "ABRA",
+      "method": "EVO_LEVEL",
+      "parameter": "16",
+      "target": "KADABRA"
+    },
+    {
+      "base": "KADABRA",
+      "method": "EVO_TRADE",
+      "parameter": "0",
+      "target": "ALAKAZAM"
+    },
+    {
+      "base": "MACHOP",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "MACHOKE"
+    },
+    {
+      "base": "MACHOKE",
+      "method": "EVO_TRADE",
+      "parameter": "0",
+      "target": "MACHAMP"
+    },
+    {
+      "base": "BELLSPROUT",
+      "method": "EVO_LEVEL",
+      "parameter": "21",
+      "target": "WEEPINBELL"
+    },
+    {
+      "base": "WEEPINBELL",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "VICTREEBEL"
+    },
+    {
+      "base": "TENTACOOL",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "TENTACRUEL"
+    },
+    {
+      "base": "GEODUDE",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "GRAVELER"
+    },
+    {
+      "base": "GRAVELER",
+      "method": "EVO_TRADE",
+      "parameter": "0",
+      "target": "GOLEM"
+    },
+    {
+      "base": "PONYTA",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "RAPIDASH"
+    },
+    {
+      "base": "SLOWPOKE",
+      "method": "EVO_LEVEL",
+      "parameter": "37",
+      "target": "SLOWBRO"
+    },
+    {
+      "base": "SLOWPOKE",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_KINGS_ROCK",
+      "target": "SLOWKING"
+    },
+    {
+      "base": "MAGNEMITE",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "MAGNETON"
+    },
+    {
+      "base": "MAGNETON",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_THUNDER_STONE",
+      "target": "MAGNEZONE"
+    },
+    {
+      "base": "DODUO",
+      "method": "EVO_LEVEL",
+      "parameter": "31",
+      "target": "DODRIO"
+    },
+    {
+      "base": "SEEL",
+      "method": "EVO_LEVEL",
+      "parameter": "34",
+      "target": "DEWGONG"
+    },
+    {
+      "base": "GRIMER",
+      "method": "EVO_LEVEL",
+      "parameter": "38",
+      "target": "MUK"
+    },
+    {
+      "base": "SHELLDER",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_WATER_STONE",
+      "target": "CLOYSTER"
+    },
+    {
+      "base": "GASTLY",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "HAUNTER"
+    },
+    {
+      "base": "HAUNTER",
+      "method": "EVO_TRADE",
+      "parameter": "0",
+      "target": "GENGAR"
+    },
+    {
+      "base": "ONIX",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_METAL_COAT",
+      "target": "STEELIX"
+    },
+    {
+      "base": "DROWZEE",
+      "method": "EVO_LEVEL",
+      "parameter": "26",
+      "target": "HYPNO"
+    },
+    {
+      "base": "KRABBY",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "KINGLER"
+    },
+    {
+      "base": "VOLTORB",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "ELECTRODE"
+    },
+    {
+      "base": "EXEGGCUTE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "EXEGGUTOR"
+    },
+    {
+      "base": "CUBONE",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "MAROWAK"
+    },
+    {
+      "base": "KOFFING",
+      "method": "EVO_LEVEL",
+      "parameter": "35",
+      "target": "WEEZING"
+    },
+    {
+      "base": "RHYHORN",
+      "method": "EVO_LEVEL",
+      "parameter": "42",
+      "target": "RHYDON"
+    },
+    {
+      "base": "RHYDON",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_PROTECTOR",
+      "target": "RHYPERIOR"
+    },
+    {
+      "base": "HAPPINY",
+      "method": "EVO_FRIENDSHIP_DAY",
+      "parameter": "0",
+      "target": "CHANSEY"
+    },
+    {
+      "base": "CHANSEY",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "BLISSEY"
+    },
+    {
+      "base": "HORSEA",
+      "method": "EVO_LEVEL",
+      "parameter": "32",
+      "target": "SEADRA"
+    },
+    {
+      "base": "SEADRA",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_DRAGON_SCALE",
+      "target": "KINGDRA"
+    },
+    {
+      "base": "GOLDEEN",
+      "method": "EVO_LEVEL",
+      "parameter": "33",
+      "target": "SEAKING"
+    },
+    {
+      "base": "STARYU",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_WATER_STONE",
+      "target": "STARMIE"
+    },
+    {
+      "base": "SCYTHER",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_METAL_COAT",
+      "target": "SCIZOR"
+    },
+    {
+      "base": "MAGIKARP",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "GYARADOS"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_THUNDER_STONE",
+      "target": "JOLTEON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_WATER_STONE",
+      "target": "VAPOREON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_FIRE_STONE",
+      "target": "FLAREON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_FRIENDSHIP_DAY",
+      "parameter": "0",
+      "target": "ESPEON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_FRIENDSHIP_NIGHT",
+      "parameter": "0",
+      "target": "UMBREON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "LEAFEON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_ICE_STONE",
+      "target": "GLACEON"
+    },
+    {
+      "base": "EEVEE",
+      "method": "EVO_FRIENDSHIP_MOVE_TYPE",
+      "parameter": "TYPE_FAIRY",
+      "target": "SYLVEON"
+    },
+    {
+      "base": "PORYGON",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_UP_GRADE",
+      "target": "PORYGON2"
+    },
+    {
+      "base": "PORYGON2",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_DUBIOUS_DISC",
+      "target": "PORYGON_Z"
+    },
+    {
+      "base": "OMANYTE",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "OMASTAR"
+    },
+    {
+      "base": "KABUTO",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "KABUTOPS"
+    },
+    {
+      "base": "DRATINI",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "DRAGONAIR"
+    },
+    {
+      "base": "DRAGONAIR",
+      "method": "EVO_LEVEL",
+      "parameter": "55",
+      "target": "DRAGONITE"
+    },
+    {
+      "base": "CYNDAQUIL",
+      "method": "EVO_LEVEL",
+      "parameter": "14",
+      "target": "QUILAVA"
+    },
+    {
+      "base": "QUILAVA",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "TYPHLOSION"
+    },
+    {
+      "base": "TOTODILE",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "CROCONAW"
+    },
+    {
+      "base": "CROCONAW",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "FERALIGATR"
+    },
+    {
+      "base": "SENTRET",
+      "method": "EVO_LEVEL",
+      "parameter": "15",
+      "target": "FURRET"
+    },
+    {
+      "base": "HOOTHOOT",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "NOCTOWL"
+    },
+    {
+      "base": "LEDYBA",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "LEDIAN"
+    },
+    {
+      "base": "SPINARAK",
+      "method": "EVO_LEVEL",
+      "parameter": "22",
+      "target": "ARIADOS"
+    },
+    {
+      "base": "CHINCHOU",
+      "method": "EVO_LEVEL",
+      "parameter": "27",
+      "target": "LANTURN"
+    },
+    {
+      "base": "PICHU",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "PIKACHU"
+    },
+    {
+      "base": "CLEFFA",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "CLEFAIRY"
+    },
+    {
+      "base": "IGGLYBUFF",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "JIGGLYPUFF"
+    },
+    {
+      "base": "TOGEPI",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "TOGETIC"
+    },
+    {
+      "base": "NATU",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "XATU"
+    },
+    {
+      "base": "MAREEP",
+      "method": "EVO_LEVEL",
+      "parameter": "15",
+      "target": "FLAAFFY"
+    },
+    {
+      "base": "FLAAFFY",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "AMPHAROS"
+    },
+    {
+      "base": "MARILL",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "AZUMARILL"
+    },
+    {
+      "base": "HOPPIP",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "SKIPLOOM"
+    },
+    {
+      "base": "SKIPLOOM",
+      "method": "EVO_LEVEL",
+      "parameter": "27",
+      "target": "JUMPLUFF"
+    },
+    {
+      "base": "SUNKERN",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_SUN_STONE",
+      "target": "SUNFLORA"
+    },
+    {
+      "base": "WOOPER",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "QUAGSIRE"
+    },
+    {
+      "base": "PINECO",
+      "method": "EVO_LEVEL",
+      "parameter": "31",
+      "target": "FORRETRESS"
+    },
+    {
+      "base": "SNUBBULL",
+      "method": "EVO_LEVEL",
+      "parameter": "23",
+      "target": "GRANBULL"
+    },
+    {
+      "base": "TEDDIURSA",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "URSARING"
+    },
+    {
+      "base": "SLUGMA",
+      "method": "EVO_LEVEL",
+      "parameter": "38",
+      "target": "MAGCARGO"
+    },
+    {
+      "base": "SWINUB",
+      "method": "EVO_LEVEL",
+      "parameter": "33",
+      "target": "PILOSWINE"
+    },
+    {
+      "base": "REMORAID",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "OCTILLERY"
+    },
+    {
+      "base": "HOUNDOUR",
+      "method": "EVO_LEVEL",
+      "parameter": "24",
+      "target": "HOUNDOOM"
+    },
+    {
+      "base": "MURKROW",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_DUSK_STONE",
+      "target": "HONCHKROW"
+    },
+    {
+      "base": "MISDREAVUS",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_DUSK_STONE",
+      "target": "MISMAGIUS"
+    },
+    {
+      "base": "SNEASEL",
+      "method": "EVO_LEVEL_ITEM_NIGHT",
+      "parameter": "ITEM_RAZOR_CLAW",
+      "target": "WEAVILE"
+    },
+    {
+      "base": "PHANPY",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "DONPHAN"
+    },
+    {
+      "base": "TYROGUE",
+      "method": "EVO_LEVEL_ATK_LT_DEF",
+      "parameter": "20",
+      "target": "HITMONCHAN"
+    },
+    {
+      "base": "TYROGUE",
+      "method": "EVO_LEVEL_ATK_GT_DEF",
+      "parameter": "20",
+      "target": "HITMONLEE"
+    },
+    {
+      "base": "TYROGUE",
+      "method": "EVO_LEVEL_ATK_EQ_DEF",
+      "parameter": "20",
+      "target": "HITMONTOP"
+    },
+    {
+      "base": "SMOOCHUM",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "JYNX"
+    },
+    {
+      "base": "ELEKID",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "ELECTABUZZ"
+    },
+    {
+      "base": "ELECTABUZZ",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_ELECTIRIZER",
+      "target": "ELECTIVIRE"
+    },
+    {
+      "base": "MAGBY",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "MAGMAR"
+    },
+    {
+      "base": "MAGMAR",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_MAGMARIZER",
+      "target": "MAGMORTAR"
+    },
+    {
+      "base": "LARVITAR",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "PUPITAR"
+    },
+    {
+      "base": "PUPITAR",
+      "method": "EVO_LEVEL",
+      "parameter": "55",
+      "target": "TYRANITAR"
+    },
+    {
+      "base": "POOCHYENA",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "MIGHTYENA"
+    },
+    {
+      "base": "ZIGZAGOON",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "LINOONE"
+    },
+    {
+      "base": "WURMPLE",
+      "method": "EVO_LEVEL_SILCOON",
+      "parameter": "7",
+      "target": "SILCOON"
+    },
+    {
+      "base": "WURMPLE",
+      "method": "EVO_LEVEL_CASCOON",
+      "parameter": "7",
+      "target": "CASCOON"
+    },
+    {
+      "base": "SILCOON",
+      "method": "EVO_LEVEL",
+      "parameter": "10",
+      "target": "BEAUTIFLY"
+    },
+    {
+      "base": "CASCOON",
+      "method": "EVO_LEVEL",
+      "parameter": "10",
+      "target": "DUSTOX"
+    },
+    {
+      "base": "SEEDOT",
+      "method": "EVO_LEVEL",
+      "parameter": "14",
+      "target": "NUZLEAF"
+    },
+    {
+      "base": "NUZLEAF",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "SHIFTRY"
+    },
+    {
+      "base": "NINCADA",
+      "method": "EVO_LEVEL_NINJASK",
+      "parameter": "20",
+      "target": "NINJASK"
+    },
+    {
+      "base": "NINCADA",
+      "method": "EVO_LEVEL_SHEDINJA",
+      "parameter": "20",
+      "target": "SHEDINJA"
+    },
+    {
+      "base": "TAILLOW",
+      "method": "EVO_LEVEL",
+      "parameter": "22",
+      "target": "SWELLOW"
+    },
+    {
+      "base": "SHROOMISH",
+      "method": "EVO_LEVEL",
+      "parameter": "23",
+      "target": "BRELOOM"
+    },
+    {
+      "base": "WINGULL",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "PELIPPER"
+    },
+    {
+      "base": "BALTOY",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "CLAYDOL"
+    },
+    {
+      "base": "FEEBAS",
+      "method": "EVO_BEAUTY",
+      "parameter": "170",
+      "target": "MILOTIC"
+    },
+    {
+      "base": "MAKUHITA",
+      "method": "EVO_LEVEL",
+      "parameter": "24",
+      "target": "HARIYAMA"
+    },
+    {
+      "base": "NUMEL",
+      "method": "EVO_LEVEL",
+      "parameter": "33",
+      "target": "CAMERUPT"
+    },
+    {
+      "base": "BARBOACH",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "WHISCASH"
+    },
+    {
+      "base": "AZURILL",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "MARILL"
+    },
+    {
+      "base": "SPOINK",
+      "method": "EVO_LEVEL",
+      "parameter": "32",
+      "target": "GRUMPIG"
+    },
+    {
+      "base": "MEDITITE",
+      "method": "EVO_LEVEL",
+      "parameter": "37",
+      "target": "MEDICHAM"
+    },
+    {
+      "base": "SWABLU",
+      "method": "EVO_LEVEL",
+      "parameter": "35",
+      "target": "ALTARIA"
+    },
+    {
+      "base": "WYNAUT",
+      "method": "EVO_LEVEL",
+      "parameter": "15",
+      "target": "WOBBUFFET"
+    },
+    {
+      "base": "DUSKULL",
+      "method": "EVO_LEVEL",
+      "parameter": "37",
+      "target": "DUSCLOPS"
+    },
+    {
+      "base": "DUSCLOPS",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_REAPER_CLOTH",
+      "target": "DUSKNOIR"
+    },
+    {
+      "base": "SLAKOTH",
+      "method": "EVO_LEVEL",
+      "parameter": "18",
+      "target": "VIGOROTH"
+    },
+    {
+      "base": "VIGOROTH",
+      "method": "EVO_LEVEL",
+      "parameter": "36",
+      "target": "SLAKING"
+    },
+    {
+      "base": "GULPIN",
+      "method": "EVO_LEVEL",
+      "parameter": "26",
+      "target": "SWALOT"
+    },
+    {
+      "base": "WHISMUR",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "LOUDRED"
+    },
+    {
+      "base": "LOUDRED",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "EXPLOUD"
+    },
+    {
+      "base": "CLAMPERL",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_DEEP_SEA_TOOTH",
+      "target": "HUNTAIL"
+    },
+    {
+      "base": "CLAMPERL",
+      "method": "EVO_TRADE_ITEM",
+      "parameter": "ITEM_DEEP_SEA_SCALE",
+      "target": "GOREBYSS"
+    },
+    {
+      "base": "LILEEP",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "CRADILY"
+    },
+    {
+      "base": "ANORITH",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "ARMALDO"
+    },
+    {
+      "base": "RALTS",
+      "method": "EVO_LEVEL",
+      "parameter": "20",
+      "target": "KIRLIA"
+    },
+    {
+      "base": "KIRLIA",
+      "method": "EVO_LEVEL",
+      "parameter": "30",
+      "target": "GARDEVOIR"
+    },
+    {
+      "base": "KIRLIA",
+      "method": "EVO_ITEM_MALE",
+      "parameter": "ITEM_DAWN_STONE",
+      "target": "GALLADE"
+    },
+    {
+      "base": "BUNEARY",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "LOPUNNY"
+    },
+    {
+      "base": "BUDEW",
+      "method": "EVO_FRIENDSHIP_DAY",
+      "parameter": "0",
+      "target": "ROSELIA"
+    },
+    {
+      "base": "ROSELIA",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_SHINY_STONE",
+      "target": "ROSERADE"
+    },
+    {
+      "base": "CHINGLING",
+      "method": "EVO_FRIENDSHIP_NIGHT",
+      "parameter": "0",
+      "target": "CHIMECHO"
+    },
+    {
+      "base": "OMATO",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "OMATOPS"
+    },
+    {
+      "base": "KABUSTAR",
+      "method": "EVO_LEVEL",
+      "parameter": "40",
+      "target": "KABUKNIGHT"
+    },
+    {
+      "base": "STARLY",
+      "method": "EVO_LEVEL",
+      "parameter": "14",
+      "target": "STARAVIA"
+    },
+    {
+      "base": "STARAVIA",
+      "method": "EVO_LEVEL",
+      "parameter": "34",
+      "target": "STARAPTOR"
+    },
+    {
+      "base": "KRICKETOT",
+      "method": "EVO_LEVEL",
+      "parameter": "10",
+      "target": "KRICKETUNE"
+    },
+    {
+      "base": "PIKACHU_ALOLAN",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_THUNDER_STONE",
+      "target": "RAICHU_ALOLAN"
+    },
+    {
+      "base": "SANDSHREW_ALOLAN",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_ICE_STONE",
+      "target": "SANDSLASH_ALOLAN"
+    },
+    {
+      "base": "VULPIX_ALOLAN",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_ICE_STONE",
+      "target": "NINETALES_ALOLAN"
+    },
+    {
+      "base": "EXEGGCUTE_ALOLAN",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_LEAF_STONE",
+      "target": "EXEGGUTOR_ALOLAN"
+    },
+    {
+      "base": "TANGELA",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_ANCIENT_POWER",
+      "target": "TANGROWTH"
+    },
+    {
+      "base": "PRIMEAPE",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_RAGE_FIST",
+      "target": "ANNIHILAPE"
+    },
+    {
+      "base": "MR_MIME",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_BARRIER",
+      "target": "MIME_SR"
+    },
+    {
+      "base": "MAROWAK",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_BONE_RUSH",
+      "target": "OSSCYTHE"
+    },
+    {
+      "base": "LICKITUNG",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_ROLLOUT",
+      "target": "LICKILICKY"
+    },
+    {
+      "base": "AIPOM",
+      "method": "EVO_APEX_MOVE",
+      "parameter": "MOVE_DOUBLE_HIT",
+      "target": "AMBIPOM"
+    },
+    {
+      "base": "TYNAMO",
+      "method": "EVO_LEVEL",
+      "parameter": "39",
+      "target": "EELEKTRIK"
+    },
+    {
+      "base": "EELEKTRIK",
+      "method": "EVO_ITEM",
+      "parameter": "ITEM_THUNDER_STONE",
+      "target": "EELEKTROSS"
+    },
+    {
+      "base": "MIME_JR",
+      "method": "EVO_LEVEL_MOVE",
+      "parameter": "MOVE_MIMIC",
+      "target": "MR_MIME"
+    },
+    {
+      "base": "COMBEE",
+      "method": "EVO_LEVEL_FEMALE",
+      "parameter": "21",
+      "target": "VESPIQUEN"
+    },
+    {
+      "base": "RATTATA_ALOLAN",
+      "method": "EVO_LEVEL_NIGHT",
+      "parameter": "20",
+      "target": "RATICATE_ALOLAN"
+    },
+    {
+      "base": "PICHU_ALOLAN",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "PIKACHU_ALOLAN"
+    },
+    {
+      "base": "DIGLETT_ALOLAN",
+      "method": "EVO_LEVEL",
+      "parameter": "26",
+      "target": "DUGTRIO_ALOLAN"
+    },
+    {
+      "base": "MEOWTH_ALOLAN",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
+      "target": "PERSIAN_ALOLAN"
+    },
+    {
+      "base": "MEOWTH_GALARIAN",
+      "method": "EVO_LEVEL",
+      "parameter": "28",
+      "target": "PERRSERKER"
+    },
+    {
+      "base": "GEODUDE_ALOLAN",
+      "method": "EVO_LEVEL",
+      "parameter": "25",
+      "target": "GRAVELER_ALOLAN"
+    },
+    {
+      "base": "GRAVELER_ALOLAN",
+      "method": "EVO_TRADE",
+      "parameter": "0",
+      "target": "GOLEM_ALOLAN"
+    },
+    {
+      "base": "GRIMER_ALOLAN",
+      "method": "EVO_LEVEL",
+      "parameter": "38",
+      "target": "MUK_ALOLAN"
+    },
+    {
+      "base": "CUBONE_ALOLAN",
+      "method": "EVO_LEVEL_NIGHT",
+      "parameter": "28",
+      "target": "MAROWAK_ALOLAN"
+    },
+    {
+      "base": "CORSOLA_GALARIAN",
+      "method": "EVO_LEVEL",
+      "parameter": "38",
+      "target": "CURSOLA"
+    },
+    {
+      "base": "KOFFING_GALARIAN",
+      "method": "EVO_LEVEL",
+      "parameter": "35",
+      "target": "WEEZING_GALARIAN"
+    }
+  ],
+  "item_evidence": {
+    "ITEM_DAWN_STONE": [],
+    "ITEM_DEEP_SEA_SCALE": [],
+    "ITEM_DEEP_SEA_TOOTH": [],
+    "ITEM_DRAGON_SCALE": [],
+    "ITEM_DUBIOUS_DISC": [],
+    "ITEM_DUSK_STONE": [],
+    "ITEM_ELECTIRIZER": [
+      "src/data/ingame_trades.h:143: .heldItem = ITEM_ELECTIRIZER,"
+    ],
+    "ITEM_FIRE_STONE": [
+      "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:30: .2byte ITEM_FIRE_STONE"
+    ],
+    "ITEM_ICE_STONE": [],
+    "ITEM_KINGS_ROCK": [
+      "src/data/ingame_trades.h:207: .heldItem = ITEM_KINGS_ROCK,"
+    ],
+    "ITEM_LEAF_STONE": [
+      "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:33: .2byte ITEM_LEAF_STONE",
+      "data/maps/SafariZone_Center/events.inc:27: bg_hidden_item_event 27, 15, 3, ITEM_LEAF_STONE, FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE, 1, FALSE",
+      "data/scripts/item_ball_scripts.inc:138: finditem ITEM_LEAF_STONE",
+      "data/maps/SafariZone_Center/map.json:141: \"item\": \"ITEM_LEAF_STONE\","
+    ],
+    "ITEM_MAGMARIZER": [],
+    "ITEM_METAL_COAT": [],
+    "ITEM_MOON_STONE": [
+      "data/maps/MtMoon_B2F/events.inc:21: bg_hidden_item_event 20, 16, 3, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE, 1, FALSE",
+      "data/maps/PokemonMansion_1F/events.inc:29: bg_hidden_item_event 2, 21, 0, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_POKEMON_MANSION_1F_MOON_STONE, 1, FALSE",
+      "data/scripts/item_ball_scripts.inc:42: finditem ITEM_MOON_STONE",
+      "data/maps/MtMoon_B2F/map.json:126: \"item\": \"ITEM_MOON_STONE\",",
+      "data/maps/PokemonMansion_1F/map.json:190: \"item\": \"ITEM_MOON_STONE\",",
+      "Wild held item: CLEFAIRY",
+      "Wild held item: CLEFABLE",
+      "Wild held item: CLEFFA"
+    ],
+    "ITEM_PROTECTOR": [],
+    "ITEM_RAZOR_CLAW": [],
+    "ITEM_REAPER_CLOTH": [],
+    "ITEM_SHINY_STONE": [],
+    "ITEM_SUN_STONE": [
+      "data/maps/Route1/events.inc:18: bg_hidden_item_event 5, 7, 3, ITEM_SUN_STONE, FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL, 1, FALSE",
+      "data/maps/Route1/map.json:144: \"item\": \"ITEM_SUN_STONE\",",
+      "Wild held item: SOLROCK"
+    ],
+    "ITEM_THUNDER_STONE": [
+      "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:31: .2byte ITEM_THUNDER_STONE",
+      "data/maps/PowerPlant/events.inc:34: bg_hidden_item_event 8, 12, 3, ITEM_THUNDER_STONE, FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE, 1, FALSE",
+      "data/scripts/item_ball_scripts.inc:234: finditem ITEM_THUNDER_STONE",
+      "data/maps/PowerPlant/map.json:279: \"item\": \"ITEM_THUNDER_STONE\","
+    ],
+    "ITEM_UP_GRADE": [],
+    "ITEM_WATER_STONE": [
+      "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:32: .2byte ITEM_WATER_STONE",
+      "data/maps/SeafoamIslands_B4F/events.inc:15: bg_hidden_item_event 13, 8, 0, ITEM_WATER_STONE, FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE, 1, FALSE",
+      "data/scripts/item_ball_scripts.inc:426: finditem ITEM_WATER_STONE",
+      "data/maps/SeafoamIslands_B4F/map.json:64: \"item\": \"ITEM_WATER_STONE\","
+    ]
+  },
+  "items_without_source": [
+    "ITEM_DAWN_STONE",
+    "ITEM_DEEP_SEA_SCALE",
+    "ITEM_DEEP_SEA_TOOTH",
+    "ITEM_DRAGON_SCALE",
+    "ITEM_DUBIOUS_DISC",
+    "ITEM_DUSK_STONE",
+    "ITEM_ICE_STONE",
+    "ITEM_MAGMARIZER",
+    "ITEM_METAL_COAT",
+    "ITEM_PROTECTOR",
+    "ITEM_RAZOR_CLAW",
+    "ITEM_REAPER_CLOTH",
+    "ITEM_SHINY_STONE",
+    "ITEM_UP_GRADE"
+  ],
+  "missing_standard_links": [
+    "PILOSWINE \u2192 MAMOSWINE"
+  ]
+}

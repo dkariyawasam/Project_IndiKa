@@ -1,0 +1,146 @@
+[
+  {
+    "index": 0,
+    "rgb": [
+      0,
+      0,
+      0
+    ],
+    "source": "gyarados"
+  },
+  {
+    "index": 1,
+    "rgb": [
+      16,
+      16,
+      16
+    ],
+    "source": "magikarp"
+  },
+  {
+    "index": 2,
+    "rgb": [
+      74,
+      49,
+      0
+    ],
+    "source": "tauros"
+  },
+  {
+    "index": 3,
+    "rgb": [
+      90,
+      57,
+      41
+    ],
+    "source": "pidgey"
+  },
+  {
+    "index": 4,
+    "rgb": [
+      172,
+      57,
+      41
+    ],
+    "source": "rhyhorn"
+  },
+  {
+    "index": 5,
+    "rgb": [
+      213,
+      106,
+      82
+    ],
+    "source": "charizard"
+  },
+  {
+    "index": 6,
+    "rgb": [
+      230,
+      148,
+      106
+    ],
+    "source": "vulpix"
+  },
+  {
+    "index": 7,
+    "rgb": [
+      123,
+      90,
+      74
+    ],
+    "source": "pidgey"
+  },
+  {
+    "index": 8,
+    "rgb": [
+      205,
+      139,
+      98
+    ],
+    "source": "pidgey"
+  },
+  {
+    "index": 9,
+    "rgb": [
+      222,
+      197,
+      131
+    ],
+    "source": "charizard"
+  },
+  {
+    "index": 10,
+    "rgb": [
+      255,
+      230,
+      180
+    ],
+    "source": "vulpix"
+  },
+  {
+    "index": 11,
+    "rgb": [
+      255,
+      164,
+      123
+    ],
+    "source": "seaking"
+  },
+  {
+    "index": 12,
+    "rgb": [
+      213,
+      213,
+      222
+    ],
+    "source": "seaking"
+  },
+  {
+    "index": 13,
+    "rgb": [
+      230,
+      230,
+      238
+    ],
+    "source": "tauros"
+  },
+  {
+    "index": 14,
+    "rgb": [
+      131,
+      131,
+      172
+    ],
+    "source": "rhyhorn"
+  },
+  {
+    "index": 15,
+    "rgb": [
+      115,
+      115,
+      139
+    ],
+    "source": "magikarp"
+  }
+]

@@ -95,10 +95,70 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route3_EventScript_YoungsterMia",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 70,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route3_EventScript_RivalConversation",
+      "flag": "FLAG_HIDE_ROUTE3_RIVAL_CONVERSATION"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 68,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_ROUTE3_RIVAL_CONVERSATION",
+      "var_value": "0",
+      "script": "Route3_EventScript_RivalConversation"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_ROUTE3_RIVAL_CONVERSATION",
+      "var_value": "0",
+      "script": "Route3_EventScript_RivalConversation"
+    },
+    {
+      "type": "trigger",
+      "x": 70,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_ROUTE3_RIVAL_CONVERSATION",
+      "var_value": "0",
+      "script": "Route3_EventScript_RivalConversation"
+    },
+    {
+      "type": "trigger",
+      "x": 71,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_ROUTE3_RIVAL_CONVERSATION",
+      "var_value": "0",
+      "script": "Route3_EventScript_RivalConversation"
+    },
+    {
+      "type": "trigger",
+      "x": 72,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_ROUTE3_RIVAL_CONVERSATION",
+      "var_value": "0",
+      "script": "Route3_EventScript_RivalConversation"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

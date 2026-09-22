@@ -11,21 +11,42 @@ SilphCo_7F_OnLoad::
 	end
 
 SilphCo_7F_OnTransition::
+	call SilphCo_7F_EventScript_UpdateRivalVisibility
 	call EventScript_UpdateSaffronRocketTakeoverState
 	call_if_ge VAR_MAP_SCENE_SILPH_CO_11F, 1, SilphCo_7F_EventScript_SetObjRocketsGone
 	end
+
+@ The rival arrives with the takeover, after Giovanni's Mansion conversation.
+SilphCo_7F_EventScript_UpdateRivalVisibility::
+	goto_if_unset FLAG_SAW_GIOVANNI_POKEMON_MANSION, SilphCo_7F_EventScript_HideRival
+	goto_if_lt VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, SilphCo_7F_EventScript_HideRival
+	goto_if_ge VAR_MAP_SCENE_SILPH_CO_7F, 1, SilphCo_7F_EventScript_HideRival
+	clearflag FLAG_HIDE_SILPH_RIVAL
+	addobject LOCALID_SILPH_CO_RIVAL
+	return
+
+SilphCo_7F_EventScript_HideRival::
+	removeobject LOCALID_SILPH_CO_RIVAL
+	setflag FLAG_HIDE_SILPH_RIVAL
+	return
 
 SilphCo_7F_EventScript_SetObjRocketsGone::
 	setobjectmovementtype LOCALID_SILPH_CO_7F_WORKER_M2, MOVEMENT_TYPE_FACE_UP
 	return
 
 SilphCo_7F_EventScript_RivalTriggerTop::
+	goto_if_unset FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
+	goto_if_lt VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_SILPH_CO_7F, 1, EventScript_Return
 	lockall
 	setvar VAR_TEMP_1, 0
 	goto SilphCo_7F_EventScript_RivalScene
 	end
 
 SilphCo_7F_EventScript_RivalTriggerBottom::
+	goto_if_unset FLAG_SAW_GIOVANNI_POKEMON_MANSION, EventScript_Return
+	goto_if_lt VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, 1, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_SILPH_CO_7F, 1, EventScript_Return
 	lockall
 	setvar VAR_TEMP_1, 1
 	goto SilphCo_7F_EventScript_RivalScene

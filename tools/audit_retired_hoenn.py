@@ -4,11 +4,13 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-RETIRED = 'TREECKO GROVYLE SCEPTILE TORCHIC COMBUSKEN BLAZIKEN MUDKIP MARSHTOMP SWAMPERT ARON LAIRON AGGRON LATIAS LATIOS KYOGRE GROUDON RAYQUAZA JIRACHI DEOXYS'.split()
+RETIRED = 'TREECKO GROVYLE SCEPTILE TORCHIC COMBUSKEN BLAZIKEN MUDKIP MARSHTOMP SWAMPERT ARON LAIRON AGGRON LATIAS LATIOS KYOGRE GROUDON RAYQUAZA JIRACHI DEOXYS BAGON SHELGON SALAMENCE BELDUM METANG METAGROSS CACNEA CACTURNE CORPHISH CRAWDAUNT ELECTRIKE MANECTRIC LOTAD LOMBRE LUDICOLO NOSEPASS SEVIPER SHUPPET BANETTE SPHEAL SEALEO WALREIN SURSKIT MASQUERAIN TORKOAL TRAPINCH VIBRAVA FLYGON ZANGOOSE REGIROCK REGICE REGISTEEL TROPIUS KECLEON CASTFORM CARVANHA SHARPEDO SKITTY DELCATTY SNORUNT GLALIE FROSLASS SPIRITOMB WAILMER WAILORD'.split()
 stats = (ROOT / 'src/data/pokemon/species_info.h').read_text()
 names = (ROOT / 'src/data/text/species_names.h').read_text()
 errors = []
 for species in RETIRED:
+    if (ROOT / "graphics/pokemon" / species.lower()).exists():
+        errors.append(species + ": retired artwork directory still exists")
     if not re.search(r'\[SPECIES_' + species + r'\]\s*=\s*\{0\}', stats):
         errors.append(species + ': species data is not blank')
     if not re.search(r'\[SPECIES_' + species + r'\]\s*=\s*_\("\?\?\?\?\?"\)', names):

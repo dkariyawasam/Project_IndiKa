@@ -337,3 +337,30 @@ ViridianForest_EventScript_CharlieRematch::
 
 ViridianForest_Text_TangrowthApexCry:
 	.string "GREEEAOW!$"
+
+ViridianForest_EventScript_RivalApex::
+	goto_if_ge VAR_FOREST_RIVAL_APEX, 1, EventScript_Return
+	lockall
+	setvar VAR_LAST_TALKED, LOCALID_FOREST_RIVAL_APEX
+	faceplayer
+	msgbox ViridianForest_Text_RivalApex
+	call EventScript_RivalApexReflection
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setvar VAR_FOREST_RIVAL_APEX, 1
+	setflag FLAG_HIDE_FOREST_RIVAL_APEX
+	removeobject LOCALID_FOREST_RIVAL_APEX
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+ViridianForest_Text_RivalApex::
+	.string "{RIVAL}: Listen to this.\n"
+	.string "The accounts describe TANGROWTH.\p"
+	.string "A TANGELA that changed in the\n"
+	.string "forest, without a TRAINER.\p"
+	.string "I've been looking at this clearing.\n"
+	.string "What makes it the right place?\p"
+	.string "Check the local accounts.\n"
+	.string "Let's see what we can learn.$"
+

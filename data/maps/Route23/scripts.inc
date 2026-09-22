@@ -3,6 +3,7 @@ Route23_MapScripts::
 	.byte 0
 
 Route23_OnTransition::
+	call Route23_EventScript_UpdateRivalVisibility
 	clearflag FLAG_HIDE_VICTORY_ROAD_3F_BOULDER
 	setflag FLAG_HIDE_VICTORY_ROAD_2F_BOULDER
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_1F, 0
@@ -297,3 +298,70 @@ Route23_Text_AceTrainerFLenaDefeat::
 
 Route23_Text_AceTrainerFLenaPostBattle::
 	.string "A challenge shows you where\nyour training needs more work.$"
+
+Route23_EventScript_UpdateRivalVisibility::
+	goto_if_lt VAR_MAP_SCENE_CELADON_RIVAL, 1, Route23_EventScript_HidePendingRival
+	goto_if_ge VAR_ROUTE23_RIVAL_CONVERSATION, 1, Route23_EventScript_HidePendingRival
+	clearflag FLAG_HIDE_ROUTE23_RIVAL_CONVERSATION
+	addobject 19
+	return
+
+Route23_EventScript_HidePendingRival::
+	removeobject 19
+	setflag FLAG_HIDE_ROUTE23_RIVAL_CONVERSATION
+	return
+
+Route23_EventScript_RivalConversation::
+	goto_if_ge VAR_ROUTE23_RIVAL_CONVERSATION, 1, EventScript_Return
+	goto_if_lt VAR_MAP_SCENE_CELADON_RIVAL, 1, EventScript_Return
+	lockall
+	setvar VAR_LAST_TALKED, 19
+	faceplayer
+	msgbox Route23_Text_RivalConversation
+	call_if_eq VAR_STARTER_MON, 2, Route23_EventScript_RivalSquirtle
+	call_if_eq VAR_STARTER_MON, 1, Route23_EventScript_RivalBulbasaur
+	call_if_eq VAR_STARTER_MON, 0, Route23_EventScript_RivalCharmander
+	msgbox Route23_Text_RivalPostBattle
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_HIDE_ROUTE23_RIVAL_CONVERSATION
+	setvar VAR_ROUTE23_RIVAL_CONVERSATION, 1
+	removeobject 19
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+Route23_EventScript_RivalSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE23_SQUIRTLE, Route23_Text_RivalDefeat
+	return
+
+Route23_EventScript_RivalBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE23_BULBASAUR, Route23_Text_RivalDefeat
+	return
+
+Route23_EventScript_RivalCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE23_CHARMANDER, Route23_Text_RivalDefeat
+	return
+
+Route23_Text_RivalConversation::
+	.string "{RIVAL}: All eight BADGES, huh?\n"
+	.string "Let me see those!\p"
+	.string "Every GYM taught us something.\n"
+	.string "Sometimes after a few losses!\p"
+	.string "I used to just shout orders.\n"
+	.string "Now I pay attention to my team.\p"
+	.string "But you know I'm still aiming\n"
+	.string "for the top, {PLAYER}!\p"
+	.string "Let's see what you and your\n"
+	.string "POKéMON learned. Here we go!$"
+
+Route23_Text_RivalDefeat::
+	.string "You've earned those BADGES!$"
+
+Route23_Text_RivalPostBattle::
+	.string "{RIVAL}: You trusted your team\n"
+	.string "to pull that off. I could tell.\p"
+	.string "We've come a long way since\n"
+	.string "that first battle at the lab.\p"
+	.string "Get through VICTORY ROAD.\n"
+	.string "I'll see you at the LEAGUE!$"

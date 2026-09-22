@@ -38,6 +38,9 @@ static const struct TrainerNickname sMistyNicknames[] = {
 };
 
 static const struct TrainerNickname sLtSurgeNicknames[] = {
+    {SPECIES_TYNAMO, _("TORPEDO")},
+    {SPECIES_EELEKTRIK, _("TORPEDO")},
+    {SPECIES_EELEKTROSS, _("TORPEDO")},
     {SPECIES_PICHU, _("SPARKY")},
     {SPECIES_PIKACHU, _("SPARKY")},
     {SPECIES_RAICHU, _("SPARKY")},

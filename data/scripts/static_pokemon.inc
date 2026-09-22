@@ -169,3 +169,71 @@ Text_OakApexAnnihilape:
     .string "ANNIHILAPE shows what happens\n"
     .string "when feeling outruns control.\p"
     .string "Be careful with such power.$"
+
+@ Rival Apex investigations can be visited in any order.
+EventScript_RivalApexReflection::
+	setvar VAR_0x8008, 0
+	call_if_ge VAR_MAP_SCENE_ROUTE11_RIVAL, 1, EventScript_RivalApexRememberMime
+	call_if_ge VAR_MAP_SCENE_POKEMON_TOWER_1F, 1, EventScript_RivalApexRememberOsscythe
+	call_if_ge VAR_FOREST_RIVAL_APEX, 1, EventScript_RivalApexRememberTangrowth
+	goto_if_eq VAR_0x8008, 0, EventScript_RivalApexFirst
+	goto_if_eq VAR_0x8008, 1, EventScript_RivalApexSecond
+	msgbox Text_RivalApexThird
+	return
+
+EventScript_RivalApexFirst::
+	msgbox Text_RivalApexFirst
+	return
+
+EventScript_RivalApexSecond::
+	msgbox Text_RivalApexSecond
+	return
+
+EventScript_RivalApexRememberMime::
+	addvar VAR_0x8008, 1
+	bufferstring STR_VAR_1, Text_RivalApexMimeName
+	return
+
+EventScript_RivalApexRememberOsscythe::
+	addvar VAR_0x8008, 1
+	bufferstring STR_VAR_1, Text_RivalApexOsscytheName
+	return
+
+EventScript_RivalApexRememberTangrowth::
+	addvar VAR_0x8008, 1
+	bufferstring STR_VAR_1, Text_RivalApexTangrowthName
+	return
+
+Text_RivalApexMimeName::
+	.string "MIME SR.$"
+Text_RivalApexOsscytheName::
+	.string "OSSCYTHE$"
+Text_RivalApexTangrowthName::
+	.string "TANGROWTH$"
+
+Text_RivalApexFirst::
+	.string "A POKéMON changing out here,\n"
+	.string "without a TRAINER... Interesting.\p"
+	.string "Don't look so surprised!\n"
+	.string "I do more than collect BADGES.\p"
+	.string "Let's compare the local accounts.\n"
+	.string "There must be a reason it's here.$"
+
+Text_RivalApexSecond::
+	.string "Remember {STR_VAR_1}?\n"
+	.string "Another unusual wild evolution.\p"
+	.string "Different places, different forms.\n"
+	.string "Maybe the habitat matters.\p"
+	.string "That's a theory, not proof.\n"
+	.string "Keep your eyes open, {PLAYER}!$"
+
+Text_RivalApexThird::
+	.string "MIME SR., OSSCYTHE, TANGROWTH...\n"
+	.string "Three places, three unusual forms.\p"
+	.string "These accounts point to habitats\n"
+	.string "helping wild POKéMON change.\p"
+	.string "My team grows by training with me.\n"
+	.string "These POKéMON found another way.\p"
+	.string "Gramps will want our notes.\n"
+	.string "I'll let you write the neat copy!$"
+

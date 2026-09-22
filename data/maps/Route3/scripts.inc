@@ -32,3 +32,30 @@ Route3_Text_YoungsterMiaPostBattle::
 
 Route3_Text_YoungsterMiaRematchIntro::
 	.string "Ready for another battle?$"
+
+Route3_EventScript_RivalConversation::
+	goto_if_set FLAG_HIDE_ROUTE3_RIVAL_CONVERSATION, EventScript_Return
+	lockall
+	setvar VAR_LAST_TALKED, 6
+	faceplayer
+	msgbox Route3_Text_RivalConversation
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_HIDE_ROUTE3_RIVAL_CONVERSATION
+	setvar VAR_ROUTE3_RIVAL_CONVERSATION, 1
+	removeobject 6
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+Route3_Text_RivalConversation::
+	.string "{RIVAL}: Hey, {PLAYER}!\n"
+	.string "Heading for MT. MOON too?\p"
+	.string "I'm taking on the GYMS.\n"
+	.string "All eight of them!\p"
+	.string "Those LEADERS know their teams\n"
+	.string "like they've been together forever.\p"
+	.string "My partner and I are still\n"
+	.string "figuring each other out.\p"
+	.string "We'll learn as we go. Next time,\n"
+	.string "I'll show you how far we've come!$"
