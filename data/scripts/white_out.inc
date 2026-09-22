@@ -70,7 +70,7 @@ EventScript_AfterWhiteOutHouseHeal::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	msgbox Text_HadQuiteAnExperienceTakeRest
+	msgbox Text_HealingHouseTakeRest
 	call EventScript_OutOfCenterPartyHeal
 	call_if_unset FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsgPreBrock
 	call_if_set FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsg

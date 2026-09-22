@@ -455,7 +455,9 @@ struct BattleStruct
         struct LinkBattlerHeader linkBattlerHeader;
         struct MultiBattlePokemonTx multiBattleMons[3];
     } multiBuffer;
-    u8 padding_1E4[0x1C];
+    // Per party slot: persists through switches and fainting, cleared each battle.
+    u8 rageFistHits[2][PARTY_SIZE];
+    u8 padding_1E4[0x10];
 }; // size == 0x200 bytes
 
 extern struct BattleStruct *gBattleStruct;

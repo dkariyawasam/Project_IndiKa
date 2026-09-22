@@ -868,21 +868,12 @@ static const u16 sDexCategory_NonNativePkmn_Page53[] = {
     SPECIES_LINOONE,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page54[] = {
-    SPECIES_LOTAD,
-    SPECIES_LOMBRE,
-    SPECIES_LUDICOLO,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page55[] = {
     SPECIES_TAILLOW,
     SPECIES_SWELLOW,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page56[] = {
-    SPECIES_SURSKIT,
-    SPECIES_MASQUERAIN,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page57[] = {
     SPECIES_NINCADA,
@@ -901,28 +892,18 @@ static const u16 sDexCategory_NonNativePkmn_Page59[] = {
     SPECIES_HARIYAMA,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page60[] = {
-    SPECIES_NOSEPASS,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page61[] = {
     SPECIES_MEDITITE,
     SPECIES_MEDICHAM,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page62[] = {
-    SPECIES_ELECTRIKE,
-    SPECIES_MANECTRIC,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page63[] = {
     SPECIES_VOLBEAT,
     SPECIES_ILLUMISE,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page64[] = {
-    SPECIES_TORKOAL,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page65[] = {
     SPECIES_SPOINK,
@@ -933,36 +914,19 @@ static const u16 sDexCategory_NonNativePkmn_Page66[] = {
     SPECIES_SPINDA,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page67[] = {
-    SPECIES_TRAPINCH,
-    SPECIES_VIBRAVA,
-    SPECIES_FLYGON,
-};
 
-static const u16 sDexCategory_NonNativePkmn_Page68[] = {
-    SPECIES_CACNEA,
-    SPECIES_CACTURNE,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page69[] = {
     SPECIES_SWABLU,
     SPECIES_ALTARIA,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page70[] = {
-    SPECIES_ZANGOOSE,
-    SPECIES_SEVIPER,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page71[] = {
     SPECIES_BARBOACH,
     SPECIES_WHISCASH,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page72[] = {
-    SPECIES_CORPHISH,
-    SPECIES_CRAWDAUNT,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page73[] = {
     SPECIES_LILEEP,
@@ -974,32 +938,35 @@ static const u16 sDexCategory_NonNativePkmn_Page74[] = {
     SPECIES_ARMALDO,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page75[] = {
-    SPECIES_SHUPPET,
-    SPECIES_BANETTE,
-};
 
 static const u16 sDexCategory_NonNativePkmn_Page76[] = {
     SPECIES_ABSOL,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page77[] = {
-    SPECIES_SPHEAL,
-    SPECIES_SEALEO,
-    SPECIES_WALREIN,
+
+
+
+
+static const u16 sDexCategory_NonNativePkmn_Page81[] = {
+    SPECIES_CHIKORITA,
+    SPECIES_BAYLEEF,
+    SPECIES_MEGANIUM,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page78[] = {
-    SPECIES_BAGON,
-    SPECIES_SHELGON,
-    SPECIES_SALAMENCE,
+
+
+
+
+
+
+
+
+static const u16 sDexCategory_NonNativePkmn_Page82[] = {
+    SPECIES_TYNAMO,
+    SPECIES_EELEKTRIK,
+    SPECIES_EELEKTROSS,
 };
 
-static const u16 sDexCategory_NonNativePkmn_Page79[] = {
-    SPECIES_BELDUM,
-    SPECIES_METANG,
-    SPECIES_METAGROSS,
-};
 
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}
 
@@ -1171,6 +1138,8 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page32),
     DEX_CATEGORY(NonNativePkmn_Page33),
     DEX_CATEGORY(NonNativePkmn_Page34),
+    DEX_CATEGORY(NonNativePkmn_Page82),
+    DEX_CATEGORY(NonNativePkmn_Page81),
     DEX_CATEGORY(NonNativePkmn_Page35),
     DEX_CATEGORY(NonNativePkmn_Page36),
     DEX_CATEGORY(NonNativePkmn_Page37),
@@ -1187,32 +1156,19 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page48),
     DEX_CATEGORY(NonNativePkmn_Page49),
     DEX_CATEGORY(NonNativePkmn_Page53),
-    DEX_CATEGORY(NonNativePkmn_Page54),
     DEX_CATEGORY(NonNativePkmn_Page55),
-    DEX_CATEGORY(NonNativePkmn_Page56),
     DEX_CATEGORY(NonNativePkmn_Page57),
     DEX_CATEGORY(NonNativePkmn_Page58),
     DEX_CATEGORY(NonNativePkmn_Page59),
-    DEX_CATEGORY(NonNativePkmn_Page60),
     DEX_CATEGORY(NonNativePkmn_Page61),
-    DEX_CATEGORY(NonNativePkmn_Page62),
     DEX_CATEGORY(NonNativePkmn_Page63),
-    DEX_CATEGORY(NonNativePkmn_Page64),
     DEX_CATEGORY(NonNativePkmn_Page65),
     DEX_CATEGORY(NonNativePkmn_Page66),
-    DEX_CATEGORY(NonNativePkmn_Page67),
-    DEX_CATEGORY(NonNativePkmn_Page68),
     DEX_CATEGORY(NonNativePkmn_Page69),
-    DEX_CATEGORY(NonNativePkmn_Page70),
     DEX_CATEGORY(NonNativePkmn_Page71),
-    DEX_CATEGORY(NonNativePkmn_Page72),
     DEX_CATEGORY(NonNativePkmn_Page73),
     DEX_CATEGORY(NonNativePkmn_Page74),
-    DEX_CATEGORY(NonNativePkmn_Page75),
     DEX_CATEGORY(NonNativePkmn_Page76),
-    DEX_CATEGORY(NonNativePkmn_Page77),
-    DEX_CATEGORY(NonNativePkmn_Page78),
-    DEX_CATEGORY(NonNativePkmn_Page79),
 };
 static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page1),

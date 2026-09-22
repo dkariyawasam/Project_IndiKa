@@ -36,6 +36,8 @@
 #include "constants/hold_effects.h"
 #include "constants/battle_move_effects.h"
 #include "constants/union_room.h"
+#include "constants/flags.h"
+#include "constants/region_map_sections.h"
 #include "day_night.h"
 
 #define SPECIES_TO_HOENN(name)      [SPECIES_##name - 1] = HOENN_DEX_##name
@@ -254,6 +256,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(MEWTWO),
     SPECIES_TO_HOENN(MEW),
     SPECIES_TO_HOENN(CINNABAR_MAGIKARP),
+    SPECIES_TO_HOENN(CHIKORITA),
     SPECIES_TO_HOENN(BAYLEEF),
     SPECIES_TO_HOENN(MEGANIUM),
     SPECIES_TO_HOENN(CYNDAQUIL),
@@ -386,9 +389,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(BEAUTIFLY),
     SPECIES_TO_HOENN(CASCOON),
     SPECIES_TO_HOENN(DUSTOX),
-    SPECIES_TO_HOENN(LOTAD),
-    SPECIES_TO_HOENN(LOMBRE),
-    SPECIES_TO_HOENN(LUDICOLO),
     SPECIES_TO_HOENN(SEEDOT),
     SPECIES_TO_HOENN(NUZLEAF),
     SPECIES_TO_HOENN(SHIFTRY),
@@ -402,43 +402,18 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(SPINDA),
     SPECIES_TO_HOENN(WINGULL),
     SPECIES_TO_HOENN(PELIPPER),
-    SPECIES_TO_HOENN(SURSKIT),
-    SPECIES_TO_HOENN(MASQUERAIN),
-    SPECIES_TO_HOENN(WAILMER),
-    SPECIES_TO_HOENN(WAILORD),
-    SPECIES_TO_HOENN(SKITTY),
-    SPECIES_TO_HOENN(DELCATTY),
-    SPECIES_TO_HOENN(KECLEON),
     SPECIES_TO_HOENN(BALTOY),
     SPECIES_TO_HOENN(CLAYDOL),
-    SPECIES_TO_HOENN(NOSEPASS),
-    SPECIES_TO_HOENN(TORKOAL),
     SPECIES_TO_HOENN(SABLEYE),
     SPECIES_TO_HOENN(BARBOACH),
     SPECIES_TO_HOENN(WHISCASH),
     SPECIES_TO_HOENN(LUVDISC),
-    SPECIES_TO_HOENN(CORPHISH),
-    SPECIES_TO_HOENN(CRAWDAUNT),
     SPECIES_TO_HOENN(FEEBAS),
     SPECIES_TO_HOENN(MILOTIC),
-    SPECIES_TO_HOENN(CARVANHA),
-    SPECIES_TO_HOENN(SHARPEDO),
-    SPECIES_TO_HOENN(TRAPINCH),
-    SPECIES_TO_HOENN(VIBRAVA),
-    SPECIES_TO_HOENN(FLYGON),
     SPECIES_TO_HOENN(MAKUHITA),
     SPECIES_TO_HOENN(HARIYAMA),
-    SPECIES_TO_HOENN(ELECTRIKE),
-    SPECIES_TO_HOENN(MANECTRIC),
     SPECIES_TO_HOENN(NUMEL),
     SPECIES_TO_HOENN(CAMERUPT),
-    SPECIES_TO_HOENN(SPHEAL),
-    SPECIES_TO_HOENN(SEALEO),
-    SPECIES_TO_HOENN(WALREIN),
-    SPECIES_TO_HOENN(CACNEA),
-    SPECIES_TO_HOENN(CACTURNE),
-    SPECIES_TO_HOENN(SNORUNT),
-    SPECIES_TO_HOENN(GLALIE),
     SPECIES_TO_HOENN(LUNATONE),
     SPECIES_TO_HOENN(SOLROCK),
     SPECIES_TO_HOENN(AZURILL),
@@ -460,7 +435,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(SLAKING),
     SPECIES_TO_HOENN(GULPIN),
     SPECIES_TO_HOENN(SWALOT),
-    SPECIES_TO_HOENN(TROPIUS),
     SPECIES_TO_HOENN(WHISMUR),
     SPECIES_TO_HOENN(LOUDRED),
     SPECIES_TO_HOENN(EXPLOUD),
@@ -468,12 +442,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(HUNTAIL),
     SPECIES_TO_HOENN(GOREBYSS),
     SPECIES_TO_HOENN(ABSOL),
-    SPECIES_TO_HOENN(SHUPPET),
-    SPECIES_TO_HOENN(BANETTE),
-    SPECIES_TO_HOENN(SEVIPER),
-    SPECIES_TO_HOENN(ZANGOOSE),
     SPECIES_TO_HOENN(RELICANTH),
-    SPECIES_TO_HOENN(CASTFORM),
     SPECIES_TO_HOENN(VOLBEAT),
     SPECIES_TO_HOENN(ILLUMISE),
     SPECIES_TO_HOENN(LILEEP),
@@ -484,15 +453,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(KIRLIA),
     SPECIES_TO_HOENN(GARDEVOIR),
     SPECIES_TO_NATIONAL(GALLADE),
-    SPECIES_TO_HOENN(BAGON),
-    SPECIES_TO_HOENN(SHELGON),
-    SPECIES_TO_HOENN(SALAMENCE),
-    SPECIES_TO_HOENN(BELDUM),
-    SPECIES_TO_HOENN(METANG),
-    SPECIES_TO_HOENN(METAGROSS),
-    SPECIES_TO_HOENN(REGIROCK),
-    SPECIES_TO_HOENN(REGICE),
-    SPECIES_TO_HOENN(REGISTEEL),
     SPECIES_TO_HOENN(CHIMECHO),
 };
 
@@ -650,6 +610,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(MEWTWO),
     SPECIES_TO_NATIONAL(MEW),
     SPECIES_TO_NATIONAL(CINNABAR_MAGIKARP),
+    SPECIES_TO_NATIONAL(CHIKORITA),
     SPECIES_TO_NATIONAL(BAYLEEF),
     SPECIES_TO_NATIONAL(MEGANIUM),
     SPECIES_TO_NATIONAL(CYNDAQUIL),
@@ -782,9 +743,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(BEAUTIFLY),
     SPECIES_TO_NATIONAL(CASCOON),
     SPECIES_TO_NATIONAL(DUSTOX),
-    SPECIES_TO_NATIONAL(LOTAD),
-    SPECIES_TO_NATIONAL(LOMBRE),
-    SPECIES_TO_NATIONAL(LUDICOLO),
     SPECIES_TO_NATIONAL(SEEDOT),
     SPECIES_TO_NATIONAL(NUZLEAF),
     SPECIES_TO_NATIONAL(SHIFTRY),
@@ -798,43 +756,18 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(SPINDA),
     SPECIES_TO_NATIONAL(WINGULL),
     SPECIES_TO_NATIONAL(PELIPPER),
-    SPECIES_TO_NATIONAL(SURSKIT),
-    SPECIES_TO_NATIONAL(MASQUERAIN),
-    SPECIES_TO_NATIONAL(WAILMER),
-    SPECIES_TO_NATIONAL(WAILORD),
-    SPECIES_TO_NATIONAL(SKITTY),
-    SPECIES_TO_NATIONAL(DELCATTY),
-    SPECIES_TO_NATIONAL(KECLEON),
     SPECIES_TO_NATIONAL(BALTOY),
     SPECIES_TO_NATIONAL(CLAYDOL),
-    SPECIES_TO_NATIONAL(NOSEPASS),
-    SPECIES_TO_NATIONAL(TORKOAL),
     SPECIES_TO_NATIONAL(SABLEYE),
     SPECIES_TO_NATIONAL(BARBOACH),
     SPECIES_TO_NATIONAL(WHISCASH),
     SPECIES_TO_NATIONAL(LUVDISC),
-    SPECIES_TO_NATIONAL(CORPHISH),
-    SPECIES_TO_NATIONAL(CRAWDAUNT),
     SPECIES_TO_NATIONAL(FEEBAS),
     SPECIES_TO_NATIONAL(MILOTIC),
-    SPECIES_TO_NATIONAL(CARVANHA),
-    SPECIES_TO_NATIONAL(SHARPEDO),
-    SPECIES_TO_NATIONAL(TRAPINCH),
-    SPECIES_TO_NATIONAL(VIBRAVA),
-    SPECIES_TO_NATIONAL(FLYGON),
     SPECIES_TO_NATIONAL(MAKUHITA),
     SPECIES_TO_NATIONAL(HARIYAMA),
-    SPECIES_TO_NATIONAL(ELECTRIKE),
-    SPECIES_TO_NATIONAL(MANECTRIC),
     SPECIES_TO_NATIONAL(NUMEL),
     SPECIES_TO_NATIONAL(CAMERUPT),
-    SPECIES_TO_NATIONAL(SPHEAL),
-    SPECIES_TO_NATIONAL(SEALEO),
-    SPECIES_TO_NATIONAL(WALREIN),
-    SPECIES_TO_NATIONAL(CACNEA),
-    SPECIES_TO_NATIONAL(CACTURNE),
-    SPECIES_TO_NATIONAL(SNORUNT),
-    SPECIES_TO_NATIONAL(GLALIE),
     SPECIES_TO_NATIONAL(LUNATONE),
     SPECIES_TO_NATIONAL(SOLROCK),
     SPECIES_TO_NATIONAL(AZURILL),
@@ -856,7 +789,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(SLAKING),
     SPECIES_TO_NATIONAL(GULPIN),
     SPECIES_TO_NATIONAL(SWALOT),
-    SPECIES_TO_NATIONAL(TROPIUS),
     SPECIES_TO_NATIONAL(WHISMUR),
     SPECIES_TO_NATIONAL(LOUDRED),
     SPECIES_TO_NATIONAL(EXPLOUD),
@@ -864,12 +796,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(HUNTAIL),
     SPECIES_TO_NATIONAL(GOREBYSS),
     SPECIES_TO_NATIONAL(ABSOL),
-    SPECIES_TO_NATIONAL(SHUPPET),
-    SPECIES_TO_NATIONAL(BANETTE),
-    SPECIES_TO_NATIONAL(SEVIPER),
-    SPECIES_TO_NATIONAL(ZANGOOSE),
     SPECIES_TO_NATIONAL(RELICANTH),
-    SPECIES_TO_NATIONAL(CASTFORM),
     SPECIES_TO_NATIONAL(VOLBEAT),
     SPECIES_TO_NATIONAL(ILLUMISE),
     SPECIES_TO_NATIONAL(LILEEP),
@@ -879,15 +806,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(RALTS),
     SPECIES_TO_NATIONAL(KIRLIA),
     SPECIES_TO_NATIONAL(GARDEVOIR),
-    SPECIES_TO_NATIONAL(BAGON),
-    SPECIES_TO_NATIONAL(SHELGON),
-    SPECIES_TO_NATIONAL(SALAMENCE),
-    SPECIES_TO_NATIONAL(BELDUM),
-    SPECIES_TO_NATIONAL(METANG),
-    SPECIES_TO_NATIONAL(METAGROSS),
-    SPECIES_TO_NATIONAL(REGIROCK),
-    SPECIES_TO_NATIONAL(REGICE),
-    SPECIES_TO_NATIONAL(REGISTEEL),
     SPECIES_TO_NATIONAL(CHIMECHO),
     SPECIES_TO_NATIONAL(BUNEARY),
     SPECIES_TO_NATIONAL(LOPUNNY),
@@ -912,14 +830,12 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(MIME_JR),
     SPECIES_TO_NATIONAL(MIME_SR),
     SPECIES_TO_NATIONAL(MISMAGIUS),
-    SPECIES_TO_NATIONAL(SPIRITOMB),
     SPECIES_TO_NATIONAL(DUSKNOIR),
     SPECIES_TO_NATIONAL(OSSCYTHE),
     SPECIES_TO_NATIONAL(RHYPERIOR),
     SPECIES_TO_NATIONAL(CINNABAR_FEEBAS),
     SPECIES_TO_NATIONAL(WEAVILE),
     SPECIES_TO_NATIONAL(MAMOSWINE),
-    SPECIES_TO_NATIONAL(FROSLASS),
     SPECIES_TO_NATIONAL(MAGMORTAR),
     SPECIES_TO_NATIONAL(KABUSTAR),
     SPECIES_TO_NATIONAL(KABUKNIGHT),
@@ -981,9 +897,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(BEAUTIFLY),
     HOENN_TO_NATIONAL(CASCOON),
     HOENN_TO_NATIONAL(DUSTOX),
-    HOENN_TO_NATIONAL(LOTAD),
-    HOENN_TO_NATIONAL(LOMBRE),
-    HOENN_TO_NATIONAL(LUDICOLO),
     HOENN_TO_NATIONAL(SEEDOT),
     HOENN_TO_NATIONAL(NUZLEAF),
     HOENN_TO_NATIONAL(SHIFTRY),
@@ -995,8 +908,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(KIRLIA),
     HOENN_TO_NATIONAL(GARDEVOIR),
     SPECIES_TO_NATIONAL(GALLADE),
-    HOENN_TO_NATIONAL(SURSKIT),
-    HOENN_TO_NATIONAL(MASQUERAIN),
     HOENN_TO_NATIONAL(SHROOMISH),
     HOENN_TO_NATIONAL(BRELOOM),
     HOENN_TO_NATIONAL(SLAKOTH),
@@ -1023,9 +934,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(GEODUDE),
     HOENN_TO_NATIONAL(GRAVELER),
     HOENN_TO_NATIONAL(GOLEM),
-    HOENN_TO_NATIONAL(NOSEPASS),
-    HOENN_TO_NATIONAL(SKITTY),
-    HOENN_TO_NATIONAL(DELCATTY),
     HOENN_TO_NATIONAL(ZUBAT),
     HOENN_TO_NATIONAL(GOLBAT),
     HOENN_TO_NATIONAL(CROBAT),
@@ -1038,8 +946,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(MACHAMP),
     HOENN_TO_NATIONAL(MEDITITE),
     HOENN_TO_NATIONAL(MEDICHAM),
-    HOENN_TO_NATIONAL(ELECTRIKE),
-    HOENN_TO_NATIONAL(MANECTRIC),
     HOENN_TO_NATIONAL(PLUSLE),
     HOENN_TO_NATIONAL(MINUN),
     HOENN_TO_NATIONAL(MAGNEMITE),
@@ -1057,15 +963,10 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(ROSELIA),
     HOENN_TO_NATIONAL(GULPIN),
     HOENN_TO_NATIONAL(SWALOT),
-    HOENN_TO_NATIONAL(CARVANHA),
-    HOENN_TO_NATIONAL(SHARPEDO),
-    HOENN_TO_NATIONAL(WAILMER),
-    HOENN_TO_NATIONAL(WAILORD),
     HOENN_TO_NATIONAL(NUMEL),
     HOENN_TO_NATIONAL(CAMERUPT),
     HOENN_TO_NATIONAL(SLUGMA),
     HOENN_TO_NATIONAL(MAGCARGO),
-    HOENN_TO_NATIONAL(TORKOAL),
     HOENN_TO_NATIONAL(GRIMER),
     HOENN_TO_NATIONAL(MUK),
     HOENN_TO_NATIONAL(KOFFING),
@@ -1076,21 +977,12 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(SANDSLASH),
     HOENN_TO_NATIONAL(SPINDA),
     HOENN_TO_NATIONAL(SKARMORY),
-    HOENN_TO_NATIONAL(TRAPINCH),
-    HOENN_TO_NATIONAL(VIBRAVA),
-    HOENN_TO_NATIONAL(FLYGON),
-    HOENN_TO_NATIONAL(CACNEA),
-    HOENN_TO_NATIONAL(CACTURNE),
     HOENN_TO_NATIONAL(SWABLU),
     HOENN_TO_NATIONAL(ALTARIA),
-    HOENN_TO_NATIONAL(ZANGOOSE),
-    HOENN_TO_NATIONAL(SEVIPER),
     HOENN_TO_NATIONAL(LUNATONE),
     HOENN_TO_NATIONAL(SOLROCK),
     HOENN_TO_NATIONAL(BARBOACH),
     HOENN_TO_NATIONAL(WHISCASH),
-    HOENN_TO_NATIONAL(CORPHISH),
-    HOENN_TO_NATIONAL(CRAWDAUNT),
     HOENN_TO_NATIONAL(BALTOY),
     HOENN_TO_NATIONAL(CLAYDOL),
     HOENN_TO_NATIONAL(LILEEP),
@@ -1102,15 +994,10 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(WIGGLYTUFF),
     HOENN_TO_NATIONAL(FEEBAS),
     HOENN_TO_NATIONAL(MILOTIC),
-    HOENN_TO_NATIONAL(CASTFORM),
     HOENN_TO_NATIONAL(STARYU),
     HOENN_TO_NATIONAL(STARMIE),
-    HOENN_TO_NATIONAL(KECLEON),
-    HOENN_TO_NATIONAL(SHUPPET),
-    HOENN_TO_NATIONAL(BANETTE),
     HOENN_TO_NATIONAL(DUSKULL),
     HOENN_TO_NATIONAL(DUSCLOPS),
-    HOENN_TO_NATIONAL(TROPIUS),
     HOENN_TO_NATIONAL(CHIMECHO),
     HOENN_TO_NATIONAL(ABSOL),
     HOENN_TO_NATIONAL(VULPIX),
@@ -1131,11 +1018,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(HERACROSS),
     HOENN_TO_NATIONAL(RHYHORN),
     HOENN_TO_NATIONAL(RHYDON),
-    HOENN_TO_NATIONAL(SNORUNT),
-    HOENN_TO_NATIONAL(GLALIE),
-    HOENN_TO_NATIONAL(SPHEAL),
-    HOENN_TO_NATIONAL(SEALEO),
-    HOENN_TO_NATIONAL(WALREIN),
     HOENN_TO_NATIONAL(CLAMPERL),
     HOENN_TO_NATIONAL(HUNTAIL),
     HOENN_TO_NATIONAL(GOREBYSS),
@@ -1147,15 +1029,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(HORSEA),
     HOENN_TO_NATIONAL(SEADRA),
     HOENN_TO_NATIONAL(KINGDRA),
-    HOENN_TO_NATIONAL(BAGON),
-    HOENN_TO_NATIONAL(SHELGON),
-    HOENN_TO_NATIONAL(SALAMENCE),
-    HOENN_TO_NATIONAL(BELDUM),
-    HOENN_TO_NATIONAL(METANG),
-    HOENN_TO_NATIONAL(METAGROSS),
-    HOENN_TO_NATIONAL(REGIROCK),
-    HOENN_TO_NATIONAL(REGICE),
-    HOENN_TO_NATIONAL(REGISTEEL),
     HOENN_TO_NATIONAL(BULBASAUR), // Pokémon from here onwards are UNSEEN in the HoennDex.
     HOENN_TO_NATIONAL(IVYSAUR),
     HOENN_TO_NATIONAL(VENUSAUR),
@@ -1260,6 +1133,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(MEWTWO),
     HOENN_TO_NATIONAL(MEW),
     HOENN_TO_NATIONAL(CINNABAR_MAGIKARP),
+    HOENN_TO_NATIONAL(CHIKORITA),
     HOENN_TO_NATIONAL(BAYLEEF),
     HOENN_TO_NATIONAL(MEGANIUM),
     HOENN_TO_NATIONAL(CYNDAQUIL),
@@ -2392,6 +2266,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = gBattleMoves[move].power;
     else
         gBattleMovePower = powerOverride;
+
+    if (move == MOVE_RAGE_FIST && !powerOverride)
+        gBattleMovePower = 50 * (1 + gBattleStruct->rageFistHits[GetBattlerSide(battlerIdAtk)][gBattlerPartyIndexes[battlerIdAtk]]);
 
     if (!typeOverride)
         type = gBattleMoves[move].type;
@@ -5037,6 +4914,42 @@ static u8 GetNatureFromPersonality(u32 personality)
     return personality % NUM_NATURES;
 }
 
+static bool8 CanEvolveIntoApexInHabitat(u16 targetSpecies)
+{
+    u16 flag;
+    u8 habitat;
+
+    switch (targetSpecies)
+    {
+    case SPECIES_TANGROWTH:
+        flag = FLAG_INTERACTED_APEX_TANGROWTH;
+        habitat = MAPSEC_VIRIDIAN_FOREST;
+        break;
+    case SPECIES_ANNIHILAPE:
+        flag = FLAG_INTERACTED_APEX_ANNIHILAPE;
+        habitat = MAPSEC_MT_MOON;
+        break;
+    case SPECIES_MIME_SR:
+        flag = FLAG_INTERACTED_APEX_MIME_SR;
+        habitat = MAPSEC_DIGLETTS_CAVE;
+        break;
+    case SPECIES_OSSCYTHE:
+        flag = FLAG_INTERACTED_APEX_OSSCYTHE;
+        habitat = MAPSEC_POKEMON_TOWER;
+        break;
+    case SPECIES_AMBIPOM:
+        // A potential Apex habitat, with no wild individual to discover.
+        return gMapHeader.regionMapSectionId == MAPSEC_FUCHSIA_FOREST;
+    case SPECIES_LICKILICKY:
+        // Reclaim the potential habitat from MEWTWO before evolving.
+        return FlagGet(FLAG_DEFEATED_APEX_MEWTWO)
+            && gMapHeader.regionMapSectionId == MAPSEC_CERULEAN_CAVE;
+    default:
+        return FALSE;
+    }
+    return FlagGet(flag) && gMapHeader.regionMapSectionId == habitat;
+}
+
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
     int i;
@@ -5086,6 +4999,27 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_NIGHT:
+                if (IsNightTime() && gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_FEMALE:
+                if (GetMonGender(mon) == MON_FEMALE && gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_MOVE:
+                {
+                    u8 moveSlot;
+                    for (moveSlot = 0; moveSlot < MAX_MON_MOVES; moveSlot++)
+                    {
+                        if (GetMonData(mon, MON_DATA_MOVE1 + moveSlot, NULL) == gEvolutionTable[species][i].param)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
             case EVO_LEVEL_ATK_GT_DEF:
                 if (gEvolutionTable[species][i].param <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) > GetMonData(mon, MON_DATA_DEF, NULL))
@@ -5116,6 +5050,35 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_BEAUTY:
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_APEX_MOVE:
+                if (CanEvolveIntoApexInHabitat(gEvolutionTable[species][i].targetSpecies))
+                {
+                    u8 moveSlot;
+                    for (moveSlot = 0; moveSlot < MAX_MON_MOVES; moveSlot++)
+                    {
+                        if (GetMonData(mon, MON_DATA_MOVE1 + moveSlot, NULL) == gEvolutionTable[species][i].param)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
+            case EVO_FRIENDSHIP_MOVE_TYPE:
+                if (friendship >= 220)
+                {
+                    u8 moveSlot;
+                    for (moveSlot = 0; moveSlot < MAX_MON_MOVES; moveSlot++)
+                    {
+                        u16 move = GetMonData(mon, MON_DATA_MOVE1 + moveSlot, NULL);
+                        if (move != MOVE_NONE && gBattleMoves[move].type == gEvolutionTable[species][i].param)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
                 break;
             case EVO_LEVEL_ITEM_NIGHT:
                 if (IsNightTime() && gEvolutionTable[species][i].param == heldItem)

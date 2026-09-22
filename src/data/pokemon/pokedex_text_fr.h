@@ -3054,3 +3054,14 @@ const u8 gPlaceholderPokedexText[] = _(
     "is still being researched.");
 
 const u8 gPlaceholderPokedexTextUnused[] = _("");
+
+const u8 gChikoritaPokedexText[] = _(
+#if REVISION == 0
+    "Its pleasantly aromatic leaves have the\n"
+    #else
+    "Its pleasantly aromatic leaf has the\n"
+    #endif
+    "ability to check the humidity and\n"
+    "temperature."
+);
+const u8 gChikoritaPokedexTextUnused[] = _("");

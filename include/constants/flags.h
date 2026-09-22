@@ -47,9 +47,9 @@
 #define FLAG_HIDE_ROUTE20_SAILOR    0x021
 #define FLAG_HIDE_ROUTE19_SEAGALLOP 0x022
 #define FLAG_HIDE_ROUTE19_SAILOR    0x023
-#define FLAG_0x024               0x024
-#define FLAG_0x025               0x025
-#define FLAG_0x026               0x026
+#define FLAG_HIDE_ROUTE3_RIVAL_CONVERSATION               0x024
+#define FLAG_HIDE_ROUTE23_RIVAL_CONVERSATION               0x025
+#define FLAG_HIDE_FOREST_RIVAL_APEX               0x026
 #define FLAG_0x027               0x027
 
 // Hide/show flags
@@ -766,7 +766,7 @@
 #define FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION            0x2F9
 #define FLAG_GOT_EVERSTONE_FROM_OAKS_AIDE                0x2FA
 #define FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER      0x2FB
-#define FLAG_0x2FC                                       0x2FC
+#define FLAG_DEFEATED_APEX_MEWTWO                       0x2FC
 #define FLAG_GOT_AMULET_COIN_FROM_OAKS_AIDE              0x2FD
 #define FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE   0x2FE
 #define FLAG_OAKS_RATING_IS_VIA_PC                       0x2FF

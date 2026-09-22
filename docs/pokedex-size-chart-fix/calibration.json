@@ -1,0 +1,709 @@
+{
+  "trainer_height_m": 1.5,
+  "updated": [
+    {
+      "species": "STARLY",
+      "height_m": 0.3,
+      "before": {
+        "height": 3,
+        "pokemonScale": 465,
+        "pokemonOffset": 15,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1211,
+        "pokemonOffset": 18,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "STARAVIA",
+      "height_m": 0.6,
+      "before": {
+        "height": 6,
+        "pokemonScale": 356,
+        "pokemonOffset": 8,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 807,
+        "pokemonOffset": 14,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "STARAPTOR",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 282,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 497,
+        "pokemonOffset": 6,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "KRICKETOT",
+      "height_m": 0.3,
+      "before": {
+        "height": 3,
+        "pokemonScale": 465,
+        "pokemonOffset": 15,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1335,
+        "pokemonOffset": 18,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "KRICKETUNE",
+      "height_m": 1.0,
+      "before": {
+        "height": 10,
+        "pokemonScale": 305,
+        "pokemonOffset": 1,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 512,
+        "pokemonOffset": 8,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "COMBEE",
+      "height_m": 0.3,
+      "before": {
+        "height": 3,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1024,
+        "pokemonOffset": 18,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "VESPIQUEN",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 435,
+        "pokemonOffset": 6,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "BUDEW",
+      "height_m": 0.2,
+      "before": {
+        "height": 2,
+        "pokemonScale": 610,
+        "pokemonOffset": 23,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1583,
+        "pokemonOffset": 19,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "TANGROWTH",
+      "height_m": 2.0,
+      "before": {
+        "height": 20,
+        "pokemonScale": 275,
+        "pokemonOffset": 1,
+        "trainerScale": 298,
+        "trainerOffset": 2
+      },
+      "after": {
+        "pokemonScale": 367,
+        "pokemonOffset": 0,
+        "trainerScale": 427,
+        "trainerOffset": 3
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MAGNEZONE",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 388,
+        "pokemonOffset": 6,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "ELECTIVIRE",
+      "height_m": 1.8,
+      "before": {
+        "height": 18,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 367,
+        "pokemonOffset": 0,
+        "trainerScale": 384,
+        "trainerOffset": 1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "HAPPINY",
+      "height_m": 0.6,
+      "before": {
+        "height": 6,
+        "pokemonScale": 356,
+        "pokemonOffset": 17,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 590,
+        "pokemonOffset": 14,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "LICKILICKY",
+      "height_m": 1.7,
+      "before": {
+        "height": 17,
+        "pokemonScale": 282,
+        "pokemonOffset": 1,
+        "trainerScale": 256,
+        "trainerOffset": 0
+      },
+      "after": {
+        "pokemonScale": 355,
+        "pokemonOffset": 0,
+        "trainerScale": 363,
+        "trainerOffset": 0
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "AMBIPOM",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 497,
+        "pokemonOffset": 6,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "ANNIHILAPE",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 489,
+        "pokemonOffset": 6,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "HONCHKROW",
+      "height_m": 0.9,
+      "before": {
+        "height": 9,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 549,
+        "pokemonOffset": 10,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "CHINGLING",
+      "height_m": 0.2,
+      "before": {
+        "height": 2,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1723,
+        "pokemonOffset": 19,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "BRONZOR",
+      "height_m": 0.5,
+      "before": {
+        "height": 5,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 540,
+        "pokemonOffset": 15,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "BRONZONG",
+      "height_m": 1.3,
+      "before": {
+        "height": 13,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 351,
+        "pokemonOffset": 3,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MIME_JR",
+      "height_m": 0.6,
+      "before": {
+        "height": 6,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 745,
+        "pokemonOffset": 14,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MIME_SR",
+      "height_m": 1.0,
+      "before": {
+        "height": 10,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 559,
+        "pokemonOffset": 8,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MISMAGIUS",
+      "height_m": 0.9,
+      "before": {
+        "height": 9,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 621,
+        "pokemonOffset": 10,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "DUSKNOIR",
+      "height_m": 2.2,
+      "before": {
+        "height": 22,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 357,
+        "pokemonOffset": 0,
+        "trainerScale": 505,
+        "trainerOffset": 6
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "OSSCYTHE",
+      "height_m": 1.0,
+      "before": {
+        "height": 10,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 596,
+        "pokemonOffset": 8,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "RHYPERIOR",
+      "height_m": 2.4,
+      "before": {
+        "height": 24,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 367,
+        "pokemonOffset": 0,
+        "trainerScale": 512,
+        "trainerOffset": 6
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "CINNABAR_MAGIKARP",
+      "height_m": 0.6,
+      "before": {
+        "height": 6,
+        "pokemonScale": 512,
+        "pokemonOffset": 18,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 823,
+        "pokemonOffset": 14,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "WEAVILE",
+      "height_m": 1.1,
+      "before": {
+        "height": 11,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 457,
+        "pokemonOffset": 7,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MAMOSWINE",
+      "height_m": 2.5,
+      "before": {
+        "height": 25,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 357,
+        "pokemonOffset": 0,
+        "trainerScale": 628,
+        "trainerOffset": 9
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "MAGMORTAR",
+      "height_m": 1.6,
+      "before": {
+        "height": 16,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 367,
+        "pokemonOffset": 0,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "PORYGON_Z",
+      "height_m": 0.9,
+      "before": {
+        "height": 9,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 528,
+        "pokemonOffset": 9,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "LEAFEON",
+      "height_m": 1.0,
+      "before": {
+        "height": 10,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 466,
+        "pokemonOffset": 7,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "GLACEON",
+      "height_m": 0.8,
+      "before": {
+        "height": 8,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 617,
+        "pokemonOffset": 10,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "GALLADE",
+      "height_m": 1.6,
+      "before": {
+        "height": 16,
+        "pokemonScale": 277,
+        "pokemonOffset": 0,
+        "trainerScale": 276,
+        "trainerOffset": -1
+      },
+      "after": {
+        "pokemonScale": 373,
+        "pokemonOffset": 0,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "SYLVEON",
+      "height_m": 1.0,
+      "before": {
+        "height": 10,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 503,
+        "pokemonOffset": 8,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "TYNAMO",
+      "height_m": 0.2,
+      "before": {
+        "height": 2,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 1769,
+        "pokemonOffset": 21,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "length"
+    },
+    {
+      "species": "EELEKTRIK",
+      "height_m": 1.2,
+      "before": {
+        "height": 12,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 489,
+        "pokemonOffset": 5,
+        "trainerScale": 342,
+        "trainerOffset": -1
+      },
+      "axis": "posed height"
+    },
+    {
+      "species": "EELEKTROSS",
+      "height_m": 2.1,
+      "before": {
+        "height": 21,
+        "pokemonScale": 256,
+        "pokemonOffset": 0,
+        "trainerScale": 256,
+        "trainerOffset": -2
+      },
+      "after": {
+        "pokemonScale": 357,
+        "pokemonOffset": 0,
+        "trainerScale": 560,
+        "trainerOffset": 8
+      },
+      "axis": "posed height"
+    }
+  ],
+  "placeholders_skipped": [
+    "ROSERADE",
+    "CINNABAR_FEEBAS",
+    "KABUSTAR",
+    "KABUKNIGHT",
+    "AMUNYTE",
+    "KINKABUTO",
+    "AEROPTERYX",
+    "FARFETCHD_GALARIAN",
+    "RATTATA_ALOLAN",
+    "RATICATE_ALOLAN",
+    "PICHU_ALOLAN",
+    "PIKACHU_ALOLAN",
+    "RAICHU_ALOLAN",
+    "SANDSHREW_ALOLAN",
+    "SANDSLASH_ALOLAN",
+    "DIGLETT_ALOLAN",
+    "DUGTRIO_ALOLAN",
+    "MEOWTH_ALOLAN",
+    "PERSIAN_ALOLAN",
+    "MEOWTH_GALARIAN",
+    "PERRSERKER",
+    "GEODUDE_ALOLAN",
+    "GRAVELER_ALOLAN",
+    "GOLEM_ALOLAN",
+    "GRIMER_ALOLAN",
+    "MUK_ALOLAN",
+    "VULPIX_ALOLAN",
+    "NINETALES_ALOLAN",
+    "EXEGGCUTE_ALOLAN",
+    "EXEGGUTOR_ALOLAN",
+    "CUBONE_ALOLAN",
+    "MAROWAK_ALOLAN",
+    "CORSOLA_GALARIAN",
+    "CURSOLA",
+    "KOFFING_GALARIAN",
+    "WEEZING_GALARIAN"
+  ]
+}

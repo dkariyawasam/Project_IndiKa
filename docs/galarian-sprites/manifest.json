@@ -1,0 +1,32 @@
+[
+  {
+    "species": "FARFETCHD_GALARIAN",
+    "name": "farfetchd_galarian",
+    "icon_palette": 1
+  },
+  {
+    "species": "MEOWTH_GALARIAN",
+    "name": "meowth_galarian",
+    "icon_palette": 0
+  },
+  {
+    "species": "PERRSERKER",
+    "name": "perrserker",
+    "icon_palette": 2
+  },
+  {
+    "species": "CORSOLA_GALARIAN",
+    "name": "corsola_galarian",
+    "icon_palette": 0
+  },
+  {
+    "species": "CURSOLA",
+    "name": "cursola",
+    "icon_palette": 0
+  },
+  {
+    "species": "WEEZING_GALARIAN",
+    "name": "weezing_galarian",
+    "icon_palette": 1
+  }
+]

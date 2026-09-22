@@ -1,0 +1,1 @@
+Direct adaptation of vanilla Magikarp icon, preserving original two-frame pose and native proportions. Peach jagged crest, terracotta body and neutral pale fins. Uses existing icon palette0. No battle-sprite downscaling or generated artwork used. comparison.png: vanilla left, deep form right.

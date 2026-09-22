@@ -5,13 +5,21 @@ CeladonCity_MapScripts::
 CeladonCity_OnTransition::
 	special EndBikeRental
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
-	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, CeladonCity_EventScript_RemoveRival
-	goto_if_unset FLAG_SYS_POKEDEX_GET, CeladonCity_EventScript_RemoveRival
+	call CeladonCity_EventScript_UpdateRivalVisibility
 	end
 
-CeladonCity_EventScript_RemoveRival::
+CeladonCity_EventScript_UpdateRivalVisibility::
+	goto_if_unset FLAG_SYS_POKEDEX_GET, CeladonCity_EventScript_HidePendingRival
+	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, CeladonCity_EventScript_HidePendingRival
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_HidePendingRival
+	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
+	addobject LOCALID_CELADON_RIVAL
+	return
+
+CeladonCity_EventScript_HidePendingRival::
 	removeobject LOCALID_CELADON_RIVAL
-	end
+	setflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
+	return
 
 CeladonCity_EventScript_RivalEvolutionTrigger38::
 	setvar VAR_TEMP_1, 0
@@ -26,7 +34,8 @@ CeladonCity_EventScript_RivalEvolutionTrigger40::
 	goto CeladonCity_EventScript_RivalEvolutionTrigger
 
 CeladonCity_EventScript_RivalEvolutionTrigger::
-	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, EventScript_Return
+	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lockall
 	playbgm MUS_ENCOUNTER_RIVAL, 0
@@ -46,7 +55,8 @@ CeladonCity_EventScript_RivalEvolutionTrigger::
 	end
 
 CeladonCity_EventScript_RivalEvolution::
-	goto_if_set FLAG_HIDE_CELADON_RIVAL_EVOLUTION, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, EventScript_Return
+	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lock
 	faceplayer
