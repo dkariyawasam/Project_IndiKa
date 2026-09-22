@@ -115,16 +115,8 @@ PokemonLeague_LancesRoom_EventScript_Intro::
 	msgbox PokemonLeague_LancesRoom_Text_Intro
 	return
 
-PokemonLeague_LancesRoom_EventScript_RematchIntro::
-	msgbox PokemonLeague_LancesRoom_Text_RematchIntro
-	return
-
 PokemonLeague_LancesRoom_EventScript_Battle::
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LANCE, PokemonLeague_LancesRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
-	return
-
-PokemonLeague_LancesRoom_EventScript_Rematch::
-	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LANCE_2, PokemonLeague_LancesRoom_Text_Defeat, Common_Text_NeedTwoPokemonForDoubleBattle
 	return
 
 PokemonLeague_LancesRoom_EventScript_PostBattle::

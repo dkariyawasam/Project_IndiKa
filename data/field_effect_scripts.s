@@ -163,8 +163,8 @@ gFldEffScript_DeepSandFootprints::
 	end 
 
 gFldEffScript_PokecenterHeal::
-	loadfadedpal gSpritePalette_PokeballGlow 
-	loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_PokecenterHeal
+	@ Both the monitor and balls use this single palette.
+	loadfadedpal_callnative gSpritePalette_PokeballGlow, FldEff_PokecenterHeal
 	end 
 
 gFldEffScript_UseSecretPowerTree::

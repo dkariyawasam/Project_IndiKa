@@ -285,7 +285,7 @@ enum {
     NATIONAL_DEX_MOLTRES,
     NATIONAL_DEX_MEWTWO,
     NATIONAL_DEX_MEW,
-    // Cross-version entries kept for trade compatibility bookkeeping.
+    // Additional entries; numeric IDs are retained for save compatibility.
     NATIONAL_DEX_EEVEE,
     NATIONAL_DEX_VAPOREON,
     NATIONAL_DEX_JOLTEON,
@@ -419,7 +419,7 @@ enum {
     NATIONAL_DEX_RAYQUAZA,
     NATIONAL_DEX_JIRACHI,
     NATIONAL_DEX_DEOXYS,
-    // Legacy constants retained for old data, assets, and scripts outside the compatibility set.
+    // Additional and reserved entries; active membership is defined separately.
     NATIONAL_DEX_SYLVEON,
     NATIONAL_DEX_FARFETCHD_GALARIAN,
     NATIONAL_DEX_TYNAMO,
@@ -468,6 +468,7 @@ enum {
     NATIONAL_DEX_REGIROCK,
     NATIONAL_DEX_REGICE,
     NATIONAL_DEX_REGISTEEL,
+    NATIONAL_DEX_CHIKORITA,
     NATIONAL_DEX_OLD_UNOWN_B,
     NATIONAL_DEX_OLD_UNOWN_C,
     NATIONAL_DEX_OLD_UNOWN_D,
@@ -496,9 +497,11 @@ enum {
     NATIONAL_DEX_COUNT,
 };
 
-#define KANTO_DEX_COUNT     NATIONAL_DEX_MEW
-#define JOHTO_DEX_COUNT     NATIONAL_DEX_MEW
-#define NATIONAL_DEX_COUNT  NATIONAL_DEX_MEW
+// Upper bound of saved Dex IDs, including reserved/inactive gaps.
+// Use IsActivePokedexSpecies for membership and GetActivePokedexCount for totals.
+#define KANTO_DEX_COUNT     NATIONAL_DEX_CHIKORITA
+#define JOHTO_DEX_COUNT     NATIONAL_DEX_CHIKORITA
+#define NATIONAL_DEX_COUNT  NATIONAL_DEX_CHIKORITA
 
 // Hoenn Pokedex order
 enum {
@@ -890,6 +893,7 @@ enum {
     HOENN_DEX_LUGIA,
     HOENN_DEX_HO_OH,
     HOENN_DEX_CELEBI,
+    HOENN_DEX_CHIKORITA,
     HOENN_DEX_OLD_UNOWN_B,
     HOENN_DEX_OLD_UNOWN_C,
     HOENN_DEX_OLD_UNOWN_D,

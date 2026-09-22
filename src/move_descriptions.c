@@ -365,6 +365,10 @@ const u8 gMoveDescription_BabyDollEyes[] = _("The user stares\ncutely to lower t
 
 const u8 gMoveDescription_Retreat[] = _("Escapes wild foes\nfirst, even if\ntrapped. Fails on\nTRAINERS and APEX.");
 
+static const u8 sRageFistDescription[] = _("Grows stronger each time\nthe user is hit in battle.");
+
+static const u8 sDoubleHitDescription[] = _("Strikes the foe twice\nwith a tail or the like.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -728,4 +732,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_MOONBLAST     - 1] = gMoveDescription_Moonblast,
     [MOVE_BABY_DOLL_EYES - 1] = gMoveDescription_BabyDollEyes,
     [MOVE_RETREAT - 1] = gMoveDescription_Retreat,
+    [MOVE_RAGE_FIST - 1] = sRageFistDescription,
+    [MOVE_DOUBLE_HIT - 1] = sDoubleHitDescription,
 };

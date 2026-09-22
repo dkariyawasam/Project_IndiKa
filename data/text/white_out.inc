@@ -17,6 +17,10 @@ Text_MonsHealed::
 	.string "to perfect health.\p"
 	.string "We hope you excel!$"
 
+Text_HealingHouseTakeRest::
+	.string "You're safe here.\n"
+	.string "Let's give your POKéMON a rest.$"
+
 Text_HadQuiteAnExperienceTakeRest::
 	.string "MOM: {PLAYER}!\n"
 	.string "Welcome home.\p"
