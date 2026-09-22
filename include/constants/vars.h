@@ -74,7 +74,7 @@
 // a massage from Daisy, it resets to 0. Caps at 500.
 #define VAR_MASSAGE_COOLDOWN_STEP_COUNTER   0x4025
 
-#define VAR_0x4026                         0x4026
+#define VAR_ROUTE3_RIVAL_CONVERSATION                         0x4026
 
 // Bits 0-11 are the number of mons in all boxes
 // with the species sanity bit set.
@@ -85,8 +85,8 @@
 #define VAR_TIME_OF_DAY                    0x4029
 #define VAR_DAYNIGHT_STEP_COUNTER          0x402A
 #define VAR_DAY_NIGHT_DAY_COUNT            0x402B
-#define VAR_0x402C                         0x402C
-#define VAR_0x402D                         0x402D
+#define VAR_ROUTE23_RIVAL_CONVERSATION                         0x402C
+#define VAR_FOREST_RIVAL_APEX                         0x402D
 #define VAR_0x402E                         0x402E
 
 #define VAR_0x402F                         0x402F

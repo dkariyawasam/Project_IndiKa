@@ -361,5 +361,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_PLAY_ROUGH]    = _("PLAY ROUGH"),
     [MOVE_MOONBLAST]     = _("MOONBLAST"),
     [MOVE_BABY_DOLL_EYES] = _("BABY-DOLL"),
-    [MOVE_RETREAT] = _("RETREAT")
+    [MOVE_RETREAT] = _("RETREAT"),
+    [MOVE_RAGE_FIST] = _("RAGE FIST"),
+    [MOVE_DOUBLE_HIT] = _("DOUBLE HIT")
 };

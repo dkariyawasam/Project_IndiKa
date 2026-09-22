@@ -1,0 +1,1 @@
+Reduced normal-palette interior contrast: raised dark body reds, slightly softened bright oranges, and lowered white/grey fin highlights. Dark outline and all front/back pixel indices unchanged. Shared normal palette applies to both views; shiny unchanged. Preview: before, after, Relicanth.

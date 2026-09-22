@@ -118,7 +118,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_LAND",
-      "x": 9,
+      "x": 13,
       "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
