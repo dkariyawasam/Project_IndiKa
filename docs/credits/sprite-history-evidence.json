@@ -1,0 +1,1109 @@
+[
+  {
+    "path": "corsola_galarian_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "corsola_galarian_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "db02cd05f6f68397ec37eed11433aeaa8ddd7b62",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/db02cd05f6f68397ec37eed11433aeaa8ddd7b62",
+        "message": "Purged the bKGD warning once and for all",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "corsola_galarian_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "cursola_back.png",
+    "commits": [
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "cursola_front.png",
+    "commits": [
+      {
+        "sha": "2237e33ab2feb989888b23beac77261e1a6381b5",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/2237e33ab2feb989888b23beac77261e1a6381b5",
+        "message": "Pokemon spite fixes (#5126)\n\nVarious Gen 8 (+Sawsbuck Summer) sprite fixes for overworld and battle sprites.",
+        "github_account": "Cafeei"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "db02cd05f6f68397ec37eed11433aeaa8ddd7b62",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/db02cd05f6f68397ec37eed11433aeaa8ddd7b62",
+        "message": "Purged the bKGD warning once and for all",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "cursola_icon.png",
+    "commits": [
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "farfetchd_galarian_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "farfetchd_galarian_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "farfetchd_galarian_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "marowak_alolan_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "marowak_alolan_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "marowak_alolan_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "meowth_galarian_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "meowth_galarian_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "meowth_galarian_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "perrserker_back.png",
+    "commits": [
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "perrserker_front.png",
+    "commits": [
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "perrserker_icon.png",
+    "commits": [
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "raichu_alolan_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "raichu_alolan_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "raichu_alolan_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "rattata_alolan_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "rattata_alolan_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "rattata_alolan_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/56f4c319a425fa80b39c881d5c922fd2bda4308d",
+        "message": "Fix multiple pokemon graphics, tidying pokemon graphic folders",
+        "github_account": "Blackforest92"
+      }
+    ]
+  },
+  {
+    "path": "roserade_back.png",
+    "commits": [
+      {
+        "sha": "de4722708b9994a0b08e88e40cc1ab613034a676",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/de4722708b9994a0b08e88e40cc1ab613034a676",
+        "message": "Add Gen4 mon sprites",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "roserade_front.png",
+    "commits": [
+      {
+        "sha": "501cff84b946d78d26819f9fac4a9783f768a995",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/501cff84b946d78d26819f9fac4a9783f768a995",
+        "message": "Removed unused single-frame front pics",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "2ad3c3f6bec5f8f0cf6a908274fe304a73da56dd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/2ad3c3f6bec5f8f0cf6a908274fe304a73da56dd",
+        "message": "Palette Conversion GEN4",
+        "github_account": "Blackforest92"
+      },
+      {
+        "sha": "80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "message": "Revert \"Fix the 'bKGD: invalid index' error\"",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "message": "Fixed the 'bKGD: invalid index' error",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "de4722708b9994a0b08e88e40cc1ab613034a676",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/de4722708b9994a0b08e88e40cc1ab613034a676",
+        "message": "Add Gen4 mon sprites",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "roserade_icon.png",
+    "commits": [
+      {
+        "sha": "7c6077ef8b986585b4ff4ffaf88d59187308bb87",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/7c6077ef8b986585b4ff4ffaf88d59187308bb87",
+        "message": "Add icons for gen1-gen6 mons",
+        "github_account": "DizzyEggg"
+      },
+      {
+        "sha": "b407967cea7c6a335c569a12ee5c4e33d7a224f9",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b407967cea7c6a335c569a12ee5c4e33d7a224f9",
+        "message": "Gen5 sprites and icon placeholder data",
+        "github_account": "DizzyEggg"
+      },
+      {
+        "sha": "adfd151f47e157be6cbc28c1081e4c981be3ec53",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/adfd151f47e157be6cbc28c1081e4c981be3ec53",
+        "message": "Add Gen4 icons",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "sylveon_back.png",
+    "commits": [
+      {
+        "sha": "86d4658bd375ea99f90709008784c60e7f9d11a9",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/86d4658bd375ea99f90709008784c60e7f9d11a9",
+        "message": "Added anim_front.png to gen6 pokemons + fix to magnemite",
+        "github_account": "Blackforest92"
+      },
+      {
+        "sha": "80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "message": "Revert \"Fix the 'bKGD: invalid index' error\"",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "message": "Fixed the 'bKGD: invalid index' error",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "431690d1c28f407402e0e4da9ae8f21d42e0672b",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/431690d1c28f407402e0e4da9ae8f21d42e0672b",
+        "message": "Add Gen6 and Gen7 mon sprites",
+        "github_account": "DizzyEggg"
+      },
+      {
+        "sha": "240e9bda1712dd475029d7a3229ff48a393bb393",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/240e9bda1712dd475029d7a3229ff48a393bb393",
+        "message": "All data for gen 6.7 mons, placeholder sprites",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "sylveon_front.png",
+    "commits": [
+      {
+        "sha": "501cff84b946d78d26819f9fac4a9783f768a995",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/501cff84b946d78d26819f9fac4a9783f768a995",
+        "message": "Removed unused single-frame front pics",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "86d4658bd375ea99f90709008784c60e7f9d11a9",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/86d4658bd375ea99f90709008784c60e7f9d11a9",
+        "message": "Added anim_front.png to gen6 pokemons + fix to magnemite",
+        "github_account": "Blackforest92"
+      },
+      {
+        "sha": "80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/80d8e4cfd4a0c87b345dc078715c3d157b25863e",
+        "message": "Revert \"Fix the 'bKGD: invalid index' error\"",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/1c59586e672fac49cacf5faa89e2b2f39a8fba8a",
+        "message": "Fixed the 'bKGD: invalid index' error",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "431690d1c28f407402e0e4da9ae8f21d42e0672b",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/431690d1c28f407402e0e4da9ae8f21d42e0672b",
+        "message": "Add Gen6 and Gen7 mon sprites",
+        "github_account": "DizzyEggg"
+      },
+      {
+        "sha": "240e9bda1712dd475029d7a3229ff48a393bb393",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/240e9bda1712dd475029d7a3229ff48a393bb393",
+        "message": "All data for gen 6.7 mons, placeholder sprites",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "sylveon_icon.png",
+    "commits": [
+      {
+        "sha": "7c6077ef8b986585b4ff4ffaf88d59187308bb87",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/7c6077ef8b986585b4ff4ffaf88d59187308bb87",
+        "message": "Add icons for gen1-gen6 mons",
+        "github_account": "DizzyEggg"
+      },
+      {
+        "sha": "b407967cea7c6a335c569a12ee5c4e33d7a224f9",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b407967cea7c6a335c569a12ee5c4e33d7a224f9",
+        "message": "Gen5 sprites and icon placeholder data",
+        "github_account": "DizzyEggg"
+      }
+    ]
+  },
+  {
+    "path": "weezing_galarian_back.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "weezing_galarian_front.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "c675c92a1d818587b0554f046b576d721bdcac79",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d818587b0554f046b576d721bdcac79",
+        "message": "Add Gen 8 Pokemon data.",
+        "github_account": "ultima-soul"
+      }
+    ]
+  },
+  {
+    "path": "weezing_galarian_icon.png",
+    "commits": [
+      {
+        "sha": "3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/3442b09852c846bf1c7d99ce9188599bf15a0757",
+        "message": "Renamed folders and symbols to match species defines (#5581)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/5b5b9e7e5099ffd2c3aae1df5109fb8671af24bb",
+        "message": "Revert \"Organized pokemon graphics by generation (#3868)\" (#3959)\n\nThis reverts commit b077d927314c75e309c214cde57f818a5ddd1435.",
+        "github_account": "AlexOn1ine"
+      },
+      {
+        "sha": "b077d927314c75e309c214cde57f818a5ddd1435",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/b077d927314c75e309c214cde57f818a5ddd1435",
+        "message": "Organized pokemon graphics by generation (#3868)\n\n* VSync BENCHMARKs and avoid AdvanceRandom in tests (#3867)\r\n\r\n* Organized pokemon graphics per generation\r\n\r\ntitle says it all\r\n\r\n---------\r\n\r\nCo-authored-by: Martin Griffin <martinrgriffin@gmail.com>",
+        "github_account": "MartyKen"
+      },
+      {
+        "sha": "76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/76075ffe57857043569fabb707af7ba0a02ad4f2",
+        "message": "Revert unneeded sprite changes from 3051 (#3205)",
+        "github_account": "AsparagusEduardo"
+      },
+      {
+        "sha": "d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/d385ae3d5eb33b0b83f88b3e3c08a58ba6aa39e7",
+        "message": "Killed the bKGD invalid index warning\nSpecial thanks to:\n-Blackforest for the tips on how to go about fixing the sprites with GIMP.\n-Dat.S.H for a tip on how to make the conversion process easier to perform.\n-Psf for actually going and doing it.",
+        "github_account": "LOuroboros"
+      },
+      {
+        "sha": "badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "url": "https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d8652bd4a7537dc2eda7b38001660bfd",
+        "message": "Added missing gen8 battle sprites and available icons - Fix Arceus, Palkia, Kyurem White and Black - Implement 1 tile 10 palettes system for Alcremie",
+        "github_account": "Blackforest92"
+      }
+    ]
+  }
+]
