@@ -3,6 +3,12 @@ Route24_Text_JustEarnedFabulousPrize::
     .string "five contest TRAINERS!\p"
     .string "You just earned a fabulous prize!$"
 
+Route24_Text_ChallengeIncomplete::
+    .string "The prize is for beating all five\n"
+    .string "TRAINERS along NUGGET BRIDGE.\p"
+    .string "Some train beside the bridge.\n"
+    .string "Talk to them to challenge them!$"
+
 Route24_Text_ReceivedNuggetFromRewardGiver::
     .string "{PLAYER} received a NUGGET\n"
     .string "from the challenge host!$"

@@ -7,6 +7,13 @@ def state():
  return tuple(map(int,m.groups()))
 surf='--surf' in sys.argv;name=sys.argv[1];groups=json.load(open('data/maps/map_groups.json'));v=state();assert groups[groups['group_order'][v[1]]][v[2]]==name, ('Wrong map',v,name)
 goal=tuple(map(int,sys.argv[2:4]));m=json.load(open('data/maps/'+name+'/map.json'));l=next(x for x in json.load(open('data/layouts/layouts.json'))['layouts'] if x['id']==m['layout']);w,h=l['width'],l['height'];b=struct.unpack('<'+'H'*(w*h),Path(l['blockdata_filepath']).read_bytes());
+try:
+ liveMap=(base/'live-map.txt').read_text().splitlines();meta=tuple(map(int,liveMap[0].split()))
+ if meta==(v[1],v[2],w,h):
+  liveBlocks=tuple(map(int,liveMap[1].split()))
+  if len(liveBlocks)==w*h:b=liveBlocks
+except (FileNotFoundError,ValueError,IndexError):pass
+
 def plan():
  v=state()
  occ={(o['x'],o['y']) for o in m['object_events']}

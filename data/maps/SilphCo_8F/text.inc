@@ -27,14 +27,14 @@ SilphCo_8F_Text_ParkerPostBattle::
 
 SilphCo_8F_Text_Grunt2Intro::
     .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+    .string "SIBLINGS!$"
 
 SilphCo_8F_Text_Grunt2Defeat::
     .string "Whoo!\n"
-    .string "Oh, Brothers!$"
+    .string "Oh, Siblings!$"
 
 SilphCo_8F_Text_Grunt2PostBattle::
-    .string "I'll leave you up to my brothers.$"
+    .string "I'll leave you up to my siblings.$"
 
 SilphCo_8F_Text_FloorSign::
     .string "SILPH CO. HEAD OFFICE\n"

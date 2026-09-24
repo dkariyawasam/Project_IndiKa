@@ -22,8 +22,7 @@ Route12_NorthEntrance_1F_EventScript_Guard::
 	faceplayer
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_GuardOwnBike
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_GuardRentalActive
+	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_GuardRentalActive
 	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route12_NorthEntrance_1F_EventScript_GuardDeclineRental
 	checkmoney 500
@@ -89,8 +88,7 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
 	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent
 Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce::
@@ -130,8 +128,7 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow::
 Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, EventScript_SetExitingCyclingRoad
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, FALSE, EventScript_SetExitingCyclingRoad
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, EventScript_SetExitingCyclingRoad
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	call_if_eq VAR_0x8008, 0, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft
 	call_if_eq VAR_0x8008, 1, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardRight
