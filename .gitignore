@@ -66,3 +66,8 @@ build-cmake-*/
 .cache/
 CMakeLists.txt
 compile_commands.json
+
+# Python runtime caches and local emulator states
+__pycache__/
+*.py[cod]
+*.ss[0-9]

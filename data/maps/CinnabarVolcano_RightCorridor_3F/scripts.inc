@@ -16,6 +16,10 @@ CinnabarVolcano_RightCorridor_3F_EventScript_CheckKogaScene::
 
 CinnabarVolcano_RightCorridor_3F_EventScript_ShowJanine::
 	clearflag FLAG_HIDE_CINNABAR_VOLCANO_JANINE
+	goto_if_unset FLAG_KOGA_VOLCANO_LAVIC_STONE_PULLED, CinnabarVolcano_RightCorridor_3F_EventScript_EndTransition
+	setobjectxyperm LOCALID_KOGA, 4, 15
+	setobjectxyperm LOCALID_JANINE, 5, 15
+CinnabarVolcano_RightCorridor_3F_EventScript_EndTransition::
 	end
 
 CinnabarVolcano_RightCorridor_3F_EventScript_Kira::

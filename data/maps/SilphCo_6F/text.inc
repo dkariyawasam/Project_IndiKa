@@ -39,14 +39,14 @@ SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
 
 SilphCo_6F_Text_Grunt1Intro::
     .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+    .string "SIBLINGS!$"
 
 SilphCo_6F_Text_Grunt1Defeat::
     .string "Flame out!$"
 
 SilphCo_6F_Text_Grunt1PostBattle::
     .string "No matter!\n"
-    .string "My brothers will avenge me!$"
+    .string "My siblings will avenge me!$"
 
 SilphCo_6F_Text_TaylorIntro::
     .string "That rotten PRESIDENT!\p"

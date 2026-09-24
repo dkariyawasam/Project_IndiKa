@@ -39,8 +39,8 @@ PokemonMansion_3F_Text_RivalReady::
     .string "useless after all.\p"
     .string "I don't know what's waiting below,\n"
     .string "but it isn't nothing.\p"
-    .string "So? Are you ready, or are you\n"
-    .string "going to turn back?$"
+    .string "So? Ready to battle me and prove\n"
+    .string "you can handle it?$"
 
 PokemonMansion_3F_Text_RivalNotReady::
     .string "{RIVAL}: Hah!\n"

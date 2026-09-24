@@ -1,0 +1,5334 @@
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATICATE is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe RATICATE was seeded!
+Foe RATICATE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATICATE is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe RATICATE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATICATE is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe RATICATE’s health is|sapped by LEECH SEED!
+Foe RATICATE|fainted!|
+
+JYNX gained|421 EXP. Points!|
+VENUSAUR gained|421 EXP. Points!|
+RIVAL GGGGGGG sent|out KADABRA!
+|ÁÁKADABRA|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe KADABRA|fell asleep!
+Foe KADABRA is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe KADABRA woke up!
+Foe KADABRA used|FUTURE SIGHT!
+Foe KADABRA foresaw|an attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe KADABRA used|RECOVER!
+Foe KADABRA regained|health!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe KADABRA evaded|the attack!
+Foe KADABRA used|REFLECT!
+Foe’s REFLECT|raised DEFENSE!
+VENUSAUR took the|FUTURE SIGHT attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe KADABRA was seeded!
+Foe KADABRA used|FUTURE SIGHT!
+Foe KADABRA foresaw|an attack!
+Foe KADABRA’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe KADABRA|fell asleep!
+Foe KADABRA is fast|asleep.
+Foe KADABRA’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe KADABRA woke up!
+Foe KADABRA used|FUTURE SIGHT!
+But it failed!
+Foe KADABRA’s health is|sapped by LEECH SEED!
+VENUSAUR took the|FUTURE SIGHT attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe KADABRA|fainted!|
+
+VENUSAUR gained|1087 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 37!|こ|
+RIVAL GGGGGGG sent|out CHARIZARD!
+|ÁÁCHARIZARD|ÀÎ♂
+Foe’s REFLECT|wore off!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD used|FLAMETHROWER!
+It’s super effective!
+VENUSAUR used|SLEEP POWDER!
+Foe CHARIZARD|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe CHARIZARD was seeded!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+|ÁÁCHARIZARD|ÀÎ♂
+VENUSAUR, come back!
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe CHARIZARD is fast|asleep.
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe CHARIZARD woke up!
+Foe CHARIZARD used|SMOKESCREEN!
+NINETALES’s accuracy|fell!
+NINETALES used|CONFUSE RAY!
+Foe CHARIZARD became|confused!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+NINETALES’s|attack missed!
+Foe CHARIZARD is|confused!
+Foe CHARIZARD used|WING ATTACK!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+A critical hit!
+Foe CHARIZARD is|confused!
+Foe CHARIZARD used|WING ATTACK!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+Foe CHARIZARD is|confused!
+Foe CHARIZARD used|WING ATTACK!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+Foe CHARIZARD|fainted!|
+
+NINETALES gained|850 EXP. Points!|
+VENUSAUR gained|850 EXP. Points!|
+Player defeated|RIVAL GGGGGGG!|
+Tch.|Fine, you’re ready enough.|Ì
+RED got ¥1368|for winning!|
+|ÁÁELECTRODE|ÀÎ
+SCIENTIST TED|would like to battle!|
+SCIENTIST TED sent|out ELECTRODE!|Ëざ
+|ÁÁELECTRODE|ÀÎ
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+Foe ELECTRODE used|SPARK!
+JYNX is paralyzed!|It may be unable to move!
+JYNX is paralyzed!|It can’t move!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+Foe ELECTRODE used|SCREECH!
+JYNX’s DEFENSE|harshly fell!
+JYNX used|ICE PUNCH!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+Foe ELECTRODE used|SELFDESTRUCT!
+JYNX|fainted!|
+
+Foe ELECTRODE|fainted!|
+
+|ÁÁELECTRODE|ÀÎ
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+SCIENTIST TED sent|out WEEZING!
+|ÁÁWEEZING|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe WEEZING was seeded!
+Foe WEEZING used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe WEEZING used|SMOG!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe WEEZING used|SLUDGE!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe WEEZING used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+Foe WEEZING|fainted!|
+
+VENUSAUR gained|1074 EXP. Points!|
+Player defeated|SCIENTIST TED!|
+Ouch!|Ì
+RED got ¥348|for winning!|
+|ÁÁKOFFING|ÀÎ♂
+Wild KOFFING appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+|ŒÙ Got away safely!|
+|ÁÁGRIMER|ÀÎ♂
+Wild GRIMER appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+|ŒÙ Got away safely!|
+|ÁÁDITTO|ÀÎ
+Wild DITTO appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+|ŒÙ Got away safely!|
+|ÁÁDITTO|ÀÎ
+Wild DITTO appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+|ŒÙ Got away safely!|
+|ÁÁGROWLITHE|ÀÎ♂
+BURGLAR LEWIS|would like to battle!|
+BURGLAR LEWIS sent|out GROWLITHE!|Ëざ
+|ÁÁGROWLITHE|ÀÎ♂
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+Foe GROWLITHE’s INTIMIDATE|cuts ARIADOS’s ATTACK!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GROWLITHE used|TAKE DOWN!
+Foe GROWLITHE is hit|with recoil!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GROWLITHE used|ODOR SLEUTH!
+Foe GROWLITHE identified|ARIADOS!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GROWLITHE used|FLAME WHEEL!
+It’s super effective!
+ARIADOS used|NIGHT SHADE!
+Foe GROWLITHE|fainted!|
+
+ARIADOS gained|663 EXP. Points!|
+|ÁÁARIADOS|ÀÎ♂
+ARIADOS grew to|LV. 35!|こ|
+BURGLAR LEWIS sent|out PONYTA!
+|ÁÁPONYTA|ÀÎ♂
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe PONYTA used|STOMP!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe PONYTA used|FIRE SPIN!
+Foe PONYTA’s|attack missed!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe PONYTA used|EMBER!
+It’s super effective!
+ARIADOS|fainted!|
+
+|ÁÁPONYTA|ÀÎ♂
+Go for it, VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe PONYTA|fainted!|
+
+VENUSAUR gained|1107 EXP. Points!|
+Player defeated|BURGLAR LEWIS!|
+Awooh!|Ì
+RED got ¥2992|for winning!|
+|ÁÁGRIMER|Àこ♀
+Wild GRIMER appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+|ŒÙ Got away safely!|
+|ÁÁGRIMER|Àこ♀
+Wild GRIMER appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+|ŒÙ Got away safely!|
+|ÁÁKOFFING|ÀÎ♂
+Wild KOFFING appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+|ŒÙ Got away safely!|
+|ÁÁSTARYU|ÀÎ
+TUBER ALEXIS|would like to battle!|
+TUBER ALEXIS sent|out STARYU!|Ëざ
+|ÁÁSTARYU|ÀÎ
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+Foe STARYU|fainted!|
+
+JYNX gained|135 EXP. Points!|
+TUBER ALEXIS sent|out STARYU!
+|ÁÁSTARYU|ÀÎ
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+Foe STARYU|fainted!|
+
+JYNX gained|159 EXP. Points!|
+TUBER ALEXIS sent|out KRABBY!
+|ÁÁKRABBY|ÀÎ♂
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+Foe KRABBY|fainted!|
+
+JYNX gained|220 EXP. Points!|
+TUBER ALEXIS sent|out KRABBY!
+|ÁÁKRABBY|ÀÎ♂
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+A critical hit!
+It’s not very effective…
+Foe KRABBY|fainted!|
+
+JYNX gained|246 EXP. Points!|
+Player defeated|TUBER ALEXIS!|
+Splashed out!|Ì
+RED got ¥40|for winning!|
+|ÁÁSKIPLOOM|Àこ♀
+Wild SKIPLOOM appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁSENTRET|ÀÎ♂
+SCOUT ARLO|would like to battle!|
+SCOUT ARLO sent|out SENTRET!|Ëざ
+|ÁÁSENTRET|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+Foe SENTRET|fainted!|
+
+JYNX gained|121 EXP. Points!|
+SCOUT ARLO sent|out HOPPIP!
+|ÁÁHOPPIP|ÀÎ♂
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Foe HOPPIP|fainted!|
+
+JYNX gained|174 EXP. Points!|
+|ÁÁJYNX|Àこ♀
+JYNX grew to|LV. 31!|こ|
+Player defeated|SCOUT ARLO!|
+You found the path through me!|Ì
+RED got ¥44|for winning!|
+|ÁÁPIDGEY|Àこ♀
+YOUNGSTER JANICE|would like to battle!|
+YOUNGSTER JANICE sent|out PIDGEY!|Ëざ
+|ÁÁPIDGEY|Àこ♀
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Foe PIDGEY|fainted!|
+
+JYNX gained|117 EXP. Points!|
+YOUNGSTER JANICE sent|out PIDGEY!
+|ÁÁPIDGEY|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Foe PIDGEY|fainted!|
+
+JYNX gained|117 EXP. Points!|
+Player defeated|YOUNGSTER JANICE!|
+You and your POKéMON move so well|together!|Ì
+RED got ¥40|for winning!|
+|ÁÁHOPPIP|Àこ♀
+Wild HOPPIP appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁPARAS|Àこ♀
+Wild PARAS appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁDIGLETT|ÀÎ♂
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Wild DIGLETT|fainted!|
+
+JYNX gained|69 EXP. Points!|
+|ÁÁPARAS|Àこ♀
+Wild PARAS appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁMR. MIME|Àこ♀
+Wild MR. MIME appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁDIGLETT|ÀÎ♂
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Wild DIGLETT|fainted!|
+
+JYNX gained|69 EXP. Points!|
+|ÁÁDIGLETT|ÀÎ♂
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Wild DIGLETT|fainted!|
+
+JYNX gained|92 EXP. Points!|
+|ÁÁDIGLETT|ÀÎ♂
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁDIGLETT|ÀÎ♂
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁDIGLETT|Àこ♀
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Wild DIGLETT|fainted!|
+
+JYNX gained|69 EXP. Points!|
+|ÁÁDIGLETT|Àこ♀
+Wild DIGLETT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+|ŒÙ Got away safely!|
+|ÁÁARBOK|ÀÎ♂
+TEAM ROCKET GRUNT|would like to battle!|
+TEAM ROCKET GRUNT sent|out ARBOK!|Ëざ
+|ÁÁARBOK|ÀÎ♂
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+Foe ARBOK’s INTIMIDATE|cuts CHINGLING’s ATTACK!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe ARBOK used|SCREECH!
+Foe ARBOK’s|attack missed!
+CHINGLING used|CONFUSION!
+It’s super effective!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe ARBOK used|GLARE!
+CHINGLING is paralyzed!|It may be unable to move!
+CHINGLING is paralyzed!|It can’t move!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe ARBOK used|POISON STING!
+CHINGLING used|CONFUSION!
+It’s super effective!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe ARBOK used|BITE!
+It’s super effective!
+CHINGLING used|CONFUSION!
+It’s super effective!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe ARBOK used|POISON STING!
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe ARBOK|fainted!|
+
+CHINGLING gained|1039 EXP. Points!|
+|ÁÁCHINGLING|ÀÎ♂
+CHINGLING grew to|LV. 31!|こ|
+Player defeated|TEAM ROCKET GRUNT!|
+Boom!|Ì
+RED got ¥1056|for winning!|
+|ÁÁMAGNETON|ÀÎ
+SCIENTIST BEAU|would like to battle!|
+SCIENTIST BEAU sent|out MAGNETON!|Ëざ
+|ÁÁMAGNETON|ÀÎ
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe MAGNETON used|SPARK!
+CHINGLING used|CONFUSION!
+It’s not very effective…
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe MAGNETON used|SONICBOOM!
+CHINGLING|fainted!|
+
+|ÁÁMAGNETON|ÀÎ
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe MAGNETON was seeded!
+Foe MAGNETON used|SONICBOOM!
+Foe MAGNETON’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAGNETON used|SUPERSONIC!
+VENUSAUR became|confused!
+Foe MAGNETON’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR is|confused!
+It hurt itself in its|confusion!
+Foe MAGNETON used|THUNDER WAVE!
+VENUSAUR is paralyzed!|It may be unable to move!
+Foe MAGNETON’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNETON used|SPARK!
+It’s not very effective…
+VENUSAUR is|confused!
+It hurt itself in its|confusion!
+Foe MAGNETON’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNETON used|SONICBOOM!
+VENUSAUR snapped|out of confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAGNETON|fainted!|
+
+VENUSAUR gained|897 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 38!|こ|
+SCIENTIST BEAU sent|out KOFFING!
+|ÁÁKOFFING|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KOFFING used|TACKLE!
+VENUSAUR is paralyzed!|It can’t move!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KOFFING used|SMOG!
+Foe KOFFING’s|attack missed!
+VENUSAUR used|LEECH SEED!
+Foe KOFFING was seeded!
+Foe KOFFING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KOFFING used|TACKLE!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe KOFFING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KOFFING used|SLUDGE!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe KOFFING|fainted!|
+
+VENUSAUR gained|634 EXP. Points!|
+SCIENTIST BEAU sent|out WEEZING!
+|ÁÁWEEZING|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+VENUSAUR used|LEECH SEED!
+Foe WEEZING evaded|the attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SLUDGE!
+VENUSAUR used|LEECH SEED!
+Foe WEEZING was seeded!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SMOG!
+Foe WEEZING’s|attack missed!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SLUDGE!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SMOG!
+Foe WEEZING’s|attack missed!
+VENUSAUR is paralyzed!|It can’t move!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|SMOG!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WEEZING used|TACKLE!
+VENUSAUR is paralyzed!|It can’t move!
+Foe WEEZING’s health is|sapped by LEECH SEED!
+Foe WEEZING|fainted!|
+
+VENUSAUR gained|963 EXP. Points!|
+SCIENTIST BEAU sent|out MAGNEMITE!
+|ÁÁMAGNEMITE|ÀÎ
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNEMITE used|SPARK!
+It’s not very effective…
+VENUSAUR used|LEECH SEED!
+Foe MAGNEMITE was seeded!
+Foe MAGNEMITE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNEMITE used|SUPERSONIC!
+Foe MAGNEMITE’s|attack missed!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe MAGNEMITE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNEMITE used|SONICBOOM!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe MAGNEMITE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNEMITE used|SONICBOOM!
+VENUSAUR is paralyzed!|It can’t move!
+Foe MAGNEMITE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAGNEMITE used|SPARK!
+A critical hit!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAGNEMITE’s health is|sapped by LEECH SEED!
+Foe MAGNEMITE|fainted!|
+
+VENUSAUR gained|495 EXP. Points!|
+Player defeated|SCIENTIST BEAU!|
+Dang!|Blast it!|Ì
+RED got ¥312|for winning!|
+|ÁÁGOLBAT|Àこ♀
+TEAM ROCKET GRUNT|would like to battle!|
+TEAM ROCKET GRUNT sent|out GOLBAT!|Ëざ
+|ÁÁGOLBAT|Àこ♀
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|SUPERSONIC!
+ARIADOS became|confused!
+ARIADOS is|confused!
+It hurt itself in its|confusion!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|BITE!
+ARIADOS is|confused!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|BITE!
+ARIADOS is|confused!
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|BITE!
+ARIADOS flinched!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|BITE!
+ARIADOS flinched!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GOLBAT used|BITE!
+ARIADOS is|confused!
+ARIADOS used|NIGHT SHADE!
+Foe GOLBAT|fainted!|
+
+ARIADOS gained|1026 EXP. Points!|
+TEAM ROCKET GRUNT sent|out DROWZEE!
+|ÁÁDROWZEE|Àこ♀
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS snapped|out of confusion!
+ARIADOS used|NIGHT SHADE!
+Foe DROWZEE used|MEDITATE!
+Foe DROWZEE’s ATTACK|rose!
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS used|NIGHT SHADE!
+Foe DROWZEE used|CONFUSION!
+It’s super effective!
+ARIADOS became|confused!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS is|confused!
+It hurt itself in its|confusion!
+Foe DROWZEE used|HEADBUTT!
+ARIADOS|fainted!|
+
+|ÁÁDROWZEE|Àこ♀
+Your foe’s weak!|Get ’em, VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe DROWZEE used|MEDITATE!
+Foe DROWZEE’s ATTACK|rose!
+VENUSAUR used|RAZOR LEAF!
+Foe DROWZEE|fainted!|
+
+VENUSAUR gained|612 EXP. Points!|
+TEAM ROCKET GRUNT sent|out HYPNO!
+|ÁÁHYPNO|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+VENUSAUR used|LEECH SEED!
+Foe HYPNO was seeded!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HYPNO used|HEADBUTT!
+VENUSAUR is paralyzed!|It can’t move!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HYPNO used|HEADBUTT!
+VENUSAUR used|RAZOR LEAF!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+VENUSAUR used|RAZOR LEAF!
+Foe HYPNO|fainted!|
+
+VENUSAUR gained|990 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 39!|こ|
+Player defeated|TEAM ROCKET GRUNT!|
+Warg!|Brothers, I lost!|Ì
+RED got ¥896|for winning!|
+|ÁÁRATICATE|Àこ♀
+TEAM ROCKET GRUNT|would like to battle!|
+TEAM ROCKET GRUNT sent|out RATICATE!|Ëざ
+|ÁÁRATICATE|Àこ♀
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|HYPER FANG!
+Foe RATICATE’s|attack missed!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|QUICK ATTACK!
+CHINGLING used|CONFUSION!
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|QUICK ATTACK!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|TAIL WHIP!
+CHINGLING’s DEFENSE|fell!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|TAIL WHIP!
+CHINGLING’s DEFENSE|fell!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe RATICATE used|HYPER FANG!
+CHINGLING|fainted!|
+
+|ÁÁRATICATE|Àこ♀
+Your foe’s weak!|Get ’em, VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe RATICATE|fainted!|
+
+VENUSAUR gained|696 EXP. Points!|
+TEAM ROCKET GRUNT sent|out HYPNO!
+|ÁÁHYPNO|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe HYPNO evaded|the attack!
+Foe HYPNO used|DISABLE!
+VENUSAUR’s LEECH SEED|was disabled!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR’s LEECH SEED|is disabled!|
+|ÈÈ|ÇÒÓÔRAZOR LEAF
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+VENUSAUR is disabled|no more!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe HYPNO was seeded!
+Foe HYPNO used|DISABLE!
+Foe HYPNO’s|attack missed!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe HYPNO used|DISABLE!
+VENUSAUR’s RAZOR LEAF|was disabled!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe HYPNO stayed awake|using its INSOMNIA!
+Foe HYPNO used|CONFUSION!
+It’s super effective!
+VENUSAUR is disabled|no more!
+Foe HYPNO’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe HYPNO|fainted!|
+
+VENUSAUR gained|990 EXP. Points!|
+TEAM ROCKET GRUNT sent|out RATICATE!
+|ÁÁRATICATE|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe RATICATE was seeded!
+Foe RATICATE used|SCARY FACE!
+VENUSAUR’s SPEED|harshly fell!
+Foe RATICATE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATICATE used|TAIL WHIP!
+VENUSAUR’s DEFENSE|fell!
+VENUSAUR used|RAZOR LEAF!
+Foe RATICATE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATICATE used|HYPER FANG!
+VENUSAUR used|RAZOR LEAF!
+Foe RATICATE|fainted!|
+
+VENUSAUR gained|696 EXP. Points!|
+Player defeated|TEAM ROCKET GRUNT!|
+I give up!|Ì
+RED got ¥896|for winning!|
+|ÁÁPIDGEOT|ÀÎ♂
+RIVAL GGGGGGG|would like to battle!|
+RIVAL GGGGGGG sent|out PIDGEOT!|Ëざ
+|ÁÁPIDGEOT|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe PIDGEOT used|WING ATTACK!
+JYNX used|LOVELY KISS!
+Foe PIDGEOT|fell asleep!
+What will|JYNX do?
+|ÁÁPIDGEOT|ÀÎ♂
+Foe PIDGEOT is fast|asleep.
+What will|JYNX do?
+|ÈÈ|ÇÒÓÔICE PUNCH
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+Foe PIDGEOT woke up!
+Foe PIDGEOT used|WING ATTACK!
+JYNX used|ICE PUNCH!
+It’s super effective!
+What will|JYNX do?
+|ÁÁPIDGEOT|ÀÎ♂
+JYNX, OK!|Come back!
+Do it! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe PIDGEOT used|QUICK ATTACK!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe PIDGEOT|fell asleep!
+Foe PIDGEOT is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe PIDGEOT was seeded!
+Foe PIDGEOT is fast|asleep.
+Foe PIDGEOT’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe PIDGEOT is fast|asleep.
+Foe PIDGEOT’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe PIDGEOT is fast|asleep.
+Foe PIDGEOT’s health is|sapped by LEECH SEED!
+Foe PIDGEOT|fainted!|
+
+JYNX gained|681 EXP. Points!|
+VENUSAUR gained|681 EXP. Points!|
+RIVAL GGGGGGG sent|out EXEGGCUTE!
+|ÁÁEXEGGCUTE|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe EXEGGCUTE used|STUN SPORE!
+VENUSAUR is paralyzed!|It may be unable to move!
+What will|VENUSAUR do?
+|ÁÁEXEGGCUTE|ÀÎ♂
+VENUSAUR, come back!
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+Foe EXEGGCUTE used|CONFUSION!
+It’s super effective!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+ARIADOS used|FURY SWIPES!
+
+Hit 5 time(s)!
+Foe EXEGGCUTE used|STUN SPORE!
+ARIADOS is paralyzed!|It may be unable to move!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔBUG
+Foe EXEGGCUTE used|CONFUSION!
+A critical hit!
+It’s super effective!
+ARIADOS|fainted!|
+
+|ÁÁEXEGGCUTE|ÀÎ♂
+Do it! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES used|EMBER!
+It’s super effective!
+Foe EXEGGCUTE used|STUN SPORE!
+NINETALES is paralyzed!|It may be unable to move!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe EXEGGCUTE used|CONFUSION!
+NINETALES became|confused!
+NINETALES is|confused!
+It hurt itself in its|confusion!
+What will|NINETALES do?
+|ÁÁEXEGGCUTE|ÀÎ♂
+Foe EXEGGCUTE used|CONFUSION!
+A critical hit!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES used|EMBER!
+It’s super effective!
+Foe EXEGGCUTE|fainted!|
+
+NINETALES gained|399 EXP. Points!|
+VENUSAUR gained|399 EXP. Points!|
+RIVAL GGGGGGG sent|out ALAKAZAM!
+|ÁÁALAKAZAM|ÀÎ♂
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe ALAKAZAM used|CALM MIND!
+Foe ALAKAZAM’s SP. ATK|rose!
+Foe ALAKAZAM’s SP. DEF|rose!
+NINETALES used|CONFUSE RAY!
+Foe ALAKAZAM became|confused!
+What will|NINETALES do?
+|ÁÁALAKAZAM|ÀÎ♂
+NINETALES, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe ALAKAZAM is|confused!
+Foe ALAKAZAM used|FUTURE SIGHT!
+Foe ALAKAZAM foresaw|an attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe ALAKAZAM is|confused!
+It hurt itself in its|confusion!
+VENUSAUR used|LEECH SEED!
+Foe ALAKAZAM was seeded!
+Foe ALAKAZAM’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+|ÁÁALAKAZAM|ÀÎ♂
+Foe ALAKAZAM is|confused!
+It hurt itself in its|confusion!
+Foe ALAKAZAM’s health is|sapped by LEECH SEED!
+VENUSAUR took the|FUTURE SIGHT attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe ALAKAZAM snapped|out of confusion!
+Foe ALAKAZAM used|FUTURE SIGHT!
+Foe ALAKAZAM foresaw|an attack!
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+Foe ALAKAZAM’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe ALAKAZAM used|FUTURE SIGHT!
+But it failed!
+VENUSAUR used|SLEEP POWDER!
+Foe ALAKAZAM|fell asleep!
+Foe ALAKAZAM’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe ALAKAZAM is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe ALAKAZAM|fainted!|
+
+NINETALES gained|697 EXP. Points!|
+NINETALES grew to|LV. 31!|こ|
+VENUSAUR gained|697 EXP. Points!|
+RIVAL GGGGGGG sent|out CHARIZARD!
+|ÁÁCHARIZARD|ÀÎ♂
+VENUSAUR took the|FUTURE SIGHT attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+VENUSAUR used|SLEEP POWDER!
+Foe CHARIZARD|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe CHARIZARD evaded|the attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe CHARIZARD evaded|the attack!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe CHARIZARD woke up!
+Foe CHARIZARD used|SMOKESCREEN!
+VENUSAUR’s accuracy|fell!
+VENUSAUR used|LEECH SEED!
+Foe CHARIZARD was seeded!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+|ÁÁCHARIZARD|ÀÎ♂
+VENUSAUR, come back!
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe CHARIZARD used|FLAMETHROWER!
+NINETALES’s FLASH FIRE|raised its FIRE power!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe CHARIZARD used|WING ATTACK!
+NINETALES used|CONFUSE RAY!
+Foe CHARIZARD became|confused!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+|ÁÁCHARIZARD|ÀÎ♂
+Foe CHARIZARD is|confused!
+Foe CHARIZARD used|WING ATTACK!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+Foe CHARIZARD is|confused!
+Foe CHARIZARD used|WING ATTACK!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+|ÁÁCHARIZARD|ÀÎ♂
+Foe CHARIZARD is|confused!
+It hurt itself in its|confusion!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+Foe CHARIZARD snapped|out of confusion!
+Foe CHARIZARD used|SMOKESCREEN!
+NINETALES’s accuracy|fell!
+Foe CHARIZARD’s health is|sapped by LEECH SEED!
+Foe CHARIZARD|fainted!|
+
+NINETALES gained|895 EXP. Points!|
+VENUSAUR gained|895 EXP. Points!|
+VENUSAUR grew to|LV. 40!|こ|
+RIVAL GGGGGGG sent|out GYARADOS!
+|ÁÁGYARADOS|ÀÎ♂
+Foe GYARADOS’s INTIMIDATE|cuts NINETALES’s ATTACK!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe GYARADOS used|LEER!
+NINETALES’s DEFENSE|fell!
+NINETALES used|CONFUSE RAY!
+Foe GYARADOS became|confused!
+What will|NINETALES do?
+|ÁÁGYARADOS|ÀÎ♂
+NINETALES, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe GYARADOS is|confused!
+It hurt itself in its|confusion!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe GYARADOS was seeded!
+Foe GYARADOS is|confused!
+It hurt itself in its|confusion!
+Foe GYARADOS’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe GYARADOS snapped|out of confusion!
+Foe GYARADOS used|DRAGON RAGE!
+Foe GYARADOS’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe GYARADOS|fainted!|
+
+NINETALES gained|802 EXP. Points!|
+VENUSAUR gained|802 EXP. Points!|
+Player defeated|RIVAL GGGGGGG!|
+Tch!|You might actually make it|to the top floor.|Ì
+RED got ¥1440|for winning!|
+|ÁÁCUBONE|Àこ♀
+TEAM ROCKET GRUNT|would like to battle!|
+TEAM ROCKET GRUNT sent|out CUBONE!|Ëざ
+|ÁÁCUBONE|Àこ♀
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe CUBONE|fainted!|
+
+VENUSAUR gained|595 EXP. Points!|
+TEAM ROCKET GRUNT sent|out DROWZEE!
+|ÁÁDROWZEE|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe DROWZEE was seeded!
+Foe DROWZEE used|PSYCHIC!
+It’s super effective!
+Foe DROWZEE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe DROWZEE used|MEDITATE!
+Foe DROWZEE’s ATTACK|rose!
+Foe DROWZEE’s health is|sapped by LEECH SEED!
+Foe DROWZEE|fainted!|
+
+VENUSAUR gained|699 EXP. Points!|
+TEAM ROCKET GRUNT sent|out MAROWAK!
+|ÁÁMAROWAK|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe MAROWAK used|FOCUS ENERGY!
+Foe MAROWAK is getting|pumped!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe MAROWAK|fainted!|
+
+VENUSAUR gained|849 EXP. Points!|
+Player defeated|TEAM ROCKET GRUNT!|
+Don’t…|Please!|Ì
+RED got ¥1024|for winning!|
+|ÁÁPERSIAN|ÀÎ♂
+BOSS GIOVANNI|would like to battle!|
+BOSS GIOVANNI sent|out PERSIAN!|Ëざ
+|ÁÁPERSIAN|ÀÎ♂
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PERSIAN used|FRUSTRATION!
+VENUSAUR used|SLEEP POWDER!
+Foe PERSIAN|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PERSIAN is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe PERSIAN was seeded!
+Foe PERSIAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PERSIAN is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe PERSIAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PERSIAN is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe PERSIAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PERSIAN is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+Foe PERSIAN|fainted!|
+
+VENUSAUR gained|1267 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 41!|こ|
+VENUSAUR is trying to|learn GROWTH.|
+But, VENUSAUR can’t learn|more than four moves.|
+Delete a move to make|room for GROWTH?
+|ËîStop learning|GROWTH?
+VENUSAUR did not learn|GROWTH.|
+BOSS GIOVANNI sent|out KANGASKHAN!
+|ÁÁKANGASKHAN|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN used|BRICK BREAK!
+It’s not very effective…
+VENUSAUR used|SLEEP POWDER!
+Foe KANGASKHAN|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN is fast|asleep.
+VENUSAUR used|LEECH SEED!
+Foe KANGASKHAN was seeded!
+Foe KANGASKHAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN woke up!
+Foe KANGASKHAN used|BRICK BREAK!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+Foe KANGASKHAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+|ÈÈ|ÇÒÓÔLEECH SEED
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN used|BRICK BREAK!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+Foe KANGASKHAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN used|BRICK BREAK!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+Foe KANGASKHAN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe KANGASKHAN used|BRICK BREAK!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe KANGASKHAN’s health is|sapped by LEECH SEED!
+Foe KANGASKHAN|fainted!|
+
+VENUSAUR gained|1537 EXP. Points!|
+BOSS GIOVANNI sent|out NIDOQUEEN!
+|ÁÁNIDOQUEEN|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe NIDOQUEEN|fell asleep!
+Foe NIDOQUEEN is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe NIDOQUEEN was seeded!
+Foe NIDOQUEEN is fast|asleep.
+Foe NIDOQUEEN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOQUEEN is fast|asleep.
+Foe NIDOQUEEN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOQUEEN is fast|asleep.
+Foe NIDOQUEEN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOQUEEN woke up!
+Foe NIDOQUEEN used|SLUDGE BOMB!
+Foe NIDOQUEEN’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOQUEEN|fainted!|
+
+VENUSAUR gained|1746 EXP. Points!|
+BOSS GIOVANNI sent|out NIDOKING!
+|ÁÁNIDOKING|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe NIDOKING|fell asleep!
+Foe NIDOKING is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe NIDOKING was seeded!
+Foe NIDOKING is fast|asleep.
+Foe NIDOKING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOKING is fast|asleep.
+Foe NIDOKING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe NIDOKING is fast|asleep.
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe NIDOKING’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe NIDOKING|fainted!|
+
+VENUSAUR gained|1755 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 42!|こ|
+BOSS GIOVANNI sent|out RHYDON!
+|ÁÁRHYDON|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe RHYDON used|EARTHQUAKE!
+
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe RHYDON|fainted!|
+
+VENUSAUR gained|1879 EXP. Points!|
+BOSS GIOVANNI sent|out GYARADOS!
+|ÁÁGYARADOS|ÀÎ♂
+Foe GYARADOS’s INTIMIDATE|cuts VENUSAUR’s ATTACK!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe GYARADOS|fell asleep!
+Foe GYARADOS is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe GYARADOS was seeded!
+Foe GYARADOS is fast|asleep.
+Foe GYARADOS’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe GYARADOS is fast|asleep.
+Foe GYARADOS’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe GYARADOS is fast|asleep.
+Foe GYARADOS’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe GYARADOS|fainted!|
+
+VENUSAUR gained|1971 EXP. Points!|
+Player defeated|BOSS GIOVANNI!|
+No…|The plan was flawless!|Ì
+RED got ¥8600|for winning!|
+|ÁÁRATTATA|ÀÎ♂
+Wild RATTATA appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁRATTATA|Àこ♀
+Wild RATTATA appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁMEOWTH|ÀÎ♂
+Wild MEOWTH appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁAEROPTERYX|Àこ♀
+Wild AEROPTERYX appeared!|
+Go! VENUSAUR!
+|ÁÁ
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁGOLDEEN|ÀÎ♂
+FISHERMAN CALE|would like to battle!|
+FISHERMAN CALE sent|out GOLDEEN!|Ëざ
+|ÁÁGOLDEEN|ÀÎ♂
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe GOLDEEN|fainted!|
+
+VENUSAUR gained|379 EXP. Points!|
+FISHERMAN CALE sent|out SHELLDER!
+|ÁÁSHELLDER|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe SHELLDER|fainted!|
+
+VENUSAUR gained|373 EXP. Points!|
+FISHERMAN CALE sent|out QWILFISH!
+|ÁÁQWILFISH|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe QWILFISH was seeded!
+Foe QWILFISH used|MINIMIZE!
+Foe QWILFISH’s evasiveness|rose!
+Foe QWILFISH’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe QWILFISH used|HARDEN!
+Foe QWILFISH’s DEFENSE|rose!
+Foe QWILFISH’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe QWILFISH|fainted!|
+
+VENUSAUR gained|427 EXP. Points!|
+Player defeated|FISHERMAN CALE!|
+Clean catch!|Ì
+RED got ¥160|for winning!|
+|ÁÁKRABBY|Àこ♀
+TUBER NADIA|would like to battle!|
+TUBER NADIA sent|out KRABBY!|Ëざ
+|ÁÁKRABBY|Àこ♀
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe KRABBY|fainted!|
+
+VENUSAUR gained|147 EXP. Points!|
+TUBER NADIA sent|out STARYU!
+|ÁÁSTARYU|ÀÎ
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe STARYU|fainted!|
+
+VENUSAUR gained|181 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 43!|こ|
+Player defeated|TUBER NADIA!|
+Still nervous!|Ì
+RED got ¥32|for winning!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWOBBUFFET|Àこ♀
+Wild WOBBUFFET appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|Àこ♀
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁSANDSLASH|ÀÎ♂
+RUIN MANIAC FOSTER|would like to battle!|
+RUIN MANIAC FOSTER sent|out SANDSLASH!|Ëざ
+|ÁÁSANDSLASH|ÀÎ♂
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe SANDSLASH|fainted!|
+
+VENUSAUR gained|1047 EXP. Points!|
+RUIN MANIAC FOSTER sent|out GRAVELER!
+|ÁÁGRAVELER|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe GRAVELER|fainted!|
+
+VENUSAUR gained|918 EXP. Points!|
+RUIN MANIAC FOSTER sent|out ONIX!
+|ÁÁONIX|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe ONIX|fainted!|
+
+VENUSAUR gained|786 EXP. Points!|
+Player defeated|RUIN MANIAC FOSTER!|
+CERULEAN CAVE wins today!|Ì
+RED got ¥408|for winning!|
+|ÁÁLICKITUNG|Àこ♀
+Wild LICKITUNG appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|À
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁAEROPTERYX|ÀÎ♂
+Wild AEROPTERYX appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|Àこ♀
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|À
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|Àこ♀
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁLICKITUNG|ÀÎ♂
+Wild LICKITUNG appeared!|
+Go! VENUSAUR!
+|ÁÁ
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWYNAUT|Àこ♀
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWOBBUFFET|Àこ♀
+Wild WOBBUFFET appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁWOBBUFFET|Àこ♀
+Wild WOBBUFFET appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁLICKITUNG|Àこ♀
+Wild LICKITUNG appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RETREAT!
+VENUSAUR fled from|battle!
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+|ŒÙ Got away safely!|
+|ÁÁMEWTWO|ÀÎ
+Wild MEWTWO appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+|ÁÁMEWTWO|ÀÎ
+RED used|MASTER BALL!
+Gotcha!|MEWTWO was caught!|こ|ÎぢÀ|
+VENUSAUR gained|2200 EXP. Points!|
+MEWTWO’s data was|added to the POKéDEX.|
+Give a nickname to the|captured MEWTWO?
+MEWTWO was transferred to|Someone’s PC.|It was placed in |BOX “BOX1.”
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Wild WYNAUT|fainted!|
+
+VENUSAUR gained|37 EXP. Points!|
+|ÁÁWYNAUT|Àこ♀
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Wild WYNAUT used|CHARM!
+VENUSAUR’s ATTACK|harshly fell!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Wild WYNAUT|fainted!|
+
+VENUSAUR gained|37 EXP. Points!|
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Wild WYNAUT|fainted!|
+
+VENUSAUR gained|50 EXP. Points!|
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+|ŒÙ Got away safely!|
+|ÁÁWOBBUFFET|Àこ♀
+Wild WOBBUFFET appeared!|
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Wild WOBBUFFET used|DESTINY BOND!
+Wild WOBBUFFET is trying|to take its foe with it!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Wild WOBBUFFET took|VENUSAUR with it!
+VENUSAUR|fainted!|
+
+Wild WOBBUFFET|fainted!|
+
+|ÁÁLICKITUNG|Àこ♀
+Wild LICKITUNG appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+|ŒÙ Got away safely!|
+|ÁÁWOBBUFFET|ÀÎ♂
+Wild WOBBUFFET appeared!|
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS used|NIGHT SHADE!
+Wild WOBBUFFET used|SAFEGUARD!
+Foe’s party is covered|by a veil!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS used|NIGHT SHADE!
+Wild WOBBUFFET used|DESTINY BOND!
+Wild WOBBUFFET is trying|to take its foe with it!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+ARIADOS used|NIGHT SHADE!
+Wild WOBBUFFET took|ARIADOS with it!
+ARIADOS|fainted!|
+
+Wild WOBBUFFET|fainted!|
+
+|ÁÁGOLBAT|ÀÎ♂
+Wild GOLBAT appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+Can’t escape!|
+Wild GOLBAT used|WING ATTACK!
+It’s super effective!
+What will|BUDEW do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+|ŒÙ Got away safely!|
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+BUDEW used|LEECH SEED!
+Wild WYNAUT was seeded!
+Wild WYNAUT used|ENCORE!
+BUDEW got|an ENCORE!
+Wild WYNAUT’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+BUDEW used|LEECH SEED!
+Wild WYNAUT evaded|the attack!
+Wild WYNAUT used|ENCORE!
+But it failed!
+Wild WYNAUT’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+BUDEW used|LEECH SEED!
+Wild WYNAUT evaded|the attack!
+Wild WYNAUT used|ENCORE!
+But it failed!
+Wild WYNAUT’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+BUDEW used|LEECH SEED!
+Wild WYNAUT evaded|the attack!
+Wild WYNAUT used|CHARM!
+BUDEW’s ATTACK|harshly fell!
+Wild WYNAUT’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+BUDEW used|LEECH SEED!
+Wild WYNAUT evaded|the attack!
+Wild WYNAUT used|CHARM!
+BUDEW’s ATTACK|harshly fell!
+BUDEW’s ENCORE|ended!
+Wild WYNAUT’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+BUDEW used|MEGA DRAIN!
+Wild WYNAUT had its|energy drained!
+Wild WYNAUT|fainted!|
+
+BUDEW gained|44 EXP. Points!|
+|ÁÁGOLBAT|Àこ♀
+Wild GOLBAT appeared!|
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+Can’t escape!|
+Wild GOLBAT used|WING ATTACK!
+It’s super effective!
+BUDEW|fainted!|
+
+Use next POKéMON?
+|ÁÁGOLBAT|Àこ♀
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+|ŒÙ Got away safely!|
+|ÁÁLICKITUNG|Àこ♀
+Wild LICKITUNG appeared!|
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|Àこ♀
+Wild ZUBAT appeared!|
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+|ŒÙ Got away safely!|
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES used|EMBER!
+Wild WYNAUT|fainted!|
+
+NINETALES gained|31 EXP. Points!|
+|ÁÁWYNAUT|ÀÎ♂
+Wild WYNAUT appeared!|
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES used|EMBER!
+Wild WYNAUT|fainted!|
+
+NINETALES gained|37 EXP. Points!|
+|ÁÁQUAGSIRE|Àこ♀
+Wild QUAGSIRE appeared!|
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+|ŒÙ Got away safely!|
+|ÁÁRATTATA|Àこ♀
+SCOUT NANCY|would like to battle!|
+SCOUT NANCY sent|out RATTATA!|Ëざ
+|ÁÁRATTATA|Àこ♀
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe RATTATA evaded|the attack!
+Foe RATTATA used|TAIL WHIP!
+VENUSAUR’s DEFENSE|fell!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe RATTATA was seeded!
+Foe RATTATA used|TACKLE!
+Foe RATTATA’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RATTATA used|QUICK ATTACK!
+VENUSAUR used|RAZOR LEAF!
+Foe RATTATA|fainted!|
+
+VENUSAUR gained|121 EXP. Points!|
+SCOUT NANCY sent|out PIKACHU!
+|ÁÁPIKACHU|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe PIKACHU was seeded!
+Foe PIKACHU used|TAIL WHIP!
+VENUSAUR’s DEFENSE|fell!
+Foe PIKACHU’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe PIKACHU used|QUICK ATTACK!
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe PIKACHU|fainted!|
+
+VENUSAUR gained|192 EXP. Points!|
+Player defeated|SCOUT NANCY!|
+That was a lively picnic!|Ì
+RED got ¥44|for winning!|
+|ÁÁTRIO|ÀÎ♂
+LEADER GIOVANNI|would like to battle!|
+LEADER GIOVANNI sent|out SPADE and TRIO!|Ëざ
+|ÁÁSPADE|ÀÎ♂
+Go! VENUSAUR and|CHINGLING!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe TRIO used|SLASH!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+Foe SPADE used|SWORDS DANCE!
+Foe SPADE’s ATTACK|sharply rose!
+CHINGLING used|YAWN!
+CHINGLING made|Foe TRIO drowsy!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe TRIO used|SLASH!
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+Foe SPADE used|SLASH!
+A critical hit!
+CHINGLING|fainted!|
+
+|ÁÁTRIO|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+Foe TRIO|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe TRIO is fast|asleep.
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+Foe SPADE used|SLASH!
+JYNX|fainted!|
+
+|ÁÁTRIO|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe TRIO is fast|asleep.
+VENUSAUR used|SLEEP POWDER!
+Foe SPADE|fell asleep!
+Foe SPADE is fast|asleep.
+NINETALES used|CONFUSE RAY!
+Foe SPADE became|confused!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|NINETALES do?
+|ÈÈ|ÇÒÓÔSAFEGUARD
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe TRIO woke up!
+Foe TRIO used|EARTHQUAKE!
+
+It’s super effective!
+
+NINETALES|fainted!|
+
+|ÁÁTRIO|ÀÎ♂
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+Foe TRIO avoided|the attack!
+Foe SPADE is fast|asleep.
+What will|VENUSAUR do?
+|ÁÁTRIO|ÀÎ♂
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+
+LEADER GIOVANNI|used HYPER POTION!
+Foe SPADE’s HYPER POTION|restored health!
+Foe TRIO used|EARTHQUAKE!
+
+ARIADOS used|SCARY FACE!
+Foe TRIO’s SPEED|harshly fell!
+What will|VENUSAUR do?
+|ÈÈ|ÇÒÓÔLEECH SEED
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+Foe SPADE is fast|asleep.
+Foe TRIO used|EARTHQUAKE!
+
+ARIADOS|fainted!|
+
+|ÁÁTRIO|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|BUDEW do?
+|ÈÈ|ÇÒÓÔLEECH SEED
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|SLEEP POWDER!
+Foe SPADE is|already asleep!
+Foe SPADE woke up!
+Foe SPADE is|confused!
+Foe SPADE used|SLASH!
+BUDEW|fainted!|
+
+BUDEW’s POISON POINT|poisoned Foe SPADE!
+Foe TRIO used|SLASH!
+VENUSAUR|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|LEADER GIOVANNI!|Ì
+RED paid ¥2752 as the prize|money…|… … … …|RED whited out!|Ì
+|ÁÁSTARYU|ÀÎ
+SWIMMER NELL|would like to battle!|
+SWIMMER NELL sent|out STARYU!|Ëざ
+|ÁÁSTARYU|ÀÎ
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe STARYU used|WATER GUN!
+CHINGLING used|CONFUSION!
+A critical hit!
+Foe STARYU|fainted!|
+
+CHINGLING gained|477 EXP. Points!|
+SWIMMER NELL sent|out POLIWHIRL!
+|ÁÁPOLIWHIRL|Àこ♀
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe POLIWHIRL used|HYPNOSIS!
+Foe POLIWHIRL’s|attack missed!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe POLIWHIRL used|HYPNOSIS!
+CHINGLING|fell asleep!
+CHINGLING is fast|asleep.
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe POLIWHIRL used|DOUBLESLAP!
+
+Hit 4 time(s)!
+CHINGLING woke up!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe POLIWHIRL used|WATER GUN!
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe POLIWHIRL used|BUBBLE!
+CHINGLING used|CONFUSION!
+Foe POLIWHIRL|fainted!|
+
+CHINGLING gained|700 EXP. Points!|
+SWIMMER NELL sent|out TENTACOOL!
+|ÁÁTENTACOOL|Àこ♀
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe TENTACOOL used|POISON STING!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe TENTACOOL|fainted!|
+
+CHINGLING gained|517 EXP. Points!|
+|ÁÁCHINGLING|ÀÎ♂
+CHINGLING grew to|LV. 32!|こ|
+Player defeated|SWIMMER NELL!|
+That made a splash!|Ì
+RED got ¥300|for winning!|
+|ÁÁODDISH|Àこ♀
+SCOUT KINDRA|would like to battle!|
+SCOUT KINDRA sent|out ODDISH!|Ëざ
+|ÁÁODDISH|Àこ♀
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe ODDISH|fainted!|
+
+CHINGLING gained|183 EXP. Points!|
+SCOUT KINDRA sent|out ODDISH!
+|ÁÁODDISH|Àこ♀
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe ODDISH|fainted!|
+
+CHINGLING gained|199 EXP. Points!|
+SCOUT KINDRA sent|out ODDISH!
+|ÁÁODDISH|Àこ♀
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHINGLING used|CONFUSION!
+It’s super effective!
+Foe ODDISH|fainted!|
+
+CHINGLING gained|216 EXP. Points!|
+Player defeated|SCOUT KINDRA!|
+Bridge checked!|Ì
+RED got ¥52|for winning!|
+|ÁÁPELIPPER|Àこ♀
+TRIATHLETE BECKY|would like to battle!|
+TRIATHLETE BECKY sent|out PELIPPER!|Ëざ
+|ÁÁPELIPPER|Àこ♀
+Go! CHINGLING!
+|ÁÁCHINGLING|ÀÎ♂
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe PELIPPER used|SUPERSONIC!
+Foe PELIPPER’s|attack missed!
+CHINGLING used|YAWN!
+CHINGLING made|Foe PELIPPER drowsy!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe PELIPPER used|WING ATTACK!
+CHINGLING used|CONFUSION!
+Foe PELIPPER|fell asleep!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe PELIPPER is fast|asleep.
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe PELIPPER is fast|asleep.
+CHINGLING used|CONFUSION!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe PELIPPER is fast|asleep.
+CHINGLING used|CONFUSION!
+Foe PELIPPER became|confused!
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe PELIPPER woke up!
+Foe PELIPPER is|confused!
+It hurt itself in its|confusion!
+CHINGLING used|CONFUSION!
+Foe PELIPPER|fainted!|
+
+CHINGLING gained|1089 EXP. Points!|
+TRIATHLETE BECKY sent|out STARMIE!
+|ÁÁSTARMIE|ÀÎ
+What will|CHINGLING do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe STARMIE used|RAPID SPIN!
+CHINGLING used|YAWN!
+CHINGLING made|Foe STARMIE drowsy!
+What will|CHINGLING do?
+|ÁÁSTARMIE|ÀÎ
+CHINGLING, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe STARMIE used|CONFUSE RAY!
+VENUSAUR became|confused!
+Foe STARMIE|fell asleep!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR is|confused!
+It hurt itself in its|confusion!
+Foe STARMIE is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR snapped|out of confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe STARMIE is fast|asleep.
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe STARMIE|fainted!|
+
+CHINGLING gained|730 EXP. Points!|
+CHINGLING grew to|LV. 33!|こ|
+VENUSAUR gained|730 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 44!|こ|
+TRIATHLETE BECKY sent|out LANTURN!
+|ÁÁLANTURN|Àこ♀
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe LANTURN|fainted!|
+
+VENUSAUR gained|1170 EXP. Points!|
+Player defeated|TRIATHLETE BECKY!|
+You kept pace!|Ì
+RED got ¥1400|for winning!|
+CHIMECHO did not learn|DOUBLE-EDGE.|
+|ÁÁJUMPLUFF|Àこ♀
+Wild JUMPLUFF appeared!|
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|CHIMECHO do?
+|ŒÙ Got away safely!|
+|ÁÁSLUGMA|ÀÎ♂
+Wild SLUGMA appeared!|
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|CHIMECHO do?
+|ŒÙ Got away safely!|
+|ÁÁSILK|ÀÎ♂
+LEADER KOGA|would like to battle!|
+LEADER KOGA sent|out WHISPER and SILK!|Ëざ
+|ÁÁWHISPER|ÀÎ♂
+Go! CHIMECHO and|VENUSAUR!
+|ÁÁCHIMECHO|ÀÎ♂
+Foe SILK’s INTIMIDATE|cuts CHIMECHO’s ATTACK!
+Foe SILK’s INTIMIDATE|cuts VENUSAUR’s ATTACK!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER used|WING ATTACK!
+VENUSAUR used|SLEEP POWDER!
+Foe WHISPER|fell asleep!
+Foe SILK used|GLARE!
+VENUSAUR is paralyzed!|It may be unable to move!
+CHIMECHO used|CONFUSION!
+It’s super effective!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER is fast|asleep.
+Foe SILK used|BITE!
+It’s super effective!
+CHIMECHO flinched!
+VENUSAUR is paralyzed!|It can’t move!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+|ÈÈ|ÇÒÓÔLEECH SEED
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER woke up!
+Foe WHISPER used|WING ATTACK!
+It’s super effective!
+Foe SILK used|ROCK SLIDE!
+
+CHIMECHO used|CONFUSION!
+It’s super effective!
+VENUSAUR used|SLEEP POWDER!
+VENUSAUR’s|attack missed!
+What will|CHIMECHO do?
+|ÁÁSILK|ÀÎ♂
+What will|VENUSAUR do?
+|ÈÈ|ÇÒÓÔLEECH SEED
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER used|BITE!
+It’s super effective!
+Foe SILK used|BITE!
+It’s super effective!
+VENUSAUR used|SLEEP POWDER!
+Foe WHISPER|fell asleep!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+|ÁÁSILK|ÀÎ♂
+Foe WHISPER is fast|asleep.
+Foe SILK used|ROCK SLIDE!
+
+CHIMECHO used|CONFUSION!
+It’s super effective!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER is fast|asleep.
+Foe SILK used|ROCK SLIDE!
+
+A critical hit!
+CHIMECHO flinched!
+VENUSAUR used|SLEEP POWDER!
+Foe SILK|fell asleep!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER is fast|asleep.
+Foe SILK is fast|asleep.
+CHIMECHO used|CONFUSION!
+It’s super effective!
+Foe SILK|fainted!|
+
+CHIMECHO gained|613 EXP. Points!|
+VENUSAUR gained|613 EXP. Points!|
+LEADER KOGA sent|out HAZE!
+|ÁÁHAZE|ÀÎ♂
+VENUSAUR used|LEECH SEED!
+Foe WHISPER evaded|the attack!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe WHISPER woke up!
+Foe WHISPER used|WING ATTACK!
+It’s super effective!
+VENUSAUR|fainted!|
+
+|ÁÁHAZE|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe HAZE used|SLUDGE!
+CHIMECHO used|CONFUSION!
+It’s super effective!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe WHISPER used|WING ATTACK!
+A critical hit!
+CHIMECHO|fainted!|
+
+|ÁÁHAZE|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+NINETALES used|CONFUSE RAY!
+Foe WHISPER became|confused!
+Foe HAZE used|SLUDGE!
+A critical hit!
+NINETALES|fainted!|
+
+|ÁÁHAZE|ÀÎ♂
+Go! ARIADOS!
+|ÁÁARIADOS|ÀÎ♂
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔBUG
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe WHISPER is|confused!
+Foe WHISPER used|AIR CUTTER!
+
+It’s super effective!
+JYNX used|ICE PUNCH!
+It’s super effective!
+Foe WHISPER|fainted!|
+
+JYNX gained|829 EXP. Points!|
+ARIADOS gained|829 EXP. Points!|
+LEADER KOGA sent|out INK!
+|ÁÁINK|ÀÎ♂
+Foe HAZE used|SLUDGE!
+JYNX|fainted!|
+
+|ÁÁHAZE|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+ARIADOS used|NIGHT SHADE!
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔWATER
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe HAZE used|SLUDGE!
+It’s not very effective…
+Foe INK used|BODY SLAM!
+BUDEW|fainted!|
+
+ARIADOS used|NIGHT SHADE!
+What will|ARIADOS do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGHOST
+Foe HAZE used|SLUDGE!
+It’s not very effective…
+Foe INK used|BODY SLAM!
+ARIADOS|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|LEADER KOGA!|Ì
+RED paid ¥2816 as the prize|money…|… … … …|RED whited out!|Ì
+|ÁÁHAPPINY|Àこ♀
+ウエ BREEDER TESS|would like to battle!|
+ウエ BREEDER TESS sent|out HAPPINY!|Ëざ
+|ÁÁHAPPINY|Àこ♀
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHIMECHO used|CONFUSION!
+Foe HAPPINY used|TAIL WHIP!
+CHIMECHO’s DEFENSE|fell!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHIMECHO used|CONFUSION!
+Foe HAPPINY|fainted!|
+
+CHIMECHO gained|400 EXP. Points!|
+ウエ BREEDER TESS sent|out BUNEARY!
+|ÁÁBUNEARY|Àこ♀
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe BUNEARY used|FOLLOW ME!
+Foe BUNEARY became the|center of attention!
+CHIMECHO used|CONFUSION!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe BUNEARY used|FOLLOW ME!
+Foe BUNEARY became the|center of attention!
+CHIMECHO used|CONFUSION!
+Foe BUNEARY|fainted!|
+
+CHIMECHO gained|270 EXP. Points!|
+ウエ BREEDER TESS sent|out SENTRET!
+|ÁÁSENTRET|Àこ♀
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHIMECHO used|CONFUSION!
+Foe SENTRET|fainted!|
+
+CHIMECHO gained|231 EXP. Points!|
+Player defeated|ウエ BREEDER TESS!|
+Healthy growth!|Ì
+RED got ¥532|for winning!|
+|ÁÁGEODUDE|ÀÎ♂
+Wild GEODUDE appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁSUNFLORA|ÀÎ♂
+Wild SUNFLORA appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁMAGBY|Àこ♀
+Wild MAGBY appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁSILK|ÀÎ♂
+LEADER KOGA|would like to battle!|
+LEADER KOGA sent|out WHISPER and SILK!|Ëざ
+|ÁÁWHISPER|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+Foe SILK’s INTIMIDATE|cuts MEWTWO’s ATTACK!
+Foe SILK’s INTIMIDATE|cuts VENUSAUR’s ATTACK!
+What will|MEWTWO do?
+|ÈÈ|ÇÒÓÔRECOVER
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe WHISPER|fainted!|
+
+MEWTWO gained|829 EXP. Points!|
+VENUSAUR gained|829 EXP. Points!|
+LEADER KOGA sent|out INK!
+|ÁÁINK|ÀÎ♂
+VENUSAUR used|LEECH SEED!
+Foe INK evaded|the attack!
+Foe SILK used|GLARE!
+VENUSAUR is paralyzed!|It may be unable to move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe INK|fainted!|
+
+MEWTWO gained|672 EXP. Points!|
+VENUSAUR gained|672 EXP. Points!|
+LEADER KOGA sent|out HAZE!
+|ÁÁHAZE|ÀÎ♂
+Foe SILK used|ROCK SLIDE!
+
+VENUSAUR used|LEECH SEED!
+Foe HAZE was seeded!
+Foe HAZE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe HAZE|fainted!|
+
+MEWTWO gained|759 EXP. Points!|
+VENUSAUR gained|759 EXP. Points!|
+LEADER KOGA sent|out PUFF!
+|ÁÁPUFF|ÀÎ♂
+Foe SILK used|GLARE!
+MEWTWO is paralyzed!|It may be unable to move!
+VENUSAUR is paralyzed!|It can’t move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|BITE!
+It’s super effective!
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe PUFF|fainted!|
+
+MEWTWO gained|513 EXP. Points!|
+VENUSAUR gained|513 EXP. Points!|
+VENUSAUR is paralyzed!|It can’t move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|BITE!
+It’s super effective!
+MEWTWO flinched!
+VENUSAUR is paralyzed!|It can’t move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|ROCK SLIDE!
+
+MEWTWO is paralyzed!|It can’t move!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|ROCK SLIDE!
+MEWTWO avoided|the attack!
+
+MEWTWO is paralyzed!|It can’t move!
+VENUSAUR flinched!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|BITE!
+It’s super effective!
+MEWTWO flinched!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SILK used|ROCK SLIDE!
+
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe SILK|fainted!|
+
+MEWTWO gained|613 EXP. Points!|
+VENUSAUR gained|613 EXP. Points!|
+Player defeated|LEADER KOGA!|
+Fwahahaha!|A worthy victory!|Ì
+RED got ¥16800|for winning!|
+|ÁÁCAMERUPT|Àこ♀
+Wild CAMERUPT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁEMBER|Àこ♀
+LEADER BLAINE|would like to battle!|
+LEADER BLAINE sent|out BUNSEN and EMBER!|Ëざ
+|ÁÁEMBER|Àこ♀
+|ÁÁBUNSEN|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+|ÁÁMEWTWO|ÀÎ
+Foe BUNSEN’s INTIMIDATE|cuts MEWTWO’s ATTACK!
+Foe BUNSEN’s INTIMIDATE|cuts VENUSAUR’s ATTACK!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe BUNSEN|fainted!|
+
+MEWTWO gained|934 EXP. Points!|
+VENUSAUR gained|934 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 45!|こ|
+LEADER BLAINE sent|out COMET!
+|ÁÁCOMET|ÀÎ♂
+VENUSAUR used|LEECH SEED!
+Foe COMET was seeded!
+Foe EMBER used|SAFEGUARD!
+Foe’s party is covered|by a veil!
+Foe COMET’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe COMET|fainted!|
+
+MEWTWO gained|925 EXP. Points!|
+VENUSAUR gained|925 EXP. Points!|
+LEADER BLAINE sent|out SIMMER!
+|ÁÁSIMMER|ÀÎ♂
+VENUSAUR used|RAZOR LEAF!
+Foe SIMMER avoided|the attack!
+
+It’s not very effective…
+Foe EMBER used|CONFUSE RAY!
+MEWTWO became|confused!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO is|confused!
+MEWTWO used|PSYCHIC!
+Foe SIMMER|fainted!|
+
+MEWTWO gained|742 EXP. Points!|
+VENUSAUR gained|742 EXP. Points!|
+LEADER BLAINE sent|out KETTLE!
+|ÁÁKETTLE|ÀÎ♂
+VENUSAUR used|LEECH SEED!
+Foe KETTLE was seeded!
+Foe EMBER used|CONFUSE RAY!
+VENUSAUR became|confused!
+Foe KETTLE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO snapped|out of confusion!
+MEWTWO used|PSYCHIC!
+A critical hit!
+Foe KETTLE|fainted!|
+
+MEWTWO gained|862 EXP. Points!|
+VENUSAUR gained|862 EXP. Points!|
+LEADER BLAINE sent|out FAHRENHEIT!
+|ÁÁFAHRENHEIT|ÀÎ♂
+VENUSAUR is|confused!
+It hurt itself in its|confusion!
+Foe EMBER used|FLAMETHROWER!
+It’s super effective!
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+VENUSAUR is|confused!
+It hurt itself in its|confusion!
+Foe FAHRENHEIT used|SUNNY DAY!
+The sunlight got bright!
+Foe EMBER used|FLAMETHROWER!
+MEWTWO was burned!
+Foe’s party is no longer|protected by SAFEGUARD!
+The sunlight is strong.
+MEWTWO is hurt|by its burn!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+
+LEADER BLAINE|used HYPER POTION!
+Foe FAHRENHEIT’s HYPER POTION|restored health!
+MEWTWO used|PSYCHIC!
+Foe FAHRENHEIT’s SP. DEF|fell!
+VENUSAUR snapped|out of confusion!
+VENUSAUR used|RAZOR LEAF!
+Foe FAHRENHEIT avoided|the attack!
+
+It’s not very effective…
+Foe EMBER used|CONFUSE RAY!
+MEWTWO became|confused!
+The sunlight is strong.
+MEWTWO is hurt|by its burn!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO is|confused!
+MEWTWO used|PSYCHIC!
+Foe FAHRENHEIT|fainted!|
+
+MEWTWO gained|1222 EXP. Points!|
+VENUSAUR gained|1222 EXP. Points!|
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe EMBER used|FLAMETHROWER!
+It’s super effective!
+VENUSAUR|fainted!|
+
+|ÁÁEMBER|Àこ♀
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+The sunlight is strong.
+MEWTWO is hurt|by its burn!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO is|confused!
+MEWTWO used|PSYCHIC!
+Foe EMBER|fainted!|
+
+MEWTWO gained|801 EXP. Points!|
+CHIMECHO gained|801 EXP. Points!|
+Player defeated|LEADER BLAINE!|
+I have burned down to nothing!|Not even ashes remain!|You have earned the VOLCANOBADGE.|Ì
+RED got ¥18800|for winning!|
+|ÁÁSHELLDER|ÀÎ♂
+Wild SHELLDER appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁMEOWTH|Àこ♀
+TRIATHLETE RINA|would like to battle!|
+TRIATHLETE RINA sent|out MEOWTH!|Ëざ
+|ÁÁMEOWTH|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe MEOWTH|fainted!|
+
+MEWTWO gained|162 EXP. Points!|
+TRIATHLETE RINA sent|out GULPIN!
+|ÁÁGULPIN|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe GULPIN|fainted!|
+
+MEWTWO gained|208 EXP. Points!|
+Player defeated|TRIATHLETE RINA!|
+Momentum gone!|Ì
+RED got ¥520|for winning!|
+|ÁÁGRIMER|ÀÎ♂
+BIKER WILTON|would like to battle!|
+BIKER WILTON sent|out GRIMER!|Ëざ
+|ÁÁGRIMER|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe GRIMER|fainted!|
+
+MEWTWO gained|423 EXP. Points!|
+BIKER WILTON sent|out KOFFING!
+|ÁÁKOFFING|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe KOFFING|fainted!|
+
+MEWTWO gained|585 EXP. Points!|
+Player defeated|BIKER WILTON!|
+Still running hot!|Ì
+RED got ¥480|for winning!|
+|ÁÁKOFFING|ÀÎ♂
+BIKER ORSON|would like to battle!|
+BIKER ORSON sent|out KOFFING!|Ëざ
+|ÁÁKOFFING|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe KOFFING|fainted!|
+
+MEWTWO gained|513 EXP. Points!|
+BIKER ORSON sent|out GRIMER!
+|ÁÁGRIMER|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe GRIMER|fainted!|
+
+MEWTWO gained|442 EXP. Points!|
+BIKER ORSON sent|out GULPIN!
+|ÁÁGULPIN|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe GULPIN|fainted!|
+
+MEWTWO gained|400 EXP. Points!|
+Player defeated|BIKER ORSON!|
+Solid braking!|Ì
+RED got ¥500|for winning!|
+|ÁÁHAPPINY|Àこ♀
+TRIATHLETE TOBY|would like to battle!|
+TRIATHLETE TOBY sent|out HAPPINY!|Ëざ
+|ÁÁHAPPINY|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe HAPPINY|fainted!|
+
+MEWTWO gained|211 EXP. Points!|
+TRIATHLETE TOBY sent|out MEOWTH!
+|ÁÁMEOWTH|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe MEOWTH|fainted!|
+
+MEWTWO gained|147 EXP. Points!|
+Player defeated|TRIATHLETE TOBY!|
+Lost count!|Ì
+RED got ¥400|for winning!|
+|ÁÁDODUO|ÀÎ♂
+TRIATHLETE DAX|would like to battle!|
+TRIATHLETE DAX sent|out DODUO!|Ëざ
+|ÁÁDODUO|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe DODUO|fainted!|
+
+MEWTWO gained|616 EXP. Points!|
+TRIATHLETE DAX sent|out VOLTORB!
+|ÁÁVOLTORB|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe VOLTORB|fainted!|
+
+MEWTWO gained|684 EXP. Points!|
+TRIATHLETE DAX sent|out PONYTA!
+|ÁÁPONYTA|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe PONYTA|fainted!|
+
+MEWTWO gained|1041 EXP. Points!|
+Player defeated|TRIATHLETE DAX!|
+You kept pace!|Ì
+RED got ¥1280|for winning!|
+|ÁÁRAICHU|ÀÎ♂
+Wild RAICHU appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁCATERPIE|ÀÎ♂
+BUG CATCHER ORIN|would like to battle!|
+BUG CATCHER ORIN sent|out CATERPIE!|Ëざ
+|ÁÁCATERPIE|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe CATERPIE|fainted!|
+
+MEWTWO gained|67 EXP. Points!|
+BUG CATCHER ORIN sent|out LEDYBA!
+|ÁÁLEDYBA|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe LEDYBA|fainted!|
+
+MEWTWO gained|81 EXP. Points!|
+Player defeated|BUG CATCHER ORIN!|
+They cooled off too fast!|Ì
+RED got ¥84|for winning!|
+|ÁÁTRIO|ÀÎ♂
+LEADER GIOVANNI|would like to battle!|
+LEADER GIOVANNI sent|out SPADE and TRIO!|Ëざ
+|ÁÁTRIO|ÀÎ♂
+|ÁÁSPADE|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe SPADE|fainted!|
+
+MEWTWO gained|820 EXP. Points!|
+VENUSAUR gained|820 EXP. Points!|
+LEADER GIOVANNI sent|out KEEPSAKE!
+|ÁÁKEEPSAKE|ÀÎ♂
+Foe TRIO used|EARTHQUAKE!
+
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe KEEPSAKE|fainted!|
+
+MEWTWO gained|637 EXP. Points!|
+VENUSAUR gained|637 EXP. Points!|
+LEADER GIOVANNI sent|out REGINA!
+|ÁÁREGINA|Àこ♀
+Foe TRIO used|EARTHQUAKE!
+A critical hit!
+
+It’s super effective!
+
+VENUSAUR used|RAZOR LEAF!
+
+It’s super effective!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+
+LEADER GIOVANNI|used HYPER POTION!
+Foe REGINA’s HYPER POTION|restored health!
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe REGINA|fainted!|
+
+MEWTWO gained|1018 EXP. Points!|
+VENUSAUR gained|1018 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 46!|こ|
+LEADER GIOVANNI sent|out REX!
+|ÁÁREX|ÀÎ♂
+Foe TRIO used|EARTHQUAKE!
+
+It’s super effective!
+
+VENUSAUR|fainted!|
+
+|ÁÁTRIO|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+
+LEADER GIOVANNI|used HYPER POTION!
+Foe REX’s HYPER POTION|restored health!
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe REX|fainted!|
+
+MEWTWO gained|1023 EXP. Points!|
+CHIMECHO gained|1023 EXP. Points!|
+|ÁÁCHIMECHO|ÀÎ♂
+CHIMECHO grew to|LV. 34!|こ|
+LEADER GIOVANNI sent|out BASTION!
+|ÁÁBASTION|ÀÎ♂
+Foe TRIO used|SLASH!
+CHIMECHO used|CONFUSION!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe BASTION|fainted!|
+
+MEWTWO gained|1092 EXP. Points!|
+|ÁÁMEWTWO|ÀÎ
+MEWTWO grew to|LV. 71!|こ|
+CHIMECHO gained|1092 EXP. Points!|
+Foe TRIO used|EARTHQUAKE!
+
+CHIMECHO makes GROUND|moves miss with LEVITATE!
+
+CHIMECHO used|CONFUSION!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe TRIO|fainted!|
+
+MEWTWO gained|769 EXP. Points!|
+CHIMECHO gained|769 EXP. Points!|
+Player defeated|LEADER GIOVANNI!|
+Ha!|That was a truly intense fight.|You have won!|As proof, here is the EARTHBADGE!||á|ÎÇÀ|Ë||Ëカ|ね|Ì
+RED got ¥20000|for winning!|
+|ÁÁVENONAT|ÀÎ♂
+Wild VENONAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁVENONAT|Àこ♀
+Wild VENONAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁODDISH|Àこ♀
+AROMA LADY NIKKI|would like to battle!|
+AROMA LADY NIKKI sent|out ODDISH!|Ëざ
+|ÁÁODDISH|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+A critical hit!
+It’s super effective!
+Foe ODDISH|fainted!|
+
+MEWTWO gained|300 EXP. Points!|
+AROMA LADY NIKKI sent|out BELLSPROUT!
+|ÁÁBELLSPROUT|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+A critical hit!
+It’s super effective!
+Foe BELLSPROUT|fainted!|
+
+MEWTWO gained|342 EXP. Points!|
+AROMA LADY NIKKI sent|out SUNKERN!
+|ÁÁSUNKERN|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe SUNKERN|fainted!|
+
+MEWTWO gained|222 EXP. Points!|
+Player defeated|AROMA LADY NIKKI!|
+VIRIDIAN FOREST wins today!|Ì
+RED got ¥240|for winning!|
+|ÁÁPICHU|Àこ♀
+ウエ BREEDER ELIN|would like to battle!|
+ウエ BREEDER ELIN sent|out PICHU!|Ëざ
+|ÁÁPICHU|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+A critical hit!
+Foe PICHU|fainted!|
+
+MEWTWO gained|144 EXP. Points!|
+ウエ BREEDER ELIN sent|out BUDEW!
+|ÁÁBUDEW|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe BUDEW|fainted!|
+
+MEWTWO gained|216 EXP. Points!|
+ウエ BREEDER ELIN sent|out LEDYBA!
+|ÁÁLEDYBA|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe LEDYBA|fainted!|
+
+MEWTWO gained|231 EXP. Points!|
+Player defeated|ウエ BREEDER ELIN!|
+VIRIDIAN FOREST wins today!|Ì
+RED got ¥560|for winning!|
+|ÁÁWEEPINBELL|Àこ♀
+Wild WEEPINBELL appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁODDISH|Àこ♀
+Wild ODDISH appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁEKANS|ÀÎ♂
+Wild EKANS appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁSPEAROW|Àこ♀
+Wild SPEAROW appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁPIDGEOTTO|ÀÎ♂
+BIRD KEEPER ROBERT|would like to battle!|
+BIRD KEEPER ROBERT sent|out PIDGEOTTO!|Ëざ
+|ÁÁPIDGEOTTO|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe PIDGEOTTO|fainted!|
+
+MEWTWO gained|726 EXP. Points!|
+BIRD KEEPER ROBERT sent|out SPEAROW!
+|ÁÁSPEAROW|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe SPEAROW|fainted!|
+
+MEWTWO gained|384 EXP. Points!|
+BIRD KEEPER ROBERT sent|out FEAROW!
+|ÁÁFEAROW|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe FEAROW|fainted!|
+
+MEWTWO gained|1144 EXP. Points!|
+Player defeated|BIRD KEEPER ROBERT!|
+My wings dipped!|Ì
+RED got ¥792|for winning!|
+|ÁÁSPEAROW|ÀÎ♂
+Wild SPEAROW appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁSPEAROW|ÀÎ♂
+SCOUT JEFF|would like to battle!|
+SCOUT JEFF sent|out SPEAROW!|Ëざ
+|ÁÁSPEAROW|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe SPEAROW|fainted!|
+
+MEWTWO gained|123 EXP. Points!|
+SCOUT JEFF sent|out RATTATA!
+|ÁÁRATTATA|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe RATTATA used|QUICK ATTACK!
+MEWTWO used|SWIFT!
+Foe RATTATA|fainted!|
+
+MEWTWO gained|133 EXP. Points!|
+Player defeated|SCOUT JEFF!|
+Lost my footing!|Ì
+RED got ¥44|for winning!|
+|ÁÁNIDORINA|Àこ♀
+ACE TRAINER NORA|would like to battle!|
+ACE TRAINER NORA sent|out NIDORINA!|Ëざ
+|ÁÁNIDORINA|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe NIDORINA|fainted!|
+
+MEWTWO gained|576 EXP. Points!|
+ACE TRAINER NORA sent|out GROWLITHE!
+|ÁÁGROWLITHE|ÀÎ♂
+Foe GROWLITHE’s INTIMIDATE|cuts MEWTWO’s ATTACK!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe GROWLITHE|fainted!|
+
+MEWTWO gained|468 EXP. Points!|
+Player defeated|ACE TRAINER NORA!|
+A lesson worth learning!|Ì
+RED got ¥2400|for winning!|
+|ÁÁPSYDUCK|Àこ♀
+Wild PSYDUCK appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁBALTOY|ÀÎ
+Wild BALTOY appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁPIDGEOT|ÀÎ♂
+RIVAL GGGGGGG|would like to battle!|
+RIVAL GGGGGGG sent|out PIDGEOT!|Ëざ
+|ÁÁPIDGEOT|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe PIDGEOT used|FEATHERDANCE!
+MEWTWO’s ATTACK|harshly fell!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe PIDGEOT used|DOUBLE-EDGE!
+A critical hit!
+Foe PIDGEOT is hit|with recoil!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe PIDGEOT|fainted!|
+
+MEWTWO gained|1731 EXP. Points!|
+RIVAL GGGGGGG sent|out RHYDON!
+|ÁÁRHYDON|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe RHYDON used|PROTECT!
+Foe RHYDON protected|itself!
+MEWTWO used|SWIFT!
+Foe RHYDON|protected itself!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe RHYDON used|MEGAHORN!
+It’s super effective!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe RHYDON used|MEGAHORN!
+It’s super effective!
+MEWTWO|fainted!|
+
+|ÁÁRHYDON|ÀÎ♂
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe RHYDON used|EARTHQUAKE!
+
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+VENUSAUR’s|attack missed!
+Foe RHYDON used|MEGAHORN!
+VENUSAUR|fainted!|
+
+|ÁÁRHYDON|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+CHIMECHO used|CONFUSION!
+Foe RHYDON used|ROCK SLIDE!
+CHIMECHO|fainted!|
+
+|ÁÁRHYDON|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+JYNX used|LOVELY KISS!
+JYNX’s|attack missed!
+Foe RHYDON used|EARTHQUAKE!
+
+JYNX|fainted!|
+
+|ÁÁRHYDON|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES used|EMBER!
+It’s not very effective…
+Foe RHYDON used|ROCK SLIDE!
+It’s super effective!
+NINETALES|fainted!|
+
+|ÁÁRHYDON|ÀÎ♂
+Do it! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe RHYDON used|EARTHQUAKE!
+
+BUDEW|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|RIVAL GGGGGGG!|Ì
+RED paid ¥8520 as the prize|money…|… … … …|RED whited out!|Ì
+|ÁÁPOOCHYENA|Àこ♀
+Wild POOCHYENA appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁPSYDUCK|Àこ♀
+Wild PSYDUCK appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁPIDGEOT|ÀÎ♂
+RIVAL GGGGGGG|would like to battle!|
+RIVAL GGGGGGG sent|out PIDGEOT!|Ëざ
+|ÁÁPIDGEOT|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe PIDGEOT’s SP. DEF|fell!
+Foe PIDGEOT used|DOUBLE-EDGE!
+Foe PIDGEOT is hit|with recoil!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe PIDGEOT|fainted!|
+
+MEWTWO gained|1731 EXP. Points!|
+RIVAL GGGGGGG sent|out RHYDON!
+|ÁÁRHYDON|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe RHYDON|fainted!|
+
+MEWTWO gained|2053 EXP. Points!|
+RIVAL GGGGGGG sent|out ALAKAZAM!
+|ÁÁALAKAZAM|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe ALAKAZAM used|SHOCK WAVE!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe ALAKAZAM used|PSYCHIC!
+It’s not very effective…
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe ALAKAZAM|fainted!|
+
+MEWTWO gained|1833 EXP. Points!|
+RIVAL GGGGGGG sent|out EXEGGUTOR!
+|ÁÁEXEGGUTOR|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe EXEGGUTOR used|LIGHT SCREEN!
+Foe’s LIGHT SCREEN|raised SP. DEF!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe EXEGGUTOR used|SLEEP POWDER!
+MEWTWO|fell asleep!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO is fast|asleep.
+Foe EXEGGUTOR used|GIGA DRAIN!
+MEWTWO had its|energy drained!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO is fast|asleep.
+Foe EXEGGUTOR used|GIGA DRAIN!
+MEWTWO had its|energy drained!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO is fast|asleep.
+Foe EXEGGUTOR used|GIGA DRAIN!
+MEWTWO had its|energy drained!
+Foe’s LIGHT SCREEN|wore off!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO woke up!
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe EXEGGUTOR|fainted!|
+
+MEWTWO gained|2134 EXP. Points!|
+RIVAL GGGGGGG sent|out GYARADOS!
+|ÁÁGYARADOS|ÀÎ♂
+Foe GYARADOS’s INTIMIDATE|cuts MEWTWO’s ATTACK!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe GYARADOS used|RETURN!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+A critical hit!
+Foe GYARADOS|fainted!|
+
+MEWTWO gained|2200 EXP. Points!|
+RIVAL GGGGGGG sent|out CHARIZARD!
+|ÁÁCHARIZARD|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+A critical hit!
+Foe CHARIZARD used|FLAMETHROWER!
+Foe CHARIZARD’s SITRUS BERRY|restored health!
+PP 
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe CHARIZARD|fainted!|
+
+MEWTWO gained|2238 EXP. Points!|
+|ÁÁMEWTWO|ÀÎ
+MEWTWO grew to|LV. 72!|こ|
+Player defeated|RIVAL GGGGGGG!|
+You’ve earned those BADGES!|Ì
+RED got ¥1800|for winning!|
+|ÁÁHITMONTOP|ÀÎ♂
+EXPERT KARINA|would like to battle!|
+EXPERT KARINA sent|out HITMONTOP!|Ëざ
+|ÁÁHITMONTOP|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+Foe HITMONTOP’s INTIMIDATE|cuts MEWTWO’s ATTACK!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HITMONTOP used|TRIPLE KICK!
+Foe HITMONTOP’s|attack missed!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HITMONTOP used|AGILITY!
+Foe HITMONTOP’s SPEED|sharply rose!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HITMONTOP|fainted!|
+
+MEWTWO gained|1242 EXP. Points!|
+EXPERT KARINA sent|out HERACROSS!
+|ÁÁHERACROSS|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HERACROSS used|FURY ATTACK!
+
+Hit 2 time(s)!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HERACROSS used|TAKE DOWN!
+Foe HERACROSS’s|attack missed!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe HERACROSS|fainted!|
+
+MEWTWO gained|1842 EXP. Points!|
+EXPERT KARINA sent|out MACHAMP!
+|ÁÁMACHAMP|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe MACHAMP used|FORESIGHT!
+Foe MACHAMP identified|MEWTWO!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe MACHAMP used|REVENGE!
+It’s not very effective…
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+Foe MACHAMP|fainted!|
+
+MEWTWO gained|1819 EXP. Points!|
+Player defeated|EXPERT KARINA!|
+Even experience has its limits!|Ì
+RED got ¥1760|for winning!|
+|ÁÁONIX|Àこ♀
+RUIN MANIAC NAOMI|would like to battle!|
+RUIN MANIAC NAOMI sent|out ONIX!|Ëざ
+|ÁÁONIX|Àこ♀
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe ONIX used|HARDEN!
+Foe ONIX’s DEFENSE|rose!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe ONIX used|RAGE!
+A critical hit!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe ONIX|fainted!|
+
+MEWTWO gained|739 EXP. Points!|
+RUIN MANIAC NAOMI sent|out MAWILE!
+|ÁÁMAWILE|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe MAWILE used|VICEGRIP!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe MAWILE|fainted!|
+
+MEWTWO gained|714 EXP. Points!|
+RUIN MANIAC NAOMI sent|out PUPITAR!
+|ÁÁPUPITAR|Àこ♀
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe PUPITAR used|SANDSTORM!
+A sandstorm brewed!
+The sandstorm rages.
+MEWTWO is buffeted|by the sandstorm!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+MEWTWO used|SWIFT!
+It’s not very effective…
+Foe PUPITAR|fainted!|
+
+MEWTWO gained|1080 EXP. Points!|
+Player defeated|RUIN MANIAC NAOMI!|
+I lost out…|VICTORY ROAD chose you this time.|Ì
+RED got ¥420|for winning!|
+|ÁÁSABLEYE|ÀÎ♂
+RUIN MANIAC ROLANDO|would like to battle!|
+RUIN MANIAC ROLANDO sent|out SABLEYE!|Ëざ
+|ÁÁSABLEYE|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe SABLEYE used|DETECT!
+Foe SABLEYE protected|itself!
+MEWTWO used|RECOVER!
+MEWTWO regained|health!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe SABLEYE used|DETECT!
+But it failed!
+MEWTWO used|SWIFT!
+It doesn’t affect|Foe SABLEYE…
+What will|MEWTWO do?
+|ÁÁSABLEYE|ÀÎ♂
+MEWTWO, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe SABLEYE used|DETECT!
+But it failed!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe SABLEYE was seeded!
+Foe SABLEYE used|FURY SWIPES!
+
+Hit 3 time(s)!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE used|FAINT ATTACK!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SABLEYE used|DETECT!
+Foe SABLEYE protected|itself!
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE|protected itself!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE|fainted!|
+
+MEWTWO gained|336 EXP. Points!|
+VENUSAUR gained|336 EXP. Points!|
+RUIN MANIAC ROLANDO sent|out SANDSLASH!
+|ÁÁSANDSLASH|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe SANDSLASH|fainted!|
+
+VENUSAUR gained|1186 EXP. Points!|
+RUIN MANIAC ROLANDO sent|out ONIX!
+|ÁÁONIX|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe ONIX|fainted!|
+
+VENUSAUR gained|810 EXP. Points!|
+Player defeated|RUIN MANIAC ROLANDO!|
+I had a chance…|Ì
+RED got ¥420|for winning!|
+|ÁÁLARVITAR|ÀÎ♂
+Wild LARVITAR appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁONIX|ÀÎ♂
+BLACK BELT DAISUKE|would like to battle!|
+BLACK BELT DAISUKE sent|out ONIX!|Ëざ
+|ÁÁONIX|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ÁÁONIX|ÀÎ♂
+MEWTWO, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe ONIX used|DRAGONBREATH!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe ONIX|fainted!|
+
+MEWTWO gained|369 EXP. Points!|
+VENUSAUR gained|369 EXP. Points!|
+BLACK BELT DAISUKE sent|out SANDSLASH!
+|ÁÁSANDSLASH|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe SANDSLASH|fainted!|
+
+VENUSAUR gained|1152 EXP. Points!|
+BLACK BELT DAISUKE sent|out MAWILE!
+|ÁÁMAWILE|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe MAWILE was seeded!
+Foe MAWILE used|SWEET SCENT!
+VENUSAUR’s evasiveness|fell!
+Foe MAWILE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAWILE used|SWEET SCENT!
+VENUSAUR’s evasiveness|fell!
+Foe MAWILE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAWILE used|FAINT ATTACK!
+Foe MAWILE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+Foe MAWILE|fainted!|
+
+VENUSAUR gained|735 EXP. Points!|
+Player defeated|BLACK BELT DAISUKE!|
+Atcho!|Even my focus cracked.|Ì
+RED got ¥840|for winning!|
+|ÁÁPUPITAR|ÀÎ♂
+ACE TRAINER NELSON|would like to battle!|
+ACE TRAINER NELSON sent|out PUPITAR!|Ëざ
+|ÁÁPUPITAR|ÀÎ♂
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ÁÁPUPITAR|ÀÎ♂
+MEWTWO, that’s enough!|Come back!
+Go! VENUSAUR!
+|ÁÁVENUSAUR|ÀÎ♂
+Foe PUPITAR used|SCREECH!
+Foe PUPITAR’s|attack missed!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe PUPITAR|fainted!|
+
+MEWTWO gained|493 EXP. Points!|
+VENUSAUR gained|493 EXP. Points!|
+ACE TRAINER NELSON sent|out ONIX!
+|ÁÁONIX|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe ONIX|fainted!|
+
+VENUSAUR gained|786 EXP. Points!|
+|ÁÁVENUSAUR|ÀÎ♂
+VENUSAUR grew to|LV. 47!|こ|
+ACE TRAINER NELSON sent|out SANDSLASH!
+|ÁÁSANDSLASH|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe SANDSLASH used|SWIFT!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe SANDSLASH|fainted!|
+
+VENUSAUR gained|1222 EXP. Points!|
+ACE TRAINER NELSON sent|out SABLEYE!
+|ÁÁSABLEYE|ÀÎ♂
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|LEECH SEED!
+Foe SABLEYE was seeded!
+Foe SABLEYE used|FAINT ATTACK!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE used|FAINT ATTACK!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SABLEYE used|DETECT!
+Foe SABLEYE protected|itself!
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE|protected itself!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SABLEYE used|DETECT!
+Foe SABLEYE protected|itself!
+VENUSAUR used|RAZOR LEAF!
+Foe SABLEYE|protected itself!
+Foe SABLEYE’s health is|sapped by LEECH SEED!
+Foe SABLEYE|fainted!|
+
+VENUSAUR gained|693 EXP. Points!|
+Player defeated|ACE TRAINER NELSON!|
+You got me!|That’s ELITE FOUR resolve.|Ì
+RED got ¥3500|for winning!|
+|ÁÁLARVITAR|Àこ♀
+Wild LARVITAR appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁGOLBAT|ÀÎ♂
+Wild GOLBAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁLARVITAR|Àこ♀
+Wild LARVITAR appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁLARVITAR|ÀÎ♂
+Wild LARVITAR appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁBRONZOR|ÀÎ
+Wild BRONZOR appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁGOLBAT|Àこ♀
+Wild GOLBAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁZUBAT|ÀÎ♂
+Wild ZUBAT appeared!|
+Go! MEWTWO!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+|ŒÙ Got away safely!|
+|ÁÁBEACON|ÀÎ♂
+LEADER MISTY|would like to battle!|
+LEADER MISTY sent|out RIBBONS and BEACON!|Ëざ
+|ÁÁRIBBONS|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+VENUSAUR used|LEECH SEED!
+Foe RIBBONS was seeded!
+Foe RIBBONS used|SUPERSONIC!
+VENUSAUR became|confused!
+Foe BEACON used|THUNDER WAVE!
+VENUSAUR is paralyzed!|It may be unable to move!
+Foe RIBBONS’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe RIBBONS|fainted!|
+
+LEADER MISTY sent|out TWINKLE!
+|ÁÁTWINKLE|ÀÎ
+Foe BEACON used|SPARK!
+It’s not very effective…
+VENUSAUR is|confused!
+VENUSAUR is paralyzed!|It can’t move!
+What will|MEWTWO do?
+Items can’t be used now.|Ëぞ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe TWINKLE used|WATER GUN!
+It’s not very effective…
+Foe BEACON used|SPARK!
+It’s not very effective…
+VENUSAUR snapped|out of confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe TWINKLE used|WATER GUN!
+It’s not very effective…
+Foe BEACON used|THUNDER WAVE!
+MEWTWO is paralyzed!|It may be unable to move!
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe TWINKLE|fainted!|
+
+It’s super effective!
+LEADER MISTY sent|out PUDDLES!
+|ÁÁPUDDLES|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe BEACON used|SPARK!
+Foe PUDDLES used|PERISH SONG!
+All affected POKéMON will|faint in three turns!
+MEWTWO used|PSYCHIC!
+VENUSAUR is paralyzed!|It can’t move!
+Foe BEACON’s PERISH count|fell to 3!
+Foe PUDDLES’s PERISH count|fell to 3!
+MEWTWO’s PERISH count|fell to 3!
+VENUSAUR’s PERISH count|fell to 3!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe BEACON used|CONFUSE RAY!
+VENUSAUR became|confused!
+Foe PUDDLES used|BODY SLAM!
+MEWTWO is paralyzed!|It can’t move!
+VENUSAUR is|confused!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+Foe BEACON’s PERISH count|fell to 2!
+Foe PUDDLES’s PERISH count|fell to 2!
+MEWTWO’s PERISH count|fell to 2!
+VENUSAUR’s PERISH count|fell to 2!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe BEACON used|CONFUSE RAY!
+MEWTWO became|confused!
+Foe PUDDLES used|BODY SLAM!
+MEWTWO is|confused!
+MEWTWO used|PSYCHIC!
+VENUSAUR snapped|out of confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe PUDDLES|fainted!|
+
+A critical hit!
+It’s super effective!
+LEADER MISTY sent|out SKIPPER!
+|ÁÁSKIPPER|ÀÎ♂
+Foe BEACON’s PERISH count|fell to 1!
+MEWTWO’s PERISH count|fell to 1!
+VENUSAUR’s PERISH count|fell to 1!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+LEADER MISTY|withdrew BEACON!
+LEADER MISTY sent|out DUCKY!
+|ÁÁDUCKY|ÀÎ♂
+Foe SKIPPER used|WATER GUN!
+MEWTWO snapped|out of confusion!
+MEWTWO used|PSYCHIC!
+Foe SKIPPER’s SP. DEF|fell!
+VENUSAUR used|LEECH SEED!
+Foe SKIPPER was seeded!
+Foe SKIPPER’s health is|sapped by LEECH SEED!
+MEWTWO’s PERISH count|fell to 0!
+MEWTWO|fainted!|
+
+|ÁÁDUCKY|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+VENUSAUR’s PERISH count|fell to 0!
+VENUSAUR|fainted!|
+
+|ÁÁDUCKY|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe SKIPPER used|WATER GUN!
+Foe DUCKY used|DOUBLE-EDGE!
+A critical hit!
+Foe DUCKY is hit|with recoil!
+BUDEW|fainted!|
+
+BUDEW’s POISON POINT|poisoned Foe DUCKY!
+|ÁÁDUCKY|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+CHIMECHO used|CONFUSION!
+Foe SKIPPER’s health is|sapped by LEECH SEED!
+Foe DUCKY is hurt|by poison!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+NINETALES used|QUICK ATTACK!
+Foe SKIPPER|fainted!|
+
+LEADER MISTY sent|out BEACON!
+|ÁÁBEACON|ÀÎ♂
+Foe DUCKY used|DOUBLE-EDGE!
+Foe DUCKY is hit|with recoil!
+CHIMECHO used|CONFUSION!
+Foe BEACON|fainted!|
+
+Foe DUCKY is hurt|by poison!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+NINETALES used|QUICK ATTACK!
+Foe DUCKY used|DOUBLE-EDGE!
+Foe DUCKY is hit|with recoil!
+CHIMECHO used|CONFUSION!
+Foe DUCKY|fainted!|
+
+Player defeated|LEADER MISTY!|
+That was a worthy battle.|Ì
+RED got ¥18800|for winning!|
+|ÁÁREVERIE|ÀÎ♂
+LEADER SABRINA|would like to battle!|
+LEADER SABRINA sent|out SAGE and REVERIE!|Ëざ
+|ÁÁSAGE|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe SAGE used|THUNDER WAVE!
+VENUSAUR is paralyzed!|It may be unable to move!
+VENUSAUR is paralyzed!|It can’t move!
+Foe REVERIE used|HYPNOSIS!
+But it failed!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe SAGE used|CALM MIND!
+Foe SAGE’s SP. ATK|rose!
+Foe SAGE’s SP. DEF|rose!
+Foe REVERIE used|THUNDER WAVE!
+MEWTWO is paralyzed!|It may be unable to move!
+VENUSAUR used|LEECH SEED!
+Foe SAGE was seeded!
+Foe SAGE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe SAGE used|PSYCHIC!
+It’s super effective!
+Foe REVERIE used|PSYCHIC!
+It’s super effective!
+VENUSAUR|fainted!|
+
+|ÁÁREVERIE|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe SAGE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe SAGE used|PSYCHIC!
+It’s not very effective…
+NINETALES used|EMBER!
+Foe REVERIE used|THUNDER WAVE!
+NINETALES is paralyzed!|It may be unable to move!
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe SAGE|fainted!|
+
+LEADER SABRINA sent|out ORBIT!
+|ÁÁORBIT|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe ORBIT used|ANCIENTPOWER!
+It’s super effective!
+Foe REVERIE used|MEDITATE!
+Foe REVERIE’s ATTACK|rose!
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+Foe ORBIT’s SP. DEF|fell!
+NINETALES used|EMBER!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe ORBIT used|COSMIC POWER!
+Foe ORBIT’s DEFENSE|rose!
+Foe ORBIT’s SP. DEF|rose!
+Foe REVERIE used|MEDITATE!
+Foe REVERIE’s ATTACK|rose!
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+NINETALES used|EMBER!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe ORBIT used|EXPLOSION!
+NINETALES|fainted!|
+
+Foe REVERIE|fainted!|
+
+Foe ORBIT|fainted!|
+
+LEADER SABRINA sent|out ORACLE!
+|ÁÁORACLE|ÀÎ♂
+|ÁÁREVERIE|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+LEADER SABRINA sent|out SOLACE!
+|ÁÁSOLACE|ÀÎ
+MEWTWO used|PSYCHIC!
+It’s not very effective…
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+Foe ORACLE used|FUTURE SIGHT!
+Foe ORACLE foresaw|an attack!
+CHIMECHO used|UPROAR!
+CHIMECHO caused|an UPROAR!
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+MEWTWO|fainted!|
+
+|ÁÁSOLACE|ÀÎ
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s super effective!
+Foe ORACLE|fainted!|
+
+LEADER SABRINA sent|out ECHO!
+|ÁÁECHO|ÀÎ♂
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe SOLACE used|IRON DEFENSE!
+Foe SOLACE’s DEFENSE|sharply rose!
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe ECHO used|PSYWAVE!
+Foe SOLACE used|CONFUSE RAY!
+JYNX became|confused!
+CHIMECHO calmed down.
+JYNX took the|FUTURE SIGHT attack!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+JYNX is|confused!
+It hurt itself in its|confusion!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+CHIMECHO caused|an UPROAR!
+Foe ECHO used|CONFUSION!
+It’s not very effective…
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX is|confused!
+JYNX used|ICE PUNCH!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe ECHO used|YAWN!
+But it failed!
+Foe SOLACE used|CONFUSE RAY!
+CHIMECHO became|confused!
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX snapped|out of confusion!
+JYNX used|ICE PUNCH!
+Foe ECHO|fainted!|
+
+CHIMECHO is|confused!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe SOLACE used|IRON DEFENSE!
+Foe SOLACE’s DEFENSE|sharply rose!
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+CHIMECHO is|confused!
+CHIMECHO used|UPROAR!
+A critical hit!
+It’s not very effective…
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+CHIMECHO calmed down.
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+JYNX used|ICE PUNCH!
+It’s not very effective…
+CHIMECHO is|confused!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+CHIMECHO caused|an UPROAR!
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+CHIMECHO is|confused!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+CHIMECHO snapped|out of confusion!
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe SOLACE used|EXTRASENSORY!
+It’s not very effective…
+CHIMECHO is making|an UPROAR!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+JYNX used|ICE PUNCH!
+It’s not very effective…
+CHIMECHO used|UPROAR!
+It’s not very effective…
+Foe SOLACE used|FUTURE SIGHT!
+Foe SOLACE foresaw|an attack!
+CHIMECHO calmed down.
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+JYNX used|ICE PUNCH!
+It’s not very effective…
+Foe SOLACE|fainted!|
+
+Player defeated|LEADER SABRINA!|
+That was a worthy battle.|Ì
+RED got ¥18800|for winning!|
+|ÁÁHITMONCHAN|ÀÎ♂
+ELITE FOUR BRUNO|would like to battle!|
+ELITE FOUR BRUNO sent|out POLIWRATH and HITMONCHAN!|Ëざ
+|ÁÁPOLIWRATH|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe POLIWRATH’s SP. DEF|fell!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+Foe HITMONCHAN used|ROCK TOMB!
+MEWTWO’s SPEED|fell!
+Foe POLIWRATH used|HYPNOSIS!
+Foe POLIWRATH’s|attack missed!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe POLIWRATH|fainted!|
+
+ELITE FOUR BRUNO sent|out HITMONLEE!
+|ÁÁHITMONLEE|ÀÎ♂
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe HITMONCHAN used|ROCK TOMB!
+A critical hit!
+VENUSAUR’s SPEED|fell!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HITMONLEE used|MEGA KICK!
+Foe HITMONLEE’s|attack missed!
+MEWTWO used|PSYCHIC!
+It’s super effective!
+Foe HITMONLEE|fainted!|
+
+ELITE FOUR BRUNO sent|out HERACROSS!
+|ÁÁHERACROSS|ÀÎ♂
+Foe HITMONCHAN used|SKY UPPERCUT!
+Foe HITMONCHAN’s|attack missed!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HERACROSS used|MEGAHORN!
+It’s super effective!
+MEWTWO|fainted!|
+
+|ÁÁHITMONCHAN|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe HITMONCHAN used|SKY UPPERCUT!
+It’s not very effective…
+VENUSAUR used|LEECH SEED!
+Foe HERACROSS was seeded!
+Foe HERACROSS’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HERACROSS used|EARTHQUAKE!
+It’s super effective!
+
+NINETALES used|EMBER!
+It’s super effective!
+Foe HITMONCHAN used|ROCK TOMB!
+It’s super effective!
+NINETALES|fainted!|
+
+|ÁÁHITMONCHAN|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+A critical hit!
+Foe HITMONCHAN|fainted!|
+
+ELITE FOUR BRUNO sent|out MACHAMP!
+|ÁÁMACHAMP|ÀÎ♂
+Foe HERACROSS’s health is|sapped by LEECH SEED!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HERACROSS used|MEGAHORN!
+It’s super effective!
+CHIMECHO|fainted!|
+
+|ÁÁMACHAMP|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+Foe MACHAMP used|SCARY FACE!
+JYNX’s SPEED|harshly fell!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+Foe HERACROSS’s health is|sapped by LEECH SEED!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HERACROSS used|MEGAHORN!
+VENUSAUR|fainted!|
+
+|ÁÁMACHAMP|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+Foe MACHAMP used|CROSS CHOP!
+JYNX|fainted!|
+
+Foe HERACROSS’s health is|sapped by LEECH SEED!
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe HERACROSS used|EARTHQUAKE!
+
+BUDEW|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|ELITE FOUR BRUNO!|Ì
+RED paid ¥6000 as the prize|money…|… … … …|RED whited out!|Ì
+|ÁÁFUSE|ÀÎ
+LEADER LT. SURGE|would like to battle!|
+LEADER LT. SURGE sent|out SPARKY and FUSE!|Ëざ
+|ÁÁSPARKY|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe FUSE used|SPARK!
+It’s not very effective…
+VENUSAUR is paralyzed!|It may be unable to move!
+VENUSAUR is paralyzed!|It can’t move!
+Foe SPARKY used|THUNDER WAVE!
+MEWTWO is paralyzed!|It may be unable to move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|LIGHT SCREEN!
+Foe’s LIGHT SCREEN|raised SP. DEF a little!
+Foe SPARKY used|THUNDERBOLT!
+MEWTWO used|PSYCHIC!
+VENUSAUR used|LEECH SEED!
+Foe SPARKY was seeded!
+Foe SPARKY’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|SPARK!
+Foe SPARKY used|THUNDERBOLT!
+MEWTWO used|PSYCHIC!
+Foe SPARKY|fainted!|
+
+LEADER LT. SURGE sent|out TORPEDO!
+|ÁÁTORPEDO|ÀÎ♂
+VENUSAUR is paralyzed!|It can’t move!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|SPARK!
+Foe TORPEDO used|CRUNCH!
+It’s super effective!
+MEWTWO used|PSYCHIC!
+VENUSAUR used|LEECH SEED!
+Foe TORPEDO was seeded!
+Foe TORPEDO’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|SPARK!
+A critical hit!
+MEWTWO|fainted!|
+
+|ÁÁFUSE|ÀÎ
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe TORPEDO used|FLAMETHROWER!
+NINETALES’s FLASH FIRE|raised its FIRE power!
+VENUSAUR used|RAZOR LEAF!
+
+Foe TORPEDO’s health is|sapped by LEECH SEED!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|SPARK!
+It’s not very effective…
+NINETALES used|EMBER!
+Foe TORPEDO was burned!
+Foe TORPEDO used|THUNDERBOLT!
+VENUSAUR is paralyzed!|It can’t move!
+Foe’s LIGHT SCREEN|wore off!
+Foe TORPEDO’s health is|sapped by LEECH SEED!
+Foe TORPEDO is hurt|by its burn!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|SPARK!
+It’s not very effective…
+NINETALES used|EMBER!
+Foe TORPEDO|fainted!|
+
+LEADER LT. SURGE sent|out SARGE!
+|ÁÁSARGE|ÀÎ♂
+VENUSAUR used|RAZOR LEAF!
+
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FUSE used|EXPLOSION!
+NINETALES|fainted!|
+
+Foe SARGE|fainted!|
+
+Foe FUSE|fainted!|
+
+|ÁÁFUSE|ÀÎ
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+LEADER LT. SURGE sent|out RADAR!
+|ÁÁRADAR|ÀÎ
+LEADER LT. SURGE sent|out MAJOR!
+|ÁÁMAJOR|ÀÎ♂
+VENUSAUR used|LEECH SEED!
+Foe RADAR was seeded!
+Foe RADAR’s health is|sapped by LEECH SEED!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|LIGHT SCREEN!
+Foe’s LIGHT SCREEN|raised SP. DEF a little!
+CHIMECHO used|CONFUSION!
+It’s not very effective…
+Foe RADAR became|confused!
+Foe RADAR is|confused!
+It hurt itself in its|confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+A critical hit!
+Foe RADAR’s health is|sapped by LEECH SEED!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|THUNDER WAVE!
+CHIMECHO is paralyzed!|It may be unable to move!
+CHIMECHO used|CONFUSION!
+It’s not very effective…
+Foe RADAR is|confused!
+It hurt itself in its|confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+Foe RADAR’s health is|sapped by LEECH SEED!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|THUNDERBOLT!
+It’s not very effective…
+Foe RADAR is|confused!
+Foe RADAR used|SUPERSONIC!
+CHIMECHO became|confused!
+VENUSAUR used|RAZOR LEAF!
+It’s not very effective…
+
+CHIMECHO is|confused!
+CHIMECHO is paralyzed!|It can’t move!
+Foe RADAR’s health is|sapped by LEECH SEED!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|THUNDERBOLT!
+Foe RADAR is|confused!
+It hurt itself in its|confusion!
+Foe RADAR|fainted!|
+
+VENUSAUR used|RAZOR LEAF!
+CHIMECHO snapped|out of confusion!
+CHIMECHO used|CONFUSION!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|THUNDERBOLT!
+VENUSAUR used|RAZOR LEAF!
+CHIMECHO is paralyzed!|It can’t move!
+Foe’s LIGHT SCREEN|wore off!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe MAJOR used|THUNDERBOLT!
+It’s not very effective…
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+Foe MAJOR|fainted!|
+
+Player defeated|LEADER LT. SURGE!|
+That was a worthy battle.|Ì
+RED got ¥18800|for winning!|
+|ÁÁFLINT|ÀÎ♂
+LEADER BROCK|would like to battle!|
+LEADER BROCK sent|out PICKLE and FLINT!|Ëざ
+|ÁÁPICKLE|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe FLINT used|WING ATTACK!
+It’s super effective!
+VENUSAUR used|LEECH SEED!
+Foe PICKLE was seeded!
+Foe PICKLE used|SAFEGUARD!
+Foe’s party is covered|by a veil!
+Foe PICKLE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe FLINT used|WING ATTACK!
+VENUSAUR used|RAZOR LEAF!
+
+Foe PICKLE used|ROCK SLIDE!
+
+Foe PICKLE’s health is|sapped by LEECH SEED!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe PICKLE|fainted!|
+
+LEADER BROCK sent|out SPIRAL!
+|ÁÁSPIRAL|ÀÎ♂
+Foe FLINT used|WING ATTACK!
+It’s super effective!
+VENUSAUR used|RAZOR LEAF!
+A critical hit!
+It’s super effective!
+Foe SPIRAL|fainted!|
+
+LEADER BROCK sent|out CHISEL!
+|ÁÁCHISEL|ÀÎ♂
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe FLINT used|WING ATTACK!
+It’s super effective!
+VENUSAUR|fainted!|
+
+|ÁÁFLINT|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Foe CHISEL used|DOUBLE-EDGE!
+Foe CHISEL is hit|with recoil!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+NINETALES used|QUICK ATTACK!
+It’s not very effective…
+MEWTWO used|PSYCHIC!
+Foe CHISEL|fainted!|
+
+LEADER BROCK sent|out CHIP!
+|ÁÁCHIP|ÀÎ♂
+Foe FLINT used|ANCIENTPOWER!
+It’s super effective!
+NINETALES|fainted!|
+
+|ÁÁFLINT|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+Foe’s party is no longer|protected by SAFEGUARD!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+MEWTWO used|PSYCHIC!
+Foe FLINT used|AGILITY!
+Foe FLINT’s SPEED|sharply rose!
+CHIMECHO used|CONFUSION!
+Foe CHIP used|SANDSTORM!
+A sandstorm brewed!
+The sandstorm rages.
+MEWTWO is buffeted|by the sandstorm!
+CHIMECHO is buffeted|by the sandstorm!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe FLINT used|ANCIENTPOWER!
+MEWTWO used|PSYCHIC!
+Foe CHIP|fainted!|
+
+LEADER BROCK sent|out PEBBLE!
+|ÁÁPEBBLE|ÀÎ♂
+CHIMECHO used|CONFUSION!
+The sandstorm rages.
+MEWTWO is buffeted|by the sandstorm!
+CHIMECHO is buffeted|by the sandstorm!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe FLINT used|ANCIENTPOWER!
+A critical hit!
+MEWTWO used|RECOVER!
+MEWTWO regained|health!
+CHIMECHO used|CONFUSION!
+Foe PEBBLE used|ROCK SLIDE!
+
+The sandstorm rages.
+MEWTWO is buffeted|by the sandstorm!
+CHIMECHO is buffeted|by the sandstorm!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe FLINT used|WING ATTACK!
+MEWTWO used|RECOVER!
+MEWTWO regained|health!
+CHIMECHO used|CONFUSION!
+Foe PEBBLE used|EARTHQUAKE!
+
+CHIMECHO makes GROUND|moves miss with LEVITATE!
+
+It doesn’t affect|Foe FLINT…
+
+The sandstorm rages.
+MEWTWO is buffeted|by the sandstorm!
+CHIMECHO is buffeted|by the sandstorm!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+Foe FLINT used|ROCK SLIDE!
+
+CHIMECHO|fainted!|
+
+|ÁÁFLINT|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+MEWTWO used|RECOVER!
+MEWTWO regained|health!
+Foe PEBBLE used|ROCK BLAST!
+
+Hit 3 time(s)!
+The sandstorm subsided.
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+Foe FLINT used|ROCK SLIDE!
+
+It’s super effective!
+MEWTWO flinched!
+JYNX flinched!
+Foe PEBBLE used|ROCK SLIDE!
+A critical hit!
+MEWTWO|fainted!|
+
+It’s super effective!
+JYNX|fainted!|
+
+|ÁÁFLINT|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+Foe FLINT used|ROCK SLIDE!
+BUDEW|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|LEADER BROCK!|Ì
+RED paid ¥6000 as the prize|money…|… … … …|RED whited out!|Ì
+|ÁÁCLOYSTER|ÀÎ♂
+ELITE FOUR LORELEI|would like to battle!|
+ELITE FOUR LORELEI sent|out DEWGONG and CLOYSTER!|Ëざ
+|ÁÁDEWGONG|ÀÎ♂
+Go! MEWTWO and|VENUSAUR!
+|ÁÁMEWTWO|ÀÎ
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+Foe CLOYSTER used|HAIL!
+It started to hail!
+Foe DEWGONG used|SAFEGUARD!
+Foe’s party is covered|by a veil!
+Hail continues to fall.
+MEWTWO is pelted|by HAIL!
+VENUSAUR is pelted|by HAIL!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+Foe CLOYSTER|fainted!|
+
+ELITE FOUR LORELEI sent|out LAPRAS!
+|ÁÁLAPRAS|ÀÎ♂
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+A critical hit!
+It’s super effective!
+Foe DEWGONG used|ICE BEAM!
+Hail continues to fall.
+MEWTWO is pelted|by HAIL!
+VENUSAUR is pelted|by HAIL!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO used|PSYCHIC!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+
+It’s super effective!
+Foe DEWGONG used|ICE BEAM!
+A critical hit!
+It’s super effective!
+Foe LAPRAS used|CONFUSE RAY!
+MEWTWO became|confused!
+Hail continues to fall.
+MEWTWO is pelted|by HAIL!
+VENUSAUR is pelted|by HAIL!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|VENUSAUR do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+MEWTWO is|confused!
+It hurt itself in its|confusion!
+VENUSAUR used|RAZOR LEAF!
+It’s super effective!
+Foe DEWGONG|fainted!|
+
+It’s super effective!
+ELITE FOUR LORELEI sent|out WEAVILE!
+|ÁÁWEAVILE|ÀÎ♂
+Foe LAPRAS used|ICE BEAM!
+It’s super effective!
+VENUSAUR|fainted!|
+
+|ÁÁLAPRAS|ÀÎ♂
+Go! NINETALES!
+|ÁÁNINETALES|Àこ♀
+Hail continues to fall.
+NINETALES is pelted|by HAIL!
+MEWTWO is pelted|by HAIL!
+Foe LAPRAS’s SITRUS BERRY|restored health!
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+MEWTWO is|confused!
+It hurt itself in its|confusion!
+Foe WEAVILE used|SHADOW BALL!
+NINETALES used|EMBER!
+It’s super effective!
+Foe LAPRAS used|BODY SLAM!
+MEWTWO is paralyzed!|It may be unable to move!
+Foe’s party is no longer|protected by SAFEGUARD!
+The hail stopped.
+What will|MEWTWO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe WEAVILE used|FAINT ATTACK!
+It’s super effective!
+MEWTWO|fainted!|
+
+|ÁÁLAPRAS|ÀÎ♂
+Go! CHIMECHO!
+|ÁÁCHIMECHO|ÀÎ♂
+NINETALES used|EMBER!
+It’s super effective!
+Foe LAPRAS used|BODY SLAM!
+CHIMECHO is paralyzed!|It may be unable to move!
+What will|CHIMECHO do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔPSYCHC
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe WEAVILE used|SHADOW BALL!
+It’s super effective!
+CHIMECHO|fainted!|
+
+|ÁÁLAPRAS|ÀÎ♂
+Go! JYNX!
+|ÁÁJYNX|Àこ♀
+NINETALES used|EMBER!
+It’s super effective!
+Foe LAPRAS used|BODY SLAM!
+What will|JYNX do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔNORMAL
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔICE
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe WEAVILE used|BRICK BREAK!
+JYNX|fainted!|
+
+|ÁÁLAPRAS|ÀÎ♂
+Go! BUDEW!
+|ÁÁBUDEW|ÀÎ♂
+NINETALES used|EMBER!
+It’s super effective!
+Foe LAPRAS used|BODY SLAM!
+What will|BUDEW do?
+|ÈÈ|ÇÒÓÔWATER SPORT
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+Foe WEAVILE used|BRICK BREAK!
+NINETALES used|EMBER!
+It’s super effective!
+Foe WEAVILE|fainted!|
+
+ELITE FOUR LORELEI sent|out PILOSWINE!
+|ÁÁPILOSWINE|ÀÎ♂
+Foe LAPRAS used|CONFUSE RAY!
+NINETALES became|confused!
+BUDEW used|MEGA DRAIN!
+It’s super effective!
+Foe PILOSWINE had its|energy drained!
+What will|BUDEW do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔGRASS
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES is|confused!
+It hurt itself in its|confusion!
+Foe LAPRAS used|BODY SLAM!
+BUDEW|fainted!|
+
+Foe PILOSWINE dug a hole!
+What will|NINETALES do?
+TYPE/|ÉÀ|ÈÈ|ÇÒÓÔFIRE
+NINETALES is|confused!
+It hurt itself in its|confusion!
+Foe LAPRAS used|BODY SLAM!
+NINETALES|fainted!|
+
+RED is out of|usable POKéMON!|Player lost against|ELITE FOUR LORELEI!|Ì
+RED paid ¥6000 as the prize|money…|… … … …|RED whited out!|Ì
