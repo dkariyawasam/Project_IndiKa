@@ -113,7 +113,22 @@ enum CreditsString
     CREDITS_STRING_SPECIAL_THANKS_5,
     CREDITS_STRING_BRAILLE_CODE_CHECK_4,
     CREDITS_STRING_GRAPHIC_DESIGNER,
-    CREDITS_STRING_DUMMY
+    CREDITS_STRING_DUMMY,
+    CREDITS_STRING_EK_PROJECT,
+    CREDITS_STRING_EK_CREATION,
+    CREDITS_STRING_EK_DESIGNS,
+    CREDITS_STRING_EK_QA,
+    CREDITS_STRING_EK_EDITOR,
+    CREDITS_STRING_EK_WRITING,
+    CREDITS_STRING_EK_PROGRAMMING,
+    CREDITS_STRING_EK_ORIGINAL_DESIGNS,
+    CREDITS_STRING_EK_ENGINE,
+    CREDITS_STRING_EK_SPRITES,
+    CREDITS_STRING_EK_ARCHIVE,
+    CREDITS_STRING_EK_TOOLS,
+    CREDITS_STRING_EK_ORIGINAL,
+    CREDITS_STRING_EK_MUSIC,
+    CREDITS_STRING_EK_THANKS,
 };
 
 enum CreditsMap
@@ -380,7 +395,7 @@ static const struct CompressedGraphicsHeader sCopyrightOrTheEndGfxHeaders[] = {
 #define CREDITS_THEENDGFX(idx, duration) { CREDITSSCRCMD_THEENDGFX, CREDITSCLOSING_##idx, duration }
 #define CREDITS_WAITBUTTON(time) { CREDITSSCRCMD_WAITBUTTON, .duration = time }
 
-static const struct CreditsScrcmd sCreditsScript[] = {
+static const struct CreditsScrcmd sOriginalCreditsScript[] = {
     CREDITS_MAPNEXT(ROUTE23, 16),
     CREDITS_PRINT(DIRECTOR, 300),
     CREDITS_PRINT(ART_DIRECTOR_BATTLE_DIRECTOR, 300),
@@ -448,6 +463,39 @@ static const struct CreditsScrcmd sCreditsScript[] = {
     CREDITS_THEENDGFX(THEEND, 240),
     CREDITS_WAITBUTTON(600)
 };
+
+static const struct CreditsScrcmd sExpeditionCreditsScript[] = {
+    CREDITS_MAPNEXT(ROUTE23, 16),
+    CREDITS_PRINT(EK_PROJECT, 360),
+    CREDITS_MAPNEXT(VIRIDIAN_CITY, 16),
+    CREDITS_PRINT(EK_CREATION, 360),
+    CREDITS_MAPNEXT(PEWTER_CITY, 16),
+    CREDITS_PRINT(EK_DESIGNS, 360),
+    CREDITS_PRINT(EK_QA, 360),
+    CREDITS_PRINT(EK_EDITOR, 360),
+    CREDITS_PRINT(EK_WRITING, 360),
+    CREDITS_PRINT(EK_PROGRAMMING, 360),
+    CREDITS_PRINT(EK_ORIGINAL_DESIGNS, 360),
+    CREDITS_MAPNEXT(CERULEAN_CITY, 16),
+    CREDITS_PRINT(EK_ENGINE, 360),
+    CREDITS_MAPNEXT(VERMILION_CITY, 16),
+    CREDITS_PRINT(EK_SPRITES, 360),
+    CREDITS_MAPNEXT(CELADON_CITY, 16),
+    CREDITS_PRINT(EK_ARCHIVE, 360),
+    CREDITS_MAPNEXT(SAFFRON_CITY, 16),
+    CREDITS_PRINT(EK_TOOLS, 360),
+    CREDITS_MAPNEXT(FUCHSIA_CITY, 16),
+    CREDITS_PRINT(EK_ORIGINAL, 360),
+    CREDITS_MAPNEXT(CINNABAR_ISLAND, 16),
+    CREDITS_PRINT(EK_MUSIC, 360),
+    CREDITS_MAPNEXT(ROUTE21_NORTH, 16),
+    CREDITS_PRINT(EK_THANKS, 360),
+    CREDITS_THEENDGFX(ALLRIGHTSRESERVED, 224),
+    CREDITS_THEENDGFX(THEEND, 240),
+    CREDITS_WAITBUTTON(600)
+};
+
+static const struct CreditsScrcmd *sCreditsScript;
 
 static const ALIGNED(4) u8 sTextColor_Unused[3] = {0, 1, 2};
 static const ALIGNED(4) u8 sTextColor_Header[3] = {0, 5, 2};
@@ -662,6 +710,39 @@ static const struct CreditsOverworldCmd *const sOverworldMapScenes[] = {
     sOverworldCmd_Route21
 };
 
+static const u8 sExpeditionCreditsTitle[] = _("EXPEDITION KANTO");
+static const u8 sCreditsChoice[] = _("A: EXPEDITION KANTO\nSELECT: ORIGINAL CREDITS");
+static const u8 sTitle_EK_PROJECT[] = _("EXPEDITION KANTO");
+static const u8 sNames_EK_PROJECT[] = _("\nAN EXPEDITION THROUGH KANTO");
+static const u8 sTitle_EK_CREATION[] = _("GAME & ART DIRECTION");
+static const u8 sNames_EK_CREATION[] = _("\nDEE KARIYAWASAM");
+static const u8 sTitle_EK_DESIGNS[] = _("ASSISTANT DIRECTOR");
+static const u8 sNames_EK_DESIGNS[] = _("\nJAKE MOSES");
+static const u8 sTitle_EK_QA[] = _("QA TESTER");
+static const u8 sNames_EK_QA[] = _("\nHONGMIAO SHI");
+static const u8 sTitle_EK_EDITOR[] = _("EDITOR");
+static const u8 sNames_EK_EDITOR[] = _("\nHONGMIAO SHI");
+static const u8 sTitle_EK_WRITING[] = _("WRITING & STORY");
+static const u8 sNames_EK_WRITING[] = _("\nDEE KARIYAWASAM");
+static const u8 sTitle_EK_PROGRAMMING[] = _("PROGRAMMING");
+static const u8 sNames_EK_PROGRAMMING[] = _("\nDEE KARIYAWASAM");
+static const u8 sTitle_EK_ORIGINAL_DESIGNS[] = _("ORIGINAL POKEMON DESIGNS");
+static const u8 sNames_EK_ORIGINAL_DESIGNS[] = _("\nDEE KARIYAWASAM");
+static const u8 sTitle_EK_ENGINE[] = _("DECOMPILATION");
+static const u8 sNames_EK_ENGINE[] = _("\nPRET / POKEFIRERED\nCONTRIBUTORS");
+static const u8 sTitle_EK_SPRITES[] = _("ADDITIONAL SPRITE RESOURCES");
+static const u8 sNames_EK_SPRITES[] = _("\nROM HACKING HIDEOUT\nPOKEEMERALD-EXPANSION\nSPRITE CONTRIBUTORS");
+static const u8 sTitle_EK_ARCHIVE[] = _("SPRITE ARCHIVES");
+static const u8 sNames_EK_ARCHIVE[] = _("\nPOKEAPI / SPRITES");
+static const u8 sTitle_EK_TOOLS[] = _("DEVELOPMENT TOOLS");
+static const u8 sNames_EK_TOOLS[] = _("\nDEVKITARM / AGBCC\nPORYMAP\nOPENAI CODEX");
+static const u8 sTitle_EK_ORIGINAL[] = _("ORIGINAL GAME");
+static const u8 sNames_EK_ORIGINAL[] = _("\nPOKEMON FIRERED\nGAME FREAK\nNINTENDO / CREATURES");
+static const u8 sTitle_EK_MUSIC[] = _("ORIGINAL MUSIC & SOUND");
+static const u8 sNames_EK_MUSIC[] = _("\nGO ICHINOSE\nJUNICHI MASUDA");
+static const u8 sTitle_EK_THANKS[] = _("THANK YOU");
+static const u8 sNames_EK_THANKS[] = _("\nTO EVERYONE WHO HELPED\nAND EVERY TRAINER\nEXPLORING KANTO");
+
 static const struct CreditsTextHeader sCreditsTexts[] = {
     { gCreditsString_Director, gCreditsString_Junichi_Masuda, FALSE },
     { gCreditsString_Art_Director_Battle_Director, gCreditsString_Ken_Sugimori_Shigeki_Morimoto, FALSE },
@@ -705,11 +786,28 @@ static const struct CreditsTextHeader sCreditsTexts[] = {
     { gCreditsString_Special_Thanks_5, gCreditsString_Nicola_Pratt_Barlow_Shellie_Dow_Anthony_Howitt_Naoko_Saeki_Kyoko_Onishi, FALSE },
     { gCreditsString_Braille_Code_Check_4, gCreditsString_The_Royal_New_Zealand_Foundation_of_the_Blind_Greg_Moran, FALSE },
     { gCreditsString_Graphic_Designer, gCreditsString_Akira_Kinashi, FALSE },
-    { gString_Dummy, gString_Dummy, FALSE }
+    { gString_Dummy, gString_Dummy, FALSE },
+    { sTitle_EK_PROJECT, sNames_EK_PROJECT, FALSE },
+    { sTitle_EK_CREATION, sNames_EK_CREATION, FALSE },
+    { sTitle_EK_DESIGNS, sNames_EK_DESIGNS, FALSE },
+    { sTitle_EK_QA, sNames_EK_QA, FALSE },
+    { sTitle_EK_EDITOR, sNames_EK_EDITOR, FALSE },
+    { sTitle_EK_WRITING, sNames_EK_WRITING, FALSE },
+    { sTitle_EK_PROGRAMMING, sNames_EK_PROGRAMMING, FALSE },
+    { sTitle_EK_ORIGINAL_DESIGNS, sNames_EK_ORIGINAL_DESIGNS, FALSE },
+    { sTitle_EK_ENGINE, sNames_EK_ENGINE, FALSE },
+    { sTitle_EK_SPRITES, sNames_EK_SPRITES, FALSE },
+    { sTitle_EK_ARCHIVE, sNames_EK_ARCHIVE, FALSE },
+    { sTitle_EK_TOOLS, sNames_EK_TOOLS, FALSE },
+    { sTitle_EK_ORIGINAL, sNames_EK_ORIGINAL, FALSE },
+    { sTitle_EK_MUSIC, sNames_EK_MUSIC, FALSE },
+    { sTitle_EK_THANKS, sNames_EK_THANKS, FALSE },
+
 };
 
 void DoCredits(void)
 {
+    sCreditsScript = sExpeditionCreditsScript;
     sCreditsMgr = AllocZeroed(sizeof(*sCreditsMgr));
     ResetTasks();
     sCreditsMgr->taskId = TASK_NONE;
@@ -865,15 +963,15 @@ static s32 RollCredits(void)
             
         }
         sCreditsMgr->timer = 360;
-        AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL_COPY_1, 0x08, 0x29, 1, 2, sTextColor_Header, 0, TITLE_TEXT);
+        AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL_COPY_1, 8, 16, 0, 0, sTextColor_Header, -1, sExpeditionCreditsTitle);
+        AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL, 8, 40, 0, 0, sTextColor_Regular, -1, sCreditsChoice);
         sCreditsMgr->mainseqno = CREDITSSCENE_WAIT_TITLE_STAFF;
         return 0;
     case CREDITSSCENE_WAIT_TITLE_STAFF:
-        if (sCreditsMgr->timer)
-        {
-            sCreditsMgr->timer--;
+        if (JOY_NEW(SELECT_BUTTON))
+            sCreditsScript = sOriginalCreditsScript;
+        else if (!JOY_NEW(A_BUTTON))
             return 0;
-        }
         DestroyCreditsWindow();
         sCreditsMgr->mainseqno = CREDITSSCENE_EXEC_CMD;
         sCreditsMgr->timer = 0;

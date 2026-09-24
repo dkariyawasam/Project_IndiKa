@@ -1,0 +1,257 @@
+{
+  "capture_rom_sha256": "fe2d5775326bf5add71399455c483c59ee1d35bc35a3fd6062f5981d41f092da",
+  "images": {
+    "title-current": {
+      "file": "images/title-current.png",
+      "source": "/tmp/kanto-blog-captures/blog-0.png",
+      "caption": "Tangrowth overlooking Kanto on the current title screen.",
+      "kind": "fresh-main-build",
+      "sha256": "0d3e67e23705e6a761792316fc3f3af4f55f5be5fb2e6022bf0c7594b20059b0"
+    },
+    "pallet-current": {
+      "file": "images/pallet-current.png",
+      "source": "/tmp/kanto-blog-captures/pallet-field.png",
+      "caption": "First steps out of Pallet Town.",
+      "kind": "fresh-main-build",
+      "sha256": "6c4e8e8f1076984fc05e32b10dc194e78b7ae7e07e75f01fa69fd0b1123f5f22"
+    },
+    "radial-current": {
+      "file": "images/radial-current.png",
+      "source": "/tmp/kanto-blog-captures/radial-menu.png",
+      "caption": "The radial menu with POK\u00e9DEX selected.",
+      "kind": "fresh-main-build",
+      "sha256": "aa1482c9bf56f3714fbe83f40f725d3c64eb4a4dd2221c3a92068c9bc7b55145"
+    },
+    "dex-current": {
+      "file": "images/dex-current.png",
+      "source": "/tmp/kanto-blog-captures/pokedex-header.png",
+      "caption": "The Pok\u00e9dex habitat list and shared blue control header.",
+      "kind": "fresh-main-build",
+      "sha256": "5c644eac441d00c06fa66ce8d913abfd9cc9c6bf1341bdf809908681eaad0de7"
+    },
+    "bag-items": {
+      "file": "images/bag-items.png",
+      "source": "/tmp/kanto-blog-captures/bag-items.png",
+      "caption": "The Items pocket with its page notches and description panel.",
+      "kind": "fresh-main-build",
+      "sha256": "bb841727d805afc887df6b44a3d771db141cceb461dd7e345429d93e3faf0089"
+    },
+    "bag-berries": {
+      "file": "images/bag-berries.png",
+      "source": "/tmp/kanto-blog-captures/bag-key-items.png",
+      "caption": "The Berries pocket; this capture save has no berries.",
+      "kind": "fresh-main-build",
+      "sha256": "306f592cdadf56b60ee355ac59e3010d2cb81496c77ddcd931d02abfc7fa4631"
+    },
+    "bag-tms": {
+      "file": "images/bag-tms.png",
+      "source": "/tmp/kanto-blog-captures/bag-tms.png",
+      "caption": "The TM pocket; this capture save has no TMs.",
+      "kind": "fresh-main-build",
+      "sha256": "e2db79e3afc5d448d5a73ab933d3919666865f7740d7e716c2bf37b5f7a646b4"
+    },
+    "bag-key-items": {
+      "file": "images/bag-key-items.png",
+      "source": "/tmp/kanto-blog-captures/bag-berries.png",
+      "caption": "The Key Items pocket showing the Soul Pass.",
+      "kind": "fresh-main-build",
+      "sha256": "93046d8146e6b3db362b51696b567a78c6daa15010449b61be37f73dfba55a98"
+    },
+    "trainer-card": {
+      "file": "images/trainer-card.png",
+      "source": "/tmp/kanto-blog-captures/trainer-card.png",
+      "caption": "The Trainer Card uses the same top-edge control hints.",
+      "kind": "fresh-main-build",
+      "sha256": "ba9b15f0867fadda75ca3a7b52628e93f44ff635da44844dab81083a3217c1d4"
+    },
+    "field-notes": {
+      "file": "images/field-notes.png",
+      "source": "/tmp/kanto-blog-captures/logbook.png",
+      "caption": "The field-notes index connects the research storylines.",
+      "kind": "fresh-main-build",
+      "sha256": "2aaa8814c76f76fd2427cc6393bf28bbd2fc24c7bc89d0911e4a61833e8ed432"
+    },
+    "gym-notes": {
+      "file": "images/gym-notes.png",
+      "source": "/tmp/kanto-blog-captures/gym-log.png",
+      "caption": "Gym trial records, with undiscovered leaders hidden.",
+      "kind": "fresh-main-build",
+      "sha256": "e29f904e2291f7a902bf431d0cfc0f6e54bfce46d0e5a49ddcf6b079c0c990ab"
+    },
+    "apex-notes": {
+      "file": "images/apex-notes.png",
+      "source": "/tmp/kanto-blog-captures/apex-log.png",
+      "caption": "The Apex log hides undiscovered entries and records active leads.",
+      "kind": "fresh-main-build",
+      "sha256": "c8cb285b87483ebcdb32223d561b92b9c6276dfb278cf7f31a086b21b1b30608"
+    },
+    "oak-intro": {
+      "file": "images/oak-intro.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/01-intro.png",
+      "caption": "Oak introduces the idea of studying Pok\u00e9mon where they live. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "444fe226fa39c7ea12eca9f4cfea184df50659417d93c902846c758bef162491"
+    },
+    "route2-rumour": {
+      "file": "images/route2-rumour.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/apex-story-playthrough/13-route2-rumour.png",
+      "caption": "A Route 2 witness offers a lead. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "2c2b7b64433c2a668e6f4ede2753c33517802206ac7626e99438d1ffed5c1c95"
+    },
+    "forest-rumour": {
+      "file": "images/forest-rumour.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/apex-story-playthrough/10-first-tangrowth-rumour.png",
+      "caption": "A witness recalls a story about the forest. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "acee90b5b85b8f2ed60122be36091c1d600e2af685c86a2c76bc82a7ab73794f"
+    },
+    "tangrowth-battle": {
+      "file": "images/tangrowth-battle.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/apex-story-playthrough/26-tangrowth-battle.png",
+      "caption": "An Apex Tangrowth encounter begins. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "ba277dc5b7330adebb51d4df02c6da3dc83612ea8bd958bc7df8a6bd7be2708c"
+    },
+    "bike-rental": {
+      "file": "images/bike-rental.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/213-cycling-road-rental.png",
+      "caption": "The Cycling Road rental checkpoint. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "b5f8cd685c54cb4a6226c5ff32676f50a9898c6fe9c7da09bd6357f4c8784b80"
+    },
+    "saffron-entry": {
+      "file": "images/saffron-entry.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/115-saffron-arrival.png",
+      "caption": "The open approach to Saffron City. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "03ee237c1fd271888cb1c65f53f844f910bad82713108fcca213d8a33e70df2d"
+    },
+    "pallet-voyage": {
+      "file": "images/pallet-voyage.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/451-pallet-voyage.png",
+      "caption": "The water route toward Pallet. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "3d714c60edb344215f49cdcf29fb2bea03746f79cbdfdf994b98d2b39bb045d6"
+    },
+    "erika-field": {
+      "file": "images/erika-field.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/30-erika-request.png",
+      "caption": "Meeting Erika in the forest. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "1c27f8d5a176e5917729bcf8ba936d78b65c0f549ac038c56b12fbc469f00d07"
+    },
+    "erika-battle": {
+      "file": "images/erika-battle.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/47-erika-challenge.png",
+      "caption": "Erika sends out her team for the field challenge. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "1402fb86438e5d00e915fe20ffbf70de0dd1d8dd8753c657a4be912a48b7af71"
+    },
+    "mansion-vat": {
+      "file": "images/mansion-vat.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/302-giovanni-scene-fixed.png",
+      "caption": "Giovanni beside the broken vat in the Mansion. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "f1a398a6d9251c87479f142032edc001321a5a07fb1b7fcfccc085c493d6ffa5"
+    },
+    "silph-office": {
+      "file": "images/silph-office.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/366-silph-giovanni-signal.png",
+      "caption": "The Silph Co. confrontation setting. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "bdb18fcb20c4232ca80adde6164a562d8a6dcc867fdf1986c20e5cdc3aaf0610"
+    },
+    "mewtwo-scene": {
+      "file": "images/mewtwo-scene.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/387-giovanni-control-fails.png",
+      "caption": "Giovanni and Mewtwo in Cerulean Cave. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "aef7917c026f9239afbe2253f751b96b4b2d92e81ac3203aadacfc9954978e43"
+    },
+    "giovanni-conclusion": {
+      "file": "images/giovanni-conclusion.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/apex-story-playthrough/50-giovanni-conclusion.png",
+      "caption": "Giovanni reflects on the difference between possession and partnership. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "361e1ef3c94ce4ab305ad98b9e6c9e36b855ab87874e0972a8fd69d1754f7ed8"
+    },
+    "route7-before": {
+      "file": "images/route7-before.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/191-route7-cave-sealed-fixture.png",
+      "caption": "Route 7 before the cave opens. Archived staged state-check capture.",
+      "kind": "archive",
+      "sha256": "26a79fb2efe8ce4666ba644558a7cb9caaaf2fa64b6c113809b99cea61b3f497"
+    },
+    "route7-after": {
+      "file": "images/route7-after.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/192-route7-cave-open-fixture.png",
+      "caption": "The same Route 7 entrance after the story flag changes. Archived staged state-check capture.",
+      "kind": "archive",
+      "sha256": "c75b26b856c0e2482b55de414b79f07b93404bfce80d671900e8d309656a3bbd"
+    },
+    "lance-cave": {
+      "file": "images/lance-cave.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/379-lance-flashback.png",
+      "caption": "Lance at the Celadon Cave scene. Archived playthrough capture; not the beam animation.",
+      "kind": "archive",
+      "sha256": "ad6d7a5c943a7257a52dc23bfe826e16b942d4cc42de60664a1aa860d98b71f7"
+    },
+    "home-healing": {
+      "file": "images/home-healing.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/release-playthrough/september22/healing-house-mom-dialogue.png",
+      "caption": "Returning home to a healing-house welcome. Archived playthrough capture.",
+      "kind": "archive",
+      "sha256": "0e3d1673db98477e422d9f8b007b2250d112477dd5df024b053a9c49fea0833f"
+    },
+    "trainer-lineup": {
+      "file": "images/trainer-lineup.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/trainer-overworld-lineup-single.png",
+      "caption": "Trainer overworld design reference sheet; a development artifact, not an in-game screenshot.",
+      "kind": "archive",
+      "sha256": "ac3d6244591bf6a7d5d2b63345a448f0f1425bdaaced15735a67263f04ec724b"
+    },
+    "trainer-heatmap": {
+      "file": "images/trainer-heatmap.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/trainer-class-heatmap.png",
+      "caption": "Trainer distribution audit reference; a development chart.",
+      "kind": "archive",
+      "sha256": "11a32e04e36235180e6f34d90883529386959673b814d7fc0a608dcdfb32cedd"
+    },
+    "palette-fix": {
+      "file": "images/palette-fix.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/regional-colour-role-fix/comparison.png",
+      "caption": "Before/after colour-role corrections for regional Cubone and Koffing, front and back.",
+      "kind": "archive",
+      "sha256": "bc4482292d024993c2ba3f23ed9e95fe12104caa9b81b484186ec98dca7a5678"
+    },
+    "footprints": {
+      "file": "images/footprints.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/footprint-audit/fixed-preview.png",
+      "caption": "The footprint correction reference sheet.",
+      "kind": "archive",
+      "sha256": "4a8deb1226115fba2bff330618355b16820bfa9b46d3ff5f50b35c85faebab8a"
+    },
+    "title-earlier": {
+      "file": "images/title-earlier.png",
+      "source": "/Users/deekariyawasam/pokefirered/docs/reference-previews/title_screen_preview.png",
+      "caption": "An earlier title-screen development preview.",
+      "kind": "archive",
+      "sha256": "9f3db1a49e2c858cc09463e947ca7d567dde54874795a5533e5d43c8bea5d8e5"
+    },
+    "pokemon-summary": {
+      "file": "images/pokemon-summary.png",
+      "source": "/tmp/kanto-blog-captures/pokemon-summary.png",
+      "caption": "The Pok\u00e9mon summary INFO page keeps its page and back controls in the blue header.",
+      "kind": "fresh-main-build",
+      "sha256": "25548c74e8eea75f1a6d77aef1cbf779a68c11b239065fa6bd605b7db55b066d"
+    },
+    "help-header": {
+      "file": "images/help-header.png",
+      "source": "/tmp/kanto-blog-captures/help-header.png",
+      "caption": "The Help topic list uses the shared blue selection and back-control header.",
+      "kind": "fresh-main-build",
+      "sha256": "725ab361fc0c692de9246fe96dad4b65d143afe233ac2a1b17343b79e12535ce"
+    }
+  }
+}

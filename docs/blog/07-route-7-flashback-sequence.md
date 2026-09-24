@@ -19,7 +19,9 @@ The map itself tells the first part of the story.
 
 A path has been carved through the trees, turning a once-blocked stretch of land into a scar running north. Before Silph Co is cleared, the trees still cover the area. Afterward, the blast path is revealed.
 
-[Screenshot: Route 7 before and after the beam cut]
+![Route 7 before the cave opens. Archived staged state-check capture.](images/route7-before.png)
+
+*Route 7 before the cave opens. Archived staged state-check capture.*
 
 ## Four Witnesses
 
@@ -73,13 +75,25 @@ All four use the same white-flash transition language, greyscale memory tint, an
 
 The beam-cut path now uses rough terrain rather than grass, and Celadon Cave connects Route 7 to Route 4 as the wound Mewtwo leaves behind.
 
+## Screenshots And References
+
+![The same Route 7 entrance after the story flag changes. Archived staged state-check capture.](images/route7-after.png)
+
+*The same Route 7 entrance after the story flag changes. Archived staged state-check capture.*
+
+![Lance at the Celadon Cave scene. Archived playthrough capture; not the beam animation.](images/lance-cave.png)
+
+*Lance at the Celadon Cave scene. Archived playthrough capture; not the beam animation.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Route 7 beam cut.
 - [ ] Lorelei flashback beam charge.
 - [ ] Bruno impact moment.
 - [ ] Agatha control-waning moment.
-- [ ] Lance in Celadon Cave.
+- [x] Lance in Celadon Cave.
 
 ## Closing Thought
 

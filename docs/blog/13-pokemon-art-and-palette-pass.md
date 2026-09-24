@@ -9,6 +9,10 @@ summary: "Making custom Pokemon sprites, palettes, icons, and footprints feel na
 
 # Pokemon Art And Palette Pass
 
+![Before/after colour-role corrections for regional Cubone and Koffing, front and back.](images/palette-fix.png)
+
+*Before/after colour-role corrections for regional Cubone and Koffing, front and back.*
+
 Adding new Pokemon art is not just dropping in sprites.
 
 The real question is:
@@ -82,13 +86,25 @@ The art pass has moved from adding sprites to making the Pokedex feel palette-co
 
 Menu icons and footprints were filled in for newer species, while custom palettes were softened toward FireRed-style colours when they felt too saturated or too flat.
 
+## Screenshots And References
+
+![The footprint correction reference sheet.](images/footprints.png)
+
+*The footprint correction reference sheet.*
+
+![The Pokédex habitat list and shared blue control header.](images/dex-current.png)
+
+*The Pokédex habitat list and shared blue control header.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Palette comparison grid.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Palette comparison grid.
 - [ ] Menu icon sheet.
-- [ ] Footprint preview.
-- [ ] Front and back sprite examples.
-- [ ] In-game Pokedex view.
+- [x] Footprint preview.
+- [x] Front and back sprite examples.
+- [x] In-game Pokedex view.
 
 ## Closing Thought
 

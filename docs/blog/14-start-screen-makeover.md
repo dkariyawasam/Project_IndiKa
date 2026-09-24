@@ -24,7 +24,9 @@ Tangrowth became the title screen Pokemon because it captures the mod's tone:
 - Overgrowth.
 - Something familiar but slightly strange.
 
-[Screenshot: final Tangrowth title screen]
+![Tangrowth overlooking Kanto on the current title screen.](images/title-current.png)
+
+*Tangrowth overlooking Kanto on the current title screen.*
 
 ## The New Scene
 
@@ -60,7 +62,15 @@ This screen was a tilemap puzzle:
 - The backdrop needed palette-safe tiles.
 - Several visual artifacts came from tile and palette overlap.
 
+## Screenshots And References
+
+![An earlier title-screen development preview.](images/title-earlier.png)
+
+*An earlier title-screen development preview.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Original FireRed title screen.
 - [ ] Early Tangrowth mockup.

@@ -25,7 +25,9 @@ The bag now uses:
 
 This makes the bag feel closer to a modern item system while still fitting the GBA UI.
 
-[Screenshot: Bag with pocket notches]
+![The Items pocket with its page notches and description panel.](images/bag-items.png)
+
+*The Items pocket with its page notches and description panel.*
 
 ## The Visual Problem
 
@@ -58,12 +60,28 @@ The old CANCEL list rows have been removed because the common hint header now te
 
 Berries now have modernised effects where FireRed only had placeholder or powder-machine behaviour, and berry use in battle has been repaired. Fossils correctly show quantities, coins no longer require the Coin Case, and the Bike Voucher has been removed now that bicycles can be bought or rented.
 
+## Screenshots And References
+
+![The Berries pocket; this capture save has no berries.](images/bag-berries.png)
+
+*The Berries pocket; this capture save has no berries.*
+
+![The TM pocket; this capture save has no TMs.](images/bag-tms.png)
+
+*The TM pocket; this capture save has no TMs.*
+
+![The Key Items pocket showing the Soul Pass.](images/bag-key-items.png)
+
+*The Key Items pocket showing the Soul Pass.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Bag pocket overview.
-- [ ] Berry pocket.
-- [ ] TM pocket.
-- [ ] Header hint strip.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Bag pocket overview.
+- [x] Berry pocket.
+- [x] TM pocket.
+- [x] Header hint strip.
 - [ ] Before and after bag layout.
 
 ## Closing Thought

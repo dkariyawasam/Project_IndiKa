@@ -9,6 +9,10 @@ summary: "A reflection on palettes, tilemaps, scripting, iteration, and the joy 
 
 # What I Learned Hacking FireRed
 
+![Before/after colour-role corrections for regional Cubone and Koffing, front and back.](images/palette-fix.png)
+
+*Before/after colour-role corrections for regional Cubone and Koffing, front and back.*
+
 This project has been a long chain of small discoveries.
 
 Some were design discoveries. Some were technical. Some were just learning that one tile being wrong can ruin your entire afternoon.
@@ -69,13 +73,25 @@ Most technical changes came from a design need:
 
 Good design pressure is useful. It tells the code what it wants to become.
 
+## Screenshots And References
+
+![The radial menu with POKéDEX selected.](images/radial-current.png)
+
+*The radial menu with POKéDEX selected.*
+
+![Lance at the Celadon Cave scene. Archived playthrough capture; not the beam animation.](images/lance-cave.png)
+
+*Lance at the Celadon Cave scene. Archived playthrough capture; not the beam animation.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Before and after screenshots from several systems.
 - [ ] A funny broken tile/palette screenshot.
-- [ ] A clean final UI screenshot.
+- [x] A clean final UI screenshot.
 - [ ] A cutscene frame.
-- [ ] A sprite sheet before and after.
+- [x] A sprite sheet before and after.
 
 ## Closing Thought
 

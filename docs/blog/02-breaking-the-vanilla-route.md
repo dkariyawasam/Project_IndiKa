@@ -21,7 +21,9 @@ If a player has played FireRed before, they will naturally follow the old route 
 
 Not with a tutorial box. With the world itself.
 
-[Screenshot: Route 2 rival encounter]
+![A Route 2 witness offers a lead. Archived playthrough capture.](images/route2-rumour.png)
+
+*A Route 2 witness offers a lead. Archived playthrough capture.*
 
 ## The First Break
 
@@ -73,13 +75,29 @@ The bike is now a purchased or rented travel tool rather than a voucher reward. 
 
 Route 7 has become the clearest expression of the new structure: it is no longer just a pass-through route, but the aftermath of Giovanni and Mewtwo tearing a path north toward Celadon Cave.
 
+## Screenshots And References
+
+![The Cycling Road rental checkpoint. Archived playthrough capture.](images/bike-rental.png)
+
+*The Cycling Road rental checkpoint. Archived playthrough capture.*
+
+![The open approach to Saffron City. Archived playthrough capture.](images/saffron-entry.png)
+
+*The open approach to Saffron City. Archived playthrough capture.*
+
+![The water route toward Pallet. Archived playthrough capture.](images/pallet-voyage.png)
+
+*The water route toward Pallet. Archived playthrough capture.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Route 2 path choice.
 - [ ] Pallet to Route 21 ferry sign.
-- [ ] Bike rental guard house.
+- [x] Bike rental guard house.
 - [ ] Direct forest entrance.
-- [ ] Saffron entrance without tea blockade.
+- [x] Saffron entrance without tea blockade.
 
 ## Closing Thought
 

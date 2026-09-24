@@ -9,6 +9,10 @@ summary: "Removing unused systems, simplifying blockers, and making room for the
 
 # Cleaning Up FireRed
 
+![Returning home to a healing-house welcome. Archived playthrough capture.](images/home-healing.png)
+
+*Returning home to a healing-house welcome. Archived playthrough capture.*
+
 ROM hacking is not only adding things.
 
 Sometimes the biggest improvement is removing systems that no longer serve the game.
@@ -88,12 +92,24 @@ Recent cleanup removed several systems that no longer fit Expeditions Kanto:
 
 Some systems survived, but changed jobs. Teachy TV became the Help menu, Fame Checker became the Apex Log, and the old quest menu became the Logbook.
 
+## Screenshots And References
+
+![The open approach to Saffron City. Archived playthrough capture.](images/saffron-entry.png)
+
+*The open approach to Saffron City. Archived playthrough capture.*
+
+![The Key Items pocket showing the Soul Pass.](images/bag-key-items.png)
+
+*The Key Items pocket showing the Soul Pass.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Removed gatehouse comparison.
 - [ ] Old item list versus new key item list.
 - [ ] Lavender healing house.
-- [ ] Saffron entrance cleanup.
+- [x] Saffron entrance cleanup.
 - [ ] Build cleanup diff snippet.
 
 ## Closing Thought

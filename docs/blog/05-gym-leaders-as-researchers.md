@@ -21,7 +21,9 @@ If Apex Pokemon show how Pokemon change without trainers, gym leaders show how P
 
 That makes the gym challenge part of the research theme instead of a separate badge quest.
 
-[Screenshot: Gym leader field challenge or Logbook entry]
+![Meeting Erika in the forest. Archived playthrough capture.](images/erika-field.png)
+
+*Meeting Erika in the forest. Archived playthrough capture.*
 
 ## Field Challenges
 
@@ -59,13 +61,25 @@ Gym leader trials use statuses like:
 
 This helps the player read the gym path as research progress, not just combat progress.
 
+## Screenshots And References
+
+![Erika sends out her team for the field challenge. Archived playthrough capture.](images/erika-battle.png)
+
+*Erika sends out her team for the field challenge. Archived playthrough capture.*
+
+![Gym trial records, with undiscovered leaders hidden.](images/gym-notes.png)
+
+*Gym trial records, with undiscovered leaders hidden.*
+
 ## Screenshot And Art Checklist
 
-- [ ] A field challenge gym leader.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] A field challenge gym leader.
 - [ ] Gym leader dialogue about Pokemon growth.
 - [ ] Thunder Pass mart specials.
 - [ ] Soul Pass friendship check.
-- [ ] Logbook gym leader trial status.
+- [x] Logbook gym leader trial status.
 
 ## Closing Thought
 

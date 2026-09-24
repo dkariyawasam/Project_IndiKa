@@ -30,7 +30,9 @@ The radial menu opens around the player, with icons for:
 
 The selected icon bobs, the backdrop scales in, and the center label updates with the current entry.
 
-[Screenshot: radial start menu open]
+![The radial menu with POKéDEX selected.](images/radial-current.png)
+
+*The radial menu with POKéDEX selected.*
 
 ## Why Radial?
 
@@ -68,10 +70,18 @@ The icons are packed into one sheet with a shared palette, and the directional g
 
 The menu still opens with its backdrop scaling into place, then the icons appear once the backdrop has settled. The save overwrite warning has also been removed so saving feels less fussy.
 
+## Screenshots And References
+
+![First steps out of Pallet Town.](images/pallet-current.png)
+
+*First steps out of Pallet Town.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Closed overworld before opening menu.
-- [ ] Radial menu open with Pokedex selected.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Closed overworld before opening menu.
+- [x] Radial menu open with Pokedex selected.
 - [ ] Icon sheet.
 - [ ] D-pad glyph variants.
 - [ ] Menu opening animation.

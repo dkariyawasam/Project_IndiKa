@@ -26,7 +26,9 @@ That creates a small investigation loop:
 3. Confirm the location.
 4. Go investigate.
 
-[Screenshot: Rumour recorded notification]
+![A witness recalls a story about the forest. Archived playthrough capture.](images/forest-rumour.png)
+
+*A witness recalls a story about the forest. Archived playthrough capture.*
 
 ## Making Rumours Feel Like Events
 
@@ -73,12 +75,24 @@ Mewtwo now follows the same logic, but through Giovanni's story. The first entry
 
 Rumours now refresh visible Apex objects immediately when the third rumour is recorded, so the player no longer has to leave and re-enter the map before an Apex appears.
 
+## Screenshots And References
+
+![A Route 2 witness offers a lead. Archived playthrough capture.](images/route2-rumour.png)
+
+*A Route 2 witness offers a lead. Archived playthrough capture.*
+
+![The Apex log hides undiscovered entries and records active leads.](images/apex-notes.png)
+
+*The Apex log hides undiscovered entries and records active leads.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] NPC before and after rumour discovery.
 - [ ] Apex Log with silhouettes.
 - [ ] Apex Log after all rumours.
-- [ ] An NPC giving a thematically strong rumour.
+- [x] An NPC giving a thematically strong rumour.
 - [ ] Apex overworld appearing after confirmation.
 
 ## Closing Thought

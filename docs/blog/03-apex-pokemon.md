@@ -15,7 +15,9 @@ How do Pokemon change when no trainer is guiding them?
 
 They are not simply legendaries. They are extreme cases of adaptation, emotion, isolation, myth, power, grief, and survival.
 
-[Screenshot: Tangrowth, Annihilape, or Mewtwo overworld]
+![An Apex Tangrowth encounter begins. Archived playthrough capture.](images/tangrowth-battle.png)
+
+*An Apex Tangrowth encounter begins. Archived playthrough capture.*
 
 ## Why "Apex"?
 
@@ -58,12 +60,20 @@ They also use screen shake, unique roar text, and overworld presence to make the
 - Apex subquests can reveal the target before it is found.
 - Apex overworlds use bespoke sprites and palettes.
 
+## Screenshots And References
+
+![The Apex log hides undiscovered entries and records active leads.](images/apex-notes.png)
+
+*The Apex log hides undiscovered entries and records active leads.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Apex Pokemon appearing after rumours.
 - [ ] Apex Log with silhouettes.
 - [ ] Oak post-encounter message.
-- [ ] An Apex battle start.
+- [x] An Apex battle start.
 - [ ] Apex overworld sprite sheet comparison.
 
 ## Closing Thought

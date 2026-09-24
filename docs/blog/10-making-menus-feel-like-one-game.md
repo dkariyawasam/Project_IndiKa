@@ -26,7 +26,9 @@ Depending on the screen, it can show:
 - `A FLIP`
 - `B BACK`
 
-[Screenshot: multiple menu headers side by side]
+![The Pokédex habitat list and shared blue control header.](images/dex-current.png)
+
+*The Pokédex habitat list and shared blue control header.*
 
 ## Why Hints Matter
 
@@ -62,14 +64,38 @@ Paged menus use a blue hint header with the screen label, notches, and compact c
 
 The Trainer Card now flips with `A` and exits with `B`, while the header stays fixed instead of flipping with the card. The Pokemon summary uses shorter page labels: INFO, STATS, and MOVESET.
 
+## Screenshots And References
+
+![The Items pocket with its page notches and description panel.](images/bag-items.png)
+
+*The Items pocket with its page notches and description panel.*
+
+![The field-notes index connects the research storylines.](images/field-notes.png)
+
+*The field-notes index connects the research storylines.*
+
+![The Trainer Card uses the same top-edge control hints.](images/trainer-card.png)
+
+*The Trainer Card uses the same top-edge control hints.*
+
+![The Pokémon summary INFO page keeps its page and back controls in the blue header.](images/pokemon-summary.png)
+
+*The Pokémon summary INFO page keeps its page and back controls in the blue header.*
+
+![The Help topic list uses the shared blue selection and back-control header.](images/help-header.png)
+
+*The Help topic list uses the shared blue selection and back-control header.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Bag header.
-- [ ] Pokedex header.
-- [ ] Pokemon summary header.
-- [ ] Trainer Card header.
-- [ ] Logbook header.
-- [ ] Help header.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Bag header.
+- [x] Pokedex header.
+- [x] Pokemon summary header.
+- [x] Trainer Card header.
+- [x] Logbook header.
+- [x] Help header.
 
 ## Closing Thought
 

@@ -26,7 +26,9 @@ He is not giving a villain speech to the player. He is talking to the empty room
 
 The player catches him in a private moment. That makes the obsession clearer.
 
-[Screenshot: Giovanni beside the broken Mewtwo vat]
+![Giovanni beside the broken vat in the Mansion. Archived playthrough capture.](images/mansion-vat.png)
+
+*Giovanni beside the broken vat in the Mansion. Archived playthrough capture.*
 
 ## Silph Co
 
@@ -73,12 +75,28 @@ Giovanni's arc now has four playable beats:
 
 Giovanni also now has distinct team identities: a full Silph Co team at his most ruthless, a formal Ground-type Gym Leader team, and a reformed Rocket League champion team. The Rocket League champion room stays locked until this arc is complete.
 
+## Screenshots And References
+
+![The Silph Co. confrontation setting. Archived playthrough capture.](images/silph-office.png)
+
+*The Silph Co. confrontation setting. Archived playthrough capture.*
+
+![Giovanni and Mewtwo in Cerulean Cave. Archived playthrough capture.](images/mewtwo-scene.png)
+
+*Giovanni and Mewtwo in Cerulean Cave. Archived playthrough capture.*
+
+![Giovanni reflects on the difference between possession and partnership. Archived playthrough capture.](images/giovanni-conclusion.png)
+
+*Giovanni reflects on the difference between possession and partnership. Archived playthrough capture.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Broken vat in Pokemon Mansion.
-- [ ] Silph Co confrontation.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Broken vat in Pokemon Mansion.
+- [x] Silph Co confrontation.
 - [ ] Route 7 beam cut.
-- [ ] Cerulean Cave Mewtwo scene.
+- [x] Cerulean Cave Mewtwo scene.
 - [ ] Viridian Gym final dialogue.
 
 ## Closing Thought

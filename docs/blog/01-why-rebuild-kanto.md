@@ -28,7 +28,9 @@ That changes what the journey is about.
 - Giovanni and Mewtwo become the darker mirror of the whole theme: power without trust.
 - The region itself becomes less of a route and more of a place to investigate.
 
-[Hero screenshot: Oak's intro or the player leaving Pallet Town]
+![Oak introduces the idea of studying Pokémon where they live. Archived playthrough capture.](images/oak-intro.png)
+
+*Oak introduces the idea of studying Pokémon where they live. Archived playthrough capture.*
 
 ## Why Kanto?
 
@@ -56,13 +58,29 @@ That one shift touches almost everything:
 - Gyms, Apex Pokemon, and Giovanni form the main narrative pillars.
 - Menus and UI were rebuilt to make the game feel like a field aide toolkit.
 
+## Screenshots And References
+
+![First steps out of Pallet Town.](images/pallet-current.png)
+
+*First steps out of Pallet Town.*
+
+![The field-notes index connects the research storylines.](images/field-notes.png)
+
+*The field-notes index connects the research storylines.*
+
+![Tangrowth overlooking Kanto on the current title screen.](images/title-current.png)
+
+*Tangrowth overlooking Kanto on the current title screen.*
+
 ## Screenshot And Art Checklist
 
-- [ ] Oak's rewritten intro.
-- [ ] First steps outside Pallet.
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
+
+- [x] Oak's rewritten intro.
+- [x] First steps outside Pallet.
 - [ ] Route 2 rival encounter.
-- [ ] Logbook showing field notes.
-- [ ] Start screen with Tangrowth and Kanto vista.
+- [x] Logbook showing field notes.
+- [x] Start screen with Tangrowth and Kanto vista.
 
 ## Closing Thought
 

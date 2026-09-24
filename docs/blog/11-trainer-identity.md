@@ -9,6 +9,10 @@ summary: "Giving trainer classes clearer overworlds, palettes, names, and narrat
 
 # Trainer Identity
 
+![Trainer overworld design reference sheet; a development artifact, not an in-game screenshot.](images/trainer-lineup.png)
+
+*Trainer overworld design reference sheet; a development artifact, not an in-game screenshot.*
+
 FireRed uses a lot of trainer classes, but many of them share generic overworld sprites.
 
 Pokemon Expeditions has been pushing toward a cleaner rule:
@@ -77,7 +81,15 @@ Rocker has been folded into Electrician, and Porymap visibility was fixed for th
 
 The roster audit also removed verified-unused trainer parties and checked that Apex Pokemon are not sitting inside ordinary trainer teams.
 
+## Screenshots And References
+
+![Trainer distribution audit reference; a development chart.](images/trainer-heatmap.png)
+
+*Trainer distribution audit reference; a development chart.*
+
 ## Screenshot And Art Checklist
+
+Checked items are illustrated above. Unchecked items still need a matching capture or historical source.
 
 - [ ] Before and after generic overworlds.
 - [ ] Trainer class hierarchy chart.
