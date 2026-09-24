@@ -32,14 +32,14 @@ SilphCo_9F_Text_EdPostBattle::
 
 SilphCo_9F_Text_Grunt2Intro::
     .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+    .string "SIBLINGS!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
     .string "Warg!\n"
-    .string "Brothers, I lost!$"
+    .string "Siblings, I lost!$"
 
 SilphCo_9F_Text_Grunt2PostBattle::
-    .string "My brothers will avenge me!$"
+    .string "My siblings will avenge me!$"
 
 SilphCo_9F_Text_FloorSign::
     .string "SILPH CO. HEAD OFFICE\n"

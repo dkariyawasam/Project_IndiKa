@@ -1,4 +1,4 @@
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+
 NOTICE！|Thieves　have　been　stealing　POKひMON|fossils　from　MT。　MOON。|Please　call　the　PEWTER　POLICE　if|you　have　any　information。
 GGGGGGG:　Hey,　RED！|Heading　for　MT。　MOON　too？|I\'m　taking　on　the　GYMS。|All　eight　of　them！|Those　LEADERS　know　their　teams|like　they\'ve　been　together　forever。|My　partner　and　I　are　still|figuring　each　other　out。|We\'ll　learn　as　we　go。　Next　time,|I\'ll　show　you　how　far　we\'ve　come！
 I　tripped　on　a　GEODUDE　earlier,|but　I\'m　not　going　home！|ROUTE　4　made　me　tougher！
@@ -51,7 +51,7 @@ Okay,　I\'ll　take　your　POKひMON　for　a|few　seconds。
 Thank　you　for　waiting。|We\'ve　restored　your　POKひMON　to|full　health。
 Have　a　great　day！
 Have a great day!
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
 Okay, I’ll take your POKéMON for a|few seconds.
 Thank you for waiting.|We’ve restored your POKéMON to|full health.
@@ -105,7 +105,7 @@ Have a great day!
 Would you like to save the game?
 SAVING…|DON’T TURN OFF THE POWER.
 RED saved the game.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 Do what with this ウエ?
 ×  1
 POTION is|selected.
@@ -169,7 +169,7 @@ Your POKéMON have been healed|to perfect health.|We hope you excel!
 Would you like to save the game?
 SAVING…|DON’T TURN OFF THE POWER.
 RED saved the game.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 ROCK TUNNEL
 Do what with this ウエ?
 Move to where?
@@ -446,7 +446,7 @@ Have a great day!
 Would you like to save the game?
 SAVING…|DON’T TURN OFF THE POWER.
 RED saved the game.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 Thank you for coming.|Your challenge in VIRIDIAN FOREST|was witnessed and official.|That forest reminded me that|growth comes through friendship.|Some POKéMON even evolve when|that friendship is allowed to|flourish.|When people and POKéMON support|one another, all may bloom.|You have already earned the|RAINBOWBADGE.|Now, please accept a POKéMON|that shows how friendship can|help life bloom.
 Please also accept this BUDEW.|Raise it with kindness, and one|day friendship may help it bloom.
 RED received BUDEW|from ERIKA.
@@ -577,7 +577,7 @@ You read me clean!
 Would you like to save the game?
 SAVING…|DON’T TURN OFF THE POWER.
 RED saved the game.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 On ROUTE 12, patience is|as important as bait.|Let’s see if you can wait out|a battle too.
 Do what with this ウエ?
 You broke the line!
@@ -760,6 +760,680 @@ VENUSAUR’s HP was restored|by 50 point(s).|Ì
 RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
 First, you should restore your|POKéMON to full health.
 Your POKéMON have been healed|to perfect health.|We hope you excel!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+GGGGGGG: Hah!|So you made it to CINNABAR after|all.|Don’t get smug. I got here first.|People on this island keep talking|about that wrecked MANSION.|It wasn’t just some rich guy’s old|house. It was a lab.|Something broke out of there.|And someone powerful seems|implicated.|Powerful enough to chase it|personally.|Sounds important, so obviously I’m|checking it before you do.
+POKéMON MANSION
+A secret switch!|Press it?
+Who wouldn’t?
+These journals are damaged,|but the formulas remain!
+My theory collapsed!
+GGGGGGG: Still poking around?|Good. Maybe you’re not completely|useless after all.|I don’t know what’s waiting below,|but it isn’t nothing.|So? Are you ready, or are you|going to turn back?
+GGGGGGG: Hah!|Thought so.|Come back when you stop looking|like you need a permission slip.
+GGGGGGG: Still poking around?|Good. Maybe you’re not completely|useless after all.|I don’t know what’s waiting below,|but it isn’t nothing.|So? Are you ready, or are you|going to turn back?
+GGGGGGG: Hah!|Thought so.|Come back when you stop looking|like you need a permission slip.
+GGGGGGG: Still poking around?|Good. Maybe you’re not completely|useless after all.|I don’t know what’s waiting below,|but it isn’t nothing.|So? Are you ready, or are you|going to turn back?
+GGGGGGG: Then prove it.|Try keeping up!
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Ahoy! Leaving CINNABAR|ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+SEAFOAM ISLANDS
+Do what with this ウエ?
+Move to where?
+×  3
+× 10
+×  5
+MAX REPEL is|selected.
+RED used the|MAX REPEL.|Ì
+×  4
+REPEL’s effect wore off…
+×  4
+MAX REPEL is|selected.
+RED used the|MAX REPEL.|Ì
+×  3
+REPEL’s effect wore off…
+×  3
+MAX REPEL is|selected.
+RED used the|MAX REPEL.|Ì
+×  2
+REPEL’s effect wore off…
+×  2
+MAX REPEL is|selected.
+RED used the|MAX REPEL.|Ì
+×  1
+REPEL’s effect wore off…
+×  1
+MAX REPEL is|selected.
+RED used the|MAX REPEL.|Ì
+× 10
+SUPER POTION is|selected.
+Use on which POKéMON?
+CHINGLING’s HP was restored|by 40 point(s).|Ì
+× 10
+ULTRA BALL is|selected.
+Ahoy! Leaving SEAFOAM ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Do what with this ウエ?
+Move to where?
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+POKéMON MANSION
+REPEL’s effect wore off…
+A secret switch!|Press it?
+Who wouldn’t?
+A secret switch!|Press it?
+Who wouldn’t?
+GGGGGGG: Still poking around?|Good. Maybe you’re not completely|useless after all.|I don’t know what’s waiting below,|but it isn’t nothing.|So? Are you ready, or are you|going to turn back?
+GGGGGGG: Then prove it.|Try keeping up!
+×  9
+× 10
+SUPER POTION is|selected.
+Use on which POKéMON?
+JYNX’s HP was restored|by 50 point(s).|Ì
+Do what with this ウエ?
+× 10
+SUPER POTION is|selected.
+Use on which POKéMON?
+VENUSAUR’s HP was restored|by 50 point(s).|Ì
+× 10
+SUPER POTION is|selected.
+Use on which POKéMON?
+VENUSAUR’s HP was restored|by 50 point(s).|Ì
+× 10
+SUPER POTION is|selected.
+Use on which POKéMON?
+VENUSAUR’s HP was restored|by 50 point(s).|Ì
+Do what with this ウエ?
+Tch.|Fine, you’re ready enough.
+GGGGGGG: Whatever’s below,|don’t slow me down.|I’m checking the rest of this|place.|Try not to fall apart.
+Who are you?|There shouldn’t be anyone here.
+Do what with this ウエ?
+Ouch!
+Uh-oh…|Where am I now?
+Do what with this ウエ?
+Awooh!
+Diary: Sept. 1|MEWTWO is far too powerful.|We have failed to curb its vicious|tendencies…
+????: Empty…|After all these years, empty.|MEWTWO was perfect power.|Power without waste.|Power without weakness.
+MEWTWO broke free before that|power could be claimed.|No matter.|I built that power once.|I will retrieve it, perfect it,|and make it mine.|SILPH in SAFFRON has what I need.|A BALL that cannot fail.
+Rumour recorded.|Compare three accounts in your|LOGBOOK to find an APEX POKéMON.|If you flee from its battle,|it will leave for good.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Ahoy! Leaving CINNABAR|ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+I came down from PALLET to play|where the water starts getting|deep.|I’m not scared of ROUTE 21!
+Splashed out!
+I camp near PALLET because the|outpost makes this road lively.|Care for a field test?
+You found the path through me!
+I like watching the aides from|PALLET study the grass here.|Let me see how your POKéMON|moves through it!
+You and your POKéMON move so well|together!
+DIGLETT’S CAVE
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Do what with this ウエ?
+Move to where?
+SILPH CO.
+Which floor do you want?
+I heard a kid was wandering|around.
+Boom!
+RED found one CARD KEY!
+RED put the CARD KEY|in the KEY ITEMS.
+We study POKé BALL technology on|this floor.
+Do what with this ウエ?
+Dang!|Blast it!
+Which floor do you want?
+I am one of the four ROCKET|BROTHERS!
+Do what with this ウエ?
+Warg!|Brothers, I lost!
+Bingo!|The CARD KEY opened the door!
+You look tired.|You should take a quick nap.
+Don’t give up!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+My siblings will avenge me!
+Which floor do you want?
+Quit messing with us, kid!
+Do what with this ウエ?
+I give up!
+Bingo!|The CARD KEY opened the door!
+Do what with this ウエ?
+Move to where?
+GGGGGGG: Ha!|Took you long enough, RED.|Don’t tell me the ROCKETS|actually slowed you down.
+GGGGGGG: I figured out why|they’re here before you did,|obviously.|SILPH isn’t just money.|It’s capture tech.|A MASTER BALL that can catch|anything...|Someone powerful would burn down|SAFFRON for that.|You’re going upstairs, right?|Ready to prove you won’t fold|when it matters?
+GGGGGGG: Figures.|Try not to spend all day hiding|behind me.
+GGGGGGG: Ha!|Took you long enough, RED.|Don’t tell me the ROCKETS|actually slowed you down.
+GGGGGGG: I figured out why|they’re here before you did,|obviously.|SILPH isn’t just money.|It’s capture tech.|A MASTER BALL that can catch|anything...|Someone powerful would burn down|SAFFRON for that.|You’re going upstairs, right?|Ready to prove you won’t fold|when it matters?
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+JYNX’s HP was restored|by 50 point(s).|Ì
+Do what with this ウエ?
+×  3
+× 10
+FULL HEAL is|selected.
+Use on which POKéMON?
+NINETALES became healthy.|Ì
+Do what with this ウエ?
+×  9
+FULL HEAL is|selected.
+Use on which POKéMON?
+VENUSAUR became healthy.|Ì
+?È 31  |ÀÓ|ÂÔ♀
+Do what with this ウエ?
+×  8
+SUPER POTION is|selected.
+Use on which POKéMON?
+NINETALES’s HP was restored|by 50 point(s).|Ì
+×  8
+SUPER POTION is|selected.
+Use on which POKéMON?
+NINETALES’s HP was restored|by 50 point(s).|Ì
+?È 40  |ÀÏ|ÂÒ♂
+Do what with this ウエ?
+Tch!|You might actually make it|to the top floor.
+Fine. You can handle yourself.|But don’t get excited.|I already knew this was bigger|than a robbery.|Whoever is pulling TEAM ROCKET’s|strings wants control.|Not money. Not badges.|Control.|I’m finding my own way through.|Try not to trail too far behind.|Smell ya!
+Do what with this ウエ?
+Move to where?
+Stop right there!|Don’t you move!
+Don’t…|Please!
+Bingo!|The CARD KEY opened the door!
+Which floor do you want?
+You look tired.|You should take a quick nap.
+Don’t give up!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+Which floor do you want?
+PRESIDENT: GIOVANNI, stop this!|The MASTER BALL was never meant|to enslave POKEMON.|If you force that power on MEWTWO,|you’ll bring ruin on us all.
+GIOVANNI: Hmph.
+GIOVANNI: You’re the child from|POKEMON MANSION...|So, you followed me from|CINNABAR ISLAND.|SILPH’s MASTER BALL is no mere|product.|It is control made mechanical.|Command made perfect.|With its plans, TEAM ROCKET will|manufacture the means to reclaim|MEWTWO.|Come forth.|I’ll deal with you now.
+I will not allow sentiment to|interrupt absolute power.
+No…|The plan was flawless!
+GIOVANNI: So SILPH’s MASTER BALL|will remain out of reach.|No matter.|A BALL is only one way to claim|power.|SILPH’s signal research will|complete my device.|I will call MEWTWO to ROUTE 7.|Once it answers, no LEAGUE,|no child, and no bond will stand|in my way.|TEAM ROCKET, withdraw.|We have what we need.
+PRESIDENT: Oh, dear boy!|Thank you for saving SILPH.|GIOVANNI failed to take the|MASTER BALL plans.|But before he fled, he accessed|our signal research.|If he combines it with old|CINNABAR records, he may force|MEWTWO to respond.|Please, take this.|If he reaches MEWTWO, you may|need it.
+RED obtained a MASTER BALL|from the PRESIDENT!
+RED put the MASTER BALL|in the POKé BALLS.
+PRESIDENT: You can’t buy that|anywhere.|It’s our secret prototype MASTER|BALL.|It was built to catch any POKéMON|without fail.|But a capture is only a beginning.|It cannot make a POKéMON trust|you. That part is up to you.
+Rumour updated.
+Which floor do you want?
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+LORELEI: You’re late.|We all were.|MEWTWO tore through here|under GIOVANNI’s command...
+GIOVANNI: MEWTWO.|Destroy the ELITE FOUR.|Show them perfected power.
+LORELEI: MEWTWO!|Stop!
+GIOVANNI: The signal holds.|Fire.
+LORELEI: That is what I saw.|Power without trust only|becomes another storm.
+BRUNO: I met MEWTWO head-on.|Foolish.|It pushed through me like|I was mist.
+BRUNO: Hah!|Then strike me!
+BRUNO: I felt no discipline|in that power.|Only pressure.
+AGATHA: GIOVANNI thought|control was the same as|trust.|Always the same mistake.
+GIOVANNI: MEWTWO.|Again.|Obey.
+AGATHA: Hah.|Hear that silence?|It is already choosing|whether to listen.
+GIOVANNI: The signal|still holds.|MEWTWO obeys me.
+GIOVANNI: Then strike her.
+AGATHA: Not for long.
+AGATHA: He learned nothing.|MEWTWO learned faster.|LANCE followed them into the|cave opened by MEWTWO’s blast.
+LANCE: I followed GIOVANNI|and MEWTWO into this cave,|opened by MEWTWO’s blast.|GIOVANNI’s signal was|breaking.|MEWTWO was beginning to|choose for itself.
+GIOVANNI: The signal|still holds.|MEWTWO, return to me.
+MEWTWO: GYAAOOO!|LANCE: It’s rejecting|his control!
+GIOVANNI: MEWTWO!|You will not escape me.|Not again!
+LANCE: MEWTWO fled north.|GIOVANNI followed it toward|CERULEAN CAVE.
+Rumour updated.
+LANCE: MEWTWO fled north.|GIOVANNI followed it toward|CERULEAN CAVE.
+Welcome to NUGGET BRIDGE!|Five TRAINERS stand between you|and the prize at the end.|I’ll cast the first line.|Ready?
+Clean catch!
+The bridge looks huge when you’re|small.|That’s why I battle here. It makes|me feel brave!
+Still nervous!
+Congratulations! You beat our|five contest TRAINERS!|You just earned a fabulous prize!
+RED received a NUGGET|from the challenge host!
+RED put the NUGGET|in the ITEMS.
+That was a fine run across|NUGGET BRIDGE.|Keep training, and keep that|momentum going!
+×  3
+×  1
+CASCADE BOARD is|selected.
+CERULEAN CAVE
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+RED found one FULL RESTORE!
+RED put the FULL RESTORE|in the ITEMS.
+This RUIN MANIAC knows|CERULEAN CAVE well!
+CERULEAN CAVE wins today!
+|ÀÁ|ÂÂRED
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+GIOVANNI: So this is the answer.|I poured wealth, science, and will|into creating absolute power.|Yet when it stood before me, no|order I gave could bind it.|Not force. Not fear.|Not even the strongest BALLS.|It has judged me unworthy.|Perhaps you will fare better.|Go on, then.|Show me what power answers to|when it refuses to answer to me.
+This APEX POKéMON is Lv. 70.|Once battle starts, you have|only one chance.|If you lose or flee, this|encounter will be gone.|You can prepare and return|before starting the battle.|Are you ready to challenge it?
+GRAAAH!
+×  3
+×  1
+MASTER BALL is|selected.
+OAK: The POKéDEX is struggling|to classify that presence.|MEWTWO’s power is not natural|instinct alone.|It is a question we created|but do not understand.
+GIOVANNI: So that is the difference.|I tried to possess MEWTWO.|You faced it as a TRAINER.|Perhaps absolute power was never|something a person could own.|There is nothing left for me|to take from this place.|I will return to VIRIDIAN GYM.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Do what with this ウエ?
+×  9
+CASCADE BOARD is|selected.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Hi, there!|May I help you?
+ ¥100
+SUPER POTION? Certainly.|How many would you like?
+×01
+SUPER POTION, and you want 1.|That will be ¥700. Okay?
+SUPER POTION? Certainly.|How many would you like?
+×01
+×11
+×10
+SUPER POTION, and you want 10.|That will be ¥7000. Okay?
+Here you are!|Thank you!
+ ¥16912
+ ¥200
+ ¥250
+ ¥550
+ ¥350
+ESCAPE ROPE? Certainly.|How many would you like?
+×01
+×02
+×03
+ESCAPE ROPE, and you want 3.|That will be ¥1650. Okay?
+Here you are!|Thank you!
+ ¥15262
+REPEL? Certainly.|How many would you like?
+×01
+×11
+×12
+×13
+×14
+×15
+REPEL, and you want 15.|That will be ¥5250. Okay?
+Here you are!|Thank you!
+ ¥10012
+Is there anything else I can do?
+Please come again!
+I picked this spot for lunch.|You can hear the forest without|stepping under the trees.
+That was a lively picnic!
+Yo!|Champ in the making!|Even I don’t know the VIRIDIAN|LEADER’s identity.|But one thing’s certain.|This will be the toughest of all|the GYM LEADERS.|Also, I heard that the TRAINERS|here like GROUND-type POKéMON.|Try WATER, GRASS, or ICE moves.|ELECTRIC moves cannot hit|GROUND-type POKéMON.
+Do what with this ウエ?
+Move to where?
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+GIOVANNI: You have seen me seek|power in ruins, in industry, and|before MEWTWO itself.|Every time, you stood in my way.|Very well.|No machines. No inventions.|No stolen advantage.|Only a TRAINER and his team.|Face GIOVANNI, LEADER of the|VIRIDIAN GYM!|ÎéÀ
+Do what with this ウエ?
+×  9
+×  3
+×  8
+×  1
+×  3
+FULL RESTORE is|selected.
+Use on which POKéMON?
+VENUSAUR’s HP was restored|by 97 point(s).|Ì
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Do what with this ウエ?
+Move to where?
+I swim beneath the bridge and hear|every battle overhead.|Let’s see if yours sounds strong|up close!
+That made a splash!
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+A good SCOUT checks every plank|before crossing.|A great SCOUT checks every|TRAINER too!
+Bridge checked!
+I run bridge laps when the water|is bright.|A quick battle keeps my pace sharp!
+Do what with this ウエ?
+?È 33  |ÀÏ|ÂÒ♂
+You kept pace!
+What?|CHINGLING is evolving!
+Congratulations! Your CHINGLING|evolved into CHIMECHO!|こ|
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+Ahoy! Heading for CINNABAR|ISLAND?|Want to sail there now?
+Alright, all aboard!|We set sail!
+CINNABAR VOLCANO
+KOGA: Together, even stubborn|stone must yield.|Now, let us make this trial|official.
+JANINE: Father uses POISON types.|PSYCHIC and GROUND moves are|strong against POISON.|But GROUND moves cannot hit|FLYING types. Watch for those!|Bring antidotes for poison, too.
+Are you ready to battle KOGA?
+KOGA: Then show me the strength|you bring to your allies!
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+CHIMECHO’s HP was restored|by 50 point(s).|Ì
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+CHIMECHO’s HP was restored|by 50 point(s).|Ì
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+The cape has open air, soft grass,|and plenty of passing TRAINERS.|That’s excellent social training|for young POKéMON.
+Healthy growth!
+A TOWN MAP.
+RED booted up the PC.
+Which PC should be accessed?
+RED’s PC
+Accessed Someone’s PC.
+POKéMON Storage System opened.
+Which PC should be accessed?
+RED’s PC
+Do what with this ウエ?
+Move to where?
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Ahoy! Heading for CINNABAR|ISLAND?|Want to sail there now?
+Alright, all aboard!|We set sail!
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+CINNABAR VOLCANO
+KOGA: Together, even stubborn|stone must yield.|Now, let us make this trial|official.
+JANINE: Father uses POISON types.|PSYCHIC and GROUND moves are|strong against POISON.|But GROUND moves cannot hit|FLYING types. Watch for those!|Bring antidotes for poison, too.
+Are you ready to battle KOGA?
+KOGA: Then show me the strength|you bring to your allies!
+Fwahahaha!|A worthy victory!
+KOGA: Fwahahaha!|You have earned the SOULBADGE!||á|ÎÇÀ|Ë||Ëカ|ね|Return to FUCHSIA GYM|when you are ready.|There, the LAVIC STONE will become|tools worthy of our clan.
+RED received the SOUL PASS|from KOGA.
+RED put the SOUL PASS|in the KEY ITEMS.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Oh, that’s a SOUL PASS.|POKéMON CENTER nurses can now|check how close your first|POKéMON feels to you.
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Yo!|Champ in the making!|The hotheaded BLAINE is a FIRE|POKéMON pro.|Douse his spirits with water!|You’d better take some|BURN HEALS, too.
+Hah!|I am BLAINE, the red-hot LEADER|of CINNABAR GYM!|Fire is more than destruction.|Properly handled, it drives|innovation and progress!|My fiery POKéMON are ready to|test your next breakthrough!|Hah!|You better have BURN HEAL!|ÎカÀ
+Do what with this ウエ?
+I have burned down to nothing!|Not even ashes remain!|You have earned the VOLCANOBADGE.
+Hah!|The VOLCANOBADGE proves you|survived CINNABAR GYM’s heat.
+But a BADGE is only proof of what|you have already survived.|Progress asks what you can build|next!|The machine by my desk can compile|a POKéMON from research data.|Answer its sequence correctly, and|generate PORYGON yourself!
+PORYGON generator online.|Initialize build sequence?
+Build a stable virtual POKéMON by|choosing the correct parameters.
+Should the base form be coded from|a stable geometric pattern?
+Parameter accepted.
+Should random noise overwrite the|core data?
+Parameter rejected!|The build collapsed into static.
+PORYGON generator online.|Initialize build sequence?
+Build a stable virtual POKéMON by|choosing the correct parameters.
+Should the base form be coded from|a stable geometric pattern?
+Parameter accepted.
+Should random noise overwrite the|core data?
+Parameter accepted.
+Should the completed data receive|a physical projection?
+Parameter accepted.
+The machine compiled the data into|PORYGON!
+MACHINE sent over PORYGON.
+Take good care of PORYGON!
+RED obtained|the PORYGON!
+Do you want to give a nickname to|this PORYGON?
+PORYGON was transferred to|Someone’s PC.|It was placed in |BOX “BOX1.”
+The PORYGON generator hums quietly.|Its last pattern is safely archived.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Ahoy! Leaving CINNABAR|ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+Ahoy! Heading for CINNABAR|ISLAND?|Want to sail there now?
+Alright, all aboard!|We set sail!
+Ahoy! Leaving CINNABAR|ISLAND?|Where would you like to sail?
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+Ahoy! Leaving CINNABAR|ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+Ahoy! Leaving SEAFOAM ISLAND?|Where would you like to sail?
+Alright, all aboard!|We set sail!
+I was honored to witness your|trial with KOGA.|The way you worked together to free|that LAVIC STONE was remarkable.|Please speak with KOGA.|Your reward is waiting.
+KOGA: Fwahahaha!|The LAVIC STONE is secure, and|your challenge was witnessed.|You earned the SOULBADGE in|CINNABAR VOLCANO.|Accept another tool of|togetherness.
+Take this GOLBAT as well.|It has trained beside my clan and|understands the strength of trust.
+RED received GOLBAT|from KOGA.
+Do you want to give a nickname to|this GOLBAT?
+GOLBAT was transferred to|Someone’s PC.|It was placed in |BOX “BOX1.”
+GOLBAT evolves through friendship.|Earn its trust, then level it up|to help it become a CROBAT.
+Train beside GOLBAT and earn|its trust.|When CROBAT is recorded in your|POKéDEX, the lesson is complete.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+I packed light.|ROUTE 18 is all momentum,|so you don’t want loose bags!
+Momentum gone!
+Excuse me!
+No BICYCLE?|You can rent one here for Routes|16, 17, and 18.|The rental fee is 500.|Rent a BICYCLE?
+All set!|Ride carefully, and return it|when you leave the route.
+CYCLING ROAD|No pedestrians permitted!
+CYCLING ROAD throws everyone|out here with hot wheels.|Let’s see if your team cooled|down yet!
+Still running hot!
+The lower slope gets faster|than people expect.|If you can stop for battle,|you’re doing fine.
+Solid braking!
+I count BIKERS as they pass.|You’re trainer number too many|not to challenge!
+Lost count!
+This slope is my training route.|Keep up if you can!
+You kept pace!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+Excuse me!|Wait up, please!
+No BICYCLE?|You can rent one here for Routes|16, 17, and 18.|The rental fee is 500.|Rent a BICYCLE?
+All set!|Ride carefully, and return it|when you leave the route.
+Your rental BICYCLE is ready.|It can be used on Routes 16,|17, and 18.
+Welcome back.|I’ll take the rental BICYCLE|from here.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+The best bugs are just outside|the forest, where they warm up|in the grass!
+They cooled off too fast!
+GIOVANNI: You have seen me seek|power in ruins, in industry, and|before MEWTWO itself.|Every time, you stood in my way.|Very well.|No machines. No inventions.|No stolen advantage.|Only a TRAINER and his team.|Face GIOVANNI, LEADER of the|VIRIDIAN GYM!|ÎéÀ
+Do what with this ウエ?
+Ha!|That was a truly intense fight.|You have won!|As proof, here is the EARTHBADGE!||á|ÎÇÀ|Ë||Ëカ|ね
+GIOVANNI: I chased absolute power|because I mistook control for|strength.|A creature in a vat.|A BALL that never fails.|A command no one could refuse.|But MEWTWO answered control with|defiance.|My own POKéMON answered trust.|You stood before power without|trying to own it.|You trusted your team, and they|trusted you.|That is what I had forgotten.|That is what TEAM ROCKET must|learn.|As of today, TEAM ROCKET changes|course.|No more shadows.|No more conquest.|I will begin again, not as a tyrant,|but as a TRAINER.|Farewell, RED.
+The EARTHBADGE is evidence of|your mastery as a TRAINER.|But obedience is earned through|the trust recorded in your|FIELD AIDE work.|With all eight BADGES, head west|from VIRIDIAN onto ROUTE 22.|Then go north through ROUTE 23|and VICTORY ROAD to reach|the INDIGO LEAGUE.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+VIRIDIAN FOREST
+GGGGGGG: Listen to this.|The accounts describe TANGROWTH.|A TANGELA that changed in the|forest, without a TRAINER.|I’ve been looking at this clearing.|What makes it the right place?|Check the local accounts.|Let’s see what we can learn.
+MIME SR., OSSCYTHE, TANGROWTH...|Three places, three unusual forms.|These accounts point to habitats|helping wild POKéMON change.|My team grows by training with me.|These POKéMON found another way.|Gramps will want our notes.|I’ll let you write the neat copy!
+This AROMA LADY knows|VIRIDIAN FOREST well!
+VIRIDIAN FOREST wins today!
+This BREEDER knows|VIRIDIAN FOREST well!
+VIRIDIAN FOREST wins today!
+The flowers in VIRIDIAN FOREST|are so beautiful.|They seem more vibrant and grow|in number the closer you get to|the centre of the forest.|Almost like something is drawing|them inward.
+Rumour updated.
+I’m too scared to enter|VIRIDIAN FOREST.|Legends tell of the forest|coming alive and ensnaring the|wicked, never to be seen again.
+My father once told me he|ventured deep into VIRIDIAN|FOREST.|He heard the grumbling growls of|a shadowy figure lurking within.
+Rumour updated.
+Birds ride the wind coming down|from the LEAGUE cliffs.|My team trains in that air!
+My wings dipped!
+I camp on ROUTE 22 because the|road feels wilder than VIRIDIAN.|Let’s see how you handle rough|ground!
+Lost my footing!
+Oh! That is the BOULDERBADGE!|Go right ahead.
+You can pass here only if you have|the CASCADEBADGE.|Oh! That is the CASCADEBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+The LEAGUE is our goal.|Every battle brings us closer!
+A lesson worth learning!
+You can pass here only if you have|the THUNDERBADGE.|Oh! That is the THUNDERBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+You can pass here only if you have|the RAINBOWBADGE.|Oh! That is the RAINBOWBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+×  3
+×  9
+CASCADE BOARD is|selected.
+You can pass here only if you have|the SOULBADGE.|Oh! That is the SOULBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+You can pass here only if you have|the MARSHBADGE.|Oh! That is the MARSHBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+You can pass here only if you have|the VOLCANOBADGE.|Oh! That is the VOLCANOBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+You can pass here only if you have|the EARTHBADGE.|Oh! That is the EARTHBADGE!|á|ÎÀÀ|Ëタ|ね|Okay, then.|Please, go right ahead.
+GGGGGGG: All eight BADGES, huh?|Let me see those!|Every GYM taught us something.|Sometimes after a few losses!|I used to just shout orders.|Now I pay attention to my team.|But you know I’m still aiming|for the top, RED!|Let’s see what you and your|POKéMON learned. Here we go!
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+CASCADE BOARD is|selected.
+GGGGGGG: All eight BADGES, huh?|Let me see those!|Every GYM taught us something.|Sometimes after a few losses!|I used to just shout orders.|Now I pay attention to my team.|But you know I’m still aiming|for the top, RED!|Let’s see what you and your|POKéMON learned. Here we go!
+You’ve earned those BADGES!
+GGGGGGG: You trusted your team|to pull that off. I could tell.|We’ve come a long way since|that first battle at the lab.|Get through VICTORY ROAD.|I’ll see you at the LEAGUE!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+VICTORY ROAD
+The road ahead tests us all.|Show me what you have learned.
+Even experience has its limits!
+It’s a big boulder, but a POKéMON|may be able to push it aside.
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+
+I wonder if you are good enough|for me?
+I lost out…|VICTORY ROAD chose you this time.
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+MEWTWO’s HP was restored|by 50 point(s).|Ì
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+MEWTWO’s HP was restored|by 50 point(s).|Ì
+×  3
+SUPER POTION is|selected.
+Use on which POKéMON?
+×  3
+I can see you’re good.|Let me see exactly how good!
+Do what with this ウエ?
+I had a chance…
+This here is VICTORY ROAD.|It’s the final test for TRAINERS!
+Do what with this ウエ?
+Atcho!|Even my focus cracked.
+Ah, so you wish to challenge the|ELITE FOUR?
+Do what with this ウエ?
+You got me!|That’s ELITE FOUR resolve.
+Welcome to our POKéMON CENTER!|Would you like me to heal your|POKéMON back to perfect health?
+Okay, I’ll take your POKéMON for a|few seconds.
+Thank you for waiting.|We’ve restored your POKéMON to|full health.
+Have a great day!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Yo! Champ in the making!|The League pool includes the|ELITE FOUR and GYM LEADERS.|Four opponents, one battle room!|Bring a team for DOUBLE BATTLES.|Both teams battle at Level 50.|Your original levels return|after each match.|Your whole team recovers fully|between battles.|Held items are allowed, but|neither side may use Bag items.|Losing or returning here resets|your run. Prepare before you go!
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Win four battles in this room|to open the CHAMPION’s door.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+That was a worthy battle.
+Victory 1 of 4 recorded.|Return to the battle area when|you are ready for the next match.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+That was a worthy battle.
+Victory 2 of 4 recorded.|Return to the battle area when|you are ready for the next match.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+That was a worthy battle.
+Victory 1 of 4 recorded.|Return to the battle area when|you are ready for the next match.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+Would you like to save the game?
+SAVING…|DON’T TURN OFF THE POWER.
+RED saved the game.
+Step into the battle area to face|your next League opponent.|Ready for a DOUBLE BATTLE?
+Your next INDIGO LEAGUE|opponent is ready.|Show what you and your POKéMON|have learned.
+Do what with this ウエ?
+RED scurried to a POKéMON CENTER,|protecting the exhausted and fainted|POKéMON from further harm…|
+First, you should restore your|POKéMON to full health.
+Your POKéMON have been healed|to perfect health.|We hope you excel!
+INDIGO LEAGUE TERMINAL|Select a service.
+Four different pool opponents,|then the CHAMPION.|DOUBLE BATTLES. Bring your team|of up to six POKéMON.|Both teams battle at Level 50.|Original levels return afterward.|HP, PP and status recover fully|after each match.|Held items are allowed. Neither|side may use items from the Bag.|Returning to the lobby ends an|unfinished run.|Losing or abandoning a run|breaks your title streak.
+INDIGO LEAGUE TERMINAL|Select a service.
+No active challenge.|Last run: 0 of 4 pool wins.|The run ended in defeat.
+INDIGO LEAGUE TERMINAL|Select a service.
+RED booted up the PC.
+Which PC should be accessed?
+Accessed Someone’s PC.
+POKéMON Storage System opened.
+Which PC should be accessed?
+RED’s PC
 Would you like to save the game?
 SAVING…|DON’T TURN OFF THE POWER.
 RED saved the game.

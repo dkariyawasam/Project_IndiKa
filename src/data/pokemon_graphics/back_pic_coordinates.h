@@ -2455,13 +2455,13 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_OMATO] =
     {
-        .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 7,
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
     },
     [SPECIES_OMATOPS] =
     {
         .size = MON_COORDS_SIZE(64, 56),
-        .y_offset = 7,
+        .y_offset = 0,
     },
     [SPECIES_STARLY] =
     {

@@ -65,6 +65,8 @@ Route24_EventScript_RewardGiver::
 	lock
 	faceplayer
 	goto_if_eq VAR_MAP_SCENE_ROUTE24, 1, Route24_EventScript_RewardGiverPostReward
+	call Route24_EventScript_CheckBridgeVictories
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_ChallengeIncomplete
 	msgbox Route24_Text_JustEarnedFabulousPrize
 	checkitemspace ITEM_NUGGET
 	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_NoRoomForNugget
@@ -96,6 +98,8 @@ Route24_EventScript_RewardGiverTriggerRight::
 
 Route24_EventScript_RewardGiverTrigger::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	call Route24_EventScript_CheckBridgeVictories
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_ChallengeIncomplete
 	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RewardGiverApproachPlayer
 	call_if_eq VAR_TEMP_1, 1, Route24_EventScript_RewardGiverMotionToPlayer
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
@@ -112,6 +116,21 @@ Route24_EventScript_GiveNuggetReward::
 	msgbox Route24_Text_KeepTraining
 	setvar VAR_MAP_SCENE_ROUTE24, 1
 	return
+
+Route24_EventScript_CheckBridgeVictories::
+	setvar VAR_RESULT, FALSE
+	goto_if_not_defeated TRAINER_ROUTE24_FISHERMAN_CALE, EventScript_Return
+	goto_if_not_defeated TRAINER_ROUTE24_SWIMMER_NELL, EventScript_Return
+	goto_if_not_defeated TRAINER_ROUTE24_SCOUT_KINDRA, EventScript_Return
+	goto_if_not_defeated TRAINER_ROUTE24_TUBER_NADIA, EventScript_Return
+	goto_if_not_defeated TRAINER_ROUTE24_TRIATHLETE_BECKY, EventScript_Return
+	setvar VAR_RESULT, TRUE
+	return
+
+Route24_EventScript_ChallengeIncomplete::
+	msgbox Route24_Text_ChallengeIncomplete
+	releaseall
+	end
 
 Route24_EventScript_RewardGiverApproachPlayer::
 	applymovement LOCALID_ROUTE24_REWARD_GIVER, Route24_Movement_RewardGiverApproachPlayer

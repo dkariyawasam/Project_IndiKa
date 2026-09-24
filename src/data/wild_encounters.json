@@ -200,12 +200,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -269,12 +269,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -318,12 +318,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -387,12 +387,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -441,7 +441,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -451,7 +451,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -471,12 +471,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_CLEFFA"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_SOLROCK"
               },
               {
                 "min_level": 25,
@@ -486,12 +486,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_SOLROCK"
+                "species": "SPECIES_AMUNYTE"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_SOLROCK"
+                "species": "SPECIES_KINKABUTO"
               }
             ]
           }
@@ -510,7 +510,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -520,7 +520,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
@@ -540,12 +540,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "species": "SPECIES_CLEFFA"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "species": "SPECIES_LUNATONE"
               },
               {
                 "min_level": 25,
@@ -555,12 +555,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_LUNATONE"
+                "species": "SPECIES_AMUNYTE"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_LUNATONE"
+                "species": "SPECIES_KINKABUTO"
               }
             ]
           }

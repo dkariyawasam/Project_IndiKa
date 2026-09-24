@@ -747,7 +747,8 @@ static void CreateMCMenuInputHandlerTask(u8 ignoreBpress, u8 count, u8 windowId,
      || mcId == MULTICHOICE_TRADE_COLOSSEUM_2)
         sDelay = 12;
     else
-        sDelay = 0;
+        // Do not reuse the button press that closed the preceding message.
+        sDelay = 2;
 
     taskId = CreateTask(Task_MultichoiceMenu_HandleInput, 80);
     gTasks[taskId].tIgnoreBPress = ignoreBpress;

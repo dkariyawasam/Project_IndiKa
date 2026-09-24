@@ -2822,3 +2822,13 @@ const u32 gMonBackPic_GalarianWeezing[] = INCBIN_U32("graphics/pokemon/weezing_g
 const u32 gMonPalette_GalarianWeezing[] = INCBIN_U32("graphics/pokemon/weezing_galarian/normal.gbapal.lz");
 const u32 gMonShinyPalette_GalarianWeezing[] = INCBIN_U32("graphics/pokemon/weezing_galarian/shiny.gbapal.lz");
 const u8 gMonIcon_GalarianWeezing[] = INCBIN_U8("graphics/pokemon/weezing_galarian/icon.4bpp");
+
+const u32 gMonFrontPic_Kinkabuto[] = INCBIN_U32("graphics/pokemon/kinkabuto/front.4bpp.lz");
+const u32 gMonPalette_Kinkabuto[] = INCBIN_U32("graphics/pokemon/kinkabuto/normal.gbapal.lz");
+
+const u32 gMonFrontPic_Amunyte[] = INCBIN_U32("graphics/pokemon/amunyte/front.4bpp.lz");
+const u32 gMonPalette_Amunyte[] = INCBIN_U32("graphics/pokemon/amunyte/normal.gbapal.lz");
+
+const u32 gMonBackPic_Amunyte[] = INCBIN_U32("graphics/pokemon/amunyte/back.4bpp.lz");
+
+const u32 gMonBackPic_Kinkabuto[] = INCBIN_U32("graphics/pokemon/kinkabuto/back.4bpp.lz");

@@ -2816,15 +2816,15 @@ const u8 gKabuknightPokedexText[] = _(
 const u8 gKabuknightPokedexTextUnused[] = _("");
 
 const u8 gAmunytePokedexText[] = _(
-    "A rare fossil relative of OMANYTE. It coils\n"
-    "through deep water and studies movement\n"
-    "with bright eyes.");
+    "It never went extinct. Hidden in caves,\n"
+    "it wards off foes with venom. Its fossils\n"
+    "yield incomplete copies when restored.");
 const u8 gAmunytePokedexTextUnused[] = _("");
 
 const u8 gKinkabutoPokedexText[] = _(
-    "A peculiar fossil POKéMON with a ridged\n"
-    "shell. Its legs let it crawl quickly over\n"
-    "wet stone.");
+    "It survived unchanged since ancient times.\n"
+    "Its blades and armor are poorly copied\n"
+    "in POKéMON restored from its fossils.");
 const u8 gKinkabutoPokedexTextUnused[] = _("");
 
 const u8 gAeropteryxPokedexText[] = _(
