@@ -1,0 +1,269 @@
+[
+  {
+    "species": "FARFETCHD_GALARIAN",
+    "normal": "graphics/pokemon/farfetchd_galarian/normal.pal",
+    "shiny": "graphics/pokemon/farfetchd_galarian/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "RATTATA_ALOLAN",
+    "normal": "graphics/pokemon/rattata_alolan/normal.pal",
+    "shiny": "graphics/pokemon/rattata_alolan/shiny.pal",
+    "off_reference_normal": [
+      12
+    ],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "RATICATE_ALOLAN",
+    "normal": "graphics/pokemon/raticate_alolan/normal.pal",
+    "shiny": "graphics/pokemon/raticate_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "PICHU_ALOLAN",
+    "normal": "graphics/pokemon/pichu/normal.pal",
+    "shiny": "graphics/pokemon/pichu/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      4,
+      9
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "PIKACHU_ALOLAN",
+    "normal": "graphics/pokemon/pikachu/normal.pal",
+    "shiny": "graphics/pokemon/pikachu/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      4,
+      5,
+      10,
+      12
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "RAICHU_ALOLAN",
+    "normal": "graphics/pokemon/raichu_alolan/normal.pal",
+    "shiny": "graphics/pokemon/raichu_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "SANDSHREW_ALOLAN",
+    "normal": "graphics/pokemon/sandshrew_alolan/normal.pal",
+    "shiny": "graphics/pokemon/sandshrew_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "SANDSLASH_ALOLAN",
+    "normal": "graphics/pokemon/sandslash_alolan/normal.pal",
+    "shiny": "graphics/pokemon/sandslash_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "DIGLETT_ALOLAN",
+    "normal": "graphics/pokemon/diglett_alolan/normal.pal",
+    "shiny": "graphics/pokemon/diglett_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "DUGTRIO_ALOLAN",
+    "normal": "graphics/pokemon/dugtrio_alolan/normal.pal",
+    "shiny": "graphics/pokemon/dugtrio_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "MEOWTH_ALOLAN",
+    "normal": "graphics/pokemon/meowth_alolan/normal.pal",
+    "shiny": "graphics/pokemon/meowth_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      9
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "PERSIAN_ALOLAN",
+    "normal": "graphics/pokemon/persian_alolan/normal.pal",
+    "shiny": "graphics/pokemon/persian_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "MEOWTH_GALARIAN",
+    "normal": "graphics/pokemon/meowth_galarian/normal.pal",
+    "shiny": "graphics/pokemon/meowth_galarian/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "PERRSERKER",
+    "normal": "graphics/pokemon/perrserker/normal.pal",
+    "shiny": "graphics/pokemon/perrserker/shiny.pal",
+    "off_reference_normal": [
+      2
+    ],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "GEODUDE_ALOLAN",
+    "normal": "graphics/pokemon/geodude_alolan/normal.pal",
+    "shiny": "graphics/pokemon/geodude_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "GRAVELER_ALOLAN",
+    "normal": "graphics/pokemon/graveler_alolan/normal.pal",
+    "shiny": "graphics/pokemon/graveler_alolan/shiny.pal",
+    "off_reference_normal": [
+      14
+    ],
+    "off_reference_shiny": [
+      14
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "GOLEM_ALOLAN",
+    "normal": "graphics/pokemon/golem_alolan/normal.pal",
+    "shiny": "graphics/pokemon/golem_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "GRIMER_ALOLAN",
+    "normal": "graphics/pokemon/grimer_alolan/normal.pal",
+    "shiny": "graphics/pokemon/grimer_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "MUK_ALOLAN",
+    "normal": "graphics/pokemon/muk_alolan/normal.pal",
+    "shiny": "graphics/pokemon/muk_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "VULPIX_ALOLAN",
+    "normal": "graphics/pokemon/vulpix_alolan/normal.pal",
+    "shiny": "graphics/pokemon/vulpix_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "NINETALES_ALOLAN",
+    "normal": "graphics/pokemon/ninetales_alolan/normal.pal",
+    "shiny": "graphics/pokemon/ninetales_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "EXEGGCUTE_ALOLAN",
+    "normal": "graphics/pokemon/exeggcute/normal.pal",
+    "shiny": "graphics/pokemon/exeggcute/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      12,
+      14
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "EXEGGUTOR_ALOLAN",
+    "normal": "graphics/pokemon/exeggutor_alolan/normal.pal",
+    "shiny": "graphics/pokemon/exeggutor_alolan/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "CUBONE_ALOLAN",
+    "normal": "graphics/pokemon/cubone/normal.pal",
+    "shiny": "graphics/pokemon/cubone/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      2,
+      4,
+      10,
+      11
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "MAROWAK_ALOLAN",
+    "normal": "graphics/pokemon/marowak_alolan/normal.pal",
+    "shiny": "graphics/pokemon/marowak_alolan/shiny.pal",
+    "off_reference_normal": [
+      8
+    ],
+    "off_reference_shiny": [
+      8
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "CORSOLA_GALARIAN",
+    "normal": "graphics/pokemon/corsola_galarian/normal.pal",
+    "shiny": "graphics/pokemon/corsola_galarian/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "CURSOLA",
+    "normal": "graphics/pokemon/cursola/normal.pal",
+    "shiny": "graphics/pokemon/cursola/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "KOFFING_GALARIAN",
+    "normal": "graphics/pokemon/koffing/normal.pal",
+    "shiny": "graphics/pokemon/koffing/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [
+      9,
+      10,
+      12,
+      13
+    ],
+    "embedded_palette_mismatch": []
+  },
+  {
+    "species": "WEEZING_GALARIAN",
+    "normal": "graphics/pokemon/weezing_galarian/normal.pal",
+    "shiny": "graphics/pokemon/weezing_galarian/shiny.pal",
+    "off_reference_normal": [],
+    "off_reference_shiny": [],
+    "embedded_palette_mismatch": []
+  }
+]

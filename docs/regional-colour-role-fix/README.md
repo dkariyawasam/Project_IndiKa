@@ -1,0 +1,1 @@
+Corrected HGSS-to-FRLG colour-index assignments for regional Cubone and Koffing. Cubone body browns are distinct from skull greys; Koffing highlights remain purple and mouth shades use red slots. Shared base palettes and sprite silhouettes unchanged. Previous sprites preserved here. Normal and shiny palettes retain their role correspondence.
