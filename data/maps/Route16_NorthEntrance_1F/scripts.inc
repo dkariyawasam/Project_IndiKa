@@ -23,8 +23,7 @@ Route16_NorthEntrance_1F_EventScript_Guard::
 	faceplayer
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_GuardOwnBike
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_GuardRentalActive
+	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route16_NorthEntrance_1F_EventScript_GuardRentalActive
 	msgbox Route16_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route16_NorthEntrance_1F_EventScript_GuardDeclineRental
 	checkmoney 500
@@ -108,8 +107,7 @@ Route16_NorthEntrance_1F_EventScript_ReturnBikeTriggerBottom::
 Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, EventScript_SetExitingCyclingRoad
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, FALSE, EventScript_SetExitingCyclingRoad
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, EventScript_SetExitingCyclingRoad
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	call_if_eq VAR_0x8008, 0, Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardTop
 	call_if_eq VAR_0x8008, 1, Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardMid
@@ -153,8 +151,7 @@ Route16_NorthEntrance_1F_EventScript_NeedBikeTrigger::
 	call_if_eq VAR_0x8008, 2, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterMid
 	call_if_eq VAR_0x8008, 3, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterMidBottom
 	call_if_eq VAR_0x8008, 4, Route16_NorthEntrance_1F_EventScript_PlayerWalkToCounterBottom
-	checkflag FLAG_BIKE_RENTAL_ACTIVE
-	goto_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
 	msgbox Route16_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerRent
 Route16_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce::

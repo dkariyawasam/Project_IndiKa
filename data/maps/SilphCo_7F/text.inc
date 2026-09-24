@@ -81,15 +81,15 @@ SilphCo_7F_Text_JoshuaPostBattle::
 
 SilphCo_7F_Text_Grunt1Intro::
     .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+    .string "SIBLINGS!$"
 
 SilphCo_7F_Text_Grunt1Defeat::
     .string "Aack!\n"
-    .string "Brothers, I lost!$"
+    .string "Siblings, I lost!$"
 
 SilphCo_7F_Text_Grunt1PostBattle::
     .string "Doesn't matter.\n"
-    .string "My brothers will repay the favor!$"
+    .string "My siblings will repay the favor!$"
 
 SilphCo_7F_Text_Grunt2Intro::
     .string "A child intruder?\n"
@@ -120,8 +120,8 @@ SilphCo_7F_Text_RivalIntro::
     .string "Someone powerful would burn down\n"
     .string "SAFFRON for that.\p"
     .string "You're going upstairs, right?\n"
-    .string "Ready to prove you won't fold\l"
-    .string "when it matters?$"
+    .string "Ready to battle me and prove\l"
+    .string "you won't fold when it matters?$"
 
 SilphCo_7F_Text_RivalNotReady::
     .string "{RIVAL}: Figures.\p"

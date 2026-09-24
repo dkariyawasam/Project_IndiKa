@@ -4599,3 +4599,11 @@ extern const u8 gMonIcon_GalarianWeezing[];
 
 #endif //GUARD_GRAPHICS_H
 
+
+extern const u32 gMonFrontPic_Kinkabuto[];
+extern const u32 gMonPalette_Kinkabuto[];
+
+extern const u32 gMonFrontPic_Amunyte[];
+extern const u32 gMonPalette_Amunyte[];
+
+

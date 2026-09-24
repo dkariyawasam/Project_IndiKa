@@ -4714,28 +4714,28 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_AMUNYTE] =
     {
-        .categoryName = _("UNKNOWN"),
-        .height = 10,
-        .weight = 100,
+        .categoryName = _("VENOM SHELL"),
+        .height = 9,
+        .weight = 240,
         .description = gAmunytePokedexText,
         .unusedDescription = gAmunytePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 617,
+        .pokemonOffset = 9,
+        .trainerScale = 352,
+        .trainerOffset = -1,
     },
 
     [NATIONAL_DEX_KINKABUTO] =
     {
-        .categoryName = _("UNKNOWN"),
-        .height = 10,
-        .weight = 100,
+        .categoryName = _("BLADE SHELL"),
+        .height = 11,
+        .weight = 320,
         .description = gKinkabutoPokedexText,
         .unusedDescription = gKinkabutoPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 489,
+        .pokemonOffset = 6,
+        .trainerScale = 352,
+        .trainerOffset = -1,
     },
 
     [NATIONAL_DEX_AEROPTERYX] =
