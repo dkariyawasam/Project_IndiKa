@@ -1,4 +1,5 @@
 #include "global.h"
+#include "ui_hint_header.h"
 #include "gflib.h"
 #include "scanline_effect.h"
 #include "task.h"
@@ -386,6 +387,14 @@ static void FreeFlyMap(u8);
 static void SetFlyWarpDestination(u16);
 
 #include "data/region_map/region_map_entry_strings.h"
+
+// The animated map uses transparent tiles over palette-zero backdrop colours.
+// Theme those entries as well as the text windows, including after opening.
+static void LoadMapHeaderBackdrop(u16 paletteOffset)
+{
+    u16 color = GetUiHintHeaderColor();
+    LoadPalette(&color, paletteOffset, sizeof(color));
+}
 
 static const u16 sTopBar_Pal[] = INCBIN_U16("graphics/region_map/top_bar.gbapal"); // Palette for the top bar and dynamic text color
 static const u16 sMapCursor_Pal[] = INCBIN_U16("graphics/region_map/cursor.gbapal");
@@ -926,17 +935,18 @@ static bool8 LoadRegionMapGfx(void)
     {
     case 0:
         LoadPalette(sTopBar_Pal, BG_PLTT_ID(12), sizeof(sTopBar_Pal));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(12) + 15);
         break;
     case 1:
         LoadPalette(sRegionMap_Pal, 0, sizeof(sRegionMap_Pal));
         TintMapEdgesPalette();
         if (sRegionMap->type != REGIONMAP_TYPE_NORMAL)
         {
-            LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(0), sizeof(sTopBar_Pal[15]));
-            LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(1), sizeof(sTopBar_Pal[15]));
-            LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(2), sizeof(sTopBar_Pal[15]));
-            LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(3), sizeof(sTopBar_Pal[15]));
-            LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(4), sizeof(sTopBar_Pal[15]));
+            LoadMapHeaderBackdrop(BG_PLTT_ID(0));
+            LoadMapHeaderBackdrop(BG_PLTT_ID(1));
+            LoadMapHeaderBackdrop(BG_PLTT_ID(2));
+            LoadMapHeaderBackdrop(BG_PLTT_ID(3));
+            LoadMapHeaderBackdrop(BG_PLTT_ID(4));
         }
         break;
     case 2:
@@ -2199,11 +2209,11 @@ static void Task_MapOpenAnim(u8 taskId)
         sMapOpenCloseAnim->openState++;
         break;
     case 10:
-        LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(0), sizeof(sTopBar_Pal[15]));
-        LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(1), sizeof(sTopBar_Pal[15]));
-        LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(2), sizeof(sTopBar_Pal[15]));
-        LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(3), sizeof(sTopBar_Pal[15]));
-        LoadPalette(&sTopBar_Pal[15], BG_PLTT_ID(4), sizeof(sTopBar_Pal[15]));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(0));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(1));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(2));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(3));
+        LoadMapHeaderBackdrop(BG_PLTT_ID(4));
         sMapOpenCloseAnim->openState++;
         break;
     case 11:
