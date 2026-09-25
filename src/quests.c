@@ -1070,6 +1070,7 @@ static bool8 LoadGraphics(void)
 			break;
 		case 2:
 			LoadCompressedPalette(sLogbookMenuBgPals, 0x00, 0x60);
+			ApplyUiDetailsFooterTheme(BG_PLTT_ID(1));
 			sStateDataPtr->data[0]++;
 			break;
 		case 3:
