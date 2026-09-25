@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -2250,6 +2251,12 @@ void LoadObjectEventPaletteSet(u16 *paletteTags)
     }
 }
 
+static bool8 IsPlayerAppearancePalette(u16 tag)
+{
+    return tag == OBJ_EVENT_PAL_TAG_PLAYER_RED || tag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN
+        || tag == OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION || tag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION;
+}
+
 static u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette)
 {
     if (IndexOfSpritePaletteTag(spritePalette->tag) != 0xFF)
@@ -2257,7 +2264,12 @@ static u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette)
         // Already loaded
         return 0xFF;
     }
-    return LoadSpritePalette(spritePalette);
+    {
+        u8 slot = LoadSpritePalette(spritePalette);
+        if (slot != 0xFF && IsPlayerAppearancePalette(spritePalette->tag))
+            ApplyPlayerAppearancePalette(OBJ_PLTT_ID(slot), PLAYER_PALETTE_OVERWORLD);
+        return slot;
+    }
 }
 
 void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
@@ -2267,6 +2279,8 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
     if (paletteIndex == 0xFF)
         return;
     LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
+    if (IsPlayerAppearancePalette(paletteTag))
+        ApplyPlayerAppearancePalette(OBJ_PLTT_ID(paletteSlot), PLAYER_PALETTE_OVERWORLD);
     ApplyGlobalFieldPaletteTint(paletteSlot);
 }
 

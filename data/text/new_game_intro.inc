@@ -173,7 +173,7 @@ gControlsGuide_Text_LRButtons::
     .string "press the L or R Button.$"
 
 gOakSpeech_Text_AskPlayerGender::
-    .string "Are you a boy or a girl?$"
+    .string "Choose your style and colors.$"
 
 gPikachuIntro_Text_Page1::
     .string "In the world which you are about to\n"
