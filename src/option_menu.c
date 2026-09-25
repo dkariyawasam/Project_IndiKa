@@ -1,4 +1,5 @@
 #include "global.h"
+#include "ui_hint_header.h"
 #include "gflib.h"
 #include "scanline_effect.h"
 #include "text_window_graphics.h"
@@ -130,7 +131,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 10, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, USER_WINDOW_FRAME_COUNT, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -333,7 +334,7 @@ static bool8 LoadOptionMenuPalette(void)
         break;
     case 2:
         LoadPalette(sOptionMenuPalette, BG_PLTT_ID(1), sizeof(sOptionMenuPalette));
-        LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        LoadUiHintHelpPaletteForFrame(BG_PLTT_ID(15), sOptionMenuPtr->option[MENUITEM_FRAMETYPE]);
         break;
     case 3:
         LoadStdWindowGfxOnBg(1, 0x1B3, BG_PLTT_ID(3));
@@ -372,6 +373,7 @@ static void Task_OptionMenu(u8 taskId)
         case 2:
             LoadBgTiles(1, GetUserWindowGraphics(sOptionMenuPtr->option[MENUITEM_FRAMETYPE])->tiles, 0x120, 0x1AA);
             LoadPalette(GetUserWindowGraphics(sOptionMenuPtr->option[MENUITEM_FRAMETYPE])->palette, BG_PLTT_ID(2), PLTT_SIZE_4BPP);
+            LoadUiHintHelpPaletteForFrame(BG_PLTT_ID(15), sOptionMenuPtr->option[MENUITEM_FRAMETYPE]);
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
         case 3:
