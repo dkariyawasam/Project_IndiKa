@@ -303,8 +303,6 @@ static const struct YesNoFuncTable sYesNoMenu_Sell = {
 
 static const u8 sListItemTextColor_RegularItem[] = _("{COLOR_HIGHLIGHT_SHADOW DARK_GRAY TRANSPARENT LIGHT_GRAY}");
 
-#define BAG_NOTCH_SELECTED_TILE 39
-#define BAG_NOTCH_INACTIVE_TILE 41
 
 static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .firstArrowType = SCROLL_ARROW_LEFT,
@@ -321,7 +319,6 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
 };
 
 static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/interface/select_button.4bpp");
-static const u8 sBagBgTiles[] = INCBIN_U8("graphics/item_menu/bg.4bpp");
 
 #define tSwitchDir     data[11]
 #define tSwitchCounter data[12]
@@ -599,6 +596,7 @@ static bool8 DoLoadBagGraphics(void)
         LoadCompressedPalette(gBagBgPalette, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         if (!BagIsTutorial() && gSaveBlock2Ptr->playerGender != MALE)
             LoadCompressedPalette(gBagBgPalette_FemaleOverride, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
+        ApplyUiDetailsFooterTheme(BG_PLTT_ID(1));
         sBagMenuDisplay->data[0]++;
         break;
     case 3:
@@ -798,26 +796,30 @@ static void PrintBagControlHints(void)
 
 static void DrawBagHeader(void)
 {
-    DrawUiHintHeader(3, gText_DPadAnyPickOKBack, 0, 10, 0, FALSE);
+    u16 i;
+    u16 blue = RGB(0, 15, 25);
+    u8 *pixels;
+
+    // Index zero is transparent: use a spare opaque colour for the strip.
+    LoadPalette(&blue, BG_PLTT_ID(15) + 11, sizeof(blue));
+    ApplyUiHintHeaderTheme(BG_PLTT_ID(15) + 11);
+    DrawUiHintHeader(3, gText_DPadAnyPickOKBack, 11, 10, 0, FALSE);
     BagPrintTextOnWindow(3, FONT_NORMAL, sPocketNames[gBagMenuState.pocket], 8, 1, 1, 0, 0, 0);
     DrawBagPocketNotches(3);
+    pixels = (u8 *)GetWindowAttribute(3, WINDOW_TILE_DATA);
+    for (i = 0; i < 30 * 2 * TILE_SIZE_4BPP; i++)
+    {
+        if ((pixels[i] & 0x0F) == 0)
+            pixels[i] |= 0x0B;
+        if ((pixels[i] & 0xF0) == 0)
+            pixels[i] |= 0xB0;
+    }
     CopyWindowToVram(3, COPYWIN_GFX);
 }
 
 static void DrawBagPocketNotches(u8 windowId)
 {
-    u8 i;
-    u8 x;
-    const u8 *notch;
-
-    for (i = 0; i < NUM_VISIBLE_BAG_POCKETS; i++)
-    {
-        x = 84 + i * 12;
-        notch = sBagBgTiles + (i == gBagMenuState.pocket ? BAG_NOTCH_SELECTED_TILE : BAG_NOTCH_INACTIVE_TILE) * TILE_SIZE_4BPP;
-
-        FillWindowPixelRect(windowId, PIXEL_FILL(0), x, 0, 8, 16);
-        BlitBitmapToWindow(windowId, notch, x, 0, 8, 16);
-    }
+    DrawUiPageNotches(windowId, 84, NUM_VISIBLE_BAG_POCKETS, gBagMenuState.pocket, 11);
 }
 
 static void RestoreBagPocketTitleWindow(void)

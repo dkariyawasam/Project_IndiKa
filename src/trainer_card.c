@@ -1490,7 +1490,10 @@ static bool8 SetTrainerCardBgsAndPals(void)
             LoadPalette(sKantoTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), sizeof(sKantoTrainerCardFemaleBg_Pal));
         // The added Kanto hint-strip tiles use index 8, originally magenta filler.
         if (sTrainerCardDataPtr->cardType == CARD_TYPE_FRLG)
+        {
             LoadPalette(&gUiHintHeaderPalette[8], BG_PLTT_ID(1) + 8, sizeof(u16));
+            ApplyUiHintHeaderTheme(BG_PLTT_ID(1) + 8);
+        }
         break;
     case 5:
         LoadPalette(sTrainerCardStar_Pal, BG_PLTT_ID(4), sizeof(sTrainerCardStar_Pal));

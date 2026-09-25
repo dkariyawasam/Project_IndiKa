@@ -1,4 +1,5 @@
 #include "global.h"
+#include "ui_hint_header.h"
 #include "gflib.h"
 #include "constants/songs.h"
 #include "event_data.h"
@@ -695,6 +696,8 @@ static const struct BgTemplate sUIBgTemplates[4] = {
     },
 };
 
+#define APEX_DOSSIER_HEADER_WINDOW 4
+
 static const struct WindowTemplate sUIWindowTemplates[] = {
     [FCWINDOWID_LIST] = {
         .bg = 0,
@@ -731,6 +734,15 @@ static const struct WindowTemplate sUIWindowTemplates[] = {
         .height = 4,
         .paletteNum = 15,
         .baseBlock = 20 + 8 * 10 + 24 * 2 + 26 * 4
+    },
+    [APEX_DOSSIER_HEADER_WINDOW] = {
+        .bg = 0,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 12,
+        .baseBlock = 296
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -938,9 +950,18 @@ static void MainCB2_LoadApexLog(void)
         case 5:
             InitWindows(sUIWindowTemplates);
             if (sApexLogData->isApexDossier)
+            {
                 SetWindowAttribute(FCWINDOWID_ICONDESC, WINDOW_TILEMAP_LEFT, ApexLog_APEX_DOSSIER_ICONDESC_LEFT);
+            }
             DeactivateAllTextPrinters();
             Setup_DrawMsgAndListBoxes();
+            if (sApexLogData->isApexDossier)
+            {
+                // A separate palette keeps dialogue-box reloads from changing
+                // the dossier header, and the opaque strip covers the old title.
+                LoadPalette(gUiHintHeaderPalette, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
+                PrintUIHelp(0);
+            }
             if (!sApexLogData->isApexDossier)
             {
                 sListMenuItems = AllocZeroed(17 * sizeof(struct ListMenuItem));
@@ -1376,6 +1397,7 @@ static void Task_DestroyAssetsAndCloseApexLog(u8 taskId)
         }
         if (!isApexDossier)
             ApexLog_DestroyWindow(FCWINDOWID_LIST);
+        ApexLog_DestroyWindow(APEX_DOSSIER_HEADER_WINDOW);
         ApexLog_DestroyWindow(FCWINDOWID_UIHELP);
         ApexLog_DestroyWindow(FCWINDOWID_MSGBOX);
         ApexLog_DestroyWindow(FCWINDOWID_ICONDESC);
@@ -1410,7 +1432,10 @@ static void PrintUIHelp(u8 state)
     const u8 * src = gApexLogText_MainScreenUI;
 
     if (sApexLogData->isApexDossier)
-        src = sApexDossierText_UI;
+    {
+        DrawUiHintHeader(APEX_DOSSIER_HEADER_WINDOW, sApexDossierText_UI, 8, 10, 0, TRUE);
+        return;
+    }
     else if (state != 0)
     {
         src = gApexLogText_FlavorTextUI;

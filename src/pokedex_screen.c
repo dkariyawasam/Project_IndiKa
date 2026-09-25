@@ -124,7 +124,6 @@ static void DexScreen_AddTextPrinterParameterized(u8 windowId, u8 fontId, const 
 static void DexScreen_PrintNum3RightAlign(u8 windowId, u8 fontId, u16 num, u8 x, u8 y, u8 colorIdx);
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y);
 static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex);
-static void DexScreen_PrintControlInfo(const u8 *src);
 static void DexScreen_PrintHeaderControlInfo(const u8 *src);
 static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void);
 static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered);
@@ -261,6 +260,9 @@ static const struct BgTemplate sBgTemplates[] = {
         .baseTile = 0x0000
     },
 };
+
+static const u8 sText_DexOKBack[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_DexOK[] = _("{A_BUTTON}OK");
 
 static const struct WindowTemplate sWindowTemplates[] = {
     {
@@ -1765,7 +1767,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         sPokedexScreenData->state = 23;
         break;
     case 23:
-        if (JOY_NEW(A_BUTTON))
+        if (JOY_NEW(B_BUTTON))
         {
             FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
             FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
@@ -1775,7 +1777,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
             CopyBgTilemapBufferToVram(0);
             sPokedexScreenData->state = 26;
         }
-        else if (JOY_NEW(B_BUTTON))
+        else if (JOY_NEW(A_BUTTON))
         {
             FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
             FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
@@ -1918,12 +1920,12 @@ static void Task_DexScreen_ShowMonPage(u8 taskId)
         sPokedexScreenData->state = 9;
         break;
     case 9:
-        if (JOY_NEW(A_BUTTON))
+        if (JOY_NEW(B_BUTTON))
         {
             BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
             sPokedexScreenData->state = 12;
         }
-        else if (JOY_NEW(B_BUTTON))
+        else if (JOY_NEW(A_BUTTON))
         {
             FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
             FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
@@ -2222,16 +2224,6 @@ static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex)
     return count;
 }
 
-static void DexScreen_PrintControlInfo(const u8 *src)
-{
-    ClearWindowTilemap(1);
-    SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
-    SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 18);
-    SetWindowAttribute(1, WINDOW_WIDTH, 30);
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, src, 236 - GetStringWidth(FONT_SMALL, src, 0), 2, 4);
-}
-
 static void DexScreen_PrintHeaderControlInfo(const u8 *src)
 {
     ClearWindowTilemap(1);
@@ -2411,7 +2403,7 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered)
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
     if (!justRegistered)
     {
-        DexScreen_PrintHeaderControlInfo(gText_PickFlipPageCheckCancel);
+        DexScreen_PrintHeaderControlInfo(gText_DPadAnyPickOKBack);
         PutWindowTilemap(1);
         CopyWindowToVram(1, COPYWIN_MAP);
     }
@@ -3001,12 +2993,11 @@ static u8 DexScreen_DrawMonDexPage(bool8 justRegistered)
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
     if (justRegistered == FALSE)
     {
-        DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, gText_Cry, 8, 2, 4);
-        DexScreen_PrintControlInfo(gText_NextDataCancel);
+        DexScreen_PrintHeaderControlInfo(sText_DexOKBack);
     }
     else
         // Just registered
-        DexScreen_PrintControlInfo(gText_Next);
+        DexScreen_PrintHeaderControlInfo(sText_DexOK);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_GFX);
 
@@ -3196,8 +3187,7 @@ u8 DexScreen_DrawMonAreaPage(void)
 
     // Draw the control info
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    DexScreen_AddTextPrinterParameterized(1, FONT_SMALL, gText_Cry, 8, 2, 4);
-    DexScreen_PrintControlInfo(gText_CancelPreviousData);
+    DexScreen_PrintHeaderControlInfo(sText_DexOKBack);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_GFX);
 

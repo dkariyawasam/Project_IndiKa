@@ -861,7 +861,7 @@ static void CreateStartMenuHeaderWindow(void)
 
     sStartMenuHeaderWindowId = AddWindow(&template);
     SaveStartMenuBg0TilemapRect(sStartMenuHeaderBgBackup, template.tilemapLeft, template.tilemapTop, template.width, template.height);
-    LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(START_MENU_LABEL_PALETTE_NUM), PLTT_SIZE_4BPP);
+    LoadUiHintHelpPalette(BG_PLTT_ID(START_MENU_LABEL_PALETTE_NUM));
     PutWindowTilemap(sStartMenuHeaderWindowId);
     PrintStartMenuHeaderWindow();
 }
@@ -1012,6 +1012,20 @@ static void BackupRadialStartMenuObjPalettes(void)
 static void LoadRadialStartMenuObjPalettes(void)
 {
     LZ77UnCompWram(sRadialStartMenuSettingsIconPal, gDecompressionBuffer);
+    if (gSaveBlock2Ptr->optionsWindowFrameType == 1)
+    {
+        u16 *palette = (u16 *)gDecompressionBuffer;
+        palette[5] = RGB(19, 12, 16);
+        palette[6] = RGB(25, 14, 21);
+        palette[13] = RGB(12, 10, 11);
+    }
+    else if (gSaveBlock2Ptr->optionsWindowFrameType == 2)
+    {
+        u16 *palette = (u16 *)gDecompressionBuffer;
+        palette[5] = RGB(18, 19, 12);
+        palette[6] = RGB(23, 25, 14);
+        palette[13] = RGB(11, 12, 10);
+    }
     LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(START_MENU_ICON_OBJ_PAL_SLOT), PLTT_SIZE_4BPP);
 }
 
@@ -1211,6 +1225,7 @@ static void SpriteCB_RadialStartMenuIcon(struct Sprite *sprite)
 static void RefreshStartMenuHelpText(void)
 {
     DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
+    // The help window loads an already-themed palette shared with the header.
 }
 
 static const u8 *GetStartMenuHeaderHints(void)

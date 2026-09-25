@@ -1,6 +1,8 @@
 #ifndef GUARD_TEXT_WINDOW_GRAPHICS_H
 #define GUARD_TEXT_WINDOW_GRAPHICS_H
 
+#define USER_WINDOW_FRAME_COUNT 4
+
 struct TextWindowGraphics
 {
     const void *tiles;

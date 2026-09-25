@@ -8,24 +8,17 @@ PalletTown_RivalsHouse_Text_HeardYouBattledRival::
     .string "a battle against {RIVAL}.\p"
     .string "I wish I'd seen that!$"
 
-PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp::
-    .string "Grandpa asked you to run an\n"
-    .string "errand?\p"
-    .string "Gee, that's lazy of him.\n"
-    .string "Here, this will help you.$"
-
-PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy::
-    .string "{PLAYER} received a TOWN MAP\n"
-    .string "from DAISY.$"
-
-PalletTown_RivalsHouse_Text_DontHaveSpaceForThis::
-    .string "You don't have space for this in\n"
-    .string "your BAG.$"
+PalletTown_RivalsHouse_Text_MapAlreadyAvailable::
+    .string "DAISY: Heading out to explore?\p"
+    .string "Press START and choose MAP to\n"
+    .string "see where you are.\p"
+    .string "You can check the names of places\n"
+    .string "and plan where to go next!$"
 
 PalletTown_RivalsHouse_Text_ExplainTownMap::
-    .string "You can use the TOWN MAP to find\n"
-    .string "out where you are, or check the\l"
-    .string "names of places.$"
+    .string "Press START and choose MAP to\n"
+    .string "check where you are or plan\l"
+    .string "your next journey.$"
 
 PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
     .string "DAISY: Just like people, POKéMON\n"
@@ -35,7 +28,7 @@ PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
 
 PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
     .string "It's a big map of the KANTO region.\n"
-    .string "Now this would be useful!$"
+    .string "You can view it from the menu, too!$"
 
 PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks::
     .string "The shelves are crammed full of\n"

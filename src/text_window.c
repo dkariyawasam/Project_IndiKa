@@ -1,9 +1,52 @@
 #include "global.h"
 #include "gflib.h"
 #include "text_window.h"
+#include "ui_hint_header.h"
 #include "text_window_graphics.h"
 #include "help_message.h"
 #include "new_menu_helpers.h"
+
+// Dialogue border shades use the same blue-to-red hue rotation as the
+// frame-2 icon theme. Text, neutral colours and semantic accents stay intact.
+static const u16 sRedDialoguePalette[16] =
+{
+    RGB(14, 25, 20),
+    RGB(31, 31, 31),
+    RGB(12, 12, 12),
+    RGB(26, 26, 25),
+    RGB(28, 1, 1),
+    RGB(31, 23, 14),
+    RGB(4, 19, 1),
+    RGB(18, 30, 18),
+    RGB(6, 10, 25),
+    RGB(20, 24, 30),
+    RGB(31, 31, 31),
+    RGB(30, 26, 26),
+    RGB(28, 20, 22),
+    RGB(31, 28, 28),
+    RGB(24, 14, 14),
+    RGB(20, 10, 9),
+};
+
+static const u16 sGreenDialoguePalette[16] =
+{
+    RGB(14, 25, 20),
+    RGB(31, 31, 31),
+    RGB(12, 12, 12),
+    RGB(26, 26, 25),
+    RGB(28, 1, 1),
+    RGB(31, 23, 14),
+    RGB(4, 19, 1),
+    RGB(18, 30, 18),
+    RGB(6, 10, 25),
+    RGB(20, 24, 30),
+    RGB(31, 31, 31),
+    RGB(27, 30, 26),
+    RGB(23, 28, 20),
+    RGB(29, 31, 28),
+    RGB(17, 24, 14),
+    RGB(10, 20, 9),
+};
 
 static void LoadUserWindowGfxByFrame(u8 windowId, u8 frameType, u16 destOffset, u8 palOffset);
 
@@ -12,7 +55,7 @@ static void LoadUserWindowGfxByFrame(u8 windowId, u8 frameType, u16 destOffset, 
 static void LoadHelpMessageWindowGfxOnBg(u8 bgId, u16 destOffset, u8 palOffset)
 {
     LoadBgTiles(bgId, gHelpMessageWindow_Gfx, 0x280, destOffset);
-    LoadPalette(GetTextWindowPalette(2), palOffset, PLTT_SIZE_4BPP);
+    LoadUiHintHelpPalette(palOffset);
 }
 
 // Unused
@@ -49,8 +92,8 @@ static void LoadQuestLogWindowTilesOnBg(u8 bgId, u16 destOffset)
 // Equivalent to LoadUserWindowGfxByFrame, but takes a bg id directly
 static void LoadUserWindowGfxByFrameOnBg(u8 bgId, u8 frameType, u16 destOffset, u8 palOffset)
 {
-    LoadBgTiles(bgId, gUserFrames[frameType].tiles, 0x120, destOffset);
-    LoadPalette(gUserFrames[frameType].palette, palOffset, PLTT_SIZE_4BPP);
+    LoadBgTiles(bgId, GetUserWindowGraphics(frameType)->tiles, 0x120, destOffset);
+    LoadPalette(GetUserWindowGraphics(frameType)->palette, palOffset, PLTT_SIZE_4BPP);
 }
 
 // Identical to LoadUserWindowGfx
@@ -62,7 +105,7 @@ void LoadUserWindowGfx2(u8 windowId, u16 destOffset, u8 palOffset)
 void LoadHelpMessageWindowGfx(u8 windowId, u16 destOffset, u8 palOffset)
 {
     LoadBgTiles(GetWindowAttribute(windowId, WINDOW_BG), gHelpMessageWindow_Gfx, 0x280, destOffset);
-    LoadPalette(GetTextWindowPalette(2), palOffset, PLTT_SIZE_4BPP);
+    LoadUiHintHelpPalette(palOffset);
 }
 
 void LoadMenuMessageWindowGfx(u8 windowId, u16 destOffset, u8 palOffset)
@@ -95,8 +138,8 @@ void LoadQuestLogWindowTiles(u8 windowId, u16 destOffset)
 
 static void LoadUserWindowGfxByFrame(u8 windowId, u8 frameType, u16 destOffset, u8 palOffset)
 {
-    LoadBgTiles(GetWindowAttribute(windowId, WINDOW_BG), gUserFrames[frameType].tiles, 0x120, destOffset);
-    LoadPalette(gUserFrames[frameType].palette, palOffset, PLTT_SIZE_4BPP);
+    LoadBgTiles(GetWindowAttribute(windowId, WINDOW_BG), GetUserWindowGraphics(frameType)->tiles, 0x120, destOffset);
+    LoadPalette(GetUserWindowGraphics(frameType)->palette, palOffset, PLTT_SIZE_4BPP);
 }
 
 void LoadUserWindowGfx(u8 windowId, u16 destOffset, u8 palOffset)
@@ -153,6 +196,11 @@ void rbox_fill_rectangle(u8 windowId)
 
 const u16 *GetTextWindowPalette(u8 id)
 {
+    if (id == 0 && gSaveBlock2Ptr->optionsWindowFrameType == 1)
+        return sRedDialoguePalette;
+    if (id == 0 && gSaveBlock2Ptr->optionsWindowFrameType == 2)
+        return sGreenDialoguePalette;
+
     switch (id)
     {
     case 0:
