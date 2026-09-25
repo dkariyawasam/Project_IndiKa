@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "ui_hint_header.h"
 #include "gflib.h"
 #include "scanline_effect.h"
@@ -3113,7 +3114,11 @@ static void CreatePlayerIconSprite(void)
         spritePalette.data = sPlayerIcon_LeafPal;
 
     LoadSpriteSheet(&spriteSheet);
-    LoadSpritePalette(&spritePalette);
+    {
+        u8 slot = LoadSpritePalette(&spritePalette);
+        if (slot != 0xFF)
+            ApplyPlayerAppearancePalette(OBJ_PLTT_ID(slot), PLAYER_PALETTE_OVERWORLD);
+    }
     spriteId = CreateSprite(&template, 8 * sPlayerIcon->x + 36, 8 * sPlayerIcon->y + 36, 2);
     sPlayerIcon->sprite = &gSprites[spriteId];
     SetPlayerIconInvisibility(TRUE);
