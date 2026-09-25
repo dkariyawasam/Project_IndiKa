@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "sprite.h"
 #include "task.h"
 #include "overworld.h"
@@ -2156,6 +2157,7 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
 
     opponentSprite = &gSprites[task->tOpponentSpriteId];
     playerSprite = &gSprites[task->tPlayerSpriteId];
+    ApplyPlayerAppearancePalette(OBJ_PLTT_ID(playerSprite->oam.paletteNum), PLAYER_PALETTE_FRONT);
 
     opponentSprite->callback = SpriteCB_MugshotTrainerPic;
     playerSprite->callback = SpriteCB_MugshotTrainerPic;

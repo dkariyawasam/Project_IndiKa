@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "task.h"
 #include "pokeball.h"
@@ -2087,6 +2088,7 @@ static void OakOldManHandleIntroTrainerBallThrow(void)
         StartSpriteAnim(&gSprites[gBattlerSpriteIds[gActiveBattler]], 1);
         paletteNum = AllocSpritePalette(0xD6F8);
         LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
+        ApplyPlayerAppearancePalette(OBJ_PLTT_ID(paletteNum), PLAYER_PALETTE_BACK);
         gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = paletteNum;
         taskId = CreateTask(Task_StartSendOutAnim, 5);
         gTasks[taskId].data[0] = gActiveBattler;

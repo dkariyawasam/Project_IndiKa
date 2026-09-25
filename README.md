@@ -34,3 +34,7 @@
 ![Pokemon_Fire_Red_U_1 0](https://github.com/user-attachments/assets/dfc9c7a2-c128-49fa-a84b-bd358b1725ad)
 ![Pokemon_Fire_Red_U_1 0](https://github.com/user-attachments/assets/592ff463-0bb9-4d4d-a36c-74946024fa6d)
 
+
+## Development dashboard
+
+The [local debug dashboard](tools/debug_dashboard/README.md) connects to mGBA for live map, story, party, battle, appearance and palette checks. Launch it with `tools/debug_dashboard/Launch.command`; its connection guide uses a separate test ROM and save.

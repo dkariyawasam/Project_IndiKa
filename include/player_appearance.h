@@ -1,0 +1,16 @@
+#ifndef GUARD_PLAYER_APPEARANCE_H
+#define GUARD_PLAYER_APPEARANCE_H
+
+#define PLAYER_APPEARANCE_VERSION 3
+#define PLAYER_ACCENT_COUNT 3
+
+enum PlayerPaletteKind
+{
+    PLAYER_PALETTE_OVERWORLD,
+    PLAYER_PALETTE_INTRO,
+    PLAYER_PALETTE_FRONT,
+    PLAYER_PALETTE_BACK,
+    PLAYER_PALETTE_CREDITS,
+};
+void ApplyPlayerAppearancePalette(u16 offset, enum PlayerPaletteKind kind);
+#endif

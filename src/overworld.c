@@ -1,4 +1,5 @@
 #include "global.h"
+#include "debug_dashboard.h"
 #include "gflib.h"
 #include "bg_regs.h"
 #include "cable_club.h"
@@ -1604,6 +1605,7 @@ void CB2_OverworldBasic(void)
 static void CB2_Overworld(void)
 {
     bool32 fading = !!gPaletteFade.active;
+    DebugDashboard_Poll();
     if (fading)
         SetVBlankCallback(NULL);
     OverworldBasic();

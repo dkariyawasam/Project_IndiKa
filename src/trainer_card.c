@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "scanline_effect.h"
 #include "task.h"
@@ -1935,6 +1936,8 @@ static void CreateTrainerCardTrainerPic(void)
                     8, 2);
         }
     }
+    if (!sTrainerCardDataPtr->isLink && sTrainerCardDataPtr->cardType == CARD_TYPE_FRLG)
+        ApplyPlayerAppearancePalette(BG_PLTT_ID(8), PLAYER_PALETTE_FRONT);
 }
 
 // Unused

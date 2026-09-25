@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "credits.h"
 #include "task.h"
@@ -1474,6 +1475,7 @@ static void LoadPlayerOrRivalSprite(u8 whichScene)
                 sprSheet.tag = data->characterTilesTag;
                 LoadCompressedSpriteSheet(&sprSheet);
                 LoadPalette(sPlayerMale_Pal, OBJ_PLTT_ID(15), sizeof(sPlayerMale_Pal));
+                ApplyPlayerAppearancePalette(OBJ_PLTT_ID(15), PLAYER_PALETTE_CREDITS);
             }
             else
             {
@@ -1482,6 +1484,7 @@ static void LoadPlayerOrRivalSprite(u8 whichScene)
                 sprSheet.tag = data->characterTilesTag;
                 LoadCompressedSpriteSheet(&sprSheet);
                 LoadPalette(sPlayerFemale_Pal, OBJ_PLTT_ID(15), sizeof(sPlayerFemale_Pal));
+                ApplyPlayerAppearancePalette(OBJ_PLTT_ID(15), PLAYER_PALETTE_CREDITS);
             }
             break;
         case 1:
