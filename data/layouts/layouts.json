@@ -616,7 +616,7 @@
     {
       "id": "LAYOUT_ROUTE15",
       "name": "Route15_Layout",
-      "width": 72,
+      "width": 56,
       "height": 37,
       "border_width": 2,
       "border_height": 2,
@@ -796,7 +796,7 @@
     {
       "id": "LAYOUT_VERMILION_HARBOR",
       "name": "VermilionHarbor_Layout",
-      "width": 72,
+      "width": 56,
       "height": 53,
       "border_width": 2,
       "border_height": 2,
