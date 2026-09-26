@@ -391,3 +391,27 @@ Route25_Text_BethanyPostBattle::
     .string "Good raising is a conversation.\p"
     .string "ROUTE 25 gives POKéMON plenty\n"
     .string "to respond to.$"
+
+Route25_Text_TriathleteReedIntro::
+	.string "A long bridge makes a great track!\nCare for a training break?$"
+
+Route25_Text_TriathleteReedDefeat::
+	.string "You ran rings around us!$"
+
+Route25_Text_TriathleteReedPostBattle::
+	.string "We pace ourselves on the long run.\nThere is room to pass beside us!$"
+
+Route25_Text_TriathleteReedRematchIntro::
+	.string "Another lap, another battle!$"
+
+Route25_Text_TriathleteLilaIntro::
+	.string "Sea air, steady feet, strong team!\nLet us show you our pace!$"
+
+Route25_Text_TriathleteLilaDefeat::
+	.string "Time to catch our breath!$"
+
+Route25_Text_TriathleteLilaPostBattle::
+	.string "My POKéMON set the pace.\nI just try to keep up!$"
+
+Route25_Text_TriathleteLilaRematchIntro::
+	.string "Ready for another training break?$"

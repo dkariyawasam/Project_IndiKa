@@ -9504,3 +9504,23 @@ static const struct TrainerMonItemDefaultMoves sParty_DojoCrushKinRenMei[] = {
     { .iv = 100, .lvl = 31, .species = SPECIES_PRIMEAPE, .heldItem = ITEM_BLACK_BELT, },
     { .iv = 100, .lvl = 31, .species = SPECIES_MACHOKE, .heldItem = ITEM_BLACK_BELT, },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route25TriathleteReed[] = {
+    { .iv = 0, .lvl = 28, .species = SPECIES_DODUO },
+    { .iv = 0, .lvl = 30, .species = SPECIES_PONYTA },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route25TriathleteReed2[] = {
+    { .iv = 30, .lvl = 33, .species = SPECIES_DODUO },
+    { .iv = 30, .lvl = 33, .species = SPECIES_PONYTA },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route25TriathleteLila[] = {
+    { .iv = 0, .lvl = 28, .species = SPECIES_BUNEARY },
+    { .iv = 0, .lvl = 30, .species = SPECIES_PIDGEOTTO },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route25TriathleteLila2[] = {
+    { .iv = 30, .lvl = 33, .species = SPECIES_BUNEARY },
+    { .iv = 30, .lvl = 33, .species = SPECIES_PIDGEOTTO },
+};

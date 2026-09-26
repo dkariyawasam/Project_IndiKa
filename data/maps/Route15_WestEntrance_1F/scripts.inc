@@ -113,7 +113,7 @@ Route15_WestEntrance_1F_EventScript_NeedBikeTriggerRent::
 	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_Movement_RentalStepOut
 	waitmovement 0
 	setvar VAR_MAP_SCENE_ROUTE16, 1
-	warp MAP_ROUTE15, 16, 28
+	warp MAP_ROUTE15, 10, 28
 	waitstate
 	end
 
@@ -141,7 +141,7 @@ Route15_WestEntrance_1F_EventScript_ReturnBikeTrigger::
 	setvar VAR_MAP_SCENE_ROUTE16, 0
 	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_Movement_ReturnBikeWalkOut
 	waitmovement 0
-	warp MAP_ROUTE15, 9, 28
+	warp MAP_ROUTE15, 3, 28
 	waitstate
 	end
 

@@ -200,3 +200,27 @@ Route25_EventScript_BethanyRematch::
 	trainerbattle_rematch TRAINER_ROUTE25_BREEDER_BETHANY, Route25_Text_BethanyRematchIntro, Route25_Text_BethanyDefeat
 	msgbox Route25_Text_BethanyPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route25_EventScript_TriathleteReed::
+	trainerbattle_single TRAINER_ROUTE25_TRIATHLETE_REED, Route25_Text_TriathleteReedIntro, Route25_Text_TriathleteReedDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_TriathleteReedRematch
+	msgbox Route25_Text_TriathleteReedPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_TriathleteReedRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_TRIATHLETE_REED, Route25_Text_TriathleteReedRematchIntro, Route25_Text_TriathleteReedDefeat
+	msgbox Route25_Text_TriathleteReedPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_TriathleteLila::
+	trainerbattle_single TRAINER_ROUTE25_TRIATHLETE_LILA, Route25_Text_TriathleteLilaIntro, Route25_Text_TriathleteLilaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_TriathleteLilaRematch
+	msgbox Route25_Text_TriathleteLilaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_TriathleteLilaRematch::
+	trainerbattle_rematch TRAINER_ROUTE25_TRIATHLETE_LILA, Route25_Text_TriathleteLilaRematchIntro, Route25_Text_TriathleteLilaDefeat
+	msgbox Route25_Text_TriathleteLilaPostBattle, MSGBOX_AUTOCLOSE
+	end
