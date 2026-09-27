@@ -804,7 +804,9 @@ struct SaveBlock1
     /*0x30D0*/ struct Roamer roamer;
     /*0x30EC*/ struct EnigmaBerry enigmaBerry;
     /*0x3120*/ struct MysteryGiftSave mysteryGift;
-    /*0x348C*/ u8 unused_348C[400];
+    /*0x348C*/ u32 dexPageRewardsVersion;
+    u8 dexPageRewards[64]; // Indexed by the page's first species, independent of habitat order.
+    u8 unused_34D0[332];
     /*0x361C*/ struct RamScript ramScript;
     /*0x3A08*/ struct RecordMixingGift recordMixingGift; // unused
     /*0x3A18*/ u8 seen2[DEX_FLAGS_NO];
