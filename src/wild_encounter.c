@@ -194,6 +194,17 @@ static u8 ChooseWildMonLevel(const struct WildPokemon * info)
 static u16 GetCurrentMapWildMonHeaderId(void)
 {
     u16 i;
+    u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    u8 mapNum = gSaveBlock1Ptr->location.mapNum;
+
+    // Preserve the original encounter tables on either side of the former seam.
+    if (mapGroup == MAP_GROUP(MAP_ROUTE21_NORTH)
+     && mapNum == MAP_NUM(MAP_ROUTE21_NORTH) && gSaveBlock1Ptr->pos.y >= 50)
+        mapNum = MAP_NUM(MAP_ROUTE21_SOUTH);
+    else if (mapGroup == MAP_GROUP(MAP_ROUTE18)
+          && mapNum == MAP_NUM(MAP_ROUTE18) && gSaveBlock1Ptr->pos.y >= 20)
+        mapNum = MAP_NUM(MAP_ROUTE21_SOUTH);
+
 
     for (i = 0; ; i++)
     {
@@ -201,8 +212,8 @@ static u16 GetCurrentMapWildMonHeaderId(void)
         if (wildHeader->mapGroup == MAP_GROUP(MAP_UNDEFINED))
             break;
 
-        if (gWildMonHeaders[i].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
-            gWildMonHeaders[i].mapNum == gSaveBlock1Ptr->location.mapNum)
+        if (gWildMonHeaders[i].mapGroup == mapGroup &&
+            gWildMonHeaders[i].mapNum == mapNum)
         {
             if (!UnlockedTanobyOrAreNotInTanoby())
                 break;
