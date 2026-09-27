@@ -299,3 +299,10 @@ Route2_Text_IvyPostBattle::
 	.string "A route this useful needs looking\n"
 	.string "after.\p"
 	.string "Forest paths can change quickly.$"
+
+Route2_Text_ForestEntranceSign::
+	.string "VIRIDIAN FOREST AHEAD$"
+
+Route2_Text_NavigationChannel::
+	.string "EAST: VIRIDIAN CHANNEL\n"
+	.string "THROUGH TO ROUTE 16 - CELADON$"

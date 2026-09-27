@@ -32,8 +32,10 @@ ViridianCity_Text_FatherHeardShadowyFigure::
     .string "a shadowy figure lurking within.$"
 
 ViridianCity_Text_CitySign::
-    .string "VIRIDIAN CITY \n"
-    .string "The Eternally Green Paradise$"
+	.string "VIRIDIAN CITY\n"
+	.string "NORTH: ROUTE 2 - PEWTER\p"
+	.string "SOUTH: ROUTE 1 - PALLET\n"
+	.string "WEST: ROUTE 22 - POKéMON LEAGUE$"
 
 ViridianCity_Text_GymSign::
     .string "VIRIDIAN CITY POKéMON GYM$"

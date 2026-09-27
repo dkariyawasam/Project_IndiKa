@@ -364,3 +364,7 @@ ViridianForest_Text_RivalApex::
 	.string "Check the local accounts.\n"
 	.string "Let's see what we can learn.$"
 
+
+ViridianForest_EventScript_NavigationSouthernExit::
+	msgbox ViridianForest_Text_NavigationSouthernExit, MSGBOX_SIGN
+	end

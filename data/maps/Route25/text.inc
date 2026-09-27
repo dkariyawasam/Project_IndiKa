@@ -415,3 +415,8 @@ Route25_Text_TriathleteLilaPostBattle::
 
 Route25_Text_TriathleteLilaRematchIntro::
 	.string "Ready for another training break?$"
+
+Route25_Text_NavigationBridge::
+	.string "NORTH: SEA COTTAGE\n"
+	.string "WEST: ROUTE 24 - CERULEAN\p"
+	.string "BRIDGE: ROUTE 10$"

@@ -103,3 +103,9 @@ Route18_Text_RouteSign::
 Route18_Text_CyclingRoadSign::
     .string "CYCLING ROAD\n"
     .string "No pedestrians permitted!$"
+
+Route18_Text_NavigationCoastJunction::
+	.string "NORTH: ROUTE 17 - CELADON\n"
+	.string "EAST: FUCHSIA CITY\p"
+	.string "WESTERN SEA: ROUTE 21\n"
+	.string "SOUTHERN SEA: SEAFOAM ISLANDS$"

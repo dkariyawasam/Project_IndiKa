@@ -443,7 +443,7 @@ string generate_groups_text(Json groups_data) {
         text << group << "::\n";
         auto maps = groups_data[group].array_items();
         for (Json &map_name : maps)
-            text << "\t.4byte " << json_to_string(map_name) << "\n";
+            text << "\t.4byte " << (groups_data["reserved_maps"][json_to_string(map_name)].is_object() ? json_to_string(groups_data["reserved_maps"][json_to_string(map_name)]["redirect"]) : json_to_string(map_name)) << "\n";
         text << "\n";
     }
 
@@ -460,7 +460,8 @@ string generate_connections_text(Json groups_data, string include_path) {
 
     for (auto &group : groups_data["group_order"].array_items())
     for (auto map_name : groups_data[json_to_string(group)].array_items())
-        map_names.push_back(map_name);
+        if (!groups_data["reserved_maps"][json_to_string(map_name)].is_object())
+            map_names.push_back(map_name);
 
     vector<Json> connections_include_order = groups_data["connections_include_order"].array_items();
 
@@ -490,7 +491,8 @@ string generate_headers_text(Json groups_data, string include_path) {
 
     for (auto &group : groups_data["group_order"].array_items())
     for (auto map_name : groups_data[json_to_string(group)].array_items())
-        map_names.push_back(json_to_string(map_name));
+        if (!groups_data["reserved_maps"][json_to_string(map_name)].is_object())
+            map_names.push_back(json_to_string(map_name));
 
     ostringstream text;
 
@@ -507,7 +509,8 @@ string generate_events_text(Json groups_data, string include_path) {
 
     for (auto &group : groups_data["group_order"].array_items())
     for (auto map_name : groups_data[json_to_string(group)].array_items())
-        map_names.push_back(json_to_string(map_name));
+        if (!groups_data["reserved_maps"][json_to_string(map_name)].is_object())
+            map_names.push_back(json_to_string(map_name));
 
     ostringstream text;
 
@@ -535,6 +538,12 @@ string generate_map_constants_text(string groups_filepath, Json groups_data) {
         size_t max_length = 0;
 
         for (auto &map_name : groups_data[groupName].array_items()) {
+            if (groups_data["reserved_maps"][json_to_string(map_name)].is_object()) {
+                string id = json_to_string(groups_data["reserved_maps"][json_to_string(map_name)]["id"]);
+                map_ids.push_back(id);
+                if (id.length() > max_length) max_length = id.length();
+                continue;
+            }
             string map_filepath = file_dir + json_to_string(map_name) + sep + "map.json";
             string err_str;
             Json map_data = Json::parse(read_text_file(map_filepath), err_str);

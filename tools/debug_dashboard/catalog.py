@@ -49,6 +49,34 @@ def load_symbols(elf):
             if len(p := line.split()) == 3 and re.fullmatch('[0-9a-fA-F]+', p[0])}
 
 
+# Character placements, including overworld Pokémon; scenery is not an NPC.
+NPC_PROP_GRAPHICS = {'0'} | {'OBJ_EVENT_GFX_' + name for name in (
+    'ITEM_BALL', 'BERRY_SOIL', 'CLIPBOARD', 'OLD_AMBER', 'POKEDEX',
+    'PUSHABLE_BOULDER', 'ROCK_SMASH_ROCK', 'SEAGALLOP', 'SS_ANNE', 'TOWN_MAP')}
+
+
+def npc_stats(objects, width, height):
+    characters = [o for o in objects
+                  if o.get('graphics_id') not in NPC_PROP_GRAPHICS
+                  and o.get('movement_type') != 'MOVEMENT_TYPE_INVISIBLE'
+                  and o.get('type', 'object') != 'clone']
+    return dict(count=len(characters),
+                trainers=sum(o.get('trainer_type') not in (None, 'TRAINER_TYPE_NONE') for o in characters),
+                conditional=sum(str(o.get('flag', '0')) not in ('0', '') for o in characters),
+                per1000=round(len(characters) * 1000 / (width * height), 2) if width * height else 0)
+
+
+def trainer_density(objects, blockdata):
+    """Static passable tiles; objects and story-dependent barriers are not simulated."""
+    tiles = struct.unpack('<' + 'H' * (len(blockdata) // 2), blockdata)
+    walkable = sum((tile & 0x0c00) == 0 for tile in tiles)
+    trainers = [o for o in objects if o.get('trainer_type') in
+                ('TRAINER_TYPE_NORMAL', 'TRAINER_TYPE_BURIED')]
+    return dict(count=len(trainers), walkable=walkable,
+                per100=round(100 * len(trainers) / walkable, 2) if walkable else None,
+                conditional=sum(str(o.get('flag', '0')) not in ('0', '') for o in trainers))
+
+
 def build_catalog():
     c = constants()
     groups = json.loads((ROOT / 'data/maps/map_groups.json').read_text())
@@ -61,7 +89,7 @@ def build_catalog():
             data = json.loads(path.read_text())
             layout = layouts[data['layout']]
             warps = data.get('warp_events', [])
-            maps.append(dict(name=name, layoutSymbol=layout['name'], id=data['id'], group=group, number=number,
+            maps.append(dict(trainerDensity=trainer_density(data.get('object_events', []), (ROOT/layout['blockdata_filepath']).read_bytes()), npcStats=npc_stats(data.get('object_events', []), layout['width'], layout['height']), name=name, layoutSymbol=layout['name'], id=data['id'], group=group, number=number,
                              width=layout['width'], height=layout['height'],
                              x=warps[0]['x'] if warps else layout['width']//2,
                              y=warps[0]['y'] if warps else layout['height']//2,

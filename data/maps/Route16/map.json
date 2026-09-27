@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE17",
-      "offset": -2,
+      "offset": 0,
       "direction": "down"
     },
     {
@@ -145,13 +145,6 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 8,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE16_HOUSE",
-      "dest_warp_id": "1"
-    },
     {
       "x": 18,
       "y": 18,

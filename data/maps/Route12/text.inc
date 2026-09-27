@@ -90,11 +90,17 @@ Route12_Text_AndrewPostBattle::
     .string "you reach the bottom.$"
 
 Route12_Text_RouteSign::
-    .string "ROUTE 12 \n"
-    .string "North to LAVENDER$"
+	.string "ROUTE 12\n"
+	.string "NORTH: LAVENDER TOWN\p"
+	.string "WEST BRANCH: ROUTE 11\n"
+	.string "THROUGH TO VERMILION CITY\p"
+	.string "SOUTH: ROUTE 13 - FUCHSIA$"
 
 Route12_Text_SportfishingArea::
-    .string "SPORTFISHING AREA$"
+	.string "SPORTFISHING AREA\n"
+	.string "WEST: ROUTE 11 - VERMILION\p"
+	.string "NORTH: LAVENDER TOWN\n"
+	.string "SOUTH: ROUTE 13 - FUCHSIA$"
 
 Route12_Text_JesIntro::
     .string "JES: GIA and I train together\n"

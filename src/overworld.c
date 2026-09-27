@@ -659,8 +659,60 @@ struct MapHeader const *const GetDestinationWarpMapHeader(void)
     return Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum);
 }
 
+// Reserved map slots retain their numbers, but no longer own map assets.
+static void MigrateRetiredMapLocation(void)
+{
+    u16 oldMap = gSaveBlock1Ptr->location.mapNum | (gSaveBlock1Ptr->location.mapGroup << 8);
+    u16 target;
+    s16 x, y;
+    switch (oldMap)
+    {
+    case MAP_ROUTE12_FISHING_HOUSE:
+        target = MAP_ROUTE12; x = 12; y = 86;
+        break;
+    case MAP_ROUTE16_HOUSE:
+        target = MAP_ROUTE16; x = 8; y = 10;
+        break;
+    case MAP_ROUTE21_SOUTH:
+        if (gSaveBlock1Ptr->pos.x < 24)
+        {
+            target = MAP_ROUTE21_NORTH;
+            x = gSaveBlock1Ptr->pos.x;
+            y = gSaveBlock1Ptr->pos.y + 50;
+        }
+        else
+        {
+            target = MAP_ROUTE18;
+            x = gSaveBlock1Ptr->pos.x - 24;
+            y = gSaveBlock1Ptr->pos.y + 20;
+        }
+        break;
+    case MAP_SEAFOAM_ISLANDS_B1F:
+        target = MAP_SEAFOAM_ISLANDS_1F; x = 6; y = 20;
+        break;
+    case MAP_SEAFOAM_ISLANDS_B3F:
+        target = MAP_SEAFOAM_ISLANDS_1F; x = 6; y = 20;
+        break;
+    case MAP_POKEMON_LEAGUE_LORELEIS_ROOM:
+        target = MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F; x = 11; y = 15;
+        break;
+    case MAP_POKEMON_LEAGUE_LANCES_ROOM:
+        target = MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F; x = 11; y = 15;
+        break;
+    default:
+        return;
+    }
+    gSaveBlock1Ptr->location.mapGroup = MAP_GROUP(target);
+    gSaveBlock1Ptr->location.mapNum = MAP_NUM(target);
+    gSaveBlock1Ptr->location.warpId = -1;
+    gSaveBlock1Ptr->location.x = gSaveBlock1Ptr->pos.x = x;
+    gSaveBlock1Ptr->location.y = gSaveBlock1Ptr->pos.y = y;
+    gSaveBlock1Ptr->mapLayoutId = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(target), MAP_NUM(target))->mapLayoutId;
+}
+
 static void LoadCurrentMapData(void)
 {
+    MigrateRetiredMapLocation();
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
     gMapHeader.mapLayout = GetMapLayout();
@@ -668,6 +720,7 @@ static void LoadCurrentMapData(void)
 
 static void LoadSaveblockMapHeader(void)
 {
+    MigrateRetiredMapLocation();
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gMapHeader.mapLayout = GetMapLayout();
 }

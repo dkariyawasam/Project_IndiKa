@@ -168,3 +168,7 @@ Route24_Movement_RewardGiverWalkBackToPos::
 Route24_Movement_WalkDown::
 	walk_down
 	step_end
+
+Route24_EventScript_NavigationCape::
+	msgbox Route24_Text_NavigationCape, MSGBOX_SIGN
+	end

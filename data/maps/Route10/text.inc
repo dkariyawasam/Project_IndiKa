@@ -91,3 +91,8 @@ Route10_Text_RockTunnel::
 
 Route10_Text_PowerPlant::
     .string "POWER PLANT$"
+
+Route10_Text_NavigationNorthernBridge::
+	.string "NORTH: ROUTE 25 - SEA COTTAGE\n"
+	.string "WEST: ROUTE 9 - CERULEAN\p"
+	.string "SOUTH: ROCK TUNNEL$"

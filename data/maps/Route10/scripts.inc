@@ -15,3 +15,7 @@ Route10_EventScript_SouthRockTunnelSign::
 Route10_EventScript_PowerPlantSign::
 	msgbox Route10_Text_PowerPlant, MSGBOX_SIGN
 	end
+
+Route10_EventScript_NavigationNorthernBridge::
+	msgbox Route10_Text_NavigationNorthernBridge, MSGBOX_SIGN
+	end

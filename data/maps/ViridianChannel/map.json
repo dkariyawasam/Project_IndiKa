@@ -71,5 +71,22 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ViridianChannel_EventScript_NavigationWestBridge"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ViridianChannel_EventScript_NavigationEastBridge"
+    }
+  ]
 }

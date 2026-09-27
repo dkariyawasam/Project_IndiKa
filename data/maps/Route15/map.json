@@ -258,14 +258,14 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 27,
+      "x": 26,
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_FOREST",
       "dest_warp_id": "1"
     },
     {
-      "x": 28,
+      "x": 27,
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_FOREST",
@@ -281,6 +281,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route15_EventScript_RouteSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route15_EventScript_ForestEntranceSign"
     }
   ]
 }

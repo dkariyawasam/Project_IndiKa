@@ -6,7 +6,7 @@ import time
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-from catalog import build_catalog, constants, decode_party, ORDERS, map_network
+from catalog import build_catalog, constants, decode_party, ORDERS, map_network, npc_stats, trainer_density
 from server import Dashboard
 from atlas import arrange, lz77, png
 
@@ -31,6 +31,24 @@ class DashboardTests(unittest.TestCase):
         self.assertGreater(len(self.catalog['maps']),200)
         self.assertTrue(any(x['key']=='FLAG_DEFEATED_APEX_MEWTWO' for x in self.catalog['flags']))
         self.assertTrue(any(x['name']=='PalletTown' for x in self.catalog['maps']))
+    def test_npc_density_excludes_props(self):
+        objects = [dict(graphics_id='OBJ_EVENT_GFX_FISHER', trainer_type='TRAINER_TYPE_NORMAL', flag='0'),
+                   dict(graphics_id='OBJ_EVENT_GFX_PIKACHU', flag='FLAG_HIDE_PIKACHU'),
+                   dict(graphics_id='OBJ_EVENT_GFX_ITEM_BALL'),
+                   dict(graphics_id='OBJ_EVENT_GFX_SS_ANNE'),
+                   dict(graphics_id='0'),
+                   dict(graphics_id='OBJ_EVENT_GFX_BLUE', movement_type='MOVEMENT_TYPE_INVISIBLE')]
+        self.assertEqual(npc_stats(objects, 20, 10), dict(count=2, trainers=1, conditional=1, per1000=10.0))
+        self.assertEqual(npc_stats([], 0, 0)['per1000'], 0)
+
+    def test_trainer_density_passable_tiles(self):
+        objects = [dict(trainer_type='TRAINER_TYPE_NORMAL', flag='0'),
+                   dict(trainer_type='TRAINER_TYPE_NORMAL', flag='FLAG_STORY'),
+                   dict(trainer_type='TRAINER_TYPE_NONE')]
+        stats = trainer_density(objects, struct.pack('<4H', 0x3001, 0x112b, 0x0471, 0x0c01))
+        self.assertEqual(stats, dict(count=2, walkable=2, per100=100.0, conditional=1))
+        self.assertIsNone(trainer_density([], struct.pack('<H', 0x0471))['per100'])
+
     def test_map_network(self):
         maps=self.catalog['maps']; network=self.catalog['network']
         names={m['name'] for m in maps}

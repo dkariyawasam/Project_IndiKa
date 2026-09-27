@@ -141,8 +141,11 @@ Route15_Text_YazminPostBattle::
     .string "I'll go train with weaker people.$"
 
 Route15_Text_RouteSign::
-    .string "ROUTE 15\n"
-    .string "West to FUCHSIA CITY$"
+	.string "ROUTE 15\n"
+	.string "WEST: FUCHSIA CITY\p"
+	.string "EAST: ROUTE 14\n"
+	.string "NORTH: FUCHSIA FOREST\p"
+	.string "THROUGH TO VERMILION HARBOR$"
 
 Route15_Text_MyaIntro::
     .string "MYA: This road toughens balance\n"
@@ -180,3 +183,6 @@ Route15_Text_RonNotEnoughMons::
     .string "RON: Did you want to battle with\n"
     .string "my sister and me?\p"
     .string "You need two POKéMON, then.$"
+
+Route15_Text_ForestEntranceSign::
+	.string "FUCHSIA FOREST AHEAD$"

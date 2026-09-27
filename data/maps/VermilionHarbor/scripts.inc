@@ -155,3 +155,11 @@ VermilionHarbor_Text_SomethingUnderTruck::
 
 VermilionHarbor_Text_MewCry::
 	.string "Mew!$"
+
+VermilionHarbor_EventScript_NavigationForest::
+	msgbox VermilionHarbor_Text_NavigationForest, MSGBOX_SIGN
+	end
+
+VermilionHarbor_EventScript_NavigationHarborCity::
+	msgbox VermilionHarbor_Text_NavigationHarborCity, MSGBOX_SIGN
+	end

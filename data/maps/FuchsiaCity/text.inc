@@ -20,8 +20,10 @@ FuchsiaCity_Text_ItemBallInThere::
     .string "…Huh? That's a POKéMON?$"
 
 FuchsiaCity_Text_CitySign::
-    .string "FUCHSIA CITY\n"
-    .string "Behold! It's Passion Pink!$"
+	.string "FUCHSIA CITY\n"
+	.string "WEST: ROUTE 18 - CYCLING ROAD\p"
+	.string "EAST: ROUTE 15\n"
+	.string "SOUTH: ROUTE 19 - SEAFOAM$"
 
 FuchsiaCity_Text_SafariZoneSign::
     .string "POKéMON PARADISE\n"

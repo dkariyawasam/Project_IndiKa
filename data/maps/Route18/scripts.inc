@@ -31,3 +31,7 @@ Route18_EventScript_RouteSign::
 Route18_EventScript_CyclingRoadSign::
 	msgbox Route18_Text_CyclingRoadSign, MSGBOX_SIGN
 	end
+
+Route18_EventScript_NavigationCoastJunction::
+	msgbox Route18_Text_NavigationCoastJunction, MSGBOX_SIGN
+	end

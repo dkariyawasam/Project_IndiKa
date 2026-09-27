@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_VERMILION_CITY",
-      "offset": 9,
+      "offset": 8,
       "direction": "up"
     },
     {
@@ -45,7 +45,7 @@
       "local_id": "LOCALID_VERMILION_FERRY_SAILOR",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 33,
+      "x": 32,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -59,7 +59,7 @@
     {
       "type": "object",
       "graphics_id": "0",
-      "x": 49,
+      "x": 48,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
@@ -73,7 +73,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_WATER",
-      "x": 24,
+      "x": 23,
       "y": 34,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -87,7 +87,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F_WATER",
-      "x": 48,
+      "x": 47,
       "y": 34,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -101,7 +101,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 49,
+      "x": 48,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -115,7 +115,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 49,
+      "x": 48,
       "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -129,7 +129,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 19,
+      "x": 18,
       "y": 37,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
@@ -143,7 +143,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 47,
+      "x": 46,
       "y": 40,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
@@ -157,7 +157,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 46,
+      "x": 45,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -171,7 +171,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 40,
+      "x": 39,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -185,7 +185,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 49,
+      "x": 50,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -199,7 +199,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_WATER",
-      "x": 27,
+      "x": 26,
       "y": 40,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
@@ -213,7 +213,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_M_WATER",
-      "x": 37,
+      "x": 36,
       "y": 24,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
@@ -227,7 +227,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TRIATHLETE_F_WATER",
-      "x": 36,
+      "x": 35,
       "y": 35,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
@@ -241,29 +241,29 @@
   ],
   "warp_events": [
     {
-      "x": 32,
+      "x": 31,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_SSANNE_1F_CORRIDOR",
       "dest_warp_id": "2"
     },
     {
-      "x": 33,
+      "x": 32,
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_SSANNE_1F_CORRIDOR",
       "dest_warp_id": "3"
     },
     {
-      "x": 43,
-      "y": 46,
+      "x": 26,
+      "y": 48,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_FOREST",
       "dest_warp_id": "4"
     },
     {
-      "x": 44,
-      "y": 46,
+      "x": 27,
+      "y": 48,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_FOREST",
       "dest_warp_id": "4"
@@ -272,16 +272,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 32,
-      "y": 10,
-      "elevation": 0,
-      "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
-      "var_value": "0",
-      "script": "VermilionHarbor_EventScript_CheckTicket"
-    },
-    {
-      "type": "trigger",
-      "x": 33,
+      "x": 31,
       "y": 10,
       "elevation": 0,
       "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
@@ -291,6 +282,15 @@
     {
       "type": "trigger",
       "x": 32,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+      "var_value": "0",
+      "script": "VermilionHarbor_EventScript_CheckTicket"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
       "y": 8,
       "elevation": 0,
       "var": "VAR_TEMP_1",
@@ -299,7 +299,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 32,
       "y": 8,
       "elevation": 0,
       "var": "VAR_TEMP_1",
@@ -310,13 +310,29 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 50,
+      "x": 49,
       "y": 28,
       "elevation": 3,
       "item": "ITEM_LAVA_COOKIE",
       "flag": "FLAG_HIDDEN_ITEM_VERMILION_HARBOR_LAVA_COOKIE",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 43,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionHarbor_EventScript_NavigationForest"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionHarbor_EventScript_NavigationHarborCity"
     }
   ]
 }

@@ -138,3 +138,7 @@ CeruleanCity_EventScript_GymSign::
 	msgbox CeruleanCity_Text_GymSign
 	releaseall
 	end
+
+CeruleanCity_EventScript_NavigationCave::
+	msgbox CeruleanCity_Text_NavigationCave, MSGBOX_SIGN
+	end

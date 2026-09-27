@@ -81,8 +81,10 @@ Route16_Text_CyclingRoadSign::
     .string "CYCLING ROAD$"
 
 Route16_Text_RouteSign::
-    .string "ROUTE 16\n"
-    .string "CELADON CITY - FUCHSIA CITY$"
+	.string "ROUTE 16\n"
+	.string "EAST: CELADON CITY\p"
+	.string "WEST: VIRIDIAN CHANNEL\n"
+	.string "SOUTH: CYCLING ROAD - FUCHSIA$"
 
 Route16_Text_JedIntro::
     .string "JED: LEA and I are watching\n"
