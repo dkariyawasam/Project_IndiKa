@@ -224,3 +224,7 @@ Route25_EventScript_TriathleteLilaRematch::
 	trainerbattle_rematch TRAINER_ROUTE25_TRIATHLETE_LILA, Route25_Text_TriathleteLilaRematchIntro, Route25_Text_TriathleteLilaDefeat
 	msgbox Route25_Text_TriathleteLilaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route25_EventScript_NavigationBridge::
+	msgbox Route25_Text_NavigationBridge, MSGBOX_SIGN
+	end

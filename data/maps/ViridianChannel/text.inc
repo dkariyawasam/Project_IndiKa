@@ -44,3 +44,13 @@ ViridianChannel_Text_CoralAfter::
 ViridianChannel_Text_CoralRematch::
     .string "Ready for another round\n"
     .string "out on the water?$"
+
+ViridianChannel_Text_NavigationWestBridge::
+	.string "VIRIDIAN CHANNEL\n"
+	.string "WEST: ROUTE 2\p"
+	.string "EAST: ROUTE 16 - CELADON$"
+
+ViridianChannel_Text_NavigationEastBridge::
+	.string "VIRIDIAN CHANNEL\n"
+	.string "WEST: ROUTE 2 - VIRIDIAN\p"
+	.string "EAST: ROUTE 16 - CELADON$"

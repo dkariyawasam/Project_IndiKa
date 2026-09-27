@@ -177,3 +177,7 @@ Route24_Text_NellPostBattle::
     .string "NUGGET BRIDGE belongs to the\n"
     .string "TRAINERS above and the water below.\p"
     .string "You handled both sides well.$"
+
+Route24_Text_NavigationCape::
+	.string "SOUTH: CERULEAN CITY\n"
+	.string "EAST: ROUTE 25 - SEA COTTAGE$"

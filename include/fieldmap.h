@@ -9,7 +9,7 @@
 #define NUM_METATILES_TOTAL 1024
 #define NUM_PALS_IN_PRIMARY 7
 #define NUM_PALS_TOTAL 13
-#define MAX_MAP_DATA_SIZE 0x2880 // Includes the 108x70 Route 18 plus connection borders.
+#define MAX_MAP_DATA_SIZE 0x2DA0 // Includes the 124x70 Route 18 plus connection borders.
 #define VIRTUAL_MAP_SIZE (MAX_MAP_DATA_SIZE)
 
 #define NUM_TILES_PER_METATILE 8

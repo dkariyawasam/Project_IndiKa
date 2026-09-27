@@ -36,3 +36,11 @@ ViridianChannel_EventScript_CoralRematch::
     trainerbattle_rematch TRAINER_CHANNEL_CORAL, ViridianChannel_Text_CoralRematch, ViridianChannel_Text_CoralDefeat
     msgbox ViridianChannel_Text_CoralAfter, MSGBOX_AUTOCLOSE
     end
+
+ViridianChannel_EventScript_NavigationWestBridge::
+	msgbox ViridianChannel_Text_NavigationWestBridge, MSGBOX_SIGN
+	end
+
+ViridianChannel_EventScript_NavigationEastBridge::
+	msgbox ViridianChannel_Text_NavigationEastBridge, MSGBOX_SIGN
+	end

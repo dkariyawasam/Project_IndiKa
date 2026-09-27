@@ -22,3 +22,7 @@ Route15_EventScript_ForceRentalBike::
 Route15_EventScript_RouteSign::
 	msgbox Route15_Text_RouteSign, MSGBOX_SIGN
 	end
+
+Route15_EventScript_ForestEntranceSign::
+	msgbox Route15_Text_ForestEntranceSign, MSGBOX_SIGN
+	end

@@ -14,3 +14,7 @@ FuchsiaForest_EventScript_WelcomeSign::
 FuchsiaForest_EventScript_BewareSign::
 	msgbox FuchsiaForest_Text_BewareWildBerryLovingMons, MSGBOX_SIGN
 	end
+
+FuchsiaForest_EventScript_NavigationNorthernExit::
+	msgbox FuchsiaForest_Text_NavigationNorthernExit, MSGBOX_SIGN
+	end

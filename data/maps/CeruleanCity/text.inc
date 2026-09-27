@@ -68,9 +68,11 @@ CeruleanCity_Text_WantBrightRedBicycle::
     .string "get dirty.$"
 
 CeruleanCity_Text_CitySign::
-    .string "CERULEAN CITY\n"
-    .string "A Mysterious, Blue Aura Surrounds\l"
-    .string "It$"
+	.string "CERULEAN CITY\n"
+	.string "NORTH: ROUTES 24 AND 25\p"
+	.string "SOUTH: ROUTE 5 - SAFFRON\n"
+	.string "WEST: ROUTE 4 - MT. MOON\p"
+	.string "EAST: ROUTE 9 - ROCK TUNNEL$"
 
 CeruleanCity_Text_BikeShopSign::
     .string "Grass and caves handled easily!\n"
@@ -80,3 +82,7 @@ CeruleanCity_Text_GymSign::
     .string "CERULEAN CITY POKéMON GYM\n"
     .string "LEADER: MISTY\l"
     .string "The Tomboyish Mermaid!$"
+
+CeruleanCity_Text_NavigationCave::
+	.string "CERULEAN CAVE\n"
+	.string "RETURN EAST TO CERULEAN CITY$"

@@ -68,8 +68,11 @@ SaffronCity_Text_HesTakingASnooze::
     .string "Hah! He's taking a snooze!$"
 
 SaffronCity_Text_CitySign::
-    .string "SAFFRON CITY\n"
-    .string "Shining, Golden Land of Commerce$"
+	.string "SAFFRON CITY\n"
+	.string "NORTH: CERULEAN CITY\p"
+	.string "SOUTH: VERMILION CITY\n"
+	.string "WEST: CELADON CITY\p"
+	.string "EAST: LAVENDER TOWN$"
 
 SaffronCity_Text_FightingDojo::
     .string "FIGHTING DOJO$"
