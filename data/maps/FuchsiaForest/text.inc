@@ -33,10 +33,15 @@ FuchsiaForest_Text_BerryPouchIsFull::
     .string "I guess you don't want this.$"
 
 FuchsiaForest_Text_WelcomeToFuchsiaForest::
-    .string "Welcome to FUCHSIA FOREST\p"
-    .string "Be friendly and share BERRIES with\n"
-    .string "others and POKéMON.$"
+	.string "WELCOME TO FUCHSIA FOREST\n"
+	.string "SOUTH EXIT: ROUTE 15\p"
+	.string "NORTH EXIT: VERMILION HARBOR\n"
+	.string "SHARE BERRIES WITH POKéMON!$"
 
 FuchsiaForest_Text_BewareWildBerryLovingMons::
     .string "Beware of wild, BERRY-loving\n"
     .string "POKéMON!$"
+
+FuchsiaForest_Text_NavigationNorthernExit::
+	.string "LEAVING FUCHSIA FOREST\n"
+	.string "VERMILION HARBOR AHEAD$"

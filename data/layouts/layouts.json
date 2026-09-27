@@ -640,7 +640,7 @@
     {
       "id": "LAYOUT_ROUTE17",
       "name": "Route17_Layout",
-      "width": 24,
+      "width": 22,
       "height": 160,
       "border_width": 2,
       "border_height": 2,
@@ -652,7 +652,7 @@
     {
       "id": "LAYOUT_ROUTE18",
       "name": "Route18_Layout",
-      "width": 108,
+      "width": 124,
       "height": 70,
       "border_width": 2,
       "border_height": 2,
@@ -676,7 +676,7 @@
     {
       "id": "LAYOUT_ROUTE20",
       "name": "Route20_Layout",
-      "width": 120,
+      "width": 136,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -1253,13 +1253,13 @@
       "id": "LAYOUT_SEAFOAM_ISLANDS_B1F",
       "name": "SeafoamIslands_B1F_Layout",
       "width": 38,
-      "height": 23,
+      "height": 24,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/SeafoamIslands_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/SeafoamIslands_B1F/map.bin"
+      "border_filepath": "data/layouts/SeafoamIslands_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SeafoamIslands_1F/map.bin"
     },
     {
       "id": "LAYOUT_SEAFOAM_ISLANDS_B2F",
@@ -1282,8 +1282,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_SeafoamIslands",
-      "border_filepath": "data/layouts/SeafoamIslands_B3F/border.bin",
-      "blockdata_filepath": "data/layouts/SeafoamIslands_B3F/map.bin"
+      "border_filepath": "data/layouts/SeafoamIslands_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SeafoamIslands_1F/map.bin"
     },
     {
       "id": "LAYOUT_SEAFOAM_ISLANDS_B4F",
@@ -1864,14 +1864,14 @@
     {
       "id": "LAYOUT_POKEMON_LEAGUE_LORELEIS_ROOM",
       "name": "PokemonLeague_LoreleisRoom_Layout",
-      "width": 13,
-      "height": 13,
+      "width": 25,
+      "height": 18,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_LoreleisRoom/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_LoreleisRoom/map.bin"
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/IndigoPlateau_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_PokemonCenter_1F/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_LEAGUE_BRUNOS_ROOM",
@@ -1900,14 +1900,14 @@
     {
       "id": "LAYOUT_POKEMON_LEAGUE_LANCES_ROOM",
       "name": "PokemonLeague_LancesRoom_Layout",
-      "width": 28,
-      "height": 24,
+      "width": 25,
+      "height": 18,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_LancesRoom/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_LancesRoom/map.bin"
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/IndigoPlateau_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_PokemonCenter_1F/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_LEAGUE_CHAMPIONS_ROOM",
@@ -1936,14 +1936,14 @@
     {
       "id": "LAYOUT_ROUTE21_SOUTH",
       "name": "Route21_South_Layout",
-      "width": 92,
-      "height": 50,
+      "width": 24,
+      "height": 100,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_CinnabarIsland",
-      "border_filepath": "data/layouts/Route21_South/border.bin",
-      "blockdata_filepath": "data/layouts/Route21_South/map.bin"
+      "border_filepath": "data/layouts/Route21_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route21_North/map.bin"
     },
     {
       "id": "LAYOUT_ENTRANCE_2F",

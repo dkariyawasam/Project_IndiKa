@@ -1,6 +1,7 @@
 Route23_Text_VictoryRoadGateSign::
-    .string "VICTORY ROAD GATE -\n"
-    .string "POKéMON LEAGUE$"
+	.string "VICTORY ROAD\n"
+	.string "NORTH: INDIGO PLATEAU\p"
+	.string "SOUTH: ROUTE 22 - VIRIDIAN$"
 
 Route23_Text_WayneIntro::
 	.string "Every step north of here weighs\n"

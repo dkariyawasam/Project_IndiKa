@@ -236,3 +236,11 @@ Route2_EventScript_RangerIvyRematch::
 	trainerbattle_rematch TRAINER_PKMN_RANGER_IVY, Route2_Text_IvyRematchIntro, Route2_Text_IvyDefeat
 	msgbox Route2_Text_IvyPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route2_EventScript_ForestEntranceSign::
+	msgbox Route2_Text_ForestEntranceSign, MSGBOX_SIGN
+	end
+
+Route2_EventScript_NavigationChannel::
+	msgbox Route2_Text_NavigationChannel, MSGBOX_SIGN
+	end

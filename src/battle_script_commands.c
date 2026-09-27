@@ -5413,12 +5413,8 @@ static bool8 IsIndigoLeagueBattle(void)
     if (gSaveBlock2Ptr->leagueChallenge.active && gSaveBlock2Ptr->leagueChallenge.type == LEAGUE_CHALLENGE_INDIGO)
         return TRUE;
 
-    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_LORELEIS_ROOM)
-      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_LORELEIS_ROOM))
-     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_BRUNOS_ROOM)
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_BRUNOS_ROOM)
       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_BRUNOS_ROOM))
-     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_LANCES_ROOM)
-      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_LANCES_ROOM))
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)))
     {
