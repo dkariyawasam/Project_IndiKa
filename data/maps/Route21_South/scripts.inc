@@ -1,6 +1,25 @@
 Route21_South_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route21_South_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route21_South_LegacyRedirectTable
 	.byte 0
+
+Route21_South_LegacyRedirectTable::
+	map_script_2 VAR_TEMP_0, 0, Route21_South_LegacyRedirect
+	.2byte 0
+
+Route21_South_LegacyRedirect::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	goto_if_ge VAR_0x8004, 24, Route21_South_LegacyRedirectEast
+	addvar VAR_0x8005, 50
+	warp MAP_ROUTE21_NORTH, VAR_0x8004, VAR_0x8005
+	waitstate
+	end
+
+Route21_South_LegacyRedirectEast::
+	subvar VAR_0x8004, 24
+	addvar VAR_0x8005, 20
+	warp MAP_ROUTE18, VAR_0x8004, VAR_0x8005
+	waitstate
+	end
 
 Route21_South_OnFrame::
 	map_script_2 VAR_MAP_SCENE_ROUTE21_SOUTH, 1, Route21_South_EventScript_PlayerStepOffFerry
