@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "m4a.h"
 #include "task.h"
@@ -450,6 +451,9 @@ void DecompressTrainerFrontPic(u16 frontPicId, u8 battlerId)
 void DecompressTrainerBackPalette(u16 index, u8 palette)
 {
     LoadCompressedPalette(gTrainerBackPicPaletteTable[index].data, OBJ_PLTT_ID2(palette), PLTT_SIZE_4BPP);
+    if (index == gSaveBlock2Ptr->playerGender
+        && (!(gBattleTypeFlags & BATTLE_TYPE_LINK) || GetBattlerPosition(palette) == B_POSITION_PLAYER_LEFT))
+        ApplyPlayerAppearancePalette(OBJ_PLTT_ID2(palette), PLAYER_PALETTE_BACK);
 }
 
 void BattleGfxSfxDummy3(u8 gender)

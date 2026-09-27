@@ -164,7 +164,10 @@ Route20_Text_MelissaPostBattle::
     .string "water in the middle.$"
 
 Route20_Text_SeafoamIslands::
-    .string "SEAFOAM ISLANDS$"
+	.string "SEAFOAM ISLANDS\n"
+	.string "WEST: CINNABAR ISLAND\p"
+	.string "EAST: ROUTE 19 - FUCHSIA\n"
+	.string "NORTH: ROUTE 18$"
 
 Route20_Text_SeagallopSailorDestination::
     .string "Ahoy! Leaving SEAFOAM ISLAND?\p"

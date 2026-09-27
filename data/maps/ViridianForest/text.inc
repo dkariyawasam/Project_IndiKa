@@ -173,3 +173,7 @@ ViridianForest_Text_GymAideTypeAdvice::
     .string "A second type can change that.\n"
     .string "Watch out for status moves, too!$"
 
+
+ViridianForest_Text_NavigationSouthernExit::
+	.string "LEAVING VIRIDIAN FOREST\n"
+	.string "ROUTE 2 - VIRIDIAN CITY AHEAD$"

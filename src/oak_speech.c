@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_appearance.h"
 #include "gflib.h"
 #include "decompress.h"
 #include "task.h"
@@ -67,10 +68,10 @@ static void Task_OakSpeech_TellMeALittleAboutYourself(u8);
 static void Task_OakSpeech_FadeOutOak(u8);
 static void Task_OakSpeech_AskPlayerGender(u8);
 static void Task_OakSpeech_ShowGenderOptions(u8);
-static void Task_OakSpeech_HandleGenderInput(u8);
-static void Task_OakSpeech_ClearGenderWindows(u8);
 static void Task_OakSpeech_LoadPlayerPic(u8);
 static void Task_OakSpeech_YourNameWhatIsIt(u8);
+static void Task_OakSpeech_ChooseAccent(u8);
+static void Task_OakSpeech_HandleAccent(u8);
 static void Task_OakSpeech_FadeOutForPlayerNamingScreen(u8);
 static void Task_OakSpeech_MoveRivalDisplayNameOptions(u8);
 static void Task_OakSpeech_HandleRivalNameInput(u8);
@@ -109,8 +110,7 @@ static void GetDefaultName(u8, u8);
 extern const u8 gText_Controls[];
 extern const u8 gText_ABUTTONNext[];
 extern const u8 gText_ABUTTONNext_BBUTTONBack[];
-extern const u8 gText_Boy[];
-extern const u8 gText_Girl[];
+
 extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_64x64;
@@ -301,12 +301,12 @@ static const struct WindowTemplate sIntro_WindowTemplates[NUM_INTRO_WINDOWS + 1]
     [WIN_INTRO_BOYGIRL] =
     {
         .bg = 0,
-        .tilemapLeft = 18,
-        .tilemapTop = 9,
-        .width = 9,
-        .height = 4,
+        .tilemapLeft = 15,
+        .tilemapTop = 4,
+        .width = 14,
+        .height = 8,
         .paletteNum = 15,
-        .baseBlock = 372
+        .baseBlock = 1
     },
     [WIN_INTRO_YESNO] =
     {
@@ -1276,65 +1276,118 @@ static void Task_OakSpeech_ShowGenderOptions(u8 taskId)
 {
     if (!IsTextPrinterActive(WIN_INTRO_TEXTBOX))
     {
-        gTasks[taskId].tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_BOYGIRL]);
-        PutWindowTilemap(gTasks[taskId].tMenuWindowId);
-        DrawStdFrameWithCustomTileAndPalette(gTasks[taskId].tMenuWindowId, TRUE, GetStdWindowBaseTileNum(), 14);
-        FillWindowPixelBuffer(gTasks[taskId].tMenuWindowId, PIXEL_FILL(1));
-        sOakSpeechResources->textColor[0] = 1;
-        sOakSpeechResources->textColor[1] = 2;
-        sOakSpeechResources->textColor[2] = 3;
-        AddTextPrinterParameterized3(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 8, 1, sOakSpeechResources->textColor, 0, gText_Boy);
-        sOakSpeechResources->textColor[0] = 1;
-        sOakSpeechResources->textColor[1] = 2;
-        sOakSpeechResources->textColor[2] = 3;
-        AddTextPrinterParameterized3(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 8, 17, sOakSpeechResources->textColor, 0, gText_Girl);
-        Menu_InitCursor(gTasks[taskId].tMenuWindowId, FONT_NORMAL, 0, 1, GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) + 2, 2, 0);
-        CopyWindowToVram(gTasks[taskId].tMenuWindowId, COPYWIN_FULL);
-        gTasks[taskId].func = Task_OakSpeech_HandleGenderInput;
-    }
-}
-
-static void Task_OakSpeech_HandleGenderInput(u8 taskId)
-{
-    s8 input = Menu_ProcessInputNoWrapAround();
-    switch (input)
-    {
-    case 0: // BOY
+        ClearDialogWindowAndFrame(WIN_INTRO_TEXTBOX, TRUE);
         gSaveBlock2Ptr->playerGender = MALE;
-        break;
-    case 1: // GIRL
-        gSaveBlock2Ptr->playerGender = FEMALE;
-        break;
-    case MENU_B_PRESSED:
-    case MENU_NOTHING_CHOSEN:
-        return;
+        gSaveBlock2Ptr->optionsWindowFrameType = 0;
+        gTasks[taskId].func = Task_OakSpeech_LoadPlayerPic;
     }
-    gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows;
-
 }
 
-static void Task_OakSpeech_ClearGenderWindows(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-    ClearStdWindowAndFrameToTransparent(tMenuWindowId, TRUE);
-    RemoveWindow(tMenuWindowId);
-    tMenuWindowId = WIN_INTRO_TEXTBOX;
-    ClearDialogWindowAndFrame(tMenuWindowId, TRUE);
-    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 30, 20);
-    CopyBgTilemapBufferToVram(0);
-    gTasks[taskId].func = Task_OakSpeech_LoadPlayerPic;
-}
+#define tAppearanceRow data[15]
 
 static void Task_OakSpeech_LoadPlayerPic(u8 taskId)
 {
+    gSaveBlock2Ptr->appearanceVersion = PLAYER_APPEARANCE_VERSION;
+    gSaveBlock2Ptr->playerAccent = 0;
+    gSaveBlock2Ptr->playerSecondaryAccent = 0;
+    gTasks[taskId].tAppearanceRow = 0;
+    gTasks[taskId].tTrainerPicPosX = 48;
+    ChangeBgX(2, 48 << 8, BG_COORD_SET);
+    gSpriteCoordOffsetX = -48;
     if (gSaveBlock2Ptr->playerGender == MALE)
         LoadTrainerPic(MALE_PLAYER_PIC, 0);
     else
         LoadTrainerPic(FEMALE_PLAYER_PIC, 0);
     CreateFadeOutTask(taskId, 2);
     gTasks[taskId].tTimer = 32;
-    gTasks[taskId].func = Task_OakSpeech_YourNameWhatIsIt;
+    gTasks[taskId].func = Task_OakSpeech_ChooseAccent;
 }
+
+static const u8 sText_ChooseAccent[] = _("{DPAD_UPDOWN} PICK  {DPAD_LEFTRIGHT} CHANGE\nCOLOR 2 also sets your menu color.");
+static const u8 sText_StyleNames[][8] = {_("STYLE 1"), _("STYLE 2")};
+static const u8 sText_AccentNames[][6] = {_("RED"), _("BLUE"), _("GREEN")};
+static const u8 sText_SecondaryNames[][6] = {_("BLUE"), _("RED"), _("GREEN")};
+static const u8 sText_Color1[] = _("COLOR 1");
+static const u8 sText_Color2[] = _("COLOR 2");
+static const u8 sText_Done[] = _("DONE");
+
+static void DrawAccentChoice(u8 taskId)
+{
+    u8 window = gTasks[taskId].tMenuWindowId;
+    const u8 *labels[] = {sText_StyleNames[gSaveBlock2Ptr->playerGender], sText_Color1, sText_Color2, sText_Done};
+    u8 row;
+    FillWindowPixelBuffer(window, PIXEL_FILL(1));
+    for (row = 0; row < 4; row++)
+        AddTextPrinterParameterized3(window, FONT_NORMAL, 8, 1 + row * 16,
+            sOakSpeechResources->textColor, 0, labels[row]);
+    AddTextPrinterParameterized3(window, FONT_NORMAL, 65, 17,
+        sOakSpeechResources->textColor, 0, sText_AccentNames[gSaveBlock2Ptr->playerAccent]);
+    AddTextPrinterParameterized3(window, FONT_NORMAL, 65, 33,
+        sOakSpeechResources->textColor, 0, sText_SecondaryNames[gSaveBlock2Ptr->playerSecondaryAccent]);
+    Menu_InitCursor(window, FONT_NORMAL, 0, 1, 16, 4, gTasks[taskId].tAppearanceRow);
+    CopyWindowToVram(window, COPYWIN_FULL);
+}
+
+static void Task_OakSpeech_ChooseAccent(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    if (tTrainerPicFadeState == 0)
+        return;
+    if (tTimer != 0)
+    {
+        tTimer--;
+        return;
+    }
+    OakSpeechPrintMessage(sText_ChooseAccent, sOakSpeechResources->textSpeed);
+    tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_BOYGIRL]);
+    PutWindowTilemap(tMenuWindowId);
+    sOakSpeechResources->textColor[0] = 1;
+    sOakSpeechResources->textColor[1] = 2;
+    sOakSpeechResources->textColor[2] = 3;
+    DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, TRUE, GetStdWindowBaseTileNum(), 14);
+    DrawAccentChoice(taskId);
+    gTasks[taskId].func = Task_OakSpeech_HandleAccent;
+}
+
+static void Task_OakSpeech_HandleAccent(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 *value;
+    u8 count;
+    if (IsTextPrinterActive(WIN_INTRO_TEXTBOX))
+        return;
+    if (JOY_NEW(DPAD_UP | DPAD_DOWN))
+        tAppearanceRow = (tAppearanceRow + (JOY_NEW(DPAD_DOWN) ? 1 : 3)) % 4;
+    else if (JOY_NEW(A_BUTTON) && tAppearanceRow == 3)
+    {
+        ClearStdWindowAndFrameToTransparent(tMenuWindowId, TRUE);
+        RemoveWindow(tMenuWindowId);
+        tMenuWindowId = WIN_INTRO_TEXTBOX;
+        tTimer = 0;
+        ChangeBgX(2, 0, BG_COORD_SET);
+        gSpriteCoordOffsetX = 0;
+        gTasks[taskId].func = Task_OakSpeech_YourNameWhatIsIt;
+        return;
+    }
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT | A_BUTTON) && tAppearanceRow < 3)
+    {
+        value = tAppearanceRow == 0 ? &gSaveBlock2Ptr->playerGender
+            : tAppearanceRow == 1 ? &gSaveBlock2Ptr->playerAccent : &gSaveBlock2Ptr->playerSecondaryAccent;
+        count = tAppearanceRow == 0 ? 2 : PLAYER_ACCENT_COUNT;
+        *value = (*value + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count;
+        gSaveBlock2Ptr->optionsWindowFrameType = gSaveBlock2Ptr->playerSecondaryAccent;
+        // Always reload original colours before applying both accents.
+        LoadTrainerPic(gSaveBlock2Ptr->playerGender == MALE ? MALE_PLAYER_PIC : FEMALE_PLAYER_PIC, 0);
+        LoadUserWindowGfx(tMenuWindowId, GetStdWindowBaseTileNum(), BG_PLTT_ID(14));
+        LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+    }
+    else
+        return;
+    PlaySE(SE_SELECT);
+    DrawAccentChoice(taskId);
+}
+
+#undef tAppearanceRow
 
 static void Task_OakSpeech_YourNameWhatIsIt(u8 taskId)
 {
@@ -1955,10 +2008,12 @@ static void LoadTrainerPic(u16 whichPic, u16 tileOffset)
     {
     case MALE_PLAYER_PIC:
         LoadPalette(sOakSpeech_Red_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Red_Pal));
+        ApplyPlayerAppearancePalette(BG_PLTT_ID(4), PLAYER_PALETTE_INTRO);
         LZ77UnCompVram(sOakSpeech_Red_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
     case FEMALE_PLAYER_PIC:
         LoadPalette(sOakSpeech_Leaf_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Leaf_Pal));
+        ApplyPlayerAppearancePalette(BG_PLTT_ID(4), PLAYER_PALETTE_INTRO);
         LZ77UnCompVram(sOakSpeech_Leaf_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
     case RIVAL_PIC:

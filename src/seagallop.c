@@ -62,7 +62,7 @@ static const struct BgTemplate sBGTemplates[] = {
 static const s8 sSeag[][4] = {
                                    // Map                     X     Y
     [SEAGALLOP_ROUTE21_NORTH]   = {MAP(MAP_ROUTE21_NORTH),        0x0e, 0x0a},
-    [SEAGALLOP_ROUTE21_SOUTH]   = {MAP(MAP_ROUTE21_SOUTH),        0x0d, 0x2d},
+    [SEAGALLOP_ROUTE21_SOUTH]   = {MAP(MAP_ROUTE21_NORTH),        0x0d, 95},
     [SEAGALLOP_SEAFOAM_ISLANDS] = {MAP(MAP_ROUTE20),              0x48, 0x0b},
     [SEAGALLOP_ROUTE19_FUCHSIA_SHORE] = {MAP(MAP_ROUTE19),        0x0e, 0x0d}
 };
