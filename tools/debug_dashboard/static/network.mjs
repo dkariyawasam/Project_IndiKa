@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
 let catalog, nodes, links, selected, current, inspect, box=[0,0,1200,750], drag;
 const make=(tag,attrs,text)=>{const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e};
-const human=s=>s.replaceAll('_',' · ').replace(/([a-z])([A-Z])/g,'$1 $2');
+const human=s=>s==='Route21_North'?'Route 21':s==='Route21_South'?'Route 21 · legacy redirect':s.replaceAll('_',' · ').replace(/([a-z])([A-Z])/g,'$1 $2');
 function setBox(){ $('network-graph').setAttribute('viewBox',box.join(' ')); }
 function visible(){const kind=$('network-kind').value;let edges=links.filter(e=>kind==='all'||e.kind===kind), names=new Set(nodes.keys());if($('network-scope').value==='near'&&selected){names=new Set([selected]);for(const e of edges)if(e.source===selected||e.target===selected){names.add(e.source);names.add(e.target)}edges=edges.filter(e=>names.has(e.source)&&names.has(e.target))}return {edges,names}}
 function fit(){const {names}=visible(), list=[...names].map(n=>nodes.get(n));const x=Math.min(...list.map(n=>n.x))-110,y=Math.min(...list.map(n=>n.y))-50;box=[x,y,Math.max(260,Math.max(...list.map(n=>n.x))+110-x),Math.max(180,Math.max(...list.map(n=>n.y))+50-y)];setBox()}

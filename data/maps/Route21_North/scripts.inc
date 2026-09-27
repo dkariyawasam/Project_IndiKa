@@ -13,6 +13,7 @@ Route21_North_EventScript_ShowFatMan::
 	end
 
 Route21_North_OnFrame::
+	map_script_2 VAR_MAP_SCENE_ROUTE21_SOUTH, 1, Route21_South_EventScript_PlayerStepOffFerry
 	map_script_2 VAR_MAP_SCENE_ROUTE21_NORTH, 1, Route21_North_EventScript_PlayerStepOffFerry
 	.2byte 0
 

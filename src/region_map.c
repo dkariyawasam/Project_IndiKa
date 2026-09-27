@@ -3004,7 +3004,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE21_NORTH))
         {
             sMapCursor->x = 4;
-            sMapCursor->y = 12;
+            sMapCursor->y = gSaveBlock1Ptr->pos.y >= 50 ? 13 : 12;
         }
         else if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE21_SOUTH))
         {

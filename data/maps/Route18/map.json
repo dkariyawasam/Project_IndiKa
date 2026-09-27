@@ -30,8 +30,8 @@
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE21_SOUTH",
-      "offset": -24,
+      "map": "MAP_ROUTE20",
+      "offset": 0,
       "direction": "down"
     }
   ],
