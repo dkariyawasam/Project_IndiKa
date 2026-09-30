@@ -131,7 +131,7 @@
       "x": 19,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE6_RARE_CANDY",
       "quantity": 1,
       "underfoot": false

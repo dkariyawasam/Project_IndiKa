@@ -433,7 +433,12 @@
 #define ITEM_RUBY 360
 #define ITEM_SAPPHIRE 361
 
-#define ITEMS_COUNT 362
+#define ITEM_EXP_CANDY_S 362
+#define ITEM_EXP_CANDY_M 363
+#define ITEM_EXP_CANDY_L 364
+#define ITEM_EXP_CANDY_XL 365
+
+#define ITEMS_COUNT 366
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF
