@@ -2775,6 +2775,12 @@ extern const u32 gItemIconPalette_Iron[];
 extern const u32 gItemIconPalette_Carbos[];
 extern const u32 gItemIconPalette_Calcium[];
 extern const u32 gItemIcon_RareCandy[];
+extern const u32 gItemIconPalette_ExpCandy[];
+extern const u32 gItemIcon_ExpCandyS[];
+extern const u32 gItemIcon_ExpCandyM[];
+extern const u32 gItemIcon_ExpCandyL[];
+extern const u32 gItemIcon_ExpCandyXL[];
+
 extern const u32 gItemIconPalette_RareCandy[];
 extern const u32 gItemIcon_PPUp[];
 extern const u32 gItemIconPalette_PPUp[];
@@ -4612,3 +4618,70 @@ extern const u32 gMonPalette_Amunyte[];
 extern const u32 gMonBackPic_Amunyte[];
 
 extern const u32 gMonBackPic_Kinkabuto[];
+
+extern const u32 gItemIcon_Electirizer[];
+extern const u32 gItemIconPalette_Electirizer[];
+
+extern const u32 gItemIcon_Protector[];
+extern const u32 gItemIconPalette_Protector[];
+
+extern const u32 gItemIcon_Magmarizer[];
+extern const u32 gItemIconPalette_Magmarizer[];
+
+extern const u32 gItemIcon_ReaperCloth[];
+extern const u32 gItemIconPalette_ReaperCloth[];
+
+extern const u32 gItemIcon_DuskStone[];
+extern const u32 gItemIconPalette_DuskStone[];
+
+extern const u32 gItemIcon_ShinyStone[];
+extern const u32 gItemIconPalette_ShinyStone[];
+
+extern const u32 gItemIcon_DawnStone[];
+extern const u32 gItemIconPalette_DawnStone[];
+
+extern const u32 gItemIcon_DubiousDisc[];
+extern const u32 gItemIconPalette_DubiousDisc[];
+
+extern const u32 gItemIcon_RazorClaw[];
+extern const u32 gItemIconPalette_RazorClaw[];
+
+extern const u32 gItemIcon_IceStone[];
+extern const u32 gItemIconPalette_IceStone[];
+
+extern const u32 gItemIconPalette_BoulderKey[];
+
+extern const u32 gItemIcon_RainbowKey[];
+
+extern const u32 gItemIconPalette_RainbowKey[];
+
+extern const u32 gItemIcon_ThunderPass[];
+
+extern const u32 gItemIconPalette_ThunderPass[];
+
+extern const u32 gItemIcon_SoulPass[];
+
+extern const u32 gItemIconPalette_SoulPass[];
+
+extern const u32 gItemIcon_MarshFinder[];
+
+extern const u32 gItemIconPalette_MarshFinder[];
+
+extern const u32 gMonFrontPic_Kabustar[];
+extern const u32 gMonPalette_Kabustar[];
+
+extern const u32 gMonFrontPic_Aeropteryx[];
+extern const u32 gMonPalette_Aeropteryx[];
+
+extern const u8 gMonIcon_Kabustar[];
+
+extern const u8 gMonIcon_Amunyte[];
+
+extern const u8 gMonIcon_Kinkabuto[];
+
+extern const u8 gMonIcon_Aeropteryx[];
+
+extern const u32 gMonFrontPic_Kabuknight[];
+extern const u32 gMonPalette_Kabuknight[];
+
+extern const u8 gMonIcon_Kabuknight[];

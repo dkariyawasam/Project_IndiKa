@@ -4,11 +4,11 @@
 
 ## Counts
 
-- front: 393 ok, 6 placeholder
-- back: 393 ok, 6 placeholder
-- normal: 393 ok, 6 placeholder
-- shiny: 393 ok, 6 placeholder
-- icon: 393 ok, 6 placeholder
+- front: 398 ok, 1 placeholder
+- back: 395 ok, 4 placeholder
+- normal: 398 ok, 1 placeholder
+- shiny: 398 ok, 1 placeholder
+- icon: 398 ok, 1 placeholder
 - footprint: 393 ok, 6 placeholder
 
 ## Missing or placeholder assets
@@ -16,11 +16,11 @@
 | Species | Internal species | Assets |
 |---|---|---|
 | FEEBAS | CINNABAR_FEEBAS | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| KABUSTAR | KABUSTAR | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| KABUKNIGHT | KABUKNIGHT | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| AMUNYTE | AMUNYTE | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| KINKABUTO | KINKABUTO | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| AEROPTERYX | AEROPTERYX | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
+| KABUSTAR | KABUSTAR | back: placeholder; footprint: placeholder |
+| KABUKNIGHT | KABUKNIGHT | back: placeholder; footprint: placeholder |
+| AMUNYTE | AMUNYTE | footprint: placeholder |
+| KINKABUTO | KINKABUTO | footprint: placeholder |
+| AEROPTERYX | AEROPTERYX | back: placeholder; footprint: placeholder |
 
 ## Other source warnings
 

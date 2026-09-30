@@ -344,6 +344,12 @@ void FieldUseFunc_PpUp(u8 taskId)
     DoSetUpItemUseCallback(taskId);
 }
 
+void FieldUseFunc_ExpCandy(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_ExpCandy;
+    DoSetUpItemUseCallback(taskId);
+}
+
 void FieldUseFunc_RareCandy(u8 taskId)
 {
     gItemUseCB = ItemUseCB_RareCandy;

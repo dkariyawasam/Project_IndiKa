@@ -11008,9 +11008,9 @@
     "name": "KABUSTAR",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_Kabustar",
+        "source": "graphics/pokemon/kabustar/front.png",
         "warnings": []
       },
       "back": {
@@ -11020,21 +11020,21 @@
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kabustar",
+        "source": "graphics/pokemon/kabustar/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kabustar",
+        "source": "graphics/pokemon/kabustar/normal.pal",
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Kabustar",
+        "source": "graphics/pokemon/kabustar/icon.png",
         "warnings": []
       },
       "footprint": {
@@ -11050,9 +11050,9 @@
     "name": "KABUKNIGHT",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_Kabuknight",
+        "source": "graphics/pokemon/kabuknight/front.png",
         "warnings": []
       },
       "back": {
@@ -11062,21 +11062,21 @@
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kabuknight",
+        "source": "graphics/pokemon/kabuknight/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kabuknight",
+        "source": "graphics/pokemon/kabuknight/normal.pal",
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Kabuknight",
+        "source": "graphics/pokemon/kabuknight/icon.png",
         "warnings": []
       },
       "footprint": {
@@ -11134,33 +11134,33 @@
     "name": "AMUNYTE",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_Amunyte",
+        "source": "graphics/pokemon/amunyte/front.png",
         "warnings": []
       },
       "back": {
-        "status": "placeholder",
-        "symbol": "gMonBackPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/back.png",
+        "status": "ok",
+        "symbol": "gMonBackPic_Amunyte",
+        "source": "graphics/pokemon/amunyte/back.png",
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Amunyte",
+        "source": "graphics/pokemon/amunyte/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Amunyte",
+        "source": "graphics/pokemon/amunyte/normal.pal",
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Amunyte",
+        "source": "graphics/pokemon/amunyte/icon.png",
         "warnings": []
       },
       "footprint": {
@@ -11176,33 +11176,33 @@
     "name": "KINKABUTO",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/front.png",
         "warnings": []
       },
       "back": {
-        "status": "placeholder",
-        "symbol": "gMonBackPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/back.png",
+        "status": "ok",
+        "symbol": "gMonBackPic_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/back.png",
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/normal.pal",
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/icon.png",
         "warnings": []
       },
       "footprint": {
@@ -11218,9 +11218,9 @@
     "name": "AEROPTERYX",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_Aeropteryx",
+        "source": "graphics/pokemon/aeropteryx/front.png",
         "warnings": []
       },
       "back": {
@@ -11230,21 +11230,21 @@
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Aeropteryx",
+        "source": "graphics/pokemon/aeropteryx/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_Aeropteryx",
+        "source": "graphics/pokemon/aeropteryx/normal.pal",
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Aeropteryx",
+        "source": "graphics/pokemon/aeropteryx/icon.png",
         "warnings": []
       },
       "footprint": {

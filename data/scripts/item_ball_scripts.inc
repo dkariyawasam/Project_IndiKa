@@ -30,8 +30,8 @@ MtMoon_1F_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
 
-MtMoon_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+MtMoon_1F_EventScript_ItemHpUp::
+	finditem ITEM_HP_UP
 	end
 
 MtMoon_1F_EventScript_ItemEscapeRope::
@@ -98,8 +98,8 @@ PokemonTower_2F_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
 
-PokemonTower_3F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+PokemonTower_3F_EventScript_ItemCleanseTag::
+	finditem ITEM_CLEANSE_TAG
 	end
 
 PokemonTower_3F_EventScript_ItemXAccuracy::
@@ -214,8 +214,8 @@ SilphCo_10F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-SilphCo_10F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+SilphCo_10F_EventScript_ItemPpUp::
+	finditem ITEM_PP_UP
 	end
 
 PowerPlant_EventScript_ItemMaxPotion::
@@ -270,8 +270,8 @@ PokemonMansion_B1F_EventScript_ItemSitrusBerry::
 	finditem ITEM_SITRUS_BERRY
 	end
 
-VictoryRoad_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+VictoryRoad_1F_EventScript_ItemMaxRevive::
+	finditem ITEM_MAX_REVIVE
 	end
 
 VictoryRoad_1F_EventScript_ItemFullRestore::
@@ -334,8 +334,8 @@ CeruleanCave_B1F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-FuchsiaCity_WardensHouse_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+FuchsiaCity_WardensHouse_EventScript_ItemProtein::
+	finditem ITEM_PROTEIN
 	end
 
 ViridianForest_EventScript_ItemPotion2::

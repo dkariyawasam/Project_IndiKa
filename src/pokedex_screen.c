@@ -49,6 +49,8 @@ struct PokedexScreenData
     u8 rewardFooterHold;
     bool8 rewardFooterRetracting;
     u8 completionBallSpriteId;
+    u8 rewardReceipt;
+    s32 selectedHabitat;
     u32 unlockedCategories;
     u32 modeSelectInput;
     u16 modeSelectItemsAbove;
@@ -117,6 +119,9 @@ static bool8 DexScreen_PageIsOwned(void);
 static bool8 DexScreen_PageRewardClaimed(void);
 static void DexScreen_DrawPageRewardFooter(void);
 static void DexScreen_AnimateRewardFooter(void);
+static bool8 DexScreen_HabitatReady(u8 category);
+static void DexScreen_ClaimHabitatReward(void);
+static void DexScreen_UpdateHabitatHeader(void);
 static void DexScreen_ClaimPageReward(void);
 static void Task_PokedexScreen(u8 taskId);
 static void DexScreen_InitGfxForTopMenu(void);
@@ -165,6 +170,7 @@ static u16 DexScreen_CreateSizeComparisonTrainerPicSprite(s16 x, s16 y);
 static void DexScreen_DestroySizeComparisonTrainerPicSprite(u16 spriteId);
 static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct ListMenu *list);
 static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y);
+static void DexScreen_DrawHabitatBall(u8 windowId, u8 y);
 static void ItemPrintFunc_OrderedListMenu(u8 windowId, u32 itemId, u8 y);
 static void Task_DexScreen_RegisterNonKantoMonBeforeNationalDex(u8 taskId);
 static void Task_DexScreen_RegisterMonToPokedex(u8 taskId);
@@ -1010,8 +1016,19 @@ static void Task_PokedexScreen(u8 taskId)
         sPokedexScreenData->state = 6;
         break;
     case 6:
+        if (sPokedexScreenData->rewardFooterRevealWidth != 0)
+        {
+            DexScreen_AnimateRewardFooter();
+            break;
+        }
         sPokedexScreenData->modeSelectInput = ListMenu_ProcessInput(sPokedexScreenData->modeSelectListMenuId);
         ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        DexScreen_UpdateHabitatHeader();
+        if (JOY_NEW(START_BUTTON))
+        {
+            DexScreen_ClaimHabitatReward();
+            break;
+        }
         if (JOY_NEW(A_BUTTON))
         {
             switch (sPokedexScreenData->modeSelectInput)
@@ -1138,6 +1155,7 @@ static void DexScreen_InitGfxForTopMenu(void)
 
 static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
+    sPokedexScreenData->selectedHabitat = itemIndex;
     if (!onInit)
         PlaySE(SE_SELECT);
     if (itemIndex == LIST_CANCEL)
@@ -1156,6 +1174,12 @@ static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct Lis
 
 static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y)
 {
+    if (itemId < DEX_CATEGORY_COUNT)
+    {
+        bool8 ready = DexScreen_HabitatReady(itemId);
+        if (ready || (gSaveBlock1Ptr->dexHabitatRewards & (1 << itemId)))
+            DexScreen_DrawHabitatBall(windowId, y);
+    }
     if (itemId >= DEX_CATEGORY_COUNT || sPokedexScreenData->unlockedCategories & (1 << itemId))
         ListMenuOverrideSetColors(TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_GRAY);
     else
@@ -2455,6 +2479,42 @@ static void DexScreen_PrintCategoryPageNumbers(u8 windowId, u16 currentPage, u16
 // Independent OBJ graphics keep the completion stamp above the footer, even hidden.
 static const u32 sCompletionBallTiles[] = INCBIN_U32("graphics/interface/ball/poke.4bpp");
 static const u16 sCompletionBallPalette[] = INCBIN_U16("graphics/interface/ball/poke.gbapal");
+// The habitat list uses BG palette 0, not the menu-info icon palette.
+// Map the existing ball's colours into that loaded palette without modifying it.
+static void DexScreen_DrawHabitatBall(u8 windowId, u8 y)
+{
+    u8 remap[16];
+    u8 i, j, x, row;
+    const u16 *palette = &gPlttBufferUnfaded[BG_PLTT_ID(GetWindowAttribute(windowId, WINDOW_PALETTE_NUM))];
+    const u8 *tiles = (const u8 *)sCompletionBallTiles;
+    for (i = 1; i < 8; i++)
+    {
+        u32 best = 0xFFFFFFFF;
+        u16 color = sCompletionBallPalette[i];
+        remap[i] = 1;
+        for (j = 1; j < 16; j++)
+        {
+            s32 r = (color & 31) - (palette[j] & 31);
+            s32 g = ((color >> 5) & 31) - ((palette[j] >> 5) & 31);
+            s32 b = ((color >> 10) & 31) - ((palette[j] >> 10) & 31);
+            u32 distance = r * r + g * g + b * b;
+            if (distance < best)
+            {
+                best = distance;
+                remap[i] = j;
+            }
+        }
+    }
+    for (row = 0; row < 16; row++)
+        for (x = 0; x < 16; x++)
+        {
+            u16 offset = ((row / 8) * 2 + x / 8) * 32 + (row % 8) * 4 + (x % 8) / 2;
+            u8 pixel = (tiles[offset] >> ((x & 1) * 4)) & 15;
+            if (pixel != 0)
+                FillWindowPixelRect(windowId, PIXEL_FILL(remap[pixel]), 142 + x, y + row, 1, 1);
+        }
+}
+
 static const struct SpriteSheet sCompletionBallSheet = {sCompletionBallTiles, 128, 2004};
 static const struct OamData sCompletionBallOam = {
     .shape = SPRITE_SHAPE(16x16), .size = SPRITE_SIZE(16x16), .priority = 0
@@ -2481,7 +2541,14 @@ static void DexScreen_UpdateCompletionBall(void)
 // Claims live in previously unused save bytes; existing saves initialize lazily.
 #define DEX_PAGE_REWARDS_VERSION 0x44585031
 static const u8 sText_PageClaimControls[] = _("{DPAD_ANY}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
-static const u8 sText_PageRewardReceived[] = _("3 POKé BALLS + 1 RARE CANDY        ");
+#include "data/pokemon/pokedex_page_rewards.h"
+static const u8 sText_RewardS[] = _("1 EXP. CANDY S + 1 RARE CANDY        ");
+static const u8 sText_RewardM[] = _("1 EXP. CANDY M + 1 RARE CANDY        ");
+static const u8 sText_RewardL[] = _("1 EXP. CANDY L + 1 RARE CANDY        ");
+static const u8 sText_RewardApex[] = _("2 EXP. CANDY L + 1 RARE CANDY        ");
+static const u8 sText_RewardHabitat[] = _("HABITAT COMPLETE! 1 EXP. CANDY XL");
+static const u8 *const sRewardReceipts[] = {sText_RewardS, sText_RewardM, sText_RewardL, sText_RewardApex, sText_RewardHabitat};
+static const u8 sText_HabitatClaim[] = _("{DPAD_ANY}PICK {START_BUTTON}CLAIM {A_BUTTON}OK {B_BUTTON}BACK");
 static const u8 sText_PageComplete[] = _(" ");
 
 static const struct PokedexCategoryPage *DexScreen_RewardPage(void)
@@ -2557,7 +2624,7 @@ static void DexScreen_AnimateRewardFooter(void)
     }
     if (width >= 30)
     {
-        DrawUiHintHeader(0, sText_PageRewardReceived, 11, 12, 0, TRUE);
+        DrawUiHintHeader(0, sRewardReceipts[sPokedexScreenData->rewardReceipt], 11, 12, 0, TRUE);
         sPokedexScreenData->rewardFooterHold = 120;
         return;
     }
@@ -2570,21 +2637,25 @@ static void DexScreen_AnimateRewardFooter(void)
 static void DexScreen_ClaimPageReward(void)
 {
     u16 key;
+    u8 tier = sDexPageRewardTiers[DexScreen_RewardPage()->species[0]];
+    u16 candy = tier == 0 ? ITEM_EXP_CANDY_S : tier == 1 ? ITEM_EXP_CANDY_M : ITEM_EXP_CANDY_L;
+    u8 count = tier == 3 ? 2 : 1;
     if (DexScreen_PageRewardClaimed() || !DexScreen_PageIsOwned())
         return;
-    // Separate pockets: both checks remain valid until both additions finish.
-    if (!CheckBagHasSpace(ITEM_POKE_BALL, 3) || !CheckBagHasSpace(ITEM_RARE_CANDY, 1))
+    // Both candies share a pocket; roll back the first if the second cannot fit.
+    if (!CheckBagHasSpace(candy, count) || !CheckBagHasSpace(ITEM_RARE_CANDY, 1))
     {
         PlaySE(SE_HELP_ERROR);
         return;
     }
-    if (!AddBagItem(ITEM_POKE_BALL, 3))
+    if (!AddBagItem(candy, count))
         return;
     if (!AddBagItem(ITEM_RARE_CANDY, 1))
     {
-        RemoveBagItem(ITEM_POKE_BALL, 3);
+        RemoveBagItem(candy, count);
         return;
     }
+    sPokedexScreenData->rewardReceipt = tier;
     key = DexScreen_RewardPage()->species[0];
     gSaveBlock1Ptr->dexPageRewards[key / 8] |= 1 << (key % 8);
     PlaySE(SE_SELECT);
@@ -2595,6 +2666,70 @@ static void DexScreen_ClaimPageReward(void)
     sPokedexScreenData->rewardFooterHold = 0;
     sPokedexScreenData->rewardFooterRetracting = FALSE;
     sPokedexScreenData->rewardFooterRevealWidth = 2;
+}
+
+static void DexScreen_InitHabitatRewards(void)
+{
+    if (gSaveBlock1Ptr->dexHabitatRewardsVersion != 0x44584831)
+    {
+        gSaveBlock1Ptr->dexHabitatRewardsVersion = 0x44584831;
+        gSaveBlock1Ptr->dexHabitatRewards = 0;
+    }
+}
+
+static bool8 DexScreen_HabitatReady(u8 category)
+{
+    u8 page, mon;
+    DexScreen_InitHabitatRewards();
+    if (category >= DEX_CATEGORY_COUNT || (gSaveBlock1Ptr->dexHabitatRewards & (1 << category)))
+        return FALSE;
+    for (page = 0; page < gDexCategories[category].count; page++)
+        for (mon = 0; mon < gDexCategories[category].page[page].count; mon++)
+            if (!DexScreen_GetSetPokedexFlag(gDexCategories[category].page[page].species[mon], FLAG_GET_CAUGHT, TRUE))
+                return FALSE;
+    return TRUE;
+}
+
+static void DexScreen_UpdateHabitatHeader(void)
+{
+    s32 category = sPokedexScreenData->selectedHabitat;
+    const u8 *text = gText_PickOKExit;
+    DexScreen_InitHabitatRewards();
+    if (category >= 0 && category < DEX_CATEGORY_COUNT)
+    {
+        if (DexScreen_HabitatReady(category))
+            text = sText_HabitatClaim;
+
+    }
+    DexScreen_PrintHeaderControlInfo(text);
+    PutWindowTilemap(1);
+    CopyWindowToVram(1, COPYWIN_MAP);
+}
+
+static void DexScreen_ClaimHabitatReward(void)
+{
+    s32 category = sPokedexScreenData->selectedHabitat;
+    if (category < 0 || category >= DEX_CATEGORY_COUNT || !DexScreen_HabitatReady(category))
+        return;
+    if (!AddBagItem(ITEM_EXP_CANDY_XL, 1))
+    {
+        PlaySE(SE_HELP_ERROR);
+        return;
+    }
+    gSaveBlock1Ptr->dexHabitatRewards |= 1 << category;
+    sPokedexScreenData->rewardReceipt = 4;
+    ClearWindowTilemap(0);
+    LoadPalette(&gPlttBufferUnfaded[BG_PLTT_ID(15)], BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+    SetWindowAttribute(0, WINDOW_PALETTE_NUM, 14);
+    SetWindowAttribute(0, WINDOW_TILEMAP_TOP, 18);
+    DrawUiHintHeader(0, sText_PageComplete, 11, 12, 0, FALSE);
+    ClearWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_MAP);
+    DexScreen_UpdateHabitatHeader();
+    sPokedexScreenData->rewardFooterHold = 0;
+    sPokedexScreenData->rewardFooterRetracting = FALSE;
+    sPokedexScreenData->rewardFooterRevealWidth = 2;
+    PlaySE(SE_SELECT);
 }
 
 static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered)

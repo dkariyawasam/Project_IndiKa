@@ -2832,3 +2832,22 @@ const u32 gMonPalette_Amunyte[] = INCBIN_U32("graphics/pokemon/amunyte/normal.gb
 const u32 gMonBackPic_Amunyte[] = INCBIN_U32("graphics/pokemon/amunyte/back.4bpp.lz");
 
 const u32 gMonBackPic_Kinkabuto[] = INCBIN_U32("graphics/pokemon/kinkabuto/back.4bpp.lz");
+
+const u32 gMonFrontPic_Kabustar[] = INCBIN_U32("graphics/pokemon/kabustar/front.4bpp.lz");
+const u32 gMonPalette_Kabustar[] = INCBIN_U32("graphics/pokemon/kabustar/normal.gbapal.lz");
+
+const u32 gMonFrontPic_Aeropteryx[] = INCBIN_U32("graphics/pokemon/aeropteryx/front.4bpp.lz");
+const u32 gMonPalette_Aeropteryx[] = INCBIN_U32("graphics/pokemon/aeropteryx/normal.gbapal.lz");
+
+const u8 gMonIcon_Kabustar[] = INCBIN_U8("graphics/pokemon/kabustar/icon.4bpp");
+
+const u8 gMonIcon_Amunyte[] = INCBIN_U8("graphics/pokemon/amunyte/icon.4bpp");
+
+const u8 gMonIcon_Kinkabuto[] = INCBIN_U8("graphics/pokemon/kinkabuto/icon.4bpp");
+
+const u8 gMonIcon_Aeropteryx[] = INCBIN_U8("graphics/pokemon/aeropteryx/icon.4bpp");
+
+const u32 gMonFrontPic_Kabuknight[] = INCBIN_U32("graphics/pokemon/kabuknight/front.4bpp.lz");
+const u32 gMonPalette_Kabuknight[] = INCBIN_U32("graphics/pokemon/kabuknight/normal.gbapal.lz");
+
+const u8 gMonIcon_Kabuknight[] = INCBIN_U8("graphics/pokemon/kabuknight/icon.4bpp");

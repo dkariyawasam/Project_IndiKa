@@ -4569,7 +4569,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_MIME_SR] =
     {
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("MIME"),
         .height = 18,
         .weight = 100,
         .description = gMimeSrPokedexText,

@@ -2130,13 +2130,13 @@ const struct MonCoords gMonFrontPicCoords[] =
     },
     [SPECIES_KABUSTAR] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 10,
     },
     [SPECIES_KABUKNIGHT] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .size = MON_COORDS_SIZE(56, 64),
+        .y_offset = 2,
     },
     [SPECIES_AMUNYTE] =
     {

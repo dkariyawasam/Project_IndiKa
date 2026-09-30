@@ -806,7 +806,9 @@ struct SaveBlock1
     /*0x3120*/ struct MysteryGiftSave mysteryGift;
     /*0x348C*/ u32 dexPageRewardsVersion;
     u8 dexPageRewards[64]; // Indexed by the page's first species, independent of habitat order.
-    u8 unused_34D0[332];
+    u32 dexHabitatRewardsVersion;
+    u16 dexHabitatRewards;
+    u8 unused_34D6[326];
     /*0x361C*/ struct RamScript ramScript;
     /*0x3A08*/ struct RecordMixingGift recordMixingGift; // unused
     /*0x3A18*/ u8 seen2[DEX_FLAGS_NO];
