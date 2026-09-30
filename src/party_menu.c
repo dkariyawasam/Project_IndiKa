@@ -396,6 +396,8 @@ static bool8 MonCanEvolve(void);
 bool8 SetUpFieldMove_CascadeBoard(void);
 
 
+static EWRAM_DATA bool8 sExpCandyLearning = FALSE;
+static EWRAM_DATA u8 sExpCandyOldLevel = 0;
 static EWRAM_DATA struct PartyMenuInternal *sPartyMenuInternal = NULL;
 EWRAM_DATA struct PartyMenu gPartyMenu = {0};
 static EWRAM_DATA struct PartyMenuBox *sPartyMenuBoxes = NULL;
@@ -4922,6 +4924,65 @@ static void Task_TryLearningNextMoveAfterText(u8 taskId)
         Task_TryLearningNextMove(taskId);
 }
 
+static const u8 sText_ExpCandyGained[] = _("{STR_VAR_1} gained {STR_VAR_2} EXP. Points!");
+
+static void ItemUseCB_ExpCandyStep(u8 taskId, TaskFunc func)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 exp = GetMonData(mon, MON_DATA_EXP);
+    u32 cap = gExperienceTables[gSpeciesInfo[species].growthRate][MAX_LEVEL];
+    static const u32 amounts[] = {800, 3000, 10000, 30000};
+    u32 gain = amounts[gSpecialVar_ItemId - ITEM_EXP_CANDY_S];
+    u8 level;
+    sExpCandyOldLevel = GetMonData(mon, MON_DATA_LEVEL);
+    if (gain > cap - exp)
+        gain = cap - exp;
+    GetMonLevelUpWindowStats(mon, sPartyMenuInternal->data);
+    exp += gain;
+    SetMonData(mon, MON_DATA_EXP, &exp);
+    CalculateMonStats(mon);
+    GetMonLevelUpWindowStats(mon, &sPartyMenuInternal->data[NUM_STATS]);
+    RemoveBagItem(gSpecialVar_ItemId, 1);
+    gPartyMenuUseExitCallback = TRUE;
+    UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
+    GetMonNickname(mon, gStringVar1);
+    level = GetMonData(mon, MON_DATA_LEVEL);
+    if (level > sExpCandyOldLevel)
+    {
+        sExpCandyLearning = TRUE;
+        PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
+        ConvertIntToDecimalStringN(gStringVar2, level, STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+        gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(gStringVar2, gain, STR_CONV_MODE_LEFT_ALIGN, 5);
+        StringExpandPlaceholders(gStringVar4, sText_ExpCandyGained);
+        gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+    }
+    DisplayPartyMenuMessage(gStringVar4, TRUE);
+    ScheduleBgCopyTilemapToVram(2);
+}
+
+void ItemUseCB_ExpCandy(u8 taskId, TaskFunc func)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    sExpCandyLearning = FALSE;
+    PlaySE(SE_SELECT);
+    if (GetMonData(mon, MON_DATA_IS_EGG) || GetMonData(mon, MON_DATA_LEVEL) >= MAX_LEVEL)
+    {
+        gPartyMenuUseExitCallback = FALSE;
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = func;
+        return;
+    }
+    Task_DoUseItemAnim(taskId);
+    gItemUseCB = ItemUseCB_ExpCandyStep;
+}
+
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5029,7 +5090,9 @@ static void Task_TryLearnNewMoves(u8 taskId)
     if (WaitFanfare(FALSE) && (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON)))
     {
         RemoveLevelUpStatsWindow();
-        learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
+        learnMove = sExpCandyLearning
+            ? MonTryLearningMovesInLevelRange(&gPlayerParty[gPartyMenu.slotId], TRUE, sExpCandyOldLevel)
+            : MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
         gPartyMenu.learnMoveMethod = LEARN_VIA_LEVEL_UP;
         switch (learnMove)
         {
@@ -5051,7 +5114,9 @@ static void Task_TryLearnNewMoves(u8 taskId)
 
 static void Task_TryLearningNextMove(u8 taskId)
 {
-    u16 result = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
+    u16 result = sExpCandyLearning
+        ? MonTryLearningMovesInLevelRange(&gPlayerParty[gPartyMenu.slotId], FALSE, sExpCandyOldLevel)
+        : MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
 
     switch (result)
     {
@@ -5074,6 +5139,7 @@ static void PartyMenuTryEvolution(u8 taskId)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE);
 
+    sExpCandyLearning = FALSE;
     if (targetSpecies != SPECIES_NONE)
     {
         FreePartyPointers();
