@@ -2189,6 +2189,27 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     return retVal;
 }
 
+// Exp. Candies may cross several levels. Keep the existing move-learning cursor
+// so replace/decline prompts resume at the next move, without changing mon level.
+u16 MonTryLearningMovesInLevelRange(struct Pokemon *mon, bool8 firstMove, u8 oldLevel)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL);
+    u16 entry;
+    if (firstMove)
+        sLearningMoveTableID = 0;
+    while ((entry = gLevelUpLearnsets[species][sLearningMoveTableID]) != LEVEL_UP_END)
+    {
+        sLearningMoveTableID++;
+        if ((entry >> 9) > oldLevel && (entry >> 9) <= level)
+        {
+            gMoveToLearn = entry & LEVEL_UP_MOVE_ID;
+            return GiveMoveToMon(mon, gMoveToLearn);
+        }
+    }
+    return MOVE_NONE;
+}
+
 void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move)
 {
     s32 i;

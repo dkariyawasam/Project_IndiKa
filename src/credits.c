@@ -966,6 +966,7 @@ static s32 RollCredits(void)
         sCreditsMgr->timer = 360;
         AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL_COPY_1, 8, 16, 0, 0, sTextColor_Header, -1, sExpeditionCreditsTitle);
         AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL, 8, 40, 0, 0, sTextColor_Regular, -1, sCreditsChoice);
+        CopyWindowToVram(sCreditsMgr->windowId, COPYWIN_GFX);
         sCreditsMgr->mainseqno = CREDITSSCENE_WAIT_TITLE_STAFF;
         return 0;
     case CREDITSSCENE_WAIT_TITLE_STAFF:
