@@ -96,3 +96,23 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk::
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain::
     .string "Aiyah!\n"
     .string "You come again!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorTrade::
+    .string "Our lab developed the PROTECTOR,\n"
+    .string "a tough suit of protective gear.\p"
+    .string "My RHYDON is holding one.\n"
+    .string "Trading it helps that protection\l"
+    .string "become part of its new body.\p"
+    .string "It evolves into RHYPERIOR!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorResult::
+    .string "RHYDON made our invention\n"
+    .string "part of itself!\p"
+    .string "Take good care of RHYPERIOR.\n"
+    .string "There's more to it than armor!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorResearch::
+    .string "We built the PROTECTOR here\n"
+    .string "to help RHYDON grow stronger.\p"
+    .string "Making the item was our work.\n"
+    .string "The evolution belongs to RHYDON.$"

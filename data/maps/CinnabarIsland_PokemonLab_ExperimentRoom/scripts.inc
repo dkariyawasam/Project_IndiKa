@@ -8,9 +8,10 @@ CinnabarIsland_PokemonLab_ExperimentRoom_MapScripts::
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Garett::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_SEEL
+	setvar VAR_0x8008, INGAME_TRADE_RHYDON
 	call EventScript_GetInGameTradeSpeciesInfo
-	goto_if_set FLAG_DID_SEELOR_TRADE, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded
+	goto_if_set FLAG_DID_CH_DING_TRADE, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorTrade
 	msgbox Trade_Text_LookingForMonWannaTradeForMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DeclineTrade
 	call EventScript_ChooseMonForInGameTrade
@@ -18,8 +19,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Garett::
 	call EventScript_GetInGameTradeSpecies
 	goto_if_ne VAR_RESULT, VAR_0x8009, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NotRequestedMon
 	call EventScript_DoInGameTrade
-	msgbox Trade_Text_HeyThanks
-	setflag FLAG_DID_SEELOR_TRADE
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorResult
+	setflag FLAG_DID_CH_DING_TRADE
 	release
 	end
 
@@ -35,7 +36,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NotRequestedMon::
 	end
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded::
-	msgbox Trade_Text_IsntMyOldMonGreat
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorResearch
 	release
 	end
 

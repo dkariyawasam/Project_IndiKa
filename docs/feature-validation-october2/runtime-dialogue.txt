@@ -1,0 +1,350 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+We exchange your COINS for prizes.
+SMEARGLE at Lv. 10.|Sent to your party, or your PC|if your party is full.
+SMEARGLE, quantity 1.|That will be 500 COINS. Okay?
+Your POKひMON was sent to your PC!
+DRATINI at Lv. 18.|Sent to your party, or your PC|if your party is full.
+You don\'t have enough COINS.
+We exchange your COINS for prizes.
+FOCUS PUNCH
+TM01? Certainly.|How many would you like?
+×01
+TM01, quantity 1.|That will be 4500 COINS. Okay?
+Here you are!|Thank you!
+KADABRA will be|sent to REYLEY.
+Byeーbye, KADABRA!
+REYLEY sent over HAUNTER.
+Take good care of HAUNTER!
+What?|HAUNTER is evolving!
+Congratulations! Your HAUNTER|evolved into GENGAR!|こ|
+We exchange your COINS for prizes.
+Here you are!|Thank you!
+KADABRA will be|sent to REYLEY.
+Byeーbye, KADABRA!
+REYLEY sent over HAUNTER.
+Take good care of HAUNTER!
+What?|HAUNTER is evolving!
+Congratulations! Your HAUNTER|evolved into GENGAR!|こ|
+We exchange your COINS for prizes.
+3500c
+You don\'t have enough COINS.
+Here you are!|Thank you!
+HAUNTER will be|sent to DONTAE.
+Byeーbye, HAUNTER!
+DONTAE sent over KADABRA.
+Take good care of KADABRA!
+What?|KADABRA is evolving!
+Congratulations! Your KADABRA|evolved into ALAKAZAM!|こ|
+We exchange your COINS for prizes.
+Here you are!|Thank you!
+NIDORAN♂ will be|sent to SAIGE.
+Byeーbye, NIDORAN♂!
+SAIGE sent over SLOWPOKE.
+Take good care of SLOWPOKE!
+What?|SLOWPOKE is evolving!
+Congratulations! Your SLOWPOKE|evolved into SLOWKING!|こ|
+We exchange your COINS for prizes.
+3500c
+You don\'t have enough COINS.
+Here you are!|Thank you!
+RHYHORN will be|sent to GARETT.
+Byeーbye, RHYHORN!
+GARETT sent over RHYDON.
+Take good care of RHYDON!
+What?|RHYDON is evolving!
+Congratulations! Your RHYDON|evolved into RHYPERIOR!|こ|
+Here you are!|Thank you!
+NIDORINO will be|sent to TURNER.
+Byeーbye, NIDORINO!
+TURNER sent over MACHOKE.
+Take good care of MACHOKE!
+What?|MACHOKE is evolving!
+Congratulations! Your MACHOKE|evolved into MACHAMP!|こ|
+Here you are!|Thank you!
+GOLDUCK will be|sent to HADEN.
+Byeーbye, GOLDUCK!
+HADEN sent over ONIX.
+Take good care of ONIX!
+What?|ONIX is evolving!
+Congratulations! Your ONIX|evolved into STEELIX!|こ|
+Here you are!|Thank you!
+RAICHU will be|sent to SURGE.
+Byeーbye, RAICHU!
+SURGE sent over ELECTABUZZ.
+Take good care of ELECTABUZZ!
+What?|ELECTABUZZ is evolving!
+Congratulations! Your ELECTABUZZ|evolved into ELECTIVIRE!|こ|
+Here you are!|Thank you!
+VENONAT will be|sent to NORMA.
+Byeーbye, VENONAT!
+NORMA sent over SCYTHER.
+Take good care of SCYTHER!
+What?|SCYTHER is evolving!
+Congratulations! Your SCYTHER|evolved into SCIZOR!|こ|
+Here you are!|Thank you!
+PONYTA will be|sent to ELYSSA.
+Byeーbye, PONYTA!
+ELYSSA sent over SEADRA.
+Take good care of SEADRA!
+What?|SEADRA is evolving!
+Congratulations! Your SEADRA|evolved into KINGDRA!|こ|
+Here you are!|Thank you!
+RELICANTH will be|sent to BROCK.
+Byeーbye, RELICANTH!
+BROCK sent over GRAVELER.
+Take good care of GRAVELER!
+What?|GRAVELER is evolving!
+Congratulations! Your GRAVELER|evolved into GOLEM!|こ|
+Here you are!|Thank you!
+GYARADOS will be|sent to MISTY.
+Byeーbye, GYARADOS!
+MISTY sent over POLIWHIRL.
+Take good care of POLIWHIRL!
+What?|POLIWHIRL is evolving!
+Congratulations! Your POLIWHIRL|evolved into POLITOED!|こ|
+Here you are!|Thank you!
+VULPIX will be|sent to CLIFTON.
+Byeーbye, VULPIX!
+CLIFTON sent over MAGMAR.
+Take good care of MAGMAR!
+What?|MAGMAR is evolving!
+Congratulations! Your MAGMAR|evolved into MAGMORTAR!|こ|
+Here you are!|Thank you!
+HAUNTER will be|sent to ELI.
+Byeーbye, HAUNTER!
+ELI sent over DUSCLOPS.
+Take good care of DUSCLOPS!
+What?|DUSCLOPS is evolving!
+Congratulations! Your DUSCLOPS|evolved into DUSKNOIR!|こ|
+Here you are!|Thank you!
+GRAVELER will be|sent to FLINT.
+Byeーbye, GRAVELER!
+FLINT sent over GRAVELER.
+Take good care of GRAVELER!
+What?|GRAVELER is evolving!
+Congratulations! Your GRAVELER|evolved into GOLEM!|こ|
+Here you are!|Thank you!
+CLAMPERL will be|sent to NIA.
+Byeーbye, CLAMPERL!
+NIA sent over CLAMPERL.
+Take good care of CLAMPERL!
+What?|CLAMPERL is evolving!
+Congratulations! Your CLAMPERL|evolved into GOREBYSS!|こ|
+Here you are!|Thank you!
+CLAMPERL will be|sent to FINN.
+Byeーbye, CLAMPERL!
+FINN sent over CLAMPERL.
+Take good care of CLAMPERL!
+What?|CLAMPERL is evolving!
+Congratulations! Your CLAMPERL|evolved into HUNTAIL!|こ|
+Here you are!|Thank you!
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should new software|preserve PORYGON\'s memories?
+CHECK 2: Should untested code|overwrite safety checks?
+Safety check failed.|Installation cancelled.|Your PORYGON and its UPGRADE|have not been changed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should new software|preserve PORYGON\'s memories?
+CHECK 2: Should untested code|overwrite safety checks?
+CHECK 3: Should PORYGON learn|from its own experiences?
+All checks passed!|Installing UPGRADE...
+MACHINE sent over PORYGON2.
+Take good care of PORYGON2!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should new software|preserve PORYGON\'s memories?
+CHECK 2: Should untested code|overwrite safety checks?
+CHECK 3: Should PORYGON learn|from its own experiences?
+All checks passed!|Installing UPGRADE...
+MACHINE sent over PORYGON2.
+Take good care of PORYGON2!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should new software|preserve PORYGON\'s memories?
+CHECK 2: Should untested code|overwrite safety checks?
+Safety check failed.|Installation cancelled.|Your PORYGON and its UPGRADE|have not been changed.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should a patch verify|its data before installation?
+CHECK 2: Should corrupted data|be treated as valid instructions?
+CHECK 3: Should an update keep|the system\'s behavior stable?
+Configuration accepted by disc.|Installing new software...
+MACHINE sent over PORYGONーZ.
+Take good care of PORYGONーZ!
+Upgrade complete!|Your partner is now PORYGONーZ!|Its memories remain intact.|The software has been installed.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should a patch verify|its data before installation?
+CHECK 2: Should corrupted data|be treated as valid instructions?
+CHECK 3: Should an update keep|the system\'s behavior stable?
+Configuration rejected by disc.|Installation cancelled.|Your partner and its held disc|have not been changed.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should a patch verify|its data before installation?
+CHECK 2: Should corrupted data|be treated as valid instructions?
+CHECK 3: Should an update keep|the system\'s behavior stable?
+Configuration accepted by disc.|Installing new software...
+MACHINE sent over PORYGON3.
+Take good care of PORYGON3!
+Upgrade complete!|Your partner is now PORYGON3!|Its memories remain intact.|The software has been installed.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+PORYGON upgrade terminal online.|Begin an upgrade?|Select a compatible POKひMON.|Three checks must pass first.
+CHECK 1: Should a patch verify|its data before installation?
+CHECK 2: Should corrupted data|be treated as valid instructions?
+CHECK 3: Should an update keep|the system\'s behavior stable?
+Configuration rejected by disc.|Installation cancelled.|Your partner and its held disc|have not been changed.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+My SLOWPOKE loves this beach.|It could sit here all day!|It\'s holding a KING\'S ROCK.|A trade will make it SLOWKING!
+Hi!|Do you have a NIDORAN♂?|Want to trade it for my|SLOWPOKE?
+NIDORAN♂ will be|sent to SAIGE.
+Byeーbye, NIDORAN♂!
+SAIGE sent over SLOWPOKE.
+Take good care of SLOWPOKE!
+What?|SLOWPOKE is evolving!
+Congratulations! Your SLOWPOKE|evolved into SLOWKING!|こ|
+Thank you for the trade!|From a daydreaming SLOWPOKE|to a wise SLOWKING!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Hey, kid!|You\'ve got a RAICHU with real|voltage, right?|I\'ve got an ELECTABUZZ holding|an ELECTIRIZER.|Trade me your RAICHU for it?
+RAICHU will be|sent to SURGE.
+Byeーbye, RAICHU!
+SURGE sent over ELECTABUZZ.
+Take good care of ELECTABUZZ!
+What?|ELECTABUZZ is evolving!
+Congratulations! Your ELECTABUZZ|evolved into ELECTIVIRE!|こ|
+Hah!|Now that\'s a power surge!|Trading with an ELECTIRIZER|turned ELECTABUZZ into ELECTIVIRE!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+So many dragons make their home|in these waters!|My SEADRA holds a DRAGON SCALE.|If traded, it becomes KINGDRA!|I\'d love a PONYTA to keep me|company when I\'m back on land.
+Hi!|Do you have a PONYTA?|Want to trade it for my|SEADRA?
+PONYTA will be|sent to ELYSSA.
+Byeーbye, PONYTA!
+ELYSSA sent over SEADRA.
+Take good care of SEADRA!
+What?|SEADRA is evolving!
+Congratulations! Your SEADRA|evolved into KINGDRA!|こ|
+Thank you for the PONYTA!|That DRAGON SCALE helped SEADRA|become a dragon of its own!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+NIA: You beat our team!|I have another CLAMPERL holding|a DEEP SEA SCALE.|Trade me a CLAMPERL, and mine|will become GOREBYSS for you!
+Hi!|Do you have a CLAMPERL?|Want to trade it for my|CLAMPERL?
+CLAMPERL will be|sent to NIA.
+Byeーbye, CLAMPERL!
+NIA sent over CLAMPERL.
+Take good care of CLAMPERL!
+What?|CLAMPERL is evolving!
+Congratulations! Your CLAMPERL|evolved into GOREBYSS!|こ|
+NIA: There it is! GOREBYSS!|Thanks for the CLAMPERL.|I\'ll take good care of it!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+FINN: You beat our team!|I have another CLAMPERL holding|a DEEP SEA TOOTH.|Trade me a CLAMPERL, and mine|will become HUNTAIL for you!
+Hi!|Do you have a CLAMPERL?|Want to trade it for my|CLAMPERL?
+CLAMPERL will be|sent to FINN.
+Byeーbye, CLAMPERL!
+FINN sent over CLAMPERL.
+Take good care of CLAMPERL!
+What?|CLAMPERL is evolving!
+Congratulations! Your CLAMPERL|evolved into HUNTAIL!|こ|
+FINN: There it is! HUNTAIL!|Thanks for the CLAMPERL.|I\'ll take good care of it!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+I care for a DUSCLOPS here.|It holds a REAPER CLOTH.|I\'d like to see it evolve!
+Hi!|Do you have a HAUNTER?|Want to trade it for my|DUSCLOPS?
+HAUNTER will be|sent to ELI.
+Byeーbye, HAUNTER!
+ELI sent over DUSCLOPS.
+Take good care of DUSCLOPS!
+What?|DUSCLOPS is evolving!
+Congratulations! Your DUSCLOPS|evolved into DUSKNOIR!|こ|
+Thanks, you\'re a pal!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+I\'m looking for the POKひMON|KADABRA!|Wanna trade one for my|HAUNTER?
+KADABRA will be|sent to REYLEY.
+Byeーbye, KADABRA!
+REYLEY sent over HAUNTER.
+Take good care of HAUNTER!
+What?|HAUNTER is evolving!
+Congratulations! Your HAUNTER|evolved into GENGAR!|こ|
+Hey, thanks!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Now watch closely.|Some evolution happens through|interaction between TRAINERS.|Will you trade your ancient|POKひMON for my GRAVELER?
+RELICANTH will be|sent to BROCK.
+Byeーbye, RELICANTH!
+BROCK sent over GRAVELER.
+Take good care of GRAVELER!
+What?|GRAVELER is evolving!
+Congratulations! Your GRAVELER|evolved into GOLEM!|こ|
+There it is...|GOLEM.|That\'s trade evolution.|A change brought about by|exchange between TRAINERS.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Our lab developed the PROTECTOR,|a tough suit of protective gear.|My RHYDON is holding one.|Trading it helps that protection|become part of its new body.|It evolves into RHYPERIOR!
+I\'m looking for the POKひMON|RHYHORN!|Wanna trade one for my|RHYDON?
+RHYHORN will be|sent to GARETT.
+Byeーbye, RHYHORN!
+GARETT sent over RHYDON.
+Take good care of RHYDON!
+What?|RHYDON is evolving!
+Congratulations! Your RHYDON|evolved into RHYPERIOR!|こ|
+RHYDON made our invention|part of itself!|Take good care of RHYPERIOR.|There\'s more to it than armor!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Ready to trade GYARADOS?|Some POKひMON evolve when traded|while holding something natural.|My POLIWHIRL is holding a|KING\'S ROCK.|Will you trade GYARADOS|for my POLIWHIRL?
+GYARADOS will be|sent to MISTY.
+Byeーbye, GYARADOS!
+MISTY sent over POLIWHIRL.
+Take good care of POLIWHIRL!
+What?|POLIWHIRL is evolving!
+Congratulations! Your POLIWHIRL|evolved into POLITOED!|こ|
+There it is...|POLITOED!|A POLIWHIRL traded with a|KING\'S ROCK can change into|something completely new.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+We developed the MAGMARIZER here|to store concentrated heat.|My MAGMAR is holding one.|Trade it, and that stored heat|helps it become MAGMORTAR!
+Hi!|Do you have a VULPIX?|Want to trade it for my|MAGMAR?
+VULPIX will be|sent to CLIFTON.
+Byeーbye, VULPIX!
+CLIFTON sent over MAGMAR.
+Take good care of MAGMAR!
+What?|MAGMAR is evolving!
+Congratulations! Your MAGMAR|evolved into MAGMORTAR!|こ|
+The MAGMARIZER is our way of|giving evolution a little spark.|Please take good care of your|MAGMORTAR!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Our lab developed the METAL COAT,|a special metallic coating.|My SCYTHER is holding a sample.|During a trade, it helps its shell|harden into SCIZOR\'s armor!
+Hi!|Do you have a VENONAT?|Want to trade it for my|SCYTHER?
+VENONAT will be|sent to NORMA.
+Byeーbye, VENONAT!
+NORMA sent over SCYTHER.
+Take good care of SCYTHER!
+What?|SCYTHER is evolving!
+Congratulations! Your SCYTHER|evolved into SCIZOR!|こ|
+SCIZOR\'s armor shows what our|METAL COAT can help it become.|I\'d love to hear how it gets on|during your travels!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+We developed the METAL COAT|right here in this lab.|My ONIX is holding a sample.|Trading it lets the coating bond|with its rocky body.|That\'s how it becomes STEELIX!
+I\'m looking for the POKひMON|GOLDUCK!|Wanna trade one for my|ONIX?
+GOLDUCK will be|sent to HADEN.
+Byeーbye, GOLDUCK!
+HADEN sent over ONIX.
+Take good care of ONIX!
+What?|ONIX is evolving!
+Congratulations! Your ONIX|evolved into STEELIX!|こ|
+From rock to steel!|Our METAL COAT helped that along.|Look after STEELIX for me!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+Hello, there! Do you happen to|have a HAUNTER?|Would you agree to a trade for|my KADABRA?
+HAUNTER will be|sent to DONTAE.
+Byeーbye, HAUNTER!
+DONTAE sent over KADABRA.
+Take good care of KADABRA!
+What?|KADABRA is evolving!
+Congratulations! Your KADABRA|evolved into ALAKAZAM!|こ|
+Thanks!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+I\'m looking for the POKひMON|NIDORINO!|Wanna trade one for my|MACHOKE?
+NIDORINO will be|sent to TURNER.
+Byeーbye, NIDORINO!
+TURNER sent over MACHOKE.
+Take good care of MACHOKE!
+What?|MACHOKE is evolving!
+Congratulations! Your MACHOKE|evolved into MACHAMP!|こ|
+Hey, thanks!
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.
+SAFARI ZONE
+These GRAVELER are from ALOLA.|Trading makes them evolve!|Catch one here, and we can swap|our Alolan GRAVELER.|You\'ll receive an Alolan GOLEM!
+Hi!|Do you have a GRAVELER?|Want to trade it for my|GRAVELER?
+GRAVELER will be|sent to FLINT.
+Byeーbye, GRAVELER!
+FLINT sent over GRAVELER.
+Take good care of GRAVELER!
+What?|GRAVELER is evolving!
+Congratulations! Your GRAVELER|evolved into GOLEM!|こ|
+There it is! An Alolan GOLEM!|Thanks for helping my research.
+Upgrade complete!|Your partner is now PORYGON2!|Its memories remain intact.|The software has been installed.

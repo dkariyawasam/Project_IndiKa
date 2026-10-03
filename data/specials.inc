@@ -273,6 +273,9 @@ gSpecials::
 	def_special GetInGameTradeSpeciesInfo
 	def_special CreateInGameTradePokemon
 	def_special DoInGameTradeScene
+	def_special GetPorygonTerminalTarget
+	def_special CanUpgradePorygon
+	def_special UpgradePorygonAtTerminal
 	def_special DoGeneratedPokemonReceiveScene
 	def_special GetTradeSpecies
 	def_special NullFieldSpecial  @ Misc Hoenn specials
@@ -464,4 +467,5 @@ gSpecials::
 	def_special BufferLeagueTerminalStatus
 	def_special RecordRocketLeagueCoins
 	def_special PlayFieldItemAnimation
+	def_special OpenRocketCoinShop
 gSpecialsEnd::

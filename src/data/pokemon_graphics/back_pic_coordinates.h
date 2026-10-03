@@ -1173,6 +1173,11 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(56, 48),
         .y_offset = 10,
     },
+    [SPECIES_PORYGON3] =
+    {
+        .size = MON_COORDS_SIZE(56, 48),
+        .y_offset = 10,
+    },
     [SPECIES_STANTLER] =
     {
         .size = MON_COORDS_SIZE(56, 64),

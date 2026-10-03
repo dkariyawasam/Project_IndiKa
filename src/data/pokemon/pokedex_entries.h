@@ -3067,6 +3067,19 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
+    [NATIONAL_DEX_PORYGON3] =
+    {
+        .categoryName = _("VIRTUAL"),
+        .height = 6,
+        .weight = 325,
+        .description = gPorygon2PokedexText,
+        .unusedDescription = gPorygon2PokedexTextUnused,
+        .pokemonScale = 320,
+        .pokemonOffset = 15,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
     [NATIONAL_DEX_STANTLER] =
     {
         .categoryName = _("BIG HORN"),

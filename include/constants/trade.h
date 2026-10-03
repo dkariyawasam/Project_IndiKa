@@ -12,15 +12,20 @@
 // In-game Trade IDs
 #define INGAME_TRADE_HAUNTER   0
 #define INGAME_TRADE_KADABRA   1
-#define INGAME_TRADE_NIDORAN   2  // M or F depending on version
-#define INGAME_TRADE_FARFETCHD 3
-#define INGAME_TRADE_NIDORINOA 4  // Nidorino or Nidorina depending on version
-#define INGAME_TRADE_LICKITUNG 5
+#define INGAME_TRADE_SLOWPOKE   2
+#define INGAME_TRADE_RHYDON 3
+#define INGAME_TRADE_MACHOKE   4
+#define INGAME_TRADE_ONIX 5
 #define INGAME_TRADE_ELECTABUZZ 6
-#define INGAME_TRADE_TANGELA   7
-#define INGAME_TRADE_SEEL      8
+#define INGAME_TRADE_SCYTHER   7
+#define INGAME_TRADE_SEADRA      8
 #define INGAME_TRADE_BROCK_GRAVELER 9
 #define INGAME_TRADE_MISTY_POLIWHIRL 10
+#define INGAME_TRADE_MAGMAR 11
+#define INGAME_TRADE_DUSCLOPS 12
+#define INGAME_TRADE_ALOLAN_GRAVELER 13
+#define INGAME_TRADE_GOREBYSS 14
+#define INGAME_TRADE_HUNTAIL 15
 
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon

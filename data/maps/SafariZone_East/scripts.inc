@@ -8,3 +8,37 @@ SafariZone_East_EventScript_RestHouseSign::
 SafariZone_East_EventScript_AreaSign::
 	msgbox SafariZone_East_Text_AreaSign, MSGBOX_SIGN
 	end
+
+SafariZone_East_EventScript_GravelerTrade::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_ALOLAN_GRAVELER
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_ALOLAN_GRAVELER_TRADE, SafariZone_East_EventScript_GravelerTrade_Done
+	msgbox SafariZone_East_Text_GravelerTradeIntro, MSGBOX_DEFAULT
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SafariZone_East_EventScript_GravelerTrade_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, SafariZone_East_EventScript_GravelerTrade_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, SafariZone_East_EventScript_GravelerTrade_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_ALOLAN_GRAVELER_TRADE
+	msgbox SafariZone_East_Text_GravelerTradeThanks
+	release
+	end
+
+SafariZone_East_EventScript_GravelerTrade_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+SafariZone_East_EventScript_GravelerTrade_WrongMon::
+	msgbox SafariZone_East_Text_GravelerTradeWrongMon
+	release
+	end
+
+SafariZone_East_EventScript_GravelerTrade_Done::
+	msgbox SafariZone_East_Text_GravelerTradeDone
+	release
+	end

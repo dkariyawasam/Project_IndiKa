@@ -1348,6 +1348,12 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_FROZEN: // check being frozen
+            // Glacial Shell handles its own thaw, without a random thaw/refreeze.
+            if (gCurrentMove == MOVE_GLACIAL_SHELL)
+            {
+                gBattleStruct->atkCancellerTracker++;
+                break;
+            }
             if (gBattleMons[gBattlerAttacker].status1 & STATUS1_FREEZE)
             {
                 if (Random() % 5)

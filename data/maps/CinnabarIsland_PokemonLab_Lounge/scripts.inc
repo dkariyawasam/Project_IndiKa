@@ -1,22 +1,51 @@
 CinnabarIsland_PokemonLab_Lounge_MapScripts::
 	.byte 0
 
-CinnabarIsland_PokemonLab_Lounge_EventScript_Scientist::
-	msgbox CinnabarIsland_PokemonLab_Lounge_Text_FoundFossilInMtMoon, MSGBOX_NPC
+CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_MAGMAR
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_MAGMAR_TRADE, CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Done
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_MagmarTrade
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_MAGMAR_TRADE
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_MagmarResult
+	release
 	end
 
-CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton::
-	msgbox CinnabarIsland_PokemonLab_Lounge_Text_ElectricTradeMoved, MSGBOX_NPC
+CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
 	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_WrongMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Done::
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_MagmarResearch
+	release
+	end
+
 
 CinnabarIsland_PokemonLab_Lounge_EventScript_Norma::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_TANGELA
+	setvar VAR_0x8008, INGAME_TRADE_SCYTHER
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
 	goto_if_set FLAG_DID_TANGENY_TRADE, CinnabarIsland_PokemonLab_Lounge_EventScript_NormaAlreadyTraded
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_ScytherTrade
 	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_Lounge_EventScript_NormaDeclineTrade
 	special ChoosePartyMon
@@ -32,7 +61,7 @@ CinnabarIsland_PokemonLab_Lounge_EventScript_Norma::
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
 	waitstate
-	msgbox Trade_Text_ThanksYoureAPal
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_ScytherResult
 	setflag FLAG_DID_TANGENY_TRADE
 	release
 	end
@@ -49,6 +78,41 @@ CinnabarIsland_PokemonLab_Lounge_EventScript_NormaNotRequestedMon::
 	end
 
 CinnabarIsland_PokemonLab_Lounge_EventScript_NormaAlreadyTraded::
-	msgbox Trade_Text_HowIsMyOldMon
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_ScytherResearch
+	release
+	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_Scientist::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_ONIX
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_MARC_TRADE, CinnabarIsland_PokemonLab_Lounge_EventScript_OnixAlreadyTraded
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_OnixTrade
+	msgbox Trade_Text_LookingForMonWannaTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_Lounge_EventScript_OnixDeclineTrade
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, CinnabarIsland_PokemonLab_Lounge_EventScript_OnixDeclineTrade
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, CinnabarIsland_PokemonLab_Lounge_EventScript_OnixNotRequestedMon
+	call EventScript_DoInGameTrade
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_OnixResult
+	setflag FLAG_DID_MARC_TRADE
+	release
+	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_OnixDeclineTrade::
+	msgbox Trade_Text_AwwOhWell
+	release
+	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_OnixNotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_WhatThatsNoMon
+	release
+	end
+
+CinnabarIsland_PokemonLab_Lounge_EventScript_OnixAlreadyTraded::
+	msgbox CinnabarIsland_PokemonLab_Lounge_Text_OnixResearch
 	release
 	end

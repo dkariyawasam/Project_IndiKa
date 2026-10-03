@@ -4741,4 +4741,27 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+    [MOVE_SCALDING_DIVE] =
+    {
+        .effect = EFFECT_SCALDING_DIVE,
+        .power = 70,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+    },
+    [MOVE_GLACIAL_SHELL] =
+    {
+        .effect = EFFECT_GLACIAL_SHELL,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
 };

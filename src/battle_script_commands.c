@@ -1073,6 +1073,8 @@ static void Cmd_accuracycheck(void)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if (WEATHER_HAS_EFFECT && gBattleMons[gBattlerTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & B_WEATHER_SANDSTORM)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
+        if (WEATHER_HAS_EFFECT && gBattleMons[gBattlerTarget].ability == ABILITY_SNOW_CLOAK && gBattleWeather & B_WEATHER_HAIL)
+            calc = (calc * 80) / 100;
         if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && IS_TYPE_PHYSICAL(type))
             calc = (calc * 80) / 100; // 1.2 hustle loss
 
@@ -1192,6 +1194,11 @@ static void Cmd_critcalc(void)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBattlerAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD);
+
+    // A wounded target exposes openings for Osscythe's scythes.
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_REAPERS_EDGE
+     && gBattleMons[gBattlerTarget].hp <= gBattleMons[gBattlerTarget].maxHP / 2)
+        critChance += 2;
 
     if (critChance >= ARRAY_COUNT(sCriticalHitChance))
         critChance = ARRAY_COUNT(sCriticalHitChance) - 1;
@@ -6246,6 +6253,26 @@ static void Cmd_various(void)
             gBattleCommunication[5] = 1;
         }
         break;
+    case VARIOUS_GLACIAL_SHELL:
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+        if (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE)
+        {
+            gBattleMons[gActiveBattler].status1 &= ~STATUS1_FREEZE;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        }
+        else if (gBattleMons[gActiveBattler].status1 == 0)
+        {
+            gBattleMons[gActiveBattler].status1 = STATUS1_FREEZE;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+        }
+        if (gBattleCommunication[MULTISTRING_CHOOSER] != 0)
+        {
+            gEffectBattler = gActiveBattler;
+            BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0,
+                sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+            MarkBattlerForControllerExec(gActiveBattler);
+        }
+        break;
     case VARIOUS_WAIT_FANFARE:
         if (!IsFanfareTaskInactive())
             return;
@@ -7287,6 +7314,7 @@ static void Cmd_weatherdamage(void)
         if (gBattleWeather & B_WEATHER_HAIL)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_CLOAK
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {

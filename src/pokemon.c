@@ -337,6 +337,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(PHANPY),
     SPECIES_TO_HOENN(DONPHAN),
     SPECIES_TO_HOENN(PORYGON2),
+    SPECIES_TO_HOENN(PORYGON3),
     SPECIES_TO_HOENN(STANTLER),
     SPECIES_TO_HOENN(SMEARGLE),
     SPECIES_TO_HOENN(TYROGUE),
@@ -691,6 +692,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(PHANPY),
     SPECIES_TO_NATIONAL(DONPHAN),
     SPECIES_TO_NATIONAL(PORYGON2),
+    SPECIES_TO_NATIONAL(PORYGON3),
     SPECIES_TO_NATIONAL(STANTLER),
     SPECIES_TO_NATIONAL(SMEARGLE),
     SPECIES_TO_NATIONAL(TYROGUE),
@@ -1194,6 +1196,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(HOUNDOUR),
     HOENN_TO_NATIONAL(HOUNDOOM),
     HOENN_TO_NATIONAL(PORYGON2),
+    HOENN_TO_NATIONAL(PORYGON3),
     HOENN_TO_NATIONAL(STANTLER),
     HOENN_TO_NATIONAL(SMEARGLE),
     HOENN_TO_NATIONAL(TYROGUE),
@@ -2523,7 +2526,28 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             damage = (15 * damage) / 10;
     }
 
-    return damage + 2;
+    damage += 2;
+    // Check HP before this hit; a hit crossing half HP still meets the condition.
+    if (defender->ability == ABILITY_INVISIBLE_WALL
+     && defender->hp > defender->maxHP / 2
+     && IS_TYPE_PHYSICAL(type))
+    {
+        damage /= 2;
+        if (damage == 0)
+            damage = 1;
+    }
+
+    // Both reconstructed shell shapes cushion contact attacks equally.
+    if ((defender->ability == ABILITY_PLATE_ARMOR
+      || defender->ability == ABILITY_SPIRAL_ARMOR)
+     && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
+    {
+        damage = damage * 3 / 4;
+        if (damage == 0)
+            damage = 1;
+    }
+
+    return damage;
 }
 
 u8 CountAliveMonsInBattle(u8 caseId)

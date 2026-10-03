@@ -77,6 +77,13 @@ static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
 static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
 static const u8 sAirLockDescription[] = _("Negates weather effects.");
 
+static const u8 sInvisibleWallDescription[] = _("Halves physical hits above half HP.");
+static const u8 sReapersEdgeDescription[] = _("More criticals on weakened foes.");
+
+static const u8 sSnowCloakDescription[] = _("Raises evasion in hail.");
+
+static const u8 sContactArmorDescription[] = _("Cuts contact damage by 25%.");
+
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
     [ABILITY_NONE] = sNoneDescription,
@@ -157,6 +164,11 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SHELL_ARMOR] = sShellArmorDescription,
     [ABILITY_CACOPHONY] = sCacophonyDescription,
     [ABILITY_AIR_LOCK] = sAirLockDescription,
+    [ABILITY_INVISIBLE_WALL] = sInvisibleWallDescription,
+    [ABILITY_REAPERS_EDGE] = sReapersEdgeDescription,
+    [ABILITY_SNOW_CLOAK] = sSnowCloakDescription,
+    [ABILITY_PLATE_ARMOR] = sContactArmorDescription,
+    [ABILITY_SPIRAL_ARMOR] = sContactArmorDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -239,4 +251,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHELL_ARMOR] = _("SHELL ARMOR"),
     [ABILITY_CACOPHONY] = _("CACOPHONY"),
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
+    [ABILITY_INVISIBLE_WALL] = _("INVIS. WALL"),
+    [ABILITY_REAPERS_EDGE] = _("REAPER EDGE"),
+    [ABILITY_SNOW_CLOAK] = _("SNOW CLOAK"),
+    [ABILITY_PLATE_ARMOR] = _("PLATE ARMOR"),
+    [ABILITY_SPIRAL_ARMOR] = _("SPIRAL ARMOR"),
 };

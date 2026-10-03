@@ -236,3 +236,63 @@ CinnabarIsland_Gym_Text_CorrectGoOnThrough::
 CinnabarIsland_Gym_Text_SorryBadCall::
     .string "Sorry!\n"
     .string "Bad call!$"
+
+CinnabarIsland_Gym_Text_UpgradeOffer::
+	.string "PORYGON upgrade terminal online.\n"
+	.string "Begin an upgrade?\p"
+	.string "Select a compatible POKéMON.\n"
+	.string "Three checks must pass first.$"
+
+CinnabarIsland_Gym_Text_UpgradeQuestion1::
+	.string "CHECK 1: Should new software\n"
+	.string "preserve PORYGON's memories?$"
+
+CinnabarIsland_Gym_Text_UpgradeQuestion2::
+	.string "CHECK 2: Should untested code\n"
+	.string "overwrite safety checks?$"
+
+CinnabarIsland_Gym_Text_UpgradeQuestion3::
+	.string "CHECK 3: Should PORYGON learn\n"
+	.string "from its own experiences?$"
+
+CinnabarIsland_Gym_Text_UpgradeInstalling::
+	.string "All checks passed!\n"
+	.string "Installing UPGRADE...$"
+
+CinnabarIsland_Gym_Text_UpgradeComplete::
+	.string "Upgrade complete!\n"
+	.string "Your partner is now {STR_VAR_1}!\p"
+	.string "Its memories remain intact.\n"
+	.string "The software has been installed.$"
+
+CinnabarIsland_Gym_Text_UpgradeInvalid::
+	.string "No compatible partner selected.\n"
+	.string "Check its held software item.$"
+
+CinnabarIsland_Gym_Text_UpgradeFailed::
+	.string "Safety check failed.\n"
+	.string "Installation cancelled.\p"
+	.string "Your PORYGON and its UPGRADE\n"
+	.string "have not been changed.$"
+
+CinnabarIsland_Gym_Text_DiscQuestion1::
+	.string "CHECK 1: Should a patch verify\n"
+	.string "its data before installation?$"
+
+CinnabarIsland_Gym_Text_DiscQuestion2::
+	.string "CHECK 2: Should corrupted data\n"
+	.string "be treated as valid instructions?$"
+
+CinnabarIsland_Gym_Text_DiscQuestion3::
+	.string "CHECK 3: Should an update keep\n"
+	.string "the system's behavior stable?$"
+
+CinnabarIsland_Gym_Text_DiscInstalling::
+	.string "Configuration accepted by disc.\n"
+	.string "Installing new software...$"
+
+CinnabarIsland_Gym_Text_DiscRejected::
+	.string "Configuration rejected by disc.\n"
+	.string "Installation cancelled.\p"
+	.string "Your partner and its held disc\n"
+	.string "have not been changed.$"

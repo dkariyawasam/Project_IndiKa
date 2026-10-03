@@ -233,6 +233,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_DRAGON_FANG]    = {gItemIcon_DragonFang, gItemIconPalette_DragonFang},
     [ITEM_SILK_SCARF]     = {gItemIcon_SilkScarf, gItemIconPalette_SilkScarf},
     [ITEM_UP_GRADE]       = {gItemIcon_UpGrade, gItemIconPalette_UpGrade},
+    [ITEM_PATCH_DISC]       = {gItemIcon_UpGrade, gItemIconPalette_UpGrade},
     [ITEM_SHELL_BELL]     = {gItemIcon_ShellBell, gItemIconPalette_Shell},
     [ITEM_SEA_INCENSE]    = {gItemIcon_SeaIncense, gItemIconPalette_SeaIncense},
     [ITEM_LAX_INCENSE]    = {gItemIcon_LaxIncense, gItemIconPalette_LaxIncense},

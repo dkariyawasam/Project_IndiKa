@@ -8,3 +8,8 @@ Route18_EastEntrance_2F_Text_PeopleSwimming::
     .string "to show…\p"
     .string "There are people swimming.$"
 
+
+Route18_EastEntrance_2F_Text_LabTrades::
+    .string "The CINNABAR LAB studies items\n"
+    .string "that change POKéMON during trades.\p"
+    .string "Try talking to the people there!$"

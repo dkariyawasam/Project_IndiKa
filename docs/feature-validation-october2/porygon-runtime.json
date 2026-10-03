@@ -1,0 +1,302 @@
+[
+  {
+    "case": "upgrade_correct",
+    "before": {
+      "name": "PORYGON",
+      "species": 137,
+      "item": 216,
+      "level": 30,
+      "hp": 84,
+      "maxHP": 84,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        159
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        30
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 0,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        159
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        30
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  },
+  {
+    "case": "upgrade_wrong",
+    "before": {
+      "name": "PORYGON",
+      "species": 137,
+      "item": 216,
+      "level": 30,
+      "hp": 84,
+      "maxHP": 84,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        159
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        30
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON",
+      "species": 137,
+      "item": 216,
+      "level": 30,
+      "hp": 84,
+      "maxHP": 84,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        159
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        30
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  },
+  {
+    "case": "dubious_wrong",
+    "before": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 231,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON-Z",
+      "species": 449,
+      "item": 0,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  },
+  {
+    "case": "dubious_correct",
+    "before": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 231,
+      "level": 30,
+      "hp": 97,
+      "maxHP": 97,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 231,
+      "level": 30,
+      "hp": 97,
+      "maxHP": 97,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  },
+  {
+    "case": "patch_correct",
+    "before": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 366,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON3",
+      "species": 491,
+      "item": 0,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  },
+  {
+    "case": "patch_wrong",
+    "before": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 366,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "after": {
+      "name": "PORYGON2",
+      "species": 233,
+      "item": 366,
+      "level": 30,
+      "hp": 96,
+      "maxHP": 96,
+      "friendship": 70,
+      "moves": [
+        97,
+        60,
+        105,
+        111
+      ],
+      "pp": [
+        30,
+        20,
+        20,
+        40
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    "passed": true
+  }
+]

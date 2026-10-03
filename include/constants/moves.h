@@ -370,7 +370,10 @@
 
 #define MOVE_DOUBLE_HIT 364
 
-#define MOVES_COUNT 365
+#define MOVE_SCALDING_DIVE 365
+#define MOVE_GLACIAL_SHELL 366
+
+#define MOVES_COUNT 367
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

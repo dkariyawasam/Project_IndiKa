@@ -343,6 +343,14 @@
     "Route25_SeaCottage"
   ],
   "reserved_maps": {
+    "PokemonLeague_LancesRoom": {
+      "id": "MAP_POKEMON_LEAGUE_LANCES_ROOM",
+      "redirect": "IndigoPlateau_PokemonCenter_1F"
+    },
+    "PokemonLeague_LoreleisRoom": {
+      "id": "MAP_POKEMON_LEAGUE_LORELEIS_ROOM",
+      "redirect": "IndigoPlateau_PokemonCenter_1F"
+    },
     "Route12_FishingHouse": {
       "id": "MAP_ROUTE12_FISHING_HOUSE",
       "redirect": "Route12"
@@ -362,14 +370,6 @@
     "SeafoamIslands_B3F": {
       "id": "MAP_SEAFOAM_ISLANDS_B3F",
       "redirect": "SeafoamIslands_1F"
-    },
-    "PokemonLeague_LoreleisRoom": {
-      "id": "MAP_POKEMON_LEAGUE_LORELEIS_ROOM",
-      "redirect": "IndigoPlateau_PokemonCenter_1F"
-    },
-    "PokemonLeague_LancesRoom": {
-      "id": "MAP_POKEMON_LEAGUE_LANCES_ROOM",
-      "redirect": "IndigoPlateau_PokemonCenter_1F"
     }
   }
 }

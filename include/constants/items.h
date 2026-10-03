@@ -438,7 +438,9 @@
 #define ITEM_EXP_CANDY_L 364
 #define ITEM_EXP_CANDY_XL 365
 
-#define ITEMS_COUNT 366
+#define ITEM_PATCH_DISC 366
+
+#define ITEMS_COUNT 367
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF

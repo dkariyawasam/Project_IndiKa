@@ -1677,6 +1677,12 @@ static const u16 sTutorLearnsets[] =
                        | TUTOR(MOVE_THUNDER_WAVE)
                        | TUTOR(MOVE_SUBSTITUTE),
 
+    [SPECIES_PORYGON3] = TUTOR(MOVE_DOUBLE_EDGE)
+                       | TUTOR(MOVE_MIMIC)
+                       | TUTOR(MOVE_DREAM_EATER)
+                       | TUTOR(MOVE_THUNDER_WAVE)
+                       | TUTOR(MOVE_SUBSTITUTE),
+
     [SPECIES_STANTLER] = TUTOR(MOVE_BODY_SLAM)
                        | TUTOR(MOVE_DOUBLE_EDGE)
                        | TUTOR(MOVE_MIMIC)

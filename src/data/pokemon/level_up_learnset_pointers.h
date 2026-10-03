@@ -233,6 +233,7 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_PHANPY] = sPhanpyLevelUpLearnset,
     [SPECIES_DONPHAN] = sDonphanLevelUpLearnset,
     [SPECIES_PORYGON2] = sPorygon2LevelUpLearnset,
+    [SPECIES_PORYGON3] = sPorygon2LevelUpLearnset,
     [SPECIES_STANTLER] = sStantlerLevelUpLearnset,
     [SPECIES_SMEARGLE] = sSmeargleLevelUpLearnset,
     [SPECIES_TYROGUE] = sTyrogueLevelUpLearnset,

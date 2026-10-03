@@ -385,6 +385,8 @@ gBattleAnims_Moves::
 	.4byte Move_TELEPORT @ RETREAT reuses the escape animation
 	.4byte Move_SHADOW_PUNCH @ RAGE FIST uses the ghostly punching animation
 	.4byte Move_SLAM @ DOUBLE HIT: played for each strike
+	.4byte Move_WATER_PULSE @ SCALDING DIVE
+	.4byte Move_WITHDRAW @ GLACIAL SHELL
 	.4byte Move_COUNT @ sentinel after the final move
 
 	.align 2

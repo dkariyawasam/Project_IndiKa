@@ -9,6 +9,33 @@ struct TrainerNickname
     u8 nickname[POKEMON_NAME_LENGTH + 1];
 };
 
+// Rival partners retain their names across story battles and evolutions.
+static const struct TrainerNickname sRivalNicknames[] = {
+    {SPECIES_BULBASAUR, _("ACE")},
+    {SPECIES_IVYSAUR, _("ACE")},
+    {SPECIES_VENUSAUR, _("ACE")},
+    {SPECIES_CHARMANDER, _("ACE")},
+    {SPECIES_CHARMELEON, _("ACE")},
+    {SPECIES_CHARIZARD, _("ACE")},
+    {SPECIES_SQUIRTLE, _("ACE")},
+    {SPECIES_WARTORTLE, _("ACE")},
+    {SPECIES_BLASTOISE, _("ACE")},
+    {SPECIES_SCYTHER, _("HOTSHOT")},
+    {SPECIES_SCIZOR, _("HOTSHOT")},
+    {SPECIES_AIPOM, _("SLICK")},
+    {SPECIES_AMBIPOM, _("SLICK")},
+    {SPECIES_EEVEE, _("GENIUS")},
+    {SPECIES_ESPEON, _("GENIUS")},
+    {SPECIES_KABUSTAR, _("BOSS")},
+    {SPECIES_KABUKNIGHT, _("BOSS")},
+    {SPECIES_GROWLITHE, _("SHOWOFF")},
+    {SPECIES_ARCANINE, _("SHOWOFF")},
+    {SPECIES_EXEGGCUTE, _("WILDCARD")},
+    {SPECIES_EXEGGUTOR, _("WILDCARD")},
+    {SPECIES_STARYU, _("STARDOM")},
+    {SPECIES_STARMIE, _("STARDOM")},
+};
+
 static const struct TrainerNickname sBrockNicknames[] = {
     {SPECIES_GEODUDE, _("PEBBLE")},
     {SPECIES_GRAVELER, _("PEBBLE")},
@@ -38,6 +65,7 @@ static const struct TrainerNickname sMistyNicknames[] = {
 };
 
 static const struct TrainerNickname sLtSurgeNicknames[] = {
+    {SPECIES_LANTURN, _("SONAR")},
     {SPECIES_TYNAMO, _("TORPEDO")},
     {SPECIES_EELEKTRIK, _("TORPEDO")},
     {SPECIES_EELEKTROSS, _("TORPEDO")},
@@ -56,6 +84,7 @@ static const struct TrainerNickname sLtSurgeNicknames[] = {
 };
 
 static const struct TrainerNickname sErikaNicknames[] = {
+    {SPECIES_ROSERADE, _("BOUQUET")},
     {SPECIES_BELLSPROUT, _("HONEY")},
     {SPECIES_WEEPINBELL, _("HONEY")},
     {SPECIES_VICTREEBEL, _("HONEY")},
@@ -84,6 +113,9 @@ static const struct TrainerNickname sKogaNicknames[] = {
 };
 
 static const struct TrainerNickname sSabrinaNicknames[] = {
+    {SPECIES_RALTS, _("LUCID")},
+    {SPECIES_KIRLIA, _("LUCID")},
+    {SPECIES_GARDEVOIR, _("LUCID")},
     {SPECIES_ABRA, _("SAGE")},
     {SPECIES_KADABRA, _("SAGE")},
     {SPECIES_ALAKAZAM, _("SAGE")},
@@ -123,11 +155,45 @@ static const struct TrainerNickname sGiovanniNicknames[] = {
     {SPECIES_HONCHKROW, _("CAPO")},
 };
 
+// Admins name their partners for deception, command, intrigue and machinery.
+static const struct TrainerNickname sPetrelNicknames[] = {
+    {SPECIES_HYPNO, _("TRANCE")},
+    {SPECIES_SLOWBRO, _("DECOY")},
+    {SPECIES_XATU, _("OMEN")},
+    {SPECIES_EXEGGUTOR, _("TRIPLETAKE")},
+    {SPECIES_ESPEON, _("MIRAGE")},
+    {SPECIES_ALAKAZAM, _("PRESTO")},
+};
+
+static const struct TrainerNickname sArcherNicknames[] = {
+    {SPECIES_CLEFABLE, _("REGENT")},
+    {SPECIES_AZUMARILL, _("ADMIRAL")},
+    {SPECIES_GRANBULL, _("WARDEN")},
+    {SPECIES_MR_MIME, _("AEGIS")},
+    {SPECIES_NINETALES_ALOLAN, _("IVORY")},
+    {SPECIES_SYLVEON, _("SOVEREIGN")},
+};
+
+static const struct TrainerNickname sArianaNicknames[] = {
+    {SPECIES_MUK_ALOLAN, _("VELVET")},
+    {SPECIES_SHIFTRY, _("WHISPER")},
+    {SPECIES_HONCHKROW, _("DONNA")},
+    {SPECIES_HOUNDOOM, _("VENDETTA")},
+    {SPECIES_WEAVILE, _("STILETTO")},
+    {SPECIES_UMBREON, _("ECLIPSE")},
+};
+
+static const struct TrainerNickname sProtonNicknames[] = {
+    {SPECIES_MAGNEZONE, _("DYNAMO")},
+    {SPECIES_FORRETRESS, _("SHRAPNEL")},
+    {SPECIES_STEELIX, _("AUGER")},
+    {SPECIES_BRONZONG, _("KLAXON")},
+    {SPECIES_SCIZOR, _("RIVETER")},
+    {SPECIES_SKARMORY, _("RAZORWING")},
+};
+
 static const u8 sNicknameCadet[POKEMON_NAME_LENGTH + 1] = _("CADET");
 static const u8 sNicknameMajor[POKEMON_NAME_LENGTH + 1] = _("MAJOR");
-static const u8 sNicknamePuff[POKEMON_NAME_LENGTH + 1] = _("PUFF");
-static const u8 sNicknameWisp[POKEMON_NAME_LENGTH + 1] = _("WISP");
-static const u8 sNicknameLucid[POKEMON_NAME_LENGTH + 1] = _("LUCID");
 
 const u8 *GetTrainerPokemonNickname(u16 trainerId, u16 species, u8 partySlot)
 {
@@ -140,19 +206,47 @@ const u8 *GetTrainerPokemonNickname(u16 trainerId, u16 species, u8 partySlot)
         return sNicknameCadet;
     if (trainerId == TRAINER_LEADER_LT_SURGE_6 && partySlot == 4 && species == SPECIES_ELECTABUZZ)
         return sNicknameMajor;
-    if (trainerId == TRAINER_LEADER_KOGA_6 && species == SPECIES_KOFFING)
-        return sNicknamePuff;
-    if ((trainerId == TRAINER_LEADER_SABRINA_2
-      || trainerId == TRAINER_LEADER_SABRINA_3
-      || trainerId == TRAINER_LEADER_SABRINA_4
-      || trainerId == TRAINER_LEADER_SABRINA_5
-      || trainerId == TRAINER_LEADER_SABRINA_6) && species == SPECIES_ABRA)
-        return sNicknameWisp;
-    if (trainerId == TRAINER_LEADER_SABRINA_6 && species == SPECIES_KADABRA)
-        return sNicknameLucid;
-
     switch (trainerId)
     {
+    case TRAINER_ROCKET_ADMIN_PETREL:
+        names = sPetrelNicknames;
+        count = ARRAY_COUNT(sPetrelNicknames);
+        break;
+    case TRAINER_ROCKET_ADMIN_ARCHER:
+        names = sArcherNicknames;
+        count = ARRAY_COUNT(sArcherNicknames);
+        break;
+    case TRAINER_ROCKET_ADMIN_ARIANA:
+        names = sArianaNicknames;
+        count = ARRAY_COUNT(sArianaNicknames);
+        break;
+    case TRAINER_ROCKET_ADMIN_PROTON:
+        names = sProtonNicknames;
+        count = ARRAY_COUNT(sProtonNicknames);
+        break;
+
+    case TRAINER_RIVAL_OAKS_LAB_SQUIRTLE:
+    case TRAINER_RIVAL_OAKS_LAB_BULBASAUR:
+    case TRAINER_RIVAL_OAKS_LAB_CHARMANDER:
+    case TRAINER_RIVAL_CERULEAN_SQUIRTLE:
+    case TRAINER_RIVAL_CERULEAN_BULBASAUR:
+    case TRAINER_RIVAL_CERULEAN_CHARMANDER:
+    case TRAINER_RIVAL_SS_ANNE_SQUIRTLE:
+    case TRAINER_RIVAL_SS_ANNE_BULBASAUR:
+    case TRAINER_RIVAL_SS_ANNE_CHARMANDER:
+    case TRAINER_RIVAL_SILPH_SQUIRTLE:
+    case TRAINER_RIVAL_SILPH_BULBASAUR:
+    case TRAINER_RIVAL_SILPH_CHARMANDER:
+    case TRAINER_RIVAL_ROUTE23_SQUIRTLE:
+    case TRAINER_RIVAL_ROUTE23_BULBASAUR:
+    case TRAINER_RIVAL_ROUTE23_CHARMANDER:
+    case TRAINER_CHAMPION_FIRST_SQUIRTLE:
+    case TRAINER_CHAMPION_FIRST_BULBASAUR:
+    case TRAINER_CHAMPION_FIRST_CHARMANDER:
+        names = sRivalNicknames;
+        count = ARRAY_COUNT(sRivalNicknames);
+        break;
+
     case TRAINER_LEADER_BROCK_1:
     case TRAINER_LEADER_BROCK_2:
     case TRAINER_LEADER_BROCK_3:

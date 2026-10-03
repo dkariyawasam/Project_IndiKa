@@ -184,3 +184,55 @@ Route20_Text_SeafoamUsedToBeVolcanic::
     .string "Then one day it all changed at\n"
     .string "once, and now it's as cold as\l"
     .string "ice!$"
+
+Route20_Text_ElyssaIntro::
+	.string "So many dragons make their home\n"
+	.string "in these waters!\p"
+	.string "My SEADRA holds a DRAGON SCALE.\n"
+	.string "If traded, it becomes KINGDRA!\p"
+	.string "I'd love a PONYTA to keep me\n"
+	.string "company when I'm back on land.$"
+
+Route20_Text_ElyssaThanks::
+	.string "Thank you for the PONYTA!\p"
+	.string "That DRAGON SCALE helped SEADRA\n"
+	.string "become a dragon of its own!$"
+
+Route20_Text_ElyssaDone::
+	.string "How is KINGDRA doing?\p"
+	.string "These waters should feel like\n"
+	.string "home to it!$"
+
+Route20_Text_GorebyssTradeIntro::
+	.string "NIA: You beat our team!\p"
+	.string "I have another CLAMPERL holding\n"
+	.string "a DEEP SEA SCALE.\p"
+	.string "Trade me a CLAMPERL, and mine\n"
+	.string "will become GOREBYSS for you!$"
+
+Route20_Text_GorebyssTradeThanks::
+	.string "NIA: There it is! GOREBYSS!\p"
+	.string "Thanks for the CLAMPERL.\n"
+	.string "I'll take good care of it!$"
+
+Route20_Text_GorebyssTradeDone::
+	.string "NIA: How is GOREBYSS doing?\p"
+	.string "It's amazing what a simple\n"
+	.string "trade can do for CLAMPERL!$"
+
+Route20_Text_HuntailTradeIntro::
+	.string "FINN: You beat our team!\p"
+	.string "I have another CLAMPERL holding\n"
+	.string "a DEEP SEA TOOTH.\p"
+	.string "Trade me a CLAMPERL, and mine\n"
+	.string "will become HUNTAIL for you!$"
+
+Route20_Text_HuntailTradeThanks::
+	.string "FINN: There it is! HUNTAIL!\p"
+	.string "Thanks for the CLAMPERL.\n"
+	.string "I'll take good care of it!$"
+
+Route20_Text_HuntailTradeDone::
+	.string "FINN: How is HUNTAIL doing?\p"
+	.string "It's amazing what a simple\n"
+	.string "trade can do for CLAMPERL!$"

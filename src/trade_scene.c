@@ -29,6 +29,7 @@
 #include "random.h"
 #include "trade_scene.h"
 #include "constants/items.h"
+#include "constants/game_stat.h"
 #include "constants/easy_chat.h"
 #include "constants/songs.h"
 #include "constants/region_map_sections.h"
@@ -126,6 +127,7 @@ static void SpriteCB_CableEndReceiving(struct Sprite *sprite);
 static void SpriteCB_GbaScreen(struct Sprite *sprite);
 static void TradeAnimInit_LoadGfx(void);
 static void CB2_InGameTrade(void);
+static EWRAM_DATA bool8 sReceiveUpgradedPorygon = FALSE;
 static void CB2_InitGeneratedPokemonReceive(void);
 static void CB2_GeneratedPokemonReceive(void);
 static void SetTradeSequenceBgGpuRegs(u8 idx);
@@ -1356,7 +1358,13 @@ static void CB2_InitGeneratedPokemonReceive(void)
     case 0:
         gSelectedTradeMonPositions[TRADE_PARTNER] = PARTY_SIZE;
         StringCopy(gStringVar1, sText_Machine);
-        CreateMon(&gEnemyParty[0], gSpecialVar_0x8004, gSpecialVar_0x8005, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        if (sReceiveUpgradedPorygon)
+        {
+            gEnemyParty[0] = gPlayerParty[gSpecialVar_0x8006];
+            sReceiveUpgradedPorygon = FALSE;
+        }
+        else
+            CreateMon(&gEnemyParty[0], gSpecialVar_0x8004, gSpecialVar_0x8005, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
         GetSpeciesName(gStringVar3, gSpecialVar_0x8004);
         sTradeAnim = AllocZeroed(sizeof(*sTradeAnim));
         AllocateMonSpritesGfx();
@@ -2852,6 +2860,7 @@ void DoInGameTradeScene(void)
 
 void DoGeneratedPokemonReceiveScene(void)
 {
+    sReceiveUpgradedPorygon = FALSE;
     LockPlayerFieldControls();
     gMain.state = 0;
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -2994,4 +3003,63 @@ static void Task_CloseCenterWhiteColumn(u8 taskId)
         ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON);
         DestroyTask(taskId);
     }
+}
+
+// The terminal upgrades the selected partner in place, retaining its identity.
+u16 CanUpgradePorygon(void)
+{
+    u16 species, item;
+    if (gSpecialVar_0x8006 >= gPlayerPartyCount)
+        return 0;
+    species = GetMonData(&gPlayerParty[gSpecialVar_0x8006], MON_DATA_SPECIES_OR_EGG);
+    item = GetMonData(&gPlayerParty[gSpecialVar_0x8006], MON_DATA_HELD_ITEM);
+    if (species == SPECIES_PORYGON && item == ITEM_UP_GRADE)
+        return 1;
+    if (species == SPECIES_PORYGON2 && (item == ITEM_DUBIOUS_DISC || item == ITEM_PATCH_DISC))
+        return 2;
+    return 0;
+}
+
+u16 GetPorygonTerminalTarget(void)
+{
+    u16 mode = CanUpgradePorygon();
+    u16 item;
+    // VAR_0x8007 counts incorrect answers across all three questions.
+    if (mode == 1 && gSpecialVar_0x8007 == 0)
+        return SPECIES_PORYGON2;
+    if (mode != 2)
+        return SPECIES_NONE;
+    item = GetMonData(&gPlayerParty[gSpecialVar_0x8006], MON_DATA_HELD_ITEM);
+    if (item == ITEM_DUBIOUS_DISC && gSpecialVar_0x8007 > 0 && gSpecialVar_0x8007 <= 3)
+        return SPECIES_PORYGON_Z;
+    if (item == ITEM_PATCH_DISC && gSpecialVar_0x8007 == 0)
+        return SPECIES_PORYGON3;
+    return SPECIES_NONE;
+}
+
+void UpgradePorygonAtTerminal(void)
+{
+    struct Pokemon *mon;
+    u16 species = GetPorygonTerminalTarget();
+    u16 oldSpecies;
+    u16 item = ITEM_NONE;
+
+    if (species == SPECIES_NONE)
+    {
+        ScriptContext_Enable();
+        return;
+    }
+    mon = &gPlayerParty[gSpecialVar_0x8006];
+    oldSpecies = GetMonData(mon, MON_DATA_SPECIES);
+    SetMonData(mon, MON_DATA_SPECIES, &species);
+    SetMonData(mon, MON_DATA_HELD_ITEM, &item);
+    CalculateMonStats(mon);
+    EvolutionRenameMon(mon, oldSpecies, species);
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_SEEN);
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT);
+    IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+    gSpecialVar_0x8004 = species;
+    gSpecialVar_0x8005 = GetMonData(mon, MON_DATA_LEVEL);
+    DoGeneratedPokemonReceiveScene();
+    sReceiveUpgradedPorygon = TRUE;
 }

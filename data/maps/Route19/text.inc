@@ -174,3 +174,19 @@ Route19_Text_LucPostBattle::
 Route19_Text_LucNotEnoughMons::
     .string "LUC: I battle with LIA!\p"
     .string "Don't you have two POKéMON?$"
+
+Route19_Text_SlowkingTradeIntro::
+	.string "My SLOWPOKE loves this beach.\n"
+	.string "It could sit here all day!\p"
+	.string "It's holding a KING'S ROCK.\n"
+	.string "A trade will make it SLOWKING!$"
+
+Route19_Text_SlowkingTradeThanks::
+	.string "Thank you for the trade!\p"
+	.string "From a daydreaming SLOWPOKE\n"
+	.string "to a wise SLOWKING!$"
+
+Route19_Text_SlowkingTradeDone::
+	.string "How is SLOWKING doing?\p"
+	.string "Bring it back to the beach\n"
+	.string "sometime!$"

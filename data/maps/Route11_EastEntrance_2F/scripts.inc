@@ -10,8 +10,9 @@ Route11_EastEntrance_2F_EventScript_RightBinoculars::
 Route11_EastEntrance_2F_EventScript_Turner::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_NIDORINOA
+	setvar VAR_0x8008, INGAME_TRADE_MACHOKE
 	call EventScript_GetInGameTradeSpeciesInfo
+// Retain the existing completion flag so old saves cannot repeat this trade.
 	goto_if_set FLAG_DID_NINA_TRADE, Route11_EastEntrance_2F_EventScript_AlreadyTraded
 	msgbox Trade_Text_LookingForMonWannaTradeForMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route11_EastEntrance_2F_EventScript_DeclineTrade

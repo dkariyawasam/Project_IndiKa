@@ -42,3 +42,38 @@ Route19_EventScript_SailToSeafoam::
 	setvar VAR_0x8006, SEAGALLOP_SEAFOAM_ISLANDS
 	goto EventScript_SetSail
 	end
+
+Route19_EventScript_SlowkingTrade_Saige::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_SLOWPOKE
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_MS_NIDO_TRADE, Route19_EventScript_SlowkingTrade_AlreadyTraded
+	msgbox Route19_Text_SlowkingTradeIntro, MSGBOX_DEFAULT
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route19_EventScript_SlowkingTrade_DeclineTrade
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Route19_EventScript_SlowkingTrade_DeclineTrade
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, Route19_EventScript_SlowkingTrade_NotRequestedMon
+	call EventScript_DoInGameTrade
+	msgbox Route19_Text_SlowkingTradeThanks
+	setflag FLAG_DID_MS_NIDO_TRADE
+	release
+	end
+
+Route19_EventScript_SlowkingTrade_DeclineTrade::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+Route19_EventScript_SlowkingTrade_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+Route19_EventScript_SlowkingTrade_AlreadyTraded::
+	msgbox Route19_Text_SlowkingTradeDone
+	release
+	end
