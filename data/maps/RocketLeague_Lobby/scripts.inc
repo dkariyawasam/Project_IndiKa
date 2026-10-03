@@ -77,11 +77,25 @@ RocketLeague_Lobby_EventScript_EnterArenaFromPrompt::
 	end
 
 RocketLeague_Lobby_EventScript_MartClerk::
-	goto CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs
+	lock
+	faceplayer
+	msgbox CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes
+	closemessage
+	setvar VAR_0x8004, 0
+	special OpenRocketCoinShop
+	waitstate
+	release
 	end
 
 RocketLeague_Lobby_EventScript_MonClerk::
-	goto CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons
+	lock
+	faceplayer
+	msgbox CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes
+	closemessage
+	setvar VAR_0x8004, 1
+	special OpenRocketCoinShop
+	waitstate
+	release
 	end
 
 RocketLeague_Lobby_Movement_FaceReceptionist::
@@ -191,3 +205,27 @@ RocketLeague_Lobby_EventScript_AceTrainerF::
 RocketLeague_Lobby_EventScript_BaldingMan::
 	msgbox RocketLeague_Lobby_Text_StairsTougherThanAnyBattle, MSGBOX_NPC
 	end
+
+RocketLeague_Lobby_EventScript_DiscScientist::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_ROCKET_DUBIOUS_DISC, RocketLeague_Lobby_EventScript_DiscScientist_Done
+	msgbox RocketLeague_Lobby_EventScript_DiscScientist_Intro
+	giveitem ITEM_DUBIOUS_DISC
+	goto_if_eq VAR_RESULT, FALSE, RocketLeague_Lobby_EventScript_DiscScientist_End
+	setflag FLAG_GOT_ROCKET_DUBIOUS_DISC
+RocketLeague_Lobby_EventScript_DiscScientist_Done::
+	msgbox RocketLeague_Lobby_EventScript_DiscScientist_After
+RocketLeague_Lobby_EventScript_DiscScientist_End::
+	release
+	end
+
+RocketLeague_Lobby_EventScript_DiscScientist_Intro::
+	.string "TEAM ROCKET needs no approval\n"
+	.string "to improve on lab software!\p"
+	.string "I wrote this DUBIOUS DISC.\n"
+	.string "The results? Still... uncertain.$"
+
+RocketLeague_Lobby_EventScript_DiscScientist_After::
+	.string "It is meant for PORYGON2.\n"
+	.string "Use it at your own risk!$"

@@ -213,7 +213,39 @@ CinnabarIsland_Gym_EventScript_PorygonMachineLocked::
 	end
 
 CinnabarIsland_Gym_EventScript_PorygonMachineAlreadyGenerated::
-	msgbox CinnabarIsland_Gym_Text_PorygonMachineAlreadyGenerated
+	msgbox CinnabarIsland_Gym_Text_UpgradeOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Gym_EventScript_PorygonMachineCancel
+	special ChoosePartyMon
+	waitstate
+	lockall
+	goto_if_ge VAR_0x8004, PARTY_SIZE, CinnabarIsland_Gym_EventScript_PorygonMachineEnd
+	copyvar VAR_0x8006, VAR_0x8004
+	setvar VAR_0x8007, 0
+	specialvar VAR_RESULT, CanUpgradePorygon
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_Gym_EventScript_UpgradeInvalid
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_Gym_EventScript_DiscQuiz
+	msgbox CinnabarIsland_Gym_Text_UpgradeQuestion1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Gym_EventScript_UpgradeFailed
+	msgbox CinnabarIsland_Gym_Text_UpgradeQuestion2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, CinnabarIsland_Gym_EventScript_UpgradeFailed
+	msgbox CinnabarIsland_Gym_Text_UpgradeQuestion3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Gym_EventScript_UpgradeFailed
+	msgbox CinnabarIsland_Gym_Text_UpgradeInstalling
+	special UpgradePorygonAtTerminal
+	waitstate
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox CinnabarIsland_Gym_Text_UpgradeComplete
+	releaseall
+	end
+
+CinnabarIsland_Gym_EventScript_UpgradeInvalid::
+	msgbox CinnabarIsland_Gym_Text_UpgradeInvalid
+	releaseall
+	end
+
+CinnabarIsland_Gym_EventScript_UpgradeFailed::
+	playse SE_BOO
+	msgbox CinnabarIsland_Gym_Text_UpgradeFailed
 	releaseall
 	end
 
@@ -299,4 +331,31 @@ SilphCo_8F_EventScript_Scientist::
 	apexlog APEX_LOG_PERSON_GIOVANNI, 2
 	msgbox SilphCo_8F_Text_ToRocketBossMonsAreTools
 	release
+	end
+
+CinnabarIsland_Gym_EventScript_DiscQuiz::
+	msgbox CinnabarIsland_Gym_Text_DiscQuestion1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, CinnabarIsland_Gym_EventScript_DiscQuestion2
+	addvar VAR_0x8007, 1
+CinnabarIsland_Gym_EventScript_DiscQuestion2::
+	msgbox CinnabarIsland_Gym_Text_DiscQuestion2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Gym_EventScript_DiscQuestion3
+	addvar VAR_0x8007, 1
+CinnabarIsland_Gym_EventScript_DiscQuestion3::
+	msgbox CinnabarIsland_Gym_Text_DiscQuestion3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, CinnabarIsland_Gym_EventScript_DiscQuizResult
+	addvar VAR_0x8007, 1
+CinnabarIsland_Gym_EventScript_DiscQuizResult::
+	specialvar VAR_RESULT, GetPorygonTerminalTarget
+	goto_if_eq VAR_RESULT, SPECIES_NONE, CinnabarIsland_Gym_EventScript_DiscRejected
+	msgbox CinnabarIsland_Gym_Text_DiscInstalling
+	special UpgradePorygonAtTerminal
+	waitstate
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox CinnabarIsland_Gym_Text_UpgradeComplete
+	releaseall
+	end
+CinnabarIsland_Gym_EventScript_DiscRejected::
+	msgbox CinnabarIsland_Gym_Text_DiscRejected
+	releaseall
 	end

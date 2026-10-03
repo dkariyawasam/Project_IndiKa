@@ -104,3 +104,91 @@ Healed at Cerulean, then collected all three accounts normally: damaged-house Hi
 Venusaur's Sleep Powder did not leave it asleep. Two Razor Leafs reduced it to 111/172 HP; switched out at 13 HP. Three Ultra Balls and seven Great Balls failed. Mewtwo and Ninetales fainted during the attempt; Mewtwo's Recover could not keep up with the heavy attacks. Golbat held the field, and the eighth/final Great Ball caught Annihilape. No reload or injected resources. Screenshot 22 records capture. EXP, RAGE POKéMON registration, declining nickname, PC transfer, Oak follow-up and object removal all worked.
 
 Saved normally at Mt. Moon B2F (34,7), observed save confirmation, and preserved `annihilape-caught-earned-checkpoint.sav`. This supersedes the Osscythe checkpoint for continuation. Ultra and Great Balls are exhausted; two Premier Balls remain. Mewtwo and Ninetales need revival/healing, Venusaur is at 13 HP. Legendary bird investigations remain outstanding; restock before attempting them. Main user save untouched.
+
+## Zapdos investigation — battle in progress, Mac locked
+
+Continued normally from Annihilape: exited Mt. Moon, healed at Route 4's healing house, returned to Cerulean, and bought 60 Ultra Balls for 72,000 from earned funds (money 147,452 → 75,452). Bag later showed eight Premier Balls, consistent with the prior two plus six purchase bonuses. Traversed Route 9 and used the registered Cascade Board on Route 10 to reach the Power Plant approach.
+
+Recorded Mark's account outside, defeated the Power Plant trainers on the route, then spoke to Baily and Braxton again after their battles to register their accounts. The final account revealed Zapdos without needing to leave the map. Its level-50 warning and battle appearance worked. Mewtwo reached 76 through earned trainer EXP; it was paralysed during the plant battles.
+
+Two Swifts reduced Zapdos to 12/165 HP. Stopped attacking. Venusaur switched in to attempt Sleep Powder but fainted before landing it. Returned to Mewtwo and threw Ultra Balls, using Recover as needed. A bounded input helper throws only from the confirmed Bag action cursor, stops below 110 HP or upon a battle outcome, and never chooses an attack. No state writes or reloads.
+
+The Mac subsequently locked and emulator snapshots stopped updating. Last confirmed snapshot: frame 4487760, Power Plant (40,9), active Zapdos battle, Zapdos 12 HP, Mewtwo 227/276 HP. Capture is NOT yet confirmed. Later requested throw batches did not execute while locked; do not infer ball usage from submitted commands. The pending command.lua only reads capture HP/PP and remaining ball count to capture-state.txt. Native UI tool explicitly reported that automatic unlock failed and manual unlock is required.
+
+Latest on-disk earned checkpoint remains `annihilape-caught-earned-checkpoint.sav`; the current live emulator additionally has the healed/restocked journey and Zapdos investigation in progress. Do not reload and erase this attempt. On unlock, inspect fresh screenshot/status/capture-state.txt before further inputs. Articuno and Moltres remain outstanding.
+
+## Zapdos — earned capture after unlock
+
+Resumed the existing battle after manual unlock; no reload. Fresh read-only state confirmed 23 Ultra Balls, Zapdos 12/165 HP, and only Agility PP remaining (13). Switched normally to Jynx and used Lovely Kiss, reapplying sleep when it woke. This improved capture odds and delayed PP exhaustion. Pressure exhausted Lovely Kiss after five uses; some attempts did not leave Zapdos asleep. At 12 Ultra Balls remaining, Zapdos was asleep with four Agility PP left. The next Ultra Ball caught it: 49 Ultra Balls consumed from the purchased 60, leaving 11 (plus eight Premier Balls).
+
+Registration showed ELECTRIC POKéMON. Capture EXP, declining nickname, PC transfer, Oak follow-up and object removal completed normally. Screenshot 23 records capture. Saved at Power Plant (40,9), observed “RED saved the game,” and preserved `zapdos-caught-earned-checkpoint.sav`. This is the latest earned continuation point. Mewtwo level 76 is paralysed; Venusaur fainted; Jynx has no Lovely Kiss PP. Heal and restock before the remaining birds. Articuno and Moltres remain pending. Main user save untouched.
+
+## Coastal traversal and bird supplies
+
+Exited Power Plant, healed at Route 10's house, and traversed Rock Tunnel normally. Cleared previously unchallenged trainers in the tunnel and southern Route 10. Balance review observation: a Rock Tunnel trainer displayed a level-5 Onix; retained as a review finding, with no balance change. Mewtwo remains level 76.
+
+Continued through Lavender and Routes 12–15 to Fuchsia. Accepted the 500-cost coastal bicycle rental at Route 12's north gate. Rental survived the coastal traversal and was returned at Route 15's west gate (“I’ll take the rental BICYCLE from here”). Navigation helper twice chose blocked boardwalk coordinates; direct ordinary movement resolved both, so this is not established as a ROM collision defect.
+
+Bought another 60 Ultra Balls at Fuchsia (79,760 → 7,760), bringing the total to 71; purchase bonuses added six Premier Balls. Healed the whole party at Fuchsia's Pokémon Center, saved normally at (7,4), and preserved `fuchsia-bird-preparation-earned-checkpoint.sav`. This is the latest earned continuation point. Articuno's Route 20 Mariner and Seafoam witness need checking, followed by the encounter; Moltres remains pending. No save/RAM injection or reload; main user save untouched.
+
+## Articuno — investigation verified, capture unsuccessful
+
+Continued through Route 19 and Route 20 using the Cascade Board. Registered the roaming Camper's account. An initial Seafoam visit with only two accounts correctly left the encounter absent: the Mariner required a second conversation after his battle. Returned, registered that account, and Articuno appeared with all three accounts. Traversed Seafoam without Strength; the level-50 warning worked.
+
+Mewtwo's Swift and Jynx's resisted attacks reduced Articuno to 27/157 HP. Used Lovely Kiss and later Venusaur's Sleep Powder until both were exhausted, and one Super Potion on Jynx. Mewtwo was frozen. All 71 Ultra Balls failed, followed by Premier Ball attempts. Articuno exhausted Ice Beam, Mind Reader, Mist and Agility, then fainted from Struggle recoil. No reload or injected resources; this unsuccessful capture is retained. This unusually expensive attempt is a balance-review observation, not evidence by itself of a catch-rate defect. No balance changes made.
+
+EXP, Jynx reaching level 32, Oak's post-encounter dialogue and Articuno object removal completed. Saved normally in Seafoam B4F at (9,3), observed “RED saved the game,” and preserved `articuno-attempt-earned-checkpoint.sav`. Mewtwo is frozen, Venusaur has 9 HP, sleep moves are exhausted, and Ultra Balls are depleted. Heal and replenish supplies before Moltres, whose investigation remains pending. Main user save untouched.
+
+## October 1 — Moltres investigation complete
+
+At the user's request, deferred live testing of the newly added abilities and signature moves and resumed the existing isolated campaign ROM. Exited Seafoam without Strength and travelled west on Route 20; small beaches dismounted the Cascade Board and required reboarding. Healed normally in Cinnabar (nurse's completion dialogue observed).
+
+Collected the old man's Moltres account outside and the scientist's account in the lab research room. The lab entrance granted access using the earned Boulder Key. Ascended the volcano's right corridors and defeated intervening trainers. Mewtwo reached level 77; declined Psych Up and retained its previous moves. Defeated Blair and spoke again for his account. “Rumour updated” appeared and Moltres was added at (24,6) on the same map, confirming the three-account reveal.
+
+Saved normally on Cinnabar Volcano 3F at (41,27), observed “RED saved the game,” and preserved `moltres-revealed-earned-checkpoint.sav`. Moltres has not been challenged. Ultra Balls remain depleted after Articuno; restock before the encounter. This is the latest earned continuation point. No game-state injection or reload; main user save untouched. New mechanics remain untested live and the isolated campaign is still running the prior ROM.
+
+## October 1 — Moltres earned capture
+
+Returned through the volcano to Cinnabar's Mart. Sold the earned Nugget for 5,000 and bought 14 Ultra Balls for 16,800, leaving 176. Purchase bonus added one Premier Ball to the existing six. Returned through the cleared right corridors; ordinary wild encounters were escaped. No injected resources or reloads.
+
+Moltres's level-50 confirmation and battle transition worked. Mewtwo's Swift reduced it from 152 to 77 HP. Jynx fainted on switch-in before it could attempt sleep. Switched normally to Ninetales, whose Flash Fire kept it safe against Moltres's Fire attacks; Quick Attack reduced Moltres to 22 HP, then stopped attacking. All 14 Ultra Balls failed. The first Premier Ball caught it, leaving six Premier Balls. Screenshot 24 records the capture.
+
+Ninetales reached level 32. Capture EXP, FLAME POKéMON registration, declining nickname, PC transfer, Oak follow-up and object removal completed normally. Saved on Cinnabar Volcano 3F at (24,7), observed “RED saved the game,” and preserved `moltres-caught-earned-checkpoint.sav`. This is the latest earned continuation point. Jynx is fainted and Ultra Balls are depleted. Main user save untouched. Newly added abilities/moves remain deliberately untested live; campaign still uses its prior isolated ROM.
+
+## October 1 — Evolution by Design verified
+
+Descended from Moltres, cleared another intervening volcano trainer and healed the entire party at Cinnabar. The live Logbook now shows Apex Pokémon and Giovanni’s Ambition Done. The Nature of Evolution initially showed Bond 1/2, Instinct 8/2 and Design 1/2. Instinct's unbounded 8/2 display is a presentation finding for review. Gym Leader Trials still shows Active despite its individual entries showing Done or Traded; parent completion bookkeeping needs investigation.
+
+Used the earned Helix and Dart fragments at the experiment-room scientist, selected Helix + Dart and confirmed Omato reconstruction. The success dialogue appeared with a full party, and the live Design counter advanced to green 2/2. Screenshots 26–27 record the reconstruction and counter. Bond remains 1/2; the Nature parent remains Active. No game-state injection, reload or balance changes.
+
+The earlier final-rival checklist was stale: the Champion-room convergence dialogue was already observed in this report's League run. Source inspection confirms this is optional dialogue for completing the rival story scenes, not a separate postgame meeting or an all-Apex-captured gate.
+
+Saved normally in Cinnabar's experiment room at (12,4), observed “RED saved the game,” and preserved `omato-reconstructed-earned-checkpoint.sav`. This is the latest earned continuation point. The party is healed; Bond progression and earned Pokédex rewards remain to check. New ability/move live tests remain deferred, and the isolated campaign still uses its prior ROM. Main user save untouched.
+
+## October 1 — Earned page reward and Bond milestone
+
+Continued the isolated campaign in Cinnabar's lab entrance. Read-only party inspection found Golbat's friendship at 228, sufficient for evolution on its next level. Opened the Rare habitat and navigated to Mewtwo's single-species page. The page was dimmed with START CLAIM and its Poké Ball visible. Claimed normally; the page returned to its normal appearance and completion icon remained. Bag comparison confirmed two Exp. Candies L and one Rare Candy awarded. The transient footer animation was not captured, so its full animation remains unverified in this pass.
+
+Used the earned Rare Candy on Golbat. It reached level 31 and evolved into Crobat normally (screenshot 28). The live Nature counters now show Bond 2/2, Instinct 8/2, Design 2/2 (screenshot 29), but the parent remains Active in the running campaign ROM. No habitat is confirmed fully caught; XL habitat reward testing remains pending genuine completion. No fabricated catches or injected items.
+
+Diagnosed both parent-label issues: Gym entries and Nature counters derive their display from live progress, whereas parent labels previously depended on separately stored completion bits. Updated GenerateQuestState to show Done when all eight Gym objectives or all three Nature targets are satisfied, without rewriting save state. Nature counters now cap the displayed numerator at their target. Main ROM rebuilt successfully with make -j4; diff whitespace check passed. This display correction has not been validated live because the earned campaign remains on its existing ROM.
+
+Saved normally in the lab entrance at (27,9), observed RED saved the game, and preserved `crobat-and-page-reward-earned-checkpoint.sav`. This is the latest earned continuation point. Two Exp. Candies L remain; the claimed Rare Candy was consumed. Main user save untouched. New ability/move battle testing remains deferred.
+
+## October 1 — Latest-build live UI and reward validation
+
+Loaded `/tmp/kanto-october-validation/validation.gba`, a copy of the current main build, with a copy of the earned Crobat checkpoint. Original campaign ROM/save and main user save remain untouched. Continue preserved all eight badges, Crobat and 26 owned species. Existing read-only/input harness remained attached; automatic battle handling was disabled for this UI pass.
+
+Live verified Nature of Evolution and Gym Leader Trials now show Done alongside Apex and Giovanni (screenshot 30). Nature's three counters all show 2/2 (screenshot 31). On Mewtwo's previously claimed page, the completion Poké Ball persisted across loading. Pressing START twice left the item inventory unchanged, confirming no duplicate grant in this check.
+
+Claimed the genuinely completed Chingling/Chimecho page. Captured frames every eight frames through the animation: footer expands from the right, displays `1 EXP. CANDY L + 1 RARE CANDY`, then retracts; completion Poké Ball remains visible and no page corruption was observed. Screenshots 32–33 preserve the displayed receipt and dismissed footer. Inventory increased from two to three Exp. Candies L, and from zero to one Rare Candy. Saved normally, observed RED saved the game, and preserved `latest-build-rewards-earned-checkpoint.sav` as the new continuation point.
+
+Habitat XL reward remains unverified live. Read-only caught flags show no completed habitat. Mountain has 1/15 species (Annihilape), with 14 still required. Twelve missing species occur on Routes 3/4/9; Golem can be obtained via Brock's Relicanth-for-Graveler trade and Machamp requires link evolution (no wild or NPC trade entry found). Rare has 5/17 but Articuno fainted earlier in this earned run. Therefore natural habitat completion is a substantial collection/trading task, not an immediately available reward. Source review confirms the XL grant checks every habitat species caught, then adds one XL and sets its claim bit only after successful bag insertion; this is not a substitute for the pending live test. No caught flags/items were injected and no failed encounters were undone.
+
+## October 1 — Mountain collection started
+
+Continued the latest-build validation copy toward genuine Mountain completion. Sold 15 unused Repels for 2,625 at Cinnabar (728 to 3,353), bought 16 Poké Balls for 3,200 and received one Premier Ball bonus (seven total). Exp. Candies have zero sale price and were retained. Travelled normally north through Route 21, reboarding the Cascade Board after island crossings, and cleared intervening previously unchallenged trainers. Continued through Pallet, Route 1, Viridian, Route 2 and Pewter to Route 3.
+
+Caught a level-7 Mankey on Route 3 using ordinary Poké Ball attempts. Switched Mewtwo out for Jynx; Lovely Kiss did not establish sleep in the observed attempts. Capture, PIG MONKEY Pokédex registration and PC transfer completed. An accidentally opened nickname prompt was cleared and accepted empty, preserving MANKEY. Screenshot 34 records capture. No injected resources, catches or save rollback.
+
+Saved normally on Route 3 at (38,12), observed RED saved the game, and preserved `mountain-mankey-earned-checkpoint.sav`. Mountain now has Annihilape and Mankey: 2/15. Remaining: Starly, Staravia, Staraptor; Machop, Machoke, Machamp; Igglybuff, Jigglypuff, Wigglytuff; Geodude, Graveler, Golem; Primeape. Routes 3/4/9 cover eleven remaining species, with availability varying by day/night. Golem has Brock's Relicanth-for-Graveler route; Machamp still requires a link trade. Habitat XL reward remains pending; no completion claimed. Main user save and original campaign save remain untouched.

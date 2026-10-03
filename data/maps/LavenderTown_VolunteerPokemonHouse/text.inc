@@ -60,3 +60,8 @@ LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
     .string "POKéMON magazines line the shelf.\p"
     .string "POKéMON INSIDER…\p"
     .string "POKéMON FAN…$"
+
+LavenderTown_VolunteerPokemonHouse_Text_DusclopsTrade::
+    .string "I care for a DUSCLOPS here.\p"
+    .string "It holds a REAPER CLOTH.\n"
+    .string "I'd like to see it evolve!$"

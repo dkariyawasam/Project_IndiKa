@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-02",
+  "romSHA256": "228c27a2c0917755f88ab0962ec674be3d9bc2c3441418c18bc497a111b85070",
+  "emulator": "mGBA 0.10.5",
+  "save": "Disposable copy of mountain-mankey-earned-checkpoint.sav",
+  "method": "Isolated emulator with debug setup, normal engine scripts, A/B inputs and decrypted runtime party checks. Not a continuous earned-progression playthrough.",
+  "shops": {
+    "live": [
+      "Three-species stock and previews",
+      "Smeargle PC delivery with full party, 500 coins deducted",
+      "Porygon insufficient-coins rejection",
+      "TM01 purchased for 4500 coins",
+      "Exit and reopen both shops"
+    ],
+    "hostOnly": [
+      "Full Bag rejection",
+      "Full PC and party rejection",
+      "Party delivery",
+      "Ordinary marts retain money currency",
+      "All 59 TM prices"
+    ]
+  },
+  "trainers": "22 normal battle starts; all 102 generated Pokemon have valid checksums. Roster/nickname inspection, not full victories or difficulty balancing.",
+  "trades": "Shared trade/evolution engine plus individual event scripts on their maps. Prerequisites supplied through debug setup; this does not certify walking access or organically earning every prerequisite.",
+  "porygon": "Six accepted/rejected terminal quiz cases. Debug-supplied held items including unreleased Patch Disc. Species, held item, level, moves and checksum checked.",
+  "remainingLimits": [
+    "Full combat balance not tested",
+    "Physical interaction geometry and end-to-end story prerequisites not covered by injected event entry",
+    "Ability/signature-move testing remains deferred"
+  ],
+  "result": "All recorded functional checks passed; no game-code edits required.",
+  "counts": {
+    "trainerVariants": 22,
+    "trainerPokemon": 102,
+    "tradeEvolutionSequences": 16,
+    "individualTradeEvents": 16,
+    "porygonBranches": 6
+  }
+}

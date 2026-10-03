@@ -1,0 +1,2568 @@
+[
+  {
+    "trainer": {
+      "id": 326,
+      "key": "TRAINER_RIVAL_OAKS_LAB_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "ACE",
+        "species": 7,
+        "item": 0,
+        "level": 5,
+        "hp": 19,
+        "maxHP": 19,
+        "friendship": 70,
+        "moves": [
+          33,
+          39,
+          0,
+          0
+        ],
+        "pp": [
+          35,
+          30,
+          0,
+          0
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 327,
+      "key": "TRAINER_RIVAL_OAKS_LAB_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "ACE",
+        "species": 1,
+        "item": 0,
+        "level": 5,
+        "hp": 19,
+        "maxHP": 19,
+        "friendship": 70,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "pp": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 328,
+      "key": "TRAINER_RIVAL_OAKS_LAB_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "ACE",
+        "species": 4,
+        "item": 0,
+        "level": 5,
+        "hp": 18,
+        "maxHP": 18,
+        "friendship": 70,
+        "moves": [
+          10,
+          45,
+          0,
+          0
+        ],
+        "pp": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 332,
+      "key": "TRAINER_RIVAL_CERULEAN_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 17,
+        "hp": 51,
+        "maxHP": 51,
+        "friendship": 70,
+        "moves": [
+          98,
+          43,
+          116,
+          228
+        ],
+        "pp": [
+          30,
+          30,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 16,
+        "hp": 44,
+        "maxHP": 44,
+        "friendship": 70,
+        "moves": [
+          33,
+          39,
+          28,
+          45
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 15,
+        "hp": 42,
+        "maxHP": 42,
+        "friendship": 70,
+        "moves": [
+          10,
+          39,
+          28,
+          310
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 7,
+        "item": 0,
+        "level": 18,
+        "hp": 46,
+        "maxHP": 46,
+        "friendship": 70,
+        "moves": [
+          33,
+          39,
+          110,
+          55
+        ],
+        "pp": [
+          35,
+          30,
+          40,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 333,
+      "key": "TRAINER_RIVAL_CERULEAN_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 17,
+        "hp": 51,
+        "maxHP": 51,
+        "friendship": 70,
+        "moves": [
+          98,
+          43,
+          116,
+          228
+        ],
+        "pp": [
+          30,
+          30,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 16,
+        "hp": 44,
+        "maxHP": 44,
+        "friendship": 70,
+        "moves": [
+          33,
+          39,
+          28,
+          45
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 15,
+        "hp": 42,
+        "maxHP": 42,
+        "friendship": 70,
+        "moves": [
+          10,
+          39,
+          28,
+          310
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 1,
+        "item": 0,
+        "level": 18,
+        "hp": 46,
+        "maxHP": 46,
+        "friendship": 70,
+        "moves": [
+          79,
+          77,
+          22,
+          73
+        ],
+        "pp": [
+          15,
+          35,
+          10,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 334,
+      "key": "TRAINER_RIVAL_CERULEAN_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 17,
+        "hp": 51,
+        "maxHP": 51,
+        "friendship": 70,
+        "moves": [
+          98,
+          43,
+          116,
+          228
+        ],
+        "pp": [
+          30,
+          30,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 16,
+        "hp": 44,
+        "maxHP": 44,
+        "friendship": 70,
+        "moves": [
+          33,
+          39,
+          28,
+          45
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 15,
+        "hp": 42,
+        "maxHP": 42,
+        "friendship": 70,
+        "moves": [
+          10,
+          39,
+          28,
+          310
+        ],
+        "pp": [
+          35,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 4,
+        "item": 0,
+        "level": 18,
+        "hp": 44,
+        "maxHP": 44,
+        "friendship": 70,
+        "moves": [
+          232,
+          52,
+          45,
+          10
+        ],
+        "pp": [
+          35,
+          25,
+          40,
+          35
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 432,
+      "key": "TRAINER_RIVAL_SS_ANNE_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 36,
+        "hp": 98,
+        "maxHP": 98,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 34,
+        "hp": 83,
+        "maxHP": 83,
+        "friendship": 70,
+        "moves": [
+          226,
+          321,
+          154,
+          364
+        ],
+        "pp": [
+          40,
+          20,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 35,
+        "hp": 85,
+        "maxHP": 85,
+        "friendship": 70,
+        "moves": [
+          361,
+          45,
+          98,
+          44
+        ],
+        "pp": [
+          30,
+          40,
+          30,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 9,
+        "item": 0,
+        "level": 38,
+        "hp": 112,
+        "maxHP": 112,
+        "friendship": 70,
+        "moves": [
+          55,
+          44,
+          229,
+          182
+        ],
+        "pp": [
+          25,
+          25,
+          40,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 433,
+      "key": "TRAINER_RIVAL_SS_ANNE_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 36,
+        "hp": 98,
+        "maxHP": 98,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 34,
+        "hp": 83,
+        "maxHP": 83,
+        "friendship": 70,
+        "moves": [
+          226,
+          321,
+          154,
+          364
+        ],
+        "pp": [
+          40,
+          20,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 35,
+        "hp": 85,
+        "maxHP": 85,
+        "friendship": 70,
+        "moves": [
+          361,
+          45,
+          98,
+          44
+        ],
+        "pp": [
+          30,
+          40,
+          30,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 3,
+        "item": 0,
+        "level": 38,
+        "hp": 113,
+        "maxHP": 113,
+        "friendship": 70,
+        "moves": [
+          77,
+          79,
+          75,
+          230
+        ],
+        "pp": [
+          35,
+          15,
+          25,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 434,
+      "key": "TRAINER_RIVAL_SS_ANNE_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 36,
+        "hp": 98,
+        "maxHP": 98,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 190,
+        "item": 0,
+        "level": 34,
+        "hp": 83,
+        "maxHP": 83,
+        "friendship": 70,
+        "moves": [
+          226,
+          321,
+          154,
+          364
+        ],
+        "pp": [
+          40,
+          20,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 133,
+        "item": 0,
+        "level": 35,
+        "hp": 85,
+        "maxHP": 85,
+        "friendship": 70,
+        "moves": [
+          361,
+          45,
+          98,
+          44
+        ],
+        "pp": [
+          30,
+          40,
+          30,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 6,
+        "item": 0,
+        "level": 38,
+        "hp": 111,
+        "maxHP": 111,
+        "friendship": 70,
+        "moves": [
+          108,
+          184,
+          53,
+          17
+        ],
+        "pp": [
+          20,
+          10,
+          15,
+          35
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 438,
+      "key": "TRAINER_RIVAL_SILPH_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 37,
+        "hp": 103,
+        "maxHP": 103,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SHOWOFF",
+        "species": 58,
+        "item": 0,
+        "level": 38,
+        "hp": 94,
+        "maxHP": 94,
+        "friendship": 70,
+        "moves": [
+          316,
+          36,
+          172,
+          270
+        ],
+        "pp": [
+          40,
+          20,
+          25,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 416,
+        "item": 0,
+        "level": 35,
+        "hp": 84,
+        "maxHP": 84,
+        "friendship": 70,
+        "moves": [
+          71,
+          43,
+          341,
+          28
+        ],
+        "pp": [
+          20,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 35,
+        "hp": 94,
+        "maxHP": 94,
+        "friendship": 70,
+        "moves": [
+          28,
+          93,
+          98,
+          129
+        ],
+        "pp": [
+          15,
+          25,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 9,
+        "item": 0,
+        "level": 40,
+        "hp": 120,
+        "maxHP": 120,
+        "friendship": 70,
+        "moves": [
+          55,
+          44,
+          229,
+          182
+        ],
+        "pp": [
+          25,
+          25,
+          40,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 439,
+      "key": "TRAINER_RIVAL_SILPH_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 37,
+        "hp": 103,
+        "maxHP": 103,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "STARDOM",
+        "species": 120,
+        "item": 0,
+        "level": 38,
+        "hp": 75,
+        "maxHP": 75,
+        "friendship": 70,
+        "moves": [
+          129,
+          61,
+          107,
+          113
+        ],
+        "pp": [
+          20,
+          20,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 416,
+        "item": 0,
+        "level": 35,
+        "hp": 84,
+        "maxHP": 84,
+        "friendship": 70,
+        "moves": [
+          71,
+          43,
+          341,
+          28
+        ],
+        "pp": [
+          20,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 35,
+        "hp": 94,
+        "maxHP": 94,
+        "friendship": 70,
+        "moves": [
+          28,
+          93,
+          98,
+          129
+        ],
+        "pp": [
+          15,
+          25,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 3,
+        "item": 0,
+        "level": 40,
+        "hp": 121,
+        "maxHP": 121,
+        "friendship": 70,
+        "moves": [
+          77,
+          79,
+          75,
+          230
+        ],
+        "pp": [
+          35,
+          15,
+          25,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 440,
+      "key": "TRAINER_RIVAL_SILPH_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 123,
+        "item": 0,
+        "level": 37,
+        "hp": 103,
+        "maxHP": 103,
+        "friendship": 70,
+        "moves": [
+          97,
+          17,
+          163,
+          14
+        ],
+        "pp": [
+          30,
+          35,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "WILDCARD",
+        "species": 102,
+        "item": 0,
+        "level": 38,
+        "hp": 98,
+        "maxHP": 98,
+        "friendship": 70,
+        "moves": [
+          93,
+          78,
+          77,
+          79
+        ],
+        "pp": [
+          25,
+          30,
+          35,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 416,
+        "item": 0,
+        "level": 35,
+        "hp": 84,
+        "maxHP": 84,
+        "friendship": 70,
+        "moves": [
+          71,
+          43,
+          341,
+          28
+        ],
+        "pp": [
+          20,
+          30,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 35,
+        "hp": 94,
+        "maxHP": 94,
+        "friendship": 70,
+        "moves": [
+          28,
+          93,
+          98,
+          129
+        ],
+        "pp": [
+          15,
+          25,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 6,
+        "item": 0,
+        "level": 40,
+        "hp": 119,
+        "maxHP": 119,
+        "friendship": 70,
+        "moves": [
+          108,
+          184,
+          53,
+          17
+        ],
+        "pp": [
+          20,
+          10,
+          15,
+          35
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 441,
+      "key": "TRAINER_RIVAL_ROUTE23_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 47,
+        "hp": 131,
+        "maxHP": 131,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 46,
+        "hp": 124,
+        "maxHP": 124,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 47,
+        "hp": 135,
+        "maxHP": 135,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          103
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SHOWOFF",
+        "species": 59,
+        "item": 0,
+        "level": 47,
+        "hp": 150,
+        "maxHP": 150,
+        "friendship": 70,
+        "moves": [
+          245,
+          53,
+          231,
+          44
+        ],
+        "pp": [
+          5,
+          15,
+          15,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 48,
+        "hp": 114,
+        "maxHP": 114,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 9,
+        "item": 140,
+        "level": 50,
+        "hp": 148,
+        "maxHP": 148,
+        "friendship": 70,
+        "moves": [
+          56,
+          58,
+          44,
+          182
+        ],
+        "pp": [
+          5,
+          10,
+          25,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 442,
+      "key": "TRAINER_RIVAL_ROUTE23_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 47,
+        "hp": 131,
+        "maxHP": 131,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 46,
+        "hp": 124,
+        "maxHP": 124,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 47,
+        "hp": 135,
+        "maxHP": 135,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          103
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "STARDOM",
+        "species": 121,
+        "item": 0,
+        "level": 47,
+        "hp": 121,
+        "maxHP": 121,
+        "friendship": 70,
+        "moves": [
+          57,
+          94,
+          85,
+          105
+        ],
+        "pp": [
+          15,
+          10,
+          15,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 48,
+        "hp": 114,
+        "maxHP": 114,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 3,
+        "item": 140,
+        "level": 50,
+        "hp": 149,
+        "maxHP": 149,
+        "friendship": 70,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ],
+        "pp": [
+          5,
+          10,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 443,
+      "key": "TRAINER_RIVAL_ROUTE23_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 47,
+        "hp": 131,
+        "maxHP": 131,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 46,
+        "hp": 124,
+        "maxHP": 124,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 47,
+        "hp": 135,
+        "maxHP": 135,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          103
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "WILDCARD",
+        "species": 103,
+        "item": 0,
+        "level": 47,
+        "hp": 154,
+        "maxHP": 154,
+        "friendship": 70,
+        "moves": [
+          202,
+          94,
+          79,
+          113
+        ],
+        "pp": [
+          5,
+          10,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 48,
+        "hp": 114,
+        "maxHP": 114,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 6,
+        "item": 140,
+        "level": 50,
+        "hp": 147,
+        "maxHP": 147,
+        "friendship": 70,
+        "moves": [
+          53,
+          337,
+          332,
+          182
+        ],
+        "pp": [
+          15,
+          15,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 444,
+      "key": "TRAINER_CHAMPION_FIRST_SQUIRTLE",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 59,
+        "hp": 169,
+        "maxHP": 169,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 57,
+        "hp": 158,
+        "maxHP": 158,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 59,
+        "hp": 175,
+        "maxHP": 175,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          97
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SHOWOFF",
+        "species": 59,
+        "item": 0,
+        "level": 59,
+        "hp": 193,
+        "maxHP": 193,
+        "friendship": 70,
+        "moves": [
+          245,
+          53,
+          231,
+          44
+        ],
+        "pp": [
+          5,
+          15,
+          15,
+          25
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 61,
+        "hp": 150,
+        "maxHP": 150,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 9,
+        "item": 140,
+        "level": 63,
+        "hp": 192,
+        "maxHP": 192,
+        "friendship": 70,
+        "moves": [
+          56,
+          58,
+          44,
+          182
+        ],
+        "pp": [
+          5,
+          10,
+          25,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 445,
+      "key": "TRAINER_CHAMPION_FIRST_BULBASAUR",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 59,
+        "hp": 169,
+        "maxHP": 169,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 57,
+        "hp": 158,
+        "maxHP": 158,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 59,
+        "hp": 175,
+        "maxHP": 175,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          97
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "STARDOM",
+        "species": 121,
+        "item": 0,
+        "level": 59,
+        "hp": 158,
+        "maxHP": 158,
+        "friendship": 70,
+        "moves": [
+          57,
+          94,
+          85,
+          105
+        ],
+        "pp": [
+          15,
+          10,
+          15,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 61,
+        "hp": 150,
+        "maxHP": 150,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 3,
+        "item": 140,
+        "level": 63,
+        "hp": 193,
+        "maxHP": 193,
+        "friendship": 70,
+        "moves": [
+          202,
+          188,
+          79,
+          182
+        ],
+        "pp": [
+          5,
+          10,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 446,
+      "key": "TRAINER_CHAMPION_FIRST_CHARMANDER",
+      "name": "TERRY",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "HOTSHOT",
+        "species": 212,
+        "item": 0,
+        "level": 59,
+        "hp": 169,
+        "maxHP": 169,
+        "friendship": 70,
+        "moves": [
+          232,
+          210,
+          280,
+          14
+        ],
+        "pp": [
+          35,
+          20,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "GENIUS",
+        "species": 196,
+        "item": 0,
+        "level": 57,
+        "hp": 158,
+        "maxHP": 158,
+        "friendship": 70,
+        "moves": [
+          94,
+          247,
+          347,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SLICK",
+        "species": 428,
+        "item": 0,
+        "level": 59,
+        "hp": 175,
+        "maxHP": 175,
+        "friendship": 100,
+        "moves": [
+          364,
+          247,
+          280,
+          97
+        ],
+        "pp": [
+          10,
+          15,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "WILDCARD",
+        "species": 103,
+        "item": 0,
+        "level": 59,
+        "hp": 199,
+        "maxHP": 199,
+        "friendship": 70,
+        "moves": [
+          202,
+          94,
+          79,
+          113
+        ],
+        "pp": [
+          5,
+          10,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "BOSS",
+        "species": 417,
+        "item": 0,
+        "level": 61,
+        "hp": 150,
+        "maxHP": 150,
+        "friendship": 70,
+        "moves": [
+          57,
+          157,
+          163,
+          203
+        ],
+        "pp": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ACE",
+        "species": 6,
+        "item": 140,
+        "level": 63,
+        "hp": 190,
+        "maxHP": 190,
+        "friendship": 70,
+        "moves": [
+          53,
+          337,
+          332,
+          182
+        ],
+        "pp": [
+          15,
+          15,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 755,
+      "key": "TRAINER_ROCKET_ADMIN_PETREL",
+      "name": "PETREL",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "TRANCE",
+        "species": 97,
+        "item": 0,
+        "level": 35,
+        "hp": 109,
+        "maxHP": 109,
+        "friendship": 70,
+        "moves": [
+          94,
+          95,
+          113,
+          247
+        ],
+        "pp": [
+          10,
+          20,
+          30,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "DECOY",
+        "species": 80,
+        "item": 0,
+        "level": 36,
+        "hp": 119,
+        "maxHP": 119,
+        "friendship": 70,
+        "moves": [
+          94,
+          57,
+          58,
+          347
+        ],
+        "pp": [
+          10,
+          15,
+          10,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "OMEN",
+        "species": 178,
+        "item": 0,
+        "level": 37,
+        "hp": 100,
+        "maxHP": 100,
+        "friendship": 70,
+        "moves": [
+          94,
+          332,
+          115,
+          109
+        ],
+        "pp": [
+          10,
+          20,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "TRIPLETAKE",
+        "species": 103,
+        "item": 0,
+        "level": 38,
+        "hp": 125,
+        "maxHP": 125,
+        "friendship": 70,
+        "moves": [
+          94,
+          202,
+          79,
+          115
+        ],
+        "pp": [
+          10,
+          5,
+          15,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "MIRAGE",
+        "species": 196,
+        "item": 0,
+        "level": 39,
+        "hp": 105,
+        "maxHP": 105,
+        "friendship": 70,
+        "moves": [
+          94,
+          347,
+          44,
+          115
+        ],
+        "pp": [
+          10,
+          20,
+          25,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "PRESTO",
+        "species": 65,
+        "item": 0,
+        "level": 40,
+        "hp": 99,
+        "maxHP": 99,
+        "friendship": 70,
+        "moves": [
+          94,
+          7,
+          105,
+          115
+        ],
+        "pp": [
+          10,
+          15,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 756,
+      "key": "TRAINER_ROCKET_ADMIN_ARCHER",
+      "name": "ARCHER",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "REGENT",
+        "species": 36,
+        "item": 0,
+        "level": 35,
+        "hp": 117,
+        "maxHP": 117,
+        "friendship": 140,
+        "moves": [
+          360,
+          85,
+          58,
+          135
+        ],
+        "pp": [
+          15,
+          15,
+          10,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ADMIRAL",
+        "species": 184,
+        "item": 0,
+        "level": 36,
+        "hp": 124,
+        "maxHP": 124,
+        "friendship": 70,
+        "moves": [
+          359,
+          57,
+          58,
+          113
+        ],
+        "pp": [
+          10,
+          15,
+          10,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "WARDEN",
+        "species": 210,
+        "item": 0,
+        "level": 37,
+        "hp": 120,
+        "maxHP": 120,
+        "friendship": 70,
+        "moves": [
+          359,
+          89,
+          157,
+          339
+        ],
+        "pp": [
+          10,
+          10,
+          10,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "AEGIS",
+        "species": 122,
+        "item": 0,
+        "level": 38,
+        "hp": 85,
+        "maxHP": 85,
+        "friendship": 70,
+        "moves": [
+          358,
+          94,
+          85,
+          113
+        ],
+        "pp": [
+          10,
+          10,
+          15,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "IVORY",
+        "species": 476,
+        "item": 0,
+        "level": 39,
+        "hp": 112,
+        "maxHP": 112,
+        "friendship": 70,
+        "moves": [
+          58,
+          358,
+          109,
+          113
+        ],
+        "pp": [
+          10,
+          10,
+          10,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SOVEREIGN",
+        "species": 452,
+        "item": 0,
+        "level": 40,
+        "hp": 133,
+        "maxHP": 133,
+        "friendship": 35,
+        "moves": [
+          360,
+          247,
+          347,
+          113
+        ],
+        "pp": [
+          15,
+          15,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 757,
+      "key": "TRAINER_ROCKET_ADMIN_ARIANA",
+      "name": "ARIANA",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "VELVET",
+        "species": 474,
+        "item": 0,
+        "level": 35,
+        "hp": 124,
+        "maxHP": 124,
+        "friendship": 70,
+        "moves": [
+          242,
+          188,
+          280,
+          103
+        ],
+        "pp": [
+          15,
+          10,
+          15,
+          40
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "WHISPER",
+        "species": 300,
+        "item": 0,
+        "level": 36,
+        "hp": 117,
+        "maxHP": 117,
+        "friendship": 70,
+        "moves": [
+          185,
+          202,
+          247,
+          252
+        ],
+        "pp": [
+          20,
+          5,
+          15,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "DONNA",
+        "species": 430,
+        "item": 0,
+        "level": 37,
+        "hp": 127,
+        "maxHP": 127,
+        "friendship": 35,
+        "moves": [
+          185,
+          65,
+          247,
+          269
+        ],
+        "pp": [
+          20,
+          20,
+          15,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "VENDETTA",
+        "species": 229,
+        "item": 0,
+        "level": 38,
+        "hp": 111,
+        "maxHP": 111,
+        "friendship": 35,
+        "moves": [
+          242,
+          53,
+          247,
+          269
+        ],
+        "pp": [
+          15,
+          15,
+          15,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "STILETTO",
+        "species": 442,
+        "item": 0,
+        "level": 39,
+        "hp": 110,
+        "maxHP": 110,
+        "friendship": 35,
+        "moves": [
+          185,
+          8,
+          247,
+          280
+        ],
+        "pp": [
+          20,
+          15,
+          15,
+          15
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "ECLIPSE",
+        "species": 197,
+        "item": 0,
+        "level": 40,
+        "hp": 133,
+        "maxHP": 133,
+        "friendship": 35,
+        "moves": [
+          185,
+          92,
+          236,
+          269
+        ],
+        "pp": [
+          20,
+          10,
+          5,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  },
+  {
+    "trainer": {
+      "id": 758,
+      "key": "TRAINER_ROCKET_ADMIN_PROTON",
+      "name": "PROTON",
+      "double": false
+    },
+    "party": [
+      {
+        "name": "DYNAMO",
+        "species": 426,
+        "item": 0,
+        "level": 35,
+        "hp": 100,
+        "maxHP": 100,
+        "friendship": 70,
+        "moves": [
+          85,
+          86,
+          115,
+          161
+        ],
+        "pp": [
+          15,
+          20,
+          20,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "SHRAPNEL",
+        "species": 205,
+        "item": 0,
+        "level": 36,
+        "hp": 106,
+        "maxHP": 106,
+        "friendship": 70,
+        "moves": [
+          191,
+          89,
+          153,
+          182
+        ],
+        "pp": [
+          20,
+          10,
+          5,
+          10
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "AUGER",
+        "species": 208,
+        "item": 0,
+        "level": 37,
+        "hp": 109,
+        "maxHP": 109,
+        "friendship": 70,
+        "moves": [
+          231,
+          89,
+          157,
+          46
+        ],
+        "pp": [
+          15,
+          10,
+          10,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "KLAXON",
+        "species": 433,
+        "item": 0,
+        "level": 38,
+        "hp": 105,
+        "maxHP": 105,
+        "friendship": 70,
+        "moves": [
+          326,
+          157,
+          95,
+          113
+        ],
+        "pp": [
+          30,
+          10,
+          20,
+          30
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "RIVETER",
+        "species": 212,
+        "item": 0,
+        "level": 39,
+        "hp": 110,
+        "maxHP": 110,
+        "friendship": 70,
+        "moves": [
+          232,
+          280,
+          14,
+          216
+        ],
+        "pp": [
+          35,
+          15,
+          30,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      },
+      {
+        "name": "RAZORWING",
+        "species": 227,
+        "item": 0,
+        "level": 40,
+        "hp": 109,
+        "maxHP": 109,
+        "friendship": 70,
+        "moves": [
+          211,
+          65,
+          191,
+          46
+        ],
+        "pp": [
+          25,
+          20,
+          20,
+          20
+        ],
+        "status": 0,
+        "checksumValid": true
+      }
+    ]
+  }
+]
