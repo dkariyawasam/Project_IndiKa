@@ -4,6 +4,7 @@ slug: "breaking-the-vanilla-route"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 2
 status: "draft"
+updated: "2026-10-03"
 summary: "How the mod pushes players away from the classic badge-route mindset."
 ---
 
@@ -74,6 +75,16 @@ Saffron's tea blockade has also been removed. The city now connects directly to 
 The bike is now a purchased or rented travel tool rather than a voucher reward. The cycling-road guard houses can rent one, owned bikes bypass the rental scripts, and the Bike Voucher has been removed.
 
 Route 7 has become the clearest expression of the new structure: it is no longer just a pass-through route, but the aftermath of Giovanni and Mewtwo tearing a path north toward Celadon Cave.
+
+## Geography has to support the invitation
+
+The route work now includes the merged Route 21, the neighbouring Route 18 water stretch, Viridian Channel, Vermilion Harbour and the approaches around Route 25. Vermilion Harbour sits south of Vermilion City and connects onward to Fuchsia Forest. Their joins matter because the player experiences one continuous landscape, even though the engine stores separate maps.
+
+Viridian and Fuchsia Forest use natural entrances inspired by the Sevii forest tiles. The opening, middle tiles and tree bases have to form one readable passage. Removing a gatehouse only helps if the replacement clearly says where to walk.
+
+The regional map has been revised alongside the terrain: water routes use water colours, dungeons use blue markers, and smaller landmarks use grey markers. Labels connect places to their approaches, such as ROUTE 15 / FUCHSIA FOREST. The new blast cave remains unnamed in-world; an accidental wound in the landscape should not have a conveniently installed tourist sign.
+
+Additional ferry destinations remain an idea on hold. The current transport network is documented separately from that possible expansion.
 
 ## Screenshots And References
 

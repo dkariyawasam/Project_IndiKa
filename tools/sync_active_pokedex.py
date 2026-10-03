@@ -17,6 +17,7 @@ def derive():
     for n in dex:
         if n in ('NONE','COUNT') or n.startswith('OLD_UNOWN_'): continue
         reasons=[]
+        if n == 'PORYGON3': reasons.append('reserved for future Patch Disc release')
         if n not in mapped: reasons.append('not mapped/retired')
         if not re.search(r'\.baseHP\s*=\s*[1-9]',stats.get(n,'')): reasons.append('no playable stats')
         if not names.get(n) or '?' in names[n]: reasons.append('missing name')

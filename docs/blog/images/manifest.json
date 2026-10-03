@@ -252,6 +252,28 @@
       "caption": "The Help topic list uses the shared blue selection and back-control header.",
       "kind": "fresh-main-build",
       "sha256": "725ab361fc0c692de9246fe96dad4b65d143afe233ac2a1b17343b79e12535ce"
+    },
+    "habitats-october": {
+      "file": "images/habitats-october.png",
+      "source": "docs/pallet-habitat-fix/habitats-fixed.png",
+      "caption": "Controlled full-Dex fixture showing two-column habitats and corrected Pok\u00e9 Ball palette.",
+      "kind": "controlled-runtime-fixture",
+      "sha256": "265bfaf3148a24e4c3681f1e266284573b24051832557680aa8116d072517960"
+    },
+    "rocket-pokemon-shop": {
+      "file": "images/rocket-pokemon-shop.png",
+      "source": "docs/feature-validation-october2/01-pokemon-shop.png",
+      "caption": "October 2 controlled Rocket League Pok\u00e9mon shop test.",
+      "kind": "archived-runtime-fixture",
+      "sha256": "cc1d6cba022e70831f7ef636c9d148e53ef7cb89405b83afd64db677d1ce03e9"
+    },
+    "expedition-certificate": {
+      "file": "images/expedition-certificate.png",
+      "source": "docs/release-playthrough/october3/08-expedition-certificate.png",
+      "caption": "October 3 certificate award from the earned test campaign.",
+      "kind": "earned-playthrough",
+      "sha256": "0b8e1a2bd38846999ce90633981de21d14552623612edab70e6ba3d95256464d"
     }
-  }
+  },
+  "updated": "2026-10-03"
 }

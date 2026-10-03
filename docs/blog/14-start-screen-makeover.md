@@ -4,6 +4,7 @@ slug: "start-screen-makeover"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 14
 status: "draft"
+updated: "2026-10-03"
 summary: "Replacing Charizard with Tangrowth and rebuilding the title screen into a Kanto vista."
 ---
 
@@ -24,9 +25,9 @@ Tangrowth became the title screen Pokemon because it captures the mod's tone:
 - Overgrowth.
 - Something familiar but slightly strange.
 
-![Tangrowth overlooking Kanto on the current title screen.](images/title-current.png)
+![Tangrowth overlooking Kanto on the September title-screen build.](images/title-current.png)
 
-*Tangrowth overlooking Kanto on the current title screen.*
+*Tangrowth overlooking Kanto on the September title-screen build.*
 
 ## The New Scene
 
@@ -61,6 +62,14 @@ This screen was a tilemap puzzle:
 - The grass layer could not corrupt Press Start.
 - The backdrop needed palette-safe tiles.
 - Several visual artifacts came from tile and palette overlap.
+
+## The final small details are part of the promise
+
+Pressing Start now plays Tangrowth's cry. The title strip reads MOD BY DEE KARIYAWASAM - 2026, using a thin brown band with grass visible beneath it. Cleaning up its stray dark pixels and separating its tiles from the blinking prompt keeps the attribution readable through the animation.
+
+The earlier copyright splash retains the original credits and dates, with a separate Expeditions Kanto · 2026 mod line. That presents the project's identity without relabelling the original game's creation date. The archived title screenshots in this post predate this final wording and strip adjustment.
+
+The same approach applies to the ending credits: identify the new work clearly, retain the original contribution, and track imported art carefully. Unresolved artist attribution remains an open task; a credit should describe a contribution that can actually be supported.
 
 ## Screenshots And References
 

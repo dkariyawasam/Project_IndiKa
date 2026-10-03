@@ -4,6 +4,7 @@ slug: "why-rebuild-kanto"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 1
 status: "draft"
+updated: "2026-10-03"
 summary: "The core idea behind turning FireRed into a fieldwork-driven Kanto expedition."
 ---
 
@@ -58,6 +59,14 @@ That one shift touches almost everything:
 - Gyms, Apex Pokemon, and Giovanni form the main narrative pillars.
 - Menus and UI were rebuilt to make the game feel like a field aide toolkit.
 
+## Three questions, one expedition
+
+The three storylines give the same journey different scales. Evolution by Bond asks what care and training make possible. Evolution by Instinct asks what happens when Pokémon respond to their surroundings without a trainer. Evolution by Design asks what people can reconstruct, engineer or force into existence. The Nature of Evolution brings those observations together.
+
+That structure gives an apparently small feature a reason to exist. A friendship check helps the player understand a relationship. A reconstructed fossil raises questions about missing information. A rival's changing team shows another person reaching conclusions from the same region. These systems should support Oak's assignment through play, as well as dialogue.
+
+The expedition now has a payoff beyond the League speech. Oak reacts to the completed research threads and eventually awards a certificate. Once earned, it appears on the bedroom wall and can be viewed again. The award turns the journey into something the player brings home. See [Oak's expedition ending](21-bringing-the-expedition-home.md) for the progression and remaining release work.
+
 ## Screenshots And References
 
 ![First steps out of Pallet Town.](images/pallet-current.png)
@@ -68,9 +77,9 @@ That one shift touches almost everything:
 
 *The field-notes index connects the research storylines.*
 
-![Tangrowth overlooking Kanto on the current title screen.](images/title-current.png)
+![Tangrowth overlooking Kanto on the September title-screen build.](images/title-current.png)
 
-*Tangrowth overlooking Kanto on the current title screen.*
+*Tangrowth overlooking Kanto on the September title-screen build.*
 
 ## Screenshot And Art Checklist
 

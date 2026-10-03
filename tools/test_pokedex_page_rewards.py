@@ -15,6 +15,8 @@ harness = r'''
 typedef uint8_t u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
+typedef int8_t s8;
+typedef int16_t s16;
 typedef int32_t s32;
 typedef u8 bool8;
 #define NELEMS(a) (sizeof(a) / sizeof((a)[0]))
@@ -39,7 +41,7 @@ void LoadPalette(const void *p, int offset, int size) {}
 #define COPYWIN_MAP 0
 struct PokedexCategoryPage { const u16 *species; u8 count; };
 #include "data/pokemon/pokedex_categories.h"
-struct {u8 category, pageNum, rewardHeaderPulseTimer, rewardFooterRevealWidth, rewardFooterHold, rewardFooterRetracting, rewardReceipt; s32 selectedHabitat;} screen, *sPokedexScreenData = &screen;
+struct {u8 category, pageNum, rewardHeaderPulseTimer, rewardFooterRevealWidth, rewardFooterHold, rewardFooterRetracting, rewardReceipt, firstPageInCategory, lastPageInCategory, categoryCursorPosInPage, numMonsOnPage, modeSelectCursorPos; s32 selectedHabitat;} screen, *sPokedexScreenData = &screen;
 struct Save {u32 dexPageRewardsVersion; u8 dexPageRewards[64]; u32 dexHabitatRewardsVersion; u16 dexHabitatRewards;} save, *gSaveBlock1Ptr = &save;
 u8 owned[NUM_SPECIES];
 int balls, candy, ballSpace = 1, candySpace = 1, failCandy;
@@ -57,6 +59,9 @@ bool8 AddBagItem(u16 item, u16 count) {
 }
 bool8 RemoveBagItem(u16 item, u16 count) {balls -= count; return TRUE;}
 void DexScreen_UpdateCompletionBall(void) {}
+bool8 DexScreen_IsPageUnlocked(u8 category, u8 page) {return TRUE;}
+static void DexScreen_UpdateHabitatHeader(void);
+void DexScreen_DrawHabitatGrid(void) {DexScreen_UpdateHabitatHeader();}
 void PlaySE(int sound) {}
 void FillBgTilemapBufferRect_Palette0(int bg, int tile, int x, int y, int w, int h) {assert(w >= 0 && w <= 30);}
 int footerVisible;
@@ -89,7 +94,7 @@ int main(void) {
  assert(screen.rewardFooterRevealWidth == 2); assert(!footerVisible);
  for(i=0;i<15;i++) DexScreen_AnimateRewardFooter();
  assert(screen.rewardFooterHold == 120); assert(footerVisible);
- assert(!strcmp(footer,"1 EXP. CANDY S + 1 RARE CANDY        ")); assert(!strcmp(header,"NORMAL CONTROLS"));
+ assert(!strcmp(footer,"1 EXP. CANDY S + 1 RARE CANDY        ")); assert(strstr(header,"{A_BUTTON}OK"));
  for(i=0;i<135;i++) DexScreen_AnimateRewardFooter();
  assert(!screen.rewardFooterRevealWidth);
  DexScreen_DrawPageRewardFooter(); assert(!strcmp(footer," ")); assert(!footerVisible);
@@ -107,6 +112,17 @@ int main(void) {
  DexScreen_ClaimHabitatReward(); assert(balls==2);
  saved=save; memset(&save,0,sizeof(save)); save=saved;
  assert(!DexScreen_HabitatReady(0));
+ // The two-column header advertises only the horizontal move that is possible.
+ screen.selectedHabitat=-1;
+ screen.modeSelectCursorPos=0; DexScreen_UpdateHabitatHeader(); assert(strstr(header,"{DPAD_RIGHTUPDOWN}"));
+ screen.modeSelectCursorPos=1; DexScreen_UpdateHabitatHeader(); assert(strstr(header,"{DPAD_LEFTUPDOWN}"));
+ screen.modeSelectCursorPos=12; DexScreen_UpdateHabitatHeader(); assert(!strcmp(header,"NORMAL CONTROLS"));
+ // Page boundaries stay within their habitat, including a one-page habitat.
+ screen.firstPageInCategory=0; screen.lastPageInCategory=3;
+ screen.pageNum=0; assert(DexScreen_FindAdjacentPage(-1)==-1); assert(DexScreen_FindAdjacentPage(1)==1);
+ screen.pageNum=2; assert(DexScreen_FindAdjacentPage(1)==-1); assert(DexScreen_FindAdjacentPage(-1)==1);
+ screen.lastPageInCategory=1; screen.pageNum=0;
+ assert(DexScreen_FindAdjacentPage(-1)==-1 && DexScreen_FindAdjacentPage(1)==-1);
  // Verify all 181 page assignments, including the two-L Apex rule.
  for(c=0;c<DEX_CATEGORY_COUNT;c++) for(p=0;p<gDexCategories[c].count;p++) {
   int expected;

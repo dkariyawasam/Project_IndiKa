@@ -4,6 +4,8 @@ import csv, json, re
 from pathlib import Path
 from PIL import Image, ImageDraw
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/footprint-audit'
+custom_path=OUT/'custom/manifest.json'
+custom=json.loads(custom_path.read_text()) if custom_path.exists() else {}
 def read(p):return (ROOT/p).read_text()
 active=re.findall(r'\[NATIONAL_DEX_(\w+)\] = TRUE',read('src/data/pokemon/active_pokedex.h'))
 table=dict(re.findall(r'\[SPECIES_(\w+)\]\s*=\s*(\w+)',read('src/data/pokemon_graphics/footprint_table.h')))
@@ -30,6 +32,7 @@ for n in active:
   rs,rb=pixels(ref);comparison='match' if rs==(16,16) and rb==bits else 'different'
  original=OUT/'reference'/(n.lower()+'-firered.png')
  if original.exists() and bits is not None and pixels(original)==((16,16),bits): comparison='match-original-firered'
+ if n in custom and bits is not None: comparison='custom-design'
  rows.append(dict(species=n,symbol=symbol,path=path,issues='; '.join(issues),reference=comparison))
  cell=Image.new('RGB',(160,76),'#f4eddb');d=ImageDraw.Draw(cell);d.text((2,1),n,fill='black')
  if bits:
@@ -39,12 +42,12 @@ for n in active:
  sheets.append(cell)
 OUT.mkdir(exist_ok=True)
 with (OUT/'all-species.csv').open('w') as f:
- w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+ w=csv.DictWriter(f,fieldnames=rows[0].keys(),lineterminator='\n');w.writeheader();w.writerows(rows)
 for start in range(0,len(sheets),80):
  page=Image.new('RGB',(1280,760),'white')
  for i,c in enumerate(sheets[start:start+80]):page.paste(c,((i%8)*160,(i//8)*76))
  page.save(OUT/f'contact-sheet-{start//80+1}.png')
-summary={k:sum(r['reference']==k for r in rows) for k in ('match','match-original-firered','different','unavailable')}
+summary={k:sum(r['reference']==k for r in rows) for k in ('match','match-original-firered','custom-design','different','unavailable')}
 summary.update(active=len(rows),placeholders=sum('placeholder' in r['issues'] for r in rows),missing=sum('missing' in r['issues'] for r in rows),blank=sum('blank' in r['issues'] for r in rows))
 (OUT/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 print(summary)
@@ -58,7 +61,8 @@ All {len(rows)} active species checked. This report reflects the current assets;
 
 - {summary['missing']} missing registrations/source files; all resolved images are 16×16.
 - {summary['match']} match the pokeemerald-expansion reference footprints.
-- {summary['match-original-firered']} additional differences are confirmed original FireRed artwork (Shroomish, Golem, Mawile, Ludicolo); retain them.
+- {summary['match-original-firered']} additional active-species differences are confirmed original FireRed artwork; retain them.
+- {summary['custom-design']} use purpose-made custom footprints; see custom/manifest.json and custom/preview.png.
 - {len(placeholders)} use the question-mark placeholder.
 - {len(suspect)} additional non-placeholder images differ from the reference and need review/replacement.
 - {summary['blank']} images are blank; blankness alone is not an error for species without tracks.
@@ -71,7 +75,7 @@ All {len(rows)} active species checked. This report reflects the current assets;
 
 Reference PNGs come from https://github.com/rh-hideout/pokeemerald-expansion/tree/master/graphics/pokemon ; per-species download URLs/results are in reference-sources.json. Four older-species alternatives were additionally checked against https://github.com/pret/pokefirered/tree/master/graphics/pokemon and matched the project exactly. The expansion reference is community maintained; a match is not independent proof of official provenance for later-generation footprints.
 
-Custom species/forms do not necessarily have an official footprint to compare against. Their placeholder graphics need deliberate design choices. Failed regional-form reference lookups do not mean that no canonical footprint exists. No speculative custom prints were drawn.
+Custom species/forms use deliberate contact-stamp designs generated with the built-in image generation tool, then converted to 16×16 monochrome assets by tools/import_custom_footprints.py. The source atlas is preserved in custom/source.png. These are new adaptations, not official footprints. Failed regional-form reference lookups do not mean that no canonical footprint exists.
 
 all-species.csv lists every registration and result. contact-sheet-*.png covers every active species; differences.png shows the initial 26 reference differences (including the four subsequently verified FireRed originals). These are static asset checks, not an emulator playtest.
 """

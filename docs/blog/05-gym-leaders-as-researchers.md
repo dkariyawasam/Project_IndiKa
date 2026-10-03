@@ -4,6 +4,7 @@ slug: "gym-leaders-as-researchers"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 5
 status: "draft"
+updated: "2026-10-03"
 summary: "Why the gym leaders became experts in human-guided Pokemon evolution."
 ---
 
@@ -60,6 +61,14 @@ Gym leader trials use statuses like:
 - Traded
 
 This helps the player read the gym path as research progress, not just combat progress.
+
+## Flexible order still needs deliberate teams
+
+Scalable Gym Leader challenges support the invitation to explore Kanto in a different order. The roster pass also checks each challenge variant for repeated members of one evolution line. Six slots should provide six meaningful opponents, rather than filling space with earlier and later versions of the same Pokémon.
+
+The rewards extend a leader's expertise into ordinary play. Field tools, shop access and friendship information become reminders of that encounter after the battle is over. Their item art helps communicate their role: the Thunder Pass and Soul Pass are diagonal cards with badge motifs, rather than indistinct copies of the badges themselves.
+
+The broader evolution system gives these lessons practical follow-through. In-game trades make several trade evolutions available without a second player, while laboratory trades explain human-made evolution items as local research. Existing Gym Leader trades stay with their leaders so that a useful reorganisation does not strip those relationships of their identity.
 
 ## Screenshots And References
 

@@ -4,6 +4,7 @@ slug: "making-menus-feel-like-one-game"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 10
 status: "draft"
+updated: "2026-10-03"
 summary: "The shared UI language across Bag, Pokedex, Pokemon, Card, Logbook, and Help."
 ---
 
@@ -26,9 +27,9 @@ Depending on the screen, it can show:
 - `A FLIP`
 - `B BACK`
 
-![The Pokédex habitat list and shared blue control header.](images/dex-current.png)
+![Earlier Pokédex habitat layout and shared blue control header; the current index uses two columns.](images/dex-current.png)
 
-*The Pokédex habitat list and shared blue control header.*
+*Earlier Pokédex habitat layout and shared blue control header; the current index uses two columns.*
 
 ## Why Hints Matter
 
@@ -41,7 +42,7 @@ The header makes those controls visible without adding tutorial text everywhere.
 - Bag: pocket names moved to the header.
 - Pokedex: footer hints moved upward into the header.
 - Pokemon: the old choose/cancel boxes were removed.
-- Trainer Card: A flips the card, B exits.
+- Field Aide card: A flips the card, B exits.
 - Logbook: title moved into the shared header, and non-selectable entries hide `A OK`.
 - Help: the Teachy TV replacement uses the same hint logic.
 
@@ -60,9 +61,31 @@ Most of this was not "draw a UI once." It was tile surgery:
 
 The shared menu language now covers Bag, Pokedex, Pokemon, Trainer Card, Logbook, and Help.
 
-Paged menus use a blue hint header with the screen label, notches, and compact controls such as `A OK`, `A FLIP`, `B BACK`, or `+ PICK` depending on the screen. Non-selectable Logbook entries hide `A OK` so the header does not promise an action that is not there.
+Paged menus use a themed hint header with the screen label, notches, and compact controls such as `A OK`, `A FLIP`, `B BACK`, or `+ PICK` depending on the screen. Non-selectable Logbook entries hide `A OK` so the header does not promise an action that is not there.
 
-The Trainer Card now flips with `A` and exits with `B`, while the header stays fixed instead of flipping with the card. The Pokemon summary uses shorter page labels: INFO, STATS, and MOVESET.
+The Field Aide card now flips with `A` and exits with `B`, while the header stays fixed instead of flipping with the card. The Pokemon summary uses shorter page labels: INFO, STATS, and MOVESET.
+
+## A direction indicator is a promise
+
+The red dots on the D-pad glyph show which directions currently do something. They are part of the control specification, not decoration.
+
+| Screen | Behaviour the header needs to explain |
+| --- | --- |
+| Habitat pages | Left/right move between available pages; neither end exits the habitat. |
+| Dex entry | A alternates between the description and area/size view; B leaves either view. |
+| Habitat index | Two columns reduce scrolling; moving up from Grassland wraps to Type under Lists. |
+| Party | The active Pokémon leads right into the reserves; the reserve list wraps vertically. |
+| Bag | Pocket movement stops at the first and last pockets. |
+| Help and Logbook | Left/right do nothing in their lists. |
+| Settings | B BACK remains in the header; the duplicate CANCEL row and title box are removed. |
+
+This is not a rule that every list must wrap. Wrapping helps a vertical list, whereas leaving a habitat because the player pressed past its final page is an accidental exit. Consistency means that visible hints and actual input agree.
+
+## Colour, boundaries and feedback
+
+Blue, rose and green are shared themes, derived from the player's secondary accent. Headers, footers, page notches, dialogue frames and radial icons have been brought into that system. The header's final pixel row should join the background cleanly, including the darker stripe on the Field Aide card.
+
+Pokédex rewards use a separate feedback pattern: the header pulses when a claim is available, START CLAIM replaces A OK, and a temporary footer presents the reward. The page avoids a second large notification window. Earlier overlay experiments corrupted the display; the quieter receipt also leaves the collection context visible.
 
 ## Screenshots And References
 

@@ -9,18 +9,16 @@
 - normal: 398 ok, 1 placeholder
 - shiny: 398 ok, 1 placeholder
 - icon: 398 ok, 1 placeholder
-- footprint: 393 ok, 6 placeholder
+- footprint: 399 ok
 
 ## Missing or placeholder assets
 
 | Species | Internal species | Assets |
 |---|---|---|
-| FEEBAS | CINNABAR_FEEBAS | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder; footprint: placeholder |
-| KABUSTAR | KABUSTAR | back: placeholder; footprint: placeholder |
-| KABUKNIGHT | KABUKNIGHT | back: placeholder; footprint: placeholder |
-| AMUNYTE | AMUNYTE | footprint: placeholder |
-| KINKABUTO | KINKABUTO | footprint: placeholder |
-| AEROPTERYX | AEROPTERYX | back: placeholder; footprint: placeholder |
+| FEEBAS | CINNABAR_FEEBAS | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder |
+| KABUSTAR | KABUSTAR | back: placeholder |
+| KABUKNIGHT | KABUKNIGHT | back: placeholder |
+| AEROPTERYX | AEROPTERYX | back: placeholder |
 
 ## Other source warnings
 

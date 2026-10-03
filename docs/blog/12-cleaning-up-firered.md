@@ -4,6 +4,7 @@ slug: "cleaning-up-firered"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 12
 status: "draft"
+updated: "2026-10-03"
 summary: "Removing unused systems, simplifying blockers, and making room for the mod's own ideas."
 ---
 
@@ -91,6 +92,14 @@ Recent cleanup removed several systems that no longer fit Expeditions Kanto:
 - Coin Case and Bike Voucher.
 
 Some systems survived, but changed jobs. Teachy TV became the Help menu, Fame Checker became the Apex Log, and the old quest menu became the Logbook.
+
+## Remove friction without removing useful structure
+
+The cleanup now includes unused maps while retaining the Battle Colosseum maps, houses inside cycling routes, redundant forest gatehouses and the duplicate Town Map gift. If the player already has the map from the beginning, Daisy should not behave as though she is unlocking it for the first time.
+
+Other removals protect progression. Loose Rare Candy pickups have been replaced as candy rewards move into the fieldwork loop. Oak's extra five-Poké-Ball gifts have been removed in favour of specific reactions to completed research. The new-game level 100 Gengar debug gift has also been removed.
+
+Cleanup still has to respect saves and references. An inactive species ID can remain reserved even when it is absent from the playable roster. Likewise, removing an unused room requires checking its warps, scripts and build references. The goal is a smaller set of systems with clear jobs, rather than deletion as a target in itself.
 
 ## Screenshots And References
 

@@ -9400,9 +9400,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_CinnabarFeebas",
+        "source": "graphics/pokemon/cinnabar_feebas/footprint.png",
         "warnings": []
       }
     }
@@ -11038,9 +11038,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_Kabustar",
+        "source": "graphics/pokemon/kabustar/footprint.png",
         "warnings": []
       }
     }
@@ -11080,9 +11080,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_Kabuknight",
+        "source": "graphics/pokemon/kabuknight/footprint.png",
         "warnings": []
       }
     }
@@ -11164,9 +11164,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_Amunyte",
+        "source": "graphics/pokemon/amunyte/footprint.png",
         "warnings": []
       }
     }
@@ -11206,9 +11206,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_Kinkabuto",
+        "source": "graphics/pokemon/kinkabuto/footprint.png",
         "warnings": []
       }
     }
@@ -11248,9 +11248,9 @@
         "warnings": []
       },
       "footprint": {
-        "status": "placeholder",
-        "symbol": "gMonFootprint_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonFootprint_Aeropteryx",
+        "source": "graphics/pokemon/aeropteryx/footprint.png",
         "warnings": []
       }
     }

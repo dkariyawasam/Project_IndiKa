@@ -4,6 +4,7 @@ slug: "what-i-learned-hacking-firered"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 15
 status: "draft"
+updated: "2026-10-03"
 summary: "A reflection on palettes, tilemaps, scripting, iteration, and the joy of tiny fixes."
 ---
 
@@ -72,6 +73,16 @@ Most technical changes came from a design need:
 - The Pokedex needed cleaner habitat presentation.
 
 Good design pressure is useful. It tells the code what it wants to become.
+
+## A useful tool makes the wrong assumption visible
+
+The debug dashboard grew from a way to inspect emulator state into a way to see the region. A connection diagram answers which maps link together. A tile-level world view answers whether those links look physically plausible. Seeing the actual maps joined exposed gaps, overlaps and coastline problems that were harder to notice while walking one screen at a time.
+
+That distinction applies to testing too. A reward fixture can establish that one XL candy is granted and a repeat claim is rejected. It cannot establish that earning a whole habitat through ordinary play feels well paced. A collision audit can identify invalid events; it cannot prove every shoreline feels right.
+
+The current QA records distinguish earned playthroughs, controlled fixtures, source checks and deferred work. The Pallet/Route 21 issue is a useful recent example: static checks passed, but a player still reported corruption. The latest changes share physical graphics across the boundary and protect empty border cells, while the record openly says the exact reported failure was not reproduced in the clean-load fixture.
+
+That honesty is useful design information. See [the development dashboard post](20-seeing-and-testing-the-whole-region.md) for the workflow and its limits.
 
 ## Screenshots And References
 

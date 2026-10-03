@@ -2851,3 +2851,15 @@ const u32 gMonFrontPic_Kabuknight[] = INCBIN_U32("graphics/pokemon/kabuknight/fr
 const u32 gMonPalette_Kabuknight[] = INCBIN_U32("graphics/pokemon/kabuknight/normal.gbapal.lz");
 
 const u8 gMonIcon_Kabuknight[] = INCBIN_U8("graphics/pokemon/kabuknight/icon.4bpp");
+
+const u8 gMonFootprint_CinnabarFeebas[] = INCBIN_U8("graphics/pokemon/cinnabar_feebas/footprint.1bpp");
+
+const u8 gMonFootprint_Kabustar[] = INCBIN_U8("graphics/pokemon/kabustar/footprint.1bpp");
+
+const u8 gMonFootprint_Kabuknight[] = INCBIN_U8("graphics/pokemon/kabuknight/footprint.1bpp");
+
+const u8 gMonFootprint_Amunyte[] = INCBIN_U8("graphics/pokemon/amunyte/footprint.1bpp");
+
+const u8 gMonFootprint_Kinkabuto[] = INCBIN_U8("graphics/pokemon/kinkabuto/footprint.1bpp");
+
+const u8 gMonFootprint_Aeropteryx[] = INCBIN_U8("graphics/pokemon/aeropteryx/footprint.1bpp");

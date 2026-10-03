@@ -904,7 +904,7 @@ static void CB2_WaitFadeBeforeSetUpIntro(void)
 // Render the mod date separately so the original copyright artwork stays intact.
 static void DrawExpeditionSplashCredit(void)
 {
-    static const u8 credit[] = _("Expedition Kanto · 2026");
+    static const u8 credit[] = _("Expeditions Kanto · 2026");
     static const u8 colors[] = {0, 1, 2};
     static const u16 palette[] = {RGB_BLACK, RGB_WHITE, RGB(12, 12, 12)};
     static const struct BgTemplate bg = {

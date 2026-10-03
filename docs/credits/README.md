@@ -18,11 +18,11 @@ See [attribution source records](attribution-sources.md) and [complete original 
 
 ## Separate story-ending work
 
-The final-rival trigger, custom story vignettes, Pallet Town ending and expedition closing message are not implemented by this attribution change. Existing credits callers still invoke this sequence. Their save/reset behavior remains the existing behavior.
+Oak’s expedition finale and the replayable bedroom certificate are implemented separately from the scrolling credits. The [October 3 QA record](../release-playthrough/october3/README.md) tracks their live verification. Credits retain the existing ending/save/reset flow.
 
 ## Validation
 
-Main ROM built successfully. Checked original page preservation, new script references, and new text widths against game font tables. Live credits playback and controller selection remain to be tested.
+Main ROM built successfully. Checked original page preservation, new script references, and new text widths against game font tables. October 3 live testing verified A selects the project sequence and SELECT selects the original sequence. All fifteen project pages played through to the ending and reset; see the [screenshots and QA record](../release-playthrough/october3/README.md). The original sequence was checked through its first attribution page, not replayed in full.
 
 ## Sprite attribution research
 

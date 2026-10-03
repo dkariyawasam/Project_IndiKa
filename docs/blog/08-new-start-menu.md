@@ -4,6 +4,7 @@ slug: "new-start-menu"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 8
 status: "draft"
+updated: "2026-10-03"
 summary: "Replacing FireRed's list menu with a radial field aide toolkit."
 ---
 
@@ -57,18 +58,25 @@ Navigation was cleaned up so directions feel intentional.
 
 Examples:
 
-- Map and Settings sit opposite each other.
-- Pokedex connects to the upper tools.
-- Help and Logbook sit in the lower tool group.
+- Each tool has a stable position around the player.
+- The centre label identifies the selected destination.
 - The D-pad glyph changes based on available directions.
 
 ## Current Build Notes
 
 The radial menu now has eight entries: Pokedex, Pokemon, Bag, Card, Map, Settings, Help, and Logbook.
 
-The icons are packed into one sheet with a shared palette, and the directional glyph changes depending on which neighbouring entries are available. `L SAVE` now lives in the common blue header instead of being a separate floating label.
+The icons are packed into one sheet with a shared palette, and the directional glyph changes depending on which neighbouring entries are available. `L SAVE` now lives in the common themed header instead of being a separate floating label.
 
 The menu still opens with its backdrop scaling into place, then the icons appear once the backdrop has settled. The save overwrite warning has also been removed so saving feels less fussy.
+
+## Appearance and controls belong to the same system
+
+The interface now supports blue, rose and green themes. The player's second clothing accent selects the matching UI frame, and radial icons shift into the corresponding palette. The primary clothing accent remains independently selectable. Choosing a style and two colours happens together, so personalisation does not become a long sequence of small questions.
+
+The radial menu is only the entrance to the toolkit. Its value depends on what happens after a tool opens: a consistent back action, a visible selection hint and a stable place to look for controls. A menu that is memorable to open but unpredictable to use would miss the point.
+
+The detailed navigation rules, including edge-aware D-pad dots and the distinction between wrapping lists and bounded pages, are covered in [the shared UX post](10-making-menus-feel-like-one-game.md).
 
 ## Screenshots And References
 

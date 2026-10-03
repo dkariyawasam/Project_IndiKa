@@ -4,6 +4,7 @@ slug: "giovanni-and-mewtwo"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 6
 status: "draft"
+updated: "2026-10-03"
 summary: "How Giovanni became the story thread connecting Apex Pokemon, gym leaders, and Team Rocket."
 ---
 
@@ -74,6 +75,14 @@ Giovanni's arc now has four playable beats:
 - Cerulean Cave and Viridian Gym close the loop: Giovanni sees the player handle Mewtwo, returns to his gym, and changes Team Rocket's direction after defeat.
 
 Giovanni also now has distinct team identities: a full Silph Co team at his most ruthless, a formal Ground-type Gym Leader team, and a reformed Rocket League champion team. The Rocket League champion room stays locked until this arc is complete.
+
+## Two leagues, two expressions of strength
+
+The Indigo League uses four double-battle rounds before the rival. The Rocket League uses four single-battle rounds before Giovanni. That difference gives the second competition a distinct rhythm instead of simply repeating the first tournament under a new sign.
+
+The Rocket administrators have specialist team identities designed in relation to the Elite Four, and their Pokémon now have nicknames. The roster and naming passes make them read as people with preferences and tactics. Giovanni's final role can then demonstrate his changed outlook through the team he brings into battle.
+
+The lobby also has a practical role. Its item/TM and Pokémon clerks now use coin-based browsing screens. Porygon, Dratini and Smeargle give the Pokémon counter a more deliberate identity than a collection of species the player keeps finding on nearby routes. The [trade and Rocket League post](18-evolution-without-a-second-console.md) covers how those rewards connect to collection.
 
 ## Screenshots And References
 

@@ -3,16 +3,20 @@
 
 ## Features
 
-- Scalable Gym leaders: Gym leaders 1-7 scale in difficulty depending on the order you challenge them in.
-- Openworld: There are no roadblocks
-- The wild encounter pool is from classic and remake Kanto found in FRLG and HGSS
-- Trade/Trade-with-item/Friendship evolution Pokemon cannot be found in the wild but will be given out by Gym Leaders and special trainers.
-- Alpha Pokemon: Legendary and Move-learn evolution Pokemon cannot be found as wild encounters but will appear as unique overworld encounters
-- Primeval Pokemon: Are the Pseudo-legendary of Kanto and, while extremely rare, they can appear in the wild.
-- Fossil Pokemon: can be revived at the Cinnabar Lab as approximations of the original primeval counterparts.
-- Pokemon League: is 4 rounds of double battles from a randomised pool of Gym Leaders and Elite Four. After which you face the Rival.
-- Rocket League: is held at Team Rocket's HQ and is 4 rounds of single battles from a randomised pool of Rocket Aces and Rocket Admins. After Which you face Giovanni.    
+- Open Kanto exploration, with scalable Gym Leader challenges and field tools earned through their trials.
+- Three connected storylines: the Gym Leader Trials, Apex investigations, and Giovanni’s Ambition, culminating in Oak’s expedition certificate.
+- An Indigo League of four double-battle rounds followed by the rival, and a Rocket League of four single-battle rounds followed by Giovanni.
+- Rare surviving primeval Pokémon and fossil reconstructions assembled from complementary fragments at Cinnabar Lab.
+- In-game trades for trade evolutions, plus Blaine’s quiz terminal for Porygon upgrades.
+- Pokédex page rewards, habitat completion rewards, and a Field Aide card recognizing the League, obtainable collection, and Rocket League milestones.
+- Two player styles, independent accent colours, and matching blue, rose, or green interface themes.
+- A shared menu interface, an expedition Logbook, and an updated regional map.
 
+## Development status
+
+This is a development build. Battle-sprite completion and the final release pass remain open. The [latest QA record](docs/release-playthrough/october3/README.md) separates automated checks, earned playthrough results, and outstanding validation. Patch Disc distribution/Porygon3 and additional ferry destinations remain deliberately deferred.
+
+See the [project credits](docs/credits/README.md) and [asset attribution records](docs/credits/attribution-sources.md). Original artist mappings that are not yet confirmed remain identified as unresolved.
 
 ## Screenshots
 ![Pokemon_Fire_Red_U_1 0](https://github.com/user-attachments/assets/e9665a17-631e-415b-9971-9129644ac9f8)
@@ -34,6 +38,10 @@
 ![Pokemon_Fire_Red_U_1 0](https://github.com/user-attachments/assets/dfc9c7a2-c128-49fa-a84b-bd358b1725ad)
 ![Pokemon_Fire_Red_U_1 0](https://github.com/user-attachments/assets/592ff463-0bb9-4d4d-a36c-74946024fa6d)
 
+
+## Design devlogs
+
+Read the [21-post devlog series](docs/blog/README.md) or use the [feature and design guide](docs/blog/feature-guide.md) to explore the expedition themes, evolution systems, collection rewards and interface decisions.
 
 ## Development dashboard
 

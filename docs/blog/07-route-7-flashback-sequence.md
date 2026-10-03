@@ -4,6 +4,7 @@ slug: "route-7-flashback-sequence"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 7
 status: "draft"
+updated: "2026-10-03"
 summary: "Building a memory sequence where the player reconstructs Mewtwo's rampage."
 ---
 
@@ -74,6 +75,14 @@ The four flashbacks now form a sequence:
 All four use the same white-flash transition language, greyscale memory tint, and post-flashback dialogue structure. The player and present-day NPCs are kept out of the staged flashback space, then restored cleanly afterward.
 
 The beam-cut path now uses rough terrain rather than grass, and Celadon Cave connects Route 7 to Route 4 as the wound Mewtwo leaves behind.
+
+## The aftermath has to remain believable
+
+A route opened by a destructive event should look different from a route planned for travellers. That is why the new cave between Route 7 and Route 4 stays unnamed in-world, with no approach signs pretending it has always been an established destination. The regional map can identify it as ROUTE 7 / CAVE without giving it a formal dungeon identity.
+
+The flashback also has a UX responsibility: return the player to a usable present. Input locks, invisible actors, lingering field effects and unfinished movement can undo the emotional effect of the scene. Testing the sequence therefore includes walking away, returning and checking later dialogue, as well as watching the dramatic moment itself.
+
+That same lesson appeared in the Celadon rival encounter. A character outside the automatic spawn range could leave an approach sequence waiting for an actor that was not properly present. Fixing the scene meant checking how it starts, not only polishing its lines.
 
 ## Screenshots And References
 

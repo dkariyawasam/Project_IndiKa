@@ -4,6 +4,7 @@ slug: "rumour-system"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 4
 status: "draft"
+updated: "2026-10-03"
 summary: "How NPC dialogue became a discovery system for Apex Pokemon."
 ---
 
@@ -74,6 +75,14 @@ The old Fame Checker has been repurposed internally as the Apex Log. It is no lo
 Mewtwo now follows the same logic, but through Giovanni's story. The first entry comes from Giovanni at the broken vat in Pokemon Mansion, the second from Silph's president after the Silph Co confrontation, and the third from Lance after the Route 7 aftermath.
 
 Rumours now refresh visible Apex objects immediately when the third rumour is recorded, so the player no longer has to leave and re-enter the map before an Apex appears.
+
+## A record should reduce memory work
+
+A clue is useful only if the player can recover it later. The Logbook preserves the research thread, while the Apex dossier keeps its witnesses and their testimony together. That allows players to leave a lead unfinished, explore somewhere else and return without having to remember which anonymous NPC said what.
+
+The interface follows the same principle as the rest of the menus: reveal available actions, hide unavailable ones and avoid redundant labels. The dossier no longer carries the inherited FAME CHECKER title, and its header follows the selected interface colour. The ordinary Logbook list ignores left and right rather than using an unrelated horizontal action.
+
+Rumours still deserve a small acknowledgement because new evidence has arrived. Routine Pokédex completion uses a quieter, player-initiated claim instead. Different kinds of progress need different levels of interruption.
 
 ## Screenshots And References
 

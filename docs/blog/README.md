@@ -1,8 +1,10 @@
 # Devlog drafts and images
 
-All 15 drafts have embedded images with descriptive alt text and captions. These are local draft edits; no posts have been published.
+The series now has 21 local drafts, updated on October 3, 2026. All 15 original posts have expanded design and UX discussion; six new posts cover the larger systems added since their first drafts. Nothing has been published.
 
-The image collection contains 36 files: 14 fresh screenshots from a separate copy of the main ROM and 22 archived captures or development references. The original game save was not used for capture writes. Pixel screenshots are stored at their native resolution; enlarge with nearest-neighbour/pixelated rendering when publishing.
+Start with the [feature and philosophy guide](feature-guide.md) for a topic index, implemented-versus-deferred status, and source links.
+
+The image collection combines earlier screenshots, development references and three added evidence captures for habitat rewards, the Rocket shop and Oak’s certificate. Captions distinguish controlled fixtures from earned playthroughs. Earlier screenshots illustrate their recorded builds and may predate the latest wording or layout. Pixel screenshots are stored at native resolution; use nearest-neighbour/pixelated rendering when publishing.
 
 Archived playthrough images, staged state checks, and development sheets are identified in their captions. They illustrate the recorded state and are not evidence that the current build has been retested at every story event. [The image manifest](images/manifest.json) records sources and hashes, including the ROM used for fresh captures.
 
@@ -25,10 +27,16 @@ Archived playthrough images, staged state checks, and development sheets are ide
 | [Pokemon Art And Palette Pass](13-pokemon-art-and-palette-pass.md) | 3 | 1 |
 | [Start Screen Makeover](14-start-screen-makeover.md) | 2 | 6 |
 | [What I Learned Hacking FireRed](15-what-i-learned-hacking-firered.md) | 3 | 3 |
+| [Making Every Catch Matter](16-making-every-catch-matter.md) | 1 | — |
+| [Fossils as Incomplete Reconstructions](17-fossils-as-incomplete-reconstructions.md) | 0 | — |
+| [Evolution Without a Second Console](18-evolution-without-a-second-console.md) | 1 | — |
+| [A Rival Who Travels the Same Region](19-a-rival-who-travels-the-same-region.md) | 0 | — |
+| [Seeing and Testing the Whole Region](20-seeing-and-testing-the-whole-region.md) | 0 | — |
+| [Bringing the Expedition Home](21-bringing-the-expedition-home.md) | 1 | — |
 
 ## Remaining shot requests
 
-These are the unchecked editorial suggestions retained in each draft. Every post is illustrated, but these exact moments or comparisons are still outstanding. Some require historical builds or earlier artwork; others require reaching a particular gameplay state. They have not been replaced with invented screenshots.
+These are the unchecked editorial suggestions retained in the original drafts. The new essays use available evidence where appropriate; dedicated fossil, rival and dashboard illustrations remain optional editorial work. These exact moments or comparisons are still outstanding. Some require historical builds or earlier artwork; others require reaching a particular gameplay state. They have not been replaced with invented screenshots.
 
 ### [Why Rebuild Kanto?](01-why-rebuild-kanto.md)
 

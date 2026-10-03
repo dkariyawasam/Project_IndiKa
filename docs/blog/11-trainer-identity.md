@@ -4,6 +4,7 @@ slug: "trainer-identity"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 11
 status: "draft"
+updated: "2026-10-03"
 summary: "Giving trainer classes clearer overworlds, palettes, names, and narrative roles."
 ---
 
@@ -79,7 +80,15 @@ Recent trainer audit work has turned several classes from placeholders into dedi
 
 Rocker has been folded into Electrician, and Porymap visibility was fixed for the newly wired overworlds so map editing reflects the in-game result.
 
-The roster audit also removed verified-unused trainer parties and checked that Apex Pokemon are not sitting inside ordinary trainer teams.
+The roster audit also removed verified-unused trainer parties and checked Apex placement in ordinary trainer teams. The rival has a deliberate story-specific exception.
+
+## The rival should have a journey you can read
+
+The rival's team now communicates experiences similar to the player's: an Apex discovery outside the player's eight investigations, a fossil reconstruction, friendship, a human-made trade evolution and a stone evolution selected around his starter branch. Kabuknight gives the fossil work a place in that parallel journey. Nicknames add his personal response to the Pokémon, rather than leaving them as interchangeable roster entries.
+
+References implying that one of his Pokémon died have been removed. His team changes should support the story being told here, rather than depend on an inherited fan interpretation from another version of Kanto.
+
+Trainer identity also lives in dialogue. Aroma Ladies and Scouts need distinct observations rather than several people delivering the same class stereotype. At the broader scale, trainer density is inspected against walkable tiles in the development dashboard. Counting every NPC, or dividing by an entire map full of inaccessible water and scenery, would answer a different question.
 
 ## Screenshots And References
 

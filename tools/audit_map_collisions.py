@@ -12,6 +12,8 @@ sys.path.insert(0,str(ROOT/'tools/debug_dashboard'))
 from atlas import AtlasRenderer
 from catalog import build_catalog,load_symbols
 c=build_catalog();r=AtlasRenderer.__new__(AtlasRenderer);r.rom=Path('pokefirered.gba').read_bytes();r.symbols=load_symbols(Path('pokefirered.elf'));r.maps={m['name']:m for m in c['maps']};r.cache={};r.tilesets={};r.pairs={};r.lock=threading.Lock();findings=[];maps={}
+import re
+max_map_data_size=int(re.search(r'#define MAX_MAP_DATA_SIZE\s+(0x[0-9A-Fa-f]+|\d+)', (ROOT/'include/fieldmap.h').read_text())[1],0)
 for m in c['maps']:
  w,h,_,blocks,p,s=r.words(r.symbols[m['layoutSymbol']],6);a=struct.unpack('<'+'H'*(w*h),r.read(blocks,w*h*2));attrs=struct.unpack('<1024I',r.tileset(p,False)[3]+r.tileset(s,True)[3]);maps[m['id']]=(m,w,h,a,attrs)
  for i,o in enumerate(m['objects'],1):
@@ -28,7 +30,7 @@ for m in c['maps']:
    if not water and '_WATER' in o['graphics_id']:detail['kind']='water trainer on land';findings.append(detail.copy())
  for i,o in enumerate(m['warps']):
   if not(0<=o['x']<w and 0<=o['y']<h):findings.append(dict(map=m['name'],kind='warp out of bounds',event=i,**o))
- if (w+15)*(h+14)>0x2880:findings.append(dict(map=m['name'],kind='map exceeds buffer',width=w,height=h))
+ if (w+15)*(h+14)>max_map_data_size:findings.append(dict(map=m['name'],kind='map exceeds buffer',width=w,height=h))
 Path('/tmp/expedition-collision-events.json').write_text(json.dumps(findings,indent=2));print(len(maps),'maps',len(findings),'findings');print(collections.Counter(f['kind'] for f in findings))
 
 waterbad=[];seams=[]

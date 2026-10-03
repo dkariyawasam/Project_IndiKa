@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import re
+from pathlib import Path
 import struct
 import sys
 import zlib
@@ -112,6 +114,38 @@ def make_tile(rows, tx, ty):
     return bytes(tile)
 
 
+def make_footer():
+    # Match the original 12px strip, exposing the BG3 grass beneath it.
+    rows = [[12] * WIDTH for _ in range(12)] + [[0] * WIDTH for _ in range(4)]
+    rows[0] = rows[11] = [13] * WIDTH
+
+    root = Path(__file__).resolve().parent.parent
+    charmap = dict((char, int(code, 16)) for char, code in
+                   re.findall(r"^'(.)'\s*=\s*([0-9A-F]{2})$",
+                              (root / "charmap.txt").read_text(), re.M))
+    font = (root / "graphics/fonts/latin_small.latfont").read_bytes()
+    glyphs = []
+    for char in "MOD BY DEE KARIYAWASAM - 2026":
+        if char == " ":
+            glyphs.append((3, []))
+            continue
+        data = struct.unpack_from("<16H", font, charmap[char] * 32)
+        pixels = [(x, y - 4, (data[y] >> (14 - x * 2)) & 3)
+                  for y in range(4, 12) for x in range(8)
+                  if ((data[y] >> (14 - x * 2)) & 3) in (1, 2)]
+        width = max(x for x, _, _ in pixels) + 1
+        glyphs.append((width + 1, pixels))
+    text_width = sum(width for width, _ in glyphs) - 1
+    if text_width > WIDTH - 16:
+        raise ValueError("mod credit is too wide for the title footer")
+    cursor = (WIDTH - text_width) // 2
+    for width, pixels in glyphs:
+        for x, y, color in pixels:
+            rows[2 + y][cursor + x] = 10 if color == 1 else 6
+        cursor += width
+    return rows
+
+
 def main():
     if len(sys.argv) != 5:
         raise SystemExit("usage: pack_title_grass.py grass.png copyright_press_start.bin grass.4bpp grass.bin")
@@ -155,12 +189,19 @@ def main():
         if tile != 0 and tile != 0x3D:
             write_u16(tilemap, index, entry)
 
-    # Footer text lives below the 144px grass area.
-    for row in range(18, 20):
-        for col in range(32):
-            index = row * 32 + col
-            entry = read_u16(copyright_map, index)
-            write_u16(tilemap, index, entry if entry else BLANK_TILE)
+    # The original credits remain on the intro splash; the title footer
+    # identifies the mod. Keep its tiles outside the PRESS START blink range.
+    footer = make_footer()
+    for ty in range(2):
+        for tx in range(WIDTH // 8):
+            tile = make_tile(footer, tx, ty)
+            if tile not in tile_to_index:
+                tile_to_index[tile] = len(tiles)
+                tiles.append(tile)
+            write_u16(tilemap, (18 + ty) * 32 + tx,
+                      (15 << 12) | (TILE_OFFSET + tile_to_index[tile]))
+    if TILE_OFFSET + len(tiles) > 512:
+        raise ValueError("title foreground exceeds its character block")
 
     with open(tiles_path, "wb") as f:
         f.write(b"".join(tiles))

@@ -1,0 +1,8 @@
+{
+  "fixture": "CompletePokedex special on disposable copy; not earned collection",
+  "before": 0,
+  "after_claim": 1,
+  "after_repeat": 1,
+  "encryption_key_offset_verified_in_compiled_GetBagItemQuantity": "0xF38",
+  "note": "Immediate raw XL quantity unchanged by repeat claim; decrypted count read after closing Dex (map transitions rotate save encryption keys)."
+}

@@ -193,7 +193,8 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
         if (gMapHeader.mapLayout->secondaryTileset == &gTileset_Route21
             && connectedMapHeader->mapLayout->secondaryTileset == &gTileset_PalletTown)
             for (col = 0; col < width; col++)
-                if ((dest[col] & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
+                if (dest[col] != MAPGRID_UNDEFINED
+                    && (dest[col] & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
                     dest[col] = (dest[col] & ~0x3FF) | ((dest[col] & 0x3FF) + 64);
         dest += VMap.Xsize;
         src += mapWidth;
@@ -699,7 +700,8 @@ bool8 CameraMove(s32 x, s32 y)
             for (i = 0; i < MAP_OFFSET_W * MAP_OFFSET_H; i++)
             {
                 u16 block = gSaveBlock2Ptr->mapView[i];
-                if ((block & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
+                if (block != MAPGRID_UNDEFINED
+                    && (block & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
                     gSaveBlock2Ptr->mapView[i] = (block & ~0x3FF) | ((block & 0x3FF) + metatileOffset);
             }
         RefreshCurrentMapNightPalette();

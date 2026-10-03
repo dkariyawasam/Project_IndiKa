@@ -4,6 +4,7 @@ slug: "rebuilding-the-bag"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 9
 status: "draft"
+updated: "2026-10-03"
 summary: "Expanding FireRed's bag into five pockets with modern item behavior."
 ---
 
@@ -59,6 +60,14 @@ The bag now uses five pockets: Items, Berries, Poke Balls, TMs, and Key Items.
 The old CANCEL list rows have been removed because the common hint header now teaches `B BACK`. The pocket name and page notches live in that header, matching the Pokemon summary screen's page language.
 
 Berries now have modernised effects where FireRed only had placeholder or powder-machine behaviour, and berry use in battle has been repaired. Fossils correctly show quantities, coins no longer require the Coin Case, and the Bike Voucher has been removed now that bicycles can be bought or rented.
+
+## Rewards should make the bag easier to use
+
+Exp. Candies now have distinct item icons with dark outlines that suit the other inventory art. Page rewards deliver S, M or L candies according to the page's difficulty, alongside a Rare Candy; habitat completion supplies an XL candy. The reward loop therefore gives this pocket a clear role in helping the next team member catch up.
+
+The bag also needs to tell the truth about its edges. The first pocket does not advertise a leftward move, and the last does not advertise a rightward move. Extra arrow art and redundant CANCEL rows are removed because the header already explains navigation and B BACK.
+
+The shared colour theme reaches the footer and pocket notches as well as the header. Leaving one of those elements in its old blue would make the rose or green version feel unfinished. These are small details, but players see them every time they check an item.
 
 ## Screenshots And References
 

@@ -4,6 +4,7 @@ slug: "pokemon-art-and-palette-pass"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 13
 status: "draft"
+updated: "2026-10-03"
 summary: "Making custom Pokemon sprites, palettes, icons, and footprints feel native to FireRed."
 ---
 
@@ -86,15 +87,23 @@ The art pass has moved from adding sprites to making the Pokedex feel palette-co
 
 Menu icons and footprints were filled in for newer species, while custom palettes were softened toward FireRed-style colours when they felt too saturated or too flat.
 
+## Colour can explain ancestry
+
+The fossil family makes palette consistency part of the fiction. Shell colours connect related reconstructions, the blue bodies connect to Amunyte, and cream body parts connect to Kinkabuto. A player should be able to compare them and infer which physical pieces belong together. The [fossil design post](17-fossils-as-incomplete-reconstructions.md) explains the fragment combinations.
+
+Aeropteryx's pass illustrates a different problem. Too little contrast flattened the body; very deep purple shadows overwhelmed it. The revisions worked toward readable grey volume, a wing palette related to Aerodactyl and a tongue that stays distinct from the wings. Its current typing is Dragon/Flying.
+
+The supporting assets matter too. The footprint audit now covers all 399 active species, including eleven custom footprint designs. Imported cries and altered family-based cries give the expanded roster an audio identity. These additions do not mean the battle art is finished: Deep Feebas and several custom backs remain on the final art list.
+
 ## Screenshots And References
 
 ![The footprint correction reference sheet.](images/footprints.png)
 
 *The footprint correction reference sheet.*
 
-![The Pokédex habitat list and shared blue control header.](images/dex-current.png)
+![Earlier Pokédex habitat layout and shared blue control header; the current index uses two columns.](images/dex-current.png)
 
-*The Pokédex habitat list and shared blue control header.*
+*Earlier Pokédex habitat layout and shared blue control header; the current index uses two columns.*
 
 ## Screenshot And Art Checklist
 

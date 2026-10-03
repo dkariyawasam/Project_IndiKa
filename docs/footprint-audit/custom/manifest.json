@@ -1,0 +1,57 @@
+{
+  "MIME_SR": {
+    "path": "graphics/pokemon/mime_sr/footprint.png",
+    "symbol": "gMonFootprint_MimeSr",
+    "atlas_cell": 0
+  },
+  "OSSCYTHE": {
+    "path": "graphics/pokemon/osscythe/footprint.png",
+    "symbol": "gMonFootprint_Osscythe",
+    "atlas_cell": 1
+  },
+  "OMATO": {
+    "path": "graphics/pokemon/omato/footprint.png",
+    "symbol": "gMonFootprint_Omato",
+    "atlas_cell": 2
+  },
+  "OMATOPS": {
+    "path": "graphics/pokemon/omatops/footprint.png",
+    "symbol": "gMonFootprint_Omatops",
+    "atlas_cell": 3
+  },
+  "CINNABAR_MAGIKARP": {
+    "path": "graphics/pokemon/cinnabar_magikarp/footprint.png",
+    "symbol": "gMonFootprint_CinnabarMagikarp",
+    "atlas_cell": 4
+  },
+  "CINNABAR_FEEBAS": {
+    "path": "graphics/pokemon/cinnabar_feebas/footprint.png",
+    "symbol": "gMonFootprint_CinnabarFeebas",
+    "atlas_cell": 5
+  },
+  "KABUSTAR": {
+    "path": "graphics/pokemon/kabustar/footprint.png",
+    "symbol": "gMonFootprint_Kabustar",
+    "atlas_cell": 6
+  },
+  "KABUKNIGHT": {
+    "path": "graphics/pokemon/kabuknight/footprint.png",
+    "symbol": "gMonFootprint_Kabuknight",
+    "atlas_cell": 7
+  },
+  "AMUNYTE": {
+    "path": "graphics/pokemon/amunyte/footprint.png",
+    "symbol": "gMonFootprint_Amunyte",
+    "atlas_cell": 8
+  },
+  "KINKABUTO": {
+    "path": "graphics/pokemon/kinkabuto/footprint.png",
+    "symbol": "gMonFootprint_Kinkabuto",
+    "atlas_cell": 9
+  },
+  "AEROPTERYX": {
+    "path": "graphics/pokemon/aeropteryx/footprint.png",
+    "symbol": "gMonFootprint_Aeropteryx",
+    "atlas_cell": 10
+  }
+}

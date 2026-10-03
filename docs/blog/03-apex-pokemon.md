@@ -4,6 +4,7 @@ slug: "apex-pokemon"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 3
 status: "draft"
+updated: "2026-10-03"
 summary: "The wild-evolution pillar of the mod and why Apex Pokemon replaced the old legendary structure."
 ---
 
@@ -59,6 +60,14 @@ They also use screen shake, unique roar text, and overworld presence to make the
 - Rumours update counters and visibility.
 - Apex subquests can reveal the target before it is found.
 - Apex overworlds use bespoke sprites and palettes.
+
+## Encounter identity extends into the battle
+
+Custom species need more than a silhouette and a dramatic introduction. Mime Sr and Osscythe have dedicated stat and ability work, while Osscythe's Ground/Ghost typing carries its connection to Marowak and loss into combat. Their intended roles should be legible through appearance, moves and mechanics together.
+
+Collection rewards acknowledge the extra investigation: Apex pages award two Exp. Candy L and one Rare Candy. That reward comes from completing the page, rather than merely hearing a rumour. It connects the investigation to the wider fieldwork loop without making the reward the whole reason to seek an Apex.
+
+There is an important development distinction here. Encounter progression and the custom ability implementation have evidence behind them, but the dedicated live custom-ability battle pass remains deferred. The devlog should not describe those abilities as fully balance-tested. The [release QA record](../release-playthrough/october3/README.md) makes that boundary explicit.
 
 ## Screenshots And References
 

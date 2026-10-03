@@ -2566,6 +2566,9 @@ extern const u32 gTrainerFrontPic_AromaLady[];
 extern const u32 gTrainerFrontPic_RuinManiac[];
 extern const u32 gTrainerFrontPic_Lady[];
 extern const u32 gTrainerFrontPic_RocketAdminAriana[];
+extern const u32 gTrainerFrontPic_RocketAdminArcher[];
+extern const u32 gTrainerFrontPic_RocketAdminPetrel[];
+extern const u32 gTrainerFrontPic_RocketAdminProton[];
 
 extern const u32 gTrainerPalette_TrendsetterM[];
 extern const u32 gTrainerPalette_Guitarist[];
@@ -2654,6 +2657,9 @@ extern const u32 gTrainerPalette_AromaLady[];
 extern const u32 gTrainerPalette_RuinManiac[];
 extern const u32 gTrainerPalette_Lady[];
 extern const u32 gTrainerPalette_RocketAdminAriana[];
+extern const u32 gTrainerPalette_RocketAdminArcher[];
+extern const u32 gTrainerPalette_RocketAdminPetrel[];
+extern const u32 gTrainerPalette_RocketAdminProton[];
 
 extern const u8 gMenuInfoElements_Gfx[];
 extern const u16 gMenuInfoElements1_Pal[];
@@ -4685,3 +4691,15 @@ extern const u32 gMonFrontPic_Kabuknight[];
 extern const u32 gMonPalette_Kabuknight[];
 
 extern const u8 gMonIcon_Kabuknight[];
+
+extern const u8 gMonFootprint_CinnabarFeebas[];
+
+extern const u8 gMonFootprint_Kabustar[];
+
+extern const u8 gMonFootprint_Kabuknight[];
+
+extern const u8 gMonFootprint_Amunyte[];
+
+extern const u8 gMonFootprint_Kinkabuto[];
+
+extern const u8 gMonFootprint_Aeropteryx[];
