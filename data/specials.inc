@@ -468,4 +468,8 @@ gSpecials::
 	def_special RecordRocketLeagueCoins
 	def_special PlayFieldItemAnimation
 	def_special OpenRocketCoinShop
+	def_special GetOakResearchReaction
+	def_special GetOakResearchInvitation
+	def_special IsOakExpeditionReady
+	def_special ShowExpeditionCertificate
 gSpecialsEnd::

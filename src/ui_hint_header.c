@@ -78,7 +78,7 @@ void DrawUiHintHeader(u8 windowId, const u8 *text, u8 fillColor, u8 lineColor, u
     AddTextPrinterParameterized4(windowId, FONT_SMALL, x, textY, 0, 0, colors, 0, text);
     if (textY == 0)
         ScrollWindow(windowId, 0, 1, PIXEL_FILL(fillColor));
-    FillWindowPixelRect(windowId, PIXEL_FILL(lineColor), 0, 15, 240, 1);
+    FillWindowPixelRect(windowId, PIXEL_FILL(lineColor), 0, UI_HINT_HEADER_BACKGROUND_ROW, 240, 1);
     if (putTilemap)
     {
         PutWindowTilemap(windowId);
@@ -108,4 +108,15 @@ void DrawUiPageNotches(u8 windowId, u8 x, u8 count, u8 selected, u8 background)
         FillWindowPixelRect(windowId, PIXEL_FILL(shade), left + 2, 3, 4, 8);
         FillWindowPixelRect(windowId, PIXEL_FILL(shade), left + 1, 4, 6, 6);
     }
+}
+
+// Header windows reserve colour 10 for the screen-facing edge. Draw this
+// after titles/notches so their text backgrounds cannot overwrite the edge.
+void DrawUiHeaderBackgroundRow(u8 windowId, u16 backgroundColor)
+{
+    LoadPalette(&backgroundColor, BG_PLTT_ID(GetWindowAttribute(windowId, WINDOW_PALETTE_NUM)) + 10, sizeof(backgroundColor));
+    FillWindowPixelRect(windowId, PIXEL_FILL(10), 0,
+                        UI_HINT_HEADER_BACKGROUND_ROW,
+                        GetWindowAttribute(windowId, WINDOW_WIDTH) * 8, 1);
+    CopyWindowToVram(windowId, COPYWIN_GFX);
 }

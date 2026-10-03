@@ -705,6 +705,7 @@ static void PartyPaletteBufferCopy(u8 offset)
 static void PrintPartyMenuControlHints(void)
 {
     DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, gText_DPadAnyPickOKBack, 8, 10, 0, TRUE);
+    DrawUiHeaderBackgroundRow(PARTY_MENU_HINT_WINDOW_ID, gPlttBufferUnfaded[BG_PLTT_ID(1) + 4]);
     ScheduleBgCopyTilemapToVram(0);
 }
 

@@ -1,0 +1,284 @@
+{
+  "method": "Derived from existing FRLG game audio; mono unsigned 8-bit PCM, 10512 Hz. Peak limited to 88%, with 8 ms edge fades.",
+  "cries": [
+    {
+      "species": "KINKABUTO",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/kabuto.wav",
+          "sha256": "3def91cad3a3b64c6b36f5c378087c6777d44cf5c1a69c4467c34500ded88ef3"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/kabutops.wav",
+          "sha256": "894ecc34b8b3faa8e78ef63cb2040787a9d9c95b9ac79f73742fe43c3755ebd2"
+        }
+      ],
+      "treatment": "Lower Kabuto body with a short, higher Kabutops clicking finish.",
+      "wav": "sound/direct_sound_samples/cries/custom_kinkabuto.wav",
+      "wav_sha256": "4f9e68150f7131705bc551a6b605177b71aeb7acd2703fb46b2f2e3fba3e3975",
+      "sample_rate": 10512,
+      "duration_seconds": 0.6657,
+      "cry_id": 447
+    },
+    {
+      "species": "AMUNYTE",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/omanyte.wav",
+          "sha256": "2f732c1694286f8301eccbab59b3d03ccd84cf10945b07b0b4769641d3d3d10b"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/omastar.wav",
+          "sha256": "aaf0fa766db59d4d56fa8e28845a1b2852c20086f40878d0618f88b36ff57638"
+        }
+      ],
+      "treatment": "Lower Omanyte with gentle bubbling amplitude pulses and an Omastar undertone.",
+      "wav": "sound/direct_sound_samples/cries/custom_amunyte.wav",
+      "wav_sha256": "e1a01d6cbf72216b9c776706c59d4290b00df9261a527ea16ed4da3fb7cadc60",
+      "sample_rate": 10512,
+      "duration_seconds": 0.8331,
+      "cry_id": 448
+    },
+    {
+      "species": "OMATO",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/omanyte.wav",
+          "sha256": "2f732c1694286f8301eccbab59b3d03ccd84cf10945b07b0b4769641d3d3d10b"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/kabuto.wav",
+          "sha256": "3def91cad3a3b64c6b36f5c378087c6777d44cf5c1a69c4467c34500ded88ef3"
+        }
+      ],
+      "treatment": "Omanyte-led call with a short Kabuto accent.",
+      "wav": "sound/direct_sound_samples/cries/custom_omato.wav",
+      "wav_sha256": "f16ff7b4588ea151f2844d26b35874b07a344dfd9e2f739d1641e81db8f0d21e",
+      "sample_rate": 10512,
+      "duration_seconds": 0.5915,
+      "cry_id": 449
+    },
+    {
+      "species": "OMATOPS",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/omastar.wav",
+          "sha256": "aaf0fa766db59d4d56fa8e28845a1b2852c20086f40878d0618f88b36ff57638"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/kabutops.wav",
+          "sha256": "894ecc34b8b3faa8e78ef63cb2040787a9d9c95b9ac79f73742fe43c3755ebd2"
+        }
+      ],
+      "treatment": "Omastar-led call with a sharper Kabutops edge.",
+      "wav": "sound/direct_sound_samples/cries/custom_omatops.wav",
+      "wav_sha256": "17851e341bfbe93f3af4322e0266828ed090f908963288f6a9db4e9e9e8729ca",
+      "sample_rate": 10512,
+      "duration_seconds": 0.6526,
+      "cry_id": 450
+    },
+    {
+      "species": "KABUSTAR",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/kabuto.wav",
+          "sha256": "3def91cad3a3b64c6b36f5c378087c6777d44cf5c1a69c4467c34500ded88ef3"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/omanyte.wav",
+          "sha256": "2f732c1694286f8301eccbab59b3d03ccd84cf10945b07b0b4769641d3d3d10b"
+        }
+      ],
+      "treatment": "Kabuto-led call with a bright Omanyte undertone.",
+      "wav": "sound/direct_sound_samples/cries/custom_kabustar.wav",
+      "wav_sha256": "45e059c36514a318869cee683ddd77e77da8ed5c44522c4fa4274a2100f040a8",
+      "sample_rate": 10512,
+      "duration_seconds": 0.5705,
+      "cry_id": 451
+    },
+    {
+      "species": "KABUKNIGHT",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/kabutops.wav",
+          "sha256": "894ecc34b8b3faa8e78ef63cb2040787a9d9c95b9ac79f73742fe43c3755ebd2"
+        },
+        {
+          "path": "sound/direct_sound_samples/cries/omastar.wav",
+          "sha256": "aaf0fa766db59d4d56fa8e28845a1b2852c20086f40878d0618f88b36ff57638"
+        }
+      ],
+      "treatment": "Lower Kabutops-led call with Omastar resonance.",
+      "wav": "sound/direct_sound_samples/cries/custom_kabuknight.wav",
+      "wav_sha256": "a0987eea0c96738101e1d7f1b802703ac3e8050c32a92f6935b4c93dc1a01630",
+      "sample_rate": 10512,
+      "duration_seconds": 0.7619,
+      "cry_id": 452
+    },
+    {
+      "species": "AEROPTERYX",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/aerodactyl.wav",
+          "sha256": "00ae31137d362ba4c5d5cff096604638bb8c5f5e102048bbd9f3ad7f7a696d87"
+        }
+      ],
+      "treatment": "Slightly lower screech, softened rasp and a quiet bright overtone.",
+      "wav": "sound/direct_sound_samples/cries/custom_aeropteryx.wav",
+      "wav_sha256": "fba42d21a8949d477765ef21fb9cd4f090f96307503af141bab6e11534058d3f",
+      "sample_rate": 10512,
+      "duration_seconds": 1.2205,
+      "cry_id": 453
+    },
+    {
+      "species": "OSSCYTHE",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/marowak.wav",
+          "sha256": "8724d27cdd342efc78d1702d4d24f1e32edff32eb782b5f0bc6b2426e9afa057"
+        }
+      ],
+      "treatment": "Hollow, lower call with two short echoes and a sharp final fragment.",
+      "wav": "sound/direct_sound_samples/cries/custom_osscythe.wav",
+      "wav_sha256": "f5ede6a6c6b64c014c097c207b3d7faa2819123e44183e19789cf4724394d5cc",
+      "sample_rate": 10512,
+      "duration_seconds": 0.8362,
+      "cry_id": 454
+    },
+    {
+      "species": "MIME_SR",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/mr_mime.wav",
+          "sha256": "4462680b7f1f08d173074f151b2c6c5e4d55e14fe1d6016d5d81836ce80695c1"
+        }
+      ],
+      "treatment": "Lower theatrical call with a short answering phrase.",
+      "wav": "sound/direct_sound_samples/cries/custom_mime_sr.wav",
+      "wav_sha256": "88ad0e9ebeaa10e6c19dbf04d0bbf3c59ccb27c7197ec12cdb4bb8af7ac2f55e",
+      "sample_rate": 10512,
+      "duration_seconds": 1.1582,
+      "cry_id": 455
+    },
+    {
+      "species": "CINNABAR_MAGIKARP",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/magikarp.wav",
+          "sha256": "005c938af36e07096b1a88400f25ebe47b43388224ca8905bad770f7c65a72a5"
+        }
+      ],
+      "treatment": "Fuller Magikarp call with a low growling undertone.",
+      "wav": "sound/direct_sound_samples/cries/custom_cinnabar_magikarp.wav",
+      "wav_sha256": "f7abc80d65cd45b82a068896d58908234d189db1b5484d0abe8c4cf10dda9a08",
+      "sample_rate": 10512,
+      "duration_seconds": 1.3366,
+      "cry_id": 456
+    },
+    {
+      "species": "CINNABAR_FEEBAS",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/feebas.wav",
+          "sha256": "a3ee3844f82257fcd1e9c156df273e353a3ca4ddb8caa18c41551f02f5a5e156"
+        }
+      ],
+      "treatment": "Wavering Feebas call with a restrained metallic, icy tail.",
+      "wav": "sound/direct_sound_samples/cries/custom_cinnabar_feebas.wav",
+      "wav_sha256": "a384459f058c53249a21788a72af6a08700fb2029b77f4c3309bf3a4b2ef3046",
+      "sample_rate": 10512,
+      "duration_seconds": 0.4247,
+      "cry_id": 457
+    },
+    {
+      "species": "PORYGON3",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/porygon2.wav",
+          "sha256": "a1336d619ff5e74ec4e5625824ad25eb71cdd5548440c84166b85c98b11d49ef"
+        }
+      ],
+      "treatment": "Three clean ascending phrases derived from Porygon2.",
+      "wav": "sound/direct_sound_samples/cries/custom_porygon3.wav",
+      "wav_sha256": "d857927faefbc27ab63d1f3fe153099c1ab8f91d73fd5ba68bebf6788ff544c5",
+      "sample_rate": 10512,
+      "duration_seconds": 0.7325,
+      "cry_id": 458
+    },
+    {
+      "species": "PICHU_ALOLAN",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/pichu.wav",
+          "sha256": "7a7f243fbbdac2ccfb6e4af91934cea168d2aea49880bdf424be462f54144744"
+        }
+      ],
+      "treatment": "Subtle family variation: playback rate 1.045; quiet 18 ms echo.",
+      "wav": "sound/direct_sound_samples/cries/custom_pichu_alolan.wav",
+      "wav_sha256": "b02ed1db097136eca38cadc9262c338b74b4f558283a1ac9c822971393c14e57",
+      "sample_rate": 10512,
+      "duration_seconds": 0.3459,
+      "cry_id": 459
+    },
+    {
+      "species": "PIKACHU_ALOLAN",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/pikachu.wav",
+          "sha256": "19ff12fa7b2e1c68c163f9718f39e23d3491bd26c544b19dbda0f2324f203f4c"
+        }
+      ],
+      "treatment": "Subtle family variation: playback rate 0.96; quiet 18 ms echo.",
+      "wav": "sound/direct_sound_samples/cries/custom_pikachu_alolan.wav",
+      "wav_sha256": "4270bd2043e17a1a6f1f6528149f04012609f38b0ea427b131bc1082a05000da",
+      "sample_rate": 10512,
+      "duration_seconds": 0.834,
+      "cry_id": 460
+    },
+    {
+      "species": "EXEGGCUTE_ALOLAN",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/exeggcute.wav",
+          "sha256": "0e49f06fabfd6eb955bb67df757a41587b8fb527c4753abc32e0b5dce6c4fefc"
+        }
+      ],
+      "treatment": "Subtle family variation: playback rate 0.955; quiet 18 ms echo.",
+      "wav": "sound/direct_sound_samples/cries/custom_exeggcute_alolan.wav",
+      "wav_sha256": "90d463ebcd5231ac7d38e45e53f42294bcded89db691c072d7e4b48489e2ee1d",
+      "sample_rate": 10512,
+      "duration_seconds": 0.9478,
+      "cry_id": 461
+    },
+    {
+      "species": "CUBONE_ALOLAN",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/cubone.wav",
+          "sha256": "26557d87b86eb64d2b1c1dca1861222b8cd362978acfcd9f0b05f7f277e4a482"
+        }
+      ],
+      "treatment": "Subtle family variation: playback rate 0.95; quiet 18 ms echo.",
+      "wav": "sound/direct_sound_samples/cries/custom_cubone_alolan.wav",
+      "wav_sha256": "720cf0b6de3f371a3e6034234c916c4dfe99129f62e10a45f0083475a02d18f0",
+      "sample_rate": 10512,
+      "duration_seconds": 0.7667,
+      "cry_id": 462
+    },
+    {
+      "species": "KOFFING_GALARIAN",
+      "sources": [
+        {
+          "path": "sound/direct_sound_samples/cries/koffing.wav",
+          "sha256": "cfbc928f25597896b795dcad33494dded99eb0baa15bee4a8462ba38e2042294"
+        }
+      ],
+      "treatment": "Subtle family variation: playback rate 0.94; quiet 18 ms echo.",
+      "wav": "sound/direct_sound_samples/cries/custom_koffing_galarian.wav",
+      "wav_sha256": "bc4aba5279a619d4c28c3f5cb2b3b477369cd16567516330ddb082ff2b53c0e0",
+      "sample_rate": 10512,
+      "duration_seconds": 1.0373,
+      "cry_id": 463
+    }
+  ]
+}

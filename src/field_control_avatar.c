@@ -19,6 +19,9 @@
 #include "overworld.h"
 #include "renewable_hidden_items.h"
 #include "quest_log.h"
+#include "quests.h"
+
+extern const u8 EventScript_OakResearchInvitation[];
 #include "safari_zone.h"
 #include "script.h"
 #include "start_menu.h"
@@ -636,6 +639,14 @@ static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileB
         return TRUE;
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior) && UpdateRepelCounter() == TRUE)
         return TRUE;
+    if (gQuestLogState != QL_STATE_PLAYBACK
+     && !(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED)
+     && !MetatileBehavior_IsForcedMovementTile(metatileBehavior)
+     && GetOakResearchInvitation() != 0)
+    {
+        ScriptContext_SetupScript(EventScript_OakResearchInvitation);
+        return TRUE;
+    }
     return FALSE;
 }
 

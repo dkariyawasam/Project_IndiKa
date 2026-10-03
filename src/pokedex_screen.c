@@ -845,7 +845,7 @@ void CB2_PokedexScreen(void)
         {
             static const u8 pulse[] = {0, 2, 4, 2};
             BlendPalettes(DEX_REWARD_DIM_PALETTES, 6, RGB_BLACK);
-            BlendPalette(BG_PLTT_ID(15) + 11, 2,
+            BlendPalette(BG_PLTT_ID(15) + 11, 1,
                          pulse[(sPokedexScreenData->rewardHeaderPulseTimer++ & 15) >> 2], RGB_WHITE);
             sPokedexScreenData->rewardPageDimmed = TRUE;
         }
@@ -2313,7 +2313,9 @@ static void DexScreen_PrintHeaderControlInfo(const u8 *src)
     SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
     SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
     SetWindowAttribute(1, WINDOW_WIDTH, 30);
-    DrawUiHintHeader(1, src, 11, 12, 0, FALSE);
+    // Let the actual page background show through the last header row.
+    // A header-palette colour stays opaque during page fades and pulses.
+    DrawUiHintHeader(1, src, 11, 0, 0, FALSE);
 }
 
 bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)

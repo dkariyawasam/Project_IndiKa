@@ -1,3 +1,4 @@
+// Keep graphics info explicit: Porymap does not expand declaration macros.
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
@@ -1271,40 +1272,224 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerrySoil = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-#define BERRY_PLANT_GFX_INFO(name, animTable, picTable)              \
-const struct ObjectEventGraphicsInfo name = {                       \
-    .tileTag = TAG_NONE,                                            \
-    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,                    \
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                 \
-    .size = 256,                                                    \
-    .width = 16,                                                    \
-    .height = 32,                                                   \
-    .paletteSlot = PALSLOT_NPC_DYNAMIC,                             \
-    .shadowSize = SHADOW_SIZE_S,                                    \
-    .inanimate = TRUE,                                              \
-    .disableReflectionPaletteLoad = FALSE,                          \
-    .tracks = TRACKS_NONE,                                          \
-    .oam = &gObjectEventBaseOam_16x32,                              \
-    .subspriteTables = gObjectEventSpriteOamTables_16x32,           \
-    .anims = animTable,                                             \
-    .images = picTable,                                             \
-    .affineAnims = gDummySpriteAffineAnimTable,                     \
-}
 
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_SitrusBerryGrowing, sAnimTable_Inanimate, sPicTable_SitrusBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_SitrusBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_SitrusBerryRipe);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LumBerryGrowing, sAnimTable_Inanimate, sPicTable_LumBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LumBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_LumBerryRipe);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LeppaBerryGrowing, sAnimTable_Inanimate, sPicTable_LeppaBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_LeppaBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_LeppaBerryRipe);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_PomegBerryGrowing, sAnimTable_Inanimate, sPicTable_PomegBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_PomegBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_PomegBerryRipe);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_KelpsyBerryGrowing, sAnimTable_Inanimate, sPicTable_KelpsyBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_KelpsyBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_KelpsyBerryRipe);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_TamatoBerryGrowing, sAnimTable_Inanimate, sPicTable_TamatoBerryGrowing);
-BERRY_PLANT_GFX_INFO(gObjectEventGraphicsInfo_TamatoBerryRipe, sAnimTable_BerryPlantRipe, sPicTable_TamatoBerryRipe);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SitrusBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_SitrusBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SitrusBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_SitrusBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LumBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_LumBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LumBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_LumBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeppaBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_LeppaBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeppaBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_LeppaBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PomegBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_PomegBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PomegBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_PomegBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KelpsyBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_KelpsyBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KelpsyBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_KelpsyBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TamatoBerryGrowing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_TamatoBerryGrowing,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TamatoBerryRipe = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BERRY_PLANT,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_BerryPlantRipe,
+    .images = sPicTable_TamatoBerryRipe,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
-#undef BERRY_PLANT_GFX_INFO
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivClerk = {
     .tileTag = TAG_NONE,
@@ -2009,27 +2194,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivGBAKid = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-#define DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(name, palette, slot, picTable)    \
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = {    \
-    .tileTag = TAG_NONE,                                                    \
-    .paletteTag = palette,                                                  \
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                         \
-    .size = 256,                                                            \
-    .width = 16,                                                            \
-    .height = 32,                                                           \
-    .paletteSlot = slot,                                                    \
-    .shadowSize = SHADOW_SIZE_M,                                            \
-    .inanimate = FALSE,                                                     \
-    .disableReflectionPaletteLoad = FALSE,                                  \
-    .tracks = TRACKS_FOOT,                                                  \
-    .oam = &gObjectEventBaseOam_16x32,                                      \
-    .subspriteTables = gObjectEventSpriteOamTables_16x32,                   \
-    .anims = sAnimTable_Standard,                                           \
-    .images = picTable,                                                     \
-    .affineAnims = gDummySpriteAffineAnimTable,                             \
-}
 
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(BugManiac, OBJ_EVENT_PAL_TAG_BUG_MANIAC, PALSLOT_NPC_BESPOKE_5, sPicTable_BugManiac);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BUG_MANIAC,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_5,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_BugManiac,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_BURGLAR,
@@ -2086,8 +2269,42 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Gambler, OBJ_EVENT_PAL_TAG_NPC_PINK, PALSLOT_NPC_2, sPicTable_Gambler);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Ninja, OBJ_EVENT_PAL_TAG_NINJA, PALSLOT_NPC_DYNAMIC, sPicTable_Ninja);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gambler = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_PINK,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_2,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Gambler,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ninja = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NINJA,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Ninja,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kindler = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_KINDLER,
@@ -2215,10 +2432,78 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM = {
     .images = sPicTable_PsychicM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(Janine, OBJ_EVENT_PAL_TAG_JANINE, PALSLOT_NPC_DYNAMIC, sPicTable_Janine);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(SuperNerd, OBJ_EVENT_PAL_TAG_NPC_WHITE, PALSLOT_NPC_4, sPicTable_SuperNerd);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMLand);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFLand, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFLand);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JANINE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Janine,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_4,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_SuperNerd,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMLand = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteMLand,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFLand = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteFLand,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_BIRD_KEEPER,
@@ -2255,14 +2540,98 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Engineer = {
     .images = sPicTable_Engineer,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMWater);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFWater, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFWater);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteMCycling, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteMCycling);
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(TriathleteFCycling, OBJ_EVENT_PAL_TAG_NPC_BLUE, PALSLOT_NPC_1, sPicTable_TriathleteFCycling);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMWater = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteMWater,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFWater = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteFWater,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteMCycling = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteMCycling,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TriathleteFCycling = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_TriathleteFCycling,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
-DEFINE_TRAINER_OBJ_EVENT_GFX_INFO(PsychicF, OBJ_EVENT_PAL_TAG_PSYCHIC_M, PALSLOT_NPC_DYNAMIC, sPicTable_PsychicF);
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicF = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PSYCHIC_M,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_PsychicF,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
-#undef DEFINE_TRAINER_OBJ_EVENT_GFX_INFO
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall = {
     .tileTag = TAG_NONE,
