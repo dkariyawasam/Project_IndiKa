@@ -715,10 +715,10 @@ static const struct WindowTemplate sWindowTemplates_Permanent_Bg1[] =
         .bg = 1,
         .tilemapLeft = 0,
         .tilemapTop = 0,
-        .width = 13,
+        .width = 14,
         .height = 2,
         .paletteNum = 7,
-        .baseBlock = 0x0258
+        .baseBlock = 0x0300
     },
     [POKESUM_WIN_CONTROLS] = {
         .bg = 1,
@@ -746,10 +746,10 @@ static const struct WindowTemplate sWindowTemplates_Permanent_Bg2[] =
         .bg = 2,
         .tilemapLeft = 0,
         .tilemapTop = 0,
-        .width = 13,
+        .width = 14,
         .height = 2,
         .paletteNum = 7,
-        .baseBlock = 0x0258
+        .baseBlock = 0x0300
     },
     {
         .bg = 2,
@@ -2406,6 +2406,8 @@ static void PokeSum_PrintControlsString(const u8 * str)
     width = GetStringWidth(FONT_SMALL, str, 0);
     r1 = sMonSummaryScreen->windowIds[POKESUM_WIN_CONTROLS];
     AddTextPrinterParameterized3(r1, FONT_SMALL, 0x7C - width, 0, sLevelNickTextColors[1], 0, str);
+    ScrollWindow(r1, 0, 1, PIXEL_FILL(0));
+    DrawUiHeaderBackgroundRow(r1, gPlttBufferUnfaded[2]);
     PutWindowTilemap(sMonSummaryScreen->windowIds[POKESUM_WIN_CONTROLS]);
 }
 
@@ -3265,6 +3267,7 @@ static void PokeSum_DrawPageProgressTiles(void)
         selected = 1;
     FillWindowPixelRect(windowId, PIXEL_FILL(0), 64, 0, 40, 16);
     DrawUiPageNotches(windowId, 64, sMonSummaryScreen->isEgg ? 1 : 3, selected, 0);
+    DrawUiHeaderBackgroundRow(windowId, gPlttBufferUnfaded[2]);
     PutWindowTilemap(windowId);
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }

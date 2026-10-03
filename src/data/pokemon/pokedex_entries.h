@@ -4387,7 +4387,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_OMATO] =
     {
-        .categoryName = _("TOMATO"),
+        .categoryName = _("SPIRAL"),
         .height = 1,
         .weight = 1,
         .description = gOmatoPokedexText,
@@ -4400,7 +4400,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_OMATOPS] =
     {
-        .categoryName = _("TOMATO"),
+        .categoryName = _("SPINNING"),
         .height = 1,
         .weight = 1,
         .description = gOmatopsPokedexText,
@@ -4648,7 +4648,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CINNABAR_FEEBAS] =
     {
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("DEEP DRAGON"),
         .height = 8,
         .weight = 100,
         .description = gCinnabarFeebasPokedexText,
@@ -4701,7 +4701,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_KABUSTAR] =
     {
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("CLINGING"),
         .height = 10,
         .weight = 100,
         .description = gKabustarPokedexText,
@@ -4714,7 +4714,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_KABUKNIGHT] =
     {
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("ARMORED"),
         .height = 10,
         .weight = 100,
         .description = gKabuknightPokedexText,
@@ -4753,7 +4753,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_AEROPTERYX] =
     {
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("PRIMEVAL"),
         .height = 10,
         .weight = 100,
         .description = gAeropteryxPokedexText,

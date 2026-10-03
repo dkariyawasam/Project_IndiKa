@@ -82,7 +82,7 @@ struct TrainerCardData
 EWRAM_DATA struct TrainerCard gTrainerCards[4] = {0};
 EWRAM_DATA static struct TrainerCardData *sTrainerCardDataPtr = NULL;
 
-#define TRAINER_CARD_HINT_HEADER_HEIGHT 16
+#define TRAINER_CARD_HINT_HEADER_HEIGHT UI_HINT_HEADER_HEIGHT
 
 // Function Declaration
 static void VBlankCB_TrainerCard(void);
@@ -1463,6 +1463,7 @@ static void DrawTrainerCardWindow(u8 windowId)
 static void PrintTrainerCardControlHints(void)
 {
     DrawUiHintHeader(3, sText_TrainerCardControlHints, 0, 0, 1, TRUE);
+    DrawUiHeaderBackgroundRow(3, gPlttBufferUnfaded[0]);
 }
 
 static bool8 SetTrainerCardBgsAndPals(void)
