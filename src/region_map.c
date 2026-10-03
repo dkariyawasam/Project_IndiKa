@@ -22,8 +22,6 @@
 #define MAP_WIDTH 22
 #define MAP_HEIGHT 15
 
-#define CANCEL_BUTTON_X 21
-#define CANCEL_BUTTON_Y 13
 
 #define SWITCH_BUTTON_X 21
 #define SWITCH_BUTTON_Y 11
@@ -380,7 +378,7 @@ static void SetDispCnt(u8, bool8);
 static void SetGpuWindowDims(u8, const struct GpuWindowParams *);
 static void FreeAndResetGpuRegs(void);
 static void PrintTopBarTextLeft(const u8 *);
-static void PrintTopBarTextRight(const u8 *);
+static void PrintTopBarTextRight(void);
 static void ClearOrDrawTopBar(bool8);
 static void Task_FlyMap(u8);
 static void InitFlyMap(void);
@@ -414,6 +412,7 @@ static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("graphics/region_map/player_ico
 static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map/region_map.4bpp.lz");
 static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map/map_edge.4bpp.lz");
 static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_menu.4bpp.lz");
+static const u32 sExpeditionRouteTiles[] = INCBIN_U32("graphics/region_map/expedition_routes.bin");
 static const u32 sKanto_Tilemap[] = INCBIN_U32("graphics/region_map/kanto.bin.lz");
 static const u32 sMapEdge_Tilemap[] = INCBIN_U32("graphics/region_map/map_edge.bin.lz");
 static const u32 sMapEdge_TopLeft[] = INCBIN_U32("graphics/region_map/map_edge_top_left.4bpp.lz");
@@ -497,9 +496,9 @@ static const struct WindowTemplate sRegionMapWindowTemplates[] = {
     [WIN_TOPBAR_LEFT] =
     {
         .bg = 3,
-        .tilemapLeft = 0,
+        .tilemapLeft = 14,
         .tilemapTop = 0,
-        .width = 30,
+        .width = 16,
         .height = 2,
         .paletteNum = 12,
         .baseBlock = 0x150
@@ -507,12 +506,12 @@ static const struct WindowTemplate sRegionMapWindowTemplates[] = {
     [WIN_TOPBAR_RIGHT] =
     {
         .bg = 3,
-        .tilemapLeft = 24,
+        .tilemapLeft = 0,
         .tilemapTop = 0,
-        .width = 5,
+        .width = 1,
         .height = 2,
         .paletteNum = 12,
-        .baseBlock = 0x18c
+        .baseBlock = 0x170
     }, DUMMY_WIN_TEMPLATE
 };
 
@@ -570,6 +569,9 @@ static const union AnimCmd *const sAnims_SwitchMapCursor[] = {
     sAnim_SwitchMapCursor
 };
 
+static const u8 sCaveDescription[] = _("A rough opening in the rock.\nIts walls bear the marks of\na powerful blast.");
+static const u8 sRocketLeagueDescription[] = _("An underground battle venue\nin CELADON CITY. Trainers\ncompete here for coins\nand prizes.");
+
 static const struct DungeonMapInfo sDungeonInfo[] = {
     {
         .id = MAPSEC_VIRIDIAN_FOREST,
@@ -623,6 +625,14 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .id = MAPSEC_FUCHSIA_FOREST,
         .name = sMapsecName_FUCHSIA_FOREST,
         .desc = gText_RegionMap_AreaDesc_FuchsiaForest
+    }, {
+        .id = MAPSEC_CELADON_CAVE,
+        .name = sMapsecName_CAVE,
+        .desc = sCaveDescription
+    }, {
+        .id = MAPSEC_LEAGUE_ROCKET,
+        .name = sMapsecName_ROCKET_LEAGUE,
+        .desc = sRocketLeagueDescription
     }
 };
 
@@ -963,6 +973,7 @@ static bool8 LoadRegionMapGfx(void)
             return FALSE;
         break;
     case 5:
+        LoadBgTiles(0, sExpeditionRouteTiles, sizeof(sExpeditionRouteTiles), 320);
         LZ77UnCompWram(sKanto_Tilemap, sRegionMap->layouts[REGIONMAP_KANTO]);
         break;
     default:
@@ -993,8 +1004,6 @@ static void PlaySEForSelectedMapsec(void)
             PlaySE(SE_DEX_SCROLL);
         if (GetMapCursorX() == SWITCH_BUTTON_X && GetMapCursorY() == SWITCH_BUTTON_Y && GetRegionMapPermission(MAPPERM_HAS_SWITCH_BUTTON) == TRUE)
             PlaySE(SE_M_SPIT_UP);
-        else if (GetMapCursorX() == CANCEL_BUTTON_X && GetMapCursorY() == CANCEL_BUTTON_Y)
-            PlaySE(SE_M_SPIT_UP);
     }
 }
 
@@ -1019,7 +1028,7 @@ static void Task_RegionMap(u8 taskId)
             ShowBg(3);
             ShowBg(1);
             PrintTopBarTextLeft(gText_RegionMap_DPadMove);
-            PrintTopBarTextRight(gText_RegionMap_Space);
+            PrintTopBarTextRight();
             ClearOrDrawTopBar(FALSE);
             SetPlayerIconInvisibility(FALSE);
             SetMapCursorInvisibility(FALSE);
@@ -1051,35 +1060,7 @@ static void Task_RegionMap(u8 taskId)
             DisplayCurrentDungeonName();
             DrawDungeonNameBox();
             PlaySEForSelectedMapsec();
-            if (GetDungeonMapsecUnderCursor() != MAPSEC_NONE)
-            {
-                if (GetRegionMapPermission(MAPPERM_HAS_MAP_PREVIEW) == TRUE)
-                {
-                    if (GetSelectedMapsecType(LAYER_DUNGEON) == MAPSECTYPE_VISITED)
-                    {
-                        PrintTopBarTextRight(gText_RegionMap_AButtonGuide);
-                    }
-                    else
-                    {
-                        PrintTopBarTextRight(gText_RegionMap_Space);
-                    }
-                }
-            }
-            else
-            {
-                if (GetMapCursorX() == SWITCH_BUTTON_X && GetMapCursorY() == SWITCH_BUTTON_Y && GetRegionMapPermission(MAPPERM_HAS_SWITCH_BUTTON) == TRUE)
-                {
-                    PrintTopBarTextRight(gText_RegionMap_AButtonSwitch);
-                }
-                else if (GetMapCursorX() == CANCEL_BUTTON_X && GetMapCursorY() == CANCEL_BUTTON_Y)
-                {
-                    PrintTopBarTextRight(gText_RegionMap_AButtonCancel);
-                }
-                else
-                {
-                    PrintTopBarTextRight(gText_RegionMap_Space);
-                }
-            }
+            PrintTopBarTextRight();
             break;
         case MAP_INPUT_A_BUTTON:
             if (GetSelectedMapsecType(LAYER_DUNGEON) == MAPSECTYPE_VISITED && sRegionMap->permissions[MAPPERM_HAS_MAP_PREVIEW] == TRUE)
@@ -1256,15 +1237,46 @@ static void UpdateMapsecNameBox(void)
 
 static void DisplayCurrentMapName(void)
 {
+    u16 mapsec = GetMapsecUnderCursor();
+
+    // A landmark may be offset for legibility. Name its actual approach,
+    // rather than the unrelated terrain cell underneath its icon.
+    switch (GetDungeonMapsecUnderCursor())
+    {
+    case MAPSEC_DIGLETTS_CAVE:
+        mapsec = GetMapCursorX() == 5 ? MAPSEC_ROUTE_2 : MAPSEC_ROUTE_11;
+        break;
+    case MAPSEC_NUGGET_BRIDGE:
+        mapsec = MAPSEC_ROUTE_24;
+        break;
+    case MAPSEC_BILLS_HOUSE:
+        mapsec = MAPSEC_ROUTE_25;
+        break;
+    case MAPSEC_FUCHSIA_FOREST:
+        mapsec = MAPSEC_ROUTE_15;
+        break;
+    case MAPSEC_CERULEAN_CAVE:
+        mapsec = MAPSEC_ROUTE_4;
+        break;
+    case MAPSEC_CELADON_CAVE:
+        mapsec = MAPSEC_ROUTE_7;
+        break;
+    case MAPSEC_CINNABAR_VOLCANO:
+        mapsec = MAPSEC_CINNABAR_ISLAND;
+        break;
+    case MAPSEC_KANTO_SAFARI_ZONE:
+        mapsec = MAPSEC_FUCHSIA_CITY;
+        break;
+    }
     ClearWindowTilemap(WIN_MAP_NAME);
     FillWindowPixelBuffer(WIN_MAP_NAME, PIXEL_FILL(0));
-    if (GetMapsecUnderCursor() == MAPSEC_NONE)
+    if (mapsec == MAPSEC_NONE)
     {
         SetGpuWindowDims(0, &sMapsecNameWindowDims[CLEAR_NAME]);
     }
     else
     {
-        GetMapName(sRegionMap->mapName, GetMapsecUnderCursor(), 0);
+        GetMapName(sRegionMap->mapName, mapsec, 0);
         AddTextPrinterParameterized3(WIN_MAP_NAME, FONT_NORMAL, 2, 2, sTextColor_White, 0, sRegionMap->mapName);
         PutWindowTilemap(WIN_MAP_NAME);
         CopyWindowToVram(WIN_MAP_NAME, COPYWIN_GFX);
@@ -1297,7 +1309,7 @@ static void DisplayCurrentDungeonName(void)
          sRegionMap->dungeonWinBottom = 48;
          FillWindowPixelBuffer(WIN_DUNGEON_NAME, PIXEL_FILL(0));
          StringCopy(sRegionMap->dungeonName, sMapNames[descOffset]);
-         AddTextPrinterParameterized3(WIN_DUNGEON_NAME, FONT_NORMAL, 12, 2, sTextColorTable[GetSelectedMapsecType(LAYER_DUNGEON) - 2], 0, sRegionMap->dungeonName);
+         AddTextPrinterParameterized3(WIN_DUNGEON_NAME, FONT_NORMAL, 12, 2, sTextColor_White, 0, sRegionMap->dungeonName);
          PutWindowTilemap(WIN_DUNGEON_NAME);
          CopyWindowToVram(WIN_DUNGEON_NAME, COPYWIN_FULL);
     }
@@ -1380,7 +1392,7 @@ static void InitSwitchMapMenu(u8 whichMap, u8 taskId, TaskFunc taskFunc)
     sSwitchMapMenu->exitTask = taskFunc;
     sSwitchMapMenu->chosenRegion = GetRegionMapPlayerIsOn();
     SaveRegionMapGpuRegs(0);
-    PrintTopBarTextRight(gText_RegionMap_AButtonOK);
+    PrintTopBarTextRight();
     gTasks[taskId].func = Task_SwitchMapMenu;
 }
 
@@ -1511,7 +1523,7 @@ static void FreeSwitchMapMenu(u8 taskId)
     gTasks[taskId].func = sSwitchMapMenu->exitTask;
     HideBg(2);
     PrintTopBarTextLeft(gText_RegionMap_DPadMove);
-    PrintTopBarTextRight(gText_RegionMap_AButtonSwitch);
+    PrintTopBarTextRight();
     UpdateMapsecNameBox();
     DrawDungeonNameBox();
     SetGpuWindowDims(0, &sMapsecNameWindowDims[CLEAR_NAME]);
@@ -1617,7 +1629,7 @@ static bool8 HandleSwitchMapInput(void)
     if (changedSelection)
     {
         BufferRegionMapBg(0, sRegionMap->layouts[sSwitchMapMenu->currentSelection]);
-        PrintTopBarTextRight(gText_RegionMap_AButtonOK);
+        PrintTopBarTextRight();
         CopyBgTilemapBufferToVram(0);
         CopyBgTilemapBufferToVram(3);
         SetFlyIconInvisibility(0xFF, NELEMS(sMapIcons->flyIcons), TRUE);
@@ -1789,7 +1801,7 @@ static void Task_DungeonMapPreview(u8 taskId)
         break;
     case 2:
         InitScreenForDungeonMapPreview();
-        PrintTopBarTextRight(gText_RegionMap_AButtonCancel2);
+        PrintTopBarTextRight();
         sDungeonMapPreview->mainState++;
         break;
     case 3:
@@ -1895,7 +1907,7 @@ static void FreeDungeonMapPreview(u8 taskId)
     DisplayCurrentDungeonName();
     UpdateMapsecNameBox();
     DrawDungeonNameBox();
-    PrintTopBarTextRight(gText_RegionMap_AButtonGuide);
+    PrintTopBarTextRight();
     FREE_IF_NOT_NULL(sDungeonMapPreview);
 }
 
@@ -2203,9 +2215,9 @@ static void Task_MapOpenAnim(u8 taskId)
     case 9:
         PrintTopBarTextLeft(gText_RegionMap_DPadMove);
         if (GetSelectedMapsecType(LAYER_DUNGEON) != MAPSECTYPE_VISITED)
-            PrintTopBarTextRight(gText_RegionMap_Space);
+            PrintTopBarTextRight();
         else
-            PrintTopBarTextRight(gText_RegionMap_AButtonGuide);
+            PrintTopBarTextRight();
         ClearOrDrawTopBar(FALSE);
         sMapOpenCloseAnim->openState++;
         break;
@@ -2586,12 +2598,6 @@ static u8 HandleRegionMapInput(void)
     if (JOY_NEW(A_BUTTON))
     {
         input = MAP_INPUT_A_BUTTON;
-        if (sMapCursor->x == CANCEL_BUTTON_X 
-         && sMapCursor->y == CANCEL_BUTTON_Y)
-        {
-            PlaySE(SE_M_HYPER_BEAM2);
-            input = MAP_INPUT_CANCEL;
-        }
         if (sMapCursor->x == SWITCH_BUTTON_X 
          && sMapCursor->y == SWITCH_BUTTON_Y 
          && GetRegionMapPermission(MAPPERM_HAS_SWITCH_BUTTON) == TRUE)
@@ -2651,52 +2657,22 @@ static u8 GetRegionMapInput(void)
     return sMapCursor->inputHandler();
 }
 
-// Pressing Start on the map snaps the cursor to the Buttons / Player Icon
-// Pressing repeatedly cycles between them
+// Start returns to the player, or cycles to the region switch if enabled.
 static void SnapToIconOrButton(void)
 {
     if (GetRegionMapPermission(MAPPERM_HAS_SWITCH_BUTTON) == TRUE)
+        sMapCursor->snapId = (sMapCursor->snapId + 1) % 2;
+    else
+        sMapCursor->snapId = 0;
+    if (sMapCursor->snapId == 1)
     {
-        sMapCursor->snapId++;
-        sMapCursor->snapId %= 3;
-        if (sMapCursor->snapId == 0 && GetSelectedRegionMap() != GetRegionMapPlayerIsOn())
-        {
-            // Player icon not present on this map, skip it
-            sMapCursor->snapId++;
-        }
-        switch (sMapCursor->snapId)
-        {
-        case 0:
-        default:
-            sMapCursor->x = GetPlayerIconX();
-            sMapCursor->y = GetPlayerIconY();
-            break;
-        case 1:
-            sMapCursor->x = SWITCH_BUTTON_X;
-            sMapCursor->y = SWITCH_BUTTON_Y;
-            break;
-        case 2:
-            sMapCursor->y = CANCEL_BUTTON_Y;
-            sMapCursor->x = CANCEL_BUTTON_X;
-            break;
-        }
+        sMapCursor->x = SWITCH_BUTTON_X;
+        sMapCursor->y = SWITCH_BUTTON_Y;
     }
     else
     {
-        sMapCursor->snapId++;
-        sMapCursor->snapId %= 2;
-        switch (sMapCursor->snapId)
-        {
-        case 0:
-        default:
-            sMapCursor->x = GetPlayerIconX();
-            sMapCursor->y = GetPlayerIconY();
-            break;
-        case 1:
-            sMapCursor->y = CANCEL_BUTTON_Y;
-            sMapCursor->x = CANCEL_BUTTON_X;
-            break;
-        }
+        sMapCursor->x = GetPlayerIconX();
+        sMapCursor->y = GetPlayerIconY();
     }
     sMapCursor->sprite->x = 8 * sMapCursor->x + 36;
     sMapCursor->sprite->y = 8 * sMapCursor->y + 36;
@@ -2736,8 +2712,6 @@ static u16 GetDungeonMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
-    if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_GAME_CLEAR))
-        mapsec = MAPSEC_NONE;
     return mapsec;
 }
 
@@ -2846,6 +2820,9 @@ static void GetPlayerPositionOnRegionMap(void)
     u16 height;
     u16 x;
     u16 y;
+    u16 sectionWidth, sectionHeight;
+    s16 cellX, cellY, distance, bestDistance;
+    u16 section;
 
     const struct MapHeader * mapHeader;
     struct WarpData * warp;
@@ -2901,29 +2878,68 @@ static void GetPlayerPositionOnRegionMap(void)
     }
 
     sMapCursor->selectedMapsec -= KANTO_MAPSEC_START;
-    divisor = width / sMapSectionDimensions[sMapCursor->selectedMapsec][0];
+    // Unplaced sections must not divide by zero or underflow the cursor.
+    sectionWidth = sMapSectionDimensions[sMapCursor->selectedMapsec][0];
+    sectionHeight = sMapSectionDimensions[sMapCursor->selectedMapsec][1];
+    if (sectionWidth == 0)
+        sectionWidth = 1;
+    if (sectionHeight == 0)
+        sectionHeight = 1;
+    divisor = width / sectionWidth;
     if (divisor == 0)
         divisor = 1;
     x /= divisor;
-    if (x >= sMapSectionDimensions[sMapCursor->selectedMapsec][0])
-        x = sMapSectionDimensions[sMapCursor->selectedMapsec][0] - 1;
-    divisor = height / sMapSectionDimensions[sMapCursor->selectedMapsec][1];
+    if (x >= sectionWidth)
+        x = sectionWidth - 1;
+    divisor = height / sectionHeight;
     if (divisor == 0)
         divisor = 1;
     y /= divisor;
-    if (y >= sMapSectionDimensions[sMapCursor->selectedMapsec][1])
-        y = sMapSectionDimensions[sMapCursor->selectedMapsec][1] - 1;
+    if (y >= sectionHeight)
+        y = sectionHeight - 1;
     sMapCursor->x = x + sMapSectionTopLeftCorners[sMapCursor->selectedMapsec][0];
     sMapCursor->y = y + sMapSectionTopLeftCorners[sMapCursor->selectedMapsec][1];
+    // Bounding rectangles include empty cells on bent routes. Keep the player
+    // on the nearest actual cell of their section rather than in the sea.
+    section = sMapCursor->selectedMapsec + KANTO_MAPSEC_START;
+    if (GetSelectedMapSection(REGIONMAP_KANTO, LAYER_MAP, sMapCursor->y, sMapCursor->x) != section)
+    {
+        bestDistance = MAP_WIDTH + MAP_HEIGHT;
+        x = sMapCursor->x;
+        y = sMapCursor->y;
+        for (cellY = 0; cellY < MAP_HEIGHT; cellY++)
+        {
+            for (cellX = 0; cellX < MAP_WIDTH; cellX++)
+            {
+                if (GetSelectedMapSection(REGIONMAP_KANTO, LAYER_MAP, cellY, cellX) != section)
+                    continue;
+                distance = abs(cellX - x) + abs(cellY - y);
+                if (distance < bestDistance)
+                {
+                    bestDistance = distance;
+                    sMapCursor->x = cellX;
+                    sMapCursor->y = cellY;
+                }
+            }
+        }
+    }
 }
 
 static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
 {
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE25_SEA_COTTAGE)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE25_SEA_COTTAGE))
+    {
+        sMapCursor->x = 16;
+        sMapCursor->y = 1;
+        sMapCursor->selectedMapsec = MAPSEC_ROUTE_25;
+        return;
+    }
     switch (GetPlayerCurrentMapSectionId())
     {
     case MAPSEC_KANTO_SAFARI_ZONE:
-        sMapCursor->x = 12;
-        sMapCursor->y = 12;
+        sMapCursor->x = 10;
+        sMapCursor->y = 11;
         break;
     case MAPSEC_SILPH_CO:
         sMapCursor->x = 14;
@@ -2943,7 +2959,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         break;
     case MAPSEC_S_S_ANNE:
         sMapCursor->x = 14;
-        sMapCursor->y = 9;
+        sMapCursor->y = 10;
         break;
     case MAPSEC_LEAGUE_INDIGO:
         sMapCursor->x = 2;
@@ -2973,12 +2989,33 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         }
         break;
     case MAPSEC_CINNABAR_VOLCANO:
-        sMapCursor->x = 4;
-        sMapCursor->y = 13;
+        sMapCursor->x = 3;
+        sMapCursor->y = 14;
         break;
     case MAPSEC_FUCHSIA_FOREST:
         sMapCursor->x = 14;
-        sMapCursor->y = 12;
+        sMapCursor->y = 11;
+        break;
+    case MAPSEC_CERULEAN_CAVE:
+        sMapCursor->x = 12;
+        sMapCursor->y = 3;
+        break;
+    case MAPSEC_DIGLETTS_CAVE:
+        if (gSaveBlock1Ptr->escapeWarp.mapGroup == MAP_GROUP(MAP_ROUTE2)
+         && gSaveBlock1Ptr->escapeWarp.mapNum == MAP_NUM(MAP_ROUTE2))
+        {
+            sMapCursor->x = 5;
+            sMapCursor->y = 6;
+        }
+        else
+        {
+            sMapCursor->x = 15;
+            sMapCursor->y = 9;
+        }
+        break;
+    case MAPSEC_SEAFOAM_ISLANDS:
+        sMapCursor->x = 7;
+        sMapCursor->y = 14;
         break;
     case MAPSEC_VIRIDIAN_FOREST:
         sMapCursor->x = 4;
@@ -3302,12 +3339,20 @@ static void CreateDungeonIcons(void)
                 mapsec = GetSelectedMapSection(i, LAYER_DUNGEON, y, x);
                 if (mapsec == MAPSEC_NONE)
                     continue;
-                if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_SYS_GAME_CLEAR))
-                    continue;
                 CreateDungeonIconSprite(i, numIcons, x, y, numIcons + 35, 10);
-                if (GetDungeonMapsecType(mapsec) != 2)
+                // Small grey landmarks are distinct from blue dungeons.
+                switch (mapsec)
                 {
+                case MAPSEC_NUGGET_BRIDGE:
+                case MAPSEC_BILLS_HOUSE:
+                case MAPSEC_CELADON_CAVE:
+                case MAPSEC_LEAGUE_ROCKET:
+                case MAPSEC_KANTO_SAFARI_ZONE:
                     StartSpriteAnim(sMapIcons->dungeonIcons[numIcons].sprite, 1);
+                    break;
+                default:
+                    StartSpriteAnim(sMapIcons->dungeonIcons[numIcons].sprite, 0);
+                    break;
                 }
                 numIcons++;
             }
@@ -3546,26 +3591,34 @@ u8 *GetMapNameGeneric_(u8 *dest, u16 mapsec)
     return GetMapNameGeneric(dest, mapsec);
 }
 
+static const u8 sMapHeaderPick[] = _("{DPAD_ANY}PICK");
+static const u8 sMapHeaderActions[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
+
 static void PrintTopBarTextLeft(const u8 *str)
 {
-    if (sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] == TRUE)
-        FillWindowPixelBuffer(WIN_TOPBAR_LEFT, PIXEL_FILL(0));
-    else
-        FillWindowPixelBuffer(WIN_TOPBAR_LEFT, PIXEL_FILL(15));
-    AddTextPrinterParameterized3(WIN_TOPBAR_LEFT, FONT_SMALL, 144, 0, sTextColors, 0, str);
-    ScrollWindow(WIN_TOPBAR_LEFT, 0, 1, PIXEL_FILL(sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] ? 0 : 15));
+    u8 text[96];
+    u8 colors[3] = {15, 1, 2};
+    u8 x;
+
+    if (str == gText_RegionMap_DPadMove)
+        str = sMapHeaderPick;
+    StringCopy(text, str);
+    StringAppend(text, gText_RegionMap_Space);
+    StringAppend(text, sMapHeaderActions);
+    // Match DrawUiHintHeader: small font, one-pixel vertical shift, and
+    // a four-pixel right margin. A compact window avoids BG0's tilemap.
+    x = 236 - 14 * 8 - GetStringWidth(FONT_SMALL, text, 0);
+    FillWindowPixelBuffer(WIN_TOPBAR_LEFT, PIXEL_FILL(15));
+    AddTextPrinterParameterized4(WIN_TOPBAR_LEFT, FONT_SMALL, x, 0, 0, 0, colors, 0, text);
+    ScrollWindow(WIN_TOPBAR_LEFT, 0, 1, PIXEL_FILL(15));
     DrawUiHeaderBackgroundRow(WIN_TOPBAR_LEFT, RGB_WHITE);
     CopyWindowToVram(WIN_TOPBAR_LEFT, COPYWIN_GFX);
 }
 
-static void PrintTopBarTextRight(const u8 *str)
+static void PrintTopBarTextRight(void)
 {
-    if (sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] == TRUE)
-        FillWindowPixelBuffer(WIN_TOPBAR_RIGHT, PIXEL_FILL(0));
-    else
-        FillWindowPixelBuffer(WIN_TOPBAR_RIGHT, PIXEL_FILL(15));
-    AddTextPrinterParameterized3(WIN_TOPBAR_RIGHT, FONT_SMALL, 0, 0, sTextColors, 0, str);
-    ScrollWindow(WIN_TOPBAR_RIGHT, 0, 1, PIXEL_FILL(sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] ? 0 : 15));
+    // Actions are printed together with PICK so their spacing is uniform.
+    FillWindowPixelBuffer(WIN_TOPBAR_RIGHT, PIXEL_FILL(15));
     DrawUiHeaderBackgroundRow(WIN_TOPBAR_RIGHT, RGB_WHITE);
     CopyWindowToVram(WIN_TOPBAR_RIGHT, COPYWIN_FULL);
 }
@@ -3574,11 +3627,18 @@ static void ClearOrDrawTopBar(bool8 clear)
 {
     if (!clear)
     {
+        // BG3 tiles must end before BG0's tilemap at 0xF000 (tile 0x180).
+        // Repeat one edge tile instead of allocating a full-width text window.
+        static const u32 edgeTile[8] = {0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
+                                        0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xAAAAAAAA};
+        LoadBgTiles(3, edgeTile, sizeof(edgeTile), 0x176);
+        FillBgTilemapBufferRect(3, 0x176, 0, 1, 30, 1, 12);
         PutWindowTilemap(WIN_TOPBAR_LEFT);
         PutWindowTilemap(WIN_TOPBAR_RIGHT);
     }
     else
     {
+        FillBgTilemapBufferRect(3, 0, 0, 1, 30, 1, 0);
         ClearWindowTilemap(WIN_TOPBAR_LEFT);
         ClearWindowTilemap(WIN_TOPBAR_RIGHT);
     }
@@ -3620,7 +3680,7 @@ static void Task_FlyMap(u8 taskId)
         sFlyMap->state++;
         break;
     case 2:
-        PrintTopBarTextRight(gText_RegionMap_AButtonOK);
+        PrintTopBarTextRight();
         ClearOrDrawTopBar(FALSE);
         sFlyMap->state++;
         break;
@@ -3652,19 +3712,7 @@ static void Task_FlyMap(u8 taskId)
             DisplayCurrentMapName();
             DisplayCurrentDungeonName();
             DrawDungeonNameBox();
-            if (GetMapCursorX() == CANCEL_BUTTON_X && GetMapCursorY() == CANCEL_BUTTON_Y)
-            {
-                PlaySE(SE_M_SPIT_UP);
-                PrintTopBarTextRight(gText_RegionMap_AButtonCancel);
-            }
-            else if (GetSelectedMapsecType(LAYER_MAP) == MAPSECTYPE_VISITED || GetSelectedMapsecType(LAYER_MAP) == MAPSECTYPE_UNKNOWN)
-            {
-                PrintTopBarTextRight(gText_RegionMap_AButtonOK);
-            }
-            else
-            {
-                PrintTopBarTextRight(gText_RegionMap_Space);
-            }
+            PrintTopBarTextRight();
             break;
         case MAP_INPUT_A_BUTTON:
             if ((GetSelectedMapsecType(LAYER_MAP) == MAPSECTYPE_VISITED || GetSelectedMapsecType(LAYER_MAP) == MAPSECTYPE_UNKNOWN) && GetRegionMapPermission(MAPPERM_HAS_FLY_DESTINATIONS) == TRUE)

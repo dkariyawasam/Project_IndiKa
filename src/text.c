@@ -92,7 +92,7 @@ struct
     [CHAR_DPAD_RIGHT]     = {  0xF,  8, 12 },
     [CHAR_DPAD_UPDOWN]    = { 0x20,  8, 12 },
     [CHAR_DPAD_LEFTRIGHT] = { 0x21,  8, 12 },
-    [CHAR_DPAD_NONE]      = { 0x22,  8, 12 },
+    [CHAR_DPAD_ANY]      = { 0x22,  8, 12 },
     [CHAR_DPAD_LEFTDOWN]      = { 0x23,  8, 12 },
     [CHAR_DPAD_RIGHTDOWN]     = { 0x24,  8, 12 },
     [CHAR_DPAD_LEFTRIGHTDOWN] = { 0x25,  8, 12 },
@@ -1353,6 +1353,15 @@ u8 DrawKeypadIcon(u8 windowId, u8 keypadIconId, u16 x, u16 y)
         y,
         sKeypadIcons[keypadIconId].width,
         sKeypadIcons[keypadIconId].height);
+    // The original all-directions tile is blank. Use the same red index
+    // and dot positions as the directional variants, in every text window.
+    if (keypadIconId == CHAR_DPAD_ANY)
+    {
+        FillWindowPixelRect(windowId, 4, x + 3, y + 5, 1, 1);
+        FillWindowPixelRect(windowId, 4, x + 3, y + 9, 1, 1);
+        FillWindowPixelRect(windowId, 4, x + 1, y + 7, 1, 1);
+        FillWindowPixelRect(windowId, 4, x + 5, y + 7, 1, 1);
+    }
     return sKeypadIcons[keypadIconId].width;
 }
 
