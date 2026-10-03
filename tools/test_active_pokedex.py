@@ -17,6 +17,7 @@ assert len(active)==len(set(active))
 assert {'EEVEE','SYLVEON','BULBASAUR','GALLADE','TYNAMO','EELEKTROSS','CHIKORITA'}<=set(active)
 assert {'ROSERADE','KABUSTAR','BRONZOR','RATTATA_ALOLAN'}<=set(active)
 assert not {'TREECKO','TORCHIC','MUDKIP','REGIROCK','REGICE','REGISTEEL'}&set(active)
+assert 'PORYGON3' not in active  # Implemented, but deliberately unreleased.
 source=read('src/pokedex.c')
 code='''#include <assert.h>
 #include <stdint.h>

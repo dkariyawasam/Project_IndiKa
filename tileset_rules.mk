@@ -200,3 +200,7 @@ $(TILESETGFXDIR)/secondary/sevii_islands_123/tiles.4bpp: %.4bpp: %.png
 
 $(TILESETGFXDIR)/secondary/island_harbor/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 165 -Wnum_tiles
+
+# Pallet retains its map IDs and palettes while sharing Route 21's tile slots.
+data/tilesets/secondary/pallet_town/connected_metatiles.bin: data/tilesets/secondary/pallet_town/metatiles.bin tools/build_pallet_connected_tiles.py
+	python3 tools/build_pallet_connected_tiles.py

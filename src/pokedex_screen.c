@@ -899,7 +899,6 @@ static void Task_PokedexScreen(u8 taskId)
             break;
         }
         sPokedexScreenData->modeSelectInput = DexScreen_ProcessHabitatGridInput();
-        DexScreen_UpdateHabitatHeader();
         if (JOY_NEW(START_BUTTON))
         {
             DexScreen_ClaimHabitatReward();
@@ -1004,7 +1003,6 @@ static void DexScreen_InitGfxForTopMenu(void)
     ConvertIntToDecimalStringN(end, IsNationalPokedexEnabled() ? sPokedexScreenData->numOwnedNational : sPokedexScreenData->numOwnedKanto, STR_CONV_MODE_LEFT_ALIGN, 3);
     AddTextPrinterParameterized3(windowId, FONT_SMALL, 64, 0, colors, TEXT_SKIP_DRAW, text);
     DexScreen_DrawHabitatGrid();
-    DexScreen_UpdateHabitatHeader();
 }
 
 static void DexScreen_DrawHabitatGrid(void)
@@ -1038,6 +1036,7 @@ static void DexScreen_DrawHabitatGrid(void)
     MoveCursorFunc_DexModeSelect(sHabitatGridItems[sPokedexScreenData->modeSelectCursorPos].index, TRUE, NULL);
     PutWindowTilemap(sPokedexScreenData->dexCountsWindowId);
     CopyWindowToVram(sPokedexScreenData->dexCountsWindowId, COPYWIN_FULL);
+    DexScreen_UpdateHabitatHeader();
 }
 
 static s32 DexScreen_ProcessHabitatGridInput(void)
@@ -1161,7 +1160,6 @@ static void DexScreen_InitGfxForNumericalOrderList(void)
     DexScreen_InitListMenuForOrderedList(&template, sPokedexScreenData->dexOrderId);
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_PokemonListNoColor, TEXT_CENTER);
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
     DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
@@ -1247,7 +1245,6 @@ static void DexScreen_CreateCharacteristicListMenu(void)
     DexScreen_InitListMenuForOrderedList(&template, sPokedexScreenData->dexOrderId);
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_SearchNoColor, TEXT_CENTER);
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
     DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
@@ -2181,15 +2178,24 @@ static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex)
 
 static void DexScreen_PrintHeaderControlInfo(const u8 *src)
 {
-    ClearWindowTilemap(1);
+    static const u8 colors[] = {11, 1, 2};
+    u16 edgeColor = gPlttBufferUnfaded[
+        (((u16 *)GetBgTilemapBuffer(3))[0] & 0x3FF) == 14 ? 4 : 3];
+    u8 x = 236 - GetStringWidth(FONT_SMALL, src, 0);
+
     SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
     SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
     SetWindowAttribute(1, WINDOW_WIDTH, 30);
-    // Keep the edge in the header palette: the page underneath is animated,
-    // faded and dimmed independently of the controls.
-    DrawUiHintHeader(1, src, 11, 0, 0, FALSE);
-    DrawUiHeaderBackgroundRow(1, gPlttBufferUnfaded[
-        (((u16 *)GetBgTilemapBuffer(3))[0] & 0x3FF) == 14 ? 4 : 3]);
+    ApplyUiHintHeaderTheme(BG_PLTT_ID(15) + 11);
+    LoadPalette(&edgeColor, BG_PLTT_ID(15) + 10, sizeof(edgeColor));
+    // Do not queue a DMA transfer until the entire header is ready. The generic
+    // helper uploads text before scrolling it, allowing VBlank to copy a partial
+    // redraw when the habitat menu updates during a visible frame.
+    FillWindowPixelBuffer(1, PIXEL_FILL(11));
+    AddTextPrinterParameterized4(1, FONT_SMALL, x, 0, 0, 0, colors, TEXT_SKIP_DRAW, src);
+    ScrollWindow(1, 0, 1, PIXEL_FILL(11));
+    FillWindowPixelRect(1, PIXEL_FILL(10), 0, UI_HINT_HEADER_BACKGROUND_ROW, 240, 1);
+    CopyWindowToVram(1, COPYWIN_GFX);
 }
 
 bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
@@ -2356,31 +2362,15 @@ static void DexScreen_PrintCategoryPageNumbers(u8 windowId, u16 currentPage, u16
 static const u32 sCompletionBallTiles[] = INCBIN_U32("graphics/interface/ball/poke.4bpp");
 static const u16 sCompletionBallPalette[] = INCBIN_U16("graphics/interface/ball/poke.gbapal");
 // The habitat list uses BG palette 0, not the menu-info icon palette.
-// Map the existing ball's colours into that loaded palette without modifying it.
+// Use its existing colour roles without allocating or changing a palette.
 static void DexScreen_DrawHabitatBall(u8 windowId, u8 left, u8 y)
 {
-    u8 remap[16];
-    u8 i, j, x, row;
-    const u16 *palette = &gPlttBufferUnfaded[BG_PLTT_ID(GetWindowAttribute(windowId, WINDOW_PALETTE_NUM))];
+    // Palette 0 already provides red, white, grey and black. Preserve the
+    // ball's colour roles: nearest-RGB matching merged its red shadow and
+    // outline into the same brown, leaving a solid block on the right.
+    static const u8 remap[16] = {0, 14, 14, 14, 15, 5, 12, 1, 1, 5, 5, 5, 5, 5, 5, 5};
+    u8 x, row;
     const u8 *tiles = (const u8 *)sCompletionBallTiles;
-    for (i = 1; i < 8; i++)
-    {
-        u32 best = 0xFFFFFFFF;
-        u16 color = sCompletionBallPalette[i];
-        remap[i] = 1;
-        for (j = 1; j < 16; j++)
-        {
-            s32 r = (color & 31) - (palette[j] & 31);
-            s32 g = ((color >> 5) & 31) - ((palette[j] >> 5) & 31);
-            s32 b = ((color >> 10) & 31) - ((palette[j] >> 10) & 31);
-            u32 distance = r * r + g * g + b * b;
-            if (distance < best)
-            {
-                best = distance;
-                remap[i] = j;
-            }
-        }
-    }
     for (row = 0; row < 16; row++)
         for (x = 0; x < 16; x++)
         {
@@ -2503,7 +2493,6 @@ static void DexScreen_UpdatePageHeader(void)
 
 static void DexScreen_DrawPageRewardFooter(void)
 {
-    ClearWindowTilemap(0);
     // Keep the footer separate from the pulsing claim header.
     LoadPalette(&gPlttBufferUnfaded[BG_PLTT_ID(15)], BG_PLTT_ID(14), PLTT_SIZE_4BPP);
     SetWindowAttribute(0, WINDOW_PALETTE_NUM, 14);
@@ -2646,7 +2635,6 @@ static void DexScreen_ClaimHabitatReward(void)
     ClearWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_MAP);
     DexScreen_DrawHabitatGrid();
-    DexScreen_UpdateHabitatHeader();
     sPokedexScreenData->rewardFooterHold = 0;
     sPokedexScreenData->rewardFooterRetracting = FALSE;
     sPokedexScreenData->rewardFooterRevealWidth = 2;
@@ -2659,30 +2647,20 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered)
     FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 32, 20);
     FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 20);
     DexScreen_CreateCategoryPageSpeciesList(sPokedexScreenData->category, sPokedexScreenData->pageNum);
-    ClearWindowTilemap(0);
-    SetWindowAttribute(0, WINDOW_PALETTE_NUM, 15);
-    SetWindowAttribute(0, WINDOW_TILEMAP_TOP, 0);
-    // Match the blue header and divider used by the other Pokédex menus.
-    FillWindowPixelBuffer(0, PIXEL_FILL(11));
-    FillWindowPixelRect(0, PIXEL_FILL(12), 0, 15, 240, 1);
+    // Window 0 is the reward footer during browsing. Do not temporarily move
+    // it onto the controls: clearing that legacy title erased the live header.
     if (justRegistered)
     {
+        ClearWindowTilemap(0);
+        SetWindowAttribute(0, WINDOW_PALETTE_NUM, 15);
+        SetWindowAttribute(0, WINDOW_TILEMAP_TOP, 0);
+        FillWindowPixelBuffer(0, PIXEL_FILL(11));
+        FillWindowPixelRect(0, PIXEL_FILL(12), 0, 15, 240, 1);
         DexScreen_PrintStringWithAlignment(sDexCategoryNamePtrs[sPokedexScreenData->category], TEXT_CENTER);
+        CopyWindowToVram(0, COPYWIN_GFX);
+        FillWindowPixelBuffer(1, PIXEL_FILL(15));
+        CopyWindowToVram(1, COPYWIN_GFX);
     }
-    else
-    {
-        DexScreen_PrintStringWithAlignment(sDexCategoryNamePtrs[sPokedexScreenData->category], TEXT_LEFT);
-        DexScreen_PrintCategoryPageNumbers(0, DexScreen_PageNumberToRenderablePages(sPokedexScreenData->pageNum), DexScreen_PageNumberToRenderablePages(sPokedexScreenData->lastPageInCategory - 1), 160, 2);
-    }
-    CopyWindowToVram(0, COPYWIN_GFX);
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    if (!justRegistered)
-    {
-        DexScreen_PrintHeaderControlInfo(sText_PagePickControls);
-        PutWindowTilemap(1);
-        CopyWindowToVram(1, COPYWIN_MAP);
-    }
-    CopyWindowToVram(1, COPYWIN_GFX);
     if (sPokedexScreenData->pageSpecies[0] != 0xFFFF)
         DexScreen_DrawMonPicInCategoryPage(sPokedexScreenData->pageSpecies[0], 0, sPokedexScreenData->numMonsOnPage);
     if (sPokedexScreenData->pageSpecies[1] != 0xFFFF)
@@ -3463,7 +3441,6 @@ u8 DexScreen_DrawMonAreaPage(void)
     CopyWindowToVram(sPokedexScreenData->windowIds[0], COPYWIN_GFX);
 
     // Draw the control info
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
     DexScreen_PrintHeaderControlInfo(sText_DexOKBack);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_GFX);

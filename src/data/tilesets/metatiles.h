@@ -198,3 +198,5 @@ const u32 gMetatileAttributes_HallOfFame[] = INCBIN_U32("data/tilesets/secondary
 
 const u16 gMetatiles_Route21[] = INCBIN_U16("data/tilesets/secondary/route21/metatiles.bin");
 const u32 gMetatileAttributes_Route21[] = INCBIN_U32("data/tilesets/secondary/route21/metatile_attributes.bin");
+
+const u16 gMetatiles_PalletTownConnected[] = INCBIN_U16("data/tilesets/secondary/pallet_town/connected_metatiles.bin");

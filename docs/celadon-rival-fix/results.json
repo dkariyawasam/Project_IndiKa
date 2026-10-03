@@ -1,0 +1,17 @@
+{
+  "rom_sha256": "231cd5c6a843cd8f3e42892223e3eeb91465e44f62435ec4bb39c59be6dbd1a5",
+  "checks": {
+    "north_entry_x38": "dialogue reached; rival visible",
+    "north_entry_x39": "dialogue reached; rival visible",
+    "north_entry_x40": "dialogue reached; rival visible",
+    "interrupted_invisible_initialization": "old script remains in WaitForMovementFinish; fixed script reaches dialogue"
+  },
+  "fixture": "Separate copied save. Scene prerequisites reset and test location set using the debug mailbox. SingleMovementActive injected immediately after the scene locks to exercise interrupted initialization. This is a controlled race fixture, not a naturally reproduced timing sequence.",
+  "completion": {
+    "scene": 1,
+    "hide_flag": 1,
+    "normal_battle_won": true,
+    "controls_released": true,
+    "trigger_revisit": "no retrigger"
+  }
+}

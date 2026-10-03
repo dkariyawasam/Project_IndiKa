@@ -264,3 +264,12 @@ const u32 gTrainerPalette_RedBackPic[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerPalette_LeafBackPic[] = INCBIN_U32("graphics/trainers/palettes/leaf_back_pic.gbapal.lz");
 const u32 gTrainerPalette_PokedudeBackPic[] = INCBIN_U32("graphics/trainers/palettes/pokedude_back_pic.gbapal.lz");
 const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palettes/old_man_back_pic.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketAdminArcher[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_archer_front_pic.4bpp.lz");
+const u32 gTrainerPalette_RocketAdminArcher[] = INCBIN_U32("graphics/trainers/palettes/rocket_admin_archer.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketAdminProton[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_proton_front_pic.4bpp.lz");
+const u32 gTrainerPalette_RocketAdminProton[] = INCBIN_U32("graphics/trainers/palettes/rocket_admin_proton.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_petrel_front_pic.4bpp.lz");
+const u32 gTrainerPalette_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/palettes/rocket_admin_petrel.gbapal.lz");

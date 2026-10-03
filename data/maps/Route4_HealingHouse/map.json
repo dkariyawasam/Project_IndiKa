@@ -33,8 +33,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CIV_MAN_3",
-      "x": 2,
-      "y": 4,
+      "x": 4,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -47,7 +47,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 6,
+      "x": 7,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -61,8 +61,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CIV_BOY",
-      "x": 2,
-      "y": 5,
+      "x": 9,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -75,7 +75,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_M",
-      "x": 6,
+      "x": 7,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
