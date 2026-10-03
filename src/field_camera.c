@@ -414,6 +414,10 @@ void CameraUpdate(void)
         // RotatingGatePuzzleCameraUpdate(deltaX, deltaY);
         // ResetBerryTreeSparkleFlags();
         tilemap_move_something(&sFieldCameraOffset, deltaX * 2, deltaY * 2);
+        // A connected map may use a different secondary tileset. Cached
+        // screen tiles then refer to the old graphics, so refresh the view.
+        if (gCamera.active)
+            DrawWholeMapView();
         RedrawMapSlicesForCameraUpdate(&sFieldCameraOffset, deltaX * 2, deltaY * 2);
     }
 
@@ -491,6 +495,10 @@ void CameraUpdateNoObjectRefresh(void)
         // RotatingGatePuzzleCameraUpdate(deltaX, deltaY);
         // ResetBerryTreeSparkleFlags();
         tilemap_move_something(&sFieldCameraOffset, deltaX * 2, deltaY * 2);
+        // A connected map may use a different secondary tileset. Cached
+        // screen tiles then refer to the old graphics, so refresh the view.
+        if (gCamera.active)
+            DrawWholeMapView();
         RedrawMapSlicesForCameraUpdate(&sFieldCameraOffset, deltaX * 2, deltaY * 2);
     }
 

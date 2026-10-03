@@ -693,7 +693,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CinnabarIsland",
+      "secondary_tileset": "gTileset_Route21",
       "border_filepath": "data/layouts/Route21_North/border.bin",
       "blockdata_filepath": "data/layouts/Route21_North/map.bin"
     },

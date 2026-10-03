@@ -170,6 +170,13 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
 
     s32 currentPosition = list->cursorPos + list->itemsAbove;
     u16 lastPositon = list->template.totalItems - 1;
+    u16 firstPosition = 0;
+
+    // Section headings are not selectable endpoints for cursor wrapping.
+    while (firstPosition < lastPositon && list->template.items[firstPosition].index == LIST_HEADER)
+        firstPosition++;
+    while (lastPositon > firstPosition && list->template.items[lastPositon].index == LIST_HEADER)
+        lastPositon--;
 
     if (JOY_NEW(A_BUTTON))
     {
@@ -181,8 +188,8 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
     }
     else if (gMain.newAndRepeatedKeys & DPAD_UP)
     {
-        if (currentPosition == 0)
-            ListMenuChangeSelection(list,TRUE,lastPositon,TRUE);
+        if (currentPosition == firstPosition)
+            ListMenuChangeSelection(list, TRUE, lastPositon - firstPosition, TRUE);
         else
             ListMenuChangeSelection(list, TRUE, 1, FALSE);
         return LIST_NOTHING_CHOSEN;
@@ -190,7 +197,7 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
     else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
     {
         if (currentPosition == lastPositon)
-            ListMenuChangeSelection(list,TRUE,lastPositon, FALSE);
+            ListMenuChangeSelection(list, TRUE, lastPositon - firstPosition, FALSE);
         else
             ListMenuChangeSelection(list, TRUE, 1, TRUE);
         return LIST_NOTHING_CHOSEN;
