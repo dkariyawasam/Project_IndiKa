@@ -53,7 +53,3 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
     .string "of you, {PLAYER}.\p"
     .string "Come.\n"
     .string "Follow me.$"
-
-PalletTown_Text_DebugSign_CompletePokedex::
-    .string "POKéDEX seen and owned data\n"
-    .string "completed.$"

@@ -901,6 +901,42 @@ static void CB2_WaitFadeBeforeSetUpIntro(void)
         SetMainCallback2(CB2_SetUpIntro);
 }
 
+// Render the mod date separately so the original copyright artwork stays intact.
+static void DrawExpeditionSplashCredit(void)
+{
+    static const u8 credit[] = _("Expedition Kanto · 2026");
+    static const u8 colors[] = {0, 1, 2};
+    static const u16 palette[] = {RGB_BLACK, RGB_WHITE, RGB(12, 12, 12)};
+    static const struct BgTemplate bg = {
+        .bg = 0, .charBaseIndex = 0, .mapBaseIndex = 7,
+        .screenSize = 0, .paletteMode = 0, .priority = 0, .baseTile = 0
+    };
+    static const struct WindowTemplate windows[] = {
+        {.bg = 0, .tilemapLeft = 0, .tilemapTop = 15, .width = 30,
+         .height = 2, .paletteNum = 15, .baseBlock = 64},
+        DUMMY_WIN_TEMPLATE
+    };
+    u16 x, y;
+    vu16 *tilemap = (vu16 *)(BG_VRAM + 7 * BG_SCREEN_SIZE);
+
+    InitBgsFromTemplates(0, &bg, 1);
+    if (!InitWindows(windows))
+        return;
+    DeactivateAllTextPrinters();
+    FillWindowPixelBuffer(0, PIXEL_FILL(0));
+    x = (DISPLAY_WIDTH - GetStringWidth(FONT_SMALL, credit, 0)) / 2;
+    AddTextPrinterParameterized4(0, FONT_SMALL, x, 0, 0, 0, colors, TEXT_SKIP_DRAW, credit);
+    // The copyright VBlank does not process background DMA requests.
+    CpuCopy32((void *)GetWindowAttribute(0, WINDOW_TILE_DATA),
+              (void *)(BG_VRAM + 64 * TILE_SIZE_4BPP), 60 * TILE_SIZE_4BPP);
+    for (y = 0; y < 2; y++)
+        for (x = 0; x < 30; x++)
+            tilemap[(15 + y) * 32 + x] = (15 << 12) | (64 + y * 30 + x);
+    LoadPalette(palette, BG_PLTT_ID(15), sizeof(palette));
+    FreeAllWindowBuffers();
+    UnsetBgTilemapBuffer(0);
+}
+
 static void LoadCopyrightGraphics(u16 charBase, u16 screenBase, u16 palOffset)
 {
     LZ77UnCompVram(sCopyright_Gfx, (void *)BG_VRAM + charBase);
@@ -936,6 +972,7 @@ static bool8 SetUpCopyrightScreen(void)
         DmaFill16(3, 0, PLTT + sizeof(vu16), PLTT_SIZE - sizeof(vu16));
         ResetPaletteFade();
         LoadCopyrightGraphics(0 * BG_CHAR_SIZE, 7 * BG_SCREEN_SIZE, BG_PLTT_ID(0));
+        DrawExpeditionSplashCredit();
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();

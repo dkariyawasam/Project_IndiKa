@@ -704,7 +704,16 @@ static void PartyPaletteBufferCopy(u8 offset)
 
 static void PrintPartyMenuControlHints(void)
 {
-    DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, gText_DPadAnyPickOKBack, 8, 10, 0, TRUE);
+    static const u8 leadHints[] = _("{DPAD_RIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 benchHints[] = _("{DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 pairHints[] = _("{DPAD_LEFT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 soloHints[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
+    const u8 *hints = soloHints;
+
+    if (gPlayerPartyCount > 1)
+        hints = *GetCurrentPartySlotPtr() == 0 ? leadHints
+              : gPlayerPartyCount > 2 ? benchHints : pairHints;
+    DrawUiHintHeader(PARTY_MENU_HINT_WINDOW_ID, hints, 8, 10, 0, TRUE);
     DrawUiHeaderBackgroundRow(PARTY_MENU_HINT_WINDOW_ID, gPlttBufferUnfaded[BG_PLTT_ID(1) + 4]);
     ScheduleBgCopyTilemapToVram(0);
 }
@@ -1354,11 +1363,37 @@ static void UpdateCurrentPartySelection(s8 *slotPtr, s8 movementDir)
         PlaySE(SE_SELECT);
         AnimatePartySlot(newSlotId, 0);
         AnimatePartySlot(*slotPtr, 1);
+        if (layout == PARTY_LAYOUT_SINGLE && !sPartyMenuInternal->chooseMultiple)
+            PrintPartyMenuControlHints();
     }
 }
 
 static void UpdatePartySelectionSingleLayout(s8 *slotPtr, s8 movementDir)
 {
+    if (!sPartyMenuInternal->chooseMultiple)
+    {
+        if (*slotPtr == 0)
+        {
+            if (movementDir == MENU_DIR_RIGHT && gPlayerPartyCount > 1)
+                *slotPtr = sPartyMenuInternal->lastSelectedSlot > 0
+                    && sPartyMenuInternal->lastSelectedSlot < gPlayerPartyCount
+                    ? sPartyMenuInternal->lastSelectedSlot : 1;
+        }
+        else if (*slotPtr < gPlayerPartyCount)
+        {
+            if (movementDir == MENU_DIR_UP)
+                *slotPtr = *slotPtr == 1 ? gPlayerPartyCount - 1 : *slotPtr - 1;
+            else if (movementDir == MENU_DIR_DOWN)
+                *slotPtr = *slotPtr == gPlayerPartyCount - 1 ? 1 : *slotPtr + 1;
+            else if (movementDir == MENU_DIR_LEFT)
+            {
+                sPartyMenuInternal->lastSelectedSlot = *slotPtr;
+                *slotPtr = 0;
+            }
+        }
+        return;
+    }
+
     switch (movementDir)
     {
     case MENU_DIR_UP:

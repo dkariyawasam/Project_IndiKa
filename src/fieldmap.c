@@ -7,6 +7,9 @@
 #include "fieldmap.h"
 #include "day_night.h"
 
+extern const struct Tileset gTileset_Route21;
+extern const struct Tileset gTileset_PalletTown;
+
 struct ConnectionFlags
 {
     u8 south:1;
@@ -177,6 +180,7 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
     const u16 *src;
     u16 *dest;
     s32 mapWidth;
+    s32 col;
 
     mapWidth = connectedMapHeader->mapLayout->width;
     src = &connectedMapHeader->mapLayout->map[mapWidth * y2 + x2];
@@ -185,6 +189,12 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
     for (i = 0; i < height; i++)
     {
         CpuCopy16(src, dest, width * 2);
+        // Route 21 keeps Cinnabar's metatiles, with Pallet's strip appended.
+        if (gMapHeader.mapLayout->secondaryTileset == &gTileset_Route21
+            && connectedMapHeader->mapLayout->secondaryTileset == &gTileset_PalletTown)
+            for (col = 0; col < width; col++)
+                if ((dest[col] & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
+                    dest[col] = (dest[col] & ~0x3FF) | ((dest[col] & 0x3FF) + 64);
         dest += VMap.Xsize;
         src += mapWidth;
     }
@@ -659,6 +669,9 @@ bool8 CameraMove(s32 x, s32 y)
     s32 direction;
     const struct MapConnection *connection;
     s32 old_x, old_y;
+    const struct Tileset *oldTileset;
+    s32 i;
+    s16 metatileOffset;
     gCamera.active = FALSE;
     direction = GetPostCameraMoveMapBorderId(x, y);
     if (direction == CONNECTION_NONE || direction == CONNECTION_INVALID)
@@ -669,11 +682,26 @@ bool8 CameraMove(s32 x, s32 y)
     else
     {
         SaveMapView();
+        oldTileset = gMapHeader.mapLayout->secondaryTileset;
         old_x = gSaveBlock1Ptr->pos.x;
         old_y = gSaveBlock1Ptr->pos.y;
         connection = GetIncomingConnection(direction, gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
         SetPositionFromConnection(connection, direction, x, y);
         LoadMapFromCameraTransition(connection->mapGroup, connection->mapNum);
+        // The saved viewport also crosses the tileset boundary. Translate it
+        // before it overwrites the freshly constructed connection strip.
+        metatileOffset = 0;
+        if (oldTileset == &gTileset_PalletTown && gMapHeader.mapLayout->secondaryTileset == &gTileset_Route21)
+            metatileOffset = 64;
+        else if (oldTileset == &gTileset_Route21 && gMapHeader.mapLayout->secondaryTileset == &gTileset_PalletTown)
+            metatileOffset = -64;
+        if (metatileOffset != 0)
+            for (i = 0; i < MAP_OFFSET_W * MAP_OFFSET_H; i++)
+            {
+                u16 block = gSaveBlock2Ptr->mapView[i];
+                if ((block & 0x3FF) >= NUM_METATILES_IN_PRIMARY)
+                    gSaveBlock2Ptr->mapView[i] = (block & ~0x3FF) | ((block & 0x3FF) + metatileOffset);
+            }
         RefreshCurrentMapNightPalette();
         gCamera.active = TRUE;
         gCamera.x = old_x - gSaveBlock1Ptr->pos.x;

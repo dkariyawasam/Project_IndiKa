@@ -799,11 +799,21 @@ static void DrawBagHeader(void)
     u16 i;
     u16 blue = RGB(0, 15, 25);
     u8 *pixels;
+    const u8 *hints = gText_DPadAnyPickOKBack;
+    static const u8 firstPocketHints[] = _("{DPAD_RIGHTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 lastPocketHints[] = _("{DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+
+    if (sBagMenuDisplay->pocketSwitchMode != 0)
+        hints = gText_PickOKExit;
+    else if (gBagMenuState.pocket == POCKET_ITEMS - 1)
+        hints = firstPocketHints;
+    else if (gBagMenuState.pocket == NUM_VISIBLE_BAG_POCKETS - 1)
+        hints = lastPocketHints;
 
     // Index zero is transparent: use a spare opaque colour for the strip.
     LoadPalette(&blue, BG_PLTT_ID(15) + 11, sizeof(blue));
     ApplyUiHintHeaderTheme(BG_PLTT_ID(15) + 11);
-    DrawUiHintHeader(3, gText_DPadAnyPickOKBack, 11, 10, 0, FALSE);
+    DrawUiHintHeader(3, hints, 11, 10, 0, FALSE);
     BagPrintTextOnWindow(3, FONT_NORMAL, sPocketNames[gBagMenuState.pocket], 8, 1, 1, 0, 0, 0);
     DrawBagPocketNotches(3);
     pixels = (u8 *)GetWindowAttribute(3, WINDOW_TILE_DATA);

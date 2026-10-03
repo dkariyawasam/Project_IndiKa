@@ -194,7 +194,8 @@
 #define CHAR_DPAD_RIGHT     0x09
 #define CHAR_DPAD_UPDOWN        0x0A
 #define CHAR_DPAD_LEFTRIGHT     0x0B
-#define CHAR_DPAD_NONE          0x0C
+#define CHAR_DPAD_ANY           0x0C
+#define CHAR_DPAD_NONE          CHAR_DPAD_ANY // Legacy name for the all-directions icon.
 #define CHAR_DPAD_LEFTDOWN      0x0D
 #define CHAR_DPAD_RIGHTDOWN     0x0E
 #define CHAR_DPAD_LEFTRIGHTDOWN 0x0F

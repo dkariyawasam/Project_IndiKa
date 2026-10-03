@@ -222,8 +222,7 @@ CeladonCity_Gym_Text_FloraIntro::
     .string "So does a winning team!$"
 
 CeladonCity_Gym_Text_FloraDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+    .string "I need more time to grow!$"
 
 CeladonCity_Gym_Text_FloraAfter::
     .string "ERIKA teaches us to notice\n"
@@ -234,8 +233,7 @@ CeladonCity_Gym_Text_DaphneIntro::
     .string "a sharp strategy!$"
 
 CeladonCity_Gym_Text_DaphneDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+    .string "You saw through my sweet act!$"
 
 CeladonCity_Gym_Text_DaphneAfter::
     .string "Fragrance draws you closer.\n"
@@ -246,8 +244,7 @@ CeladonCity_Gym_Text_LaurelIntro::
     .string "even while ERIKA is away.$"
 
 CeladonCity_Gym_Text_LaurelDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+    .string "I will keep tending my team!$"
 
 CeladonCity_Gym_Text_LaurelAfter::
     .string "Use your VS SEEKER here\n"
@@ -258,8 +255,7 @@ CeladonCity_Gym_Text_ViolaIntro::
     .string "at its own pace.$"
 
 CeladonCity_Gym_Text_ViolaDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+    .string "You chose your moment well!$"
 
 CeladonCity_Gym_Text_ViolaAfter::
     .string "A patient TRAINER knows\n"

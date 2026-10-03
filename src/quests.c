@@ -1332,7 +1332,7 @@ static u16 BuildMenuTemplate(void)
 	gMultiuseListMenuTemplate.cursorShadowPal = TEXT_COLOR_LIGHT_GRAY;
 	gMultiuseListMenuTemplate.moveCursorFunc = MoveCursorFunc;
 	gMultiuseListMenuTemplate.itemPrintFunc = GenerateStateAndPrint;
-	gMultiuseListMenuTemplate.scrollMultiple = LIST_MULTIPLE_SCROLL_DPAD;
+	gMultiuseListMenuTemplate.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
 	gMultiuseListMenuTemplate.cursorKind = 0;
 }
 

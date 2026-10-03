@@ -134,7 +134,6 @@ static void DexScreen_InitListMenuForOrderedList(const struct ListMenuTemplate *
 static u8 DexScreen_CreateDexOrderScrollArrows(void);
 static void DexScreen_DestroyDexOrderListMenu(u8 order);
 static void Task_DexScreen_CategorySubmenu(u8 taskId);
-static u8 DexScreen_CreateCategoryMenuScrollArrows(void);
 static int DexScreen_InputHandler_GetShoulderInput(void);
 static void Task_DexScreen_ShowMonPage(u8 taskId);
 static bool32 DexScreen_TryScrollMonsVertical(u8 direction);
@@ -144,6 +143,8 @@ static void DexScreen_PrintNum3RightAlign(u8 windowId, u8 fontId, u16 num, u8 x,
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y);
 static u16 DexScreen_GetDexCount(u8 caseId, bool8 whichDex);
 static void DexScreen_PrintHeaderControlInfo(const u8 *src);
+static s16 DexScreen_FindAdjacentPage(s8 direction);
+static void DexScreen_UpdatePageHeader(void);
 static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void);
 static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered);
 static void DexScreen_CreateCategoryPageSelectionCursor(u8 cursorPos);
@@ -169,8 +170,9 @@ void DexScreen_PrintStringWithAlignment(const u8 *str, s32 mode);
 static u16 DexScreen_CreateSizeComparisonTrainerPicSprite(s16 x, s16 y);
 static void DexScreen_DestroySizeComparisonTrainerPicSprite(u16 spriteId);
 static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct ListMenu *list);
-static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y);
-static void DexScreen_DrawHabitatBall(u8 windowId, u8 y);
+static void DexScreen_DrawHabitatGrid(void);
+static s32 DexScreen_ProcessHabitatGridInput(void);
+static void DexScreen_DrawHabitatBall(u8 windowId, u8 left, u8 y);
 static void ItemPrintFunc_OrderedListMenu(u8 windowId, u32 itemId, u8 y);
 static void Task_DexScreen_RegisterNonKantoMonBeforeNationalDex(u8 taskId);
 static void Task_DexScreen_RegisterMonToPokedex(u8 taskId);
@@ -332,143 +334,37 @@ static const struct PokedexScreenData sDexScreenDataInitialState = {
 
 
 static const struct WindowTemplate sWindowTemplate_ModeSelect = {
-    .bg = 1,
-    .tilemapLeft = 1,
-    .tilemapTop = 2,
-    .width = 20,
-    .height = 16,
-    .paletteNum = 0,
-    .baseBlock = 0x0008
+    .bg = 1, .tilemapLeft = 1, .tilemapTop = 2, .width = 28, .height = 18,
+    .paletteNum = 0, .baseBlock = 8
 };
-
 static const struct WindowTemplate sWindowTemplate_SelectionIcon = {
-    .bg = 1,
-    .tilemapLeft = 21,
-    .tilemapTop = 11,
-    .width = 8,
-    .height = 6,
-    .paletteNum = 1,
-    .baseBlock = 0x0148
+    .bg = 1, .tilemapLeft = 21, .tilemapTop = 13, .width = 8, .height = 6,
+    .paletteNum = 1, .baseBlock = 512
 };
-
 static const struct WindowTemplate sWindowTemplate_DexCounts = {
-    .bg = 1,
-    .tilemapLeft = 21,
-    .tilemapTop = 2,
-    .width = 9,
-    .height = 9,
-    .paletteNum = 0,
-    .baseBlock = 0x0178
+    .bg = 1, .tilemapLeft = 13, .tilemapTop = 2, .width = 16, .height = 2,
+    .paletteNum = 0, .baseBlock = 560
 };
 
-static const struct ListMenuItem sListMenuItems_KantoDexModeSelect[] = {
-    {gText_PokemonList,                  LIST_HEADER},
-    {gText_NumericalMode,                DEX_MODE(NUMERICAL_NATIONAL)},
-    {gText_PokemonHabitats,              LIST_HEADER},
-    {gText_DexCategory_GrasslandPkmn,    DEX_CATEGORY_GRASSLAND},
-    {gText_DexCategory_ForestPkmn,       DEX_CATEGORY_FOREST},
-    {gText_DexCategory_WatersEdgePkmn,   DEX_CATEGORY_WATERS_EDGE},
-    {gText_DexCategory_SeaPkmn,          DEX_CATEGORY_SEA},
-    {gText_DexCategory_CavePkmn,         DEX_CATEGORY_CAVE},
-    {gText_DexCategory_MountainPkmn,     DEX_CATEGORY_MOUNTAIN},
+// Row-major grid: the original habitat order runs down each column.
+static const struct ListMenuItem sHabitatGridItems[] = {
+    {gText_DexCategory_GrasslandPkmn, DEX_CATEGORY_GRASSLAND},
+    {gText_DexCategory_CavePkmn, DEX_CATEGORY_CAVE},
+    {gText_DexCategory_ForestPkmn, DEX_CATEGORY_FOREST},
+    {gText_DexCategory_MountainPkmn, DEX_CATEGORY_MOUNTAIN},
+    {gText_DexCategory_WatersEdgePkmn, DEX_CATEGORY_WATERS_EDGE},
     {gText_DexCategory_RoughTerrainPkmn, DEX_CATEGORY_ROUGH_TERRAIN},
-    {gText_DexCategory_UrbanPkmn,        DEX_CATEGORY_URBAN},
-    {gText_DexCategory_RarePkmn,         DEX_CATEGORY_RARE},
-    {gText_DexCategory_NonNativePkmn,    DEX_CATEGORY_NON_NATIVE},
-    {gText_Search,                       LIST_HEADER},
-    {gText_AToZMode,                     DEX_MODE(ATOZ)},
-    {gText_TypeMode,                     DEX_MODE(TYPE)},
-    {gText_LightestMode,                 DEX_MODE(LIGHTEST)},
-    {gText_SmallestMode,                 DEX_MODE(SMALLEST)},
+    {gText_DexCategory_SeaPkmn, DEX_CATEGORY_SEA},
+    {gText_DexCategory_UrbanPkmn, DEX_CATEGORY_URBAN},
+    {gText_DexCategory_RarePkmn, DEX_CATEGORY_RARE},
+    {gText_DexCategory_NonNativePkmn, DEX_CATEGORY_NON_NATIVE},
+    {gText_NumericalModeNational, DEX_MODE(NUMERICAL_NATIONAL)},
+    {gText_AToZMode, DEX_MODE(ATOZ)},
+    {gText_TypeMode, DEX_MODE(TYPE)},
+    {gText_LightestMode, DEX_MODE(LIGHTEST)},
+    {gText_SmallestMode, DEX_MODE(SMALLEST)},
 };
 
-static const struct ListMenuTemplate sListMenuTemplate_KantoDexModeSelect = {
-    .items = sListMenuItems_KantoDexModeSelect,
-    .moveCursorFunc = MoveCursorFunc_DexModeSelect,
-    .itemPrintFunc = ItemPrintFunc_DexModeSelect,
-    .totalItems = NELEMS(sListMenuItems_KantoDexModeSelect),
-    .maxShowed = 9,
-    .windowId = 0,
-    .header_X = 0,
-    .item_X = 12,
-    .cursor_X = 4,
-    .upText_Y = 2,
-    .cursorPal = 1,
-    .fillValue = 0,
-    .cursorShadowPal = 3,
-    .lettersSpacing = 1,
-    .itemVerticalPadding = 0,
-    .scrollMultiple = 0,
-    .fontId = FONT_NORMAL,
-    .cursorKind = 0,
-};
-
-static const struct ListMenuItem sListMenuItems_NatDexModeSelect[] = {
-    {gText_PokemonHabitats,              LIST_HEADER},
-    {gText_DexCategory_GrasslandPkmn,    DEX_CATEGORY_GRASSLAND},
-    {gText_DexCategory_ForestPkmn,       DEX_CATEGORY_FOREST},
-    {gText_DexCategory_WatersEdgePkmn,   DEX_CATEGORY_WATERS_EDGE},
-    {gText_DexCategory_SeaPkmn,          DEX_CATEGORY_SEA},
-    {gText_DexCategory_CavePkmn,         DEX_CATEGORY_CAVE},
-    {gText_DexCategory_MountainPkmn,     DEX_CATEGORY_MOUNTAIN},
-    {gText_DexCategory_RoughTerrainPkmn, DEX_CATEGORY_ROUGH_TERRAIN},
-    {gText_DexCategory_UrbanPkmn,        DEX_CATEGORY_URBAN},
-    {gText_DexCategory_RarePkmn,         DEX_CATEGORY_RARE},
-    {gText_DexCategory_NonNativePkmn,    DEX_CATEGORY_NON_NATIVE},
-    {gText_Search,                       LIST_HEADER},
-    {gText_NumericalModeNational,        DEX_MODE(NUMERICAL_NATIONAL)},
-    {gText_AToZMode,                     DEX_MODE(ATOZ)},
-    {gText_TypeMode,                     DEX_MODE(TYPE)},
-};
-
-static const struct ListMenuTemplate sListMenuTemplate_NatDexModeSelect = {
-    .items = sListMenuItems_NatDexModeSelect,
-    .moveCursorFunc = MoveCursorFunc_DexModeSelect,
-    .itemPrintFunc = ItemPrintFunc_DexModeSelect,
-    .totalItems = NELEMS(sListMenuItems_NatDexModeSelect),
-    .maxShowed = 9,
-    .windowId = 0,
-    .header_X = 0,
-    .item_X = 12,
-    .cursor_X = 4,
-    .upText_Y = 2,
-    .cursorPal = 1,
-    .fillValue = 0,
-    .cursorShadowPal = 3,
-    .lettersSpacing = 1,
-    .itemVerticalPadding = 0,
-    .scrollMultiple = 0,
-    .fontId = FONT_NORMAL,
-    .cursorKind = 0,
-};
-
-static const struct ScrollArrowsTemplate sScrollArrowsTemplate_KantoDex = {
-    .firstArrowType = 2,
-    .firstX = 200,
-    .firstY = 19,
-    .secondArrowType = 3,
-    .secondX = 200,
-    .secondY = 141,
-    .fullyUpThreshold = 0,
-    .fullyDownThreshold = 9,
-    .tileTag = 2000,
-    .palTag = 0xFFFF,
-    .palNum = 1
-};
-
-static const struct ScrollArrowsTemplate sScrollArrowsTemplate_NatDex = {
-    .firstArrowType = 2,
-    .firstX = 200,
-    .firstY = 19,
-    .secondArrowType = 3,
-    .secondX = 200,
-    .secondY = 141,
-    .fullyUpThreshold = 0,
-    .fullyDownThreshold = 6,
-    .tileTag = 2000,
-    .palTag = 0xFFFF,
-    .palNum = 1
-};
 
 
 static const struct PokedexScreenWindowGfx sTopMenuSelectionIconGfxPtrs[] = {
@@ -549,7 +445,7 @@ static const struct WindowTemplate sWindowTemplate_OrderedListMenu = {
 };
 
 static const struct ListMenuTemplate sListMenuTemplate_OrderedListMenu = {
-    .items = sListMenuItems_KantoDexModeSelect,
+    .items = sHabitatGridItems,
     .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
     .itemPrintFunc = ItemPrintFunc_OrderedListMenu,
     .totalItems = 0,
@@ -787,19 +683,6 @@ static const u8 sDexScreenPageTurnColumns[][30] = {
     { 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29},
 };
 
-static const struct ScrollArrowsTemplate sScrollArrowsTemplate_CategoryMenu = {
-    .firstArrowType = 0,
-    .firstX = 16,
-    .firstY = 80,
-    .secondArrowType = 1,
-    .secondX = 224,
-    .secondY = 80,
-    .fullyUpThreshold = 0,
-    .fullyDownThreshold = 0,
-    .tileTag = 2000,
-    .palTag = 0xFFFF,
-    .palNum = 1,
-};
 
 const struct CursorStruct sCursorStruct_CategoryPage = {
     .left = 0,
@@ -975,7 +858,6 @@ static void Task_PokedexScreen(u8 taskId)
         sPokedexScreenData->state = 2;
         break;
     case 1:
-        RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
         DexScreen_RemoveWindow(&sPokedexScreenData->modeSelectWindowId);
         DexScreen_RemoveWindow(&sPokedexScreenData->selectionIconWindowId);
         DexScreen_RemoveWindow(&sPokedexScreenData->dexCountsWindowId);
@@ -1008,11 +890,6 @@ static void Task_PokedexScreen(u8 taskId)
         sPokedexScreenData->state = 5;
         break;
     case 5:
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
-        if (IsNationalPokedexEnabled())
-            sPokedexScreenData->scrollArrowsTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_NatDex, &sPokedexScreenData->modeSelectCursorPosBak);
-        else
-            sPokedexScreenData->scrollArrowsTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_KantoDex, &sPokedexScreenData->modeSelectCursorPosBak);
         sPokedexScreenData->state = 6;
         break;
     case 6:
@@ -1021,8 +898,7 @@ static void Task_PokedexScreen(u8 taskId)
             DexScreen_AnimateRewardFooter();
             break;
         }
-        sPokedexScreenData->modeSelectInput = ListMenu_ProcessInput(sPokedexScreenData->modeSelectListMenuId);
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        sPokedexScreenData->modeSelectInput = DexScreen_ProcessHabitatGridInput();
         DexScreen_UpdateHabitatHeader();
         if (JOY_NEW(START_BUTTON))
         {
@@ -1048,7 +924,6 @@ static void Task_PokedexScreen(u8 taskId)
             case DEX_CATEGORY_NON_NATIVE:
                 if (DexScreen_IsCategoryUnlocked(sPokedexScreenData->modeSelectInput))
                 {
-                    RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
                     sPokedexScreenData->category = sPokedexScreenData->modeSelectInput;
                     BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
                     sPokedexScreenData->state = 7;
@@ -1056,7 +931,6 @@ static void Task_PokedexScreen(u8 taskId)
                 break;
             case DEX_MODE(NUMERICAL_KANTO):
             case DEX_MODE(NUMERICAL_NATIONAL):
-                RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
                 sPokedexScreenData->dexOrderId = sPokedexScreenData->modeSelectInput - DEX_CATEGORY_COUNT;
                 BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
                 sPokedexScreenData->state = 9;
@@ -1065,7 +939,6 @@ static void Task_PokedexScreen(u8 taskId)
             case DEX_MODE(TYPE):
             case DEX_MODE(LIGHTEST):
             case DEX_MODE(SMALLEST):
-                RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
                 sPokedexScreenData->dexOrderId = sPokedexScreenData->modeSelectInput - DEX_CATEGORY_COUNT;
                 sPokedexScreenData->characteristicOrderMenuItemsAbove = sPokedexScreenData->characteristicOrderMenuCursorPos = 0;
                 BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
@@ -1080,7 +953,6 @@ static void Task_PokedexScreen(u8 taskId)
         }
         break;
     case 7:
-        DestroyListMenuTask(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPos, &sPokedexScreenData->modeSelectItemsAbove);
         FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 20);
         CopyBgTilemapBufferToVram(1);
         DexScreen_RemoveWindow(&sPokedexScreenData->modeSelectWindowId);
@@ -1093,7 +965,6 @@ static void Task_PokedexScreen(u8 taskId)
         sPokedexScreenData->state = 0;
         break;
     case 8:
-        DestroyListMenuTask(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPos, &sPokedexScreenData->modeSelectItemsAbove);
         HideBg(1);
         DexScreen_RemoveWindow(&sPokedexScreenData->modeSelectWindowId);
         DexScreen_RemoveWindow(&sPokedexScreenData->selectionIconWindowId);
@@ -1102,7 +973,6 @@ static void Task_PokedexScreen(u8 taskId)
         sPokedexScreenData->state = 0;
         break;
     case 9:
-        DestroyListMenuTask(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPos, &sPokedexScreenData->modeSelectItemsAbove);
         HideBg(1);
         DexScreen_RemoveWindow(&sPokedexScreenData->modeSelectWindowId);
         DexScreen_RemoveWindow(&sPokedexScreenData->selectionIconWindowId);
@@ -1115,42 +985,81 @@ static void Task_PokedexScreen(u8 taskId)
 
 static void DexScreen_InitGfxForTopMenu(void)
 {
-    struct ListMenuTemplate listMenuTemplate;
+    u8 windowId;
+    u8 text[32];
+    u8 *end;
+    static const u8 colors[] = {0, 1, 3};
     FillBgTilemapBufferRect(3, 0x00E, 0, 0, 30, 20, 0);
     FillBgTilemapBufferRect(0, 0x003, 0, 0, 32, 2, 15);
-    FillBgTilemapBufferRect(2, 0x000, 0, 0, 30, 20, 17);
-    FillBgTilemapBufferRect(1, 0x000, 0, 0, 30, 20, 17);
+    FillBgTilemapBufferRect(2, 0, 0, 0, 30, 20, 17);
+    FillBgTilemapBufferRect(1, 0, 0, 0, 30, 20, 17);
     sPokedexScreenData->modeSelectWindowId = AddWindow(&sWindowTemplate_ModeSelect);
     sPokedexScreenData->selectionIconWindowId = AddWindow(&sWindowTemplate_SelectionIcon);
-    sPokedexScreenData->dexCountsWindowId = AddWindow(&sWindowTemplate_DexCounts);
-    if (IsNationalPokedexEnabled())
+    windowId = sPokedexScreenData->dexCountsWindowId = AddWindow(&sWindowTemplate_DexCounts);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    end = StringCopy(text, gText_Seen);
+    ConvertIntToDecimalStringN(end, IsNationalPokedexEnabled() ? sPokedexScreenData->numSeenNational : sPokedexScreenData->numSeenKanto, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, 0, 0, colors, TEXT_SKIP_DRAW, text);
+    end = StringCopy(text, gText_Owned);
+    ConvertIntToDecimalStringN(end, IsNationalPokedexEnabled() ? sPokedexScreenData->numOwnedNational : sPokedexScreenData->numOwnedKanto, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, 64, 0, colors, TEXT_SKIP_DRAW, text);
+    DexScreen_DrawHabitatGrid();
+    DexScreen_UpdateHabitatHeader();
+}
+
+static void DexScreen_DrawHabitatGrid(void)
+{
+    u8 i, x, y;
+    u8 windowId = sPokedexScreenData->modeSelectWindowId;
+    u8 count = IsNationalPokedexEnabled() ? 13 : NELEMS(sHabitatGridItems);
+    static const u8 normal[] = {0, 1, 3};
+    static const u8 locked[] = {0, TEXT_DYNAMIC_COLOR_1, TEXT_DYNAMIC_COLOR_2};
+    static const u8 heading[] = {0, 6, 7};
+    static const u8 cursor[] = _("▶");
+    if (sPokedexScreenData->modeSelectCursorPos >= count)
+        sPokedexScreenData->modeSelectCursorPos = 0;
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, 0, 0, heading, TEXT_SKIP_DRAW, gText_PokemonHabitats);
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, 0, 86, heading, TEXT_SKIP_DRAW, gText_Search);
+    for (i = 0; i < count; i++)
     {
-        listMenuTemplate = sListMenuTemplate_NatDexModeSelect;
-        listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
-        sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
-        FillWindowPixelBuffer(sPokedexScreenData->dexCountsWindowId, PIXEL_FILL(0));
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Seen, 8, 2, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numSeenNational, 44, 2, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, 8, 18, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedNational, 44, 18, 2);
+        u32 id = sHabitatGridItems[i].index;
+        bool8 unlocked = id >= DEX_CATEGORY_COUNT || (sPokedexScreenData->unlockedCategories & (1 << id));
+        x = i < 10 ? (i % 2) * 112 : (i >= 13 ? 80 : 0);
+        y = i < 10 ? 16 + (i / 2) * 14 : 100 + (i >= 13 ? i - 13 : i - 10) * 12;
+        AddTextPrinterParameterized3(windowId, FONT_SMALL, x + 8, y, unlocked ? normal : locked, TEXT_SKIP_DRAW, sHabitatGridItems[i].label);
+        if (i == sPokedexScreenData->modeSelectCursorPos)
+            AddTextPrinterParameterized3(windowId, FONT_SMALL, x, y, normal, TEXT_SKIP_DRAW, cursor);
+        if (id < DEX_CATEGORY_COUNT && (DexScreen_HabitatReady(id) || (gSaveBlock1Ptr->dexHabitatRewards & (1 << id))))
+            DexScreen_DrawHabitatBall(windowId, x + 96, y - 1);
     }
-    else
-    {
-        listMenuTemplate = sListMenuTemplate_KantoDexModeSelect;
-        listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
-        sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
-        FillWindowPixelBuffer(sPokedexScreenData->dexCountsWindowId, PIXEL_FILL(0));
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Seen, 8, 2, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numSeenKanto, 44, 2, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, 8, 18, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedKanto, 44, 18, 2);
-    }
-    FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    DexScreen_PrintHeaderControlInfo(gText_PickOKExit);
-    PutWindowTilemap(1);
-    CopyWindowToVram(1, COPYWIN_GFX);
+    PutWindowTilemap(windowId);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+    MoveCursorFunc_DexModeSelect(sHabitatGridItems[sPokedexScreenData->modeSelectCursorPos].index, TRUE, NULL);
     PutWindowTilemap(sPokedexScreenData->dexCountsWindowId);
-    CopyWindowToVram(sPokedexScreenData->dexCountsWindowId, COPYWIN_GFX);
+    CopyWindowToVram(sPokedexScreenData->dexCountsWindowId, COPYWIN_FULL);
+}
+
+static s32 DexScreen_ProcessHabitatGridInput(void)
+{
+    u8 old = sPokedexScreenData->modeSelectCursorPos;
+    u8 next = old;
+    u8 last = IsNationalPokedexEnabled() ? 12 : 14;
+    if (JOY_REPT(DPAD_UP))
+        next = old < 2 ? last : old < 10 ? old - 2 : old == 10 ? 8 : old - 1;
+    else if (JOY_REPT(DPAD_DOWN))
+        next = old == last ? 0 : old < 8 ? old + 2 : old < 10 ? 10 : old + 1;
+    else if (old < 10 && JOY_REPT(DPAD_LEFT) && (old & 1))
+        next = old - 1;
+    else if (old < 10 && JOY_REPT(DPAD_RIGHT) && !(old & 1))
+        next = old + 1;
+    if (next != old)
+    {
+        sPokedexScreenData->modeSelectCursorPos = next;
+        PlaySE(SE_SELECT);
+        DexScreen_DrawHabitatGrid();
+    }
+    return sHabitatGridItems[next].index;
 }
 
 static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct ListMenu *list)
@@ -1170,20 +1079,6 @@ static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct Lis
     }
     PutWindowTilemap(sPokedexScreenData->selectionIconWindowId);
     CopyWindowToVram(sPokedexScreenData->selectionIconWindowId, COPYWIN_GFX);
-}
-
-static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y)
-{
-    if (itemId < DEX_CATEGORY_COUNT)
-    {
-        bool8 ready = DexScreen_HabitatReady(itemId);
-        if (ready || (gSaveBlock1Ptr->dexHabitatRewards & (1 << itemId)))
-            DexScreen_DrawHabitatBall(windowId, y);
-    }
-    if (itemId >= DEX_CATEGORY_COUNT || sPokedexScreenData->unlockedCategories & (1 << itemId))
-        ListMenuOverrideSetColors(TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_GRAY);
-    else
-        ListMenuOverrideSetColors(TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_TRANSPARENT, TEXT_DYNAMIC_COLOR_2);
 }
 
 static void Task_DexScreen_NumericalOrder(u8 taskId)
@@ -1218,13 +1113,13 @@ static void Task_DexScreen_NumericalOrder(u8 taskId)
         sPokedexScreenData->state = 5;
         break;
     case 5:
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        ListMenuGetScrollAndRow(sPokedexScreenData->orderedListMenuTaskId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
         sPokedexScreenData->scrollArrowsTaskId = DexScreen_CreateDexOrderScrollArrows();
         sPokedexScreenData->state = 6;
         break;
     case 6:
         sPokedexScreenData->characteristicMenuInput = ListMenu_ProcessInput(sPokedexScreenData->orderedListMenuTaskId);
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        ListMenuGetScrollAndRow(sPokedexScreenData->orderedListMenuTaskId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
         if (JOY_NEW(A_BUTTON))
         {
             if ((sPokedexScreenData->characteristicMenuInput >> 16) & 1)
@@ -1304,13 +1199,13 @@ static void Task_DexScreen_CharacteristicOrder(u8 taskId)
         sPokedexScreenData->state = 5;
         break;
     case 5:
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        ListMenuGetScrollAndRow(sPokedexScreenData->orderedListMenuTaskId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
         sPokedexScreenData->scrollArrowsTaskId = DexScreen_CreateDexOrderScrollArrows();
         sPokedexScreenData->state = 6;
         break;
     case 6:
         sPokedexScreenData->characteristicMenuInput = ListMenu_ProcessInput(sPokedexScreenData->orderedListMenuTaskId);
-        ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
+        ListMenuGetScrollAndRow(sPokedexScreenData->orderedListMenuTaskId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
         if (JOY_NEW(A_BUTTON))
         {
             if (((sPokedexScreenData->characteristicMenuInput >> 16) & 1) && !DexScreen_LookUpCategoryBySpecies(sPokedexScreenData->characteristicMenuInput))
@@ -1560,6 +1455,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
 {
     bool8 rewardPending;
     int pageFlipCmd;
+    s16 nextPage;
     u8 *ptr;
     switch (sPokedexScreenData->state)
     {
@@ -1604,7 +1500,6 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         sPokedexScreenData->state = 4;
         break;
     case 4:
-        sPokedexScreenData->scrollArrowsTaskId = DexScreen_CreateCategoryMenuScrollArrows();
         sPokedexScreenData->categoryPageCursorTaskId = ListMenuAddCursorObjectInternal(&sCursorStruct_CategoryPage, 0);
         sPokedexScreenData->state = 5;
         break;
@@ -1634,7 +1529,6 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         }
         if (!rewardPending && JOY_NEW(A_BUTTON) && DexScreen_GetSetPokedexFlag(sPokedexScreenData->pageSpecies[sPokedexScreenData->categoryCursorPosInPage], FLAG_GET_SEEN, TRUE))
         {
-            RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
             ListMenuRemoveCursorObject(sPokedexScreenData->categoryPageCursorTaskId, 0);
             sPokedexScreenData->data[0] = 0;
             sPokedexScreenData->state = 12;
@@ -1645,6 +1539,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
             if (!rewardPending && sPokedexScreenData->categoryCursorPosInPage != 0)
             {
                 sPokedexScreenData->categoryCursorPosInPage--;
+                DexScreen_UpdatePageHeader();
                 PlaySE(SE_SELECT);
                 break;
             }
@@ -1656,6 +1551,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
             if (!rewardPending && sPokedexScreenData->categoryCursorPosInPage < sPokedexScreenData->numMonsOnPage - 1)
             {
                 sPokedexScreenData->categoryCursorPosInPage++;
+                DexScreen_UpdatePageHeader();
                 PlaySE(SE_SELECT);
                 break;
             }
@@ -1669,30 +1565,13 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         case 0: // No action
             break;
         case 1: // Left
-            while (sPokedexScreenData->pageNum > sPokedexScreenData->firstPageInCategory)
-            {
-                sPokedexScreenData->pageNum--;
-                if (DexScreen_IsPageUnlocked(sPokedexScreenData->category, sPokedexScreenData->pageNum))
-                {
-                    sPokedexScreenData->state = 8;
-                    break;
-                }
-            }
-            if (sPokedexScreenData->state != 8)
-                sPokedexScreenData->state = 6;
-            break;
         case 2: // Right
-            while (sPokedexScreenData->pageNum < sPokedexScreenData->lastPageInCategory - 1)
+            nextPage = DexScreen_FindAdjacentPage(pageFlipCmd == 1 ? -1 : 1);
+            if (nextPage >= 0)
             {
-                sPokedexScreenData->pageNum++;
-                if (DexScreen_IsPageUnlocked(sPokedexScreenData->category, sPokedexScreenData->pageNum))
-                {
-                    sPokedexScreenData->state = 10;
-                    break;
-                }
+                sPokedexScreenData->pageNum = nextPage;
+                sPokedexScreenData->state = pageFlipCmd == 1 ? 8 : 10;
             }
-            if (sPokedexScreenData->state != 10)
-                sPokedexScreenData->state = 6;
             break;
         }
         if (JOY_NEW(B_BUTTON))
@@ -1702,7 +1581,6 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         break;
     case 6:
     case 7:
-        RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
         ListMenuRemoveCursorObject(sPokedexScreenData->categoryPageCursorTaskId, 0);
         BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
         sPokedexScreenData->state = 1;
@@ -1720,6 +1598,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         if (DexScreen_FlipCategoryPageInDirection(0))
         {
             sPokedexScreenData->categoryCursorPosInPage = sPokedexScreenData->numMonsOnPage - 1;
+            DexScreen_UpdatePageHeader();
             sPokedexScreenData->state = 5;
         }
         break;
@@ -1727,6 +1606,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         if (DexScreen_FlipCategoryPageInDirection(1))
         {
             sPokedexScreenData->categoryCursorPosInPage = 0;
+            DexScreen_UpdatePageHeader();
             sPokedexScreenData->state = 5;
         }
         break;
@@ -1894,14 +1774,6 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
     }
 }
 
-static u8 DexScreen_CreateCategoryMenuScrollArrows(void)
-{
-    struct ScrollArrowsTemplate template = sScrollArrowsTemplate_CategoryMenu;
-    template.fullyUpThreshold = sPokedexScreenData->firstPageInCategory;
-    template.fullyDownThreshold = sPokedexScreenData->lastPageInCategory - 1;
-    sPokedexScreenData->modeSelectCursorPosBak = sPokedexScreenData->pageNum;
-    return AddScrollIndicatorArrowPair(&template, &sPokedexScreenData->modeSelectCursorPosBak);
-}
 
 /*
  * Returns 1 to flip pages left, 2 to flip pages right, 0 for no action
@@ -2313,9 +2185,11 @@ static void DexScreen_PrintHeaderControlInfo(const u8 *src)
     SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
     SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
     SetWindowAttribute(1, WINDOW_WIDTH, 30);
-    // Let the actual page background show through the last header row.
-    // A header-palette colour stays opaque during page fades and pulses.
+    // Keep the edge in the header palette: the page underneath is animated,
+    // faded and dimmed independently of the controls.
     DrawUiHintHeader(1, src, 11, 0, 0, FALSE);
+    DrawUiHeaderBackgroundRow(1, gPlttBufferUnfaded[
+        (((u16 *)GetBgTilemapBuffer(3))[0] & 0x3FF) == 14 ? 4 : 3]);
 }
 
 bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
@@ -2483,7 +2357,7 @@ static const u32 sCompletionBallTiles[] = INCBIN_U32("graphics/interface/ball/po
 static const u16 sCompletionBallPalette[] = INCBIN_U16("graphics/interface/ball/poke.gbapal");
 // The habitat list uses BG palette 0, not the menu-info icon palette.
 // Map the existing ball's colours into that loaded palette without modifying it.
-static void DexScreen_DrawHabitatBall(u8 windowId, u8 y)
+static void DexScreen_DrawHabitatBall(u8 windowId, u8 left, u8 y)
 {
     u8 remap[16];
     u8 i, j, x, row;
@@ -2513,7 +2387,7 @@ static void DexScreen_DrawHabitatBall(u8 windowId, u8 y)
             u16 offset = ((row / 8) * 2 + x / 8) * 32 + (row % 8) * 4 + (x % 8) / 2;
             u8 pixel = (tiles[offset] >> ((x & 1) * 4)) & 15;
             if (pixel != 0)
-                FillWindowPixelRect(windowId, PIXEL_FILL(remap[pixel]), 142 + x, y + row, 1, 1);
+                FillWindowPixelRect(windowId, PIXEL_FILL(remap[pixel]), left + x, y + row, 1, 1);
         }
 }
 
@@ -2542,7 +2416,8 @@ static void DexScreen_UpdateCompletionBall(void)
 
 // Claims live in previously unused save bytes; existing saves initialize lazily.
 #define DEX_PAGE_REWARDS_VERSION 0x44585031
-static const u8 sText_PageClaimControls[] = _("{DPAD_ANY}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
+static const u8 sText_PagePickControls[] = _("{DPAD_LEFTRIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 sText_PageClaimControls[] = _("{DPAD_LEFTRIGHT}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
 #include "data/pokemon/pokedex_page_rewards.h"
 static const u8 sText_RewardS[] = _("1 EXP. CANDY S + 1 RARE CANDY        ");
 static const u8 sText_RewardM[] = _("1 EXP. CANDY M + 1 RARE CANDY        ");
@@ -2550,7 +2425,6 @@ static const u8 sText_RewardL[] = _("1 EXP. CANDY L + 1 RARE CANDY        ");
 static const u8 sText_RewardApex[] = _("2 EXP. CANDY L + 1 RARE CANDY        ");
 static const u8 sText_RewardHabitat[] = _("HABITAT COMPLETE! 1 EXP. CANDY XL");
 static const u8 *const sRewardReceipts[] = {sText_RewardS, sText_RewardM, sText_RewardL, sText_RewardApex, sText_RewardHabitat};
-static const u8 sText_HabitatClaim[] = _("{DPAD_ANY}PICK {START_BUTTON}CLAIM {A_BUTTON}OK {B_BUTTON}BACK");
 static const u8 sText_PageComplete[] = _(" ");
 
 static const struct PokedexCategoryPage *DexScreen_RewardPage(void)
@@ -2587,6 +2461,46 @@ static bool8 DexScreen_PageRewardClaimed(void)
     return (gSaveBlock1Ptr->dexPageRewards[key / 8] & (1 << (key % 8))) != 0;
 }
 
+// Search without changing the displayed page when the habitat boundary is reached.
+static s16 DexScreen_FindAdjacentPage(s8 direction)
+{
+    s16 page;
+    for (page = sPokedexScreenData->pageNum + direction;
+         page >= sPokedexScreenData->firstPageInCategory
+         && page < sPokedexScreenData->lastPageInCategory; page += direction)
+        if (DexScreen_IsPageUnlocked(sPokedexScreenData->category, page))
+            return page;
+    return -1;
+}
+
+static void DexScreen_UpdatePageHeader(void)
+{
+    static const u8 leftPick[] = _("{DPAD_LEFT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 rightPick[] = _("{DPAD_RIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 noPick[] = _("{A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 leftClaim[] = _("{DPAD_LEFT}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
+    static const u8 rightClaim[] = _("{DPAD_RIGHT}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
+    static const u8 noClaim[] = _("{START_BUTTON}CLAIM {B_BUTTON}BACK");
+    bool8 pending = !DexScreen_PageRewardClaimed() && DexScreen_PageIsOwned();
+    bool8 left = (!pending && sPokedexScreenData->categoryCursorPosInPage > 0)
+                 || DexScreen_FindAdjacentPage(-1) >= 0;
+    bool8 right = (!pending && sPokedexScreenData->categoryCursorPosInPage + 1 < sPokedexScreenData->numMonsOnPage)
+                  || DexScreen_FindAdjacentPage(1) >= 0;
+    const u8 *text;
+
+    if (left && right)
+        text = pending ? sText_PageClaimControls : sText_PagePickControls;
+    else if (left)
+        text = pending ? leftClaim : leftPick;
+    else if (right)
+        text = pending ? rightClaim : rightPick;
+    else
+        text = pending ? noClaim : noPick;
+    DexScreen_PrintHeaderControlInfo(text);
+    PutWindowTilemap(1);
+    CopyWindowToVram(1, COPYWIN_MAP);
+}
+
 static void DexScreen_DrawPageRewardFooter(void)
 {
     ClearWindowTilemap(0);
@@ -2599,8 +2513,7 @@ static void DexScreen_DrawPageRewardFooter(void)
     DrawUiHintHeader(0, sText_PageComplete, 11, 12, 0, FALSE);
     ClearWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_MAP);
-    DexScreen_PrintHeaderControlInfo(!DexScreen_PageRewardClaimed() && DexScreen_PageIsOwned()
-                                    ? sText_PageClaimControls : gText_DPadAnyPickOKBack);
+    DexScreen_UpdatePageHeader();
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_MAP);
     DexScreen_UpdateCompletionBall();
@@ -2695,12 +2608,17 @@ static bool8 DexScreen_HabitatReady(u8 category)
 static void DexScreen_UpdateHabitatHeader(void)
 {
     s32 category = sPokedexScreenData->selectedHabitat;
-    const u8 *text = gText_PickOKExit;
+    static const u8 left[] = _("{DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 right[] = _("{DPAD_RIGHTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
+    static const u8 leftClaim[] = _("{DPAD_LEFTUPDOWN}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
+    static const u8 rightClaim[] = _("{DPAD_RIGHTUPDOWN}PICK {START_BUTTON}CLAIM {B_BUTTON}BACK");
+    u8 cursor = sPokedexScreenData->modeSelectCursorPos;
+    const u8 *text = cursor >= 10 ? gText_PickOKExit : (cursor & 1) ? left : right;
     DexScreen_InitHabitatRewards();
     if (category >= 0 && category < DEX_CATEGORY_COUNT)
     {
         if (DexScreen_HabitatReady(category))
-            text = sText_HabitatClaim;
+            text = (cursor & 1) ? leftClaim : rightClaim;
 
     }
     DexScreen_PrintHeaderControlInfo(text);
@@ -2727,6 +2645,7 @@ static void DexScreen_ClaimHabitatReward(void)
     DrawUiHintHeader(0, sText_PageComplete, 11, 12, 0, FALSE);
     ClearWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_MAP);
+    DexScreen_DrawHabitatGrid();
     DexScreen_UpdateHabitatHeader();
     sPokedexScreenData->rewardFooterHold = 0;
     sPokedexScreenData->rewardFooterRetracting = FALSE;
@@ -2759,7 +2678,7 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered)
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
     if (!justRegistered)
     {
-        DexScreen_PrintHeaderControlInfo(gText_DPadAnyPickOKBack);
+        DexScreen_PrintHeaderControlInfo(sText_PagePickControls);
         PutWindowTilemap(1);
         CopyWindowToVram(1, COPYWIN_MAP);
     }
