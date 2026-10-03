@@ -200,22 +200,7 @@ PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
     .string "POKéMON around the world wait for\n"
     .string "you, {PLAYER}!$"
 
-PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex::
-    .string "Ah, {PLAYER}!\n"
-    .string "How is your POKéDEX shaping up?\p"
-    .string "{RIVAL} has already caught some\n"
-    .string "POKéMON and added to the data.\p"
-    .string "So, {PLAYER}, let's have a look at\n"
-    .string "your POKéDEX.\p"
-    .string "…What's the matter?\n"
-    .string "You've added no new data at all.\p"
-    .string "I'll give you these, so do try a\n"
-    .string "little harder.$"
 
-PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime::
-    .string "OAK: Come see me sometime.\p"
-    .string "After all, I want to know how your\n"
-    .string "POKéDEX is coming along.$"
 
 PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
     .string "It's like an encyclopedia, but the\n"
@@ -386,3 +371,55 @@ Text_FeelRejuvenated::
     .string "you, I felt so much relief.\p"
     .string "In fact, I feel rejuvenated,\n"
     .string "as if I were younger again!$"
+
+PalletTown_ProfessorOaksLab_Text_ExpeditionInvite::
+    .string "OAK: {PLAYER}, you and {RIVAL}\n"
+    .string "have come a long way!\p"
+    .string "Come back to my lab. It is time\n"
+    .string "we brought the expedition home.$"
+
+PalletTown_ProfessorOaksLab_Text_ExpeditionFinale::
+    .string "OAK: Welcome home, {PLAYER}.\n"
+    .string "When you left this lab,\p"
+    .string "I asked you to study how\n"
+    .string "POKéMON change.\p"
+    .string "Your gym trials taught you to\n"
+    .string "work alongside them.\p"
+    .string "The APEX showed you strength\n"
+    .string "shaped by a place to belong.\p"
+    .string "Some thrive without needing\n"
+    .string "to evolve into something else.\p"
+    .string "And GIOVANNI showed you the cost\n"
+    .string "of treating life as a tool.\p"
+    .string "Our designs can help POKéMON.\n"
+    .string "They do not make us their masters.\p"
+    .string "You and {RIVAL} followed\n"
+    .string "different paths through KANTO.\p"
+    .string "Yet you both returned with more\n"
+    .string "than stronger teams.\p"
+    .string "You learned to ask what your\n"
+    .string "partners need from you.\p"
+    .string "I sent you out to discover\n"
+    .string "what POKéMON could become.\p"
+    .string "You have shown me why they do not\n"
+    .string "always need to become something else.\p"
+    .string "Trust. A home. The freedom\n"
+    .string "to grow in their own way.\p"
+    .string "That is what I want this\n"
+    .string "expedition to stand for.\p"
+    .string "Thank you, {PLAYER}.\n"
+    .string "I am proud to call you a colleague.$"
+
+PalletTown_ProfessorOaksLab_Text_ExpeditionAward::
+    .string "OAK awarded {PLAYER} an\n"
+    .string "EXPEDITION CERTIFICATE!\p"
+    .string "It will be displayed on the wall\n"
+    .string "of your room back home.$"
+
+PalletTown_ProfessorOaksLab_Text_ExpeditionRepeat::
+    .string "OAK: Our expedition is complete,\n"
+    .string "but there is more to discover.\p"
+    .string "Every new entry is another life\n"
+    .string "we can learn to understand.\p"
+    .string "You will always have a place\n"
+    .string "on my research team, {PLAYER}.$"

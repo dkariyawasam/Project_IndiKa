@@ -217,6 +217,13 @@ static u8 *const sStringVarPtrs[] = {
     gStringVar3
 };
 
+void ShowExpeditionCertificate(void)
+{
+    QuestLog_CutRecording();
+    SetMainCallback2(CB2_ShowExpeditionCertificate);
+    LockPlayerFieldControls();
+}
+
 void ShowDiploma(void)
 {
     QuestLog_CutRecording();

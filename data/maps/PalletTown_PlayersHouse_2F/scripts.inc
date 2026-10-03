@@ -1,4 +1,5 @@
 PalletTown_PlayersHouse_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, PalletTown_PlayersHouse_2F_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_PlayersHouse_2F_OnWarp
 	.byte 0
@@ -38,5 +39,22 @@ EventScript_PalletTown_PlayersHouse_2F_ShutDownPC::
 	setvar VAR_0x8004, 1
 	playse SE_PC_OFF
 	special AnimatePcTurnOff
+	releaseall
+	end
+
+PalletTown_PlayersHouse_2F_OnLoad::
+	goto_if_unset FLAG_OAK_EXPEDITION_COMPLETE, PalletTown_PlayersHouse_2F_CertificateLoadDone
+	setmetatile 11, 0, METATILE_Building_CertificateTop, 1
+	setmetatile 11, 1, METATILE_Building_CertificateBottom, 1
+PalletTown_PlayersHouse_2F_CertificateLoadDone::
+	end
+
+PalletTown_PlayersHouse_2F_EventScript_Certificate::
+	goto_if_unset FLAG_OAK_EXPEDITION_COMPLETE, EventScript_Return
+	lockall
+	msgbox PalletTown_PlayersHouse_2F_Text_Certificate
+	closemessage
+	special ShowExpeditionCertificate
+	waitstate
 	releaseall
 	end

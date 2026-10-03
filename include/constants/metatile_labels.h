@@ -2,6 +2,8 @@
 #define GUARD_METATILE_LABELS_H
 
 // gTileset_Building
+#define METATILE_Building_CertificateTop     0x096
+#define METATILE_Building_CertificateBottom  0x0A6
 #define METATILE_Building_PCOff  0x062
 #define METATILE_Building_PCOn   0x063
 

@@ -497,9 +497,9 @@ static const struct WindowTemplate sRegionMapWindowTemplates[] = {
     [WIN_TOPBAR_LEFT] =
     {
         .bg = 3,
-        .tilemapLeft = 18,
+        .tilemapLeft = 0,
         .tilemapTop = 0,
-        .width = 5,
+        .width = 30,
         .height = 2,
         .paletteNum = 12,
         .baseBlock = 0x150
@@ -512,7 +512,7 @@ static const struct WindowTemplate sRegionMapWindowTemplates[] = {
         .width = 5,
         .height = 2,
         .paletteNum = 12,
-        .baseBlock = 0x15a
+        .baseBlock = 0x18c
     }, DUMMY_WIN_TEMPLATE
 };
 
@@ -3552,7 +3552,9 @@ static void PrintTopBarTextLeft(const u8 *str)
         FillWindowPixelBuffer(WIN_TOPBAR_LEFT, PIXEL_FILL(0));
     else
         FillWindowPixelBuffer(WIN_TOPBAR_LEFT, PIXEL_FILL(15));
-    AddTextPrinterParameterized3(WIN_TOPBAR_LEFT, FONT_SMALL, 0, 0, sTextColors, 0, str);
+    AddTextPrinterParameterized3(WIN_TOPBAR_LEFT, FONT_SMALL, 144, 0, sTextColors, 0, str);
+    ScrollWindow(WIN_TOPBAR_LEFT, 0, 1, PIXEL_FILL(sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] ? 0 : 15));
+    DrawUiHeaderBackgroundRow(WIN_TOPBAR_LEFT, RGB_WHITE);
     CopyWindowToVram(WIN_TOPBAR_LEFT, COPYWIN_GFX);
 }
 
@@ -3563,6 +3565,8 @@ static void PrintTopBarTextRight(const u8 *str)
     else
         FillWindowPixelBuffer(WIN_TOPBAR_RIGHT, PIXEL_FILL(15));
     AddTextPrinterParameterized3(WIN_TOPBAR_RIGHT, FONT_SMALL, 0, 0, sTextColors, 0, str);
+    ScrollWindow(WIN_TOPBAR_RIGHT, 0, 1, PIXEL_FILL(sRegionMap->permissions[MAPPERM_HAS_OPEN_ANIM] ? 0 : 15));
+    DrawUiHeaderBackgroundRow(WIN_TOPBAR_RIGHT, RGB_WHITE);
     CopyWindowToVram(WIN_TOPBAR_RIGHT, COPYWIN_FULL);
 }
 

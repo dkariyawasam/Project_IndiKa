@@ -69,6 +69,9 @@ enum QuestCases
 };
 
 // functions
+bool8 IsOakExpeditionReady(void);
+u16 GetOakResearchReaction(void);
+u16 GetOakResearchInvitation(void);
 void LogbookMenu_Init(u8 a0, MainCallback callback);
 u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest);
 u8 LogbookMenu_GetSetQuestState(u8 quest, u8 caseId);

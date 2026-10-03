@@ -309,6 +309,8 @@ static void OptionMenu_PickSwitchCancel(void)
     x = 0xE4 - GetStringWidth(FONT_SMALL, gText_PickSwitchCancel, 0);
     FillWindowPixelBuffer(2, PIXEL_FILL(15)); 
     AddTextPrinterParameterized3(2, FONT_SMALL, x, 0, sOptionMenuPickSwitchCancelTextColor, 0, gText_PickSwitchCancel);
+    ScrollWindow(2, 0, 1, PIXEL_FILL(15));
+    DrawUiHeaderBackgroundRow(2, RGB_WHITE);
     PutWindowTilemap(2);
     CopyWindowToVram(2, COPYWIN_FULL);
 }

@@ -814,6 +814,7 @@ static void DrawBagHeader(void)
         if ((pixels[i] & 0xF0) == 0)
             pixels[i] |= 0xB0;
     }
+    DrawUiHeaderBackgroundRow(3, gPlttBufferUnfaded[3]);
     CopyWindowToVram(3, COPYWIN_GFX);
 }
 

@@ -12,6 +12,7 @@
 
 struct Diploma
 {
+    bool8 expedition;
     u8 mainState;
     u8 gfxState;
     u8 initState;
@@ -108,6 +109,12 @@ void CB2_ShowDiploma(void)
     SetMainCallback2(CB2_Diploma);
 }
 
+void CB2_ShowExpeditionCertificate(void)
+{
+    CB2_ShowDiploma();
+    sDiploma->expedition = TRUE;
+}
+
 static void CB2_Diploma(void)
 {
     RunTasks();
@@ -134,7 +141,7 @@ static void Task_DiplomaInit(u8 taskId)
         CopyToBgTilemapBuffer(BG_DIPLOMA, sDiplomaTilemap, 0, 0);
         break;
     case 4:
-        if (HasAllMons())
+        if (!sDiploma->expedition && HasAllMons())
             SetGpuReg(REG_OFFSET_BG1HOFS, 0x100);
         else
             SetGpuReg(REG_OFFSET_BG1HOFS, 0);
@@ -253,6 +260,9 @@ static bool8 DiplomaLoadGfx(void)
     return FALSE;
 }
 
+static const u8 sText_ExpeditionCertificate[] = _("EXPEDITION CERTIFICATE\nFor fieldwork across KANTO:\nbond, instinct, and design.\nFor helping POKéMON thrive.");
+static const u8 sText_OakSignature[] = _("PROFESSOR OAK");
+
 static void DiplomaPrintText(void)
 {
     u8 str[160];
@@ -267,9 +277,9 @@ static void DiplomaPrintText(void)
     DynamicPlaceholderTextUtil_ExpandPlaceholders(str, gText_Diploma_Player);
     width = GetStringWidth(FONT_NORMAL, str, -1);
     AddTextPrinterParameterized3(WIN_TEXT, FONT_NORMAL, 120 - (width / 2), 4, sTextColors, TEXT_SKIP_DRAW, str);
-    DynamicPlaceholderTextUtil_ExpandPlaceholders(str, gText_Diploma_ThisDocument);
+    DynamicPlaceholderTextUtil_ExpandPlaceholders(str, sDiploma->expedition ? sText_ExpeditionCertificate : gText_Diploma_ThisDocument);
     width = GetStringWidth(FONT_NORMAL, str, -1);
     AddTextPrinterParameterized3(WIN_TEXT, FONT_NORMAL, 120 - (width / 2), 30, sTextColors, TEXT_SKIP_DRAW, str);
-    AddTextPrinterParameterized3(WIN_TEXT, FONT_NORMAL, 120, 105, sTextColors, 0, gText_Diploma_GameFreak);
+    AddTextPrinterParameterized3(WIN_TEXT, FONT_NORMAL, 120, 105, sTextColors, 0, sDiploma->expedition ? sText_OakSignature : gText_Diploma_GameFreak);
     PutWindowTilemap(WIN_TEXT);
 }

@@ -3,6 +3,11 @@
 
 #include "global.h"
 
+#define UI_HINT_HEADER_HEIGHT 16
+#define UI_HINT_HEADER_BACKGROUND_ROW (UI_HINT_HEADER_HEIGHT - 1)
+
+void DrawUiHeaderBackgroundRow(u8 windowId, u16 backgroundColor);
+
 extern const u16 gUiHintHeaderPalette[16];
 u16 GetUiHintHeaderColor(void);
 void ApplyUiHintHeaderTheme(u16 paletteEntry);

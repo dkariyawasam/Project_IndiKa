@@ -979,37 +979,37 @@ const u8 gPorygonPokedexText[] = _(
 const u8 gPorygonPokedexTextUnused[] = _("");
 
 const u8 gOmanytePokedexText[] = _(
-    "A prehistoric POKéMON that lived in the\n"
-    "primordial sea, it swims by twisting its\n"
-    "10 tentacles about.");
+    "Its spiral shell and blue body\n"
+    "come from AMUNYTE fossils. The\n"
+    "restored tentacles lack venom.");
 
 const u8 gOmanytePokedexTextUnused[] = _("");
 
 const u8 gOmastarPokedexText[] = _(
-    "Its tentacles are highly developed as if\n"
-    "they are hands and feet. As soon as it\n"
-    "ensnares prey, it bites.");
+    "Its restored body grows a crushing\n"
+    "beak. It pins shellfish in place\n"
+    "before cracking them open.");
 
 const u8 gOmastarPokedexTextUnused[] = _("");
 
 const u8 gKabutoPokedexText[] = _(
-    "This POKéMON was regenerated from the\n"
-    "fossil of an ancient creature. It protects\n"
-    "itself with a hard shell.");
+    "Restored from KINKABUTO fossils, it\n"
+    "shelters its pale body beneath a\n"
+    "brown dome of shell.");
 
 const u8 gKabutoPokedexTextUnused[] = _("");
 
 const u8 gKabutopsPokedexText[] = _(
-    "It swims freely through water. It catches\n"
-    "prey with its scythe-like arms and drains\n"
-    "the victim's fluids.");
+    "Its body grows upright as it tries\n"
+    "to regain KINKABUTO's blades. The\n"
+    "arms become oversized scythes.");
 
 const u8 gKabutopsPokedexTextUnused[] = _("");
 
 const u8 gAerodactylPokedexText[] = _(
-    "It was regenerated from a dinosaur's\n"
-    "genetic matter that was found in amber.\n"
-    "It flies with high-pitched cries.");
+    "Amber preserves only part of its\n"
+    "ancestor. The revived wings bear\n"
+    "heavy stone-like growths.");
 
 const u8 gAerodactylPokedexTextUnused[] = _("");
 
@@ -1071,9 +1071,9 @@ const u8 gMewPokedexText[] = _(
 const u8 gMewPokedexTextUnused[] = _("");
 
 const u8 gCinnabarMagikarpPokedexText[] = _(
-    "It has adapted to the volcanic\n"
-    "waters of CINNABAR VOLCANO giving it\n"
-    "the raging essence of fire.");
+    "This ancient dragon thrives in deep\n"
+    "volcanic water. It has no need to\n"
+    "become a GYARADOS.");
 
 const u8 gCinnabarMagikarpPokedexTextUnused[] = _("");
 
@@ -2521,9 +2521,9 @@ const u8 gGorebyssPokedexText[] = _(
 const u8 gGorebyssPokedexTextUnused[] = _("");
 
 const u8 gRelicanthPokedexText[] = _(
-    "It has remained unchanged for 100\n"
-    "million years. It was discovered\n"
-    "during a deep-sea exploration.");
+    "It walks the seabed on sturdy fins.\n"
+    "Its form has endured for ages\n"
+    "without needing to change.");
 
 const u8 gRelicanthPokedexTextUnused[] = _("");
 
@@ -2633,14 +2633,16 @@ const u8 gStaraptorPokedexText[] = _(
 const u8 gStaraptorPokedexTextUnused[] = _("");
 
 const u8 gOmatoPokedexText[] = _(
-    "It is a POKéMON that was\n"
-    "regenerated from a fossil.");
+    "A HELIX shell shelters a pale body\n"
+    "restored from DART fragments. It\n"
+    "peeks out to search for food.");
 
 const u8 gOmatoPokedexTextUnused[] = _("");
 
 const u8 gOmatopsPokedexText[] = _(
-    "It is a POKéMON that was\n"
-    "regenerated from a fossil.");
+    "It tucks in its body and spins on\n"
+    "its pointed shell. Small scythes\n"
+    "sweep around it as it turns.");
 
 const u8 gOmatopsPokedexTextUnused[] = _("");
 
@@ -2774,9 +2776,9 @@ const u8 gRhyperiorPokedexText[] = _(
 const u8 gRhyperiorPokedexTextUnused[] = _("");
 
 const u8 gCinnabarFeebasPokedexText[] = _(
-    "Its transparent scales make it almost\n"
-    "impossible to see in water. Only ripples\n"
-    "give away its path.");
+    "An ancestral dragon of cold\n"
+    "depths, it needs no evolution. Pale\n"
+    "scales hide it in the dim water.");
 const u8 gCinnabarFeebasPokedexTextUnused[] = _("");
 
 const u8 gWeavilePokedexText[] = _(
@@ -2804,33 +2806,33 @@ const u8 gMagmortarPokedexText[] = _(
 const u8 gMagmortarPokedexTextUnused[] = _("");
 
 const u8 gKabustarPokedexText[] = _(
-    "A restored fossil with a star-shaped shell.\n"
-    "It uses sharp limbs to cling to rocks in\n"
-    "ancient reefs.");
+    "A DOME shell covers a blue body\n"
+    "restored from HASTE fragments. Its\n"
+    "soft limbs grip wet rocks.");
 const u8 gKabustarPokedexTextUnused[] = _("");
 
 const u8 gKabuknightPokedexText[] = _(
-    "Its fossil armor hardened into a knightly\n"
-    "shell. It protects its territory with\n"
-    "swift blade-like strikes.");
+    "Its broad shell shields a soft blue\n"
+    "body. It braces with its rear limbs\n"
+    "to fend off attackers.");
 const u8 gKabuknightPokedexTextUnused[] = _("");
 
 const u8 gAmunytePokedexText[] = _(
-    "It never went extinct. Hidden in caves,\n"
-    "it wards off foes with venom. Its fossils\n"
-    "yield incomplete copies when restored.");
+    "Never extinct, it hides in flooded\n"
+    "caves. Venom seeps from the purple\n"
+    "growths along its shell.");
 const u8 gAmunytePokedexTextUnused[] = _("");
 
 const u8 gKinkabutoPokedexText[] = _(
-    "It survived unchanged since ancient times.\n"
-    "Its blades and armor are poorly copied\n"
-    "in POKéMON restored from its fossils.");
+    "This ancient survivor keeps its\n"
+    "blades folded by its shell. They\n"
+    "snap out when prey draws near.");
 const u8 gKinkabutoPokedexTextUnused[] = _("");
 
 const u8 gAeropteryxPokedexText[] = _(
-    "Restored from ancient flying fossils, it\n"
-    "leaps before taking wing. Its cries echo\n"
-    "through caverns.");
+    "It vaults from cliff faces on\n"
+    "folded wings. Warm rising air\n"
+    "carries this ancient dragon aloft.");
 const u8 gAeropteryxPokedexTextUnused[] = _("");
 
 const u8 gPorygonZPokedexText[] = _(

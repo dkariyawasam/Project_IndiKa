@@ -16,12 +16,8 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
-	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck::
-	setflag FLAG_OAK_SKIP_22_RIVAL_CHECK
-	return
 
 PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9
@@ -655,12 +651,20 @@ PalletTown_ProfessorOaksLab_EventScript_RivalChoseStarter::
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
+	specialvar VAR_RESULT, GetOakResearchReaction
+	goto_if_eq VAR_RESULT, 1, PalletTown_ProfessorOaksLab_EventScript_ResearchBond
+	goto_if_eq VAR_RESULT, 2, PalletTown_ProfessorOaksLab_EventScript_ResearchInstinct
+	goto_if_eq VAR_RESULT, 3, PalletTown_ProfessorOaksLab_EventScript_ResearchDesign
+	goto_if_eq VAR_RESULT, 4, PalletTown_ProfessorOaksLab_EventScript_ResearchNature
+	goto_if_set FLAG_OAK_EXPEDITION_COMPLETE, PalletTown_ProfessorOaksLab_EventScript_ExpeditionRepeat
+	specialvar VAR_RESULT, IsOakExpeditionReady
+	goto_if_eq VAR_RESULT, TRUE, PalletTown_ProfessorOaksLab_EventScript_ExpeditionFinale
 	goto_if_set SHOWED_OAK_COMPLETE_DEX, PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_TryStartNationalDexScene
 	goto_if_eq VAR_MAP_SCENE_CERULEAN_CITY_RIVAL, 1, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
-	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, PalletTown_ProfessorOaksLab_EventScript_RatePokedexOrTryGiveBalls
+	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
@@ -745,7 +749,6 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
 	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
-	setvar VAR_MAP_SCENE_ROUTE22, 1
 	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_THE_NATURE_OF_EVOLUTION
 	logbookmenu LOGBOOK_MENU_SET_ACTIVE, QUEST_THE_NATURE_OF_EVOLUTION
 	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
@@ -842,16 +845,6 @@ PalletTown_ProfessorOaksLab_Movement_OakWalkToDeskSouth::
 	walk_in_place_faster_right
 	step_end
 
-PalletTown_ProfessorOaksLab_EventScript_RatePokedexOrTryGiveBalls::
-	setvar VAR_0x8004, 0
-	specialvar VAR_RESULT, GetPokedexCount
-	copyvar VAR_0x8008, VAR_0x8005
-	copyvar VAR_0x8009, VAR_0x8006
-	buffernumberstring STR_VAR_1, VAR_0x8008
-	buffernumberstring STR_VAR_2, VAR_0x8009
-	goto_if_eq VAR_0x8009, 1, PalletTown_ProfessorOaksLab_EventScript_CheckIfPlayerNeedsBalls  @ Player only has starter
-	goto PalletTown_ProfessorOaksLab_EventScript_RatePokedex
-	end
 
 PalletTown_ProfessorOaksLab_EventScript_RatePokedex::
 	call PokedexRating_EventScript_RateInPerson
@@ -986,35 +979,14 @@ PalletTown_ProfessorOaksLab_EventScript_DontStartNationalDexScene::
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_CheckIfPlayerNeedsBalls::
-	goto_if_set FLAG_OAK_SKIP_22_RIVAL_CHECK, PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
-	goto_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_PlayerAlreadyGotBalls
-	checkitem ITEM_POKE_BALL
-	goto_if_eq VAR_RESULT, FALSE, PalletTown_ProfessorOaksLab_EventScript_PlayerOutOfBalls
-	goto PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
-	end
 
-PalletTown_ProfessorOaksLab_EventScript_PlayerOutOfBalls::
-	goto_if_ge VAR_MAP_SCENE_ROUTE22, 2, PalletTown_ProfessorOaksLab_EventScript_GivePlayerMoreBalls
-	goto PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
-	end
 
-PalletTown_ProfessorOaksLab_EventScript_GivePlayerMoreBalls::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex
-	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
-	setflag FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL
-	release
-	end
 
 PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_PlayerAlreadyGotBalls::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime
-	release
-	end
 
 PalletTown_ProfessorOaksLab_EventScript_DexSceneRivalEnterNorth::
 	setobjectxyperm LOCALID_OAKS_LAB_RIVAL, 5, 10
@@ -1354,3 +1326,169 @@ PalletTown_ProfessorOaksLab_EventScript_Computer::
 PalletTown_ProfessorOaksLab_Movement_PlayerFaceUp::
 	face_up
 	step_end
+
+PalletTown_ProfessorOaksLab_EventScript_ResearchBond::
+	msgbox PalletTown_ProfessorOaksLab_Text_ResearchBond
+	setflag FLAG_OAK_ACKNOWLEDGED_BOND
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_ResearchBond::
+	.string "OAK: Your research into evolution\n"
+	.string "through bond is complete!\p"
+	.string "Trust can help a POKéMON grow.\n"
+	.string "So can the care of a new TRAINER.\p"
+	.string "These changes tell us something\n"
+	.string "that numbers alone cannot explain.\p"
+	.string "The relationships we build with\n"
+	.string "POKéMON can shape what they become.\p"
+	.string "Well done, {PLAYER}!$"
+
+PalletTown_ProfessorOaksLab_EventScript_ResearchInstinct::
+	msgbox PalletTown_ProfessorOaksLab_Text_ResearchInstinct
+	setflag FLAG_OAK_ACKNOWLEDGED_INSTINCT
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_ResearchInstinct::
+	.string "OAK: You have completed your\n"
+	.string "research into evolution by instinct!\p"
+	.string "Those APEX POKéMON show us what\n"
+	.string "life in the wild can make possible.\p"
+	.string "A move, a habitat, and the need\n"
+	.string "to survive can all shape growth.\p"
+	.string "We must study them where they live\n"
+	.string "to understand why they change.\p"
+	.string "Excellent fieldwork, {PLAYER}!$"
+
+PalletTown_ProfessorOaksLab_EventScript_ResearchDesign::
+	msgbox PalletTown_ProfessorOaksLab_Text_ResearchDesign
+	setflag FLAG_OAK_ACKNOWLEDGED_DESIGN
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_ResearchDesign::
+	.string "OAK: Your research into evolution\n"
+	.string "by design is complete!\p"
+	.string "From fossil restoration to PORYGON,\n"
+	.string "our ideas can give life a new form.\p"
+	.string "But a restored fossil is only as\n"
+	.string "complete as the evidence we have.\p"
+	.string "Creating something does not mean\n"
+	.string "we understand everything about it.\p"
+	.string "Keep that curiosity, {PLAYER}!$"
+
+PalletTown_ProfessorOaksLab_EventScript_ResearchNature::
+	msgbox PalletTown_ProfessorOaksLab_Text_ResearchNature
+	setflag FLAG_OAK_ACKNOWLEDGED_NATURE
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_ResearchNature::
+	.string "OAK: Bond, instinct, and design...\n"
+	.string "You have studied all three!\p"
+	.string "The nature of evolution is more\n"
+	.string "than one POKéMON changing shape.\p"
+	.string "It is a story of relationships,\n"
+	.string "of life in its surroundings,\p"
+	.string "and of the ways people can\n"
+	.string "change that life.\p"
+	.string "Your findings have brought those\n"
+	.string "pieces together, {PLAYER}.\p"
+	.string "Thank you! You have become a\n"
+	.string "researcher I am proud to work with!$"
+
+@ Deliver research calls only after control returns to the field.
+EventScript_OakResearchInvitation::
+	lockall
+	specialvar VAR_RESULT, GetOakResearchInvitation
+	goto_if_eq VAR_RESULT, 1, EventScript_OakInviteBond
+	goto_if_eq VAR_RESULT, 2, EventScript_OakInviteInstinct
+	goto_if_eq VAR_RESULT, 3, EventScript_OakInviteDesign
+	goto_if_eq VAR_RESULT, 5, EventScript_OakInviteExpedition
+	goto_if_eq VAR_RESULT, 4, EventScript_OakInviteNature
+	releaseall
+	end
+
+EventScript_OakInviteBond::
+	pokedexmsg Text_OakInviteBond
+	setflag FLAG_OAK_INVITED_BOND
+	releaseall
+	end
+
+Text_OakInviteBond::
+	.string "OAK: {PLAYER}! Your research into\n"
+	.string "evolution through bond\p"
+	.string "is complete! Come back to my lab\n"
+	.string "in PALLET TOWN.\p"
+	.string "I'd like to talk about\n"
+	.string "what you've discovered!$"
+
+EventScript_OakInviteInstinct::
+	pokedexmsg Text_OakInviteInstinct
+	setflag FLAG_OAK_INVITED_INSTINCT
+	releaseall
+	end
+
+Text_OakInviteInstinct::
+	.string "OAK: {PLAYER}! Your research into\n"
+	.string "evolution through instinct\p"
+	.string "is complete! Come back to my lab\n"
+	.string "in PALLET TOWN.\p"
+	.string "I'd like to talk about\n"
+	.string "what you've discovered!$"
+
+EventScript_OakInviteDesign::
+	pokedexmsg Text_OakInviteDesign
+	setflag FLAG_OAK_INVITED_DESIGN
+	releaseall
+	end
+
+Text_OakInviteDesign::
+	.string "OAK: {PLAYER}! Your research into\n"
+	.string "evolution through design\p"
+	.string "is complete! Come back to my lab\n"
+	.string "in PALLET TOWN.\p"
+	.string "I'd like to talk about\n"
+	.string "what you've discovered!$"
+
+EventScript_OakInviteNature::
+	pokedexmsg Text_OakInviteNature
+	setflag FLAG_OAK_INVITED_NATURE
+	releaseall
+	end
+
+Text_OakInviteNature::
+	.string "OAK: {PLAYER}! Your research into\n"
+	.string "the nature of evolution\p"
+	.string "is complete! Come back to my lab\n"
+	.string "in PALLET TOWN.\p"
+	.string "I'd like to talk about\n"
+	.string "what you've discovered!$"
+
+EventScript_OakInviteExpedition::
+	lockall
+	pokedexmsg PalletTown_ProfessorOaksLab_Text_ExpeditionInvite
+	setflag FLAG_OAK_INVITED_EXPEDITION
+	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_ExpeditionFinale::
+	msgbox PalletTown_ProfessorOaksLab_Text_ExpeditionFinale
+	closemessage
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	msgbox PalletTown_ProfessorOaksLab_Text_ExpeditionAward
+	waitfanfare
+	setflag FLAG_OAK_EXPEDITION_COMPLETE
+	goto PalletTown_ProfessorOaksLab_EventScript_ExpeditionCertificate
+
+PalletTown_ProfessorOaksLab_EventScript_ExpeditionRepeat::
+	msgbox PalletTown_ProfessorOaksLab_Text_ExpeditionRepeat
+	goto PalletTown_ProfessorOaksLab_EventScript_RatePokedex
+
+PalletTown_ProfessorOaksLab_EventScript_ExpeditionCertificate::
+	closemessage
+	special ShowExpeditionCertificate
+	waitstate
+	release
+	end

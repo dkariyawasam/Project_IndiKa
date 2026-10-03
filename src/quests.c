@@ -2099,6 +2099,49 @@ static u8 CountEvolutionThroughDesignMilestones(void)
     return count;
 }
 
+// Return one unacknowledged research milestone per conversation.
+// Use the live logbook counters so existing saves work without replaying events.
+u16 GetOakResearchReaction(void)
+{
+    bool8 bond = CountEvolutionThroughBondMilestones() >= 2;
+    bool8 instinct = CountApexInteractionsForNatureQuest() >= 2;
+    bool8 design = CountEvolutionThroughDesignMilestones() >= 2;
+
+    if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+        return 0;
+    if (bond && !FlagGet(FLAG_OAK_ACKNOWLEDGED_BOND))
+        return 1;
+    if (instinct && !FlagGet(FLAG_OAK_ACKNOWLEDGED_INSTINCT))
+        return 2;
+    if (design && !FlagGet(FLAG_OAK_ACKNOWLEDGED_DESIGN))
+        return 3;
+    if (bond && instinct && design && !FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE))
+        return 4;
+    return 0;
+}
+
+u16 GetOakResearchInvitation(void)
+{
+    bool8 bond = CountEvolutionThroughBondMilestones() >= 2;
+    bool8 instinct = CountApexInteractionsForNatureQuest() >= 2;
+    bool8 design = CountEvolutionThroughDesignMilestones() >= 2;
+
+    if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+        return 0;
+    if (bond && !FlagGet(FLAG_OAK_ACKNOWLEDGED_BOND) && !FlagGet(FLAG_OAK_INVITED_BOND))
+        return 1;
+    if (instinct && !FlagGet(FLAG_OAK_ACKNOWLEDGED_INSTINCT) && !FlagGet(FLAG_OAK_INVITED_INSTINCT))
+        return 2;
+    if (design && !FlagGet(FLAG_OAK_ACKNOWLEDGED_DESIGN) && !FlagGet(FLAG_OAK_INVITED_DESIGN))
+        return 3;
+    if (bond && instinct && design && !FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE) && !FlagGet(FLAG_OAK_INVITED_NATURE))
+        return 4;
+    if (!FlagGet(FLAG_OAK_EXPEDITION_COMPLETE)
+     && !FlagGet(FLAG_OAK_INVITED_EXPEDITION) && IsOakExpeditionReady())
+        return 5;
+    return 0;
+}
+
 static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex)
 {
     u8 count;
@@ -2255,6 +2298,32 @@ u8 GenerateSubquestState(u8 questId)
 	return 2;
 }
 
+bool8 IsOakExpeditionReady(void)
+{
+    static const u16 storyVars[] = {
+        VAR_ROUTE3_RIVAL_CONVERSATION, VAR_MAP_SCENE_CELADON_RIVAL,
+        VAR_ROUTE23_RIVAL_CONVERSATION, VAR_MAP_SCENE_CINNABAR_RIVAL,
+        VAR_MAP_SCENE_POKEMON_MANSION_3F_RIVAL, VAR_MAP_SCENE_SILPH_CO_7F,
+        VAR_MAP_SCENE_ROUTE11_RIVAL, VAR_MAP_SCENE_POKEMON_TOWER_1F,
+        VAR_FOREST_RIVAL_APEX,
+    };
+    u8 i;
+
+    if (!FlagGet(FLAG_SYS_GAME_CLEAR) || !FlagGet(FLAG_DEFEATED_CHAMP)
+     || !FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI)
+     || !FlagGet(FLAG_SAW_GIOVANNI_POKEMON_MANSION)
+     || !FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE)
+     || CountApexInteractionsForNatureQuest() < 8)
+        return FALSE;
+    for (i = 0; i < NELEMS(storyVars); i++)
+        if (VarGet(storyVars[i]) < 1)
+            return FALSE;
+    for (i = SUB_QUEST_BROCK; i <= SUB_QUEST_GIOVANNI; i++)
+        if (!IsGymTrialCompleted(i) && !IsGymTrialTraded(i))
+            return FALSE;
+    return TRUE;
+}
+
 u8 GenerateQuestState(u8 questId)
 {
 	bool8 objectivesComplete = FALSE;
@@ -2368,6 +2437,7 @@ static void PrintMenuContext(bool8 selectedRowAcceptsA)
 	                                      questNameArray[QUEST_ARRAY_COUNT],
 	                                      8, 1, 0, 0, 0, 0);
 	CopyWindowToVram(2, COPYWIN_GFX);
+	DrawUiHeaderBackgroundRow(2, gPlttBufferUnfaded[3]);
 }
 
 static bool8 DoesSelectedRowAcceptA(s32 questId)
