@@ -9,13 +9,14 @@ const struct Tileset gTileset_General =
     .callback = InitTilesetAnim_General,
 };
 
+// Share physical tile slots with Route 21 across the seamless border.
 const struct Tileset gTileset_PalletTown =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PalletTown,
+    .tiles = gTilesetTiles_Route21,
     .palettes = gTilesetPalettes_PalletTown,
-    .metatiles = gMetatiles_PalletTown,
+    .metatiles = gMetatiles_PalletTownConnected,
     .metatileAttributes = gMetatileAttributes_PalletTown,
     .callback = NULL,
 };

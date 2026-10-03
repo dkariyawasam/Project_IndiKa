@@ -70,3 +70,4 @@ All four sort orders are generated from the same roster. Inactive IDs remain res
 - REGIROCK: not mapped/retired, no playable stats, missing name, missing dex entry
 - REGICE: not mapped/retired, no playable stats, missing name, missing dex entry
 - REGISTEEL: not mapped/retired, no playable stats, missing name, missing dex entry
+- PORYGON3: reserved for future Patch Disc release

@@ -38,6 +38,12 @@ CeladonCity_EventScript_RivalEvolutionTrigger::
 	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lockall
+	@ The eastern trigger can be outside the rival's automatic spawn range.
+	@ Recreate him after locking so a half-initialized invisible movement
+	@ cannot stay frozen while the approach waits to take control of him.
+	removeobject LOCALID_CELADON_RIVAL
+	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
+	addobject LOCALID_CELADON_RIVAL
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	call_if_eq VAR_TEMP_1, 0, CeladonCity_EventScript_RivalApproach38
 	call_if_eq VAR_TEMP_1, 1, CeladonCity_EventScript_RivalApproach39

@@ -16,6 +16,37 @@ class Route21TilesetTests(unittest.TestCase):
             self.assertEqual((old / f'palettes/{palette:02}.gbapal').read_bytes(),
                              (new / f'palettes/{palette:02}.gbapal').read_bytes())
 
+    def test_shared_physical_tiles_across_boundary(self):
+        headers = (ROOT / 'src/data/tilesets/headers.h').read_text()
+        for name in ('PalletTown', 'Route21'):
+            body = headers.split('const struct Tileset gTileset_' + name + ' =')[1].split('};')[0]
+            self.assertIn('.tiles = gTilesetTiles_Route21,', body)
+        old = (TILESETS / 'pallet_town/metatiles.bin').read_bytes()
+        new = (TILESETS / 'pallet_town/connected_metatiles.bin').read_bytes()
+        for offset in range(0, len(old), 2):
+            before = struct.unpack_from('<H', old, offset)[0]
+            after = struct.unpack_from('<H', new, offset)[0]
+            self.assertEqual(before & ~1023, after & ~1023)
+            self.assertEqual(after & 1023, (before & 1023) + (128 if before & 1023 >= 640 else 0))
+
+    def test_empty_viewport_border_is_not_translated(self):
+        # Exercise the actual guard and assignment from the transition loop.
+        import re, subprocess, tempfile
+        source = (ROOT / 'src/fieldmap.c').read_text()
+        body = re.search(r'u16 block = gSaveBlock2Ptr->mapView\[i\];(.*?)\n            }', source, re.S).group(1)
+        body = body.replace('gSaveBlock2Ptr->mapView[i]', 'result')
+        c = '#include <assert.h>\n#define MAPGRID_UNDEFINED 1023\n#define NUM_METATILES_IN_PRIMARY 640\n'
+        c += 'int main(void) { unsigned block, result; int metatileOffset; '
+        for offset in (64, -64):
+            for value in (1023, 2, 516, 728 if offset == 64 else 792):
+                expected = value if value < 640 or value == 1023 else value + offset
+                c += f'block = result = {value}; metatileOffset = {offset}; {body} assert(result == {expected});'
+        c += 'return 0;}'
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'guard.c'; path.write_text(c)
+            subprocess.run(['cc', str(path), '-o', str(path.with_suffix(''))], check=True)
+            subprocess.run([str(path.with_suffix(''))], check=True)
+
     def test_pallet_border_keeps_pixels_palettes_attributes_and_collision(self):
         old = TILESETS / 'pallet_town'
         new = TILESETS / 'route21'

@@ -1,0 +1,14 @@
+{
+  "pokefirered.gba": {
+    "sha256": "68193db00cf69b99fa62b974e0f1b57b5100c52b1d40ffb75e8311c2668f224a",
+    "bytes": 16777216
+  },
+  "/tmp/kanto-release-oct3/fixed.gba": {
+    "sha256": "68193db00cf69b99fa62b974e0f1b57b5100c52b1d40ffb75e8311c2668f224a",
+    "bytes": 16777216
+  },
+  "/tmp/kanto-release-oct3/expedition-certificate-earned-checkpoint.sav": {
+    "sha256": "24e0548df36b701c101cac45cb71389db14972a6afeaef41345e493635693da5",
+    "bytes": 131088
+  }
+}
