@@ -723,3 +723,15 @@ const struct Tileset gTileset_HallOfFame =
     .metatileAttributes = gMetatileAttributes_HallOfFame,
     .callback = NULL,
 };
+
+// Cinnabar terrain plus Pallet's southern connection strip.
+const struct Tileset gTileset_Route21 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route21,
+    .palettes = gTilesetPalettes_Route21,
+    .metatiles = gMetatiles_Route21,
+    .metatileAttributes = gMetatileAttributes_Route21,
+    .callback = NULL,
+};

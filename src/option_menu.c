@@ -22,7 +22,6 @@ enum
     MENUITEM_BATTLESTYLE,
     MENUITEM_SOUND,
     MENUITEM_FRAMETYPE,
-    MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
 
@@ -61,7 +60,6 @@ static u8 OptionMenu_ProcessInput(void);
 static void BufferOptionMenuString(u8 selection);
 static void CloseAndSaveOptionMenu(u8 taskId);
 static void SaveOptionMenuSettings(void);
-static void PrintOptionMenuHeader(void);
 static void DrawOptionMenuBg(void);
 static void LoadOptionMenuItemNames(void);
 static void UpdateSettingSelectionDisplay(u16 selection);
@@ -81,7 +79,7 @@ static const struct WindowTemplate sOptionMenuWinTemplates[] =
     {
         .bg = 0,
         .tilemapLeft = 2,
-        .tilemapTop = 7,
+        .tilemapTop = 3,
         .width = 26,
         .height = 12,
         .paletteNum = 1,
@@ -131,7 +129,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, USER_WINDOW_FRAME_COUNT, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, USER_WINDOW_FRAME_COUNT};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -140,7 +138,6 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
-    [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
 static const u8 *const sTextSpeedOptions[] =
@@ -204,7 +201,7 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_SOUND] = gSaveBlock2Ptr->optionsSound;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
     
-    for (i = 0; i < MENUITEM_COUNT - 1; i++)
+    for (i = 0; i < MENUITEM_COUNT; i++)
     {
         if (sOptionMenuPtr->option[i] > (sOptionMenuItemCounts[i]) - 1)
             sOptionMenuPtr->option[i] = 0;
@@ -243,7 +240,7 @@ static void CB2_OptionMenu(void)
             return;
         break;
     case 4:
-        PrintOptionMenuHeader();
+        // The controls header is drawn after the settings list.
         break;
     case 5:
         DrawOptionMenuBg();
@@ -376,6 +373,7 @@ static void Task_OptionMenu(u8 taskId)
             LoadBgTiles(1, GetUserWindowGraphics(sOptionMenuPtr->option[MENUITEM_FRAMETYPE])->tiles, 0x120, 0x1AA);
             LoadPalette(GetUserWindowGraphics(sOptionMenuPtr->option[MENUITEM_FRAMETYPE])->palette, BG_PLTT_ID(2), PLTT_SIZE_4BPP);
             LoadUiHintHelpPaletteForFrame(BG_PLTT_ID(15), sOptionMenuPtr->option[MENUITEM_FRAMETYPE]);
+            OptionMenu_PickSwitchCancel();
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
         case 3:
@@ -437,14 +435,14 @@ static u8 OptionMenu_ProcessInput(void)
     else if (JOY_REPT(DPAD_UP))
     {
         if (sOptionMenuPtr->cursorPos == MENUITEM_TEXTSPEED)
-            sOptionMenuPtr->cursorPos = MENUITEM_CANCEL;
+            sOptionMenuPtr->cursorPos = MENUITEM_FRAMETYPE;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos - 1;
         return 3;        
     }
     else if (JOY_REPT(DPAD_DOWN))
     {
-        if (sOptionMenuPtr->cursorPos == MENUITEM_CANCEL)
+        if (sOptionMenuPtr->cursorPos == MENUITEM_FRAMETYPE)
             sOptionMenuPtr->cursorPos = MENUITEM_TEXTSPEED;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos + 1;
@@ -520,35 +518,19 @@ static void SaveOptionMenuSettings(void)
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
 }
 
-static void PrintOptionMenuHeader(void)
-{
-    FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_TEXT_OPTION, FONT_NORMAL, gText_MenuSettings, 8, 1, TEXT_SKIP_DRAW, NULL);
-    PutWindowTilemap(0);
-    CopyWindowToVram(0, COPYWIN_FULL);
-}
-
 static void DrawOptionMenuBg(void)
 {
     u8 h;
     h = 2;
     
-    FillBgTilemapBufferRect(1, 0x1B3, 1, 2, 1, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1B4, 2, 2, 0x1B, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1B5, 0x1C, 2, 1, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1B6, 1, 3, 1, h, 3);
-    FillBgTilemapBufferRect(1, 0x1B8, 0x1C, 3, 1, h, 3);
-    FillBgTilemapBufferRect(1, 0x1B9, 1, 5, 1, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1BA, 2, 5, 0x1B, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1BB, 0x1C, 5, 1, 1, 3);
-    FillBgTilemapBufferRect(1, 0x1AA, 1, 6, 1, 1, h);
-    FillBgTilemapBufferRect(1, 0x1AB, 2, 6, 0x1A, 1, h);
-    FillBgTilemapBufferRect(1, 0x1AC, 0x1C, 6, 1, 1, h);
-    FillBgTilemapBufferRect(1, 0x1AD, 1, 7, 1, 0x10, h);
-    FillBgTilemapBufferRect(1, 0x1AF, 0x1C, 7, 1, 0x10, h);
-    FillBgTilemapBufferRect(1, 0x1B0, 1, 0x13, 1, 1, h);
-    FillBgTilemapBufferRect(1, 0x1B1, 2, 0x13, 0x1A, 1, h);
-    FillBgTilemapBufferRect(1, 0x1B2, 0x1C, 0x13, 1, 1, h);
+    FillBgTilemapBufferRect(1, 0x1AA, 1, 2, 1, 1, h);
+    FillBgTilemapBufferRect(1, 0x1AB, 2, 2, 26, 1, h);
+    FillBgTilemapBufferRect(1, 0x1AC, 28, 2, 1, 1, h);
+    FillBgTilemapBufferRect(1, 0x1AD, 1, 3, 1, 12, h);
+    FillBgTilemapBufferRect(1, 0x1AF, 28, 3, 1, 12, h);
+    FillBgTilemapBufferRect(1, 0x1B0, 1, 15, 1, 1, h);
+    FillBgTilemapBufferRect(1, 0x1B1, 2, 15, 26, 1, h);
+    FillBgTilemapBufferRect(1, 0x1B2, 28, 15, 1, 1, h);
     CopyBgTilemapBufferToVram(1);
 }
 
@@ -568,7 +550,7 @@ static void UpdateSettingSelectionDisplay(u16 selection)
     u16 maxLetterHeight, y;
     
     maxLetterHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
-    y = selection * (maxLetterHeight - 1) + 0x3A;
+    y = selection * (maxLetterHeight - 1) + 0x1A;
     SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(y, y + maxLetterHeight));
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(0x10, 0xE0));
 }

@@ -342,13 +342,3 @@ PalletTown_EventScript_TownSign::
 PalletTown_EventScript_FerryLandingSign::
 	msgbox Route21_North_Text_FerryLandingSign, MSGBOX_SIGN
 	end
-
-PalletTown_Eventscript_DegbugDANSign::
-	lock
-	setflag FLAG_SYS_POKEDEX_GET
-	special EnableNationalPokedex
-	special SetUnlockedPokedexFlags
-	special CompletePokedex
-	msgbox PalletTown_Text_DebugSign_CompletePokedex, MSGBOX_DEFAULT
-	release
-	end

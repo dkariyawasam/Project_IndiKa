@@ -1,0 +1,1827 @@
+{
+  "required_count": 318,
+  "sources": {
+    "ABRA": [
+      "Breeding ancestry: KADABRA",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE7"
+    ],
+    "AERODACTYL": [
+      "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/scripts.inc"
+    ],
+    "AEROPTERYX": [
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F"
+    ],
+    "AIPOM": [
+      "Breeding ancestry: AMBIPOM",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "ALAKAZAM": [
+      "NPC trade evolution: INGAME_TRADE_KADABRA"
+    ],
+    "AMBIPOM": [
+      "Evolution: AIPOM"
+    ],
+    "AMUNYTE": [
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "ANNIHILAPE": [
+      "Evolution: PRIMEAPE",
+      "data/maps/MtMoon_B2F/scripts.inc"
+    ],
+    "ARBOK": [
+      "Evolution: EKANS",
+      "Wild: MAP_ROUTE22"
+    ],
+    "ARCANINE": [
+      "Evolution: GROWLITHE",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE15"
+    ],
+    "ARIADOS": [
+      "Evolution: SPINARAK",
+      "Wild: MAP_ROUTE5"
+    ],
+    "ARTICUNO": [
+      "data/maps/SeafoamIslands_B4F/scripts.inc"
+    ],
+    "BALTOY": [
+      "Breeding ancestry: CLAYDOL",
+      "Wild: MAP_ROUTE23"
+    ],
+    "BEAUTIFLY": [
+      "Evolution: SILCOON",
+      "Wild: MAP_ROUTE5"
+    ],
+    "BEEDRILL": [
+      "Evolution: KAKUNA",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "BELLOSSOM": [
+      "Evolution: GLOOM"
+    ],
+    "BELLSPROUT": [
+      "Breeding ancestry: WEEPINBELL",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "BLASTOISE": [
+      "Evolution: WARTORTLE"
+    ],
+    "BLISSEY": [
+      "Evolution: CHANSEY"
+    ],
+    "BRELOOM": [
+      "Evolution: SHROOMISH",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "BRONZONG": [
+      "Evolution: BRONZOR",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "BRONZOR": [
+      "Breeding ancestry: BRONZONG",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "BUDEW": [
+      "Breeding ancestry: ROSELIA",
+      "Wild: MAP_VIRIDIAN_FOREST",
+      "data/maps/CeladonCity_Gym/scripts.inc"
+    ],
+    "BULBASAUR": [
+      "Breeding ancestry: IVYSAUR",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "BUNEARY": [
+      "Breeding ancestry: LOPUNNY",
+      "Wild: MAP_ROUTE8"
+    ],
+    "BUTTERFREE": [
+      "Evolution: METAPOD",
+      "Wild: MAP_ROUTE2"
+    ],
+    "CAMERUPT": [
+      "Evolution: NUMEL",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "CASCOON": [
+      "Breeding ancestry: DUSTOX",
+      "Evolution: WURMPLE",
+      "Wild: MAP_ROUTE5"
+    ],
+    "CATERPIE": [
+      "Breeding ancestry: METAPOD",
+      "Wild: MAP_ROUTE2"
+    ],
+    "CHANSEY": [
+      "Breeding ancestry: BLISSEY",
+      "Evolution: HAPPINY",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "CHARIZARD": [
+      "Evolution: CHARMELEON"
+    ],
+    "CHARMANDER": [
+      "Breeding ancestry: CHARMELEON",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "CHARMELEON": [
+      "Breeding ancestry: CHARIZARD",
+      "Evolution: CHARMANDER"
+    ],
+    "CHIMECHO": [
+      "Evolution: CHINGLING"
+    ],
+    "CHINCHOU": [
+      "Breeding ancestry: LANTURN",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "CHINGLING": [
+      "Breeding ancestry: CHIMECHO",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F",
+      "data/maps/SaffronCity_Gym/scripts.inc"
+    ],
+    "CINNABAR_FEEBAS": [
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20"
+    ],
+    "CINNABAR_MAGIKARP": [
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH"
+    ],
+    "CLAMPERL": [
+      "Breeding ancestry: GOREBYSS",
+      "Breeding ancestry: HUNTAIL",
+      "NPC trade: INGAME_TRADE_GOREBYSS",
+      "NPC trade: INGAME_TRADE_HUNTAIL",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "CLAYDOL": [
+      "Evolution: BALTOY",
+      "Wild: MAP_ROUTE23"
+    ],
+    "CLEFABLE": [
+      "Evolution: CLEFAIRY",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "CLEFAIRY": [
+      "Breeding ancestry: CLEFABLE",
+      "Evolution: CLEFFA",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "CLEFFA": [
+      "Breeding ancestry: CLEFAIRY",
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "CLOYSTER": [
+      "Evolution: SHELLDER",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "COMBEE": [
+      "Breeding ancestry: VESPIQUEN",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "CORSOLA": [
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE6"
+    ],
+    "CORSOLA_GALARIAN": [
+      "Breeding ancestry: CURSOLA",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_EAST",
+      "Wild: MAP_SAFARI_ZONE_NORTH",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "CROBAT": [
+      "Evolution: GOLBAT"
+    ],
+    "CUBONE": [
+      "Breeding ancestry: MAROWAK",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "CUBONE_ALOLAN": [
+      "Breeding ancestry: MAROWAK_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "CURSOLA": [
+      "Evolution: CORSOLA_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_EAST",
+      "Wild: MAP_SAFARI_ZONE_NORTH",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "DEWGONG": [
+      "Evolution: SEEL",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "DIGLETT": [
+      "Breeding ancestry: DUGTRIO",
+      "Wild: MAP_DIGLETTS_CAVE_B2F",
+      "Wild: MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F"
+    ],
+    "DIGLETT_ALOLAN": [
+      "Breeding ancestry: DUGTRIO_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "DITTO": [
+      "Wild: MAP_POKEMON_MANSION_1F",
+      "Wild: MAP_POKEMON_MANSION_2F",
+      "Wild: MAP_POKEMON_MANSION_3F",
+      "Wild: MAP_POKEMON_MANSION_B1F"
+    ],
+    "DODRIO": [
+      "Evolution: DODUO",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17"
+    ],
+    "DODUO": [
+      "Breeding ancestry: DODRIO",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE18"
+    ],
+    "DONPHAN": [
+      "Evolution: PHANPY",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15"
+    ],
+    "DRAGONAIR": [
+      "Breeding ancestry: DRAGONITE",
+      "Evolution: DRATINI"
+    ],
+    "DRAGONITE": [
+      "Evolution: DRAGONAIR"
+    ],
+    "DRATINI": [
+      "Breeding ancestry: DRAGONAIR",
+      "Rocket League prize shop"
+    ],
+    "DROWZEE": [
+      "Breeding ancestry: HYPNO",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE8"
+    ],
+    "DUGTRIO": [
+      "Evolution: DIGLETT",
+      "Wild: MAP_DIGLETTS_CAVE_B2F"
+    ],
+    "DUGTRIO_ALOLAN": [
+      "Evolution: DIGLETT_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "DUSCLOPS": [
+      "Breeding ancestry: DUSKNOIR",
+      "Evolution: DUSKULL",
+      "NPC trade: INGAME_TRADE_DUSCLOPS",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "DUSKNOIR": [
+      "NPC trade evolution: INGAME_TRADE_DUSCLOPS"
+    ],
+    "DUSKULL": [
+      "Breeding ancestry: DUSCLOPS",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "DUSTOX": [
+      "Evolution: CASCOON",
+      "Wild: MAP_ROUTE5"
+    ],
+    "EEVEE": [
+      "Breeding ancestry: ESPEON",
+      "Breeding ancestry: FLAREON",
+      "Breeding ancestry: JOLTEON",
+      "Breeding ancestry: LEAFEON",
+      "Breeding ancestry: SYLVEON",
+      "Breeding ancestry: UMBREON",
+      "Breeding ancestry: VAPOREON",
+      "data/maps/CeladonCity_Condominiums_RoofRoom/scripts.inc"
+    ],
+    "EKANS": [
+      "Breeding ancestry: ARBOK",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE22"
+    ],
+    "ELECTABUZZ": [
+      "Breeding ancestry: ELECTIVIRE",
+      "Evolution: ELEKID",
+      "NPC trade: INGAME_TRADE_ELECTABUZZ",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "ELECTIVIRE": [
+      "NPC trade evolution: INGAME_TRADE_ELECTABUZZ"
+    ],
+    "ELECTRODE": [
+      "Evolution: VOLTORB",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "ELEKID": [
+      "Breeding ancestry: ELECTABUZZ",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "ESPEON": [
+      "Evolution: EEVEE"
+    ],
+    "EXEGGCUTE": [
+      "Breeding ancestry: EXEGGUTOR",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "EXEGGCUTE_ALOLAN": [
+      "Breeding ancestry: EXEGGUTOR_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER"
+    ],
+    "EXEGGUTOR": [
+      "Evolution: EXEGGCUTE",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "EXEGGUTOR_ALOLAN": [
+      "Evolution: EXEGGCUTE_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER"
+    ],
+    "FEAROW": [
+      "Evolution: SPEAROW",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE18",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23"
+    ],
+    "FEEBAS": [
+      "Breeding ancestry: MILOTIC",
+      "Wild: MAP_ROUTE20"
+    ],
+    "FLAREON": [
+      "Evolution: EEVEE"
+    ],
+    "FORRETRESS": [
+      "Evolution: PINECO",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "FURRET": [
+      "Evolution: SENTRET",
+      "Wild: MAP_ROUTE1"
+    ],
+    "GASTLY": [
+      "Breeding ancestry: HAUNTER",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "GENGAR": [
+      "NPC trade evolution: INGAME_TRADE_HAUNTER"
+    ],
+    "GEODUDE": [
+      "Breeding ancestry: GRAVELER",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "GEODUDE_ALOLAN": [
+      "Breeding ancestry: GRAVELER_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "GLOOM": [
+      "Breeding ancestry: BELLOSSOM",
+      "Breeding ancestry: VILEPLUME",
+      "Evolution: ODDISH",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "GOLBAT": [
+      "Breeding ancestry: CROBAT",
+      "Evolution: ZUBAT",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_B2F",
+      "Wild: MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F",
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F",
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F",
+      "data/maps/FuchsiaCity_Gym/scripts.inc"
+    ],
+    "GOLDEEN": [
+      "Breeding ancestry: SEAKING",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VIRIDIAN_CITY"
+    ],
+    "GOLDUCK": [
+      "Evolution: PSYDUCK",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "GOLEM": [
+      "NPC trade evolution: INGAME_TRADE_BROCK_GRAVELER"
+    ],
+    "GOLEM_ALOLAN": [
+      "NPC trade evolution: INGAME_TRADE_ALOLAN_GRAVELER"
+    ],
+    "GOREBYSS": [
+      "NPC trade evolution: INGAME_TRADE_GOREBYSS"
+    ],
+    "GRAVELER": [
+      "Breeding ancestry: GOLEM",
+      "Evolution: GEODUDE",
+      "NPC trade: INGAME_TRADE_BROCK_GRAVELER",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "GRAVELER_ALOLAN": [
+      "Breeding ancestry: GOLEM_ALOLAN",
+      "Evolution: GEODUDE_ALOLAN",
+      "NPC trade: INGAME_TRADE_ALOLAN_GRAVELER",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "GRIMER": [
+      "Breeding ancestry: MUK",
+      "Wild: MAP_CELADON_CITY",
+      "Wild: MAP_POKEMON_MANSION_1F",
+      "Wild: MAP_POKEMON_MANSION_2F",
+      "Wild: MAP_POKEMON_MANSION_3F",
+      "Wild: MAP_POKEMON_MANSION_B1F"
+    ],
+    "GRIMER_ALOLAN": [
+      "Breeding ancestry: MUK_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "GROWLITHE": [
+      "Breeding ancestry: ARCANINE",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE15"
+    ],
+    "GULPIN": [
+      "Breeding ancestry: SWALOT",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "GYARADOS": [
+      "Evolution: MAGIKARP",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VERMILION_HARBOR",
+      "Wild: MAP_VIRIDIAN_CITY"
+    ],
+    "HAPPINY": [
+      "Breeding ancestry: CHANSEY",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "HAUNTER": [
+      "Breeding ancestry: GENGAR",
+      "Evolution: GASTLY",
+      "NPC trade: INGAME_TRADE_HAUNTER",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "HERACROSS": [
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "HITMONCHAN": [
+      "Evolution: TYROGUE",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "HITMONLEE": [
+      "Evolution: TYROGUE",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "HITMONTOP": [
+      "Evolution: TYROGUE"
+    ],
+    "HONCHKROW": [
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "HOOTHOOT": [
+      "Breeding ancestry: NOCTOWL",
+      "Wild: MAP_ROUTE2"
+    ],
+    "HOPPIP": [
+      "Breeding ancestry: SKIPLOOM",
+      "Wild: MAP_ROUTE1"
+    ],
+    "HORSEA": [
+      "Breeding ancestry: SEADRA",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "HOUNDOOM": [
+      "Evolution: HOUNDOUR",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15",
+      "Wild: MAP_ROUTE23"
+    ],
+    "HOUNDOUR": [
+      "Breeding ancestry: HOUNDOOM",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15",
+      "Wild: MAP_ROUTE23"
+    ],
+    "HUNTAIL": [
+      "NPC trade evolution: INGAME_TRADE_HUNTAIL"
+    ],
+    "HYPNO": [
+      "Evolution: DROWZEE",
+      "Wild: MAP_ROUTE8"
+    ],
+    "IGGLYBUFF": [
+      "Breeding ancestry: JIGGLYPUFF",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "IVYSAUR": [
+      "Breeding ancestry: VENUSAUR",
+      "Evolution: BULBASAUR"
+    ],
+    "JIGGLYPUFF": [
+      "Breeding ancestry: WIGGLYTUFF",
+      "Evolution: IGGLYBUFF",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "JOLTEON": [
+      "Evolution: EEVEE"
+    ],
+    "JUMPLUFF": [
+      "Evolution: SKIPLOOM",
+      "Wild: MAP_ROUTE1"
+    ],
+    "JYNX": [
+      "Evolution: SMOOCHUM",
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "KABUKNIGHT": [
+      "Evolution: KABUSTAR"
+    ],
+    "KABUSTAR": [
+      "Breeding ancestry: KABUKNIGHT",
+      "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/scripts.inc"
+    ],
+    "KABUTO": [
+      "Breeding ancestry: KABUTOPS",
+      "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/scripts.inc"
+    ],
+    "KABUTOPS": [
+      "Evolution: KABUTO"
+    ],
+    "KADABRA": [
+      "Breeding ancestry: ALAKAZAM",
+      "Evolution: ABRA",
+      "NPC trade: INGAME_TRADE_KADABRA",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE7"
+    ],
+    "KAKUNA": [
+      "Breeding ancestry: BEEDRILL",
+      "Evolution: WEEDLE",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "KANGASKHAN": [
+      "Wild: MAP_ROUTE23"
+    ],
+    "KINGDRA": [
+      "NPC trade evolution: INGAME_TRADE_SEADRA"
+    ],
+    "KINGLER": [
+      "Evolution: KRABBY",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "KINKABUTO": [
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "KOFFING": [
+      "Breeding ancestry: WEEZING",
+      "Wild: MAP_CELADON_CITY",
+      "Wild: MAP_POKEMON_MANSION_1F",
+      "Wild: MAP_POKEMON_MANSION_2F",
+      "Wild: MAP_POKEMON_MANSION_3F",
+      "Wild: MAP_POKEMON_MANSION_B1F"
+    ],
+    "KOFFING_GALARIAN": [
+      "Breeding ancestry: WEEZING_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "KRABBY": [
+      "Breeding ancestry: KINGLER",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "KRICKETOT": [
+      "Breeding ancestry: KRICKETUNE",
+      "Wild: MAP_ROUTE22"
+    ],
+    "KRICKETUNE": [
+      "Evolution: KRICKETOT",
+      "Wild: MAP_ROUTE22"
+    ],
+    "LANTURN": [
+      "Evolution: CHINCHOU",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "LAPRAS": [
+      "data/maps/SilphCo_7F/scripts.inc"
+    ],
+    "LARVITAR": [
+      "Breeding ancestry: PUPITAR",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "LEAFEON": [
+      "Evolution: EEVEE"
+    ],
+    "LEDIAN": [
+      "Evolution: LEDYBA",
+      "Wild: MAP_ROUTE5"
+    ],
+    "LEDYBA": [
+      "Breeding ancestry: LEDIAN",
+      "Wild: MAP_ROUTE5"
+    ],
+    "LICKILICKY": [
+      "Evolution: LICKITUNG"
+    ],
+    "LICKITUNG": [
+      "Breeding ancestry: LICKILICKY",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F"
+    ],
+    "LOPUNNY": [
+      "Evolution: BUNEARY"
+    ],
+    "LUNATONE": [
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "LUVDISC": [
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "MACHAMP": [
+      "NPC trade evolution: INGAME_TRADE_MACHOKE"
+    ],
+    "MACHOKE": [
+      "Breeding ancestry: MACHAMP",
+      "Evolution: MACHOP",
+      "NPC trade: INGAME_TRADE_MACHOKE",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "MACHOP": [
+      "Breeding ancestry: MACHOKE",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "MAGBY": [
+      "Breeding ancestry: MAGMAR",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "MAGCARGO": [
+      "Evolution: SLUGMA",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "MAGIKARP": [
+      "Breeding ancestry: GYARADOS",
+      "Wild: MAP_CELADON_CITY",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR",
+      "Wild: MAP_VIRIDIAN_CITY",
+      "data/maps/Route4_HealingHouse/scripts.inc"
+    ],
+    "MAGMAR": [
+      "Breeding ancestry: MAGMORTAR",
+      "Evolution: MAGBY",
+      "NPC trade: INGAME_TRADE_MAGMAR",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "MAGMORTAR": [
+      "NPC trade evolution: INGAME_TRADE_MAGMAR"
+    ],
+    "MAGNEMITE": [
+      "Breeding ancestry: MAGNETON",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "MAGNETON": [
+      "Breeding ancestry: MAGNEZONE",
+      "Evolution: MAGNEMITE",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "MAGNEZONE": [
+      "Evolution: MAGNETON",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "MANKEY": [
+      "Breeding ancestry: PRIMEAPE",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE9"
+    ],
+    "MAROWAK": [
+      "Breeding ancestry: OSSCYTHE",
+      "Evolution: CUBONE",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "MAROWAK_ALOLAN": [
+      "Evolution: CUBONE_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "MAWILE": [
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "MEOWTH": [
+      "Breeding ancestry: PERSIAN",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "MEOWTH_ALOLAN": [
+      "Breeding ancestry: PERSIAN_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "MEOWTH_GALARIAN": [
+      "Breeding ancestry: PERRSERKER",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "METAPOD": [
+      "Breeding ancestry: BUTTERFREE",
+      "Evolution: CATERPIE",
+      "Wild: MAP_ROUTE2"
+    ],
+    "MEW": [
+      "data/maps/VermilionHarbor/scripts.inc"
+    ],
+    "MEWTWO": [
+      "data/maps/CeruleanCave_B1F/scripts.inc"
+    ],
+    "MIGHTYENA": [
+      "Evolution: POOCHYENA",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15",
+      "Wild: MAP_ROUTE22"
+    ],
+    "MILOTIC": [
+      "Evolution: FEEBAS",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20"
+    ],
+    "MIME_JR": [
+      "Breeding ancestry: MR_MIME",
+      "Wild: MAP_DIGLETTS_CAVE_B2F"
+    ],
+    "MIME_SR": [
+      "Evolution: MR_MIME",
+      "data/maps/DiglettsCave_B2F/scripts.inc"
+    ],
+    "MINUN": [
+      "Wild: MAP_ROUTE5"
+    ],
+    "MISDREAVUS": [
+      "Breeding ancestry: MISMAGIUS",
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "MISMAGIUS": [
+      "Wild: MAP_POKEMON_TOWER_2F",
+      "Wild: MAP_POKEMON_TOWER_3F",
+      "Wild: MAP_POKEMON_TOWER_4F"
+    ],
+    "MOLTRES": [
+      "data/maps/CinnabarVolcano_3F/scripts.inc"
+    ],
+    "MR_MIME": [
+      "Breeding ancestry: MIME_SR",
+      "Evolution: MIME_JR",
+      "Wild: MAP_DIGLETTS_CAVE_B2F",
+      "Wild: MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F"
+    ],
+    "MUK": [
+      "Evolution: GRIMER",
+      "Wild: MAP_POKEMON_MANSION_1F",
+      "Wild: MAP_POKEMON_MANSION_2F",
+      "Wild: MAP_POKEMON_MANSION_3F",
+      "Wild: MAP_POKEMON_MANSION_B1F"
+    ],
+    "MUK_ALOLAN": [
+      "Evolution: GRIMER_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "MURKROW": [
+      "Breeding ancestry: HONCHKROW",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "NATU": [
+      "Breeding ancestry: XATU",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "NIDOKING": [
+      "Evolution: NIDORINO",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NIDOQUEEN": [
+      "Evolution: NIDORINA",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NIDORAN_F": [
+      "Breeding ancestry: NIDORINA",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NIDORAN_M": [
+      "Breeding ancestry: NIDORINO",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NIDORINA": [
+      "Breeding ancestry: NIDOQUEEN",
+      "Evolution: NIDORAN_F",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NIDORINO": [
+      "Breeding ancestry: NIDOKING",
+      "Evolution: NIDORAN_M",
+      "Wild: MAP_ROUTE3"
+    ],
+    "NINETALES": [
+      "Evolution: VULPIX",
+      "Wild: MAP_ROUTE8"
+    ],
+    "NINETALES_ALOLAN": [
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "NOCTOWL": [
+      "Evolution: HOOTHOOT",
+      "Wild: MAP_ROUTE2"
+    ],
+    "NUMEL": [
+      "Breeding ancestry: CAMERUPT",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "NUZLEAF": [
+      "Breeding ancestry: SHIFTRY",
+      "Evolution: SEEDOT",
+      "Wild: MAP_ROUTE2"
+    ],
+    "ODDISH": [
+      "Breeding ancestry: GLOOM",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "OMANYTE": [
+      "Breeding ancestry: OMASTAR",
+      "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/scripts.inc"
+    ],
+    "OMASTAR": [
+      "Evolution: OMANYTE"
+    ],
+    "OMATO": [
+      "Breeding ancestry: OMATOPS",
+      "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/scripts.inc"
+    ],
+    "OMATOPS": [
+      "Evolution: OMATO"
+    ],
+    "ONIX": [
+      "Breeding ancestry: STEELIX",
+      "NPC trade: INGAME_TRADE_ONIX",
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F"
+    ],
+    "OSSCYTHE": [
+      "Evolution: MAROWAK",
+      "data/maps/PokemonTower_4F/scripts.inc"
+    ],
+    "PARAS": [
+      "Breeding ancestry: PARASECT",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_DIGLETTS_CAVE_B2F"
+    ],
+    "PARASECT": [
+      "Evolution: PARAS",
+      "Wild: MAP_DIGLETTS_CAVE_B2F"
+    ],
+    "PELIPPER": [
+      "Evolution: WINGULL",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "PERRSERKER": [
+      "Evolution: MEOWTH_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "PERSIAN": [
+      "Evolution: MEOWTH",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "PERSIAN_ALOLAN": [
+      "Evolution: MEOWTH_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "PHANPY": [
+      "Breeding ancestry: DONPHAN",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15"
+    ],
+    "PICHU": [
+      "Breeding ancestry: PIKACHU",
+      "Wild: MAP_ROUTE2"
+    ],
+    "PICHU_ALOLAN": [
+      "Breeding ancestry: PIKACHU_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "PIDGEOT": [
+      "Evolution: PIDGEOTTO",
+      "Wild: MAP_ROUTE1",
+      "Wild: MAP_ROUTE8"
+    ],
+    "PIDGEOTTO": [
+      "Breeding ancestry: PIDGEOT",
+      "Evolution: PIDGEY",
+      "Wild: MAP_ROUTE1",
+      "Wild: MAP_ROUTE8"
+    ],
+    "PIDGEY": [
+      "Breeding ancestry: PIDGEOTTO",
+      "Wild: MAP_ROUTE1",
+      "Wild: MAP_ROUTE8"
+    ],
+    "PIKACHU": [
+      "Breeding ancestry: RAICHU",
+      "Evolution: PICHU",
+      "Wild: MAP_ROUTE2"
+    ],
+    "PIKACHU_ALOLAN": [
+      "Breeding ancestry: RAICHU_ALOLAN",
+      "Evolution: PICHU_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "PINECO": [
+      "Breeding ancestry: FORRETRESS",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "PLUSLE": [
+      "Wild: MAP_ROUTE5"
+    ],
+    "POLITOED": [
+      "NPC trade evolution: INGAME_TRADE_MISTY_POLIWHIRL"
+    ],
+    "POLIWAG": [
+      "Breeding ancestry: POLIWHIRL",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_VIRIDIAN_CITY"
+    ],
+    "POLIWHIRL": [
+      "Breeding ancestry: POLITOED",
+      "Breeding ancestry: POLIWRATH",
+      "Evolution: POLIWAG",
+      "NPC trade: INGAME_TRADE_MISTY_POLIWHIRL",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_VIRIDIAN_CITY"
+    ],
+    "POLIWRATH": [
+      "Evolution: POLIWHIRL",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE6"
+    ],
+    "PONYTA": [
+      "Breeding ancestry: RAPIDASH",
+      "Wild: MAP_ROUTE14"
+    ],
+    "POOCHYENA": [
+      "Breeding ancestry: MIGHTYENA",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE15",
+      "Wild: MAP_ROUTE22"
+    ],
+    "PORYGON": [
+      "Breeding ancestry: PORYGON2",
+      "Rocket League prize shop",
+      "data/scripts/apex_log.inc"
+    ],
+    "PORYGON2": [
+      "Breeding ancestry: PORYGON_Z",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "PORYGON_Z": [
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "PRIMEAPE": [
+      "Breeding ancestry: ANNIHILAPE",
+      "Evolution: MANKEY",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE9"
+    ],
+    "PSYDUCK": [
+      "Breeding ancestry: GOLDUCK",
+      "Wild: MAP_CELADON_CITY",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VERMILION_HARBOR",
+      "Wild: MAP_VIRIDIAN_CITY"
+    ],
+    "PUPITAR": [
+      "Breeding ancestry: TYRANITAR",
+      "Evolution: LARVITAR",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "QUAGSIRE": [
+      "Evolution: WOOPER",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE6"
+    ],
+    "QWILFISH": [
+      "Wild: MAP_ROUTE12"
+    ],
+    "RAICHU": [
+      "Evolution: PIKACHU",
+      "Wild: MAP_ROUTE2"
+    ],
+    "RAICHU_ALOLAN": [
+      "Evolution: PIKACHU_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "RAPIDASH": [
+      "Evolution: PONYTA",
+      "Wild: MAP_ROUTE14"
+    ],
+    "RATICATE": [
+      "Evolution: RATTATA",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE18",
+      "Wild: MAP_ROUTE7"
+    ],
+    "RATICATE_ALOLAN": [
+      "Evolution: RATTATA_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "RATTATA": [
+      "Breeding ancestry: RATICATE",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE18",
+      "Wild: MAP_ROUTE7"
+    ],
+    "RATTATA_ALOLAN": [
+      "Breeding ancestry: RATICATE_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER",
+      "Wild: MAP_SAFARI_ZONE_WEST"
+    ],
+    "RELICANTH": [
+      "Wild: MAP_ROCK_TUNNEL_B2F"
+    ],
+    "RHYDON": [
+      "Breeding ancestry: RHYPERIOR",
+      "Evolution: RHYHORN",
+      "NPC trade: INGAME_TRADE_RHYDON",
+      "Wild: MAP_ROUTE23"
+    ],
+    "RHYHORN": [
+      "Breeding ancestry: RHYDON",
+      "Wild: MAP_ROUTE23"
+    ],
+    "RHYPERIOR": [
+      "NPC trade evolution: INGAME_TRADE_RHYDON"
+    ],
+    "ROSELIA": [
+      "Evolution: BUDEW"
+    ],
+    "SABLEYE": [
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "SANDSHREW": [
+      "Breeding ancestry: SANDSLASH",
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE11"
+    ],
+    "SANDSHREW_ALOLAN": [
+      "Breeding ancestry: SANDSLASH_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "SANDSLASH": [
+      "Evolution: SANDSHREW",
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F"
+    ],
+    "SANDSLASH_ALOLAN": [
+      "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "SCIZOR": [
+      "NPC trade evolution: INGAME_TRADE_SCYTHER"
+    ],
+    "SCYTHER": [
+      "Breeding ancestry: SCIZOR",
+      "NPC trade: INGAME_TRADE_SCYTHER"
+    ],
+    "SEADRA": [
+      "Breeding ancestry: KINGDRA",
+      "Evolution: HORSEA",
+      "NPC trade: INGAME_TRADE_SEADRA",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "SEAKING": [
+      "Evolution: GOLDEEN",
+      "Wild: MAP_FUCHSIA_CITY",
+      "Wild: MAP_FUCHSIA_FOREST",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH"
+    ],
+    "SEEDOT": [
+      "Breeding ancestry: NUZLEAF",
+      "Wild: MAP_ROUTE2"
+    ],
+    "SEEL": [
+      "Breeding ancestry: DEWGONG",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "SENTRET": [
+      "Breeding ancestry: FURRET",
+      "Wild: MAP_ROUTE1"
+    ],
+    "SHELLDER": [
+      "Breeding ancestry: CLOYSTER",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_ROUTE6",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "SHIFTRY": [
+      "Evolution: NUZLEAF",
+      "Wild: MAP_ROUTE2"
+    ],
+    "SHROOMISH": [
+      "Breeding ancestry: BRELOOM",
+      "Wild: MAP_ROUTE7"
+    ],
+    "SHUCKLE": [
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F"
+    ],
+    "SILCOON": [
+      "Breeding ancestry: BEAUTIFLY",
+      "Evolution: WURMPLE",
+      "Wild: MAP_ROUTE5"
+    ],
+    "SKIPLOOM": [
+      "Breeding ancestry: JUMPLUFF",
+      "Evolution: HOPPIP",
+      "Wild: MAP_ROUTE1"
+    ],
+    "SLAKING": [
+      "Evolution: VIGOROTH",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "SLAKOTH": [
+      "Breeding ancestry: VIGOROTH",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "SLOWBRO": [
+      "Evolution: SLOWPOKE",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE24"
+    ],
+    "SLOWKING": [
+      "NPC trade evolution: INGAME_TRADE_SLOWPOKE"
+    ],
+    "SLOWPOKE": [
+      "Breeding ancestry: SLOWBRO",
+      "Breeding ancestry: SLOWKING",
+      "NPC trade: INGAME_TRADE_SLOWPOKE",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE12",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE25"
+    ],
+    "SLUGMA": [
+      "Breeding ancestry: MAGCARGO",
+      "Wild: MAP_CINNABAR_VOLCANO_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_LEFT_CORRIDOR_3F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_1F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_2F",
+      "Wild: MAP_CINNABAR_VOLCANO_RIGHT_CORRIDOR_3F"
+    ],
+    "SMEARGLE": [
+      "Rocket League prize shop"
+    ],
+    "SMOOCHUM": [
+      "Breeding ancestry: JYNX",
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "SNEASEL": [
+      "Breeding ancestry: WEAVILE",
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "SOLROCK": [
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F"
+    ],
+    "SPEAROW": [
+      "Breeding ancestry: FEAROW",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE14",
+      "Wild: MAP_ROUTE18",
+      "Wild: MAP_ROUTE22",
+      "Wild: MAP_ROUTE23"
+    ],
+    "SPINARAK": [
+      "Breeding ancestry: ARIADOS",
+      "Wild: MAP_ROUTE5"
+    ],
+    "SQUIRTLE": [
+      "Breeding ancestry: WARTORTLE",
+      "Starter / Dojo gift / Blaine terminal"
+    ],
+    "STARAPTOR": [
+      "Evolution: STARAVIA",
+      "Wild: MAP_ROUTE9"
+    ],
+    "STARAVIA": [
+      "Breeding ancestry: STARAPTOR",
+      "Evolution: STARLY",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "STARLY": [
+      "Breeding ancestry: STARAVIA",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "STARMIE": [
+      "Evolution: STARYU",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "STARYU": [
+      "Breeding ancestry: STARMIE",
+      "Wild: MAP_ROUTE10",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "STEELIX": [
+      "NPC trade evolution: INGAME_TRADE_ONIX"
+    ],
+    "SUNFLORA": [
+      "Evolution: SUNKERN",
+      "Wild: MAP_ROUTE1"
+    ],
+    "SUNKERN": [
+      "Breeding ancestry: SUNFLORA",
+      "Wild: MAP_ROUTE1"
+    ],
+    "SWALOT": [
+      "Evolution: GULPIN",
+      "Wild: MAP_ROUTE16",
+      "Wild: MAP_ROUTE17",
+      "Wild: MAP_ROUTE7"
+    ],
+    "SYLVEON": [
+      "Evolution: EEVEE"
+    ],
+    "TANGELA": [
+      "Breeding ancestry: TANGROWTH",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "TANGROWTH": [
+      "Evolution: TANGELA",
+      "data/maps/ViridianForest/scripts.inc"
+    ],
+    "TEDDIURSA": [
+      "Breeding ancestry: URSARING",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "TENTACOOL": [
+      "Breeding ancestry: TENTACRUEL",
+      "Wild: MAP_CERULEAN_CITY",
+      "Wild: MAP_CINNABAR_ISLAND",
+      "Wild: MAP_PALLET_TOWN",
+      "Wild: MAP_ROUTE11",
+      "Wild: MAP_ROUTE13",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "TENTACRUEL": [
+      "Evolution: TENTACOOL",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_VERMILION_CITY"
+    ],
+    "TYRANITAR": [
+      "Evolution: PUPITAR",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ],
+    "TYROGUE": [
+      "Breeding ancestry: HITMONCHAN",
+      "Breeding ancestry: HITMONLEE",
+      "Breeding ancestry: HITMONTOP"
+    ],
+    "UMBREON": [
+      "Evolution: EEVEE"
+    ],
+    "URSARING": [
+      "Evolution: TEDDIURSA",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "VAPOREON": [
+      "Evolution: EEVEE"
+    ],
+    "VENOMOTH": [
+      "Evolution: VENONAT",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "VENONAT": [
+      "Breeding ancestry: VENOMOTH",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "VENUSAUR": [
+      "Evolution: IVYSAUR"
+    ],
+    "VESPIQUEN": [
+      "Evolution: COMBEE",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "VICTREEBEL": [
+      "Evolution: WEEPINBELL",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "VIGOROTH": [
+      "Breeding ancestry: SLAKING",
+      "Evolution: SLAKOTH",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "VILEPLUME": [
+      "Evolution: GLOOM",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "VOLTORB": [
+      "Breeding ancestry: ELECTRODE",
+      "Wild: MAP_POWER_PLANT"
+    ],
+    "VULPIX": [
+      "Breeding ancestry: NINETALES",
+      "Wild: MAP_ROUTE8"
+    ],
+    "VULPIX_ALOLAN": [
+      "Breeding ancestry: NINETALES_ALOLAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "WARTORTLE": [
+      "Breeding ancestry: BLASTOISE",
+      "Evolution: SQUIRTLE"
+    ],
+    "WEAVILE": [
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F"
+    ],
+    "WEEDLE": [
+      "Breeding ancestry: KAKUNA",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "WEEPINBELL": [
+      "Breeding ancestry: VICTREEBEL",
+      "Evolution: BELLSPROUT",
+      "Wild: MAP_VIRIDIAN_FOREST"
+    ],
+    "WEEZING": [
+      "Evolution: KOFFING",
+      "Wild: MAP_POKEMON_MANSION_1F",
+      "Wild: MAP_POKEMON_MANSION_2F",
+      "Wild: MAP_POKEMON_MANSION_3F",
+      "Wild: MAP_POKEMON_MANSION_B1F"
+    ],
+    "WEEZING_GALARIAN": [
+      "Evolution: KOFFING_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "WIGGLYTUFF": [
+      "Evolution: JIGGLYPUFF",
+      "Wild: MAP_ROUTE3",
+      "Wild: MAP_ROUTE4",
+      "Wild: MAP_ROUTE9"
+    ],
+    "WINGULL": [
+      "Breeding ancestry: PELIPPER",
+      "Wild: MAP_ROUTE19",
+      "Wild: MAP_ROUTE20",
+      "Wild: MAP_ROUTE21_NORTH",
+      "Wild: MAP_ROUTE25",
+      "Wild: MAP_VERMILION_CITY",
+      "Wild: MAP_VERMILION_HARBOR"
+    ],
+    "WOBBUFFET": [
+      "Evolution: WYNAUT",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F"
+    ],
+    "WOOPER": [
+      "Breeding ancestry: QUAGSIRE",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_ROUTE24",
+      "Wild: MAP_ROUTE6"
+    ],
+    "WURMPLE": [
+      "Breeding ancestry: CASCOON",
+      "Breeding ancestry: SILCOON",
+      "Wild: MAP_ROUTE5"
+    ],
+    "WYNAUT": [
+      "Breeding ancestry: WOBBUFFET",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F"
+    ],
+    "XATU": [
+      "Evolution: NATU",
+      "Wild: MAP_FUCHSIA_FOREST"
+    ],
+    "ZAPDOS": [
+      "data/maps/PowerPlant/scripts.inc"
+    ],
+    "ZUBAT": [
+      "Breeding ancestry: GOLBAT",
+      "Wild: MAP_CELADON_CAVE",
+      "Wild: MAP_CERULEAN_CAVE_1F",
+      "Wild: MAP_CERULEAN_CAVE_2F",
+      "Wild: MAP_CERULEAN_CAVE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_B2F",
+      "Wild: MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
+      "Wild: MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F",
+      "Wild: MAP_MT_MOON_1F",
+      "Wild: MAP_MT_MOON_B1F",
+      "Wild: MAP_MT_MOON_B2F",
+      "Wild: MAP_ROCK_TUNNEL_1F",
+      "Wild: MAP_ROCK_TUNNEL_B1F",
+      "Wild: MAP_ROCK_TUNNEL_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_1F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B2F",
+      "Wild: MAP_SEAFOAM_ISLANDS_B4F",
+      "Wild: MAP_VICTORY_ROAD_1F",
+      "Wild: MAP_VICTORY_ROAD_2F",
+      "Wild: MAP_VICTORY_ROAD_3F"
+    ]
+  },
+  "excluded": [
+    "ABSOL",
+    "ALTARIA",
+    "AMPHAROS",
+    "ANORITH",
+    "ARMALDO",
+    "AZUMARILL",
+    "AZURILL",
+    "BARBOACH",
+    "BAYLEEF",
+    "CELEBI",
+    "CHIKORITA",
+    "CRADILY",
+    "CROCONAW",
+    "CYNDAQUIL",
+    "DELIBIRD",
+    "DUNSPARCE",
+    "EELEKTRIK",
+    "EELEKTROSS",
+    "ENTEI",
+    "EXPLOUD",
+    "FARFETCHD",
+    "FARFETCHD_GALARIAN",
+    "FERALIGATR",
+    "FLAAFFY",
+    "GALLADE",
+    "GARDEVOIR",
+    "GIRAFARIG",
+    "GLACEON",
+    "GLIGAR",
+    "GRANBULL",
+    "GRUMPIG",
+    "HARIYAMA",
+    "HO_OH",
+    "ILLUMISE",
+    "KIRLIA",
+    "LILEEP",
+    "LINOONE",
+    "LOUDRED",
+    "LUGIA",
+    "MAKUHITA",
+    "MAMOSWINE",
+    "MANTINE",
+    "MAREEP",
+    "MARILL",
+    "MEDICHAM",
+    "MEDITITE",
+    "MEGANIUM",
+    "MILTANK",
+    "NINCADA",
+    "NINJASK",
+    "OCTILLERY",
+    "PILOSWINE",
+    "PINSIR",
+    "PORYGON3",
+    "QUILAVA",
+    "RAIKOU",
+    "RALTS",
+    "REMORAID",
+    "ROSERADE",
+    "SHEDINJA",
+    "SKARMORY",
+    "SNUBBULL",
+    "SPINDA",
+    "SPOINK",
+    "STANTLER",
+    "SUICUNE",
+    "SWABLU",
+    "SWELLOW",
+    "SWINUB",
+    "TAILLOW",
+    "TAUROS",
+    "TOGEPI",
+    "TOGETIC",
+    "TOTODILE",
+    "TYNAMO",
+    "TYPHLOSION",
+    "UNOWN",
+    "VOLBEAT",
+    "WHISCASH",
+    "WHISMUR",
+    "YANMA",
+    "ZIGZAGOON"
+  ]
+}

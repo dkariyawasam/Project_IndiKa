@@ -3,6 +3,7 @@
 #include "pokedex_screen.h"
 
 #include "data/pokemon/active_pokedex.h"
+#include "data/pokemon/obtainable_pokedex.h"
 
 bool8 IsActivePokedexSpecies(u16 nationalDexNo)
 {
@@ -162,4 +163,14 @@ bool16 HasAllKantoMons(void)
 bool16 HasAllMons(void)
 {
     return HasAllKantoMons();
+}
+
+// Card completion is based on acquisition sources, not the trainer-visible Dex.
+bool16 HasAllObtainableMons(void)
+{
+    u16 i;
+    for (i = 1; i <= NATIONAL_DEX_COUNT; i++)
+        if (sObtainablePokedexSpecies[i] && !GetSetPokedexFlag(i, FLAG_GET_CAUGHT))
+            return FALSE;
+    return TRUE;
 }
