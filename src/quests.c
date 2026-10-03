@@ -2309,7 +2309,9 @@ bool8 IsOakExpeditionReady(void)
     };
     u8 i;
 
-    if (!FlagGet(FLAG_SYS_GAME_CLEAR) || !FlagGet(FLAG_DEFEATED_CHAMP)
+    // Hall of Fame clears FLAG_DEFEATED_CHAMP after the victory sequence.
+    // The expedition must remain completable after returning home.
+    if (!FlagGet(FLAG_SYS_GAME_CLEAR)
      || !FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI)
      || !FlagGet(FLAG_SAW_GIOVANNI_POKEMON_MANSION)
      || !FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE)

@@ -1,0 +1,83 @@
+[
+  {
+    "test": "exp_candies",
+    "passed": true,
+    "tail": "PASS: all four EXP amounts, cap, level-100/Egg rejection, no-level gain, one-item consumption, all crossed-level moves\n"
+  },
+  {
+    "test": "coin_shop",
+    "passed": true,
+    "tail": "PASS: coin item and Pokemon purchases, insufficient funds, full Bag/PC, party/PC delivery, ordinary money shops.\nPASS: all 59 TM coin prices match the original clerk.\n"
+  },
+  {
+    "test": "region_map",
+    "passed": true,
+    "tail": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n"
+  },
+  {
+    "test": "route21_tileset",
+    "passed": true,
+    "tail": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.020s\n\nOK\n"
+  },
+  {
+    "test": "player_accent",
+    "passed": true,
+    "tail": "PASS: both independent accents, invalid/legacy saves, version-2 compatibility and palette boundaries across all five layouts.\n"
+  },
+  {
+    "test": "radial_menu_palettes",
+    "passed": true,
+    "tail": "Radial palette bounds, cancel restoration, black submenu handoff and repeated cleanup passed\n"
+  },
+  {
+    "test": "object_palette_lifetime",
+    "passed": true,
+    "tail": "Passed: shared live palettes retained, unused NPC palettes reclaimed, fixed and field-effect palettes protected, 200 reuse cycles.\n"
+  },
+  {
+    "test": "object_palette_recovery",
+    "passed": true,
+    "tail": "PASS: full pool fallback, recovery after release, shared palette reuse, no repeated reload, fixed/effect palette protection.\n"
+  },
+  {
+    "test": "eevee_evolution",
+    "passed": true,
+    "tail": "PASS: 15 restored evolution links; level, gender, night, friendship, move, item, trade and Everstone checks.\nPASS: Ambipom/Fuchsia Forest and Lickilicky/Cerulean Cave after Mewtwo victory; no Piloswine evolution.\nPASS: four Apex species, discovery, habitat, known move in every slot, and Everstone.\nPASS: Sylveon friendship threshold, all move slots, day/night priority, other seven evolutions and Everstone.\n"
+  },
+  {
+    "test": "cry_imports",
+    "passed": true,
+    "tail": "78 cries: species mappings, WAV format, ROM samples and both tone tables passed.\n"
+  },
+  {
+    "test": "pokedex_page_rewards",
+    "passed": true,
+    "tail": "PASS: unique page keys, incomplete/claim/complete states, full Bag, rollback, repeat claims and saved claims\n"
+  },
+  {
+    "test": "active_pokedex",
+    "passed": true,
+    "tail": "Membership, seen/caught counts, restored placeholders and retired exclusions, and completion: 399 species passed\n"
+  },
+  {
+    "test": "field_aide_stars",
+    "passed": true,
+    "tail": "PASS: eight milestone combinations, all 318 required species, exclusions and repeated championship wins\n"
+  },
+  {
+    "test": "navigation_signs",
+    "passed": true,
+    "tail": "13 navigation signs passed; no world connection conflicts or overlaps.\n"
+  },
+  {
+    "test": "player_sprite_palettes",
+    "passed": true,
+    "tail": "Passed: all 14 player overworld sheets use the runtime palette and correct built tile indices.\n"
+  },
+  {
+    "test": "oak_expedition",
+    "passed": true,
+    "tail": "PASS: ordered research reactions, every expedition prerequisite, eight Apex encounters, and both gym completion paths\n",
+    "coverage_note": "Also verifies eligibility with FLAG_DEFEATED_CHAMP cleared by Hall of Fame."
+  }
+]

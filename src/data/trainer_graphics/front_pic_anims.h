@@ -576,5 +576,8 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_AROMA_LADY]            = sAnims_AromaLady,
     [TRAINER_PIC_RUIN_MANIAC]           = sAnims_RuinManiac,
     [TRAINER_PIC_LADY]                  = sAnims_Lady,
+    [TRAINER_PIC_ROCKET_ADMIN_PROTON] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ROCKET_ADMIN_PETREL] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ROCKET_ADMIN_ARCHER] = sAnims_RocketGruntM,
     [TRAINER_PIC_ROCKET_ADMIN_ARIANA]   = sAnims_RocketGruntF,
 };
