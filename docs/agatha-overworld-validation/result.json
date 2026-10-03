@@ -1,0 +1,17 @@
+{
+  "sheet": "graphics/object_events/pics/people/agatha.png",
+  "dimensions": [
+    160,
+    32
+  ],
+  "frames": 10,
+  "frameTable": "Sequential frames 0 through 9; previously walking reused standing frames",
+  "animations": "Standard walking uses frames 0-8. Frame 9 retained for an optional specific pose.",
+  "validation": [
+    "Agatha build passed",
+    "Agatha ROM packing: all 10 frames match source pixels",
+    "Live Route 7 isolated emulator: south, north, west and east walking poses inspected"
+  ],
+  "save": "Disposable feature-test save; earned playthrough untouched",
+  "latestGlobalAudit": "Other current sheets differ from the previously built ROM: ninja and triathlete_f_water. This does not invalidate the Agatha-specific check."
+}

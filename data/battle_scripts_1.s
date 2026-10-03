@@ -235,6 +235,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectScaldingDive
+	.4byte BattleScript_EffectGlacialShell
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4386,3 +4388,32 @@ BattleScript_ActionSelectionItemsCantBeUsed::
 BattleScript_FlushMessageBox::
 	printstring STRINGID_EMPTYSTRING3
 	return
+
+BattleScript_EffectScaldingDive::
+	setmoveeffect MOVE_EFFECT_BURN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectGlacialShell::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_GLACIAL_SHELL
+	waitstate
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0, BattleScript_ButItFailed
+	updatestatusicon BS_ATTACKER
+	waitstate
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_GlacialShellThaw
+	printstring STRINGID_PKMNWASFROZEN
+	waitmessage B_WAIT_TIME_LONG
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_GlacialShellThaw::
+	printstring STRINGID_PKMNWASDEFROSTED2
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

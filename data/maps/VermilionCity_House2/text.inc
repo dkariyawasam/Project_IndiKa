@@ -24,3 +24,9 @@ VermilionCity_House2_Text_NoLongerTrading::
 	.string "passing TRAINERS.\p"
 	.string "These days, I just like hearing\n"
 	.string "where rare POKéMON live.$"
+
+VermilionCity_House2_Text_Route20Trader::
+	.string "A TRAINER on ROUTE 20 is looking\n"
+	.string "for a PONYTA.\p"
+	.string "Try the little sandy island\n"
+	.string "just west of SEAFOAM ISLANDS!$"

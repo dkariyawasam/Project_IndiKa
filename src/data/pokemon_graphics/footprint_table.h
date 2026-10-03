@@ -233,6 +233,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_PHANPY] = gMonFootprint_Phanpy,
     [SPECIES_DONPHAN] = gMonFootprint_Donphan,
     [SPECIES_PORYGON2] = gMonFootprint_Porygon2,
+    [SPECIES_PORYGON3] = gMonFootprint_Porygon2,
     [SPECIES_STANTLER] = gMonFootprint_Stantler,
     [SPECIES_SMEARGLE] = gMonFootprint_Smeargle,
     [SPECIES_TYROGUE] = gMonFootprint_Tyrogue,
