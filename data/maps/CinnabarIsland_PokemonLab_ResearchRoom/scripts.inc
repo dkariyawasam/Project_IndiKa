@@ -6,6 +6,7 @@ CinnabarIsland_PokemonLab_ResearchRoom_EventScript_MetronomeTutor::
 	end
 
 CinnabarIsland_PokemonLab_ResearchRoom_EventScript_Scientist::
+	call CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift
 	msgbox CinnabarIsland_PokemonLab_ResearchRoom_Text_MoltresRenewingEnergy, MSGBOX_NPC
 	setvar VAR_0x8004, SUB_QUEST_APEX_MOLTRES
 	setvar VAR_0x8005, 1
@@ -19,3 +20,27 @@ CinnabarIsland_PokemonLab_ResearchRoom_EventScript_Computer::
 CinnabarIsland_PokemonLab_ResearchRoom_EventScript_AmberPipe::
 	msgbox CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe, MSGBOX_SIGN
 	end
+
+CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_LAB_UPGRADE, CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_Done
+	msgbox CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_Intro
+	giveitem ITEM_UP_GRADE
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_End
+	setflag FLAG_GOT_LAB_UPGRADE
+CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_Done::
+	msgbox CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_After
+CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_End::
+	release
+	return
+
+CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_Intro::
+	.string "We developed new software\n"
+	.string "to help PORYGON adapt!\p"
+	.string "Take this UPGRADE.\n"
+	.string "BLAINE can install it.$"
+
+CinnabarIsland_PokemonLab_ResearchRoom_EventScript_UpgradeGift_After::
+	.string "Let PORYGON hold the UPGRADE,\n"
+	.string "then use BLAINE's gym terminal.$"

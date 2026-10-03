@@ -68,28 +68,24 @@ Route20_EventScript_NiaFinnNia::
 	trainerbattle_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_NiaFinnNiaRematch
-	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
-	end
+	goto Route20_EventScript_GorebyssTrade
 
 Route20_EventScript_NiaFinnNiaRematch::
 	trainerbattle_rematch_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
-	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
-	end
+	goto Route20_EventScript_GorebyssTrade
 
 Route20_EventScript_NiaFinnFinn::
 	trainerbattle_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_NiaFinnFinnRematch
-	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
-	end
+	goto Route20_EventScript_HuntailTrade
 
 Route20_EventScript_NiaFinnFinnRematch::
 	trainerbattle_rematch_double TRAINER_SWIM_SIBS_NIA_FINN, Route20_Text_NiaFinnIntro, Route20_Text_NiaFinnDefeat, Route20_Text_NiaFinnNotEnoughMons
-	msgbox Route20_Text_NiaFinnPostBattle, MSGBOX_AUTOCLOSE
-	end
+	goto Route20_EventScript_HuntailTrade
 
 Route20_Text_NiaFinnIntro::
-	.string "We practice swimming together.\nNow we are practicing battles!$"
+	.string "Our CLAMPERL took different paths.\nSee how they battle together!$"
 
 Route20_Text_NiaFinnDefeat::
 	.string "You make a great team!$"
@@ -99,3 +95,110 @@ Route20_Text_NiaFinnPostBattle::
 
 Route20_Text_NiaFinnNotEnoughMons::
 	.string "Bring two ready POKéMON\nso we can battle as a pair!$"
+
+Route20_EventScript_Elyssa::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_SEADRA
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_SEELOR_TRADE, Route20_EventScript_Elyssa_Done
+	msgbox Route20_Text_ElyssaIntro, MSGBOX_DEFAULT
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route20_EventScript_Elyssa_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Route20_EventScript_Elyssa_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, Route20_EventScript_Elyssa_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_SEELOR_TRADE
+	msgbox Route20_Text_ElyssaThanks
+	release
+	end
+
+Route20_EventScript_Elyssa_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+Route20_EventScript_Elyssa_WrongMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+Route20_EventScript_Elyssa_Done::
+	msgbox Route20_Text_ElyssaDone
+	release
+	end
+
+Route20_EventScript_GorebyssTrade::
+	goto_if_not_defeated TRAINER_SWIM_SIBS_NIA_FINN, Route20_EventScript_NiaFinnNia
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_GOREBYSS
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_GOREBYSS_TRADE, Route20_EventScript_GorebyssTrade_Done
+	msgbox Route20_Text_GorebyssTradeIntro, MSGBOX_DEFAULT
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route20_EventScript_GorebyssTrade_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Route20_EventScript_GorebyssTrade_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, Route20_EventScript_GorebyssTrade_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_GOREBYSS_TRADE
+	msgbox Route20_Text_GorebyssTradeThanks
+	release
+	end
+
+Route20_EventScript_GorebyssTrade_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+Route20_EventScript_GorebyssTrade_WrongMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+Route20_EventScript_GorebyssTrade_Done::
+	msgbox Route20_Text_GorebyssTradeDone
+	release
+	end
+
+Route20_EventScript_HuntailTrade::
+	goto_if_not_defeated TRAINER_SWIM_SIBS_NIA_FINN, Route20_EventScript_NiaFinnFinn
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_HUNTAIL
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_HUNTAIL_TRADE, Route20_EventScript_HuntailTrade_Done
+	msgbox Route20_Text_HuntailTradeIntro, MSGBOX_DEFAULT
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route20_EventScript_HuntailTrade_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Route20_EventScript_HuntailTrade_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, Route20_EventScript_HuntailTrade_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_HUNTAIL_TRADE
+	msgbox Route20_Text_HuntailTradeThanks
+	release
+	end
+
+Route20_EventScript_HuntailTrade_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+Route20_EventScript_HuntailTrade_WrongMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+Route20_EventScript_HuntailTrade_Done::
+	msgbox Route20_Text_HuntailTradeDone
+	release
+	end

@@ -1,5 +1,5 @@
 static const struct InGameTrade sInGameTrades[] = {
-    [INGAME_TRADE_HAUNTER] = 
+    [INGAME_TRADE_HAUNTER] =
     {
         .nickname = _("HAUNTER"),
         .species = SPECIES_HAUNTER,
@@ -14,8 +14,8 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_KADABRA
-    }, 
-    [INGAME_TRADE_KADABRA] = 
+    },
+    [INGAME_TRADE_KADABRA] =
     {
         .nickname = _("KADABRA"),
         .species = SPECIES_KADABRA,
@@ -30,60 +30,43 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_HAUNTER
-    }, 
-    [INGAME_TRADE_NIDORAN] = 
+    },
+    [INGAME_TRADE_SLOWPOKE] =
     {
-#if defined(FIRERED)
-        .nickname = _("MS. NIDO"),
-        .species = SPECIES_NIDORAN_F,
+        .nickname = _("SLOWPOKE"),
+        .species = SPECIES_SLOWPOKE,
         .ivs = {22, 18, 25, 19, 15, 22},
         .abilityNum = 0,
         .otId = 63184,
         .conditions = {5, 5, 5, 5, 30},
         .personality = 0x4c970b89,
-        .heldItem = ITEM_TINY_MUSHROOM,
+        .heldItem = ITEM_KINGS_ROCK,
         .mailNum = 255,
         .otName = _("SAIGE"),
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_NIDORAN_M
-#elif defined(LEAFGREEN)
-        .nickname = _("MR. NIDO"),
-        .species = SPECIES_NIDORAN_M,
-        .ivs = {19, 25, 18, 22, 22, 15},
-        .abilityNum = 0,
-        .otId = 63184,
-        .conditions = {30, 5, 5, 5, 5},
-        .personality = 0x4c970b9e,
-        .heldItem = ITEM_TINY_MUSHROOM,
-        .mailNum = 255,
-        .otName = _("SAIGE"),
-        .otGender = FEMALE,
-        .sheen = 10,
-        .requestedSpecies = SPECIES_NIDORAN_F
-#endif
-    }, 
-    [INGAME_TRADE_FARFETCHD] = 
+    },
+    [INGAME_TRADE_RHYDON] =
     {
-        .nickname = _("CH'DING"),
-        .species = SPECIES_FARFETCHD,
+        .nickname = _("RHYDON"),
+        .species = SPECIES_RHYDON,
         .ivs = {20, 25, 21, 24, 15, 20},
         .abilityNum = 0,
         .otId = 8810,
         .conditions = {30, 5, 5, 5, 5},
         .personality = 0x151943d7,
-        .heldItem = ITEM_STICK,
+        .heldItem = ITEM_PROTECTOR,
         .mailNum = 255,
-        .otName = _("ELYSSA"),
+        .otName = _("GARETT"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_SPEAROW
-    }, 
-    [INGAME_TRADE_NIDORINOA] = 
+        .requestedSpecies = SPECIES_RHYHORN
+    },
+    [INGAME_TRADE_MACHOKE] =
     {
-#if defined(FIRERED)
-        .nickname = _("NINA"),
-        .species = SPECIES_NIDORINA,
+        .nickname = _("MACHOKE"),
+        .species = SPECIES_MACHOKE,
         .ivs = {22, 25, 18, 19, 22, 15},
         .abilityNum = 0,
         .otId = 13637,
@@ -95,43 +78,25 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_NIDORINO
-#elif defined(LEAFGREEN)
-        .nickname = _("NINO"),
-        .species = SPECIES_NIDORINO,
-        .ivs = {19, 18, 25, 22, 15, 22},
-        .abilityNum = 0,
-        .otId = 13637,
-        .conditions = {5, 5, 5, 5, 30},
-        .personality = 0x00eeca19,
-        .heldItem = ITEM_NONE,
-        .mailNum = 255,
-        .otName = _("TURNER"),
-        .otGender = MALE,
-        .sheen = 10,
-        .requestedSpecies = SPECIES_NIDORINA
-#endif
-    }, 
-    [INGAME_TRADE_LICKITUNG] = 
+    },
+    [INGAME_TRADE_ONIX] =
     {
-        .nickname = _("MARC"),
-        .species = SPECIES_LICKITUNG,
+        .nickname = _("ONIX"),
+        .species = SPECIES_ONIX,
         .ivs = {24, 19, 21, 15, 23, 21},
         .abilityNum = 0,
         .otId = 1239,
         .conditions = {5, 5, 5, 5, 30},
         .personality = 0x451308ab,
-        .heldItem = ITEM_NONE,
+        .heldItem = ITEM_METAL_COAT,
         .mailNum = 255,
         .otName = _("HADEN"),
         .otGender = MALE,
         .sheen = 10,
-#if defined(FIRERED)
         .requestedSpecies = SPECIES_GOLDUCK
-#elif defined(LEAFGREEN)
-        .requestedSpecies = SPECIES_SLOWBRO
-#endif
-    }, 
-    [INGAME_TRADE_ELECTABUZZ] = 
+
+    },
+    [INGAME_TRADE_ELECTABUZZ] =
     {
         .nickname = _("ELECTABUZZ"),
         .species = SPECIES_ELECTABUZZ,
@@ -146,35 +111,35 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_RAICHU
-    }, 
-    [INGAME_TRADE_TANGELA] = 
+    },
+    [INGAME_TRADE_SCYTHER] =
     {
-        .nickname = _("TANGENY"),
-        .species = SPECIES_TANGELA,
+        .nickname = _("SCYTHER"),
+        .species = SPECIES_SCYTHER,
         .ivs = {22, 17, 25, 16, 23, 20},
         .abilityNum = 0,
         .otId = 60042,
         .conditions = {5, 5, 30, 5, 5},
         .personality = 0x5c77ecfa,
-        .heldItem = ITEM_STARDUST,
+        .heldItem = ITEM_METAL_COAT,
         .mailNum = 255,
         .otName = _("NORMA"),
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_VENONAT
     },
-    [INGAME_TRADE_SEEL] = 
+    [INGAME_TRADE_SEADRA] =
     {
-        .nickname = _("SEELOR"),
-        .species = SPECIES_SEEL,
+        .nickname = _("SEADRA"),
+        .species = SPECIES_SEADRA,
         .ivs = {24, 15, 22, 16, 23, 22},
         .abilityNum = 0,
         .otId = 9853,
         .conditions = {5, 5, 5, 5, 30},
         .personality = 0x482cac89,
-        .heldItem = ITEM_NONE,
+        .heldItem = ITEM_DRAGON_SCALE,
         .mailNum = 255,
-        .otName = _("GARETT"),
+        .otName = _("ELYSSA"),
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_PONYTA
@@ -210,7 +175,88 @@ static const struct InGameTrade sInGameTrades[] = {
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_GYARADOS
-    }
+    },
+    [INGAME_TRADE_MAGMAR] =
+    {
+        .nickname = _("MAGMAR"),
+        .species = SPECIES_MAGMAR,
+        .ivs = {22, 20, 22, 24, 22, 18},
+        .abilityNum = 0,
+        .otId = 50299,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_MAGMARIZER,
+        .mailNum = 255,
+        .otName = _("CLIFTON"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_VULPIX
+    },
+    [INGAME_TRADE_DUSCLOPS] =
+    {
+        .nickname = _("DUSCLOPS"),
+        .species = SPECIES_DUSCLOPS,
+        .ivs = {22, 20, 22, 24, 22, 18},
+        .abilityNum = 0,
+        .otId = 50300,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_REAPER_CLOTH,
+        .mailNum = 255,
+        .otName = _("ELI"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_HAUNTER
+    },
+    [INGAME_TRADE_ALOLAN_GRAVELER] =
+    {
+        .nickname = _("GRAVELER"),
+        .species = SPECIES_GRAVELER_ALOLAN,
+        .ivs = {22, 20, 22, 24, 22, 18},
+        .abilityNum = 0,
+        .otId = 50301,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_NONE,
+        .mailNum = 255,
+        .otName = _("FLINT"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_GRAVELER_ALOLAN
+    },
+    [INGAME_TRADE_GOREBYSS] =
+    {
+        .nickname = _("CLAMPERL"),
+        .species = SPECIES_CLAMPERL,
+        .ivs = {22, 20, 22, 24, 22, 18},
+        .abilityNum = 0,
+        .otId = 50302,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_DEEP_SEA_SCALE,
+        .mailNum = 255,
+        .otName = _("NIA"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_CLAMPERL
+    },
+    [INGAME_TRADE_HUNTAIL] =
+    {
+        .nickname = _("CLAMPERL"),
+        .species = SPECIES_CLAMPERL,
+        .ivs = {22, 20, 22, 24, 22, 18},
+        .abilityNum = 0,
+        .otId = 50303,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x00001074,
+        .heldItem = ITEM_DEEP_SEA_TOOTH,
+        .mailNum = 255,
+        .otName = _("FINN"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_CLAMPERL
+    },
+
 };
 
 static const u16 sInGameTradeMailMessages[][10] = {

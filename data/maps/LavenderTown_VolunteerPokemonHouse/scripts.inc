@@ -33,8 +33,40 @@ LavenderTown_VolunteerPokemonHouse_EventScript_LittleGirl::
 	end
 
 LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy::
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug, MSGBOX_NPC
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_DUSCLOPS
+	call EventScript_GetInGameTradeSpeciesInfo
+	goto_if_set FLAG_DID_DUSCLOPS_TRADE, LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Done
+	msgbox LavenderTown_VolunteerPokemonHouse_Text_DusclopsTrade
+	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Decline
+	call EventScript_ChooseMonForInGameTrade
+	goto_if_ge VAR_0x8004, PARTY_SIZE, LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Decline
+	call EventScript_GetInGameTradeSpecies
+	goto_if_ne VAR_RESULT, VAR_0x8009, LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_WrongMon
+	call EventScript_DoInGameTrade
+	setflag FLAG_DID_DUSCLOPS_TRADE
+	msgbox Trade_Text_ThanksYoureAPal
+	release
 	end
+
+LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Decline::
+	msgbox Trade_Text_ThatsTooBad
+	release
+	end
+
+LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_WrongMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Trade_Text_ThisIsNoMon
+	release
+	end
+
+LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Done::
+	msgbox Trade_Text_IsntMyOldMonGreat
+	release
+	end
+
 
 LavenderTown_VolunteerPokemonHouse_EventScript_Youngster::
 	lock

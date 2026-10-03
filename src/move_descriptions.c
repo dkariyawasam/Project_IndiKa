@@ -369,6 +369,9 @@ static const u8 sRageFistDescription[] = _("Grows stronger each time\nthe user i
 
 static const u8 sDoubleHitDescription[] = _("Strikes the foe twice\nwith a tail or the like.");
 
+static const u8 sScaldingDiveDescription[] = _("A scalding dive that\nburns the user after\na successful hit.");
+static const u8 sGlacialShellDescription[] = _("Freezes the user to\nraise SP. DEF. Use\nwhile frozen to\nthaw out instead.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -734,4 +737,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_RETREAT - 1] = gMoveDescription_Retreat,
     [MOVE_RAGE_FIST - 1] = sRageFistDescription,
     [MOVE_DOUBLE_HIT - 1] = sDoubleHitDescription,
+    [MOVE_SCALDING_DIVE - 1] = sScaldingDiveDescription,
+    [MOVE_GLACIAL_SHELL - 1] = sGlacialShellDescription,
 };

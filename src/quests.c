@@ -2119,7 +2119,7 @@ static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex)
         return FALSE;
     }
 
-    ConvertIntToDecimalStringN(gStringVar1, count, STR_CONV_MODE_LEFT_ALIGN, 1);
+    ConvertIntToDecimalStringN(gStringVar1, min(count, target), STR_CONV_MODE_LEFT_ALIGN, 1);
     ConvertIntToDecimalStringN(gStringVar2, target, STR_CONV_MODE_LEFT_ALIGN, 1);
     StringExpandPlaceholders(gStringVar4, sText_QuestNumberDisplay);
     *colorIndex = (count >= target) ? 2 : 3;
@@ -2257,6 +2257,30 @@ u8 GenerateSubquestState(u8 questId)
 
 u8 GenerateQuestState(u8 questId)
 {
+	bool8 objectivesComplete = FALSE;
+	u8 subquestId;
+
+	if (questId == QUEST_GYM_LEADER_TRIALS)
+	{
+		objectivesComplete = TRUE;
+		for (subquestId = SUB_QUEST_BROCK; subquestId <= SUB_QUEST_GIOVANNI; subquestId++)
+		{
+			if (!IsGymTrialCompleted(subquestId) && !IsGymTrialTraded(subquestId))
+				objectivesComplete = FALSE;
+		}
+	}
+	else if (questId == QUEST_THE_NATURE_OF_EVOLUTION)
+	{
+		objectivesComplete = CountEvolutionThroughBondMilestones() >= 2
+		                  && CountApexInteractionsForNatureQuest() >= 2
+		                  && CountEvolutionThroughDesignMilestones() >= 2;
+	}
+
+	if (objectivesComplete)
+	{
+		StringCopy(gStringVar4, sText_Complete);
+		return 2;
+	}
 	if (questId == QUEST_GIOVANNIS_AMBITION && FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI))
 	{
 		StringCopy(gStringVar4, sText_Complete);

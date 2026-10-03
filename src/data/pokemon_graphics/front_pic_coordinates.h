@@ -1173,6 +1173,11 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(40, 40),
         .y_offset = 15,
     },
+    [SPECIES_PORYGON3] =
+    {
+        .size = MON_COORDS_SIZE(40, 40),
+        .y_offset = 15,
+    },
     [SPECIES_STANTLER] =
     {
         .size = MON_COORDS_SIZE(64, 64),

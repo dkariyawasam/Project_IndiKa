@@ -22,27 +22,26 @@ RocketLeague_Arena_Text_ChampionAwaits::
     .string "awaits you in the next room.$"
 
 RocketLeague_Arena_Text_PetrelIntro::
-    .string "PETREL: Heh!\n"
-    .string "You came looking for trouble?\p"
-    .string "Then I'll give you a show worth\n"
-    .string "every COIN.$"
+    .string "PETREL: BRUNO trusts his fists.\n"
+    .string "I prefer getting inside heads!\p"
+    .string "Let me show you what PSYCHIC\n"
+    .string "POKéMON can do.$"
 
 RocketLeague_Arena_Text_ArcherIntro::
-    .string "ARCHER: Discipline decides\n"
-    .string "victory.\p"
-    .string "Show me whether your ambition is\n"
-    .string "anything more than noise.$"
+    .string "ARCHER: LANCE relies on dragons.\n"
+    .string "I have studied their weakness.\p"
+    .string "My FAIRY team is ready.\n"
+    .string "Are you?$"
 
 RocketLeague_Arena_Text_ArianaIntro::
-    .string "ARIANA: Careful now.\p"
-    .string "TEAM ROCKET does not reward weak\n"
-    .string "challengers.$"
+    .string "ARIANA: AGATHA has her ghosts.\n"
+    .string "I have the darkness they fear.\p"
+    .string "Care to step into it?$"
 
 RocketLeague_Arena_Text_ProtonIntro::
-    .string "PROTON: So you're the next\n"
-    .string "challenger?\p"
-    .string "Fine.\n"
-    .string "I'll make this quick.$"
+    .string "PROTON: LORELEI has her ice.\n"
+    .string "I have STEEL and a plan to break it!\p"
+    .string "Let's see you stop us.$"
 
 RocketLeague_Arena_Text_RocketAceIntro::
     .string "ROCKET ACE: You made it under\n"
@@ -50,8 +49,8 @@ RocketLeague_Arena_Text_RocketAceIntro::
     .string "Now prove you can survive them.$"
 
 RocketLeague_Arena_Text_PetrelDefeat::
-    .string "Heh…\n"
-    .string "Guess the smoke cleared your way.$"
+    .string "Heh... You saw right through\n"
+    .string "my mind games!$"
 
 RocketLeague_Arena_Text_ArcherDefeat::
     .string "So discipline alone was not\n"
