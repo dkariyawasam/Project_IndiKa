@@ -1434,6 +1434,7 @@ static void PrintUIHelp(u8 state)
     if (sApexLogData->isApexDossier)
     {
         DrawUiHintHeader(APEX_DOSSIER_HEADER_WINDOW, sApexDossierText_UI, 8, 10, 0, TRUE);
+        DrawUiHeaderBackgroundRow(APEX_DOSSIER_HEADER_WINDOW, gPlttBufferUnfaded[0]);
         return;
     }
     else if (state != 0)
