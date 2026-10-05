@@ -6,6 +6,7 @@
 #include "item.h"
 #include "sound.h"
 #include "pokemon.h"
+#include "random.h"
 #include "load_save.h"
 #include "safari_zone.h"
 #include "quest_log.h"
@@ -311,7 +312,23 @@ void StartSouthernIslandBattle(void)
 void StartApexBattle(void)
 {
     u16 species;
-    
+    u8 perfectIV = 31;
+    u8 ivFields[] = {MON_DATA_HP_IV, MON_DATA_ATK_IV, MON_DATA_DEF_IV,
+                     MON_DATA_SPEED_IV, MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV};
+    u8 i, chosen, field;
+
+    // Guarantee three distinct perfect IVs only for dedicated Apex encounters.
+    // The other three keep their normal random rolls, which may also be 31.
+    for (i = 0; i < 3; i++)
+    {
+        chosen = i + Random() % (6 - i);
+        field = ivFields[chosen];
+        ivFields[chosen] = ivFields[i];
+        ivFields[i] = field;
+        SetMonData(&gEnemyParty[0], field, &perfectIV);
+    }
+    CalculateMonStats(&gEnemyParty[0]);
+
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_LEGENDARY_FRLG;
