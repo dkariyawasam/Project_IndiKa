@@ -302,3 +302,22 @@ const u16 gObjectEventPic_PsychicF[] = INCBIN_U16("graphics/object_events/pics/p
 const u16 gObjectEventPal_TriathleteCycling[] = INCBIN_U16("graphics/object_events/palettes/triathlete_cycling.gbapal");
 
 const u16 gObjectEventPal_TriathleteFCycling[] = INCBIN_U16("graphics/object_events/palettes/triathlete_f_cycling.gbapal");
+
+
+const u16 gObjectEventPal_Brunette_bird_keeper[] = INCBIN_U16("graphics/object_events/palettes/brunette_bird_keeper.gbapal");
+
+const u16 gObjectEventPal_Brunette_rival[] = INCBIN_U16("graphics/object_events/palettes/brunette_rival.gbapal");
+
+const u16 gObjectEventPal_Brunette_brock[] = INCBIN_U16("graphics/object_events/palettes/brunette_brock.gbapal");
+
+const u16 gObjectEventPal_Brunette_civilian[] = INCBIN_U16("graphics/object_events/palettes/brunette_civilian.gbapal");
+
+const u16 gObjectEventPal_Brunette_bill[] = INCBIN_U16("graphics/object_events/palettes/brunette_bill.gbapal");
+
+const u16 gObjectEventPal_Brunette_green_civilian[] = INCBIN_U16("graphics/object_events/palettes/brunette_green_civilian.gbapal");
+
+const u16 gObjectEventPal_Brunette_pokefan_f[] = INCBIN_U16("graphics/object_events/palettes/brunette_pokefan_f.gbapal");
+
+const u16 gObjectEventPal_Brunette_pokefan_m[] = INCBIN_U16("graphics/object_events/palettes/brunette_pokefan_m.gbapal");
+
+const u16 gObjectEventPal_Brunette_youngster[] = INCBIN_U16("graphics/object_events/palettes/brunette_youngster.gbapal");
