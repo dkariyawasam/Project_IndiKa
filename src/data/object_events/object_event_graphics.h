@@ -298,3 +298,7 @@ const u16 gObjectEventPal_TuberM[] = INCBIN_U16("graphics/object_events/palettes
 
 const u16 gObjectEventPal_PsychicF[] = INCBIN_U16("graphics/object_events/palettes/psychic_f.gbapal");
 const u16 gObjectEventPic_PsychicF[] = INCBIN_U16("graphics/object_events/pics/people/psychic_f.4bpp");
+
+const u16 gObjectEventPal_TriathleteCycling[] = INCBIN_U16("graphics/object_events/palettes/triathlete_cycling.gbapal");
+
+const u16 gObjectEventPal_TriathleteFCycling[] = INCBIN_U16("graphics/object_events/palettes/triathlete_f_cycling.gbapal");
