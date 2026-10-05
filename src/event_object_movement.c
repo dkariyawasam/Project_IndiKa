@@ -518,6 +518,15 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_PSYCHIC_F                   0x1148
 #define OBJ_EVENT_PAL_TAG_TRIATHLETE_CYCLING           0x1149
 #define OBJ_EVENT_PAL_TAG_TRIATHLETE_F_CYCLING         0x114A
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_BIRD_KEEPER 0x114C
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_RIVAL 0x114D
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_BROCK 0x114E
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_CIVILIAN 0x114F
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_BILL 0x1150
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_GREEN_CIVILIAN 0x1151
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_F 0x1152
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_M 0x1153
+#define OBJ_EVENT_PAL_TAG_BRUNETTE_YOUNGSTER 0x1154
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -580,6 +589,16 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SwimmerFLand,            OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND},
     {gObjectEventPal_TriathleteFCycling,      OBJ_EVENT_PAL_TAG_TRIATHLETE_F_CYCLING},
     {gObjectEventPal_TriathleteCycling,       OBJ_EVENT_PAL_TAG_TRIATHLETE_CYCLING},
+
+    {gObjectEventPal_Brunette_bird_keeper, OBJ_EVENT_PAL_TAG_BRUNETTE_BIRD_KEEPER},
+    {gObjectEventPal_Brunette_rival, OBJ_EVENT_PAL_TAG_BRUNETTE_RIVAL},
+    {gObjectEventPal_Brunette_brock, OBJ_EVENT_PAL_TAG_BRUNETTE_BROCK},
+    {gObjectEventPal_Brunette_civilian, OBJ_EVENT_PAL_TAG_BRUNETTE_CIVILIAN},
+    {gObjectEventPal_Brunette_bill, OBJ_EVENT_PAL_TAG_BRUNETTE_BILL},
+    {gObjectEventPal_Brunette_green_civilian, OBJ_EVENT_PAL_TAG_BRUNETTE_GREEN_CIVILIAN},
+    {gObjectEventPal_Brunette_pokefan_f, OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_F},
+    {gObjectEventPal_Brunette_pokefan_m, OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_M},
+    {gObjectEventPal_Brunette_youngster, OBJ_EVENT_PAL_TAG_BRUNETTE_YOUNGSTER},
     {gObjectEventPal_TuberM,                  OBJ_EVENT_PAL_TAG_TUBER_M},
     {gObjectEventPal_RocketPetrel,            OBJ_EVENT_PAL_TAG_ROCKET_PETREL},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
