@@ -18,14 +18,14 @@
     "radial-current": {
       "file": "images/radial-current.png",
       "source": "/tmp/kanto-blog-captures/radial-menu.png",
-      "caption": "The radial menu with POK\u00e9DEX selected.",
+      "caption": "The radial menu with POKéDEX selected.",
       "kind": "fresh-main-build",
       "sha256": "aa1482c9bf56f3714fbe83f40f725d3c64eb4a4dd2221c3a92068c9bc7b55145"
     },
     "dex-current": {
       "file": "images/dex-current.png",
       "source": "/tmp/kanto-blog-captures/pokedex-header.png",
-      "caption": "The Pok\u00e9dex habitat list and shared blue control header.",
+      "caption": "The Pokédex habitat list and shared blue control header.",
       "kind": "fresh-main-build",
       "sha256": "5c644eac441d00c06fa66ce8d913abfd9cc9c6bf1341bdf809908681eaad0de7"
     },
@@ -88,7 +88,7 @@
     "oak-intro": {
       "file": "images/oak-intro.png",
       "source": "/Users/deekariyawasam/pokefirered/docs/full-story-playthrough/01-intro.png",
-      "caption": "Oak introduces the idea of studying Pok\u00e9mon where they live. Archived playthrough capture.",
+      "caption": "Oak introduces the idea of studying Pokémon where they live. Archived playthrough capture.",
       "kind": "archive",
       "sha256": "444fe226fa39c7ea12eca9f4cfea184df50659417d93c902846c758bef162491"
     },
@@ -242,7 +242,7 @@
     "pokemon-summary": {
       "file": "images/pokemon-summary.png",
       "source": "/tmp/kanto-blog-captures/pokemon-summary.png",
-      "caption": "The Pok\u00e9mon summary INFO page keeps its page and back controls in the blue header.",
+      "caption": "The Pokémon summary INFO page keeps its page and back controls in the blue header.",
       "kind": "fresh-main-build",
       "sha256": "25548c74e8eea75f1a6d77aef1cbf779a68c11b239065fa6bd605b7db55b066d"
     },
@@ -256,14 +256,14 @@
     "habitats-october": {
       "file": "images/habitats-october.png",
       "source": "docs/pallet-habitat-fix/habitats-fixed.png",
-      "caption": "Controlled full-Dex fixture showing two-column habitats and corrected Pok\u00e9 Ball palette.",
+      "caption": "Controlled full-Dex fixture showing two-column habitats and corrected Poké Ball palette.",
       "kind": "controlled-runtime-fixture",
       "sha256": "265bfaf3148a24e4c3681f1e266284573b24051832557680aa8116d072517960"
     },
     "rocket-pokemon-shop": {
       "file": "images/rocket-pokemon-shop.png",
       "source": "docs/feature-validation-october2/01-pokemon-shop.png",
-      "caption": "October 2 controlled Rocket League Pok\u00e9mon shop test.",
+      "caption": "October 2 controlled Rocket League Pokémon shop test.",
       "kind": "archived-runtime-fixture",
       "sha256": "cc1d6cba022e70831f7ef636c9d148e53ef7cb89405b83afd64db677d1ce03e9"
     },
@@ -273,7 +273,77 @@
       "caption": "October 3 certificate award from the earned test campaign.",
       "kind": "earned-playthrough",
       "sha256": "0b8e1a2bd38846999ce90633981de21d14552623612edab70e6ba3d95256464d"
+    },
+    "soul-pass-friendship": {
+      "file": "images/soul-pass-friendship.png",
+      "source": "docs/full-story-playthrough/itemanim-006-soul-pass-services.png",
+      "caption": "The Soul Pass opens a friendship-check service at the healing counter. Archived playthrough capture; the menu reflects that earlier build.",
+      "kind": "archived-runtime-fixture",
+      "sha256": "54a6acfa222ef01683fed6c6d461ac6a57c56a39f14ac14bae5c07d59f104421"
+    },
+    "celadon-rival-dialogue": {
+      "file": "images/celadon-rival-dialogue.png",
+      "source": "docs/celadon-rival-fix/fixed-40.png",
+      "caption": "The rival encounter in Celadon reaches its opening dialogue. Controlled encounter fixture; the repeated-letter rival name belongs to the test save.",
+      "kind": "controlled-runtime-fixture",
+      "sha256": "6b846ce1e97a989b0cf734819badb53e78ce8d2c7de351bd227d5966ab4437c9"
+    },
+    "oak-bond-complete": {
+      "file": "images/oak-bond-complete.png",
+      "source": "docs/release-playthrough/october3/02-oak-bond.png",
+      "caption": "Oak acknowledges completed research into evolution through bond. Earned campaign capture from the October 3 playthrough.",
+      "kind": "earned-playthrough",
+      "sha256": "d3e923e848c704068053dbd79b7ddd63aefaefe9d51de613a1d7dd772a15ec86"
+    },
+    "bedroom-certificate": {
+      "file": "images/bedroom-certificate.png",
+      "source": "docs/release-playthrough/october3/09-bedroom-certificate-visible.png",
+      "caption": "The earned certificate appears on the bedroom wall, where the expedition can be remembered after its conclusion. October 3 campaign capture.",
+      "kind": "earned-playthrough",
+      "sha256": "20eda1fb16fa0359b4344d2eb8280e36b51b523a879fa3161c4ffa6d72a60f1b"
+    },
+    "habitat-xl-receipt": {
+      "file": "images/habitat-xl-receipt.png",
+      "source": "docs/release-playthrough/october3/12-fixture-habitat-receipt.png",
+      "caption": "The habitat claim displays its one EXP. CANDY XL reward in the footer. Controlled full-Dex fixture used to check the reward interface, not a naturally completed collection.",
+      "kind": "controlled-runtime-fixture",
+      "sha256": "4c559a0b70c2134e6608672a67ead5e2c48c3c67ecfdca53aec9e43f347c7a0d"
+    },
+    "rocket-tm-shop": {
+      "file": "images/rocket-tm-shop.png",
+      "source": "docs/feature-validation-october2/03-tm-shop.png",
+      "caption": "The Rocket TM counter uses a browsing shop with prices and balance in coins. Controlled shop fixture from October 2.",
+      "kind": "controlled-runtime-fixture",
+      "sha256": "2b7ac693e9e74942f95eb13e50352867cf63167bcc9182b15fac3118200f44ff"
+    },
+    "helix-fossil-discovery": {
+      "file": "images/helix-fossil-discovery.png",
+      "source": "docs/full-story-playthrough/61-fossil-discovery.png",
+      "caption": "Collecting a Helix Fossil during an archived development playthrough. The repeated-letter player name is from that save; this records acquisition rather than the later reconstruction choice.",
+      "kind": "archived-runtime-fixture",
+      "sha256": "03619b3764bb71fd45e52c54074b8032bdb0f36df751a986754b593959a695eb"
+    },
+    "natural-forest-entrance": {
+      "file": "images/natural-forest-entrance.png",
+      "source": "docs/asset-previews/fuchsia-forest-entrance.png",
+      "caption": "A development tile preview of the natural forest approach, showing the shaded passage between trees. This is an asset preview, not a live gameplay capture.",
+      "kind": "development-reference",
+      "sha256": "ab7a73ae5e1aa2d61f22787fc8c8fa4a568a37ca907f7a83d8c9cdc1f9ee1574"
+    },
+    "deep-feebas-corrected": {
+      "file": "images/deep-feebas-corrected.png",
+      "source": "docs/sprite-work/deep-feebas/front-colour-preview.png",
+      "caption": "Deep-form Feebas after the supplied October 4 pixel corrections, with pink lips and distinct body and fin shading. Enlarged sprite reference, not an emulator screenshot.",
+      "kind": "development-reference",
+      "sha256": "fb679e488fe02605cf9924bed0d5cca50b65c953fe6cffece3c7fb2523af3f79"
+    },
+    "dashboard-atlas-october": {
+      "file": "images/dashboard-atlas-october.png",
+      "source": "http://127.0.0.1:8765/ — Tile atlas, captured 2026-10-04",
+      "caption": "The connected tile atlas exposes the southern coastline and trainer-density information. Fresh October 4 dashboard capture with no emulator attached; the map is a static rendering of ROM tiles.",
+      "kind": "fresh-dashboard-capture",
+      "sha256": "05ea2b77472e5f2beee23843f527c968821ea9fb83a3f30a21cdf01977598466"
     }
   },
-  "updated": "2026-10-03"
+  "updated": "2026-10-04"
 }

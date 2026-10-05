@@ -2863,3 +2863,6 @@ const u8 gMonFootprint_Amunyte[] = INCBIN_U8("graphics/pokemon/amunyte/footprint
 const u8 gMonFootprint_Kinkabuto[] = INCBIN_U8("graphics/pokemon/kinkabuto/footprint.1bpp");
 
 const u8 gMonFootprint_Aeropteryx[] = INCBIN_U8("graphics/pokemon/aeropteryx/footprint.1bpp");
+
+const u32 gMonFrontPic_CinnabarFeebas[] = INCBIN_U32("graphics/pokemon/cinnabar_feebas/front.4bpp.lz");
+const u32 gMonPalette_CinnabarFeebas[] = INCBIN_U32("graphics/pokemon/cinnabar_feebas/normal.gbapal.lz");

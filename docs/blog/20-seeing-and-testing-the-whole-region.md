@@ -4,7 +4,7 @@ slug: "seeing-and-testing-the-whole-region"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 20
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Why the emulator dashboard became a map-design tool, and what its checks can and cannot prove."
 ---
 
@@ -12,13 +12,17 @@ summary: "Why the emulator dashboard became a map-design tool, and what its chec
 
 A map can look convincing on its own and still be wrong in Kanto. The dashboard's visual world view makes that distinction visible by joining maps using their actual tiles and connection offsets.
 
+![The connected tile atlas exposes the southern coastline and trainer-density information. Fresh October 4 dashboard capture with no emulator attached; the map is a static rendering of ROM tiles.](images/dashboard-atlas-october.png)
+
+*The connected tile atlas exposes the southern coastline and trainer-density information. Fresh October 4 dashboard capture with no emulator attached; the map is a static rendering of ROM tiles.*
+
 A separate connection diagram shows links and warps. The tile view shows the landscape those links produce. Both are useful: one explains reachability, the other exposes gaps, overlaps and mismatched approaches.
 
 ## Design decisions made visible
 
 This view helped inspect Route 24/25, the Vermilion coastline, Route 18 and the merged Route 21, as well as the relationship between Viridian Channel, Route 16 and Celadon. The design constraint was often to preserve a familiar vanilla location while adjusting the new connecting terrain around it.
 
-The map view also supports a more useful trainer-density measure. Trainers per walkable tile is closer to the player's encounter pressure than all NPCs divided by a rectangle containing mountains, sea and unused margins. It is still a diagnostic, not a universal target: sight ranges, optional paths and battle difficulty can make equal numerical densities feel very different.
+The map view also supports a more useful trainer-density measure. Trainers per traversable tile is closer to the player's encounter pressure than all NPCs divided by a rectangle containing mountains and unused margins. The current measure counts tiles without a static collision block, including surfable water; it does not simulate progression gates or moving obstacles. It is still a diagnostic, not a universal target: sight ranges, optional paths and battle difficulty can make equal numerical densities feel very different.
 
 ## Inspect, change, verify
 

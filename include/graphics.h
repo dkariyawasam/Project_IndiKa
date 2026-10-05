@@ -4693,6 +4693,8 @@ extern const u32 gMonPalette_Kabuknight[];
 extern const u8 gMonIcon_Kabuknight[];
 
 extern const u8 gMonFootprint_CinnabarFeebas[];
+extern const u32 gMonFrontPic_CinnabarFeebas[];
+extern const u32 gMonPalette_CinnabarFeebas[];
 
 extern const u8 gMonFootprint_Kabustar[];
 

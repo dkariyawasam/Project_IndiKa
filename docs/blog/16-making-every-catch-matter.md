@@ -4,13 +4,17 @@ slug: "making-every-catch-matter"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 16
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Collection rewards that give each stage of an evolution line a reason to be caught."
 ---
 
 # Making Every Catch Matter
 
 The collection problem was easy to describe. If an entire evolution line is available in the wild, and its final form is higher level, why catch the earlier stages?
+
+![The habitat claim displays its one EXP. CANDY XL reward in the footer. Controlled full-Dex fixture used to check the reward interface, not a naturally completed collection.](images/habitat-xl-receipt.png)
+
+*The habitat claim displays its one EXP. CANDY XL reward in the footer. Controlled full-Dex fixture used to check the reward interface, not a naturally completed collection.*
 
 The answer chosen for Expeditions Kanto is to make the Pokédex page a meaningful unit of fieldwork. Catching the strongest member helps the team. Completing the page records the wider group and earns a separate reward. This lets the game encourage collection without removing every convenient evolved encounter.
 

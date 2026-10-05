@@ -4,7 +4,7 @@ slug: "pokemon-art-and-palette-pass"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 13
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Making custom Pokemon sprites, palettes, icons, and footprints feel native to FireRed."
 ---
 
@@ -96,6 +96,10 @@ Aeropteryx's pass illustrates a different problem. Too little contrast flattened
 The supporting assets matter too. The footprint audit now covers all 399 active species, including eleven custom footprint designs. Imported cries and altered family-based cries give the expanded roster an audio identity. These additions do not mean the battle art is finished: Deep Feebas and several custom backs remain on the final art list.
 
 ## Screenshots And References
+
+![Deep-form Feebas after the supplied October 4 pixel corrections, with pink lips and distinct body and fin shading. Enlarged sprite reference, not an emulator screenshot.](images/deep-feebas-corrected.png)
+
+*Deep-form Feebas after the supplied October 4 pixel corrections, with pink lips and distinct body and fin shading. Enlarged sprite reference, not an emulator screenshot.*
 
 ![The footprint correction reference sheet.](images/footprints.png)
 

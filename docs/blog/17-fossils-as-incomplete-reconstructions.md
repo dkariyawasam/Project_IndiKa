@@ -4,13 +4,17 @@ slug: "fossils-as-incomplete-reconstructions"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 17
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "How fossil fragments, shared colours and surviving primeval Pokémon express the limits of reconstruction."
 ---
 
 # Fossils as Incomplete Reconstructions
 
 Kinkabuto and Amunyte are the surviving original forms in this setting. They never went extinct. The familiar fossil Pokémon, and the new combinations built around them, are reconstructions made from incomplete remains.
+
+![Collecting a Helix Fossil during an archived development playthrough. The repeated-letter player name is from that save; this records acquisition rather than the later reconstruction choice.](images/helix-fossil-discovery.png)
+
+*Collecting a Helix Fossil during an archived development playthrough. The repeated-letter player name is from that save; this records acquisition rather than the later reconstruction choice.*
 
 That changes the meaning of revival. A fossil machine is interpreting limited evidence. Its output can be alive and viable without being a complete copy of the animal that left the fossil.
 

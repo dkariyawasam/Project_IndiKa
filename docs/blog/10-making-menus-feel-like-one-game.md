@@ -4,7 +4,7 @@ slug: "making-menus-feel-like-one-game"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 10
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "The shared UI language across Bag, Pokedex, Pokemon, Card, Logbook, and Help."
 ---
 
@@ -88,6 +88,10 @@ Blue, rose and green are shared themes, derived from the player's secondary acce
 Pokédex rewards use a separate feedback pattern: the header pulses when a claim is available, START CLAIM replaces A OK, and a temporary footer presents the reward. The page avoids a second large notification window. Earlier overlay experiments corrupted the display; the quieter receipt also leaves the collection context visible.
 
 ## Screenshots And References
+
+![The habitat claim displays its one EXP. CANDY XL reward in the footer. Controlled full-Dex fixture used to check the reward interface, not a naturally completed collection.](images/habitat-xl-receipt.png)
+
+*The habitat claim displays its one EXP. CANDY XL reward in the footer. Controlled full-Dex fixture used to check the reward interface, not a naturally completed collection.*
 
 ![The Items pocket with its page notches and description panel.](images/bag-items.png)
 

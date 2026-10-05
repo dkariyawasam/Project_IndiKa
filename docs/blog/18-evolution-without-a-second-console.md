@@ -4,13 +4,17 @@ slug: "evolution-without-a-second-console"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 18
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "In-world trades, laboratory inventions and Porygon upgrades as part of the expedition."
 ---
 
 # Evolution Without a Second Console
 
 An evolution can be an interesting research goal and still be frustrating if it depends on another console. Expeditions Kanto uses in-game trades to make several of those transformations part of the region itself.
+
+![The Soul Pass opens a friendship-check service at the healing counter. Archived playthrough capture; the menu reflects that earlier build.](images/soul-pass-friendship.png)
+
+*The Soul Pass opens a friendship-check service at the healing counter. Archived playthrough capture; the menu reflects that earlier build.*
 
 The important part is the encounter around the transaction. Receiving a Machoke and watching it become Machamp teaches something different from simply finding Machamp in grass. Held-item trades give the item, the partner and the location a role in the discovery.
 

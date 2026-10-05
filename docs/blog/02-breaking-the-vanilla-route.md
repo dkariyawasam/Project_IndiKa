@@ -4,7 +4,7 @@ slug: "breaking-the-vanilla-route"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 2
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "How the mod pushes players away from the classic badge-route mindset."
 ---
 
@@ -87,6 +87,10 @@ The regional map has been revised alongside the terrain: water routes use water 
 Additional ferry destinations remain an idea on hold. The current transport network is documented separately from that possible expansion.
 
 ## Screenshots And References
+
+![A development tile preview of the natural forest approach, showing the shaded passage between trees. This is an asset preview, not a live gameplay capture.](images/natural-forest-entrance.png)
+
+*A development tile preview of the natural forest approach, showing the shaded passage between trees. This is an asset preview, not a live gameplay capture.*
 
 ![The Cycling Road rental checkpoint. Archived playthrough capture.](images/bike-rental.png)
 

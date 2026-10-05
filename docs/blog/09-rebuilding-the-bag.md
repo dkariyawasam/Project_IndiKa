@@ -4,7 +4,7 @@ slug: "rebuilding-the-bag"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 9
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Expanding FireRed's bag into five pockets with modern item behavior."
 ---
 
@@ -70,6 +70,10 @@ The bag also needs to tell the truth about its edges. The first pocket does not 
 The shared colour theme reaches the footer and pocket notches as well as the header. Leaving one of those elements in its old blue would make the rose or green version feel unfinished. These are small details, but players see them every time they check an item.
 
 ## Screenshots And References
+
+![The Rocket TM counter uses a browsing shop with prices and balance in coins. Controlled shop fixture from October 2.](images/rocket-tm-shop.png)
+
+*The Rocket TM counter uses a browsing shop with prices and balance in coins. Controlled shop fixture from October 2.*
 
 ![The Berries pocket; this capture save has no berries.](images/bag-berries.png)
 

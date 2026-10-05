@@ -4,7 +4,7 @@ slug: "gym-leaders-as-researchers"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 5
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Why the gym leaders became experts in human-guided Pokemon evolution."
 ---
 
@@ -72,6 +72,10 @@ The broader evolution system gives these lessons practical follow-through. In-ga
 
 ## Screenshots And References
 
+![The Soul Pass opens a friendship-check service at the healing counter. Archived playthrough capture; the menu reflects that earlier build.](images/soul-pass-friendship.png)
+
+*The Soul Pass opens a friendship-check service at the healing counter. Archived playthrough capture; the menu reflects that earlier build.*
+
 ![Erika sends out her team for the field challenge. Archived playthrough capture.](images/erika-battle.png)
 
 *Erika sends out her team for the field challenge. Archived playthrough capture.*
@@ -87,7 +91,7 @@ Checked items are illustrated above. Unchecked items still need a matching captu
 - [x] A field challenge gym leader.
 - [ ] Gym leader dialogue about Pokemon growth.
 - [ ] Thunder Pass mart specials.
-- [ ] Soul Pass friendship check.
+- [x] Soul Pass friendship check.
 - [x] Logbook gym leader trial status.
 
 ## Closing Thought

@@ -4,13 +4,21 @@ slug: "bringing-the-expedition-home"
 series: "Pokemon Expeditions: Kanto Devlog"
 part: 21
 status: "draft"
-updated: "2026-10-03"
+updated: "2026-10-04"
 summary: "Oak’s reactions, the Field Aide card and a certificate that makes the research journey tangible."
 ---
 
 # Bringing the Expedition Home
 
 Oak's expedition needs an ending that responds to what the player has learned. Winning the League is a major achievement, but the mod has also asked the player to study relationships, wild adaptation and deliberate intervention.
+
+![The earned certificate appears on the bedroom wall, where the expedition can be remembered after its conclusion. October 3 campaign capture.](images/bedroom-certificate.png)
+
+*The earned certificate appears on the bedroom wall, where the expedition can be remembered after its conclusion. October 3 campaign capture.*
+
+![Oak acknowledges completed research into evolution through bond. Earned campaign capture from the October 3 playthrough.](images/oak-bond-complete.png)
+
+*Oak acknowledges completed research into evolution through bond. Earned campaign capture from the October 3 playthrough.*
 
 Oak now gives dedicated reactions to Evolution by Bond, Evolution by Instinct and Evolution by Design, followed by a response to the completed Nature of Evolution. Invitations bring the player back to the lab as those threads finish. The old extra five-Poké-Ball gifts no longer stand in for that conversation.
 
