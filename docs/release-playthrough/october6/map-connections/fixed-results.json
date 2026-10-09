@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "fuchsia-south-fixed",
+    "from": [
+      "FuchsiaForest",
+      43,
+      39
+    ],
+    "key": 128,
+    "after": "frame=36258780 map=3,25 xy=26,18 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "fuchsia-south-right-fixed",
+    "from": [
+      "FuchsiaForest",
+      44,
+      39
+    ],
+    "key": 128,
+    "after": "frame=36259680 map=3,25 xy=27,18 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "harbor-forest-fixed",
+    "from": [
+      "VermilionHarbor",
+      26,
+      46
+    ],
+    "key": 128,
+    "after": "frame=36260460 map=1,88 xy=6,9 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "harbor-forest-right-fixed",
+    "from": [
+      "VermilionHarbor",
+      27,
+      46
+    ],
+    "key": 128,
+    "after": "frame=36261240 map=1,88 xy=6,9 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "forest-harbor-fixed",
+    "from": [
+      "FuchsiaForest",
+      5,
+      10
+    ],
+    "key": 64,
+    "after": "frame=36261960 map=1,4 xy=26,48 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "forest-harbor-right-fixed",
+    "from": [
+      "FuchsiaForest",
+      6,
+      10
+    ],
+    "key": 64,
+    "after": "frame=36262860 map=1,4 xy=27,48 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "channel-west",
+    "from": [
+      "ViridianChannel",
+      1,
+      12
+    ],
+    "key": 32,
+    "after": "frame=36263640 map=3,12 xy=36,37 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-return",
+    "from": [
+      "FuchsiaCity",
+      1,
+      19
+    ],
+    "key": 32,
+    "after": "frame=36264420 map=3,29 xy=122,9 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "channel-east-return",
+    "from": [
+      "Route16",
+      1,
+      12
+    ],
+    "key": 32,
+    "after": "frame=36265920 map=3,27 xy=34,12 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "harbor-return",
+    "from": [
+      "VermilionHarbor",
+      31,
+      1
+    ],
+    "key": 64,
+    "after": "frame=36266700 map=3,5 xy=23,38 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "viridian-north-in",
+    "from": [
+      "Route2",
+      4,
+      14
+    ],
+    "key": 128,
+    "after": "frame=36267480 map=1,0 xy=5,9 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  }
+]

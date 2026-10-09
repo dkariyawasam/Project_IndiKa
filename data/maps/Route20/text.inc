@@ -45,7 +45,7 @@ Route20_Text_LuisIntro::
     .string "A battle ought to warm us up!$"
 
 Route20_Text_LuisDefeat::
-    .string "Washed out!$"
+	.string "The cold got into my strategy!$"
 
 Route20_Text_LuisPostBattle::
     .string "The current here is rough, but\n"
@@ -58,7 +58,7 @@ Route20_Text_IreneIntro::
     .string "That's perfect training for me!$"
 
 Route20_Text_IreneDefeat::
-    .string "Lost my pace!$"
+	.string "I missed my stroke!$"
 
 Route20_Text_IrenePostBattle::
     .string "A triathlon route around SEAFOAM\n"

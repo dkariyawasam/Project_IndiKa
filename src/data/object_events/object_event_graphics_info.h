@@ -246,6 +246,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivBoy = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+// Avoid exhausting the dynamic pool in the Saffron Trainer Fan Club.
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrushGirl = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_BLACK_BELT_F,
@@ -253,7 +254,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrushGirl = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_4,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -379,14 +380,15 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWorkerM = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+// Indoor clerks share this reserved slot; leave dynamic slots for visitors.
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWorkerF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_GOLDEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_3,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -400,12 +402,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CivWorkerF = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrendsetterF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_F,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_1,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -533,7 +535,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokemonRangerF = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Breeder = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_POKEMON_BREEDER,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_BREEDER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -761,7 +763,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMWater = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWater = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_SWIMMER_F,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -799,7 +801,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMLand = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_SWIMMER_F,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -854,6 +856,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+// Keep the Game Corner and fan clubs within the dynamic palette budget.
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_GENTLEMAN,
@@ -861,7 +864,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman = {
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .paletteSlot = PALSLOT_NPC_BESPOKE_2,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -970,7 +973,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFWater = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMWater = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_TUBER_M,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TUBER_M,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -989,7 +992,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMWater = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMLand = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_TUBER_M,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TUBER_M,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -1721,12 +1724,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celio = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_CELIO,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_4,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -1816,12 +1819,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MistyWater = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LtSurge = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_GOLDEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -1949,12 +1952,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bill = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Daisy = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_GREEN,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_GOLDEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
@@ -2379,7 +2382,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac = {
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrendsetterM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_TRENDSETTER_M,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_M,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -3640,5 +3643,43 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne = {
     .subspriteTables = gObjectEventSpriteOamTables_128x64,
     .anims = sAnimTable_Standard,
     .images = sPicTable_SSAnne,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketArcher = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ROCKET_ARCHER,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_RocketArcher,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketProton = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ROCKET_PROTON,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_DYNAMIC,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_RocketProton,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

@@ -152,7 +152,7 @@ Route24_Text_BeckyRematchIntro::
     .string "Let's see whose pace holds longer!$"
 
 Route24_Text_BeckyDefeat::
-    .string "You kept pace!$"
+	.string "You beat my bridge time!$"
 
 Route24_Text_BeckyPostBattle::
     .string "The bridge is perfect training.\p"

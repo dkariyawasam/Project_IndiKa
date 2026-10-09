@@ -163,10 +163,10 @@ SaffronCity_Dojo_Text_ExpertMaraIntro::
 	.string "Watch your opponent carefully.\nEach move teaches you something.$"
 
 SaffronCity_Dojo_Text_ExpertMaraDefeat::
-	.string "Even experience has its limits!$"
+	.string "You spotted the opening first!$"
 
 SaffronCity_Dojo_Text_ExpertMaraPostBattle::
-	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+	.string "I ask my students what they\nnoticed before I give advice.\pThey often see what I miss.$"
 
 SaffronCity_Dojo_EventScript_CrushKinRen::
 	trainerbattle_double TRAINER_DOJO_CRUSH_KIN_REN_MEI, SaffronCity_Dojo_Text_CrushKinIntro, SaffronCity_Dojo_Text_CrushKinDefeat, SaffronCity_Dojo_Text_CrushKinNeedTwo
