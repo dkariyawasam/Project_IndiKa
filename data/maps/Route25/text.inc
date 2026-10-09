@@ -33,7 +33,7 @@ Route25_Text_FlintBridgeRematchIntro::
     .string "shifted too!$"
 
 Route25_Text_FlintDefeat::
-    .string "Line snapped!$"
+	.string "That cast went wide!$"
 
 Route25_Text_FlintPostBattle::
     .string "ROUTE 25 looks peaceful, but the\n"
@@ -153,7 +153,7 @@ Route25_Text_FishermanTylorRematchIntro::
     .string "This one's mine!$"
 
 Route25_Text_FishermanTylorDefeat::
-    .string "Washed out!$"
+	.string "The tide favoured you!$"
 
 Route25_Text_FishermanTylorPostBattle::
     .string "This bridge turned my quiet spot\n"
@@ -171,7 +171,7 @@ Route25_Text_TriathleteMLandRematchIntro::
     .string "for this rematch!$"
 
 Route25_Text_TriathleteMLandDefeat::
-    .string "Outpaced!$"
+	.string "You won that interval!$"
 
 Route25_Text_TriathleteMLandPostBattle::
     .string "The best part of a long run is\n"

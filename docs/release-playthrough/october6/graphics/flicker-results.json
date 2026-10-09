@@ -1,0 +1,24 @@
+{
+  "radial": {
+    "frames": 120,
+    "header_colors": [
+      [
+        107,
+        189,
+        74
+      ]
+    ],
+    "edge_rows": 8
+  },
+  "dex": {
+    "frames": 120,
+    "header_colors": [
+      [
+        107,
+        189,
+        74
+      ]
+    ],
+    "edge_rows": 1
+  }
+}

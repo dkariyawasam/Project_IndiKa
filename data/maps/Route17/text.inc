@@ -63,10 +63,7 @@ Route17_Text_NikolasDefeat::
     .string "Grounded out!$"
 
 Route17_Text_NikolasPostBattle::
-    .string "I got my VOLTORB at the abandoned\n"
-    .string "POWER PLANT.\p"
-    .string "It likes this road's constant\n"
-    .string "motion as much as I do.$"
+	.string "I caught VOLTORB before the\nPOWER PLANT reopened. It likes\pthis road's constant motion as\nmuch as I do.$"
 
 Route17_Text_ZeekIntro::
     .string "I trained hard all along this\n"

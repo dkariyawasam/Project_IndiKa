@@ -88,7 +88,7 @@ Route20_Text_NiaFinnIntro::
 	.string "Our CLAMPERL took different paths.\nSee how they battle together!$"
 
 Route20_Text_NiaFinnDefeat::
-	.string "You make a great team!$"
+	.string "Our two paths met their match!$"
 
 Route20_Text_NiaFinnPostBattle::
 	.string "Keeping pace is easy in water.\nBattling together takes work!$"

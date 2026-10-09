@@ -97,7 +97,7 @@ PowerPlant_Text_ElectricianLucaIntro:
 	.string "a few sparks!$"
 
 PowerPlant_Text_ElectricianLucaDefeat:
-	.string "Shorted out!$"
+	.string "You found the live fault!$"
 
 PowerPlant_Text_ElectricianLucaPostBattle:
 	.string "The current's unstable, but the\n"

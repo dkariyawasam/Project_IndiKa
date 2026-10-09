@@ -222,7 +222,7 @@ Route23_Text_EvanZoeIntro::
 	.string "We are training for the LEAGUE.\nCan you handle both of us?$"
 
 Route23_Text_EvanZoeDefeat::
-	.string "You make a great team!$"
+	.string "We'll take that lesson to the\nLEAGUE!$"
 
 Route23_Text_EvanZoePostBattle::
 	.string "A good partner spots things\nyou might miss on your own.$"

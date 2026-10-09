@@ -18,7 +18,7 @@ Route18_Text_RamiroIntro::
     .string "Same goes for battling.$"
 
 Route18_Text_RamiroDefeat::
-    .string "I blinked first!$"
+	.string "Your nerve held longer!$"
 
 Route18_Text_RamiroPostBattle::
     .string "This little road catches all the\n"

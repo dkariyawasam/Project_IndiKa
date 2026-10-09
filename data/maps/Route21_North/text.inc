@@ -18,7 +18,7 @@ Route21_North_Text_WadeIntro::
 	.string "That's when I cast my line!$"
 
 Route21_North_Text_WadeDefeat::
-	.string "You reeled me in!$"
+	.string "My timing missed the wake!$"
 
 Route21_North_Text_WadePostBattle::
 	.string "A little wake can bring fish up\n"

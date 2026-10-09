@@ -27,6 +27,13 @@ APEX_SPECIES = {
     "SPECIES_ZAPDOS",
 }
 
+# Rival's parallel expedition deliberately includes the non-encounter Apex Ambipom.
+RIVAL_APEX_TEAMS = {
+    "TRAINER_RIVAL_ROUTE23_SQUIRTLE", "TRAINER_RIVAL_ROUTE23_BULBASAUR",
+    "TRAINER_RIVAL_ROUTE23_CHARMANDER", "TRAINER_CHAMPION_FIRST_SQUIRTLE",
+    "TRAINER_CHAMPION_FIRST_BULBASAUR", "TRAINER_CHAMPION_FIRST_CHARMANDER",
+}
+
 REMOVED_SPECIES = {
     "SPECIES_AGGRON",
     "SPECIES_ARON",
@@ -137,7 +144,7 @@ def main() -> int:
         for mon in species:
             if mon not in species_constants:
                 issues.append(f"{trainer_label(trainer)} uses unknown {mon} in {party_name}")
-            if mon in APEX_SPECIES:
+            if mon in APEX_SPECIES and not (mon == "SPECIES_AMBIPOM" and trainer["id"] in RIVAL_APEX_TEAMS):
                 issues.append(f"{trainer_label(trainer)} uses Apex {mon} in {party_name}")
             if mon in REMOVED_SPECIES:
                 issues.append(f"{trainer_label(trainer)} uses removed {mon} in {party_name}")
@@ -156,7 +163,7 @@ def main() -> int:
     print(f"- {len(trainers)} trainers with parties checked")
     print(f"- {len(parties)} party blocks parsed")
     print(f"- {total_pokemon} Pokemon entries scanned")
-    print("- No Apex, removed, or unknown species in trainer rosters")
+    print("- No unintended Apex, removed, or unknown species (rival Ambipom is intentional)")
     if orphan_parties:
         print(f"- {len(orphan_parties)} unused party blocks present")
     return 0

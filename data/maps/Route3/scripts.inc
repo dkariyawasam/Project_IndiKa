@@ -31,7 +31,7 @@ Route3_Text_YoungsterMiaPostBattle::
 	.string "We take turns picking\nwhere to explore next.$"
 
 Route3_Text_YoungsterMiaRematchIntro::
-	.string "Ready for another battle?$"
+	.string "Josh says I've improved my\ntiming. Help me prove it!$"
 
 Route3_EventScript_RivalConversation::
 	goto_if_set FLAG_HIDE_ROUTE3_RIVAL_CONVERSATION, EventScript_Return

@@ -1,0 +1,141 @@
+[
+  {
+    "name": "VENUSAUR",
+    "species": 3,
+    "item": 0,
+    "level": 47,
+    "hp": 143,
+    "maxHP": 143,
+    "friendship": 255,
+    "moves": [
+      79,
+      75,
+      362,
+      73
+    ],
+    "pp": [
+      13,
+      23,
+      20,
+      10
+    ],
+    "status": 64,
+    "checksumValid": true
+  },
+  {
+    "name": "CROBAT",
+    "species": 169,
+    "item": 0,
+    "level": 31,
+    "hp": 94,
+    "maxHP": 94,
+    "friendship": 236,
+    "moves": [
+      48,
+      44,
+      17,
+      109
+    ],
+    "pp": [
+      20,
+      25,
+      35,
+      10
+    ],
+    "status": 0,
+    "checksumValid": true
+  },
+  {
+    "name": "NINETALES",
+    "species": 38,
+    "item": 134,
+    "level": 32,
+    "hp": 98,
+    "maxHP": 98,
+    "friendship": 194,
+    "moves": [
+      53,
+      98,
+      109,
+      219
+    ],
+    "pp": [
+      15,
+      30,
+      10,
+      25
+    ],
+    "status": 0,
+    "checksumValid": true
+  },
+  {
+    "name": "JYNX",
+    "species": 124,
+    "item": 0,
+    "level": 32,
+    "hp": 89,
+    "maxHP": 89,
+    "friendship": 159,
+    "moves": [
+      142,
+      181,
+      3,
+      8
+    ],
+    "pp": [
+      10,
+      25,
+      10,
+      15
+    ],
+    "status": 0,
+    "checksumValid": true
+  },
+  {
+    "name": "CHIMECHO",
+    "species": 411,
+    "item": 0,
+    "level": 35,
+    "hp": 99,
+    "maxHP": 99,
+    "friendship": 255,
+    "moves": [
+      94,
+      253,
+      281,
+      149
+    ],
+    "pp": [
+      10,
+      10,
+      10,
+      15
+    ],
+    "status": 0,
+    "checksumValid": true
+  },
+  {
+    "name": "WEEPINBELL",
+    "species": 70,
+    "item": 0,
+    "level": 24,
+    "hp": 32,
+    "maxHP": 67,
+    "friendship": 70,
+    "moves": [
+      79,
+      77,
+      78,
+      51
+    ],
+    "pp": [
+      14,
+      34,
+      28,
+      30
+    ],
+    "status": 0,
+    "checksumValid": true
+  }
+]
+[('Grassland', 3, 24), ('Forest', 9, 55), ('WatersEdge', 0, 23), ('Sea', 0, 20), ('Cave', 4, 45), ('Mountain', 2, 15), ('RoughTerrain', 0, 22), ('Urban', 3, 42), ('Rare', 5, 17), ('NonNative', 3, 136)]

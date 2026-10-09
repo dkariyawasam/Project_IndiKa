@@ -499,6 +499,8 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_SCIENTIST                   0x1135
 #define OBJ_EVENT_PAL_TAG_POKE_MANIAC                 0x1136
 #define OBJ_EVENT_PAL_TAG_SWIMMER_F_LAND              0x1137
+#define OBJ_EVENT_PAL_TAG_ROCKET_ARCHER 0x115C
+#define OBJ_EVENT_PAL_TAG_ROCKET_PROTON 0x115D
 #define OBJ_EVENT_PAL_TAG_ROCKET_PETREL               0x1138
 #define OBJ_EVENT_PAL_TAG_YOUNGSTER                        0x1139
 #define OBJ_EVENT_PAL_TAG_GENTLEMAN                   0x113A
@@ -527,6 +529,13 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_F 0x1152
 #define OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_M 0x1153
 #define OBJ_EVENT_PAL_TAG_BRUNETTE_YOUNGSTER 0x1154
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_CELIO 0x1155
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_GOLDEN 0x1156
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_F 0x1157
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_BREEDER 0x1158
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_SWIMMER_F 0x1159
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_M 0x115A
+#define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TUBER_M 0x115B
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -599,7 +608,16 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Brunette_pokefan_f, OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_F},
     {gObjectEventPal_Brunette_pokefan_m, OBJ_EVENT_PAL_TAG_BRUNETTE_POKEFAN_M},
     {gObjectEventPal_Brunette_youngster, OBJ_EVENT_PAL_TAG_BRUNETTE_YOUNGSTER},
+    {gObjectEventPal_LightHair_celio, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_CELIO},
+    {gObjectEventPal_LightHair_golden, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_GOLDEN},
+    {gObjectEventPal_LightHair_trendsetter_f, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_F},
+    {gObjectEventPal_LightHair_breeder, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_BREEDER},
+    {gObjectEventPal_LightHair_swimmer_f, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_SWIMMER_F},
+    {gObjectEventPal_LightHair_trendsetter_m, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_M},
+    {gObjectEventPal_LightHair_tuber_m, OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TUBER_M},
     {gObjectEventPal_TuberM,                  OBJ_EVENT_PAL_TAG_TUBER_M},
+    {gObjectEventPal_RocketArcher, OBJ_EVENT_PAL_TAG_ROCKET_ARCHER},
+    {gObjectEventPal_RocketProton, OBJ_EVENT_PAL_TAG_ROCKET_PROTON},
     {gObjectEventPal_RocketPetrel,            OBJ_EVENT_PAL_TAG_ROCKET_PETREL},
     {gObjectEventPal_Brock,                   OBJ_EVENT_PAL_TAG_BROCK},
     {gObjectEventPal_Youngster,                    OBJ_EVENT_PAL_TAG_YOUNGSTER},

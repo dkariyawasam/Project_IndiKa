@@ -126,3 +126,20 @@ CeladonCity_Text_SomeoneStoleSilphScope::
     .string "I'm sure of it.\p"
     .string "But I lost sight of him!\n"
     .string "Where'd he go?$"
+
+CeladonCity_Text_RivalVSSeekerGift::
+	.string "{RIVAL}: Here. Take this VS SEEKER.\p"
+	.string "Beating someone once doesn't mean\n"
+	.string "you've got nothing left to learn.\p"
+	.string "And I need you to keep up.\n"
+	.string "Winning too easily gets boring.$"
+
+CeladonCity_Text_RivalVSSeekerUse::
+	.string "Use it near TRAINERS you've beaten\n"
+	.string "to see who wants another battle.\p"
+	.string "Walk around to recharge it.\n"
+	.string "Even you can manage that.$"
+
+CeladonCity_Text_RivalVSSeekerBagFull::
+	.string "Your BAG's full? Make some room.\n"
+	.string "I'll keep it for you.$"

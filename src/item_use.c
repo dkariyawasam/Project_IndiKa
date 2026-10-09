@@ -290,7 +290,8 @@ static bool8 CanFish(void)
         return FALSE;
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
-        if (IsPlayerFacingSurfableFishableWater())
+        // Match the board's shoreline check, including mapped water barriers.
+        if (CanUseCascadeBoardOnField())
             return TRUE;
     }
     else

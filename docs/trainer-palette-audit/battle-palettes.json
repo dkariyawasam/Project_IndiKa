@@ -430,6 +430,21 @@
     "mismatched_indices": []
   },
   {
+    "pic": "ROCKET_ADMIN_PROTON",
+    "palette": "gTrainerPalette_RocketAdminProton",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROCKET_ADMIN_PETREL",
+    "palette": "gTrainerPalette_RocketAdminPetrel",
+    "mismatched_indices": []
+  },
+  {
+    "pic": "ROCKET_ADMIN_ARCHER",
+    "palette": "gTrainerPalette_RocketAdminArcher",
+    "mismatched_indices": []
+  },
+  {
     "pic": "ROCKET_ADMIN_ARIANA",
     "palette": "gTrainerPalette_RocketAdminAriana",
     "mismatched_indices": []

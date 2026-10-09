@@ -1,0 +1,23 @@
+{
+  "name": "FEEBAS",
+  "species": 328,
+  "item": 0,
+  "level": 11,
+  "hp": 26,
+  "maxHP": 26,
+  "friendship": 224,
+  "moves": [
+    150,
+    0,
+    0,
+    0
+  ],
+  "pp": [
+    40,
+    0,
+    0,
+    0
+  ],
+  "status": 2,
+  "checksumValid": true
+}

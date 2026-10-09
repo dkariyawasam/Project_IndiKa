@@ -55,7 +55,7 @@ lines = ['# Evolution and required-item availability audit','',f'{len(active)} a
 'Custom regional pre-evolutions stay in their own form lines. Standard methods cross-checked against the [PokeAPI evolution dataset](https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_evolution.csv). Friendship uses the existing project threshold of 220.','',
 '## Remaining decisions and limitations','',
 '- Piloswine → Mamoswine remains deliberately disabled in Kanto. Apex discovery, habitat and Mewtwo conditions remain unchanged.',
-'- Feebas still requires Beauty 170. No ordinary gameplay Beauty-raising route was identified; wild Milotic exists, but that does not make caught Feebas evolvable. Needs a replacement method or a Beauty mechanic.',
+'- Ordinary Feebas evolves into Milotic on level-up with friendship at least 220, at any time of day. This replaces the inaccessible Beauty requirement; Deep Form Feebas remains unchanged.',
 '- Galarian Farfetch’d has no Sirfetch’d species in this roster; adding that evolution is a roster/design decision.',
 '- Custom species relationships beyond configured links cannot be inferred from official ancestry data.',
 '- Item evidence below includes scripts, map items, configured in-game trades and wild held items. Unreachable scripts, prerequisite flags, trade partners, transfer access and limited item quantities still need live verification.',

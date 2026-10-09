@@ -230,7 +230,11 @@
 
 
 
-#define NUM_OBJ_EVENT_GFX     206
+#define OBJ_EVENT_GFX_ROCKET_ARCHER 206
+
+#define OBJ_EVENT_GFX_ROCKET_PROTON 207
+
+#define NUM_OBJ_EVENT_GFX     208
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

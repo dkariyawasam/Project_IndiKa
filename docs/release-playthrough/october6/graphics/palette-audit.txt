@@ -1,0 +1,6 @@
+Checked 181 sprite/palette pairs and all map object lists.
+Dynamic palette reuse required: CeladonCity: 6 across the entire map
+Dynamic palette reuse required: Route4: 5 across the entire map
+Dynamic palette reuse required: Route7: 6 across the entire map
+Dynamic palette reuse required: ViridianForest: 6 across the entire map
+Passed: no detected index permutations or whole-map fixed-slot conflicts.

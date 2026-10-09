@@ -1,0 +1,162 @@
+[
+  {
+    "id": 66,
+    "token": "TRAINER_LASS_ANN_FIELD_REMATCH",
+    "base": "TRAINER_LASS_ANN",
+    "name": null,
+    "party": "sParty_LassAnnFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 67,
+    "token": "TRAINER_TRENDSETTER_DAWN_FIELD_REMATCH",
+    "base": "TRAINER_TRENDSETTER_DAWN",
+    "name": null,
+    "party": "sParty_TrendsetterDawnFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 68,
+    "token": "TRAINER_TRENDSETTER_TYLER_FIELD_REMATCH",
+    "base": "TRAINER_TRENDSETTER_TYLER",
+    "name": null,
+    "party": "sParty_TrendsetterTylerFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 72,
+    "token": "TRAINER_CHANNELER_ANGELICA_FIELD_REMATCH",
+    "base": "TRAINER_CHANNELER_ANGELICA",
+    "name": null,
+    "party": "sParty_ChannelerAngelicaFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 73,
+    "token": "TRAINER_TRENDSETTER_DALE_FIELD_REMATCH",
+    "base": "TRAINER_TRENDSETTER_DALE",
+    "name": null,
+    "party": "sParty_TrendsetterDaleFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 74,
+    "token": "TRAINER_ACE_TRAINER_GREGORY_FIELD_REMATCH",
+    "base": "TRAINER_ACE_TRAINER_GREGORY",
+    "name": null,
+    "party": "sParty_AceTrainerGregoryFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 75,
+    "token": "TRAINER_BUG_CATCHER_RICK_FIELD_REMATCH",
+    "base": "TRAINER_BUG_CATCHER_RICK",
+    "name": null,
+    "party": "sParty_BugCatcherRickFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 76,
+    "token": "TRAINER_BUG_CATCHER_DOUG_FIELD_REMATCH",
+    "base": "TRAINER_BUG_CATCHER_DOUG",
+    "name": null,
+    "party": "sParty_BugCatcherDougFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 77,
+    "token": "TRAINER_BUG_CATCHER_SAMMY_FIELD_REMATCH",
+    "base": "TRAINER_BUG_CATCHER_SAMMY",
+    "name": null,
+    "party": "sParty_BugCatcherSammyFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 82,
+    "token": "TRAINER_BUG_CATCHER_ANTHONY_FIELD_REMATCH",
+    "base": "TRAINER_BUG_CATCHER_ANTHONY",
+    "name": null,
+    "party": "sParty_BugCatcherAnthonyFieldRematch",
+    "rematch": true
+  },
+  {
+    "id": 83,
+    "token": "TRAINER_ROUTE24_SCOUT_INEZ",
+    "base": "TRAINER_PICNICKER_KINDRA",
+    "name": "INEZ",
+    "party": "sParty_PicnickerKindra",
+    "rematch": false
+  },
+  {
+    "id": 84,
+    "token": "TRAINER_ROUTE24_SCOUT_INEZ_REMATCH",
+    "base": "TRAINER_PICNICKER_KINDRA",
+    "name": "INEZ",
+    "party": "sParty_Route24ScoutInezRematch",
+    "rematch": true
+  },
+  {
+    "id": 85,
+    "token": "TRAINER_ROUTE23_BIRD_KEEPER_ORVILLE",
+    "base": "TRAINER_BIRD_KEEPER_CHESTER",
+    "name": "ORVILLE",
+    "party": "sParty_BirdKeeperChester",
+    "rematch": false
+  },
+  {
+    "id": 86,
+    "token": "TRAINER_ROUTE23_BIRD_KEEPER_ORVILLE_REMATCH",
+    "base": "TRAINER_BIRD_KEEPER_CHESTER",
+    "name": "ORVILLE",
+    "party": "sParty_Route23BirdKeeperOrvilleRematch",
+    "rematch": true
+  },
+  {
+    "id": 87,
+    "token": "TRAINER_ROUTE22_TRIATHLETE_FREYA",
+    "base": "TRAINER_TRIATHLETE_F_LAND",
+    "name": "FREYA",
+    "party": "sParty_TriathleteFLand",
+    "rematch": false
+  },
+  {
+    "id": 88,
+    "token": "TRAINER_ROUTE22_TRIATHLETE_FREYA_REMATCH",
+    "base": "TRAINER_TRIATHLETE_F_LAND",
+    "name": "FREYA",
+    "party": "sParty_Route22TriathleteFreyaRematch",
+    "rematch": true
+  },
+  {
+    "id": 351,
+    "token": "TRAINER_ROUTE5_AROMA_LADY_IRMA",
+    "base": "TRAINER_AROMA_LADY_VIOLET",
+    "name": "IRMA",
+    "party": "sParty_AromaLadyViolet",
+    "rematch": false
+  },
+  {
+    "id": 352,
+    "token": "TRAINER_ROUTE5_AROMA_LADY_IRMA_REMATCH",
+    "base": "TRAINER_AROMA_LADY_VIOLET",
+    "name": "IRMA",
+    "party": "sParty_Route5AromaLadyIrmaRematch",
+    "rematch": true
+  },
+  {
+    "id": 353,
+    "token": "TRAINER_ROUTE8_AROMA_LADY_HEATHER",
+    "base": "TRAINER_AROMA_LADY_NIKKI",
+    "name": "HEATHER",
+    "party": "sParty_AromaLadyNikki",
+    "rematch": false
+  },
+  {
+    "id": 354,
+    "token": "TRAINER_ROUTE8_AROMA_LADY_HEATHER_REMATCH",
+    "base": "TRAINER_AROMA_LADY_NIKKI",
+    "name": "HEATHER",
+    "party": "sParty_Route8AromaLadyHeatherRematch",
+    "rematch": true
+  }
+]

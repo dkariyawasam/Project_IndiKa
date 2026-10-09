@@ -30,7 +30,7 @@ Route19_Text_MatthewIntro::
     .string "the shore disappears.$"
 
 Route19_Text_MatthewDefeat::
-    .string "Washed out!$"
+	.string "That wake spun me round!$"
 
 Route19_Text_MatthewPostBattle::
     .string "The ferry cuts a clean line\n"

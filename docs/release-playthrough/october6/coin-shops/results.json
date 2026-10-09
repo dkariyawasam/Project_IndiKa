@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-09",
+  "coins": {
+    "initial": 5550,
+    "after_insufficient_and_cancel": 5550,
+    "after_smeargle": 5050,
+    "after_two_tm05": 3050,
+    "after_continue": 3050
+  },
+  "money_unchanged": 2481,
+  "new_stored_pokemon": [
+    {
+      "box": 1,
+      "slot": 10,
+      "name": "SMEARGLE",
+      "species": 235,
+      "item": 0,
+      "friendship": 70,
+      "moves": [
+        166,
+        0,
+        0,
+        0
+      ],
+      "pp": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "checksumValid": true
+    }
+  ],
+  "tm05_quantity": 2,
+  "party_unchanged_during_transactions": true,
+  "continue_matches_before_reset": true,
+  "final_rom_sha256": "6b46e825e807880acf1626df432c4b9db79003c472e4ee14cb8a2688afd7b16f",
+  "checkpoint_sha256": "001a04fc396009ff0a8fecd353eba53a721b32f6577dc2c19950472aa66b4ac4"
+}

@@ -10,7 +10,7 @@ source = (ROOT / 'src/quests.c').read_text()
 
 
 def function(name):
-    start = re.search(r'(?:bool8|u16) ' + name + r'\(void\)\n\{', source).start()
+    start = re.search(r'(?:bool8|u8|u16) ' + name + r'\(void\)\n\{', source).start()
     return source[start:source.index('\n}', start) + 2]
 
 
@@ -22,6 +22,7 @@ code = r'''
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/quests.h"
+#include "constants/species.h"
 typedef uint8_t u8;
 typedef uint16_t u16;
 typedef u8 bool8;
@@ -30,15 +31,17 @@ typedef u8 bool8;
 #define NELEMS(a) (sizeof(a)/sizeof((a)[0]))
 static u8 flags[65536], completed[8], traded[8];
 static u16 vars[65536];
-static int bond, instinct, design;
+static int instinct, design;
+static u8 caught[NUM_SPECIES];
+static bool8 IsSpeciesCaught(u16 n) {return caught[n];}
 static bool8 FlagGet(u16 n) {return flags[n];}
 static u16 VarGet(u16 n) {return vars[n];}
 static bool8 IsGymTrialCompleted(u8 n) {return completed[n];}
 static bool8 IsGymTrialTraded(u8 n) {return traded[n];}
-static int CountEvolutionThroughBondMilestones(void) {return bond;}
 static int CountApexInteractionsForNatureQuest(void) {return instinct;}
 static int CountEvolutionThroughDesignMilestones(void) {return design;}
 '''
+code += function('CountEvolutionThroughBondMilestones') + '\n'
 code += function('GetOakResearchReaction') + '\n' + function('IsOakExpeditionReady')
 code += r'''
 int main(void) {
@@ -51,7 +54,8 @@ int main(void) {
    VAR_MAP_SCENE_ROUTE11_RIVAL, VAR_MAP_SCENE_POKEMON_TOWER_1F, VAR_FOREST_RIVAL_APEX};
  int i;
  assert(!IsOakExpeditionReady());
- bond=instinct=design=2;
+ instinct=design=2;
+ caught[SPECIES_CROBAT]=caught[SPECIES_CHIMECHO]=1;
  assert(!GetOakResearchReaction());
  flags[FLAG_SYS_POKEDEX_GET]=1;
  assert(GetOakResearchReaction()==1); flags[FLAG_OAK_ACKNOWLEDGED_BOND]=1;
@@ -77,7 +81,18 @@ int main(void) {
    completed[i]=0; assert(!IsOakExpeditionReady());
    traded[i]=1; assert(IsOakExpeditionReady());
  }
- puts("PASS: ordered research reactions, every expedition prerequisite, eight Apex encounters, and both gym completion paths");
+ // Milotic can supply the second Bond milestone, but Feebas alone cannot.
+ memset(flags,0,sizeof(flags)); memset(caught,0,sizeof(caught));
+ flags[FLAG_SYS_POKEDEX_GET]=1; instinct=design=0;
+ caught[SPECIES_CROBAT]=caught[SPECIES_FEEBAS]=1;
+ assert(CountEvolutionThroughBondMilestones()==1);
+ assert(GetOakResearchReaction()==0);
+ caught[SPECIES_MILOTIC]=1;
+ assert(CountEvolutionThroughBondMilestones()==2);
+ assert(GetOakResearchReaction()==1);
+ flags[FLAG_OAK_ACKNOWLEDGED_BOND]=1;
+ assert(GetOakResearchReaction()==0);
+ puts("PASS: ordered research reactions, expedition prerequisites, Milotic Bond credit, and no duplicate Bond reaction");
 }
 '''
 with tempfile.TemporaryDirectory() as tmp:

@@ -1,0 +1,58 @@
+[
+  {
+    "map": "Route11",
+    "local": 2,
+    "expected": 781,
+    "actual": 781,
+    "intro": "frame=983460 map=3,21 xy=13,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nI study MR. MIME, but they\u2019ve|all withdrawn into DIGLETT\u2019S|CAVE! Perhaps a battle will|clear my head."
+  },
+  {
+    "map": "Route18",
+    "local": 5,
+    "expected": 748,
+    "actual": 748,
+    "intro": "frame=989340 map=3,29 xy=109,14 step=2/1 timer=0 main=8056e25 lock=1 party=6\nA short road still teaches you|plenty if you pay attention.|Lesson one: battle before you|relax."
+  },
+  {
+    "map": "Route24",
+    "local": 6,
+    "expected": 486,
+    "actual": 486,
+    "intro": "frame=995460 map=3,36 xy=13,23 step=2/1 timer=0 main=8056e25 lock=1 party=6\nI run bridge laps when the water|is bright.|A quick battle keeps my pace sharp!"
+  },
+  {
+    "map": "Route20",
+    "local": 19,
+    "expected": 6,
+    "actual": 6,
+    "intro": "frame=1001220 map=3,31 xy=38,13 step=2/1 timer=0 main=8056e25 lock=1 party=6\nOur CLAMPERL took different paths.|See how they battle together!"
+  },
+  {
+    "map": "VermilionHarbor",
+    "local": 10,
+    "expected": 719,
+    "actual": 719,
+    "intro": "frame=1007400 map=1,4 xy=45,5 step=2/1 timer=0 main=8056e25 lock=1 party=6\nI tie knots aboard ship. In|battle, I like leaving my|opponent in a tangle!"
+  },
+  {
+    "map": "FuchsiaForest",
+    "local": 4,
+    "expected": 511,
+    "actual": 511,
+    "intro": "frame=1013400 map=1,88 xy=12,11 step=2/1 timer=0 main=8056e25 lock=1 party=6\nI found a bug clinging under a|wet leaf. It didn\u2019t slide off|once! My team can hang on too!"
+  },
+  {
+    "map": "FuchsiaForest",
+    "local": 6,
+    "expected": 513,
+    "actual": 513,
+    "intro": "frame=1019460 map=1,88 xy=36,19 step=2/1 timer=0 main=8056e25 lock=1 party=6\nThese leaves smell sharp when|rubbed. My team has a sharp|side too!"
+  },
+  {
+    "map": "Route24",
+    "local": 5,
+    "expected": 83,
+    "actual": 83,
+    "intro": "frame=1025760 map=3,36 xy=13,29 step=2/1 timer=0 main=8056e25 lock=1 party=6\nA good SCOUT checks every plank|before crossing.|A great SCOUT checks every|TRAINER too!"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "case": "Archer",
+    "intro": "frame=52800 map=2,0 xy=6,7 step=3/2 timer=0 main=8056e25 lock=1 party=6\nARCHER: LANCE relies on dragons.|I have studied their weakness.|My FAIRY team is ready.|Are you?"
+  },
+  {
+    "case": "Proton",
+    "intro": "frame=56580 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nPROTON: LORELEI has her ice.|I have STEEL and a plan to break it!|Let\u2019s see you stop us."
+  },
+  {
+    "case": "Ariana",
+    "intro": "frame=60360 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nARIANA: AGATHA has her ghosts.|I have the darkness they fear.|Care to step into it?"
+  },
+  {
+    "case": "Petrel",
+    "intro": "frame=64140 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nPETREL: BRUNO trusts his fists.|I prefer getting inside heads!|Let me show you what PSYCHIC|POK\u00e9MON can do."
+  },
+  {
+    "case": "Razor",
+    "intro": "frame=67920 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nKARDINAL: You watch the attack.|I watch the choice before it.|Try keeping a secret from my|PSYCHIC team!"
+  },
+  {
+    "case": "Vex",
+    "intro": "frame=71760 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nSHION: Still judging strength by|appearances? My FAIRY team|enjoys correcting that mistake."
+  },
+  {
+    "case": "Nova",
+    "intro": "frame=75600 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nMOJAY: Empty space? Look closer.|My GHOST team is already making|itself at home under these|lights!"
+  },
+  {
+    "case": "Knell",
+    "intro": "frame=79380 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nATTRYCE: Hear the bell? That\u2019s|our cue. My WATER team keeps|rolling until the final round!"
+  },
+  {
+    "case": "Mako",
+    "intro": "frame=83220 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nMAKO: Plenty of challengers look|calm on the surface. Let\u2019s see|what happens under pressure."
+  },
+  {
+    "case": "Sable",
+    "intro": "frame=87060 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nSABLE: You came looking for|something exotic? My|ordinary-looking team has a few|surprises."
+  },
+  {
+    "case": "Jet",
+    "intro": "frame=90720 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nJET: My team keeps its feet on|the ground. One clean opening,|and we hit like a landslide!"
+  },
+  {
+    "case": "Viper",
+    "intro": "frame=94560 map=2,0 xy=6,7 step=2/1 timer=0 main=8056e25 lock=1 party=6\nVIPER: A little pressure, a|little poison. I prefer a plan|that keeps working after the|first hit."
+  }
+]

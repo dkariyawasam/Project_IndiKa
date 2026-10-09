@@ -139,15 +139,10 @@ Route2_Text_GarretPostBattle::
 	.string "open grass on the other.$"
 
 Route2_Text_JonahIntro::
-	.string "The forest gate is close.\p"
-	.string "If you can handle my bugs, you can\n"
-	.string "handle the path ahead!$"
+	.string "The forest entrance is close. If\nyou can handle my bugs, you can\phandle the path ahead!$"
 
 Route2_Text_JonahRematchIntro::
-	.string "You've crossed the forest gate\n"
-	.string "before.\p"
-	.string "Let's see if my bugs can still\n"
-	.string "slow you down!$"
+	.string "You've crossed beneath those\ntrees before. Let's see if my\pbugs can still slow you down!$"
 
 Route2_Text_JonahDefeat::
 	.string "My bugs lost their footing!$"

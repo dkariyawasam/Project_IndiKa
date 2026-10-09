@@ -321,3 +321,23 @@ const u16 gObjectEventPal_Brunette_pokefan_f[] = INCBIN_U16("graphics/object_eve
 const u16 gObjectEventPal_Brunette_pokefan_m[] = INCBIN_U16("graphics/object_events/palettes/brunette_pokefan_m.gbapal");
 
 const u16 gObjectEventPal_Brunette_youngster[] = INCBIN_U16("graphics/object_events/palettes/brunette_youngster.gbapal");
+
+const u16 gObjectEventPal_LightHair_celio[] = INCBIN_U16("graphics/object_events/palettes/light_hair_celio.gbapal");
+
+const u16 gObjectEventPal_LightHair_golden[] = INCBIN_U16("graphics/object_events/palettes/light_hair_golden.gbapal");
+
+const u16 gObjectEventPal_LightHair_trendsetter_f[] = INCBIN_U16("graphics/object_events/palettes/light_hair_trendsetter_f.gbapal");
+
+const u16 gObjectEventPal_LightHair_breeder[] = INCBIN_U16("graphics/object_events/palettes/light_hair_breeder.gbapal");
+
+const u16 gObjectEventPal_LightHair_swimmer_f[] = INCBIN_U16("graphics/object_events/palettes/light_hair_swimmer_f.gbapal");
+
+const u16 gObjectEventPal_LightHair_trendsetter_m[] = INCBIN_U16("graphics/object_events/palettes/light_hair_trendsetter_m.gbapal");
+
+const u16 gObjectEventPal_LightHair_tuber_m[] = INCBIN_U16("graphics/object_events/palettes/light_hair_tuber_m.gbapal");
+
+const u16 gObjectEventPal_RocketArcher[] = INCBIN_U16("graphics/object_events/palettes/rocket_archer.gbapal");
+const u16 gObjectEventPic_RocketArcher[] = INCBIN_U16("graphics/object_events/pics/people/rocket_admin_archer.4bpp");
+
+const u16 gObjectEventPal_RocketProton[] = INCBIN_U16("graphics/object_events/palettes/rocket_proton.gbapal");
+const u16 gObjectEventPic_RocketProton[] = INCBIN_U16("graphics/object_events/pics/people/rocket_admin_proton.4bpp");

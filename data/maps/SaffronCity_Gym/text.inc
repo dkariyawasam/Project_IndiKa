@@ -113,8 +113,7 @@ SaffronCity_Gym_Text_OrinIntro::
     .string "Now, focus your team!$"
 
 SaffronCity_Gym_Text_OrinDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "My thoughts ran ahead of my\nteam!$"
 
 SaffronCity_Gym_Text_OrinAfter::
     .string "A calm mind can learn\n"
@@ -125,8 +124,7 @@ SaffronCity_Gym_Text_AldenIntro::
     .string "I test concentration.$"
 
 SaffronCity_Gym_Text_AldenDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "You found the clear way through!$"
 
 SaffronCity_Gym_Text_AldenAfter::
     .string "The shortest path is not\n"
@@ -137,8 +135,7 @@ SaffronCity_Gym_Text_SilasIntro::
     .string "Let us find out.$"
 
 SaffronCity_Gym_Text_SilasDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "I didn't predict that finish!$"
 
 SaffronCity_Gym_Text_SilasAfter::
     .string "Prediction still needs practice.\n"
@@ -149,8 +146,7 @@ SaffronCity_Gym_Text_MiraIntro::
     .string "Show me yours in battle.$"
 
 SaffronCity_Gym_Text_MiraDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "My concentration slipped!$"
 
 SaffronCity_Gym_Text_MiraAfter::
     .string "Our training continues\n"
@@ -161,8 +157,7 @@ SaffronCity_Gym_Text_SeleneIntro::
     .string "Listen to your POKéMON.$"
 
 SaffronCity_Gym_Text_SeleneDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "Your team heard you clearly!$"
 
 SaffronCity_Gym_Text_SeleneAfter::
     .string "Trust makes it easier\n"
@@ -173,8 +168,7 @@ SaffronCity_Gym_Text_LyraIntro::
     .string "That is my kind of strength.$"
 
 SaffronCity_Gym_Text_LyraDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "A clear and decisive answer!$"
 
 SaffronCity_Gym_Text_LyraAfter::
     .string "Come back with your VS SEEKER.\n"

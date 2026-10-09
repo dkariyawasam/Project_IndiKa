@@ -2856,26 +2856,26 @@ EventScript_RouteTrainer_PKMN_BREEDER_ALLISONRematch::
 	end
 
 EventScript_RouteTrainer_AROMA_LADY_NIKKI::
-	trainerbattle_single TRAINER_AROMA_LADY_NIKKI, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Intro, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Defeat
+	trainerbattle_single TRAINER_ROUTE8_AROMA_LADY_HEATHER, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Intro, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_NIKKIRematch
 	msgbox EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_AROMA_LADY_NIKKIRematch::
-	trainerbattle_rematch TRAINER_AROMA_LADY_NIKKI, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_RematchIntro, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Defeat
+	trainerbattle_rematch TRAINER_ROUTE8_AROMA_LADY_HEATHER, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_RematchIntro, EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_Defeat
 	msgbox EventScript_RouteTrainer_AROMA_LADY_NIKKI_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_AROMA_LADY_VIOLET::
-	trainerbattle_single TRAINER_AROMA_LADY_VIOLET, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Intro, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Defeat
+	trainerbattle_single TRAINER_ROUTE5_AROMA_LADY_IRMA, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Intro, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Defeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, EventScript_RouteTrainer_AROMA_LADY_VIOLETRematch
 	msgbox EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_RouteTrainer_AROMA_LADY_VIOLETRematch::
-	trainerbattle_rematch TRAINER_AROMA_LADY_VIOLET, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_RematchIntro, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Defeat
+	trainerbattle_rematch TRAINER_ROUTE5_AROMA_LADY_IRMA, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_RematchIntro, EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_Defeat
 	msgbox EventScript_RouteTrainer_AROMA_LADY_VIOLET_Text_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -4222,38 +4222,29 @@ EventScript_ForestTrainer_BUG_CATCHER_FINN_Text_PostBattle::
     .string "You notice more when you stop\n"
     .string "rushing between cities.$"
 EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_Intro::
-    .string "This BUG CATCHER knows\n"
-    .string "VIRIDIAN FOREST well!$"
+	.string "See that curled leaf? Something\nbuilt a shelter inside it! My\pbugs have a surprise too!$"
 EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_RematchIntro::
-    .string "Back on VIRIDIAN FOREST?\n"
-    .string "Then we battle again!$"
+	.string "I found more leaf shelters! My\nteam has been busy growing too!$"
 EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_Defeat::
-    .string "VIRIDIAN FOREST wins today!$"
+	.string "My surprise came unwrapped!$"
 EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I leave curled leaves alone. I'd\nhate someone tearing down my\proof to say hello.$"
 EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_Intro::
-    .string "This BUG CATCHER knows\n"
-    .string "FUCHSIA FOREST well!$"
+	.string "I found a bug clinging under a\nwet leaf. It didn't slide off\ponce! My team can hang on too!$"
 EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_RematchIntro::
-    .string "Back on FUCHSIA FOREST?\n"
-    .string "Then we battle again!$"
+	.string "We've practised holding on! Try\nshaking our team this time!$"
 EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_Defeat::
-    .string "FUCHSIA FOREST wins today!$"
+	.string "We lost our grip!$"
 EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_PostBattle::
-    .string "FUCHSIA FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I check underneath leaves after\nrain. There's a whole forest you\pmiss by looking down.$"
 EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_Intro::
-    .string "This BUG MANIAC knows\n"
-    .string "VIRIDIAN FOREST well!$"
+	.string "I compare the patterns on shed\nskins. No two finds are quite\palike. Let me study your team!$"
 EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_RematchIntro::
-    .string "Back on VIRIDIAN FOREST?\n"
-    .string "Then we battle again!$"
+	.string "New notes, new questions. Shall\nwe test another theory?$"
 EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_Defeat::
-    .string "VIRIDIAN FOREST wins today!$"
+	.string "An unexpected result!$"
 EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "An empty shell isn't a dead bug.\nIt may be proof that something\pis still growing.$"
 EventScript_ForestTrainer_BUG_MANIAC_HOLLIS_Text_Intro::
     .string "Everyone talks about the DAY CARE,\n"
     .string "but I watch the bugs nearby.\p"
@@ -4285,16 +4276,13 @@ EventScript_ForestTrainer_BUG_MANIAC_JACKSON_Text_PostBattle::
     .string "Sometimes the important movement\n"
     .string "is under your feet.$"
 EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_Intro::
-    .string "This BUG MANIAC knows\n"
-    .string "FUCHSIA FOREST well!$"
+	.string "Hear that clicking? I record\nwhich bugs answer each other.\pLet's see how your team\nresponds!$"
 EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_RematchIntro::
-    .string "Back on FUCHSIA FOREST?\n"
-    .string "Then we battle again!$"
+	.string "I learned another call. Now I\nwant to hear your battle\pcommands!$"
 EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_Defeat::
-    .string "FUCHSIA FOREST wins today!$"
+	.string "That stopped my clicking!$"
 EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_PostBattle::
-    .string "FUCHSIA FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "One call can set the whole patch\nbuzzing. I wait quietly to hear\pwho starts it.$"
 EventScript_ForestTrainer_CAMPER_DENNY_Text_Intro::
     .string "My knots hold firm. Let us\n"
     .string "see if my strategy does too!$"
@@ -4381,16 +4369,13 @@ EventScript_ForestTrainer_PICNICKER_ROSA_Text_PostBattle::
     .string "far away. Their leaves make\p"
     .string "better landmarks.$"
 EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_Intro::
-    .string "This BREEDER knows\n"
-    .string "VIRIDIAN FOREST well!$"
+	.string "My young POKéMON startle at\nrustling leaves. We take little\pwalks to build their confidence.$"
 EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_RematchIntro::
-    .string "Back on VIRIDIAN FOREST?\n"
-    .string "Then we battle again!$"
+	.string "They recognised your footsteps!\nWould you help with another\plesson?$"
 EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_Defeat::
-    .string "VIRIDIAN FOREST wins today!$"
+	.string "They stayed brave to the end!$"
 EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I let them investigate a sound\nbefore moving on. Confidence\pgrows faster than orders can\nforce it.$"
 EventScript_ForestTrainer_PKMN_BREEDER_NIA_Text_Intro::
     .string "The DAY CARE teaches you that\n"
     .string "POKéMON grow in their own time.\p"
@@ -4406,38 +4391,29 @@ EventScript_ForestTrainer_PKMN_BREEDER_NIA_Text_PostBattle::
     .string "Some need time.\p"
     .string "Good TRAINERS learn both.$"
 EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_Intro::
-    .string "This BREEDER knows\n"
-    .string "FUCHSIA FOREST well!$"
+	.string "I brought my POKéMON out of the\ncity to explore. New smells can\pbe quite an adventure!$"
 EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_RematchIntro::
-    .string "Back on FUCHSIA FOREST?\n"
-    .string "Then we battle again!$"
+	.string "They remembered this path! Let's\nsee what else they remember!$"
 EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_Defeat::
-    .string "FUCHSIA FOREST wins today!$"
+	.string "An adventure for us both!$"
 EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_PostBattle::
-    .string "FUCHSIA FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I let them choose which scent to\nfollow, then call them back.\pThey learn that exploring\ndoesn't mean being alone.$"
 EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_Intro::
-    .string "This RANGER knows\n"
-    .string "VIRIDIAN FOREST well!$"
+	.string "I keep fallen branches off the\ntrail. A clear path protects the\pplants beside it. Ready for a\nfield test?$"
 EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_RematchIntro::
-    .string "Back on VIRIDIAN FOREST?\n"
-    .string "Then we battle again!$"
+	.string "The trail is clear again. Let's\ncheck how your team is doing!$"
 EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_Defeat::
-    .string "VIRIDIAN FOREST wins today!$"
+	.string "You handled that with care!$"
 EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_PostBattle::
-    .string "VIRIDIAN FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I move a branch only as far as I\nneed to. Something may still be\pliving beneath it.$"
 EventScript_ForestTrainer_PKMN_RANGER_REED_Text_Intro::
-    .string "This RANGER knows\n"
-    .string "FUCHSIA FOREST well!$"
+	.string "I check the trees along the\npaths from FUCHSIA. Show me that\pyou and your team can travel\ntogether.$"
 EventScript_ForestTrainer_PKMN_RANGER_REED_Text_RematchIntro::
-    .string "Back on FUCHSIA FOREST?\n"
-    .string "Then we battle again!$"
+	.string "Your team looks well rested.\nReady for another patrol test?$"
 EventScript_ForestTrainer_PKMN_RANGER_REED_Text_Defeat::
-    .string "FUCHSIA FOREST wins today!$"
+	.string "A dependable team!$"
 EventScript_ForestTrainer_PKMN_RANGER_REED_Text_PostBattle::
-    .string "FUCHSIA FOREST has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I look for fresh damage after\nstrong winds. A familiar path\pstill deserves a fresh look.$"
 EventScript_GymAdjacent_AROMA_LADY_NIKKI_Text_Intro::
     .string "Something sweet is drifting\n"
     .string "from deeper in the forest.\p"
@@ -4554,38 +4530,29 @@ EventScript_WatersEdge_SAILOR_TYRON_Text_PostBattle::
     .string "Watch how TRAINERS flow between\n"
     .string "the city and the sea.$"
 EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_Intro::
-    .string "This RUIN MANIAC knows\n"
-    .string "CERULEAN CAVE well!$"
+	.string "Look at the bands in this stone!\nEach layer formed differently.\pMy battle plan has layers too!$"
 EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_RematchIntro::
-    .string "Back on CERULEAN CAVE?\n"
-    .string "Then we battle again!$"
+	.string "I've revised my notes and my\nstrategy. Let's compare them\pagain!$"
 EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_Defeat::
-    .string "CERULEAN CAVE wins today!$"
+	.string "You reached the weakest layer!$"
 EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_PostBattle::
-    .string "CERULEAN CAVE has more to teach\n"
-    .string "than one battle can show.$"
+	.string "A loose fragment tells only part\nof the story. I record where it\pcame from before picking it up.$"
 EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_Intro::
-    .string "This RUIN MANIAC knows\n"
-    .string "CERULEAN CAVE well!$"
+	.string "Something disturbed these deep\nrocks. I'm tracing the\pfractures. Your team looks like\na force worth studying!$"
 EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_RematchIntro::
-    .string "Back on CERULEAN CAVE?\n"
-    .string "Then we battle again!$"
+	.string "The stone hasn't moved, but my\nideas have. Time to test them!$"
 EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_Defeat::
-    .string "CERULEAN CAVE wins today!$"
+	.string "Another crack in my theory!$"
 EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_PostBattle::
-    .string "CERULEAN CAVE has more to teach\n"
-    .string "than one battle can show.$"
+	.string "The lake hides the ends of these\nfractures. I won't guess what\plies beneath without evidence.$"
 EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_Intro::
-    .string "This RUIN MANIAC knows\n"
-    .string "CERULEAN CAVE well!$"
+	.string "These marks show where the water\nonce reached. Shall we compare\pwhat our teams have learned?$"
 EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_RematchIntro::
-    .string "Back on CERULEAN CAVE?\n"
-    .string "Then we battle again!$"
+	.string "I found a higher water mark.\nPerhaps your team has reached\pnew heights too!$"
 EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_Defeat::
-    .string "CERULEAN CAVE wins today!$"
+	.string "My theory doesn't hold water!$"
 EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_PostBattle::
-    .string "CERULEAN CAVE has more to teach\n"
-    .string "than one battle can show.$"
+	.string "Water leaves evidence long after\nit moves on. I sketch the marks\pbefore the next flood changes\nthem.$"
 EventScript_Mansion_BURGLAR_EGAN_Text_Intro::
     .string "This place is abandoned?\p"
     .string "Then nobody will miss what I\n"
@@ -4863,11 +4830,9 @@ EventScript_RouteTrainer_BUG_MANIAC_MARK_Text_PostBattle::
     .string "are small enough to hide\l"
     .string "under one leaf.$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro::
-    .string "All the MR. MIME have withdrawn\n"
-    .string "from the area!$"
+	.string "I study MR. MIME, but they've\nall withdrawn into DIGLETT'S\pCAVE! Perhaps a battle will\nclear my head.$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro::
-    .string "All the MR. MIME have withdrawn\n"
-    .string "from the area!$"
+	.string "Still no sign of the wild MR.\nMIME. My own partner is eager to\psee you again, though!$"
 EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Defeat::
     .string "I would've won had you\n"
     .string "challenged me before they shut\l"
@@ -5505,7 +5470,7 @@ EventScript_RouteTrainer_TUBER_ALEXIS_Text_RematchIntro::
     .string "into a real sea route?\p"
     .string "Then I want another battle!$"
 EventScript_RouteTrainer_TUBER_ALEXIS_Text_Defeat::
-    .string "Splashed out!$"
+	.string "You tipped my float!$"
 EventScript_RouteTrainer_TUBER_ALEXIS_Text_PostBattle::
     .string "The grown-ups swim farther south,\n"
     .string "but I like staying near PALLET.\p"
@@ -5702,7 +5667,7 @@ EventScript_RouteTrainer_ROUTE14_TRIATHLETE_LOLA_Text_RematchIntro::
     .string "Back for another uneven run?\p"
     .string "Good. My rhythm is sharper now!$"
 EventScript_RouteTrainer_ROUTE14_TRIATHLETE_LOLA_Text_Defeat::
-    .string "You kept your balance!$"
+	.string "My stride fell apart!$"
 EventScript_RouteTrainer_ROUTE14_TRIATHLETE_LOLA_Text_PostBattle::
     .string "ROUTE 14 is tougher than it looks.\p"
     .string "If your feet drift, your commands\n"
@@ -5904,9 +5869,7 @@ Route17_EventScript_Erin_Text_PostBattle::
     .string "I like making them pause one\n"
     .string "last time.$"
 Route17_EventScript_June_Text_Intro::
-    .string "I brought picnic food, but the\n"
-    .string "wind keeps trying to steal it.\p"
-    .string "A battle is easier to hold onto!$"
+	.string "My food is strapped to the bike,\nbut the wind keeps pulling at\pthe bag! Let's stop for a match.$"
 Route17_EventScript_June_Text_RematchIntro::
     .string "Back on the windy stretch?\p"
     .string "Good. My lunch can wait for\n"
@@ -5914,9 +5877,7 @@ Route17_EventScript_June_Text_RematchIntro::
 Route17_EventScript_June_Text_Defeat::
     .string "There goes my rhythm!$"
 Route17_EventScript_June_Text_PostBattle::
-    .string "The grass beside the road is\n"
-    .string "calmer than the pavement.\p"
-    .string "That's why I stay near the edge.$"
+	.string "I eat before the last climb. An\nempty stomach makes for heavy\ppedals.$"
 Route17_EventScript_Miles_Text_Intro::
     .string "I mark the middle stretch by\n"
     .string "how loud the wheels get.\p"
@@ -5933,13 +5894,9 @@ Route17_EventScript_Miles_Text_PostBattle::
     .string "I battle the ones who still\n"
     .string "look sharp.$"
 Route17_EventScript_Milo_Text_Intro::
-    .string "I race beside the BIKERS until\n"
-    .string "my legs give out.\p"
-    .string "If you want past me, battle first!$"
+	.string "I ride beside the BIKERS until\nmy legs ache. My team still has\penergy for you!$"
 Route17_EventScript_Milo_Text_RematchIntro::
-    .string "Back for another downhill race?\p"
-    .string "Great! I'll battle before my\n"
-    .string "next sprint.$"
+	.string "Chain checked, tyres ready. One\nbattle before my next ride!$"
 Route17_EventScript_Milo_Text_Defeat::
     .string "You passed me!$"
 Route17_EventScript_Milo_Text_PostBattle::
@@ -5947,23 +5904,15 @@ Route17_EventScript_Milo_Text_PostBattle::
     .string "race and narrow enough for a\n"
     .string "battle.$"
 Route17_EventScript_Nico_Text_Intro::
-    .string "Everyone says CYCLING ROAD is\n"
-    .string "for BIKERS.\p"
-    .string "I'm proving runners can keep up!$"
+	.string "Running and swimming can wait.\nToday I'm working on my cycling!\pTry to match our cadence!$"
 Route17_EventScript_Nico_Text_RematchIntro::
-    .string "Back for another downhill race?\p"
-    .string "Good! I've still got breath for\n"
-    .string "one more battle.$"
+	.string "I've ridden the downhill stretch\nagain. Let's test my team's\pfinish!$"
 Route17_EventScript_Nico_Text_Defeat::
     .string "Outpaced!$"
 Route17_EventScript_Nico_Text_PostBattle::
-    .string "If I can keep my footing here,\n"
-    .string "FUCHSIA's flat roads will feel\n"
-    .string "easy.$"
+	.string "I keep my pedals turning evenly\nover the rough patches. A steady\peffort gets me farther.$"
 Route17_EventScript_Mina_Text_Intro::
-    .string "Near the bottom, everyone thinks\n"
-    .string "the race is over.\p"
-    .string "That's when I sprint ahead!$"
+	.string "Near the bottom, everyone stops\npedalling. That's when I put on\pa final burst!$"
 Route17_EventScript_Mina_Text_RematchIntro::
     .string "You came back to the lower road?\p"
     .string "Then don't relax yet. Race me!$"
@@ -6056,11 +6005,9 @@ EventScript_RouteTrainer_ROUTE17_SCOUT_LEAH_Text_PostBattle::
     .string "Good rest points turn a hard road\n"
     .string "into a manageable one.$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Intro::
-    .string "This slope is my training route.\p"
-    .string "Keep up if you can!$"
+	.string "I practise keeping my wheels on\na clean line. My POKéMON train\pfor precise moves too!$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_RematchIntro::
-    .string "Back for another downhill run?\p"
-    .string "Good. Keep your cadence steady!$"
+	.string "Another downhill ride is done.\nTime to test that steady\pcadence!$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Defeat::
     .string "You kept pace!$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_PostBattle::
@@ -6071,8 +6018,7 @@ EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Intro::
     .string "to FUCHSIA.\p"
     .string "Let's see your split!$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_RematchIntro::
-    .string "Another timed run?\p"
-    .string "Then don't blink!$"
+	.string "A new riding time to beat! Can\nmy team finish as strongly?$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_Defeat::
     .string "Fast finish!$"
 EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_PostBattle::
@@ -6102,137 +6048,101 @@ Route25_EventScript_Nob_Text_PostBattle::
     .string "ROUTE 25 has more to teach\n"
     .string "than one battle can show.$"
 WatersEdge_EventScript_HarborFishermanOtto_Text_Intro::
-    .string "This FISHERMAN knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I lower my line beside the\nmooring posts. No need for a\pfancy cast. Show me your\ntechnique!$"
 WatersEdge_EventScript_HarborFishermanOtto_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "Same old rod, new trick. Watch\nthe tip!$"
 WatersEdge_EventScript_HarborFishermanOtto_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "A fine catch, young one!$"
 WatersEdge_EventScript_HarborFishermanOtto_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "A still float isn't always a bad\nsign. Sometimes the fish are\pstudying you.$"
 WatersEdge_EventScript_HarborFishermanVale_Text_Intro::
-    .string "This FISHERMAN knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "The forest runoff meets salt\nwater here. I never know what\pwill bite next!$"
 WatersEdge_EventScript_HarborFishermanVale_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "I've filled another page with\ncatches. Your team deserves a\ppage too!$"
 WatersEdge_EventScript_HarborFishermanVale_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "That's one for my records!$"
 WatersEdge_EventScript_HarborFishermanVale_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I note each catch with the tide.\nEven familiar fish choose\pdifferent water.$"
 WatersEdge_EventScript_HarborSailorMorgan_Text_Intro::
-    .string "This SAILOR knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I watch the treeline to judge\nthe wind. A sailor needs more\pthan a view of the waves!$"
 WatersEdge_EventScript_HarborSailorMorgan_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "Leaves fluttering, pennants\nflying... A fine breeze for\panother match!$"
 WatersEdge_EventScript_HarborSailorMorgan_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "A change of wind caught me!$"
 WatersEdge_EventScript_HarborSailorMorgan_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "Those trees mark the eastern\nshore. After a long voyage,\pgreen is a welcome sight.$"
 WatersEdge_EventScript_HarborSailorPax_Text_Intro::
-    .string "This SAILOR knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I tie knots aboard ship. In\nbattle, I like leaving my\popponent in a tangle!$"
 WatersEdge_EventScript_HarborSailorPax_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "No loose ends in our plan today!\nLet's see you untie it!$"
 WatersEdge_EventScript_HarborSailorPax_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "You slipped every knot!$"
 WatersEdge_EventScript_HarborSailorPax_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "A knot should hold under strain,\nthen loosen when you need it.\pThat's a useful lesson ashore.$"
 WatersEdge_EventScript_HarborSailorRafe_Text_Intro::
-    .string "This SAILOR knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "Loading cargo taught me to share\nthe weight. My team knows how to\ppull together!$"
 WatersEdge_EventScript_HarborSailorRafe_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "All hands ready! We've learned\nto answer each other faster!$"
 WatersEdge_EventScript_HarborSailorRafe_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "You carried that battle!$"
 WatersEdge_EventScript_HarborSailorRafe_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "The smallest deckhand can spot a\nslipping rope. I listen when\panyone calls out.$"
 WatersEdge_EventScript_HarborSwimmerDane_Text_Intro::
-    .string "This SWIMMER knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I swim short lengths between\nrests on shore. Fast isn't much\puse if you can't get back!$"
 WatersEdge_EventScript_HarborSwimmerDane_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "Rested, warmed up, ready! Let's\nmake this a good length!$"
 WatersEdge_EventScript_HarborSwimmerDane_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "Time for my shore break!$"
 WatersEdge_EventScript_HarborSwimmerDane_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "Boats need room to turn. I stay\nwell clear of their route, even\pon a good day.$"
 WatersEdge_EventScript_HarborSwimmerLina_Text_Intro::
-    .string "This SWIMMER knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I can float without making a\nripple. My POKéMON aren't nearly\pso quiet!$"
 WatersEdge_EventScript_HarborSwimmerLina_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "I heard your splashes coming.\nOur quiet break is over!$"
 WatersEdge_EventScript_HarborSwimmerLina_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "So much for a quiet swim!$"
 WatersEdge_EventScript_HarborSwimmerLina_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "Lie back and listen. The ropes\ncreak, the gulls call... The\pharbor has a rhythm.$"
 WatersEdge_EventScript_HarborTriathleteElle_Text_Intro::
-    .string "This TRIATHLETE knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "My partner sets our training\npace. Today it wants to stop and\pchallenge you!$"
 WatersEdge_EventScript_HarborTriathleteElle_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "My partner spotted you again. I\nthink it wants a rematch!$"
 WatersEdge_EventScript_HarborTriathleteElle_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "A well-earned water break!$"
 WatersEdge_EventScript_HarborTriathleteElle_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "Some days we train hard. Other\ndays we walk along the trees.\pRest is part of getting\nstronger.$"
 WatersEdge_EventScript_HarborTriathleteRory_Text_Intro::
-    .string "This TRIATHLETE knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I'm working on even splits.\nStarting too fast cost me my\plast race. Race my team instead!$"
 WatersEdge_EventScript_HarborTriathleteRory_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "I've saved something for the\nfinal stretch this time!$"
 WatersEdge_EventScript_HarborTriathleteRory_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "I spent too much too soon!$"
 WatersEdge_EventScript_HarborTriathleteRory_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I measure progress by what I\nhave left at the finish, not how\pI feel at the start.$"
 WatersEdge_EventScript_HarborTriathleteSkye_Text_Intro::
-    .string "This TRIATHLETE knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I practise changing from a swim\nto a run. The first few steps\palways feel strange!$"
 WatersEdge_EventScript_HarborTriathleteSkye_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "Shoes ready, breath steady. This\ntransition includes a battle!$"
 WatersEdge_EventScript_HarborTriathleteSkye_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "You caught me in transition!$"
 WatersEdge_EventScript_HarborTriathleteSkye_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I lay out my shoes before\nswimming. Finding them shouldn't\pbe the hardest part of training.$"
 WatersEdge_EventScript_HarborTuberKai_Text_Intro::
-    .string "This TUBER knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "My float keeps bobbing when the\nships go by! Can your team stay\psteady?$"
 WatersEdge_EventScript_HarborTuberKai_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "I stayed upright through three\nwakes! Now for your POKéMON!$"
 WatersEdge_EventScript_HarborTuberKai_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "Whoa! My float did a flip!$"
 WatersEdge_EventScript_HarborTuberKai_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I count the ripples after each\nboat. The little ones always\pcatch up!$"
 WatersEdge_EventScript_HarborTuberMina_Text_Intro::
-    .string "This TUBER knows\n"
-    .string "VERMILION HARBOR well!$"
+	.string "I found a shell shaped like a\ntiny shield! My team wants to\ptest it.$"
 WatersEdge_EventScript_HarborTuberMina_Text_RematchIntro::
-    .string "Back on VERMILION HARBOR?\n"
-    .string "Then we battle again!$"
+	.string "Look, another shield shell! This\ntime we have a plan!$"
 WatersEdge_EventScript_HarborTuberMina_Text_Defeat::
-    .string "VERMILION HARBOR wins today!$"
+	.string "My shell couldn't save us!$"
 WatersEdge_EventScript_HarborTuberMina_Text_PostBattle::
-    .string "VERMILION HARBOR has more to teach\n"
-    .string "than one battle can show.$"
+	.string "I put the shells back when I'm\ndone. Someone small might need a\phome.$"
 WatersEdge_EventScript_Route10FishermanPierce_Text_Intro::
     .string "The POWER PLANT hums through\n"
     .string "the water if you listen.\p"
@@ -6322,7 +6232,7 @@ WatersEdge_EventScript_Route12SailorBriggs_Text_RematchIntro::
     .string "Back in the narrow channel?\p"
     .string "Good. Hold your course!$"
 WatersEdge_EventScript_Route12SailorBriggs_Text_Defeat::
-    .string "You held the channel!$"
+	.string "You steered through my defence!$"
 WatersEdge_EventScript_Route12SailorBriggs_Text_PostBattle::
     .string "VERMILION HARBOR feels wide\n"
     .string "after you train here awhile.$"
@@ -6372,7 +6282,7 @@ WatersEdge_EventScript_Route12TuberLuca_Text_RematchIntro::
     .string "Back to splash by the bridge?\p"
     .string "Then let's battle!$"
 WatersEdge_EventScript_Route12TuberLuca_Text_Defeat::
-    .string "Splashdown!$"
+	.string "My splash barely reached you!$"
 WatersEdge_EventScript_Route12TuberLuca_Text_PostBattle::
     .string "If you stand still too long here,\n"
     .string "someone starts fishing beside you.$"
@@ -6813,20 +6723,16 @@ EventScript_ForestTrainer_PKMN_RANGER_IVY_Text_PostBattle::
     .string "with every journey.$"
 
 EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Intro::
-    .string "PSYCHIC JOHAN knows\n"
-    .string "SAFFRON's streets well!$"
+	.string "The noise from SAFFRON makes it\nhard to hear a single thought.\pCan you focus on one command?$"
 
 EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_RematchIntro::
-    .string "The paths around SAFFRON\n"
-    .string "are clear in my mind!$"
+	.string "I recognised your steps this\ntime. Let's see if I can predict\pyour moves!$"
 
 EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Defeat::
-    .string "You know the path\n"
-    .string "better than I thought!$"
+	.string "You cut through the noise!$"
 
 EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_PostBattle::
-    .string "Saffron's streets change\n"
-    .string "with every journey.$"
+	.string "I close my eyes and picture this\nroad. The footsteps tell me\pwhich way people are heading.$"
 
 EventScript_GymAdjacent_PSYCHIC_PRESTON_Text_Intro::
     .string "Close to SAFFRON,\n"

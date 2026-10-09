@@ -24,7 +24,7 @@ SSAnne_1F_Room4_EventScript_TrendsettersBriRemi_Intro::
     .string "A grand voyage needs\na grand entrance!$"
 
 SSAnne_1F_Room4_EventScript_TrendsettersBriRemi_Defeat::
-    .string "You have a style all your own!$"
+	.string "You stole our grand entrance!$"
 
 SSAnne_1F_Room4_EventScript_TrendsettersBriRemi_Post::
     .string "Our next stop?\nThe shops in Celadon!$"

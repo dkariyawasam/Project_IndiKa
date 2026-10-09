@@ -241,7 +241,7 @@ CinnabarIsland_Gym_Text_UpgradeOffer::
 	.string "PORYGON upgrade terminal online.\n"
 	.string "Begin an upgrade?\p"
 	.string "Select a compatible POKéMON.\n"
-	.string "Three checks must pass first.$"
+	.string "Three checks configure it.$"
 
 CinnabarIsland_Gym_Text_UpgradeQuestion1::
 	.string "CHECK 1: Should new software\n"

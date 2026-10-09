@@ -158,15 +158,14 @@ Route9_Text_BriceRematchIntro::
 	.string "A little toughie, as always!$"
 
 Route9_Text_BrentRematchIntro::
-	.string "I got up early every day to train\n"
-	.string "my POKéMON from cocoons!$"
+	.string "I've practised my stance on\nloose stone. Try to knock me off\pbalance now!$"
 
 Route9_Text_AlanRematchIntro::
 	.string "Hahahaha!\n"
 	.string "I'll win this time!$"
 
 Route9_Text_ConnerRematchIntro::
-	.string "Go win, my super BUG POKéMON!$"
+	.string "I've sharpened my turns on this\nrocky path. Watch my team's\pfootwork!$"
 
 Route10_Text_MarkRematchIntro::
 	.string "Back by the POWER PLANT\n"

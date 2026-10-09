@@ -52,10 +52,10 @@ VictoryRoad_1F_Text_ExpertIvoIntro::
 	.string "Strength brought you this far.\nNow show me your judgment.$"
 
 VictoryRoad_1F_Text_ExpertIvoDefeat::
-	.string "Even experience has its limits!$"
+	.string "Your judgment held under strain!$"
 
 VictoryRoad_1F_Text_ExpertIvoPostBattle::
-	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+	.string "The last climb can tempt you to\nrush. Save enough strength to\pgreet what waits beyond it.$"
 
 VictoryRoad_1F_EventScript_ExpertKarina::
 	trainerbattle_single TRAINER_CHANNELER_KARINA_2, VictoryRoad_1F_Text_ExpertKarinaIntro, VictoryRoad_1F_Text_ExpertKarinaDefeat
@@ -73,7 +73,7 @@ VictoryRoad_1F_Text_ExpertKarinaIntro::
 	.string "The road ahead tests us all.\nShow me what you have learned.$"
 
 VictoryRoad_1F_Text_ExpertKarinaDefeat::
-	.string "Even experience has its limits!$"
+	.string "You carried your lessons well!$"
 
 VictoryRoad_1F_Text_ExpertKarinaPostBattle::
-	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+	.string "I think of every teacher who\nhelped me reach this road.\pLosing gives me one more to\nremember.$"

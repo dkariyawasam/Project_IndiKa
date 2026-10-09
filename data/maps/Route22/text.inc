@@ -56,7 +56,7 @@ Route22_Text_JarenRematchIntro::
 	.string "Try keeping up again!$"
 
 Route22_Text_JarenDefeat::
-	.string "Skidded out!$"
+	.string "I took that corner too sharply!$"
 
 Route22_Text_JarenPostBattle::
 	.string "Flat roads make lazy riders.\p"

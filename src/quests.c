@@ -2063,6 +2063,8 @@ static u8 CountEvolutionThroughBondMilestones(void)
         count++;
     if (IsSpeciesCaught(SPECIES_CHIMECHO))
         count++;
+    if (IsSpeciesCaught(SPECIES_MILOTIC))
+        count++;
     if (IsSpeciesCaught(SPECIES_PORYGON2))
         count++;
     if (IsSpeciesCaught(SPECIES_RHYPERIOR))

@@ -736,3 +736,14 @@ const struct Tileset gTileset_Route21 =
     .metatileAttributes = gMetatileAttributes_Route21,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_RocketLeagueArena =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PokemonLeague,
+    .palettes = gTilesetPalettes_RocketLeagueArena,
+    .metatiles = gMetatiles_PokemonLeague,
+    .metatileAttributes = gMetatileAttributes_PokemonLeague,
+    .callback = NULL,
+};

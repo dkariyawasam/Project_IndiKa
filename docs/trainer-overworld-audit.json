@@ -1,8 +1,8 @@
 {
   "summary": {
-    "maps_scanned": 253,
-    "trainer_object_events": 354,
-    "matched": 354
+    "maps_scanned": 246,
+    "trainer_object_events": 356,
+    "matched": 356
   },
   "mismatches": [],
   "skipped_multi_trainer_scripts": [],

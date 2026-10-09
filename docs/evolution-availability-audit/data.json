@@ -897,8 +897,8 @@
     },
     {
       "base": "FEEBAS",
-      "method": "EVO_BEAUTY",
-      "parameter": "170",
+      "method": "EVO_FRIENDSHIP",
+      "parameter": "0",
       "target": "MILOTIC"
     },
     {

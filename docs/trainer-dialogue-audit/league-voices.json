@@ -1,0 +1,162 @@
+{
+  "RocketLeague_Arena_Text_RazorIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "KARDINAL: You watch the attack.\\nI watch the choice before it.\\pTry keeping a secret from my\\nPSYCHIC team!$"
+  },
+  "RocketLeague_Arena_Text_RazorDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You chose a line I hadn't seen.$"
+  },
+  "RocketLeague_Arena_Text_VexIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "SHION: Still judging strength by\\nappearances? My FAIRY team\\penjoys correcting that mistake.$"
+  },
+  "RocketLeague_Arena_Text_VexDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "An unexpected outcome. I'll\\nrevise my prediction.$"
+  },
+  "RocketLeague_Arena_Text_NovaIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "MOJAY: Empty space? Look closer.\\nMy GHOST team is already making\\pitself at home under these\\nlights!$"
+  },
+  "RocketLeague_Arena_Text_NovaDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You didn't fall for our\\ndisappearing act!$"
+  },
+  "RocketLeague_Arena_Text_KnellIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "ATTRYCE: Hear the bell? That's\\nour cue. My WATER team keeps\\prolling until the final round!$"
+  },
+  "RocketLeague_Arena_Text_KnellDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You weathered every round!$"
+  },
+  "RocketLeague_Arena_Text_MakoIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "MAKO: Plenty of challengers look\\ncalm on the surface. Let's see\\pwhat happens under pressure.$"
+  },
+  "RocketLeague_Arena_Text_MakoDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You kept your head in deep\\nwater.$"
+  },
+  "RocketLeague_Arena_Text_SableIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "SABLE: You came looking for\\nsomething exotic? My\\pordinary-looking team has a few\\nsurprises.$"
+  },
+  "RocketLeague_Arena_Text_SableDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You noticed what mattered.\\nClever.$"
+  },
+  "RocketLeague_Arena_Text_JetIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "JET: My team keeps its feet on\\nthe ground. One clean opening,\\pand we hit like a landslide!$"
+  },
+  "RocketLeague_Arena_Text_JetDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You stopped us in our tracks!$"
+  },
+  "RocketLeague_Arena_Text_ViperIntro": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "VIPER: A little pressure, a\\nlittle poison. I prefer a plan\\pthat keeps working after the\\nfirst hit.$"
+  },
+  "RocketLeague_Arena_Text_ViperDefeat": {
+    "file": "data/maps/RocketLeague_Arena/text.inc",
+    "after": "You cut off my plan before it\\nspread!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LoreleiIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "LORELEI: The arena is warm, but\\nmy team is quite at home. Keep\\pyour composure when the cold\\ncloses in.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LoreleiDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "You stayed composed through it\\nall.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BrunoIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "BRUNO: Every step here took\\neffort! Put that effort behind\\pyour commands. Hoo hah!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BrunoDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Your training speaks for itself!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_AgathaIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "AGATHA: OAK sent you out to\\nlearn, did he? Let's see whether\\pyou can surprise an old hand!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_AgathaDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Hah! There is life in this old\\nchallenge yet!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LanceIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "LANCE: A dragon's strength needs\\na trainer who can guide it. Show\\pme how you guide your own team.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LanceDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Your team answered with\\nremarkable strength.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BrockIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "BROCK: We began with fragments\\nand questions. Now show me the\\pfoundation you've built since\\nMT. MOON.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BrockDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "That foundation held firm.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_MistyIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "MISTY: We've come a long way\\nfrom those currents! My team\\pwon't hold back. Let's make some\\nwaves!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_MistyDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "You found a way through every\\nwave!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LtSurgeIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "LT. SURGE: Look who made the\\nLEAGUE! Training's over, kid.\\pShow me that voltage under\\npressure!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_LtSurgeDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Now that's power you can rely\\non!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_ErikaIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "ERIKA: How lovely to meet here.\\nI can see how your team has\\pgrown. May we share another\\nlesson?$"
+  },
+  "PokemonLeague_BrunosRoom_Text_ErikaDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Your care has borne wonderful\\nfruit.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_KogaIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "KOGA: Fwahahaha! No volcanic\\ntrial today. Only your allies\\pand mine. Show me the strength\\nof that bond!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_KogaDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Together, you overcame my\\ntechnique!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BlaineIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "BLAINE: Hah! A familiar face\\nwith new ideas! Let's put those\\pdiscoveries through a proper\\nheat test!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_BlaineDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "A breakthrough! You burned past\\nmy expectations!$"
+  },
+  "PokemonLeague_BrunosRoom_Text_SabrinaIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "SABRINA: The arena is full of\\nexpectation. Let it pass. Listen\\pto your partners, then answer\\nme.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_SabrinaDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "Your will and theirs moved\\ntogether.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_GiovanniIntro": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "GIOVANNI: You taught me what\\ncontrol could not achieve.\\pToday, my team and I will show\\nyou what we have learned.$"
+  },
+  "PokemonLeague_BrunosRoom_Text_GiovanniDefeat": {
+    "file": "data/maps/PokemonLeague_BrunosRoom/text.inc",
+    "after": "We have more to learn. A worthy\\nresult.$"
+  }
+}

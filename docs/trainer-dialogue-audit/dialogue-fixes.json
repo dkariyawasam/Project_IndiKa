@@ -1,0 +1,807 @@
+{
+  "WatersEdge_EventScript_HarborTuberKai_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This TUBER knows\\nVERMILION HARBOR well!$",
+    "after": "My float keeps bobbing when the\\nships go by! Can your team stay\\psteady?$"
+  },
+  "WatersEdge_EventScript_HarborTuberKai_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "Whoa! My float did a flip!$"
+  },
+  "WatersEdge_EventScript_HarborTuberKai_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "I count the ripples after each\\nboat. The little ones always\\pcatch up!$"
+  },
+  "WatersEdge_EventScript_HarborTuberKai_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "I stayed upright through three\\nwakes! Now for your POKéMON!$"
+  },
+  "WatersEdge_EventScript_HarborTuberMina_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This TUBER knows\\nVERMILION HARBOR well!$",
+    "after": "I found a shell shaped like a\\ntiny shield! My team wants to\\ptest it.$"
+  },
+  "WatersEdge_EventScript_HarborTuberMina_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "My shell couldn't save us!$"
+  },
+  "WatersEdge_EventScript_HarborTuberMina_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "I put the shells back when I'm\\ndone. Someone small might need a\\phome.$"
+  },
+  "WatersEdge_EventScript_HarborTuberMina_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "Look, another shield shell! This\\ntime we have a plan!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanOtto_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This FISHERMAN knows\\nVERMILION HARBOR well!$",
+    "after": "I lower my line beside the\\nmooring posts. No need for a\\pfancy cast. Show me your\\ntechnique!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanOtto_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "A fine catch, young one!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanOtto_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "A still float isn't always a bad\\nsign. Sometimes the fish are\\pstudying you.$"
+  },
+  "WatersEdge_EventScript_HarborFishermanOtto_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "Same old rod, new trick. Watch\\nthe tip!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanVale_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This FISHERMAN knows\\nVERMILION HARBOR well!$",
+    "after": "The forest runoff meets salt\\nwater here. I never know what\\pwill bite next!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanVale_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "That's one for my records!$"
+  },
+  "WatersEdge_EventScript_HarborFishermanVale_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "I note each catch with the tide.\\nEven familiar fish choose\\pdifferent water.$"
+  },
+  "WatersEdge_EventScript_HarborFishermanVale_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "I've filled another page with\\ncatches. Your team deserves a\\ppage too!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerDane_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This SWIMMER knows\\nVERMILION HARBOR well!$",
+    "after": "I swim short lengths between\\nrests on shore. Fast isn't much\\puse if you can't get back!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerDane_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "Time for my shore break!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerDane_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "Boats need room to turn. I stay\\nwell clear of their route, even\\pon a good day.$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerDane_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "Rested, warmed up, ready! Let's\\nmake this a good length!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerLina_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This SWIMMER knows\\nVERMILION HARBOR well!$",
+    "after": "I can float without making a\\nripple. My POKéMON aren't nearly\\pso quiet!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerLina_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "So much for a quiet swim!$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerLina_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "Lie back and listen. The ropes\\ncreak, the gulls call... The\\pharbor has a rhythm.$"
+  },
+  "WatersEdge_EventScript_HarborSwimmerLina_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "I heard your splashes coming.\\nOur quiet break is over!$"
+  },
+  "WatersEdge_EventScript_HarborSailorPax_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This SAILOR knows\\nVERMILION HARBOR well!$",
+    "after": "I tie knots aboard ship. In\\nbattle, I like leaving my\\popponent in a tangle!$"
+  },
+  "WatersEdge_EventScript_HarborSailorPax_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "You slipped every knot!$"
+  },
+  "WatersEdge_EventScript_HarborSailorPax_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "A knot should hold under strain,\\nthen loosen when you need it.\\pThat's a useful lesson ashore.$"
+  },
+  "WatersEdge_EventScript_HarborSailorPax_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "No loose ends in our plan today!\\nLet's see you untie it!$"
+  },
+  "WatersEdge_EventScript_HarborSailorMorgan_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This SAILOR knows\\nVERMILION HARBOR well!$",
+    "after": "I watch the treeline to judge\\nthe wind. A sailor needs more\\pthan a view of the waves!$"
+  },
+  "WatersEdge_EventScript_HarborSailorMorgan_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "A change of wind caught me!$"
+  },
+  "WatersEdge_EventScript_HarborSailorMorgan_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "Those trees mark the eastern\\nshore. After a long voyage,\\pgreen is a welcome sight.$"
+  },
+  "WatersEdge_EventScript_HarborSailorMorgan_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "Leaves fluttering, pennants\\nflying... A fine breeze for\\panother match!$"
+  },
+  "WatersEdge_EventScript_HarborSailorRafe_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This SAILOR knows\\nVERMILION HARBOR well!$",
+    "after": "Loading cargo taught me to share\\nthe weight. My team knows how to\\ppull together!$"
+  },
+  "WatersEdge_EventScript_HarborSailorRafe_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "You carried that battle!$"
+  },
+  "WatersEdge_EventScript_HarborSailorRafe_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "The smallest deckhand can spot a\\nslipping rope. I listen when\\panyone calls out.$"
+  },
+  "WatersEdge_EventScript_HarborSailorRafe_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "All hands ready! We've learned\\nto answer each other faster!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteSkye_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This TRIATHLETE knows\\nVERMILION HARBOR well!$",
+    "after": "I practise changing from a swim\\nto a run. The first few steps\\palways feel strange!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteSkye_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "You caught me in transition!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteSkye_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "I lay out my shoes before\\nswimming. Finding them shouldn't\\pbe the hardest part of training.$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteSkye_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "Shoes ready, breath steady. This\\ntransition includes a battle!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteRory_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This TRIATHLETE knows\\nVERMILION HARBOR well!$",
+    "after": "I'm working on even splits.\\nStarting too fast cost me my\\plast race. Race my team instead!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteRory_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "I spent too much too soon!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteRory_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "I measure progress by what I\\nhave left at the finish, not how\\pI feel at the start.$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteRory_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "I've saved something for the\\nfinal stretch this time!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteElle_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This TRIATHLETE knows\\nVERMILION HARBOR well!$",
+    "after": "My partner sets our training\\npace. Today it wants to stop and\\pchallenge you!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteElle_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR wins today!$",
+    "after": "A well-earned water break!$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteElle_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VERMILION HARBOR has more to teach\\nthan one battle can show.$",
+    "after": "Some days we train hard. Other\\ndays we walk along the trees.\\pRest is part of getting\\nstronger.$"
+  },
+  "WatersEdge_EventScript_HarborTriathleteElle_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VERMILION HARBOR?\\nThen we battle again!$",
+    "after": "My partner spotted you again. I\\nthink it wants a rematch!$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BUG CATCHER knows\\nVIRIDIAN FOREST well!$",
+    "after": "See that curled leaf? Something\\nbuilt a shelter inside it! My\\pbugs have a surprise too!$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST wins today!$",
+    "after": "My surprise came unwrapped!$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I leave curled leaves alone. I'd\\nhate someone tearing down my\\proof to say hello.$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_NILES_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VIRIDIAN FOREST?\\nThen we battle again!$",
+    "after": "I found more leaf shelters! My\\nteam has been busy growing too!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BUG MANIAC knows\\nVIRIDIAN FOREST well!$",
+    "after": "I compare the patterns on shed\\nskins. No two finds are quite\\palike. Let me study your team!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST wins today!$",
+    "after": "An unexpected result!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST has more to teach\\nthan one battle can show.$",
+    "after": "An empty shell isn't a dead bug.\\nIt may be proof that something\\pis still growing.$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_CEDAR_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VIRIDIAN FOREST?\\nThen we battle again!$",
+    "after": "New notes, new questions. Shall\\nwe test another theory?$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This RANGER knows\\nVIRIDIAN FOREST well!$",
+    "after": "I keep fallen branches off the\\ntrail. A clear path protects the\\pplants beside it. Ready for a\\nfield test?$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST wins today!$",
+    "after": "You handled that with care!$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I move a branch only as far as I\\nneed to. Something may still be\\pliving beneath it.$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_HAZEL_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VIRIDIAN FOREST?\\nThen we battle again!$",
+    "after": "The trail is clear again. Let's\\ncheck how your team is doing!$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BREEDER knows\\nVIRIDIAN FOREST well!$",
+    "after": "My young POKéMON startle at\\nrustling leaves. We take little\\pwalks to build their confidence.$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST wins today!$",
+    "after": "They stayed brave to the end!$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "VIRIDIAN FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I let them investigate a sound\\nbefore moving on. Confidence\\pgrows faster than orders can\\nforce it.$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_ELI_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on VIRIDIAN FOREST?\\nThen we battle again!$",
+    "after": "They recognised your footsteps!\\nWould you help with another\\plesson?$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BUG CATCHER knows\\nFUCHSIA FOREST well!$",
+    "after": "I found a bug clinging under a\\nwet leaf. It didn't slide off\\ponce! My team can hang on too!$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST wins today!$",
+    "after": "We lost our grip!$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I check underneath leaves after\\nrain. There's a whole forest you\\pmiss by looking down.$"
+  },
+  "EventScript_ForestTrainer_BUG_CATCHER_TOBIN_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on FUCHSIA FOREST?\\nThen we battle again!$",
+    "after": "We've practised holding on! Try\\nshaking our team this time!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BUG MANIAC knows\\nFUCHSIA FOREST well!$",
+    "after": "Hear that clicking? I record\\nwhich bugs answer each other.\\pLet's see how your team\\nresponds!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST wins today!$",
+    "after": "That stopped my clicking!$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST has more to teach\\nthan one battle can show.$",
+    "after": "One call can set the whole patch\\nbuzzing. I wait quietly to hear\\pwho starts it.$"
+  },
+  "EventScript_ForestTrainer_BUG_MANIAC_QUILL_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on FUCHSIA FOREST?\\nThen we battle again!$",
+    "after": "I learned another call. Now I\\nwant to hear your battle\\pcommands!$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_REED_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This RANGER knows\\nFUCHSIA FOREST well!$",
+    "after": "I check the trees along the\\npaths from FUCHSIA. Show me that\\pyou and your team can travel\\ntogether.$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_REED_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST wins today!$",
+    "after": "A dependable team!$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_REED_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I look for fresh damage after\\nstrong winds. A familiar path\\pstill deserves a fresh look.$"
+  },
+  "EventScript_ForestTrainer_PKMN_RANGER_REED_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on FUCHSIA FOREST?\\nThen we battle again!$",
+    "after": "Your team looks well rested.\\nReady for another patrol test?$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This BREEDER knows\\nFUCHSIA FOREST well!$",
+    "after": "I brought my POKéMON out of the\\ncity to explore. New smells can\\pbe quite an adventure!$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST wins today!$",
+    "after": "An adventure for us both!$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "FUCHSIA FOREST has more to teach\\nthan one battle can show.$",
+    "after": "I let them choose which scent to\\nfollow, then call them back.\\pThey learn that exploring\\ndoesn't mean being alone.$"
+  },
+  "EventScript_ForestTrainer_PKMN_BREEDER_WREN_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on FUCHSIA FOREST?\\nThen we battle again!$",
+    "after": "They remembered this path! Let's\\nsee what else they remember!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This RUIN MANIAC knows\\nCERULEAN CAVE well!$",
+    "after": "These marks show where the water\\nonce reached. Shall we compare\\pwhat our teams have learned?$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE wins today!$",
+    "after": "My theory doesn't hold water!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE has more to teach\\nthan one battle can show.$",
+    "after": "Water leaves evidence long after\\nit moves on. I sketch the marks\\pbefore the next flood changes\\nthem.$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_STANLY_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on CERULEAN CAVE?\\nThen we battle again!$",
+    "after": "I found a higher water mark.\\nPerhaps your team has reached\\pnew heights too!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This RUIN MANIAC knows\\nCERULEAN CAVE well!$",
+    "after": "Look at the bands in this stone!\\nEach layer formed differently.\\pMy battle plan has layers too!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE wins today!$",
+    "after": "You reached the weakest layer!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE has more to teach\\nthan one battle can show.$",
+    "after": "A loose fragment tells only part\\nof the story. I record where it\\pcame from before picking it up.$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_FOSTER_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on CERULEAN CAVE?\\nThen we battle again!$",
+    "after": "I've revised my notes and my\\nstrategy. Let's compare them\\pagain!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This RUIN MANIAC knows\\nCERULEAN CAVE well!$",
+    "after": "Something disturbed these deep\\nrocks. I'm tracing the\\pfractures. Your team looks like\\na force worth studying!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE wins today!$",
+    "after": "Another crack in my theory!$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "CERULEAN CAVE has more to teach\\nthan one battle can show.$",
+    "after": "The lake hides the ends of these\\nfractures. I won't guess what\\plies beneath without evidence.$"
+  },
+  "EventScript_GymAdjacent_RUIN_MANIAC_LARRY_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back on CERULEAN CAVE?\\nThen we battle again!$",
+    "after": "The stone hasn't moved, but my\\nideas have. Time to test them!$"
+  },
+  "Route9_Text_BrentRematchIntro": {
+    "file": "data/text/trainers.inc",
+    "before": "I got up early every day to train\\nmy POKéMON from cocoons!$",
+    "after": "I've practised my stance on\\nloose stone. Try to knock me off\\pbalance now!$"
+  },
+  "Route9_Text_ConnerRematchIntro": {
+    "file": "data/text/trainers.inc",
+    "before": "Go win, my super BUG POKéMON!$",
+    "after": "I've sharpened my turns on this\\nrocky path. Watch my team's\\pfootwork!$"
+  },
+  "RockTunnel_B1F_Text_SteveIntro": {
+    "file": "data/maps/RockTunnel_B1F/text.inc",
+    "before": "Um… Do you know about POKéMON\\ncosplay?$",
+    "after": "I practise forms by the cave\\nechoes. One clean strike should\\pmake one clear sound!$"
+  },
+  "RockTunnel_B1F_Text_StevePostBattle": {
+    "file": "data/maps/RockTunnel_B1F/text.inc",
+    "before": "POKéMON cosplay is dressing up as\\nPOKéMON for fun.\\pCLEFAIRY is a favorite.$",
+    "after": "If my feet scrape the stone, I\\nstart again. Quiet steps leave\\pmore strength for the strike.$"
+  },
+  "RockTunnel_B1F_Text_WinstonIntro": {
+    "file": "data/maps/RockTunnel_B1F/text.inc",
+    "before": "I draw illustrations of POKéMON\\nwhen I'm home.$",
+    "after": "I sketch the cracks in these\\nwalls. They reveal how the\\ptunnel formed. Let's compare our\\nobservations!$"
+  },
+  "RockTunnel_B1F_Text_WinstonPostBattle": {
+    "file": "data/maps/RockTunnel_B1F/text.inc",
+    "before": "I'm an artist, not a fighter.\\nI'll go home to draw.$",
+    "after": "A sketch makes me notice what I\\nwould walk past. Battle reveals\\pgaps in my thinking too.$"
+  },
+  "Route2_Text_JonahIntro": {
+    "file": "data/maps/Route2/text.inc",
+    "before": "The forest gate is close.\\pIf you can handle my bugs, you can\\nhandle the path ahead!$",
+    "after": "The forest entrance is close. If\\nyou can handle my bugs, you can\\phandle the path ahead!$"
+  },
+  "Route2_Text_JonahRematchIntro": {
+    "file": "data/maps/Route2/text.inc",
+    "before": "You've crossed the forest gate\\nbefore.\\pLet's see if my bugs can still\\nslow you down!$",
+    "after": "You've crossed beneath those\\ntrees before. Let's see if my\\pbugs can still slow you down!$"
+  },
+  "Route17_Text_NikolasPostBattle": {
+    "file": "data/maps/Route17/text.inc",
+    "before": "I got my VOLTORB at the abandoned\\nPOWER PLANT.\\pIt likes this road's constant\\nmotion as much as I do.$",
+    "after": "I caught VOLTORB before the\\nPOWER PLANT reopened. It likes\\pthis road's constant motion as\\nmuch as I do.$"
+  },
+  "EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "PSYCHIC JOHAN knows\\nSAFFRON's streets well!$",
+    "after": "The noise from SAFFRON makes it\\nhard to hear a single thought.\\pCan you focus on one command?$"
+  },
+  "EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "You know the path\\nbetter than I thought!$",
+    "after": "You cut through the noise!$"
+  },
+  "EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Saffron's streets change\\nwith every journey.$",
+    "after": "I close my eyes and picture this\\nroad. The footsteps tell me\\pwhich way people are heading.$"
+  },
+  "EventScript_GymAdjacent_PSYCHIC_JOHAN_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "The paths around SAFFRON\\nare clear in my mind!$",
+    "after": "I recognised your steps this\\ntime. Let's see if I can predict\\pyour moves!$"
+  },
+  "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "All the MR. MIME have withdrawn\\nfrom the area!$",
+    "after": "I study MR. MIME, but they've\\nall withdrawn into DIGLETT'S\\pCAVE! Perhaps a battle will\\nclear my head.$"
+  },
+  "EventScript_RouteTrainer_ROUTE11_POKEMANIAC_CHAPLIN_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "All the MR. MIME have withdrawn\\nfrom the area!$",
+    "after": "Still no sign of the wild MR.\\nMIME. My own partner is eager to\\psee you again, though!$"
+  },
+  "Route17_EventScript_Milo_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "I race beside the BIKERS until\\nmy legs give out.\\pIf you want past me, battle first!$",
+    "after": "I ride beside the BIKERS until\\nmy legs ache. My team still has\\penergy for you!$"
+  },
+  "Route17_EventScript_Milo_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back for another downhill race?\\pGreat! I'll battle before my\\nnext sprint.$",
+    "after": "Chain checked, tyres ready. One\\nbattle before my next ride!$"
+  },
+  "Route17_EventScript_Mina_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Near the bottom, everyone thinks\\nthe race is over.\\pThat's when I sprint ahead!$",
+    "after": "Near the bottom, everyone stops\\npedalling. That's when I put on\\pa final burst!$"
+  },
+  "Route17_EventScript_Nico_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Everyone says CYCLING ROAD is\\nfor BIKERS.\\pI'm proving runners can keep up!$",
+    "after": "Running and swimming can wait.\\nToday I'm working on my cycling!\\pTry to match our cadence!$"
+  },
+  "Route17_EventScript_Nico_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "If I can keep my footing here,\\nFUCHSIA's flat roads will feel\\neasy.$",
+    "after": "I keep my pedals turning evenly\\nover the rough patches. A steady\\peffort gets me farther.$"
+  },
+  "Route17_EventScript_Nico_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back for another downhill race?\\pGood! I've still got breath for\\none more battle.$",
+    "after": "I've ridden the downhill stretch\\nagain. Let's test my team's\\pfinish!$"
+  },
+  "EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "This slope is my training route.\\pKeep up if you can!$",
+    "after": "I practise keeping my wheels on\\na clean line. My POKéMON train\\pfor precise moves too!$"
+  },
+  "EventScript_RouteTrainer_ROUTE17_TRIATHLETE_DAX_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Back for another downhill run?\\pGood. Keep your cadence steady!$",
+    "after": "Another downhill ride is done.\\nTime to test that steady\\pcadence!$"
+  },
+  "Route17_EventScript_June_Text_Intro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "I brought picnic food, but the\\nwind keeps trying to steal it.\\pA battle is easier to hold onto!$",
+    "after": "My food is strapped to the bike,\\nbut the wind keeps pulling at\\pthe bag! Let's stop for a match.$"
+  },
+  "Route17_EventScript_June_Text_PostBattle": {
+    "file": "data/scripts/trainers.inc",
+    "before": "The grass beside the road is\\ncalmer than the pavement.\\pThat's why I stay near the edge.$",
+    "after": "I eat before the last climb. An\\nempty stomach makes for heavy\\ppedals.$"
+  },
+  "EventScript_RouteTrainer_ROUTE17_TRIATHLETE_NINA_Text_RematchIntro": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Another timed run?\\pThen don't blink!$",
+    "after": "A new riding time to beat! Can\\nmy team finish as strongly?$"
+  },
+  "Route3_Text_YoungsterMiaRematchIntro": {
+    "file": "data/maps/Route3/scripts.inc",
+    "before": "Ready for another battle?$",
+    "after": "Josh says I've improved my\\ntiming. Help me prove it!$"
+  },
+  "Route4_Text_YoungsterEllaRematchIntro": {
+    "file": "data/maps/Route4/scripts.inc",
+    "before": "Ready for another battle?$",
+    "after": "My team is braver on this rocky\\nroad now. Let's try again!$"
+  },
+  "Route7_Text_YoungsterRubyRematchIntro": {
+    "file": "data/maps/Route7/scripts.inc",
+    "before": "Ready for another battle?$",
+    "after": "Chad and I tried a new training\\nplan. Want to see my results?$"
+  },
+  "SaffronCity_Gym_Text_OrinDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "My thoughts ran ahead of my\\nteam!$"
+  },
+  "SaffronCity_Gym_Text_AldenDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "You found the clear way through!$"
+  },
+  "SaffronCity_Gym_Text_SilasDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "I didn't predict that finish!$"
+  },
+  "SaffronCity_Gym_Text_MiraDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "My concentration slipped!$"
+  },
+  "SaffronCity_Gym_Text_SeleneDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "Your team heard you clearly!$"
+  },
+  "SaffronCity_Gym_Text_LyraDefeat": {
+    "file": "data/maps/SaffronCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "A clear and decisive answer!$"
+  },
+  "CeladonCity_Gym_Text_HazelDefeat": {
+    "file": "data/maps/CeladonCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "We have some growing to do!$"
+  },
+  "CeladonCity_Gym_Text_MabelDefeat": {
+    "file": "data/maps/CeladonCity_Gym/text.inc",
+    "before": "You gave me something\\nnew to learn!$",
+    "after": "That care showed in every move!$"
+  },
+  "CinnabarVolcano_3F_Text_ExpertHugoDefeat": {
+    "file": "data/maps/CinnabarVolcano_3F/scripts.inc",
+    "before": "Even experience has its limits!$",
+    "after": "I let the heat hurry me!$"
+  },
+  "CinnabarVolcano_3F_Text_ExpertHugoPostBattle": {
+    "file": "data/maps/CinnabarVolcano_3F/scripts.inc",
+    "before": "Every loss holds a lesson.\\nLearn alongside your POKéMON.$",
+    "after": "I stop when my breathing turns\\nshallow. Experience includes\\pknowing when to rest.$"
+  },
+  "SaffronCity_Dojo_Text_ExpertMaraDefeat": {
+    "file": "data/maps/SaffronCity_Dojo/scripts.inc",
+    "before": "Even experience has its limits!$",
+    "after": "You spotted the opening first!$"
+  },
+  "SaffronCity_Dojo_Text_ExpertMaraPostBattle": {
+    "file": "data/maps/SaffronCity_Dojo/scripts.inc",
+    "before": "Every loss holds a lesson.\\nLearn alongside your POKéMON.$",
+    "after": "I ask my students what they\\nnoticed before I give advice.\\pThey often see what I miss.$"
+  },
+  "VictoryRoad_1F_Text_ExpertIvoDefeat": {
+    "file": "data/maps/VictoryRoad_1F/scripts.inc",
+    "before": "Even experience has its limits!$",
+    "after": "Your judgment held under strain!$"
+  },
+  "VictoryRoad_1F_Text_ExpertIvoPostBattle": {
+    "file": "data/maps/VictoryRoad_1F/scripts.inc",
+    "before": "Every loss holds a lesson.\\nLearn alongside your POKéMON.$",
+    "after": "The last climb can tempt you to\\nrush. Save enough strength to\\pgreet what waits beyond it.$"
+  },
+  "VictoryRoad_1F_Text_ExpertKarinaDefeat": {
+    "file": "data/maps/VictoryRoad_1F/scripts.inc",
+    "before": "Even experience has its limits!$",
+    "after": "You carried your lessons well!$"
+  },
+  "VictoryRoad_1F_Text_ExpertKarinaPostBattle": {
+    "file": "data/maps/VictoryRoad_1F/scripts.inc",
+    "before": "Every loss holds a lesson.\\nLearn alongside your POKéMON.$",
+    "after": "I think of every teacher who\\nhelped me reach this road.\\pLosing gives me one more to\\nremember.$"
+  },
+  "CeladonCity_EventScript_TrendsetterLori_Defeat": {
+    "file": "data/maps/CeladonCity/scripts.inc",
+    "before": "You have a style all your own!$",
+    "after": "Now that's a look I remember!$"
+  },
+  "CeladonCity_EventScript_TrendsettersTamiaLeo_Defeat": {
+    "file": "data/maps/CeladonCity/scripts.inc",
+    "before": "You have a style all your own!$",
+    "after": "Our coordination came apart!$"
+  },
+  "Route7_EventScript_TrendsetterClaire_Defeat": {
+    "file": "data/maps/Route7/scripts.inc",
+    "before": "You have a style all your own!$",
+    "after": "You gave me a bright idea!$"
+  },
+  "Route7_EventScript_TrendsetterElio_Defeat": {
+    "file": "data/maps/Route7/scripts.inc",
+    "before": "You have a style all your own!$",
+    "after": "You set today's trend!$"
+  },
+  "SSAnne_1F_Room4_EventScript_TrendsettersBriRemi_Defeat": {
+    "file": "data/maps/SSAnne_1F_Room4/scripts.inc",
+    "before": "You have a style all your own!$",
+    "after": "You stole our grand entrance!$"
+  },
+  "Route20_Text_NiaFinnDefeat": {
+    "file": "data/maps/Route20/scripts.inc",
+    "before": "You make a great team!$",
+    "after": "Our two paths met their match!$"
+  },
+  "Route23_Text_EvanZoeDefeat": {
+    "file": "data/maps/Route23/scripts.inc",
+    "before": "You make a great team!$",
+    "after": "We'll take that lesson to the\\nLEAGUE!$"
+  },
+  "VictoryRoad_2F_Text_KaiTessDefeat": {
+    "file": "data/maps/VictoryRoad_2F/scripts.inc",
+    "before": "You make a great team!$",
+    "after": "You found the gap between us!$"
+  },
+  "Route18_Text_RamiroDefeat": {
+    "file": "data/maps/Route18/text.inc",
+    "before": "I blinked first!$",
+    "after": "Your nerve held longer!$"
+  },
+  "SaffronCity_Dojo_Text_MikeDefeat": {
+    "file": "data/maps/SaffronCity_Dojo/text.inc",
+    "before": "I give up!$",
+    "after": "I bow to that technique!$"
+  },
+  "Route25_Text_FlintDefeat": {
+    "file": "data/maps/Route25/text.inc",
+    "before": "Line snapped!$",
+    "after": "That cast went wide!$"
+  },
+  "Route20_Text_IreneDefeat": {
+    "file": "data/maps/Route20/text.inc",
+    "before": "Lost my pace!$",
+    "after": "I missed my stroke!$"
+  },
+  "Route25_Text_TriathleteMLandDefeat": {
+    "file": "data/maps/Route25/text.inc",
+    "before": "Outpaced!$",
+    "after": "You won that interval!$"
+  },
+  "PowerPlant_Text_ElectricianLucaDefeat": {
+    "file": "data/maps/PowerPlant/scripts.inc",
+    "before": "Shorted out!$",
+    "after": "You found the live fault!$"
+  },
+  "Route22_Text_JarenDefeat": {
+    "file": "data/maps/Route22/text.inc",
+    "before": "Skidded out!$",
+    "after": "I took that corner too sharply!$"
+  },
+  "WatersEdge_EventScript_Route12TuberLuca_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Splashdown!$",
+    "after": "My splash barely reached you!$"
+  },
+  "EventScript_RouteTrainer_TUBER_ALEXIS_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "Splashed out!$",
+    "after": "You tipped my float!$"
+  },
+  "Route19_Text_MatthewDefeat": {
+    "file": "data/maps/Route19/text.inc",
+    "before": "Washed out!$",
+    "after": "That wake spun me round!$"
+  },
+  "Route20_Text_LuisDefeat": {
+    "file": "data/maps/Route20/text.inc",
+    "before": "Washed out!$",
+    "after": "The cold got into my strategy!$"
+  },
+  "Route25_Text_FishermanTylorDefeat": {
+    "file": "data/maps/Route25/text.inc",
+    "before": "Washed out!$",
+    "after": "The tide favoured you!$"
+  },
+  "WatersEdge_EventScript_Route12SailorBriggs_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "You held the channel!$",
+    "after": "You steered through my defence!$"
+  },
+  "Route24_Text_BeckyDefeat": {
+    "file": "data/maps/Route24/text.inc",
+    "before": "You kept pace!$",
+    "after": "You beat my bridge time!$"
+  },
+  "EventScript_RouteTrainer_ROUTE14_TRIATHLETE_LOLA_Text_Defeat": {
+    "file": "data/scripts/trainers.inc",
+    "before": "You kept your balance!$",
+    "after": "My stride fell apart!$"
+  },
+  "Route21_North_Text_WadeDefeat": {
+    "file": "data/maps/Route21_North/text.inc",
+    "before": "You reeled me in!$",
+    "after": "My timing missed the wake!$"
+  }
+}
