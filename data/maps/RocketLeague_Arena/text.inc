@@ -43,11 +43,6 @@ RocketLeague_Arena_Text_ProtonIntro::
     .string "I have STEEL and a plan to break it!\p"
     .string "Let's see you stop us.$"
 
-RocketLeague_Arena_Text_RocketAceIntro::
-    .string "ROCKET ACE: You made it under\n"
-    .string "the lights.\p"
-    .string "Now prove you can survive them.$"
-
 RocketLeague_Arena_Text_PetrelDefeat::
     .string "Heh... You saw right through\n"
     .string "my mind games!$"
@@ -63,10 +58,6 @@ RocketLeague_Arena_Text_ArianaDefeat::
 RocketLeague_Arena_Text_ProtonDefeat::
     .string "Tch!\n"
     .string "You made that take too long.$"
-
-RocketLeague_Arena_Text_RocketAceDefeat::
-    .string "So that's your answer.\n"
-    .string "Not bad.$"
 
 RocketLeague_Arena_Text_PetrelPostBattle::
     .string "PETREL: Go on, then.\p"
@@ -147,3 +138,59 @@ RocketLeague_Arena_Text_CoinPouchFull::
     .string "You can't hold more COINS.\p"
     .string "You couldn't receive the prize\n"
     .string "COINS.$"
+
+RocketLeague_Arena_Text_RazorIntro::
+	.string "KARDINAL: You watch the attack.\nI watch the choice before it.\pTry keeping a secret from my\nPSYCHIC team!$"
+
+RocketLeague_Arena_Text_RazorDefeat::
+	.string "You chose a line I hadn't seen.$"
+
+
+RocketLeague_Arena_Text_VexIntro::
+	.string "SHION: Still judging strength by\nappearances? My FAIRY team\penjoys correcting that mistake.$"
+
+RocketLeague_Arena_Text_VexDefeat::
+	.string "An unexpected outcome. I'll\nrevise my prediction.$"
+
+
+RocketLeague_Arena_Text_NovaIntro::
+	.string "MOJAY: Empty space? Look closer.\nMy GHOST team is already making\pitself at home under these\nlights!$"
+
+RocketLeague_Arena_Text_NovaDefeat::
+	.string "You didn't fall for our\ndisappearing act!$"
+
+
+RocketLeague_Arena_Text_KnellIntro::
+	.string "ATTRYCE: Hear the bell? That's\nour cue. My WATER team keeps\prolling until the final round!$"
+
+RocketLeague_Arena_Text_KnellDefeat::
+	.string "You weathered every round!$"
+
+
+RocketLeague_Arena_Text_MakoIntro::
+	.string "MAKO: Plenty of challengers look\ncalm on the surface. Let's see\pwhat happens under pressure.$"
+
+RocketLeague_Arena_Text_MakoDefeat::
+	.string "You kept your head in deep\nwater.$"
+
+
+RocketLeague_Arena_Text_SableIntro::
+	.string "SABLE: You came looking for\nsomething exotic? My\pordinary-looking team has a few\nsurprises.$"
+
+RocketLeague_Arena_Text_SableDefeat::
+	.string "You noticed what mattered.\nClever.$"
+
+
+RocketLeague_Arena_Text_JetIntro::
+	.string "JET: My team keeps its feet on\nthe ground. One clean opening,\pand we hit like a landslide!$"
+
+RocketLeague_Arena_Text_JetDefeat::
+	.string "You stopped us in our tracks!$"
+
+
+RocketLeague_Arena_Text_ViperIntro::
+	.string "VIPER: A little pressure, a\nlittle poison. I prefer a plan\pthat keeps working after the\nfirst hit.$"
+
+RocketLeague_Arena_Text_ViperDefeat::
+	.string "You cut off my plan before it\nspread!$"
+

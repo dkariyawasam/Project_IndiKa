@@ -266,8 +266,7 @@ CeladonCity_Gym_Text_HazelIntro::
     .string "help POKéMON flourish.$"
 
 CeladonCity_Gym_Text_HazelDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "We have some growing to do!$"
 
 CeladonCity_Gym_Text_HazelAfter::
     .string "Young POKéMON need care,\n"
@@ -278,8 +277,7 @@ CeladonCity_Gym_Text_MabelIntro::
     .string "with ERIKA's lessons in mind.$"
 
 CeladonCity_Gym_Text_MabelDefeat::
-    .string "You gave me something\n"
-    .string "new to learn!$"
+	.string "That care showed in every move!$"
 
 CeladonCity_Gym_Text_MabelAfter::
     .string "Friendship grows through\n"

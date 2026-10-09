@@ -1,0 +1,23 @@
+{
+  "name": "MILOTIC",
+  "species": 329,
+  "item": 0,
+  "level": 28,
+  "hp": 93,
+  "maxHP": 93,
+  "friendship": 224,
+  "moves": [
+    150,
+    33,
+    0,
+    0
+  ],
+  "pp": [
+    40,
+    35,
+    0,
+    0
+  ],
+  "status": 2,
+  "checksumValid": true
+}

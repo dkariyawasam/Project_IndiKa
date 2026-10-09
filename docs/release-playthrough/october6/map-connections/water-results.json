@@ -1,0 +1,72 @@
+[
+  {
+    "tag": "channel-west-return",
+    "from": [
+      "Route2",
+      36,
+      37
+    ],
+    "key": 16,
+    "after": "frame=36268560 map=3,27 xy=1,12 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-water-east",
+    "from": [
+      "Route21_North",
+      22,
+      38
+    ],
+    "key": 16,
+    "after": "frame=36269280 map=3,29 xy=3,8 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-water-west",
+    "from": [
+      "Route18",
+      1,
+      8
+    ],
+    "key": 32,
+    "after": "frame=36270060 map=3,32 xy=20,38 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-water-south",
+    "from": [
+      "Route18",
+      25,
+      68
+    ],
+    "key": 128,
+    "after": "frame=36270840 map=3,31 xy=25,0 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-water-north",
+    "from": [
+      "Route20",
+      25,
+      1
+    ],
+    "key": 64,
+    "after": "frame=36271620 map=3,29 xy=25,66 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "pallet-water-north",
+    "from": [
+      "Route21_North",
+      8,
+      1
+    ],
+    "key": 64,
+    "after": "frame=36272400 map=3,0 xy=8,16 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "pallet-water-south",
+    "from": [
+      "PalletTown",
+      8,
+      18
+    ],
+    "key": 128,
+    "after": "frame=36273120 map=3,32 xy=8,4 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  }
+]

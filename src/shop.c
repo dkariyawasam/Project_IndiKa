@@ -92,11 +92,11 @@ static EWRAM_DATA u8 sCoinMonIcon = MAX_SPRITES;
 static EWRAM_DATA u16 sCoinIconSpecies = SPECIES_NONE;
 static const u8 sText_CoinPrice[] = _("{STR_VAR_1}c");
 static const u8 sText_CoinConfirm[] = _("{STR_VAR_1}, quantity {STR_VAR_2}.\nThat will be {STR_VAR_3} COINS. Okay?");
-static const u8 sText_NotEnoughCoins[] = _("You don't have enough COINS.");
+static const u8 sText_NotEnoughCoins[] = _("You don't have enough COINS.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PrizeDescription[] = _("{STR_VAR_1} at Lv. {STR_VAR_2}.\nSent to your party, or your PC\nif your party is full.");
 static const u8 sText_PrizeParty[] = _("Your POKéMON joined your party!");
 static const u8 sText_PrizePC[] = _("Your POKéMON was sent to your PC!");
-static const u8 sText_PrizeFull[] = _("Your party and PC are full.");
+static const u8 sText_PrizeFull[] = _("Your party and PC are full.{PAUSE_UNTIL_PRESS}");
 static const u16 sRocketCoinTms[] = {
     ITEM_TM01,
     ITEM_TM02,

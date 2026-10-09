@@ -1,0 +1,62 @@
+[
+  {
+    "trainer": "TRAINER_LASS_ANN",
+    "expected": 66,
+    "actual": 0,
+    "map": "SSAnne_1F_Room2"
+  },
+  {
+    "trainer": "TRAINER_TRENDSETTER_DAWN",
+    "expected": 67,
+    "actual": 0,
+    "map": "SSAnne_2F_Room4"
+  },
+  {
+    "trainer": "TRAINER_TRENDSETTER_TYLER",
+    "expected": 68,
+    "actual": 0,
+    "map": "SSAnne_1F_Room2"
+  },
+  {
+    "trainer": "TRAINER_CHANNELER_ANGELICA",
+    "expected": 72,
+    "actual": 72,
+    "map": "PokemonTower_3F"
+  },
+  {
+    "trainer": "TRAINER_TRENDSETTER_DALE",
+    "expected": 73,
+    "actual": 0,
+    "map": "SSAnne_2F_Room2"
+  },
+  {
+    "trainer": "TRAINER_ACE_TRAINER_GREGORY",
+    "expected": 74,
+    "actual": 74,
+    "map": "VictoryRoad_2F"
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_RICK",
+    "expected": 75,
+    "actual": 75,
+    "map": "ViridianForest"
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_DOUG",
+    "expected": 76,
+    "actual": 76,
+    "map": "ViridianForest"
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_SAMMY",
+    "expected": 77,
+    "actual": 77,
+    "map": "ViridianForest"
+  },
+  {
+    "trainer": "TRAINER_BUG_CATCHER_ANTHONY",
+    "expected": 82,
+    "actual": 82,
+    "map": "ViridianForest"
+  }
+]

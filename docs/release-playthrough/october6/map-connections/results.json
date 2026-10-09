@@ -1,0 +1,102 @@
+[
+  {
+    "tag": "route18-fuchsia",
+    "from": [
+      "Route18",
+      122,
+      9
+    ],
+    "key": 16,
+    "after": "frame=36244500 map=3,7 xy=2,19 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "route18-cycling",
+    "from": [
+      "Route18",
+      60,
+      1
+    ],
+    "key": 64,
+    "after": "frame=36245160 map=3,28 xy=10,158 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "channel-east",
+    "from": [
+      "ViridianChannel",
+      34,
+      12
+    ],
+    "key": 16,
+    "after": "frame=36245820 map=3,26 xy=1,12 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "harbor-city",
+    "from": [
+      "VermilionCity",
+      23,
+      38
+    ],
+    "key": 128,
+    "after": "frame=36246480 map=1,4 xy=31,1 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "viridian-south",
+    "from": [
+      "Route2",
+      4,
+      49
+    ],
+    "key": 64,
+    "after": "frame=36247140 map=1,0 xy=44,62 step=3/2 timer=0 main=8056e25 lock=1 party=6"
+  },
+  {
+    "tag": "viridian-south-out",
+    "from": [
+      "ViridianForest",
+      43,
+      61
+    ],
+    "key": 128,
+    "after": "frame=36247740 map=3,12 xy=4,48 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "viridian-north-out",
+    "from": [
+      "ViridianForest",
+      4,
+      10
+    ],
+    "key": 64,
+    "after": "frame=36248520 map=3,12 xy=4,15 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "fuchsia-south",
+    "from": [
+      "Route15",
+      26,
+      19
+    ],
+    "key": 64,
+    "after": "frame=36249180 map=1,88 xy=43,40 step=3/2 timer=0 main=8056e25 lock=1 party=6"
+  },
+  {
+    "tag": "fuchsia-south-out",
+    "from": [
+      "FuchsiaForest",
+      43,
+      39
+    ],
+    "key": 128,
+    "after": "frame=36249780 map=1,88 xy=43,40 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  },
+  {
+    "tag": "fuchsia-north-out",
+    "from": [
+      "FuchsiaForest",
+      5,
+      10
+    ],
+    "key": 64,
+    "after": "frame=36250380 map=1,4 xy=26,48 step=3/2 timer=0 main=8056e25 lock=0 party=6"
+  }
+]

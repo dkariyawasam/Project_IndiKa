@@ -91,4 +91,4 @@ Route4_Text_YoungsterEllaPostBattle::
 	.string "My POKéMON and I are getting\nbraver with every battle.$"
 
 Route4_Text_YoungsterEllaRematchIntro::
-	.string "Ready for another battle?$"
+	.string "My team is braver on this rocky\nroad now. Let's try again!$"

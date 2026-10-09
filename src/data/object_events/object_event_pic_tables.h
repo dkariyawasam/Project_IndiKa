@@ -2170,3 +2170,29 @@ static const struct SpriteFrameImage sPicTable_PsychicF[] = {
     overworld_frame(gObjectEventPic_PsychicF, 2, 4, 8),
     overworld_frame(gObjectEventPic_PsychicF, 2, 4, 0), // Safe fallback for ANIM_RAISE_HAND.
 };
+
+static const struct SpriteFrameImage sPicTable_RocketArcher[] = {
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 3),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 4),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 5),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 6),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 7),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 8),
+    overworld_frame(gObjectEventPic_RocketArcher, 2, 4, 9),
+};
+
+static const struct SpriteFrameImage sPicTable_RocketProton[] = {
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 3),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 4),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 5),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 6),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 7),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 8),
+    overworld_frame(gObjectEventPic_RocketProton, 2, 4, 9),
+};

@@ -703,7 +703,7 @@ Route7_EventScript_TrendsetterClaire_Intro::
     .string "A new look, a new team!\nCare for a quick battle?$"
 
 Route7_EventScript_TrendsetterClaire_Defeat::
-    .string "You have a style all your own!$"
+	.string "You gave me a bright idea!$"
 
 Route7_EventScript_TrendsetterClaire_Post::
     .string "Shopping can wait.\nThat battle gave me an idea!$"
@@ -717,7 +717,7 @@ Route7_EventScript_TrendsetterElio_Intro::
     .string "Celadon sets the trends.\nMy team sets the pace!$"
 
 Route7_EventScript_TrendsetterElio_Defeat::
-    .string "You have a style all your own!$"
+	.string "You set today's trend!$"
 
 Route7_EventScript_TrendsetterElio_Post::
     .string "Great style means finding\nwhat works for you.$"
@@ -744,4 +744,4 @@ Route7_Text_YoungsterRubyPostBattle::
 	.string "There are strong trainers here!\nI want to keep up with them.$"
 
 Route7_Text_YoungsterRubyRematchIntro::
-	.string "Ready for another battle?$"
+	.string "Chad and I tried a new training\nplan. Want to see my results?$"
