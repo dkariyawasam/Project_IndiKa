@@ -1893,7 +1893,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonLeague",
+      "secondary_tileset": "gTileset_RocketLeagueArena",
       "border_filepath": "data/layouts/RocketLeague_Arena/border.bin",
       "blockdata_filepath": "data/layouts/RocketLeague_Arena/map.bin"
     },

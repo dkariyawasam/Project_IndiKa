@@ -139,10 +139,10 @@ CinnabarVolcano_3F_Text_ExpertHugoIntro::
 	.string "Steady breathing. Steady steps.\nKeep your focus in this heat.$"
 
 CinnabarVolcano_3F_Text_ExpertHugoDefeat::
-	.string "Even experience has its limits!$"
+	.string "I let the heat hurry me!$"
 
 CinnabarVolcano_3F_Text_ExpertHugoPostBattle::
-	.string "Every loss holds a lesson.\nLearn alongside your POKéMON.$"
+	.string "I stop when my breathing turns\nshallow. Experience includes\pknowing when to rest.$"
 
 CinnabarVolcano_3F_EventScript_KindlerFlint::
 	trainerbattle_single TRAINER_KINDLER_FLINT, CinnabarVolcano_3F_Text_KindlerFlintIntro, CinnabarVolcano_3F_Text_KindlerFlintDefeat

@@ -155,6 +155,22 @@ int main(void){
  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=SPECIES_GRAVELER_ALOLAN;
  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
  assert(GetEvolutionTargetSpecies(&m,EVO_MODE_TRADE,0)==SPECIES_GOLEM_ALOLAN);
+ m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=SPECIES_FEEBAS;
+ m.data[MON_DATA_LEVEL]=8;m.data[MON_DATA_BEAUTY]=255;
+ for(int day=0;day<2;day++){
+  daytime=day;
+  m.data[MON_DATA_FRIENDSHIP]=219;
+  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
+  m.data[MON_DATA_FRIENDSHIP]=220;m.data[MON_DATA_BEAUTY]=0;
+  assert(GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0)==SPECIES_MILOTIC);
+  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_TRADE,0));
+  m.data[MON_DATA_HELD_ITEM]=ITEM_EVERSTONE;
+  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
+  m.data[MON_DATA_HELD_ITEM]=ITEM_NONE;
+ }
+ m.data[MON_DATA_SPECIES]=SPECIES_CINNABAR_FEEBAS;
+ assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
+ puts("PASS: Feebas friendship threshold, day/night, Beauty independence, Everstone, and unchanged Deep Form.");
  puts("PASS: 15 restored evolution links; level, gender, night, friendship, move, item, trade and Everstone checks.");
  puts("PASS: Ambipom/Fuchsia Forest and Lickilicky/Cerulean Cave after Mewtwo victory; no Piloswine evolution.");
  puts("PASS: four Apex species, discovery, habitat, known move in every slot, and Everstone.");

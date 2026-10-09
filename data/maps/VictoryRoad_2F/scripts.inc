@@ -97,7 +97,7 @@ VictoryRoad_2F_Text_KaiTessIntro::
 	.string "This cave tests your teamwork.\nShow us how your team works!$"
 
 VictoryRoad_2F_Text_KaiTessDefeat::
-	.string "You make a great team!$"
+	.string "You found the gap between us!$"
 
 VictoryRoad_2F_Text_KaiTessPostBattle::
 	.string "We cover each other when\nthe going gets tough.$"

@@ -184,6 +184,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celebi;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabuto;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketNurse;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketArcher;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketProton;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketPetrel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrendsetterM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lady;
@@ -349,6 +351,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_ROCKET_ARIANA]            = &gObjectEventGraphicsInfo_RocketAriana,
     [OBJ_EVENT_GFX_ROCKET_NURSE]             = &gObjectEventGraphicsInfo_RocketNurse,
+    [OBJ_EVENT_GFX_ROCKET_ARCHER] = &gObjectEventGraphicsInfo_RocketArcher,
+    [OBJ_EVENT_GFX_ROCKET_PROTON] = &gObjectEventGraphicsInfo_RocketProton,
     [OBJ_EVENT_GFX_ROCKET_PETREL]            = &gObjectEventGraphicsInfo_RocketPetrel,
     [OBJ_EVENT_GFX_TRENDSETTER_M]                 = &gObjectEventGraphicsInfo_TrendsetterM,
     [OBJ_EVENT_GFX_MISTY_WATER]              = &gObjectEventGraphicsInfo_MistyWater,

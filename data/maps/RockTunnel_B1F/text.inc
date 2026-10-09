@@ -36,16 +36,13 @@ RockTunnel_B1F_Text_CooperPostBattle::
     .string "can I have it?$"
 
 RockTunnel_B1F_Text_SteveIntro::
-    .string "Um… Do you know about POKéMON\n"
-    .string "cosplay?$"
+	.string "I practise forms by the cave\nechoes. One clean strike should\pmake one clear sound!$"
 
 RockTunnel_B1F_Text_SteveDefeat::
     .string "Well, that's that.$"
 
 RockTunnel_B1F_Text_StevePostBattle::
-    .string "POKéMON cosplay is dressing up as\n"
-    .string "POKéMON for fun.\p"
-    .string "CLEFAIRY is a favorite.$"
+	.string "If my feet scrape the stone, I\nstart again. Quiet steps leave\pmore strength for the strike.$"
 
 RockTunnel_B1F_Text_AllenIntro::
     .string "My POKéMON techniques will leave\n"
@@ -84,13 +81,11 @@ RockTunnel_B1F_Text_EricPostBattle::
     .string "yours, kid.$"
 
 RockTunnel_B1F_Text_WinstonIntro::
-    .string "I draw illustrations of POKéMON\n"
-    .string "when I'm home.$"
+	.string "I sketch the cracks in these\nwalls. They reveal how the\ptunnel formed. Let's compare our\nobservations!$"
 
 RockTunnel_B1F_Text_WinstonDefeat::
     .string "Whew…\n"
     .string "I'm exhausted…$"
 
 RockTunnel_B1F_Text_WinstonPostBattle::
-    .string "I'm an artist, not a fighter.\n"
-    .string "I'll go home to draw.$"
+	.string "A sketch makes me notice what I\nwould walk past. Battle reveals\pgaps in my thinking too.$"

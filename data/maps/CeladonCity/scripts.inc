@@ -11,7 +11,15 @@ CeladonCity_OnTransition::
 CeladonCity_EventScript_UpdateRivalVisibility::
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CeladonCity_EventScript_HidePendingRival
 	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, CeladonCity_EventScript_HidePendingRival
-	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_HidePendingRival
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_CheckRivalGift
+	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
+	addobject LOCALID_CELADON_RIVAL
+	return
+
+@ Completed saves can collect the new gift without repeating the battle.
+CeladonCity_EventScript_CheckRivalGift::
+	checkitem ITEM_VS_SEEKER
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_EventScript_HidePendingRival
 	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
 	addobject LOCALID_CELADON_RIVAL
 	return
@@ -61,7 +69,7 @@ CeladonCity_EventScript_RivalEvolutionTrigger::
 	end
 
 CeladonCity_EventScript_RivalEvolution::
-	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, EventScript_Return
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_CollectRivalGift
 	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lock
@@ -77,6 +85,7 @@ CeladonCity_EventScript_RivalEvolutionScene::
 	call_if_eq VAR_STARTER_MON, 1, CeladonCity_EventScript_RivalBulbasaur
 	call_if_eq VAR_STARTER_MON, 0, CeladonCity_EventScript_RivalCharmander
 	msgbox CeladonCity_Text_RivalEvolutionPostBattle
+	call CeladonCity_EventScript_GiveVSSeeker
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
 	applymovement LOCALID_CELADON_RIVAL, CeladonCity_Movement_RivalExitEvolution
@@ -297,7 +306,7 @@ CeladonCity_EventScript_TrendsetterLori_Intro::
     .string "The shops have new arrivals.\nMy team has new moves!$"
 
 CeladonCity_EventScript_TrendsetterLori_Defeat::
-    .string "You have a style all your own!$"
+	.string "Now that's a look I remember!$"
 
 CeladonCity_EventScript_TrendsetterLori_Post::
     .string "Confidence is always in style.$"
@@ -311,7 +320,7 @@ CeladonCity_EventScript_TrendsettersTamiaLeo_Intro::
     .string "Our outfits match.\nOur moves work together too!$"
 
 CeladonCity_EventScript_TrendsettersTamiaLeo_Defeat::
-    .string "You have a style all your own!$"
+	.string "Our coordination came apart!$"
 
 CeladonCity_EventScript_TrendsettersTamiaLeo_Post::
     .string "A good partner brings out\nyour best.$"
@@ -319,3 +328,36 @@ CeladonCity_EventScript_TrendsettersTamiaLeo_Post::
 CeladonCity_EventScript_TrendsettersTamiaLeo_NeedTwo::
     .string "Bring two POKéMON and show us\nyour best combination!$"
 
+
+CeladonCity_EventScript_CollectRivalGift::
+	lock
+	faceplayer
+	call CeladonCity_EventScript_GiveVSSeeker
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_EventScript_RivalGiftDone
+	closemessage
+	setflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
+	removeobject LOCALID_CELADON_RIVAL
+CeladonCity_EventScript_RivalGiftDone::
+	release
+	end
+
+CeladonCity_EventScript_GiveVSSeeker::
+	checkitem ITEM_VS_SEEKER
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_EventScript_VSSeekerAlreadyOwned
+	msgbox CeladonCity_Text_RivalVSSeekerGift
+	giveitem ITEM_VS_SEEKER
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_EventScript_VSSeekerBagFull
+	setflag FLAG_GOT_VS_SEEKER
+	msgbox CeladonCity_Text_RivalVSSeekerUse
+	setvar VAR_RESULT, TRUE
+	return
+
+CeladonCity_EventScript_VSSeekerAlreadyOwned::
+	setflag FLAG_GOT_VS_SEEKER
+	setvar VAR_RESULT, TRUE
+	return
+
+CeladonCity_EventScript_VSSeekerBagFull::
+	msgbox CeladonCity_Text_RivalVSSeekerBagFull
+	setvar VAR_RESULT, FALSE
+	return

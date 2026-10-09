@@ -1,0 +1,2 @@
+frame=1102860 map=3,36 xy=13,29 step=2/1 timer=0 main=8056e25 lock=0 party=6
+Bridge checked!

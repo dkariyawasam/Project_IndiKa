@@ -612,6 +612,9 @@ static void HelpMenuCreateAndRenderRbox(void)
 
 static void HelpMenuPrintControlHints(void)
 {
+    u16 edgeColor = gPlttBufferUnfaded[3];
+
+    LoadPalette(&edgeColor, BG_PLTT_ID(4) + 10, sizeof(edgeColor));
     DrawUiHintHeader(2, sText_HelpMenuControlHints, 8, 10, 0, TRUE);
 }
 

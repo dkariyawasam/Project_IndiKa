@@ -1,0 +1,1 @@
+frame=36277860 map=1,4 xy=27,45 step=3/2 timer=0 main=8056e25 lock=0 party=6

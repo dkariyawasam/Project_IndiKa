@@ -1,0 +1,23 @@
+{
+  "name": "PORYGON",
+  "species": 137,
+  "item": 216,
+  "level": 26,
+  "hp": 70,
+  "maxHP": 70,
+  "friendship": 70,
+  "moves": [
+    97,
+    60,
+    105,
+    159
+  ],
+  "pp": [
+    30,
+    20,
+    20,
+    30
+  ],
+  "status": 0,
+  "checksumValid": true
+}

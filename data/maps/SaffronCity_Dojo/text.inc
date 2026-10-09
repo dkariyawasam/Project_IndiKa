@@ -27,7 +27,7 @@ SaffronCity_Dojo_Text_MikeIntro::
     .string "Take your shoes off!$"
 
 SaffronCity_Dojo_Text_MikeDefeat::
-    .string "I give up!$"
+	.string "I bow to that technique!$"
 
 SaffronCity_Dojo_Text_MikePostBattle::
     .string "You wait 'til you see our MASTER!\n"
