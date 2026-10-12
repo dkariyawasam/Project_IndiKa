@@ -1,0 +1,80 @@
+[
+  {
+    "name": "koga-tier6-11",
+    "leader": "koga",
+    "badges": 5,
+    "trainer": 500,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 41
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 40
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "erika-tier7-11",
+    "leader": "erika",
+    "badges": 6,
+    "trainer": 764,
+    "seed": 11,
+    "team": [
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 46
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 46
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 45
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 45
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 45
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 45
+      }
+    ]
+  }
+]
