@@ -1,0 +1,78 @@
+{
+  "party": [
+    {
+      "name": "BULBASAUR",
+      "species": 1,
+      "item": 0,
+      "level": 8,
+      "hp": 25,
+      "maxHP": 25,
+      "friendship": 89,
+      "moves": [
+        33,
+        45,
+        362,
+        73
+      ],
+      "pp": [
+        35,
+        40,
+        20,
+        10
+      ],
+      "status": 0,
+      "checksumValid": true
+    },
+    {
+      "name": "BELLSPROUT",
+      "species": 69,
+      "item": 0,
+      "level": 10,
+      "hp": 31,
+      "maxHP": 31,
+      "friendship": 80,
+      "moves": [
+        22,
+        74,
+        0,
+        0
+      ],
+      "pp": [
+        10,
+        40,
+        0,
+        0
+      ],
+      "status": 0,
+      "checksumValid": true
+    }
+  ],
+  "bag": [
+    [
+      [
+        13,
+        3
+      ],
+      [
+        343,
+        1
+      ],
+      [
+        346,
+        1
+      ]
+    ],
+    [],
+    [
+      [
+        4,
+        9
+      ]
+    ],
+    [],
+    []
+  ],
+  "brockTrial": 3,
+  "battleOutcome": 5,
+  "campaignSha256": "001a04fc396009ff0a8fecd353eba53a721b32f6577dc2c19950472aa66b4ac4"
+}
