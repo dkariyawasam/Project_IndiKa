@@ -18,6 +18,7 @@
 #include "strings.h"
 #include "task.h"
 #include "text_window.h"
+#include "ui_hint_header.h"
 #include "trig.h"
 #include "constants/event_object_movement.h"
 #include "constants/songs.h"
@@ -1878,7 +1879,7 @@ static void LoadPalettes(void)
 {
     LoadPalette(gNamingScreenMenu_Pal, BG_PLTT_ID(0), sizeof(gNamingScreenMenu_Pal));
     LoadPalette(gNamingScreenKeyboard_Pal, BG_PLTT_ID(10), PLTT_SIZE_4BPP);
-    LoadPalette(GetTextWindowPalette(2), BG_PLTT_ID(11), PLTT_SIZE_4BPP);
+    LoadUiHintHelpPalette(BG_PLTT_ID(11));
 }
 
 static void DecompressToBgTilemapBuffer(u8 bg, const u32 *src)

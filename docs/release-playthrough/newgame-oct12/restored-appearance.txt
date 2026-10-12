@@ -1,0 +1,2 @@
+Compiled offsets: gender=0x08, appearanceVersion=0xa4, primary=0xa5, secondary=0xa6
+gender=1 version=3 primary=1 secondary=2 frame=2

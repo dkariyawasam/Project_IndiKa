@@ -1,0 +1,39 @@
+{
+  "party": {
+    "name": "BULBASAUR",
+    "species": 1,
+    "item": 0,
+    "level": 5,
+    "hp": 19,
+    "maxHP": 19,
+    "friendship": 69,
+    "moves": [
+      33,
+      45,
+      362,
+      0
+    ],
+    "pp": [
+      35,
+      40,
+      20,
+      0
+    ],
+    "status": 0,
+    "checksumValid": true
+  },
+  "bag": [
+    [],
+    [],
+    [
+      [
+        4,
+        5
+      ]
+    ],
+    [],
+    []
+  ],
+  "labScene": 6,
+  "martScene": 2
+}
