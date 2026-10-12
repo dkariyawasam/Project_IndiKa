@@ -1,0 +1,107 @@
+[
+  {
+    "tier": 1,
+    "species": [
+      "SPECIES_BELLSPROUT",
+      "SPECIES_ODDISH"
+    ],
+    "levels": [
+      13,
+      16
+    ]
+  },
+  {
+    "tier": 2,
+    "species": [
+      "SPECIES_ODDISH",
+      "SPECIES_WEEPINBELL",
+      "SPECIES_TANGELA"
+    ],
+    "levels": [
+      17,
+      20,
+      23
+    ]
+  },
+  {
+    "tier": 3,
+    "species": [
+      "SPECIES_WEEPINBELL",
+      "SPECIES_LEAFEON",
+      "SPECIES_TANGELA"
+    ],
+    "levels": [
+      23,
+      25,
+      27
+    ]
+  },
+  {
+    "tier": 4,
+    "species": [
+      "SPECIES_VICTREEBEL",
+      "SPECIES_TANGELA",
+      "SPECIES_VILEPLUME",
+      "SPECIES_LEAFEON"
+    ],
+    "levels": [
+      29,
+      24,
+      29,
+      32
+    ]
+  },
+  {
+    "tier": 5,
+    "species": [
+      "SPECIES_BELLOSSOM",
+      "SPECIES_EXEGGCUTE",
+      "SPECIES_LEAFEON",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_TANGELA"
+    ],
+    "levels": [
+      31,
+      32,
+      34,
+      36,
+      38
+    ]
+  },
+  {
+    "tier": 6,
+    "species": [
+      "SPECIES_EXEGGUTOR",
+      "SPECIES_LEAFEON",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_VILEPLUME",
+      "SPECIES_TANGELA"
+    ],
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ]
+  },
+  {
+    "tier": 7,
+    "species": [
+      "SPECIES_LEAFEON",
+      "SPECIES_EXEGGUTOR",
+      "SPECIES_ROSERADE",
+      "SPECIES_VICTREEBEL",
+      "SPECIES_VILEPLUME",
+      "SPECIES_TANGELA"
+    ],
+    "levels": [
+      41,
+      42,
+      45,
+      45,
+      46,
+      47
+    ]
+  }
+]

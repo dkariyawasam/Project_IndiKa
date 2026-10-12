@@ -1,0 +1,224 @@
+[
+  {
+    "name": "koga-tier6-11-prepared",
+    "leader": "koga",
+    "badges": 5,
+    "trainer": 500,
+    "seed": 11,
+    "team": [
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 40,
+        "move_names": [
+          "THUNDERBOLT",
+          "SHOCK_WAVE",
+          "THUNDER_WAVE",
+          "QUICK_ATTACK"
+        ],
+        "moves": [
+          85,
+          351,
+          86,
+          98
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 41,
+        "move_names": [
+          "ROCK_SLIDE",
+          "DIG",
+          "STRENGTH",
+          "PROTECT"
+        ],
+        "moves": [
+          157,
+          91,
+          70,
+          182
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 41,
+        "move_names": [
+          "RAZOR_LEAF",
+          "SLEEP_POWDER",
+          "LEECH_SEED",
+          "GROWTH"
+        ],
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40,
+        "move_names": [
+          "WING_ATTACK",
+          "FLY",
+          "QUICK_ATTACK",
+          "FEATHER_DANCE"
+        ],
+        "moves": [
+          17,
+          19,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 40,
+        "move_names": [
+          "SURF",
+          "BITE",
+          "DRAGON_RAGE",
+          "LEER"
+        ],
+        "moves": [
+          57,
+          44,
+          82,
+          43
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 40,
+        "move_names": [
+          "FLAMETHROWER",
+          "BITE",
+          "TAKE_DOWN",
+          "ROAR"
+        ],
+        "moves": [
+          53,
+          44,
+          36,
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "name": "erika-tier7-11-prepared",
+    "leader": "erika",
+    "badges": 6,
+    "trainer": 764,
+    "seed": 11,
+    "team": [
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 46,
+        "move_names": [
+          "WING_ATTACK",
+          "FLY",
+          "QUICK_ATTACK",
+          "FEATHER_DANCE"
+        ],
+        "moves": [
+          17,
+          19,
+          98,
+          297
+        ]
+      },
+      {
+        "species": "ARCANINE",
+        "id": 59,
+        "level": 46,
+        "move_names": [
+          "FLAMETHROWER",
+          "BITE",
+          "TAKE_DOWN",
+          "ROAR"
+        ],
+        "moves": [
+          53,
+          44,
+          36,
+          46
+        ]
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 45,
+        "move_names": [
+          "RAZOR_LEAF",
+          "SLEEP_POWDER",
+          "LEECH_SEED",
+          "GROWTH"
+        ],
+        "moves": [
+          75,
+          79,
+          73,
+          74
+        ]
+      },
+      {
+        "species": "GOLEM",
+        "id": 76,
+        "level": 45,
+        "move_names": [
+          "ROCK_SLIDE",
+          "DIG",
+          "STRENGTH",
+          "PROTECT"
+        ],
+        "moves": [
+          157,
+          91,
+          70,
+          182
+        ]
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 45,
+        "move_names": [
+          "SURF",
+          "BITE",
+          "DRAGON_RAGE",
+          "LEER"
+        ],
+        "moves": [
+          57,
+          44,
+          82,
+          43
+        ]
+      },
+      {
+        "species": "RAICHU",
+        "id": 26,
+        "level": 45,
+        "move_names": [
+          "THUNDERBOLT",
+          "SHOCK_WAVE",
+          "THUNDER_WAVE",
+          "QUICK_ATTACK"
+        ],
+        "moves": [
+          85,
+          351,
+          86,
+          98
+        ]
+      }
+    ]
+  }
+]

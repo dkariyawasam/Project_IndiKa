@@ -1,0 +1,236 @@
+[
+  {
+    "name": "surge-11",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "surge-37",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "surge-83",
+    "leader": "surge",
+    "badges": 2,
+    "trainer": 461,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 26
+      },
+      {
+        "species": "IVYSAUR",
+        "id": 2,
+        "level": 26
+      },
+      {
+        "species": "PIDGEOTTO",
+        "id": 17,
+        "level": 25
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 25
+      },
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 25
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 25
+      }
+    ]
+  },
+  {
+    "name": "sabrina-11",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 11,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "sabrina-37",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 37,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "sabrina-83",
+    "leader": "sabrina",
+    "badges": 5,
+    "trainer": 723,
+    "seed": 83,
+    "team": [
+      {
+        "species": "GYARADOS",
+        "id": 130,
+        "level": 41
+      },
+      {
+        "species": "GROWLITHE",
+        "id": 58,
+        "level": 41
+      },
+      {
+        "species": "VENUSAUR",
+        "id": 3,
+        "level": 40
+      },
+      {
+        "species": "PIDGEOT",
+        "id": 18,
+        "level": 40
+      },
+      {
+        "species": "GRAVELER",
+        "id": 75,
+        "level": 40
+      },
+      {
+        "species": "PIKACHU",
+        "id": 25,
+        "level": 40
+      }
+    ]
+  }
+]
