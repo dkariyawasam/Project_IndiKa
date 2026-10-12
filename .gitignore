@@ -70,10 +70,11 @@ compile_commands.json
 # Python runtime caches and local emulator states
 __pycache__/
 *.py[cod]
-*.ss[0-9]
+*.ss[0-9]*
 
 # Full game builds and private base ROMs must remain local.
 *.gba
+*.gb
 *.gbc
 *.nds
 *.ups
