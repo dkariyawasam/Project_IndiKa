@@ -1,0 +1,462 @@
+[
+  {
+    "leader": "LtSurge",
+    "badges": 0,
+    "previous": {
+      "levels": [
+        13,
+        16
+      ],
+      "species": [
+        "PICHU",
+        "VOLTORB"
+      ]
+    },
+    "current": {
+      "levels": [
+        13,
+        16
+      ],
+      "species": [
+        "PICHU",
+        "TYNAMO"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 1,
+    "previous": {
+      "levels": [
+        17,
+        20,
+        23
+      ],
+      "species": [
+        "PICHU",
+        "PIKACHU",
+        "VOLTORB"
+      ]
+    },
+    "current": {
+      "levels": [
+        17,
+        20,
+        23
+      ],
+      "species": [
+        "TYNAMO",
+        "PIKACHU",
+        "VOLTORB"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 2,
+    "previous": {
+      "levels": [
+        23,
+        25,
+        27
+      ],
+      "species": [
+        "PIKACHU",
+        "PLUSLE",
+        "MAGNEMITE"
+      ]
+    },
+    "current": {
+      "levels": [
+        23,
+        25,
+        27
+      ],
+      "species": [
+        "PIKACHU",
+        "TYNAMO",
+        "MAGNEMITE"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 3,
+    "previous": {
+      "levels": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "species": [
+        "PIKACHU",
+        "ELECTABUZZ",
+        "ELECTRODE",
+        "MAGNETON"
+      ]
+    },
+    "current": {
+      "levels": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "species": [
+        "PIKACHU",
+        "ELECTABUZZ",
+        "EELEKTRIK",
+        "MAGNETON"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 4,
+    "previous": {
+      "levels": [
+        31,
+        32,
+        34,
+        36,
+        38
+      ],
+      "species": [
+        "PIKACHU",
+        "ELECTABUZZ",
+        "PLUSLE",
+        "MINUN",
+        "ELECTRODE"
+      ]
+    },
+    "current": {
+      "levels": [
+        31,
+        32,
+        34,
+        36,
+        38
+      ],
+      "species": [
+        "PIKACHU",
+        "ELECTABUZZ",
+        "PLUSLE",
+        "MINUN",
+        "EELEKTRIK"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 5,
+    "previous": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "RAICHU",
+        "ELECTRODE",
+        "MAGNETON",
+        "ELECTABUZZ",
+        "ELECTABUZZ"
+      ]
+    },
+    "current": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "RAICHU",
+        "ELECTRODE",
+        "MAGNETON",
+        "ELECTABUZZ",
+        "EELEKTRIK"
+      ]
+    }
+  },
+  {
+    "leader": "LtSurge",
+    "badges": 6,
+    "previous": {
+      "levels": [
+        41,
+        42,
+        45,
+        45,
+        46,
+        47
+      ],
+      "species": [
+        "RAICHU",
+        "ELECTRODE",
+        "MAGNETON",
+        "MAGNEZONE",
+        "ELECTABUZZ",
+        "ELECTIVIRE"
+      ]
+    },
+    "current": {
+      "levels": [
+        41,
+        42,
+        45,
+        45,
+        46,
+        47
+      ],
+      "species": [
+        "RAICHU",
+        "ELECTRODE",
+        "EELEKTROSS",
+        "MAGNEZONE",
+        "LANTURN",
+        "ELECTIVIRE"
+      ]
+    }
+  },
+  {
+    "leader": "Erika",
+    "badges": 6,
+    "previous": {
+      "levels": [
+        41,
+        42,
+        45,
+        45,
+        46,
+        47
+      ],
+      "species": [
+        "SHIFTRY",
+        "EXEGGUTOR",
+        "BELLOSSOM",
+        "VICTREEBEL",
+        "VILEPLUME",
+        "TANGELA"
+      ]
+    },
+    "current": {
+      "levels": [
+        41,
+        42,
+        45,
+        45,
+        46,
+        47
+      ],
+      "species": [
+        "SHIFTRY",
+        "EXEGGUTOR",
+        "ROSERADE",
+        "VICTREEBEL",
+        "VILEPLUME",
+        "TANGELA"
+      ]
+    }
+  },
+  {
+    "leader": "Koga",
+    "badges": 5,
+    "previous": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "CROBAT",
+        "ARBOK",
+        "MUK",
+        "WEEZING",
+        "KOFFING"
+      ]
+    },
+    "current": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "CROBAT",
+        "ARBOK",
+        "MUK",
+        "WEEZING",
+        "SWALOT"
+      ]
+    }
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 1,
+    "previous": {
+      "levels": [
+        17,
+        20,
+        23
+      ],
+      "species": [
+        "ABRA",
+        "KADABRA",
+        "DROWZEE"
+      ]
+    },
+    "current": {
+      "levels": [
+        17,
+        20,
+        23
+      ],
+      "species": [
+        "RALTS",
+        "KADABRA",
+        "DROWZEE"
+      ]
+    }
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 2,
+    "previous": {
+      "levels": [
+        23,
+        25,
+        27
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "ABRA"
+      ]
+    },
+    "current": {
+      "levels": [
+        23,
+        25,
+        27
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "KIRLIA"
+      ]
+    }
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 3,
+    "previous": {
+      "levels": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "ABRA",
+        "NATU"
+      ]
+    },
+    "current": {
+      "levels": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "KIRLIA",
+        "NATU"
+      ]
+    }
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 4,
+    "previous": {
+      "levels": [
+        31,
+        32,
+        34,
+        36,
+        38
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "ABRA",
+        "NATU",
+        "CHINGLING"
+      ]
+    },
+    "current": {
+      "levels": [
+        31,
+        32,
+        34,
+        36,
+        38
+      ],
+      "species": [
+        "KADABRA",
+        "HYPNO",
+        "GARDEVOIR",
+        "NATU",
+        "CHINGLING"
+      ]
+    }
+  },
+  {
+    "leader": "Sabrina",
+    "badges": 5,
+    "previous": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "ALAKAZAM",
+        "HYPNO",
+        "XATU",
+        "KADABRA",
+        "ABRA"
+      ]
+    },
+    "current": {
+      "levels": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "species": [
+        "ALAKAZAM",
+        "HYPNO",
+        "XATU",
+        "CHIMECHO",
+        "GARDEVOIR"
+      ]
+    }
+  }
+]
