@@ -1,6 +1,7 @@
 RocketLeague_Lobby_MapScripts::
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, RocketLeague_Lobby_OnReturnToField
 	map_script MAP_SCRIPT_ON_TRANSITION, RocketLeague_Lobby_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RocketLeague_Lobby_OnFrame
 	.byte 0
 
 RocketLeague_Lobby_OnReturnToField::
@@ -16,7 +17,41 @@ RocketLeague_Lobby_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ROCKET_LEAGUE_LOBBY
 	setrespawn HEAL_LOCATION_ROCKET_LEAGUE
 	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_4, 0
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 9, RocketLeague_Lobby_CheckArenaReturn
 	end
+
+RocketLeague_Lobby_CheckArenaReturn::
+	goto_if_ne VAR_0x8005, 2, RocketLeague_Lobby_NoArenaReturn
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_4, 1
+RocketLeague_Lobby_NoArenaReturn::
+	return
+
+RocketLeague_Lobby_OnFrame::
+	map_script_2 VAR_TEMP_4, 1, RocketLeague_Lobby_EventScript_WalkBackFromArena
+	.2byte 0
+
+RocketLeague_Lobby_EventScript_WalkBackFromArena::
+	lockall
+	setvar VAR_TEMP_4, 0
+	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_ReturnToReception
+	waitmovement 0
+	setvar VAR_TEMP_3, 0
+	releaseall
+	end
+
+RocketLeague_Lobby_Movement_ReturnToReception::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	face_up
+	step_end
 
 RocketLeague_Lobby_EventScript_Nurse::
 	lock
@@ -229,3 +264,15 @@ RocketLeague_Lobby_EventScript_DiscScientist_Intro::
 RocketLeague_Lobby_EventScript_DiscScientist_After::
 	.string "It is meant for PORYGON2.\n"
 	.string "Use it at your own risk!$"
+
+RocketLeague_Lobby_EventScript_Tactician::
+	msgbox RocketLeague_Lobby_Text_Tactician, MSGBOX_NPC
+	end
+
+RocketLeague_Lobby_EventScript_PrizeSeeker::
+	msgbox RocketLeague_Lobby_Text_PrizeSeeker, MSGBOX_NPC
+	end
+
+RocketLeague_Lobby_EventScript_Spectator::
+	msgbox RocketLeague_Lobby_Text_Spectator, MSGBOX_NPC
+	end
