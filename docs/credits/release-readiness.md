@@ -17,6 +17,6 @@ The current local ROM build, index hygiene and diff whitespace checks pass. The 
 
 The actual BPS requires the user's clean English FireRed revision 0 base, SHA-1 `41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`. No installable game patch or release ZIP has been produced yet.
 
-Rights are not certified. Attribution notices are not permissions. Original game-derived assets and the embedded multiboot dependency remain in source. Earlier commits still contain full ROMs and the state; removing their current tracking is not history cleanup. No Git history rewrite, commit, push, visibility change or release publication was performed. See [RIGHTS.md](../../RIGHTS.md).
+Rights are not certified. Attribution notices are not permissions. Original game-derived assets and the embedded multiboot dependency remain in source. Earlier commits still contain full ROMs and the state; removing their current tracking is not history cleanup. The preparation work is committed. No Git history rewrite, visibility change or release publication was performed. See [RIGHTS.md](../../RIGHTS.md).
 
 Playthrough and line-of-sight reviews remain accepted. Sprite polish and unresolved attribution remain documented preview limitations.
