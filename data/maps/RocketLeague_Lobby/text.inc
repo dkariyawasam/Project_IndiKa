@@ -63,3 +63,21 @@ RocketLeague_Lobby_Text_NurseAfterHeal::
     .string "Your team is combat-ready.\p"
     .string "Return to the arena and make\n"
     .string "TEAM ROCKET proud.$"
+
+RocketLeague_Lobby_Text_Tactician::
+    .string "A loss costs more than pride.\n"
+    .string "It shows everyone your tricks.\p"
+    .string "I change my lead POKéMON\n"
+    .string "between runs. Keep them guessing.$"
+
+RocketLeague_Lobby_Text_PrizeSeeker::
+    .string "I'm saving my COINS for a\n"
+    .string "PORYGON. No more impulse buys!\p"
+    .string "Then I saw the TM counter...\n"
+    .string "Maybe one little impulse buy.$"
+
+RocketLeague_Lobby_Text_Spectator::
+    .string "Upstairs, I watch the reels.\n"
+    .string "Down here, I watch the matches.\p"
+    .string "A machine never bluffs.\n"
+    .string "That's what makes this fun!$"
