@@ -1,0 +1,177 @@
+[
+  {
+    "map": "PokemonMansion_3F",
+    "object": 2,
+    "script": "PokemonMansion_3F_EventScript_Braydon",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "PokemonTower_3F",
+    "object": 2,
+    "script": "PokemonTower_3F_EventScript_Jennifer",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "PokemonTower_3F",
+    "object": 3,
+    "script": "PokemonTower_3F_EventScript_Emilia",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "RockTunnel_1F",
+    "object": 4,
+    "script": "RockTunnel_1F_EventScript_Ashton",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "RockTunnel_B1F",
+    "object": 2,
+    "script": "RockTunnel_B1F_EventScript_Dudley",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "RockTunnel_B1F",
+    "object": 6,
+    "script": "RockTunnel_B1F_EventScript_Winston",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "Route14",
+    "object": 4,
+    "script": "Route14_EventScript_Carter",
+    "from": "MOVEMENT_TYPE_FACE_RIGHT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "Route9",
+    "object": 1,
+    "script": "Route9_EventScript_Alan",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "Route9",
+    "object": 2,
+    "script": "Route9_EventScript_Brent",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "Route9",
+    "object": 3,
+    "script": "Route9_EventScript_Conner",
+    "from": "MOVEMENT_TYPE_FACE_RIGHT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SSAnne_1F_Room2",
+    "object": 2,
+    "script": "SSAnne_1F_Room2_EventScript_Ann",
+    "from": "MOVEMENT_TYPE_FACE_RIGHT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SSAnne_1F_Room2",
+    "object": 3,
+    "script": "SSAnne_1F_Room2_EventScript_Tyler",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SSAnne_1F_Room5",
+    "object": 1,
+    "script": "SSAnne_1F_Room5_EventScript_Arthur",
+    "from": "MOVEMENT_TYPE_FACE_UP",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SSAnne_2F_Room2",
+    "object": 1,
+    "script": "SSAnne_2F_Room2_EventScript_Dale",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SSAnne_B1F_Room3",
+    "object": 1,
+    "script": "SSAnne_B1F_Room3_EventScript_Dylan",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SilphCo_10F",
+    "object": 3,
+    "script": "SilphCo_10F_EventScript_Grunt",
+    "from": "MOVEMENT_TYPE_FACE_RIGHT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SilphCo_11F",
+    "object": 6,
+    "script": "SilphCo_11F_EventScript_Grunt2",
+    "from": "MOVEMENT_TYPE_FACE_UP",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SilphCo_2F",
+    "object": 1,
+    "script": "SilphCo_2F_EventScript_Grunt2",
+    "from": "MOVEMENT_TYPE_FACE_UP",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SilphCo_3F",
+    "object": 1,
+    "script": "SilphCo_3F_EventScript_Grunt",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SilphCo_7F",
+    "object": 3,
+    "script": "SilphCo_7F_EventScript_Grunt2",
+    "from": "MOVEMENT_TYPE_FACE_RIGHT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  },
+  {
+    "map": "SilphCo_7F",
+    "object": 4,
+    "script": "SilphCo_7F_EventScript_Grunt3",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SilphCo_9F",
+    "object": 2,
+    "script": "SilphCo_9F_EventScript_Grunt2",
+    "from": "MOVEMENT_TYPE_FACE_UP",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "SilphCo_9F",
+    "object": 4,
+    "script": "SilphCo_9F_EventScript_Grunt1",
+    "from": "MOVEMENT_TYPE_FACE_DOWN",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "VictoryRoad_1F",
+    "object": 5,
+    "script": "VictoryRoad_1F_EventScript_ExpertIvo",
+    "from": "MOVEMENT_TYPE_FACE_UP",
+    "to": "MOVEMENT_TYPE_FACE_DOWN_AND_UP"
+  },
+  {
+    "map": "ViridianForest",
+    "object": 5,
+    "script": "ViridianForest_EventScript_Sammy",
+    "from": "MOVEMENT_TYPE_FACE_LEFT",
+    "to": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT"
+  }
+]
