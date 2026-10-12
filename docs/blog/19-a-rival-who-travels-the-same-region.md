@@ -35,3 +35,7 @@ The administrators' teams are designed to counter the Elite Four, with their own
 Indigo runs four double-battle rounds followed by the rival. Rocket runs four single-battle rounds followed by Giovanni. Doubles and singles ask different questions of the player's team, which gives both competitions a reason to exist in the same adventure.
 
 Roster inspection and scripted encounter checks establish that these choices are wired into the game. They do not replace a representative balance playthrough with an ordinary team. The [current QA record](../release-playthrough/october3/README.md) keeps that work visible.
+
+## An invitation to return
+
+After the Celadon battle, the rival gives the player the VS Seeker. Its role is to make trainers available for rematches. The gift carries a practical suggestion from someone travelling alongside you: revisit people, see how your team has grown, and keep training.

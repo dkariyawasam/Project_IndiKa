@@ -15,7 +15,7 @@ See `sprite-source-matches.json` for per-file hashes and paths. `sprite-history-
 | Blackforest92 | [Gen VI animation integration](https://github.com/rh-hideout/pokeemerald-expansion/commit/86d4658bd375), [Gen VIII sprites/icons integration](https://github.com/rh-hideout/pokeemerald-expansion/commit/badf8945d865) | Integration role; does not establish who drew each frame |
 | ultima-soul | [Gen VIII data/assets import](https://github.com/rh-hideout/pokeemerald-expansion/commit/c675c92a1d81) | Importer, not automatically the artist |
 
-## Original-artist attribution still unresolved
+## Original-artist attribution unresolved at the September pass
 
 - Sylveon front/back and icon.
 - Roserade's imported GBA front/back adaptation and icon.
@@ -34,3 +34,7 @@ A [second-frame resource](https://whackahack.com/foro/threads/gen-vii-sprites-fo
 ## Credit-screen decision
 
 No speculative artist names added to the ROM. Retain RHH/expansion contributor credit. Confirmed integration/correction names can be listed under upstream sprite adaptation rather than original art. Original artist mapping remains open; finishing it requires matching the archived artwork to the historical resource sheets/author posts, or clarification from their maintainers. No messages have been sent to maintainers.
+
+## October 12 follow-up
+
+The original resource threads became accessible. See the [new research report](sprite-credit-research-oct12.md) and [frame comparisons](sprite-resource-comparisons-oct12.json) for 50 confirmed archived frame matches across 22 species/forms. The unresolved list above records the earlier state; the new report narrows it without claiming unmatched revisions or animation frames.

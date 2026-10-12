@@ -1,6 +1,6 @@
 # Devlog drafts and images
 
-The series now has 21 local drafts, updated on October 4, 2026. All 15 original posts have expanded design and UX discussion; six new posts cover the larger systems added since their first drafts. Nothing has been published.
+The series now has 21 local drafts, reviewed on October 12, 2026. All 15 original posts have expanded design and UX discussion; six new posts cover the larger systems added since their first drafts. The October 12 text pass adds timed trainer avoidance, the rival’s VS Seeker gift and Feebas’s friendship evolution, and updates accepted review status. Nothing has been published.
 
 Start with the [feature and philosophy guide](feature-guide.md) for a topic index, implemented-versus-deferred status, and source links.
 

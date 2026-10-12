@@ -1,0 +1,1262 @@
+[
+  {
+    "local": "docs/roserade-alolan-sprites/source/persian_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/rp1g3fuquxs8w4v/053-Alola.png?raw=1",
+    "source_sha256": "90162333ee26c825769ea871e15aad29f9bf908fa433cf03bab9606f462b2387",
+    "matches": [],
+    "local_sha256": "82a6cb56c5927522fe97cbb92df36af4af7b6d9fb6842319699e75df9a21fb04",
+    "credit_sheet_row": 486,
+    "resource_credit": "leParagon, OtaKun, xiechayghe",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/persian_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/rp1g3fuquxs8w4v/053-Alola.png?raw=1",
+    "source_sha256": "90162333ee26c825769ea871e15aad29f9bf908fa433cf03bab9606f462b2387",
+    "matches": [],
+    "local_sha256": "82a6cb56c5927522fe97cbb92df36af4af7b6d9fb6842319699e75df9a21fb04",
+    "credit_sheet_row": 486,
+    "resource_credit": "leParagon, OtaKun, xiechayghe",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/persian_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/rp1g3fuquxs8w4v/053-Alola.png?raw=1",
+    "source_sha256": "90162333ee26c825769ea871e15aad29f9bf908fa433cf03bab9606f462b2387",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "b64b1fceed06c9f3087c3128cd2a58f528f72b7c804195d13db2bbd0bfde75da",
+    "credit_sheet_row": 486,
+    "resource_credit": "leParagon, OtaKun, xiechayghe",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/geodude_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/42wj2o2z69y0jn9/074-Alola.png?raw=1",
+    "source_sha256": "a067a13eaed403ded3bf8b08c2babd68ba003e262d09a58e8c420824d89e37ef",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "97e2cc27811ab0ebfb53708f6621d746780915ff43f177c52e06f34005bf2795",
+    "credit_sheet_row": 487,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/geodude_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/42wj2o2z69y0jn9/074-Alola.png?raw=1",
+    "source_sha256": "a067a13eaed403ded3bf8b08c2babd68ba003e262d09a58e8c420824d89e37ef",
+    "matches": [],
+    "local_sha256": "97e2cc27811ab0ebfb53708f6621d746780915ff43f177c52e06f34005bf2795",
+    "credit_sheet_row": 487,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/geodude_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/42wj2o2z69y0jn9/074-Alola.png?raw=1",
+    "source_sha256": "a067a13eaed403ded3bf8b08c2babd68ba003e262d09a58e8c420824d89e37ef",
+    "matches": [
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "23ce8084c4cacca9499d375c263abdf37537fcb9deaab823d4da0f2ace87dcee",
+    "credit_sheet_row": 487,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/graveler_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/eyk4y0t1hoxcynh/075-Alola.png?raw=1",
+    "source_sha256": "1726a3ea210ac40edc5a5561e91132f25b3d45e45a1ca80f8e6b796a3a2e1611",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "ff959e4e6e56440957f82d5538f6a45e70120612aa243dcbf3481e06589c4131",
+    "credit_sheet_row": 488,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/graveler_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/eyk4y0t1hoxcynh/075-Alola.png?raw=1",
+    "source_sha256": "1726a3ea210ac40edc5a5561e91132f25b3d45e45a1ca80f8e6b796a3a2e1611",
+    "matches": [],
+    "local_sha256": "ff959e4e6e56440957f82d5538f6a45e70120612aa243dcbf3481e06589c4131",
+    "credit_sheet_row": 488,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/graveler_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/eyk4y0t1hoxcynh/075-Alola.png?raw=1",
+    "source_sha256": "1726a3ea210ac40edc5a5561e91132f25b3d45e45a1ca80f8e6b796a3a2e1611",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "0bd6e1e49782ae3fdc6b656b27df39f338f83531f21ecfc8d62a8fbae414f1bd",
+    "credit_sheet_row": 488,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/golem_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/8jfvsb18w2ijyc0/076-Alola.png?raw=1",
+    "source_sha256": "c983c5cb9b3b50505e818d434199c41ffc538232a77b30b0f4b7f72122ddb5eb",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "669a6980d43926f6f3031d270241d2cde62bfae8ec8e9d8000f4abb4bc291019",
+    "credit_sheet_row": 489,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/golem_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/8jfvsb18w2ijyc0/076-Alola.png?raw=1",
+    "source_sha256": "c983c5cb9b3b50505e818d434199c41ffc538232a77b30b0f4b7f72122ddb5eb",
+    "matches": [],
+    "local_sha256": "669a6980d43926f6f3031d270241d2cde62bfae8ec8e9d8000f4abb4bc291019",
+    "credit_sheet_row": 489,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/golem_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/8jfvsb18w2ijyc0/076-Alola.png?raw=1",
+    "source_sha256": "c983c5cb9b3b50505e818d434199c41ffc538232a77b30b0f4b7f72122ddb5eb",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "73be09997b0411088eb3f62a6955d36178afe2c83604f83a2abfa1eebf93e0ea",
+    "credit_sheet_row": 489,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/grimer_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/2rrsbuqds7pat1z/088-Alola.png?raw=1",
+    "source_sha256": "15c25d4b45a229ae54e66f7af6ab06ab70574ba9ac772abc61500c7ca3098d75",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "1b8de60d92170b99a5fba4d02ac8d71e5975a708fe9cb90ba694085380e1c86a",
+    "credit_sheet_row": 490,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/grimer_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/2rrsbuqds7pat1z/088-Alola.png?raw=1",
+    "source_sha256": "15c25d4b45a229ae54e66f7af6ab06ab70574ba9ac772abc61500c7ca3098d75",
+    "matches": [],
+    "local_sha256": "1b8de60d92170b99a5fba4d02ac8d71e5975a708fe9cb90ba694085380e1c86a",
+    "credit_sheet_row": 490,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/grimer_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/2rrsbuqds7pat1z/088-Alola.png?raw=1",
+    "source_sha256": "15c25d4b45a229ae54e66f7af6ab06ab70574ba9ac772abc61500c7ca3098d75",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "d5a0ebbd46c307364db30bafe57c6c278a51e86353e73700b8583423cf0af00b",
+    "credit_sheet_row": 490,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/muk_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/cearsemekos3res/089-Alola.png?raw=1",
+    "source_sha256": "69e1136fce6a6fc02e4f84440f5d9d1dd8555df4a082ffdb1d9a5b025551b152",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "abe10d05a8d07491b560e2a325ecce680b04957a2d40d4b57b94eae6dc4883ba",
+    "credit_sheet_row": 491,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/muk_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/cearsemekos3res/089-Alola.png?raw=1",
+    "source_sha256": "69e1136fce6a6fc02e4f84440f5d9d1dd8555df4a082ffdb1d9a5b025551b152",
+    "matches": [],
+    "local_sha256": "abe10d05a8d07491b560e2a325ecce680b04957a2d40d4b57b94eae6dc4883ba",
+    "credit_sheet_row": 491,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/muk_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/cearsemekos3res/089-Alola.png?raw=1",
+    "source_sha256": "69e1136fce6a6fc02e4f84440f5d9d1dd8555df4a082ffdb1d9a5b025551b152",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "edd54a8e2c4c06907d326d20f58ff7c2d8e4cf368fc8d09494a3227ed5a57c24",
+    "credit_sheet_row": 491,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/exeggutor_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ync7wnic0s7pva2/103-Alola.png?raw=1",
+    "source_sha256": "5b888a8f4c63476eb67a88820782ed0dbc5c7d5af1a3ac7d5ca407b25ea51276",
+    "matches": [],
+    "local_sha256": "d36b107e4ba4b3c1195f51a1b2fb0ce1d03dae660fe1313f539f2b9bfb6a63df",
+    "credit_sheet_row": 492,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/exeggutor_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/ync7wnic0s7pva2/103-Alola.png?raw=1",
+    "source_sha256": "5b888a8f4c63476eb67a88820782ed0dbc5c7d5af1a3ac7d5ca407b25ea51276",
+    "matches": [],
+    "local_sha256": "d36b107e4ba4b3c1195f51a1b2fb0ce1d03dae660fe1313f539f2b9bfb6a63df",
+    "credit_sheet_row": 492,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/exeggutor_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ync7wnic0s7pva2/103-Alola.png?raw=1",
+    "source_sha256": "5b888a8f4c63476eb67a88820782ed0dbc5c7d5af1a3ac7d5ca407b25ea51276",
+    "matches": [],
+    "local_sha256": "27f6e587a522b50f9542b0520a51c3d7f8d2f55650680716dd5e8bd4e23db359",
+    "credit_sheet_row": 492,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/marowak_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/lg4p3oz9f6x1aj3/105-Alola.png?raw=1",
+    "source_sha256": "5f226a6d755ac2664f4eb195aea8c06452cc1269200d0cee9abf0afafaa6adc4",
+    "matches": [],
+    "local_sha256": "de3a68423910c39e0d8b94b22ee1b15f602a158fa24668c7b55b02624b74d757",
+    "credit_sheet_row": 493,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/marowak_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/lg4p3oz9f6x1aj3/105-Alola.png?raw=1",
+    "source_sha256": "5f226a6d755ac2664f4eb195aea8c06452cc1269200d0cee9abf0afafaa6adc4",
+    "matches": [],
+    "local_sha256": "de3a68423910c39e0d8b94b22ee1b15f602a158fa24668c7b55b02624b74d757",
+    "credit_sheet_row": 493,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/marowak_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/lg4p3oz9f6x1aj3/105-Alola.png?raw=1",
+    "source_sha256": "5f226a6d755ac2664f4eb195aea8c06452cc1269200d0cee9abf0afafaa6adc4",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "b77e3d7a7a45829dd55746340057fd7684ced55f1616548cfd829ea2e3918808",
+    "credit_sheet_row": 493,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/rattata_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/fgnr3nil5rjm41o/019-Alola.png?raw=1",
+    "source_sha256": "58923a61ae5fa7e65e68bef1f1d8bd342ac240b9380ede34ad37fd0af498d74d",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "20a4d8d072102927f13edeba439bf3dea330016ed65de95702b1d174a577b799",
+    "credit_sheet_row": 476,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/rattata_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/fgnr3nil5rjm41o/019-Alola.png?raw=1",
+    "source_sha256": "58923a61ae5fa7e65e68bef1f1d8bd342ac240b9380ede34ad37fd0af498d74d",
+    "matches": [],
+    "local_sha256": "20a4d8d072102927f13edeba439bf3dea330016ed65de95702b1d174a577b799",
+    "credit_sheet_row": 476,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/rattata_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/fgnr3nil5rjm41o/019-Alola.png?raw=1",
+    "source_sha256": "58923a61ae5fa7e65e68bef1f1d8bd342ac240b9380ede34ad37fd0af498d74d",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "e2eeb4e5266ab83b55200a0bf2cb38f348b241a70668f9cbfcae3b17def1fdea",
+    "credit_sheet_row": 476,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raticate_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/a3o0p3s8xw4gsl6/020-Alola.png?raw=1",
+    "source_sha256": "9458729718f84bc0c818010e999aea6bcbe825d25a6acf761e91390aafb03794",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "172e56e560239251d5e81c668fc72960ff7a9c9c053d61ba08a6fe2f3ca5c61a",
+    "credit_sheet_row": 477,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raticate_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/a3o0p3s8xw4gsl6/020-Alola.png?raw=1",
+    "source_sha256": "9458729718f84bc0c818010e999aea6bcbe825d25a6acf761e91390aafb03794",
+    "matches": [],
+    "local_sha256": "172e56e560239251d5e81c668fc72960ff7a9c9c053d61ba08a6fe2f3ca5c61a",
+    "credit_sheet_row": 477,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raticate_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/a3o0p3s8xw4gsl6/020-Alola.png?raw=1",
+    "source_sha256": "9458729718f84bc0c818010e999aea6bcbe825d25a6acf761e91390aafb03794",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "231756a8165390255f99b75b9f499d7a68fb11b407deb270be124b335e319bc1",
+    "credit_sheet_row": 477,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raichu_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/rsbsjded4zghzel/026-Alola.png?raw=1",
+    "source_sha256": "a5a0e4ea9dc25aa301167fb5b8f562d647497806d192425bc7e55d725bf2f7bd",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "bb6dff0fc36005cc37eaad7624e9103d3b95364eba8fc5bb92aa6f59920cde05",
+    "credit_sheet_row": 478,
+    "resource_credit": "leParagon, MrDollSteak",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raichu_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/rsbsjded4zghzel/026-Alola.png?raw=1",
+    "source_sha256": "a5a0e4ea9dc25aa301167fb5b8f562d647497806d192425bc7e55d725bf2f7bd",
+    "matches": [],
+    "local_sha256": "bb6dff0fc36005cc37eaad7624e9103d3b95364eba8fc5bb92aa6f59920cde05",
+    "credit_sheet_row": 478,
+    "resource_credit": "leParagon, MrDollSteak",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/raichu_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/rsbsjded4zghzel/026-Alola.png?raw=1",
+    "source_sha256": "a5a0e4ea9dc25aa301167fb5b8f562d647497806d192425bc7e55d725bf2f7bd",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "e2ebc332f0f9330e9b4bde7274a99769a99736a4f9259f3e0957d05924a9edad",
+    "credit_sheet_row": 478,
+    "resource_credit": "leParagon, MrDollSteak",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandshrew_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/l53x8p1hvqrwx3l/027-Alola.png?raw=1",
+    "source_sha256": "78a806f3b57d63ebdeb01da397503589091eee3f568022b784bf8ded5fe5a4e2",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "90f0beacab8833bcc9f1bba37f07c9da2f6b9a3258c67dff03296d603765bf9f",
+    "credit_sheet_row": 479,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandshrew_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/l53x8p1hvqrwx3l/027-Alola.png?raw=1",
+    "source_sha256": "78a806f3b57d63ebdeb01da397503589091eee3f568022b784bf8ded5fe5a4e2",
+    "matches": [],
+    "local_sha256": "90f0beacab8833bcc9f1bba37f07c9da2f6b9a3258c67dff03296d603765bf9f",
+    "credit_sheet_row": 479,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandshrew_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/l53x8p1hvqrwx3l/027-Alola.png?raw=1",
+    "source_sha256": "78a806f3b57d63ebdeb01da397503589091eee3f568022b784bf8ded5fe5a4e2",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "a65e0a5e0101983f616b9344aaf416531440a4060d5c60c639ae63f648cc59ea",
+    "credit_sheet_row": 479,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandslash_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/7kkp47wyc5uef2n/028-Alola.png?raw=1",
+    "source_sha256": "f17ba718b0384909feba420c742a490b241e38c45d1df7dcd7c3445f1904ac05",
+    "matches": [],
+    "local_sha256": "6fc52eaaf0841bb4e9294fe4e63aec0564b9fa84c0f57ad5c6616d7024c8f39b",
+    "credit_sheet_row": 480,
+    "resource_credit": "zlolxd (front); Z-nogyroP (back)",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandslash_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/7kkp47wyc5uef2n/028-Alola.png?raw=1",
+    "source_sha256": "f17ba718b0384909feba420c742a490b241e38c45d1df7dcd7c3445f1904ac05",
+    "matches": [],
+    "local_sha256": "6fc52eaaf0841bb4e9294fe4e63aec0564b9fa84c0f57ad5c6616d7024c8f39b",
+    "credit_sheet_row": 480,
+    "resource_credit": "zlolxd (front); Z-nogyroP (back)",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/sandslash_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/7kkp47wyc5uef2n/028-Alola.png?raw=1",
+    "source_sha256": "f17ba718b0384909feba420c742a490b241e38c45d1df7dcd7c3445f1904ac05",
+    "matches": [],
+    "local_sha256": "3b0da3e9ce876d24201a18ad4d40ba3592757a688dbc022e9c4ae4a7ab11c359",
+    "credit_sheet_row": 480,
+    "resource_credit": "zlolxd (front); Z-nogyroP (back)",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/vulpix_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/zjq5gd9jt4x746i/037-Alola.png?raw=1",
+    "source_sha256": "3e774f32ede386eef4be4d9031e415bbf8293045860f8c38e693c8d20782c37a",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "323eef8960561946c0a66c7eb37d3a893bc32d99b6da0723df65813c034d9fb8",
+    "credit_sheet_row": 481,
+    "resource_credit": "Elazulmax, Versekr Dark, xiechayghe, goranthegreat, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/vulpix_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/zjq5gd9jt4x746i/037-Alola.png?raw=1",
+    "source_sha256": "3e774f32ede386eef4be4d9031e415bbf8293045860f8c38e693c8d20782c37a",
+    "matches": [],
+    "local_sha256": "323eef8960561946c0a66c7eb37d3a893bc32d99b6da0723df65813c034d9fb8",
+    "credit_sheet_row": 481,
+    "resource_credit": "Elazulmax, Versekr Dark, xiechayghe, goranthegreat, leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/vulpix_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/zjq5gd9jt4x746i/037-Alola.png?raw=1",
+    "source_sha256": "3e774f32ede386eef4be4d9031e415bbf8293045860f8c38e693c8d20782c37a",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "bac4d005abdfc867142d4d18ebad1a2d31ba382b2d3ce255aa2c37724043f365",
+    "credit_sheet_row": 481,
+    "resource_credit": "Elazulmax, Versekr Dark, xiechayghe, goranthegreat, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/ninetales_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ow5scmi2pcfyiir/038-Alola.png?raw=1",
+    "source_sha256": "db66f7d72f5bba8ce1fa749905c68555a0c4e8882addc7ab2ef4c91c74f9feba",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "c498614071c4b09c45ac56e5f16e364a72ec34cf1e46f4f485b2609f54536315",
+    "credit_sheet_row": 482,
+    "resource_credit": "leParagon (front); Z-nogyroP (back)",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/ninetales_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/ow5scmi2pcfyiir/038-Alola.png?raw=1",
+    "source_sha256": "db66f7d72f5bba8ce1fa749905c68555a0c4e8882addc7ab2ef4c91c74f9feba",
+    "matches": [],
+    "local_sha256": "c498614071c4b09c45ac56e5f16e364a72ec34cf1e46f4f485b2609f54536315",
+    "credit_sheet_row": 482,
+    "resource_credit": "leParagon (front); Z-nogyroP (back)",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/ninetales_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ow5scmi2pcfyiir/038-Alola.png?raw=1",
+    "source_sha256": "db66f7d72f5bba8ce1fa749905c68555a0c4e8882addc7ab2ef4c91c74f9feba",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "f28b86ed9e1bfb0a12c7a36f0d64777a5daffec1ba41e7254ef4afb2900bf822",
+    "credit_sheet_row": 482,
+    "resource_credit": "leParagon (front); Z-nogyroP (back)",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/diglett_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/qj0aw02856338b9/050-Alola.png?raw=1",
+    "source_sha256": "502c8c026c01f4b1b7b041028f628c68adb77e2641383307fb80e05024d68caf",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "5f51c63d25ff4bbf4f4ced0ec1da9383e561f1ea6bbf341899719110bf500e4c",
+    "credit_sheet_row": 483,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/diglett_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/qj0aw02856338b9/050-Alola.png?raw=1",
+    "source_sha256": "502c8c026c01f4b1b7b041028f628c68adb77e2641383307fb80e05024d68caf",
+    "matches": [],
+    "local_sha256": "5f51c63d25ff4bbf4f4ced0ec1da9383e561f1ea6bbf341899719110bf500e4c",
+    "credit_sheet_row": 483,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/diglett_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/qj0aw02856338b9/050-Alola.png?raw=1",
+    "source_sha256": "502c8c026c01f4b1b7b041028f628c68adb77e2641383307fb80e05024d68caf",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "abad8fc3206275dae3f9c16047ec5728307f06897a653978b8f99116020193da",
+    "credit_sheet_row": 483,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/dugtrio_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/amsl89htw9aktgx/051-Alola.png?raw=1",
+    "source_sha256": "fab07f829a1b57869b207794306f595e662ed5a2f8ce64e42f17f4c760b8f46d",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "81a4bf8d71b424ecfa0964afb83fa95b2420597b57bc9a527122278d6899f91d",
+    "credit_sheet_row": 484,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/dugtrio_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/amsl89htw9aktgx/051-Alola.png?raw=1",
+    "source_sha256": "fab07f829a1b57869b207794306f595e662ed5a2f8ce64e42f17f4c760b8f46d",
+    "matches": [],
+    "local_sha256": "81a4bf8d71b424ecfa0964afb83fa95b2420597b57bc9a527122278d6899f91d",
+    "credit_sheet_row": 484,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/dugtrio_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/amsl89htw9aktgx/051-Alola.png?raw=1",
+    "source_sha256": "fab07f829a1b57869b207794306f595e662ed5a2f8ce64e42f17f4c760b8f46d",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "c801811c8f8bd784e7c8492942fed0d4818119ff8fe2f383c6c5fc11196342cf",
+    "credit_sheet_row": 484,
+    "resource_credit": "Chaos Rush, leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/meowth_alolan/anim_front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/as9paoltzfeu21g/052-Alola.png?raw=1",
+    "source_sha256": "420256f29ae9267be790c3e05064eff006579263bffe2453f134e00e779440e3",
+    "matches": [],
+    "local_sha256": "df31d0b25b901192980a3e1c7bf10eda1583188017392b4714406f27f81a2797",
+    "credit_sheet_row": 485,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/meowth_alolan/anim_front.png",
+    "frame_y": 64,
+    "source_url": "https://www.dropbox.com/s/as9paoltzfeu21g/052-Alola.png?raw=1",
+    "source_sha256": "420256f29ae9267be790c3e05064eff006579263bffe2453f134e00e779440e3",
+    "matches": [],
+    "local_sha256": "df31d0b25b901192980a3e1c7bf10eda1583188017392b4714406f27f81a2797",
+    "credit_sheet_row": 485,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/roserade-alolan-sprites/source/meowth_alolan/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/as9paoltzfeu21g/052-Alola.png?raw=1",
+    "source_sha256": "420256f29ae9267be790c3e05064eff006579263bffe2453f134e00e779440e3",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "4f324657f40b9578076b1b58d2086d250da2718eb5e51a89d9cf78b3a1bc0076",
+    "credit_sheet_row": 485,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/meowth_galarian/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/66837spycpgb7c5/052-Galar.png?raw=1",
+    "source_sha256": "214ffe894a57ccd6a163f7a694aea7004d2cbdc69a55e7bbb4e007be46d320e9",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "871a2a8d55d8cb178151ce2d7f744a6dafab6f7d5d1dd2b1d1d6e9dea66a6f78",
+    "credit_sheet_row": 495,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/meowth_galarian/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/66837spycpgb7c5/052-Galar.png?raw=1",
+    "source_sha256": "214ffe894a57ccd6a163f7a694aea7004d2cbdc69a55e7bbb4e007be46d320e9",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "f9a1cc65f5e839ada212f98db722528dcfcb7ed4302b451c401c496d72d75be5",
+    "credit_sheet_row": 495,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/farfetchd_galarian/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/c58ws3rpfas54fv/083-Galar.png?raw=1",
+    "source_sha256": "7d18a1599b9c6fce215913a01c0f582c1b531f6a2f42f0a11e08cf7782a3aaf8",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "5c89d57ec73ba6b4ef0d16f5a71dda51a663ab0781901dea6725fc8686067f6e",
+    "credit_sheet_row": 500,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/farfetchd_galarian/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/c58ws3rpfas54fv/083-Galar.png?raw=1",
+    "source_sha256": "7d18a1599b9c6fce215913a01c0f582c1b531f6a2f42f0a11e08cf7782a3aaf8",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "d716a065a1e1f8489414b363d79c7ca66c9037e5ff578dadc12152841802fcf8",
+    "credit_sheet_row": 500,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/weezing_galarian/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/fbghtk4tqqnsvnh/110-Galar.png?raw=1",
+    "source_sha256": "2f1c2825dbf0c31bce8e9fa52fe0cf88ea474b007c98e0ed9525f9232bbccd61",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "22c3f5abd5c915cdd3940372914d2f7100a27ae5871c21d73db09b7c952c71cb",
+    "credit_sheet_row": 501,
+    "resource_credit": "French-Cyndaquil",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/weezing_galarian/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/fbghtk4tqqnsvnh/110-Galar.png?raw=1",
+    "source_sha256": "2f1c2825dbf0c31bce8e9fa52fe0cf88ea474b007c98e0ed9525f9232bbccd61",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "833f241853c9159eef448fb0a6bd3afbf9fdba60f6e339aa8e9b03f560c04cfb",
+    "credit_sheet_row": 501,
+    "resource_credit": "French-Cyndaquil",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/corsola_galarian/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/7dsilrtqnkhqjwo/222-Galar.png?raw=1",
+    "source_sha256": "f50b422c74c1fbf39b2b26d5f0fa0c69f4ee0e5c2fd757d82ab61e1b68559ed8",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "9b7ffbfc04c8e1f4b223208ca5799fe8853ffca15ab2ca9df00f6c309265b0fd",
+    "credit_sheet_row": 507,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/corsola_galarian/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/7dsilrtqnkhqjwo/222-Galar.png?raw=1",
+    "source_sha256": "f50b422c74c1fbf39b2b26d5f0fa0c69f4ee0e5c2fd757d82ab61e1b68559ed8",
+    "matches": [],
+    "local_sha256": "a1a08278d56ec7d93bfbe10f45992ebf4482d3557ba76d55d3c1033426f35905",
+    "credit_sheet_row": 507,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/galarian-sprites/source/perrserker/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ppzxnrqetsn5hg4/863.png?raw=1",
+    "source_sha256": "42dd6c9c377926071df5a427e8a7739af60f0078b9cee4ac0eb069ccbf9f4923",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "19c21719d60fcfe1ff5f36defc4515b7791368700fd20a0f0c995d89da2ecb58",
+    "credit_sheet_row": 198,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/perrserker/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/ppzxnrqetsn5hg4/863.png?raw=1",
+    "source_sha256": "42dd6c9c377926071df5a427e8a7739af60f0078b9cee4ac0eb069ccbf9f4923",
+    "matches": [
+      [
+        0,
+        0
+      ],
+      [
+        64,
+        0
+      ]
+    ],
+    "local_sha256": "c35ccdf4ba8b9276c327423e060f6281465b11f01e2b766db8f01c275360c2b3",
+    "credit_sheet_row": 198,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/cursola/back.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/alp4gr3xthp0hyc/864.png?raw=1",
+    "source_sha256": "437e166f1be9a15ddeafd190a6b2c7aa0b961b5c51d264b6172ff7fd472a8149",
+    "matches": [
+      [
+        128,
+        0
+      ],
+      [
+        192,
+        0
+      ]
+    ],
+    "local_sha256": "e36d2e4e034bbd6e0a43a92f4613ee9577a3cd20369bfbad5579c241d2fa3aca",
+    "credit_sheet_row": 199,
+    "resource_credit": "leParagon",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/cursola/front.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/alp4gr3xthp0hyc/864.png?raw=1",
+    "source_sha256": "437e166f1be9a15ddeafd190a6b2c7aa0b961b5c51d264b6172ff7fd472a8149",
+    "matches": [],
+    "local_sha256": "63f4e145356b6d3580af2b23acc61eebd1b461353282ece5ad009a8e6a0ab3e1",
+    "credit_sheet_row": 199,
+    "resource_credit": "leParagon",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/galarian-sprites/source/meowth_galarian/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/x9pc9ddg64v13ff/052-Galar.png?raw=1",
+    "source_sha256": "1de1b9d212141a7f93b89eacb55bfbcbcec0bc7656d5eafc2a4edc5fdc461555",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "f27bcac07bc3b46f15739411a3935e22e8b50bc0a1e57541e23b9ff309d2fd90",
+    "credit_sheet_row": 495,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/meowth_galarian/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/x9pc9ddg64v13ff/052-Galar.png?raw=1",
+    "source_sha256": "1de1b9d212141a7f93b89eacb55bfbcbcec0bc7656d5eafc2a4edc5fdc461555",
+    "matches": [
+      [
+        0,
+        32
+      ]
+    ],
+    "local_sha256": "f27bcac07bc3b46f15739411a3935e22e8b50bc0a1e57541e23b9ff309d2fd90",
+    "credit_sheet_row": 495,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/farfetchd_galarian/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/wjhzjbyxwbl7etm/083-Galar.png?raw=1",
+    "source_sha256": "8c9d570977de7a9347e465b8a00539f29afe08240cc78782cb3da6aa43bf92d7",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "8774fa433a47fbd85488de2b350370d6c767785b2a7de67933e94b6cd52cb38a",
+    "credit_sheet_row": 500,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/farfetchd_galarian/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/wjhzjbyxwbl7etm/083-Galar.png?raw=1",
+    "source_sha256": "8c9d570977de7a9347e465b8a00539f29afe08240cc78782cb3da6aa43bf92d7",
+    "matches": [
+      [
+        0,
+        32
+      ]
+    ],
+    "local_sha256": "8774fa433a47fbd85488de2b350370d6c767785b2a7de67933e94b6cd52cb38a",
+    "credit_sheet_row": 500,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/weezing_galarian/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/lpm852w20tfb9qs/110-Galar.png?raw=1",
+    "source_sha256": "6ba4f341ee90b2ec2b7c7bac9b7c45ea070593039f286c144868eb774930d021",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "01a1fcdab7cc5725589629763d6d99de46ef0f26053cfb313313bda19a1cce2a",
+    "credit_sheet_row": 501,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/weezing_galarian/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/lpm852w20tfb9qs/110-Galar.png?raw=1",
+    "source_sha256": "6ba4f341ee90b2ec2b7c7bac9b7c45ea070593039f286c144868eb774930d021",
+    "matches": [
+      [
+        0,
+        32
+      ]
+    ],
+    "local_sha256": "01a1fcdab7cc5725589629763d6d99de46ef0f26053cfb313313bda19a1cce2a",
+    "credit_sheet_row": 501,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/corsola_galarian/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/boohs4w9o0jwwcp/222-Galar.png?raw=1",
+    "source_sha256": "6c1c0f0e98e542ad2efc5d95b8a31b93228f5cf265277ab223e1996890825d9d",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "00e58da8f3171d5d0fa55b5d33b65c586960790c406bd38fbfa3672b7a6797fa",
+    "credit_sheet_row": 507,
+    "resource_credit": "Percy",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/corsola_galarian/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/boohs4w9o0jwwcp/222-Galar.png?raw=1",
+    "source_sha256": "6c1c0f0e98e542ad2efc5d95b8a31b93228f5cf265277ab223e1996890825d9d",
+    "matches": [],
+    "local_sha256": "00e58da8f3171d5d0fa55b5d33b65c586960790c406bd38fbfa3672b7a6797fa",
+    "credit_sheet_row": 507,
+    "resource_credit": "Percy",
+    "status": "unresolved revision"
+  },
+  {
+    "local": "docs/galarian-sprites/source/perrserker/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/dw2d0anfgvmivkp/863.png?raw=1",
+    "source_sha256": "e41c9928a7a998043e51dba62c063defc71af980bed24f7897c79d7d73219afe",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "599a34e7297096ee001bbd0713318a07a6912c5d28daf51817482edece32932a",
+    "credit_sheet_row": 198,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/perrserker/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/dw2d0anfgvmivkp/863.png?raw=1",
+    "source_sha256": "e41c9928a7a998043e51dba62c063defc71af980bed24f7897c79d7d73219afe",
+    "matches": [
+      [
+        0,
+        32
+      ]
+    ],
+    "local_sha256": "599a34e7297096ee001bbd0713318a07a6912c5d28daf51817482edece32932a",
+    "credit_sheet_row": 198,
+    "resource_credit": "Megax Rocker",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/cursola/icon.png",
+    "frame_y": 0,
+    "source_url": "https://www.dropbox.com/s/e2po3wfzizzjhdp/864.png?raw=1",
+    "source_sha256": "786fadd54481815d1bda5a3e73dd91dbdc6df2d46b8e552f4f8f0542e4d9f115",
+    "matches": [
+      [
+        0,
+        0
+      ]
+    ],
+    "local_sha256": "f5e0e6bf37871aa261fd748f4a6a25df2e6e62bb4b2258c7a7ea26fbb0f5050f",
+    "credit_sheet_row": 199,
+    "resource_credit": "Percy",
+    "status": "matched geometry and color regions"
+  },
+  {
+    "local": "docs/galarian-sprites/source/cursola/icon.png",
+    "frame_y": 32,
+    "source_url": "https://www.dropbox.com/s/e2po3wfzizzjhdp/864.png?raw=1",
+    "source_sha256": "786fadd54481815d1bda5a3e73dd91dbdc6df2d46b8e552f4f8f0542e4d9f115",
+    "matches": [
+      [
+        0,
+        32
+      ]
+    ],
+    "local_sha256": "f5e0e6bf37871aa261fd748f4a6a25df2e6e62bb4b2258c7a7ea26fbb0f5050f",
+    "credit_sheet_row": 199,
+    "resource_credit": "Percy",
+    "status": "matched geometry and color regions"
+  }
+]

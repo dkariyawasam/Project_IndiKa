@@ -1,0 +1,25 @@
+{
+  "title": "Pok\u00e9mon Expeditions Kanto",
+  "label": "2026-10-12 development preview",
+  "status": "staged; patch generation awaits verified clean base",
+  "target": {
+    "size": 16777216,
+    "sha256": "50b57d2f8b7282a4e435df82ac172634ac380459c009d772983d6aa3285316c9",
+    "sha1": "2f758686a8c97812e1123cc060b1d48fa65cc01c"
+  },
+  "required_base": {
+    "description": "Pok\u00e9mon FireRed English, revision 0",
+    "sha1": "41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc"
+  },
+  "source_commit": "57a1b9085461ff86489e9a2ed541d18b0fc27f00",
+  "includes_uncommitted_changes": true,
+  "rom_included": false,
+  "new_game_smoke": "passed opening progression with Bulbasaur, rival-battle loss branch, expedition/Pokedex handoff, Route 1, Viridian Mart and initial menus; saved disposable fixture",
+  "forest_brock_smoke": "verified forest entrances/exits, catching, healing, Mt Moon Helix/Dart fossil sequence, Brock return and zero-badge challenge loss/retry state, save/CONTINUE; coverage accepted by user on October 12",
+  "review_acceptance": {
+    "date": "2026-10-12",
+    "playthrough": "accepted by user; closed",
+    "trainer_line_of_sight": "accepted by user; closed",
+    "coverage": "Existing evidence and limitations retained; no additional live testing claimed."
+  }
+}

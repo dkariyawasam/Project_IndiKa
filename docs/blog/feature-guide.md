@@ -1,6 +1,6 @@
 # Feature and design guide
 
-Updated October 3, 2026. This is the editorial index for the local devlog drafts, not a release-completion claim. The roster counts and implementation status below describe this development snapshot.
+Updated October 12, 2026. This is the editorial index for the local devlog drafts, not a release-completion claim. The roster counts and implementation status below describe this development snapshot.
 
 ## Design principles
 
@@ -29,15 +29,21 @@ Oak's fieldwork framing; Gym Leader field trials and scalable challenge variants
 
 Primary posts: [1](01-why-rebuild-kanto.md), [Apex](03-apex-pokemon.md), [rumours](04-rumour-system.md), [gyms](05-gym-leaders-as-researchers.md), [Giovanni](06-giovanni-and-mewtwo.md), [flashbacks](07-route-7-flashback-sequence.md), [19](19-a-rival-who-travels-the-same-region.md), [21](21-bringing-the-expedition-home.md).
 
+Trainer avoidance is part of exploration: players can time their walking to pass outside a trainer’s current view. A collision audit led to 25 fixed-facing trainers receiving opposite-direction turning patterns. This preserves sight-triggered battles and team strength. Running nearby can still draw attention. See the [avoidance review](../release-playthrough/trainer-avoidance-oct12/README.md).
+
 ### Pokémon and acquisition
 
 399 active species in this snapshot; a separate 318-species obtainable completion target; regional and custom forms; rare surviving primeval Pokémon; four fossil-fragment combinations; NPC trade evolutions; held-item evolution trades placed around appropriate characters; the Porygon quiz terminal; Porygon, Dratini and Smeargle at the Rocket prize counter; species ability and stat revisions; expanded menu icons, cries and complete active-roster footprints.
 
 Primary posts: [13](13-pokemon-art-and-palette-pass.md), [collection](16-making-every-catch-matter.md), [fossils](17-fossils-as-incomplete-reconstructions.md), [evolution access](18-evolution-without-a-second-console.md). Active does not mean obtainable, and complete footprint coverage does not mean complete battle artwork.
 
+Ordinary Feebas evolves into Milotic through high friendship followed by a level-up. The Celadon rival gives the VS Seeker after defeat, connecting repeat trainer battles to the rival’s parallel journey.
+
 ### Rewards and inventory
 
 Page difficulty determines S/M/L Exp. Candy, with a Rare Candy alongside it. Friendship pages use L; Apex pages give two L. Habitat completion gives one XL. Claims are saved and checked against inventory space. Loose Rare Candy pickups have been replaced. The five-pocket Bag separates Items, Berries, Poké Balls, TMs and Key Items. Berry behaviour, fossil quantities and item icons have received dedicated passes. Rocket item/TM and Pokémon clerks use coin shops; the Coin Case requirement is removed. Badge-linked field items include the Thunder and Soul passes, with custom card-like icons.
+
+The Rocket League lobby now includes a lounge, additional NPCs and a large circled Rocket emblem. Returning from the arena walks the player below the receptionist, beside the rules and betting board. Erika’s challenge tiers 3–7 include Leafeon.
 
 Primary posts: [9](09-rebuilding-the-bag.md), [16](16-making-every-catch-matter.md), [18](18-evolution-without-a-second-console.md).
 
@@ -59,7 +65,7 @@ Primary posts: [trainers](11-trainer-identity.md), [cleanup](12-cleaning-up-fire
 | --- | --- |
 | Implemented with recorded checks | Core progression, Oak's ending, page/habitat grants, NPC trades, terminal branches, coin shops and the main menu systems. Evidence varies by feature; use the QA records below. |
 | Art still unfinished | Deep Feebas assets and custom backs for Kabustar, Kabuknight and Aeropteryx. |
-| Further validation required | Naturally earned collection pacing, representative ordinary-team balance and the deferred live custom-ability battle pass. The reported Pallet boundary issue has additional fixes and clean test crossings, but its exact reported failure was not reproduced in the fixture. |
+| Reviews accepted | The user closed the playthrough and trainer line-of-sight reviews on October 12. Recorded limitations remain evidence boundaries, not outstanding release gates. The custom-ability-specific live battle pass remains deferred. |
 | Intentionally unavailable | Patch Disc distribution and Porygon3 acquisition. Additional ferry destinations remain on hold. |
 | Release work still open | Remaining imported-art attribution and final patch/package production after final QA. |
 

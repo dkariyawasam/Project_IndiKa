@@ -1,0 +1,562 @@
+[
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/diglett_alolan/anim_front.png",
+    "sha": "3491501adb37b8cffcd45da7fcce252041d383fb",
+    "upstream_paths": [
+      "graphics/pokemon/diglett/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/diglett_alolan/back.png",
+    "sha": "26e060dc346577c083b40b883dcd09b47f5f0661",
+    "upstream_paths": [
+      "graphics/pokemon/diglett/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/diglett_alolan/icon.png",
+    "sha": "ccde6cb2a3c5f2f283fefa50926094383ea3a9a2",
+    "upstream_paths": [
+      "graphics/pokemon/diglett/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/dugtrio_alolan/anim_front.png",
+    "sha": "bd902aeb4fb672fec41d4cc538a9a22c9dbf6c28",
+    "upstream_paths": [
+      "graphics/pokemon/dugtrio/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/dugtrio_alolan/back.png",
+    "sha": "e114284819b74add47b737b084e0bb2aed9ce800",
+    "upstream_paths": [
+      "graphics/pokemon/dugtrio/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/dugtrio_alolan/icon.png",
+    "sha": "3b10a41c6b4e6598e50397a0ba635f7d60511628",
+    "upstream_paths": [
+      "graphics/pokemon/dugtrio/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/exeggutor_alolan/anim_front.png",
+    "sha": "33f0caa366046993f7456e1eeef0bb719b650ad7",
+    "upstream_paths": [
+      "graphics/pokemon/exeggutor/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/exeggutor_alolan/back.png",
+    "sha": "09b1bad270bc17289e339e01cbf4971bee7217ca",
+    "upstream_paths": [
+      "graphics/pokemon/exeggutor/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/exeggutor_alolan/icon.png",
+    "sha": "49b788b715eec8b442346f25da18c5cd4ba971c7",
+    "upstream_paths": [
+      "graphics/pokemon/exeggutor/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/geodude_alolan/anim_front.png",
+    "sha": "d4bb0a53490d59a0c3137d4b155ee5a42543b0a3",
+    "upstream_paths": [
+      "graphics/pokemon/geodude/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/geodude_alolan/back.png",
+    "sha": "f01936a1a3657f171da32f8a7c12bfe5f14f76f9",
+    "upstream_paths": [
+      "graphics/pokemon/geodude/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/geodude_alolan/icon.png",
+    "sha": "6a4cbd5158a7d878ec05293c5b8b8f82730bac55",
+    "upstream_paths": [
+      "graphics/pokemon/geodude/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/golem_alolan/anim_front.png",
+    "sha": "b23a3e673f987d7154b80c070d4c68158f77783a",
+    "upstream_paths": [
+      "graphics/pokemon/golem/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/golem_alolan/back.png",
+    "sha": "bda1dfaa6f0933ec3c548c7166385568ec1f74a3",
+    "upstream_paths": [
+      "graphics/pokemon/golem/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/golem_alolan/icon.png",
+    "sha": "ccaa2714e850d9de02a92206de34b731f6ea4357",
+    "upstream_paths": [
+      "graphics/pokemon/golem/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/graveler_alolan/anim_front.png",
+    "sha": "ddefaaee7980abd8325fa58629c087196f7ba626",
+    "upstream_paths": [
+      "graphics/pokemon/graveler/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/graveler_alolan/back.png",
+    "sha": "038e7d37bc0b70ce598634bba0e583782e949cc1",
+    "upstream_paths": [
+      "graphics/pokemon/graveler/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/graveler_alolan/icon.png",
+    "sha": "da15318b969421df7b9557aaa14f211c73ab0c5c",
+    "upstream_paths": [
+      "graphics/pokemon/graveler/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/grimer_alolan/anim_front.png",
+    "sha": "a6884406d8b0449d36ab455f3f6953a58ddfaabb",
+    "upstream_paths": [
+      "graphics/pokemon/grimer/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/grimer_alolan/back.png",
+    "sha": "41165aaa83378c32f0d0e9de54d03d09bf8421c5",
+    "upstream_paths": [
+      "graphics/pokemon/grimer/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/grimer_alolan/icon.png",
+    "sha": "38ba79b2dcef557112a07f6add581dcfaeef9cd6",
+    "upstream_paths": [
+      "graphics/pokemon/grimer/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/marowak_alolan/anim_front.png",
+    "sha": "716b04d57860b60b7a10fadb45db0e561a6705d4",
+    "upstream_paths": [
+      "graphics/pokemon/marowak/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/marowak_alolan/back.png",
+    "sha": "bec02f84009a06e1bb70d3c8f0df2af66df0ee3b",
+    "upstream_paths": [
+      "graphics/pokemon/marowak/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/marowak_alolan/icon.png",
+    "sha": "d434c92fb7021a56eabd8152d852fd50e4191777",
+    "upstream_paths": [
+      "graphics/pokemon/marowak/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/meowth_alolan/anim_front.png",
+    "sha": "227beff37932d6e06b38c26b1ded804567b50ef1",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/meowth_alolan/back.png",
+    "sha": "84eafdae027197ea54f679aafe7d77d5d8f417c5",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/meowth_alolan/icon.png",
+    "sha": "f2b5d00cbe0f1fe34894061e9cc8d9cd3a234d44",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/muk_alolan/anim_front.png",
+    "sha": "89241b7d4545c5d7fc9242c1c6144868d82aea23",
+    "upstream_paths": [
+      "graphics/pokemon/muk/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/muk_alolan/back.png",
+    "sha": "243561d491ab8c195c3b5c285102a0224cb1bdc3",
+    "upstream_paths": [
+      "graphics/pokemon/muk/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/muk_alolan/icon.png",
+    "sha": "676a7999ee49f0f5c2d89775cb1ea9d6a05abf80",
+    "upstream_paths": [
+      "graphics/pokemon/muk/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/ninetales_alolan/anim_front.png",
+    "sha": "6a544c69deb33dcb910f9c009d0c4e8e96971d70",
+    "upstream_paths": [
+      "graphics/pokemon/ninetales/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/ninetales_alolan/back.png",
+    "sha": "149d868a537ce4a02f2030a87a4672027d3fcaa0",
+    "upstream_paths": [
+      "graphics/pokemon/ninetales/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/ninetales_alolan/icon.png",
+    "sha": "f433689887d957e282514f0caf60e2ad46f3ceb8",
+    "upstream_paths": [
+      "graphics/pokemon/ninetales/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/persian_alolan/anim_front.png",
+    "sha": "4c7a6c9c76a57046c7bb608fb592d8c628c24334",
+    "upstream_paths": [
+      "graphics/pokemon/persian/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/persian_alolan/back.png",
+    "sha": "24405c2a38f9b6b59790235f61075868db1f0cf0",
+    "upstream_paths": [
+      "graphics/pokemon/persian/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/persian_alolan/icon.png",
+    "sha": "21ad48eb3146b1d73682f2cbd3356283dfd275fe",
+    "upstream_paths": [
+      "graphics/pokemon/persian/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raichu_alolan/anim_front.png",
+    "sha": "cb2bdff14da96edc9d765dd3bb4bd74264528988",
+    "upstream_paths": [
+      "graphics/pokemon/raichu/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raichu_alolan/back.png",
+    "sha": "abb01054a45db50f0cf29d2857656efae5e7e33e",
+    "upstream_paths": [
+      "graphics/pokemon/raichu/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raichu_alolan/icon.png",
+    "sha": "2098d83f95f0f3ce3524dbdf689ecf7a32ccbb6e",
+    "upstream_paths": [
+      "graphics/pokemon/raichu/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raticate_alolan/anim_front.png",
+    "sha": "1f4131c62f89e459e5151f06cb995437f7ff8d86",
+    "upstream_paths": [
+      "graphics/pokemon/raticate/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raticate_alolan/back.png",
+    "sha": "7ea9895e56ac95bf1c5bf77f312f84c880a8de3c",
+    "upstream_paths": [
+      "graphics/pokemon/raticate/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/raticate_alolan/icon.png",
+    "sha": "072c5ca6e449682495503884f59548b1f0c6339b",
+    "upstream_paths": [
+      "graphics/pokemon/raticate/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/rattata_alolan/anim_front.png",
+    "sha": "fc2639fba589537f14a87da9a30c4f0092ab0ede",
+    "upstream_paths": [
+      "graphics/pokemon/rattata/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/rattata_alolan/back.png",
+    "sha": "3ad8eb28f28a562bd646a22cb12b1a459d8c02ec",
+    "upstream_paths": [
+      "graphics/pokemon/rattata/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/rattata_alolan/icon.png",
+    "sha": "87c40fa445bf6bc13c336a782def0a8400094c89",
+    "upstream_paths": [
+      "graphics/pokemon/rattata/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/roserade/anim_front.png",
+    "sha": "5630199f799e3b8cf96644628ccfb16c697b1871",
+    "upstream_paths": [
+      "graphics/pokemon/roserade/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/roserade/back.png",
+    "sha": "1c4c4e30b9ca551852760751ad87c9078ae7126a",
+    "upstream_paths": [
+      "graphics/pokemon/roserade/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/roserade/icon.png",
+    "sha": "68f7f8660bda544bb4eb719e9041ef923a1aff3b",
+    "upstream_paths": [
+      "graphics/pokemon/roserade/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandshrew_alolan/anim_front.png",
+    "sha": "bba2dda98b7742a1a761c93908d78996f3782595",
+    "upstream_paths": [
+      "graphics/pokemon/sandshrew/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandshrew_alolan/back.png",
+    "sha": "1e09ba38b6cdb50aeb0f5fd378ed8b8b9d2007cd",
+    "upstream_paths": [
+      "graphics/pokemon/sandshrew/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandshrew_alolan/icon.png",
+    "sha": "ae93de08b63dd5ce969e51ac122ba2a28f7eb5c3",
+    "upstream_paths": [
+      "graphics/pokemon/sandshrew/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandslash_alolan/anim_front.png",
+    "sha": "dd59eb2207dcb3ce32f66758940bdedcdaf0378a",
+    "upstream_paths": [
+      "graphics/pokemon/sandslash/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandslash_alolan/back.png",
+    "sha": "c64d6953600ea700edd42ee0c6c29d251c21f8aa",
+    "upstream_paths": [
+      "graphics/pokemon/sandslash/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/sandslash_alolan/icon.png",
+    "sha": "9df450d1ed8594ced07983bb93326f457e1c9771",
+    "upstream_paths": [
+      "graphics/pokemon/sandslash/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/vulpix_alolan/anim_front.png",
+    "sha": "ff2732b3e9a590c522fca90a04144fc7d14a76ec",
+    "upstream_paths": [
+      "graphics/pokemon/vulpix/alola/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/vulpix_alolan/back.png",
+    "sha": "f3ea2e305d7d2c6cf809ae1f2c58041c494d4a38",
+    "upstream_paths": [
+      "graphics/pokemon/vulpix/alola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/roserade-alolan-sprites/source/vulpix_alolan/icon.png",
+    "sha": "ccf5bbfcc1174bd82045103696d9a142c53fecef",
+    "upstream_paths": [
+      "graphics/pokemon/vulpix/alola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/corsola_galarian/back.png",
+    "sha": "790ff60b431b865c37d9c7f4a3a0e8daf2a5e4e5",
+    "upstream_paths": [
+      "graphics/pokemon/corsola/galar/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/corsola_galarian/front.png",
+    "sha": "f90ef1b20ed540bdc602a863fe1c95b057e1a3ba",
+    "upstream_paths": [
+      "graphics/pokemon/corsola/galar/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/corsola_galarian/icon.png",
+    "sha": "96ef4da0463cc943443c60a8f8d42e671a89b8ea",
+    "upstream_paths": [
+      "graphics/pokemon/corsola/galar/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/cursola/back.png",
+    "sha": "28d3cdf08834701a515c42e4db6c01e89c664eb6",
+    "upstream_paths": [
+      "graphics/pokemon/cursola/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/cursola/front.png",
+    "sha": "5dd4cea7de0a60382d0071ee68d84310448e1fb2",
+    "upstream_paths": [
+      "graphics/pokemon/cursola/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/cursola/icon.png",
+    "sha": "8bfc498178be5b9f929fa8e797ac46e8fe9c85ef",
+    "upstream_paths": [
+      "graphics/pokemon/cursola/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/farfetchd_galarian/back.png",
+    "sha": "a526545c9bc7a09b360b1777f485312d6ed47f74",
+    "upstream_paths": [
+      "graphics/pokemon/farfetchd/galar/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/farfetchd_galarian/front.png",
+    "sha": "11100f7b1e328fc44676baf92bb2714334d4b4da",
+    "upstream_paths": [
+      "graphics/pokemon/farfetchd/galar/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/farfetchd_galarian/icon.png",
+    "sha": "2dda2cd26249a69c5759c2854a8fcfa2bf56d5e8",
+    "upstream_paths": [
+      "graphics/pokemon/farfetchd/galar/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/meowth_galarian/back.png",
+    "sha": "a7ad396e7318bff0bd023db5eddcf3e69fb50b0f",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/galar/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/meowth_galarian/front.png",
+    "sha": "05c6ee6db4ff120b681d34d0b15036695b9823a9",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/galar/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/meowth_galarian/icon.png",
+    "sha": "5292f0b5490437b889f3c5b947689f4e513062bb",
+    "upstream_paths": [
+      "graphics/pokemon/meowth/galar/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/perrserker/back.png",
+    "sha": "1a116b98ab6bba76242d0da7ece14f81045d79e2",
+    "upstream_paths": [
+      "graphics/pokemon/perrserker/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/perrserker/front.png",
+    "sha": "2544418b30643e8a2ca9504c29dac56690a79e7d",
+    "upstream_paths": [
+      "graphics/pokemon/perrserker/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/perrserker/icon.png",
+    "sha": "fe93bd3172aa7a7cfa21f352ff2b2ff857190b19",
+    "upstream_paths": [
+      "graphics/pokemon/perrserker/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/weezing_galarian/back.png",
+    "sha": "e4ecb384a2a01413887b8153561540f646a45720",
+    "upstream_paths": [
+      "graphics/pokemon/weezing/galar/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/weezing_galarian/front.png",
+    "sha": "c66352bb08d6fb8c20ef66b3a33a509a1c6dbf50",
+    "upstream_paths": [
+      "graphics/pokemon/weezing/galar/front.png"
+    ]
+  },
+  {
+    "local_source": "docs/galarian-sprites/source/weezing_galarian/icon.png",
+    "sha": "79c7dd6bfed1069c39e39bdadcce1cd91a8105d0",
+    "upstream_paths": [
+      "graphics/pokemon/weezing/galar/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/sylveon-sprites/source/anim_front.png",
+    "sha": "a840f7cf86cdfbdec1e219cdd4b3044d10dbccdc",
+    "upstream_paths": [
+      "graphics/pokemon/sylveon/anim_front.png"
+    ]
+  },
+  {
+    "local_source": "docs/sylveon-sprites/source/back.png",
+    "sha": "3eb857769935c3a98adef0977c4ef27a8db3c489",
+    "upstream_paths": [
+      "graphics/pokemon/sylveon/back.png"
+    ]
+  },
+  {
+    "local_source": "docs/sylveon-sprites/source/footprint.png",
+    "sha": "40d49e2b5ebea3fdcbabe5b1ee4aa2e05b6334db",
+    "upstream_paths": [
+      "graphics/pokemon/sylveon/footprint.png"
+    ]
+  },
+  {
+    "local_source": "docs/sylveon-sprites/source/icon.png",
+    "sha": "717e4004a565d90bbe00048312ff414148496061",
+    "upstream_paths": [
+      "graphics/pokemon/sylveon/icon.png"
+    ]
+  },
+  {
+    "local_source": "docs/sylveon-sprites/source/overworld.png",
+    "sha": "11847710f3d0b89791bb54b1e849b2d334fea662",
+    "upstream_paths": [
+      "graphics/pokemon/sylveon/overworld.png"
+    ]
+  }
+]

@@ -43,3 +43,7 @@ The Rocket League's two prize clerks now provide browsing screens using coins. T
 *October 2 controlled shop-validation capture. The transaction path was tested separately from an earned coin-grinding playthrough.*
 
 The [October 2 evidence](../feature-validation-october2/coverage.json) covers sixteen NPC trades, terminal cases and shop behaviour. It is more specific than a blanket claim that every possible player state has been tested.
+
+## Friendship as care
+
+Ordinary Feebas now evolves into Milotic through high friendship followed by a level-up. This gives its transformation a condition the player can work toward through the journey, and connects it to the expedition’s theme of growth through bond.

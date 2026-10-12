@@ -21,3 +21,5 @@ These existing records document imports. Archive or project credit does not esta
 - [tynamo-sprites](../../docs/tynamo-sprites/README.md)
 
 The preserved [upstream contributor list](../roserade-alolan-sprites/upstream-credits.md) covers the broader expansion project and must not be presented as if every person contributed directly to Expedition Kanto.
+
+The [October 12 resource comparison](sprite-credit-research-oct12.md) adds individual artist credits for confirmed archived drawings and distinguishes unmatched revisions.

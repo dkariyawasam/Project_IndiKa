@@ -109,3 +109,9 @@ Checked items are illustrated above. Unchecked items still need a matching captu
 ## Closing Thought
 
 Trainer identity is worldbuilding. If the player can tell who someone is before the battle starts, the region feels more intentional.
+
+## Choosing when to engage
+
+Trainer placement should reward watching the world. The player can wait for a trainer to turn, then walk past outside their view. Strong teams can remain in early areas when the player has a genuine opportunity to avoid them. That makes positioning and patience part of exploration.
+
+The October 12 collision review identified 25 fixed-facing trainers whose sight cut across a passage or branch. They now turn between opposite directions. Their teams and sight ranges stay intact, and walking remains important because running nearby can attract attention. The [review record](../release-playthrough/trainer-avoidance-oct12/README.md) separates these static checks from live evidence.
