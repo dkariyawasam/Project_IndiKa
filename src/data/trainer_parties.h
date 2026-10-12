@@ -4542,8 +4542,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika3[] = {
     {
         .iv = 0,
         .lvl = 25,
-        .species = SPECIES_GLOOM,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE},
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_QUICK_ATTACK, MOVE_HELPING_HAND, MOVE_SAND_ATTACK},
     },
     {
         .iv = 0,
@@ -4575,8 +4575,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika4[] = {
     {
         .iv = 0,
         .lvl = 32,
-        .species = SPECIES_EXEGGCUTE,
-        .moves = {MOVE_HYPNOSIS, MOVE_LEECH_SEED, MOVE_CONFUSION, MOVE_STUN_SPORE},
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_QUICK_ATTACK, MOVE_HELPING_HAND, MOVE_SYNTHESIS},
     },
 };
 
@@ -4596,8 +4596,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika5[] = {
     {
         .iv = 0,
         .lvl = 34,
-        .species = SPECIES_SEEDOT,
-        .moves = {MOVE_SUNNY_DAY, MOVE_SYNTHESIS, MOVE_NATURE_POWER, MOVE_GROWTH},
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_BODY_SLAM, MOVE_HELPING_HAND, MOVE_SYNTHESIS},
     },
     {
         .iv = 0,
@@ -4623,8 +4623,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika6[] = {
     {
         .iv = 0,
         .lvl = 39,
-        .species = SPECIES_SHIFTRY,
-        .moves = {MOVE_SWORDS_DANCE, MOVE_NATURE_POWER, MOVE_EXPLOSION, MOVE_BODY_SLAM},
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE, MOVE_SYNTHESIS},
     },
     {
         .iv = 0,
@@ -4650,8 +4650,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika7[] = {
     {
         .iv = 0,
         .lvl = 41,
-        .species = SPECIES_SHIFTRY,
-        .moves = {MOVE_SWORDS_DANCE, MOVE_NATURE_POWER, MOVE_EXPLOSION, MOVE_BODY_SLAM},
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE, MOVE_SYNTHESIS},
     },
     {
         .iv = 0,
