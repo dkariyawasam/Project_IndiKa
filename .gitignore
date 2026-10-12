@@ -71,3 +71,15 @@ compile_commands.json
 __pycache__/
 *.py[cod]
 *.ss[0-9]
+
+# Full game builds and private base ROMs must remain local.
+*.gba
+*.gbc
+*.nds
+*.ups
+*.srm
+*.state
+/baseroms/
+/dist/
+# Existing embedded upstream multiboot dependency; not a full game release.
+!data/mb_colosseum.gba
