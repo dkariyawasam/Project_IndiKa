@@ -1,6 +1,6 @@
 # Graphical playthrough — 11 September 2026
 
-Historical test record: player customisation was subsequently [shelved](../shelves/player-customisation-2026-09-11/README.md). These screenshots and ROM hash describe the tested build before shelving. The NPC repairs, trainer-card header fix and open Route 7 finding remain relevant; the current rebuilt ROM uses the original player selection and colours.
+Historical test record: these screenshots and ROM hash describe an earlier customisation implementation. Customisation is now integrated into the main game; see [the current feature documentation](../player-accent-customisation.md). The obsolete standalone build and restoration archive have been retired. NPC repairs and other findings below describe the build tested at that time.
 
 ## Findings
 

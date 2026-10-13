@@ -19,7 +19,6 @@ for kind,name,body in parties:
         assert struct.unpack_from('<4H',rom,symbols[name]-0x08000000+i*stride+offset)==expected,(name,i)
 for name,expected in {
 'pokefirered.sav':'816eb072055dad4bbd8ca2b4d596cf468e58b68384664931a91e814dbb824b08',
-'pokefirered-player-customisation.gba':'880e9e2dc73c16084b10dfc3cb13bfa1b3535b637277e02a576fb8aee0194d5b',
 }.items():
     assert hashlib.sha256((root/name).read_bytes()).hexdigest()==expected,name
-print('PASS: all 168 Champion move slots match rebuilt ROM; main save and customisation ROM unchanged.')
+print('PASS: all 168 Champion move slots match rebuilt ROM; main save unchanged.')

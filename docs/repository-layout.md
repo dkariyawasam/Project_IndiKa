@@ -13,7 +13,7 @@
 
 ## Builds and user files
 
-`pokefirered.gba` is the main ROM. `pokefirered-player-customisation.gba` is the deliberately preserved customisation version. Keep their saves and emulator states. `data/mb_colosseum.gba` is a build input, not a temporary ROM.
+`pokefirered.gba` is the main ROM, including the integrated [player customisation](player-accent-customisation.md). The obsolete standalone customisation build and shelved restoration files are retired. Keep the main game save and emulator states. `data/mb_colosseum.gba` is a build input, not a temporary ROM.
 
 ## Cleanup — 24 September 2026
 
