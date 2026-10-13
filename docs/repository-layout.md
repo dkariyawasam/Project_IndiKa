@@ -18,3 +18,9 @@
 ## Cleanup — 24 September 2026
 
 Moved six root preview images into `reference-previews/`, removed macOS metadata and Python bytecode caches, removed the empty `Animation/` directory, and added Python-cache/emulator-state ignore rules. No game source, sprite revisions, saves or ROMs were removed. Historical test logs remain with their reports.
+
+## Cleanup — 13 October 2026
+
+Removed 1119 files (12.82 MiB): unreferenced intermediate test captures, exact duplicate captures and five early Kinkabuto generated concepts superseded by the user's native sprite. Existing explicit filename references were checked before capture removal. Reports, logs, harnesses, referenced screenshots, selected first/middle/last captures per test folder, original artwork and attribution sources remain.
+
+The [removal manifest](repository-cleanup-oct13.json) records each path, hash, reason and recovery commit. Historical test reports describe the captures available at the time; full image sequences can be recovered from that commit. Game assets and Git history were not changed.
