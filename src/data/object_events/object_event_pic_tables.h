@@ -2168,7 +2168,7 @@ static const struct SpriteFrameImage sPicTable_PsychicF[] = {
     overworld_frame(gObjectEventPic_PsychicF, 2, 4, 6),
     overworld_frame(gObjectEventPic_PsychicF, 2, 4, 7),
     overworld_frame(gObjectEventPic_PsychicF, 2, 4, 8),
-    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 0), // Safe fallback for ANIM_RAISE_HAND.
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 9),
 };
 
 static const struct SpriteFrameImage sPicTable_RocketArcher[] = {
