@@ -61,6 +61,7 @@ RocketLeague_Lobby_EventScript_Nurse::
 	end
 
 RocketLeague_Lobby_EventScript_Receptionist::
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_THE_ROCKET_LEAGUE
 	lockall
 	faceplayer
 	textcolor NPC_TEXT_COLOR_NEUTRAL
@@ -89,6 +90,7 @@ RocketLeague_Lobby_EventScript_EnterArenaFromReceptionistBelow::
 	end
 
 RocketLeague_Lobby_EventScript_EntryPrompt::
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_THE_ROCKET_LEAGUE
 	lockall
 	applymovement LOCALID_ROCKET_LEAGUE_RECEPTIONIST, RocketLeague_Lobby_Movement_ReceptionistFacePlayer
 	applymovement LOCALID_PLAYER, RocketLeague_Lobby_Movement_FaceReceptionist

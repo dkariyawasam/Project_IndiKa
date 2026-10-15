@@ -82,17 +82,43 @@ def prepare(base, copy_save=True):
     return directory, bootstrap, hashlib.sha256(rom_bytes).hexdigest()
 
 
+def resume_session(base):
+    """Reuse the last test save and bridge only while its ROM and ELF still match."""
+    try:
+        current=json.loads((base/'current.json').read_text())
+        directory=Path(current['directory']).resolve()
+        if directory.parent != base.resolve(): return None
+        for name in ('gba','elf'):
+            if hashlib.sha256((directory/('expedition-debug.'+name)).read_bytes()).digest() != hashlib.sha256((ROOT/('pokefirered.'+name)).read_bytes()).digest(): return None
+        bootstrap=directory/'connect.lua'
+        if not bootstrap.is_file(): return None
+        return directory,bootstrap,hashlib.sha256((directory/'expedition-debug.gba').read_bytes()).hexdigest()
+    except (OSError,ValueError,KeyError): return None
+
+
 class Dashboard:
     def __init__(self, directory, bootstrap, digest):
         self.directory, self.bootstrap, self.digest = directory, bootstrap, digest
         self.catalog = build_catalog()
         self.token = secrets.token_urlsafe(32)
-        self.lock = threading.Lock(); self.sequence = 0; self.pending = None
+        self.lock = threading.Lock(); self.sequence = time.time_ns()//1000000; self.pending = None
         self.atlas_renderer = None
+        self.emulator_process = None
         self.events = []; self.jobs = {}; self.port = None
         self.python = sys.executable
         candidate = Path('/tmp/frigibas-imagegen-venv/bin/python')
         if candidate.exists(): self.python = str(candidate)
+
+    def connect_emulator(self):
+        from emulator import launch
+        with self.lock:
+            if self.raw_state().get('connected'):
+                return dict(message='Already connected to the matching game.')
+            if self.emulator_process and self.emulator_process.poll() is None:
+                return dict(message='The test emulator is already running. Unpause it, or load the bridge from the connection guide if required.')
+            self.emulator_process,result=launch(self.directory,self.bootstrap)
+            self.event('Launched test emulator',automatic=result['automatic'])
+            return result
 
     def atlas(self):
         from atlas import AtlasRenderer
@@ -264,6 +290,50 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200,dict(catalog=self.app.catalog,token=self.app.token,rom=str(self.app.directory/'expedition-debug.gba'),
                                   connect='dofile('+lua(str(self.app.bootstrap))+')',session=str(self.app.directory),sha=self.app.digest,
                                   audits=[dict(id=k,title=v[0],test=v[2]) for k,v in AUDITS.items()]))
+            elif path in ('/api/pokedex','/pokemon-preview.png'):
+                from pokedex import catalog, sprite
+                dex=catalog(ROOT,self.app.catalog['species'])
+                if path=='/api/pokedex': self.send(200,dex)
+                else:
+                    query=parse_qs(urlsplit(self.path).query)
+                    key=query.get('species',[''])[0];view=query.get('view',[''])[0]
+                    entry=next((e for e in dex['species'] if e['key']==key),None)
+                    if entry is None or view not in ('front','back'):
+                        self.send(404,dict(error='Unknown species or view'));return
+                    self.send(200,sprite(ROOT,entry,view,query.get('shiny',['0'])[0]=='1'),'image/png')
+            elif path in ('/api/pokemon-details','/pokemon-cry.wav','/pokemon-footprint.png'):
+                from pokedex import catalog, details
+                key=parse_qs(urlsplit(self.path).query).get('species',[''])[0]
+                entry=next((e for e in catalog(ROOT,self.app.catalog['species'])['species'] if e['key']==key),None)
+                if entry is None: raise ValueError('Unknown species')
+                info=details(ROOT,entry)
+                if path=='/api/pokemon-details': self.send(200,info)
+                else:
+                    asset=info['cry' if path.endswith('.wav') else 'footprint']
+                    if not asset or not (ROOT/asset).is_file():
+                        self.send(404,dict(error='Asset unavailable'));return
+                    self.send(200,(ROOT/asset).read_bytes(),'audio/wav' if path.endswith('.wav') else 'image/png')
+            elif path=='/item-icon.png':
+                from items import icon
+                key=parse_qs(urlsplit(self.path).query).get('item',[''])[0]
+                self.send(200,icon(ROOT,key),'image/png')
+            elif path=='/api/quests':
+                from quests import catalog
+                self.send(200,catalog(ROOT))
+            elif path=='/api/items':
+                from items import catalog
+                self.send(200,catalog(ROOT))
+            elif path=='/api/overworlds':
+                from overworlds import catalog
+                self.send(200, catalog(ROOT))
+            elif path=='/overworld-sheet.png':
+                from overworlds import transparent_png
+                name=parse_qs(urlsplit(self.path).query).get('path',[''])[0]
+                target=(ROOT/name).resolve()
+                allowed=(ROOT/'graphics/object_events/pics').resolve()
+                if not target.is_relative_to(allowed) or target.suffix!='.png':
+                    self.send(404,dict(error='Unknown sheet'));return
+                self.send(200,transparent_png(target),'image/png')
             elif path=='/api/atlas': self.send(200,self.app.atlas().manifest)
             elif path=='/map-art.png':
                 name=parse_qs(urlsplit(self.path).query).get('name',[''])[0]
@@ -272,9 +342,11 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200,self.app.atlas().render(name),'image/png')
             elif path=='/api/state': self.send(200,self.app.state())
             elif path=='/screen.png': self.send(200,(self.app.directory/'screen.png').read_bytes(),'image/png')
-            elif path in ('/','/app.mjs','/network.mjs','/atlas.mjs','/style.css'):
+            elif path=='/pixel.ttf':
+                self.send(200,(ROOT/'tools/debug_dashboard/static/pixel.ttf').read_bytes(),'font/ttf')
+            elif path in ('/','/app.mjs','/quests.mjs','/atlas.mjs','/overworlds.mjs','/pokedex.mjs','/items.mjs','/style.css'):
                 file=HERE/'static'/('index.html' if path=='/' else path[1:])
-                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/network.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
+                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/quests.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/overworlds.mjs':'text/javascript; charset=utf-8','/items.mjs':'text/javascript; charset=utf-8','/pokedex.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
             else: self.send(404,dict(error='Not found'))
         except FileNotFoundError: self.send(404,dict(error='Not available yet'))
         except Exception as e: self.send(500,dict(error=str(e)))
@@ -288,6 +360,12 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(data,dict): raise ValueError('Expected an object')
             path=urlsplit(self.path).path
             if path=='/api/command': result=self.app.command(data)
+            elif path=='/api/pokedex/offsets':
+                from pokedex import save_offsets
+                with self.app.lock:
+                    result=save_offsets(ROOT,self.app.catalog['species'],data)
+                self.app.event('Saved Pokémon sprite offsets',species=result['species'],values=result['values'])
+            elif path=='/api/connect': result=self.app.connect_emulator()
             elif path=='/api/audit': result=self.app.audit(data.get('id'))
             elif path=='/api/evidence': result=self.app.evidence(data.get('note',''))
             else: raise ValueError('Unknown endpoint')
@@ -301,13 +379,20 @@ def main():
     parser.add_argument('--port',type=int,default=8765)
     parser.add_argument('--fresh',action='store_true',help='Start without copying the main save')
     parser.add_argument('--no-open',action='store_true')
+    parser.add_argument('--new-session',action='store_true',help='Copy a new test session instead of resuming')
+    parser.add_argument('--launch-game',action='store_true',help='Launch the test game and automatically load the bridge when supported')
     args=parser.parse_args()
-    directory,bootstrap,digest=prepare(ROOT/'.cache/debug-dashboard',not args.fresh)
+    base=ROOT/'.cache/debug-dashboard'
+    previous=None if args.fresh or args.new_session else resume_session(base)
+    directory,bootstrap,digest=previous or prepare(base,not args.fresh)
     app=Dashboard(directory,bootstrap,digest)
     server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler);server.app=app
     url=f'http://127.0.0.1:{server.server_port}'
     atomic(ROOT/'.cache/debug-dashboard/current.json',json.dumps(dict(url=url,directory=str(directory),connect=str(bootstrap))))
     print(f'Dashboard: {url}\nTest ROM: {directory / "expedition-debug.gba"}\nIn mGBA Tools → Scripting, run: dofile({lua(str(bootstrap))})',flush=True)
+    if args.launch_game:
+        try: print(app.connect_emulator()['message'],flush=True)
+        except (OSError,ValueError,subprocess.SubprocessError) as e: print('Could not launch mGBA: '+str(e),flush=True)
     if not args.no_open:
         import webbrowser
         webbrowser.open(url)

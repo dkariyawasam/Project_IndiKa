@@ -25,7 +25,7 @@ Custom regional pre-evolutions stay in their own form lines. Standard methods cr
 
 ## Required items with no acquisition evidence
 
-14 items: DAWN STONE, DEEP SEA SCALE, DEEP SEA TOOTH, DRAGON SCALE, DUBIOUS DISC, DUSK STONE, ICE STONE, MAGMARIZER, METAL COAT, PROTECTOR, RAZOR CLAW, REAPER CLOTH, SHINY STONE, UP GRADE.
+5 items: DAWN STONE, DUSK STONE, ICE STONE, RAZOR CLAW, SHINY STONE.
 
 No new item placements or shops were added. Newer evolution items also retain question-mark menu icons.
 
@@ -37,19 +37,19 @@ No acquisition source found.
 
 ### DEEP_SEA_SCALE
 
-No acquisition source found.
+- `src/data/ingame_trades.h:236: .heldItem = ITEM_DEEP_SEA_SCALE,`
 
 ### DEEP_SEA_TOOTH
 
-No acquisition source found.
+- `src/data/ingame_trades.h:252: .heldItem = ITEM_DEEP_SEA_TOOTH,`
 
 ### DRAGON_SCALE
 
-No acquisition source found.
+- `src/data/ingame_trades.h:140: .heldItem = ITEM_DRAGON_SCALE,`
 
 ### DUBIOUS_DISC
 
-No acquisition source found.
+- `data/maps/RocketLeague_Lobby/scripts.inc:249: giveitem ITEM_DUBIOUS_DISC`
 
 ### DUSK_STONE
 
@@ -57,7 +57,7 @@ No acquisition source found.
 
 ### ELECTIRIZER
 
-- `src/data/ingame_trades.h:143: .heldItem = ITEM_ELECTIRIZER,`
+- `src/data/ingame_trades.h:108: .heldItem = ITEM_ELECTIRIZER,`
 
 ### FIRE_STONE
 
@@ -69,28 +69,30 @@ No acquisition source found.
 
 ### KINGS_ROCK
 
-- `src/data/ingame_trades.h:207: .heldItem = ITEM_KINGS_ROCK,`
+- `src/data/ingame_trades.h:43: .heldItem = ITEM_KINGS_ROCK,`
+- `src/data/ingame_trades.h:172: .heldItem = ITEM_KINGS_ROCK,`
 
 ### LEAF_STONE
 
+- `data/scripts/item_ball_scripts.inc:138: finditem ITEM_LEAF_STONE`
 - `data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:33: .2byte ITEM_LEAF_STONE`
 - `data/maps/SafariZone_Center/events.inc:27: bg_hidden_item_event 27, 15, 3, ITEM_LEAF_STONE, FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE, 1, FALSE`
-- `data/scripts/item_ball_scripts.inc:138: finditem ITEM_LEAF_STONE`
 - `data/maps/SafariZone_Center/map.json:141: "item": "ITEM_LEAF_STONE",`
 
 ### MAGMARIZER
 
-No acquisition source found.
+- `src/data/ingame_trades.h:188: .heldItem = ITEM_MAGMARIZER,`
 
 ### METAL_COAT
 
-No acquisition source found.
+- `src/data/ingame_trades.h:91: .heldItem = ITEM_METAL_COAT,`
+- `src/data/ingame_trades.h:124: .heldItem = ITEM_METAL_COAT,`
 
 ### MOON_STONE
 
+- `data/scripts/item_ball_scripts.inc:42: finditem ITEM_MOON_STONE`
 - `data/maps/MtMoon_B2F/events.inc:21: bg_hidden_item_event 20, 16, 3, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE, 1, FALSE`
 - `data/maps/PokemonMansion_1F/events.inc:29: bg_hidden_item_event 2, 21, 0, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_POKEMON_MANSION_1F_MOON_STONE, 1, FALSE`
-- `data/scripts/item_ball_scripts.inc:42: finditem ITEM_MOON_STONE`
 - `data/maps/MtMoon_B2F/map.json:126: "item": "ITEM_MOON_STONE",`
 - `data/maps/PokemonMansion_1F/map.json:190: "item": "ITEM_MOON_STONE",`
 - `Wild held item: CLEFAIRY`
@@ -99,7 +101,7 @@ No acquisition source found.
 
 ### PROTECTOR
 
-No acquisition source found.
+- `src/data/ingame_trades.h:59: .heldItem = ITEM_PROTECTOR,`
 
 ### RAZOR_CLAW
 
@@ -107,7 +109,7 @@ No acquisition source found.
 
 ### REAPER_CLOTH
 
-No acquisition source found.
+- `src/data/ingame_trades.h:204: .heldItem = ITEM_REAPER_CLOTH,`
 
 ### SHINY_STONE
 
@@ -121,20 +123,20 @@ No acquisition source found.
 
 ### THUNDER_STONE
 
+- `data/scripts/item_ball_scripts.inc:234: finditem ITEM_THUNDER_STONE`
 - `data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:31: .2byte ITEM_THUNDER_STONE`
 - `data/maps/PowerPlant/events.inc:34: bg_hidden_item_event 8, 12, 3, ITEM_THUNDER_STONE, FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE, 1, FALSE`
-- `data/scripts/item_ball_scripts.inc:234: finditem ITEM_THUNDER_STONE`
 - `data/maps/PowerPlant/map.json:279: "item": "ITEM_THUNDER_STONE",`
 
 ### UP_GRADE
 
-No acquisition source found.
+- `data/maps/CinnabarIsland_PokemonLab_ResearchRoom/scripts.inc:29: giveitem ITEM_UP_GRADE`
 
 ### WATER_STONE
 
+- `data/scripts/item_ball_scripts.inc:426: finditem ITEM_WATER_STONE`
 - `data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:32: .2byte ITEM_WATER_STONE`
 - `data/maps/SeafoamIslands_B4F/events.inc:15: bg_hidden_item_event 13, 8, 0, ITEM_WATER_STONE, FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE, 1, FALSE`
-- `data/scripts/item_ball_scripts.inc:426: finditem ITEM_WATER_STONE`
 - `data/maps/SeafoamIslands_B4F/map.json:64: "item": "ITEM_WATER_STONE",`
 
 ## Standard ancestry pairs without a configured link

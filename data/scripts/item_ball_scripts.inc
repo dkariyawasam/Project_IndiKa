@@ -15,7 +15,7 @@ ViridianForest_EventScript_ItemAntidote::
 	end
 
 ViridianForest_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_FIGY_BERRY
 	end
 
 MtMoon_1F_EventScript_ItemParalyzeHeal::
@@ -27,7 +27,7 @@ MtMoon_1F_EventScript_ItemSuperPotion::
 	end
 
 MtMoon_1F_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_WIKI_BERRY
 	end
 
 MtMoon_1F_EventScript_ItemHpUp::
@@ -91,7 +91,7 @@ SSAnne_Kitchen_EventScript_ItemGreatBall::
 	end
 
 Route9_EventScript_ItemHyperPotion::
-	finditem ITEM_HYPER_POTION
+	finditem ITEM_MAGO_BERRY
 	end
 
 PokemonTower_2F_EventScript_ItemEscapeRope::
@@ -123,7 +123,7 @@ SafariZone_Center_EventScript_ItemNugget::
 	end
 
 SafariZone_East_EventScript_ItemMaxPotion::
-	finditem ITEM_MAX_POTION
+	finditem ITEM_AGUAV_BERRY
 	end
 
 SafariZone_East_EventScript_ItemFullRestore::
@@ -291,7 +291,7 @@ VictoryRoad_2F_EventScript_ItemFullHeal::
 	end
 
 VictoryRoad_2F_EventScript_ItemMaxPotion::
-	finditem ITEM_MAX_POTION
+	finditem ITEM_IAPAPA_BERRY
 	end
 
 VictoryRoad_3F_EventScript_ItemMaxRevive::

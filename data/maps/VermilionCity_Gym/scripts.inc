@@ -125,6 +125,7 @@ VermilionCity_Gym_EventScript_DefeatedLtSurge::
 
 VermilionCity_Gym_EventScript_LtSurgeElectabuzzTrade::
 	setvar VAR_0x8008, INGAME_TRADE_ELECTABUZZ
+	setflag FLAG_HEARD_ELECTABUZZ_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_ELECTABUZZ_TRADE, VermilionCity_Gym_EventScript_LtSurgeElectabuzzTradeDone
 	msgbox VermilionCity_Gym_Text_LtSurgeOfferElectabuzzTrade, MSGBOX_YESNO

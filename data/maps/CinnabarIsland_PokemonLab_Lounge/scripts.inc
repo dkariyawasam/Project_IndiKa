@@ -5,6 +5,7 @@ CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_MAGMAR
+	setflag FLAG_HEARD_MAGMAR_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_MAGMAR_TRADE, CinnabarIsland_PokemonLab_Lounge_EventScript_Clifton_Done
 	msgbox CinnabarIsland_PokemonLab_Lounge_Text_MagmarTrade
@@ -41,6 +42,7 @@ CinnabarIsland_PokemonLab_Lounge_EventScript_Norma::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_SCYTHER
+	setflag FLAG_HEARD_SCYTHER_REQUEST
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -86,6 +88,7 @@ CinnabarIsland_PokemonLab_Lounge_EventScript_Scientist::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_ONIX
+	setflag FLAG_HEARD_ONIX_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_MARC_TRADE, CinnabarIsland_PokemonLab_Lounge_EventScript_OnixAlreadyTraded
 	msgbox CinnabarIsland_PokemonLab_Lounge_Text_OnixTrade

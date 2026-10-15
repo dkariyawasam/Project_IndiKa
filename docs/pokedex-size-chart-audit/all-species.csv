@@ -149,7 +149,8 @@ DRAGONAIR,True,40,274,0,423,6,1.46,-0.5,1.46,-0.5,red silhouette crosses size pa
 DRAGONITE,True,22,283,-1,342,4,1.406,0.7,1.406,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 MEWTWO,True,20,276,-1,342,5,1.419,0.5,1.419,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 MEW,True,4,460,-2,256,-2,0.445,-20.4,0.445,-20.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CINNABAR_MAGIKARP,True,6,512,18,256,-2,0.491,3.0,0.491,3.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+CINNABAR_MAGIKARP,True,9,507,8,342,-1,0.76,1.4,0.76,1.4,
+CHIKORITA,True,9,512,18,256,-2,0.336,-1.5,0.336,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 BAYLEEF,True,12,296,4,256,-2,0.849,-0.8,0.849,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 MEGANIUM,True,18,286,0,317,2,1.29,1.6,1.29,1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 CYNDAQUIL,True,5,539,19,256,-2,0.311,-1.5,0.311,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -230,6 +231,7 @@ KINGDRA,True,18,257,1,293,1,1.223,0.8,1.223,0.8,red silhouette crosses size pane
 PHANPY,True,5,465,20,256,-2,0.32,-0.2,0.32,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 DONPHAN,True,11,313,9,256,-2,0.714,-0.4,0.714,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 PORYGON2,True,6,320,15,256,-2,0.509,-0.4,0.509,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PORYGON3,False,6,320,15,256,-2,0.509,-0.4,0.509,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 STANTLER,True,14,277,-1,277,0,1.145,-0.1,1.145,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SMEARGLE,True,12,287,5,256,-2,0.827,-0.8,0.827,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 TYROGUE,True,7,292,8,256,-2,0.733,-0.8,0.733,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -257,9 +259,6 @@ SILCOON,True,6,431,19,256,-2,0.356,-1.1,0.356,-1.1,red silhouette crosses size p
 BEAUTIFLY,True,10,298,-1,256,-2,0.734,-10.2,0.734,-10.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 CASCOON,True,7,391,19,256,-2,0.369,0.5,0.369,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 DUSTOX,True,12,269,1,256,-2,0.692,-11.8,0.692,-11.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LOTAD,True,5,406,17,256,-2,0.344,-0.7,0.344,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LOMBRE,True,12,277,7,256,-2,0.756,-0.7,0.756,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LUDICOLO,True,15,283,0,282,0,1.16,0.8,1.16,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SEEDOT,True,5,472,20,256,-2,0.375,-0.3,0.375,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 NUZLEAF,True,10,299,8,256,-2,0.747,-0.5,0.747,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SHIFTRY,True,13,290,2,256,-2,0.995,-0.5,0.995,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -273,43 +272,18 @@ BRELOOM,True,12,324,6,256,-2,0.776,-0.9,0.776,-0.9,red silhouette crosses size p
 SPINDA,True,11,321,9,256,-2,0.711,-0.9,0.711,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 WINGULL,True,6,295,-2,256,-2,0.347,-24.1,0.347,-24.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 PELIPPER,True,12,288,1,256,-2,0.889,-3.1,0.889,-3.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SURSKIT,True,5,375,17,256,-2,0.459,-0.4,0.459,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MASQUERAIN,True,8,378,-1,256,-2,0.727,-9.0,0.727,-9.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WAILMER,True,20,256,10,493,10,1.225,0.9,1.225,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WAILORD,True,145,276,-1,1428,20,4.515,-6.2,4.515,-6.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SKITTY,True,6,492,18,256,-2,0.378,-0.1,0.378,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DELCATTY,True,11,322,9,256,-2,0.694,-0.9,0.694,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KECLEON,True,10,316,8,256,-2,0.751,-0.7,0.751,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 BALTOY,True,5,384,18,256,-3,0.424,0.7,0.424,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 CLAYDOL,True,15,256,3,280,0,1.094,0.7,1.094,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NOSEPASS,True,10,256,9,289,1,0.842,0.5,0.842,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TORKOAL,True,5,392,9,256,-2,0.689,-0.4,0.689,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SABLEYE,True,5,451,15,256,-2,0.454,-0.9,0.454,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 BARBOACH,True,4,581,-2,256,-2,0.336,-21.7,0.336,-21.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 WHISCASH,True,9,317,1,256,-2,0.675,-9.4,0.675,-9.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 LUVDISC,True,6,371,2,256,-2,0.389,-21.5,0.389,-21.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CORPHISH,True,6,484,18,256,-2,0.394,-0.4,0.394,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CRAWDAUNT,True,11,365,7,256,-2,0.778,-0.3,0.778,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 FEEBAS,True,6,423,3,256,-2,0.462,-14.5,0.462,-14.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 MILOTIC,True,62,282,-1,382,7,1.576,0.3,1.576,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CARVANHA,True,8,362,0,256,-2,0.694,-10.6,0.694,-10.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHARPEDO,True,18,265,0,342,4,1.408,0.8,1.408,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TRAPINCH,True,7,298,15,256,-2,0.5,-0.3,0.5,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VIBRAVA,True,11,370,15,256,-2,0.516,-0.2,0.516,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FLYGON,True,20,280,0,299,2,1.204,-0.2,1.204,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 MAKUHITA,True,10,256,9,256,-2,0.727,0.0,0.727,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 HARIYAMA,True,23,268,-1,375,6,1.552,1.4,1.552,1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ELECTRIKE,True,6,290,16,256,-2,0.433,-0.6,0.433,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MANECTRIC,True,15,256,1,257,-2,1.022,0.1,1.022,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 NUMEL,True,7,310,14,256,-2,0.495,-1.0,0.495,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 CAMERUPT,True,19,256,6,345,4,1.225,2.0,1.225,2.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPHEAL,True,8,315,15,256,-2,0.488,-1.0,0.488,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEALEO,True,11,338,12,256,-2,0.62,-0.3,0.62,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WALREIN,True,14,305,2,277,0,0.991,-0.6,0.991,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CACNEA,True,4,455,19,256,-2,0.327,-1.0,0.327,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CACTURNE,True,13,327,3,256,-2,0.897,-0.9,0.897,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SNORUNT,True,7,380,14,256,-2,0.502,-0.9,0.502,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GLALIE,True,15,256,3,344,2,1.099,-0.1,1.099,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 LUNATONE,True,10,300,1,256,-2,0.698,-8.4,0.698,-8.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SOLROCK,True,12,328,-3,256,-2,0.88,-7.8,0.88,-7.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 AZURILL,True,2,603,21,256,-2,0.286,-0.8,0.286,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -331,7 +305,6 @@ VIGOROTH,True,14,301,1,256,-2,0.99,-0.8,0.99,-0.8,red silhouette crosses size pa
 SLAKING,True,20,277,5,326,3,0.984,-0.2,0.984,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 GULPIN,True,4,593,22,256,-2,0.267,-1.0,0.267,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 SWALOT,True,17,256,5,345,4,1.176,2.0,1.176,2.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TROPIUS,True,20,283,-1,371,6,1.525,0.6,1.525,0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 WHISMUR,True,6,373,16,256,-2,0.462,-0.6,0.462,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 LOUDRED,True,10,356,8,256,-2,0.745,-0.1,0.745,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 EXPLOUD,True,15,284,1,256,-2,1.016,-0.1,1.016,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -339,12 +312,7 @@ CLAMPERL,True,4,691,22,256,-2,0.236,-0.3,0.236,-0.3,red silhouette crosses size 
 HUNTAIL,True,17,307,1,256,-2,0.849,-3.8,0.849,-3.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 GOREBYSS,True,18,278,5,256,-2,0.753,-4.7,0.753,-4.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 ABSOL,True,12,301,1,256,-2,0.974,-0.8,0.974,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHUPPET,True,6,440,-3,256,-2,0.413,-21.5,0.413,-21.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BANETTE,True,11,262,9,256,-2,0.711,-0.5,0.711,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEVIPER,True,27,275,6,256,-2,0.88,-0.7,0.88,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ZANGOOSE,True,13,256,2,256,-2,0.982,0.0,0.982,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 RELICANTH,True,10,316,5,256,-2,0.692,-7.0,0.692,-7.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CASTFORM,True,3,435,-5,256,-2,0.332,-25.2,0.332,-25.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 VOLBEAT,True,7,442,-4,256,-2,0.474,-19.1,0.474,-19.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 ILLUMISE,True,6,572,-4,256,-2,0.374,-22.3,0.374,-22.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 LILEEP,True,10,305,8,256,-2,0.763,-0.0,0.763,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
@@ -354,91 +322,80 @@ ARMALDO,True,15,312,2,271,-1,1.011,-0.0,1.011,-0.0,red silhouette crosses size p
 RALTS,True,4,457,18,256,-2,0.356,-1.5,0.356,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 KIRLIA,True,8,354,10,256,-2,0.657,-0.2,0.657,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 GARDEVOIR,True,16,277,0,276,-1,1.141,0.9,1.141,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BAGON,True,6,448,17,256,-2,0.416,0.0,0.416,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHELGON,True,11,311,10,256,-2,0.673,-0.1,0.673,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SALAMENCE,True,15,272,2,307,0,1.149,2.5,1.149,2.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BELDUM,True,6,414,-1,256,-2,0.382,-19.5,0.382,-19.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-METANG,True,12,256,3,272,-2,0.927,0.8,0.927,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-METAGROSS,True,16,272,3,461,4,1.387,6.3,1.387,6.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-REGIROCK,True,17,256,1,309,1,1.251,2.3,1.251,2.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-REGICE,True,18,265,0,317,3,1.305,0.9,1.305,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-REGISTEEL,True,19,256,0,359,6,1.479,0.9,1.479,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 CHIMECHO,True,6,505,-4,256,-2,0.488,-19.8,0.488,-19.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 BUNEARY,True,4,479,16,256,-2,0.476,-2.3,0.476,-2.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 LOPUNNY,True,12,288,5,272,-2,0.979,2.7,0.979,2.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 OMATO,True,1,256,0,256,-2,0.655,-11.0,0.655,-11.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
 OMATOPS,True,1,256,0,256,-2,0.873,-5.0,0.873,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARLY,True,3,465,15,256,-2,0.39,-3.5,0.39,-3.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARAVIA,True,6,356,8,256,-2,0.68,-2.3,0.68,-2.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARAPTOR,True,12,282,0,256,-2,1.056,0.0,1.056,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TANGROWTH,True,20,275,1,298,2,1.241,2.2,1.241,2.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-COMBEE,True,3,256,0,256,-2,0.6,-13.0,0.6,-13.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VESPIQUEN,True,12,256,0,256,-2,1.018,-2.0,1.018,-2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BUDEW,True,2,610,23,256,-2,0.259,0.7,0.259,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ROSERADE,True,9,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGNEZONE,True,12,256,0,256,-2,0.909,-5.0,0.909,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ELECTIVIRE,True,18,256,0,256,-2,1.145,3.0,1.145,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AMBIPOM,True,12,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ANNIHILAPE,True,12,256,0,256,-2,1.145,2.0,1.145,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HONCHKROW,True,9,256,0,256,-2,0.964,-3.0,0.964,-3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHINGLING,True,2,256,0,256,-2,0.673,-7.0,0.673,-7.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BRONZOR,True,5,256,0,256,-2,0.527,-15.0,0.527,-15.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BRONZONG,True,13,256,0,256,-2,0.891,-3.0,0.891,-3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MIME_JR,True,6,256,0,256,-2,0.873,-5.0,0.873,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MIME_SR,True,10,256,0,256,-2,1.091,2.0,1.091,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MISMAGIUS,True,9,256,0,256,-2,1.091,1.0,1.091,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPIRITOMB,True,10,256,0,256,-2,1.018,-1.0,1.018,-1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUSKNOIR,True,22,256,0,256,-2,1.036,1.0,1.036,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OSSCYTHE,True,10,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RHYPERIOR,True,24,256,0,256,-2,1.145,3.0,1.145,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CINNABAR_FEEBAS,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEAVILE,True,11,256,0,256,-2,0.982,-2.0,0.982,-2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAMOSWINE,True,25,256,0,256,-2,0.945,1.0,0.945,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FROSLASS,True,13,256,0,256,-2,0.982,1.0,0.982,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGMORTAR,True,16,256,0,256,-2,1.145,2.0,1.145,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUSTAR,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUKNIGHT,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AMUNYTE,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KINKABUTO,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AEROPTERYX,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PORYGON_Z,True,9,256,0,256,-2,0.927,-2.0,0.927,-2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LEAFEON,True,10,256,0,256,-2,0.909,-1.0,0.909,-1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GLACEON,True,8,256,0,256,-2,0.964,1.0,0.964,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SYLVEON,True,10,256,0,256,-2,0.982,-1.0,0.982,-1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FARFETCHD_GALARIAN,True,8,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TYNAMO,True,2,256,0,256,-2,0.309,-20.0,0.309,-20.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EELEKTRIK,True,12,256,0,256,-2,1.145,3.0,1.145,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EELEKTROSS,True,21,256,0,256,-2,0.891,1.0,0.891,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RATTATA_ALOLAN,True,3,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RATICATE_ALOLAN,True,7,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PICHU_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIKACHU_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RAICHU_ALOLAN,True,7,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SANDSHREW_ALOLAN,True,7,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SANDSLASH_ALOLAN,True,12,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DIGLETT_ALOLAN,True,2,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUGTRIO_ALOLAN,True,7,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEOWTH_ALOLAN,True,4,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PERSIAN_ALOLAN,True,11,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEOWTH_GALARIAN,True,4,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PERRSERKER,True,8,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GEODUDE_ALOLAN,True,4,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRAVELER_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLEM_ALOLAN,True,17,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRIMER_ALOLAN,True,7,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MUK_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VULPIX_ALOLAN,True,6,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NINETALES_ALOLAN,True,11,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGCUTE_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGUTOR_ALOLAN,True,109,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CUBONE_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAROWAK_ALOLAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CORSOLA_GALARIAN,True,6,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CURSOLA,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KOFFING_GALARIAN,True,10,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEEZING_GALARIAN,True,30,256,0,256,-2,1.018,-3.0,1.018,-3.0,placeholder question-mark sprite; default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KRICKETOT,True,3,465,15,256,-2,0.43,-2.4,0.43,-2.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KRICKETUNE,True,10,305,1,256,-2,0.839,-4.5,0.839,-4.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HAPPINY,True,6,356,17,256,-2,0.497,1.7,0.497,1.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LICKILICKY,True,17,282,1,256,0,1.007,-1.9,1.007,-1.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GALLADE,True,16,277,0,276,-1,1.159,1.8,1.159,1.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+STARLY,True,3,1211,18,342,-1,0.2,-0.2,0.2,-0.2,
+STARAVIA,True,6,807,14,342,-1,0.401,0.0,0.401,0.0,
+STARAPTOR,True,12,497,6,342,-1,0.801,0.3,0.801,0.3,
+TANGROWTH,True,20,367,0,427,3,1.333,0.7,1.333,0.7,
+COMBEE,True,3,1024,18,342,-1,0.2,-0.2,0.2,-0.2,
+VESPIQUEN,True,12,435,6,342,-1,0.801,-0.3,0.801,-0.3,
+BUDEW,True,2,1583,19,342,-1,0.134,-0.6,0.134,-0.6,
+ROSERADE,True,9,256,0,256,-2,0.927,-4.0,0.927,-4.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+MAGNEZONE,True,12,388,6,342,-1,0.801,-0.4,0.801,-0.4,
+ELECTIVIRE,True,18,367,0,384,1,1.199,0.7,1.199,0.7,
+AMBIPOM,True,12,497,6,342,-1,0.801,0.3,0.801,0.3,
+ANNIHILAPE,True,12,489,6,342,-1,0.801,0.0,0.801,0.0,
+HONCHKROW,True,9,549,10,342,-1,0.6,-0.1,0.6,-0.1,
+CHINGLING,True,2,1723,19,342,-1,0.134,0.1,0.134,0.1,
+BRONZOR,True,5,540,15,342,-1,0.334,-0.6,0.334,-0.6,
+BRONZONG,True,13,351,3,342,-1,0.868,-0.2,0.868,-0.2,
+MIME_JR,True,6,745,14,342,-1,0.401,0.0,0.401,0.0,
+MIME_SR,True,18,357,0,392,2,1.198,-0.0,1.198,-0.0,
+MISMAGIUS,True,9,621,10,342,-1,0.601,0.2,0.601,0.2,
+DUSKNOIR,True,22,357,0,505,6,1.466,-0.2,1.466,-0.2,
+OSSCYTHE,True,16,373,0,342,-1,1.067,-0.2,1.067,-0.2,
+RHYPERIOR,True,24,367,0,512,6,1.598,0.8,1.598,0.8,
+CINNABAR_FEEBAS,True,8,256,0,256,-2,1.0,-2.0,1.0,-2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+WEAVILE,True,11,457,7,342,-1,0.735,-0.1,0.735,-0.1,
+MAMOSWINE,True,25,357,0,628,9,1.663,-0.1,1.663,-0.1,
+MAGMORTAR,True,16,367,0,342,-1,1.067,-0.6,1.067,-0.6,
+KABUSTAR,True,10,256,0,256,-2,0.764,-8.0,0.764,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+KABUKNIGHT,True,10,256,0,256,-2,1.091,1.0,1.091,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+AMUNYTE,True,9,617,9,352,-1,0.643,0.3,0.643,0.3,
+KINKABUTO,True,11,489,6,352,-1,0.785,0.2,0.785,0.2,
+AEROPTERYX,True,10,256,0,256,-2,1.109,1.0,1.109,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PORYGON_Z,True,9,528,9,342,-1,0.601,-0.1,0.601,-0.1,
+LEAFEON,True,10,466,7,342,-1,0.667,0.2,0.667,0.2,
+GLACEON,True,8,617,10,342,-1,0.534,0.2,0.534,0.2,
+SYLVEON,True,10,503,8,342,-1,0.668,0.0,0.668,0.0,
+FARFETCHD_GALARIAN,True,8,256,0,256,-2,0.855,-6.0,0.855,-6.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+TYNAMO,True,2,1769,21,342,-1,0.06,0.1,0.06,0.1,
+EELEKTRIK,True,12,489,5,342,-1,0.801,-0.5,0.801,-0.5,
+EELEKTROSS,True,21,357,0,560,8,1.398,-0.7,1.398,-0.7,
+RATTATA_ALOLAN,True,3,256,0,256,-2,0.709,-8.0,0.709,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+RATICATE_ALOLAN,True,7,256,0,256,-2,0.818,-5.0,0.818,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PICHU_ALOLAN,True,10,256,0,256,-2,0.636,-12.0,0.636,-12.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PIKACHU_ALOLAN,True,10,256,0,256,-2,0.909,-4.0,0.909,-4.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+RAICHU_ALOLAN,True,7,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+SANDSHREW_ALOLAN,True,7,256,0,256,-2,0.691,-10.0,0.691,-10.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+SANDSLASH_ALOLAN,True,12,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+DIGLETT_ALOLAN,True,2,256,0,256,-2,0.582,-16.0,0.582,-16.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+DUGTRIO_ALOLAN,True,7,256,0,256,-2,0.8,-8.0,0.8,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+MEOWTH_ALOLAN,True,4,256,0,256,-2,0.8,-5.0,0.8,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PERSIAN_ALOLAN,True,11,256,0,256,-2,0.964,3.0,0.964,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+MEOWTH_GALARIAN,True,4,256,0,256,-2,0.836,-6.0,0.836,-6.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+PERRSERKER,True,8,256,0,256,-2,1.091,1.0,1.091,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+GEODUDE_ALOLAN,True,4,256,0,256,-2,0.473,-14.0,0.473,-14.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+GRAVELER_ALOLAN,True,10,256,0,256,-2,0.891,-5.0,0.891,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+GOLEM_ALOLAN,True,17,256,0,256,-2,1.109,2.0,1.109,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+GRIMER_ALOLAN,True,7,256,0,256,-2,0.727,-8.0,0.727,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+MUK_ALOLAN,True,10,256,0,256,-2,1.018,0.0,1.018,0.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+VULPIX_ALOLAN,True,6,256,0,256,-2,0.818,-7.0,0.818,-7.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+NINETALES_ALOLAN,True,11,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+EXEGGCUTE_ALOLAN,True,10,256,0,256,-2,0.691,-10.0,0.691,-10.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+EXEGGUTOR_ALOLAN,True,109,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+CUBONE_ALOLAN,True,10,256,0,256,-2,0.673,-11.0,0.673,-11.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+MAROWAK_ALOLAN,True,10,256,0,256,-2,1.036,-1.0,1.036,-1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+CORSOLA_GALARIAN,True,6,256,0,256,-2,0.764,-8.0,0.764,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+CURSOLA,True,10,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+KOFFING_GALARIAN,True,10,256,0,256,-2,0.873,-5.0,0.873,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+WEEZING_GALARIAN,True,30,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+KRICKETOT,True,3,1335,18,342,-1,0.2,-0.2,0.2,-0.2,
+KRICKETUNE,True,10,512,8,342,-1,0.668,-0.2,0.668,-0.2,
+HAPPINY,True,6,590,14,342,-1,0.4,0.0,0.4,0.0,
+LICKILICKY,True,17,355,0,363,0,1.134,0.5,1.134,0.5,
+GALLADE,True,16,373,0,342,-1,1.067,-0.2,1.067,-0.2,

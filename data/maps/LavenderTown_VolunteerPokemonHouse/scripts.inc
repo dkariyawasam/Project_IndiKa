@@ -4,23 +4,7 @@ LavenderTown_VolunteerPokemonHouse_MapScripts::
 LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_POKE_FLUTE, LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis
-	checkitemspace ITEM_POKE_FLUTE
-	goto_if_eq VAR_RESULT, FALSE, LavenderTown_VolunteerPokemonHouse_EventScript_NoRoomForPokeFlute
-	setflag FLAG_GOT_POKE_FLUTE
-	giveitem_msg LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji, ITEM_POKE_FLUTE, 1, MUS_OBTAIN_KEY_ITEM
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute
-	release
-	end
-
-LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute::
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou
-	release
-	end
-
-LavenderTown_VolunteerPokemonHouse_EventScript_NoRoomForPokeFlute::
-	msgbox LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis
+	msgbox LavenderTown_VolunteerPokemonHouse_Text_CareForPokemon
 	release
 	end
 
@@ -36,6 +20,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_DUSCLOPS
+	setflag FLAG_HEARD_DUSCLOPS_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_DUSCLOPS_TRADE, LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy_Done
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_DusclopsTrade

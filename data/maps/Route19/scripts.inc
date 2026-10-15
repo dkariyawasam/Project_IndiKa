@@ -47,6 +47,7 @@ Route19_EventScript_SlowkingTrade_Saige::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_SLOWPOKE
+	setflag FLAG_HEARD_SLOWPOKE_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_MS_NIDO_TRADE, Route19_EventScript_SlowkingTrade_AlreadyTraded
 	msgbox Route19_Text_SlowkingTradeIntro, MSGBOX_DEFAULT

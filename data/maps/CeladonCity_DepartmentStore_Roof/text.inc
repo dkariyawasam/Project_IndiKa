@@ -60,13 +60,15 @@ CeladonCity_DepartmentStore_Roof_Text_FloorSign::
 
 CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave::
     .string "A vending machine!\n"
-    .string "What does it have?$"
+    .string "What does it have?\p"
+    .string "MOOMOO MILK is imported from\n"
+    .string "the farm in JOHTO.$"
 
 CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
     .string "Oops, not enough money!$"
 
 CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut::
-    .string "A can of {STR_VAR_1} popped out!$"
+    .string "{STR_VAR_1} dropped out!$"
 
 CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff::
     .string "There's no more room for stuff!$"

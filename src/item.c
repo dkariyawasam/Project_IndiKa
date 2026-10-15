@@ -6,6 +6,10 @@
 #include "item_use.h"
 #include "load_save.h"
 #include "quest_log.h"
+#include "pokemon.h"
+#include "pokemon_storage_system.h"
+#include "mail_data.h"
+#include "constants/flags.h"
 #include "strings.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
@@ -198,6 +202,9 @@ bool8 AddBagItem(u16 itemId, u16 count)
     u8 pocket;
     s8 idx;
 
+    if (IsRetiredItem(itemId))
+        return FALSE;
+
     if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH || itemId == ITEM_HELP_MENU)
         return TRUE;
 
@@ -363,6 +370,9 @@ bool8 AddPCItem(u16 itemId, u16 count)
     u16 quantity;
     s8 idx;
 
+    if (IsRetiredItem(itemId))
+        return FALSE;
+
     for (i = 0; i < PC_ITEMS_COUNT; i++)
     {
         if (gSaveBlock1Ptr->pcItems[i].itemId == itemId)
@@ -499,6 +509,71 @@ u16 BagGetQuantityByItemId(u16 itemId)
     }
 
     return 0;
+}
+
+bool8 IsRetiredItem(u16 itemId)
+{
+    switch (itemId)
+    {
+#define RETIRED_ITEM(id) case id:
+#include "constants/retired_items.h"
+#undef RETIRED_ITEM
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+// Run after CONTINUE has restored the save and its encryption key.
+void RemoveRetiredItemsFromSave(void)
+{
+    u16 i, j;
+    u16 noItem = ITEM_NONE;
+    u8 noMail = 0xFF;
+    SetBagPocketsPointers();
+    for (i = 0; i < NUM_BAG_POCKETS; i++)
+    {
+        struct BagPocket *pocket = &gBagPockets[i];
+        for (j = 0; j < pocket->capacity; j++)
+            if (IsRetiredItem(pocket->itemSlots[j].itemId))
+            {
+                pocket->itemSlots[j].itemId = ITEM_NONE;
+                SetBagItemQuantity(&pocket->itemSlots[j].quantity, 0);
+            }
+        BagPocketCompaction(pocket->itemSlots, pocket->capacity);
+    }
+    for (i = 0; i < PC_ITEMS_COUNT; i++)
+        if (IsRetiredItem(gSaveBlock1Ptr->pcItems[i].itemId))
+        {
+            gSaveBlock1Ptr->pcItems[i].itemId = ITEM_NONE;
+            SetPcItemQuantity(&gSaveBlock1Ptr->pcItems[i].quantity, 0);
+        }
+    ItemPcCompaction();
+    if (IsRetiredItem(gSaveBlock1Ptr->registeredItem))
+        gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (IsRetiredItem(GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM)))
+            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &noItem);
+        SetMonData(&gPlayerParty[i], MON_DATA_MAIL, &noMail);
+    }
+    for (i = 0; i < TOTAL_BOXES_COUNT; i++)
+        for (j = 0; j < IN_BOX_COUNT; j++)
+        {
+            struct BoxPokemon *mon = GetBoxedMonPtr(i, j);
+            if (IsRetiredItem(GetBoxMonData(mon, MON_DATA_HELD_ITEM)))
+                SetBoxMonData(mon, MON_DATA_HELD_ITEM, &noItem);
+        }
+    for (i = 0; i < DAYCARE_MON_COUNT; i++)
+    {
+        struct DaycareMon *mon = &gSaveBlock1Ptr->daycare.mons[i];
+        if (IsRetiredItem(GetBoxMonData(&mon->mon, MON_DATA_HELD_ITEM)))
+            SetBoxMonData(&mon->mon, MON_DATA_HELD_ITEM, &noItem);
+        ClearMailStruct(&mon->mail.message);
+    }
+    ClearMailData();
+    FlagClear(FLAG_SYS_WHITE_FLUTE_ACTIVE);
+    FlagClear(FLAG_SYS_BLACK_FLUTE_ACTIVE);
 }
 
 u16 SanitizeItemId(u16 itemId)

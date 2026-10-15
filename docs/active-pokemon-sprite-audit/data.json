@@ -9370,9 +9370,9 @@
     "name": "FEEBAS",
     "assets": {
       "front": {
-        "status": "placeholder",
-        "symbol": "gMonFrontPic_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/front.png",
+        "status": "ok",
+        "symbol": "gMonFrontPic_CinnabarFeebas",
+        "source": "graphics/pokemon/cinnabar_feebas/front.png",
         "warnings": []
       },
       "back": {
@@ -9382,15 +9382,15 @@
         "warnings": []
       },
       "normal": {
-        "status": "placeholder",
-        "symbol": "gMonPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/normal.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_CinnabarFeebas",
+        "source": "graphics/pokemon/cinnabar_feebas/normal.pal",
         "warnings": []
       },
       "shiny": {
-        "status": "placeholder",
-        "symbol": "gMonShinyPalette_DoubleQuestionMark",
-        "source": "graphics/pokemon/question_mark/double/shiny.pal",
+        "status": "ok",
+        "symbol": "gMonPalette_CinnabarFeebas",
+        "source": "graphics/pokemon/cinnabar_feebas/normal.pal",
         "warnings": []
       },
       "icon": {

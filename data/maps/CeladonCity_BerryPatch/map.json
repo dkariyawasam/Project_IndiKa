@@ -178,14 +178,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeladonCity_BerryPatch_EventScript_TamatoBerry"
-    },
-    {
-      "type": "sign",
-      "x": 7,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CeladonCity_BerryPatch_EventScript_DebugCounter"
     }
   ]
 }

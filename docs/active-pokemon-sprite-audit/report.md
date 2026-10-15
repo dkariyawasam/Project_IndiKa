@@ -4,10 +4,10 @@
 
 ## Counts
 
-- front: 398 ok, 1 placeholder
+- front: 399 ok
 - back: 395 ok, 4 placeholder
-- normal: 398 ok, 1 placeholder
-- shiny: 398 ok, 1 placeholder
+- normal: 399 ok
+- shiny: 399 ok
 - icon: 398 ok, 1 placeholder
 - footprint: 399 ok
 
@@ -15,7 +15,7 @@
 
 | Species | Internal species | Assets |
 |---|---|---|
-| FEEBAS | CINNABAR_FEEBAS | front: placeholder; back: placeholder; normal: placeholder; shiny: placeholder; icon: placeholder |
+| FEEBAS | CINNABAR_FEEBAS | back: placeholder; icon: placeholder |
 | KABUSTAR | KABUSTAR | back: placeholder |
 | KABUKNIGHT | KABUKNIGHT | back: placeholder |
 | AEROPTERYX | AEROPTERYX | back: placeholder |

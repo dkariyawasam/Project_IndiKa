@@ -54,6 +54,7 @@ CeladonCity_DepartmentStore_5F_Vitamins::
 	.2byte ITEM_CALCIUM
 	.2byte ITEM_ZINC
 	.2byte ITEM_CARBOS
+	.2byte ITEM_PP_MAX
 	.2byte ITEM_NONE
 	release
 	end

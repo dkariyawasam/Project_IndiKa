@@ -71,6 +71,8 @@ u8 ItemId_GetBattleUsage(u16 itemId);
 ItemUseFunc ItemId_GetBattleFunc(u16 itemId);
 u8 ItemId_GetSecondaryId(u16 itemId);
 u16 ItemId_GetPrice(u16 itemId);
+bool8 IsRetiredItem(u16 itemId);
+void RemoveRetiredItemsFromSave(void);
 void ClearBag(void);
 void ClearPCItemSlots(void);
 bool8 AddBagItem(u16 itemId, u16 amount);

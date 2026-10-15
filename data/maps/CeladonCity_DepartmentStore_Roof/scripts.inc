@@ -193,6 +193,7 @@ CeladonCity_DepartmentStore_Roof_EventScript_ChooseDrink::
 	case 0, CeladonCity_DepartmentStore_Roof_EventScript_BuyFreshWater
 	case 1, CeladonCity_DepartmentStore_Roof_EventScript_BuySodaPop
 	case 2, CeladonCity_DepartmentStore_Roof_EventScript_BuyLemonade
+	case 3, CeladonCity_DepartmentStore_Roof_EventScript_BuyMoomooMilk
 	msgbox CeladonCity_DepartmentStore_Roof_Text_NotThirsty
 	goto CeladonCity_DepartmentStore_Roof_EventScript_ExitVendingMachine
 	end
@@ -215,6 +216,15 @@ CeladonCity_DepartmentStore_Roof_EventScript_BuyLemonade::
 	goto CeladonCity_DepartmentStore_Roof_EventScript_TryBuyDrink
 	end
 
+CeladonCity_DepartmentStore_Roof_EventScript_BuyMoomooMilk::
+	setvar VAR_TEMP_0, ITEM_MOOMOO_MILK
+	checkmoney 500
+	goto CeladonCity_DepartmentStore_Roof_EventScript_TryBuyDrink
+
+CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneyMoomooMilk::
+	removemoney 500
+	return
+
 CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneyFreshWater::
 	removemoney 200
 	return
@@ -234,6 +244,7 @@ CeladonCity_DepartmentStore_Roof_EventScript_TryBuyDrink::
 	call_if_eq VAR_TEMP_1, 0, CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneyFreshWater
 	call_if_eq VAR_TEMP_1, 1, CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneySodaPop
 	call_if_eq VAR_TEMP_1, 2, CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneyLemonade
+	call_if_eq VAR_TEMP_1, 3, CeladonCity_DepartmentStore_Roof_EventScript_RemoveMoneyMoomooMilk
 	updatemoneybox
 	bufferitemname STR_VAR_1, VAR_TEMP_0
 	playse SE_VEND

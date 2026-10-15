@@ -81,4 +81,6 @@ void LogbookMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId);
 void LogbookMenu_ResetMenuSaveData(void);
 bool8 LogbookMenu_HasHeardApexRumor(u8 apexSubquest, u8 rumor);
 
+void RecordNatureResearchEvolution(u16 before, u16 after, bool8 trade);
+
 #endif // GUARD_QUESTS_H

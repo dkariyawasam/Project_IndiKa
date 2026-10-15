@@ -18,12 +18,12 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 | Black Belt M | 7 | Route 9 (1), Cinnabar Volcano (1), Kanto Victory Road (1), Rock Tunnel (1), Saffron City (3) |
 | Boss | 1 | Silph Co. (1) |
 | Bug Catcher | 12 | Route 2 (3), Route 5 (2), Fuchsia Forest (1), Viridian Forest (6) |
-| Bug Maniac | 8 | Route 2 (1), Route 5 (2), Route 11 (3), Fuchsia Forest (1), Viridian Forest (1) |
+| Bug Maniac | 7 | Route 2 (1), Route 5 (2), Route 11 (2), Fuchsia Forest (1), Viridian Forest (1) |
 | Burglar | 7 | Pokémon Mansion (7) |
 | Champion | 2 | Pokémon League (1), Rocket League (1) |
 | Channeler | 6 | Route 8 (1), Pokémon Tower (5) |
 | Electrician | 4 | Power Plant (4) |
-| Elite Four | 3 | Pokémon League (3) |
+| Elite Four | 1 | Pokémon League (1) |
 | Engineer | 3 | Power Plant (3) |
 | Expert F | 3 | Cinnabar Volcano (1), Kanto Victory Road (1), Saffron City (1) |
 | Expert M | 3 | Cinnabar Volcano (1), Kanto Victory Road (1), Saffron City (1) |
@@ -38,14 +38,14 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 | Player | 0 |  |
 | Pokéfan F | 3 | Underground Path (3) |
 | Pokéfan M | 3 | Underground Path (3) |
-| Pokémaniac | 4 | Underground Path (4) |
+| Pokémaniac | 5 | Route 11 (1), Underground Path (4) |
 | Pokémon Breeder | 11 | Route 2 (1), Route 5 (1), Route 8 (1), Route 11 (1), Route 25 (3), Celadon City (2), Fuchsia Forest (1), Viridian Forest (1) |
 | Pokémon Ranger F | 3 | Route 2 (1), Route 5 (1), Viridian Forest (1) |
 | Pokémon Ranger M | 2 | Route 11 (1), Fuchsia Forest (1) |
 | Psychic F | 3 | Saffron City (3) |
 | Psychic M | 7 | Route 5 (1), Route 6 (1), Route 7 (1), Route 8 (1), Saffron City (3) |
 | Rival Early | 2 | Celadon City (1), Pallet Town (1) |
-| Rival Late | 3 | Pokémon Mansion (1), Pokémon Tower (1), Silph Co. (1) |
+| Rival Late | 3 | Route 23 (1), Pokémon Mansion (1), Silph Co. (1) |
 | Rocket Ace F | 1 | Rocket League (1) |
 | Rocket Ace M | 1 | Rocket League (1) |
 | Rocket Admin | 1 | Rocket League (1) |
@@ -65,8 +65,8 @@ Rows follow the displayed trainer class, with M/F battle-sprite variants separat
 | Trendsetter F | 3 | Route 7 (1), Celadon City (1), S.S. Anne (1) |
 | Trendsetter M | 3 | Route 7 (1), S.S. Anne (2) |
 | Trendsetters | 3 | Route 16 (1), Celadon City (1), S.S. Anne (1) |
-| Triathlete F | 24 | Route 12 (2), Route 13 (2), Route 14 (2), Route 15 (2), Route 16 (2), Route 17 (5), Route 18 (2), Route 20 (2), Route 22 (1), Route 24 (1), Route 25 (1), Vermilion Harbor (2) |
-| Triathlete M | 8 | Route 17 (5), Route 22 (1), Route 25 (1), Vermilion Harbor (1) |
+| Triathlete F | 25 | Route 12 (2), Route 13 (2), Route 14 (2), Route 15 (2), Route 16 (2), Route 17 (5), Route 18 (2), Route 20 (2), Route 22 (1), Route 24 (1), Route 25 (2), Vermilion Harbor (2) |
+| Triathlete M | 9 | Route 17 (5), Route 22 (1), Route 25 (2), Vermilion Harbor (1) |
 | Tuber F | 6 | Route 6 (1), Route 10 (1), Route 12 (1), Route 20 (1), Route 24 (1), Vermilion Harbor (1) |
 | Tuber M | 7 | Route 6 (1), Route 10 (1), Route 12 (2), Route 20 (1), Route 21 (1), Vermilion Harbor (1) |
 | Twins | 0 |  |

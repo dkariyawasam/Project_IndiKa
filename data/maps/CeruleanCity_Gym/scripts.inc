@@ -105,6 +105,7 @@ CeruleanCity_Gym_EventScript_GiveCascadeBoard::
 
 CeruleanCity_Gym_EventScript_MistyGyaradosCheck::
 	setvar VAR_0x8008, INGAME_TRADE_MISTY_POLIWHIRL
+	setflag FLAG_HEARD_MISTY_POLIWHIRL_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_MISTY_POLIWHIRL_TRADE, CeruleanCity_Gym_EventScript_MistyTradeDone
 	msgbox CeruleanCity_Gym_Text_MistyOfferTrade, MSGBOX_YESNO

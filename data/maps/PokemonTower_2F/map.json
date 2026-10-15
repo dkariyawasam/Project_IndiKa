@@ -75,5 +75,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_DUSK_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_POKEMON_TOWER_2F_DUSK_STONE",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
 }

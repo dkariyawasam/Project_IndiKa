@@ -95,6 +95,7 @@ PewterCity_Gym_EventScript_GiveBoulderBadge::
 
 PewterCity_Gym_EventScript_BrockRelicanthCheck::
 	setvar VAR_0x8008, INGAME_TRADE_BROCK_GRAVELER
+	setflag FLAG_HEARD_BROCK_GRAVELER_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_BROCK_GRAVELER_TRADE, PewterCity_Gym_EventScript_BrockTradeDone
 	msgbox PewterCity_Gym_Text_BrockOfferTrade, MSGBOX_YESNO

@@ -23,31 +23,13 @@ LavenderTown_VolunteerPokemonHouse_Text_Nidorino::
 LavenderTown_VolunteerPokemonHouse_Text_Psyduck::
     .string "PSYDUCK: Gwappa!$"
 
-LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
-    .string "MR. FUJI: {PLAYER}…\p"
-    .string "Your POKéDEX quest is one that\n"
-    .string "requires strong dedication.\p"
-    .string "Without deep love for POKéMON,\n"
-    .string "your quest may fail.\p"
-    .string "I'm not sure if this will help you,\n"
-    .string "but I'd like you to have it.$"
-
-LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
-    .string "{PLAYER} received a POKé FLUTE\n"
-    .string "from MR. FUJI.$"
-
-LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
-    .string "Upon hearing the POKé FLUTE,\n"
-    .string "sleeping POKéMON will spring awake.\p"
-    .string "Use it during battle to wake\n"
-    .string "sleeping POKéMON.$"
-
-LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
-    .string "You must make room for this!$"
-
-LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
-    .string "MR. FUJI: Has my POKé FLUTE\n"
-    .string "helped you?$"
+LavenderTown_VolunteerPokemonHouse_Text_CareForPokemon::
+    .string "MR. FUJI: Each POKéMON you meet\n"
+    .string "has a life beyond your POKéDEX.\p"
+    .string "Some need patience. Others need\n"
+    .string "a safe place to call home.\p"
+    .string "Care for them, {PLAYER}. That is\n"
+    .string "what makes your journey matter.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
     .string "POKéMON FAN MAGAZINE\n"

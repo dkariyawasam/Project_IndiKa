@@ -225,14 +225,6 @@ CeladonCity_BerryPatch_EventScript_Release::
 	releaseall
 	end
 
-CeladonCity_BerryPatch_EventScript_DebugCounter::
-	lockall
-	copyvar VAR_0x8008, VAR_DAY_NIGHT_DAY_COUNT
-	buffernumberstring STR_VAR_1, VAR_0x8008
-	msgbox CeladonCity_BerryPatch_Text_DebugCounter, MSGBOX_DEFAULT
-	releaseall
-	end
-
 CeladonCity_BerryPatch_Text_BerryReady:
 	.string "The {STR_VAR_1} is ripe and ready.\n"
 	.string "Pick it?$"
@@ -248,7 +240,3 @@ CeladonCity_BerryPatch_Text_NotReady:
 CeladonCity_BerryPatch_Text_NoRoom:
 	.string "There is no room for that\n"
 	.string "BERRY.$"
-
-CeladonCity_BerryPatch_Text_DebugCounter:
-	.string "DEBUG: Days passed: {STR_VAR_1}.\n"
-	.string "Each plot has its own timer.$"

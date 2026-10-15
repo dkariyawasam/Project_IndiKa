@@ -2183,6 +2183,10 @@ static void DexScreen_PrintHeaderControlInfo(const u8 *src)
         (((u16 *)GetBgTilemapBuffer(3))[0] & 0x3FF) == 14 ? 4 : 3];
     u8 x = 236 - GetStringWidth(FONT_SMALL, src, 0);
 
+    // Remove the old footer mapping before relocating this window. Otherwise
+    // first-catch registration displays the same control tiles at both edges.
+    if (GetWindowAttribute(1, WINDOW_TILEMAP_TOP) != 0)
+        ClearWindowTilemap(1);
     SetWindowAttribute(1, WINDOW_TILEMAP_LEFT, 0);
     SetWindowAttribute(1, WINDOW_TILEMAP_TOP, 0);
     SetWindowAttribute(1, WINDOW_WIDTH, 30);

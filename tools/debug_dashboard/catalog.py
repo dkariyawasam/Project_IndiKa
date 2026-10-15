@@ -113,12 +113,13 @@ def build_catalog():
     flag_keys, var_keys = header_keys('flags.h'), header_keys('vars.h')
     flags = [{'key': k, 'id': v} for k, v in c.items() if k in flag_keys and k.startswith('FLAG_') and 0 < v < c['FLAGS_COUNT'] and not k.endswith('_START')]
     variables = [{'key': k, 'id': v} for k, v in c.items() if k in var_keys and k.startswith('VAR_') and c['VARS_START'] <= v <= c['VARS_END']]
+    retired = set(re.findall(r"RETIRED_ITEM\((ITEM_\w+)\)", (ROOT/"include/constants/retired_items.h").read_text()))
     def named(prefix, maximum, header):
         seen = set(); result = []
         keys = re.findall(r'^#define[ \t]+(' + prefix + r'\w+)[ \t]+', (ROOT/'include/constants'/header).read_text(), re.M)
         for key in keys:
             value = c.get(key, -1)
-            if key.startswith(prefix) and 0 < value < maximum and value not in seen:
+            if key not in retired and key.startswith(prefix) and 0 < value < maximum and value not in seen:
                 result.append(dict(id=value, key=key, name=key[len(prefix):].replace('_', ' '))); seen.add(value)
         return result
     chars = {int(code,16): char for char,code in reversed(re.findall(r"^'(.)'\s*=\s*([0-9A-F]{2})\s*$", (ROOT/'charmap.txt').read_text(), re.M))}

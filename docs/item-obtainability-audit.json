@@ -1,0 +1,863 @@
+{
+  "scope": "Source audit of normal single-player item acquisition; excludes debug grants and external link trading. Conditional reachability and trainer-item theft are not live verified.",
+  "sourceFound": 206,
+  "remaining": [
+    {
+      "key": "ITEM_ELECTIRIZER",
+      "name": "ELECTIRIZER",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 108,
+          "text": ".heldItem = ITEM_ELECTIRIZER,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 134,
+          "text": "[SPECIES_ELECTABUZZ] = {{EVO_TRADE_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_PROTECTOR",
+      "name": "PROTECTOR",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 59,
+          "text": ".heldItem = ITEM_PROTECTOR,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 73,
+          "text": "[SPECIES_RHYDON]     = {{EVO_TRADE_ITEM, ITEM_PROTECTOR, SPECIES_RHYPERIOR}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_MAGMARIZER",
+      "name": "MAGMARIZER",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 188,
+          "text": ".heldItem = ITEM_MAGMARIZER,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 136,
+          "text": "[SPECIES_MAGMAR]     = {{EVO_TRADE_ITEM, ITEM_MAGMARIZER, SPECIES_MAGMORTAR}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_REAPER_CLOTH",
+      "name": "REAPER CLOTH",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 204,
+          "text": ".heldItem = ITEM_REAPER_CLOTH,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 175,
+          "text": "[SPECIES_DUSCLOPS]   = {{EVO_TRADE_ITEM, ITEM_REAPER_CLOTH, SPECIES_DUSKNOIR}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_DAWN_STONE",
+      "name": "DAWN STONE",
+      "category": "Reserved for JOHTO Route 34 and its wild RALTS; not distributed in KANTO.",
+      "references": [
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 188,
+          "text": "{EVO_ITEM_MALE, ITEM_DAWN_STONE, SPECIES_GALLADE}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_PATCH_DISC",
+      "name": "PATCH DISC",
+      "category": "Reserved for a future PORYGON upgrade; not distributed yet.",
+      "references": [
+        {
+          "path": "src/trade_scene.c",
+          "line": 3019,
+          "text": "if (species == SPECIES_PORYGON2 && (item == ITEM_DUBIOUS_DISC || item == ITEM_PATCH_DISC))"
+        },
+        {
+          "path": "src/trade_scene.c",
+          "line": 3036,
+          "text": "if (item == ITEM_PATCH_DISC && gSpecialVar_0x8007 == 0)"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_RAZOR_CLAW",
+      "name": "RAZOR CLAW",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 127,
+          "text": "[SPECIES_SNEASEL]    = {{EVO_LEVEL_ITEM_NIGHT, ITEM_RAZOR_CLAW, SPECIES_WEAVILE}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_SAFARI_BALL",
+      "name": "SAFARI BALL",
+      "category": "Safari-only supply; not a bag item",
+      "references": [
+        {
+          "path": "src/battle_anim_special.c",
+          "line": 712,
+          "text": "case ITEM_SAFARI_BALL:"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 4322,
+          "text": "gLastUsedItem = ITEM_SAFARI_BALL;"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 4323,
+          "text": "gBattlescriptCurrInstr = gBattlescriptsForBallThrow[ITEM_SAFARI_BALL];"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 811,
+          "text": "[ITEM_SAFARI_BALL - ITEM_ULTRA_BALL] = 15"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 9557,
+          "text": "if (gLastUsedItem == ITEM_SAFARI_BALL)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 9562,
+          "text": "if (gLastUsedItem > ITEM_SAFARI_BALL)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 9619,
+          "text": "if (gLastUsedItem != ITEM_SAFARI_BALL)"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_QUALOT_BERRY",
+      "name": "QUALOT BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 490,
+          "text": "[ITEM_QUALOT_BERRY - FIRST_BERRY_INDEX] ="
+        },
+        {
+          "path": "src/data/pokemon/item_effects.h",
+          "line": 444,
+          "text": "[ITEM_QUALOT_BERRY - ITEM_POTION]  = sItemEffect_QualotBerry,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_HONDEW_BERRY",
+      "name": "HONDEW BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 508,
+          "text": "[ITEM_HONDEW_BERRY - FIRST_BERRY_INDEX] ="
+        },
+        {
+          "path": "src/data/pokemon/item_effects.h",
+          "line": 445,
+          "text": "[ITEM_HONDEW_BERRY - ITEM_POTION]  = sItemEffect_HondewBerry,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_GREPA_BERRY",
+      "name": "GREPA BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 526,
+          "text": "[ITEM_GREPA_BERRY - FIRST_BERRY_INDEX] ="
+        },
+        {
+          "path": "src/data/pokemon/item_effects.h",
+          "line": 446,
+          "text": "[ITEM_GREPA_BERRY - ITEM_POTION]   = sItemEffect_GrepaBerry,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_LIECHI_BERRY",
+      "name": "LIECHI BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 724,
+          "text": "[ITEM_LIECHI_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_GANLON_BERRY",
+      "name": "GANLON BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 742,
+          "text": "[ITEM_GANLON_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_SALAC_BERRY",
+      "name": "SALAC BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 760,
+          "text": "[ITEM_SALAC_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_PETAYA_BERRY",
+      "name": "PETAYA BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 778,
+          "text": "[ITEM_PETAYA_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_APICOT_BERRY",
+      "name": "APICOT BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 796,
+          "text": "[ITEM_APICOT_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_LANSAT_BERRY",
+      "name": "LANSAT BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 814,
+          "text": "[ITEM_LANSAT_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_STARF_BERRY",
+      "name": "STARF BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/berry.c",
+          "line": 832,
+          "text": "[ITEM_STARF_BERRY - FIRST_BERRY_INDEX] ="
+        }
+      ]
+    },
+    {
+      "key": "ITEM_ENIGMA_BERRY",
+      "name": "ENIGMA BERRY",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/battle_ai_switch_items.c",
+          "line": 585,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 720,
+          "text": "const struct Berry *berryData = GetBerryInfo(ItemIdToBerryType(ITEM_ENIGMA_BERRY));"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 761,
+          "text": "const struct Berry *berryData = GetBerryInfo(ItemIdToBerryType(ITEM_ENIGMA_BERRY));"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 2961,
+          "text": "if (gBattleMons[gActiveBattler].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 3386,
+          "text": "if (gBattleMons[battler1].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 3406,
+          "text": "if (gBattleMons[battler2].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_main.c",
+          "line": 4180,
+          "text": "if (gBattleMons[battler].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_message.c",
+          "line": 1973,
+          "text": "if (gLastUsedItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_message.c",
+          "line": 2262,
+          "text": "if (hword == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 1076,
+          "text": "if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 1177,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 1588,
+          "text": "if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 1631,
+          "text": "if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 2657,
+          "text": "|| gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 3169,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 3208,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 4086,
+          "text": "if (gBattleMons[gBattlerAttacker].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 5647,
+          "text": "if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 7169,
+          "text": "if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 8889,
+          "text": "|| gBattleMons[gBattlerAttacker].item == ITEM_ENIGMA_BERRY"
+        },
+        {
+          "path": "src/battle_script_commands.c",
+          "line": 8890,
+          "text": "|| gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 378,
+          "text": "if (gBattleMons[gActiveBattler].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 407,
+          "text": "if (gBattleMons[battlerId].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 2531,
+          "text": "if (gLastUsedItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 2543,
+          "text": "if (atkItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 2556,
+          "text": "if (defItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/battle_util.c",
+          "line": 2892,
+          "text": "if (gBattleMons[battlerId].item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/berry.c",
+          "line": 850,
+          "text": "[ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX] ="
+        },
+        {
+          "path": "src/berry.c",
+          "line": 875,
+          "text": "berries[ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX]; \\"
+        },
+        {
+          "path": "src/berry.c",
+          "line": 952,
+          "text": "if (berryIdx == ITEM_TO_BERRY(ITEM_ENIGMA_BERRY) && IsEnigmaBerryValid())"
+        },
+        {
+          "path": "src/berry.c",
+          "line": 955,
+          "text": "if (berryIdx == 0 || berryIdx > ITEM_TO_BERRY(ITEM_ENIGMA_BERRY))"
+        },
+        {
+          "path": "src/berry.c",
+          "line": 963,
+          "text": "if (itemId - FIRST_BERRY_INDEX < 0 || itemId - FIRST_BERRY_INDEX > ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX)"
+        },
+        {
+          "path": "src/berry.c",
+          "line": 971,
+          "text": "if (berryType - 1 < 0 || berryType - 1 > ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX)"
+        },
+        {
+          "path": "src/item.c",
+          "line": 79,
+          "text": "if (itemId == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/item.c",
+          "line": 81,
+          "text": "StringCopy(dest, GetBerryInfo(ITEM_TO_BERRY(ITEM_ENIGMA_BERRY))->name);"
+        },
+        {
+          "path": "src/item_use.c",
+          "line": 131,
+          "text": "if (gSpecialVar_ItemId == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/menu_helpers.c",
+          "line": 97,
+          "text": "if (itemId == ITEM_ENIGMA_BERRY"
+        },
+        {
+          "path": "src/party_menu.c",
+          "line": 4233,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/party_menu.c",
+          "line": 4250,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/party_menu.c",
+          "line": 4551,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/party_menu.c",
+          "line": 5341,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 1915,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 2308,
+          "text": "if (attacker->item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 2320,
+          "text": "if (defender->item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 3922,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 3959,
+          "text": "if (gItemEffectTable[item - ITEM_POTION] == NULL && item != ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 3963,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4475,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4512,
+          "text": "if (gItemEffectTable[item - ITEM_POTION] == NULL && item != ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4516,
+          "text": "if (item == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4793,
+          "text": "if (!temp && itemId != ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4796,
+          "text": "if (itemId == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 4907,
+          "text": "if (itemId == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 5011,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 5473,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/pokemon.c",
+          "line": 5593,
+          "text": "if (heldItem == ITEM_ENIGMA_BERRY)"
+        },
+        {
+          "path": "src/script_pokemon_util.c",
+          "line": 120,
+          "text": "bool8 hasItem = CheckPartyMonHasHeldItem(ITEM_ENIGMA_BERRY);"
+        },
+        {
+          "path": "src/script_pokemon_util.c",
+          "line": 122,
+          "text": "GetBerryNameByBerryType(ItemIdToBerryType(ITEM_ENIGMA_BERRY), gStringVar1);"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_CHOICE_BAND",
+      "name": "CHOICE BAND",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_KINGS_ROCK",
+      "name": "KING'S ROCK",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 43,
+          "text": ".heldItem = ITEM_KINGS_ROCK,"
+        },
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 172,
+          "text": ".heldItem = ITEM_KINGS_ROCK,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 44,
+          "text": "{EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_POLITOED}},"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 56,
+          "text": "{EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}},"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 5450,
+          "text": ".itemRare = ITEM_KINGS_ROCK,"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 5827,
+          "text": ".itemRare = ITEM_KINGS_ROCK,"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 8346,
+          "text": ".itemRare = ITEM_KINGS_ROCK,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_DEEP_SEA_TOOTH",
+      "name": "DEEPSEATOOTH",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 252,
+          "text": ".heldItem = ITEM_DEEP_SEA_TOOTH,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 181,
+          "text": "[SPECIES_CLAMPERL]   = {{EVO_TRADE_ITEM, ITEM_DEEP_SEA_TOOTH, SPECIES_HUNTAIL},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_DEEP_SEA_SCALE",
+      "name": "DEEPSEASCALE",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 236,
+          "text": ".heldItem = ITEM_DEEP_SEA_SCALE,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 182,
+          "text": "{EVO_TRADE_ITEM, ITEM_DEEP_SEA_SCALE, SPECIES_GOREBYSS}},"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_SCOPE_LENS",
+      "name": "SCOPE LENS",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_METAL_COAT",
+      "name": "METAL COAT",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 91,
+          "text": ".heldItem = ITEM_METAL_COAT,"
+        },
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 124,
+          "text": ".heldItem = ITEM_METAL_COAT,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 65,
+          "text": "[SPECIES_ONIX]       = {{EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX}},"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 80,
+          "text": "[SPECIES_SCYTHER]    = {{EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR}},"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 6088,
+          "text": ".itemRare = ITEM_METAL_COAT,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_DRAGON_SCALE",
+      "name": "DRAGON SCALE",
+      "category": "Used by NPC trade evolution; consumed, not supplied as a spare bag item",
+      "references": [
+        {
+          "path": "src/data/ingame_trades.h",
+          "line": 140,
+          "text": ".heldItem = ITEM_DRAGON_SCALE,"
+        },
+        {
+          "path": "src/data/pokemon/evolution.h",
+          "line": 77,
+          "text": "[SPECIES_SEADRA]     = {{EVO_TRADE_ITEM, ITEM_DRAGON_SCALE, SPECIES_KINGDRA}},"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 6726,
+          "text": ".itemRare = ITEM_DRAGON_SCALE,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_LIGHT_BALL",
+      "name": "LIGHT BALL",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/daycare.c",
+          "line": 1010,
+          "text": "if (motherItem == ITEM_LIGHT_BALL || fatherItem == ITEM_LIGHT_BALL)"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_BLACK_GLASSES",
+      "name": "BLACKGLASSES",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_DRAGON_FANG",
+      "name": "DRAGON FANG",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 4348,
+          "text": ".itemRare = ITEM_DRAGON_FANG,"
+        },
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 4377,
+          "text": ".itemRare = ITEM_DRAGON_FANG,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_SILK_SCARF",
+      "name": "SILK SCARF",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_SHELL_BELL",
+      "name": "SHELL BELL",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_SEA_INCENSE",
+      "name": "SEA INCENSE",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/daycare.c",
+          "line": 998,
+          "text": "if (*species == SPECIES_AZURILL && motherItem != ITEM_SEA_INCENSE && fatherItem != ITEM_SEA_INCENSE)"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_LAX_INCENSE",
+      "name": "LAX INCENSE",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/daycare.c",
+          "line": 993,
+          "text": "if (*species == SPECIES_WYNAUT && motherItem != ITEM_LAX_INCENSE && fatherItem != ITEM_LAX_INCENSE)"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_LUCKY_PUNCH",
+      "name": "LUCKY PUNCH",
+      "category": "No ordinary acquisition source found",
+      "references": []
+    },
+    {
+      "key": "ITEM_STICK",
+      "name": "STICK",
+      "category": "No ordinary acquisition source found",
+      "references": [
+        {
+          "path": "src/data/pokemon/species_info.h",
+          "line": 2434,
+          "text": ".itemRare = ITEM_STICK,"
+        }
+      ]
+    },
+    {
+      "key": "ITEM_0FF",
+      "name": "?????",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    },
+    {
+      "key": "ITEM_METEORITE",
+      "name": "METEORITE",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    },
+    {
+      "key": "ITEM_TOWN_MAP",
+      "name": "TOWN MAP",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    },
+    {
+      "key": "ITEM_APEX_LOG",
+      "name": "APEX LOG",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    },
+    {
+      "key": "ITEM_RUBY",
+      "name": "RUBY",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    },
+    {
+      "key": "ITEM_SAPPHIRE",
+      "name": "SAPPHIRE",
+      "category": "Legacy / placeholder; no distribution found",
+      "references": []
+    }
+  ],
+  "designRules": [
+    "KANTO and JOHTO Gym Leaders may use Pokémon from both regions because they share the INDIGO LEAGUE. This does not imply local wild availability.",
+    "RALTS and DAWN STONE belong to JOHTO Route 34; DAWN STONE is intentionally unavailable in KANTO.",
+    "MOOMOO MILK comes from the JOHTO farm and is sold only through KANTO vending machines (¥500).",
+    "The Fighting Dojo master awards one BLACK BELT after defeat, replacing the HITMONLEE/HITMONCHAN choice.",
+    "All flutes, mail, Soul Dew, Fluffy Tail, Sacred Ash and the 14 flavour-only berries are retired. Numeric slots remain reserved; CONTINUE removes existing copies from inventory and held items. Functional berries remain available."
+  ]
+}

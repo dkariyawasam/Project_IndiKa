@@ -249,16 +249,6 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY",
       "quantity": 1,
       "underfoot": false
-    },
-    {
-      "type": "hidden_item",
-      "x": 67,
-      "y": 17,
-      "elevation": 3,
-      "item": "ITEM_RAZZ_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY",
-      "quantity": 1,
-      "underfoot": false
     }
   ]
 }

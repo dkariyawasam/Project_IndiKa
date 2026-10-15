@@ -9,6 +9,7 @@ Route2_House_EventScript_Reyley::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_HAUNTER
+	setflag FLAG_HEARD_HAUNTER_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_HAUNTER_TRADE, Route2_House_EventScript_AlreadyTraded
 	msgbox Trade_Text_LookingForMonWannaTradeForMon, MSGBOX_YESNO

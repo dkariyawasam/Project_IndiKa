@@ -1240,42 +1240,60 @@
   ],
   "item_evidence": {
     "ITEM_DAWN_STONE": [],
-    "ITEM_DEEP_SEA_SCALE": [],
-    "ITEM_DEEP_SEA_TOOTH": [],
-    "ITEM_DRAGON_SCALE": [],
-    "ITEM_DUBIOUS_DISC": [],
+    "ITEM_DEEP_SEA_SCALE": [
+      "src/data/ingame_trades.h:236: .heldItem = ITEM_DEEP_SEA_SCALE,"
+    ],
+    "ITEM_DEEP_SEA_TOOTH": [
+      "src/data/ingame_trades.h:252: .heldItem = ITEM_DEEP_SEA_TOOTH,"
+    ],
+    "ITEM_DRAGON_SCALE": [
+      "src/data/ingame_trades.h:140: .heldItem = ITEM_DRAGON_SCALE,"
+    ],
+    "ITEM_DUBIOUS_DISC": [
+      "data/maps/RocketLeague_Lobby/scripts.inc:249: giveitem ITEM_DUBIOUS_DISC"
+    ],
     "ITEM_DUSK_STONE": [],
     "ITEM_ELECTIRIZER": [
-      "src/data/ingame_trades.h:143: .heldItem = ITEM_ELECTIRIZER,"
+      "src/data/ingame_trades.h:108: .heldItem = ITEM_ELECTIRIZER,"
     ],
     "ITEM_FIRE_STONE": [
       "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:30: .2byte ITEM_FIRE_STONE"
     ],
     "ITEM_ICE_STONE": [],
     "ITEM_KINGS_ROCK": [
-      "src/data/ingame_trades.h:207: .heldItem = ITEM_KINGS_ROCK,"
+      "src/data/ingame_trades.h:43: .heldItem = ITEM_KINGS_ROCK,",
+      "src/data/ingame_trades.h:172: .heldItem = ITEM_KINGS_ROCK,"
     ],
     "ITEM_LEAF_STONE": [
+      "data/scripts/item_ball_scripts.inc:138: finditem ITEM_LEAF_STONE",
       "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:33: .2byte ITEM_LEAF_STONE",
       "data/maps/SafariZone_Center/events.inc:27: bg_hidden_item_event 27, 15, 3, ITEM_LEAF_STONE, FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE, 1, FALSE",
-      "data/scripts/item_ball_scripts.inc:138: finditem ITEM_LEAF_STONE",
       "data/maps/SafariZone_Center/map.json:141: \"item\": \"ITEM_LEAF_STONE\","
     ],
-    "ITEM_MAGMARIZER": [],
-    "ITEM_METAL_COAT": [],
+    "ITEM_MAGMARIZER": [
+      "src/data/ingame_trades.h:188: .heldItem = ITEM_MAGMARIZER,"
+    ],
+    "ITEM_METAL_COAT": [
+      "src/data/ingame_trades.h:91: .heldItem = ITEM_METAL_COAT,",
+      "src/data/ingame_trades.h:124: .heldItem = ITEM_METAL_COAT,"
+    ],
     "ITEM_MOON_STONE": [
+      "data/scripts/item_ball_scripts.inc:42: finditem ITEM_MOON_STONE",
       "data/maps/MtMoon_B2F/events.inc:21: bg_hidden_item_event 20, 16, 3, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE, 1, FALSE",
       "data/maps/PokemonMansion_1F/events.inc:29: bg_hidden_item_event 2, 21, 0, ITEM_MOON_STONE, FLAG_HIDDEN_ITEM_POKEMON_MANSION_1F_MOON_STONE, 1, FALSE",
-      "data/scripts/item_ball_scripts.inc:42: finditem ITEM_MOON_STONE",
       "data/maps/MtMoon_B2F/map.json:126: \"item\": \"ITEM_MOON_STONE\",",
       "data/maps/PokemonMansion_1F/map.json:190: \"item\": \"ITEM_MOON_STONE\",",
       "Wild held item: CLEFAIRY",
       "Wild held item: CLEFABLE",
       "Wild held item: CLEFFA"
     ],
-    "ITEM_PROTECTOR": [],
+    "ITEM_PROTECTOR": [
+      "src/data/ingame_trades.h:59: .heldItem = ITEM_PROTECTOR,"
+    ],
     "ITEM_RAZOR_CLAW": [],
-    "ITEM_REAPER_CLOTH": [],
+    "ITEM_REAPER_CLOTH": [
+      "src/data/ingame_trades.h:204: .heldItem = ITEM_REAPER_CLOTH,"
+    ],
     "ITEM_SHINY_STONE": [],
     "ITEM_SUN_STONE": [
       "data/maps/Route1/events.inc:18: bg_hidden_item_event 5, 7, 3, ITEM_SUN_STONE, FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL, 1, FALSE",
@@ -1283,34 +1301,27 @@
       "Wild held item: SOLROCK"
     ],
     "ITEM_THUNDER_STONE": [
+      "data/scripts/item_ball_scripts.inc:234: finditem ITEM_THUNDER_STONE",
       "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:31: .2byte ITEM_THUNDER_STONE",
       "data/maps/PowerPlant/events.inc:34: bg_hidden_item_event 8, 12, 3, ITEM_THUNDER_STONE, FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE, 1, FALSE",
-      "data/scripts/item_ball_scripts.inc:234: finditem ITEM_THUNDER_STONE",
       "data/maps/PowerPlant/map.json:279: \"item\": \"ITEM_THUNDER_STONE\","
     ],
-    "ITEM_UP_GRADE": [],
+    "ITEM_UP_GRADE": [
+      "data/maps/CinnabarIsland_PokemonLab_ResearchRoom/scripts.inc:29: giveitem ITEM_UP_GRADE"
+    ],
     "ITEM_WATER_STONE": [
+      "data/scripts/item_ball_scripts.inc:426: finditem ITEM_WATER_STONE",
       "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc:32: .2byte ITEM_WATER_STONE",
       "data/maps/SeafoamIslands_B4F/events.inc:15: bg_hidden_item_event 13, 8, 0, ITEM_WATER_STONE, FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE, 1, FALSE",
-      "data/scripts/item_ball_scripts.inc:426: finditem ITEM_WATER_STONE",
       "data/maps/SeafoamIslands_B4F/map.json:64: \"item\": \"ITEM_WATER_STONE\","
     ]
   },
   "items_without_source": [
     "ITEM_DAWN_STONE",
-    "ITEM_DEEP_SEA_SCALE",
-    "ITEM_DEEP_SEA_TOOTH",
-    "ITEM_DRAGON_SCALE",
-    "ITEM_DUBIOUS_DISC",
     "ITEM_DUSK_STONE",
     "ITEM_ICE_STONE",
-    "ITEM_MAGMARIZER",
-    "ITEM_METAL_COAT",
-    "ITEM_PROTECTOR",
     "ITEM_RAZOR_CLAW",
-    "ITEM_REAPER_CLOTH",
-    "ITEM_SHINY_STONE",
-    "ITEM_UP_GRADE"
+    "ITEM_SHINY_STONE"
   ],
   "missing_standard_links": [
     "PILOSWINE \u2192 MAMOSWINE"
