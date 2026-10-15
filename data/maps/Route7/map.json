@@ -262,16 +262,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_EventScript_UndergroundPathSign"
-    },
-    {
-      "type": "hidden_item",
-      "x": 16,
-      "y": 75,
-      "elevation": 3,
-      "item": "ITEM_WEPEAR_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY",
-      "quantity": 1,
-      "underfoot": false
     }
   ]
 }

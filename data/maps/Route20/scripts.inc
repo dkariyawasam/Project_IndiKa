@@ -100,6 +100,7 @@ Route20_EventScript_Elyssa::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_SEADRA
+	setflag FLAG_HEARD_SEADRA_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_SEELOR_TRADE, Route20_EventScript_Elyssa_Done
 	msgbox Route20_Text_ElyssaIntro, MSGBOX_DEFAULT
@@ -136,6 +137,7 @@ Route20_EventScript_GorebyssTrade::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_GOREBYSS
+	setflag FLAG_HEARD_GOREBYSS_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_GOREBYSS_TRADE, Route20_EventScript_GorebyssTrade_Done
 	msgbox Route20_Text_GorebyssTradeIntro, MSGBOX_DEFAULT
@@ -172,6 +174,7 @@ Route20_EventScript_HuntailTrade::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_HUNTAIL
+	setflag FLAG_HEARD_HUNTAIL_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_HUNTAIL_TRADE, Route20_EventScript_HuntailTrade_Done
 	msgbox Route20_Text_HuntailTradeIntro, MSGBOX_DEFAULT
