@@ -22,6 +22,7 @@
 #include "quests.h"
 
 extern const u8 EventScript_OakResearchInvitation[];
+extern const u8 PalletTown_PlayersHouse_2F_EventScript_Certificate[];
 #include "safari_zone.h"
 #include "script.h"
 #include "start_menu.h"
@@ -1317,6 +1318,11 @@ void UpdateInteractionPrompt(void)
     {
         GetInFrontOfPlayerPosition(&pos);
         bg = GetBackgroundEventAtPosition(&gMapHeader, pos.x - MAP_OFFSET, pos.y - MAP_OFFSET, pos.elevation);
+        // This background event exists even while its wall tiles are hidden.
+        if (bg != NULL && bg->kind <= BG_EVENT_PLAYER_FACING_WEST
+         && bg->bgUnion.script == PalletTown_PlayersHouse_2F_EventScript_Certificate
+         && !FlagGet(FLAG_OAK_EXPEDITION_COMPLETE))
+            goto hide;
         if (bg != NULL && bg->kind <= BG_EVENT_PLAYER_FACING_WEST)
         {
             eligible = bg->kind == BG_EVENT_PLAYER_FACING_ANY

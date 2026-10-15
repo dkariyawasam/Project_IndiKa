@@ -1,4 +1,5 @@
 #include "global.h"
+#include "quests.h"
 #include "gflib.h"
 #include "task.h"
 #include "util.h"
@@ -3055,6 +3056,7 @@ void UpgradePorygonAtTerminal(void)
     SetMonData(mon, MON_DATA_HELD_ITEM, &item);
     CalculateMonStats(mon);
     EvolutionRenameMon(mon, oldSpecies, species);
+    RecordNatureResearchEvolution(oldSpecies, species, TRUE);
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_SEEN);
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT);
     IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);

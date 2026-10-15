@@ -1,0 +1,154 @@
+{
+  "existingPreserved": [
+    "Route1: Sun Stone",
+    "MtMoon_B2F: Moon Stone",
+    "PowerPlant: Thunder Stone",
+    "SafariZone_Center: Leaf Stone"
+  ],
+  "added": [
+    {
+      "map": "Route2",
+      "item": "ITEM_THUNDER_STONE",
+      "x": 6,
+      "y": 12,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_THUNDER_STONE",
+      "originalMetatile": "0x3008",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "Route2",
+      "item": "ITEM_LEAF_STONE",
+      "x": 32,
+      "y": 43,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_LEAF_STONE",
+      "originalMetatile": "0x3010",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "Route3",
+      "item": "ITEM_MOON_STONE",
+      "x": 57,
+      "y": 10,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE3_MOON_STONE",
+      "originalMetatile": "0x3011",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "ViridianForest",
+      "item": "ITEM_LEAF_STONE",
+      "x": 20,
+      "y": 12,
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_LEAF_STONE",
+      "originalMetatile": "0x30c5",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "ViridianForest",
+      "item": "ITEM_SUN_STONE",
+      "x": 36,
+      "y": 32,
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_SUN_STONE",
+      "originalMetatile": "0x3010",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "ViridianForest",
+      "item": "ITEM_SHINY_STONE",
+      "x": 64,
+      "y": 38,
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_SHINY_STONE",
+      "originalMetatile": "0x3011",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "Route8",
+      "item": "ITEM_FIRE_STONE",
+      "x": 38,
+      "y": 16,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE8_FIRE_STONE",
+      "originalMetatile": "0x300d",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "Route15",
+      "item": "ITEM_FIRE_STONE",
+      "x": 45,
+      "y": 28,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE15_FIRE_STONE",
+      "originalMetatile": "0x300d",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "Route6",
+      "item": "ITEM_WATER_STONE",
+      "x": 7,
+      "y": 22,
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE6_WATER_STONE",
+      "originalMetatile": "0x3009",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "VermilionHarbor",
+      "item": "ITEM_WATER_STONE",
+      "x": 29,
+      "y": 44,
+      "flag": "FLAG_HIDDEN_ITEM_VERMILION_HARBOR_WATER_STONE",
+      "originalMetatile": "0x3009",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "FuchsiaForest",
+      "item": "ITEM_LEAF_STONE",
+      "x": 18,
+      "y": 16,
+      "flag": "FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_LEAF_STONE",
+      "originalMetatile": "0x3010",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "FuchsiaForest",
+      "item": "ITEM_DUSK_STONE",
+      "x": 43,
+      "y": 23,
+      "flag": "FLAG_HIDDEN_ITEM_FUCHSIA_FOREST_DUSK_STONE",
+      "originalMetatile": "0x3009",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "PokemonTower_2F",
+      "item": "ITEM_DUSK_STONE",
+      "x": 6,
+      "y": 6,
+      "flag": "FLAG_HIDDEN_ITEM_POKEMON_TOWER_2F_DUSK_STONE",
+      "originalMetatile": "0x691",
+      "clueMetatile": "0x6b2"
+    },
+    {
+      "map": "SafariZone_Center",
+      "item": "ITEM_THUNDER_STONE",
+      "x": 37,
+      "y": 26,
+      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_THUNDER_STONE",
+      "originalMetatile": "0x300d",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "SafariZone_East",
+      "item": "ITEM_ICE_STONE",
+      "x": 18,
+      "y": 22,
+      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_EAST_ICE_STONE",
+      "originalMetatile": "0x3008",
+      "clueMetatile": "0x30c2"
+    },
+    {
+      "map": "SafariZone_North",
+      "item": "ITEM_ICE_STONE",
+      "x": 33,
+      "y": 6,
+      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_ICE_STONE",
+      "originalMetatile": "0x3010",
+      "clueMetatile": "0x30c2"
+    }
+  ]
+}

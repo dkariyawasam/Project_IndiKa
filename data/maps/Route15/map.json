@@ -289,6 +289,16 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route15_EventScript_ForestEntranceSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 45,
+      "y": 28,
+      "elevation": 3,
+      "item": "ITEM_FIRE_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE15_FIRE_STONE",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

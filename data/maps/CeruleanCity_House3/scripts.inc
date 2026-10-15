@@ -9,6 +9,7 @@ CeruleanCity_House3_EventScript_Dontae::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_KADABRA
+	setflag FLAG_HEARD_KADABRA_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_KADABRA_TRADE, CeruleanCity_House3_EventScript_AlreadyTraded
 	msgbox Trade_Text_DoYouHaveMonWouldYouTradeForMon, MSGBOX_YESNO

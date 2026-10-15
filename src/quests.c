@@ -24,6 +24,9 @@
 #include "task.h"
 #include "text_window.h"
 #include "quests.h"
+#include "league_challenge.h"
+#include "battle_setup.h"
+#include "constants/opponents.h"
 #include "apex_log.h"
 #include "overworld.h"
 #include "event_data.h"
@@ -128,6 +131,9 @@ static void PopulateEmptyRow(u8 countQuest);
 static void PrependQuestNumber(u8 countQuest);
 static void SetFavoriteQuest(u8 countQuest);
 static void PopulateQuestName(u8 countQuest);
+static bool8 IsPrimevalRecorded(u8 id, bool8 caught);
+
+static bool8 IsPromiseKnown(u8 id);
 static void PopulateSubquestName(u8 parentQuest, u8 countQuest);
 static u8 PopulateListRowNameAndId(u8 row, u8 countQuest);
 static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId);
@@ -214,6 +220,7 @@ static const u32 sLogbookMenuTilemap[] =
 static const u16 sLogbookMenuWindowPal[] =
         INCBIN_U16("graphics/item_menu/bag_window_pal.gbapal");
 
+#define LOGBOOK_MENU_ICON_BG_COLOR 10 // Untinted white in the footer palette.
 #define LOGBOOK_MENU_FOOTER_BG_COLOR 15
 #define LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR 13
 #define LOGBOOK_MENU_FOOTER_BORDER_LIGHT_COLOR 12
@@ -231,9 +238,9 @@ static const u8 sText_Active[] = _("Active");
 static const u8 sText_Reward[] = _("Reward");
 static const u8 sText_Complete[] = _("Done");
 static const u8 sText_StartForMore[] =
-      _("Start for more details.");
+      _("Explore KANTO to learn more.");
 static const u8 sText_ReturnRecieveReward[] =
-      _("Return to {STR_VAR_2}\nto recieve your reward!");
+      _("Return to {STR_VAR_2}\nto receive your reward!");
 static const u8 sText_PickBack[] = _("{DPAD_UPDOWN}PICK {B_BUTTON}BACK");
 static const u8 sText_Caught[] = _("Caught");
 static const u8 sText_Found[] = _("Found");
@@ -249,8 +256,8 @@ static const u8 sText_ApexAnnihilapeRumor[] = _("There are rumours of a POKéMON
 static const u8 sText_ApexAnnihilapeConfirmed[] = _("Rumour confirmed.\nLet's investigate MT. MOON.");
 static const u8 sText_ApexAnnihilapeRecorded[] = _("APEX POKéMON ANNIHILAPE\nrecorded in MT. MOON.");
 static const u8 sText_ApexMimeSrRumor[] = _("There are rumours of an isolated\nMR. MIME community.");
-static const u8 sText_ApexMimeSrConfirmed[] = _("Rumour confirmed.\nLet's investigate DIGLETT CAVE.");
-static const u8 sText_ApexMimeSrRecorded[] = _("APEX POKéMON MIME SR.\nrecorded in DIGLETT CAVE.");
+static const u8 sText_ApexMimeSrConfirmed[] = _("Rumour confirmed.\nLet's investigate DIGLETT'S CAVE.");
+static const u8 sText_ApexMimeSrRecorded[] = _("APEX POKéMON MIME SR.\nrecorded in DIGLETT'S CAVE.");
 static const u8 sText_ApexArticunoRumor[] = _("There are rumours of sudden\nchange at SEAFOAM ISLANDS.");
 static const u8 sText_ApexArticunoConfirmed[] = _("Rumour confirmed.\nLet's investigate SEAFOAM.");
 static const u8 sText_ApexArticunoRecorded[] = _("APEX POKéMON ARTICUNO\nrecorded in SEAFOAM ISLANDS.");
@@ -267,11 +274,107 @@ static const u8 sText_ApexMoltresRumor[] = _("There are rumours of renewing\nene
 static const u8 sText_ApexMoltresConfirmed[] = _("Rumour confirmed.\nLet's investigate CINNABAR VOLCANO.");
 static const u8 sText_ApexMoltresRecorded[] = _("APEX POKéMON MOLTRES\nrecorded in CINNABAR VOLCANO.");
 
+static const u8 sText_LogbookMtMoonPewter[] = _("MT. MOON / PEWTER");
+static const u8 sText_LogbookRockTunnelCerulean[] = _("ROCK TUNNEL / CERULEAN");
+static const u8 sText_LogbookDiglettSCaveVermilion[] = _("DIGLETT'S CAVE / VERMILION");
+static const u8 sText_LogbookViridianForestCeladon[] = _("VIRIDIAN FOREST / CELADON");
+static const u8 sText_LogbookCinnabarVolcanoFuchsia[] = _("CINNABAR VOLCANO / FUCHSIA");
+static const u8 sText_LogbookPokMonTowerSaffron[] = _("POKéMON TOWER / SAFFRON");
+static const u8 sText_LogbookCinnabarGym[] = _("CINNABAR GYM");
+static const u8 sText_LogbookViridianGym[] = _("VIRIDIAN GYM");
+static const u8 sText_LogbookHaunterTrade[] = _("HAUNTER TRADE");
+static const u8 sText_LogbookBringKadabraToRoute2House[] = _("Bring KADABRA to ROUTE 2 HOUSE\nfor HAUNTER.");
+static const u8 sText_LogbookRoute2House[] = _("ROUTE 2 HOUSE");
+static const u8 sText_LogbookKadabraTrade[] = _("KADABRA TRADE");
+static const u8 sText_LogbookBringHaunterToCeruleanCityHouse[] = _("Bring HAUNTER to CERULEAN CITY\nHOUSE 3 for KADABRA.");
+static const u8 sText_LogbookCeruleanCityHouse3[] = _("CERULEAN CITY HOUSE 3");
+static const u8 sText_LogbookSlowpokeTrade[] = _("SLOWPOKE TRADE");
+static const u8 sText_LogbookBringNidoranToRoute19For[] = _("Bring NIDORAN♂ to ROUTE 19 for\nSLOWPOKE.");
+static const u8 sText_LogbookRoute19[] = _("ROUTE 19");
+static const u8 sText_LogbookRhydonTrade[] = _("RHYDON TRADE");
+static const u8 sText_LogbookBringRhyhornToCinnabarIslandPok[] = _("Bring RHYHORN to CINNABAR ISLAND\nPOKéMON LAB EXPERIMENT ROOM for\nRHYDON.");
+static const u8 sText_LogbookCinnabarIslandPokMonLabExperiment[] = _("CINNABAR ISLAND POKéMON LAB EXPERIMENT ROOM");
+static const u8 sText_LogbookMachokeTrade[] = _("MACHOKE TRADE");
+static const u8 sText_LogbookBringNidorinoToRoute11East[] = _("Bring NIDORINO to ROUTE 11 EAST\nENTRANCE 2F for MACHOKE.");
+static const u8 sText_LogbookRoute11EastEntrance2f[] = _("ROUTE 11 EAST ENTRANCE 2F");
+static const u8 sText_LogbookOnixTrade[] = _("ONIX TRADE");
+static const u8 sText_LogbookBringGolduckToCinnabarIslandPok[] = _("Bring GOLDUCK to CINNABAR ISLAND\nPOKéMON LAB LOUNGE for ONIX.");
+static const u8 sText_LogbookCinnabarIslandPokMonLabLounge[] = _("CINNABAR ISLAND POKéMON LAB LOUNGE");
+static const u8 sText_LogbookElectabuzzTrade[] = _("ELECTABUZZ TRADE");
+static const u8 sText_LogbookBringRaichuToVermilionCityGym[] = _("Bring RAICHU to VERMILION CITY\nGYM for ELECTABUZZ.");
+static const u8 sText_LogbookVermilionCityGym[] = _("VERMILION CITY GYM");
+static const u8 sText_LogbookScytherTrade[] = _("SCYTHER TRADE");
+static const u8 sText_LogbookBringVenonatToCinnabarIslandPok[] = _("Bring VENONAT to CINNABAR ISLAND\nPOKéMON LAB LOUNGE for SCYTHER.");
+static const u8 sText_LogbookSeadraTrade[] = _("SEADRA TRADE");
+static const u8 sText_LogbookBringPonytaToRoute20For[] = _("Bring PONYTA to ROUTE 20 for\nSEADRA.");
+static const u8 sText_LogbookRoute20[] = _("ROUTE 20");
+static const u8 sText_LogbookGravelerTrade[] = _("GRAVELER TRADE");
+static const u8 sText_LogbookBringRelicanthToPewterCityGym[] = _("Bring RELICANTH to PEWTER CITY\nGYM for GRAVELER.");
+static const u8 sText_LogbookPewterCityGym[] = _("PEWTER CITY GYM");
+static const u8 sText_LogbookPoliwhirlTrade[] = _("POLIWHIRL TRADE");
+static const u8 sText_LogbookBringGyaradosToCeruleanCityGym[] = _("Bring GYARADOS to CERULEAN CITY\nGYM for POLIWHIRL.");
+static const u8 sText_LogbookCeruleanCityGym[] = _("CERULEAN CITY GYM");
+static const u8 sText_LogbookMagmarTrade[] = _("MAGMAR TRADE");
+static const u8 sText_LogbookBringVulpixToCinnabarIslandPok[] = _("Bring VULPIX to CINNABAR ISLAND\nPOKéMON LAB LOUNGE for MAGMAR.");
+static const u8 sText_LogbookDusclopsTrade[] = _("DUSCLOPS TRADE");
+static const u8 sText_LogbookBringHaunterToLavenderTownVolunteer[] = _("Bring HAUNTER to LAVENDER TOWN\nVOLUNTEER POKéMON HOUSE for\nDUSCLOPS.");
+static const u8 sText_LogbookLavenderTownVolunteerPokMonHouse[] = _("LAVENDER TOWN VOLUNTEER POKéMON HOUSE");
+static const u8 sText_LogbookAlolanGravelerTrade[] = _("ALOLAN GRAVELER TRADE");
+static const u8 sText_LogbookBringGravelerAlolanToSafariZone[] = _("Bring GRAVELER ALOLAN to SAFARI\nZONE EAST for GRAVELER ALOLAN.");
+static const u8 sText_LogbookSafariZoneEast[] = _("SAFARI ZONE EAST");
+static const u8 sText_LogbookGorebyssTrade[] = _("GOREBYSS TRADE");
+static const u8 sText_LogbookBringClamperlToTheGorebyssSwimmer[] = _("Bring CLAMPERL to the GOREBYSS\nswimmer on ROUTE 20.");
+static const u8 sText_LogbookHuntailTrade[] = _("HUNTAIL TRADE");
+static const u8 sText_LogbookBringClamperlToTheHuntailSwimmer[] = _("Bring CLAMPERL to the HUNTAIL\nswimmer on ROUTE 20.");
+static const u8 sText_LogbookDojoBlackBelt[] = _("DOJO BLACK BELT");
+static const u8 sText_LogbookReturnToTheDojoMasterTo[] = _("Return to the DOJO master\nto receive your BLACK BELT.");
+static const u8 sText_LogbookSaffronCityDojo[] = _("SAFFRON CITY DOJO");
+static const u8 sText_LogbookCeladonRocketLeague[] = _("CELADON ROCKET LEAGUE");
+static const u8 sText_LogbookIndigoPlateau[] = _("INDIGO PLATEAU");
+static const u8 sText_LogbookExpeditionHomecoming[] = _("EXPEDITION HOMECOMING");
+static const u8 sText_LogbookGatherYourFieldNotesAndReturn[] = _("Gather your field notes and\nreturn to PROF. OAK.");
+static const u8 sText_LogbookOakRecognisedYourExpeditionYourCertificate[] = _("OAK recognised your expedition.\nYour certificate is at home.");
+static const u8 sText_LogbookPalletTown[] = _("PALLET TOWN");
+static const u8 sText_LogbookFieldPromises[] = _("FIELD PROMISES");
+static const u8 sText_LogbookPeopleYouHaveMetAreWaiting[] = _("People you have met are waiting\nfor trades or a return visit.");
+static const u8 sText_LogbookAllRecordedPromisesFulfilled[] = _("All recorded promises fulfilled.");
+static const u8 sText_LogbookKanto[] = _("KANTO");
+static const u8 sText_LogbookReturnToProfOakInHis[] = _("Return to PROF. OAK in his lab\nto conclude the expedition.");
+static const u8 sText_LogbookContinueTheApexInvestigationRecordAll[] = _("Continue the APEX investigation.\nRecord all eight encounters.");
+static const u8 sText_LogbookTakeYourResearchToTheIndigo[] = _("Take your research to the\nINDIGO LEAGUE. Become CHAMPION.");
+static const u8 sText_LogbookFinishTheGymTrialsAndFollow[] = _("Finish the GYM trials and follow\nup with your rival across KANTO.");
+static const u8 sText_LogbookBondRecorded[] = _("This friendship evolution is\nrecorded in your field notes.");
+static const u8 sText_LogbookYouFulfilledThisPromise[] = _("You fulfilled this promise.");
+static const u8 sText_LogbookPorygonSAlteredEvolutionIsRecorded[] = _("PORYGON's altered evolution\nis recorded in your notes.");
+static const u8 sText_LogbookTestTheDubiousDiscWithPorygon2[] = _("Test the DUBIOUS DISC with\nPORYGON2 at BLAINE's terminal.");
+static const u8 sText_LogbookPorygonSUpgradeIsRecordedContinue[] = _("PORYGON's upgrade is recorded.\nContinue studying human designs.");
+static const u8 sText_LogbookGivePorygonTheUpGradeReturn[] = _("Give PORYGON the UP-GRADE.\nReturn to BLAINE's terminal.");
+static const u8 sText_LogbookAskTheCinnabarLabScientistsAbout[] = _("Ask the CINNABAR LAB scientists\nabout improving PORYGON.");
+static const u8 sText_LogbookVisitBlaineSTerminalToStudy[] = _("Visit BLAINE's terminal to\nstudy the creation of PORYGON.");
+static const u8 sText_LogbookThisChapterOfGiovanniSPursuit[] = _("This chapter of GIOVANNI's\npursuit is recorded.");
+static const u8 sText_LogbookPorygonCreatedContinueYourResearchUnder[] = _("PORYGON created. Continue under\nEVOLUTION BY DESIGN.");
+static const u8 sText_LogbookUseBlaineSTerminalToCreate[] = _("Use BLAINE's terminal to create\nPORYGON.");
+static const u8 sText_LogbookChallengeBlaineAtCinnabarGym[] = _("Challenge BLAINE at CINNABAR GYM.");
+static const u8 sText_LogbookGiovanniSFinalTrialIsComplete[] = _("GIOVANNI's final trial is complete.");
+static const u8 sText_LogbookMeetGiovanniInViridianGymAnd[] = _("Meet GIOVANNI in VIRIDIAN GYM\nand challenge his ideals.");
+
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
 
 //Declaration of subquest structures. Edits to subquests are made here.
 #define sub_quest(i, n, d, m, s, st, t) {.id = i, .name = n, .desc = d, .map = m, .sprite = s, .spritetype = st, .type = t}
+static const u8 sText_ERIKAGiftName[] = _("ERIKA'S BUDEW");
+static const u8 sText_ERIKAGiftDesc[] = _("Visit ERIKA at CELADON GYM\nto receive BUDEW.");
+static const u8 sText_ERIKAGiftMap[] = _("CELADON GYM");
+static const u8 sText_KOGAGiftName[] = _("KOGA'S GOLBAT");
+static const u8 sText_KOGAGiftDesc[] = _("Visit KOGA at FUCHSIA GYM\nto receive GOLBAT.");
+static const u8 sText_KOGAGiftMap[] = _("FUCHSIA GYM");
+static const u8 sText_SABRINAGiftName[] = _("SABRINA'S CHINGLING");
+static const u8 sText_SABRINAGiftDesc[] = _("Visit SABRINA at SAFFRON GYM\nto receive CHINGLING.");
+static const u8 sText_SABRINAGiftMap[] = _("SAFFRON GYM");
+static const u8 sText_BLAINEGiftName[] = _("BLAINE'S PORYGON");
+static const u8 sText_BLAINEGiftDesc[] = _("Visit BLAINE at CINNABAR GYM\nto receive PORYGON.");
+static const u8 sText_BLAINEGiftMap[] = _("CINNABAR GYM");
 static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 {
 	sub_quest(
@@ -311,7 +414,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      3,
 	      gText_SubQuest2_Name1,
 	      gText_SubQuest2_Desc1,
-	      gText_QuestTheNatureOfEvolutionMap1,
+	      sText_LogbookMtMoonPewter,
 	      OBJ_EVENT_GFX_BROCK,
 	      OBJECT,
 	      sText_Found
@@ -321,7 +424,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      4,
 	      gText_SubQuest2_Name2,
 	      gText_SubQuest2_Desc2,
-	      gText_SideQuestMap2,
+	      sText_LogbookRockTunnelCerulean,
 	      OBJ_EVENT_GFX_MISTY,
 	      OBJECT,
 	      sText_Found
@@ -331,7 +434,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      5,
 	      gText_SubQuest2_Name3,
 	      gText_SubQuest2_Desc3,
-	      gText_SideQuestMap3,
+	      sText_LogbookDiglettSCaveVermilion,
 	      OBJ_EVENT_GFX_LT_SURGE,
 	      OBJECT,
 	      sText_Found
@@ -341,7 +444,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      6,
 	      gText_SubQuest2_Name4,
 	      gText_SubQuest2_Desc4,
-	      gText_SideQuestMap4,
+	      sText_LogbookViridianForestCeladon,
 	      OBJ_EVENT_GFX_ERIKA,
 	      OBJECT,
 	      sText_Found
@@ -351,7 +454,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      7,
 	      gText_SubQuest2_Name5,
 	      gText_SubQuest2_Desc5,
-	      gText_SideQuestMap5,
+	      sText_LogbookCinnabarVolcanoFuchsia,
 	      OBJ_EVENT_GFX_KOGA,
 	      OBJECT,
 	      sText_Found
@@ -361,7 +464,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      8,
 	      gText_SubQuest2_Name6,
 	      gText_SubQuest2_Desc6,
-	      gText_SideQuestMap6,
+	      sText_LogbookPokMonTowerSaffron,
 	      OBJ_EVENT_GFX_SABRINA,
 	      OBJECT,
 	      sText_Found
@@ -371,7 +474,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      9,
 	      gText_SubQuest2_Name7,
 	      gText_SubQuest2_Desc7,
-	      gText_SideQuestMap7,
+	      sText_LogbookCinnabarGym,
 	      OBJ_EVENT_GFX_BLAINE,
 	      OBJECT,
 	      sText_Found
@@ -381,7 +484,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      10,
 	      gText_SubQuest2_Name8,
 	      gText_SubQuest2_Desc8,
-	      gText_SideQuestMap8,
+	      sText_LogbookViridianGym,
 	      OBJ_EVENT_GFX_GIOVANNI,
 	      OBJECT,
 	      sText_Found
@@ -530,6 +633,83 @@ static const struct SubQuest sSubQuests4[QUEST_4_SUB_COUNT] =
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////BEGIN QUEST CUSTOMIZATION//////////////////////////////
 
+// Living Relics is inferred from Pokédex records; it needs no new subquest bits.
+static const u16 sPrimevalSpecies[] = {
+    SPECIES_CINNABAR_MAGIKARP,
+    SPECIES_CINNABAR_FEEBAS,
+    SPECIES_RELICANTH,
+    SPECIES_KINKABUTO,
+    SPECIES_AMUNYTE,
+    SPECIES_AEROPTERYX,
+};
+static const u8 sText_LivingRelicsName[] = _("LIVING RELICS");
+static const u8 sText_LivingRelicsDesc[] = _("An ancient POKéMON lives on.\nWhat else has escaped notice?");
+static const u8 sText_LivingRelicsDone[] = _("Six ancient survivors recorded.\nThe past is still alive.");
+static const u8 sText_LivingRelicsSeen[] = _("An unexpected survivor.\nCatch it to study its origins.");
+static const u8 sText_LivingRelicsCaught[] = _("A living link to the distant\npast, recorded in your notes.");
+static const u8 sText_PrimevalName0[] = _("DEEP-FORM MAGIKARP");
+static const u8 sText_PrimevalName1[] = _("DEEP-FORM FEEBAS");
+static const u8 sText_PrimevalName2[] = _("RELICANTH");
+static const u8 sText_PrimevalName3[] = _("KINKABUTO");
+static const u8 sText_PrimevalName4[] = _("AMUNYTE");
+static const u8 sText_PrimevalName5[] = _("AEROPTERYX");
+static const struct SubQuest sPrimevalQuests[] = {
+    sub_quest(0, sText_PrimevalName0, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_CINNABAR_MAGIKARP, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName1, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_CINNABAR_FEEBAS, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName2, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_RELICANTH, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName3, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_KINKABUTO, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName4, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_AMUNYTE, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName5, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_AEROPTERYX, PKMN, sText_Caught),
+};
+
+// Request visibility follows conversations; old completed trades remain recorded.
+static const struct { u16 heard; u16 done; } sFieldPromises[] = {
+    {FLAG_HEARD_HAUNTER_REQUEST, FLAG_DID_HAUNTER_TRADE},
+    {FLAG_HEARD_KADABRA_REQUEST, FLAG_DID_KADABRA_TRADE},
+    {FLAG_HEARD_SLOWPOKE_REQUEST, FLAG_DID_MS_NIDO_TRADE},
+    {FLAG_HEARD_RHYDON_REQUEST, FLAG_DID_CH_DING_TRADE},
+    {FLAG_HEARD_MACHOKE_REQUEST, FLAG_DID_NINA_TRADE},
+    {FLAG_HEARD_ONIX_REQUEST, FLAG_DID_MARC_TRADE},
+    {FLAG_HEARD_ELECTABUZZ_REQUEST, FLAG_DID_ELECTABUZZ_TRADE},
+    {FLAG_HEARD_SCYTHER_REQUEST, FLAG_DID_TANGENY_TRADE},
+    {FLAG_HEARD_SEADRA_REQUEST, FLAG_DID_SEELOR_TRADE},
+    {FLAG_HEARD_BROCK_GRAVELER_REQUEST, FLAG_DID_BROCK_GRAVELER_TRADE},
+    {FLAG_HEARD_MISTY_POLIWHIRL_REQUEST, FLAG_DID_MISTY_POLIWHIRL_TRADE},
+    {FLAG_HEARD_MAGMAR_REQUEST, FLAG_DID_MAGMAR_TRADE},
+    {FLAG_HEARD_DUSCLOPS_REQUEST, FLAG_DID_DUSCLOPS_TRADE},
+    {FLAG_HEARD_ALOLAN_GRAVELER_REQUEST, FLAG_DID_ALOLAN_GRAVELER_TRADE},
+    {FLAG_HEARD_GOREBYSS_REQUEST, FLAG_DID_GOREBYSS_TRADE},
+    {FLAG_HEARD_HUNTAIL_REQUEST, FLAG_DID_HUNTAIL_TRADE},
+    {0, FLAG_GOT_DOJO_BLACK_BELT},
+    {FLAG_DEFEATED_ERIKA, FLAG_GOT_BUDEW_FROM_ERIKA},
+    {FLAG_DEFEATED_KOGA, FLAG_GOT_GOLBAT_FROM_KOGA},
+    {FLAG_DEFEATED_SABRINA, FLAG_GOT_CHINGLING_FROM_SABRINA},
+    {FLAG_DEFEATED_BLAINE, FLAG_GOT_PORYGON_FROM_BLAINE},
+};
+static const struct SubQuest sPromiseQuests[] = {
+    sub_quest(0, sText_LogbookHaunterTrade, sText_LogbookBringKadabraToRoute2House, sText_LogbookRoute2House, SPECIES_HAUNTER, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookKadabraTrade, sText_LogbookBringHaunterToCeruleanCityHouse, sText_LogbookCeruleanCityHouse3, SPECIES_KADABRA, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookSlowpokeTrade, sText_LogbookBringNidoranToRoute19For, sText_LogbookRoute19, SPECIES_SLOWPOKE, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookRhydonTrade, sText_LogbookBringRhyhornToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabExperiment, SPECIES_RHYDON, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookMachokeTrade, sText_LogbookBringNidorinoToRoute11East, sText_LogbookRoute11EastEntrance2f, SPECIES_MACHOKE, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookOnixTrade, sText_LogbookBringGolduckToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabLounge, SPECIES_ONIX, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookElectabuzzTrade, sText_LogbookBringRaichuToVermilionCityGym, sText_LogbookVermilionCityGym, SPECIES_ELECTABUZZ, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookScytherTrade, sText_LogbookBringVenonatToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabLounge, SPECIES_SCYTHER, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookSeadraTrade, sText_LogbookBringPonytaToRoute20For, sText_LogbookRoute20, SPECIES_SEADRA, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookGravelerTrade, sText_LogbookBringRelicanthToPewterCityGym, sText_LogbookPewterCityGym, SPECIES_GRAVELER, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookPoliwhirlTrade, sText_LogbookBringGyaradosToCeruleanCityGym, sText_LogbookCeruleanCityGym, SPECIES_POLIWHIRL, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookMagmarTrade, sText_LogbookBringVulpixToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabLounge, SPECIES_MAGMAR, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookDusclopsTrade, sText_LogbookBringHaunterToLavenderTownVolunteer, sText_LogbookLavenderTownVolunteerPokMonHouse, SPECIES_DUSCLOPS, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookAlolanGravelerTrade, sText_LogbookBringGravelerAlolanToSafariZone, sText_LogbookSafariZoneEast, SPECIES_GRAVELER_ALOLAN, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookGorebyssTrade, sText_LogbookBringClamperlToTheGorebyssSwimmer, sText_LogbookRoute20, SPECIES_CLAMPERL, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookHuntailTrade, sText_LogbookBringClamperlToTheHuntailSwimmer, sText_LogbookRoute20, SPECIES_CLAMPERL, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookDojoBlackBelt, sText_LogbookReturnToTheDojoMasterTo, sText_LogbookSaffronCityDojo, OBJ_EVENT_GFX_BLACK_BELT, OBJECT, sText_CompletedCaps),
+    sub_quest(0, sText_ERIKAGiftName, sText_ERIKAGiftDesc, sText_ERIKAGiftMap, SPECIES_BUDEW, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_KOGAGiftName, sText_KOGAGiftDesc, sText_KOGAGiftMap, SPECIES_GOLBAT, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_SABRINAGiftName, sText_SABRINAGiftDesc, sText_SABRINAGiftMap, SPECIES_CHINGLING, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_BLAINEGiftName, sText_BLAINEGiftDesc, sText_BLAINEGiftMap, SPECIES_PORYGON, PKMN, sText_CompletedCaps),
+};
+
 //Declaration of side quest structures. Edits to quests are made here.
 #define side_quest(n, d, dd, m, s, st, sq, ns) {.name = n, .desc = d, .donedesc = dd, .map = m, .sprite = s, .spritetype = st, .subquests = sq, .numSubquests = ns}
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
@@ -578,7 +758,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestName_5,
 	      gText_SideQuestDesc_5,
 	      gText_SideQuestDoneDesc_5,
-	      gText_SideQuestMap5,
+	      sText_LogbookCeladonRocketLeague,
 	      OBJ_EVENT_GFX_BLUE,
 	      OBJECT,
 	      NULL,
@@ -588,13 +768,21 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestName_6,
 	      gText_SideQuestDesc_6,
 	      gText_SideQuestDoneDesc_6,
-	      gText_SideQuestMap6,
+	      sText_LogbookIndigoPlateau,
 	      OBJ_EVENT_GFX_BLUE,
 	      OBJECT,
 	      NULL,
 	      0
 	),
+    side_quest(sText_LogbookExpeditionHomecoming, sText_LogbookGatherYourFieldNotesAndReturn, sText_LogbookOakRecognisedYourExpeditionYourCertificate, sText_LogbookPalletTown, OBJ_EVENT_GFX_PROF_OAK, OBJECT, NULL, 0),
+    side_quest(sText_LogbookFieldPromises, sText_LogbookPeopleYouHaveMetAreWaiting, sText_LogbookAllRecordedPromisesFulfilled, sText_LogbookKanto, OBJ_EVENT_GFX_SCIENTIST, OBJECT, sPromiseQuests, NELEMS(sPromiseQuests)),
+    side_quest(sText_LivingRelicsName, sText_LivingRelicsDesc, sText_LivingRelicsDone, sText_LogbookKanto, SPECIES_RELICANTH, PKMN, sPrimevalQuests, NELEMS(sPrimevalQuests)),
+
 };
+
+STATIC_ASSERT(QUEST_COUNT * 5 <= sizeof(gSaveBlock2Ptr->questData) * 8, logbook_save_quest_capacity);
+STATIC_ASSERT(SUB_QUEST_COUNT == 24, logbook_save_subquest_layout);
+STATIC_ASSERT(NELEMS(sPromiseQuests) <= QUEST_ARRAY_COUNT, logbook_request_list_capacity);
 
 #define APEX_RUMORS_REQUIRED 3
 #define APEX_RUMOR_RESULT_NONE 0
@@ -1352,6 +1540,12 @@ static u8 CountNumberListRows()
 {
 	if (IsSubquestMode())
 	{
+        if (sStateDataPtr->parentQuest == QUEST_FIELD_PROMISES)
+        {
+            u8 i, count = 0;
+            for (i = 0; i < NELEMS(sFieldPromises); i++) if (IsPromiseKnown(i)) count++;
+            return count;
+        }
 		return sSideQuests[sStateDataPtr->parentQuest].numSubquests;
 	}
 
@@ -1373,19 +1567,16 @@ u8 *DefineQuestOrder()
 
 u8 GenerateSubquestList()
 {
-	u8 parentQuest = sStateDataPtr->parentQuest;
-	u8 lastRow = 0, numRow = 0, countQuest = 0;
-
-	for (numRow = 0; numRow < sSideQuests[parentQuest].numSubquests; numRow++)
-	{
-		PopulateEmptyRow(countQuest);
-		PopulateSubquestName(parentQuest, countQuest);
-		PopulateListRowNameAndId(numRow, countQuest);
-
-		countQuest++;
-		lastRow = numRow + 1;
-	}
-	return lastRow;
+    u8 parentQuest = sStateDataPtr->parentQuest;
+    u8 row = 0, id;
+    for (id = 0; id < sSideQuests[parentQuest].numSubquests; id++)
+    {
+        if (parentQuest == QUEST_FIELD_PROMISES && !IsPromiseKnown(id)) continue;
+        PopulateEmptyRow(id);
+        PopulateSubquestName(parentQuest, id);
+        PopulateListRowNameAndId(row++, id);
+    }
+    return row;
 }
 
 u8 GenerateList(void)
@@ -1420,6 +1611,26 @@ u8 GenerateList(void)
 	return numRow + offset;
 }
 
+static u8 CountEvolutionThroughBondMilestones(void);
+static u8 CountEvolutionThroughDesignMilestones(void);
+static u8 CountApexInteractionsForNatureQuest(void);
+static bool8 IsGymTrialCompleted(u8 subquestId);
+static bool8 IsGymTrialTraded(u8 subquestId);
+static s8 GetDerivedQuestState(u8 quest, u8 query);
+static bool8 IsPrimevalRecorded(u8 id, bool8 caught)
+{
+    if (id >= NELEMS(sPrimevalSpecies)) return FALSE;
+    return GetSetPokedexFlag(SpeciesToNationalPokedexNum(sPrimevalSpecies[id]), caught ? FLAG_GET_CAUGHT : FLAG_GET_SEEN);
+}
+
+static bool8 IsPromiseKnown(u8 id)
+{
+    if (id >= NELEMS(sFieldPromises)) return FALSE;
+    if (FlagGet(sFieldPromises[id].done)) return TRUE;
+    if (sFieldPromises[id].heard) return FlagGet(sFieldPromises[id].heard);
+    return FlagGet(FLAG_GOT_DOJO_BLACK_BELT) || FlagGet(TRAINER_FLAGS_START + TRAINER_BLACK_BELT_KOICHI);
+}
+
 u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 {
     u8 uniqueId;
@@ -1427,6 +1638,28 @@ u8 LogbookMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
     u8 bit;
     u8 mask;
 
+    if (quest >= QUEST_COUNT) return 0;
+    if (quest == QUEST_LIVING_RELICS)
+    {
+        if (caseId == FLAG_GET_UNLOCKED) return IsPrimevalRecorded(childQuest, FALSE) || IsPrimevalRecorded(childQuest, TRUE);
+        if (caseId == FLAG_GET_COMPLETED) return IsPrimevalRecorded(childQuest, TRUE);
+        return 0;
+    }
+    if (quest == QUEST_FIELD_PROMISES)
+    {
+        if (childQuest >= NELEMS(sFieldPromises)) return 0;
+        if (caseId == FLAG_GET_UNLOCKED) return IsPromiseKnown(childQuest);
+        if (caseId == FLAG_GET_COMPLETED) return FlagGet(sFieldPromises[childQuest].done);
+        return 0;
+    }
+    if (caseId == FLAG_GET_COMPLETED && quest == QUEST_THE_NATURE_OF_EVOLUTION)
+    {
+        if (childQuest == 0) return CountEvolutionThroughBondMilestones() >= 2;
+        if (childQuest == 1) return CountApexInteractionsForNatureQuest() >= 2;
+        if (childQuest == 2) return CountEvolutionThroughDesignMilestones() >= 2;
+    }
+    if (caseId == FLAG_GET_COMPLETED && quest == QUEST_GYM_LEADER_TRIALS)
+        return IsGymTrialCompleted(childQuest) || IsGymTrialTraded(childQuest);
     if (childQuest >= sSideQuests[quest].numSubquests)
         return 0;
 
@@ -1461,6 +1694,11 @@ u8 LogbookMenu_GetSetQuestState(u8 quest, u8 caseId)
 	u8 bit = quest * 5 % 8;
 	u8 mask = 0, index2 = 0, bit2 = 0, index3 = 0, bit3 = 0, mask2 = 0,
 	   mask3 = 0;
+
+    s8 derived;
+    if (quest >= QUEST_COUNT) return 0;
+    derived = GetDerivedQuestState(quest, caseId);
+    if (derived >= 0) return derived;
 
 	// 0 : locked
 	// 1 : actived
@@ -1742,6 +1980,8 @@ static void FillQuestFooterWindow(void)
 	FillWindowPixelBuffer(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BG_COLOR));
 	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR), 0, 0, 240, 2);
 	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_LIGHT_COLOR), 0, 2, 240, 1);
+	// Repaint the icon backing whenever the selected quest changes.
+	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_ICON_BG_COLOR), 4, 4, 32, 32);
 	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BOTTOM_MID_COLOR), 0, 45, 240, 1);
 	FillWindowPixelRect(1, PIXEL_FILL(LOGBOOK_MENU_FOOTER_BORDER_DARK_COLOR), 0, 46, 240, 2);
 }
@@ -1775,7 +2015,7 @@ void GenerateQuestFlavorText(s32 questId)
 		}
 		if (IsQuestRewardState(questId) == TRUE)
 		{
-			StringCopy(gStringVar1, sText_ReturnRecieveReward);
+			StringCopy(gStringVar1, questId == QUEST_EXPEDITION_FINALE ? sText_LogbookReturnToProfOakInHis : sText_ReturnRecieveReward);
 		}
 		if (IsQuestCompletedState(questId) == TRUE)
 		{
@@ -1810,7 +2050,14 @@ void GenerateQuestFlavorText(s32 questId)
 }
 void UpdateQuestFlavorText(s32 questId)
 {
-	StringCopy(gStringVar1, sSideQuests[questId].desc);
+    const u8 *desc = sSideQuests[questId].desc;
+    if (questId == QUEST_EXPEDITION_FINALE)
+    {
+        if (CountApexInteractionsForNatureQuest() < 8) desc = sText_LogbookContinueTheApexInvestigationRecordAll;
+        else if (!FlagGet(FLAG_SYS_GAME_CLEAR)) desc = sText_LogbookTakeYourResearchToTheIndigo;
+        else desc = sText_LogbookFinishTheGymTrialsAndFollow;
+    }
+    StringCopy(gStringVar1, desc);
 }
 void PrintQuestFlavorText(s32 questId)
 {
@@ -1897,7 +2144,13 @@ void DetermineSpriteType(s32 questId)
 	u16 spriteId;
 	u8 spriteType;
 
-	if (IsSubquestMode() == FALSE)
+	if ((!IsSubquestMode() && !IsQuestUnlocked(questId))
+	 || (IsSubquestMode() && !IsSubquestUnlockedState(questId)))
+	{
+		// ITEM_NONE is the existing question-mark icon, not an empty icon.
+		LogbookMenu_CreateSprite(ITEM_NONE, sStateDataPtr->spriteIconSlot, ITEM);
+	}
+	else if (IsSubquestMode() == FALSE)
 	{
 		spriteId = sSideQuests[questId].sprite;
 		spriteType = sSideQuests[questId].spritetype;
@@ -1960,7 +2213,8 @@ static void LogbookMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
 			if (spriteType == ITEM)
 			{
 				gSprites[spriteId].x2 = 24;
-				gSprites[spriteId].y2 = 140;
+				// Item artwork occupies the top-left 24px of a padded 32px sprite.
+				gSprites[spriteId].y2 = 136;
 			}
 		}
 	}
@@ -2047,58 +2301,44 @@ static bool8 IsSpeciesCaught(u16 species)
     return GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
 }
 
+#include "data/nature_research.h"
+
+// Called only after an evolution actually succeeds, never on cancellation.
+void RecordNatureResearchEvolution(u16 before, u16 after, bool8 trade)
+{
+    u32 i;
+    for (i = 0; i < NELEMS(sDesignMilestones); i++)
+        if (sDesignMilestones[i].before == before && sDesignMilestones[i].after == after)
+        {
+            FlagSet(sDesignMilestones[i].flag);
+            return; // PORYGON upgrades belong exclusively to Design.
+        }
+    for (i = 0; i < NELEMS(sBondMilestones); i++)
+        if (sBondMilestones[i].before == before && sBondMilestones[i].after == after && sBondMilestones[i].trade == trade)
+            FlagSet(sBondMilestones[i].flag);
+}
+
 static u8 CountEvolutionThroughBondMilestones(void)
 {
     u8 count = 0;
-
-    if (FlagGet(FLAG_DID_BROCK_GRAVELER_TRADE))
-        count++;
-    if (FlagGet(FLAG_DID_MISTY_POLIWHIRL_TRADE))
-        count++;
-    if (FlagGet(FLAG_DID_ELECTABUZZ_TRADE))
-        count++;
-    if (IsSpeciesCaught(SPECIES_ROSELIA))
-        count++;
-    if (IsSpeciesCaught(SPECIES_CROBAT))
-        count++;
-    if (IsSpeciesCaught(SPECIES_CHIMECHO))
-        count++;
-    if (IsSpeciesCaught(SPECIES_MILOTIC))
-        count++;
-    if (IsSpeciesCaught(SPECIES_PORYGON2))
-        count++;
-    if (IsSpeciesCaught(SPECIES_RHYPERIOR))
-        count++;
-
-    return count;
+    u32 i;
+    for (i = 0; i < NELEMS(sBondMilestones); i++)
+        if (FlagGet(sBondMilestones[i].flag) || (sBondMilestones[i].legacy && FlagGet(sBondMilestones[i].legacy)))
+            count++;
+    // Older saves lack evolution history; retain Oak's acknowledged completion.
+    return FlagGet(FLAG_OAK_ACKNOWLEDGED_BOND) && count < 2 ? 2 : count;
 }
 
 static u8 CountEvolutionThroughDesignMilestones(void)
 {
-    u8 count = 0;
-
-    if (IsSpeciesCaught(SPECIES_PORYGON))
-        count++;
-    if (IsSpeciesCaught(SPECIES_OMANYTE))
-        count++;
-    if (IsSpeciesCaught(SPECIES_OMASTAR))
-        count++;
-    if (IsSpeciesCaught(SPECIES_OMATO))
-        count++;
-    if (IsSpeciesCaught(SPECIES_OMATOPS))
-        count++;
-    if (IsSpeciesCaught(SPECIES_KABUTO))
-        count++;
-    if (IsSpeciesCaught(SPECIES_KABUTOPS))
-        count++;
-    if (IsSpeciesCaught(SPECIES_KABUSTAR))
-        count++;
-    if (IsSpeciesCaught(SPECIES_KABUKNIGHT))
-        count++;
-    if (IsSpeciesCaught(SPECIES_AERODACTYL))
-        count++;
-
-    return count;
+    u8 count = FlagGet(FLAG_GOT_PORYGON_FROM_BLAINE) ? 1 : 0;
+    u32 i;
+    for (i = 0; i < NELEMS(sDesignMilestones); i++)
+        if (FlagGet(sDesignMilestones[i].flag)) count++;
+    for (i = 0; i < NELEMS(sRevivalMilestones); i++)
+        if (FlagGet(sRevivalMilestones[i])
+         || (sRevivalMilestones[i] == FLAG_RESEARCH_REVIVED_AERODACTYL && FlagGet(FLAG_REVIVED_AMBER))) count++;
+    return FlagGet(FLAG_OAK_ACKNOWLEDGED_DESIGN) && count < 2 ? 2 : count;
 }
 
 // Return one unacknowledged research milestone per conversation.
@@ -2164,7 +2404,7 @@ static bool8 TryGenerateNatureSubquestCounter(u8 subquestId, u8 *colorIndex)
         return FALSE;
     }
 
-    ConvertIntToDecimalStringN(gStringVar1, min(count, target), STR_CONV_MODE_LEFT_ALIGN, 1);
+    ConvertIntToDecimalStringN(gStringVar1, count, STR_CONV_MODE_LEFT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar2, target, STR_CONV_MODE_LEFT_ALIGN, 1);
     StringExpandPlaceholders(gStringVar4, sText_QuestNumberDisplay);
     *colorIndex = (count >= target) ? 2 : 3;
@@ -2226,7 +2466,7 @@ static bool8 TryGenerateGymTrialState(u8 subquestId, u8 *colorIndex)
 
     if (IsGymTrialTraded(subquestId))
     {
-        StringCopy(gStringVar4, sText_TradedCaps);
+        StringCopy(gStringVar4, subquestId >= SUB_QUEST_ERIKA ? sText_CompletedCaps : sText_TradedCaps);
         *colorIndex = 2;
     }
     else if (IsGymTrialCompleted(subquestId))
@@ -2287,7 +2527,7 @@ u8 GenerateSubquestState(u8 questId)
 	{
 		StringCopy(gStringVar4, sSideQuests[parentQuest].subquests[questId].type);
 	}
-	else if (parentQuest == QUEST_APEX_POKEMON
+	else if ((parentQuest == QUEST_APEX_POKEMON || parentQuest == QUEST_FIELD_PROMISES)
 	      && LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_UNLOCKED, questId))
 	{
 		StringCopy(gStringVar4, sText_InProgress);
@@ -2328,38 +2568,72 @@ bool8 IsOakExpeditionReady(void)
     return TRUE;
 }
 
+static s8 GetDerivedQuestState(u8 quest, u8 query)
+{
+    bool8 known = (gSaveBlock2Ptr->questData[quest * 5 / 8] >> (quest * 5 % 8)) & 1;
+    bool8 done = FALSE;
+    bool8 reward = FALSE;
+    u8 i;
+    const struct LeagueRecord *record;
+    if (query > FLAG_GET_COMPLETED) return -1;
+    switch (quest)
+    {
+    case QUEST_THE_NATURE_OF_EVOLUTION:
+        done = CountEvolutionThroughBondMilestones() >= 2 && CountApexInteractionsForNatureQuest() >= 2 && CountEvolutionThroughDesignMilestones() >= 2;
+        break;
+    case QUEST_GYM_LEADER_TRIALS:
+        done = TRUE;
+        for (i = 0; i < QUEST_2_SUB_COUNT; i++)
+            if (!IsGymTrialCompleted(i) && !IsGymTrialTraded(i)) done = FALSE;
+        break;
+    case QUEST_APEX_POKEMON:
+        return -1;
+    case QUEST_GIOVANNIS_AMBITION:
+        done = FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI);
+        break;
+    case QUEST_THE_ROCKET_LEAGUE:
+    case QUEST_THE_INDIGO_LEAGUE:
+        record = GetLeagueRecord(quest == QUEST_THE_ROCKET_LEAGUE ? LEAGUE_CHALLENGE_ROCKET : LEAGUE_CHALLENGE_INDIGO);
+        known |= record->lastResult != 0 || record->wins != 0 || record->championships != 0;
+        done = record->championships != 0 || (quest == QUEST_THE_INDIGO_LEAGUE && FlagGet(FLAG_SYS_GAME_CLEAR));
+        known |= done;
+        break;
+    case QUEST_EXPEDITION_FINALE:
+        done = FlagGet(FLAG_OAK_EXPEDITION_COMPLETE);
+        known |= FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE) || done;
+        reward = !done && IsOakExpeditionReady();
+        break;
+    case QUEST_LIVING_RELICS:
+        done = TRUE;
+        for (i = 0; i < NELEMS(sPrimevalSpecies); i++)
+        {
+            known |= IsPrimevalRecorded(i, FALSE) || IsPrimevalRecorded(i, TRUE);
+            if (!IsPrimevalRecorded(i, TRUE)) done = FALSE;
+        }
+        break;
+    case QUEST_FIELD_PROMISES:
+        done = TRUE;
+        for (i = 0; i < NELEMS(sFieldPromises); i++)
+            if (IsPromiseKnown(i))
+            {
+                known = TRUE;
+                if (!FlagGet(sFieldPromises[i].done)) done = FALSE;
+            }
+        break;
+    default: return -1;
+    }
+    if (query == FLAG_GET_UNLOCKED) return known;
+    if (query == FLAG_GET_COMPLETED) return known && done;
+    if (query == FLAG_GET_REWARD) return known && reward;
+    if (query == FLAG_GET_ACTIVE) return known && !done && !reward;
+    if (query == FLAG_GET_INACTIVE) return !known;
+    return -1;
+}
+
+
 u8 GenerateQuestState(u8 questId)
 {
-	bool8 objectivesComplete = FALSE;
-	u8 subquestId;
-
-	if (questId == QUEST_GYM_LEADER_TRIALS)
-	{
-		objectivesComplete = TRUE;
-		for (subquestId = SUB_QUEST_BROCK; subquestId <= SUB_QUEST_GIOVANNI; subquestId++)
-		{
-			if (!IsGymTrialCompleted(subquestId) && !IsGymTrialTraded(subquestId))
-				objectivesComplete = FALSE;
-		}
-	}
-	else if (questId == QUEST_THE_NATURE_OF_EVOLUTION)
-	{
-		objectivesComplete = CountEvolutionThroughBondMilestones() >= 2
-		                  && CountApexInteractionsForNatureQuest() >= 2
-		                  && CountEvolutionThroughDesignMilestones() >= 2;
-	}
-
-	if (objectivesComplete)
-	{
-		StringCopy(gStringVar4, sText_Complete);
-		return 2;
-	}
-	if (questId == QUEST_GIOVANNIS_AMBITION && FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI))
-	{
-		StringCopy(gStringVar4, sText_Complete);
-		return 2;
-	}
-	else if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+	if (LogbookMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
 	{
 		StringCopy(gStringVar4, sText_Complete);
 		return 2;
@@ -2378,6 +2652,7 @@ u8 GenerateQuestState(u8 questId)
 	{
 		StringCopy(gStringVar4, sText_Empty);
 	}
+    return 3;
 }
 
 void PrintQuestState(u8 windowId, u8 y, u8 colorIndex)
@@ -2410,7 +2685,7 @@ static void GenerateNumeratorNumQuests(void)
 	if (IsSubquestMode())
 	{
 		ConvertIntToDecimalStringN(gStringVar2,
-		                           sSideQuests[parentQuest].numSubquests,
+		                           (parentQuest == QUEST_FIELD_PROMISES ? CountNumberListRows() : sSideQuests[parentQuest].numSubquests),
 		                           STR_CONV_MODE_LEFT_ALIGN, 6);
 		ConvertIntToDecimalStringN(gStringVar1, CountCompletedQuests(),
 		                           STR_CONV_MODE_LEFT_ALIGN,
@@ -2830,10 +3105,33 @@ void LogbookMenu_ResetMenuSaveData(void)
 
 const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 {
+    if (parentQuest == QUEST_LIVING_RELICS)
+        return IsPrimevalRecorded(subquestId, TRUE) ? sText_LivingRelicsCaught : sText_LivingRelicsSeen;
+
+    if (parentQuest == QUEST_FIELD_PROMISES && subquestId < NELEMS(sPromiseQuests))
+        return FlagGet(sFieldPromises[subquestId].done) ? sText_LogbookYouFulfilledThisPromise : sPromiseQuests[subquestId].desc;
+    if (parentQuest == QUEST_THE_NATURE_OF_EVOLUTION && subquestId == SUB_QUEST_EVOLUTION_THROUGH_DESIGN)
+    {
+        if (FlagGet(FLAG_GOT_PORYGON_FROM_BLAINE))
+        {
+            if (IsSpeciesCaught(SPECIES_PORYGON_Z)) return sText_LogbookPorygonSAlteredEvolutionIsRecorded;
+            if (IsSpeciesCaught(SPECIES_PORYGON2) && FlagGet(FLAG_GOT_ROCKET_DUBIOUS_DISC)) return sText_LogbookTestTheDubiousDiscWithPorygon2;
+            if (IsSpeciesCaught(SPECIES_PORYGON2)) return sText_LogbookPorygonSUpgradeIsRecordedContinue;
+            if (FlagGet(FLAG_GOT_LAB_UPGRADE)) return sText_LogbookGivePorygonTheUpGradeReturn;
+            return sText_LogbookAskTheCinnabarLabScientistsAbout;
+        }
+        if (FlagGet(FLAG_DEFEATED_BLAINE)) return sText_LogbookVisitBlaineSTerminalToStudy;
+    }
+    if (parentQuest == QUEST_GIOVANNIS_AMBITION && LogbookMenu_GetSetSubquestState(parentQuest, FLAG_GET_COMPLETED, subquestId))
+        return sText_LogbookThisChapterOfGiovanniSPursuit;
     if (parentQuest == QUEST_GYM_LEADER_TRIALS)
     {
         switch (subquestId)
         {
+            case SUB_QUEST_BLAINE:
+                return FlagGet(FLAG_GOT_PORYGON_FROM_BLAINE) ? sText_LogbookPorygonCreatedContinueYourResearchUnder : FlagGet(FLAG_DEFEATED_BLAINE) ? sText_LogbookUseBlaineSTerminalToCreate : sText_LogbookChallengeBlaineAtCinnabarGym;
+            case SUB_QUEST_GIOVANNI:
+                return FlagGet(FLAG_DEFEATED_LEADER_GIOVANNI) ? sText_LogbookGiovanniSFinalTrialIsComplete : sText_LogbookMeetGiovanniInViridianGymAnd;
             case SUB_QUEST_BROCK:
                 switch (VarGet(VAR_BROCK_TRIAL_STATE))
                 {
@@ -2889,6 +3187,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 						return gText_LtSurgeTrialPhase5;
 				}
 			case SUB_QUEST_ERIKA:
+                if (IsSpeciesCaught(SPECIES_ROSELIA)) return sText_LogbookBondRecorded;
 				switch (VarGet(VAR_ERIKA_TRIAL_STATE))
 				{
 					default:
@@ -2906,6 +3205,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 						return gText_ErikaTrialPhase5;
 				}
 			case SUB_QUEST_KOGA:
+                if (IsSpeciesCaught(SPECIES_CROBAT)) return sText_LogbookBondRecorded;
 				switch (VarGet(VAR_KOGA_TRIAL_STATE))
 				{
 					default:
@@ -2923,6 +3223,7 @@ const u8 *GetDynamicSubquestDesc(u8 parentQuest, u8 subquestId)
 						return gText_KogaTrialPhase5;
 				}
 			case SUB_QUEST_SABRINA:
+                if (IsSpeciesCaught(SPECIES_CHIMECHO)) return sText_LogbookBondRecorded;
 				switch (VarGet(VAR_SABRINA_TRIAL_STATE))
 				{
 					default:

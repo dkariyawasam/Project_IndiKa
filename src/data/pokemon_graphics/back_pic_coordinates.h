@@ -2001,7 +2001,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_ELECTIVIRE] =
     {
         .size = MON_COORDS_SIZE(64, 48),
-        .y_offset = 8,
+        .y_offset = 15,
     },
     [SPECIES_AMBIPOM] =
     {

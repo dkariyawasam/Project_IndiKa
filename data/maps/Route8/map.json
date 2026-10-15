@@ -187,6 +187,16 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE8_LEPPA_BERRY",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 16,
+      "elevation": 3,
+      "item": "ITEM_FIRE_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE8_FIRE_STONE",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

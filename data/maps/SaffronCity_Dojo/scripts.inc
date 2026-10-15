@@ -17,90 +17,6 @@ SaffronCity_Dojo_EventScript_TriggerMasterBattleRight::
 	releaseall
 	end
 
-SaffronCity_Dojo_EventScript_HitmonleeBall::
-	lock
-	faceplayer
-	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_AlreadyGotHitmon
-	showmonpic SPECIES_HITMONLEE, 10, 3
-	setvar VAR_TEMP_1, SPECIES_HITMONLEE
-	applymovement LOCALID_KARATE_MASTER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox SaffronCity_Dojo_Text_YouWantHitmonlee, MSGBOX_YESNO
-	call EventScript_RestorePrevTextColor
-	goto_if_eq VAR_RESULT, YES, SaffronCity_Dojo_EventScript_GiveHitmon
-	hidemonpic
-	release
-	end
-
-SaffronCity_Dojo_EventScript_AlreadyGotHitmon::
-	msgbox SaffronCity_Dojo_Text_BetterNotGetGreedy
-	release
-	end
-
-SaffronCity_Dojo_EventScript_HitmonchanBall::
-	lock
-	faceplayer
-	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_AlreadyGotHitmon
-	showmonpic SPECIES_HITMONCHAN, 10, 3
-	setvar VAR_TEMP_1, SPECIES_HITMONCHAN
-	applymovement LOCALID_KARATE_MASTER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox SaffronCity_Dojo_Text_YouWantHitmonchan, MSGBOX_YESNO
-	call EventScript_RestorePrevTextColor
-	goto_if_eq VAR_RESULT, YES, SaffronCity_Dojo_EventScript_GiveHitmon
-	hidemonpic
-	release
-	end
-
-SaffronCity_Dojo_EventScript_GiveHitmon::
-	hidemonpic
-	givemon VAR_TEMP_1, 25
-	goto_if_eq VAR_RESULT, 0, SaffronCity_Dojo_EventScript_ReceivedHitmonParty
-	goto_if_eq VAR_RESULT, 1, SaffronCity_Dojo_EventScript_ReceivedHitmonPC
-	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
-	release
-	end
-
-SaffronCity_Dojo_EventScript_ReceivedHitmonParty::
-	removeobject VAR_LAST_TALKED
-	bufferspeciesname STR_VAR_1, VAR_TEMP_1
-	playfanfare MUS_LEVEL_UP
-	message SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster
-	waitmessage
-	waitfanfare
-	setflag FLAG_GOT_HITMON_FROM_DOJO
-	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_EventScript_EndGiveMon
-	call EventScript_GetGiftMonPartySlot
-	call EventScript_ChangePokemonNickname
-	goto SaffronCity_Dojo_EventScript_EndGiveMon
-	end
-
-SaffronCity_Dojo_EventScript_ReceivedHitmonPC::
-	removeobject VAR_LAST_TALKED
-	bufferspeciesname STR_VAR_1, VAR_TEMP_1
-	playfanfare MUS_LEVEL_UP
-	message SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster
-	waitmessage
-	waitfanfare
-	setflag FLAG_GOT_HITMON_FROM_DOJO
-	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_EventScript_TransferredHitmonToPC
-	call EventScript_NameReceivedBoxMon
-	goto SaffronCity_Dojo_EventScript_TransferredHitmonToPC
-	end
-
-SaffronCity_Dojo_EventScript_TransferredHitmonToPC::
-	call EventScript_TransferredToPC
-	goto SaffronCity_Dojo_EventScript_EndGiveMon
-	end
-
-SaffronCity_Dojo_EventScript_EndGiveMon::
-	release
-	end
-
 SaffronCity_Dojo_EventScript_Statue::
 	msgbox SaffronCity_Dojo_Text_FightingDojo, MSGBOX_SIGN
 	end
@@ -140,17 +56,25 @@ SaffronCity_Dojo_EventScript_Mike::
 
 SaffronCity_Dojo_EventScript_MasterKoichi::
 	trainerbattle_single TRAINER_BLACK_BELT_KOICHI, SaffronCity_Dojo_Text_MasterKoichiIntro, SaffronCity_Dojo_Text_MasterKoichiDefeat, SaffronCity_Dojo_EventScript_DefeatedMasterKoichi
-	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon
-	msgbox SaffronCity_Dojo_Text_ChoosePrizedFightingMon, MSGBOX_AUTOCLOSE
-	end
-
-SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon::
-	msgbox SaffronCity_Dojo_Text_StayAndTrainWithUs
-	release
-	end
+	goto SaffronCity_Dojo_EventScript_Reward
 
 SaffronCity_Dojo_EventScript_DefeatedMasterKoichi::
 	setvar VAR_MAP_SCENE_SAFFRON_CITY_DOJO, 1
+	goto SaffronCity_Dojo_EventScript_Reward
+
+SaffronCity_Dojo_EventScript_Reward::
+	goto_if_set FLAG_GOT_DOJO_BLACK_BELT, SaffronCity_Dojo_EventScript_RewardClaimed
+	msgbox SaffronCity_Dojo_Text_BlackBeltReward
+	giveitem ITEM_BLACK_BELT
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_Dojo_EventScript_EndReward
+	setflag FLAG_GOT_DOJO_BLACK_BELT
+	msgbox SaffronCity_Dojo_Text_BlackBeltEffect
+SaffronCity_Dojo_EventScript_EndReward::
+	release
+	end
+
+SaffronCity_Dojo_EventScript_RewardClaimed::
+	msgbox SaffronCity_Dojo_Text_StayAndTrainWithUs
 	release
 	end
 

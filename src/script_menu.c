@@ -171,6 +171,7 @@ static const struct MenuAction sMultichoiceList_CeladonVendingMachine[] = {
     { gText_FreshWater_200 },
     { gText_SodaPop_300 },
     { gText_Lemonade_350 },
+    { gText_MoomooMilk_500 },
     { gOtherText_Exit }
 };
 
@@ -286,7 +287,6 @@ static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
     { gText_MiracleSeed_1000Coins },
     { gText_Charcoal_1000Coins },
     { gText_MysticWater_1000Coins },
-    { gText_YellowFlute_1600Coins },
     { gText_NoThanks_2 }
 };
 

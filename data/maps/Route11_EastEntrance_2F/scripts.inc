@@ -11,6 +11,7 @@ Route11_EastEntrance_2F_EventScript_Turner::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_MACHOKE
+	setflag FLAG_HEARD_MACHOKE_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 // Retain the existing completion flag so old saves cannot repeat this trade.
 	goto_if_set FLAG_DID_NINA_TRADE, Route11_EastEntrance_2F_EventScript_AlreadyTraded

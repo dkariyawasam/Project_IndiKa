@@ -9,6 +9,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Garett::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_RHYDON
+	setflag FLAG_HEARD_RHYDON_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_CH_DING_TRADE, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ProtectorTrade
@@ -67,6 +68,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixHaste::
 	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
 	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	givemon SPECIES_OMANYTE, 5
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	setflag FLAG_RESEARCH_REVIVED_OMANYTE
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
 	release
 	end
@@ -81,6 +84,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixDart::
 	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
 	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	givemon SPECIES_OMATO, 5
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	setflag FLAG_RESEARCH_REVIVED_OMATO
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
 	release
 	end
@@ -95,6 +100,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeDart::
 	removeitem ITEM_DOME_FOSSIL_SHARD, 1
 	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	givemon SPECIES_KABUTO, 5
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	setflag FLAG_RESEARCH_REVIVED_KABUTO
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
 	release
 	end
@@ -109,6 +116,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeHaste::
 	removeitem ITEM_DOME_FOSSIL_SHARD, 1
 	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	givemon SPECIES_KABUSTAR, 5
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	setflag FLAG_RESEARCH_REVIVED_KABUSTAR
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
 	release
 	end
@@ -119,8 +128,10 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_OldAmber::
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_OLD_AMBER, 1
-	setflag FLAG_REVIVED_AMBER
 	givemon SPECIES_AERODACTYL, 5
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	setflag FLAG_REVIVED_AMBER
+	setflag FLAG_RESEARCH_REVIVED_AERODACTYL
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
 	release
 	end

@@ -10,6 +10,7 @@ IndigoPlateau_PokemonCenter_1F_OnTransition::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_THE_INDIGO_LEAGUE
 	lock
 	faceplayer
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
@@ -17,6 +18,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
+	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_THE_INDIGO_LEAGUE
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice, MSGBOX_NPC
 	end
 

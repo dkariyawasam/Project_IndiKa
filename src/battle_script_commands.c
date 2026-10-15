@@ -784,12 +784,7 @@ static const struct PickupItem sPickupItems[] =
     { ITEM_TM10, 80 },
     { ITEM_PP_UP, 85 },
     { ITEM_RARE_CANDY, 90 },
-    { ITEM_NUGGET, 95 },
-    { ITEM_SPELON_BERRY, 96 },
-    { ITEM_PAMTRE_BERRY, 97 },
-    { ITEM_WATMEL_BERRY, 98 },
-    { ITEM_DURIN_BERRY, 99 },
-    { ITEM_BELUE_BERRY, 1 },
+    { ITEM_NUGGET, 100 },
 
 };
 
@@ -9343,7 +9338,7 @@ static void Cmd_pickup(void)
         {
             s32 random = Random() % 100;
 
-            for (j = 0; j < 15; ++j)
+            for (j = 0; j < ARRAY_COUNT(sPickupItems) - 1; ++j)
                 if (sPickupItems[j].chance > random)
                     break;
             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[j]);

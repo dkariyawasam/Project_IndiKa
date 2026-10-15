@@ -1286,7 +1286,7 @@ const u8 gText_SideQuestDesc_2[] = _("Observe how KANTO's GYM LEADERS\ntrain and
 const u8 gText_SideQuestDesc_3[] = _("Record rare Apex POKéMON whose\ninstincts exceed ordinary limits.");
 const u8 gText_SideQuestDesc_4[] = _("Follow GIOVANNI's pursuit of\nabsolute power through MEWTWO.");
 const u8 gText_SideQuestDesc_5[] = _("Challenge TEAM ROCKET's league\nand test their ambition.");
-const u8 gText_SideQuestDesc_6[] = _("Challenge KANTO's strongest\ntrainers at the INDIGO LEAGUE.");
+const u8 gText_SideQuestDesc_6[] = _("Challenge KANTO and JOHTO's\ntrainers at the INDIGO LEAGUE.");
 const u8 gText_SideQuestDesc_7[] = _("Description 7");
 const u8 gText_SideQuestDesc_8[] = _("Description 8");
 const u8 gText_SideQuestDesc_9[] = _("Description 9");
@@ -1422,7 +1422,7 @@ const u8 gText_BrockTrialPhase1[] = _("BROCK is in MT. MOON searching\nfor fossi
 const u8 gText_BrockTrialPhase2[] = _("Search MT. MOON's exposed rocks\nfor a fossil. Show it to BROCK.");
 const u8 gText_BrockTrialPhase3[] = _("BROCK returned to Pewter GYM.\nChallenge him.");
 const u8 gText_BrockTrialPhase4[] = _("BROCK wants to study a POKéMON\nthat has lived unchanged since\nancient times.");
-const u8 gText_BrockTrialPhase5[] = _("Trade evolution confirmed through BROCK's GOLEM.");
+const u8 gText_BrockTrialPhase5[] = _("Trade evolution recorded\nthrough BROCK's GOLEM.");
 
 const u8 gText_MistyTrialPhase1[] = _("MISTY is investigating water\ncurrents inside ROCK TUNNEL.");
 const u8 gText_MistyTrialPhase2[] = _("MISTY asked you to scout the\ncurrents inside ROCK TUNNEL.");
@@ -1456,7 +1456,7 @@ const u8 gText_SabrinaTrialPhase5[] = _("Raise CHINGLING's friendship, then\nlev
 
 const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by trust\nand friendship.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution shaped by habitat,\ninstinct, and survival.");
-const u8 gText_SubQuest1_Desc3[] = _("Study evolution shaped by items,\ntrades, and human care.");
+const u8 gText_SubQuest1_Desc3[] = _("Study fossil revival, PORYGON,\nand human-made evolution tools.");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");
 const u8 gText_SubQuest1_Desc5[] = _("Description Sub 5");
 const u8 gText_SubQuest1_Desc6[] = _("Description Sub 6");
@@ -1498,3 +1498,5 @@ const u8 gText_SubQuest2_Desc17[] = _("Description Sub 17");
 const u8 gText_SubQuest2_Desc18[] = _("Description Sub 18");
 const u8 gText_SubQuest2_Desc19[] = _("Description Sub 19");
 const u8 gText_SubQuest2_Desc20[] = _("Description Sub 20");
+
+const u8 gText_MoomooMilk_500[] = _("MOOMOO MILK{CLEAR_TO 0x57}{FONT_SMALL}¥500");
