@@ -163,7 +163,7 @@ RocketLeague_Arena_EventScript_BattleProton::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleRazor::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_M
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_ACE_KARDINAL
 	call RocketLeague_Arena_EventScript_AdminMEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_RazorIntro
@@ -176,7 +176,7 @@ RocketLeague_Arena_EventScript_BattleRazor::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleVex::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_F
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_ACE_SHION
 	call RocketLeague_Arena_EventScript_AdminFEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_VexIntro
@@ -189,7 +189,7 @@ RocketLeague_Arena_EventScript_BattleVex::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleNova::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_F
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_ACE_MOJAY
 	call RocketLeague_Arena_EventScript_AdminFEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_NovaIntro
@@ -202,7 +202,7 @@ RocketLeague_Arena_EventScript_BattleNova::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleKnell::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_M
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_ACE_ATTRYCE
 	call RocketLeague_Arena_EventScript_AdminMEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_KnellIntro
@@ -215,7 +215,7 @@ RocketLeague_Arena_EventScript_BattleKnell::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleMako::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_M
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_ACE_MAKO
 	call RocketLeague_Arena_EventScript_AdminMEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_MakoIntro
@@ -228,7 +228,7 @@ RocketLeague_Arena_EventScript_BattleMako::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleSable::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_F
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_ACE_SABLE
 	call RocketLeague_Arena_EventScript_AdminFEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_SableIntro
@@ -241,7 +241,7 @@ RocketLeague_Arena_EventScript_BattleSable::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleJet::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_M
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_M, OBJ_EVENT_GFX_ROCKET_ACE_JET
 	call RocketLeague_Arena_EventScript_AdminMEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_JetIntro
@@ -254,7 +254,7 @@ RocketLeague_Arena_EventScript_BattleJet::
 	goto RocketLeague_Arena_EventScript_GiveCoinReward
 
 RocketLeague_Arena_EventScript_BattleViper::
-	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_F
+	setobjectgfx LOCALID_ROCKET_LEAGUE_ADMIN_F, OBJ_EVENT_GFX_ROCKET_ACE_VIPER
 	call RocketLeague_Arena_EventScript_AdminFEnter
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_Arena_Text_ViperIntro
