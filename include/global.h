@@ -361,7 +361,8 @@ struct SaveBlock2
     /*0xB12*/ struct LeagueRecordsData leagueRecords;
     u8 filler_B12[0x40E - sizeof(struct LeagueRecordsData)];
     /*0xF20*/ u32 encryptionKey;
-#define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
+// Keep the original six-byte save allocation: nine quests use 45 bits.
+#define QUEST_FLAGS_COUNT 1
 #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)
 #define QUEST_STATES 6 //Number of different quest states tracked in the saveblock
     //May overflow

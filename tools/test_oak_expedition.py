@@ -23,6 +23,7 @@ code = r'''
 #include "constants/vars.h"
 #include "constants/quests.h"
 #include "constants/species.h"
+typedef uint32_t u32;
 typedef uint8_t u8;
 typedef uint16_t u16;
 typedef u8 bool8;
@@ -41,6 +42,7 @@ static bool8 IsGymTrialTraded(u8 n) {return traded[n];}
 static int CountApexInteractionsForNatureQuest(void) {return instinct;}
 static int CountEvolutionThroughDesignMilestones(void) {return design;}
 '''
+code += (ROOT/'src/data/nature_research.h').read_text()+'\n'
 code += function('CountEvolutionThroughBondMilestones') + '\n'
 code += function('GetOakResearchReaction') + '\n' + function('IsOakExpeditionReady')
 code += r'''
@@ -55,7 +57,7 @@ int main(void) {
  int i;
  assert(!IsOakExpeditionReady());
  instinct=design=2;
- caught[SPECIES_CROBAT]=caught[SPECIES_CHIMECHO]=1;
+ flags[FLAG_RESEARCH_BOND_CROBAT]=flags[FLAG_RESEARCH_BOND_CHIMECHO]=1;
  assert(!GetOakResearchReaction());
  flags[FLAG_SYS_POKEDEX_GET]=1;
  assert(GetOakResearchReaction()==1); flags[FLAG_OAK_ACKNOWLEDGED_BOND]=1;
@@ -84,10 +86,10 @@ int main(void) {
  // Milotic can supply the second Bond milestone, but Feebas alone cannot.
  memset(flags,0,sizeof(flags)); memset(caught,0,sizeof(caught));
  flags[FLAG_SYS_POKEDEX_GET]=1; instinct=design=0;
- caught[SPECIES_CROBAT]=caught[SPECIES_FEEBAS]=1;
+ flags[FLAG_RESEARCH_BOND_CROBAT]=1; caught[SPECIES_FEEBAS]=1;
  assert(CountEvolutionThroughBondMilestones()==1);
  assert(GetOakResearchReaction()==0);
- caught[SPECIES_MILOTIC]=1;
+ flags[FLAG_RESEARCH_BOND_MILOTIC]=1;
  assert(CountEvolutionThroughBondMilestones()==2);
  assert(GetOakResearchReaction()==1);
  flags[FLAG_OAK_ACKNOWLEDGED_BOND]=1;

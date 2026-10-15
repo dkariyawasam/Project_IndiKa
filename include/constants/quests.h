@@ -21,7 +21,10 @@
 #define QUEST_GIOVANNIS_AMBITION                3
 #define QUEST_THE_ROCKET_LEAGUE                 4
 #define QUEST_THE_INDIGO_LEAGUE                 5
-#define QUEST_COUNT     (QUEST_THE_INDIGO_LEAGUE + 1)
+#define QUEST_EXPEDITION_FINALE                  6
+#define QUEST_FIELD_PROMISES                     7
+#define QUEST_LIVING_RELICS                      8
+#define QUEST_COUNT     (QUEST_LIVING_RELICS + 1)
 
 #define SUB_QUEST_EVOLUTION_THROUGH_BOND        0
 #define SUB_QUEST_EVOLUTION_THROUGH_INSTINCT    1

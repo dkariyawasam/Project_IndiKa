@@ -1,4 +1,5 @@
 #include "global.h"
+#include "quests.h"
 #include "gflib.h"
 #include "battle.h"
 #include "battle_message.h"
@@ -782,6 +783,7 @@ static void Task_EvolutionScene(u8 taskId)
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
             IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+            RecordNatureResearchEvolution(gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies, FALSE);
         }
         break;
     case EVOSTATE_TRY_LEARN_MOVE:
@@ -1216,6 +1218,7 @@ static void Task_TradeEvolutionScene(u8 taskId)
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
             IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+            RecordNatureResearchEvolution(gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies, TRUE);
         }
         break;
     case T_EVOSTATE_TRY_LEARN_MOVE:

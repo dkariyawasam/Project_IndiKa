@@ -10,13 +10,15 @@ SaffronCity_Dojo_Text_MasterKoichiDefeat::
     .string "Hwa!\n"
     .string "Arrgh! Beaten!$"
 
-SaffronCity_Dojo_Text_ChoosePrizedFightingMon::
-    .string "Indeed, I have lost!\p"
-    .string "But, I beseech you, do not take\n"
-    .string "our emblem as your trophy!\p"
-    .string "In return, I will give you a prized\n"
-    .string "FIGHTING POKéMON!\p"
-    .string "Choose whichever one you like!$"
+SaffronCity_Dojo_Text_BlackBeltReward::
+    .string "Your technique has earned my\n"
+    .string "respect! Take this BLACK BELT.$"
+
+SaffronCity_Dojo_Text_BlackBeltEffect::
+    .string "A POKéMON holding it strengthens\n"
+    .string "its FIGHTING-type moves.\p"
+    .string "Keep training! A belt is only\n"
+    .string "the beginning.$"
 
 SaffronCity_Dojo_Text_StayAndTrainWithUs::
     .string "Grunt!\n"
@@ -85,25 +87,6 @@ SaffronCity_Dojo_Text_CarlyPostBattle::
     .string "noise.\p"
     .string "A true martial artist makes one\n"
     .string "motion answer everything.$"
-
-SaffronCity_Dojo_Text_YouWantHitmonlee::
-    .string "You want the hard-kicking\n"
-    .string "HITMONLEE?$"
-
-SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster::
-    .string "{PLAYER} received the {STR_VAR_1}\n"
-    .string "from the KARATE MASTER.$"
-
-SaffronCity_Dojo_Text_YouWantHitmonchan::
-    .string "You want the piston-punching\n"
-    .string "HITMONCHAN?$"
-
-SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster2::
-    .string "{PLAYER}は　カラテ　だいおう　から\n"
-    .string "{STR_VAR_1}を　もらった！$"
-
-SaffronCity_Dojo_Text_BetterNotGetGreedy::
-    .string "Better not get greedy…$"
 
 SaffronCity_Dojo_Text_EnemiesOnEverySide::
     .string "Enemies on every side!$"

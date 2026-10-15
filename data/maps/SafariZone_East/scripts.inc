@@ -13,6 +13,7 @@ SafariZone_East_EventScript_GravelerTrade::
 	lock
 	faceplayer
 	setvar VAR_0x8008, INGAME_TRADE_ALOLAN_GRAVELER
+	setflag FLAG_HEARD_ALOLAN_GRAVELER_REQUEST
 	call EventScript_GetInGameTradeSpeciesInfo
 	goto_if_set FLAG_DID_ALOLAN_GRAVELER_TRADE, SafariZone_East_EventScript_GravelerTrade_Done
 	msgbox SafariZone_East_Text_GravelerTradeIntro, MSGBOX_DEFAULT
