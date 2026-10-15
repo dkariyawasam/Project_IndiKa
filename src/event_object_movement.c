@@ -536,6 +536,14 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_SWIMMER_F 0x1159
 #define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TRENDSETTER_M 0x115A
 #define OBJ_EVENT_PAL_TAG_LIGHT_HAIR_TUBER_M 0x115B
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_KARDINAL 0x115C
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_SHION 0x115D
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_MOJAY 0x115E
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_ATTRYCE 0x115F
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_MAKO 0x1160
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_SABLE 0x1161
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_JET 0x1162
+#define OBJ_EVENT_PAL_TAG_ROCKET_ACE_VIPER 0x1163
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -547,6 +555,15 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #include "data/object_events/object_event_graphics_info.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+    {gObjectEventPal_RocketAceKardinal, OBJ_EVENT_PAL_TAG_ROCKET_ACE_KARDINAL},
+    {gObjectEventPal_RocketAceShion, OBJ_EVENT_PAL_TAG_ROCKET_ACE_SHION},
+    {gObjectEventPal_RocketAceMojay, OBJ_EVENT_PAL_TAG_ROCKET_ACE_MOJAY},
+    {gObjectEventPal_RocketAceAttryce, OBJ_EVENT_PAL_TAG_ROCKET_ACE_ATTRYCE},
+    {gObjectEventPal_RocketAceMako, OBJ_EVENT_PAL_TAG_ROCKET_ACE_MAKO},
+    {gObjectEventPal_RocketAceSable, OBJ_EVENT_PAL_TAG_ROCKET_ACE_SABLE},
+    {gObjectEventPal_RocketAceJet, OBJ_EVENT_PAL_TAG_ROCKET_ACE_JET},
+    {gObjectEventPal_RocketAceViper, OBJ_EVENT_PAL_TAG_ROCKET_ACE_VIPER},
+
     {gObjectEventPal_NpcBlue,                 OBJ_EVENT_PAL_TAG_NPC_BLUE},
     {gObjectEventPal_NpcPink,                 OBJ_EVENT_PAL_TAG_NPC_PINK},
     {gObjectEventPal_NpcGreen,                OBJ_EVENT_PAL_TAG_NPC_GREEN},

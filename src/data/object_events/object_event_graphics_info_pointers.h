@@ -195,7 +195,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicF;
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceKardinal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceShion;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceMojay;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceAttryce;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceMako;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceSable;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceJet;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAceViper;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
+    [OBJ_EVENT_GFX_ROCKET_ACE_KARDINAL] = &gObjectEventGraphicsInfo_RocketAceKardinal,
+    [OBJ_EVENT_GFX_ROCKET_ACE_SHION] = &gObjectEventGraphicsInfo_RocketAceShion,
+    [OBJ_EVENT_GFX_ROCKET_ACE_MOJAY] = &gObjectEventGraphicsInfo_RocketAceMojay,
+    [OBJ_EVENT_GFX_ROCKET_ACE_ATTRYCE] = &gObjectEventGraphicsInfo_RocketAceAttryce,
+    [OBJ_EVENT_GFX_ROCKET_ACE_MAKO] = &gObjectEventGraphicsInfo_RocketAceMako,
+    [OBJ_EVENT_GFX_ROCKET_ACE_SABLE] = &gObjectEventGraphicsInfo_RocketAceSable,
+    [OBJ_EVENT_GFX_ROCKET_ACE_JET] = &gObjectEventGraphicsInfo_RocketAceJet,
+    [OBJ_EVENT_GFX_ROCKET_ACE_VIPER] = &gObjectEventGraphicsInfo_RocketAceViper,
+
     [OBJ_EVENT_GFX_PSYCHIC_F] = &gObjectEventGraphicsInfo_PsychicF,
     [OBJ_EVENT_GFX_RED_NORMAL]               = &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE]                 = &gObjectEventGraphicsInfo_RedBike,

@@ -341,3 +341,21 @@ const u16 gObjectEventPic_RocketArcher[] = INCBIN_U16("graphics/object_events/pi
 
 const u16 gObjectEventPal_RocketProton[] = INCBIN_U16("graphics/object_events/palettes/rocket_proton.gbapal");
 const u16 gObjectEventPic_RocketProton[] = INCBIN_U16("graphics/object_events/pics/people/rocket_admin_proton.4bpp");
+
+// Capless Rocket Aces; matching palettes are independent of regular grunts.
+const u16 gObjectEventPic_RocketAceKardinal[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_kardinal.4bpp");
+const u16 gObjectEventPal_RocketAceKardinal[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_kardinal.gbapal");
+const u16 gObjectEventPic_RocketAceShion[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_shion.4bpp");
+const u16 gObjectEventPal_RocketAceShion[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_shion.gbapal");
+const u16 gObjectEventPic_RocketAceMojay[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_mojay.4bpp");
+const u16 gObjectEventPal_RocketAceMojay[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_mojay.gbapal");
+const u16 gObjectEventPic_RocketAceAttryce[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_attryce.4bpp");
+const u16 gObjectEventPal_RocketAceAttryce[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_attryce.gbapal");
+const u16 gObjectEventPic_RocketAceMako[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_mako.4bpp");
+const u16 gObjectEventPal_RocketAceMako[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_mako.gbapal");
+const u16 gObjectEventPic_RocketAceSable[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_sable.4bpp");
+const u16 gObjectEventPal_RocketAceSable[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_sable.gbapal");
+const u16 gObjectEventPic_RocketAceJet[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_jet.4bpp");
+const u16 gObjectEventPal_RocketAceJet[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_jet.gbapal");
+const u16 gObjectEventPic_RocketAceViper[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_viper.4bpp");
+const u16 gObjectEventPal_RocketAceViper[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_viper.gbapal");

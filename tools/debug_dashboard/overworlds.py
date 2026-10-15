@@ -11,7 +11,7 @@ APEX = {'Tangrowth', 'Annihilape', 'Osscythe', 'MimeSr', 'Articuno', 'Zapdos', '
 
 def group_for(label, frames):
     path = frames[0]['path']
-    if label in {'Giovanni', 'RocketArcher', 'RocketAriana', 'RocketPetrel', 'RocketProton', 'RocketM', 'RocketF'}: return GROUPS[7]
+    if label.startswith('RocketAce') or label in {'Giovanni', 'RocketArcher', 'RocketAriana', 'RocketPetrel', 'RocketProton', 'RocketM', 'RocketF'}: return GROUPS[7]
     if label in LEADERS: return GROUPS[0]
     if label in APEX: return GROUPS[4]
     if '/pokemon/' in path: return GROUPS[3]
