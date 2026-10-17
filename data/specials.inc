@@ -472,4 +472,5 @@ gSpecials::
 	def_special GetOakResearchInvitation
 	def_special IsOakExpeditionReady
 	def_special ShowExpeditionCertificate
+	def_special ShowFossilRevival
 gSpecialsEnd::

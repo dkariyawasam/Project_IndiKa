@@ -2,6 +2,8 @@
 """Local, dependency-free dashboard server for Expedition Kanto and mGBA."""
 import argparse
 import hashlib
+import ipaddress
+from http.cookies import SimpleCookie
 import json
 import mimetypes
 import os
@@ -277,16 +279,37 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff')
         self.send_header('Content-Security-Policy',"default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'")
         self.end_headers();self.wfile.write(data)
+    def paired(self):
+        if self.client_address[0] in ('127.0.0.1', '::1'):
+            return True
+        cookie = SimpleCookie()
+        try:
+            cookie.load(self.headers.get('Cookie', ''))
+            value = cookie.get('expedition_phone')
+            return bool(value and secrets.compare_digest(value.value, self.server.phone_key))
+        except Exception:
+            return False
+
     def local(self):
         allowed={f'127.0.0.1:{self.server.server_port}',f'localhost:{self.server.server_port}'}
+        if getattr(self.server, 'lan_host', None):
+            allowed.add(f'{self.server.lan_host}:{self.server.server_port}')
         if self.headers.get('Host') not in allowed: return False
         origin=self.headers.get('Origin')
         return not origin or origin in {'http://'+x for x in allowed}
     def do_GET(self):
         if not self.local(): self.send(403,dict(error='Local requests only'));return
         path=urlsplit(self.path).path
+        public = {'/', '/manifest.webmanifest', '/app-icon.png'}
+        if not self.paired() and path not in public:
+            self.send(401, dict(error='Pair this iPhone with the Mac dashboard first.'));return
+        if path == '/' and not self.paired():
+            self.send(200, (HERE/'static/phone-pair.html').read_bytes(), 'text/html; charset=utf-8');return
         try:
-            if path=='/api/bootstrap':
+            if path in ('/manifest.webmanifest', '/app-icon.png'):
+                mime = {'/manifest.webmanifest':'application/manifest+json', '/app-icon.png':'image/png'}[path]
+                self.send(200, (HERE/'static'/path[1:]).read_bytes(), mime)
+            elif path=='/api/bootstrap':
                 self.send(200,dict(catalog=self.app.catalog,token=self.app.token,rom=str(self.app.directory/'expedition-debug.gba'),
                                   connect='dofile('+lua(str(self.app.bootstrap))+')',session=str(self.app.directory),sha=self.app.digest,
                                   audits=[dict(id=k,title=v[0],test=v[2]) for k,v in AUDITS.items()]))
@@ -317,6 +340,9 @@ class Handler(BaseHTTPRequestHandler):
                 from items import icon
                 key=parse_qs(urlsplit(self.path).query).get('item',[''])[0]
                 self.send(200,icon(ROOT,key),'image/png')
+            elif path=='/api/rivals':
+                from rivals import catalog
+                self.send(200,catalog(ROOT))
             elif path=='/api/quests':
                 from quests import catalog
                 self.send(200,catalog(ROOT))
@@ -344,14 +370,32 @@ class Handler(BaseHTTPRequestHandler):
             elif path=='/screen.png': self.send(200,(self.app.directory/'screen.png').read_bytes(),'image/png')
             elif path=='/pixel.ttf':
                 self.send(200,(ROOT/'tools/debug_dashboard/static/pixel.ttf').read_bytes(),'font/ttf')
-            elif path in ('/','/app.mjs','/quests.mjs','/atlas.mjs','/overworlds.mjs','/pokedex.mjs','/items.mjs','/style.css'):
+            elif path in ('/','/app.mjs','/rivals.mjs','/quests.mjs','/atlas.mjs','/overworlds.mjs','/pokedex.mjs','/items.mjs','/style.css'):
                 file=HERE/'static'/('index.html' if path=='/' else path[1:])
-                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/quests.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/overworlds.mjs':'text/javascript; charset=utf-8','/items.mjs':'text/javascript; charset=utf-8','/pokedex.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
+                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/rivals.mjs':'text/javascript; charset=utf-8','/quests.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/overworlds.mjs':'text/javascript; charset=utf-8','/items.mjs':'text/javascript; charset=utf-8','/pokedex.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
             else: self.send(404,dict(error='Not found'))
         except FileNotFoundError: self.send(404,dict(error='Not available yet'))
         except Exception as e: self.send(500,dict(error=str(e)))
     def do_POST(self):
-        if not self.local() or self.headers.get('X-Debug-Token') != self.app.token:
+        if urlsplit(self.path).path == '/pair':
+            if not self.local():
+                self.send(403, dict(error='Invalid dashboard origin'));return
+            try:
+                length = int(self.headers.get('Content-Length', '0'))
+                if not 0 < length <= 256: raise ValueError()
+                code = ''.join(parse_qs(self.rfile.read(length).decode()).get('code', [''])[0].split()).lower()
+                if not secrets.compare_digest(code, self.server.phone_key):
+                    self.send(403, b'Pairing code incorrect. Go back and use the code shown on your Mac.', 'text/plain');return
+                self.send_response(303)
+                self.send_header('Location', '/')
+                self.send_header('Set-Cookie', 'expedition_phone='+self.server.phone_key+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=2592000')
+                self.send_header('Cache-Control', 'no-store')
+                self.send_header('Content-Length', '0')
+                self.end_headers()
+            except (ValueError, UnicodeError):
+                self.send(400, dict(error='Invalid pairing request'))
+            return
+        if not self.local() or not self.paired() or self.headers.get('X-Debug-Token') != self.app.token:
             self.send(403,dict(error='Invalid local session'));return
         try:
             length=int(self.headers.get('Content-Length','0'))
@@ -381,15 +425,32 @@ def main():
     parser.add_argument('--no-open',action='store_true')
     parser.add_argument('--new-session',action='store_true',help='Copy a new test session instead of resuming')
     parser.add_argument('--launch-game',action='store_true',help='Launch the test game and automatically load the bridge when supported')
+    parser.add_argument('--lan-host', help='Mac private IPv4 address for paired iPhone access on trusted Wi-Fi')
     args=parser.parse_args()
+    if args.lan_host:
+        try:
+            address = ipaddress.IPv4Address(args.lan_host)
+            if not address.is_private or address.is_loopback or address.is_unspecified or address.is_link_local:
+                raise ValueError()
+        except ValueError:
+            parser.error('--lan-host must be your Mac’s private Wi-Fi IPv4 address')
     base=ROOT/'.cache/debug-dashboard'
     previous=None if args.fresh or args.new_session else resume_session(base)
     directory,bootstrap,digest=previous or prepare(base,not args.fresh)
     app=Dashboard(directory,bootstrap,digest)
-    server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler);server.app=app
+    server=ThreadingHTTPServer(('0.0.0.0' if args.lan_host else '127.0.0.1',args.port),Handler);server.app=app
+    server.lan_host=args.lan_host
+    pairing_file=directory/'phone-pairing.key'
+    if not pairing_file.exists():
+        fd=os.open(pairing_file, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        with os.fdopen(fd, 'w') as stream:
+            stream.write(secrets.token_hex(8))
+    server.phone_key=pairing_file.read_text().strip()
     url=f'http://127.0.0.1:{server.server_port}'
     atomic(ROOT/'.cache/debug-dashboard/current.json',json.dumps(dict(url=url,directory=str(directory),connect=str(bootstrap))))
     print(f'Dashboard: {url}\nTest ROM: {directory / "expedition-debug.gba"}\nIn mGBA Tools → Scripting, run: dofile({lua(str(bootstrap))})',flush=True)
+    if args.lan_host:
+        print(f'iPhone: http://{args.lan_host}:{server.server_port}\nPairing code: {server.phone_key}', flush=True)
     if args.launch_game:
         try: print(app.connect_emulator()['message'],flush=True)
         except (OSError,ValueError,subprocess.SubprocessError) as e: print('Could not launch mGBA: '+str(e),flush=True)

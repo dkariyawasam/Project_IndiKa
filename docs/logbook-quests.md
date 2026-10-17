@@ -1,8 +1,8 @@
 # Logbook progression
 
-The logbook has nine main entries: The Nature of Evolution, Gym Leader Trials,
-Apex Pokémon, Giovanni's Ambition, Rocket League, Indigo League, Expedition
-Homecoming, Field Promises, and Living Relics.
+The logbook has eight main entries: The Nature of Evolution, Gym Leader Trials,
+Apex Pokémon, Giovanni's Ambition, Rocket League, Indigo League, Field Promises,
+and Living Relics.
 
 ## Research and story
 
@@ -38,9 +38,11 @@ footers, and gameplay consumers. League reception unlocks its entry; saved
 League records determine completion. Existing Indigo Hall of Fame saves count
 as complete even without newer League records.
 
-Expedition Homecoming appears after Oak acknowledges the Nature research.
-It follows the existing expedition prerequisites and becomes reward-ready when
-the final lab conversation is available. Receiving the certificate completes it.
+The Nature of Evolution completes when all three research categories reach two.
+The later homecoming is an automatic Oak invitation, not a separate quest.
+Once the existing expedition prerequisites are met, Oak recalls the player to
+the lab and awards the certificate. The retired Homecoming save slot remains
+reserved so other quest progress and favourites keep their original IDs.
 
 ## Field Promises
 

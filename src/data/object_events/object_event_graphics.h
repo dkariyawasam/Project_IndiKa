@@ -38,6 +38,7 @@ const u16 gObjectEventPic_Sabrina[] = INCBIN_U16("graphics/object_events/pics/pe
 const u16 gObjectEventPic_Daisy[] = INCBIN_U16("graphics/object_events/pics/people/civilians/daisy.4bpp");
 const u16 gObjectEventPic_Lorelei[] = INCBIN_U16("graphics/object_events/pics/people/lorelei.4bpp");
 const u16 gObjectEventPic_Erika[] = INCBIN_U16("graphics/object_events/pics/people/erika.4bpp");
+const u16 gObjectEventPal_Koga[] = INCBIN_U16("graphics/object_events/palettes/koga.gbapal");
 const u16 gObjectEventPic_Koga[] = INCBIN_U16("graphics/object_events/pics/people/koga.4bpp");
 const u16 gObjectEventPal_ProfOak[] = INCBIN_U16("graphics/object_events/palettes/prof_oak.gbapal");
 const u16 gObjectEventPal_Agatha[] = INCBIN_U16("graphics/object_events/palettes/agatha.gbapal");

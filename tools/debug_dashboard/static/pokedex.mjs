@@ -43,6 +43,34 @@ async function showDetails(){
   const heading=text=>{const h=document.createElement('h3');h.textContent=text;host.append(h);};
   const paragraph=text=>{const p=document.createElement('p');p.textContent=text;host.append(p);return p;};
   heading('Pokédex entry');paragraph(`${info.category} POKéMON · ${Number(info.height)/10} m · ${Number(info.weight)/10} kg`);paragraph(info.description).style.whiteSpace='pre-line';
+  heading('Official games · regional encounters');
+  const official=info.officialEncounters;
+  const readable=value=>value.split('-').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
+  const gameNames={firered:'FireRed',leafgreen:'LeafGreen',heartgold:'HeartGold',soulsilver:'SoulSilver',xd:'XD: Gale of Darkness', 'lets-go-pikachu':"Let’s Go, Pikachu!",'lets-go-eevee':"Let’s Go, Eevee!"};
+  if(official){
+   paragraph('Grouped by the actual encounter location, including Kanto visits in Johto games. Records include wild encounters, gifts and trades where supplied. Evolution, breeding and transfers are not inferred. No record does not mean unobtainable.');
+   if(official.status==='custom')paragraph('Custom species or form — no official-game counterpart.');
+   else if(official.status==='unmapped')paragraph('This species has not been mapped to the official reference.');
+   else {
+    const grid=document.createElement('div');grid.className='dex-regions';host.append(grid);
+    for(const [title,regions] of [['Kanto',official.regions.filter(r=>r.region==='kanto')],['Johto',official.regions.filter(r=>r.region==='johto')],['Other regions',official.regions.filter(r=>!['kanto','johto'].includes(r.region))]]){
+     const section=document.createElement('section'),h=document.createElement('h4');h.textContent=title;section.append(h);grid.append(section);
+     if(!regions.length){const p=document.createElement('p');p.textContent='No direct encounter records in this snapshot.';section.append(p);}
+     for(const region of regions){
+      if(title==='Other regions'){const h=document.createElement('h4');h.textContent=readable(region.region);section.append(h);}
+      for(const game of region.games){
+       const detail=document.createElement('details'),summary=document.createElement('summary');summary.textContent=gameNames[game.game]||readable(game.game);detail.append(summary);
+       const list=document.createElement('ul');
+       for(const encounter of game.encounters){const li=document.createElement('li');li.textContent=readable(encounter.location)+' · '+readable(encounter.method);list.append(li);}
+       detail.append(list);section.append(detail);
+      }
+     }
+    }
+   }
+   const coverage=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Source and coverage limitations';coverage.append(summary);
+   const note=document.createElement('p');note.textContent='PokéAPI community encounter snapshot, retrieved '+official.retrieved+'. Coverage varies by game and is not exhaustive. Games without encounter data, including Legends: Arceus, Scarlet/Violet and Brilliant Diamond/Shining Pearl, are not marked absent. Included games: '+official.coverage.map(g=>gameNames[g]||readable(g)).join(', ')+'.';coverage.append(note);
+   const link=document.createElement('a');link.href=official.source;link.textContent='PokéAPI source tables';link.target='_blank';link.rel='noopener noreferrer';coverage.append(link);host.append(coverage);
+  }else paragraph('Official encounter reference unavailable. Restart the dashboard server to load it.');
   heading('Full cry');const audio=document.createElement('audio');audio.id='dex-audio';audio.controls=true;audio.preload='metadata';audio.src='/pokemon-cry.wav?species='+encodeURIComponent(key);host.append(audio);const play=document.createElement('button');play.textContent='Play full cry';play.onclick=()=>{audio.currentTime=0;audio.play().catch(()=>{play.textContent='Audio unavailable';});};host.append(play);paragraph('Full source recording · '+info.cry);
   heading('Footprint');const footprint=document.createElement('img');footprint.src='/pokemon-footprint.png?species='+encodeURIComponent(key);footprint.alt=key+' footprint';footprint.className='dex-footprint';host.append(footprint);
   heading('Sprite palettes');for(const kind of ['normal','shiny']){paragraph(kind+' · '+info.palettes[kind].path);const row=document.createElement('div');row.className='dex-swatches';info.palettes[kind].colors.forEach((color,i)=>{const chip=document.createElement('span');chip.style.backgroundColor=color;chip.title=`Index ${i}: ${color}${i===0?' (transparent)':''}`;chip.textContent=i;row.append(chip);});host.append(row);}

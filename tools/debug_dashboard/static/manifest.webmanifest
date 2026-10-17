@@ -1,0 +1,11 @@
+{
+  "id": "/",
+  "name": "Pokemon Expedition: Dashboard",
+  "short_name": "Expedition",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#182d3c",
+  "theme_color": "#182d3c",
+  "icons": [{"src": "/app-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any"}]
+}

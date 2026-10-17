@@ -485,12 +485,12 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_AMUNYTE"
+                "max_level": 25,
+                "species": "SPECIES_KINKABUTO"
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 25,
                 "species": "SPECIES_KINKABUTO"
               }
             ]
@@ -554,13 +554,13 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 25,
                 "species": "SPECIES_AMUNYTE"
               },
               {
                 "min_level": 5,
-                "max_level": 8,
-                "species": "SPECIES_KINKABUTO"
+                "max_level": 25,
+                "species": "SPECIES_AMUNYTE"
               }
             ]
           }
@@ -2063,7 +2063,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 25,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -2217,7 +2217,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 25,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -2286,7 +2286,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 25,
                 "species": "SPECIES_AEROPTERYX"
               },
               {

@@ -71,3 +71,25 @@ Item cards render their registered icon with its actual palette. Obtainability i
 **Quests & research** reads the nine main quests, 30 objectives, 21 Field Promises and dynamic objective dialogue from `src/quests.c` and `src/strings.c`. Search by quest, objective or location. Progression notes come from `docs/logbook-quests.md`. This is a source catalogue including undiscovered content, not live save progress. Porygon research remains under Evolution by Design.
 
 The dashboard uses a local pixel font derived from `graphics/fonts/latin_normal.png`, with square panels and hard shadows. The checked-in `static/pixel.ttf` needs no runtime dependencies or external font requests. To regenerate it, run `build_pixel_font.py` in a Python environment with Pillow and fontTools. The glyph artwork retains its existing game-asset attribution; this conversion does not claim new ownership.
+
+
+## iPhone Home Screen app
+
+Run the dashboard on the Mac with its private Wi-Fi address:
+
+```sh
+python3 tools/debug_dashboard/server.py --no-open --lan-host "$(ipconfig getifaddr en0)"
+```
+
+If Wi-Fi uses a different interface, use the IPv4 address shown in macOS Wi-Fi settings instead. The terminal prints the iPhone URL and a pairing code. Open that URL in iPhone Safari on the same trusted Wi-Fi and enter the code. Use Share → Add to Home Screen, with Open as Web App enabled. If the installed app asks again, enter the same code there.
+
+The phone has a section picker containing all dashboard tabs, touch-sized controls, and a Home Screen icon. mGBA, repository data and edits still run on the Mac. Keep the Mac awake and the server running; there is no offline emulator or cached project data. The local connection uses HTTP, so use trusted private Wi-Fi only, without public port forwarding. A Mac firewall prompt may require allowing Python incoming connections. Guest-network device isolation can block connections.
+
+LAN access is opt-in: without `--lan-host` the server remains localhost-only. LAN requests must use the specified address and pair before reading project data or invoking commands. Pairing cookies are HttpOnly and SameSite=Strict; mutations also require the existing session token and matching origin. Pairing persists when restarting the same test session. A new session or deleting its phone-pairing.key file resets pairing. The IP address may change when switching networks; reopen the new address and add it to the Home Screen again if needed.
+
+
+## Official-game regional encounter reference
+
+The Pokédex includes a bundled PokéAPI encounter snapshot in `official_encounters.json`, grouped by actual location region, not the game’s primary region. It contains direct encounters, gifts and NPC trades where upstream records them. It does not infer evolution, breeding or transfer availability; missing data is explicitly not an absence claim. Custom species/forms do not inherit the official base species’ encounters.
+
+Source: https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv (PokéAPI community data). Snapshot metadata includes retrieval date, covered versions and input SHA-256 hashes. To refresh, download the tables listed in `import_official_encounters.py` from that source into one directory, then run `python3 tools/debug_dashboard/import_official_encounters.py /path/to/csv`. The dashboard does not require internet access to display the reference. Encounter coverage is incomplete for some games, and several recent games have no records in the snapshot.

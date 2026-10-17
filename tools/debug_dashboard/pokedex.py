@@ -98,6 +98,7 @@ def save_offsets(root, species, payload):
 
 def details(root, entry):
     import json
+    from official_encounters import for_species
     key = entry['key']
     text = (root/'src/data/pokemon/pokedex_text_fr.h').read_text()
     texts = {name: ''.join(json.loads(s) for s in re.findall(r'"(?:\\.|[^"\\])*"', body))
@@ -136,4 +137,4 @@ def details(root, entry):
     for kind in ('normal','shiny'):
         colors = [list(map(int,line.split())) for line in (root/entry[kind]).read_text().splitlines()[3:19]]
         palettes[kind] = dict(path=entry[kind],colors=['#'+''.join(f'{(v>>3)*255//31:02x}' for v in c) for c in colors])
-    return dict(description=texts.get(field('description'),'No entry found.'),category=category[1] if category else '',height=field('height'),weight=field('weight'),footprint=footprint,cry=cry,cryId=cry_id,palettes=palettes,evolutions=[e for e in edges if e['source'] in family])
+    return dict(officialEncounters=for_species(key),description=texts.get(field('description'),'No entry found.'),category=category[1] if category else '',height=field('height'),weight=field('weight'),footprint=footprint,cry=cry,cryId=cry_id,palettes=palettes,evolutions=[e for e in edges if e['source'] in family])

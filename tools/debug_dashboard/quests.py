@@ -40,7 +40,12 @@ def catalog(root):
         return strings[key]
     promises = re.findall(r'\{(\w+),\s*(\w+)\}', array(source, 'sFieldPromises'))
     quests = []
+    # Preserve source/save IDs while omitting retired catalogue slots.
+    constants = (root / 'include/constants/quests.h').read_text()
+    retired = int(re.search(r'#define QUEST_EXPEDITION_FINALE\s+(\d+)', constants)[1])
     for i, args in enumerate(calls(array(source, 'sSideQuests'), 'side_quest')):
+        if i == retired:
+            continue
         name, desc, done, location, sprite, kind, children, count = args
         entry = dict(id=i, name=resolve(name), description=resolve(desc), completed=resolve(done), location=resolve(location), objectives=[], source='src/quests.c')
         if children != 'NULL':

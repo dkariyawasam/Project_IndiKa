@@ -28,3 +28,50 @@ main{margin-left:240px;padding:32px;max-width:1800px}header{align-items:flex-sta
 @media(max-width:700px){aside{position:static;width:100%;border-right:0;border-bottom:4px solid #668087;padding:16px}nav{margin-top:12px}nav button{flex-shrink:0}.brand span{display:block}.aside-label,.aside-bottom{display:none}main{margin:0;padding:16px}h1{font-size:32px}.metrics strong{font-size:24px}.metrics>div{padding:12px}.card{padding:16px}.quest-objectives{grid-template-columns:1fr}.card-heading{flex-wrap:wrap;gap:12px}}
 
 .ow-group{margin-top:24px}.ow-group>h2{margin-bottom:8px}
+
+/* Keep every dashboard section reachable in short and narrow windows. */
+@media(min-width:701px){
+ aside{overflow:hidden}
+ aside>.brand,aside>.aside-label,aside>.aside-bottom{flex-shrink:0}
+ aside>.aside-label{margin-top:16px;margin-bottom:8px}
+ aside>nav{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable}
+ aside>.aside-bottom{padding-top:12px}
+}
+@media(max-width:700px){
+ aside{overflow:visible}
+ aside>nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;overflow:visible}
+ nav button{width:100%;min-width:0;white-space:normal;margin:0;text-align:left;line-height:1.2}
+}
+
+/* Rival story graph: a shared root above three narrative lanes. */
+#rival-graph{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.rival-shared{grid-column:1/-1}
+.rival-lane{min-width:0;--branch:#618998}
+.rival-league{--branch:#b99837}.rival-apex{--branch:#528660}.rival-giovanni{--branch:#a45960}
+.rival-lane h3{border-bottom:4px solid var(--branch);padding-bottom:10px;margin:0 0 16px}
+.rival-nodes{display:flex;flex-direction:column;gap:24px;position:relative}
+.rival-nodes:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:4px;background:var(--branch)}
+.rival-node{position:relative;z-index:1;width:100%;text-align:left;border:3px solid var(--branch);padding:14px;background:#fffef0;color:#253c49}
+.rival-node strong,.rival-node span,.rival-node small{display:block;overflow-wrap:anywhere}
+.rival-node span{margin:8px 0;line-height:1.3}.rival-node small{color:#526875}
+.rival-node[aria-pressed="true"]{background:#dceacb;outline:3px solid #253c49;outline-offset:2px}
+.rival-shared .rival-nodes{max-width:460px;margin:auto}
+.rival-shared:after{content:"↓  Story branches  ↓";display:block;text-align:center;margin-top:20px;color:#526875}
+@media(max-width:1000px){#rival-graph{grid-template-columns:1fr}.rival-shared{grid-column:auto}.rival-shared .rival-nodes{max-width:none}}
+
+.phone-navigation{display:none}
+@media(max-width:700px){
+ body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+ .phone-navigation{display:block;margin:12px 0 0;color:#c8d8d8}
+ aside>nav{display:none}
+ button,select,input{min-height:44px;font-size:16px}
+ .header-actions{flex-wrap:wrap;gap:12px}
+ .form-row{flex-wrap:wrap}.form-row>*{flex-basis:140px}
+ .copy-row{flex-wrap:wrap}.copy-row code{flex-basis:100%;min-width:0}
+ h1{font-size:28px;overflow-wrap:anywhere}
+ main,.card,.two-col>*,.three-col>*{min-width:0}
+ footer{flex-wrap:wrap;gap:12px}
+ button{touch-action:manipulation}
+}
+
+.dex-regions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:16px 0}.dex-regions section{border:2px solid var(--line);padding:14px;min-width:0}.dex-regions h4{margin:8px 0 12px}.dex-regions details{margin:10px 0}.dex-regions summary{cursor:pointer;min-height:32px}.dex-regions ul{padding-left:18px;line-height:1.5;overflow-wrap:anywhere}@media(max-width:1000px){.dex-regions{grid-template-columns:1fr}}

@@ -1549,7 +1549,7 @@ static u8 CountNumberListRows()
 		return sSideQuests[sStateDataPtr->parentQuest].numSubquests;
 	}
 
-	return QUEST_COUNT;
+	return VISIBLE_QUEST_COUNT;
 }
 
 u8 *DefineQuestOrder()
@@ -1590,6 +1590,7 @@ u8 GenerateList(void)
 	for (countQuest = 0; countQuest < QUEST_COUNT; countQuest++)
 	{
 		selectedQuestId = *(sortedQuestList + countQuest);
+		if (selectedQuestId == QUEST_EXPEDITION_FINALE) continue;
 
 		PopulateEmptyRow(selectedQuestId);
 
@@ -1696,7 +1697,7 @@ u8 LogbookMenu_GetSetQuestState(u8 quest, u8 caseId)
 	   mask3 = 0;
 
     s8 derived;
-    if (quest >= QUEST_COUNT) return 0;
+    if (quest >= QUEST_COUNT || quest == QUEST_EXPEDITION_FINALE) return 0;
     derived = GetDerivedQuestState(quest, caseId);
     if (derived >= 0) return derived;
 
@@ -1867,7 +1868,7 @@ void PopulateEmptyRow(u8 countQuest)
 void PrependQuestNumber(u8 countQuest)
 {
 	questNamePointer = ConvertIntToDecimalStringN(questNameArray[countQuest],
-	                   countQuest + 1, STR_CONV_MODE_LEFT_ALIGN, 2);
+	                   countQuest + 1 - (countQuest > QUEST_EXPEDITION_FINALE), STR_CONV_MODE_LEFT_ALIGN, 2);
 	questNamePointer = StringAppend(questNamePointer,
 	                                sText_DotSpace);
 }
@@ -2015,7 +2016,7 @@ void GenerateQuestFlavorText(s32 questId)
 		}
 		if (IsQuestRewardState(questId) == TRUE)
 		{
-			StringCopy(gStringVar1, questId == QUEST_EXPEDITION_FINALE ? sText_LogbookReturnToProfOakInHis : sText_ReturnRecieveReward);
+			StringCopy(gStringVar1, sText_ReturnRecieveReward);
 		}
 		if (IsQuestCompletedState(questId) == TRUE)
 		{
@@ -2051,12 +2052,6 @@ void GenerateQuestFlavorText(s32 questId)
 void UpdateQuestFlavorText(s32 questId)
 {
     const u8 *desc = sSideQuests[questId].desc;
-    if (questId == QUEST_EXPEDITION_FINALE)
-    {
-        if (CountApexInteractionsForNatureQuest() < 8) desc = sText_LogbookContinueTheApexInvestigationRecordAll;
-        else if (!FlagGet(FLAG_SYS_GAME_CLEAR)) desc = sText_LogbookTakeYourResearchToTheIndigo;
-        else desc = sText_LogbookFinishTheGymTrialsAndFollow;
-    }
     StringCopy(gStringVar1, desc);
 }
 void PrintQuestFlavorText(s32 questId)
@@ -2598,11 +2593,6 @@ static s8 GetDerivedQuestState(u8 quest, u8 query)
         done = record->championships != 0 || (quest == QUEST_THE_INDIGO_LEAGUE && FlagGet(FLAG_SYS_GAME_CLEAR));
         known |= done;
         break;
-    case QUEST_EXPEDITION_FINALE:
-        done = FlagGet(FLAG_OAK_EXPEDITION_COMPLETE);
-        known |= FlagGet(FLAG_OAK_ACKNOWLEDGED_NATURE) || done;
-        reward = !done && IsOakExpeditionReady();
-        break;
     case QUEST_LIVING_RELICS:
         done = TRUE;
         for (i = 0; i < NELEMS(sPrimevalSpecies); i++)
@@ -2671,7 +2661,7 @@ static void GenerateAndPrintHeader(void)
 }
 static void GenerateDenominatorNumQuests(void)
 {
-	ConvertIntToDecimalStringN(gStringVar2, QUEST_COUNT,
+	ConvertIntToDecimalStringN(gStringVar2, VISIBLE_QUEST_COUNT,
 	                           STR_CONV_MODE_LEFT_ALIGN, 6);
 }
 
