@@ -21,7 +21,7 @@
 #define QUEST_GIOVANNIS_AMBITION                3
 #define QUEST_THE_ROCKET_LEAGUE                 4
 #define QUEST_THE_INDIGO_LEAGUE                 5
-#define QUEST_EXPEDITION_FINALE                  6
+#define QUEST_EXPEDITION_FINALE                  6 // Retired: Oak recalls the player directly. Keep save IDs stable.
 #define QUEST_FIELD_PROMISES                     7
 #define QUEST_LIVING_RELICS                      8
 #define QUEST_COUNT     (QUEST_LIVING_RELICS + 1)
@@ -57,4 +57,8 @@
 #define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT + QUEST_3_SUB_COUNT + QUEST_4_SUB_COUNT)
 
 #define QUEST_ARRAY_COUNT (SUB_QUEST_COUNT > QUEST_COUNT ? SUB_QUEST_COUNT : QUEST_COUNT)
+
+// Homecoming retains its save slot but is no longer a separate logbook entry.
+#define VISIBLE_QUEST_COUNT (QUEST_COUNT - 1)
+
 #endif // GUARD_CONSTANTS_QUESTS_H

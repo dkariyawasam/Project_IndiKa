@@ -110,10 +110,12 @@ int main(void) {
  for(i=0;i<QUEST_COUNT;i++) LogbookMenu_GetSetQuestState(i,FLAG_GET_COMPLETED);
  assert(!memcmp(before,save.questData,6)); // reads never corrupt old state/favorites
  reset();flags[FLAG_OAK_ACKNOWLEDGED_NATURE]=1;
- assert(LogbookMenu_GetSetQuestState(6,FLAG_GET_ACTIVE));
- ready=1;assert(LogbookMenu_GetSetQuestState(6,FLAG_GET_REWARD));assert(!LogbookMenu_GetSetQuestState(6,FLAG_GET_COMPLETED));
+ // Retired Homecoming slot stays hidden even in old saves and after the award.
+ LogbookMenu_GetSetQuestState(6,FLAG_SET_UNLOCKED);
+ assert(!LogbookMenu_GetSetQuestState(6,FLAG_GET_ACTIVE));
+ ready=1;assert(!LogbookMenu_GetSetQuestState(6,FLAG_GET_REWARD));
  flags[FLAG_OAK_EXPEDITION_COMPLETE]=1;
- assert(LogbookMenu_GetSetQuestState(6,FLAG_GET_COMPLETED));assert(!LogbookMenu_GetSetQuestState(6,FLAG_GET_REWARD));
+ assert(!LogbookMenu_GetSetQuestState(6,FLAG_GET_COMPLETED));
  reset();
  for(i=0;i<NELEMS(sDesignMilestones);i++) RecordNatureResearchEvolution(sDesignMilestones[i].before,sDesignMilestones[i].after,TRUE);
  for(i=0;i<NELEMS(sRevivalMilestones);i++) flags[sRevivalMilestones[i]]=1;
