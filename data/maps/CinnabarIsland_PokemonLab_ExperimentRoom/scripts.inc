@@ -67,10 +67,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixHaste::
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
 	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
+	setvar VAR_TEMP_1, SPECIES_OMANYTE
 	givemon SPECIES_OMANYTE, 5
+	copyvar VAR_TEMP_2, VAR_RESULT
 	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	setflag FLAG_RESEARCH_REVIVED_OMANYTE
-	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
 	end
 
@@ -83,10 +85,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixDart::
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
 	removeitem ITEM_DART_FOSSIL_SHARD, 1
+	setvar VAR_TEMP_1, SPECIES_OMATO
 	givemon SPECIES_OMATO, 5
+	copyvar VAR_TEMP_2, VAR_RESULT
 	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	setflag FLAG_RESEARCH_REVIVED_OMATO
-	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
 	end
 
@@ -99,10 +103,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeDart::
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_DOME_FOSSIL_SHARD, 1
 	removeitem ITEM_DART_FOSSIL_SHARD, 1
+	setvar VAR_TEMP_1, SPECIES_KABUTO
 	givemon SPECIES_KABUTO, 5
+	copyvar VAR_TEMP_2, VAR_RESULT
 	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	setflag FLAG_RESEARCH_REVIVED_KABUTO
-	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
 	end
 
@@ -115,10 +121,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeHaste::
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_DOME_FOSSIL_SHARD, 1
 	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
+	setvar VAR_TEMP_1, SPECIES_KABUSTAR
 	givemon SPECIES_KABUSTAR, 5
+	copyvar VAR_TEMP_2, VAR_RESULT
 	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	setflag FLAG_RESEARCH_REVIVED_KABUSTAR
-	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
 	end
 
@@ -128,11 +136,13 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_OldAmber::
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	removeitem ITEM_OLD_AMBER, 1
+	setvar VAR_TEMP_1, SPECIES_AERODACTYL
 	givemon SPECIES_AERODACTYL, 5
+	copyvar VAR_TEMP_2, VAR_RESULT
 	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
 	setflag FLAG_REVIVED_AMBER
 	setflag FLAG_RESEARCH_REVIVED_AERODACTYL
-	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
 	end
 
@@ -224,3 +234,20 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_CheckRevivedDome::
 	goto_if_unset FLAG_REVIVED_DOME, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_SetResultFalse
 	setvar VAR_RESULT, TRUE
 	return
+
+CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery::
+	closemessage
+	special ShowFossilRevival
+	waitstate
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Success
+	goto_if_eq VAR_TEMP_2, 1, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalSentToPC
+	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_JoinedParty
+	return
+
+CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalSentToPC::
+	call EventScript_TransferredToPC
+	return
+
+@ Same party-delivery wording as the Rocket League Pokemon clerk.
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_JoinedParty::
+	.string "Your POKéMON joined your party!$"

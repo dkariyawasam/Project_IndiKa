@@ -1,5 +1,5 @@
 {
-  "required_count": 318,
+  "required_count": 320,
   "sources": {
     "ABRA": [
       "Breeding ancestry: KADABRA",
@@ -337,11 +337,13 @@
     "EEVEE": [
       "Breeding ancestry: ESPEON",
       "Breeding ancestry: FLAREON",
+      "Breeding ancestry: GLACEON",
       "Breeding ancestry: JOLTEON",
       "Breeding ancestry: LEAFEON",
       "Breeding ancestry: SYLVEON",
       "Breeding ancestry: UMBREON",
       "Breeding ancestry: VAPOREON",
+      "Rocket League prize shop",
       "data/maps/CeladonCity_Condominiums_RoofRoom/scripts.inc"
     ],
     "EKANS": [
@@ -426,6 +428,9 @@
     "GEODUDE_ALOLAN": [
       "Breeding ancestry: GRAVELER_ALOLAN",
       "Wild: MAP_SAFARI_ZONE_EAST"
+    ],
+    "GLACEON": [
+      "Evolution: EEVEE"
     ],
     "GLOOM": [
       "Breeding ancestry: BELLOSSOM",
@@ -578,6 +583,7 @@
       "Evolution: TYROGUE"
     ],
     "HONCHKROW": [
+      "Evolution: MURKROW",
       "Wild: MAP_FUCHSIA_FOREST"
     ],
     "HOOTHOOT": [
@@ -957,6 +963,7 @@
       "Wild: MAP_POKEMON_TOWER_4F"
     ],
     "MISMAGIUS": [
+      "Evolution: MISDREAVUS",
       "Wild: MAP_POKEMON_TOWER_2F",
       "Wild: MAP_POKEMON_TOWER_3F",
       "Wild: MAP_POKEMON_TOWER_4F"
@@ -1021,6 +1028,7 @@
       "Wild: MAP_ROUTE8"
     ],
     "NINETALES_ALOLAN": [
+      "Evolution: VULPIX_ALOLAN",
       "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "NOCTOWL": [
@@ -1317,7 +1325,11 @@
       "NPC trade evolution: INGAME_TRADE_RHYDON"
     ],
     "ROSELIA": [
+      "Breeding ancestry: ROSERADE",
       "Evolution: BUDEW"
+    ],
+    "ROSERADE": [
+      "Evolution: ROSELIA"
     ],
     "SABLEYE": [
       "Wild: MAP_SEAFOAM_ISLANDS_1F",
@@ -1342,6 +1354,7 @@
       "Wild: MAP_ROCK_TUNNEL_B2F"
     ],
     "SANDSLASH_ALOLAN": [
+      "Evolution: SANDSHREW_ALOLAN",
       "Wild: MAP_SAFARI_ZONE_EAST"
     ],
     "SCIZOR": [
@@ -1768,7 +1781,6 @@
     "GALLADE",
     "GARDEVOIR",
     "GIRAFARIG",
-    "GLACEON",
     "GLIGAR",
     "GRANBULL",
     "GRUMPIG",
@@ -1798,7 +1810,6 @@
     "RAIKOU",
     "RALTS",
     "REMORAID",
-    "ROSERADE",
     "SHEDINJA",
     "SKARMORY",
     "SNUBBULL",
