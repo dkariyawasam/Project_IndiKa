@@ -1,400 +1,405 @@
 species,active_pokedex,height,pokemonScale,pokemonOffset,trainerScale,trainerOffset,red_height_ratio,red_baseline_gap_px,leaf_height_ratio,leaf_baseline_gap_px,issues
-SENTRET,True,8,439,12,256,-2,0.594,-0.7,0.594,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FURRET,True,18,346,10,256,-2,0.673,-0.5,0.673,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SUNKERN,True,3,541,0,256,-2,0.275,-21.4,0.275,-21.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SUNFLORA,True,8,374,12,256,-2,0.597,-0.6,0.597,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HOPPIP,True,4,562,-7,256,-2,0.356,-26.0,0.356,-26.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SKIPLOOM,True,6,387,0,256,-2,0.409,-17.8,0.409,-17.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-JUMPLUFF,True,8,418,-4,256,-2,0.557,-17.7,0.557,-17.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BUNEARY,True,4,479,16,256,-2,0.476,-2.3,0.476,-2.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LOPUNNY,True,12,288,5,272,-2,0.979,2.7,0.979,2.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDORAN_F,True,4,488,19,256,-2,0.305,-1.6,0.305,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDORINA,True,8,381,13,256,-2,0.513,-1.9,0.513,-1.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDOQUEEN,True,13,283,2,256,-2,0.937,0.1,0.937,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDORAN_M,True,5,480,17,256,-2,0.339,-1.3,0.339,-1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDORINO,True,9,408,13,256,-2,0.536,-0.9,0.536,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NIDOKING,True,14,304,3,323,2,1.12,1.7,1.12,1.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIDGEY,True,3,492,18,256,-2,0.35,-1.1,0.35,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIDGEOTTO,True,11,334,11,256,-2,0.725,1.2,0.725,1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIDGEOT,True,15,269,-2,256,-2,1.055,-1.5,1.055,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPEAROW,True,3,571,19,256,-2,0.302,-1.0,0.302,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FEAROW,True,12,282,-1,272,-2,1.122,0.9,1.122,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HOOTHOOT,True,7,380,15,256,-2,0.453,-1.2,0.453,-1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NOCTOWL,True,16,278,2,256,-2,0.954,-0.3,0.954,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARLY,True,3,1211,18,342,-1,0.2,-0.2,0.2,-0.2,
-STARAVIA,True,6,807,14,342,-1,0.401,0.0,0.401,0.0,
-STARAPTOR,True,12,497,6,342,-1,0.801,0.3,0.801,0.3,
-DODUO,True,14,256,3,287,0,0.958,0.3,0.958,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DODRIO,True,18,272,-2,296,1,1.207,-0.6,1.207,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CATERPIE,True,3,549,20,256,-2,0.271,-1.5,0.271,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-METAPOD,True,7,350,18,256,-2,0.332,-2.2,0.332,-2.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BUTTERFREE,True,11,312,2,256,-2,0.641,-8.1,0.641,-8.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEEDLE,True,3,455,19,256,-2,0.286,-1.6,0.286,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KAKUNA,True,6,424,14,256,-2,0.384,-4.1,0.384,-4.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BEEDRILL,True,10,366,2,256,-2,0.585,-10.9,0.585,-10.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LEDYBA,True,10,256,4,256,-2,0.745,-5.0,0.745,-5.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LEDIAN,True,14,256,1,256,-2,1.0,0.0,1.0,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPINARAK,True,5,414,20,256,-2,0.281,-1.0,0.281,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ARIADOS,True,11,316,7,256,-2,0.795,-0.1,0.795,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KRICKETOT,True,3,1335,18,342,-1,0.2,-0.2,0.2,-0.2,
-KRICKETUNE,True,10,512,8,342,-1,0.668,-0.2,0.668,-0.2,
-WURMPLE,True,3,711,22,256,-2,0.236,-0.5,0.236,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SILCOON,True,6,431,19,256,-2,0.356,-1.1,0.356,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BEAUTIFLY,True,10,298,-1,256,-2,0.734,-10.2,0.734,-10.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CASCOON,True,7,391,19,256,-2,0.369,0.5,0.369,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUSTOX,True,12,269,1,256,-2,0.692,-11.8,0.692,-11.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VENONAT,True,10,360,14,256,-2,0.608,-0.1,0.608,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VENOMOTH,True,15,256,3,293,1,1.082,-1.1,1.082,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-COMBEE,True,3,1024,18,342,-1,0.2,-0.2,0.2,-0.2,
-VESPIQUEN,True,12,435,6,342,-1,0.801,-0.3,0.801,-0.3,
-PINECO,True,6,445,2,256,-2,0.45,-14.3,0.45,-14.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FORRETRESS,True,12,293,5,256,-2,0.731,-3.9,0.731,-3.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PARAS,True,3,546,21,256,-2,0.239,-1.4,0.239,-1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PARASECT,True,10,307,8,256,-2,0.713,-1.0,0.713,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BELLSPROUT,True,7,354,16,256,-2,0.5,-0.7,0.5,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEEPINBELL,True,10,256,-1,256,-2,0.764,-9.0,0.764,-9.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VICTREEBEL,True,17,256,2,302,2,1.158,0.7,1.158,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ODDISH,True,5,423,15,256,-2,0.396,-1.9,0.396,-1.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GLOOM,True,8,329,10,256,-2,0.679,-0.3,0.679,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VILEPLUME,True,12,256,4,272,-2,0.831,-1.2,0.831,-1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BELLOSSOM,True,4,472,19,256,-2,0.345,-0.2,0.345,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BUDEW,True,2,1583,19,342,-1,0.134,-0.6,0.134,-0.6,
-ROSELIA,True,3,677,20,256,-2,0.33,0.1,0.33,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ROSERADE,True,9,256,0,256,-2,0.927,-4.0,0.927,-4.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGCUTE,True,4,495,-4,256,-2,0.423,-21.1,0.423,-21.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGUTOR,True,20,283,0,376,7,1.522,-0.1,1.522,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEEDOT,True,5,472,20,256,-2,0.375,-0.3,0.375,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NUZLEAF,True,10,299,8,256,-2,0.747,-0.5,0.747,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHIFTRY,True,13,290,2,256,-2,0.995,-0.5,0.995,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TANGELA,True,10,320,9,256,-2,0.684,-0.8,0.684,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TANGROWTH,True,20,367,0,427,3,1.333,0.7,1.333,0.7,
-PICHU,True,3,508,17,256,-2,0.348,-1.9,0.348,-1.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIKACHU,True,4,479,16,256,-2,0.476,-0.7,0.476,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RAICHU,True,8,426,10,256,-2,0.656,0.2,0.656,0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PLUSLE,True,4,515,-9,256,-2,0.362,-29.1,0.362,-29.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MINUN,True,4,512,-7,256,-2,0.382,-26.0,0.382,-26.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VOLTORB,True,5,364,-8,256,-2,0.32,-27.9,0.32,-27.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ELECTRODE,True,12,256,0,256,-2,0.655,-11.0,0.655,-11.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGNEMITE,True,3,294,-8,256,-2,0.317,-28.3,0.317,-28.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGNETON,True,10,293,-4,273,-2,0.61,-17.1,0.61,-17.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGNEZONE,True,12,388,6,342,-1,0.801,-0.4,0.801,-0.4,
-ELEKID,True,6,363,13,256,-2,0.564,-0.5,0.564,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ELECTABUZZ,True,11,330,7,256,-2,0.818,-0.3,0.818,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ELECTIVIRE,True,18,367,0,384,1,1.199,0.7,1.199,0.7,
-RATTATA,True,3,481,18,256,-2,0.339,-1.4,0.339,-1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RATICATE,True,7,401,14,256,-2,0.406,-1.6,0.406,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HAPPINY,True,6,590,14,342,-1,0.4,0.0,0.4,0.0,
-CHANSEY,True,11,257,6,256,-2,0.833,-0.1,0.833,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BLISSEY,True,15,256,3,310,3,1.123,0.4,1.123,0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LICKITUNG,True,12,272,3,272,-3,0.855,-0.6,0.855,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LICKILICKY,True,17,355,0,363,0,1.134,0.5,1.134,0.5,
-MEOWTH,True,4,480,17,256,-2,0.388,-1.3,0.388,-1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PERSIAN,True,10,320,10,256,-2,0.655,-1.4,0.655,-1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AIPOM,True,8,363,8,256,-2,0.718,-0.5,0.718,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AMBIPOM,True,12,497,6,342,-1,0.801,0.3,0.801,0.3,
-TEDDIURSA,True,6,455,17,256,-2,0.44,-0.2,0.44,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-URSARING,True,18,275,0,280,0,1.148,0.5,1.148,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KANGASKHAN,True,22,257,-3,349,5,1.457,1.1,1.457,1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TAUROS,True,14,256,2,312,3,1.285,0.6,1.285,0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAREEP,True,6,379,18,256,-2,0.405,-0.2,0.405,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FLAAFFY,True,8,372,13,256,-2,0.551,-0.9,0.551,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AMPHAROS,True,14,275,2,283,-1,0.992,0.1,0.992,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MARILL,True,4,476,19,256,-2,0.342,-0.3,0.342,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AZUMARILL,True,8,448,15,256,-2,0.468,-0.9,0.468,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AZURILL,True,2,603,21,256,-2,0.286,-0.8,0.286,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SMEARGLE,True,12,287,5,256,-2,0.827,-0.8,0.827,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MILTANK,True,12,280,3,256,-2,0.881,-0.4,0.881,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FARFETCHD,True,8,317,-2,256,-3,0.617,-13.0,0.617,-13.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GIRAFARIG,True,15,281,2,256,-2,0.977,-0.6,0.977,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLAKOTH,True,8,291,16,256,-2,0.48,-0.7,0.48,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VIGOROTH,True,14,301,1,256,-2,0.99,-0.8,0.99,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLAKING,True,20,277,5,326,3,0.984,-0.2,0.984,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHROOMISH,True,4,513,20,256,-2,0.29,-1.0,0.29,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BRELOOM,True,12,324,6,256,-2,0.776,-0.9,0.776,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MANKEY,True,5,388,16,256,-2,0.468,-1.1,0.468,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PRIMEAPE,True,10,326,8,256,-2,0.728,-0.6,0.728,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ANNIHILAPE,True,12,489,6,342,-1,0.801,0.0,0.801,0.0,
-MACHOP,True,8,320,12,256,-2,0.611,-0.2,0.611,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MACHOKE,True,15,304,6,256,-2,0.766,-1.1,0.766,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MACHAMP,True,16,278,2,283,0,1.111,0.7,1.111,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HERACROSS,True,15,285,0,283,-2,1.029,0.0,1.029,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EKANS,True,20,298,13,256,-2,0.578,-1.4,0.578,-1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ARBOK,True,35,256,0,296,1,1.219,1.2,1.219,1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRIMER,True,9,258,8,256,-2,0.74,-0.2,0.74,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MUK,True,12,288,7,288,-1,0.764,0.0,0.764,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KOFFING,True,6,369,-1,256,-2,0.505,-15.4,0.505,-15.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEEZING,True,12,321,-1,276,-1,0.844,-8.8,0.844,-8.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ZUBAT,True,8,355,-4,256,-2,0.524,-19.3,0.524,-19.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLBAT,True,16,291,0,296,2,1.036,-1.5,1.036,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CROBAT,True,18,279,-1,313,2,1.285,1.0,1.285,1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GULPIN,True,4,593,22,256,-2,0.267,-1.0,0.267,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SWALOT,True,17,256,5,345,4,1.176,2.0,1.176,2.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HOUNDOUR,True,6,393,15,256,-2,0.486,-0.3,0.486,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HOUNDOOM,True,14,256,2,256,-2,0.982,0.0,0.982,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-POOCHYENA,True,5,481,18,256,-2,0.387,-0.4,0.387,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MIGHTYENA,True,10,359,9,256,-2,0.726,-0.0,0.726,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MURKROW,True,5,401,-8,256,-2,0.488,-23.6,0.488,-23.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HONCHKROW,True,9,549,10,342,-1,0.6,-0.1,0.6,-0.1,
-ABRA,True,9,374,14,256,-2,0.498,-0.6,0.498,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KADABRA,True,13,272,2,256,-2,0.924,-0.6,0.924,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ALAKAZAM,True,15,272,-1,271,-1,1.105,-0.1,1.105,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DROWZEE,True,10,274,7,256,-2,0.781,-0.5,0.781,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HYPNO,True,16,298,3,310,2,1.059,-0.5,1.059,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WYNAUT,True,6,453,17,256,-2,0.411,-0.7,0.411,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WOBBUFFET,True,13,274,4,256,-2,0.883,-0.7,0.883,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NATU,True,2,610,23,256,-2,0.191,-1.0,0.191,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-XATU,True,15,258,4,317,3,1.117,0.8,1.117,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHINGLING,True,2,1723,19,342,-1,0.134,0.1,0.134,0.1,
-CHIMECHO,True,6,505,-4,256,-2,0.488,-19.8,0.488,-19.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BALTOY,True,5,384,18,256,-3,0.424,0.7,0.424,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CLAYDOL,True,15,256,3,280,0,1.094,0.7,1.094,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LUNATONE,True,10,300,1,256,-2,0.698,-8.4,0.698,-8.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SOLROCK,True,12,328,-3,256,-2,0.88,-7.8,0.88,-7.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BRONZOR,True,5,540,15,342,-1,0.334,-0.6,0.334,-0.6,
-BRONZONG,True,13,351,3,342,-1,0.868,-0.2,0.868,-0.2,
-MIME_JR,True,6,745,14,342,-1,0.401,0.0,0.401,0.0,
-MR_MIME,True,13,258,4,256,-2,0.866,-1.2,0.866,-1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MIME_SR,True,18,357,0,392,2,1.198,-0.0,1.198,-0.0,
-GASTLY,True,13,256,0,256,-2,0.927,-3.0,0.927,-3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HAUNTER,True,16,269,2,308,1,1.02,-1.0,1.02,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GENGAR,True,15,256,4,317,1,1.013,1.0,1.013,1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MISDREAVUS,True,7,407,-8,256,-2,0.446,-24.4,0.446,-24.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MISMAGIUS,True,9,621,10,342,-1,0.601,0.2,0.601,0.2,
-SABLEYE,True,5,451,15,256,-2,0.454,-0.9,0.454,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUSKULL,True,8,376,13,256,-2,0.569,-1.0,0.569,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUSCLOPS,True,16,256,2,299,2,1.125,0.5,1.125,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUSKNOIR,True,22,357,0,505,6,1.466,-0.2,1.466,-0.2,
-CUBONE,True,4,545,19,256,-2,0.325,-1.1,0.325,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAROWAK,True,10,293,12,256,-2,0.699,-0.4,0.699,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OSSCYTHE,True,16,373,0,342,-1,1.067,-0.2,1.067,-0.2,
-CLEFFA,True,3,462,22,256,-2,0.252,-0.4,0.252,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CLEFAIRY,True,6,425,18,256,-2,0.361,-1.4,0.361,-1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CLEFABLE,True,13,256,3,272,-1,0.908,-0.2,0.908,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-IGGLYBUFF,True,3,457,-1,256,-2,0.295,-22.2,0.295,-22.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-JIGGLYPUFF,True,5,419,19,256,-2,0.367,-0.2,0.367,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WIGGLYTUFF,True,10,328,9,256,-2,0.71,-1.3,0.71,-1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GEODUDE,True,4,330,17,256,-2,0.367,-1.1,0.367,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRAVELER,True,10,272,8,305,1,0.856,0.7,0.856,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLEM,True,14,266,3,298,1,1.018,-0.6,1.018,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ONIX,True,88,257,0,515,12,2.15,1.5,2.15,1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STEELIX,True,92,278,-1,557,13,2.295,1.2,2.295,1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RHYHORN,True,10,291,7,276,-2,0.793,0.5,0.793,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RHYDON,True,19,272,-1,344,3,1.334,1.2,1.334,1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RHYPERIOR,True,24,367,0,512,6,1.598,0.8,1.598,0.8,
-SANDSHREW,True,6,370,15,256,-2,0.465,0.5,0.465,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SANDSLASH,True,10,341,10,256,-2,0.682,0.5,0.682,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DIGLETT,True,2,706,22,256,-2,0.171,-1.6,0.171,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUGTRIO,True,7,384,14,256,-2,0.448,-1.7,0.448,-1.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PHANPY,True,5,465,20,256,-2,0.32,-0.2,0.32,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DONPHAN,True,11,313,9,256,-2,0.714,-0.4,0.714,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHUCKLE,True,6,485,16,256,-2,0.432,-0.9,0.432,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LARVITAR,True,6,472,16,256,-2,0.434,-0.5,0.434,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PUPITAR,True,12,292,8,256,-2,0.749,-0.8,0.749,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TYRANITAR,True,20,285,0,383,7,1.564,1.0,1.564,1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAWILE,True,6,466,15,256,-3,0.469,0.2,0.469,0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WOOPER,True,4,479,20,256,-2,0.292,-0.4,0.292,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-QUAGSIRE,True,14,273,4,273,-2,0.909,0.4,0.909,0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-POLIWAG,True,6,353,17,256,-2,0.409,-0.4,0.409,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-POLIWHIRL,True,10,288,10,256,-2,0.663,-0.3,0.663,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-POLIWRATH,True,13,256,5,256,-2,0.873,1.0,0.873,1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-POLITOED,True,11,289,5,256,-2,0.837,-1.0,0.837,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLOWPOKE,True,12,271,10,272,-2,0.712,0.8,0.712,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLOWBRO,True,16,257,-2,312,0,1.148,2.4,1.148,2.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLOWKING,True,20,265,-1,330,4,1.358,0.9,1.358,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHELLDER,True,3,643,21,256,-2,0.239,-1.6,0.239,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CLOYSTER,True,15,264,0,288,-1,1.111,0.6,1.111,0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KRABBY,True,4,469,18,256,-2,0.347,-1.2,0.347,-1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KINGLER,True,13,287,3,308,1,1.034,0.3,1.034,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PSYDUCK,True,8,347,11,256,-2,0.604,-1.0,0.604,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLDUCK,True,17,272,4,287,1,0.998,-0.2,0.998,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HORSEA,True,4,399,-1,256,-2,0.385,-19.7,0.385,-19.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEADRA,True,12,296,3,256,-2,0.739,-3.5,0.739,-3.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KINGDRA,True,18,257,1,293,1,1.223,0.8,1.223,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLDEEN,True,6,379,4,256,-2,0.54,-10.1,0.54,-10.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEAKING,True,13,304,1,288,-2,0.947,-1.0,0.947,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LUVDISC,True,6,371,2,256,-2,0.389,-21.5,0.389,-21.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CLAMPERL,True,4,691,22,256,-2,0.236,-0.3,0.236,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HUNTAIL,True,17,307,1,256,-2,0.849,-3.8,0.849,-3.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOREBYSS,True,18,278,5,256,-2,0.753,-4.7,0.753,-4.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGIKARP,True,9,317,4,256,-2,0.675,-8.0,0.675,-8.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GYARADOS,True,65,288,-1,512,11,2.069,0.9,2.069,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FEEBAS,True,6,423,3,256,-2,0.462,-14.5,0.462,-14.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MILOTIC,True,62,282,-1,382,7,1.576,0.3,1.576,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RELICANTH,True,10,316,5,256,-2,0.692,-7.0,0.692,-7.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CINNABAR_MAGIKARP,True,9,507,8,342,-1,0.76,1.4,0.76,1.4,
-CINNABAR_FEEBAS,True,8,256,0,256,-2,1.0,-2.0,1.0,-2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARYU,True,8,326,1,256,-2,0.585,-13.1,0.585,-13.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STARMIE,True,11,301,3,256,-2,0.727,-7.3,0.727,-7.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHINCHOU,True,5,424,-2,256,-2,0.362,-21.3,0.362,-21.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LANTURN,True,12,269,6,256,-2,0.831,-3.0,0.831,-3.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WINGULL,True,6,295,-2,256,-2,0.347,-24.1,0.347,-24.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PELIPPER,True,12,288,1,256,-2,0.889,-3.1,0.889,-3.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TENTACOOL,True,9,256,0,256,-2,0.818,-8.0,0.818,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TENTACRUEL,True,16,272,-1,312,0,1.23,2.7,1.23,2.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-QWILFISH,True,5,430,0,256,-2,0.465,-15.9,0.465,-15.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CORSOLA,True,6,410,15,256,-2,0.443,-1.5,0.443,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SEEL,True,11,298,8,256,-2,0.718,-1.2,0.718,-1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DEWGONG,True,17,288,1,306,-1,0.966,-1.7,0.966,-1.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SNEASEL,True,9,413,-3,256,-2,0.597,-15.3,0.597,-15.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEAVILE,True,11,457,7,342,-1,0.735,-0.1,0.735,-0.1,
-SWINUB,True,4,324,19,256,-2,0.316,-0.5,0.316,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PILOSWINE,True,11,306,8,256,-2,0.73,-0.9,0.73,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAMOSWINE,True,25,357,0,628,9,1.663,-0.1,1.663,-0.1,
-SMOOCHUM,True,4,440,19,256,-2,0.381,-0.1,0.381,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-JYNX,True,14,256,3,300,1,1.001,-0.5,1.001,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VULPIX,True,6,497,18,256,-2,0.365,-0.7,0.365,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NINETALES,True,11,339,6,256,-2,0.769,-1.1,0.769,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GROWLITHE,True,7,346,14,256,-2,0.538,-0.2,0.538,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ARCANINE,True,19,256,-1,312,2,1.307,1.6,1.307,1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PONYTA,True,10,288,7,256,-2,0.824,0.2,0.824,0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RAPIDASH,True,17,282,-1,312,1,1.287,1.6,1.287,1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SLUGMA,True,7,329,14,256,-2,0.523,-0.2,0.523,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGCARGO,True,8,332,14,256,-2,0.645,-0.3,0.645,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NUMEL,True,7,310,14,256,-2,0.495,-1.0,0.495,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CAMERUPT,True,19,256,6,345,4,1.225,2.0,1.225,2.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGBY,True,7,284,11,256,-2,0.623,-0.9,0.623,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGMAR,True,13,293,4,272,-2,0.911,1.3,0.911,1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAGMORTAR,True,16,367,0,342,-1,1.067,-0.6,1.067,-0.6,
-OMANYTE,True,4,521,20,256,-2,0.304,-0.6,0.304,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OMASTAR,True,10,307,5,256,-2,0.758,-3.2,0.758,-3.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OMATO,True,1,256,0,256,-2,0.655,-11.0,0.655,-11.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OMATOPS,True,1,256,0,256,-2,0.873,-5.0,0.873,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUTO,True,5,438,21,256,-2,0.266,-1.0,0.266,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUTOPS,True,13,271,1,256,-2,0.979,-0.6,0.979,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUSTAR,True,10,256,0,256,-2,0.764,-8.0,0.764,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KABUKNIGHT,True,10,256,0,256,-2,1.091,1.0,1.091,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AERODACTYL,True,18,275,-1,317,2,1.32,0.8,1.32,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-AMUNYTE,True,9,617,9,352,-1,0.643,0.3,0.643,0.3,
-KINKABUTO,True,11,489,6,352,-1,0.785,0.2,0.785,0.2,
-AEROPTERYX,True,10,256,0,256,-2,1.109,1.0,1.109,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PORYGON,True,8,328,7,256,-2,0.539,-5.6,0.539,-5.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PORYGON2,True,6,320,15,256,-2,0.509,-0.4,0.509,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PORYGON_Z,True,9,528,9,342,-1,0.601,-0.1,0.601,-0.1,
-DITTO,True,3,602,21,256,-2,0.232,-1.6,0.232,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ARTICUNO,True,17,278,0,308,1,1.289,2.7,1.289,2.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ZAPDOS,True,16,275,1,330,3,1.244,0.0,1.244,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MOLTRES,True,20,270,1,379,6,1.48,-1.3,1.48,-1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEWTWO,True,20,276,-1,342,5,1.419,0.5,1.419,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEW,True,4,460,-2,256,-2,0.445,-20.4,0.445,-20.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EEVEE,True,3,476,17,256,-2,0.391,-1.8,0.391,-1.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VAPOREON,True,10,316,7,256,-2,0.781,-0.9,0.781,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-JOLTEON,True,8,283,8,256,-2,0.691,-1.1,0.691,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FLAREON,True,9,302,11,256,-2,0.678,-0.2,0.678,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ESPEON,True,9,363,12,256,-2,0.615,-0.1,0.615,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-UMBREON,True,10,317,9,256,-2,0.719,-0.6,0.719,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LEAFEON,True,10,466,7,342,-1,0.667,0.2,0.667,0.2,
-GLACEON,True,8,617,10,342,-1,0.534,0.2,0.534,0.2,
-TYROGUE,True,7,292,8,256,-2,0.733,-0.8,0.733,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HITMONLEE,True,15,256,0,273,-2,1.008,0.9,1.008,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HITMONCHAN,True,14,256,1,264,-2,1.05,0.9,1.05,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HITMONTOP,True,14,256,2,257,-2,0.967,0.1,0.967,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LAPRAS,True,25,256,0,425,8,1.69,1.3,1.69,1.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DRATINI,True,18,256,8,386,6,0.96,-1.6,0.96,-1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DRAGONAIR,True,40,274,0,423,6,1.46,-0.5,1.46,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DRAGONITE,True,22,283,-1,342,4,1.406,0.7,1.406,0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BULBASAUR,True,7,356,16,256,-2,0.431,-1.5,0.431,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-IVYSAUR,True,10,332,11,256,-2,0.589,-1.0,0.589,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VENUSAUR,True,20,256,1,375,6,1.438,1.8,1.438,1.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHARMANDER,True,6,410,16,256,-2,0.443,-1.1,0.443,-1.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHARMELEON,True,11,294,8,256,-2,0.744,-1.0,0.744,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHARIZARD,True,17,271,0,317,3,1.319,1.2,1.319,1.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SQUIRTLE,True,5,412,16,256,-2,0.407,-0.6,0.407,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WARTORTLE,True,10,334,9,256,-2,0.641,-2.4,0.641,-2.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BLASTOISE,True,16,256,1,329,3,1.238,0.9,1.238,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SCYTHER,True,15,272,0,293,1,1.195,0.1,1.195,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PINSIR,True,15,256,1,257,-2,1.022,0.1,1.022,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CYNDAQUIL,True,5,539,19,256,-2,0.311,-1.5,0.311,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-QUILAVA,True,9,329,10,256,-2,0.679,-0.3,0.679,-0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TYPHLOSION,True,17,284,-1,287,0,1.176,0.2,1.176,0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TOTODILE,True,6,487,20,256,-2,0.335,-0.1,0.335,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CROCONAW,True,11,378,11,256,-2,0.64,-0.4,0.64,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-FERALIGATR,True,23,282,-1,375,6,1.547,0.9,1.547,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TOGEPI,True,3,507,21,256,-2,0.23,-1.9,0.23,-1.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TOGETIC,True,6,424,15,256,-2,0.505,-0.1,0.505,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-YANMA,True,12,274,-4,256,-2,0.73,-12.4,0.73,-12.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-UNOWN,True,5,411,2,256,-2,0.385,-16.4,0.385,-16.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUNSPARCE,True,15,284,15,256,-2,0.492,-0.5,0.492,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GLIGAR,True,11,350,-1,256,-2,0.731,-8.8,0.731,-8.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SNUBBULL,True,6,465,18,256,-2,0.38,-0.5,0.38,-0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRANBULL,True,14,256,3,256,-2,0.945,0.0,0.945,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SCIZOR,True,18,282,0,282,0,1.164,0.9,1.164,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-REMORAID,True,6,316,4,256,-2,0.516,-10.4,0.516,-10.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-OCTILLERY,True,9,296,9,256,-2,0.676,-1.0,0.676,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DELIBIRD,True,9,293,8,256,-2,0.763,-0.0,0.763,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MANTINE,True,21,275,0,360,6,1.5,0.8,1.5,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SKARMORY,True,17,285,0,276,0,1.127,-0.0,1.127,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-STANTLER,True,14,277,-1,277,0,1.145,-0.1,1.145,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RAIKOU,True,19,283,0,359,6,1.476,0.8,1.476,0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ENTEI,True,21,283,0,370,7,1.521,0.5,1.521,0.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SUICUNE,True,20,286,0,371,7,1.509,0.3,1.509,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LUGIA,True,52,283,0,742,18,3.051,0.3,3.051,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HO_OH,True,38,283,0,620,16,2.549,0.1,2.549,0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CELEBI,True,6,393,-10,256,-2,0.426,-27.3,0.426,-27.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ZIGZAGOON,True,4,560,21,256,-2,0.299,-0.2,0.299,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LINOONE,True,5,321,5,256,-2,0.87,-0.9,0.87,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TAILLOW,True,3,465,20,256,-2,0.3,-0.2,0.3,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SWELLOW,True,7,428,13,256,-2,0.555,-0.4,0.555,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RALTS,True,4,457,18,256,-2,0.356,-1.5,0.356,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KIRLIA,True,8,354,10,256,-2,0.657,-0.2,0.657,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GARDEVOIR,True,16,277,0,276,-1,1.141,0.9,1.141,0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GALLADE,True,16,373,0,342,-1,1.067,-0.2,1.067,-0.2,
-NINCADA,True,5,405,20,256,-2,0.322,-0.2,0.322,-0.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NINJASK,True,8,383,-9,256,-2,0.474,-23.3,0.474,-23.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SHEDINJA,True,8,372,-8,256,-2,0.551,-21.9,0.551,-21.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WHISMUR,True,6,373,16,256,-2,0.462,-0.6,0.462,-0.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LOUDRED,True,10,356,8,256,-2,0.745,-0.1,0.745,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXPLOUD,True,15,284,1,256,-2,1.016,-0.1,1.016,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAKUHITA,True,10,256,9,256,-2,0.727,0.0,0.727,0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-HARIYAMA,True,23,268,-1,375,6,1.552,1.4,1.552,1.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEDITITE,True,6,465,17,256,-2,0.4,-1.0,0.4,-1.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEDICHAM,True,13,298,2,256,-2,0.953,-0.4,0.953,-0.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VOLBEAT,True,7,442,-4,256,-2,0.474,-19.1,0.474,-19.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ILLUMISE,True,6,572,-4,256,-2,0.374,-22.3,0.374,-22.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPOINK,True,7,423,15,256,-2,0.517,-0.1,0.517,-0.1,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRUMPIG,True,9,358,9,256,-2,0.715,-0.7,0.715,-0.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SPINDA,True,11,321,9,256,-2,0.711,-0.9,0.711,-0.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SWABLU,True,4,422,-8,256,-2,0.397,-27.9,0.397,-27.9,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ALTARIA,True,11,327,0,256,-2,0.84,-5.5,0.84,-5.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BARBOACH,True,4,581,-2,256,-2,0.336,-21.7,0.336,-21.7,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WHISCASH,True,9,317,1,256,-2,0.675,-9.4,0.675,-9.4,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-LILEEP,True,10,305,8,256,-2,0.763,-0.0,0.763,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CRADILY,True,15,275,-1,269,-1,1.12,0.3,1.12,0.3,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ANORITH,True,7,296,4,256,-2,0.755,-4.2,0.755,-4.2,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ARMALDO,True,15,312,2,271,-1,1.011,-0.0,1.011,-0.0,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-ABSOL,True,12,301,1,256,-2,0.974,-0.8,0.974,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SYLVEON,True,10,503,8,342,-1,0.668,0.0,0.668,0.0,
-FARFETCHD_GALARIAN,True,8,256,0,256,-2,0.855,-6.0,0.855,-6.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-TYNAMO,True,2,1769,21,342,-1,0.06,0.1,0.06,0.1,
-EELEKTRIK,True,12,489,5,342,-1,0.801,-0.5,0.801,-0.5,
-EELEKTROSS,True,21,357,0,560,8,1.398,-0.7,1.398,-0.7,
-RATTATA_ALOLAN,True,3,256,0,256,-2,0.709,-8.0,0.709,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RATICATE_ALOLAN,True,7,256,0,256,-2,0.818,-5.0,0.818,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PICHU_ALOLAN,True,10,256,0,256,-2,0.636,-12.0,0.636,-12.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PIKACHU_ALOLAN,True,10,256,0,256,-2,0.909,-4.0,0.909,-4.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-RAICHU_ALOLAN,True,7,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SANDSHREW_ALOLAN,True,7,256,0,256,-2,0.691,-10.0,0.691,-10.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-SANDSLASH_ALOLAN,True,12,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DIGLETT_ALOLAN,True,2,256,0,256,-2,0.582,-16.0,0.582,-16.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-DUGTRIO_ALOLAN,True,7,256,0,256,-2,0.8,-8.0,0.8,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEOWTH_ALOLAN,True,4,256,0,256,-2,0.8,-5.0,0.8,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PERSIAN_ALOLAN,True,11,256,0,256,-2,0.964,3.0,0.964,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEOWTH_GALARIAN,True,4,256,0,256,-2,0.836,-6.0,0.836,-6.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-PERRSERKER,True,8,256,0,256,-2,1.091,1.0,1.091,1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GEODUDE_ALOLAN,True,4,256,0,256,-2,0.473,-14.0,0.473,-14.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRAVELER_ALOLAN,True,10,256,0,256,-2,0.891,-5.0,0.891,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GOLEM_ALOLAN,True,17,256,0,256,-2,1.109,2.0,1.109,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-GRIMER_ALOLAN,True,7,256,0,256,-2,0.727,-8.0,0.727,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MUK_ALOLAN,True,10,256,0,256,-2,1.018,0.0,1.018,0.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-VULPIX_ALOLAN,True,6,256,0,256,-2,0.818,-7.0,0.818,-7.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-NINETALES_ALOLAN,True,11,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGCUTE_ALOLAN,True,10,256,0,256,-2,0.691,-10.0,0.691,-10.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-EXEGGUTOR_ALOLAN,True,109,256,0,256,-2,1.127,2.0,1.127,2.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CUBONE_ALOLAN,True,10,256,0,256,-2,0.673,-11.0,0.673,-11.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MAROWAK_ALOLAN,True,10,256,0,256,-2,1.036,-1.0,1.036,-1.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CORSOLA_GALARIAN,True,6,256,0,256,-2,0.764,-8.0,0.764,-8.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CURSOLA,True,10,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-KOFFING_GALARIAN,True,10,256,0,256,-2,0.873,-5.0,0.873,-5.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-WEEZING_GALARIAN,True,30,256,0,256,-2,1.164,3.0,1.164,3.0,default calibration: review; red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-BAYLEEF,True,12,296,4,256,-2,0.849,-0.8,0.849,-0.8,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-MEGANIUM,True,18,286,0,317,2,1.29,1.6,1.29,1.6,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
-CHIKORITA,True,9,512,18,256,-2,0.336,-1.5,0.336,-1.5,red silhouette crosses size panel interior; leaf silhouette crosses size panel interior
+SENTRET,True,8,652,12,341,0,0.533,-0.3,0.533,-0.3,
+FURRET,True,18,278,0,367,1,1.2,0.4,1.2,0.4,
+SUNKERN,True,3,993,19,341,0,0.2,-0.1,0.2,-0.1,
+SUNFLORA,True,8,559,12,341,0,0.532,-0.3,0.532,-0.3,
+HOPPIP,True,4,1001,17,341,0,0.266,-0.6,0.266,-0.6,
+SKIPLOOM,True,6,528,15,341,0,0.399,-0.0,0.399,-0.0,
+JUMPLUFF,True,8,582,12,341,0,0.533,-0.3,0.533,-0.3,
+BUNEARY,True,4,1140,19,341,0,0.266,0.2,0.266,0.2,
+LOPUNNY,True,12,442,7,341,0,0.8,-0.1,0.8,-0.1,
+NIDORAN_F,True,4,745,18,341,0,0.266,0.2,0.266,0.2,
+NIDORINA,True,8,489,12,341,0,0.533,-0.3,0.533,-0.3,
+NIDOQUEEN,True,13,408,4,341,0,0.866,-0.4,0.866,-0.4,
+NIDORAN_M,True,5,652,15,341,0,0.333,-0.4,0.333,-0.4,
+NIDORINO,True,9,486,10,341,0,0.6,-0.6,0.6,-0.6,
+NIDOKING,True,14,386,3,341,0,0.932,-0.4,0.932,-0.4,
+PIDGEY,True,3,1148,19,341,0,0.2,-0.0,0.2,-0.0,
+PIDGEOTTO,True,11,440,8,341,0,0.733,-0.7,0.733,-0.7,
+PIDGEOT,True,15,379,2,341,0,0.998,-0.3,0.998,-0.3,
+SPEAROW,True,3,1148,19,341,0,0.2,0.2,0.2,0.2,
+FEAROW,True,12,496,6,341,0,0.8,-0.8,0.8,-0.8,
+HOOTHOOT,True,7,492,13,341,0,0.466,-0.4,0.466,-0.4,
+NOCTOWL,True,16,332,1,341,0,1.064,0.1,1.064,0.1,
+STARLY,True,3,1210,19,341,0,0.2,-0.3,0.2,-0.3,
+STARAVIA,True,6,807,15,341,0,0.4,-0.0,0.4,-0.0,
+STARAPTOR,True,12,496,6,341,0,0.8,-0.8,0.8,-0.8,
+DODUO,True,14,313,3,341,0,0.931,0.2,0.931,0.2,
+DODRIO,True,18,356,1,385,2,1.199,0.7,1.199,0.7,
+CATERPIE,True,3,993,19,341,0,0.2,-0.1,0.2,-0.1,
+METAPOD,True,7,332,14,341,0,0.467,-0.0,0.467,-0.0,
+BUTTERFREE,True,11,364,7,341,0,0.732,-0.1,0.732,-0.1,
+WEEDLE,True,3,869,19,341,0,0.2,0.1,0.2,0.1,
+KAKUNA,True,6,543,15,341,0,0.4,0.2,0.4,0.2,
+BEEDRILL,True,10,428,9,341,0,0.666,-0.5,0.666,-0.5,
+LEDYBA,True,10,382,10,341,0,0.665,0.1,0.665,0.1,
+LEDIAN,True,14,366,3,341,0,0.932,-0.7,0.932,-0.7,
+SPINARAK,True,5,465,16,341,0,0.333,-0.1,0.333,-0.1,
+ARIADOS,True,11,457,8,341,0,0.733,-0.1,0.733,-0.1,
+KRICKETOT,True,3,1334,19,341,0,0.2,-0.2,0.2,-0.2,
+KRICKETUNE,True,10,512,9,341,0,0.666,-0.3,0.666,-0.3,
+WURMPLE,True,3,1117,19,341,0,0.2,-0.1,0.2,-0.1,
+SILCOON,True,6,512,16,341,0,0.4,0.2,0.4,0.2,
+BEAUTIFLY,True,10,438,10,341,0,0.665,0.2,0.665,0.2,
+CASCOON,True,7,412,13,341,0,0.467,-0.3,0.467,-0.3,
+DUSTOX,True,12,317,9,349,0,0.801,-0.0,0.801,-0.0,
+VENONAT,True,10,438,11,341,0,0.665,0.0,0.665,0.0,
+VENOMOTH,True,15,323,4,341,0,0.998,-0.3,0.998,-0.3,
+COMBEE,True,3,1024,19,341,0,0.2,-0.3,0.2,-0.3,
+VESPIQUEN,True,12,434,7,341,0,0.8,-0.3,0.8,-0.3,
+PINECO,True,6,667,15,341,0,0.4,0.2,0.4,0.2,
+FORRETRESS,True,12,357,7,341,0,0.799,0.2,0.799,0.2,
+PARAS,True,3,869,19,341,0,0.2,-0.1,0.2,-0.1,
+PARASECT,True,10,438,9,341,0,0.665,-0.2,0.665,-0.2,
+BELLSPROUT,True,7,505,14,341,0,0.467,-0.7,0.467,-0.7,
+WEEPINBELL,True,10,391,9,341,0,0.666,-0.5,0.666,-0.5,
+VICTREEBEL,True,17,306,0,353,1,1.133,-0.9,1.133,-0.9,
+ODDISH,True,5,670,15,341,0,0.333,-0.6,0.333,-0.6,
+GLOOM,True,8,559,12,341,0,0.532,-0.3,0.532,-0.3,
+VILEPLUME,True,12,334,6,341,0,0.798,-0.4,0.798,-0.4,
+BELLOSSOM,True,4,815,17,341,0,0.266,-0.6,0.266,-0.6,
+BUDEW,True,2,1583,20,341,0,0.133,-0.7,0.133,-0.7,
+ROSELIA,True,3,1489,19,341,0,0.2,-0.1,0.2,-0.1,
+ROSERADE,True,9,528,11,341,0,0.599,-0.2,0.599,-0.2,
+EXEGGCUTE,True,4,1047,17,341,0,0.266,-0.6,0.266,-0.6,
+EXEGGUTOR,True,20,351,0,408,4,1.331,-0.8,1.331,-0.8,
+SEEDOT,True,5,707,17,341,0,0.333,-0.5,0.333,-0.5,
+NUZLEAF,True,10,447,9,341,0,0.666,-0.5,0.666,-0.5,
+SHIFTRY,True,13,444,6,341,0,0.866,0.0,0.866,0.0,
+TANGELA,True,10,438,9,341,0,0.665,-0.2,0.665,-0.2,
+TANGROWTH,True,20,351,0,408,4,1.331,-0.1,1.331,-0.1,
+PICHU,True,3,1179,19,341,0,0.2,0.1,0.2,0.1,
+PIKACHU,True,4,1140,18,341,0,0.266,-0.1,0.266,-0.1,
+RAICHU,True,8,698,11,341,0,0.533,-0.5,0.533,-0.5,
+PLUSLE,True,4,931,18,341,0,0.266,-0.3,0.266,-0.3,
+MINUN,True,4,977,18,341,0,0.267,-0.0,0.267,-0.0,
+VOLTORB,True,5,465,16,341,0,0.333,-0.1,0.333,-0.1,
+ELECTRODE,True,12,279,6,341,0,0.8,-0.8,0.8,-0.8,
+MAGNEMITE,True,3,621,19,341,0,0.2,-0.2,0.2,-0.2,
+MAGNETON,True,10,335,11,341,0,0.666,-0.0,0.666,-0.0,
+MAGNEZONE,True,12,388,7,341,0,0.799,-0.4,0.799,-0.4,
+ELEKID,True,6,683,15,341,0,0.399,-0.0,0.399,-0.0,
+ELECTABUZZ,True,11,491,8,341,0,0.732,-0.7,0.732,-0.7,
+ELECTIVIRE,True,18,356,0,373,2,1.2,-0.3,1.2,-0.3,
+RATTATA,True,3,1086,19,341,0,0.2,-0.0,0.2,-0.0,
+RATICATE,True,7,465,11,341,0,0.467,-0.7,0.467,-0.7,
+HAPPINY,True,6,590,15,341,0,0.399,-0.0,0.399,-0.0,
+CHANSEY,True,11,389,8,341,0,0.733,-0.1,0.733,-0.1,
+BLISSEY,True,15,317,2,341,0,0.997,-0.3,0.997,-0.3,
+LICKITUNG,True,12,365,6,341,0,0.798,-0.4,0.798,-0.4,
+LICKILICKY,True,17,339,0,347,0,1.135,0.5,1.135,0.5,
+MEOWTH,True,4,931,18,341,0,0.266,0.2,0.266,0.2,
+PERSIAN,True,10,419,10,341,0,0.666,0.2,0.666,0.2,
+AIPOM,True,8,652,12,341,0,0.533,0.1,0.533,0.1,
+AMBIPOM,True,12,496,6,341,0,0.8,-0.8,0.8,-0.8,
+TEDDIURSA,True,6,667,15,341,0,0.4,-0.2,0.4,-0.2,
+URSARING,True,18,345,0,367,1,1.199,0.4,1.199,0.4,
+KANGASKHAN,True,22,328,-2,449,5,1.468,0.3,1.468,0.3,
+TAUROS,True,14,386,5,341,0,0.932,-0.4,0.932,-0.4,
+MAREEP,True,6,512,15,341,0,0.4,-0.3,0.4,-0.3,
+FLAAFFY,True,8,512,12,341,0,0.533,-0.3,0.533,-0.3,
+AMPHAROS,True,14,352,3,341,0,0.934,-0.6,0.934,-0.6,
+MARILL,True,4,815,17,341,0,0.266,-0.6,0.266,-0.6,
+AZUMARILL,True,8,524,12,341,0,0.532,-0.0,0.532,-0.0,
+AZURILL,True,2,1722,20,341,0,0.133,-0.7,0.133,-0.7,
+SMEARGLE,True,12,396,6,341,0,0.798,-0.5,0.798,-0.5,
+MILTANK,True,12,411,6,341,0,0.8,0.2,0.8,0.2,
+FARFETCHD,True,8,489,12,341,0,0.533,-0.3,0.533,-0.3,
+GIRAFARIG,True,15,366,3,341,0,0.999,0.0,0.999,0.0,
+SLAKOTH,True,8,349,13,341,0,0.533,-0.0,0.533,-0.0,
+VIGOROTH,True,14,426,4,341,0,0.931,-0.0,0.931,-0.0,
+SLAKING,True,20,356,6,568,9,1.334,0.3,1.334,0.3,
+SHROOMISH,True,4,745,18,341,0,0.266,0.2,0.266,0.2,
+BRELOOM,True,12,419,6,341,0,0.799,-0.2,0.799,-0.2,
+MANKEY,True,5,726,17,341,0,0.333,0.1,0.333,0.1,
+PRIMEAPE,True,10,475,9,341,0,0.666,-0.3,0.666,-0.3,
+ANNIHILAPE,True,12,489,7,341,0,0.799,-0.0,0.799,-0.0,
+MACHOP,True,8,489,12,341,0,0.533,-0.3,0.533,-0.3,
+MACHOKE,True,15,310,2,341,0,1.0,0.2,1.0,0.2,
+MACHAMP,True,16,351,2,343,0,1.066,0.0,1.066,0.0,
+HERACROSS,True,15,354,2,341,0,0.998,-0.3,0.998,-0.3,
+EKANS,True,20,256,6,507,7,1.332,0.3,1.332,0.3,
+ARBOK,True,35,323,0,714,12,2.331,-0.1,2.331,-0.1,
+GRIMER,True,9,424,10,341,0,0.6,-0.6,0.6,-0.6,
+MUK,True,12,356,7,373,2,0.8,-0.5,0.8,-0.5,
+KOFFING,True,6,621,14,341,0,0.399,-0.6,0.399,-0.6,
+WEEZING,True,12,419,8,341,0,0.799,0.0,0.799,0.0,
+ZUBAT,True,8,465,13,341,0,0.533,0.2,0.533,0.2,
+GOLBAT,True,16,345,0,361,1,1.065,0.0,1.065,0.0,
+CROBAT,True,18,351,0,367,1,1.198,0.7,1.198,0.7,
+GULPIN,True,4,791,18,341,0,0.266,-0.7,0.266,-0.7,
+SWALOT,True,17,267,0,347,0,1.134,0.1,1.134,0.1,
+HOUNDOUR,True,6,636,15,341,0,0.4,0.2,0.4,0.2,
+HOUNDOOM,True,14,359,4,341,0,0.933,-0.0,0.933,-0.0,
+POOCHYENA,True,5,745,16,341,0,0.333,-0.4,0.333,-0.4,
+MIGHTYENA,True,10,521,9,341,0,0.666,-0.5,0.666,-0.5,
+MURKROW,True,5,782,16,341,0,0.333,-0.4,0.333,-0.4,
+HONCHKROW,True,9,548,11,341,0,0.6,-0.1,0.6,-0.1,
+ABRA,True,9,414,10,341,0,0.599,-0.3,0.599,-0.3,
+KADABRA,True,13,387,4,341,0,0.865,-0.8,0.865,-0.8,
+ALAKAZAM,True,15,379,2,341,0,0.998,-0.3,0.998,-0.3,
+DROWZEE,True,10,428,9,341,0,0.666,-0.5,0.666,-0.5,
+HYPNO,True,16,351,3,367,1,1.065,0.8,1.065,0.8,
+WYNAUT,True,6,621,15,341,0,0.399,-0.0,0.399,-0.0,
+WOBBUFFET,True,13,372,5,341,0,0.867,-0.4,0.867,-0.4,
+NATU,True,2,1164,20,341,0,0.133,-0.6,0.133,-0.6,
+XATU,True,15,310,2,341,0,1.0,-0.6,1.0,-0.6,
+CHINGLING,True,2,1722,20,341,0,0.133,-0.0,0.133,-0.0,
+CHIMECHO,True,6,822,15,341,0,0.4,-0.2,0.4,-0.2,
+BALTOY,True,5,652,17,341,0,0.333,0.0,0.333,0.0,
+CLAYDOL,True,15,341,3,341,0,1.0,-0.8,1.0,-0.8,
+LUNATONE,True,10,419,9,341,0,0.666,-0.2,0.666,-0.2,
+SOLROCK,True,12,481,7,341,0,0.799,0.2,0.799,0.2,
+BRONZOR,True,5,540,16,341,0,0.333,-0.6,0.333,-0.6,
+BRONZONG,True,13,351,4,341,0,0.866,-0.3,0.866,-0.3,
+MIME_JR,True,6,745,15,341,0,0.399,-0.0,0.399,-0.0,
+MR_MIME,True,13,344,5,341,0,0.865,-0.4,0.865,-0.4,
+MIME_SR,True,18,356,1,392,3,1.201,0.0,1.201,0.0,
+GASTLY,True,13,365,5,341,0,0.866,-0.0,0.866,-0.0,
+HAUNTER,True,16,323,3,386,2,1.065,0.3,1.065,0.3,
+GENGAR,True,15,284,2,347,0,1.0,-0.1,1.0,-0.1,
+MISDREAVUS,True,7,519,13,341,0,0.466,-0.4,0.466,-0.4,
+MISMAGIUS,True,9,621,11,341,0,0.599,0.1,0.599,0.1,
+SABLEYE,True,5,819,16,341,0,0.333,-0.1,0.333,-0.1,
+DUSKULL,True,8,535,12,341,0,0.533,-0.7,0.533,-0.7,
+DUSCLOPS,True,16,308,1,341,0,1.067,0.2,1.067,0.2,
+DUSKNOIR,True,22,356,1,504,7,1.467,-0.2,1.467,-0.2,
+CUBONE,True,4,884,17,341,0,0.267,-0.8,0.267,-0.8,
+MAROWAK,True,10,410,11,341,0,0.665,-0.4,0.665,-0.4,
+OSSCYTHE,True,16,372,1,341,0,1.067,-0.3,1.067,-0.3,
+CLEFFA,True,3,776,19,341,0,0.2,-0.3,0.2,-0.3,
+CLEFAIRY,True,6,512,15,341,0,0.4,-0.3,0.4,-0.3,
+CLEFABLE,True,13,337,4,341,0,0.865,-0.3,0.865,-0.3,
+IGGLYBUFF,True,3,900,19,341,0,0.2,-0.3,0.2,-0.3,
+JIGGLYPUFF,True,5,614,16,341,0,0.333,-0.6,0.333,-0.6,
+WIGGLYTUFF,True,10,465,10,341,0,0.667,-0.1,0.667,-0.1,
+GEODUDE,True,4,605,17,341,0,0.266,-0.3,0.266,-0.3,
+GRAVELER,True,10,391,9,341,0,0.666,-0.5,0.666,-0.5,
+GOLEM,True,14,332,4,341,0,0.934,0.0,0.934,0.0,
+ONIX,True,88,328,0,1796,19,5.874,-0.8,5.874,-0.8,
+STEELIX,True,92,356,0,1907,19,6.136,-0.2,6.136,-0.2,
+RHYHORN,True,10,428,9,341,0,0.666,-0.5,0.666,-0.5,
+RHYDON,True,19,334,0,401,3,1.266,0.2,1.266,0.2,
+RHYPERIOR,True,24,356,0,498,7,1.602,0.1,1.602,0.1,
+SANDSHREW,True,6,574,14,341,0,0.4,0.1,0.4,0.1,
+SANDSLASH,True,10,465,9,341,0,0.667,0.0,0.667,0.0,
+DIGLETT,True,2,1210,20,341,0,0.133,-0.1,0.133,-0.1,
+DUGTRIO,True,7,492,13,341,0,0.466,0.1,0.466,0.1,
+PHANPY,True,5,596,16,341,0,0.333,-0.4,0.333,-0.4,
+DONPHAN,True,11,406,8,341,0,0.733,-0.1,0.733,-0.1,
+SHUCKLE,True,6,698,15,341,0,0.4,0.2,0.4,0.2,
+LARVITAR,True,6,683,14,341,0,0.399,-0.7,0.399,-0.7,
+PUPITAR,True,12,365,7,341,0,0.798,-0.1,0.798,-0.1,
+TYRANITAR,True,20,356,0,408,4,1.334,-0.4,1.334,-0.4,
+MAWILE,True,6,729,15,341,0,0.4,0.2,0.4,0.2,
+WOOPER,True,4,698,17,341,0,0.266,-0.4,0.266,-0.4,
+QUAGSIRE,True,14,332,4,341,0,0.934,0.0,0.934,0.0,
+POLIWAG,True,6,481,14,341,0,0.4,-0.8,0.4,-0.8,
+POLIWHIRL,True,10,382,9,341,0,0.665,-0.2,0.665,-0.2,
+POLIWRATH,True,13,344,4,341,0,0.865,-0.7,0.865,-0.7,
+POLITOED,True,11,440,8,341,0,0.733,-0.1,0.733,-0.1,
+SLOWPOKE,True,12,303,7,341,0,0.798,-0.2,0.798,-0.2,
+SLOWBRO,True,16,328,0,370,2,1.067,-0.0,1.067,-0.0,
+SLOWKING,True,20,334,-1,408,4,1.333,-0.7,1.333,-0.7,
+SHELLDER,True,3,1024,19,341,0,0.2,-0.3,0.2,-0.3,
+CLOYSTER,True,15,348,2,341,0,0.998,-0.7,0.998,-0.7,
+KRABBY,True,4,815,17,341,0,0.266,-0.6,0.266,-0.6,
+KINGLER,True,13,380,5,341,0,0.865,-0.1,0.865,-0.1,
+PSYDUCK,True,8,524,12,341,0,0.532,-0.0,0.532,-0.0,
+GOLDUCK,True,17,289,0,347,0,1.135,0.2,1.135,0.2,
+HORSEA,True,4,768,18,341,0,0.266,0.1,0.266,0.1,
+SEADRA,True,12,365,5,341,0,0.798,-0.0,0.798,-0.0,
+KINGDRA,True,18,328,1,367,1,1.2,0.2,1.2,0.2,
+GOLDEEN,True,6,683,15,341,0,0.399,-0.0,0.399,-0.0,
+SEAKING,True,13,394,5,341,0,0.865,-0.1,0.865,-0.1,
+LUVDISC,True,6,481,19,341,0,0.4,-0.0,0.4,-0.0,
+CLAMPERL,True,4,815,17,341,0,0.266,-0.6,0.266,-0.6,
+HUNTAIL,True,17,312,-1,347,0,1.132,-0.1,1.132,-0.1,
+GOREBYSS,True,18,339,7,498,7,1.202,-0.1,1.202,-0.1,
+MAGIKARP,True,9,476,12,341,0,0.599,0.0,0.599,0.0,
+GYARADOS,True,65,356,0,1326,17,4.334,0.0,4.334,0.0,
+FEEBAS,True,6,652,16,341,0,0.399,0.2,0.399,0.2,
+MILOTIC,True,62,356,0,1265,17,4.135,-0.3,4.135,-0.3,
+RELICANTH,True,10,438,11,341,0,0.665,0.0,0.665,0.0,
+CINNABAR_MAGIKARP,True,18,345,0,367,1,1.199,0.4,1.199,0.4,
+CINNABAR_FEEBAS,True,16,320,1,341,0,1.066,-0.7,1.066,-0.7,
+STARYU,True,8,477,13,341,0,0.533,-0.1,0.533,-0.1,
+STARMIE,True,11,398,9,341,0,0.732,-0.1,0.732,-0.1,
+CHINCHOU,True,5,614,16,341,0,0.333,-0.6,0.333,-0.6,
+LANTURN,True,12,372,9,341,0,0.8,0.2,0.8,0.2,
+WINGULL,True,6,341,17,341,0,0.4,-0.3,0.4,-0.3,
+PELIPPER,True,12,427,6,341,0,0.799,-0.5,0.799,-0.5,
+TENTACOOL,True,9,465,11,341,0,0.6,-0.7,0.6,-0.7,
+TENTACRUEL,True,16,343,0,341,0,1.066,-0.1,1.066,-0.1,
+QWILFISH,True,5,801,16,341,0,0.333,-0.2,0.333,-0.2,
+CORSOLA,True,6,605,15,341,0,0.4,0.2,0.4,0.2,
+SEEL,True,11,389,8,341,0,0.733,-0.1,0.733,-0.1,
+DEWGONG,True,17,351,5,437,5,1.132,0.1,1.132,0.1,
+SNEASEL,True,9,548,10,341,0,0.6,-0.7,0.6,-0.7,
+WEAVILE,True,11,457,8,341,0,0.733,-0.1,0.733,-0.1,
+SWINUB,True,4,512,17,341,0,0.266,-0.3,0.266,-0.3,
+PILOSWINE,True,11,406,8,341,0,0.733,-0.1,0.733,-0.1,
+MAMOSWINE,True,25,356,1,628,10,1.668,-0.1,1.668,-0.1,
+SMOOCHUM,True,4,838,18,341,0,0.266,-0.1,0.266,-0.1,
+JYNX,True,14,313,3,341,0,0.931,-0.6,0.931,-0.6,
+VULPIX,True,6,605,15,341,0,0.4,0.2,0.4,0.2,
+NINETALES,True,11,474,7,341,0,0.732,-0.6,0.732,-0.6,
+GROWLITHE,True,7,532,13,341,0,0.466,-0.6,0.466,-0.6,
+ARCANINE,True,19,328,0,388,3,1.269,-0.0,1.269,-0.0,
+PONYTA,True,10,475,10,341,0,0.666,0.2,0.666,0.2,
+RAPIDASH,True,17,356,0,347,0,1.134,0.1,1.134,0.1,
+SLUGMA,True,7,492,13,341,0,0.466,-0.4,0.466,-0.4,
+MAGCARGO,True,8,535,14,341,0,0.533,-0.2,0.533,-0.2,
+NUMEL,True,7,439,13,341,0,0.466,-0.4,0.466,-0.4,
+CAMERUPT,True,19,339,6,473,6,1.268,0.6,1.268,0.6,
+MAGBY,True,7,505,13,341,0,0.467,-0.6,0.467,-0.6,
+MAGMAR,True,13,387,4,341,0,0.865,-0.8,0.865,-0.8,
+MAGMORTAR,True,16,367,1,341,0,1.064,-0.6,1.064,-0.6,
+OMANYTE,True,4,791,17,341,0,0.266,-0.8,0.266,-0.8,
+OMASTAR,True,10,465,9,341,0,0.667,-0.5,0.667,-0.5,
+OMATO,True,1,3351,22,341,0,0.067,0.1,0.067,0.1,
+OMATOPS,True,1,4468,22,341,0,0.067,0.1,0.067,0.1,
+KABUTO,True,5,465,16,341,0,0.333,-0.7,0.333,-0.7,
+KABUTOPS,True,13,408,5,341,0,0.866,-0.1,0.866,-0.1,
+KABUSTAR,True,10,391,9,341,0,0.666,-0.5,0.666,-0.5,
+KABUKNIGHT,True,10,559,9,341,0,0.665,-0.5,0.665,-0.5,
+AERODACTYL,True,18,356,1,373,2,1.2,0.0,1.2,0.0,
+AMUNYTE,True,9,641,11,341,0,0.6,0.1,0.6,0.1,
+KINKABUTO,True,11,508,8,341,0,0.732,-0.2,0.732,-0.2,
+AEROPTERYX,True,10,568,9,341,0,0.666,-0.8,0.666,-0.8,
+PORYGON,True,8,442,11,341,0,0.533,-0.1,0.533,-0.1,
+PORYGON2,True,6,543,15,341,0,0.4,-0.3,0.4,-0.3,
+PORYGON_Z,True,9,528,10,341,0,0.599,-0.2,0.599,-0.2,
+DITTO,True,3,931,19,341,0,0.2,-0.1,0.2,-0.1,
+ARTICUNO,True,17,356,0,347,0,1.134,0.1,1.134,0.1,
+ZAPDOS,True,16,356,3,367,1,1.068,0.5,1.068,0.5,
+MOLTRES,True,20,351,4,443,5,1.331,0.0,1.331,0.0,
+MEWTWO,True,20,351,0,408,4,1.331,-0.1,1.331,-0.1,
+MEW,True,4,1024,18,341,0,0.266,-0.5,0.266,-0.5,
+EEVEE,True,3,1241,19,341,0,0.2,-0.4,0.2,-0.4,
+VAPOREON,True,10,493,9,341,0,0.667,-0.8,0.667,-0.8,
+JOLTEON,True,8,489,11,341,0,0.533,-0.8,0.533,-0.8,
+FLAREON,True,9,455,11,341,0,0.6,-0.5,0.6,-0.5,
+ESPEON,True,9,496,11,341,0,0.6,0.1,0.6,0.1,
+UMBREON,True,10,456,10,341,0,0.666,0.2,0.666,0.2,
+LEAFEON,True,10,465,8,341,0,0.667,0.1,0.667,0.1,
+GLACEON,True,8,617,11,341,0,0.533,0.2,0.533,0.2,
+TYROGUE,True,7,612,13,341,0,0.466,-0.7,0.466,-0.7,
+HITMONLEE,True,15,323,1,341,0,0.998,-0.1,0.998,-0.1,
+HITMONCHAN,True,14,372,4,341,0,0.933,-0.0,0.933,-0.0,
+HITMONTOP,True,14,352,3,341,0,0.934,-0.6,0.934,-0.6,
+LAPRAS,True,25,323,1,528,8,1.664,0.2,1.664,0.2,
+DRATINI,True,18,273,7,514,8,1.198,-0.5,1.198,-0.5,
+DRAGONAIR,True,40,345,4,973,15,2.666,0.1,2.666,0.1,
+DRAGONITE,True,22,356,0,449,5,1.468,0.3,1.468,0.3,
+BULBASAUR,True,7,439,14,341,0,0.466,0.1,0.466,0.1,
+IVYSAUR,True,10,391,9,341,0,0.666,0.1,0.666,0.1,
+VENUSAUR,True,20,328,1,446,5,1.335,0.1,1.335,0.1,
+CHARMANDER,True,6,605,15,341,0,0.4,-0.2,0.4,-0.2,
+CHARMELEON,True,11,398,8,341,0,0.732,-0.5,0.732,-0.5,
+CHARIZARD,True,17,356,1,358,1,1.134,0.1,1.134,0.1,
+SQUIRTLE,True,5,670,15,341,0,0.333,-0.6,0.333,-0.6,
+WARTORTLE,True,10,428,9,341,0,0.666,-0.5,0.666,-0.5,
+BLASTOISE,True,16,328,2,363,1,1.066,0.2,1.066,0.2,
+SCYTHER,True,15,379,3,341,0,0.998,-0.0,0.998,-0.0,
+PINSIR,True,15,348,2,341,0,0.998,-0.7,0.998,-0.7,
+CYNDAQUIL,True,5,670,16,341,0,0.333,-0.4,0.333,-0.4,
+QUILAVA,True,9,496,11,341,0,0.6,0.1,0.6,0.1,
+TYPHLOSION,True,17,356,0,347,0,1.134,0.1,1.134,0.1,
+TOTODILE,True,6,543,15,341,0,0.4,-0.3,0.4,-0.3,
+CROCONAW,True,11,440,8,341,0,0.733,-0.1,0.733,-0.1,
+FERALIGATR,True,23,356,0,469,6,1.533,0.1,1.533,0.1,
+TOGEPI,True,3,776,19,341,0,0.2,-0.3,0.2,-0.3,
+TOGETIC,True,6,714,15,341,0,0.399,-0.0,0.399,-0.0,
+YANMA,True,12,334,6,341,0,0.798,-0.4,0.798,-0.4,
+UNOWN,True,5,633,16,341,0,0.333,-0.4,0.333,-0.4,
+DUNSPARCE,True,15,273,9,500,7,0.999,0.2,0.999,0.2,
+GLIGAR,True,11,465,7,341,0,0.733,-0.3,0.733,-0.3,
+SNUBBULL,True,6,590,15,341,0,0.399,-0.0,0.399,-0.0,
+GRANBULL,True,14,346,4,341,0,0.932,-0.0,0.932,-0.0,
+SCIZOR,True,18,356,0,367,1,1.2,0.4,1.2,0.4,
+REMORAID,True,6,543,15,341,0,0.4,0.2,0.4,0.2,
+OCTILLERY,True,9,445,10,341,0,0.599,-0.6,0.599,-0.6,
+DELIBIRD,True,9,496,11,341,0,0.6,0.1,0.6,0.1,
+MANTINE,True,21,351,0,429,5,1.4,-0.9,1.4,-0.9,
+SKARMORY,True,17,356,0,347,0,1.134,0.1,1.134,0.1,
+STANTLER,True,14,419,3,341,0,0.932,-0.7,0.932,-0.7,
+RAIKOU,True,19,356,0,388,3,1.268,-0.4,1.268,-0.4,
+ENTEI,True,21,356,0,429,5,1.402,-0.5,1.402,-0.5,
+SUICUNE,True,20,356,0,408,4,1.334,-0.4,1.334,-0.4,
+LUGIA,True,52,356,0,1061,16,3.468,-0.5,3.468,-0.5,
+HO_OH,True,38,356,0,775,13,2.533,-0.2,2.533,-0.2,
+CELEBI,True,6,559,15,341,0,0.399,-0.0,0.399,-0.0,
+ZIGZAGOON,True,4,838,18,341,0,0.266,-0.1,0.266,-0.1,
+LINOONE,True,5,1117,16,341,0,0.333,-0.6,0.333,-0.6,
+TAILLOW,True,3,931,19,341,0,0.2,0.1,0.2,0.1,
+SWELLOW,True,7,678,13,341,0,0.466,-0.5,0.466,-0.5,
+RALTS,True,4,815,18,341,0,0.266,0.1,0.266,0.1,
+KIRLIA,True,8,582,12,341,0,0.533,0.2,0.533,0.2,
+GARDEVOIR,True,16,367,1,341,0,1.064,-0.6,1.064,-0.6,
+GALLADE,True,16,372,1,341,0,1.067,-0.3,1.067,-0.3,
+NINCADA,True,5,521,16,341,0,0.333,-0.4,0.333,-0.4,
+NINJASK,True,8,454,11,341,0,0.533,0.1,0.533,0.1,
+SHEDINJA,True,8,512,12,341,0,0.533,-0.3,0.533,-0.3,
+WHISMUR,True,6,574,15,341,0,0.4,-0.2,0.4,-0.2,
+LOUDRED,True,10,531,9,341,0,0.666,-0.3,0.666,-0.3,
+EXPLOUD,True,15,385,2,341,0,0.998,-0.7,0.998,-0.7,
+MAKUHITA,True,10,372,9,341,0,0.667,-0.5,0.667,-0.5,
+HARIYAMA,True,23,351,0,485,7,1.533,-0.8,1.533,-0.8,
+MEDITITE,True,6,621,15,341,0,0.399,-0.0,0.399,-0.0,
+MEDICHAM,True,13,437,5,341,0,0.865,-0.1,0.865,-0.1,
+VOLBEAT,True,7,598,13,341,0,0.467,0.0,0.467,0.0,
+ILLUMISE,True,6,714,14,341,0,0.399,-0.7,0.399,-0.7,
+SPOINK,True,7,625,14,341,0,0.466,0.1,0.466,0.1,
+GRUMPIG,True,9,569,11,341,0,0.599,-0.1,0.599,-0.1,
+SPINDA,True,11,415,8,341,0,0.732,-0.5,0.732,-0.5,
+SWABLU,True,4,838,18,341,0,0.266,-0.7,0.266,-0.7,
+ALTARIA,True,11,499,8,341,0,0.733,0.1,0.733,0.1,
+BARBOACH,True,4,977,17,341,0,0.267,-0.8,0.267,-0.8,
+WHISCASH,True,9,476,11,341,0,0.599,0.1,0.599,0.1,
+LILEEP,True,10,465,9,341,0,0.667,-0.5,0.667,-0.5,
+CRADILY,True,15,391,2,341,0,0.999,-0.3,0.999,-0.3,
+ANORITH,True,7,638,13,341,0,0.466,-0.6,0.466,-0.6,
+ARMALDO,True,15,397,2,341,0,0.999,-0.6,0.999,-0.6,
+ABSOL,True,12,489,6,341,0,0.799,-0.5,0.799,-0.5,
+SYLVEON,True,10,503,9,341,0,0.666,-0.0,0.666,-0.0,
+FARFETCHD_GALARIAN,True,8,547,12,341,0,0.533,-0.5,0.533,-0.5,
+TYNAMO,True,2,791,20,341,0,0.133,-0.4,0.133,-0.4,
+EELEKTRIK,True,12,489,6,341,0,0.799,-0.5,0.799,-0.5,
+EELEKTROSS,True,21,356,1,560,9,1.401,-0.6,1.401,-0.6,
+RATTATA_ALOLAN,True,3,1210,19,341,0,0.2,0.2,0.2,0.2,
+RATICATE_ALOLAN,True,7,598,13,341,0,0.467,0.0,0.467,0.0,
+RAICHU_ALOLAN,True,7,851,13,341,0,0.466,-0.6,0.466,-0.6,
+SANDSHREW_ALOLAN,True,7,505,13,341,0,0.467,-0.6,0.467,-0.6,
+SANDSLASH_ALOLAN,True,12,481,7,341,0,0.799,0.2,0.799,0.2,
+DIGLETT_ALOLAN,True,2,1489,21,341,0,0.133,-0.0,0.133,-0.0,
+DUGTRIO_ALOLAN,True,7,585,14,341,0,0.466,-0.1,0.466,-0.1,
+MEOWTH_ALOLAN,True,4,1024,17,341,0,0.266,-0.3,0.266,-0.3,
+PERSIAN_ALOLAN,True,11,449,5,341,0,0.732,-0.0,0.732,-0.0,
+MEOWTH_GALARIAN,True,4,1071,18,341,0,0.266,0.2,0.266,0.2,
+PERRSERKER,True,8,698,12,341,0,0.533,-0.3,0.533,-0.3,
+GEODUDE_ALOLAN,True,4,605,17,341,0,0.266,0.1,0.266,0.1,
+GRAVELER_ALOLAN,True,10,456,10,341,0,0.666,0.2,0.666,0.2,
+GOLEM_ALOLAN,True,17,339,0,347,0,1.135,0.5,1.135,0.5,
+GRIMER_ALOLAN,True,7,532,13,341,0,0.466,-0.2,0.466,-0.2,
+MUK_ALOLAN,True,10,521,9,341,0,0.666,-0.0,0.666,-0.0,
+VULPIX_ALOLAN,True,6,698,15,341,0,0.4,-0.2,0.4,-0.2,
+NINETALES_ALOLAN,True,11,525,8,341,0,0.732,-0.2,0.732,-0.2,
+EXEGGUTOR_ALOLAN,True,109,356,1,2296,20,7.27,-0.2,7.27,-0.2,
+MAROWAK_ALOLAN,True,10,531,10,341,0,0.666,0.2,0.666,0.2,
+CORSOLA_GALARIAN,True,6,652,15,341,0,0.399,-0.0,0.399,-0.0,
+CURSOLA,True,10,596,9,341,0,0.666,-0.5,0.666,-0.5,
+WEEZING_GALARIAN,True,30,356,0,612,10,2.0,0.0,2.0,0.0,
+BAYLEEF,True,12,419,6,341,0,0.799,-0.2,0.799,-0.2,
+MEGANIUM,True,18,356,0,367,1,1.2,0.4,1.2,0.4,
+CHIKORITA,True,9,383,10,341,0,0.599,-0.6,0.599,-0.6,
+PONYTA_GALARIAN,True,8,570,12,341,0,0.533,-0.5,0.533,-0.5,
+RAPIDASH_GALARIAN,True,17,351,0,347,0,1.132,0.5,1.132,0.5,
+SLOWPOKE_GALARIAN,True,12,289,11,472,6,0.802,-0.3,0.802,-0.3,
+SLOWBRO_GALARIAN,True,16,356,3,387,2,1.067,0.6,1.067,0.6,
+SLOWKING_GALARIAN,True,18,345,-1,367,1,1.199,0.1,1.199,0.1,
+MR_MIME_GALARIAN,True,14,332,4,341,0,0.934,0.0,0.934,0.0,
+MR_RIME,True,15,354,3,341,0,0.998,-0.0,0.998,-0.0,
+SIRFETCHD,True,8,745,12,341,0,0.533,-0.3,0.533,-0.3,
+WOOPER_PALDEAN,True,4,721,17,341,0,0.267,-0.6,0.267,-0.6,
+CLODSIRE,True,18,317,4,582,9,1.202,0.7,1.202,0.7,

@@ -93,7 +93,7 @@ Audited {len(rows)} non-retired species in the species-to-National-Dex mapping; 
 - {len(placeholders)} mapped entries use question-mark placeholder sprites. Mapping coverage does not mean all these species are obtainable in-game.
 - {len(overflow)} species have a calculated silhouette crossing the size panel interior (x16–96, y80–128), for at least one player. These are layout review flags, not necessarily visible corruption.
 
-The chart uses hand-authored inverse affine scale/offset values, not the height field. Updating a height or front sprite does not recalibrate the chart. Both RED and LEAF were checked. CASTFORM uses its normal form. UNOWN uses A as the audit representative; the game can show the saved personality form, and SPINDA spots depend on the save. Contact sheets approximate current affine silhouettes with RED in dark gray and LEAF in gray at right; they are static reconstructions, not emulator captures.
+The chart uses stored inverse affine scale/offset values. Active entries are calibrated from their listed heights and visible front-sprite bounds against a 1.5 m trainer by tools/sync_pokedex_size_chart.py. Run that tool after changing heights or sprites; its --check mode detects stale calibration. Both RED and LEAF were checked. CASTFORM uses its normal form. UNOWN uses A as the audit representative; the game can show the saved personality form, and SPINDA spots depend on the save. Contact sheets approximate current affine silhouettes with RED in dark gray and LEAF in gray at right; they are static reconstructions, not emulator captures.
 
 ## Active Pokédex coverage
 
@@ -113,7 +113,7 @@ Active placeholder entries: {', '.join(r['species'] for r in active_placeholders
 
 ## Interpretation
 
-Pixel-height ratios are diagnostics, not proof of biological height: tails, wings, curled bodies, floating poses and species measured by length require individual judgment. Existing vanilla calibrations should not be blindly replaced with bounding-box normalization. This audit does not verify canonical height lore against external sources and is not a live emulator sign-off.
+Pixel-height ratios are diagnostics, not proof of biological height: tails, wings, curled bodies, floating poses and species measured by length require individual judgment. The current active-entry calibration treats the whole silhouette as the listed height; curled and length-measured species remain pose approximations. This audit does not verify canonical height lore against external sources and is not a live emulator sign-off.
 
 See all-species.csv for every species, both player ratios, baseline differences and layout flags. See contact-sheet-*.png for visual review.
 '''
