@@ -220,14 +220,14 @@ static const u16 sRocketCoinPrices[] = {
     3500,
     4500,
 };
-static const u16 sRocketPrizeMons[] = {SPECIES_SMEARGLE, SPECIES_DRATINI,
+static const u16 sRocketPrizeMons[] = {SPECIES_SMEARGLE, SPECIES_EEVEE, SPECIES_DRATINI,
     SPECIES_PORYGON, SPECIES_NONE};
 #ifdef FIRERED
-static const u16 sRocketMonPrices[] = {500, 2800, 9999};
-static const u8 sRocketMonLevels[] = {10, 18, 26};
+static const u16 sRocketMonPrices[] = {500, 1500, 2800, 9999};
+static const u8 sRocketMonLevels[] = {10, 15, 18, 26};
 #else
-static const u16 sRocketMonPrices[] = {500, 4600, 6500};
-static const u8 sRocketMonLevels[] = {10, 24, 18};
+static const u16 sRocketMonPrices[] = {500, 1500, 4600, 6500};
+static const u8 sRocketMonLevels[] = {10, 15, 24, 18};
 #endif
 
 bool8 IsCoinShop(void)
@@ -436,6 +436,18 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
     }
 };
 
+// Independent herbalists and Rocket prize clerks do not accept the Thunder Pass.
+extern const u16 FuchsiaCity_House2_HerbalistItems[];
+
+static bool8 ShopAcceptsThunderPass(void)
+{
+    return !IsCoinShop()
+        && sShopData.mainItemList != sRocketCoinTms
+        && sShopData.mainItemList != sRocketPrizeMons
+        && sShopData.mainItemList != FuchsiaCity_House2_HerbalistItems
+        && CheckBagHasItem(ITEM_THUNDER_PASS, 1);
+}
+
 // Functions
 static u8 CreateShopMenu(u8 martType)
 {
@@ -450,7 +462,7 @@ static u8 CreateShopMenu(u8 martType)
     else
         sShopData.fontId = FONT_NORMAL;
 
-    if (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
+    if (sShopData.martType == MART_TYPE_REGULAR && ShopAcceptsThunderPass())
     {
         menuActions = sShopMenuActions_BuySellSpecialsCancel;
         menuActionCount = NELEMS(sShopMenuActions_BuySellSpecialsCancel);
@@ -502,7 +514,7 @@ static void SetShopMenuCallback(void (*callback)(void))
 static void Task_ShopMenu(u8 taskId)
 {
     s8 input = Menu_ProcessInputNoWrapAround();
-    const struct MenuAction *menuActions = (sShopData.martType == MART_TYPE_REGULAR && CheckBagHasItem(ITEM_THUNDER_PASS, 1))
+    const struct MenuAction *menuActions = (sShopData.martType == MART_TYPE_REGULAR && ShopAcceptsThunderPass())
         ? sShopMenuActions_BuySellSpecialsCancel
         : sShopMenuActions_BuySellCancel;
 
@@ -1462,7 +1474,7 @@ void CreatePokemartMenu(const u16 *itemsForSale)
     sShopData.mainItemList = itemsForSale;
     SetShopMenuCallback(ScriptContext_Enable);
     DebugFunc_PrintShopMenuHistoryBeforeClearMaybe();
-    if (CheckBagHasItem(ITEM_THUNDER_PASS, 1) && !FlagGet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART))
+    if (ShopAcceptsThunderPass() && !FlagGet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART))
     {
         FlagSet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART);
         CreateTask(Task_ShowShopMenuAfterThunderPassIntro, 8);
