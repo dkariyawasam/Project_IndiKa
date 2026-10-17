@@ -2135,3 +2135,43 @@ Cry_Custom_CUBONE_ALOLAN::
 	.align 2
 Cry_Custom_KOFFING_GALARIAN::
 	.incbin "sound/direct_sound_samples/cries/custom_koffing_galarian.bin"
+
+	.align 2
+Cry_Imported_PONYTA_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_ponyta_galarian.bin"
+
+	.align 2
+Cry_Imported_RAPIDASH_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_rapidash_galarian.bin"
+
+	.align 2
+Cry_Imported_SLOWPOKE_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_slowpoke_galarian.bin"
+
+	.align 2
+Cry_Imported_SLOWBRO_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_slowbro_galarian.bin"
+
+	.align 2
+Cry_Imported_SLOWKING_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_slowking_galarian.bin"
+
+	.align 2
+Cry_Imported_MR_MIME_GALARIAN::
+	.incbin "sound/direct_sound_samples/cries/imported_mr_mime_galarian.bin"
+
+	.align 2
+Cry_Imported_MR_RIME::
+	.incbin "sound/direct_sound_samples/cries/imported_mr_rime.bin"
+
+	.align 2
+Cry_Imported_SIRFETCHD::
+	.incbin "sound/direct_sound_samples/cries/imported_sirfetchd.bin"
+
+	.align 2
+Cry_Imported_WOOPER_PALDEAN::
+	.incbin "sound/direct_sound_samples/cries/imported_wooper_paldean.bin"
+
+	.align 2
+Cry_Imported_CLODSIRE::
+	.incbin "sound/direct_sound_samples/cries/imported_clodsire.bin"

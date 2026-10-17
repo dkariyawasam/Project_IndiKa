@@ -201,6 +201,8 @@ void SaveSerializedGame(void)
 void LoadSerializedGame(void)
 {
     LoadPlayerParty();
+    MigrateSafariPreEvolutions();
+    SavePlayerParty();
     LoadObjectEvents();
 }
 

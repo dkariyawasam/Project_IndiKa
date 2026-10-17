@@ -518,4 +518,24 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(UNOWN_Z, gMonPalette_Unown),
     SPECIES_PAL(UNOWN_EMARK, gMonPalette_Unown),
     SPECIES_PAL(UNOWN_QMARK, gMonPalette_Unown),
+    SPECIES_PAL(PONYTA_GALARIAN, gMonPalette_PonytaGalarian),
+
+    SPECIES_PAL(RAPIDASH_GALARIAN, gMonPalette_RapidashGalarian),
+
+    SPECIES_PAL(SLOWPOKE_GALARIAN, gMonPalette_SlowpokeGalarian),
+
+    SPECIES_PAL(SLOWBRO_GALARIAN, gMonPalette_SlowbroGalarian),
+
+    SPECIES_PAL(SLOWKING_GALARIAN, gMonPalette_SlowkingGalarian),
+
+    SPECIES_PAL(MR_MIME_GALARIAN, gMonPalette_MrMimeGalarian),
+
+    SPECIES_PAL(MR_RIME, gMonPalette_MrRime),
+
+    SPECIES_PAL(SIRFETCHD, gMonPalette_Sirfetchd),
+
+    SPECIES_PAL(WOOPER_PALDEAN, gMonPalette_WooperPaldean),
+
+    SPECIES_PAL(CLODSIRE, gMonPalette_Clodsire),
+
 };

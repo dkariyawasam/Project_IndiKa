@@ -1188,7 +1188,9 @@ static void Cmd_critcalc(void)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBattlerAttacker].species == SPECIES_CHANSEY)
-                + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD);
+                + 2 * (holdEffect == HOLD_EFFECT_STICK && (gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD
+                 || gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD_GALARIAN
+                 || gBattleMons[gBattlerAttacker].species == SPECIES_SIRFETCHD));
 
     // A wounded target exposes openings for Osscythe's scythes.
     if (gBattleMons[gBattlerAttacker].ability == ABILITY_REAPERS_EDGE
@@ -1891,6 +1893,7 @@ static void Cmd_critmessage(void)
     {
         if (gCritMultiplier == 2 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
+            RecordCriticalHitEvolution();
             PrepareStringBattle(STRINGID_CRITICALHIT, gBattlerAttacker);
             gBattleCommunication[MSG_DISPLAY] = 1;
         }
@@ -7310,6 +7313,7 @@ static void Cmd_weatherdamage(void)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_CLOAK
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_ICE_BODY
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {

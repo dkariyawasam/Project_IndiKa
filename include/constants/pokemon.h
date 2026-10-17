@@ -288,10 +288,18 @@
 #define EVO_APEX_MOVE 20 // Known move, discovered Apex, and its habitat
 #define EVO_LEVEL_NIGHT 21 // Specified level, at night
 #define EVO_LEVEL_FEMALE 22 // Specified level, female only
+#define EVO_LEVEL_NON_SAFARI 25 // Level reached, not caught in Safari
+#define EVO_LEVEL_SAFARI 26 // Level reached, caught in Safari
+#define EVO_LEVEL_NIGHT_SAFARI 27 // Level reached at night, caught in Safari
+#define EVO_LEVEL_MOVE_SAFARI 29 // Known move and caught in Safari
+#define EVO_LEVEL_MOVE_NON_SAFARI 30 // Known move and other origin
+#define EVO_CRITICAL_HITS 28 // Critical hits in one completed battle
+#define EVO_ITEM_SAFARI 24 // Evolution item, caught in the Safari Zone
 #define EVO_LEVEL_MOVE 23 // Levels up knowing the specified move
 
 #define EVOS_PER_MON 8
 
+#define EVO_MODE_BATTLE_END 4 // Battle-only conditions; no level-up required
 #define EVO_MODE_NORMAL     0
 #define EVO_MODE_TRADE      1
 #define EVO_MODE_ITEM_USE   2

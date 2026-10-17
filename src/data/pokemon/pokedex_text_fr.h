@@ -3067,3 +3067,73 @@ const u8 gChikoritaPokedexText[] = _(
     "temperature."
 );
 const u8 gChikoritaPokedexTextUnused[] = _("");
+
+const u8 gPonytaGalarianPokedexText[] = _(
+    "Its mane stores the life energy of the\n"
+    "forest. It watches people quietly before\n"
+    "letting them approach its small horn."
+);
+const u8 gPonytaGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gRapidashGalarianPokedexText[] = _(
+    "Psychic power flows through its long horn.\n"
+    "It gallops through the woodland with a\n"
+    "lightness that belies its powerful legs."
+);
+const u8 gRapidashGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gSlowpokeGalarianPokedexText[] = _(
+    "The plants of its distant homeland have\n"
+    "changed its body. A sudden bright thought\n"
+    "usually fades before it can act on it."
+);
+const u8 gSlowpokeGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gSlowbroGalarianPokedexText[] = _(
+    "A SHELLDER grips its arm rather than its\n"
+    "tail. Poison gathers inside the shell,\n"
+    "ready to be expelled in a sudden burst."
+);
+const u8 gSlowbroGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gSlowkingGalarianPokedexText[] = _(
+    "The SHELLDER on its head guides its mind.\n"
+    "It mutters strange phrases while mixing\n"
+    "substances into mysterious concoctions."
+);
+const u8 gSlowkingGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gMrMimeGalarianPokedexText[] = _(
+    "It taps its feet against the ground to\n"
+    "spread a slippery sheet of ice. Its steps\n"
+    "become quicker as the surface freezes."
+);
+const u8 gMrMimeGalarianPokedexTextUnused[] = _(" ");
+
+const u8 gMrRimePokedexText[] = _(
+    "Its cane and nimble feet set a lively\n"
+    "rhythm. The face on its belly helps it\n"
+    "channel psychic power while it dances."
+);
+const u8 gMrRimePokedexTextUnused[] = _(" ");
+
+const u8 gSirfetchdPokedexText[] = _(
+    "It carries a long leek as a lance and\n"
+    "a broad leaf as a shield. It treats\n"
+    "every duel with solemn respect."
+);
+const u8 gSirfetchdPokedexTextUnused[] = _(" ");
+
+const u8 gWooperPaldeanPokedexText[] = _(
+    "A poisonous film keeps its skin moist\n"
+    "on dry land. Its branched gills have\n"
+    "hardened into sharp defensive points."
+);
+const u8 gWooperPaldeanPokedexTextUnused[] = _(" ");
+
+const u8 gClodsirePokedexText[] = _(
+    "It shelters small WOOPER on its broad\n"
+    "back. When threatened, sharp spines\n"
+    "rise through its soft, muddy skin."
+);
+const u8 gClodsirePokedexTextUnused[] = _(" ");

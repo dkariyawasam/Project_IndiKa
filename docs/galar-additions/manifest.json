@@ -1,0 +1,601 @@
+[
+  {
+    "species": "PONYTA_GALARIAN",
+    "reference": "ponyta-galar",
+    "icon_palette": 2,
+    "ability": "RUN_AWAY",
+    "learnset": [
+      [
+        1,
+        "GROWL"
+      ],
+      [
+        1,
+        "TACKLE"
+      ],
+      [
+        5,
+        "TAIL_WHIP"
+      ],
+      [
+        10,
+        "CONFUSION"
+      ],
+      [
+        15,
+        "FAIRY_WIND"
+      ],
+      [
+        20,
+        "AGILITY"
+      ],
+      [
+        25,
+        "PSYBEAM"
+      ],
+      [
+        30,
+        "STOMP"
+      ],
+      [
+        41,
+        "TAKE_DOWN"
+      ],
+      [
+        45,
+        "DAZZLING_GLEAM"
+      ],
+      [
+        50,
+        "PSYCHIC"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "13ba90a2fd3736be45b8d9075d65615ee3b7b29e39255858f3668c53e71f58fb",
+      "icon.png": "005da2f853b8ea651ec07f24f37c6fbeb0b9cc0c43d1ca6e7bdef96c0daf06d0",
+      "species.json": "4720a468d8b5d128938459373f8610b66280925e32290d4cb3aebc3eb1541228",
+      "cry.ogg": "6be79d7172ac8cc9c1584e6303155cffefeed33a279f4e8b55b71e9f2a80e900",
+      "normal.pal": "600526314789307d0bd9843ee7e1dfc318655b3aec5de0b7fe708d0d0d0498bb",
+      "pokemon.json": "91d39818eeb5457d226d1ef5dd26dcca972e2c566686bbed1b14e53ae4b258d8",
+      "back.png": "73d5631de2a65035a040bf0c0a1a866a48a157c5771391bd18ebcb2860832484",
+      "front.png": "f8719c5cdeff693448947d39e12d575f14c0839100fdc76c20a4e0ed69086138"
+    }
+  },
+  {
+    "species": "RAPIDASH_GALARIAN",
+    "reference": "rapidash-galar",
+    "icon_palette": 2,
+    "ability": "RUN_AWAY",
+    "learnset": [
+      [
+        1,
+        "CONFUSION"
+      ],
+      [
+        1,
+        "GROWL"
+      ],
+      [
+        1,
+        "MEGAHORN"
+      ],
+      [
+        1,
+        "QUICK_ATTACK"
+      ],
+      [
+        1,
+        "TACKLE"
+      ],
+      [
+        1,
+        "TAIL_WHIP"
+      ],
+      [
+        15,
+        "FAIRY_WIND"
+      ],
+      [
+        20,
+        "AGILITY"
+      ],
+      [
+        25,
+        "PSYBEAM"
+      ],
+      [
+        30,
+        "STOMP"
+      ],
+      [
+        43,
+        "TAKE_DOWN"
+      ],
+      [
+        49,
+        "DAZZLING_GLEAM"
+      ],
+      [
+        56,
+        "PSYCHIC"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "3dece33bbb7894eb2b1f8617b3f3746af379c2aac726afa86a05d9237a4b6f75",
+      "icon.png": "77db9b1def8e785f0d4ca6895fbf2e01669da6d0282cfdbd9fdf1c0211d22ca9",
+      "species.json": "bb1a8cbfd26a3b66d262b1373ea0e057a102c5812910bb30e35011bbd1321eba",
+      "cry.ogg": "43db7dc4707035f18025b43db27de3ebe5bf86bc7795b2a45e549e8cb00c0b7e",
+      "normal.pal": "df0a217f9f263e2450aa09b7ea8bd47158e6e77d0efbee6d4f43ba45b5f507d8",
+      "pokemon.json": "ac5e1919c770389b7d069d9720d73f3d2219ddcc97f6c9642bd54ae3235cdc60",
+      "back.png": "4f38a00116d0935eb24f641c463be6cb89fd116363c3c3bb74ce8f304e70baaa",
+      "front.png": "6359b81aeea414ac261a59f7f5529b695ad33f524063a8c7da1491e2d1ebf422"
+    }
+  },
+  {
+    "species": "SLOWPOKE_GALARIAN",
+    "reference": "slowpoke-galar",
+    "icon_palette": 0,
+    "ability": "OWN_TEMPO",
+    "learnset": [
+      [
+        1,
+        "CURSE"
+      ],
+      [
+        1,
+        "TACKLE"
+      ],
+      [
+        3,
+        "GROWL"
+      ],
+      [
+        6,
+        "ACID"
+      ],
+      [
+        9,
+        "YAWN"
+      ],
+      [
+        12,
+        "CONFUSION"
+      ],
+      [
+        15,
+        "DISABLE"
+      ],
+      [
+        18,
+        "WATER_PULSE"
+      ],
+      [
+        21,
+        "HEADBUTT"
+      ],
+      [
+        27,
+        "AMNESIA"
+      ],
+      [
+        30,
+        "SURF"
+      ],
+      [
+        33,
+        "SLACK_OFF"
+      ],
+      [
+        36,
+        "PSYCHIC"
+      ],
+      [
+        39,
+        "PSYCH_UP"
+      ],
+      [
+        42,
+        "RAIN_DANCE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "f8f574f0231aa27fd0993c7b1681fc61d364835226cf502e65c7dd5bbe3db28e",
+      "icon.png": "7a54021fdadb365fff88c72749a19e291fd9050a25fb40978964f44d1c618ed4",
+      "species.json": "ec38b128a6595c0e0bc7c7766bbb87a9533ac621f6fda95ee910ea4d2bb54498",
+      "cry.ogg": "8e239c0de81d81af370dd99bdbdace2f07e057704bc9d2a4aac8b4833ec200d1",
+      "normal.pal": "15815c22cc28db6cb6838d0fa513ecf1b5dc949e960e954f2e4f87c5676e6580",
+      "pokemon.json": "6619094a3a0793f8d8a29b558f65fcab1f24f77765bd204c49b1ffd9dd2c2547",
+      "back.png": "cb0f5d9c39e25bbe8609362735af9cff8028cb0e6880cf2a055c899c6a795848",
+      "front.png": "caa9327bb932ea39d345b85405d159eaf1330f9df4d15d92b6f21195792e4212"
+    }
+  },
+  {
+    "species": "SLOWBRO_GALARIAN",
+    "reference": "slowbro-galar",
+    "icon_palette": 0,
+    "ability": "OWN_TEMPO",
+    "learnset": [
+      [
+        1,
+        "ACID"
+      ],
+      [
+        1,
+        "CURSE"
+      ],
+      [
+        1,
+        "GROWL"
+      ],
+      [
+        1,
+        "SLUDGE"
+      ],
+      [
+        1,
+        "TACKLE"
+      ],
+      [
+        1,
+        "WITHDRAW"
+      ],
+      [
+        9,
+        "YAWN"
+      ],
+      [
+        12,
+        "CONFUSION"
+      ],
+      [
+        15,
+        "DISABLE"
+      ],
+      [
+        18,
+        "WATER_PULSE"
+      ],
+      [
+        21,
+        "HEADBUTT"
+      ],
+      [
+        27,
+        "AMNESIA"
+      ],
+      [
+        30,
+        "SURF"
+      ],
+      [
+        33,
+        "SLACK_OFF"
+      ],
+      [
+        36,
+        "PSYCHIC"
+      ],
+      [
+        39,
+        "PSYCH_UP"
+      ],
+      [
+        40,
+        "SLUDGE_BOMB"
+      ],
+      [
+        42,
+        "RAIN_DANCE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "80cf99235b071258f847df425386040714e6f70b372888abfdb82a87e6da8487",
+      "icon.png": "0005f9012dc211775a5023136aac6ec3f9ae33715afc1116655beadd11a7042f",
+      "species.json": "61a14193c2212081c050e9a304d0dba1698d71868b74d25a48582f6d53072415",
+      "cry.ogg": "216778d4a4a0db319e9226673fec1c16b899479949984b1627e42603c81f6bc0",
+      "normal.pal": "87a3f4f4717e598081c5bb81c1d2af84244e563f7eaff90a8d8d05108d43a9ea",
+      "pokemon.json": "992e619f2a0f3c169d4c30abe2c667bd96d55d8bd639497ec988ac070bac4ec3",
+      "back.png": "d7961bb3d6702e586c026e4f05c05f45dbad1d2fbe9142dfb56f7eb0bd48e9de",
+      "front.png": "269e54d867bc40f7d0fd958a47f3d2e18a933a39a6b6667885b717130e00f933"
+    }
+  },
+  {
+    "species": "SLOWKING_GALARIAN",
+    "reference": "slowking-galar",
+    "icon_palette": 0,
+    "ability": "OWN_TEMPO",
+    "learnset": [
+      [
+        1,
+        "ACID"
+      ],
+      [
+        1,
+        "CURSE"
+      ],
+      [
+        1,
+        "GROWL"
+      ],
+      [
+        1,
+        "SLUDGE"
+      ],
+      [
+        1,
+        "SWAGGER"
+      ],
+      [
+        1,
+        "TACKLE"
+      ],
+      [
+        9,
+        "YAWN"
+      ],
+      [
+        12,
+        "CONFUSION"
+      ],
+      [
+        15,
+        "DISABLE"
+      ],
+      [
+        18,
+        "WATER_PULSE"
+      ],
+      [
+        21,
+        "HEADBUTT"
+      ],
+      [
+        27,
+        "AMNESIA"
+      ],
+      [
+        30,
+        "SURF"
+      ],
+      [
+        33,
+        "SLACK_OFF"
+      ],
+      [
+        36,
+        "PSYCHIC"
+      ],
+      [
+        39,
+        "PSYCH_UP"
+      ],
+      [
+        40,
+        "SLUDGE_BOMB"
+      ],
+      [
+        42,
+        "RAIN_DANCE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "2d4cd9d5c9f40e7afb36714677f2e94d2d769b34e8c9a8d373cb52b222d27918",
+      "icon.png": "6068e9d9b29d4fe8a04e8163d71e76d84d2589f28efd1dd30739d4beaed1c13c",
+      "species.json": "22ce9a15dbf9c7ec3fbfc4ef4d9363b8e35eabab42b3bbdca3b066d03c8837ec",
+      "cry.ogg": "13525463508e35cfa828419c0af3f4b014fe5160a9472a489ebfe4a412fcf15f",
+      "normal.pal": "143ffbb5fb0b6daf3ea2ce1d16b6b892517a6a57589bf9c1bfe724cc20079802",
+      "pokemon.json": "f086b0b5082def732d2a3fb49e2d93e2bcf9855aea8eea791ab802ecee1894d2",
+      "back.png": "a797c7704e4c0e8f9d15a99e4b3d35944793cc3c28a9f2e756f735082aedfd6e",
+      "front.png": "be625ef3a7a1b55f88309c1e51be6033d28d25fcbfcd3d0531d8c3a61334d4df"
+    }
+  },
+  {
+    "species": "MR_MIME_GALARIAN",
+    "reference": "mr-mime-galar",
+    "icon_palette": 0,
+    "ability": "VITAL_SPIRIT",
+    "learnset": [
+      [
+        1,
+        "BATON_PASS"
+      ],
+      [
+        1,
+        "DAZZLING_GLEAM"
+      ],
+      [
+        1,
+        "ENCORE"
+      ],
+      [
+        1,
+        "LIGHT_SCREEN"
+      ],
+      [
+        1,
+        "MIMIC"
+      ],
+      [
+        1,
+        "POUND"
+      ],
+      [
+        1,
+        "PROTECT"
+      ],
+      [
+        1,
+        "RAPID_SPIN"
+      ],
+      [
+        1,
+        "RECYCLE"
+      ],
+      [
+        1,
+        "REFLECT"
+      ],
+      [
+        1,
+        "ROLE_PLAY"
+      ],
+      [
+        1,
+        "SAFEGUARD"
+      ],
+      [
+        12,
+        "CONFUSION"
+      ],
+      [
+        20,
+        "ICY_WIND"
+      ],
+      [
+        24,
+        "DOUBLE_KICK"
+      ],
+      [
+        28,
+        "PSYBEAM"
+      ],
+      [
+        32,
+        "HYPNOSIS"
+      ],
+      [
+        36,
+        "MIRROR_COAT"
+      ],
+      [
+        48,
+        "PSYCHIC"
+      ],
+      [
+        52,
+        "TEETER_DANCE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "3caf7bf621fbf6e9699654be8e07f98b9eae7955319352fa9e1eb472c263728b",
+      "icon.png": "8188e83cde3feaff8fb0ac7375856bff8c6807dbf0e720b98cd919b25d481b56",
+      "species.json": "2f5131323e1c889388bd72cd8cd13cfd04c185c67e5f2a2bf666c1f61a1adccd",
+      "cry.ogg": "00771d6d5f9bce86be72d0843d54178eb478f1039bf039e8428e6eea02b36cda",
+      "normal.pal": "744e5030ff81afed907cc93a23464127425f2e92408510974f54e1c17aca9abf",
+      "pokemon.json": "e4d11afb5341f715fc230034af85fdb07fdf4c9fdb567edd1e1353a4f21d4865",
+      "back.png": "cbd056b02206ec6d81442b471ae2706f59a1d88ea3b4ae5279f4e11fd559947d",
+      "front.png": "950383819596171ad991cd14255c4199a4a5fbb2030bdcda89664a05ae2643f3"
+    }
+  },
+  {
+    "species": "MR_RIME",
+    "reference": "mr-rime",
+    "icon_palette": 0,
+    "ability": "ICE_BODY",
+    "learnset": [
+      [
+        1,
+        "BATON_PASS"
+      ],
+      [
+        1,
+        "BLOCK"
+      ],
+      [
+        1,
+        "DAZZLING_GLEAM"
+      ],
+      [
+        1,
+        "ENCORE"
+      ],
+      [
+        1,
+        "FAKE_TEARS"
+      ],
+      [
+        1,
+        "LIGHT_SCREEN"
+      ],
+      [
+        1,
+        "MIMIC"
+      ],
+      [
+        1,
+        "POUND"
+      ],
+      [
+        1,
+        "PROTECT"
+      ],
+      [
+        1,
+        "RAPID_SPIN"
+      ],
+      [
+        1,
+        "RECYCLE"
+      ],
+      [
+        1,
+        "REFLECT"
+      ],
+      [
+        1,
+        "ROLE_PLAY"
+      ],
+      [
+        1,
+        "SAFEGUARD"
+      ],
+      [
+        1,
+        "SLACK_OFF"
+      ],
+      [
+        12,
+        "CONFUSION"
+      ],
+      [
+        20,
+        "ICY_WIND"
+      ],
+      [
+        24,
+        "DOUBLE_KICK"
+      ],
+      [
+        28,
+        "PSYBEAM"
+      ],
+      [
+        32,
+        "HYPNOSIS"
+      ],
+      [
+        36,
+        "MIRROR_COAT"
+      ],
+      [
+        48,
+        "PSYCHIC"
+      ],
+      [
+        52,
+        "TEETER_DANCE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "94d5e1c7e6b994ce512909edba9a1d62e4ebd9f98cae328e9c8f8b314f0ccb35",
+      "icon.png": "a69b354afc181ed6fc303fdf2408b4e1737217074dc259f1d75556b38441c577",
+      "species.json": "9570358a22df5d178d02551d5d827a6da53dd789e88060c764994914e8c21f74",
+      "footprint.png": "270a146f67bac6e2867d0a1e9bcc4207fae9cc4b18c65fd5cdfb57bb760bf57d",
+      "cry.ogg": "108daeb1a00ed8e92a097fb4e4161440449ad1f8bbae1809d0fa1928342bb266",
+      "normal.pal": "65ff4fbfb9568394d091b4b5eb414482f2eb6e690482b60b5aecfcfff66b4f3d",
+      "pokemon.json": "301dbed33896e8e761d8865eca8f552c3285465f99d472f4a48887e298b6e898",
+      "back.png": "f89b1adf6f5be52747e022511b5de5e5161f4e28ca7fa5db1970e6c207d1fbfc",
+      "front.png": "fc248006fae9ed1862e27f062bb4e735da7e34a5d403e885302d86fb56e35f92"
+    }
+  }
+]

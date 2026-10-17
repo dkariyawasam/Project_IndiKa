@@ -20,7 +20,7 @@ int main(void) {
     const unsigned stones[] = {ITEM_MOON_STONE, ITEM_SUN_STONE,
         ITEM_FIRE_STONE, ITEM_WATER_STONE, ITEM_THUNDER_STONE,
         ITEM_LEAF_STONE, ITEM_SHINY_STONE, ITEM_DUSK_STONE,
-        ITEM_DAWN_STONE, ITEM_ICE_STONE};
+        ITEM_DAWN_STONE, ITEM_ICE_STONE, ITEM_GALARICA_CUFF, ITEM_GALARICA_WREATH};
     for (unsigned i = 0; i < sizeof(stones) / sizeof(stones[0]); i++) {
         unsigned item = stones[i];
         assert(IS_POKEMON_ITEM(item));

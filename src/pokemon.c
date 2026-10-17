@@ -455,6 +455,18 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(GARDEVOIR),
     SPECIES_TO_NATIONAL(GALLADE),
     SPECIES_TO_HOENN(CHIMECHO),
+    SPECIES_TO_HOENN(PONYTA_GALARIAN),
+    SPECIES_TO_HOENN(RAPIDASH_GALARIAN),
+    SPECIES_TO_HOENN(SLOWPOKE_GALARIAN),
+    SPECIES_TO_HOENN(SLOWBRO_GALARIAN),
+    SPECIES_TO_HOENN(SLOWKING_GALARIAN),
+    SPECIES_TO_HOENN(MR_MIME_GALARIAN),
+    SPECIES_TO_HOENN(MR_RIME),
+
+    SPECIES_TO_HOENN(SIRFETCHD),
+    SPECIES_TO_HOENN(WOOPER_PALDEAN),
+    SPECIES_TO_HOENN(CLODSIRE),
+
 };
 
  // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -885,6 +897,18 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(HAPPINY),
     SPECIES_TO_NATIONAL(LICKILICKY),
     SPECIES_TO_NATIONAL(GALLADE),
+    SPECIES_TO_NATIONAL(PONYTA_GALARIAN),
+    SPECIES_TO_NATIONAL(RAPIDASH_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWPOKE_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWBRO_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWKING_GALARIAN),
+    SPECIES_TO_NATIONAL(MR_MIME_GALARIAN),
+    SPECIES_TO_NATIONAL(MR_RIME),
+
+    SPECIES_TO_NATIONAL(SIRFETCHD),
+    SPECIES_TO_NATIONAL(WOOPER_PALDEAN),
+    SPECIES_TO_NATIONAL(CLODSIRE),
+
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1240,6 +1264,18 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(OLD_UNOWN_X),
     HOENN_TO_NATIONAL(OLD_UNOWN_Y),
     HOENN_TO_NATIONAL(OLD_UNOWN_Z),
+    HOENN_TO_NATIONAL(PONYTA_GALARIAN),
+    HOENN_TO_NATIONAL(RAPIDASH_GALARIAN),
+    HOENN_TO_NATIONAL(SLOWPOKE_GALARIAN),
+    HOENN_TO_NATIONAL(SLOWBRO_GALARIAN),
+    HOENN_TO_NATIONAL(SLOWKING_GALARIAN),
+    HOENN_TO_NATIONAL(MR_MIME_GALARIAN),
+    HOENN_TO_NATIONAL(MR_RIME),
+
+    HOENN_TO_NATIONAL(SIRFETCHD),
+    HOENN_TO_NATIONAL(WOOPER_PALDEAN),
+    HOENN_TO_NATIONAL(CLODSIRE),
+
 };
 
 static const struct SpindaSpot sSpindaSpotGraphics[] =
@@ -4995,6 +5031,12 @@ static bool8 CanEvolveIntoApexInHabitat(u16 targetSpecies)
     return FlagGet(flag) && gMapHeader.regionMapSectionId == habitat;
 }
 
+static bool8 HasSafariEvolutionOrigin(struct Pokemon *mon)
+{
+    return GetMonData(mon, MON_DATA_MET_LOCATION, NULL) == MAPSEC_KANTO_SAFARI_ZONE
+        && GetMonData(mon, MON_DATA_MET_LEVEL, NULL) != 0;
+}
+
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
     int i;
@@ -5044,6 +5086,18 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_NON_SAFARI:
+                if (!HasSafariEvolutionOrigin(mon) && gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_SAFARI:
+                if (HasSafariEvolutionOrigin(mon) && gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_NIGHT_SAFARI:
+                if (HasSafariEvolutionOrigin(mon) && IsNightTime() && gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_LEVEL_NIGHT:
                 if (IsNightTime() && gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
@@ -5053,8 +5107,14 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_MOVE:
+            case EVO_LEVEL_MOVE_SAFARI:
+            case EVO_LEVEL_MOVE_NON_SAFARI:
                 {
                     u8 moveSlot;
+                    if (gEvolutionTable[species][i].method == EVO_LEVEL_MOVE_SAFARI && !HasSafariEvolutionOrigin(mon))
+                        break;
+                    if (gEvolutionTable[species][i].method == EVO_LEVEL_MOVE_NON_SAFARI && HasSafariEvolutionOrigin(mon))
+                        break;
                     for (moveSlot = 0; moveSlot < MAX_MON_MOVES; moveSlot++)
                     {
                         if (GetMonData(mon, MON_DATA_MOVE1 + moveSlot, NULL) == gEvolutionTable[species][i].param)
@@ -5132,6 +5192,17 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             }
         }
         break;
+    case EVO_MODE_BATTLE_END:
+        {
+            u8 slot;
+            for (slot = 0; slot < PARTY_SIZE; slot++)
+                if (mon == &gPlayerParty[slot])
+                    for (i = 0; i < EVOS_PER_MON; i++)
+                        if (gEvolutionTable[species][i].method == EVO_CRITICAL_HITS
+                         && gCriticalHitsInBattle[slot] >= gEvolutionTable[species][i].param)
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+        }
+        break;
     case EVO_MODE_TRADE:
         for (i = 0; i < EVOS_PER_MON; i++)
         {
@@ -5162,6 +5233,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         for (i = 0; i < EVOS_PER_MON; i++)
         {
             if ((gEvolutionTable[species][i].method == EVO_ITEM
+              || (gEvolutionTable[species][i].method == EVO_ITEM_SAFARI
+               && HasSafariEvolutionOrigin(mon))
               || (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE && GetMonGender(mon) == MON_FEMALE)
               || (gEvolutionTable[species][i].method == EVO_ITEM_MALE && GetMonGender(mon) == MON_MALE))
              && gEvolutionTable[species][i].param == evolutionItem)
@@ -5174,6 +5247,71 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     }
 
     return targetSpecies;
+}
+
+// Retain the old IDs as save-compatible aliases, but retire them from encounters/Dex.
+static bool8 NormalizeSafariPreEvolution(struct BoxPokemon *mon)
+{
+    u16 species = GetBoxMonData(mon, MON_DATA_SPECIES, NULL);
+    u16 replacement;
+    u8 origin = MAPSEC_KANTO_SAFARI_ZONE;
+    u8 legacyMetLevel = 1;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    if (species == SPECIES_PICHU_ALOLAN)
+        replacement = SPECIES_PICHU;
+    else if (species == SPECIES_PIKACHU_ALOLAN)
+        replacement = SPECIES_PIKACHU;
+    else if (species == SPECIES_EXEGGCUTE_ALOLAN)
+        replacement = SPECIES_EXEGGCUTE;
+    else if (species == SPECIES_CUBONE_ALOLAN)
+        replacement = SPECIES_CUBONE;
+    else if (species == SPECIES_KOFFING_GALARIAN)
+        replacement = SPECIES_KOFFING;
+    else
+        return FALSE;
+    GetBoxMonData(mon, MON_DATA_NICKNAME, nickname);
+    if (!StringCompare(nickname, gSpeciesNames[species]))
+        SetBoxMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[replacement]);
+    SetBoxMonData(mon, MON_DATA_SPECIES, &replacement);
+    SetBoxMonData(mon, MON_DATA_MET_LOCATION, &origin);
+    // Old custom forms were always eligible, including any previously hatched copies.
+    if (!GetBoxMonData(mon, MON_DATA_MET_LEVEL, NULL))
+        SetBoxMonData(mon, MON_DATA_MET_LEVEL, &legacyMetLevel);
+    return TRUE;
+}
+
+void MigrateSafariPreEvolutions(void)
+{
+    u16 i, box;
+    u16 oldDex, newDex;
+    static const u16 oldSpecies[] = {SPECIES_PICHU_ALOLAN, SPECIES_PIKACHU_ALOLAN, SPECIES_EXEGGCUTE_ALOLAN, SPECIES_CUBONE_ALOLAN, SPECIES_KOFFING_GALARIAN};
+    static const u16 newSpecies[] = {SPECIES_PICHU, SPECIES_PIKACHU, SPECIES_EXEGGCUTE, SPECIES_CUBONE, SPECIES_KOFFING};
+    // Keep the old Non-native page's claimed reward when its first species changes.
+    if (gSaveBlock1Ptr->dexPageRewards[SPECIES_PICHU_ALOLAN / 8] & (1 << (SPECIES_PICHU_ALOLAN % 8)))
+        gSaveBlock1Ptr->dexPageRewards[SPECIES_RAICHU_ALOLAN / 8] |= 1 << (SPECIES_RAICHU_ALOLAN % 8);
+    if (gSaveBlock1Ptr->dexPageRewards[SPECIES_EXEGGCUTE_ALOLAN / 8] & (1 << (SPECIES_EXEGGCUTE_ALOLAN % 8)))
+        gSaveBlock1Ptr->dexPageRewards[SPECIES_EXEGGUTOR_ALOLAN / 8] |= 1 << (SPECIES_EXEGGUTOR_ALOLAN % 8);
+    if (gSaveBlock1Ptr->dexPageRewards[SPECIES_CUBONE_ALOLAN / 8] & (1 << (SPECIES_CUBONE_ALOLAN % 8)))
+        gSaveBlock1Ptr->dexPageRewards[SPECIES_MAROWAK_ALOLAN / 8] |= 1 << (SPECIES_MAROWAK_ALOLAN % 8);
+    if (gSaveBlock1Ptr->dexPageRewards[SPECIES_KOFFING_GALARIAN / 8] & (1 << (SPECIES_KOFFING_GALARIAN % 8)))
+        gSaveBlock1Ptr->dexPageRewards[SPECIES_WEEZING_GALARIAN / 8] |= 1 << (SPECIES_WEEZING_GALARIAN % 8);
+    for (i = 0; i < PARTY_SIZE; i++)
+        if (NormalizeSafariPreEvolution(&gPlayerParty[i].box))
+            CalculateMonStats(&gPlayerParty[i]);
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+        for (i = 0; i < IN_BOX_COUNT; i++)
+            NormalizeSafariPreEvolution(GetBoxedMonPtr(box, i));
+    for (i = 0; i < DAYCARE_MON_COUNT; i++)
+        NormalizeSafariPreEvolution(&gSaveBlock1Ptr->daycare.mons[i].mon);
+    for (i = 0; i < ARRAY_COUNT(oldSpecies); i++)
+    {
+        oldDex = SpeciesToNationalPokedexNum(oldSpecies[i]);
+        newDex = SpeciesToNationalPokedexNum(newSpecies[i]);
+        if (GetSetPokedexFlag(oldDex, FLAG_GET_SEEN))
+            GetSetPokedexFlag(newDex, FLAG_SET_SEEN);
+        if (GetSetPokedexFlag(oldDex, FLAG_GET_CAUGHT))
+            GetSetPokedexFlag(newDex, FLAG_SET_CAUGHT);
+    }
 }
 
 static u16 HoennPokedexNumToSpecies(u16 hoennNum)

@@ -131,7 +131,8 @@ extern u8 gStringVar4[];
 
 #define ROUND_BITS_TO_BYTES(numBits) DIV_ROUND_UP(numBits, 8)
 
-#define DEX_FLAGS_NO ROUND_BITS_TO_BYTES(NUM_SPECIES)
+// Preserve the existing save layout; current National Dex IDs fit in 496 bits.
+#define DEX_FLAGS_NO 62
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_ADDITIONAL_PHRASE_BYTES ROUND_BITS_TO_BYTES(NUM_ADDITIONAL_PHRASES)
 

@@ -10,7 +10,7 @@ class PokedexTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):cls.dex=catalog(ROOT,build_catalog()['species']);cls.by_key={e['key']:e for e in cls.dex['species']}
     def test_active_sources_resolve(self):
-        self.assertEqual(len(self.dex['species']),399)
+        self.assertEqual(len(self.dex['species']),404)
         self.assertEqual([(e['key'],e['issues']) for e in self.dex['species'] if e['issues']],[])
     def test_single_and_double_anchors(self):
         self.assertEqual(self.dex['anchors']['single'][:2],[[72,80],[176,40]])

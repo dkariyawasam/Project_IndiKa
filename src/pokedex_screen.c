@@ -60,6 +60,9 @@ struct PokedexScreenData
     u8 dexCountsWindowId;
     u8 modeSelectListMenuId;
     u16 pageSpecies[4];
+    u8 formArrowTaskId;
+    u16 formArrowPosition;
+    u16 formArrowSpecies;
     u8 categoryMonWindowIds[4];
     u8 categoryMonInfoWindowIds[4];
     u8 categoryApexMarkerSpriteIds[4];
@@ -176,6 +179,15 @@ static void DexScreen_DrawHabitatBall(u8 windowId, u8 left, u8 y);
 static void ItemPrintFunc_OrderedListMenu(u8 windowId, u32 itemId, u8 y);
 static void Task_DexScreen_RegisterNonKantoMonBeforeNationalDex(u8 taskId);
 static void Task_DexScreen_RegisterMonToPokedex(u8 taskId);
+
+bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots);
+static const u16 *DexScreen_FormGroup(u16 species);
+static u16 DexScreen_AdjacentForm(u16 species, s8 direction);
+static bool8 DexScreen_FormFamilyOwned(u16 species);
+static void DexScreen_RemoveFormArrows(void);
+static void DexScreen_UpdateFormArrows(bool8 hidden);
+static bool8 DexScreen_ChangeForm(s8 direction);
+static const u8 *DexScreen_FormLabel(u16 species);
 
 #include "data/pokemon_graphics/footprint_table.h"
 
@@ -323,6 +335,8 @@ static const struct PokedexScreenData sDexScreenDataInitialState = {
     .selectionIconWindowId = -1,
     .dexCountsWindowId = -1,
     .pageSpecies = {-1, -1, -1, -1},
+    .formArrowTaskId = TASK_NONE,
+    .formArrowSpecies = SPECIES_NONE,
     .categoryMonWindowIds = {-1, -1, -1, -1},
     .categoryMonInfoWindowIds = {-1, -1, -1, -1},
     .categoryApexMarkerSpriteIds = {MAX_SPRITES, MAX_SPRITES, MAX_SPRITES, MAX_SPRITES},
@@ -895,6 +909,7 @@ static void Task_PokedexScreen(u8 taskId)
     case 6:
         if (sPokedexScreenData->rewardFooterRevealWidth != 0)
         {
+            DexScreen_RemoveFormArrows();
             DexScreen_AnimateRewardFooter();
             break;
         }
@@ -1448,6 +1463,127 @@ static void ItemPrintFunc_OrderedListMenu(u8 windowId, u32 itemId, u8 y)
     }
 }
 
+#include "data/pokemon/pokedex_forms.h"
+
+static const u16 *DexScreen_FormGroup(u16 species)
+{
+    u16 i, j;
+    for (i = 0; i < ARRAY_COUNT(sDexFormGroups); i++)
+        for (j = 0; j < 3; j++)
+            if (species != SPECIES_NONE && sDexFormGroups[i][j] == species)
+                return sDexFormGroups[i];
+    return NULL;
+}
+
+static u16 DexScreen_AdjacentForm(u16 species, s8 direction)
+{
+    const u16 *group = DexScreen_FormGroup(species);
+    s16 i;
+    if (group == NULL)
+        return SPECIES_NONE;
+    for (i = 0; i < 3 && group[i] != species; i++);
+    for (i += direction; i >= 0 && i < 3; i += direction)
+        if (group[i] != SPECIES_NONE && DexScreen_GetSetPokedexFlag(group[i], FLAG_GET_SEEN, TRUE))
+            return group[i];
+    return SPECIES_NONE;
+}
+
+static bool8 DexScreen_FormFamilyOwned(u16 species)
+{
+    const u16 *group = DexScreen_FormGroup(species);
+    u8 i;
+    if (group == NULL)
+        return DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, TRUE);
+    for (i = 0; i < 3 && group[i] != SPECIES_NONE; i++)
+        // This imported form has no acquisition source in the Kanto release.
+        if (group[i] != SPECIES_FARFETCHD_GALARIAN
+         && !DexScreen_GetSetPokedexFlag(group[i], FLAG_GET_CAUGHT, TRUE))
+            return FALSE;
+    return TRUE;
+}
+
+static const u8 *DexScreen_FormLabel(u16 species)
+{
+    const u16 *group = DexScreen_FormGroup(species);
+    static const u8 standard[] = _("STANDARD");
+    static const u8 alolan[] = _("ALOLAN");
+    static const u8 galarian[] = _("GALARIAN");
+    static const u8 deep[] = _("DEEP FORM");
+    static const u8 paldean[] = _("PALDEAN");
+    if (group == NULL)
+        return NULL;
+    if (species == group[0])
+        return standard;
+    if (species == SPECIES_CINNABAR_MAGIKARP || species == SPECIES_CINNABAR_FEEBAS)
+        return deep;
+    if (species == SPECIES_WOOPER_PALDEAN)
+        return paldean;
+    if (species == SPECIES_FARFETCHD_GALARIAN || species == SPECIES_MEOWTH_GALARIAN
+     || species == SPECIES_CORSOLA_GALARIAN || species == SPECIES_WEEZING_GALARIAN
+     || (species >= SPECIES_PONYTA_GALARIAN && species <= SPECIES_MR_MIME_GALARIAN))
+        return galarian;
+    return alolan;
+}
+
+static void DexScreen_RemoveFormArrows(void)
+{
+    if (sPokedexScreenData->formArrowTaskId != TASK_NONE)
+        RemoveScrollIndicatorArrowPair(sPokedexScreenData->formArrowTaskId);
+    sPokedexScreenData->formArrowTaskId = TASK_NONE;
+    sPokedexScreenData->formArrowSpecies = SPECIES_NONE;
+}
+
+static void DexScreen_UpdateFormArrows(bool8 hidden)
+{
+    u8 slot = sPokedexScreenData->categoryCursorPosInPage;
+    u16 species = sPokedexScreenData->pageSpecies[slot];
+    bool8 up = DexScreen_AdjacentForm(species, -1) != SPECIES_NONE;
+    bool8 down = DexScreen_AdjacentForm(species, 1) != SPECIES_NONE;
+    struct ScrollArrowsTemplate arrows;
+    const u8 *coords;
+    if (hidden || (!up && !down))
+    {
+        DexScreen_RemoveFormArrows();
+        return;
+    }
+    if (sPokedexScreenData->formArrowSpecies == species)
+        return;
+    DexScreen_RemoveFormArrows();
+    coords = sCategoryPageIconCoords[sPokedexScreenData->numMonsOnPage - 1][slot];
+    arrows = sDexOrderScrollArrowsTemplate;
+    arrows.tileTag = 2006;
+    arrows.palTag = TAG_NONE;
+    arrows.palNum = 7;
+    arrows.firstX = arrows.secondX = coords[2] * 8 + 58;
+    // Keep the arrows inside the card's top/bottom margins, clear of the header.
+    arrows.firstY = coords[3] * 8 + 4;
+    arrows.secondY = coords[3] * 8 + 34;
+    arrows.fullyUpThreshold = up ? 0xFFFF : 1;
+    arrows.fullyDownThreshold = down ? 0xFFFF : 1;
+    sPokedexScreenData->formArrowPosition = 1;
+    sPokedexScreenData->formArrowTaskId = AddScrollIndicatorArrowPair(&arrows, &sPokedexScreenData->formArrowPosition);
+    sPokedexScreenData->formArrowSpecies = species;
+}
+
+static bool8 DexScreen_ChangeForm(s8 direction)
+{
+    u8 slot = sPokedexScreenData->categoryCursorPosInPage;
+    u16 next = DexScreen_AdjacentForm(sPokedexScreenData->pageSpecies[slot], direction);
+    if (next == SPECIES_NONE)
+        return FALSE;
+    DexScreen_RemoveFormArrows();
+    DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonWindowIds[slot]);
+    DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonInfoWindowIds[slot]);
+    sPokedexScreenData->pageSpecies[slot] = next;
+    DexScreen_DrawMonPicInCategoryPage(next, slot, sPokedexScreenData->numMonsOnPage);
+    DexScreen_UpdatePageHeader();
+    CopyBgTilemapBufferToVram(1);
+    CopyBgTilemapBufferToVram(2);
+    DexScreen_UpdateFormArrows(FALSE);
+    PlaySE(SE_SELECT);
+    return TRUE;
+}
+
 static void Task_DexScreen_CategorySubmenu(u8 taskId)
 {
     bool8 rewardPending;
@@ -1503,10 +1639,15 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
     case 5:
         if (sPokedexScreenData->rewardFooterRevealWidth != 0)
         {
+            DexScreen_RemoveFormArrows();
             DexScreen_AnimateRewardFooter();
             break;
         }
         rewardPending = !DexScreen_PageRewardClaimed() && DexScreen_PageIsOwned();
+        DexScreen_UpdateFormArrows(rewardPending);
+        if (!rewardPending && ((JOY_REPT(DPAD_UP) && DexScreen_ChangeForm(-1))
+         || (JOY_REPT(DPAD_DOWN) && DexScreen_ChangeForm(1))))
+            break;
         if (rewardPending)
         {
             DexScreen_CreateCategoryPageSelectionCursor(0xFF);
@@ -1527,6 +1668,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         if (!rewardPending && JOY_NEW(A_BUTTON) && DexScreen_GetSetPokedexFlag(sPokedexScreenData->pageSpecies[sPokedexScreenData->categoryCursorPosInPage], FLAG_GET_SEEN, TRUE))
         {
             ListMenuRemoveCursorObject(sPokedexScreenData->categoryPageCursorTaskId, 0);
+            DexScreen_RemoveFormArrows();
             sPokedexScreenData->data[0] = 0;
             sPokedexScreenData->state = 12;
             break;
@@ -1578,6 +1720,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         break;
     case 6:
     case 7:
+        DexScreen_RemoveFormArrows();
         ListMenuRemoveCursorObject(sPokedexScreenData->categoryPageCursorTaskId, 0);
         BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
         sPokedexScreenData->state = 1;
@@ -2096,7 +2239,8 @@ static void DexScreen_LoadMonPicInWindow(u8 windowId, u16 species, u16 paletteOf
 
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y)
 {
-    u16 dexNum = SpeciesToNationalPokedexNum(species);
+    const u16 *group = DexScreen_FormGroup(species);
+    u16 dexNum = SpeciesToNationalPokedexNum(group == NULL ? species : group[0]);
     DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
     DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
 }
@@ -2233,8 +2377,10 @@ bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
             template.baseBlock = slot * 40 + 0x108;
             sPokedexScreenData->categoryMonInfoWindowIds[slot] = AddWindow(&template);
             CopyToWindowPixelBuffer(sPokedexScreenData->categoryMonInfoWindowIds[slot], sCategoryMonInfoBgTiles, 0, 0);
-            DexScreen_PrintMonDexNo(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_SMALL, species, 12, 0);
+            DexScreen_PrintMonDexNo(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_SMALL, DexScreen_FormGroup(species) ? DexScreen_FormGroup(species)[0] : species, 12, 0);
             DexScreen_AddTextPrinterParameterized(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_NORMAL, gSpeciesNames[species], 2, 13, 0);
+            if (DexScreen_FormLabel(species) != NULL)
+                DexScreen_AddTextPrinterParameterized(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_SMALL, DexScreen_FormLabel(species), 2, 27, 0);
             if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, TRUE))
                 BlitBitmapRectToWindow(sPokedexScreenData->categoryMonInfoWindowIds[slot], sDexScreen_CaughtIcon, 0, 0, 8, 8, 2, 3, 8, 8);
             if (DexScreen_IsApexSpecies(species))
@@ -2329,6 +2475,7 @@ static void DexScreen_DrawCategoryPageMonBackdrop(u16 species, u8 slot, u8 numSl
 static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void)
 {
     int i;
+    DexScreen_RemoveFormArrows();
     ClearWindowTilemap(0);
     SetWindowAttribute(0, WINDOW_PALETTE_NUM, 15);
     SetWindowAttribute(0, WINDOW_TILEMAP_TOP, 0);
@@ -2443,7 +2590,7 @@ static bool8 DexScreen_PageIsOwned(void)
     if (!page->count)
         return FALSE;
     for (i = 0; i < page->count; i++)
-        if (!DexScreen_GetSetPokedexFlag(page->species[i], FLAG_GET_CAUGHT, TRUE))
+        if (!DexScreen_FormFamilyOwned(page->species[i]))
             return FALSE;
     return TRUE;
 }
@@ -2490,6 +2637,34 @@ static void DexScreen_UpdatePageHeader(void)
         text = pending ? rightClaim : rightPick;
     else
         text = pending ? noClaim : noPick;
+    if (!pending)
+    {
+        static const u8 formControls[][50] = {
+            _("{A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFT}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_RIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTRIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_UP}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_RIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTRIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_DOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_RIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTRIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_UPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_RIGHTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK"),
+            _("{DPAD_ANY}PICK {A_BUTTON}OK {B_BUTTON}BACK")
+        };
+        u16 species = sPokedexScreenData->pageSpecies[sPokedexScreenData->categoryCursorPosInPage];
+        u8 mask = (left ? 1 : 0) | (right ? 2 : 0);
+        if (DexScreen_AdjacentForm(species, -1) != SPECIES_NONE)
+            mask |= 4;
+        if (DexScreen_AdjacentForm(species, 1) != SPECIES_NONE)
+            mask |= 8;
+        text = formControls[mask];
+    }
     DexScreen_PrintHeaderControlInfo(text);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_MAP);
@@ -2593,7 +2768,7 @@ static bool8 DexScreen_HabitatReady(u8 category)
         return FALSE;
     for (page = 0; page < gDexCategories[category].count; page++)
         for (mon = 0; mon < gDexCategories[category].page[page].count; mon++)
-            if (!DexScreen_GetSetPokedexFlag(gDexCategories[category].page[page].species[mon], FLAG_GET_CAUGHT, TRUE))
+            if (!DexScreen_FormFamilyOwned(gDexCategories[category].page[page].species[mon]))
                 return FALSE;
     return TRUE;
 }
@@ -2650,7 +2825,10 @@ static bool8 DexScreen_CreateCategoryListGfx(bool8 justRegistered)
     FillBgTilemapBufferRect_Palette0(3, 2, 0, 0, 30, 20);
     FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 32, 20);
     FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 20);
-    DexScreen_CreateCategoryPageSpeciesList(sPokedexScreenData->category, sPokedexScreenData->pageNum);
+    // Returning from an entry keeps the selected forms and their existing windows.
+    if (justRegistered || sPokedexScreenData->state != 18
+     || gTasks[sPokedexScreenData->taskId].func != Task_DexScreen_CategorySubmenu)
+        DexScreen_CreateCategoryPageSpeciesList(sPokedexScreenData->category, sPokedexScreenData->pageNum);
     // Window 0 is the reward footer during browsing. Do not temporarily move
     // it onto the controls: clearing that legacy title erased the live header.
     if (justRegistered)
@@ -3527,6 +3705,20 @@ static int DexScreen_CanShowMonInCategory(u8 categoryNum, u16 species)
     return DexScreen_CanShowMonInDex(species);
 }
 
+static u16 DexScreen_SeenForm(u16 species)
+{
+    const u16 *group;
+    u8 i;
+    if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
+        return species;
+    group = DexScreen_FormGroup(species);
+    if (group != NULL)
+        for (i = 0; i < 3 && group[i] != SPECIES_NONE; i++)
+            if (DexScreen_GetSetPokedexFlag(group[i], FLAG_GET_SEEN, TRUE))
+                return group[i];
+    return SPECIES_NONE;
+}
+
 static u8 DexScreen_IsPageUnlocked(u8 categoryNum, u8 pageNum)
 {
     int i, count;
@@ -3539,7 +3731,7 @@ static u8 DexScreen_IsPageUnlocked(u8 categoryNum, u8 pageNum)
         if (i < count)
         {
             species = gDexCategories[categoryNum].page[pageNum].species[i];
-            if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
+            if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_SeenForm(species) != SPECIES_NONE)
                 return TRUE;
         }
     }
@@ -3573,9 +3765,9 @@ void DexScreen_CreateCategoryPageSpeciesList(u8 categoryNum, u8 pageNum)
     for (i = 0; i < count; i++)
     {
         species = gDexCategories[categoryNum].page[pageNum].species[i];
-        if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_GetSetPokedexFlag(species, FLAG_GET_SEEN, TRUE))
+        if (DexScreen_CanShowMonInCategory(categoryNum, species) == TRUE && DexScreen_SeenForm(species) != SPECIES_NONE)
         {
-            sPokedexScreenData->pageSpecies[sPokedexScreenData->numMonsOnPage] = gDexCategories[categoryNum].page[pageNum].species[i];
+            sPokedexScreenData->pageSpecies[sPokedexScreenData->numMonsOnPage] = DexScreen_SeenForm(species);
             sPokedexScreenData->numMonsOnPage++;
         }
     }

@@ -41,3 +41,9 @@ A new [internet research and pixel-comparison pass](sprite-credit-research-oct12
 Some imported artwork still has incomplete artist attribution. If you created an asset used here, or can help identify its creator, please contact Dee Kariyawasam through the project’s release page so the credits can be corrected. Please identify the asset and include a source or original artwork where possible.
 
 The in-game project credits include this invitation on two pages before the final thank-you, each shown for eight seconds. Confirmed credits and the original FireRed sequence remain intact. The [research report](sprite-credit-research-oct12.md) continues to identify unresolved assets.
+
+## Galar regional additions
+
+See the [Galar asset provenance and implementation notes](../galar-additions/README.md) for the seven new species, Galarica items and imported cries, including upstream credits and source hashes.
+
+See also [Sirfetch’d and the Paldean Wooper line](../regional-evolutions/README.md) for their sprite and cry sources, transformations and remaining attribution research.

@@ -490,4 +490,24 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_HAPPINY] = sHappinyLevelUpLearnset,
     [SPECIES_LICKILICKY] = sLickitungLevelUpLearnset,
     [SPECIES_GALLADE] = sGalladeLevelUpLearnset,
+    [SPECIES_PONYTA_GALARIAN] = sPonytaGalarianLevelUpLearnset,
+
+    [SPECIES_RAPIDASH_GALARIAN] = sRapidashGalarianLevelUpLearnset,
+
+    [SPECIES_SLOWPOKE_GALARIAN] = sSlowpokeGalarianLevelUpLearnset,
+
+    [SPECIES_SLOWBRO_GALARIAN] = sSlowbroGalarianLevelUpLearnset,
+
+    [SPECIES_SLOWKING_GALARIAN] = sSlowkingGalarianLevelUpLearnset,
+
+    [SPECIES_MR_MIME_GALARIAN] = sMrMimeGalarianLevelUpLearnset,
+
+    [SPECIES_MR_RIME] = sMrRimeLevelUpLearnset,
+
+    [SPECIES_SIRFETCHD] = sSirfetchdLevelUpLearnset,
+
+    [SPECIES_WOOPER_PALDEAN] = sWooperPaldeanLevelUpLearnset,
+
+    [SPECIES_CLODSIRE] = sClodsireLevelUpLearnset,
+
 };

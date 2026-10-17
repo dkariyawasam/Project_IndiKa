@@ -450,4 +450,8 @@ const u8 *const gItemEffectTable[] =
     [ITEM_GREPA_BERRY - ITEM_POTION]   = sItemEffect_GrepaBerry,
     [ITEM_TAMATO_BERRY - ITEM_POTION]  = sItemEffect_TamatoBerry,
     [LAST_BERRY_INDEX - ITEM_POTION]   = NULL,
+    [ITEM_GALARICA_CUFF - ITEM_POTION] = sItemEffect_MoonStone,
+
+    [ITEM_GALARICA_WREATH - ITEM_POTION] = sItemEffect_MoonStone,
+
 };

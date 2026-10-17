@@ -181,6 +181,7 @@ static const u16 sDexCategory_ForestPkmn_Page23[] = {
 static const u16 sDexCategory_WatersEdgePkmn_Page1[] = {
     SPECIES_WOOPER,
     SPECIES_QUAGSIRE,
+    SPECIES_CLODSIRE,
 };
 
 static const u16 sDexCategory_WatersEdgePkmn_Page2[] = {
@@ -218,6 +219,7 @@ static const u16 sDexCategory_WatersEdgePkmn_Page7[] = {
 
 static const u16 sDexCategory_WatersEdgePkmn_Page8[] = {
     SPECIES_CORSOLA,
+    SPECIES_CURSOLA,
 };
 
 static const u16 sDexCategory_WatersEdgePkmn_Page9[] = {
@@ -312,6 +314,7 @@ static const u16 sDexCategory_CavePkmn_Page6[] = {
     SPECIES_MIME_JR,
     SPECIES_MR_MIME,
     SPECIES_MIME_SR,
+    SPECIES_MR_RIME,
 };
 
 static const u16 sDexCategory_CavePkmn_Page7[] = {
@@ -502,6 +505,7 @@ static const u16 sDexCategory_UrbanPkmn_Page4[] = {
 static const u16 sDexCategory_UrbanPkmn_Page5[] = {
     SPECIES_MEOWTH,
     SPECIES_PERSIAN,
+    SPECIES_PERRSERKER,
 };
 
 static const u16 sDexCategory_UrbanPkmn_Page6[] = {
@@ -671,77 +675,6 @@ static const u16 sDexCategory_NonNativePkmn_Page10[] = {
     SPECIES_SQUIRTLE,
     SPECIES_WARTORTLE,
     SPECIES_BLASTOISE,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page11[] = {
-    SPECIES_FARFETCHD_GALARIAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page12[] = {
-    SPECIES_RATTATA_ALOLAN,
-    SPECIES_RATICATE_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page13[] = {
-    SPECIES_PICHU_ALOLAN,
-    SPECIES_PIKACHU_ALOLAN,
-    SPECIES_RAICHU_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page14[] = {
-    SPECIES_SANDSHREW_ALOLAN,
-    SPECIES_SANDSLASH_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page15[] = {
-    SPECIES_DIGLETT_ALOLAN,
-    SPECIES_DUGTRIO_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page16[] = {
-    SPECIES_MEOWTH_ALOLAN,
-    SPECIES_PERSIAN_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page17[] = {
-    SPECIES_MEOWTH_GALARIAN,
-    SPECIES_PERRSERKER,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page18[] = {
-    SPECIES_GEODUDE_ALOLAN,
-    SPECIES_GRAVELER_ALOLAN,
-    SPECIES_GOLEM_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page19[] = {
-    SPECIES_GRIMER_ALOLAN,
-    SPECIES_MUK_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page20[] = {
-    SPECIES_VULPIX_ALOLAN,
-    SPECIES_NINETALES_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page21[] = {
-    SPECIES_EXEGGCUTE_ALOLAN,
-    SPECIES_EXEGGUTOR_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page22[] = {
-    SPECIES_CUBONE_ALOLAN,
-    SPECIES_MAROWAK_ALOLAN,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page23[] = {
-    SPECIES_CORSOLA_GALARIAN,
-    SPECIES_CURSOLA,
-};
-
-static const u16 sDexCategory_NonNativePkmn_Page24[] = {
-    SPECIES_KOFFING_GALARIAN,
-    SPECIES_WEEZING_GALARIAN,
 };
 
 static const u16 sDexCategory_NonNativePkmn_Page25[] = {
@@ -1114,20 +1047,6 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page8),
     DEX_CATEGORY(NonNativePkmn_Page9),
     DEX_CATEGORY(NonNativePkmn_Page10),
-    DEX_CATEGORY(NonNativePkmn_Page11),
-    DEX_CATEGORY(NonNativePkmn_Page12),
-    DEX_CATEGORY(NonNativePkmn_Page13),
-    DEX_CATEGORY(NonNativePkmn_Page14),
-    DEX_CATEGORY(NonNativePkmn_Page15),
-    DEX_CATEGORY(NonNativePkmn_Page16),
-    DEX_CATEGORY(NonNativePkmn_Page17),
-    DEX_CATEGORY(NonNativePkmn_Page18),
-    DEX_CATEGORY(NonNativePkmn_Page19),
-    DEX_CATEGORY(NonNativePkmn_Page20),
-    DEX_CATEGORY(NonNativePkmn_Page21),
-    DEX_CATEGORY(NonNativePkmn_Page22),
-    DEX_CATEGORY(NonNativePkmn_Page23),
-    DEX_CATEGORY(NonNativePkmn_Page24),
     DEX_CATEGORY(NonNativePkmn_Page25),
     DEX_CATEGORY(NonNativePkmn_Page26),
     DEX_CATEGORY(NonNativePkmn_Page27),
@@ -1169,6 +1088,8 @@ static const struct PokedexCategoryPage sDexCategory_NonNativePkmn[] = {
     DEX_CATEGORY(NonNativePkmn_Page73),
     DEX_CATEGORY(NonNativePkmn_Page74),
     DEX_CATEGORY(NonNativePkmn_Page76),
+
+
 };
 static const struct PokedexCategoryPage sDexCategory_RarePkmn[] = {
     DEX_CATEGORY(RarePkmn_Page1),
