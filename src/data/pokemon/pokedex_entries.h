@@ -20,10 +20,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 69,
         .description = gBulbasaurPokedexText,
         .unusedDescription = gBulbasaurPokedexTextUnused,
-        .pokemonScale = 356,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 439,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_IVYSAUR] =
@@ -33,10 +33,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 130,
         .description = gIvysaurPokedexText,
         .unusedDescription = gIvysaurPokedexTextUnused,
-        .pokemonScale = 332,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 391,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VENUSAUR] =
@@ -46,10 +46,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1000,
         .description = gVenusaurPokedexText,
         .unusedDescription = gVenusaurPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 328,
         .pokemonOffset = 1,
-        .trainerScale = 375,
-        .trainerOffset = 6,
+        .trainerScale = 446,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_CHARMANDER] =
@@ -59,10 +59,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 85,
         .description = gCharmanderPokedexText,
         .unusedDescription = gCharmanderPokedexTextUnused,
-        .pokemonScale = 410,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 605,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CHARMELEON] =
@@ -72,10 +72,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 190,
         .description = gCharmeleonPokedexText,
         .unusedDescription = gCharmeleonPokedexTextUnused,
-        .pokemonScale = 294,
+        .pokemonScale = 398,
         .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CHARIZARD] =
@@ -85,10 +85,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 905,
         .description = gCharizardPokedexText,
         .unusedDescription = gCharizardPokedexTextUnused,
-        .pokemonScale = 271,
-        .pokemonOffset = 0,
-        .trainerScale = 317,
-        .trainerOffset = 3,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
+        .trainerScale = 358,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_SQUIRTLE] =
@@ -98,10 +98,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 90,
         .description = gSquirtlePokedexText,
         .unusedDescription = gSquirtlePokedexTextUnused,
-        .pokemonScale = 412,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 670,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WARTORTLE] =
@@ -111,10 +111,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 225,
         .description = gWartortlePokedexText,
         .unusedDescription = gWartortlePokedexTextUnused,
-        .pokemonScale = 334,
+        .pokemonScale = 428,
         .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BLASTOISE] =
@@ -124,10 +124,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 855,
         .description = gBlastoisePokedexText,
         .unusedDescription = gBlastoisePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 1,
-        .trainerScale = 329,
-        .trainerOffset = 3,
+        .pokemonScale = 328,
+        .pokemonOffset = 2,
+        .trainerScale = 363,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_CATERPIE] =
@@ -137,10 +137,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 29,
         .description = gCaterpiePokedexText,
         .unusedDescription = gCaterpiePokedexTextUnused,
-        .pokemonScale = 549,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 993,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_METAPOD] =
@@ -150,10 +150,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 99,
         .description = gMetapodPokedexText,
         .unusedDescription = gMetapodPokedexTextUnused,
-        .pokemonScale = 350,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 332,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BUTTERFREE] =
@@ -163,10 +163,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 320,
         .description = gButterfreePokedexText,
         .unusedDescription = gButterfreePokedexTextUnused,
-        .pokemonScale = 312,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 364,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WEEDLE] =
@@ -176,10 +176,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 32,
         .description = gWeedlePokedexText,
         .unusedDescription = gWeedlePokedexTextUnused,
-        .pokemonScale = 455,
+        .pokemonScale = 869,
         .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KAKUNA] =
@@ -189,10 +189,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gKakunaPokedexText,
         .unusedDescription = gKakunaPokedexTextUnused,
-        .pokemonScale = 424,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 543,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BEEDRILL] =
@@ -202,10 +202,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 295,
         .description = gBeedrillPokedexText,
         .unusedDescription = gBeedrillPokedexTextUnused,
-        .pokemonScale = 366,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 428,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PIDGEY] =
@@ -215,10 +215,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 18,
         .description = gPidgeyPokedexText,
         .unusedDescription = gPidgeyPokedexTextUnused,
-        .pokemonScale = 492,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1148,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PIDGEOTTO] =
@@ -228,10 +228,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gPidgeottoPokedexText,
         .unusedDescription = gPidgeottoPokedexTextUnused,
-        .pokemonScale = 334,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 440,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PIDGEOT] =
@@ -241,10 +241,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 395,
         .description = gPidgeotPokedexText,
         .unusedDescription = gPidgeotPokedexTextUnused,
-        .pokemonScale = 269,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 379,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RATTATA] =
@@ -254,10 +254,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 35,
         .description = gRattataPokedexText,
         .unusedDescription = gRattataPokedexTextUnused,
-        .pokemonScale = 481,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1086,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RATICATE] =
@@ -267,10 +267,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 185,
         .description = gRaticatePokedexText,
         .unusedDescription = gRaticatePokedexTextUnused,
-        .pokemonScale = 401,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SPEAROW] =
@@ -280,10 +280,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gSpearowPokedexText,
         .unusedDescription = gSpearowPokedexTextUnused,
-        .pokemonScale = 571,
+        .pokemonScale = 1148,
         .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FEAROW] =
@@ -293,10 +293,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 380,
         .description = gFearowPokedexText,
         .unusedDescription = gFearowPokedexTextUnused,
-        .pokemonScale = 282,
-        .pokemonOffset = -1,
-        .trainerScale = 272,
-        .trainerOffset = -2,
+        .pokemonScale = 496,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EKANS] =
@@ -306,10 +306,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 69,
         .description = gEkansPokedexText,
         .unusedDescription = gEkansPokedexTextUnused,
-        .pokemonScale = 298,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 256,
+        .pokemonOffset = 6,
+        .trainerScale = 507,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_ARBOK] =
@@ -319,10 +319,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 650,
         .description = gArbokPokedexText,
         .unusedDescription = gArbokPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 323,
         .pokemonOffset = 0,
-        .trainerScale = 296,
-        .trainerOffset = 1,
+        .trainerScale = 714,
+        .trainerOffset = 12,
     },
 
     [NATIONAL_DEX_PIKACHU] =
@@ -332,10 +332,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 60,
         .description = gPikachuPokedexText,
         .unusedDescription = gPikachuPokedexTextUnused,
-        .pokemonScale = 479,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1140,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RAICHU] =
@@ -345,10 +345,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gRaichuPokedexText,
         .unusedDescription = gRaichuPokedexTextUnused,
-        .pokemonScale = 426,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 698,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SANDSHREW] =
@@ -358,10 +358,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 120,
         .description = gSandshrewPokedexText,
         .unusedDescription = gSandshrewPokedexTextUnused,
-        .pokemonScale = 370,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 574,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SANDSLASH] =
@@ -371,10 +371,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 295,
         .description = gSandslashPokedexText,
         .unusedDescription = gSandslashPokedexTextUnused,
-        .pokemonScale = 341,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDORAN_F] =
@@ -384,10 +384,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 70,
         .description = gNidoranFPokedexText,
         .unusedDescription = gNidoranFPokedexTextUnused,
-        .pokemonScale = 488,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 745,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDORINA] =
@@ -397,10 +397,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 200,
         .description = gNidorinaPokedexText,
         .unusedDescription = gNidorinaPokedexTextUnused,
-        .pokemonScale = 381,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 489,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDOQUEEN] =
@@ -410,10 +410,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 600,
         .description = gNidoqueenPokedexText,
         .unusedDescription = gNidoqueenPokedexTextUnused,
-        .pokemonScale = 283,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 408,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDORAN_M] =
@@ -423,10 +423,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 90,
         .description = gNidoranMPokedexText,
         .unusedDescription = gNidoranMPokedexTextUnused,
-        .pokemonScale = 480,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 652,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDORINO] =
@@ -436,10 +436,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 195,
         .description = gNidorinoPokedexText,
         .unusedDescription = gNidorinoPokedexTextUnused,
-        .pokemonScale = 408,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 486,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NIDOKING] =
@@ -449,10 +449,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 620,
         .description = gNidokingPokedexText,
         .unusedDescription = gNidokingPokedexTextUnused,
-        .pokemonScale = 304,
+        .pokemonScale = 386,
         .pokemonOffset = 3,
-        .trainerScale = 323,
-        .trainerOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CLEFAIRY] =
@@ -462,10 +462,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 75,
         .description = gClefairyPokedexText,
         .unusedDescription = gClefairyPokedexTextUnused,
-        .pokemonScale = 425,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CLEFABLE] =
@@ -475,10 +475,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 400,
         .description = gClefablePokedexText,
         .unusedDescription = gClefablePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 3,
-        .trainerScale = 272,
-        .trainerOffset = -1,
+        .pokemonScale = 337,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VULPIX] =
@@ -488,10 +488,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 99,
         .description = gVulpixPokedexText,
         .unusedDescription = gVulpixPokedexTextUnused,
-        .pokemonScale = 497,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 605,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NINETALES] =
@@ -501,10 +501,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 199,
         .description = gNinetalesPokedexText,
         .unusedDescription = gNinetalesPokedexTextUnused,
-        .pokemonScale = 339,
-        .pokemonOffset = 6,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 474,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_JIGGLYPUFF] =
@@ -514,10 +514,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 55,
         .description = gJigglypuffPokedexText,
         .unusedDescription = gJigglypuffPokedexTextUnused,
-        .pokemonScale = 419,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 614,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WIGGLYTUFF] =
@@ -527,10 +527,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 120,
         .description = gWigglytuffPokedexText,
         .unusedDescription = gWigglytuffPokedexTextUnused,
-        .pokemonScale = 328,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ZUBAT] =
@@ -540,10 +540,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 75,
         .description = gZubatPokedexText,
         .unusedDescription = gZubatPokedexTextUnused,
-        .pokemonScale = 355,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOLBAT] =
@@ -553,10 +553,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 550,
         .description = gGolbatPokedexText,
         .unusedDescription = gGolbatPokedexTextUnused,
-        .pokemonScale = 291,
+        .pokemonScale = 345,
         .pokemonOffset = 0,
-        .trainerScale = 296,
-        .trainerOffset = 2,
+        .trainerScale = 361,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_ODDISH] =
@@ -566,10 +566,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 54,
         .description = gOddishPokedexText,
         .unusedDescription = gOddishPokedexTextUnused,
-        .pokemonScale = 423,
+        .pokemonScale = 670,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GLOOM] =
@@ -579,10 +579,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 86,
         .description = gGloomPokedexText,
         .unusedDescription = gGloomPokedexTextUnused,
-        .pokemonScale = 329,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 559,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VILEPLUME] =
@@ -592,10 +592,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 186,
         .description = gVileplumePokedexText,
         .unusedDescription = gVileplumePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 4,
-        .trainerScale = 272,
-        .trainerOffset = -2,
+        .pokemonScale = 334,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PARAS] =
@@ -605,10 +605,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 54,
         .description = gParasPokedexText,
         .unusedDescription = gParasPokedexTextUnused,
-        .pokemonScale = 546,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 869,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PARASECT] =
@@ -618,10 +618,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 295,
         .description = gParasectPokedexText,
         .unusedDescription = gParasectPokedexTextUnused,
-        .pokemonScale = 307,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 438,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VENONAT] =
@@ -631,10 +631,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gVenonatPokedexText,
         .unusedDescription = gVenonatPokedexTextUnused,
-        .pokemonScale = 360,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 438,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VENOMOTH] =
@@ -644,10 +644,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 125,
         .description = gVenomothPokedexText,
         .unusedDescription = gVenomothPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 3,
-        .trainerScale = 293,
-        .trainerOffset = 1,
+        .pokemonScale = 323,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DIGLETT] =
@@ -657,10 +657,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 8,
         .description = gDiglettPokedexText,
         .unusedDescription = gDiglettPokedexTextUnused,
-        .pokemonScale = 706,
-        .pokemonOffset = 22,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1210,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DUGTRIO] =
@@ -670,10 +670,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 333,
         .description = gDugtrioPokedexText,
         .unusedDescription = gDugtrioPokedexTextUnused,
-        .pokemonScale = 384,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 492,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEOWTH] =
@@ -683,10 +683,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 42,
         .description = gMeowthPokedexText,
         .unusedDescription = gMeowthPokedexTextUnused,
-        .pokemonScale = 480,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 931,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PERSIAN] =
@@ -696,10 +696,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 320,
         .description = gPersianPokedexText,
         .unusedDescription = gPersianPokedexTextUnused,
-        .pokemonScale = 320,
+        .pokemonScale = 419,
         .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PSYDUCK] =
@@ -709,10 +709,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 196,
         .description = gPsyduckPokedexText,
         .unusedDescription = gPsyduckPokedexTextUnused,
-        .pokemonScale = 347,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 524,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOLDUCK] =
@@ -722,10 +722,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 766,
         .description = gGolduckPokedexText,
         .unusedDescription = gGolduckPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = 4,
-        .trainerScale = 287,
-        .trainerOffset = 1,
+        .pokemonScale = 289,
+        .pokemonOffset = 0,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MANKEY] =
@@ -735,10 +735,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 280,
         .description = gMankeyPokedexText,
         .unusedDescription = gMankeyPokedexTextUnused,
-        .pokemonScale = 388,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 726,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PRIMEAPE] =
@@ -748,10 +748,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 320,
         .description = gPrimeapePokedexText,
         .unusedDescription = gPrimeapePokedexTextUnused,
-        .pokemonScale = 326,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 475,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GROWLITHE] =
@@ -761,10 +761,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 190,
         .description = gGrowlithePokedexText,
         .unusedDescription = gGrowlithePokedexTextUnused,
-        .pokemonScale = 346,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 532,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ARCANINE] =
@@ -774,10 +774,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1550,
         .description = gArcaninePokedexText,
         .unusedDescription = gArcaninePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = -1,
-        .trainerScale = 312,
-        .trainerOffset = 2,
+        .pokemonScale = 328,
+        .pokemonOffset = 0,
+        .trainerScale = 388,
+        .trainerOffset = 3,
     },
 
     [NATIONAL_DEX_POLIWAG] =
@@ -787,10 +787,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 124,
         .description = gPoliwagPokedexText,
         .unusedDescription = gPoliwagPokedexTextUnused,
-        .pokemonScale = 353,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 481,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_POLIWHIRL] =
@@ -800,10 +800,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 200,
         .description = gPoliwhirlPokedexText,
         .unusedDescription = gPoliwhirlPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 382,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_POLIWRATH] =
@@ -813,10 +813,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 540,
         .description = gPoliwrathPokedexText,
         .unusedDescription = gPoliwrathPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 344,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ABRA] =
@@ -826,10 +826,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 195,
         .description = gAbraPokedexText,
         .unusedDescription = gAbraPokedexTextUnused,
-        .pokemonScale = 374,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 414,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KADABRA] =
@@ -839,10 +839,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 565,
         .description = gKadabraPokedexText,
         .unusedDescription = gKadabraPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 387,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ALAKAZAM] =
@@ -852,10 +852,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 480,
         .description = gAlakazamPokedexText,
         .unusedDescription = gAlakazamPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = -1,
-        .trainerScale = 271,
-        .trainerOffset = -1,
+        .pokemonScale = 379,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MACHOP] =
@@ -865,10 +865,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 195,
         .description = gMachopPokedexText,
         .unusedDescription = gMachopPokedexTextUnused,
-        .pokemonScale = 320,
+        .pokemonScale = 489,
         .pokemonOffset = 12,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MACHOKE] =
@@ -878,10 +878,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 705,
         .description = gMachokePokedexText,
         .unusedDescription = gMachokePokedexTextUnused,
-        .pokemonScale = 304,
-        .pokemonOffset = 6,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 310,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MACHAMP] =
@@ -891,9 +891,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1300,
         .description = gMachampPokedexText,
         .unusedDescription = gMachampPokedexTextUnused,
-        .pokemonScale = 278,
+        .pokemonScale = 351,
         .pokemonOffset = 2,
-        .trainerScale = 283,
+        .trainerScale = 343,
         .trainerOffset = 0,
     },
 
@@ -904,10 +904,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 40,
         .description = gBellsproutPokedexText,
         .unusedDescription = gBellsproutPokedexTextUnused,
-        .pokemonScale = 354,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 505,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WEEPINBELL] =
@@ -917,10 +917,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 64,
         .description = gWeepinbellPokedexText,
         .unusedDescription = gWeepinbellPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 391,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VICTREEBEL] =
@@ -930,10 +930,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 155,
         .description = gVictreebelPokedexText,
         .unusedDescription = gVictreebelPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 302,
-        .trainerOffset = 2,
+        .pokemonScale = 306,
+        .pokemonOffset = 0,
+        .trainerScale = 353,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_TENTACOOL] =
@@ -943,10 +943,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 455,
         .description = gTentacoolPokedexText,
         .unusedDescription = gTentacoolPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TENTACRUEL] =
@@ -956,9 +956,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 550,
         .description = gTentacruelPokedexText,
         .unusedDescription = gTentacruelPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = -1,
-        .trainerScale = 312,
+        .pokemonScale = 343,
+        .pokemonOffset = 0,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -969,10 +969,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 200,
         .description = gGeodudePokedexText,
         .unusedDescription = gGeodudePokedexTextUnused,
-        .pokemonScale = 330,
+        .pokemonScale = 605,
         .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GRAVELER] =
@@ -982,10 +982,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1050,
         .description = gGravelerPokedexText,
         .unusedDescription = gGravelerPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = 8,
-        .trainerScale = 305,
-        .trainerOffset = 1,
+        .pokemonScale = 391,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOLEM] =
@@ -995,10 +995,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 3000,
         .description = gGolemPokedexText,
         .unusedDescription = gGolemPokedexTextUnused,
-        .pokemonScale = 266,
-        .pokemonOffset = 3,
-        .trainerScale = 298,
-        .trainerOffset = 1,
+        .pokemonScale = 332,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PONYTA] =
@@ -1008,10 +1008,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gPonytaPokedexText,
         .unusedDescription = gPonytaPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 475,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RAPIDASH] =
@@ -1021,10 +1021,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 950,
         .description = gRapidashPokedexText,
         .unusedDescription = gRapidashPokedexTextUnused,
-        .pokemonScale = 282,
-        .pokemonOffset = -1,
-        .trainerScale = 312,
-        .trainerOffset = 1,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SLOWPOKE] =
@@ -1034,10 +1034,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 360,
         .description = gSlowpokePokedexText,
         .unusedDescription = gSlowpokePokedexTextUnused,
-        .pokemonScale = 271,
-        .pokemonOffset = 10,
-        .trainerScale = 272,
-        .trainerOffset = -2,
+        .pokemonScale = 303,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SLOWBRO] =
@@ -1047,10 +1047,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 785,
         .description = gSlowbroPokedexText,
         .unusedDescription = gSlowbroPokedexTextUnused,
-        .pokemonScale = 257,
-        .pokemonOffset = -2,
-        .trainerScale = 312,
-        .trainerOffset = 0,
+        .pokemonScale = 328,
+        .pokemonOffset = 0,
+        .trainerScale = 370,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_MAGNEMITE] =
@@ -1060,10 +1060,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 60,
         .description = gMagnemitePokedexText,
         .unusedDescription = gMagnemitePokedexTextUnused,
-        .pokemonScale = 294,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 621,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGNETON] =
@@ -1073,10 +1073,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 600,
         .description = gMagnetonPokedexText,
         .unusedDescription = gMagnetonPokedexTextUnused,
-        .pokemonScale = 293,
-        .pokemonOffset = -4,
-        .trainerScale = 273,
-        .trainerOffset = -2,
+        .pokemonScale = 335,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FARFETCHD] =
@@ -1086,10 +1086,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 150,
         .description = gFarfetchdPokedexText,
         .unusedDescription = gFarfetchdPokedexTextUnused,
-        .pokemonScale = 317,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -3,
+        .pokemonScale = 489,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DODUO] =
@@ -1099,9 +1099,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 392,
         .description = gDoduoPokedexText,
         .unusedDescription = gDoduoPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 313,
         .pokemonOffset = 3,
-        .trainerScale = 287,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -1112,10 +1112,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 852,
         .description = gDodrioPokedexText,
         .unusedDescription = gDodrioPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = -2,
-        .trainerScale = 296,
-        .trainerOffset = 1,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
+        .trainerScale = 385,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_SEEL] =
@@ -1125,10 +1125,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 900,
         .description = gSeelPokedexText,
         .unusedDescription = gSeelPokedexTextUnused,
-        .pokemonScale = 298,
+        .pokemonScale = 389,
         .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DEWGONG] =
@@ -1138,10 +1138,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1200,
         .description = gDewgongPokedexText,
         .unusedDescription = gDewgongPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = 1,
-        .trainerScale = 306,
-        .trainerOffset = -1,
+        .pokemonScale = 351,
+        .pokemonOffset = 5,
+        .trainerScale = 437,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_GRIMER] =
@@ -1151,10 +1151,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gGrimerPokedexText,
         .unusedDescription = gGrimerPokedexTextUnused,
-        .pokemonScale = 258,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 424,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MUK] =
@@ -1164,10 +1164,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gMukPokedexText,
         .unusedDescription = gMukPokedexTextUnused,
-        .pokemonScale = 288,
+        .pokemonScale = 356,
         .pokemonOffset = 7,
-        .trainerScale = 288,
-        .trainerOffset = -1,
+        .trainerScale = 373,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_SHELLDER] =
@@ -1177,10 +1177,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 40,
         .description = gShellderPokedexText,
         .unusedDescription = gShellderPokedexTextUnused,
-        .pokemonScale = 643,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1024,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CLOYSTER] =
@@ -1190,10 +1190,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1325,
         .description = gCloysterPokedexText,
         .unusedDescription = gCloysterPokedexTextUnused,
-        .pokemonScale = 264,
-        .pokemonOffset = 0,
-        .trainerScale = 288,
-        .trainerOffset = -1,
+        .pokemonScale = 348,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GASTLY] =
@@ -1203,10 +1203,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1,
         .description = gGastlyPokedexText,
         .unusedDescription = gGastlyPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 365,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HAUNTER] =
@@ -1216,10 +1216,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1,
         .description = gHaunterPokedexText,
         .unusedDescription = gHaunterPokedexTextUnused,
-        .pokemonScale = 269,
-        .pokemonOffset = 2,
-        .trainerScale = 308,
-        .trainerOffset = 1,
+        .pokemonScale = 323,
+        .pokemonOffset = 3,
+        .trainerScale = 386,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_GENGAR] =
@@ -1229,10 +1229,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 405,
         .description = gGengarPokedexText,
         .unusedDescription = gGengarPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 4,
-        .trainerScale = 317,
-        .trainerOffset = 1,
+        .pokemonScale = 284,
+        .pokemonOffset = 2,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ONIX] =
@@ -1242,10 +1242,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2100,
         .description = gOnixPokedexText,
         .unusedDescription = gOnixPokedexTextUnused,
-        .pokemonScale = 257,
+        .pokemonScale = 328,
         .pokemonOffset = 0,
-        .trainerScale = 515,
-        .trainerOffset = 12,
+        .trainerScale = 1796,
+        .trainerOffset = 19,
     },
 
     [NATIONAL_DEX_DROWZEE] =
@@ -1255,10 +1255,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 324,
         .description = gDrowzeePokedexText,
         .unusedDescription = gDrowzeePokedexTextUnused,
-        .pokemonScale = 274,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 428,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HYPNO] =
@@ -1268,10 +1268,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 756,
         .description = gHypnoPokedexText,
         .unusedDescription = gHypnoPokedexTextUnused,
-        .pokemonScale = 298,
+        .pokemonScale = 351,
         .pokemonOffset = 3,
-        .trainerScale = 310,
-        .trainerOffset = 2,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_KRABBY] =
@@ -1281,10 +1281,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 65,
         .description = gKrabbyPokedexText,
         .unusedDescription = gKrabbyPokedexTextUnused,
-        .pokemonScale = 469,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 815,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KINGLER] =
@@ -1294,10 +1294,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 600,
         .description = gKinglerPokedexText,
         .unusedDescription = gKinglerPokedexTextUnused,
-        .pokemonScale = 287,
-        .pokemonOffset = 3,
-        .trainerScale = 308,
-        .trainerOffset = 1,
+        .pokemonScale = 380,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VOLTORB] =
@@ -1307,10 +1307,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 104,
         .description = gVoltorbPokedexText,
         .unusedDescription = gVoltorbPokedexTextUnused,
-        .pokemonScale = 364,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ELECTRODE] =
@@ -1320,10 +1320,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 666,
         .description = gElectrodePokedexText,
         .unusedDescription = gElectrodePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 279,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EXEGGCUTE] =
@@ -1333,10 +1333,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 25,
         .description = gExeggcutePokedexText,
         .unusedDescription = gExeggcutePokedexTextUnused,
-        .pokemonScale = 495,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1047,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EXEGGUTOR] =
@@ -1346,10 +1346,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1200,
         .description = gExeggutorPokedexText,
         .unusedDescription = gExeggutorPokedexTextUnused,
-        .pokemonScale = 283,
+        .pokemonScale = 351,
         .pokemonOffset = 0,
-        .trainerScale = 376,
-        .trainerOffset = 7,
+        .trainerScale = 408,
+        .trainerOffset = 4,
     },
 
     [NATIONAL_DEX_CUBONE] =
@@ -1359,10 +1359,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 65,
         .description = gCubonePokedexText,
         .unusedDescription = gCubonePokedexTextUnused,
-        .pokemonScale = 545,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 884,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAROWAK] =
@@ -1372,10 +1372,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 450,
         .description = gMarowakPokedexText,
         .unusedDescription = gMarowakPokedexTextUnused,
-        .pokemonScale = 293,
-        .pokemonOffset = 12,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 410,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HITMONLEE] =
@@ -1385,10 +1385,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 498,
         .description = gHitmonleePokedexText,
         .unusedDescription = gHitmonleePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 273,
-        .trainerOffset = -2,
+        .pokemonScale = 323,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HITMONCHAN] =
@@ -1398,10 +1398,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 502,
         .description = gHitmonchanPokedexText,
         .unusedDescription = gHitmonchanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 1,
-        .trainerScale = 264,
-        .trainerOffset = -2,
+        .pokemonScale = 372,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LICKITUNG] =
@@ -1411,10 +1411,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 655,
         .description = gLickitungPokedexText,
         .unusedDescription = gLickitungPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = 3,
-        .trainerScale = 272,
-        .trainerOffset = -3,
+        .pokemonScale = 365,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KOFFING] =
@@ -1424,10 +1424,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gKoffingPokedexText,
         .unusedDescription = gKoffingPokedexTextUnused,
-        .pokemonScale = 369,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 621,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WEEZING] =
@@ -1437,10 +1437,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 95,
         .description = gWeezingPokedexText,
         .unusedDescription = gWeezingPokedexTextUnused,
-        .pokemonScale = 321,
-        .pokemonOffset = -1,
-        .trainerScale = 276,
-        .trainerOffset = -1,
+        .pokemonScale = 419,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RHYHORN] =
@@ -1450,10 +1450,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1150,
         .description = gRhyhornPokedexText,
         .unusedDescription = gRhyhornPokedexTextUnused,
-        .pokemonScale = 291,
-        .pokemonOffset = 7,
-        .trainerScale = 276,
-        .trainerOffset = -2,
+        .pokemonScale = 428,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RHYDON] =
@@ -1463,9 +1463,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1200,
         .description = gRhydonPokedexText,
         .unusedDescription = gRhydonPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = -1,
-        .trainerScale = 344,
+        .pokemonScale = 334,
+        .pokemonOffset = 0,
+        .trainerScale = 401,
         .trainerOffset = 3,
     },
 
@@ -1477,9 +1477,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gHappinyPokedexText,
         .unusedDescription = gHappinyPokedexTextUnused,
         .pokemonScale = 590,
-        .pokemonOffset = 14,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LICKILICKY] =
@@ -1489,9 +1489,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1400,
         .description = gLickilickyPokedexText,
         .unusedDescription = gLickilickyPokedexTextUnused,
-        .pokemonScale = 355,
+        .pokemonScale = 339,
         .pokemonOffset = 0,
-        .trainerScale = 363,
+        .trainerScale = 347,
         .trainerOffset = 0,
     },
 
@@ -1502,10 +1502,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 346,
         .description = gChanseyPokedexText,
         .unusedDescription = gChanseyPokedexTextUnused,
-        .pokemonScale = 257,
-        .pokemonOffset = 6,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 389,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TANGELA] =
@@ -1515,10 +1515,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 350,
         .description = gTangelaPokedexText,
         .unusedDescription = gTangelaPokedexTextUnused,
-        .pokemonScale = 320,
+        .pokemonScale = 438,
         .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TANGROWTH] =
@@ -1528,10 +1528,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1286,
         .description = gTangrowthPokedexText,
         .unusedDescription = gTangrowthPokedexTextUnused,
-        .pokemonScale = 367,
+        .pokemonScale = 351,
         .pokemonOffset = 0,
-        .trainerScale = 427,
-        .trainerOffset = 3,
+        .trainerScale = 408,
+        .trainerOffset = 4,
     },
 
     [NATIONAL_DEX_KANGASKHAN] =
@@ -1541,9 +1541,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 800,
         .description = gKangaskhanPokedexText,
         .unusedDescription = gKangaskhanPokedexTextUnused,
-        .pokemonScale = 257,
-        .pokemonOffset = -3,
-        .trainerScale = 349,
+        .pokemonScale = 328,
+        .pokemonOffset = -2,
+        .trainerScale = 449,
         .trainerOffset = 5,
     },
 
@@ -1554,10 +1554,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 80,
         .description = gHorseaPokedexText,
         .unusedDescription = gHorseaPokedexTextUnused,
-        .pokemonScale = 399,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 768,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SEADRA] =
@@ -1567,10 +1567,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 250,
         .description = gSeadraPokedexText,
         .unusedDescription = gSeadraPokedexTextUnused,
-        .pokemonScale = 296,
-        .pokemonOffset = 3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 365,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOLDEEN] =
@@ -1580,10 +1580,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 150,
         .description = gGoldeenPokedexText,
         .unusedDescription = gGoldeenPokedexTextUnused,
-        .pokemonScale = 379,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 683,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SEAKING] =
@@ -1593,10 +1593,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 390,
         .description = gSeakingPokedexText,
         .unusedDescription = gSeakingPokedexTextUnused,
-        .pokemonScale = 304,
-        .pokemonOffset = 1,
-        .trainerScale = 288,
-        .trainerOffset = -2,
+        .pokemonScale = 394,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STARYU] =
@@ -1606,10 +1606,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 345,
         .description = gStaryuPokedexText,
         .unusedDescription = gStaryuPokedexTextUnused,
-        .pokemonScale = 326,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 477,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STARMIE] =
@@ -1619,10 +1619,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 800,
         .description = gStarmiePokedexText,
         .unusedDescription = gStarmiePokedexTextUnused,
-        .pokemonScale = 301,
-        .pokemonOffset = 3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 398,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MR_MIME] =
@@ -1632,10 +1632,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 545,
         .description = gMrmimePokedexText,
         .unusedDescription = gMrmimePokedexTextUnused,
-        .pokemonScale = 258,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 344,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SCYTHER] =
@@ -1645,10 +1645,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 560,
         .description = gScytherPokedexText,
         .unusedDescription = gScytherPokedexTextUnused,
-        .pokemonScale = 272,
-        .pokemonOffset = 0,
-        .trainerScale = 293,
-        .trainerOffset = 1,
+        .pokemonScale = 379,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_JYNX] =
@@ -1658,10 +1658,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 406,
         .description = gJynxPokedexText,
         .unusedDescription = gJynxPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 313,
         .pokemonOffset = 3,
-        .trainerScale = 300,
-        .trainerOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ELECTABUZZ] =
@@ -1671,10 +1671,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 300,
         .description = gElectabuzzPokedexText,
         .unusedDescription = gElectabuzzPokedexTextUnused,
-        .pokemonScale = 330,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 491,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGMAR] =
@@ -1684,10 +1684,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 445,
         .description = gMagmarPokedexText,
         .unusedDescription = gMagmarPokedexTextUnused,
-        .pokemonScale = 293,
+        .pokemonScale = 387,
         .pokemonOffset = 4,
-        .trainerScale = 272,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PINSIR] =
@@ -1697,10 +1697,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 550,
         .description = gPinsirPokedexText,
         .unusedDescription = gPinsirPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 1,
-        .trainerScale = 257,
-        .trainerOffset = -2,
+        .pokemonScale = 348,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TAUROS] =
@@ -1710,10 +1710,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 884,
         .description = gTaurosPokedexText,
         .unusedDescription = gTaurosPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 312,
-        .trainerOffset = 3,
+        .pokemonScale = 386,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGIKARP] =
@@ -1723,10 +1723,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gMagikarpPokedexText,
         .unusedDescription = gMagikarpPokedexTextUnused,
-        .pokemonScale = 317,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 476,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GYARADOS] =
@@ -1736,10 +1736,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2350,
         .description = gGyaradosPokedexText,
         .unusedDescription = gGyaradosPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = -1,
-        .trainerScale = 512,
-        .trainerOffset = 11,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 1326,
+        .trainerOffset = 17,
     },
 
     [NATIONAL_DEX_LAPRAS] =
@@ -1749,9 +1749,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2200,
         .description = gLaprasPokedexText,
         .unusedDescription = gLaprasPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 425,
+        .pokemonScale = 323,
+        .pokemonOffset = 1,
+        .trainerScale = 528,
         .trainerOffset = 8,
     },
 
@@ -1762,10 +1762,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 40,
         .description = gDittoPokedexText,
         .unusedDescription = gDittoPokedexTextUnused,
-        .pokemonScale = 602,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 931,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EEVEE] =
@@ -1775,10 +1775,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 65,
         .description = gEeveePokedexText,
         .unusedDescription = gEeveePokedexTextUnused,
-        .pokemonScale = 476,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1241,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VAPOREON] =
@@ -1788,10 +1788,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 290,
         .description = gVaporeonPokedexText,
         .unusedDescription = gVaporeonPokedexTextUnused,
-        .pokemonScale = 316,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 493,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_JOLTEON] =
@@ -1801,10 +1801,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 245,
         .description = gJolteonPokedexText,
         .unusedDescription = gJolteonPokedexTextUnused,
-        .pokemonScale = 283,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 489,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FLAREON] =
@@ -1814,10 +1814,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 250,
         .description = gFlareonPokedexText,
         .unusedDescription = gFlareonPokedexTextUnused,
-        .pokemonScale = 302,
+        .pokemonScale = 455,
         .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PORYGON] =
@@ -1827,10 +1827,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 365,
         .description = gPorygonPokedexText,
         .unusedDescription = gPorygonPokedexTextUnused,
-        .pokemonScale = 328,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 442,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_OMANYTE] =
@@ -1840,10 +1840,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 75,
         .description = gOmanytePokedexText,
         .unusedDescription = gOmanytePokedexTextUnused,
-        .pokemonScale = 521,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 791,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_OMASTAR] =
@@ -1853,10 +1853,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 350,
         .description = gOmastarPokedexText,
         .unusedDescription = gOmastarPokedexTextUnused,
-        .pokemonScale = 307,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KABUTO] =
@@ -1866,10 +1866,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 115,
         .description = gKabutoPokedexText,
         .unusedDescription = gKabutoPokedexTextUnused,
-        .pokemonScale = 438,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KABUTOPS] =
@@ -1879,10 +1879,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 405,
         .description = gKabutopsPokedexText,
         .unusedDescription = gKabutopsPokedexTextUnused,
-        .pokemonScale = 271,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 408,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AERODACTYL] =
@@ -1892,9 +1892,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 590,
         .description = gAerodactylPokedexText,
         .unusedDescription = gAerodactylPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = -1,
-        .trainerScale = 317,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
+        .trainerScale = 373,
         .trainerOffset = 2,
     },
 
@@ -1905,10 +1905,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 554,
         .description = gArticunoPokedexText,
         .unusedDescription = gArticunoPokedexTextUnused,
-        .pokemonScale = 278,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 308,
-        .trainerOffset = 1,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ZAPDOS] =
@@ -1918,10 +1918,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 526,
         .description = gZapdosPokedexText,
         .unusedDescription = gZapdosPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = 1,
-        .trainerScale = 330,
-        .trainerOffset = 3,
+        .pokemonScale = 356,
+        .pokemonOffset = 3,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_MOLTRES] =
@@ -1931,10 +1931,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 600,
         .description = gMoltresPokedexText,
         .unusedDescription = gMoltresPokedexTextUnused,
-        .pokemonScale = 270,
-        .pokemonOffset = 1,
-        .trainerScale = 379,
-        .trainerOffset = 6,
+        .pokemonScale = 351,
+        .pokemonOffset = 4,
+        .trainerScale = 443,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_DRATINI] =
@@ -1944,10 +1944,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 33,
         .description = gDratiniPokedexText,
         .unusedDescription = gDratiniPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 8,
-        .trainerScale = 386,
-        .trainerOffset = 6,
+        .pokemonScale = 273,
+        .pokemonOffset = 7,
+        .trainerScale = 514,
+        .trainerOffset = 8,
     },
 
     [NATIONAL_DEX_DRAGONAIR] =
@@ -1957,10 +1957,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 165,
         .description = gDragonairPokedexText,
         .unusedDescription = gDragonairPokedexTextUnused,
-        .pokemonScale = 274,
-        .pokemonOffset = 0,
-        .trainerScale = 423,
-        .trainerOffset = 6,
+        .pokemonScale = 345,
+        .pokemonOffset = 4,
+        .trainerScale = 973,
+        .trainerOffset = 15,
     },
 
     [NATIONAL_DEX_DRAGONITE] =
@@ -1970,10 +1970,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2100,
         .description = gDragonitePokedexText,
         .unusedDescription = gDragonitePokedexTextUnused,
-        .pokemonScale = 283,
-        .pokemonOffset = -1,
-        .trainerScale = 342,
-        .trainerOffset = 4,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 449,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_MEWTWO] =
@@ -1983,10 +1983,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1220,
         .description = gMewtwoPokedexText,
         .unusedDescription = gMewtwoPokedexTextUnused,
-        .pokemonScale = 276,
-        .pokemonOffset = -1,
-        .trainerScale = 342,
-        .trainerOffset = 5,
+        .pokemonScale = 351,
+        .pokemonOffset = 0,
+        .trainerScale = 408,
+        .trainerOffset = 4,
     },
 
     [NATIONAL_DEX_MEW] =
@@ -1996,23 +1996,23 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 40,
         .description = gMewPokedexText,
         .unusedDescription = gMewPokedexTextUnused,
-        .pokemonScale = 460,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1024,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CINNABAR_MAGIKARP] =
     {
         .categoryName = _("DRAGON"),
-        .height = 9,
+        .height = 18,
         .weight = 79,
         .description = gCinnabarMagikarpPokedexText,
         .unusedDescription = gCinnabarMagikarpPokedexTextUnused,
-        .pokemonScale = 507,
-        .pokemonOffset = 8,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 345,
+        .pokemonOffset = 0,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_CHIKORITA] =
@@ -2022,10 +2022,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 64,
         .description = gChikoritaPokedexText,
         .unusedDescription = gChikoritaPokedexTextUnused,
-        .pokemonScale = 512,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 383,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
     [NATIONAL_DEX_BAYLEEF] =
     {
@@ -2034,10 +2034,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 158,
         .description = gBayleefPokedexText,
         .unusedDescription = gBayleefPokedexTextUnused,
-        .pokemonScale = 296,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 419,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEGANIUM] =
@@ -2047,10 +2047,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1005,
         .description = gMeganiumPokedexText,
         .unusedDescription = gMeganiumPokedexTextUnused,
-        .pokemonScale = 286,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 317,
-        .trainerOffset = 2,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_CYNDAQUIL] =
@@ -2060,10 +2060,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 79,
         .description = gCyndaquilPokedexText,
         .unusedDescription = gCyndaquilPokedexTextUnused,
-        .pokemonScale = 539,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 670,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_QUILAVA] =
@@ -2073,10 +2073,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 190,
         .description = gQuilavaPokedexText,
         .unusedDescription = gQuilavaPokedexTextUnused,
-        .pokemonScale = 329,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 496,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TYPHLOSION] =
@@ -2086,9 +2086,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 795,
         .description = gTyphlosionPokedexText,
         .unusedDescription = gTyphlosionPokedexTextUnused,
-        .pokemonScale = 284,
-        .pokemonOffset = -1,
-        .trainerScale = 287,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 347,
         .trainerOffset = 0,
     },
 
@@ -2099,10 +2099,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 95,
         .description = gTotodilePokedexText,
         .unusedDescription = gTotodilePokedexTextUnused,
-        .pokemonScale = 487,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 543,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CROCONAW] =
@@ -2112,10 +2112,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 250,
         .description = gCroconawPokedexText,
         .unusedDescription = gCroconawPokedexTextUnused,
-        .pokemonScale = 378,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 440,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FERALIGATR] =
@@ -2125,9 +2125,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 888,
         .description = gFeraligatrPokedexText,
         .unusedDescription = gFeraligatrPokedexTextUnused,
-        .pokemonScale = 282,
-        .pokemonOffset = -1,
-        .trainerScale = 375,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 469,
         .trainerOffset = 6,
     },
 
@@ -2138,10 +2138,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 60,
         .description = gSentretPokedexText,
         .unusedDescription = gSentretPokedexTextUnused,
-        .pokemonScale = 439,
+        .pokemonScale = 652,
         .pokemonOffset = 12,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FURRET] =
@@ -2151,10 +2151,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 325,
         .description = gFurretPokedexText,
         .unusedDescription = gFurretPokedexTextUnused,
-        .pokemonScale = 346,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 278,
+        .pokemonOffset = 0,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_HOOTHOOT] =
@@ -2164,10 +2164,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 212,
         .description = gHoothootPokedexText,
         .unusedDescription = gHoothootPokedexTextUnused,
-        .pokemonScale = 380,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 492,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NOCTOWL] =
@@ -2177,10 +2177,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 408,
         .description = gNoctowlPokedexText,
         .unusedDescription = gNoctowlPokedexTextUnused,
-        .pokemonScale = 278,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 332,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LEDYBA] =
@@ -2190,10 +2190,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 108,
         .description = gLedybaPokedexText,
         .unusedDescription = gLedybaPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 382,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LEDIAN] =
@@ -2203,10 +2203,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 356,
         .description = gLedianPokedexText,
         .unusedDescription = gLedianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 366,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SPINARAK] =
@@ -2216,10 +2216,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 85,
         .description = gSpinarakPokedexText,
         .unusedDescription = gSpinarakPokedexTextUnused,
-        .pokemonScale = 414,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ARIADOS] =
@@ -2229,10 +2229,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 335,
         .description = gAriadosPokedexText,
         .unusedDescription = gAriadosPokedexTextUnused,
-        .pokemonScale = 316,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 457,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CROBAT] =
@@ -2242,10 +2242,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 750,
         .description = gCrobatPokedexText,
         .unusedDescription = gCrobatPokedexTextUnused,
-        .pokemonScale = 279,
-        .pokemonOffset = -1,
-        .trainerScale = 313,
-        .trainerOffset = 2,
+        .pokemonScale = 351,
+        .pokemonOffset = 0,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_CHINCHOU] =
@@ -2255,10 +2255,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 120,
         .description = gChinchouPokedexText,
         .unusedDescription = gChinchouPokedexTextUnused,
-        .pokemonScale = 424,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 614,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LANTURN] =
@@ -2268,10 +2268,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 225,
         .description = gLanturnPokedexText,
         .unusedDescription = gLanturnPokedexTextUnused,
-        .pokemonScale = 269,
-        .pokemonOffset = 6,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 372,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PICHU] =
@@ -2281,10 +2281,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gPichuPokedexText,
         .unusedDescription = gPichuPokedexTextUnused,
-        .pokemonScale = 508,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1179,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CLEFFA] =
@@ -2294,10 +2294,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 30,
         .description = gCleffaPokedexText,
         .unusedDescription = gCleffaPokedexTextUnused,
-        .pokemonScale = 462,
-        .pokemonOffset = 22,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 776,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_IGGLYBUFF] =
@@ -2307,10 +2307,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gIgglybuffPokedexText,
         .unusedDescription = gIgglybuffPokedexTextUnused,
-        .pokemonScale = 457,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 900,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TOGEPI] =
@@ -2320,10 +2320,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 15,
         .description = gTogepiPokedexText,
         .unusedDescription = gTogepiPokedexTextUnused,
-        .pokemonScale = 507,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 776,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TOGETIC] =
@@ -2333,10 +2333,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 32,
         .description = gTogeticPokedexText,
         .unusedDescription = gTogeticPokedexTextUnused,
-        .pokemonScale = 424,
+        .pokemonScale = 714,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NATU] =
@@ -2346,10 +2346,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gNatuPokedexText,
         .unusedDescription = gNatuPokedexTextUnused,
-        .pokemonScale = 610,
-        .pokemonOffset = 23,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1164,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_XATU] =
@@ -2359,10 +2359,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 150,
         .description = gXatuPokedexText,
         .unusedDescription = gXatuPokedexTextUnused,
-        .pokemonScale = 258,
-        .pokemonOffset = 4,
-        .trainerScale = 317,
-        .trainerOffset = 3,
+        .pokemonScale = 310,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAREEP] =
@@ -2372,10 +2372,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 78,
         .description = gMareepPokedexText,
         .unusedDescription = gMareepPokedexTextUnused,
-        .pokemonScale = 379,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FLAAFFY] =
@@ -2385,10 +2385,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 133,
         .description = gFlaaffyPokedexText,
         .unusedDescription = gFlaaffyPokedexTextUnused,
-        .pokemonScale = 372,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AMPHAROS] =
@@ -2398,10 +2398,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 615,
         .description = gAmpharosPokedexText,
         .unusedDescription = gAmpharosPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = 2,
-        .trainerScale = 283,
-        .trainerOffset = -1,
+        .pokemonScale = 352,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BELLOSSOM] =
@@ -2411,10 +2411,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 58,
         .description = gBellossomPokedexText,
         .unusedDescription = gBellossomPokedexTextUnused,
-        .pokemonScale = 472,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 815,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MARILL] =
@@ -2424,10 +2424,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 85,
         .description = gMarillPokedexText,
         .unusedDescription = gMarillPokedexTextUnused,
-        .pokemonScale = 476,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 815,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AZUMARILL] =
@@ -2437,10 +2437,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 285,
         .description = gAzumarillPokedexText,
         .unusedDescription = gAzumarillPokedexTextUnused,
-        .pokemonScale = 448,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 524,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_POLITOED] =
@@ -2450,10 +2450,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 339,
         .description = gPolitoedPokedexText,
         .unusedDescription = gPolitoedPokedexTextUnused,
-        .pokemonScale = 289,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 440,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HOPPIP] =
@@ -2463,10 +2463,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 5,
         .description = gHoppipPokedexText,
         .unusedDescription = gHoppipPokedexTextUnused,
-        .pokemonScale = 562,
-        .pokemonOffset = -7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1001,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SKIPLOOM] =
@@ -2476,10 +2476,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gSkiploomPokedexText,
         .unusedDescription = gSkiploomPokedexTextUnused,
-        .pokemonScale = 387,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 528,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_JUMPLUFF] =
@@ -2489,10 +2489,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 30,
         .description = gJumpluffPokedexText,
         .unusedDescription = gJumpluffPokedexTextUnused,
-        .pokemonScale = 418,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 582,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AIPOM] =
@@ -2502,10 +2502,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 115,
         .description = gAipomPokedexText,
         .unusedDescription = gAipomPokedexTextUnused,
-        .pokemonScale = 363,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 652,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SUNKERN] =
@@ -2515,10 +2515,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 18,
         .description = gSunkernPokedexText,
         .unusedDescription = gSunkernPokedexTextUnused,
-        .pokemonScale = 541,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 993,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SUNFLORA] =
@@ -2528,10 +2528,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 85,
         .description = gSunfloraPokedexText,
         .unusedDescription = gSunfloraPokedexTextUnused,
-        .pokemonScale = 374,
+        .pokemonScale = 559,
         .pokemonOffset = 12,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_YANMA] =
@@ -2541,10 +2541,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 380,
         .description = gYanmaPokedexText,
         .unusedDescription = gYanmaPokedexTextUnused,
-        .pokemonScale = 274,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 334,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WOOPER] =
@@ -2554,10 +2554,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 85,
         .description = gWooperPokedexText,
         .unusedDescription = gWooperPokedexTextUnused,
-        .pokemonScale = 479,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 698,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_QUAGSIRE] =
@@ -2567,10 +2567,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 750,
         .description = gQuagsirePokedexText,
         .unusedDescription = gQuagsirePokedexTextUnused,
-        .pokemonScale = 273,
+        .pokemonScale = 332,
         .pokemonOffset = 4,
-        .trainerScale = 273,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ESPEON] =
@@ -2580,10 +2580,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 265,
         .description = gEspeonPokedexText,
         .unusedDescription = gEspeonPokedexTextUnused,
-        .pokemonScale = 363,
-        .pokemonOffset = 12,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 496,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_UMBREON] =
@@ -2593,10 +2593,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 270,
         .description = gUmbreonPokedexText,
         .unusedDescription = gUmbreonPokedexTextUnused,
-        .pokemonScale = 317,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 456,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MURKROW] =
@@ -2606,10 +2606,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 21,
         .description = gMurkrowPokedexText,
         .unusedDescription = gMurkrowPokedexTextUnused,
-        .pokemonScale = 401,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 782,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SLOWKING] =
@@ -2619,9 +2619,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 795,
         .description = gSlowkingPokedexText,
         .unusedDescription = gSlowkingPokedexTextUnused,
-        .pokemonScale = 265,
+        .pokemonScale = 334,
         .pokemonOffset = -1,
-        .trainerScale = 330,
+        .trainerScale = 408,
         .trainerOffset = 4,
     },
 
@@ -2632,10 +2632,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gMisdreavusPokedexText,
         .unusedDescription = gMisdreavusPokedexTextUnused,
-        .pokemonScale = 407,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 519,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_UNOWN] =
@@ -2645,10 +2645,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 50,
         .description = gUnownPokedexText,
         .unusedDescription = gUnownPokedexTextUnused,
-        .pokemonScale = 411,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 633,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WOBBUFFET] =
@@ -2658,10 +2658,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 285,
         .description = gWobbuffetPokedexText,
         .unusedDescription = gWobbuffetPokedexTextUnused,
-        .pokemonScale = 274,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 372,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GIRAFARIG] =
@@ -2671,10 +2671,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 415,
         .description = gGirafarigPokedexText,
         .unusedDescription = gGirafarigPokedexTextUnused,
-        .pokemonScale = 281,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 366,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PINECO] =
@@ -2684,10 +2684,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 72,
         .description = gPinecoPokedexText,
         .unusedDescription = gPinecoPokedexTextUnused,
-        .pokemonScale = 445,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 667,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FORRETRESS] =
@@ -2697,10 +2697,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1258,
         .description = gForretressPokedexText,
         .unusedDescription = gForretressPokedexTextUnused,
-        .pokemonScale = 293,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 357,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DUNSPARCE] =
@@ -2710,10 +2710,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 140,
         .description = gDunsparcePokedexText,
         .unusedDescription = gDunsparcePokedexTextUnused,
-        .pokemonScale = 284,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 273,
+        .pokemonOffset = 9,
+        .trainerScale = 500,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_GLIGAR] =
@@ -2723,10 +2723,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 648,
         .description = gGligarPokedexText,
         .unusedDescription = gGligarPokedexTextUnused,
-        .pokemonScale = 350,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STEELIX] =
@@ -2736,10 +2736,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 4000,
         .description = gSteelixPokedexText,
         .unusedDescription = gSteelixPokedexTextUnused,
-        .pokemonScale = 278,
-        .pokemonOffset = -1,
-        .trainerScale = 557,
-        .trainerOffset = 13,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 1907,
+        .trainerOffset = 19,
     },
 
     [NATIONAL_DEX_SNUBBULL] =
@@ -2749,10 +2749,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 78,
         .description = gSnubbullPokedexText,
         .unusedDescription = gSnubbullPokedexTextUnused,
-        .pokemonScale = 465,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 590,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GRANBULL] =
@@ -2762,10 +2762,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 487,
         .description = gGranbullPokedexText,
         .unusedDescription = gGranbullPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 346,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_QWILFISH] =
@@ -2775,10 +2775,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 39,
         .description = gQwilfishPokedexText,
         .unusedDescription = gQwilfishPokedexTextUnused,
-        .pokemonScale = 430,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 801,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SCIZOR] =
@@ -2788,10 +2788,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1180,
         .description = gScizorPokedexText,
         .unusedDescription = gScizorPokedexTextUnused,
-        .pokemonScale = 282,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 282,
-        .trainerOffset = 0,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_SHUCKLE] =
@@ -2801,10 +2801,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 205,
         .description = gShucklePokedexText,
         .unusedDescription = gShucklePokedexTextUnused,
-        .pokemonScale = 485,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 698,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HERACROSS] =
@@ -2814,10 +2814,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 540,
         .description = gHeracrossPokedexText,
         .unusedDescription = gHeracrossPokedexTextUnused,
-        .pokemonScale = 285,
-        .pokemonOffset = 0,
-        .trainerScale = 283,
-        .trainerOffset = -2,
+        .pokemonScale = 354,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SNEASEL] =
@@ -2827,10 +2827,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 280,
         .description = gSneaselPokedexText,
         .unusedDescription = gSneaselPokedexTextUnused,
-        .pokemonScale = 413,
-        .pokemonOffset = -3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 548,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TEDDIURSA] =
@@ -2840,10 +2840,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 88,
         .description = gTeddiursaPokedexText,
         .unusedDescription = gTeddiursaPokedexTextUnused,
-        .pokemonScale = 455,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 667,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_URSARING] =
@@ -2853,10 +2853,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1258,
         .description = gUrsaringPokedexText,
         .unusedDescription = gUrsaringPokedexTextUnused,
-        .pokemonScale = 275,
+        .pokemonScale = 345,
         .pokemonOffset = 0,
-        .trainerScale = 280,
-        .trainerOffset = 0,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_SLUGMA] =
@@ -2866,10 +2866,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 350,
         .description = gSlugmaPokedexText,
         .unusedDescription = gSlugmaPokedexTextUnused,
-        .pokemonScale = 329,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 492,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGCARGO] =
@@ -2879,10 +2879,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 550,
         .description = gMagcargoPokedexText,
         .unusedDescription = gMagcargoPokedexTextUnused,
-        .pokemonScale = 332,
+        .pokemonScale = 535,
         .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SWINUB] =
@@ -2892,10 +2892,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 65,
         .description = gSwinubPokedexText,
         .unusedDescription = gSwinubPokedexTextUnused,
-        .pokemonScale = 324,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PILOSWINE] =
@@ -2905,10 +2905,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 558,
         .description = gPiloswinePokedexText,
         .unusedDescription = gPiloswinePokedexTextUnused,
-        .pokemonScale = 306,
+        .pokemonScale = 406,
         .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CORSOLA] =
@@ -2918,10 +2918,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 50,
         .description = gCorsolaPokedexText,
         .unusedDescription = gCorsolaPokedexTextUnused,
-        .pokemonScale = 410,
+        .pokemonScale = 605,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_REMORAID] =
@@ -2931,10 +2931,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 120,
         .description = gRemoraidPokedexText,
         .unusedDescription = gRemoraidPokedexTextUnused,
-        .pokemonScale = 316,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 543,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_OCTILLERY] =
@@ -2944,10 +2944,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 285,
         .description = gOctilleryPokedexText,
         .unusedDescription = gOctilleryPokedexTextUnused,
-        .pokemonScale = 296,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 445,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DELIBIRD] =
@@ -2957,10 +2957,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 160,
         .description = gDelibirdPokedexText,
         .unusedDescription = gDelibirdPokedexTextUnused,
-        .pokemonScale = 293,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 496,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MANTINE] =
@@ -2970,10 +2970,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2200,
         .description = gMantinePokedexText,
         .unusedDescription = gMantinePokedexTextUnused,
-        .pokemonScale = 275,
+        .pokemonScale = 351,
         .pokemonOffset = 0,
-        .trainerScale = 360,
-        .trainerOffset = 6,
+        .trainerScale = 429,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_SKARMORY] =
@@ -2983,9 +2983,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 505,
         .description = gSkarmoryPokedexText,
         .unusedDescription = gSkarmoryPokedexTextUnused,
-        .pokemonScale = 285,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 276,
+        .trainerScale = 347,
         .trainerOffset = 0,
     },
 
@@ -2996,10 +2996,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 108,
         .description = gHoundourPokedexText,
         .unusedDescription = gHoundourPokedexTextUnused,
-        .pokemonScale = 393,
+        .pokemonScale = 636,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HOUNDOOM] =
@@ -3009,10 +3009,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 350,
         .description = gHoundoomPokedexText,
         .unusedDescription = gHoundoomPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 359,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KINGDRA] =
@@ -3022,9 +3022,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1520,
         .description = gKingdraPokedexText,
         .unusedDescription = gKingdraPokedexTextUnused,
-        .pokemonScale = 257,
+        .pokemonScale = 328,
         .pokemonOffset = 1,
-        .trainerScale = 293,
+        .trainerScale = 367,
         .trainerOffset = 1,
     },
 
@@ -3035,10 +3035,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 335,
         .description = gPhanpyPokedexText,
         .unusedDescription = gPhanpyPokedexTextUnused,
-        .pokemonScale = 465,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 596,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DONPHAN] =
@@ -3048,10 +3048,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1200,
         .description = gDonphanPokedexText,
         .unusedDescription = gDonphanPokedexTextUnused,
-        .pokemonScale = 313,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 406,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PORYGON2] =
@@ -3061,10 +3061,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 325,
         .description = gPorygon2PokedexText,
         .unusedDescription = gPorygon2PokedexTextUnused,
-        .pokemonScale = 320,
+        .pokemonScale = 543,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PORYGON3] =
@@ -3087,9 +3087,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 712,
         .description = gStantlerPokedexText,
         .unusedDescription = gStantlerPokedexTextUnused,
-        .pokemonScale = 277,
-        .pokemonOffset = -1,
-        .trainerScale = 277,
+        .pokemonScale = 419,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -3100,10 +3100,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 580,
         .description = gSmearglePokedexText,
         .unusedDescription = gSmearglePokedexTextUnused,
-        .pokemonScale = 287,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 396,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TYROGUE] =
@@ -3113,10 +3113,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 210,
         .description = gTyroguePokedexText,
         .unusedDescription = gTyroguePokedexTextUnused,
-        .pokemonScale = 292,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 612,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HITMONTOP] =
@@ -3126,10 +3126,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 480,
         .description = gHitmontopPokedexText,
         .unusedDescription = gHitmontopPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 257,
-        .trainerOffset = -2,
+        .pokemonScale = 352,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SMOOCHUM] =
@@ -3139,10 +3139,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 60,
         .description = gSmoochumPokedexText,
         .unusedDescription = gSmoochumPokedexTextUnused,
-        .pokemonScale = 440,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 838,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ELEKID] =
@@ -3152,10 +3152,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 235,
         .description = gElekidPokedexText,
         .unusedDescription = gElekidPokedexTextUnused,
-        .pokemonScale = 363,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 683,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGBY] =
@@ -3165,10 +3165,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 214,
         .description = gMagbyPokedexText,
         .unusedDescription = gMagbyPokedexTextUnused,
-        .pokemonScale = 284,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 505,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MILTANK] =
@@ -3178,10 +3178,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 755,
         .description = gMiltankPokedexText,
         .unusedDescription = gMiltankPokedexTextUnused,
-        .pokemonScale = 280,
-        .pokemonOffset = 3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 411,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BLISSEY] =
@@ -3191,10 +3191,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 468,
         .description = gBlisseyPokedexText,
         .unusedDescription = gBlisseyPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 3,
-        .trainerScale = 310,
-        .trainerOffset = 3,
+        .pokemonScale = 317,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RAIKOU] =
@@ -3204,10 +3204,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1780,
         .description = gRaikouPokedexText,
         .unusedDescription = gRaikouPokedexTextUnused,
-        .pokemonScale = 283,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 359,
-        .trainerOffset = 6,
+        .trainerScale = 388,
+        .trainerOffset = 3,
     },
 
     [NATIONAL_DEX_ENTEI] =
@@ -3217,10 +3217,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1980,
         .description = gEnteiPokedexText,
         .unusedDescription = gEnteiPokedexTextUnused,
-        .pokemonScale = 283,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 370,
-        .trainerOffset = 7,
+        .trainerScale = 429,
+        .trainerOffset = 5,
     },
 
     [NATIONAL_DEX_SUICUNE] =
@@ -3230,10 +3230,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1870,
         .description = gSuicunePokedexText,
         .unusedDescription = gSuicunePokedexTextUnused,
-        .pokemonScale = 286,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 371,
-        .trainerOffset = 7,
+        .trainerScale = 408,
+        .trainerOffset = 4,
     },
 
     [NATIONAL_DEX_LARVITAR] =
@@ -3243,10 +3243,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 720,
         .description = gLarvitarPokedexText,
         .unusedDescription = gLarvitarPokedexTextUnused,
-        .pokemonScale = 472,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 683,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PUPITAR] =
@@ -3256,10 +3256,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1520,
         .description = gPupitarPokedexText,
         .unusedDescription = gPupitarPokedexTextUnused,
-        .pokemonScale = 292,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 365,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TYRANITAR] =
@@ -3269,10 +3269,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2020,
         .description = gTyranitarPokedexText,
         .unusedDescription = gTyranitarPokedexTextUnused,
-        .pokemonScale = 285,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 383,
-        .trainerOffset = 7,
+        .trainerScale = 408,
+        .trainerOffset = 4,
     },
 
     [NATIONAL_DEX_LUGIA] =
@@ -3282,10 +3282,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2160,
         .description = gLugiaPokedexText,
         .unusedDescription = gLugiaPokedexTextUnused,
-        .pokemonScale = 283,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 742,
-        .trainerOffset = 18,
+        .trainerScale = 1061,
+        .trainerOffset = 16,
     },
 
     [NATIONAL_DEX_HO_OH] =
@@ -3295,10 +3295,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1990,
         .description = gHoOhPokedexText,
         .unusedDescription = gHoOhPokedexTextUnused,
-        .pokemonScale = 283,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 620,
-        .trainerOffset = 16,
+        .trainerScale = 775,
+        .trainerOffset = 13,
     },
 
     [NATIONAL_DEX_CELEBI] =
@@ -3308,10 +3308,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 50,
         .description = gCelebiPokedexText,
         .unusedDescription = gCelebiPokedexTextUnused,
-        .pokemonScale = 393,
-        .pokemonOffset = -10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 559,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_POOCHYENA] =
@@ -3321,10 +3321,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 136,
         .description = gPoochyenaPokedexText,
         .unusedDescription = gPoochyenaPokedexTextUnused,
-        .pokemonScale = 481,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 745,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MIGHTYENA] =
@@ -3334,10 +3334,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 370,
         .description = gMightyenaPokedexText,
         .unusedDescription = gMightyenaPokedexTextUnused,
-        .pokemonScale = 359,
+        .pokemonScale = 521,
         .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ZIGZAGOON] =
@@ -3347,10 +3347,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 175,
         .description = gZigzagoonPokedexText,
         .unusedDescription = gZigzagoonPokedexTextUnused,
-        .pokemonScale = 560,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 838,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LINOONE] =
@@ -3360,10 +3360,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 325,
         .description = gLinoonePokedexText,
         .unusedDescription = gLinoonePokedexTextUnused,
-        .pokemonScale = 321,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1117,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WURMPLE] =
@@ -3373,10 +3373,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 36,
         .description = gWurmplePokedexText,
         .unusedDescription = gWurmplePokedexTextUnused,
-        .pokemonScale = 711,
-        .pokemonOffset = 22,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1117,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SILCOON] =
@@ -3386,10 +3386,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gSilcoonPokedexText,
         .unusedDescription = gSilcoonPokedexTextUnused,
-        .pokemonScale = 431,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BEAUTIFLY] =
@@ -3399,10 +3399,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 284,
         .description = gBeautiflyPokedexText,
         .unusedDescription = gBeautiflyPokedexTextUnused,
-        .pokemonScale = 298,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 438,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CASCOON] =
@@ -3412,10 +3412,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 115,
         .description = gCascoonPokedexText,
         .unusedDescription = gCascoonPokedexTextUnused,
-        .pokemonScale = 391,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 412,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DUSTOX] =
@@ -3425,10 +3425,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 316,
         .description = gDustoxPokedexText,
         .unusedDescription = gDustoxPokedexTextUnused,
-        .pokemonScale = 269,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 317,
+        .pokemonOffset = 9,
+        .trainerScale = 349,
+        .trainerOffset = 0,
     },
 
 
@@ -3441,10 +3441,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 40,
         .description = gSeedotPokedexText,
         .unusedDescription = gSeedotPokedexTextUnused,
-        .pokemonScale = 472,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 707,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NUZLEAF] =
@@ -3454,10 +3454,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 280,
         .description = gNuzleafPokedexText,
         .unusedDescription = gNuzleafPokedexTextUnused,
-        .pokemonScale = 299,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 447,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SHIFTRY] =
@@ -3467,10 +3467,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 596,
         .description = gShiftryPokedexText,
         .unusedDescription = gShiftryPokedexTextUnused,
-        .pokemonScale = 290,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 444,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TAILLOW] =
@@ -3480,10 +3480,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 23,
         .description = gTaillowPokedexText,
         .unusedDescription = gTaillowPokedexTextUnused,
-        .pokemonScale = 465,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 931,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SWELLOW] =
@@ -3493,10 +3493,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 198,
         .description = gSwellowPokedexText,
         .unusedDescription = gSwellowPokedexTextUnused,
-        .pokemonScale = 428,
+        .pokemonScale = 678,
         .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WINGULL] =
@@ -3506,10 +3506,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 95,
         .description = gWingullPokedexText,
         .unusedDescription = gWingullPokedexTextUnused,
-        .pokemonScale = 295,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 341,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PELIPPER] =
@@ -3519,10 +3519,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 280,
         .description = gPelipperPokedexText,
         .unusedDescription = gPelipperPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 427,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RALTS] =
@@ -3532,10 +3532,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 66,
         .description = gRaltsPokedexText,
         .unusedDescription = gRaltsPokedexTextUnused,
-        .pokemonScale = 457,
+        .pokemonScale = 815,
         .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KIRLIA] =
@@ -3545,10 +3545,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 202,
         .description = gKirliaPokedexText,
         .unusedDescription = gKirliaPokedexTextUnused,
-        .pokemonScale = 354,
-        .pokemonOffset = 10,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 582,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GARDEVOIR] =
@@ -3558,10 +3558,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 484,
         .description = gGardevoirPokedexText,
         .unusedDescription = gGardevoirPokedexTextUnused,
-        .pokemonScale = 277,
-        .pokemonOffset = 0,
-        .trainerScale = 276,
-        .trainerOffset = -1,
+        .pokemonScale = 367,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GALLADE] =
@@ -3571,10 +3571,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 520,
         .description = gGalladePokedexText,
         .unusedDescription = gGalladePokedexTextUnused,
-        .pokemonScale = 373,
-        .pokemonOffset = 0,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 372,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -3586,10 +3586,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 45,
         .description = gShroomishPokedexText,
         .unusedDescription = gShroomishPokedexTextUnused,
-        .pokemonScale = 513,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 745,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BRELOOM] =
@@ -3599,10 +3599,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 392,
         .description = gBreloomPokedexText,
         .unusedDescription = gBreloomPokedexTextUnused,
-        .pokemonScale = 324,
+        .pokemonScale = 419,
         .pokemonOffset = 6,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SLAKOTH] =
@@ -3612,10 +3612,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 240,
         .description = gSlakothPokedexText,
         .unusedDescription = gSlakothPokedexTextUnused,
-        .pokemonScale = 291,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 349,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VIGOROTH] =
@@ -3625,10 +3625,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 465,
         .description = gVigorothPokedexText,
         .unusedDescription = gVigorothPokedexTextUnused,
-        .pokemonScale = 301,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 426,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SLAKING] =
@@ -3638,10 +3638,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1305,
         .description = gSlakingPokedexText,
         .unusedDescription = gSlakingPokedexTextUnused,
-        .pokemonScale = 277,
-        .pokemonOffset = 5,
-        .trainerScale = 326,
-        .trainerOffset = 3,
+        .pokemonScale = 356,
+        .pokemonOffset = 6,
+        .trainerScale = 568,
+        .trainerOffset = 9,
     },
 
     [NATIONAL_DEX_NINCADA] =
@@ -3651,10 +3651,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 55,
         .description = gNincadaPokedexText,
         .unusedDescription = gNincadaPokedexTextUnused,
-        .pokemonScale = 405,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 521,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NINJASK] =
@@ -3664,10 +3664,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 120,
         .description = gNinjaskPokedexText,
         .unusedDescription = gNinjaskPokedexTextUnused,
-        .pokemonScale = 383,
-        .pokemonOffset = -9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 454,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SHEDINJA] =
@@ -3677,10 +3677,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 12,
         .description = gShedinjaPokedexText,
         .unusedDescription = gShedinjaPokedexTextUnused,
-        .pokemonScale = 372,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 512,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WHISMUR] =
@@ -3690,10 +3690,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 163,
         .description = gWhismurPokedexText,
         .unusedDescription = gWhismurPokedexTextUnused,
-        .pokemonScale = 373,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 574,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LOUDRED] =
@@ -3703,10 +3703,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 405,
         .description = gLoudredPokedexText,
         .unusedDescription = gLoudredPokedexTextUnused,
-        .pokemonScale = 356,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 531,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EXPLOUD] =
@@ -3716,10 +3716,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 840,
         .description = gExploudPokedexText,
         .unusedDescription = gExploudPokedexTextUnused,
-        .pokemonScale = 284,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 385,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAKUHITA] =
@@ -3729,10 +3729,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 864,
         .description = gMakuhitaPokedexText,
         .unusedDescription = gMakuhitaPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 372,
         .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HARIYAMA] =
@@ -3742,10 +3742,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2538,
         .description = gHariyamaPokedexText,
         .unusedDescription = gHariyamaPokedexTextUnused,
-        .pokemonScale = 268,
-        .pokemonOffset = -1,
-        .trainerScale = 375,
-        .trainerOffset = 6,
+        .pokemonScale = 351,
+        .pokemonOffset = 0,
+        .trainerScale = 485,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_AZURILL] =
@@ -3755,10 +3755,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gAzurillPokedexText,
         .unusedDescription = gAzurillPokedexTextUnused,
-        .pokemonScale = 603,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1722,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -3771,10 +3771,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 110,
         .description = gSableyePokedexText,
         .unusedDescription = gSableyePokedexTextUnused,
-        .pokemonScale = 451,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 819,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAWILE] =
@@ -3784,10 +3784,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 115,
         .description = gMawilePokedexText,
         .unusedDescription = gMawilePokedexTextUnused,
-        .pokemonScale = 466,
+        .pokemonScale = 729,
         .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -3,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEDITITE] =
@@ -3797,10 +3797,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 112,
         .description = gMedititePokedexText,
         .unusedDescription = gMedititePokedexTextUnused,
-        .pokemonScale = 465,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 621,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEDICHAM] =
@@ -3810,10 +3810,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 315,
         .description = gMedichamPokedexText,
         .unusedDescription = gMedichamPokedexTextUnused,
-        .pokemonScale = 298,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 437,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -3825,10 +3825,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 42,
         .description = gPluslePokedexText,
         .unusedDescription = gPluslePokedexTextUnused,
-        .pokemonScale = 515,
-        .pokemonOffset = -9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 931,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MINUN] =
@@ -3838,10 +3838,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 42,
         .description = gMinunPokedexText,
         .unusedDescription = gMinunPokedexTextUnused,
-        .pokemonScale = 512,
-        .pokemonOffset = -7,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 977,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VOLBEAT] =
@@ -3851,10 +3851,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 177,
         .description = gVolbeatPokedexText,
         .unusedDescription = gVolbeatPokedexTextUnused,
-        .pokemonScale = 442,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 598,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ILLUMISE] =
@@ -3864,10 +3864,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 177,
         .description = gIllumisePokedexText,
         .unusedDescription = gIllumisePokedexTextUnused,
-        .pokemonScale = 572,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 714,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ROSELIA] =
@@ -3877,10 +3877,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gRoseliaPokedexText,
         .unusedDescription = gRoseliaPokedexTextUnused,
-        .pokemonScale = 677,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1489,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GULPIN] =
@@ -3890,10 +3890,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 103,
         .description = gGulpinPokedexText,
         .unusedDescription = gGulpinPokedexTextUnused,
-        .pokemonScale = 593,
-        .pokemonOffset = 22,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 791,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SWALOT] =
@@ -3903,10 +3903,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 800,
         .description = gSwalotPokedexText,
         .unusedDescription = gSwalotPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 5,
-        .trainerScale = 345,
-        .trainerOffset = 4,
+        .pokemonScale = 267,
+        .pokemonOffset = 0,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
 
@@ -3920,10 +3920,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 240,
         .description = gNumelPokedexText,
         .unusedDescription = gNumelPokedexTextUnused,
-        .pokemonScale = 310,
-        .pokemonOffset = 14,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 439,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CAMERUPT] =
@@ -3933,10 +3933,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2200,
         .description = gCameruptPokedexText,
         .unusedDescription = gCameruptPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 339,
         .pokemonOffset = 6,
-        .trainerScale = 345,
-        .trainerOffset = 4,
+        .trainerScale = 473,
+        .trainerOffset = 6,
     },
 
 
@@ -3947,10 +3947,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 306,
         .description = gSpoinkPokedexText,
         .unusedDescription = gSpoinkPokedexTextUnused,
-        .pokemonScale = 423,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 625,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GRUMPIG] =
@@ -3960,10 +3960,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 715,
         .description = gGrumpigPokedexText,
         .unusedDescription = gGrumpigPokedexTextUnused,
-        .pokemonScale = 358,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 569,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SPINDA] =
@@ -3973,10 +3973,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 50,
         .description = gSpindaPokedexText,
         .unusedDescription = gSpindaPokedexTextUnused,
-        .pokemonScale = 321,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 415,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -3991,10 +3991,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 12,
         .description = gSwabluPokedexText,
         .unusedDescription = gSwabluPokedexTextUnused,
-        .pokemonScale = 422,
-        .pokemonOffset = -8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 838,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ALTARIA] =
@@ -4004,10 +4004,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 206,
         .description = gAltariaPokedexText,
         .unusedDescription = gAltariaPokedexTextUnused,
-        .pokemonScale = 327,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 499,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4019,10 +4019,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1680,
         .description = gLunatonePokedexText,
         .unusedDescription = gLunatonePokedexTextUnused,
-        .pokemonScale = 300,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 419,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SOLROCK] =
@@ -4032,10 +4032,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1540,
         .description = gSolrockPokedexText,
         .unusedDescription = gSolrockPokedexTextUnused,
-        .pokemonScale = 328,
-        .pokemonOffset = -3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 481,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4046,10 +4046,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 19,
         .description = gBarboachPokedexText,
         .unusedDescription = gBarboachPokedexTextUnused,
-        .pokemonScale = 581,
-        .pokemonOffset = -2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 977,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WHISCASH] =
@@ -4059,10 +4059,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 236,
         .description = gWhiscashPokedexText,
         .unusedDescription = gWhiscashPokedexTextUnused,
-        .pokemonScale = 317,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 476,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4074,10 +4074,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 215,
         .description = gBaltoyPokedexText,
         .unusedDescription = gBaltoyPokedexTextUnused,
-        .pokemonScale = 384,
-        .pokemonOffset = 18,
-        .trainerScale = 256,
-        .trainerOffset = -3,
+        .pokemonScale = 652,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CLAYDOL] =
@@ -4087,9 +4087,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1080,
         .description = gClaydolPokedexText,
         .unusedDescription = gClaydolPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 341,
         .pokemonOffset = 3,
-        .trainerScale = 280,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -4100,10 +4100,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 238,
         .description = gLileepPokedexText,
         .unusedDescription = gLileepPokedexTextUnused,
-        .pokemonScale = 305,
-        .pokemonOffset = 8,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 465,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CRADILY] =
@@ -4113,10 +4113,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 604,
         .description = gCradilyPokedexText,
         .unusedDescription = gCradilyPokedexTextUnused,
-        .pokemonScale = 275,
-        .pokemonOffset = -1,
-        .trainerScale = 269,
-        .trainerOffset = -1,
+        .pokemonScale = 391,
+        .pokemonOffset = 2,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ANORITH] =
@@ -4126,10 +4126,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 125,
         .description = gAnorithPokedexText,
         .unusedDescription = gAnorithPokedexTextUnused,
-        .pokemonScale = 296,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 638,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ARMALDO] =
@@ -4139,10 +4139,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 682,
         .description = gArmaldoPokedexText,
         .unusedDescription = gArmaldoPokedexTextUnused,
-        .pokemonScale = 312,
+        .pokemonScale = 397,
         .pokemonOffset = 2,
-        .trainerScale = 271,
-        .trainerOffset = -1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FEEBAS] =
@@ -4152,10 +4152,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 74,
         .description = gFeebasPokedexText,
         .unusedDescription = gFeebasPokedexTextUnused,
-        .pokemonScale = 423,
-        .pokemonOffset = 3,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 652,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MILOTIC] =
@@ -4165,10 +4165,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1620,
         .description = gMiloticPokedexText,
         .unusedDescription = gMiloticPokedexTextUnused,
-        .pokemonScale = 282,
-        .pokemonOffset = -1,
-        .trainerScale = 382,
-        .trainerOffset = 7,
+        .pokemonScale = 356,
+        .pokemonOffset = 0,
+        .trainerScale = 1265,
+        .trainerOffset = 17,
     },
 
 
@@ -4182,10 +4182,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 150,
         .description = gDuskullPokedexText,
         .unusedDescription = gDuskullPokedexTextUnused,
-        .pokemonScale = 376,
-        .pokemonOffset = 13,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 535,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DUSCLOPS] =
@@ -4195,10 +4195,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 306,
         .description = gDusclopsPokedexText,
         .unusedDescription = gDusclopsPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 299,
-        .trainerOffset = 2,
+        .pokemonScale = 308,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4209,10 +4209,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gChimechoPokedexText,
         .unusedDescription = gChimechoPokedexTextUnused,
-        .pokemonScale = 505,
-        .pokemonOffset = -4,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 822,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ABSOL] =
@@ -4222,10 +4222,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 470,
         .description = gAbsolPokedexText,
         .unusedDescription = gAbsolPokedexTextUnused,
-        .pokemonScale = 301,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 489,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WYNAUT] =
@@ -4235,10 +4235,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 140,
         .description = gWynautPokedexText,
         .unusedDescription = gWynautPokedexTextUnused,
-        .pokemonScale = 453,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 621,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4253,10 +4253,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 525,
         .description = gClamperlPokedexText,
         .unusedDescription = gClamperlPokedexTextUnused,
-        .pokemonScale = 691,
-        .pokemonOffset = 22,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 815,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HUNTAIL] =
@@ -4266,10 +4266,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 270,
         .description = gHuntailPokedexText,
         .unusedDescription = gHuntailPokedexTextUnused,
-        .pokemonScale = 307,
-        .pokemonOffset = 1,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 312,
+        .pokemonOffset = -1,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOREBYSS] =
@@ -4279,10 +4279,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 226,
         .description = gGorebyssPokedexText,
         .unusedDescription = gGorebyssPokedexTextUnused,
-        .pokemonScale = 278,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 339,
+        .pokemonOffset = 7,
+        .trainerScale = 498,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_RELICANTH] =
@@ -4292,10 +4292,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 234,
         .description = gRelicanthPokedexText,
         .unusedDescription = gRelicanthPokedexTextUnused,
-        .pokemonScale = 316,
-        .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 438,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LUVDISC] =
@@ -4305,10 +4305,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 87,
         .description = gLuvdiscPokedexText,
         .unusedDescription = gLuvdiscPokedexTextUnused,
-        .pokemonScale = 371,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 481,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4327,10 +4327,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 55,
         .description = gBunearyPokedexText,
         .unusedDescription = gBunearyPokedexTextUnused,
-        .pokemonScale = 479,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1140,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LOPUNNY] =
@@ -4340,10 +4340,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 333,
         .description = gLopunnyPokedexText,
         .unusedDescription = gLopunnyPokedexTextUnused,
-        .pokemonScale = 288,
-        .pokemonOffset = 5,
-        .trainerScale = 272,
-        .trainerOffset = -2,
+        .pokemonScale = 442,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STARLY] =
@@ -4353,10 +4353,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 20,
         .description = gStarlyPokedexText,
         .unusedDescription = gStarlyPokedexTextUnused,
-        .pokemonScale = 1211,
-        .pokemonOffset = 18,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 1210,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STARAVIA] =
@@ -4367,9 +4367,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gStaraviaPokedexText,
         .unusedDescription = gStaraviaPokedexTextUnused,
         .pokemonScale = 807,
-        .pokemonOffset = 14,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_STARAPTOR] =
@@ -4379,10 +4379,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 249,
         .description = gStaraptorPokedexText,
         .unusedDescription = gStaraptorPokedexTextUnused,
-        .pokemonScale = 497,
+        .pokemonScale = 496,
         .pokemonOffset = 6,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_OMATO] =
@@ -4392,10 +4392,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1,
         .description = gOmatoPokedexText,
         .unusedDescription = gOmatoPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 3351,
+        .pokemonOffset = 22,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_OMATOPS] =
@@ -4405,10 +4405,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1,
         .description = gOmatopsPokedexText,
         .unusedDescription = gOmatopsPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 4468,
+        .pokemonOffset = 22,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_COMBEE] =
@@ -4419,9 +4419,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCombeePokedexText,
         .unusedDescription = gCombeePokedexTextUnused,
         .pokemonScale = 1024,
-        .pokemonOffset = 18,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VESPIQUEN] =
@@ -4431,10 +4431,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 385,
         .description = gVespiquenPokedexText,
         .unusedDescription = gVespiquenPokedexTextUnused,
-        .pokemonScale = 435,
-        .pokemonOffset = 6,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 434,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BUDEW] =
@@ -4445,9 +4445,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gBudewPokedexText,
         .unusedDescription = gBudewPokedexTextUnused,
         .pokemonScale = 1583,
-        .pokemonOffset = 19,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ROSERADE] =
@@ -4457,10 +4457,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 145,
         .description = gRoseradePokedexText,
         .unusedDescription = gRoseradePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 528,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAGNEZONE] =
@@ -4471,9 +4471,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMagnezonePokedexText,
         .unusedDescription = gMagnezonePokedexTextUnused,
         .pokemonScale = 388,
-        .pokemonOffset = 6,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ELECTIVIRE] =
@@ -4483,10 +4483,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1386,
         .description = gElectivirePokedexText,
         .unusedDescription = gElectivirePokedexTextUnused,
-        .pokemonScale = 367,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 384,
-        .trainerOffset = 1,
+        .trainerScale = 373,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_AMBIPOM] =
@@ -4496,10 +4496,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 203,
         .description = gAmbipomPokedexText,
         .unusedDescription = gAmbipomPokedexTextUnused,
-        .pokemonScale = 497,
+        .pokemonScale = 496,
         .pokemonOffset = 6,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_ANNIHILAPE] =
@@ -4510,9 +4510,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAnnihilapePokedexText,
         .unusedDescription = gAnnihilapePokedexTextUnused,
         .pokemonScale = 489,
-        .pokemonOffset = 6,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_HONCHKROW] =
@@ -4522,10 +4522,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 273,
         .description = gHonchkrowPokedexText,
         .unusedDescription = gHonchkrowPokedexTextUnused,
-        .pokemonScale = 549,
-        .pokemonOffset = 10,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 548,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CHINGLING] =
@@ -4535,10 +4535,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 6,
         .description = gChinglingPokedexText,
         .unusedDescription = gChinglingPokedexTextUnused,
-        .pokemonScale = 1723,
-        .pokemonOffset = 19,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 1722,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BRONZOR] =
@@ -4549,9 +4549,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gBronzorPokedexText,
         .unusedDescription = gBronzorPokedexTextUnused,
         .pokemonScale = 540,
-        .pokemonOffset = 15,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 16,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_BRONZONG] =
@@ -4562,9 +4562,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gBronzongPokedexText,
         .unusedDescription = gBronzongPokedexTextUnused,
         .pokemonScale = 351,
-        .pokemonOffset = 3,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MIME_JR] =
@@ -4575,9 +4575,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMimeJrPokedexText,
         .unusedDescription = gMimeJrPokedexTextUnused,
         .pokemonScale = 745,
-        .pokemonOffset = 14,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MIME_SR] =
@@ -4587,10 +4587,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gMimeSrPokedexText,
         .unusedDescription = gMimeSrPokedexTextUnused,
-        .pokemonScale = 357,
-        .pokemonOffset = 0,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
         .trainerScale = 392,
-        .trainerOffset = 2,
+        .trainerOffset = 3,
     },
 
     [NATIONAL_DEX_MISMAGIUS] =
@@ -4601,9 +4601,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMismagiusPokedexText,
         .unusedDescription = gMismagiusPokedexTextUnused,
         .pokemonScale = 621,
-        .pokemonOffset = 10,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
 
@@ -4614,10 +4614,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1066,
         .description = gDusknoirPokedexText,
         .unusedDescription = gDusknoirPokedexTextUnused,
-        .pokemonScale = 357,
-        .pokemonOffset = 0,
-        .trainerScale = 505,
-        .trainerOffset = 6,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
+        .trainerScale = 504,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_OSSCYTHE] =
@@ -4627,10 +4627,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gOsscythePokedexText,
         .unusedDescription = gOsscythePokedexTextUnused,
-        .pokemonScale = 373,
-        .pokemonOffset = 0,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 372,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RHYPERIOR] =
@@ -4640,23 +4640,23 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2828,
         .description = gRhyperiorPokedexText,
         .unusedDescription = gRhyperiorPokedexTextUnused,
-        .pokemonScale = 367,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 512,
-        .trainerOffset = 6,
+        .trainerScale = 498,
+        .trainerOffset = 7,
     },
 
     [NATIONAL_DEX_CINNABAR_FEEBAS] =
     {
         .categoryName = _("DEEP DRAGON"),
-        .height = 8,
+        .height = 16,
         .weight = 100,
         .description = gCinnabarFeebasPokedexText,
         .unusedDescription = gCinnabarFeebasPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 320,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_WEAVILE] =
@@ -4667,9 +4667,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gWeavilePokedexText,
         .unusedDescription = gWeavilePokedexTextUnused,
         .pokemonScale = 457,
-        .pokemonOffset = 7,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MAMOSWINE] =
@@ -4679,10 +4679,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2910,
         .description = gMamoswinePokedexText,
         .unusedDescription = gMamoswinePokedexTextUnused,
-        .pokemonScale = 357,
-        .pokemonOffset = 0,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
         .trainerScale = 628,
-        .trainerOffset = 9,
+        .trainerOffset = 10,
     },
 
 
@@ -4694,9 +4694,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMagmortarPokedexText,
         .unusedDescription = gMagmortarPokedexTextUnused,
         .pokemonScale = 367,
-        .pokemonOffset = 0,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 1,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KABUSTAR] =
@@ -4706,10 +4706,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gKabustarPokedexText,
         .unusedDescription = gKabustarPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 391,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KABUKNIGHT] =
@@ -4719,10 +4719,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gKabuknightPokedexText,
         .unusedDescription = gKabuknightPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 559,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AMUNYTE] =
@@ -4732,10 +4732,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 240,
         .description = gAmunytePokedexText,
         .unusedDescription = gAmunytePokedexTextUnused,
-        .pokemonScale = 617,
-        .pokemonOffset = 9,
-        .trainerScale = 352,
-        .trainerOffset = -1,
+        .pokemonScale = 641,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KINKABUTO] =
@@ -4745,10 +4745,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 320,
         .description = gKinkabutoPokedexText,
         .unusedDescription = gKinkabutoPokedexTextUnused,
-        .pokemonScale = 489,
-        .pokemonOffset = 6,
-        .trainerScale = 352,
-        .trainerOffset = -1,
+        .pokemonScale = 508,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_AEROPTERYX] =
@@ -4758,10 +4758,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 100,
         .description = gAeropteryxPokedexText,
         .unusedDescription = gAeropteryxPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 568,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PORYGON_Z] =
@@ -4772,9 +4772,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gPorygonZPokedexText,
         .unusedDescription = gPorygonZPokedexTextUnused,
         .pokemonScale = 528,
-        .pokemonOffset = 9,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_LEAFEON] =
@@ -4784,10 +4784,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 255,
         .description = gLeafeonPokedexText,
         .unusedDescription = gLeafeonPokedexTextUnused,
-        .pokemonScale = 466,
-        .pokemonOffset = 7,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 465,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GLACEON] =
@@ -4798,9 +4798,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gGlaceonPokedexText,
         .unusedDescription = gGlaceonPokedexTextUnused,
         .pokemonScale = 617,
-        .pokemonOffset = 10,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 11,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SYLVEON] =
@@ -4811,9 +4811,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSylveonPokedexText,
         .unusedDescription = gSylveonPokedexTextUnused,
         .pokemonScale = 503,
-        .pokemonOffset = 8,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_FARFETCHD_GALARIAN] =
@@ -4823,10 +4823,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 420,
         .description = gFarfetchdGalarianPokedexText,
         .unusedDescription = gFarfetchdGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 547,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_TYNAMO] =
@@ -4836,10 +4836,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 3,
         .description = gTynamoPokedexText,
         .unusedDescription = gTynamoPokedexTextUnused,
-        .pokemonScale = 1769,
-        .pokemonOffset = 21,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 791,
+        .pokemonOffset = 20,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EELEKTRIK] =
@@ -4850,9 +4850,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gEelektrikPokedexText,
         .unusedDescription = gEelektrikPokedexTextUnused,
         .pokemonScale = 489,
-        .pokemonOffset = 5,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 6,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EELEKTROSS] =
@@ -4862,10 +4862,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 805,
         .description = gEelektrossPokedexText,
         .unusedDescription = gEelektrossPokedexTextUnused,
-        .pokemonScale = 357,
-        .pokemonOffset = 0,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
         .trainerScale = 560,
-        .trainerOffset = 8,
+        .trainerOffset = 9,
     },
 
     [NATIONAL_DEX_RATTATA_ALOLAN] =
@@ -4875,10 +4875,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 38,
         .description = gRattataAlolanPokedexText,
         .unusedDescription = gRattataAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1210,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_RATICATE_ALOLAN] =
@@ -4888,10 +4888,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 255,
         .description = gRaticateAlolanPokedexText,
         .unusedDescription = gRaticateAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 598,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PICHU_ALOLAN] =
@@ -4927,10 +4927,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 210,
         .description = gRaichuAlolanPokedexText,
         .unusedDescription = gRaichuAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 851,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SANDSHREW_ALOLAN] =
@@ -4940,10 +4940,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 400,
         .description = gSandshrewAlolanPokedexText,
         .unusedDescription = gSandshrewAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 505,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_SANDSLASH_ALOLAN] =
@@ -4953,10 +4953,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 550,
         .description = gSandslashAlolanPokedexText,
         .unusedDescription = gSandslashAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 481,
+        .pokemonOffset = 7,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DIGLETT_ALOLAN] =
@@ -4966,10 +4966,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 10,
         .description = gDiglettAlolanPokedexText,
         .unusedDescription = gDiglettAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1489,
+        .pokemonOffset = 21,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_DUGTRIO_ALOLAN] =
@@ -4979,10 +4979,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 666,
         .description = gDugtrioAlolanPokedexText,
         .unusedDescription = gDugtrioAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 585,
+        .pokemonOffset = 14,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEOWTH_ALOLAN] =
@@ -4992,10 +4992,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 42,
         .description = gMeowthAlolanPokedexText,
         .unusedDescription = gMeowthAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1024,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PERSIAN_ALOLAN] =
@@ -5005,10 +5005,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 330,
         .description = gPersianAlolanPokedexText,
         .unusedDescription = gPersianAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 449,
+        .pokemonOffset = 5,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MEOWTH_GALARIAN] =
@@ -5018,10 +5018,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 75,
         .description = gMeowthGalarianPokedexText,
         .unusedDescription = gMeowthGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 1071,
+        .pokemonOffset = 18,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PERRSERKER] =
@@ -5031,10 +5031,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 280,
         .description = gPerrserkerPokedexText,
         .unusedDescription = gPerrserkerPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 698,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GEODUDE_ALOLAN] =
@@ -5044,10 +5044,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 203,
         .description = gGeodudeAlolanPokedexText,
         .unusedDescription = gGeodudeAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 605,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GRAVELER_ALOLAN] =
@@ -5057,10 +5057,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1100,
         .description = gGravelerAlolanPokedexText,
         .unusedDescription = gGravelerAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 456,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GOLEM_ALOLAN] =
@@ -5070,10 +5070,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 3160,
         .description = gGolemAlolanPokedexText,
         .unusedDescription = gGolemAlolanPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 339,
         .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 347,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_GRIMER_ALOLAN] =
@@ -5083,10 +5083,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 420,
         .description = gGrimerAlolanPokedexText,
         .unusedDescription = gGrimerAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 532,
+        .pokemonOffset = 13,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_MUK_ALOLAN] =
@@ -5096,10 +5096,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 520,
         .description = gMukAlolanPokedexText,
         .unusedDescription = gMukAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 521,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_VULPIX_ALOLAN] =
@@ -5109,10 +5109,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 99,
         .description = gVulpixAlolanPokedexText,
         .unusedDescription = gVulpixAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 698,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_NINETALES_ALOLAN] =
@@ -5122,10 +5122,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 199,
         .description = gNinetalesAlolanPokedexText,
         .unusedDescription = gNinetalesAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 525,
+        .pokemonOffset = 8,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_EXEGGCUTE_ALOLAN] =
@@ -5148,10 +5148,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 4156,
         .description = gExeggutorAlolanPokedexText,
         .unusedDescription = gExeggutorAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 356,
+        .pokemonOffset = 1,
+        .trainerScale = 2296,
+        .trainerOffset = 20,
     },
 
     [NATIONAL_DEX_CUBONE_ALOLAN] =
@@ -5174,10 +5174,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 340,
         .description = gMarowakAlolanPokedexText,
         .unusedDescription = gMarowakAlolanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 531,
+        .pokemonOffset = 10,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CORSOLA_GALARIAN] =
@@ -5187,10 +5187,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 5,
         .description = gCorsolaGalarianPokedexText,
         .unusedDescription = gCorsolaGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 652,
+        .pokemonOffset = 15,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_CURSOLA] =
@@ -5200,10 +5200,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 4,
         .description = gCursolaPokedexText,
         .unusedDescription = gCursolaPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .pokemonScale = 596,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KOFFING_GALARIAN] =
@@ -5226,10 +5226,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 160,
         .description = gWeezingGalarianPokedexText,
         .unusedDescription = gWeezingGalarianPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 356,
         .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = -2,
+        .trainerScale = 612,
+        .trainerOffset = 10,
     },
 
     [NATIONAL_DEX_KRICKETOT] =
@@ -5239,10 +5239,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 22,
         .description = gKricketotPokedexText,
         .unusedDescription = gKricketotPokedexTextUnused,
-        .pokemonScale = 1335,
-        .pokemonOffset = 18,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonScale = 1334,
+        .pokemonOffset = 19,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_KRICKETUNE] =
@@ -5253,9 +5253,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gKricketunePokedexText,
         .unusedDescription = gKricketunePokedexTextUnused,
         .pokemonScale = 512,
-        .pokemonOffset = 8,
-        .trainerScale = 342,
-        .trainerOffset = -1,
+        .pokemonOffset = 9,
+        .trainerScale = 341,
+        .trainerOffset = 0,
     },
 
     [NATIONAL_DEX_PONYTA_GALARIAN] =
@@ -5265,9 +5265,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 240,
         .description = gPonytaGalarianPokedexText,
         .unusedDescription = gPonytaGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
+        .pokemonScale = 570,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -5278,9 +5278,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 800,
         .description = gRapidashGalarianPokedexText,
         .unusedDescription = gRapidashGalarianPokedexTextUnused,
-        .pokemonScale = 256,
+        .pokemonScale = 351,
         .pokemonOffset = 0,
-        .trainerScale = 256,
+        .trainerScale = 347,
         .trainerOffset = 0,
     },
 
@@ -5291,10 +5291,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 360,
         .description = gSlowpokeGalarianPokedexText,
         .unusedDescription = gSlowpokeGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+        .pokemonScale = 289,
+        .pokemonOffset = 11,
+        .trainerScale = 472,
+        .trainerOffset = 6,
     },
 
     [NATIONAL_DEX_SLOWBRO_GALARIAN] =
@@ -5304,10 +5304,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 705,
         .description = gSlowbroGalarianPokedexText,
         .unusedDescription = gSlowbroGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+        .pokemonScale = 356,
+        .pokemonOffset = 3,
+        .trainerScale = 387,
+        .trainerOffset = 2,
     },
 
     [NATIONAL_DEX_SLOWKING_GALARIAN] =
@@ -5317,10 +5317,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 795,
         .description = gSlowkingGalarianPokedexText,
         .unusedDescription = gSlowkingGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+        .pokemonScale = 345,
+        .pokemonOffset = -1,
+        .trainerScale = 367,
+        .trainerOffset = 1,
     },
 
     [NATIONAL_DEX_MR_MIME_GALARIAN] =
@@ -5330,9 +5330,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 568,
         .description = gMrMimeGalarianPokedexText,
         .unusedDescription = gMrMimeGalarianPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
+        .pokemonScale = 332,
+        .pokemonOffset = 4,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -5343,9 +5343,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 582,
         .description = gMrRimePokedexText,
         .unusedDescription = gMrRimePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
+        .pokemonScale = 354,
+        .pokemonOffset = 3,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -5356,9 +5356,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 1170,
         .description = gSirfetchdPokedexText,
         .unusedDescription = gSirfetchdPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
+        .pokemonScale = 745,
+        .pokemonOffset = 12,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -5369,9 +5369,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 110,
         .description = gWooperPaldeanPokedexText,
         .unusedDescription = gWooperPaldeanPokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
+        .pokemonScale = 721,
+        .pokemonOffset = 17,
+        .trainerScale = 341,
         .trainerOffset = 0,
     },
 
@@ -5382,10 +5382,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 2230,
         .description = gClodsirePokedexText,
         .unusedDescription = gClodsirePokedexTextUnused,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+        .pokemonScale = 317,
+        .pokemonOffset = 4,
+        .trainerScale = 582,
+        .trainerOffset = 9,
     },
 
 };
