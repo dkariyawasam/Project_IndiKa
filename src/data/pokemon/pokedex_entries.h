@@ -5258,4 +5258,134 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -1,
     },
 
+    [NATIONAL_DEX_PONYTA_GALARIAN] =
+    {
+        .categoryName = _("UNIQUE HORN"),
+        .height = 8,
+        .weight = 240,
+        .description = gPonytaGalarianPokedexText,
+        .unusedDescription = gPonytaGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_RAPIDASH_GALARIAN] =
+    {
+        .categoryName = _("UNIQUE HORN"),
+        .height = 17,
+        .weight = 800,
+        .description = gRapidashGalarianPokedexText,
+        .unusedDescription = gRapidashGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SLOWPOKE_GALARIAN] =
+    {
+        .categoryName = _("DOPEY"),
+        .height = 12,
+        .weight = 360,
+        .description = gSlowpokeGalarianPokedexText,
+        .unusedDescription = gSlowpokeGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SLOWBRO_GALARIAN] =
+    {
+        .categoryName = _("HERMIT CRAB"),
+        .height = 16,
+        .weight = 705,
+        .description = gSlowbroGalarianPokedexText,
+        .unusedDescription = gSlowbroGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SLOWKING_GALARIAN] =
+    {
+        .categoryName = _("HEXPERT"),
+        .height = 18,
+        .weight = 795,
+        .description = gSlowkingGalarianPokedexText,
+        .unusedDescription = gSlowkingGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_MR_MIME_GALARIAN] =
+    {
+        .categoryName = _("DANCING"),
+        .height = 14,
+        .weight = 568,
+        .description = gMrMimeGalarianPokedexText,
+        .unusedDescription = gMrMimeGalarianPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_MR_RIME] =
+    {
+        .categoryName = _("COMEDIAN"),
+        .height = 15,
+        .weight = 582,
+        .description = gMrRimePokedexText,
+        .unusedDescription = gMrRimePokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SIRFETCHD] =
+    {
+        .categoryName = _("WILD DUCK"),
+        .height = 8,
+        .weight = 1170,
+        .description = gSirfetchdPokedexText,
+        .unusedDescription = gSirfetchdPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_WOOPER_PALDEAN] =
+    {
+        .categoryName = _("POISON FISH"),
+        .height = 4,
+        .weight = 110,
+        .description = gWooperPaldeanPokedexText,
+        .unusedDescription = gWooperPaldeanPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_CLODSIRE] =
+    {
+        .categoryName = _("SPINY FISH"),
+        .height = 18,
+        .weight = 2230,
+        .description = gClodsirePokedexText,
+        .unusedDescription = gClodsirePokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
 };

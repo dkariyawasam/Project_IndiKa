@@ -212,4 +212,24 @@ static const u16 sHoennSpeciesIdToCryId[] =
     [SPECIES_EXEGGCUTE_ALOLAN - HOENN_MON_SPECIES_START] = 461, // Custom family cry.
     [SPECIES_CUBONE_ALOLAN - HOENN_MON_SPECIES_START] = 462, // Custom family cry.
     [SPECIES_KOFFING_GALARIAN - HOENN_MON_SPECIES_START] = 463, // Custom family cry.
+    [SPECIES_PONYTA_GALARIAN - HOENN_MON_SPECIES_START] = 464, // Imported latest cry.
+
+    [SPECIES_RAPIDASH_GALARIAN - HOENN_MON_SPECIES_START] = 465, // Imported latest cry.
+
+    [SPECIES_SLOWPOKE_GALARIAN - HOENN_MON_SPECIES_START] = 466, // Imported latest cry.
+
+    [SPECIES_SLOWBRO_GALARIAN - HOENN_MON_SPECIES_START] = 467, // Imported latest cry.
+
+    [SPECIES_SLOWKING_GALARIAN - HOENN_MON_SPECIES_START] = 468, // Imported latest cry.
+
+    [SPECIES_MR_MIME_GALARIAN - HOENN_MON_SPECIES_START] = 469, // Imported latest cry.
+
+    [SPECIES_MR_RIME - HOENN_MON_SPECIES_START] = 470, // Imported latest cry.
+
+    [SPECIES_SIRFETCHD - HOENN_MON_SPECIES_START] = 471, // Imported latest cry.
+
+    [SPECIES_WOOPER_PALDEAN - HOENN_MON_SPECIES_START] = 472, // Imported latest cry.
+
+    [SPECIES_CLODSIRE - HOENN_MON_SPECIES_START] = 473, // Imported latest cry.
+
 };

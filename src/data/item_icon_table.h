@@ -386,4 +386,8 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_EXP_CANDY_L] = {gItemIcon_ExpCandyL, gItemIconPalette_ExpCandy},
     [ITEM_EXP_CANDY_XL] = {gItemIcon_ExpCandyXL, gItemIconPalette_ExpCandy},
     [ITEMS_COUNT]         = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
+    [ITEM_GALARICA_CUFF] = {gItemIcon_GalaricaCuff, gItemIconPalette_GalaricaCuff},
+
+    [ITEM_GALARICA_WREATH] = {gItemIcon_GalaricaWreath, gItemIconPalette_GalaricaWreath},
+
 };

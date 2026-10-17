@@ -1,0 +1,182 @@
+[
+  {
+    "species": "SIRFETCHD",
+    "reference": "sirfetchd",
+    "icon_palette": 1,
+    "ability": "STEADFAST",
+    "learnset": [
+      [
+        1,
+        "FURY_CUTTER"
+      ],
+      [
+        1,
+        "IRON_DEFENSE"
+      ],
+      [
+        1,
+        "LEER"
+      ],
+      [
+        1,
+        "PECK"
+      ],
+      [
+        1,
+        "SAND_ATTACK"
+      ],
+      [
+        15,
+        "ROCK_SMASH"
+      ],
+      [
+        25,
+        "DETECT"
+      ],
+      [
+        30,
+        "KNOCK_OFF"
+      ],
+      [
+        40,
+        "BRICK_BREAK"
+      ],
+      [
+        45,
+        "SWORDS_DANCE"
+      ],
+      [
+        50,
+        "SLAM"
+      ],
+      [
+        55,
+        "LEAF_BLADE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "ca3ee463d1acf98a8b512d7e0ca336eb0d04020968838aa6fb8bfe60dfa0cc94",
+      "icon.png": "a1616db12eb4455d9557d6609dcb30a7eeb0e5b3ffb3218173dd598c839cd183",
+      "species.json": "faa7c8736d894caa50b149fb3d52678cd8de9944afe92c932da3d8fe45568237",
+      "footprint.png": "92cf63c4e7b0e27bb3a2b56e35983cfe0a4cdbd8250e3e453d95ffdd7452e62e",
+      "cry.ogg": "1b65eaae1ae8d1392008d2a0a3611afde2cc87d15162545d9fb7cbf4f6b9d57a",
+      "normal.pal": "451d5998cacfc5f525b484417f7df5dfd5a9cbb6329786959e2c961881f57072",
+      "pokemon.json": "0d4dfce8e38ad98b4e2e87570a4595d3ff696dda19b2a39950484437d6a38e1c",
+      "back.png": "7e048a4fb072933e7a870e44003e735c270ac31cf36dc990d4d2677217d23d9d",
+      "front.png": "38e6c0f4e5654e8eb962baa9ac99b9d2aa78ca936ecf8ec8a607bc6d50ac2d5f"
+    }
+  },
+  {
+    "species": "WOOPER_PALDEAN",
+    "reference": "wooper-paldea",
+    "icon_palette": 2,
+    "ability": "POISON_POINT",
+    "learnset": [
+      [
+        1,
+        "MUD_SHOT"
+      ],
+      [
+        1,
+        "TAIL_WHIP"
+      ],
+      [
+        4,
+        "TACKLE"
+      ],
+      [
+        8,
+        "POISON_TAIL"
+      ],
+      [
+        16,
+        "SLAM"
+      ],
+      [
+        21,
+        "YAWN"
+      ],
+      [
+        32,
+        "AMNESIA"
+      ],
+      [
+        36,
+        "TOXIC"
+      ],
+      [
+        40,
+        "EARTHQUAKE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "e879f7dfa2342b459da97fc6c575c954607135ef10b85285a729beed6f548c88",
+      "icon.png": "0b2a71afb98e5d90598fee8604e179e1f5690c4630e665abc1604746ce778cf3",
+      "species.json": "ae8fbf1f385fdb8ea08ee63c5ec15114c8914661b43d8606ce82f598997bfbe3",
+      "cry.ogg": "fb9007f6300936889f2ee0a9834e241f57bcb02351fd5261868b2fa1ba319cdf",
+      "normal.pal": "87c22093cbb2bedbfa1828c6f021f38a64b5108a928d9a1efb2f28834820458e",
+      "pokemon.json": "2468901e566c1f16e3012d7ffa510185e1da02e080ac1d99a98b93828b1f5122",
+      "back.png": "212dd6e098763ace519fb7183345db689855f11b76270de6bfcde17c40fd72bc",
+      "front.png": "ccd2e43d5798621983e8b4dd5bbfeac0f51d4349a184c89068d95db364448fb4"
+    }
+  },
+  {
+    "species": "CLODSIRE",
+    "reference": "clodsire",
+    "icon_palette": 0,
+    "ability": "POISON_POINT",
+    "learnset": [
+      [
+        1,
+        "AMNESIA"
+      ],
+      [
+        1,
+        "POISON_STING"
+      ],
+      [
+        1,
+        "TAIL_WHIP"
+      ],
+      [
+        8,
+        "MUD_SHOT"
+      ],
+      [
+        12,
+        "POISON_TAIL"
+      ],
+      [
+        16,
+        "SLAM"
+      ],
+      [
+        21,
+        "YAWN"
+      ],
+      [
+        36,
+        "MEGAHORN"
+      ],
+      [
+        40,
+        "TOXIC"
+      ],
+      [
+        48,
+        "EARTHQUAKE"
+      ]
+    ],
+    "source_sha256": {
+      "shiny.pal": "3ef53ca240b0866d2e0fcb424e3de55986d15c443a1cf2ede166cae719a19d4f",
+      "icon.png": "a11b02dc18951e73d25ffe977576b558b77410328f214c94fd4781c793014f2d",
+      "species.json": "5999e4414309869d060e69aa90a54adf077ae00d87b0d883386f89fdc616fc5f",
+      "footprint.png": "b71e5704b8a57f2048ddd0c8e10125bdffe29aaf6000bfd1a36667870732323d",
+      "cry.ogg": "9a144c652b8bb2b4478e2f4d583345e7c4744ca05a3174a95d50665404eaa093",
+      "normal.pal": "205a73cdd7e63f54033d8ae62a2ec63a66af39246355bb75f5dcceabfb7419cb",
+      "pokemon.json": "9e4faa0017ad9133c6c79a7ec1538699a3ce8c55d672a1449c16ac551231f8ec",
+      "back.png": "d69623fd75077ab9296930a44ab88f54d3b0f8e911e7d0729e9c4380731647af",
+      "front.png": "1e191202e0e9f8d9df9d3684e7db0e3e221058261fc53bba0081a6b0ae369c5a"
+    }
+  }
+]

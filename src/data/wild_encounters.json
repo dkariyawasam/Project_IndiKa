@@ -1423,12 +1423,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PICHU_ALOLAN"
+                "species": "SPECIES_PICHU"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_EXEGGCUTE_ALOLAN"
+                "species": "SPECIES_EXEGGCUTE"
               },
               {
                 "min_level": 5,
@@ -1438,12 +1438,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_RATTATA_ALOLAN"
+                "species": "SPECIES_PONYTA_GALARIAN"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PIKACHU_ALOLAN"
+                "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 5,
@@ -1731,12 +1731,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CUBONE_ALOLAN"
+                "species": "SPECIES_CUBONE"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KOFFING_GALARIAN"
+                "species": "SPECIES_KOFFING"
               },
               {
                 "min_level": 5,
@@ -1746,17 +1746,17 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_VULPIX_ALOLAN"
+                "species": "SPECIES_MR_MIME_GALARIAN"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CUBONE_ALOLAN"
+                "species": "SPECIES_WOOPER_PALDEAN"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_KOFFING_GALARIAN"
+                "species": "SPECIES_MIME_JR"
               },
               {
                 "min_level": 5,
@@ -1890,7 +1890,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PICHU_ALOLAN"
+                "species": "SPECIES_PICHU"
               },
               {
                 "min_level": 5,
@@ -1905,12 +1905,12 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PIKACHU_ALOLAN"
+                "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_RATTATA_ALOLAN"
+                "species": "SPECIES_SLOWPOKE_GALARIAN"
               },
               {
                 "min_level": 5,

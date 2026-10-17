@@ -3725,6 +3725,14 @@ BattleScript_MoveUsedIsParalyzed::
 	cancelmultiturnmoves BS_ATTACKER
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveUsedFlinchedSteadfast::
+    printstring STRINGID_PKMNFLINCHED
+    waitmessage B_WAIT_TIME_LONG
+    playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+    printstring STRINGID_PKMNRAISEDSPEED
+    waitmessage B_WAIT_TIME_LONG
+    goto BattleScript_MoveEnd
+
 BattleScript_MoveUsedFlinched::
 	printstring STRINGID_PKMNFLINCHED
 	waitmessage B_WAIT_TIME_LONG
