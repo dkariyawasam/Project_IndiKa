@@ -1,3 +1,5 @@
+static const u8 sSteadfastDescription[] = _("Flinching raises SPEED.");
+static const u8 sIceBodyDescription[] = _("Hail gradually restores HP.");
 static const u8 sNoneDescription[] = _("No special ability.");
 static const u8 sStenchDescription[] = _("Helps repel wild POKéMON.");
 static const u8 sDrizzleDescription[] = _("Summons rain in battle.");
@@ -167,6 +169,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_INVISIBLE_WALL] = sInvisibleWallDescription,
     [ABILITY_REAPERS_EDGE] = sReapersEdgeDescription,
     [ABILITY_SNOW_CLOAK] = sSnowCloakDescription,
+    [ABILITY_ICE_BODY] = sIceBodyDescription,
+    [ABILITY_STEADFAST] = sSteadfastDescription,
     [ABILITY_PLATE_ARMOR] = sContactArmorDescription,
     [ABILITY_SPIRAL_ARMOR] = sContactArmorDescription,
 };
@@ -254,6 +258,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_INVISIBLE_WALL] = _("INVIS. WALL"),
     [ABILITY_REAPERS_EDGE] = _("REAPER EDGE"),
     [ABILITY_SNOW_CLOAK] = _("SNOW CLOAK"),
+    [ABILITY_ICE_BODY] = _("ICE BODY"),
+    [ABILITY_STEADFAST] = _("STEADFAST"),
     [ABILITY_PLATE_ARMOR] = _("PLATE ARMOR"),
     [ABILITY_SPIRAL_ARMOR] = _("SPIRAL ARMOR"),
 };

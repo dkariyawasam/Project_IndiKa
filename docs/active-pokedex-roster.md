@@ -1,6 +1,6 @@
 # Active Pokédex roster
 
-399 species enabled. Existing species and Dex IDs are unchanged. Eligibility requires playable stats, a name, a learnset, and a Dex entry. Unfinished/placeholder sprites do not hide a species; this includes the Safari regional forms and unfinished fossil Pokémon. Deliberately retired species remain excluded.
+404 species enabled. Existing species and Dex IDs are unchanged. Eligibility requires playable stats, a name, a learnset, and a Dex entry. Unfinished/placeholder sprites do not hide a species; this includes the Safari regional forms and unfinished fossil Pokémon. Deliberately retired species remain excluded.
 
 All four sort orders are generated from the same roster. Inactive IDs remain reserved for save compatibility; displayed numbering therefore retains gaps.
 
@@ -57,6 +57,11 @@ All four sort orders are generated from the same roster. Inactive IDs remain res
 - RAYQUAZA: not mapped/retired, no playable stats, missing name, missing dex entry
 - JIRACHI: not mapped/retired, no playable stats, missing name, missing dex entry
 - DEOXYS: not mapped/retired, no playable stats, missing name, missing dex entry
+- PICHU_ALOLAN: retired: Safari origin determines regional evolution
+- PIKACHU_ALOLAN: retired: Safari origin determines regional evolution
+- EXEGGCUTE_ALOLAN: retired: Safari origin determines regional evolution
+- CUBONE_ALOLAN: retired: Safari origin determines regional evolution
+- KOFFING_GALARIAN: retired: Safari origin determines regional evolution
 - SKITTY: not mapped/retired, no playable stats, missing name, missing dex entry
 - DELCATTY: not mapped/retired, no playable stats, missing name, missing dex entry
 - AGGRON: not mapped/retired, no playable stats, missing name, missing dex entry

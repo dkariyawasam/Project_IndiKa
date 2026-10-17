@@ -518,4 +518,24 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(UNOWN_Z, gMonShinyPalette_Unown),
     SPECIES_SHINY_PAL(UNOWN_EMARK, gMonShinyPalette_Unown),
     SPECIES_SHINY_PAL(UNOWN_QMARK, gMonShinyPalette_Unown),
+    SPECIES_SHINY_PAL(PONYTA_GALARIAN, gMonShinyPalette_PonytaGalarian),
+
+    SPECIES_SHINY_PAL(RAPIDASH_GALARIAN, gMonShinyPalette_RapidashGalarian),
+
+    SPECIES_SHINY_PAL(SLOWPOKE_GALARIAN, gMonShinyPalette_SlowpokeGalarian),
+
+    SPECIES_SHINY_PAL(SLOWBRO_GALARIAN, gMonShinyPalette_SlowbroGalarian),
+
+    SPECIES_SHINY_PAL(SLOWKING_GALARIAN, gMonShinyPalette_SlowkingGalarian),
+
+    SPECIES_SHINY_PAL(MR_MIME_GALARIAN, gMonShinyPalette_MrMimeGalarian),
+
+    SPECIES_SHINY_PAL(MR_RIME, gMonShinyPalette_MrRime),
+
+    SPECIES_SHINY_PAL(SIRFETCHD, gMonShinyPalette_Sirfetchd),
+
+    SPECIES_SHINY_PAL(WOOPER_PALDEAN, gMonShinyPalette_WooperPaldean),
+
+    SPECIES_SHINY_PAL(CLODSIRE, gMonShinyPalette_Clodsire),
+
 };

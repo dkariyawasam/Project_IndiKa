@@ -1,5 +1,5 @@
 {
-  "required_count": 320,
+  "required_count": 324,
   "sources": {
     "ABRA": [
       "Breeding ancestry: KADABRA",
@@ -203,6 +203,9 @@
       "Wild: MAP_MT_MOON_B1F",
       "Wild: MAP_MT_MOON_B2F"
     ],
+    "CLODSIRE": [
+      "Evolution: WOOPER_PALDEAN"
+    ],
     "CLOYSTER": [
       "Evolution: SHELLDER",
       "Wild: MAP_ROUTE10",
@@ -237,12 +240,10 @@
     ],
     "CUBONE": [
       "Breeding ancestry: MAROWAK",
+      "Breeding ancestry: MAROWAK_ALOLAN",
       "Wild: MAP_POKEMON_TOWER_2F",
       "Wild: MAP_POKEMON_TOWER_3F",
-      "Wild: MAP_POKEMON_TOWER_4F"
-    ],
-    "CUBONE_ALOLAN": [
-      "Breeding ancestry: MAROWAK_ALOLAN",
+      "Wild: MAP_POKEMON_TOWER_4F",
       "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "CURSOLA": [
@@ -373,10 +374,8 @@
     ],
     "EXEGGCUTE": [
       "Breeding ancestry: EXEGGUTOR",
-      "Wild: MAP_FUCHSIA_FOREST"
-    ],
-    "EXEGGCUTE_ALOLAN": [
       "Breeding ancestry: EXEGGUTOR_ALOLAN",
+      "Wild: MAP_FUCHSIA_FOREST",
       "Wild: MAP_SAFARI_ZONE_CENTER"
     ],
     "EXEGGUTOR": [
@@ -384,7 +383,7 @@
       "Wild: MAP_FUCHSIA_FOREST"
     ],
     "EXEGGUTOR_ALOLAN": [
-      "Evolution: EXEGGCUTE_ALOLAN",
+      "Evolution: EXEGGCUTE",
       "Wild: MAP_SAFARI_ZONE_CENTER"
     ],
     "FEAROW": [
@@ -710,14 +709,12 @@
     ],
     "KOFFING": [
       "Breeding ancestry: WEEZING",
+      "Breeding ancestry: WEEZING_GALARIAN",
       "Wild: MAP_CELADON_CITY",
       "Wild: MAP_POKEMON_MANSION_1F",
       "Wild: MAP_POKEMON_MANSION_2F",
       "Wild: MAP_POKEMON_MANSION_3F",
-      "Wild: MAP_POKEMON_MANSION_B1F"
-    ],
-    "KOFFING_GALARIAN": [
-      "Breeding ancestry: WEEZING_GALARIAN",
+      "Wild: MAP_POKEMON_MANSION_B1F",
       "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "KRABBY": [
@@ -899,7 +896,7 @@
       "Wild: MAP_POKEMON_TOWER_4F"
     ],
     "MAROWAK_ALOLAN": [
-      "Evolution: CUBONE_ALOLAN",
+      "Evolution: CUBONE",
       "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "MAWILE": [
@@ -947,7 +944,9 @@
     ],
     "MIME_JR": [
       "Breeding ancestry: MR_MIME",
-      "Wild: MAP_DIGLETTS_CAVE_B2F"
+      "Breeding ancestry: MR_MIME_GALARIAN",
+      "Wild: MAP_DIGLETTS_CAVE_B2F",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "MIME_SR": [
       "Evolution: MR_MIME",
@@ -977,6 +976,14 @@
       "Wild: MAP_DIGLETTS_CAVE_B2F",
       "Wild: MAP_DIGLETTS_CAVE_NORTHSIDE_B1F",
       "Wild: MAP_DIGLETTS_CAVE_SOUTHSIDE_B1F"
+    ],
+    "MR_MIME_GALARIAN": [
+      "Breeding ancestry: MR_RIME",
+      "Evolution: MIME_JR",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
+    ],
+    "MR_RIME": [
+      "Evolution: MR_MIME_GALARIAN"
     ],
     "MUK": [
       "Evolution: GRIMER",
@@ -1120,10 +1127,7 @@
     ],
     "PICHU": [
       "Breeding ancestry: PIKACHU",
-      "Wild: MAP_ROUTE2"
-    ],
-    "PICHU_ALOLAN": [
-      "Breeding ancestry: PIKACHU_ALOLAN",
+      "Wild: MAP_ROUTE2",
       "Wild: MAP_SAFARI_ZONE_CENTER",
       "Wild: MAP_SAFARI_ZONE_WEST"
     ],
@@ -1145,12 +1149,9 @@
     ],
     "PIKACHU": [
       "Breeding ancestry: RAICHU",
-      "Evolution: PICHU",
-      "Wild: MAP_ROUTE2"
-    ],
-    "PIKACHU_ALOLAN": [
       "Breeding ancestry: RAICHU_ALOLAN",
-      "Evolution: PICHU_ALOLAN",
+      "Evolution: PICHU",
+      "Wild: MAP_ROUTE2",
       "Wild: MAP_SAFARI_ZONE_CENTER",
       "Wild: MAP_SAFARI_ZONE_WEST"
     ],
@@ -1205,6 +1206,10 @@
     "PONYTA": [
       "Breeding ancestry: RAPIDASH",
       "Wild: MAP_ROUTE14"
+    ],
+    "PONYTA_GALARIAN": [
+      "Breeding ancestry: RAPIDASH_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_CENTER"
     ],
     "POOCHYENA": [
       "Breeding ancestry: MIGHTYENA",
@@ -1276,13 +1281,16 @@
       "Wild: MAP_ROUTE2"
     ],
     "RAICHU_ALOLAN": [
-      "Evolution: PIKACHU_ALOLAN",
+      "Evolution: PIKACHU",
       "Wild: MAP_SAFARI_ZONE_CENTER",
       "Wild: MAP_SAFARI_ZONE_WEST"
     ],
     "RAPIDASH": [
       "Evolution: PONYTA",
       "Wild: MAP_ROUTE14"
+    ],
+    "RAPIDASH_GALARIAN": [
+      "Evolution: PONYTA_GALARIAN"
     ],
     "RATICATE": [
       "Evolution: RATTATA",
@@ -1446,8 +1454,14 @@
       "Wild: MAP_ROUTE12",
       "Wild: MAP_ROUTE24"
     ],
+    "SLOWBRO_GALARIAN": [
+      "Evolution: SLOWPOKE_GALARIAN"
+    ],
     "SLOWKING": [
       "NPC trade evolution: INGAME_TRADE_SLOWPOKE"
+    ],
+    "SLOWKING_GALARIAN": [
+      "Evolution: SLOWPOKE_GALARIAN"
     ],
     "SLOWPOKE": [
       "Breeding ancestry: SLOWBRO",
@@ -1457,6 +1471,11 @@
       "Wild: MAP_ROUTE12",
       "Wild: MAP_ROUTE24",
       "Wild: MAP_ROUTE25"
+    ],
+    "SLOWPOKE_GALARIAN": [
+      "Breeding ancestry: SLOWBRO_GALARIAN",
+      "Breeding ancestry: SLOWKING_GALARIAN",
+      "Wild: MAP_SAFARI_ZONE_WEST"
     ],
     "SLUGMA": [
       "Breeding ancestry: MAGCARGO",
@@ -1681,7 +1700,7 @@
       "Wild: MAP_POKEMON_MANSION_B1F"
     ],
     "WEEZING_GALARIAN": [
-      "Evolution: KOFFING_GALARIAN",
+      "Evolution: KOFFING",
       "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "WIGGLYTUFF": [
@@ -1711,6 +1730,10 @@
       "Wild: MAP_ROCK_TUNNEL_B2F",
       "Wild: MAP_ROUTE24",
       "Wild: MAP_ROUTE6"
+    ],
+    "WOOPER_PALDEAN": [
+      "Breeding ancestry: CLODSIRE",
+      "Wild: MAP_SAFARI_ZONE_NORTH"
     ],
     "WURMPLE": [
       "Breeding ancestry: CASCOON",
@@ -1811,6 +1834,7 @@
     "RALTS",
     "REMORAID",
     "SHEDINJA",
+    "SIRFETCHD",
     "SKARMORY",
     "SNUBBULL",
     "SPINDA",

@@ -225,6 +225,7 @@ COMMON_DATA void (*gPreBattleCallback1)(void) = NULL;
 COMMON_DATA void (*gBattleMainFunc)(void) = NULL;
 COMMON_DATA struct BattleResults gBattleResults = {0};
 COMMON_DATA u8 gLeveledUpInBattle = 0;
+EWRAM_DATA u8 gCriticalHitsInBattle[PARTY_SIZE] = {0};
 COMMON_DATA void (*gBattlerControllerFuncs[MAX_BATTLERS_COUNT])(void) = {0};
 COMMON_DATA u8 gHealthboxSpriteIds[MAX_BATTLERS_COUNT] = {0};
 COMMON_DATA u8 gMultiUsePlayerCursor = 0;
@@ -2230,6 +2231,7 @@ static void BattleStartClearSetData(void)
     gBattleScripting.animTurn = 0;
     gBattleScripting.animTargetsHit = 0;
     gLeveledUpInBattle = 0;
+    memset(gCriticalHitsInBattle, 0, sizeof(gCriticalHitsInBattle));
     gAbsentBattlerFlags = 0;
     gBattleStruct->runTries = 0;
     gBattleStruct->safariRockThrowCounter = 0;
@@ -3801,11 +3803,30 @@ static void HandleEndTurn_FinishBattle(void)
     }
 }
 
+void RecordCriticalHitEvolution(void)
+{
+    u8 slot = gBattlerPartyIndexes[gBattlerAttacker];
+    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER))
+     && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER
+     && GetBattlerSide(gBattlerTarget) == B_SIDE_OPPONENT
+     && slot < PARTY_SIZE
+     && GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES) == SPECIES_FARFETCHD_GALARIAN
+     && gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD_GALARIAN
+     && gCriticalHitsInBattle[slot] < 3)
+        gCriticalHitsInBattle[slot]++;
+}
+
 static void FreeResetData_ReturnToOvOrDoEvolutions(void)
 {
     if (!gPaletteFade.active)
     {
+        u8 i;
         ResetSpriteData();
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER)))
+            for (i = 0; i < PARTY_SIZE; i++)
+                if (gCriticalHitsInBattle[i] >= 3
+                 && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_FARFETCHD_GALARIAN)
+                    gLeveledUpInBattle |= gBitTable[i];
         if (gLeveledUpInBattle == 0
          || (gBattleOutcome != B_OUTCOME_WON && gBattleOutcome != B_OUTCOME_CAUGHT))
             gBattleMainFunc = ReturnFromBattleToOverworld;
@@ -3837,7 +3858,9 @@ static void TryEvolvePokemon(void)
                 levelUpBits &= ~(gBitTable[i]);
                 gLeveledUpInBattle = levelUpBits;
 
-                species = GetEvolutionTargetSpecies(&gPlayerParty[i], EVO_MODE_NORMAL, levelUpBits);
+                species = GetEvolutionTargetSpecies(&gPlayerParty[i], EVO_MODE_BATTLE_END, 0);
+                if (species == SPECIES_NONE)
+                    species = GetEvolutionTargetSpecies(&gPlayerParty[i], EVO_MODE_NORMAL, levelUpBits);
                 if (species != SPECIES_NONE)
                 {
                     gBattleMainFunc = WaitForEvoSceneToFinish;

@@ -440,7 +440,9 @@
 
 #define ITEM_PATCH_DISC 366
 
-#define ITEMS_COUNT 367
+#define ITEM_GALARICA_CUFF 367
+#define ITEM_GALARICA_WREATH 368
+#define ITEMS_COUNT 369
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF
@@ -456,6 +458,7 @@
 // Check if the item is one that can be used on a Pokemon.
 #define IS_POKEMON_ITEM(item) (((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX) \
     || (item) == ITEM_DUSK_STONE || (item) == ITEM_SHINY_STONE \
-    || (item) == ITEM_DAWN_STONE || (item) == ITEM_ICE_STONE)
+    || (item) == ITEM_DAWN_STONE || (item) == ITEM_ICE_STONE \
+    || (item) == ITEM_GALARICA_CUFF || (item) == ITEM_GALARICA_WREATH)
 
 #endif  // GUARD_CONSTANTS_ITEMS_H

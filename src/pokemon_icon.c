@@ -543,7 +543,27 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_UNOWN_Y]     = gMonIcon_UnownY,
     [SPECIES_UNOWN_Z]     = gMonIcon_UnownZ,
     [SPECIES_UNOWN_EMARK] = gMonIcon_UnownExclamationMark,
-    [SPECIES_UNOWN_QMARK] = gMonIcon_UnownQuestionMark
+    [SPECIES_UNOWN_QMARK] = gMonIcon_UnownQuestionMark,
+    [SPECIES_PONYTA_GALARIAN] = gMonIcon_PonytaGalarian,
+
+    [SPECIES_RAPIDASH_GALARIAN] = gMonIcon_RapidashGalarian,
+
+    [SPECIES_SLOWPOKE_GALARIAN] = gMonIcon_SlowpokeGalarian,
+
+    [SPECIES_SLOWBRO_GALARIAN] = gMonIcon_SlowbroGalarian,
+
+    [SPECIES_SLOWKING_GALARIAN] = gMonIcon_SlowkingGalarian,
+
+    [SPECIES_MR_MIME_GALARIAN] = gMonIcon_MrMimeGalarian,
+
+    [SPECIES_MR_RIME] = gMonIcon_MrRime,
+
+    [SPECIES_SIRFETCHD] = gMonIcon_Sirfetchd,
+
+    [SPECIES_WOOPER_PALDEAN] = gMonIcon_WooperPaldean,
+
+    [SPECIES_CLODSIRE] = gMonIcon_Clodsire,
+
 };
 
 const u8 gMonIconPaletteIndices[] = {
@@ -1064,7 +1084,27 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_UNOWN_Y]     = 0,
     [SPECIES_UNOWN_Z]     = 0,
     [SPECIES_UNOWN_EMARK] = 0,
-    [SPECIES_UNOWN_QMARK] = 0
+    [SPECIES_UNOWN_QMARK] = 0,
+    [SPECIES_PONYTA_GALARIAN] = 2,
+
+    [SPECIES_RAPIDASH_GALARIAN] = 2,
+
+    [SPECIES_SLOWPOKE_GALARIAN] = 0,
+
+    [SPECIES_SLOWBRO_GALARIAN] = 0,
+
+    [SPECIES_SLOWKING_GALARIAN] = 0,
+
+    [SPECIES_MR_MIME_GALARIAN] = 0,
+
+    [SPECIES_MR_RIME] = 0,
+
+    [SPECIES_SIRFETCHD] = 1,
+
+    [SPECIES_WOOPER_PALDEAN] = 2,
+
+    [SPECIES_CLODSIRE] = 0,
+
 };
 
 const struct SpritePalette gMonIconPaletteTable[] = {

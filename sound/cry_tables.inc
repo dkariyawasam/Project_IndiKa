@@ -467,6 +467,18 @@ gCryTable::
 	cry Cry_Custom_CUBONE_ALOLAN
 	cry Cry_Custom_KOFFING_GALARIAN
 
+	cry Cry_Imported_PONYTA_GALARIAN
+	cry Cry_Imported_RAPIDASH_GALARIAN
+	cry Cry_Imported_SLOWPOKE_GALARIAN
+	cry Cry_Imported_SLOWBRO_GALARIAN
+	cry Cry_Imported_SLOWKING_GALARIAN
+	cry Cry_Imported_MR_MIME_GALARIAN
+	cry Cry_Imported_MR_RIME
+
+	cry Cry_Imported_SIRFETCHD
+	cry Cry_Imported_WOOPER_PALDEAN
+	cry Cry_Imported_CLODSIRE
+
 	.align 2
 gCryTable_Reverse::
 	cry_reverse Cry_Bulbasaur
@@ -935,3 +947,13 @@ gCryTable_Reverse::
 	cry_reverse Cry_Custom_EXEGGCUTE_ALOLAN
 	cry_reverse Cry_Custom_CUBONE_ALOLAN
 	cry_reverse Cry_Custom_KOFFING_GALARIAN
+	cry_reverse Cry_Imported_PONYTA_GALARIAN
+	cry_reverse Cry_Imported_RAPIDASH_GALARIAN
+	cry_reverse Cry_Imported_SLOWPOKE_GALARIAN
+	cry_reverse Cry_Imported_SLOWBRO_GALARIAN
+	cry_reverse Cry_Imported_SLOWKING_GALARIAN
+	cry_reverse Cry_Imported_MR_MIME_GALARIAN
+	cry_reverse Cry_Imported_MR_RIME
+	cry_reverse Cry_Imported_SIRFETCHD
+	cry_reverse Cry_Imported_WOOPER_PALDEAN
+	cry_reverse Cry_Imported_CLODSIRE
