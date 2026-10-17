@@ -717,6 +717,8 @@ extern u16 gLockedMoves[MAX_BATTLERS_COUNT];
 extern u8 gCurrentTurnActionNumber;
 extern u16 gExpShareExp;
 extern u8 gLeveledUpInBattle;
+extern u8 gCriticalHitsInBattle[PARTY_SIZE];
+void RecordCriticalHitEvolution(void);
 extern u16 gLastResultingMoves[MAX_BATTLERS_COUNT];
 extern u16 gLastPrintedMoves[MAX_BATTLERS_COUNT];
 extern u8 gActionsByTurnOrder[MAX_BATTLERS_COUNT];

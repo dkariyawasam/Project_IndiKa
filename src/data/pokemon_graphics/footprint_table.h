@@ -491,4 +491,24 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_LICKILICKY] = gMonFootprint_Lickilicky,
     [SPECIES_GALLADE] = gMonFootprint_Gallade,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
+    [SPECIES_PONYTA_GALARIAN] = gMonFootprint_PonytaGalarian,
+
+    [SPECIES_RAPIDASH_GALARIAN] = gMonFootprint_RapidashGalarian,
+
+    [SPECIES_SLOWPOKE_GALARIAN] = gMonFootprint_SlowpokeGalarian,
+
+    [SPECIES_SLOWBRO_GALARIAN] = gMonFootprint_SlowbroGalarian,
+
+    [SPECIES_SLOWKING_GALARIAN] = gMonFootprint_SlowkingGalarian,
+
+    [SPECIES_MR_MIME_GALARIAN] = gMonFootprint_MrMimeGalarian,
+
+    [SPECIES_MR_RIME] = gMonFootprint_MrRime,
+
+    [SPECIES_SIRFETCHD] = gMonFootprint_Sirfetchd,
+
+    [SPECIES_WOOPER_PALDEAN] = gMonFootprint_WooperPaldean,
+
+    [SPECIES_CLODSIRE] = gMonFootprint_Clodsire,
+
 };

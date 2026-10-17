@@ -438,12 +438,14 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
 
 // Independent herbalists and Rocket prize clerks do not accept the Thunder Pass.
 extern const u16 FuchsiaCity_House2_HerbalistItems[];
+extern const u16 SafariZone_Center_RestHouse_GalarItems[];
 
 static bool8 ShopAcceptsThunderPass(void)
 {
     return !IsCoinShop()
         && sShopData.mainItemList != sRocketCoinTms
         && sShopData.mainItemList != sRocketPrizeMons
+        && sShopData.mainItemList != SafariZone_Center_RestHouse_GalarItems
         && sShopData.mainItemList != FuchsiaCity_House2_HerbalistItems
         && CheckBagHasItem(ITEM_THUNDER_PASS, 1);
 }

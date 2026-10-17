@@ -41,7 +41,7 @@ void LoadPalette(const void *p, int offset, int size) {}
 #define COPYWIN_MAP 0
 struct PokedexCategoryPage { const u16 *species; u8 count; };
 #include "data/pokemon/pokedex_categories.h"
-struct {u8 category, pageNum, rewardHeaderPulseTimer, rewardFooterRevealWidth, rewardFooterHold, rewardFooterRetracting, rewardReceipt, firstPageInCategory, lastPageInCategory, categoryCursorPosInPage, numMonsOnPage, modeSelectCursorPos; s32 selectedHabitat;} screen, *sPokedexScreenData = &screen;
+struct {u8 category, pageNum, rewardHeaderPulseTimer, rewardFooterRevealWidth, rewardFooterHold, rewardFooterRetracting, rewardReceipt, firstPageInCategory, lastPageInCategory, categoryCursorPosInPage, numMonsOnPage, modeSelectCursorPos; u16 pageSpecies[4]; s32 selectedHabitat;} screen, *sPokedexScreenData = &screen;
 struct Save {u32 dexPageRewardsVersion; u8 dexPageRewards[64]; u32 dexHabitatRewardsVersion; u16 dexHabitatRewards;} save, *gSaveBlock1Ptr = &save;
 u8 owned[NUM_SPECIES];
 int balls, candy, ballSpace = 1, candySpace = 1, failCandy;
@@ -71,6 +71,9 @@ void ClearWindowTilemap(int w) {if(w==0) footerVisible=0;}
 void SetWindowAttribute(int w, int a, int v) {}
 void DrawUiHintHeader(int w, const u8 *s, int a, int b, int c, int d) {footer = (const char *)s; if(w==0 && d) footerVisible=1;}
 '''
+form_helpers = '#include "data/pokemon/pokedex_forms.h"\n' + source[source.index('static const u16 *DexScreen_FormGroup(u16 species)\n{'):source.index('static const u8 *DexScreen_FormLabel(u16 species)\n{')]
+harness += '\n#define ARRAY_COUNT(a) (sizeof(a)/sizeof((a)[0]))\n#define FLAG_GET_SEEN 0\n' + form_helpers
+
 tests = r'''
 int main(void) {
  int c, p, i; u8 keys[512] = {0}; struct Save saved;
@@ -105,6 +108,9 @@ int main(void) {
  screen.selectedHabitat=0; assert(!DexScreen_HabitatReady(0));
  for(p=0;p<gDexCategories[0].count;p++)
   for(i=0;i<gDexCategories[0].page[p].count;i++) owned[gDexCategories[0].page[p].species[i]]=1;
+ // Alternate forms are independently required even when not seen yet.
+ assert(!DexScreen_HabitatReady(0));
+ memset(owned,1,sizeof(owned));
  assert(DexScreen_HabitatReady(0));
  DexScreen_UpdateHabitatHeader(); assert(strstr(header,"CLAIM"));
  ballSpace=0; DexScreen_ClaimHabitatReward(); assert(!save.dexHabitatRewards);

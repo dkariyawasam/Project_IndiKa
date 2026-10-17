@@ -723,3 +723,9 @@ const u32 gItemIconPalette_SoulPass[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_MarshFinder[] = INCBIN_U32("graphics/items/icons/marsh_finder.4bpp.lz");
 
 const u32 gItemIconPalette_MarshFinder[] = INCBIN_U32("graphics/items/icon_palettes/marsh_finder.gbapal.lz");
+
+const u32 gItemIcon_GalaricaCuff[] = INCBIN_U32("graphics/items/icons/galarica_cuff.4bpp.lz");
+const u32 gItemIconPalette_GalaricaCuff[] = INCBIN_U32("graphics/items/icon_palettes/galarica_cuff.gbapal.lz");
+
+const u32 gItemIcon_GalaricaWreath[] = INCBIN_U32("graphics/items/icons/galarica_wreath.4bpp.lz");
+const u32 gItemIconPalette_GalaricaWreath[] = INCBIN_U32("graphics/items/icon_palettes/galarica_wreath.gbapal.lz");
