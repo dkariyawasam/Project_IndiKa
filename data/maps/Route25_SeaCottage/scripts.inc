@@ -22,9 +22,7 @@ Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket::
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set RETURN_AFTER_SS_TICKET, Route25_SeaCottage_EventScript_BillGoLookAtPC
-	goto_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_BillGoToSSAnne
-	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_BillGiveSSTicket
+	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_PostRescue
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillAskForHelpMale
 	goto_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillAskForHelpFemale
@@ -103,7 +101,7 @@ Route25_SeaCottage_EventScript_BillGiveSSTicket::
 	setflag FLAG_HIDE_NUGGET_BRIDGE_REWARD_GIVER
 	setflag FLAG_GOT_SS_TICKET
 	setflag FLAG_SYS_NOT_SOMEONES_PC
-	goto Route25_SeaCottage_EventScript_BillGoToSSAnne
+	goto Route25_SeaCottage_EventScript_Challenge
 	end
 
 Route25_SeaCottage_EventScript_BillThanksMale::
@@ -294,3 +292,73 @@ Route25_SeaCottage_Movement_BillWalkToMiddleOfRoom::
 Route25_SeaCottage_Movement_BillExitTeleporter::
 	walk_down
 	step_end
+
+Route25_SeaCottage_EventScript_PostRescue::
+	goto_if_unset FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_BillGiveSSTicket
+	goto Route25_SeaCottage_EventScript_Challenge
+
+Route25_SeaCottage_EventScript_Challenge::
+	goto_if_defeated TRAINER_BILL, Route25_SeaCottage_EventScript_GiftEevee
+	msgbox Route25_SeaCottage_Text_BattleOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route25_SeaCottage_EventScript_BattleLater
+	trainerbattle_no_intro TRAINER_BILL, Route25_SeaCottage_Text_BattleDefeat
+	goto Route25_SeaCottage_EventScript_GiftEevee
+
+Route25_SeaCottage_EventScript_BattleLater::
+	msgbox Route25_SeaCottage_Text_BattleLater
+	release
+	end
+
+Route25_SeaCottage_EventScript_GiftEevee::
+	goto_if_set FLAG_GOT_EEVEE, Route25_SeaCottage_EventScript_EeveeFarewell
+	msgbox Route25_SeaCottage_Text_EeveeGift
+	setvar VAR_TEMP_1, SPECIES_EEVEE
+	givemon SPECIES_EEVEE, 8
+	goto_if_eq VAR_RESULT, 0, Route25_SeaCottage_EventScript_GetEeveeParty
+	goto_if_eq VAR_RESULT, 1, Route25_SeaCottage_EventScript_GetEeveePC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+Route25_SeaCottage_EventScript_GetEeveeParty::
+	call EventScript_GetGiftMonPartySlot
+	special SetPartyMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message Route25_SeaCottage_Text_ObtainedAnEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route25_SeaCottage_EventScript_SetGotEevee
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto Route25_SeaCottage_EventScript_SetGotEevee
+	end
+
+Route25_SeaCottage_EventScript_GetEeveePC::
+	special SetBoxMonHighFriendship
+	playfanfare MUS_LEVEL_UP
+	message Route25_SeaCottage_Text_ObtainedAnEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route25_SeaCottage_EventScript_TransferEeveeToPC
+	call EventScript_NameReceivedBoxMon
+	goto Route25_SeaCottage_EventScript_TransferEeveeToPC
+	end
+
+Route25_SeaCottage_EventScript_TransferEeveeToPC::
+	call EventScript_TransferredToPC
+	goto Route25_SeaCottage_EventScript_SetGotEevee
+	end
+
+Route25_SeaCottage_EventScript_SetGotEevee::
+	setflag FLAG_GOT_EEVEE
+	goto Route25_SeaCottage_EventScript_EeveeFarewell
+
+Route25_SeaCottage_EventScript_EeveeFarewell::
+	msgbox Route25_SeaCottage_Text_EeveeSightseeing
+	release
+	end
+

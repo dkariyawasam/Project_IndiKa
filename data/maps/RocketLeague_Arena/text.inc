@@ -80,9 +80,10 @@ RocketLeague_Arena_Text_ProtonPostBattle::
     .string "be polite.$"
 
 RocketLeague_Arena_Text_RazorPostBattle::
-    .string "KARDINAL: You cut clean through\n"
-    .string "my plan.\p"
-    .string "Let's see you do it again.$"
+    .string "KARDINAL: I could make my exit\n"
+    .string "in a cloud of glitter…\p"
+    .string "But last time, they made me\n"
+    .string "clean it up without my powers.$"
 
 RocketLeague_Arena_Text_VexPostBattle::
     .string "SHION: Data point recorded.\p"
@@ -140,11 +141,15 @@ RocketLeague_Arena_Text_CoinPouchFull::
     .string "COINS.$"
 
 RocketLeague_Arena_Text_RazorIntro::
-	.string "KARDINAL: You watch the attack.\nI watch the choice before it.\pTry keeping a secret from my\nPSYCHIC team!$"
+    .string "KARDINAL: The floating lights?\n"
+    .string "Psychic power. All me.\p"
+    .string "ROCKET wanted something dramatic.\n"
+    .string "I may have got carried away.\p"
+    .string "Now, watch closely.\n"
+    .string "The finale has a little kick!$"
 
 RocketLeague_Arena_Text_RazorDefeat::
-	.string "You chose a line I hadn't seen.$"
-
+    .string "That blackout was NOT my cue!$"
 
 RocketLeague_Arena_Text_VexIntro::
 	.string "SHION: Still judging strength by\nappearances? My FAIRY team\penjoys correcting that mistake.$"
