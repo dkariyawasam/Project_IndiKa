@@ -30,6 +30,10 @@ struct Evolution {u16 method,param,targetSpecies;};
 #include "src/data/pokemon/evolution.h"
 #define MAX_MON_MOVES 4
 struct Pokemon {u32 data[128];};
+#define PARTY_SIZE 6
+static struct Pokemon gPlayerParty[PARTY_SIZE];
+static u8 gCriticalHitsInBattle[PARTY_SIZE];
+static bool8 HasSafariEvolutionOrigin(struct Pokemon *m){return m->data[MON_DATA_MET_LOCATION] == MAPSEC_KANTO_SAFARI_ZONE && m->data[MON_DATA_MET_LEVEL] != 0;}
 static u32 GetMonData(struct Pokemon *m,int field,void *unused){return m->data[field];}
 static void SetMonData(struct Pokemon *m,int field,const u16 *v){m->data[field]=*v;}
 static u8 ItemId_GetHoldEffect(u16 item){return item==ITEM_EVERSTONE?HOLD_EFFECT_PREVENT_EVOLVE:0;}
@@ -115,17 +119,19 @@ int main(void){
   assert(GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0)==0);
  }
 
- const u16 levelBases[]={SPECIES_TYNAMO,SPECIES_DIGLETT_ALOLAN,SPECIES_MEOWTH_GALARIAN,SPECIES_GEODUDE_ALOLAN,SPECIES_GRIMER_ALOLAN,SPECIES_CORSOLA_GALARIAN,SPECIES_KOFFING_GALARIAN};
+ const u16 levelBases[]={SPECIES_TYNAMO,SPECIES_DIGLETT_ALOLAN,SPECIES_MEOWTH_GALARIAN,SPECIES_GEODUDE_ALOLAN,SPECIES_GRIMER_ALOLAN,SPECIES_CORSOLA_GALARIAN,SPECIES_KOFFING};
  const u16 levelTargets[]={SPECIES_EELEKTRIK,SPECIES_DUGTRIO_ALOLAN,SPECIES_PERRSERKER,SPECIES_GRAVELER_ALOLAN,SPECIES_MUK_ALOLAN,SPECIES_CURSOLA,SPECIES_WEEZING_GALARIAN};
  const u16 levels[]={39,26,28,25,38,38,35};
  for(int i=0;i<7;i++){
   m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=levelBases[i];
+  m.data[MON_DATA_MET_LOCATION]=MAPSEC_KANTO_SAFARI_ZONE;m.data[MON_DATA_MET_LEVEL]=1;
   m.data[MON_DATA_LEVEL]=levels[i]-1;assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
   m.data[MON_DATA_LEVEL]=levels[i];assert(GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0)==levelTargets[i]);
   m.data[MON_DATA_HELD_ITEM]=ITEM_EVERSTONE;assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
  }
  for(int i=0;i<2;i++){
-  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=i?SPECIES_CUBONE_ALOLAN:SPECIES_RATTATA_ALOLAN;
+  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=i?SPECIES_CUBONE:SPECIES_RATTATA_ALOLAN;
+  m.data[MON_DATA_MET_LOCATION]=MAPSEC_KANTO_SAFARI_ZONE;m.data[MON_DATA_MET_LEVEL]=1;
   int threshold=i?28:20;u16 target=i?SPECIES_MAROWAK_ALOLAN:SPECIES_RATICATE_ALOLAN;
   for(int day=0;day<2;day++)for(int level=threshold-1;level<=threshold+1;level++){
    daytime=day;m.data[MON_DATA_LEVEL]=level;
@@ -148,9 +154,9 @@ int main(void){
  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_ITEM_USE,ITEM_FIRE_STONE));
  assert(GetEvolutionTargetSpecies(&m,EVO_MODE_ITEM_USE,ITEM_THUNDER_STONE)==SPECIES_EELEKTROSS);
  for(int i=0;i<2;i++){
-  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=i?SPECIES_MEOWTH_ALOLAN:SPECIES_PICHU_ALOLAN;
+  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=i?SPECIES_MEOWTH_ALOLAN:SPECIES_PICHU;
   m.data[MON_DATA_FRIENDSHIP]=219;assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
-  m.data[MON_DATA_FRIENDSHIP]=220;assert(GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0)==(i?SPECIES_PERSIAN_ALOLAN:SPECIES_PIKACHU_ALOLAN));
+  m.data[MON_DATA_FRIENDSHIP]=220;assert(GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0)==(i?SPECIES_PERSIAN_ALOLAN:SPECIES_PIKACHU));
  }
  m=(struct Pokemon){0};m.data[MON_DATA_SPECIES]=SPECIES_GRAVELER_ALOLAN;
  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));

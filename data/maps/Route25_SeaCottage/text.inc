@@ -51,24 +51,16 @@ Route25_SeaCottage_Text_NoPleaseBeautiful::
     .string "All right!$"
 
 Route25_SeaCottage_Text_ThanksBudTakeThis::
-    .string "BILL: Yeehah!\n"
-    .string "Thanks, bud! I owe you one!\p"
-    .string "So, did you come to see my\n"
-    .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+    .string "BILL: Thanks for rescuing me!\n"
+    .string "Here, take my S.S. TICKET.\p"
+    .string "The S.S. ANNE is in VERMILION.\n"
+    .string "I'd rather stay with my POKéMON!$"
 
 Route25_SeaCottage_Text_ThanksLadyTakeThis::
-    .string "BILL: Yeehah!\n"
-    .string "Thanks, lady! I owe you one!\p"
-    .string "So, did you come to see my\n"
-    .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+    .string "BILL: Thanks for rescuing me!\n"
+    .string "Here, take my S.S. TICKET.\p"
+    .string "The S.S. ANNE is in VERMILION.\n"
+    .string "I'd rather stay with my POKéMON!$"
 
 Route25_SeaCottage_Text_ReceivedSSTicketFromBill::
     .string "{PLAYER} received an S.S. TICKET\n"
@@ -106,3 +98,31 @@ Route25_SeaCottage_Text_BillsFavoriteMonList::
 Route25_SeaCottage_Text_SeeWhichMon::
     .string "Which POKéMON do you want to see?$"
 
+
+Route25_SeaCottage_Text_BattleOffer::
+    .string "BILL: Thanks for getting me back\n"
+    .string "on my own two feet!\p"
+    .string "How about a battle? I'd love you\n"
+    .string "to meet my EEVEE's evolutions!$"
+
+Route25_SeaCottage_Text_BattleLater::
+    .string "BILL: Whenever you're ready!\n"
+    .string "Your ticket's good for the S.S. ANNE.$"
+
+Route25_SeaCottage_Text_BattleDefeat::
+    .string "What a team!\n"
+    .string "You've really brought out their best!$"
+
+Route25_SeaCottage_Text_EeveeGift::
+    .string "BILL: This EEVEE's taken a real\n"
+    .string "shine to you. Take it with you!$"
+
+Route25_SeaCottage_Text_ObtainedAnEevee::
+    .string "{PLAYER} received an EEVEE\n"
+    .string "from BILL!$"
+
+Route25_SeaCottage_Text_EeveeSightseeing::
+    .string "BILL: Take EEVEE to the S.S. ANNE!\n"
+    .string "It's keen to do some sightseeing.\p"
+    .string "A little adventure together might\n"
+    .string "bring you even closer.$"

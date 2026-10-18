@@ -8,7 +8,7 @@ from overworlds import transparent_png
 
 def catalog(root, species):
     folder=root/'src/data/pokemon_graphics'
-    symbols=dict(re.findall(r'const u\d+ (\w+)\[\] = INCBIN_U\d+\("([^"]+)"\)',(root/'src/data/graphics/pokemon.h').read_text()))
+    symbols=dict(re.findall(r'const u\d+ (\w+)\[\] = INCBIN_U\d+\(\s*"([^"]+)"\)',(root/'src/data/graphics/pokemon.h').read_text()))
     def table(name):return dict(re.findall(r'SPECIES_(?:SPRITE|PAL|SHINY_PAL)\((\w+),\s*(\w+)\)',(folder/name).read_text()))
     front,back,normal,shiny=[table(n) for n in ['front_pic_table.h','back_pic_table.h','palette_table.h','shiny_palette_table.h']]
     def offsets(name):return {k:int(v) for k,v in re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{[^}]*\.y_offset\s*=\s*(\d+)',(folder/name).read_text())}
@@ -96,6 +96,30 @@ def save_offsets(root, species, payload):
     return dict(species=key, values=values, message='Saved to source. Rebuild the ROM to use these offsets in-game.')
 
 
+def battle_info(root, key):
+    """Read the mod's stats and ability text, rather than external species defaults."""
+    source = (root/'src/data/pokemon/species_info.h').read_text()
+    blocks = dict(re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}', source, re.S))
+    block = blocks.get(key, '')
+    fields = [('hp','baseHP'), ('attack','baseAttack'), ('defense','baseDefense'),
+              ('specialAttack','baseSpAttack'), ('specialDefense','baseSpDefense'), ('speed','baseSpeed')]
+    stats = {}
+    for label, field in fields:
+        value = re.search(r'\.'+field+r'\s*=\s*(\d+)', block)
+        stats[label] = int(value[1]) if value else None
+    text = (root/'src/data/text/abilities.h').read_text()
+    names = dict(re.findall(r'\[(ABILITY_\w+)\]\s*=\s*_\("([^"\n]*)"\)', text))
+    descriptions = dict(re.findall(r'static const u8 (\w+)\[\] = _\("([^"\n]*)"\);', text))
+    pointers = dict(re.findall(r'\[(ABILITY_\w+)\]\s*=\s*(\w+Description)', text))
+    slots = re.search(r'\.abilities\s*=\s*\{([^}]+)\}', block)
+    keys = list(dict.fromkeys(re.findall(r'ABILITY_\w+', slots[1]))) if slots else []
+    abilities = [dict(key=k, name=names.get(k, k.removeprefix('ABILITY_').replace('_',' ')),
+                      description=descriptions.get(pointers.get(k,''), 'Description unavailable.'))
+                 for k in keys if k != 'ABILITY_NONE']
+    return dict(stats=stats, baseStatTotal=sum(stats.values()) if all(v is not None for v in stats.values()) else None,
+                abilities=abilities)
+
+
 def details(root, entry):
     import json
     from official_encounters import for_species
@@ -110,7 +134,7 @@ def details(root, entry):
         return m[1] if m else ''
     category = re.search(r'\.categoryName\s*=\s*_\("([^"]*)"\)', block)
     footprints = dict(re.findall(r'\[SPECIES_(\w+)\]\s*=\s*(\w+)', (root/'src/data/pokemon_graphics/footprint_table.h').read_text()))
-    assets = dict(re.findall(r'const u\d+ (\w+)\[\] = INCBIN_U\d+\("([^"]+)"\)', (root/'src/data/graphics/pokemon.h').read_text()))
+    assets = dict(re.findall(r'const u\d+ (\w+)\[\] = INCBIN_U\d+\(\s*"([^"]+)"\)', (root/'src/data/graphics/pokemon.h').read_text()))
     footprint = assets.get(footprints.get(key, ''), '').replace('.1bpp', '.png')
     cry_constants = dict(re.findall(r'(CRY_\w+)\s*=\s*(\d+)', (root/'include/constants/hoenn_cries.h').read_text()))
     mapping = dict(re.findall(r'\[SPECIES_(\w+) - HOENN_MON_SPECIES_START\]\s*=\s*(\w+)', (root/'src/data/pokemon/cry_ids.h').read_text()))
@@ -137,4 +161,4 @@ def details(root, entry):
     for kind in ('normal','shiny'):
         colors = [list(map(int,line.split())) for line in (root/entry[kind]).read_text().splitlines()[3:19]]
         palettes[kind] = dict(path=entry[kind],colors=['#'+''.join(f'{(v>>3)*255//31:02x}' for v in c) for c in colors])
-    return dict(officialEncounters=for_species(key),description=texts.get(field('description'),'No entry found.'),category=category[1] if category else '',height=field('height'),weight=field('weight'),footprint=footprint,cry=cry,cryId=cry_id,palettes=palettes,evolutions=[e for e in edges if e['source'] in family])
+    return dict(**battle_info(root, key), officialEncounters=for_species(key),description=texts.get(field('description'),'No entry found.'),category=category[1] if category else '',height=field('height'),weight=field('weight'),footprint=footprint,cry=cry,cryId=cry_id,palettes=palettes,evolutions=[e for e in edges if e['source'] in family])

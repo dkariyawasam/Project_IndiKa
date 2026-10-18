@@ -43,6 +43,22 @@ async function showDetails(){
   const heading=text=>{const h=document.createElement('h3');h.textContent=text;host.append(h);};
   const paragraph=text=>{const p=document.createElement('p');p.textContent=text;host.append(p);return p;};
   heading('Pokédex entry');paragraph(`${info.category} POKéMON · ${Number(info.height)/10} m · ${Number(info.weight)/10} kg`);paragraph(info.description).style.whiteSpace='pre-line';
+  heading('Base stats');
+  paragraph(`Overall (base-stat total): ${info.baseStatTotal ?? 'Unavailable'}`);
+  const statTable=document.createElement('table');statTable.className='dex-stats';
+  for(const [key,label] of [['hp','HP'],['attack','Attack'],['defense','Defense'],['specialAttack','Sp. Attack'],['specialDefense','Sp. Defense'],['speed','Speed']]){
+   const row=document.createElement('tr'),name=document.createElement('th'),value=document.createElement('td');
+   name.scope='row';name.textContent=label;const stat=info.stats?.[key];value.textContent=stat??'Unavailable';
+   const barCell=document.createElement('td'),track=document.createElement('div'),bar=document.createElement('div');
+   track.className='dex-stat-track';track.setAttribute('aria-hidden','true');bar.className='dex-stat-fill';
+   const colors={hp:'#cb5050',attack:'#d88a32',defense:'#c6ab32',specialAttack:'#5587cd',specialDefense:'#58a66c',speed:'#bc65a2'};
+   bar.style.width=`${Number.isFinite(stat)?Math.min(100,Math.max(0,stat/255*100)):0}%`;bar.style.backgroundColor=colors[key];
+   track.append(bar);barCell.append(track);row.append(name,value,barCell);statTable.append(row);
+  }
+  host.append(statTable);paragraph('Bar lengths use the same 0–255 scale for every stat.');
+  heading('Special abilities');
+  if(!info.abilities?.length)paragraph('No ability assigned.');
+  for(const ability of info.abilities||[]){const p=paragraph('');const name=document.createElement('strong');name.textContent=ability.name;p.append(name,document.createTextNode(' — '+ability.description));}
   heading('Official games · regional encounters');
   const official=info.officialEncounters;
   const readable=value=>value.split('-').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');

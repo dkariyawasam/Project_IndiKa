@@ -9394,9 +9394,9 @@
         "warnings": []
       },
       "icon": {
-        "status": "placeholder",
-        "symbol": "gMonIcon_QuestionMark",
-        "source": null,
+        "status": "ok",
+        "symbol": "gMonIcon_Feebas",
+        "source": "graphics/pokemon/feebas/icon.png",
         "warnings": []
       },
       "footprint": {
@@ -15540,90 +15540,6 @@
     }
   },
   {
-    "species": "PICHU_ALOLAN",
-    "name": "PICHU",
-    "assets": {
-      "front": {
-        "status": "ok",
-        "symbol": "gMonFrontPic_RegionalPosePichu",
-        "source": "graphics/pokemon/pichu_alolan/front.png",
-        "warnings": []
-      },
-      "back": {
-        "status": "ok",
-        "symbol": "gMonBackPic_RegionalPosePichu",
-        "source": "graphics/pokemon/pichu_alolan/back.png",
-        "warnings": []
-      },
-      "normal": {
-        "status": "ok",
-        "symbol": "gMonPalette_Pichu",
-        "source": "graphics/pokemon/pichu/normal.pal",
-        "warnings": []
-      },
-      "shiny": {
-        "status": "ok",
-        "symbol": "gMonShinyPalette_Pichu",
-        "source": "graphics/pokemon/pichu/shiny.pal",
-        "warnings": []
-      },
-      "icon": {
-        "status": "ok",
-        "symbol": "gMonIcon_Pichu",
-        "source": "graphics/pokemon/pichu/icon.png",
-        "warnings": []
-      },
-      "footprint": {
-        "status": "ok",
-        "symbol": "gMonFootprint_Pichu",
-        "source": "graphics/pokemon/pichu/footprint.png",
-        "warnings": []
-      }
-    }
-  },
-  {
-    "species": "PIKACHU_ALOLAN",
-    "name": "PIKACHU",
-    "assets": {
-      "front": {
-        "status": "ok",
-        "symbol": "gMonFrontPic_RegionalPosePikachu",
-        "source": "graphics/pokemon/pikachu_alolan/front.png",
-        "warnings": []
-      },
-      "back": {
-        "status": "ok",
-        "symbol": "gMonBackPic_RegionalPosePikachu",
-        "source": "graphics/pokemon/pikachu_alolan/back.png",
-        "warnings": []
-      },
-      "normal": {
-        "status": "ok",
-        "symbol": "gMonPalette_Pikachu",
-        "source": "graphics/pokemon/pikachu/normal.pal",
-        "warnings": []
-      },
-      "shiny": {
-        "status": "ok",
-        "symbol": "gMonShinyPalette_Pikachu",
-        "source": "graphics/pokemon/pikachu/shiny.pal",
-        "warnings": []
-      },
-      "icon": {
-        "status": "ok",
-        "symbol": "gMonIcon_Pikachu",
-        "source": "graphics/pokemon/pikachu/icon.png",
-        "warnings": []
-      },
-      "footprint": {
-        "status": "ok",
-        "symbol": "gMonFootprint_Pikachu",
-        "source": "graphics/pokemon/pikachu/footprint.png",
-        "warnings": []
-      }
-    }
-  },
-  {
     "species": "RAICHU_ALOLAN",
     "name": "RAICHU",
     "assets": {
@@ -16296,48 +16212,6 @@
     }
   },
   {
-    "species": "EXEGGCUTE_ALOLAN",
-    "name": "EXEGGCUTE",
-    "assets": {
-      "front": {
-        "status": "ok",
-        "symbol": "gMonFrontPic_RegionalPoseExeggcute",
-        "source": "graphics/pokemon/exeggcute_alolan/front.png",
-        "warnings": []
-      },
-      "back": {
-        "status": "ok",
-        "symbol": "gMonBackPic_RegionalPoseExeggcute",
-        "source": "graphics/pokemon/exeggcute_alolan/back.png",
-        "warnings": []
-      },
-      "normal": {
-        "status": "ok",
-        "symbol": "gMonPalette_Exeggcute",
-        "source": "graphics/pokemon/exeggcute/normal.pal",
-        "warnings": []
-      },
-      "shiny": {
-        "status": "ok",
-        "symbol": "gMonShinyPalette_Exeggcute",
-        "source": "graphics/pokemon/exeggcute/shiny.pal",
-        "warnings": []
-      },
-      "icon": {
-        "status": "ok",
-        "symbol": "gMonIcon_Exeggcute",
-        "source": "graphics/pokemon/exeggcute/icon.png",
-        "warnings": []
-      },
-      "footprint": {
-        "status": "ok",
-        "symbol": "gMonFootprint_Exeggcute",
-        "source": "graphics/pokemon/exeggcute/footprint.png",
-        "warnings": []
-      }
-    }
-  },
-  {
     "species": "EXEGGUTOR_ALOLAN",
     "name": "EXEGGUTOR",
     "assets": {
@@ -16375,48 +16249,6 @@
         "status": "ok",
         "symbol": "gMonFootprint_Exeggutor",
         "source": "graphics/pokemon/exeggutor/footprint.png",
-        "warnings": []
-      }
-    }
-  },
-  {
-    "species": "CUBONE_ALOLAN",
-    "name": "CUBONE",
-    "assets": {
-      "front": {
-        "status": "ok",
-        "symbol": "gMonFrontPic_RegionalPoseCubone",
-        "source": "graphics/pokemon/cubone_alolan/front.png",
-        "warnings": []
-      },
-      "back": {
-        "status": "ok",
-        "symbol": "gMonBackPic_RegionalPoseCubone",
-        "source": "graphics/pokemon/cubone_alolan/back.png",
-        "warnings": []
-      },
-      "normal": {
-        "status": "ok",
-        "symbol": "gMonPalette_Cubone",
-        "source": "graphics/pokemon/cubone/normal.pal",
-        "warnings": []
-      },
-      "shiny": {
-        "status": "ok",
-        "symbol": "gMonShinyPalette_Cubone",
-        "source": "graphics/pokemon/cubone/shiny.pal",
-        "warnings": []
-      },
-      "icon": {
-        "status": "ok",
-        "symbol": "gMonIcon_Cubone",
-        "source": "graphics/pokemon/cubone/icon.png",
-        "warnings": []
-      },
-      "footprint": {
-        "status": "ok",
-        "symbol": "gMonFootprint_Cubone",
-        "source": "graphics/pokemon/cubone/footprint.png",
         "warnings": []
       }
     }
@@ -16543,48 +16375,6 @@
         "status": "ok",
         "symbol": "gMonFootprint_GalarianCursola",
         "source": "graphics/pokemon/cursola/footprint.png",
-        "warnings": []
-      }
-    }
-  },
-  {
-    "species": "KOFFING_GALARIAN",
-    "name": "KOFFING",
-    "assets": {
-      "front": {
-        "status": "ok",
-        "symbol": "gMonFrontPic_RegionalPoseKoffing",
-        "source": "graphics/pokemon/koffing_galarian/front.png",
-        "warnings": []
-      },
-      "back": {
-        "status": "ok",
-        "symbol": "gMonBackPic_RegionalPoseKoffing",
-        "source": "graphics/pokemon/koffing_galarian/back.png",
-        "warnings": []
-      },
-      "normal": {
-        "status": "ok",
-        "symbol": "gMonPalette_Koffing",
-        "source": "graphics/pokemon/koffing/normal.pal",
-        "warnings": []
-      },
-      "shiny": {
-        "status": "ok",
-        "symbol": "gMonShinyPalette_Koffing",
-        "source": "graphics/pokemon/koffing/shiny.pal",
-        "warnings": []
-      },
-      "icon": {
-        "status": "ok",
-        "symbol": "gMonIcon_Koffing",
-        "source": "graphics/pokemon/koffing/icon.png",
-        "warnings": []
-      },
-      "footprint": {
-        "status": "ok",
-        "symbol": "gMonFootprint_Koffing",
-        "source": "graphics/pokemon/koffing/footprint.png",
         "warnings": []
       }
     }
@@ -16753,6 +16543,426 @@
         "status": "ok",
         "symbol": "gMonFootprint_Chikorita",
         "source": "graphics/pokemon/chikorita/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "PONYTA_GALARIAN",
+    "name": "PONYTA",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_PonytaGalarian",
+        "source": "graphics/pokemon/ponyta_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "RAPIDASH_GALARIAN",
+    "name": "RAPIDASH",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_RapidashGalarian",
+        "source": "graphics/pokemon/rapidash_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "SLOWPOKE_GALARIAN",
+    "name": "SLOWPOKE",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_SlowpokeGalarian",
+        "source": "graphics/pokemon/slowpoke_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "SLOWBRO_GALARIAN",
+    "name": "SLOWBRO",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_SlowbroGalarian",
+        "source": "graphics/pokemon/slowbro_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "SLOWKING_GALARIAN",
+    "name": "SLOWKING",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_SlowkingGalarian",
+        "source": "graphics/pokemon/slowking_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "MR_MIME_GALARIAN",
+    "name": "MR. MIME",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_MrMimeGalarian",
+        "source": "graphics/pokemon/mr_mime_galarian/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "MR_RIME",
+    "name": "MR. RIME",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_MrRime",
+        "source": "graphics/pokemon/mr_rime/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_MrRime",
+        "source": "graphics/pokemon/mr_rime/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_MrRime",
+        "source": "graphics/pokemon/mr_rime/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_MrRime",
+        "source": "graphics/pokemon/mr_rime/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_MrRime",
+        "source": "graphics/pokemon/mr_rime/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_MrRime",
+        "source": "graphics/pokemon/mr_rime/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "SIRFETCHD",
+    "name": "SIRFETCH\u2019D",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_Sirfetchd",
+        "source": "graphics/pokemon/sirfetchd/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "WOOPER_PALDEAN",
+    "name": "WOOPER",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_WooperPaldean",
+        "source": "graphics/pokemon/wooper_paldean/footprint.png",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "species": "CLODSIRE",
+    "name": "CLODSIRE",
+    "assets": {
+      "front": {
+        "status": "ok",
+        "symbol": "gMonFrontPic_Clodsire",
+        "source": "graphics/pokemon/clodsire/front.png",
+        "warnings": []
+      },
+      "back": {
+        "status": "ok",
+        "symbol": "gMonBackPic_Clodsire",
+        "source": "graphics/pokemon/clodsire/back.png",
+        "warnings": []
+      },
+      "normal": {
+        "status": "ok",
+        "symbol": "gMonPalette_Clodsire",
+        "source": "graphics/pokemon/clodsire/normal.pal",
+        "warnings": []
+      },
+      "shiny": {
+        "status": "ok",
+        "symbol": "gMonShinyPalette_Clodsire",
+        "source": "graphics/pokemon/clodsire/shiny.pal",
+        "warnings": []
+      },
+      "icon": {
+        "status": "ok",
+        "symbol": "gMonIcon_Clodsire",
+        "source": "graphics/pokemon/clodsire/icon.png",
+        "warnings": []
+      },
+      "footprint": {
+        "status": "ok",
+        "symbol": "gMonFootprint_Clodsire",
+        "source": "graphics/pokemon/clodsire/footprint.png",
         "warnings": []
       }
     }

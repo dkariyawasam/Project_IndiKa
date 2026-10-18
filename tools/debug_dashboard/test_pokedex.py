@@ -4,7 +4,7 @@ import shutil
 import unittest
 from pathlib import Path
 from catalog import build_catalog
-from pokedex import catalog,sprite,details,save_offsets,OFFSET_FIELDS
+from pokedex import catalog,sprite,details,save_offsets,OFFSET_FIELDS,battle_info
 ROOT=Path(__file__).resolve().parents[2]
 class PokedexTests(unittest.TestCase):
     @classmethod
@@ -12,6 +12,18 @@ class PokedexTests(unittest.TestCase):
     def test_active_sources_resolve(self):
         self.assertEqual(len(self.dex['species']),404)
         self.assertEqual([(e['key'],e['issues']) for e in self.dex['species'] if e['issues']],[])
+    def test_base_stats_and_abilities(self):
+        for mon in self.dex['species']:
+            info=battle_info(ROOT,mon['key'])
+            self.assertTrue(all(isinstance(v,int) and v>0 for v in info['stats'].values()),mon['key'])
+            self.assertEqual(info['baseStatTotal'],sum(info['stats'].values()))
+            self.assertTrue(info['abilities'],mon['key'])
+            self.assertTrue(all(a['description']!='Description unavailable.' for a in info['abilities']),mon['key'])
+        self.assertEqual(battle_info(ROOT,'BULBASAUR')['baseStatTotal'],318)
+        for key in ('MIME_SR','OSSCYTHE'):
+            self.assertEqual(battle_info(ROOT,key)['baseStatTotal'],535)
+        self.assertEqual(battle_info(ROOT,'MIME_SR')['abilities'][0]['key'],'ABILITY_INVISIBLE_WALL')
+
     def test_single_and_double_anchors(self):
         self.assertEqual(self.dex['anchors']['single'][:2],[[72,80],[176,40]])
         self.assertEqual(self.dex['anchors']['double'],[[32,80],[200,40],[90,88],[152,32]])

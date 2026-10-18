@@ -340,6 +340,24 @@ class Handler(BaseHTTPRequestHandler):
                 from items import icon
                 key=parse_qs(urlsplit(self.path).query).get('item',[''])[0]
                 self.send(200,icon(ROOT,key),'image/png')
+            elif path=='/api/encounters':
+                from planning import encounters
+                self.send(200,encounters(ROOT))
+            elif path=='/api/palette-style':
+                variant=parse_qs(urlsplit(self.path).query).get('variant',['normal'])[0]
+                if variant not in ('normal','shiny'): raise ValueError('Unknown palette variant')
+                result=subprocess.run([self.app.python,str(ROOT/'tools/debug_dashboard/palette_style.py')],input=json.dumps(dict(species=self.app.catalog['species'],variant=variant)),capture_output=True,text=True,timeout=60,cwd=ROOT)
+                if result.returncode: raise ValueError('Palette checker failed: '+result.stderr[-1000:])
+                self.send(200,json.loads(result.stdout))
+            elif path=='/api/assets':
+                from planning import assets
+                self.send(200,assets(ROOT,self.app.catalog['species']))
+            elif path=='/api/trainers':
+                from trainers import catalog
+                self.send(200,catalog(ROOT))
+            elif path=='/trainer-portrait.png':
+                from trainers import portrait
+                self.send(200,portrait(ROOT,parse_qs(urlsplit(self.path).query).get('trainer',[''])[0]),'image/png')
             elif path=='/api/rivals':
                 from rivals import catalog
                 self.send(200,catalog(ROOT))
@@ -370,9 +388,9 @@ class Handler(BaseHTTPRequestHandler):
             elif path=='/screen.png': self.send(200,(self.app.directory/'screen.png').read_bytes(),'image/png')
             elif path=='/pixel.ttf':
                 self.send(200,(ROOT/'tools/debug_dashboard/static/pixel.ttf').read_bytes(),'font/ttf')
-            elif path in ('/','/app.mjs','/rivals.mjs','/quests.mjs','/atlas.mjs','/overworlds.mjs','/pokedex.mjs','/items.mjs','/style.css'):
+            elif path in ('/','/app.mjs','/trainers.mjs','/planning.mjs','/palette-style.mjs','/rivals.mjs','/quests.mjs','/atlas.mjs','/overworlds.mjs','/pokedex.mjs','/items.mjs','/style.css'):
                 file=HERE/'static'/('index.html' if path=='/' else path[1:])
-                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/rivals.mjs':'text/javascript; charset=utf-8','/quests.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/overworlds.mjs':'text/javascript; charset=utf-8','/items.mjs':'text/javascript; charset=utf-8','/pokedex.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
+                self.send(200,file.read_bytes(),{'/':'text/html; charset=utf-8','/app.mjs':'text/javascript; charset=utf-8','/trainers.mjs':'text/javascript; charset=utf-8','/planning.mjs':'text/javascript; charset=utf-8','/palette-style.mjs':'text/javascript; charset=utf-8','/rivals.mjs':'text/javascript; charset=utf-8','/quests.mjs':'text/javascript; charset=utf-8','/atlas.mjs':'text/javascript; charset=utf-8','/overworlds.mjs':'text/javascript; charset=utf-8','/items.mjs':'text/javascript; charset=utf-8','/pokedex.mjs':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
             else: self.send(404,dict(error='Not found'))
         except FileNotFoundError: self.send(404,dict(error='Not available yet'))
         except Exception as e: self.send(500,dict(error=str(e)))
@@ -404,6 +422,24 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(data,dict): raise ValueError('Expected an object')
             path=urlsplit(self.path).path
             if path=='/api/command': result=self.app.command(data)
+            elif path in ('/api/palette-style/proposal','/api/palette-style/apply'):
+                payload=dict(data,species=self.app.catalog['species'],action='apply' if path.endswith('/apply') else 'proposal')
+                with self.app.lock:
+                    process=subprocess.run([self.app.python,str(ROOT/'tools/debug_dashboard/palette_style.py')],input=json.dumps(payload),capture_output=True,text=True,timeout=60,cwd=ROOT)
+                    if process.returncode: raise ValueError('Palette operation failed: '+process.stderr[-1000:])
+                    result=json.loads(process.stdout)
+                    if 'error' in result: raise ValueError(result['error'])
+                if path.endswith('/apply'): self.app.event('Approved Pokémon palette',species=data.get('key'))
+            elif path=='/api/encounters/save':
+                from planning import save_encounters
+                with self.app.lock:
+                    result=save_encounters(ROOT,self.app.catalog['species'],data)
+                self.app.event('Saved encounter table',table=data.get('id'))
+            elif path=='/api/trainers/team':
+                from trainers import save
+                with self.app.lock:
+                    result=save(ROOT,data)
+                self.app.event('Saved trainer team',trainer=data.get('trainer'))
             elif path=='/api/pokedex/offsets':
                 from pokedex import save_offsets
                 with self.app.lock:

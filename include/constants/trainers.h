@@ -154,6 +154,8 @@
 #define TRAINER_PIC_ROCKET_ADMIN_ARCHER   150
 #define TRAINER_PIC_ROCKET_ADMIN_PROTON   151
 #define TRAINER_PIC_ROCKET_ADMIN_PETREL   152
+#define TRAINER_PIC_BILL                  153
+#define TRAINER_PIC_ROCKET_ACE_KARDINAL   154
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_RED                    0

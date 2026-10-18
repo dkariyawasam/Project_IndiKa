@@ -56,6 +56,8 @@ CeruleanCave_B1F_EventScript_MoveGiovanniAside::
 	return
 
 CeruleanCave_B1F_EventScript_Giovanni::
+	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
+	goto_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	lock
 	faceplayer
 	goto_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoTalk
@@ -81,6 +83,7 @@ CeruleanCave_B1F_EventScript_GiovanniWaits::
 	end
 
 CeruleanCave_B1F_EventScript_GiovanniApproachTrigger::
+	goto_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	setvar VAR_TEMP_0, 1
 	goto_if_set FLAG_GIOVANNI_CERULEAN_MOVED_ASIDE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	goto_if_set FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
@@ -109,6 +112,7 @@ CeruleanCave_B1F_EventScript_GiovanniAfterMewtwoAlreadyGone::
 	end
 
 CeruleanCave_B1F_EventScript_GiovanniAfterMewtwo::
+	goto_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, EventScript_Return
 	goto_if_set FLAG_SAW_GIOVANNI_CERULEAN_CAVE, EventScript_Return
 	applymovement LOCALID_CERULEAN_CAVE_GIOVANNI, CeruleanCave_B1F_Movement_GiovanniApproachesPlayerAfterMewtwo
 	waitmovement 0
@@ -159,6 +163,7 @@ CeruleanCave_B1F_Movement_GiovanniLeaves::
 	step_end
 
 CeruleanCave_B1F_EventScript_Mewtwo::
+	goto_if_unset FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE, CeruleanCave_B1F_EventScript_GiovanniApproachTriggerEnd
 	lock
 	faceplayer
 	setvar VAR_0x8004, 70
