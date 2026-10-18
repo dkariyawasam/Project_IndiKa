@@ -2565,6 +2565,9 @@ extern const u32 gTrainerFrontPic_Lady[];
 extern const u32 gTrainerFrontPic_RocketAdminAriana[];
 extern const u32 gTrainerFrontPic_RocketAdminArcher[];
 extern const u32 gTrainerFrontPic_RocketAdminPetrel[];
+extern const u32 gTrainerFrontPic_Bill[];
+extern const u32 gTrainerFrontPic_RocketAceKardinal[];
+extern const u32 gTrainerPalette_RocketAceKardinal[];
 extern const u32 gTrainerFrontPic_RocketAdminProton[];
 
 extern const u32 gTrainerPalette_TrendsetterM[];
@@ -2656,6 +2659,7 @@ extern const u32 gTrainerPalette_Lady[];
 extern const u32 gTrainerPalette_RocketAdminAriana[];
 extern const u32 gTrainerPalette_RocketAdminArcher[];
 extern const u32 gTrainerPalette_RocketAdminPetrel[];
+extern const u32 gTrainerPalette_Bill[];
 extern const u32 gTrainerPalette_RocketAdminProton[];
 
 extern const u8 gMenuInfoElements_Gfx[];

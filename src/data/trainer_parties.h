@@ -84,7 +84,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RematchMtMoonCamper[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchMtMoonRuinManiac[] = {
     { .iv = 50, .lvl = 31, .species = SPECIES_CLEFAIRY, },
     { .iv = 50, .lvl = 33, .species = SPECIES_ONIX, },
-    { .iv = 50, .lvl = 35, .species = SPECIES_AMUNYTE, },
+    { .iv = 50, .lvl = 35, .species = SPECIES_OMASTAR, },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchRockTunnelHiker[] = {
@@ -131,7 +131,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RematchFuchsiaNinja[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchMansionScientist[] = {
     { .iv = 60, .lvl = 36, .species = SPECIES_MAGNETON, },
     { .iv = 60, .lvl = 37, .species = SPECIES_ELECTRODE, },
-    { .iv = 60, .lvl = 38, .species = SPECIES_WEEZING, },
+    { .iv = 60, .lvl = 38, .species = SPECIES_WEEZING_GALARIAN, },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RematchMansionBurglar[] = {
@@ -248,7 +248,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundGamblerHugo[]
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundPokemaniacDirk[] = {
-    { .iv = 45, .lvl = 23, .species = SPECIES_CUBONE, },
+    { .iv = 45, .lvl = 23, .species = SPECIES_MEOWTH_GALARIAN, },
     { .iv = 45, .lvl = 25, .species = SPECIES_LICKITUNG, },
 };
 
@@ -286,7 +286,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PowerPlantElectricianLuc
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_UndergroundPokemaniacHideo[] = {
-    { .iv = 50, .lvl = 24, .species = SPECIES_CUBONE, },
+    { .iv = 50, .lvl = 24, .species = SPECIES_WOOPER_PALDEAN, },
     { .iv = 50, .lvl = 26, .species = SPECIES_RHYHORN, },
 };
 
@@ -440,7 +440,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MansionScientistNiles[] 
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MansionScientistMira[] = {
     { .iv = 40, .lvl = 28, .species = SPECIES_MAGNEMITE, },
-    { .iv = 40, .lvl = 30, .species = SPECIES_GRIMER, },
+    { .iv = 40, .lvl = 30, .species = SPECIES_GRIMER_ALOLAN, },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MansionBurglarFlint[] = {
@@ -1027,12 +1027,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdJovan[] = {
     {
         .iv = 40,
         .lvl = 25,
-        .species = SPECIES_KINKABUTO,
+        .species = SPECIES_KABUTO,
     },
     {
         .iv = 40,
         .lvl = 27,
-        .species = SPECIES_SANDSHREW,
+        .species = SPECIES_SANDSHREW_ALOLAN,
     },
     {
         .iv = 40,
@@ -1162,7 +1162,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerMarcos[] = {
     {
         .iv = 40,
         .lvl = 28,
-        .species = SPECIES_AMUNYTE,
+        .species = SPECIES_OMANYTE,
     },
 };
 
@@ -2275,12 +2275,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PsychicCameron[] = {
     {
         .iv = 50,
         .lvl = 31,
-        .species = SPECIES_DROWZEE,
+        .species = SPECIES_SLOWPOKE_GALARIAN,
     },
     {
         .iv = 50,
         .lvl = 33,
-        .species = SPECIES_KADABRA,
+        .species = SPECIES_MR_MIME_GALARIAN,
     },
     {
         .iv = 50,
@@ -3901,9 +3901,9 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     {
         .iv = 250,
         .lvl = 54,
-        .species = SPECIES_ALTARIA,
+        .species = SPECIES_AEROPTERYX,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_DRAGON_BREATH, MOVE_FLAMETHROWER, MOVE_SING, MOVE_AERIAL_ACE},
+        .moves = {MOVE_DRAGON_CLAW, MOVE_AERIAL_ACE, MOVE_ANCIENT_POWER, MOVE_AGILITY},
     },
     {
         .iv = 250,
@@ -5269,12 +5269,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanArthur[] = {
     {
         .iv = 0,
         .lvl = 19,
-        .species = SPECIES_NIDORAN_M,
+        .species = SPECIES_MEOWTH_ALOLAN,
     },
     {
         .iv = 0,
         .lvl = 19,
-        .species = SPECIES_NIDORAN_F,
+        .species = SPECIES_PONYTA_GALARIAN,
     },
 };
 
@@ -5282,7 +5282,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanTucker[] = {
     {
         .iv = 0,
         .lvl = 23,
-        .species = SPECIES_PIKACHU,
+        .species = SPECIES_RAICHU_ALOLAN,
     },
 };
 
@@ -6117,7 +6117,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanLamar[] = {
     {
         .iv = 0,
         .lvl = 17,
-        .species = SPECIES_PONYTA,
+        .species = SPECIES_PONYTA_GALARIAN,
     },
 };
 
@@ -7001,21 +7001,17 @@ static const struct TrainerMonNoItemCustomMoves sParty_AcesLexNya[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_LadyUnused612[] = {
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_PERSIAN,
-        .heldItem = ITEM_NUGGET,
-        .moves = {MOVE_PAY_DAY, MOVE_BITE, MOVE_TAUNT, MOVE_TORMENT},
-    },
-    {
-        .iv = 0,
-        .lvl = 49,
-        .species = SPECIES_PERSIAN,
-        .heldItem = ITEM_NUGGET,
-        .moves = {MOVE_PAY_DAY, MOVE_SCRATCH, MOVE_TORMENT, MOVE_TAUNT},
-    },
+static const struct TrainerMonNoItemCustomMoves sParty_Bill[] = {
+    { .iv = 0, .lvl = 16, .species = SPECIES_FLAREON,
+      .moves = {MOVE_EMBER, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_HELPING_HAND} },
+    { .iv = 0, .lvl = 16, .species = SPECIES_VAPOREON,
+      .moves = {MOVE_WATER_GUN, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_HELPING_HAND} },
+    { .iv = 0, .lvl = 16, .species = SPECIES_JOLTEON,
+      .moves = {MOVE_THUNDER_SHOCK, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_HELPING_HAND} },
+    { .iv = 0, .lvl = 16, .species = SPECIES_LEAFEON,
+      .moves = {MOVE_RAZOR_LEAF, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_HELPING_HAND} },
+    { .iv = 0, .lvl = 16, .species = SPECIES_GLACEON,
+      .moves = {MOVE_ICY_WIND, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_HELPING_HAND} },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PkmnBreederBethany[] = {
@@ -7571,12 +7567,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark3[] = {
     {
         .iv = 150,
         .lvl = 54,
-        .species = SPECIES_RHYDON,
+        .species = SPECIES_PERRSERKER,
     },
     {
         .iv = 150,
         .lvl = 54,
-        .species = SPECIES_LICKITUNG,
+        .species = SPECIES_CLODSIRE,
     },
 };
 
@@ -8366,30 +8362,31 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
     },
 };
 
+// Kardinal stages psychic light, dream and illusion effects; Mr. Mime builds the scenery.
 static const struct TrainerMonNoItemCustomMoves sParty_RocketAceRazor[] = {
     {
         .iv = 120,
         .lvl = 34,
         .species = SPECIES_ALAKAZAM,
-        .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_RECOVER, MOVE_REFLECT},
+        .moves = {MOVE_PSYBEAM, MOVE_SHADOW_BALL, MOVE_CALM_MIND, MOVE_RECOVER},
     },
     {
         .iv = 120,
         .lvl = 35,
-        .species = SPECIES_EXEGGUTOR,
-        .moves = {MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_REFLECT},
+        .species = SPECIES_HYPNO,
+        .moves = {MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_DISABLE},
     },
     {
         .iv = 120,
         .lvl = 36,
         .species = SPECIES_XATU,
-        .moves = {MOVE_PSYCHIC, MOVE_AERIAL_ACE, MOVE_CONFUSE_RAY, MOVE_REFLECT},
+        .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_AERIAL_ACE, MOVE_CONFUSE_RAY},
     },
     {
         .iv = 120,
         .lvl = 37,
         .species = SPECIES_STARMIE,
-        .moves = {MOVE_PSYCHIC, MOVE_SURF, MOVE_RECOVER, MOVE_LIGHT_SCREEN},
+        .moves = {MOVE_PSYCHIC, MOVE_SURF, MOVE_SWIFT, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 120,
@@ -8400,8 +8397,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RocketAceRazor[] = {
     {
         .iv = 120,
         .lvl = 39,
-        .species = SPECIES_CLAYDOL,
-        .moves = {MOVE_PSYCHIC, MOVE_EARTHQUAKE, MOVE_ANCIENT_POWER, MOVE_COSMIC_POWER},
+        .species = SPECIES_MR_MIME,
+        .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_BARRIER, MOVE_LIGHT_SCREEN},
     },
 };
 

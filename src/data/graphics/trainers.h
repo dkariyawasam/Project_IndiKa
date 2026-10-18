@@ -273,3 +273,10 @@ const u32 gTrainerPalette_RocketAdminProton[] = INCBIN_U32("graphics/trainers/pa
 
 const u32 gTrainerFrontPic_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_petrel_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/palettes/rocket_admin_petrel.gbapal.lz");
+
+// Bill's battle portrait is also used by the logbook.
+const u32 gTrainerFrontPic_Bill[] = INCBIN_U32("graphics/trainers/front_pics/bill_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Bill[] = INCBIN_U32("graphics/trainers/palettes/bill.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketAceKardinal[] = INCBIN_U32("graphics/trainers/front_pics/rocket_ace_kardinal_front_pic.4bpp.lz");
+const u32 gTrainerPalette_RocketAceKardinal[] = INCBIN_U32("graphics/trainers/palettes/rocket_ace_kardinal.gbapal.lz");

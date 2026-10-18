@@ -6,9 +6,6 @@ CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow::
     .string "Get together with your friends and\n"
     .string "enjoy trading POKéMON!$"
 
-CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee::
-    .string "{PLAYER} obtained an EEVEE!$"
-
 CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull::
     .string "ポケモンが　いっぱいだ\n"
     .string "ボックスを　かえて　きなさい$"
