@@ -793,7 +793,7 @@
 #define TRAINER_RUIN_MANIAC_BENJAMIN             609
 #define TRAINER_PKMN_BREEDER_WREN                610
 #define TRAINER_WATERS_EDGE_HARBOR_TRIATHLETE_RORY 611
-#define TRAINER_LADY_UNUSED_612                  612
+#define TRAINER_BILL                             612
 #define TRAINER_WATERS_EDGE_HARBOR_TRIATHLETE_ELLE 613
 #define TRAINER_PSYCHIC_LAURA                    614
 #define TRAINER_PKMN_BREEDER_BETHANY             615

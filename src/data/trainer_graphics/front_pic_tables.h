@@ -153,6 +153,8 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_ROCKET_ADMIN_ARCHER] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_ROCKET_ADMIN_PROTON] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_ROCKET_ADMIN_PETREL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_ACE_KARDINAL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_BILL] = {.size = 8, .y_offset = 1},
 };
 
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
@@ -244,6 +246,8 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(RUIN_MANIAC, gTrainerFrontPic_RuinManiac, 0x800),
     TRAINER_SPRITE(LADY, gTrainerFrontPic_Lady, 0x800),
     TRAINER_SPRITE(ROCKET_ADMIN_PROTON, gTrainerFrontPic_RocketAdminProton, 0x800),
+    TRAINER_SPRITE(ROCKET_ACE_KARDINAL, gTrainerFrontPic_RocketAceKardinal, 0x800),
+    TRAINER_SPRITE(BILL, gTrainerFrontPic_Bill, 0x800),
     TRAINER_SPRITE(ROCKET_ADMIN_PETREL, gTrainerFrontPic_RocketAdminPetrel, 0x800),
     TRAINER_SPRITE(ROCKET_ADMIN_ARCHER, gTrainerFrontPic_RocketAdminArcher, 0x800),
     TRAINER_SPRITE(ROCKET_ADMIN_ARIANA, gTrainerFrontPic_RocketAdminAriana, 0x800),
@@ -338,6 +342,8 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(RUIN_MANIAC, gTrainerPalette_RuinManiac),
     TRAINER_PAL(LADY, gTrainerPalette_Lady),
     TRAINER_PAL(ROCKET_ADMIN_PROTON, gTrainerPalette_RocketAdminProton),
+    TRAINER_PAL(ROCKET_ACE_KARDINAL, gTrainerPalette_RocketAceKardinal),
+    TRAINER_PAL(BILL, gTrainerPalette_Bill),
     TRAINER_PAL(ROCKET_ADMIN_PETREL, gTrainerPalette_RocketAdminPetrel),
     TRAINER_PAL(ROCKET_ADMIN_ARCHER, gTrainerPalette_RocketAdminArcher),
     TRAINER_PAL(ROCKET_ADMIN_ARIANA, gTrainerPalette_RocketAdminAriana),
