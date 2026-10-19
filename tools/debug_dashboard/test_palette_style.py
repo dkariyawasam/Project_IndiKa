@@ -48,3 +48,32 @@ class PaletteStyleTests(unittest.TestCase):
         self.assertGreater(lightness(out[1]),lightness(out[2]))
         self.assertGreater(lightness(out[2]),lightness(out[3]))
         self.assertEqual(len(set(tuple(c) for c in out)),len(out))
+
+    def test_adaptation_uses_one_species_per_ramp(self):
+        from palette_style import recommend
+        pal=[[0,0,0],[104,64,128],[176,120,200],[232,208,240]]
+        refs=[dict(c,key='VANILLA') for c in colors([[0,0,0],[112,40,144],[192,96,224],[240,208,248]],{1:10,2:20,3:10})]
+        out,changes=recommend(pal,{1,2,3},refs)
+        self.assertEqual(len(changes),3)
+        self.assertEqual({c['referenceSpecies'] for c in changes},{'VANILLA'})
+        self.assertEqual({c['ramp'] for c in changes},{1})
+        self.assertEqual(out[0],pal[0])
+
+    def test_modern_art_guides_identity_using_only_vanilla_colours(self):
+        from palette_style import recommend
+        pal=[[0,0,0],[232,144,64]]
+        refs=[dict(c,key='VANILLA') for c in colors([[0,0,0],[232,144,64],[160,112,72]],{1:10,2:10})]
+        plain,_=recommend(pal,{1},refs)
+        modern,changes=recommend(pal,{1},refs,[dict(rgb=[160,112,72],share=1)])
+        self.assertEqual(plain[1],pal[1])
+        self.assertEqual(modern[1],[160,112,72])
+        self.assertEqual(changes[0]['referenceSpecies'],'VANILLA')
+        self.assertEqual(modern[0],pal[0])
+
+    def test_family_reference_resolution(self):
+        from palette_style import family_key
+        keys={'SLOWKING','PONYTA','MEOWTH'}
+        self.assertEqual(family_key('SLOWKING_GALARIAN',keys),'SLOWKING')
+        self.assertEqual(family_key('MEOWTH_ALOLAN',keys),'MEOWTH')
+        self.assertIsNone(family_key('CUSTOM',keys))
+        self.assertEqual(family_key('PONYTA',keys),'PONYTA')

@@ -39,31 +39,81 @@ def lightness(rgb):
     values=gba(rgb)
     return (max(values)+min(values))/2
 
-def recommend(palette,indices,refs):
-    """Choose actual vanilla colours conservatively; retain pale highlights and ramp order."""
+def hue_distance(a,b):return min(abs(a-b),1-abs(a-b))
+
+def ramp_groups(entries):
+    """Group similar hues, then order shades by lightness (dark to light)."""
+    groups=[]
+    for entry in sorted(entries,key=lambda e:colorsys.rgb_to_hsv(*gba(e['rgb']))[1],reverse=True):
+        h,s,v=colorsys.rgb_to_hsv(*gba(entry['rgb']))
+        if v<.12 or lightness(entry['rgb'])>.96:continue
+        neutral=s<.12
+        group=next((g for g in groups if g['neutral']==neutral and (neutral or hue_distance(g['hue'],h)<=.09)),None)
+        if group is None:
+            group=dict(hue=h,neutral=neutral,entries=[]);groups.append(group)
+        group['entries'].append(entry)
+    for g in groups:g['entries'].sort(key=lambda e:lightness(e['rgb']))
+    return groups
+
+def recommend(palette,indices,refs,artwork=None):
+    """Adapt whole shade ramps to one vanilla Pokémon per ramp, never merge shades."""
+    from itertools import combinations
+    sources={}
+    for r in refs:sources.setdefault(r['key'],[]).append(r)
+    candidates=[dict(g,key=key) for key,entries in sources.items() for g in ramp_groups(entries)]
     proposed=[c[:] for c in palette];changes=[]
-    used=sorted(set(indices)-{0})
-    for i in used:
-        rgb=palette[i];h,s,v=colorsys.rgb_to_hsv(*gba(rgb));l=lightness(rgb)
-        # Whites, outlines and pastel highlights are intentional material cues.
-        if s<.15 or v<.18 or (l>=.72 and s<.5):continue
-        choices=[]
-        for r in refs:
-            rh,rs,rv=r['hsv'];rl=lightness(r['rgb'])
-            if min(abs(h-rh),1-abs(h-rh))>15/360:continue
-            if abs(rl-l)>.04 or rs-s>.10 or s-rs>.10:continue
-            candidate=[(c>>3)*8 for c in r['rgb']]
-            # Never merge an existing shade or reverse/collapse a meaningful lightness step.
-            if any(gba(candidate)==gba(proposed[j]) for j in used if j!=i):continue
-            if any((l-lightness(palette[j]))*(lightness(candidate)-lightness(proposed[j]))<=0 or abs(lightness(candidate)-lightness(proposed[j]))<abs(l-lightness(palette[j]))*.75
-                   for j in used if j!=i and abs(l-lightness(palette[j]))>=.04):continue
-            distance=sum((a-b)**2 for a,b in zip(gba(rgb),gba(candidate)))
-            choices.append((distance,candidate,r['key']))
-        if choices:
-            _,candidate,source=min(choices,key=lambda x:x[0])
-            if gba(candidate)!=gba(rgb):
-                proposed[i]=candidate;changes.append(dict(index=i,before=rgb,after=candidate,referenceSpecies=source))
+    groups=ramp_groups([dict(index=i,rgb=palette[i]) for i in sorted(set(indices)-{0})])
+    for number,g in enumerate(groups):
+        original=g['entries'];n=len(original);best=None
+        guidance=[]
+        for a in original:
+            ah,ast,av=colorsys.rgb_to_hsv(*gba(a['rgb']));al=lightness(a['rgb'])
+            eligible=[c for c in (artwork or []) if (colorsys.rgb_to_hsv(*gba(c['rgb']))[1]<.15)==g['neutral'] and (g['neutral'] or hue_distance(ah,colorsys.rgb_to_hsv(*gba(c['rgb']))[0])<.12)]
+            guidance.append(min(eligible,key=lambda c:3*hue_distance(ah,colorsys.rgb_to_hsv(*gba(c['rgb']))[0])+2*abs(al-lightness(c['rgb']))+.25*abs(ast-colorsys.rgb_to_hsv(*gba(c['rgb']))[1])) if eligible else a)
+
+        # Artwork may legitimately be darker or less saturated than the existing sprite.
+        basis=guidance if artwork else original
+        for target in candidates:
+            if target['neutral']!=g['neutral'] or (not g['neutral'] and hue_distance(target['hue'],g['hue'])>.10):continue
+            unique={gba(e['rgb']):e for e in target['entries']}
+            entries=sorted(unique.values(),key=lambda e:lightness(e['rgb']))
+            if len(entries)<n:continue
+            for shades in combinations(entries,n):
+                # Preserve each material's hue and avoid trading vivid midtones for dull ramps.
+                if any(hue_distance(colorsys.rgb_to_hsv(*gba(a['rgb']))[0],colorsys.rgb_to_hsv(*gba(b['rgb']))[0])>20/360 for a,b in zip(basis,shades) if not g['neutral']):continue
+                if not artwork and any(colorsys.rgb_to_hsv(*gba(b['rgb']))[1]<colorsys.rgb_to_hsv(*gba(a['rgb']))[1]-.10 for a,b in zip(original,shades)):continue
+                # Highlights must remain pale; distinct shadows must retain their separation.
+                if any(lightness(a['rgb'])>=.72 and lightness(b['rgb'])<max(.72,lightness(a['rgb'])-.06) for a,b in zip(basis,shades)):continue
+                if any(lightness(shades[i+1]['rgb'])-lightness(shades[i]['rgb'])<max(.02,(lightness(original[i+1]['rgb'])-lightness(original[i]['rgb']))*.65) for i in range(n-1)):continue
+                score=sum(3*abs(lightness(a['rgb'])-lightness(b['rgb']))+(.5*hue_distance(colorsys.rgb_to_hsv(*gba(a['rgb']))[0],colorsys.rgb_to_hsv(*gba(b['rgb']))[0]) if not g['neutral'] else 0) for a,b in zip(original,shades))/n
+                if artwork:
+                    score=.25*score+sum(3*abs(lightness(a['rgb'])-lightness(b['rgb']))+2*hue_distance(colorsys.rgb_to_hsv(*gba(a['rgb']))[0],colorsys.rgb_to_hsv(*gba(b['rgb']))[0])+abs(colorsys.rgb_to_hsv(*gba(a['rgb']))[1]-colorsys.rgb_to_hsv(*gba(b['rgb']))[1]) for a,b in zip(guidance,shades))/n
+                score+=2*hue_distance(target['hue'],g['hue']) if not g['neutral'] else 0
+                if best is None or score<best[0]:best=(score,target['key'],shades)
+        if best is None:continue
+        _,source,shades=best
+        replacements=[[(v>>3)*8 for v in e['rgb']] for e in shades]
+        outside={gba(proposed[i]) for i in set(indices)-{0}-{e['index'] for e in original}}
+        if any(gba(rgb) in outside for rgb in replacements):continue
+        for entry,rgb in zip(original,replacements):
+            i=entry['index']
+            if gba(rgb)!=gba(palette[i]):
+                proposed[i]=rgb;changes.append(dict(index=i,before=palette[i],after=rgb,referenceSpecies=source,ramp=number+1))
     return proposed,changes
+
+def family_key(key, reference_keys):
+    for suffix in ('_ALOLAN','_GALARIAN','_PALDEAN','_HISUIAN'):
+        if key.endswith(suffix) and key[:-len(suffix)] in reference_keys:
+            return key[:-len(suffix)]
+    return key if key in reference_keys else None
+
+def approved_palettes(root):
+    path=root/'tools/debug_dashboard/approved_family_palettes.json'
+    return json.loads(path.read_text()).get('species',{}) if path.exists() else {}
+
+def studies(root):
+    path=root/'tools/debug_dashboard/curated_palette_studies.json'
+    return json.loads(path.read_text()) if path.exists() else {}
 
 def check(root,species,variant='normal'):
     if variant not in ('normal','shiny'):raise ValueError('Unknown palette variant')
@@ -80,16 +130,30 @@ def check(root,species,variant='normal'):
             counts=Counter(im.getdata());counts.pop(0,None)
             palette=[list(map(int,l.split())) for l in (root/mon[variant]).read_text().splitlines()[3:19]]
             cs=colors(palette,counts);stats=metrics(cs);stats['vanillaColourShare']=sum(c['share'] for c in cs if gba(c['rgb']) in typical);muted=compare(cs,refs);share=sum(c['share'] for c in muted)
-            same=mon['key'] in by_key and all(gba(palette[int(i)])==gba(by_key[mon['key']][variant][int(i)]) for i in counts)
+            original=mon['key'] in by_key
+            used=set(counts)|set(Image.open(root/mon['back']).getdata());used.discard(0)
+            same=original and all(gba(palette[int(i)])==gba(by_key[mon['key']][variant][int(i)]) for i in used)
             reasons=[]
-            if not same and share>=.1:reasons.append(f'{share:.0%} of visible pixels use colours at least 12 saturation points below comparable vanilla hues.')
-            if not same and stats['contrast']<threshold:reasons.append('Value contrast falls below the vanilla 10th percentile.')
-            rows.append(dict(key=mon['key'],name=mon.get('name',mon['key']),metrics=stats,muted=muted,reasons=reasons,status='Vanilla match' if same else ('Review' if reasons else 'No flags'),colors=cs))
+            if not original and share>=.1:reasons.append(f'{share:.0%} of visible pixels use colours at least 12 saturation points below comparable vanilla hues.')
+            if not original and stats['contrast']<threshold:reasons.append('Value contrast falls below the vanilla 10th percentile.')
+            if original:
+                muted=[]
+                reasons=['Matches this species’ own vanilla FireRed colours.' if same else 'Modified from this species’ own vanilla FireRed palette. This is a customisation, not a style error.']
+            rows.append(dict(original=original,key=mon['key'],name=mon.get('name',mon['key']),metrics=stats,muted=muted,reasons=reasons,status=('Vanilla match' if same else 'Modified from vanilla') if original else 'FireRed adaptation',colors=cs))
         except (ValueError,OSError,IndexError) as e:rows.append(dict(key=mon['key'],name=mon.get('name',mon['key']),status='Unavailable',reasons=[str(e)],colors=[],muted=[],metrics={}))
-    return dict(rows=rows,variant=variant,reference={k:reference[k] for k in ('repository','revision')},contrastThreshold=threshold,note='Heuristic review, not a style verdict. Compares first-frame front-sprite colours after GBA 5-bit conversion with 151 vanilla Kanto Pokémon. Transparent and unused indices are excluded; neutral colours are excluded from saturation comparisons. Comparable colours are within 20° hue and 15 value points. Saturation comparisons also require similar lightness; pale highlights are protected. Vanilla colour coverage measures exact used-colour matches at GBA precision, not artistic quality. Shiny palettes use a separate shiny reference. Scanning changes no colours.')
+    art_path=root/'tools/debug_dashboard/official_artwork_colours.json'
+    art=json.loads(art_path.read_text()).get('species',{}) if art_path.exists() else {}
+    curated=studies(root);approved=approved_palettes(root)
+    for row in rows:
+        row['familyReference']=family_key(row['key'],by_key)
+        row['approvedFamily']=variant=='normal' and row['key'] in approved
+        row['curatedStudy']=variant=='normal' and row['key'] in curated
+        a=art.get(row['key'],{})
+        row['modernArtwork']=variant=='normal' and a.get('status')=='available'
+    return dict(rows=rows,variant=variant,reference={k:reference[k] for k in ('repository','revision')},contrastThreshold=threshold,note='Heuristic review, not a style verdict. Compares first-frame front-sprite colours after GBA 5-bit conversion with 386 vanilla FireRed Pokémon. Transparent and unused indices are excluded; neutral colours are excluded from saturation comparisons. Comparable colours are within 20° hue and 15 value points. Saturation comparisons also require similar lightness; pale highlights are protected. Vanilla colour coverage measures exact used-colour matches at GBA precision, not artistic quality. Shiny palettes use a separate shiny reference. Scanning changes no colours.')
 
 
-def proposal(root,species,key,variant):
+def proposal(root,species,key,variant,mode=None):
     import hashlib,base64,io
     data=check(root,species,variant)
     row=next((r for r in data['rows'] if r['key']==key),None)
@@ -102,10 +166,52 @@ def proposal(root,species,key,variant):
     used=set()
     for view in ('front','back'):
         used.update(Image.open(root/mon[view]).getdata())
-    proposed,changes=recommend(palette,used,refs) if row['status']!='Vanilla match' else ([c[:] for c in palette],[])
+    own=next((r for r in reference['species'] if r['key']==key),None)
+    art_path=root/'tools/debug_dashboard/official_artwork_colours.json'
+    art=json.loads(art_path.read_text()).get('species',{}).get(key,{}) if art_path.exists() else {}
+    available=variant=='normal' and art.get('status')=='available'
+    mode=mode or ('restore' if own else ('modern' if available else 'adapt'))
+    if mode not in ('restore','modern','adapt','study','family'):raise ValueError('Unknown adaptation mode')
+    if mode=='modern' and not available:raise ValueError('No verified normal artwork reference for this Pokémon. Choose FireRed adaptation instead.')
+    if mode=='restore' and not own:raise ValueError('No original FireRed palette for this Pokémon')
+
+    if mode=='family':
+        family=family_key(key,{r['key'] for r in reference['species']})
+        saved=approved_palettes(root).get(key) if variant=='normal' else None
+        if saved:
+            proposed=[c[:] for c in palette];changes=[]
+            for i in sorted(used-{0}):
+                rgb=saved[i];proposed[i]=rgb[:]
+                if gba(rgb)!=gba(palette[i]):changes.append(dict(index=i,before=palette[i],after=rgb,referenceSpecies=key,ramp='approved family'))
+            family_message='Uses your approved family palette. No changes means this Pokémon already matches the accepted treatment.'
+        else:
+            if not family:raise ValueError('No vanilla family reference is available for this species')
+            proposed,changes=recommend(palette,used,[r for r in refs if r['key']==family])
+            family_message='Suggested using vanilla '+family.replace('_',' ')+' shade ramps. Only compatible colour groups are adapted; distinctive regional colours without a suitable family ramp are retained. This is a starting point for visual review, not automatic material recognition.'
+    elif mode=='study':
+        study=studies(root).get(key)
+        if not study or variant!=study['variant']:raise ValueError('No material study for this palette')
+        if hashlib.sha256(raw).hexdigest()!=study['sourcePaletteSha256']:raise ValueError('Palette changed since this study. Review the study before applying it.')
+        proposed=[c[:] for c in palette];changes=[]
+        baseline={r['key']:r for r in reference['species']}
+        for edit in study['changes']:
+            i=edit['index'];rgb=edit.get('rgb',baseline[edit['referenceSpecies']][variant][edit['referenceIndex']])
+            if len(rgb)!=3 or any(type(c) is not int or not 0<=c<=255 for c in rgb):raise ValueError('Invalid study RGB colour')
+            if i==0 or i not in used:raise ValueError('Study refers to a transparent or unused index')
+            proposed[i]=rgb[:]
+            if gba(rgb)!=gba(palette[i]):changes.append(dict(index=i,before=palette[i],after=rgb,referenceSpecies=edit['referenceSpecies'],ramp=edit['material']))
+    elif mode=='restore':
+        proposed=[c[:] for c in palette];changes=[]
+        for i in sorted(used-{0}):
+            rgb=own[variant][i]
+            if gba(palette[i])!=gba(rgb):
+                proposed[i]=rgb[:];changes.append(dict(index=i,before=palette[i],after=rgb,referenceSpecies=key,ramp='original'))
+    else:proposed,changes=recommend(palette,used,refs,art.get('colours') if mode=='modern' else None)
+
     affected=[m for m in mons if m[variant]==mon[variant]]
     previews=[];digest=hashlib.sha256(raw)
-    digest.update(json.dumps(proposed).encode())
+    digest.update(json.dumps(proposed).encode());digest.update(mode.encode())
+    if mode=='modern':digest.update(art['sha256'].encode())
     for m in affected:
         digest.update(m['key'].encode());entry=dict(key=m['key'],name=m.get('name',m['key']),views=[])
         for view in ('front','back'):
@@ -119,12 +225,19 @@ def proposal(root,species,key,variant):
                 pair[label]='data:image/png;base64,'+base64.b64encode(buf.getvalue()).decode()
             entry['views'].append(pair)
         previews.append(entry)
-    return dict(key=key,variant=variant,path=mon[variant],revision=digest.hexdigest(),changes=changes,previews=previews,palette=proposed,
-                message='Suggestions use actual vanilla colours close in hue, saturation and lightness. Pale highlights and neutral colours are protected; shade merging, lightness reversal and large ramp compression are rejected. Some palettes need manual editing. This changes the registered battle palette, including every sprite shown below; menu icons use separate palettes.')
+    artwork=None
+    if mode in ('modern','study') and available:
+        cached=root/'.cache/debug-dashboard/official-artwork'/(key+'.png')
+        thumbnail=None
+        if cached.exists():
+            pic=Image.open(cached);pic.thumbnail((192,192));buf=io.BytesIO();pic.save(buf,format='PNG');thumbnail='data:image/png;base64,'+base64.b64encode(buf.getvalue()).decode()
+        artwork=dict(url=art['url'],image=thumbnail,colours=art['colours'],note=('Family study: colours may be blended from the vanilla family to retain regional identity. Inspect both sprite views before approval.' if mode=='study' else 'Official artwork mirrored by PokéAPI guides colour identity. Output colours still come exclusively from the 386-species vanilla FireRed palettes. Hue grouping is approximate; inspect small details before approval.'))
+    return dict(mode=mode,artwork=artwork,key=key,variant=variant,path=mon[variant],revision=digest.hexdigest(),changes=changes,previews=previews,palette=proposed,
+                message=(family_message if mode=='family' else study['description'] if mode=='study' else 'Restoration to this species’ own vanilla FireRed palette. All shared-palette users are previewed below; recoloured or reindexed artwork may require manual review.' if mode=='restore' else 'FireRed palette adaptation maps each hue group to an ordered shade ramp from one vanilla Pokémon. Pale highlights and meaningful lightness gaps are retained; shades are never merged. Black/white endpoints remain unchanged. Reference Pokémon are named for each changed ramp. Groups without a suitable ramp remain unchanged. This changes the registered battle palette, including every sprite shown below; menu icons use separate palettes.'))
 
 def apply_proposal(root,species,payload):
     from datetime import datetime
-    p=proposal(root,species,payload.get('key'),payload.get('variant','normal'))
+    p=proposal(root,species,payload.get('key'),payload.get('variant','normal'),payload.get('mode'))
     if p['revision']!=payload.get('revision'):raise ValueError('Palette or artwork changed. Generate a new preview before approving.')
     if not p['changes']:raise ValueError('No suggested colour changes to apply')
     path=root/p['path'];original=path.read_bytes()
@@ -139,7 +252,7 @@ if __name__=='__main__':
     payload=json.load(sys.stdin)
     try:
         action=payload.get('action','check')
-        if action=='proposal':result=proposal(ROOT,payload['species'],payload.get('key'),payload.get('variant','normal'))
+        if action=='proposal':result=proposal(ROOT,payload['species'],payload.get('key'),payload.get('variant','normal'),payload.get('mode'))
         elif action=='apply':result=apply_proposal(ROOT,payload['species'],payload)
         else:result=check(ROOT,payload['species'],payload.get('variant','normal'))
         print(json.dumps(result))

@@ -200,3 +200,7 @@ const u16 gMetatiles_Route21[] = INCBIN_U16("data/tilesets/secondary/route21/met
 const u32 gMetatileAttributes_Route21[] = INCBIN_U32("data/tilesets/secondary/route21/metatile_attributes.bin");
 
 const u16 gMetatiles_PalletTownConnected[] = INCBIN_U16("data/tilesets/secondary/pallet_town/connected_metatiles.bin");
+
+// Silph Co. retains its original stair definitions; Building is customised for other interiors.
+const u16 gMetatiles_SilphCoBuilding[] = INCBIN_U16("data/tilesets/primary/silph_co_building/metatiles.bin");
+const u32 gMetatileAttributes_SilphCoBuilding[] = INCBIN_U32("data/tilesets/primary/silph_co_building/metatile_attributes.bin");

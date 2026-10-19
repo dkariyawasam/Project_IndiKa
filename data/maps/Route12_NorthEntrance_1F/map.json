@@ -3,7 +3,7 @@
   "name": "Route12_NorthEntrance_1F",
   "layout": "LAYOUT_ROUTE12_NORTH_ENTRANCE_1F",
   "music": "MUS_PEWTER",
-  "region_map_section": "MAPSEC_ROUTE_12",
+  "region_map_section": "MAPSEC_ROUTE_14",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -35,29 +35,29 @@
       "x": 5,
       "y": 1,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE12",
+      "dest_map": "MAP_ROUTE14",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE12",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 11,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE12",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "1"
     },
     {
       "x": 6,
       "y": 11,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE12",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "1"
     },
     {
       "x": 8,
