@@ -422,6 +422,8 @@ CeladonCity_GameCorner_Movement_RocketGruntRetreat::
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
 	walk_in_place_faster_up
 	step_end
 
