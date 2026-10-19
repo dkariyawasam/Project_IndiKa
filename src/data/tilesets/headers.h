@@ -142,6 +142,17 @@ const struct Tileset gTileset_Building =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_SilphCoBuilding =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Building,
+    .palettes = gTilesetPalettes_Building,
+    .metatiles = gMetatiles_SilphCoBuilding,
+    .metatileAttributes = gMetatileAttributes_SilphCoBuilding,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_Mart =
 {
     .isCompressed = TRUE,

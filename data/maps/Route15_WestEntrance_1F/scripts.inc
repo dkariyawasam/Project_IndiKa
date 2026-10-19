@@ -6,6 +6,7 @@ Route15_WestEntrance_1F_OnTransition::
 	setvar VAR_TEMP_1, 0
 	call Route15_WestEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
 	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route15_WestEntrance_1F_EventScript_DisableNeedBikeTrigger
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route15_WestEntrance_1F_EventScript_PrepareRentalReturn
 	end
 
 Route15_WestEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike::
@@ -226,3 +227,8 @@ Route15_WestEntrance_1F_Movement_ReturnBikeWalkOut::
 	walk_left
 	walk_left
 	step_end
+
+@ A rental arriving back at either gate can be returned regardless of origin.
+Route15_WestEntrance_1F_EventScript_PrepareRentalReturn::
+	setvar VAR_MAP_SCENE_ROUTE16, 1
+	return

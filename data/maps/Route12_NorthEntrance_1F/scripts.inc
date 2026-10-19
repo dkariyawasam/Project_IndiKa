@@ -6,6 +6,7 @@ Route12_NorthEntrance_1F_OnTransition::
 	setvar VAR_TEMP_1, 0
 	call Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
 	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_PrepareRentalReturn
 	end
 
 Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike::
@@ -111,7 +112,7 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent::
 	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_RentalStepOut
 	waitmovement 0
 	setvar VAR_MAP_SCENE_ROUTE16, 1
-	warp MAP_ROUTE12, 14, 21
+	warp MAP_ROUTE14, 15, 13
 	waitstate
 	end
 
@@ -139,7 +140,7 @@ Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	setvar VAR_MAP_SCENE_ROUTE16, 0
 	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut
 	waitmovement 0
-	warp MAP_ROUTE12, 14, 15
+	warp MAP_ROUTE14, 15, 5
 	waitstate
 	end
 
@@ -191,3 +192,8 @@ Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut::
 	walk_up
 	walk_up
 	step_end
+
+@ A rental arriving back at either gate can be returned regardless of origin.
+Route12_NorthEntrance_1F_EventScript_PrepareRentalReturn::
+	setvar VAR_MAP_SCENE_ROUTE16, 1
+	return
