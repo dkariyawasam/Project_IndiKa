@@ -30,6 +30,7 @@ enum {
 #define PALSLOT_NPC_BESPOKE_3 PALSLOT_NPC_1_REFLECTION
 #define PALSLOT_NPC_BESPOKE_4 PALSLOT_NPC_2_REFLECTION
 #define PALSLOT_NPC_BESPOKE_5 PALSLOT_NPC_3_REFLECTION
+#define PALSLOT_NPC_BESPOKE_6 PALSLOT_NPC_4_REFLECTION
 
 enum SpinnerRunnerFollowPatterns
 {
@@ -241,4 +242,7 @@ u8 GetFishingBiteDirectionAnimNum(u8 direction);
 void TrySpawnObjectEvents(s16 cameraX, s16 cameraY);
 void ResetObjectEvents(void);
 
+void RemoveUnrelatedFlashbackObjects(void);
+
 #endif // GUARD_EVENT_OBJECT_MOVEMENT_H
+

@@ -300,7 +300,7 @@
 #define VAR_0x40FC                 0x40FC
 #define VAR_0x40FD                 0x40FD
 #define VAR_0x40FE                 0x40FE
-#define VAR_0x40FF                 0x40FF
+#define VAR_BIKE_RENTAL_STAGE      0x40FF // 0: none/legacy, 1: issued, 2: ridden outside
 
 #define VARS_END                   0x40FF
 #define VARS_COUNT                 (VARS_END - VARS_START + 1)

@@ -70,6 +70,96 @@
   "coord_events": [
     {
       "type": "trigger",
+      "x": 5,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_TownReturn0"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_TownReturn1"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_TownReturn2"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_TownReturn3"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_TownReturn4"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeAtCarpet"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeAtCarpet"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeAtCarpet"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeAtCarpet"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeAtCarpet"
+    },
+    {
+      "type": "trigger",
       "x": 6,
       "y": 6,
       "elevation": 3,
@@ -85,24 +175,6 @@
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "Route15_WestEntrance_1F_EventScript_NeedBikeTriggerBottom"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 6,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE16",
-      "var_value": "1",
-      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeTriggerTop"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 7,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROUTE16",
-      "var_value": "1",
-      "script": "Route15_WestEntrance_1F_EventScript_ReturnBikeTriggerBottom"
     }
   ],
   "bg_events": []
