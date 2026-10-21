@@ -3,6 +3,10 @@ Route12_NorthEntrance_1F_MapScripts::
 	.byte 0
 
 Route12_NorthEntrance_1F_OnTransition::
+	setvar VAR_TEMP_3, 0
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_EnableTownReturn
+	setvar VAR_TEMP_2, 0
+	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_EnableRentalReturn
 	setvar VAR_TEMP_1, 0
 	call Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
 	call_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
@@ -24,15 +28,20 @@ Route12_NorthEntrance_1F_EventScript_Guard::
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_GuardOwnBike
 	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_GuardRentalActive
+	showmoneybox 0, 0
 	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	hidemoneybox
 	goto_if_eq VAR_RESULT, NO, Route12_NorthEntrance_1F_EventScript_GuardDeclineRental
 	checkmoney 500
 	goto_if_eq VAR_RESULT, FALSE, Route12_NorthEntrance_1F_EventScript_GuardNotEnoughMoney
 	removemoney 500
 	playse SE_SHOP
 	setflag FLAG_BIKE_RENTAL_ACTIVE
+	setvar VAR_BIKE_RENTAL_STAGE, 1
 	setvar VAR_TEMP_1, 1
 	msgbox Route12_NorthEntrance_1F_Text_RentalStarted
+	closemessage
+	call Route12_NorthEntrance_1F_EventScript_RentalHandoff
 	release
 	end
 
@@ -81,6 +90,9 @@ Route12_NorthEntrance_1F_EventScript_ReturnBikeTriggerRight::
 	end
 
 Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger::
+	@ Only stop pedestrians entering the cycling route; swimmers may leave on foot.
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_ne VAR_RESULT, DIR_SOUTH, Route12_NorthEntrance_1F_EventScript_PedestrianExit
 	checkitem ITEM_BICYCLE, 1
 	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
 	textcolor NPC_TEXT_COLOR_NEUTRAL
@@ -90,7 +102,9 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger::
 	waitmovement 0
 	delay 20
 	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
+	showmoneybox 0, 0
 	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
+	hidemoneybox
 	goto_if_eq VAR_RESULT, YES, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent
 Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerBounce::
 	msgbox Route12_NorthEntrance_1F_Text_NeedBicycleForCoastalRoutes
@@ -106,14 +120,12 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerRent::
 	removemoney 500
 	playse SE_SHOP
 	setflag FLAG_BIKE_RENTAL_ACTIVE
+	setvar VAR_BIKE_RENTAL_STAGE, 1
 	msgbox Route12_NorthEntrance_1F_Text_RentalStarted
 	closemessage
 	setvar VAR_TEMP_1, 1
-	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_RentalStepOut
-	waitmovement 0
-	setvar VAR_MAP_SCENE_ROUTE16, 1
-	warp MAP_ROUTE14, 15, 13
-	waitstate
+	call Route12_NorthEntrance_1F_EventScript_RentalHandoff
+	releaseall
 	end
 
 Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerNotEnoughMoney::
@@ -131,17 +143,23 @@ Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	goto_if_eq VAR_RESULT, TRUE, EventScript_SetExitingCyclingRoad
 	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, EventScript_SetExitingCyclingRoad
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	call_if_eq VAR_0x8008, 0, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft
-	call_if_eq VAR_0x8008, 1, Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardRight
-	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	msgbox Route16_NorthEntrance_1F_Text_RentalWelcomeBack
 	closemessage
 	clearflag FLAG_SYS_ON_CYCLING_ROAD
 	special EndBikeRental
+	delay 16
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 3, Route12_NorthEntrance_1F_EventScript_ReturnLane3
+	call_if_eq VAR_0x8004, 4, Route12_NorthEntrance_1F_EventScript_ReturnLane4
+	call_if_eq VAR_0x8004, 5, Route12_NorthEntrance_1F_EventScript_ReturnLane5
+	call_if_eq VAR_0x8004, 6, Route12_NorthEntrance_1F_EventScript_ReturnLane6
+	call_if_eq VAR_0x8004, 7, Route12_NorthEntrance_1F_EventScript_ReturnLane7
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
 	setvar VAR_MAP_SCENE_ROUTE16, 0
-	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut
-	waitmovement 0
-	warp MAP_ROUTE14, 15, 5
-	waitstate
+	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
+	releaseall
 	end
 
 Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft::
@@ -158,17 +176,9 @@ Route12_NorthEntrance_1F_Movement_WalkUp::
 	walk_up
 	step_end
 
-Route12_NorthEntrance_1F_Movement_RentalStepOut::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
 
 Route12_NorthEntrance_1F_Movement_ReturnBikeLeftToGuard::
 	walk_up
-	walk_left
 	walk_left
 	walk_left
 	walk_in_place_faster_left
@@ -179,12 +189,10 @@ Route12_NorthEntrance_1F_Movement_ReturnBikeRightToGuard::
 	walk_left
 	walk_left
 	walk_left
-	walk_left
 	walk_in_place_faster_left
 	step_end
 
 Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut::
-	walk_right
 	walk_right
 	walk_right
 	walk_up
@@ -197,3 +205,243 @@ Route12_NorthEntrance_1F_Movement_ReturnBikeWalkOut::
 Route12_NorthEntrance_1F_EventScript_PrepareRentalReturn::
 	setvar VAR_MAP_SCENE_ROUTE16, 1
 	return
+
+@ Finish the handover on the carpet before restoring player control.
+Route12_NorthEntrance_1F_EventScript_RentalHandoff::
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_2, 0
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 3, Route12_NorthEntrance_1F_EventScript_RentalFromCounter
+	call_if_eq VAR_0x8004, 6, Route12_NorthEntrance_1F_EventScript_RentalFromRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	special ForcePlayerOntoBike
+	delay 16
+	return
+
+Route12_NorthEntrance_1F_EventScript_RentalFromCounter::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_RentalFromCounter
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_Movement_RentalFromCounter::
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_RentalFromRight::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_RentalFromRight
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_Movement_RentalFromRight::
+	walk_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_ReturnBikeAtCarpet::
+	lockall
+	goto Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger
+
+Route12_NorthEntrance_1F_Movement_ReturnFromCarpet::
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_in_place_faster_left
+	step_end
+
+@ Only rentals already active when entering this gate can be returned.
+Route12_NorthEntrance_1F_EventScript_EnableRentalReturn::
+	goto_if_eq VAR_BIKE_RENTAL_STAGE, 1, Route12_NorthEntrance_1F_EventScript_ReturnNotReady
+	setvar VAR_TEMP_2, 1
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnNotReady::
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane3::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_ReturnLane3_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane3_Movement::
+	walk_up
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane4::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_ReturnLane4_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane4_Movement::
+	walk_up
+	walk_left
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane5::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_ReturnLane5_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane5_Movement::
+	walk_up
+	walk_left
+	walk_left
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane6::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_ReturnLane6_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane6_Movement::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane7::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_ReturnLane7_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_ReturnLane7_Movement::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_EnableTownReturn::
+	setvar VAR_TEMP_3, 1
+	return
+
+Route12_NorthEntrance_1F_EventScript_TownReturn0::
+	lockall
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_TownReturnDone
+	msgbox Route16_NorthEntrance_1F_Text_TownReturn
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	delay 16
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_TownReturn0_Movement
+	waitmovement 0
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
+
+Route12_NorthEntrance_1F_EventScript_TownReturn0_Movement::
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_TownReturn1::
+	lockall
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_TownReturnDone
+	msgbox Route16_NorthEntrance_1F_Text_TownReturn
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	delay 16
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_TownReturn1_Movement
+	waitmovement 0
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
+
+Route12_NorthEntrance_1F_EventScript_TownReturn1_Movement::
+	walk_left
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_TownReturn2::
+	lockall
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_TownReturnDone
+	msgbox Route16_NorthEntrance_1F_Text_TownReturn
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	delay 16
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_TownReturn2_Movement
+	waitmovement 0
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
+
+Route12_NorthEntrance_1F_EventScript_TownReturn2_Movement::
+	walk_left
+	walk_left
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_TownReturn3::
+	lockall
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_TownReturnDone
+	msgbox Route16_NorthEntrance_1F_Text_TownReturn
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	delay 16
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_TownReturn3_Movement
+	waitmovement 0
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
+
+Route12_NorthEntrance_1F_EventScript_TownReturn3_Movement::
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_TownReturn4::
+	lockall
+	goto_if_unset FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_TownReturnDone
+	msgbox Route16_NorthEntrance_1F_Text_TownReturn
+	closemessage
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	special EndBikeRental
+	delay 16
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_TownReturn4_Movement
+	waitmovement 0
+	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
+	closemessage
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
+
+Route12_NorthEntrance_1F_EventScript_TownReturn4_Movement::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_TownReturnDone::
+	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
+	setvar VAR_MAP_SCENE_ROUTE16, 0
+	releaseall
+	end
+
+@ Do not disable the entry check: turning back must still require a bicycle.
+Route12_NorthEntrance_1F_EventScript_PedestrianExit::
+	releaseall
+	end

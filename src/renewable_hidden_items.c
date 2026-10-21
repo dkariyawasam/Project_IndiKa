@@ -22,6 +22,44 @@ static void SampleRenewableItemFlags(void);
 
 static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
     {
+        .mapGroup = MAP_GROUP(MAP_CERULEAN_CAVE_2F),
+        .mapNum = MAP_NUM(MAP_CERULEAN_CAVE_2F),
+        .rare = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_DART_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_HASTE_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+        .uncommon = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_DART_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_HASTE_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+        .common = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_DART_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_2F_HASTE_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+    },
+    {
+        .mapGroup = MAP_GROUP(MAP_CERULEAN_CAVE_1F),
+        .mapNum = MAP_NUM(MAP_CERULEAN_CAVE_1F),
+        .rare = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_DART_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+        .uncommon = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_DART_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+        .common = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_DART_SHARD),
+            NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
+        },
+    },
+    {
         .mapGroup = MAP_GROUP(MAP_ROUTE20),
         .mapNum = MAP_NUM(MAP_ROUTE20),
         .rare = {
@@ -127,29 +165,35 @@ static const struct RenewableHiddenItemData sRenewableHiddenItems[] = {
         .mapGroup = MAP_GROUP(MAP_MT_MOON_B1F),
         .mapNum = MAP_NUM(MAP_MT_MOON_B1F),
         .rare = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD_2),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3),
             NO_ITEM,
-            NO_ITEM
+            NO_ITEM,
         },
         .uncommon = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD_2),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2),
             HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3),
             NO_ITEM,
             NO_ITEM,
             NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
         },
         .common = {
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD_2),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD),
+            HIDDEN_ID(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2),
             NO_ITEM,
             NO_ITEM,
             NO_ITEM,
             NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM,
-            NO_ITEM
-        }
+        },
     },
     {
         .mapGroup = MAP_GROUP(MAP_FUCHSIA_FOREST),

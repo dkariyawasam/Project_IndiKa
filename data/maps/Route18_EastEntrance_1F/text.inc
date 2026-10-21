@@ -34,6 +34,5 @@ Route18_EastEntrance_1F_Text_NotEnoughMoney::
     .string "You don't have enough money.$"
 
 Route18_EastEntrance_1F_Text_ReturnRentalBike::
-    .string "Welcome back.\p"
     .string "I'll take the rental BICYCLE\n"
     .string "from here.$"

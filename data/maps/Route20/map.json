@@ -246,8 +246,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F_WATER",
-      "x": 66,
-      "y": 3,
+      "x": 59,
+      "y": 13,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
