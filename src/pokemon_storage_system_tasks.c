@@ -2122,6 +2122,26 @@ static void LoadPokeStorageMenuGfx(void)
     InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
     DecompressAndLoadBgGfxUsingHeap(1, gPokeStorageMenu_Gfx, 0, 0, 0);
     LZ77UnCompWram(sMenu_Tilemap, gStorage->menuTilemapBuffer);
+    // Fill the preview's left gutter and finish the markings panel with a
+    // flat edge; the portrait's curved border tiles do not fit this panel.
+    {
+        static const u8 bottomEdge[32] = {
+            0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44,
+            0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44,
+            0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44,
+            0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33,
+        };
+        u16 *tilemap = (u16 *)gStorage->menuTilemapBuffer;
+        u16 x;
+        LoadBgTiles(1, bottomEdge, sizeof(bottomEdge), 0x90);
+        for (x = 3; x <= 8; x++)
+            tilemap[x * 32] = 0x110;
+        for (x = 1; x < 9; x++)
+        {
+            tilemap[18 * 32 + x] = 0x124;
+            tilemap[19 * 32 + x] = 0x190;
+        }
+    }
     SetBgTilemapBuffer(1, gStorage->menuTilemapBuffer);
     ShowBg(1);
     ScheduleBgCopyTilemapToVram(1);

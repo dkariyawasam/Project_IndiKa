@@ -307,12 +307,29 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo * info, u8 area, u8
     return TRUE;
 }
 
+// Route 20's western waters are warmed by Cinnabar; the eastern waters
+// approach Seafoam's two entrances at x=60 and x=72. Outside their refuge,
+// deep-form fishing slots yield the corresponding ordinary fish instead.
+static u16 GetFishingSpeciesForLocation(u16 species)
+{
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE20)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE20))
+    {
+        if (species == SPECIES_CINNABAR_MAGIKARP && gSaveBlock1Ptr->pos.x >= 48)
+            return SPECIES_MAGIKARP;
+        if (species == SPECIES_CINNABAR_FEEBAS && gSaveBlock1Ptr->pos.x < 48)
+            return SPECIES_FEEBAS;
+    }
+    return species;
+}
+
 static u16 GenerateFishingEncounter(const struct WildPokemonInfo * info, u8 rod)
 {
     u8 slot = ChooseWildMonIndex_Fishing(rod);
     u8 level = ChooseWildMonLevel(&info->wildPokemon[slot]);
-    GenerateWildMon(info->wildPokemon[slot].species, level, slot);
-    return info->wildPokemon[slot].species;
+    u16 species = GetFishingSpeciesForLocation(info->wildPokemon[slot].species);
+    GenerateWildMon(species, level, slot);
+    return species;
 }
 
 static bool8 DoWildEncounterRateDiceRoll(u16 encounterRate)

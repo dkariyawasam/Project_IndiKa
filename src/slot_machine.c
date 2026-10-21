@@ -24,7 +24,7 @@
 #define NUM_MATCH_LINES 5
 
 #define NUM_BUTTON_TILES 4
-#define NUM_DIGIT_SPRITES 4
+#define NUM_DIGIT_SPRITES 5
 
 enum {
     PALSLOT_LINE_NORMAL = 4, // Loaded as part of sBg_Pal
@@ -1893,9 +1893,9 @@ static void CreateScoreDigitSprites(void)
 
     for (i = 0; i < NUM_DIGIT_SPRITES; i++)
     {
-        spriteId = CreateSprite(&sSpriteTemplate_Digits, 85 + 7 * i, 30, 0);
+        spriteId = CreateSprite(&sSpriteTemplate_Digits, 78 + 7 * i, 30, 0);
         sSlotMachineGfxManager->creditDigitSprites[i] = &gSprites[spriteId];
-        spriteId = CreateSprite(&sSpriteTemplate_Digits, 133 + 7 * i, 30, 0);
+        spriteId = CreateSprite(&sSpriteTemplate_Digits, 126 + 7 * i, 30, 0);
         sSlotMachineGfxManager->payoutDigitSprites[i] = &gSprites[spriteId];
     }
 }
@@ -1905,7 +1905,7 @@ static void UpdateCoinsDisplay(void)
     s32 coins = GetCoins();
     s32 payout = GetPayout();
     s32 i;
-    s32 divisor = 1000;
+    s32 divisor = 10000;
     s32 quotient;
 
     for (i = 0; i < NUM_DIGIT_SPRITES; i++)

@@ -42,6 +42,7 @@
 #include "constants/songs.h"
 #include "constants/items.h"
 #include "constants/maps.h"
+#include "constants/map_event_ids.h"
 #include "constants/region_map_sections.h"
 #include "constants/moves.h"
 #include "constants/menu.h"
@@ -70,6 +71,7 @@ static EWRAM_DATA u8 sPCBoxToSendMon = 0;
 static EWRAM_DATA u8 sBrailleTextCursorSpriteID = 0;
 static EWRAM_DATA u16 sFlashbackPaletteBackup[PLTT_BUFFER_SIZE] = {0};
 static EWRAM_DATA bool8 sFlashbackPaletteBackupValid = FALSE;
+static EWRAM_DATA bool8 sFlashbackActorsOnly = FALSE;
 static EWRAM_DATA u16 sFlashbackCameraFocusX = 0;
 static EWRAM_DATA u16 sFlashbackCameraFocusY = 0;
 static EWRAM_DATA bool8 sFlashbackCameraFocusValid = FALSE;
@@ -242,6 +244,7 @@ void ForcePlayerOntoBike(void)
 void EndBikeRental(void)
 {
     FlagClear(FLAG_BIKE_RENTAL_ACTIVE);
+    VarSet(VAR_BIKE_RENTAL_STAGE, 0);
     if (!CheckBagHasItem(ITEM_BICYCLE, 1) && GetPlayerAvatarBike() != 0)
     {
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
@@ -469,17 +472,53 @@ void SpawnCameraObject(void)
     CameraObjectSetFollowedObjectId(gObjectEvents[objectEventId].spriteId);
 }
 
+bool8 IsObjectAllowedInFlashback(u8 localId, u8 mapNum, u8 mapGroup)
+{
+    if (!sFlashbackActorsOnly || localId == LOCALID_PLAYER || localId == LOCALID_CAMERA)
+        return TRUE;
+    if (mapGroup == MAP_GROUP(MAP_ROUTE7) && mapNum == MAP_NUM(MAP_ROUTE7))
+        return localId == LOCALID_ROUTE7_FLASHBACK_LORELEI
+            || localId == LOCALID_ROUTE7_FLASHBACK_BRUNO
+            || localId == LOCALID_ROUTE7_FLASHBACK_AGATHA
+            || localId == LOCALID_ROUTE7_FLASHBACK_LANCE
+            || localId == LOCALID_ROUTE7_FLASHBACK_MEWTWO
+            || localId == LOCALID_ROUTE7_FLASHBACK_GIOVANNI;
+    if (mapGroup == MAP_GROUP(MAP_CELADON_CAVE) && mapNum == MAP_NUM(MAP_CELADON_CAVE))
+        return localId == LOCALID_CELADON_CAVE_FLASHBACK_LANCE
+            || localId == LOCALID_CELADON_CAVE_FLASHBACK_MEWTWO
+            || localId == LOCALID_CELADON_CAVE_FLASHBACK_GIOVANNI;
+    return TRUE;
+}
+
+static void ReloadFlashbackObjectPalettes(void)
+{
+    u8 i;
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        struct ObjectEvent *object = &gObjectEvents[i];
+        if (object->active && object->spriteId < MAX_SPRITES && gSprites[object->spriteId].inUse)
+            PatchObjectPalette(GetObjectEventGraphicsInfo(object->graphicsId)->paletteTag,
+                               gSprites[object->spriteId].oam.paletteNum);
+    }
+}
+
 void SetFlashbackCameraToCoords(void)
 {
     u8 objectEventId;
     u16 focusX = gSpecialVar_0x8004 + MAP_OFFSET;
     u16 focusY = gSpecialVar_0x8005 + MAP_OFFSET;
 
+    sFlashbackActorsOnly = TRUE;
+    RemoveUnrelatedFlashbackObjects();
+
     ClearFlashbackTerrainFieldEffects();
     HideMewtwoFlashbackBeam();
     CacheFlashbackPlayerPosition();
-    GetCameraFocusCoords(&sFlashbackCameraFocusX, &sFlashbackCameraFocusY);
-    sFlashbackCameraFocusValid = TRUE;
+    if (!sFlashbackCameraFocusValid)
+    {
+        GetCameraFocusCoords(&sFlashbackCameraFocusX, &sFlashbackCameraFocusY);
+        sFlashbackCameraFocusValid = TRUE;
+    }
     ResetCameraUpdateInfo();
 
     SetCameraFocusCoords(focusX, focusY);
@@ -499,6 +538,7 @@ void SetFlashbackCameraToCoords(void)
 
 void RestoreFlashbackCamera(void)
 {
+    sFlashbackActorsOnly = FALSE;
     ClearFlashbackTerrainFieldEffects();
     HideMewtwoFlashbackBeam();
     CameraObjectSetFollowedObjectId(GetPlayerAvatarObjectId());
@@ -512,6 +552,8 @@ void RestoreFlashbackCamera(void)
 
     ResetCameraUpdateInfo();
     RestoreFlashbackPlayerObjectEvents();
+    TrySpawnObjectEvents(0, 0);
+    ReloadFlashbackObjectPalettes();
     DrawWholeMapView();
     CameraObjectSetFollowedObjectId(GetPlayerAvatarObjectId());
     CameraObjectReset1();
@@ -785,7 +827,7 @@ static void RestoreFlashbackFieldEffectPalette(const struct SpritePalette *sprit
         ApplyNightTintToSandFootprintsEffect();
     else if (spritePalette->tag == FLDEFF_PAL_TAG_GENERAL_1)
         ApplyNightTintToTallGrassEffect();
-    CpuFastCopy(&gPlttBufferFaded[paletteOffset], (void *)(OBJ_PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
+    CpuFastCopy(&gPlttBufferFaded[paletteOffset], (void *)(PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
 }
 
 static void WhitenFlashbackFieldEffectPalettes(void)
@@ -805,7 +847,7 @@ static void WhitenFlashbackFieldEffectPalette(const struct SpritePalette *sprite
     paletteOffset = OBJ_PLTT_ID(paletteSlot);
     CpuFastFill16(RGB_WHITE, &gPlttBufferUnfaded[paletteOffset], PLTT_SIZE_4BPP);
     CpuFastFill16(RGB_WHITE, &gPlttBufferFaded[paletteOffset], PLTT_SIZE_4BPP);
-    CpuFastFill16(RGB_WHITE, (void *)(OBJ_PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
+    CpuFastFill16(RGB_WHITE, (void *)(PLTT + paletteOffset * sizeof(u16)), PLTT_SIZE_4BPP);
 }
 
 void StartMewtwoFlashbackSparkleLoop(void)
@@ -2775,8 +2817,10 @@ static void Task_WingFlapSound(u8 taskId)
 
 void ApplyFlashbackGreyscaleTint(void)
 {
-    CpuFastCopy(gPlttBufferUnfaded, sFlashbackPaletteBackup, PLTT_SIZE);
+    if (!sFlashbackPaletteBackupValid)
+        CpuFastCopy(gPlttBufferUnfaded, sFlashbackPaletteBackup, PLTT_SIZE);
     sFlashbackPaletteBackupValid = TRUE;
+    ReloadFlashbackObjectPalettes();
 
     TintFlashbackPaletteBuffer(gPlttBufferUnfaded);
     CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_SIZE);
@@ -2790,6 +2834,7 @@ void RestoreFlashbackGreyscaleTint(void)
         sFlashbackPaletteBackupValid = FALSE;
     }
 
+    ReloadFlashbackObjectPalettes();
     RestoreFlashbackFieldEffectPalettes();
     HoldFlashbackFadeWhite();
 }

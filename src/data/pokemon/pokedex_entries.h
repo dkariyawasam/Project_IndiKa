@@ -2006,7 +2006,7 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("DRAGON"),
         .height = 18,
-        .weight = 79,
+        .weight = 420,
         .description = gCinnabarMagikarpPokedexText,
         .unusedDescription = gCinnabarMagikarpPokedexTextUnused,
         .pokemonScale = 345,
@@ -4388,12 +4388,12 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_OMATO] =
     {
         .categoryName = _("SPIRAL"),
-        .height = 1,
-        .weight = 1,
+        .height = 5,
+        .weight = 95,
         .description = gOmatoPokedexText,
         .unusedDescription = gOmatoPokedexTextUnused,
-        .pokemonScale = 3351,
-        .pokemonOffset = 22,
+        .pokemonScale = 670,
+        .pokemonOffset = 16,
         .trainerScale = 341,
         .trainerOffset = 0,
     },
@@ -4401,12 +4401,12 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_OMATOPS] =
     {
         .categoryName = _("SPINNING"),
-        .height = 1,
-        .weight = 1,
+        .height = 12,
+        .weight = 380,
         .description = gOmatopsPokedexText,
         .unusedDescription = gOmatopsPokedexTextUnused,
-        .pokemonScale = 4468,
-        .pokemonOffset = 22,
+        .pokemonScale = 372,
+        .pokemonOffset = 6,
         .trainerScale = 341,
         .trainerOffset = 0,
     },
@@ -4584,7 +4584,7 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("MIME"),
         .height = 18,
-        .weight = 100,
+        .weight = 780,
         .description = gMimeSrPokedexText,
         .unusedDescription = gMimeSrPokedexTextUnused,
         .pokemonScale = 356,
@@ -4624,7 +4624,7 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("UNKNOWN"),
         .height = 16,
-        .weight = 100,
+        .weight = 560,
         .description = gOsscythePokedexText,
         .unusedDescription = gOsscythePokedexTextUnused,
         .pokemonScale = 372,
@@ -4650,7 +4650,7 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("DEEP DRAGON"),
         .height = 16,
-        .weight = 100,
+        .weight = 360,
         .description = gCinnabarFeebasPokedexText,
         .unusedDescription = gCinnabarFeebasPokedexTextUnused,
         .pokemonScale = 320,
@@ -4702,12 +4702,12 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_KABUSTAR] =
     {
         .categoryName = _("CLINGING"),
-        .height = 10,
-        .weight = 100,
+        .height = 5,
+        .weight = 110,
         .description = gKabustarPokedexText,
         .unusedDescription = gKabustarPokedexTextUnused,
-        .pokemonScale = 391,
-        .pokemonOffset = 9,
+        .pokemonScale = 782,
+        .pokemonOffset = 16,
         .trainerScale = 341,
         .trainerOffset = 0,
     },
@@ -4715,12 +4715,12 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_KABUKNIGHT] =
     {
         .categoryName = _("ARMORED"),
-        .height = 10,
-        .weight = 100,
+        .height = 15,
+        .weight = 480,
         .description = gKabuknightPokedexText,
         .unusedDescription = gKabuknightPokedexTextUnused,
-        .pokemonScale = 559,
-        .pokemonOffset = 9,
+        .pokemonScale = 372,
+        .pokemonOffset = 2,
         .trainerScale = 341,
         .trainerOffset = 0,
     },
@@ -4754,14 +4754,14 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_AEROPTERYX] =
     {
         .categoryName = _("PRIMEVAL"),
-        .height = 10,
-        .weight = 100,
+        .height = 19,
+        .weight = 520,
         .description = gAeropteryxPokedexText,
         .unusedDescription = gAeropteryxPokedexTextUnused,
-        .pokemonScale = 568,
-        .pokemonOffset = 9,
-        .trainerScale = 341,
-        .trainerOffset = 0,
+        .pokemonScale = 339,
+        .pokemonOffset = 0,
+        .trainerScale = 388,
+        .trainerOffset = 3,
     },
 
     [NATIONAL_DEX_PORYGON_Z] =
