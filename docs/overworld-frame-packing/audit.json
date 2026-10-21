@@ -1029,152 +1029,64 @@
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2678,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_jet.png": {
       "symbol": "gObjectEventPic_RocketAceJet",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2678,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_kardinal.png": {
       "symbol": "gObjectEventPic_RocketAceKardinal",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2714,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_mako.png": {
       "symbol": "gObjectEventPic_RocketAceMako",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2761,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_mojay.png": {
       "symbol": "gObjectEventPic_RocketAceMojay",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2538,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_sable.png": {
       "symbol": "gObjectEventPic_RocketAceSable",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2692,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_shion.png": {
       "symbol": "gObjectEventPic_RocketAceShion",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2533,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_ace_viper.png": {
       "symbol": "gObjectEventPic_RocketAceViper",
       "tile_width": 2,
       "tile_height": 4,
       "frames": 10,
-      "bad_pixels": 2533,
-      "bad_frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "bad_pixels": 0,
+      "bad_frames": []
     },
     "graphics/object_events/pics/people/rocket_admin_archer.png": {
       "symbol": "gObjectEventPic_RocketArcher",

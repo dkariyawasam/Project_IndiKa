@@ -1208,7 +1208,7 @@ static void PrintTimeOnCard(void)
     {
         FillWindowPixelRect(1, PIXEL_FILL(0), sTrainerCardTimeHoursXPositions[sTrainerCardDataPtr->cardType], sTrainerCardTimeMinutesYPositions[sTrainerCardDataPtr->cardType], 50, 12);
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 20, 80, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Coins_2);
-        ConvertIntToDecimalStringN(buffer, GetCoins(), STR_CONV_MODE_RIGHT_ALIGN, 4);
+        ConvertIntToDecimalStringN(buffer, GetCoins(), STR_CONV_MODE_RIGHT_ALIGN, 5);
         x = 134 - 6 * StringLength(buffer);
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], x, 80, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
         return;

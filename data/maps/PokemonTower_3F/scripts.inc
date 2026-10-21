@@ -20,6 +20,7 @@ PokemonTower_3F_EventScript_ShowGymGuide::
 PokemonTower_3F_EventScript_Sabrina::
 	lock
 	faceplayer
+	lockall
 	goto_if_ge VAR_SABRINA_TRIAL_STATE, 4, PokemonTower_3F_EventScript_SabrinaGone
 	goto_if_eq VAR_SABRINA_TRIAL_STATE, 3, PokemonTower_3F_EventScript_SabrinaAskChallenge
 	logbookmenu LOGBOOK_MENU_UNLOCK_QUEST, QUEST_GYM_LEADER_TRIALS
@@ -35,10 +36,13 @@ PokemonTower_3F_EventScript_Sabrina::
 	msgbox PokemonTower_3F_Text_SabrinaTaughtDreamEater
 	closemessage
 	setvar VAR_SABRINA_TRIAL_STATE, 3
+	call PokemonTower_3F_EventScript_ClearWalkway
 	clearflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	setobjectxyperm LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, 18, 10
 	addobject LOCALID_POKEMON_TOWER_3F_GYM_GUIDE
 	applymovement LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, PokemonTower_3F_Movement_GymGuideArrive
 	waitmovement 0
+	setobjectxyperm LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, 12, 6
 	msgbox PokemonTower_3F_Text_GymGuideArrives
 	goto PokemonTower_3F_EventScript_SabrinaAskChallenge
 
@@ -117,15 +121,17 @@ PokemonTower_3F_EventScript_DefeatedSabrina::
 	setflag FLAG_GOT_MARSH_FINDER
 	msgbox SaffronCity_Gym_Text_ExplainMarshFinder
 	clearflag FLAG_HIDE_SAFFRON_CITY_GYM_SABRINA
-	applymovement LOCALID_POKEMON_TOWER_3F_SABRINA, PokemonTower_3F_Movement_SabrinaStepBehindGuide
-	waitmovement 0
+	closemessage
+	lockall
+	call PokemonTower_3F_EventScript_ClearWalkway
 	applymovement LOCALID_POKEMON_TOWER_3F_GYM_GUIDE, PokemonTower_3F_Movement_GymGuideLeave
+	waitmovement 0
+	setflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
+	removeobject LOCALID_POKEMON_TOWER_3F_GYM_GUIDE
 	applymovement LOCALID_POKEMON_TOWER_3F_SABRINA, PokemonTower_3F_Movement_SabrinaLeave
 	waitmovement 0
 	setflag FLAG_HIDE_POKEMON_TOWER_SABRINA
-	setflag FLAG_HIDE_POKEMON_TOWER_GYM_GUIDE
 	removeobject LOCALID_POKEMON_TOWER_3F_SABRINA
-	removeobject LOCALID_POKEMON_TOWER_3F_GYM_GUIDE
 	release
 	end
 
@@ -138,7 +144,8 @@ PokemonTower_3F_EventScript_GymGuide::
 	end
 
 PokemonTower_3F_Movement_GymGuideArrive::
-	walk_left
+	walk_up
+	walk_up
 	walk_left
 	walk_left
 	walk_up
@@ -151,7 +158,7 @@ PokemonTower_3F_Movement_GymGuideArrive::
 	walk_left
 	walk_down
 	walk_down
-	walk_in_place_faster_up
+	walk_in_place_faster_down
 	step_end
 
 PokemonTower_3F_Movement_GymGuideLeave::
@@ -167,17 +174,16 @@ PokemonTower_3F_Movement_GymGuideLeave::
 	walk_down
 	walk_right
 	walk_right
-	walk_right
-	step_end
-
-PokemonTower_3F_Movement_SabrinaStepBehindGuide::
-	walk_right
-	walk_up
+	walk_down
+	walk_down
 	step_end
 
 PokemonTower_3F_Movement_SabrinaLeave::
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -188,7 +194,8 @@ PokemonTower_3F_Movement_SabrinaLeave::
 	walk_down
 	walk_right
 	walk_right
-	walk_right
+	walk_down
+	walk_down
 	step_end
 
 PokemonTower_3F_EventScript_Angelica::
@@ -226,3 +233,45 @@ PokemonTower_3F_EventScript_JenniferRematch::
 	trainerbattle_rematch TRAINER_CHANNELER_JENNIFER, PokemonTower_3F_Text_JenniferIntro, PokemonTower_3F_Text_JenniferDefeat
 	msgbox PokemonTower_3F_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+PokemonTower_3F_EventScript_ClearWalkway::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 10, PokemonTower_3F_EventScript_PlayerFromLeft
+	call_if_eq VAR_0x8004, 12, PokemonTower_3F_EventScript_PlayerFromRight
+	call_if_eq VAR_0x8005, 7, PokemonTower_3F_EventScript_PlayerFromAbove
+	return
+
+PokemonTower_3F_EventScript_PlayerFromLeft::
+	applymovement LOCALID_PLAYER, PokemonTower_3F_EventScript_PlayerFromLeft_Movement
+	waitmovement 0
+	return
+
+PokemonTower_3F_EventScript_PlayerFromLeft_Movement::
+	walk_down
+	walk_right
+	walk_in_place_faster_up
+	step_end
+
+PokemonTower_3F_EventScript_PlayerFromRight::
+	applymovement LOCALID_PLAYER, PokemonTower_3F_EventScript_PlayerFromRight_Movement
+	waitmovement 0
+	return
+
+PokemonTower_3F_EventScript_PlayerFromRight_Movement::
+	walk_down
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+PokemonTower_3F_EventScript_PlayerFromAbove::
+	applymovement LOCALID_PLAYER, PokemonTower_3F_EventScript_PlayerFromAbove_Movement
+	waitmovement 0
+	return
+
+PokemonTower_3F_EventScript_PlayerFromAbove_Movement::
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_in_place_faster_up
+	step_end

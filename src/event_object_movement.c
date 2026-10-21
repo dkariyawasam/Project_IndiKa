@@ -4,6 +4,7 @@
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
+#include "field_specials.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
 #include "field_effect_helpers.h"
@@ -1766,6 +1767,9 @@ static u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEv
     struct SpriteFrameImage spriteFrameImage;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
     const struct SubspriteTable *subspriteTables = NULL;
+
+    if (!IsObjectAllowedInFlashback(objectEventTemplate->localId, mapNum, mapGroup))
+        return OBJECT_EVENTS_COUNT;
 
     graphicsInfo = GetObjectEventGraphicsInfo(objectEventTemplate->graphicsId);
     MakeObjectTemplateFromObjectEventTemplate(objectEventTemplate, &spriteTemplate, &subspriteTables);
@@ -9665,4 +9669,17 @@ static void DoRippleFieldEffect(struct ObjectEvent *objectEvent, struct Sprite *
     gFieldEffectArguments[2] = 151;
     gFieldEffectArguments[3] = 3;
     FieldEffectStart(FLDEFF_RIPPLE);
+}
+
+// Remove only live objects; their persistent visibility flags remain untouched.
+void RemoveUnrelatedFlashbackObjects(void)
+{
+    u8 i;
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        struct ObjectEvent *object = &gObjectEvents[i];
+        if (object->active && !object->isPlayer
+         && !IsObjectAllowedInFlashback(object->localId, object->mapNum, object->mapGroup))
+            RemoveObjectEvent(object);
+    }
 }

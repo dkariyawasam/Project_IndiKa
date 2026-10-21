@@ -4,6 +4,33 @@ SaffronCity_MrPsychicsHouse_MapScripts::
 SaffronCity_MrPsychicsHouse_EventScript_MrPsychic::
 	lock
 	faceplayer
-	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis
+	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SaffronCity_MrPsychicsHouse_EventScript_Goodbye
+SaffronCity_MrPsychicsHouse_EventScript_ChooseMon::
+	msgbox SaffronCity_MrPsychicsHouse_Text_WhichMon
+	closemessage
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, SaffronCity_MrPsychicsHouse_EventScript_Goodbye
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_MrPsychicsHouse_EventScript_Egg
+	goto_if_eq VAR_0x8005, 0, SaffronCity_MrPsychicsHouse_EventScript_NoMoves
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, FALSE, SaffronCity_MrPsychicsHouse_EventScript_Goodbye
+	msgbox SaffronCity_MrPsychicsHouse_Text_Remembered
+	release
+	end
+
+SaffronCity_MrPsychicsHouse_EventScript_Egg::
+	msgbox SaffronCity_MrPsychicsHouse_Text_Egg
+	goto SaffronCity_MrPsychicsHouse_EventScript_ChooseMon
+
+SaffronCity_MrPsychicsHouse_EventScript_NoMoves::
+	msgbox SaffronCity_MrPsychicsHouse_Text_NoMoves
+	goto SaffronCity_MrPsychicsHouse_EventScript_ChooseMon
+
+SaffronCity_MrPsychicsHouse_EventScript_Goodbye::
+	msgbox SaffronCity_MrPsychicsHouse_Text_Goodbye
 	release
 	end

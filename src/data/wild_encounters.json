@@ -484,12 +484,12 @@
                 "species": "SPECIES_CLEFABLE"
               },
               {
-                "min_level": 5,
+                "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_KINKABUTO"
               },
               {
-                "min_level": 5,
+                "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_KINKABUTO"
               }
@@ -553,12 +553,12 @@
                 "species": "SPECIES_CLEFABLE"
               },
               {
-                "min_level": 5,
+                "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_AMUNYTE"
               },
               {
-                "min_level": 5,
+                "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_AMUNYTE"
               }
@@ -704,7 +704,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -2062,8 +2062,8 @@
                 "species": "SPECIES_WOBBUFFET"
               },
               {
-                "min_level": 5,
-                "max_level": 25,
+                "min_level": 45,
+                "max_level": 50,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -2164,7 +2164,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -2216,8 +2216,8 @@
                 "species": "SPECIES_WOBBUFFET"
               },
               {
-                "min_level": 5,
-                "max_level": 25,
+                "min_level": 45,
+                "max_level": 50,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -2285,8 +2285,8 @@
                 "species": "SPECIES_WOBBUFFET"
               },
               {
-                "min_level": 5,
-                "max_level": 25,
+                "min_level": 45,
+                "max_level": 50,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -2387,7 +2387,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -2397,7 +2397,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               }
             ]
           }
@@ -2444,8 +2444,8 @@
                 "species": "SPECIES_LICKITUNG"
               },
               {
-                "min_level": 18,
-                "max_level": 22,
+                "min_level": 30,
+                "max_level": 35,
                 "species": "SPECIES_AEROPTERYX"
               },
               {
@@ -3079,7 +3079,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -3089,7 +3089,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               }
             ]
           }
@@ -3233,7 +3233,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -3243,7 +3243,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               }
             ]
           }
@@ -4166,7 +4166,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -4734,7 +4734,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -6045,7 +6045,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -6551,7 +6551,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -7459,7 +7459,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 5,
@@ -7474,7 +7474,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 5,
@@ -7494,7 +7494,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CINNABAR_FEEBAS"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 5,
@@ -7697,12 +7697,12 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_MILOTIC"
+                "species": "SPECIES_FEEBAS"
               }
             ]
           },
@@ -7730,8 +7730,8 @@
                 "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 5,
-                "max_level": 8,
+                "min_level": 28,
+                "max_level": 32,
                 "species": "SPECIES_CINNABAR_MAGIKARP"
               },
               {
@@ -7755,8 +7755,8 @@
                 "species": "SPECIES_FEEBAS"
               },
               {
-                "min_level": 5,
-                "max_level": 8,
+                "min_level": 28,
+                "max_level": 32,
                 "species": "SPECIES_CINNABAR_FEEBAS"
               }
             ]
@@ -7851,12 +7851,12 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 25,
                 "max_level": 28,
-                "species": "SPECIES_MILOTIC"
+                "species": "SPECIES_FEEBAS"
               }
             ]
           }
@@ -8005,7 +8005,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CINNABAR_MAGIKARP"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -8258,7 +8258,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_CINNABAR_MAGIKARP"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -8506,7 +8506,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -8759,7 +8759,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -9265,7 +9265,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -9453,7 +9453,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 32,
@@ -9542,7 +9542,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -9631,7 +9631,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -10062,7 +10062,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -10151,7 +10151,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 32,

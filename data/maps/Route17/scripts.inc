@@ -7,6 +7,7 @@ Route17_OnTransition::
 	end
 
 Route17_EventScript_ForceRentalBike::
+	setvar VAR_BIKE_RENTAL_STAGE, 2
 	special ForcePlayerOntoBike
 	return
 

@@ -271,7 +271,7 @@ void DrawShopCoinBalance(void)
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0xA, 0xF);
     AddTextPrinterParameterized(0, FONT_NORMAL, gText_Coins_2, 0, 0, TEXT_SKIP_DRAW, NULL);
-    ConvertIntToDecimalStringN(gStringVar1, GetCoins(), STR_CONV_MODE_RIGHT_ALIGN, 4);
+    ConvertIntToDecimalStringN(gStringVar1, GetCoins(), STR_CONV_MODE_RIGHT_ALIGN, 5);
     AddTextPrinterParameterized(0, FONT_SMALL, gStringVar1, 32, 12, 0, NULL);
 }
 

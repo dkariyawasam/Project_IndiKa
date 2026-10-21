@@ -4415,7 +4415,7 @@ BattleScript_EffectGlacialShell::
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_GlacialShellThaw
 	printstring STRINGID_PKMNWASFROZEN
 	waitmessage B_WAIT_TIME_LONG
-	setstatchanger STAT_SPDEF, 1, FALSE
+	setstatchanger STAT_SPDEF, 2, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
 	printfromtable gStatUpStringIds

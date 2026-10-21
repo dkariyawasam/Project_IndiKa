@@ -39,6 +39,13 @@ Route16_NorthEntrance_1F_Text_NotEnoughMoney::
     .string "You don't have enough money.$"
 
 Route16_NorthEntrance_1F_Text_ReturnRentalBike::
-    .string "Welcome back.\p"
     .string "I'll take the rental BICYCLE\n"
     .string "from here.$"
+
+Route16_NorthEntrance_1F_Text_RentalWelcomeBack::
+    .string "Welcome back!\n"
+    .string "Please bring the BICYCLE over here.$"
+
+Route16_NorthEntrance_1F_Text_TownReturn::
+    .string "Heading back? Please leave the\n"
+    .string "rental BICYCLE with me.$"

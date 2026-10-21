@@ -24,4 +24,7 @@ bool8 UsedPokemonCenterWarp(void);
 void QuestLog_CheckDepartingIndoorsMap(void);
 void QuestLog_TryRecordDepartedLocation(void);
 
+bool8 IsObjectAllowedInFlashback(u8 localId, u8 mapNum, u8 mapGroup);
+
 #endif // GUARD_FIELD_SPECIALS_H
+

@@ -290,7 +290,7 @@ void ApplyNightTintToTallGrassEffect(void)
     for (i = 0; i < 16; i++)
         gPlttBufferFaded[base + i] = TintColorNight(gPlttBufferUnfaded[base + i]);
 
-    CpuFastCopy(&gPlttBufferFaded[base], (void *)(OBJ_PLTT + base * sizeof(u16)), 16 * sizeof(u16));
+    CpuFastCopy(&gPlttBufferFaded[base], (void *)(PLTT + base * sizeof(u16)), 16 * sizeof(u16));
 }
 
 void ApplyNightTintToSandFootprintsEffect(void)
@@ -310,7 +310,7 @@ void ApplyNightTintToSandFootprintsEffect(void)
     for (i = 0; i < 16; i++)
         gPlttBufferFaded[base + i] = TintColorNight(gPlttBufferUnfaded[base + i]);
 
-    CpuFastCopy(&gPlttBufferFaded[base], (void *)(OBJ_PLTT + base * sizeof(u16)), 16 * sizeof(u16));
+    CpuFastCopy(&gPlttBufferFaded[base], (void *)(PLTT + base * sizeof(u16)), 16 * sizeof(u16));
 }
 
 static u16 BlendTowardNight(u16 dayColor, u8 blend, u8 maxBlend)
