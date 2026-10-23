@@ -241,13 +241,14 @@ CeruleanCave_B1F_Text_GiovanniWaits:
 	.string "what power could not, prove it.$"
 
 CeruleanCave_B1F_Text_GiovanniAfterMewtwo:
-	.string "GIOVANNI: So that is the difference.\p"
-	.string "I tried to possess MEWTWO.\n"
-	.string "You faced it as a TRAINER.\p"
+	.string "GIOVANNI: So that is the\n"
+	.string "difference.\p"
+	.string "I tried to possess MEWTWO. You\n"
+	.string "faced it as a TRAINER.\p"
 	.string "Perhaps absolute power was never\n"
 	.string "something a person could own.\p"
-	.string "There is nothing left for me\n"
-	.string "to take from this place.\p"
+	.string "There is nothing left for me to take\n"
+	.string "from this place.\p"
 	.string "I will return to VIRIDIAN GYM.$"
 
 CeruleanCave_B1F_Text_GiovanniAfterMewtwoEscaped:

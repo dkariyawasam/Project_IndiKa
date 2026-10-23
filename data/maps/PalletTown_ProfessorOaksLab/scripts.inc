@@ -1336,12 +1336,13 @@ PalletTown_ProfessorOaksLab_EventScript_ResearchBond::
 PalletTown_ProfessorOaksLab_Text_ResearchBond::
 	.string "OAK: Your research into evolution\n"
 	.string "through bond is complete!\p"
-	.string "Trust can help a POKéMON grow.\n"
-	.string "So can the care of a new TRAINER.\p"
+	.string "Trust can help a POKéMON grow. So\n"
+	.string "can the care of a new TRAINER.\p"
 	.string "These changes tell us something\n"
 	.string "that numbers alone cannot explain.\p"
 	.string "The relationships we build with\n"
-	.string "POKéMON can shape what they become.\p"
+	.string "POKéMON can shape what they\l"
+	.string "become.\p"
 	.string "Well done, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_EventScript_ResearchInstinct::

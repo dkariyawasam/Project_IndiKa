@@ -200,12 +200,13 @@ FuchsiaCity_Gym_Text_GymGuideKogaStillAway::
     .string "and help our clan leader.$"
 
 FuchsiaCity_Gym_Text_GymGuideKogaImpressed::
-    .string "I was honored to witness your\n"
-    .string "trial with KOGA.\p"
-    .string "The way you worked together to free\n"
-    .string "that LAVIC STONE was remarkable.\p"
-    .string "Please speak with KOGA.\n"
-    .string "Your reward is waiting.$"
+    .string "I was honored to witness your trial\n"
+    .string "with KOGA.\p"
+    .string "The way you worked together to\n"
+    .string "free that LAVIC STONE was\l"
+    .string "remarkable.\p"
+    .string "Please speak with KOGA. Your reward\n"
+    .string "is waiting.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "It's amazing how ninja can terrify,\n"

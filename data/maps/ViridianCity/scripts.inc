@@ -90,8 +90,38 @@ ViridianCity_EventScript_Woman::
 	release
 	end
 
-ViridianCity_EventScript_DreamEaterTutor::
-	goto EventScript_DreamEaterTutor
+ViridianCity_EventScript_BirdKeeper::
+	lock
+	faceplayer
+	goto_if_unset FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR, ViridianCity_EventScript_FlightLocked
+	msgbox ViridianCity_Text_OfferLeagueFlight, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ViridianCity_EventScript_FlightDeclined
+	msgbox ViridianCity_Text_TakeFlight
+	closemessage
+	playmoncry SPECIES_PIDGEOT, CRY_MODE_NORMAL
+	waitmoncry
+	warp MAP_INDIGO_PLATEAU_EXTERIOR, 9, 9
+	waitstate
+	release
+	end
+
+ViridianCity_EventScript_FlightLocked::
+	msgbox ViridianCity_Text_FlightLocked
+	release
+	end
+
+ViridianCity_EventScript_FlightDeclined::
+	msgbox ViridianCity_Text_FlightDeclined
+	release
+	end
+
+ViridianCity_EventScript_FlightPidgeot::
+	lock
+	faceplayer
+	playmoncry SPECIES_PIDGEOT, CRY_MODE_NORMAL
+	msgbox ViridianCity_Text_FlightPidgeot
+	waitmoncry
+	release
 	end
 
 ViridianCity_Movement_WalkDown::
