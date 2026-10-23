@@ -157,6 +157,11 @@ static const u16 sRocketCoinTms[] = {
     ITEM_TM57,
     ITEM_TM58,
     ITEM_TM59,
+    ITEM_TM60,
+    ITEM_TM61,
+    ITEM_TM62,
+    ITEM_TM63,
+    ITEM_TM64,
     ITEM_NONE
 };
 static const u16 sRocketCoinPrices[] = {
@@ -219,6 +224,11 @@ static const u16 sRocketCoinPrices[] = {
     4500,
     3500,
     4500,
+    6000,
+    5000,
+    5000,
+    5000,
+    4000,
 };
 static const u16 sRocketPrizeMons[] = {SPECIES_SMEARGLE, SPECIES_EEVEE, SPECIES_DRATINI,
     SPECIES_PORYGON, SPECIES_NONE};
@@ -920,7 +930,7 @@ static void LoadTmHmNameInMart(s32 item)
 {
     if (item != INDEX_CANCEL)
     {
-        ConvertIntToDecimalStringN(gStringVar1, item - (ITEM_TM01 - 1), 2, 2);
+        ConvertIntToDecimalStringN(gStringVar1, ITEM_TO_TM_INDEX(item) + 1, 2, 2);
         StringCopy(gStringVar4, gText_NumberClear01);
         StringAppend(gStringVar4, gStringVar1);
         BuyMenuPrint(6, FONT_SMALL, gStringVar4, 0, 0, 0, 0, TEXT_SKIP_DRAW, 1);

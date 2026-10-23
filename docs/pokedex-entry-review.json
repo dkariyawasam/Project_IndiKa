@@ -1,0 +1,3550 @@
+{
+  "description": "Active roster text-fit review; selected entries expanded, others retained and reflowed. Not a claim of exhaustive lore verification.",
+  "reference": "https://github.com/PokeAPI/pokeapi/blob/master/data/v2/csv/pokemon_species_flavor_text.csv",
+  "local_ecology_source": "src/data/wild_encounters.json",
+  "entries": [
+    {
+      "species": "SENTRET",
+      "text_symbol": "gSentretPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "FURRET",
+      "text_symbol": "gFurretPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 218
+    },
+    {
+      "species": "SUNKERN",
+      "text_symbol": "gSunkernPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 232,
+      "reference_version_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "local_ecology_maps": [
+        "MAP_ROUTE1"
+      ]
+    },
+    {
+      "species": "SUNFLORA",
+      "text_symbol": "gSunfloraPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 223,
+      "reference_version_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "local_ecology_maps": [
+        "MAP_ROUTE1"
+      ]
+    },
+    {
+      "species": "HOPPIP",
+      "text_symbol": "gHoppipPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "SKIPLOOM",
+      "text_symbol": "gSkiploomPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "JUMPLUFF",
+      "text_symbol": "gJumpluffPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "BUNEARY",
+      "text_symbol": "gBunearyPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 230,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "LOPUNNY",
+      "text_symbol": "gLopunnyPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 221,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "NIDORAN_F",
+      "text_symbol": "gNidoranFPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "NIDORINA",
+      "text_symbol": "gNidorinaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 207
+    },
+    {
+      "species": "NIDOQUEEN",
+      "text_symbol": "gNidoqueenPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "NIDORAN_M",
+      "text_symbol": "gNidoranMPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "NIDORINO",
+      "text_symbol": "gNidorinoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "NIDOKING",
+      "text_symbol": "gNidokingPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 216
+    },
+    {
+      "species": "PIDGEY",
+      "text_symbol": "gPidgeyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "PIDGEOTTO",
+      "text_symbol": "gPidgeottoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "PIDGEOT",
+      "text_symbol": "gPidgeotPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "SPEAROW",
+      "text_symbol": "gSpearowPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 215
+    },
+    {
+      "species": "FEAROW",
+      "text_symbol": "gFearowPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 222
+    },
+    {
+      "species": "HOOTHOOT",
+      "text_symbol": "gHoothootPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "NOCTOWL",
+      "text_symbol": "gNoctowlPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "STARLY",
+      "text_symbol": "gStarlyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "STARAVIA",
+      "text_symbol": "gStaraviaPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 225,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        39
+      ]
+    },
+    {
+      "species": "STARAPTOR",
+      "text_symbol": "gStaraptorPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 230,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        39
+      ]
+    },
+    {
+      "species": "DODUO",
+      "text_symbol": "gDoduoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "DODRIO",
+      "text_symbol": "gDodrioPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 190
+    },
+    {
+      "species": "CATERPIE",
+      "text_symbol": "gCaterpiePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 212
+    },
+    {
+      "species": "METAPOD",
+      "text_symbol": "gMetapodPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "BUTTERFREE",
+      "text_symbol": "gButterfreePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "WEEDLE",
+      "text_symbol": "gWeedlePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 216
+    },
+    {
+      "species": "KAKUNA",
+      "text_symbol": "gKakunaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "BEEDRILL",
+      "text_symbol": "gBeedrillPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "LEDYBA",
+      "text_symbol": "gLedybaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 201
+    },
+    {
+      "species": "LEDIAN",
+      "text_symbol": "gLedianPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "SPINARAK",
+      "text_symbol": "gSpinarakPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 218
+    },
+    {
+      "species": "ARIADOS",
+      "text_symbol": "gAriadosPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "KRICKETOT",
+      "text_symbol": "gKricketotPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "KRICKETUNE",
+      "text_symbol": "gKricketunePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "WURMPLE",
+      "text_symbol": "gWurmplePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "SILCOON",
+      "text_symbol": "gSilcoonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 217
+    },
+    {
+      "species": "BEAUTIFLY",
+      "text_symbol": "gBeautiflyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "CASCOON",
+      "text_symbol": "gCascoonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 215
+    },
+    {
+      "species": "DUSTOX",
+      "text_symbol": "gDustoxPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "VENONAT",
+      "text_symbol": "gVenonatPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "VENOMOTH",
+      "text_symbol": "gVenomothPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "COMBEE",
+      "text_symbol": "gCombeePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "VESPIQUEN",
+      "text_symbol": "gVespiquenPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 219,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "PINECO",
+      "text_symbol": "gPinecoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "FORRETRESS",
+      "text_symbol": "gForretressPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 222
+    },
+    {
+      "species": "PARAS",
+      "text_symbol": "gParasPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "PARASECT",
+      "text_symbol": "gParasectPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "BELLSPROUT",
+      "text_symbol": "gBellsproutPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "WEEPINBELL",
+      "text_symbol": "gWeepinbellPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "VICTREEBEL",
+      "text_symbol": "gVictreebelPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "ODDISH",
+      "text_symbol": "gOddishPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "GLOOM",
+      "text_symbol": "gGloomPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "VILEPLUME",
+      "text_symbol": "gVileplumePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 216
+    },
+    {
+      "species": "BELLOSSOM",
+      "text_symbol": "gBellossomPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "BUDEW",
+      "text_symbol": "gBudewPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 217,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "ROSELIA",
+      "text_symbol": "gRoseliaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "ROSERADE",
+      "text_symbol": "gRoseradePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 231,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "EXEGGCUTE",
+      "text_symbol": "gExeggcutePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "EXEGGUTOR",
+      "text_symbol": "gExeggutorPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "SEEDOT",
+      "text_symbol": "gSeedotPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "NUZLEAF",
+      "text_symbol": "gNuzleafPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "SHIFTRY",
+      "text_symbol": "gShiftryPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 211
+    },
+    {
+      "species": "TANGELA",
+      "text_symbol": "gTangelaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 208
+    },
+    {
+      "species": "TANGROWTH",
+      "text_symbol": "gTangrowthPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "PICHU",
+      "text_symbol": "gPichuPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "PIKACHU",
+      "text_symbol": "gPikachuPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 224
+    },
+    {
+      "species": "RAICHU",
+      "text_symbol": "gRaichuPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 199
+    },
+    {
+      "species": "PLUSLE",
+      "text_symbol": "gPluslePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "MINUN",
+      "text_symbol": "gMinunPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "VOLTORB",
+      "text_symbol": "gVoltorbPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "ELECTRODE",
+      "text_symbol": "gElectrodePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 214
+    },
+    {
+      "species": "MAGNEMITE",
+      "text_symbol": "gMagnemitePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "MAGNETON",
+      "text_symbol": "gMagnetonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "MAGNEZONE",
+      "text_symbol": "gMagnezonePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 226,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "ELEKID",
+      "text_symbol": "gElekidPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "ELECTABUZZ",
+      "text_symbol": "gElectabuzzPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "ELECTIVIRE",
+      "text_symbol": "gElectivirePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "RATTATA",
+      "text_symbol": "gRattataPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "RATICATE",
+      "text_symbol": "gRaticatePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "HAPPINY",
+      "text_symbol": "gHappinyPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 218,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "CHANSEY",
+      "text_symbol": "gChanseyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "BLISSEY",
+      "text_symbol": "gBlisseyPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 231,
+      "reference_version_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "LICKITUNG",
+      "text_symbol": "gLickitungPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 232,
+      "reference_version_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "LICKILICKY",
+      "text_symbol": "gLickilickyPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 218,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "MEOWTH",
+      "text_symbol": "gMeowthPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 210
+    },
+    {
+      "species": "PERSIAN",
+      "text_symbol": "gPersianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "AIPOM",
+      "text_symbol": "gAipomPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "AMBIPOM",
+      "text_symbol": "gAmbipomPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 220,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        39
+      ]
+    },
+    {
+      "species": "TEDDIURSA",
+      "text_symbol": "gTeddiursaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 210
+    },
+    {
+      "species": "URSARING",
+      "text_symbol": "gUrsaringPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "KANGASKHAN",
+      "text_symbol": "gKangaskhanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "TAUROS",
+      "text_symbol": "gTaurosPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "MAREEP",
+      "text_symbol": "gMareepPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "FLAAFFY",
+      "text_symbol": "gFlaaffyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "AMPHAROS",
+      "text_symbol": "gAmpharosPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "MARILL",
+      "text_symbol": "gMarillPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "AZUMARILL",
+      "text_symbol": "gAzumarillPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "AZURILL",
+      "text_symbol": "gAzurillPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "SMEARGLE",
+      "text_symbol": "gSmearglePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 221,
+      "reference_version_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "species": "MILTANK",
+      "text_symbol": "gMiltankPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "FARFETCHD",
+      "text_symbol": "gFarfetchdPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "GIRAFARIG",
+      "text_symbol": "gGirafarigPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "SLAKOTH",
+      "text_symbol": "gSlakothPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "VIGOROTH",
+      "text_symbol": "gVigorothPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "SLAKING",
+      "text_symbol": "gSlakingPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 201
+    },
+    {
+      "species": "SHROOMISH",
+      "text_symbol": "gShroomishPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "BRELOOM",
+      "text_symbol": "gBreloomPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "MANKEY",
+      "text_symbol": "gMankeyPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 208
+    },
+    {
+      "species": "PRIMEAPE",
+      "text_symbol": "gPrimeapePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 222
+    },
+    {
+      "species": "ANNIHILAPE",
+      "text_symbol": "gAnnihilapePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "MACHOP",
+      "text_symbol": "gMachopPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "MACHOKE",
+      "text_symbol": "gMachokePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 215
+    },
+    {
+      "species": "MACHAMP",
+      "text_symbol": "gMachampPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 215
+    },
+    {
+      "species": "HERACROSS",
+      "text_symbol": "gHeracrossPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "EKANS",
+      "text_symbol": "gEkansPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "ARBOK",
+      "text_symbol": "gArbokPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "GRIMER",
+      "text_symbol": "gGrimerPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 216
+    },
+    {
+      "species": "MUK",
+      "text_symbol": "gMukPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "KOFFING",
+      "text_symbol": "gKoffingPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 214
+    },
+    {
+      "species": "WEEZING",
+      "text_symbol": "gWeezingPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "ZUBAT",
+      "text_symbol": "gZubatPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "GOLBAT",
+      "text_symbol": "gGolbatPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "CROBAT",
+      "text_symbol": "gCrobatPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 205
+    },
+    {
+      "species": "GULPIN",
+      "text_symbol": "gGulpinPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "SWALOT",
+      "text_symbol": "gSwalotPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "HOUNDOUR",
+      "text_symbol": "gHoundourPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 211
+    },
+    {
+      "species": "HOUNDOOM",
+      "text_symbol": "gHoundoomPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "POOCHYENA",
+      "text_symbol": "gPoochyenaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "MIGHTYENA",
+      "text_symbol": "gMightyenaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 225
+    },
+    {
+      "species": "MURKROW",
+      "text_symbol": "gMurkrowPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "HONCHKROW",
+      "text_symbol": "gHonchkrowPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        39
+      ]
+    },
+    {
+      "species": "ABRA",
+      "text_symbol": "gAbraPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 214
+    },
+    {
+      "species": "KADABRA",
+      "text_symbol": "gKadabraPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 218
+    },
+    {
+      "species": "ALAKAZAM",
+      "text_symbol": "gAlakazamPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 224
+    },
+    {
+      "species": "DROWZEE",
+      "text_symbol": "gDrowzeePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "HYPNO",
+      "text_symbol": "gHypnoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "WYNAUT",
+      "text_symbol": "gWynautPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 205
+    },
+    {
+      "species": "WOBBUFFET",
+      "text_symbol": "gWobbuffetPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 198
+    },
+    {
+      "species": "NATU",
+      "text_symbol": "gNatuPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "XATU",
+      "text_symbol": "gXatuPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 211
+    },
+    {
+      "species": "CHINGLING",
+      "text_symbol": "gChinglingPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 223,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        39
+      ]
+    },
+    {
+      "species": "CHIMECHO",
+      "text_symbol": "gChimechoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 213
+    },
+    {
+      "species": "BALTOY",
+      "text_symbol": "gBaltoyPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 225
+    },
+    {
+      "species": "CLAYDOL",
+      "text_symbol": "gClaydolPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "LUNATONE",
+      "text_symbol": "gLunatonePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 225
+    },
+    {
+      "species": "SOLROCK",
+      "text_symbol": "gSolrockPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "BRONZOR",
+      "text_symbol": "gBronzorPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 220,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "BRONZONG",
+      "text_symbol": "gBronzongPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 232,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "MIME_JR",
+      "text_symbol": "gMimeJrPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "MR_MIME",
+      "text_symbol": "gMrmimePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "MIME_SR",
+      "text_symbol": "gMimeSrPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 212
+    },
+    {
+      "species": "GASTLY",
+      "text_symbol": "gGastlyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "HAUNTER",
+      "text_symbol": "gHaunterPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "GENGAR",
+      "text_symbol": "gGengarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "MISDREAVUS",
+      "text_symbol": "gMisdreavusPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "MISMAGIUS",
+      "text_symbol": "gMismagiusPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 232,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        39
+      ]
+    },
+    {
+      "species": "SABLEYE",
+      "text_symbol": "gSableyePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "DUSKULL",
+      "text_symbol": "gDuskullPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "DUSCLOPS",
+      "text_symbol": "gDusclopsPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "DUSKNOIR",
+      "text_symbol": "gDusknoirPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 226,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "CUBONE",
+      "text_symbol": "gCubonePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "MAROWAK",
+      "text_symbol": "gMarowakPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "OSSCYTHE",
+      "text_symbol": "gOsscythePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "CLEFFA",
+      "text_symbol": "gCleffaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "CLEFAIRY",
+      "text_symbol": "gClefairyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 213
+    },
+    {
+      "species": "CLEFABLE",
+      "text_symbol": "gClefablePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 218
+    },
+    {
+      "species": "IGGLYBUFF",
+      "text_symbol": "gIgglybuffPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "JIGGLYPUFF",
+      "text_symbol": "gJigglypuffPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "WIGGLYTUFF",
+      "text_symbol": "gWigglytuffPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 213
+    },
+    {
+      "species": "GEODUDE",
+      "text_symbol": "gGeodudePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 207
+    },
+    {
+      "species": "GRAVELER",
+      "text_symbol": "gGravelerPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "GOLEM",
+      "text_symbol": "gGolemPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "ONIX",
+      "text_symbol": "gOnixPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 228
+    },
+    {
+      "species": "STEELIX",
+      "text_symbol": "gSteelixPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "RHYHORN",
+      "text_symbol": "gRhyhornPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 207
+    },
+    {
+      "species": "RHYDON",
+      "text_symbol": "gRhydonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "RHYPERIOR",
+      "text_symbol": "gRhyperiorPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "SANDSHREW",
+      "text_symbol": "gSandshrewPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "SANDSLASH",
+      "text_symbol": "gSandslashPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 215
+    },
+    {
+      "species": "DIGLETT",
+      "text_symbol": "gDiglettPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "DUGTRIO",
+      "text_symbol": "gDugtrioPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "PHANPY",
+      "text_symbol": "gPhanpyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 211
+    },
+    {
+      "species": "DONPHAN",
+      "text_symbol": "gDonphanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "SHUCKLE",
+      "text_symbol": "gShucklePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "LARVITAR",
+      "text_symbol": "gLarvitarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "PUPITAR",
+      "text_symbol": "gPupitarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "TYRANITAR",
+      "text_symbol": "gTyranitarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "MAWILE",
+      "text_symbol": "gMawilePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "WOOPER",
+      "text_symbol": "gWooperPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "QUAGSIRE",
+      "text_symbol": "gQuagsirePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 214
+    },
+    {
+      "species": "POLIWAG",
+      "text_symbol": "gPoliwagPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "POLIWHIRL",
+      "text_symbol": "gPoliwhirlPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "POLIWRATH",
+      "text_symbol": "gPoliwrathPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 215
+    },
+    {
+      "species": "POLITOED",
+      "text_symbol": "gPolitoedPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "SLOWPOKE",
+      "text_symbol": "gSlowpokePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "SLOWBRO",
+      "text_symbol": "gSlowbroPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 228
+    },
+    {
+      "species": "SLOWKING",
+      "text_symbol": "gSlowkingPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 211
+    },
+    {
+      "species": "SHELLDER",
+      "text_symbol": "gShellderPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "CLOYSTER",
+      "text_symbol": "gCloysterPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "KRABBY",
+      "text_symbol": "gKrabbyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "KINGLER",
+      "text_symbol": "gKinglerPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 192
+    },
+    {
+      "species": "PSYDUCK",
+      "text_symbol": "gPsyduckPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 224
+    },
+    {
+      "species": "GOLDUCK",
+      "text_symbol": "gGolduckPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "HORSEA",
+      "text_symbol": "gHorseaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "SEADRA",
+      "text_symbol": "gSeadraPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "KINGDRA",
+      "text_symbol": "gKingdraPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "GOLDEEN",
+      "text_symbol": "gGoldeenPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "SEAKING",
+      "text_symbol": "gSeakingPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "LUVDISC",
+      "text_symbol": "gLuvdiscPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 208
+    },
+    {
+      "species": "CLAMPERL",
+      "text_symbol": "gClamperlPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "HUNTAIL",
+      "text_symbol": "gHuntailPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "GOREBYSS",
+      "text_symbol": "gGorebyssPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 204
+    },
+    {
+      "species": "MAGIKARP",
+      "text_symbol": "gMagikarpPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        39
+      ],
+      "local_ecology_maps": [
+        "MAP_ROUTE21_NORTH",
+        "MAP_ROUTE21_SOUTH"
+      ]
+    },
+    {
+      "species": "GYARADOS",
+      "text_symbol": "gGyaradosPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "FEEBAS",
+      "text_symbol": "gFeebasPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 208,
+      "reference_version_ids": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34
+      ],
+      "local_ecology_maps": [
+        "MAP_ROUTE19"
+      ]
+    },
+    {
+      "species": "MILOTIC",
+      "text_symbol": "gMiloticPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 210
+    },
+    {
+      "species": "RELICANTH",
+      "text_symbol": "gRelicanthPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "CINNABAR_MAGIKARP",
+      "text_symbol": "gCinnabarMagikarpPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 220
+    },
+    {
+      "species": "CINNABAR_FEEBAS",
+      "text_symbol": "gCinnabarFeebasPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "STARYU",
+      "text_symbol": "gStaryuPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 205
+    },
+    {
+      "species": "STARMIE",
+      "text_symbol": "gStarmiePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "CHINCHOU",
+      "text_symbol": "gChinchouPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "LANTURN",
+      "text_symbol": "gLanturnPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "WINGULL",
+      "text_symbol": "gWingullPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "PELIPPER",
+      "text_symbol": "gPelipperPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "TENTACOOL",
+      "text_symbol": "gTentacoolPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 197
+    },
+    {
+      "species": "TENTACRUEL",
+      "text_symbol": "gTentacruelPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 194
+    },
+    {
+      "species": "QWILFISH",
+      "text_symbol": "gQwilfishPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "CORSOLA",
+      "text_symbol": "gCorsolaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "SEEL",
+      "text_symbol": "gSeelPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 214
+    },
+    {
+      "species": "DEWGONG",
+      "text_symbol": "gDewgongPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "SNEASEL",
+      "text_symbol": "gSneaselPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "WEAVILE",
+      "text_symbol": "gWeavilePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 204
+    },
+    {
+      "species": "SWINUB",
+      "text_symbol": "gSwinubPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "PILOSWINE",
+      "text_symbol": "gPiloswinePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "MAMOSWINE",
+      "text_symbol": "gMamoswinePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 232,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "SMOOCHUM",
+      "text_symbol": "gSmoochumPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "JYNX",
+      "text_symbol": "gJynxPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 205
+    },
+    {
+      "species": "VULPIX",
+      "text_symbol": "gVulpixPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 214
+    },
+    {
+      "species": "NINETALES",
+      "text_symbol": "gNinetalesPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "GROWLITHE",
+      "text_symbol": "gGrowlithePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 193
+    },
+    {
+      "species": "ARCANINE",
+      "text_symbol": "gArcaninePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "PONYTA",
+      "text_symbol": "gPonytaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "RAPIDASH",
+      "text_symbol": "gRapidashPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "SLUGMA",
+      "text_symbol": "gSlugmaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "MAGCARGO",
+      "text_symbol": "gMagcargoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 197
+    },
+    {
+      "species": "NUMEL",
+      "text_symbol": "gNumelPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 196
+    },
+    {
+      "species": "CAMERUPT",
+      "text_symbol": "gCameruptPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "MAGBY",
+      "text_symbol": "gMagbyPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "MAGMAR",
+      "text_symbol": "gMagmarPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "MAGMORTAR",
+      "text_symbol": "gMagmortarPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 228,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "OMANYTE",
+      "text_symbol": "gOmanytePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 200
+    },
+    {
+      "species": "OMASTAR",
+      "text_symbol": "gOmastarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "OMATO",
+      "text_symbol": "gOmatoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "OMATOPS",
+      "text_symbol": "gOmatopsPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "KABUTO",
+      "text_symbol": "gKabutoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "KABUTOPS",
+      "text_symbol": "gKabutopsPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "KABUSTAR",
+      "text_symbol": "gKabustarPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "KABUKNIGHT",
+      "text_symbol": "gKabuknightPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "AERODACTYL",
+      "text_symbol": "gAerodactylPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 211
+    },
+    {
+      "species": "AMUNYTE",
+      "text_symbol": "gAmunytePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "KINKABUTO",
+      "text_symbol": "gKinkabutoPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "AEROPTERYX",
+      "text_symbol": "gAeropteryxPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 214
+    },
+    {
+      "species": "PORYGON",
+      "text_symbol": "gPorygonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 201
+    },
+    {
+      "species": "PORYGON2",
+      "text_symbol": "gPorygon2PokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "PORYGON_Z",
+      "text_symbol": "gPorygonZPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 212
+    },
+    {
+      "species": "DITTO",
+      "text_symbol": "gDittoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "ARTICUNO",
+      "text_symbol": "gArticunoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "ZAPDOS",
+      "text_symbol": "gZapdosPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "MOLTRES",
+      "text_symbol": "gMoltresPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "MEWTWO",
+      "text_symbol": "gMewtwoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "MEW",
+      "text_symbol": "gMewPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 208
+    },
+    {
+      "species": "EEVEE",
+      "text_symbol": "gEeveePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "VAPOREON",
+      "text_symbol": "gVaporeonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 216
+    },
+    {
+      "species": "JOLTEON",
+      "text_symbol": "gJolteonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "FLAREON",
+      "text_symbol": "gFlareonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "ESPEON",
+      "text_symbol": "gEspeonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "UMBREON",
+      "text_symbol": "gUmbreonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 213
+    },
+    {
+      "species": "LEAFEON",
+      "text_symbol": "gLeafeonPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 217,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "GLACEON",
+      "text_symbol": "gGlaceonPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 207,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "TYROGUE",
+      "text_symbol": "gTyroguePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "HITMONLEE",
+      "text_symbol": "gHitmonleePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "HITMONCHAN",
+      "text_symbol": "gHitmonchanPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 203
+    },
+    {
+      "species": "HITMONTOP",
+      "text_symbol": "gHitmontopPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "LAPRAS",
+      "text_symbol": "gLaprasPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "DRATINI",
+      "text_symbol": "gDratiniPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "DRAGONAIR",
+      "text_symbol": "gDragonairPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "DRAGONITE",
+      "text_symbol": "gDragonitePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "BULBASAUR",
+      "text_symbol": "gBulbasaurPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "IVYSAUR",
+      "text_symbol": "gIvysaurPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    },
+    {
+      "species": "VENUSAUR",
+      "text_symbol": "gVenusaurPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 215
+    },
+    {
+      "species": "CHARMANDER",
+      "text_symbol": "gCharmanderPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "CHARMELEON",
+      "text_symbol": "gCharmeleonPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "CHARIZARD",
+      "text_symbol": "gCharizardPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 231
+    },
+    {
+      "species": "SQUIRTLE",
+      "text_symbol": "gSquirtlePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "WARTORTLE",
+      "text_symbol": "gWartortlePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "BLASTOISE",
+      "text_symbol": "gBlastoisePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "SCYTHER",
+      "text_symbol": "gScytherPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 215
+    },
+    {
+      "species": "PINSIR",
+      "text_symbol": "gPinsirPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "CYNDAQUIL",
+      "text_symbol": "gCyndaquilPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "QUILAVA",
+      "text_symbol": "gQuilavaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "TYPHLOSION",
+      "text_symbol": "gTyphlosionPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "TOTODILE",
+      "text_symbol": "gTotodilePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "CROCONAW",
+      "text_symbol": "gCroconawPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 213
+    },
+    {
+      "species": "FERALIGATR",
+      "text_symbol": "gFeraligatrPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "TOGEPI",
+      "text_symbol": "gTogepiPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "TOGETIC",
+      "text_symbol": "gTogeticPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 214
+    },
+    {
+      "species": "YANMA",
+      "text_symbol": "gYanmaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "UNOWN",
+      "text_symbol": "gUnownPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "DUNSPARCE",
+      "text_symbol": "gDunsparcePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "GLIGAR",
+      "text_symbol": "gGligarPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "SNUBBULL",
+      "text_symbol": "gSnubbullPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 217
+    },
+    {
+      "species": "GRANBULL",
+      "text_symbol": "gGranbullPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 231
+    },
+    {
+      "species": "SCIZOR",
+      "text_symbol": "gScizorPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "REMORAID",
+      "text_symbol": "gRemoraidPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 210
+    },
+    {
+      "species": "OCTILLERY",
+      "text_symbol": "gOctilleryPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "DELIBIRD",
+      "text_symbol": "gDelibirdPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "MANTINE",
+      "text_symbol": "gMantinePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 222
+    },
+    {
+      "species": "SKARMORY",
+      "text_symbol": "gSkarmoryPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 215
+    },
+    {
+      "species": "STANTLER",
+      "text_symbol": "gStantlerPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "RAIKOU",
+      "text_symbol": "gRaikouPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "ENTEI",
+      "text_symbol": "gEnteiPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "SUICUNE",
+      "text_symbol": "gSuicunePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 212
+    },
+    {
+      "species": "LUGIA",
+      "text_symbol": "gLugiaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "HO_OH",
+      "text_symbol": "gHoOhPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "CELEBI",
+      "text_symbol": "gCelebiPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "ZIGZAGOON",
+      "text_symbol": "gZigzagoonPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "LINOONE",
+      "text_symbol": "gLinoonePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "TAILLOW",
+      "text_symbol": "gTaillowPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "SWELLOW",
+      "text_symbol": "gSwellowPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 226
+    },
+    {
+      "species": "RALTS",
+      "text_symbol": "gRaltsPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "KIRLIA",
+      "text_symbol": "gKirliaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "GARDEVOIR",
+      "text_symbol": "gGardevoirPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "GALLADE",
+      "text_symbol": "gGalladePokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 218,
+      "reference_version_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "NINCADA",
+      "text_symbol": "gNincadaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 225
+    },
+    {
+      "species": "NINJASK",
+      "text_symbol": "gNinjaskPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "SHEDINJA",
+      "text_symbol": "gShedinjaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 204
+    },
+    {
+      "species": "WHISMUR",
+      "text_symbol": "gWhismurPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "LOUDRED",
+      "text_symbol": "gLoudredPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "EXPLOUD",
+      "text_symbol": "gExploudPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "MAKUHITA",
+      "text_symbol": "gMakuhitaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "HARIYAMA",
+      "text_symbol": "gHariyamaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "MEDITITE",
+      "text_symbol": "gMedititePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 200
+    },
+    {
+      "species": "MEDICHAM",
+      "text_symbol": "gMedichamPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 224
+    },
+    {
+      "species": "VOLBEAT",
+      "text_symbol": "gVolbeatPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 215
+    },
+    {
+      "species": "ILLUMISE",
+      "text_symbol": "gIllumisePokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "SPOINK",
+      "text_symbol": "gSpoinkPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 224
+    },
+    {
+      "species": "GRUMPIG",
+      "text_symbol": "gGrumpigPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 230
+    },
+    {
+      "species": "SPINDA",
+      "text_symbol": "gSpindaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "SWABLU",
+      "text_symbol": "gSwabluPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "ALTARIA",
+      "text_symbol": "gAltariaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 213
+    },
+    {
+      "species": "BARBOACH",
+      "text_symbol": "gBarboachPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "WHISCASH",
+      "text_symbol": "gWhiscashPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 232
+    },
+    {
+      "species": "LILEEP",
+      "text_symbol": "gLileepPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 201
+    },
+    {
+      "species": "CRADILY",
+      "text_symbol": "gCradilyPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "ANORITH",
+      "text_symbol": "gAnorithPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 229
+    },
+    {
+      "species": "ARMALDO",
+      "text_symbol": "gArmaldoPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 204
+    },
+    {
+      "species": "ABSOL",
+      "text_symbol": "gAbsolPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 206
+    },
+    {
+      "species": "SYLVEON",
+      "text_symbol": "gSylveonPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        39
+      ]
+    },
+    {
+      "species": "FARFETCHD_GALARIAN",
+      "text_symbol": "gFarfetchdGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 218
+    },
+    {
+      "species": "TYNAMO",
+      "text_symbol": "gTynamoPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 229,
+      "reference_version_ids": [
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "species": "EELEKTRIK",
+      "text_symbol": "gEelektrikPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 223,
+      "reference_version_ids": [
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "species": "EELEKTROSS",
+      "text_symbol": "gEelektrossPokedexText",
+      "editorial_change": true,
+      "lines": 4,
+      "max_width_px": 228,
+      "reference_version_ids": [
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "species": "RATTATA_ALOLAN",
+      "text_symbol": "gRattataAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "RATICATE_ALOLAN",
+      "text_symbol": "gRaticateAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "RAICHU_ALOLAN",
+      "text_symbol": "gRaichuAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 226
+    },
+    {
+      "species": "SANDSHREW_ALOLAN",
+      "text_symbol": "gSandshrewAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 222
+    },
+    {
+      "species": "SANDSLASH_ALOLAN",
+      "text_symbol": "gSandslashAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "DIGLETT_ALOLAN",
+      "text_symbol": "gDiglettAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 182
+    },
+    {
+      "species": "DUGTRIO_ALOLAN",
+      "text_symbol": "gDugtrioAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 223
+    },
+    {
+      "species": "MEOWTH_ALOLAN",
+      "text_symbol": "gMeowthAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 209
+    },
+    {
+      "species": "PERSIAN_ALOLAN",
+      "text_symbol": "gPersianAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "MEOWTH_GALARIAN",
+      "text_symbol": "gMeowthGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "PERRSERKER",
+      "text_symbol": "gPerrserkerPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 221
+    },
+    {
+      "species": "GEODUDE_ALOLAN",
+      "text_symbol": "gGeodudeAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 193
+    },
+    {
+      "species": "GRAVELER_ALOLAN",
+      "text_symbol": "gGravelerAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "GOLEM_ALOLAN",
+      "text_symbol": "gGolemAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "GRIMER_ALOLAN",
+      "text_symbol": "gGrimerAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 229
+    },
+    {
+      "species": "MUK_ALOLAN",
+      "text_symbol": "gMukAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "VULPIX_ALOLAN",
+      "text_symbol": "gVulpixAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 220
+    },
+    {
+      "species": "NINETALES_ALOLAN",
+      "text_symbol": "gNinetalesAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 230
+    },
+    {
+      "species": "EXEGGUTOR_ALOLAN",
+      "text_symbol": "gExeggutorAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 206
+    },
+    {
+      "species": "MAROWAK_ALOLAN",
+      "text_symbol": "gMarowakAlolanPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "CORSOLA_GALARIAN",
+      "text_symbol": "gCorsolaGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 219
+    },
+    {
+      "species": "CURSOLA",
+      "text_symbol": "gCursolaPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 221
+    },
+    {
+      "species": "WEEZING_GALARIAN",
+      "text_symbol": "gWeezingGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 222
+    },
+    {
+      "species": "BAYLEEF",
+      "text_symbol": "gBayleefPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 227
+    },
+    {
+      "species": "MEGANIUM",
+      "text_symbol": "gMeganiumPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 228
+    },
+    {
+      "species": "CHIKORITA",
+      "text_symbol": "gChikoritaPokedexText",
+      "editorial_change": false,
+      "lines": 3,
+      "max_width_px": 216
+    },
+    {
+      "species": "PONYTA_GALARIAN",
+      "text_symbol": "gPonytaGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 223
+    },
+    {
+      "species": "RAPIDASH_GALARIAN",
+      "text_symbol": "gRapidashGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 219
+    },
+    {
+      "species": "SLOWPOKE_GALARIAN",
+      "text_symbol": "gSlowpokeGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "SLOWBRO_GALARIAN",
+      "text_symbol": "gSlowbroGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 228
+    },
+    {
+      "species": "SLOWKING_GALARIAN",
+      "text_symbol": "gSlowkingGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 232
+    },
+    {
+      "species": "MR_MIME_GALARIAN",
+      "text_symbol": "gMrMimeGalarianPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 228
+    },
+    {
+      "species": "MR_RIME",
+      "text_symbol": "gMrRimePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 198
+    },
+    {
+      "species": "SIRFETCHD",
+      "text_symbol": "gSirfetchdPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 218
+    },
+    {
+      "species": "WOOPER_PALDEAN",
+      "text_symbol": "gWooperPaldeanPokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 204
+    },
+    {
+      "species": "CLODSIRE",
+      "text_symbol": "gClodsirePokedexText",
+      "editorial_change": false,
+      "lines": 4,
+      "max_width_px": 227
+    }
+  ],
+  "reference_note": "Community-maintained transcription of game entries. Version IDs identify available English references for each rewritten species, not a claim that every version was used. New prose synthesizes selected traits; local route observations are mod-specific.",
+  "reference_sha256": "c341e602ab623084fef4c44ca4a174938e617802cfcf2deec830d824f688dc69"
+}

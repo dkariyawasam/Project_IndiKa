@@ -24,7 +24,7 @@ def mask(path):
 trainers = [mask(ROOT / f'graphics/trainers/front_pics/{gender}_front_pic.png') for gender in ('red','leaf')]
 def bounds(im, scale, offset, x):
     a,b,c,d = im.getbbox()
-    return (x+(a-32)*256/scale,104+offset+(b-32)*256/scale,x+(c-32)*256/scale,104+offset+(d-32)*256/scale)
+    return (x+(a-32)*256/scale,112+offset+(b-32)*256/scale,x+(c-32)*256/scale,112+offset+(d-32)*256/scale)
 out = ROOT/'docs/pokedex-size-chart-audit'; out.mkdir(exist_ok=True)
 rows=[]; images=[]; image_by_species={}
 for name in roster:
@@ -46,14 +46,14 @@ for name in roster:
             if (ps,po,ts,to)==(256,0,256,-2): issues.append('default calibration: review')
             mb=bounds(mon,ps,po,40)
             for gender,t in zip(('red','leaf'),trainers):
-                tb=bounds(t,ts,to,80)
+                tb=bounds(t,ts,to,96)
                 row[gender+'_height_ratio']=round((mb[3]-mb[1])/(tb[3]-tb[1]),3)
                 row[gender+'_baseline_gap_px']=round(mb[3]-tb[3],1)
-                if any((b[0]<16 or b[2]>96 or b[1]<80 or b[3]>128) for b in (mb,tb)):
+                if any((b[0]<16 or b[2]>120 or b[1]<48 or b[3]>144) for b in (mb,tb)):
                     issues.append(gender+' silhouette crosses size panel interior')
             canvas=Image.new('RGB',(160,112),'#e8e0c8');draw=ImageDraw.Draw(canvas)
             draw.text((2,0),name,fill='black');draw.text((2,12),f'{e["height"]/10:g}m  P:{ps} T:{ts}',fill='black')
-            for m,s,o,x,color in ((mon,ps,po,40,'#454545'),(trainers[0],ts,to,80,'#454545'),(trainers[1],ts,to,124,'#777777')):
+            for m,s,o,x,color in ((mon,ps,po,40,'#454545'),(trainers[0],ts,to,96,'#454545'),(trainers[1],ts,to,124,'#777777')):
                 # Sample inverse affine transformation as GBA does, clipped to normal 64x64 OBJ.
                 transformed=m.transform((64,64),Image.Transform.AFFINE,(s/256,0,32-32*s/256,0,s/256,32-32*s/256),resample=Image.Resampling.NEAREST)
                 canvas.paste(color,(x-32,56+o-32),transformed)
@@ -91,7 +91,7 @@ Audited {len(rows)} non-retired species in the species-to-National-Dex mapping; 
 - {len(structural)} missing/blank/invalid entry or front-asset findings.
 - {len(defaults)} species use the identical default calibration (256, 0, 256, -2); {len(real_defaults)} have actual species sprites.
 - {len(placeholders)} mapped entries use question-mark placeholder sprites. Mapping coverage does not mean all these species are obtainable in-game.
-- {len(overflow)} species have a calculated silhouette crossing the size panel interior (x16–96, y80–128), for at least one player. These are layout review flags, not necessarily visible corruption.
+- {len(overflow)} species have a calculated silhouette crossing the size panel interior (x16–120, y48–144), for at least one player. These are layout review flags, not necessarily visible corruption.
 
 The chart uses stored inverse affine scale/offset values. Active entries are calibrated from their listed heights and visible front-sprite bounds against a 1.5 m trainer by tools/sync_pokedex_size_chart.py. Run that tool after changing heights or sprites; its --check mode detects stale calibration. Both RED and LEAF were checked. CASTFORM uses its normal form. UNOWN uses A as the audit representative; the game can show the saved personality form, and SPINDA spots depend on the save. Contact sheets approximate current affine silhouettes with RED in dark gray and LEAF in gray at right; they are static reconstructions, not emulator captures.
 

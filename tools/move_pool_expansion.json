@@ -1,0 +1,2543 @@
+{
+  "moves": {
+    "AURA_SPHERE": {
+      "id": 367,
+      "name": "Aura Sphere",
+      "power": 80,
+      "accuracy": 0,
+      "pp": 20,
+      "priority": 0,
+      "type": "FIGHTING",
+      "category": "SPECIAL",
+      "effect": "ALWAYS_HIT",
+      "animation": "WATER_PULSE",
+      "description": "An aura sphere\nstrikes the foe.\nIt never misses.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "FOCUS_BLAST": {
+      "id": 368,
+      "name": "Focus Blast",
+      "power": 120,
+      "accuracy": 70,
+      "pp": 5,
+      "priority": 0,
+      "type": "FIGHTING",
+      "category": "SPECIAL",
+      "effect": "SPECIAL_DEFENSE_DOWN_HIT",
+      "animation": "FOCUS_PUNCH",
+      "description": "A powerful blast\nthat may lower\nthe foe's SP. DEF.",
+      "chance": 10,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "DARK_PULSE": {
+      "id": 369,
+      "name": "Dark Pulse",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "DARK",
+      "category": "SPECIAL",
+      "effect": "FLINCH_HIT",
+      "animation": "SHADOW_BALL",
+      "description": "A wave of malice\nthat may make\nthe foe flinch.",
+      "chance": 20,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "SNARL": {
+      "id": 370,
+      "name": "Snarl",
+      "power": 55,
+      "accuracy": 95,
+      "pp": 15,
+      "priority": 0,
+      "type": "DARK",
+      "category": "SPECIAL",
+      "effect": "SPECIAL_ATTACK_DOWN_HIT",
+      "animation": "HYPER_VOICE",
+      "description": "A harsh cry hits\nboth foes and\nlowers SP. ATK.",
+      "chance": 100,
+      "contact": false,
+      "target": "MOVE_TARGET_BOTH"
+    },
+    "ZEN_HEADBUTT": {
+      "id": 371,
+      "name": "Zen Headbutt",
+      "power": 80,
+      "accuracy": 90,
+      "pp": 15,
+      "priority": 0,
+      "type": "PSYCHIC",
+      "category": "PHYSICAL",
+      "effect": "FLINCH_HIT",
+      "animation": "HEADBUTT",
+      "description": "A psychic headbutt\nthat may make\nthe foe flinch.",
+      "chance": 20,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "PSYCHO_CUT": {
+      "id": 372,
+      "name": "Psycho Cut",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "type": "PSYCHIC",
+      "category": "PHYSICAL",
+      "effect": "HIGH_CRITICAL",
+      "animation": "SLASH",
+      "description": "Psychic blades cut\nthe foe. It has a\nhigh critical-hit\nratio.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "EARTH_POWER": {
+      "id": 373,
+      "name": "Earth Power",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "type": "GROUND",
+      "category": "SPECIAL",
+      "effect": "SPECIAL_DEFENSE_DOWN_HIT",
+      "animation": "EARTHQUAKE",
+      "description": "Earth erupts below\nthe foe. It may\nlower SP. DEF.",
+      "chance": 10,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "POWER_GEM": {
+      "id": 374,
+      "name": "Power Gem",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "type": "ROCK",
+      "category": "SPECIAL",
+      "effect": "HIT",
+      "animation": "ANCIENT_POWER",
+      "description": "The foe is struck\nby rays of light\nfrom shining gems.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "FLASH_CANNON": {
+      "id": 375,
+      "name": "Flash Cannon",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "type": "STEEL",
+      "category": "SPECIAL",
+      "effect": "SPECIAL_DEFENSE_DOWN_HIT",
+      "animation": "LUSTER_PURGE",
+      "description": "A flash of light\nthat may lower\nthe foe's SP. DEF.",
+      "chance": 10,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "IRON_HEAD": {
+      "id": 376,
+      "name": "Iron Head",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "STEEL",
+      "category": "PHYSICAL",
+      "effect": "FLINCH_HIT",
+      "animation": "IRON_TAIL",
+      "description": "A steel-hard head\nstrikes the foe.\nIt may cause\nflinching.",
+      "chance": 30,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "X_SCISSOR": {
+      "id": 377,
+      "name": "X-Scissor",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "BUG",
+      "category": "PHYSICAL",
+      "effect": "HIT",
+      "animation": "SLASH",
+      "description": "Crossed claws\nslash the foe\nlike scissors.",
+      "chance": 0,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "BUG_BUZZ": {
+      "id": 378,
+      "name": "Bug Buzz",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "type": "BUG",
+      "category": "SPECIAL",
+      "effect": "SPECIAL_DEFENSE_DOWN_HIT",
+      "animation": "HYPER_VOICE",
+      "description": "A buzzing attack\nthat may lower\nthe foe's SP. DEF.",
+      "chance": 10,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "AIR_SLASH": {
+      "id": 379,
+      "name": "Air Slash",
+      "power": 75,
+      "accuracy": 95,
+      "pp": 15,
+      "priority": 0,
+      "type": "FLYING",
+      "category": "SPECIAL",
+      "effect": "FLINCH_HIT",
+      "animation": "AIR_CUTTER",
+      "description": "A blade of air\nstrikes the foe.\nIt may cause\nflinching.",
+      "chance": 30,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "DRAGON_PULSE": {
+      "id": 380,
+      "name": "Dragon Pulse",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "type": "DRAGON",
+      "category": "SPECIAL",
+      "effect": "HIT",
+      "animation": "DRAGON_BREATH",
+      "description": "A shock wave of\ndragon power\nstrikes the foe.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "POISON_JAB": {
+      "id": 381,
+      "name": "Poison Jab",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "type": "POISON",
+      "category": "PHYSICAL",
+      "effect": "POISON_HIT",
+      "animation": "POISON_TAIL",
+      "description": "A toxic jab\nstrikes the foe.\nIt may cause\npoisoning.",
+      "chance": 30,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "GUNK_SHOT": {
+      "id": 382,
+      "name": "Gunk Shot",
+      "power": 120,
+      "accuracy": 80,
+      "pp": 5,
+      "priority": 0,
+      "type": "POISON",
+      "category": "PHYSICAL",
+      "effect": "POISON_HIT",
+      "animation": "SLUDGE_BOMB",
+      "description": "Filthy garbage\nstrikes the foe.\nIt may cause\npoisoning.",
+      "chance": 30,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "ICE_SHARD": {
+      "id": 383,
+      "name": "Ice Shard",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "priority": 1,
+      "type": "ICE",
+      "category": "PHYSICAL",
+      "effect": "QUICK_ATTACK",
+      "animation": "POWDER_SNOW",
+      "description": "Sharp ice strikes\nthe foe. Usually\ngoes first.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "ICICLE_CRASH": {
+      "id": 384,
+      "name": "Icicle Crash",
+      "power": 85,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "type": "ICE",
+      "category": "PHYSICAL",
+      "effect": "FLINCH_HIT",
+      "animation": "ICICLE_SPEAR",
+      "description": "Large icicles\nstrike the foe.\nIt may cause\nflinching.",
+      "chance": 30,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "SEED_BOMB": {
+      "id": 385,
+      "name": "Seed Bomb",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "GRASS",
+      "category": "PHYSICAL",
+      "effect": "HIT",
+      "animation": "BULLET_SEED",
+      "description": "Hard seeds are\nlaunched at\nthe foe.",
+      "chance": 0,
+      "contact": false,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "AQUA_TAIL": {
+      "id": 386,
+      "name": "Aqua Tail",
+      "power": 90,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "type": "WATER",
+      "category": "PHYSICAL",
+      "effect": "HIT",
+      "animation": "WATERFALL",
+      "description": "The user swings\nits tail like a\npowerful wave.",
+      "chance": 0,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "WILD_CHARGE": {
+      "id": 387,
+      "name": "Wild Charge",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "ELECTRIC",
+      "category": "PHYSICAL",
+      "effect": "RECOIL",
+      "animation": "VOLT_TACKLE",
+      "description": "An electric tackle\nthat also hurts\nthe user.",
+      "chance": 0,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "SHADOW_CLAW": {
+      "id": 388,
+      "name": "Shadow Claw",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "type": "GHOST",
+      "category": "PHYSICAL",
+      "effect": "HIGH_CRITICAL",
+      "animation": "SHADOW_PUNCH",
+      "description": "A shadowy claw\nslashes the foe.\nIt has a high\ncritical-hit ratio.",
+      "chance": 0,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    },
+    "DRAGON_RUSH": {
+      "id": 389,
+      "name": "Dragon Rush",
+      "power": 100,
+      "accuracy": 75,
+      "pp": 10,
+      "priority": 0,
+      "type": "DRAGON",
+      "category": "PHYSICAL",
+      "effect": "FLINCH_HIT",
+      "animation": "DRAGON_CLAW",
+      "description": "A fierce charge\nthat may make\nthe foe flinch.",
+      "chance": 20,
+      "contact": true,
+      "target": "MOVE_TARGET_SELECTED"
+    }
+  },
+  "levelups": [
+    {
+      "species": "ABSOL",
+      "move": "PSYCHO_CUT",
+      "level": 37,
+      "source": "7L37"
+    },
+    {
+      "species": "AERODACTYL",
+      "move": "IRON_HEAD",
+      "level": 35,
+      "source": "8L35"
+    },
+    {
+      "species": "ALAKAZAM",
+      "move": "PSYCHO_CUT",
+      "level": 20,
+      "source": "8L20"
+    },
+    {
+      "species": "ALTARIA",
+      "move": "DRAGON_PULSE",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "AMPHAROS",
+      "move": "POWER_GEM",
+      "level": 35,
+      "source": "9L35"
+    },
+    {
+      "species": "AMPHAROS",
+      "move": "DRAGON_PULSE",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "ANORITH",
+      "move": "X_SCISSOR",
+      "level": 44,
+      "source": "8L44"
+    },
+    {
+      "species": "ARBOK",
+      "move": "GUNK_SHOT",
+      "level": 63,
+      "source": "9L63"
+    },
+    {
+      "species": "ARIADOS",
+      "move": "POISON_JAB",
+      "level": 46,
+      "source": "9L46"
+    },
+    {
+      "species": "ARMALDO",
+      "move": "X_SCISSOR",
+      "level": 48,
+      "source": "8L48"
+    },
+    {
+      "species": "ARTICUNO",
+      "move": "ICE_SHARD",
+      "level": 15,
+      "source": "9L15"
+    },
+    {
+      "species": "AZUMARILL",
+      "move": "AQUA_TAIL",
+      "level": 21,
+      "source": "9L21"
+    },
+    {
+      "species": "BALTOY",
+      "move": "EARTH_POWER",
+      "level": 30,
+      "source": "8L30"
+    },
+    {
+      "species": "BARBOACH",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "BEAUTIFLY",
+      "move": "BUG_BUZZ",
+      "level": 35,
+      "source": "7L35"
+    },
+    {
+      "species": "BEEDRILL",
+      "move": "POISON_JAB",
+      "level": 35,
+      "source": "7L35"
+    },
+    {
+      "species": "BELLSPROUT",
+      "move": "POISON_JAB",
+      "level": 41,
+      "source": "9L41"
+    },
+    {
+      "species": "BLASTOISE",
+      "move": "FLASH_CANNON",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "BLASTOISE",
+      "move": "AQUA_TAIL",
+      "level": 30,
+      "source": "9L30"
+    },
+    {
+      "species": "BRELOOM",
+      "move": "SEED_BOMB",
+      "level": 44,
+      "source": "9L44"
+    },
+    {
+      "species": "BULBASAUR",
+      "move": "SEED_BOMB",
+      "level": 18,
+      "source": "9L18"
+    },
+    {
+      "species": "BUTTERFREE",
+      "move": "BUG_BUZZ",
+      "level": 32,
+      "source": "8L32"
+    },
+    {
+      "species": "BUTTERFREE",
+      "move": "AIR_SLASH",
+      "level": 24,
+      "source": "8L24"
+    },
+    {
+      "species": "CAMERUPT",
+      "move": "EARTH_POWER",
+      "level": 26,
+      "source": "9L26"
+    },
+    {
+      "species": "CHARIZARD",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "CHARIZARD",
+      "move": "SHADOW_CLAW",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "CLAYDOL",
+      "move": "EARTH_POWER",
+      "level": 30,
+      "source": "8L30"
+    },
+    {
+      "species": "CLODSIRE",
+      "move": "POISON_JAB",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "CLOYSTER",
+      "move": "ICE_SHARD",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "CLOYSTER",
+      "move": "ICICLE_CRASH",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "COMBEE",
+      "move": "BUG_BUZZ",
+      "level": 29,
+      "source": "7L29"
+    },
+    {
+      "species": "CROBAT",
+      "move": "AIR_SLASH",
+      "level": 62,
+      "source": "8L62"
+    },
+    {
+      "species": "CROCONAW",
+      "move": "AQUA_TAIL",
+      "level": 47,
+      "source": "9L47"
+    },
+    {
+      "species": "DEWGONG",
+      "move": "ICE_SHARD",
+      "level": 17,
+      "source": "9L17"
+    },
+    {
+      "species": "DEWGONG",
+      "move": "AQUA_TAIL",
+      "level": 49,
+      "source": "9L49"
+    },
+    {
+      "species": "DRAGONAIR",
+      "move": "AQUA_TAIL",
+      "level": 33,
+      "source": "9L33"
+    },
+    {
+      "species": "DRAGONAIR",
+      "move": "DRAGON_RUSH",
+      "level": 39,
+      "source": "9L39"
+    },
+    {
+      "species": "DRAGONITE",
+      "move": "AQUA_TAIL",
+      "level": 33,
+      "source": "9L33"
+    },
+    {
+      "species": "DRAGONITE",
+      "move": "DRAGON_RUSH",
+      "level": 39,
+      "source": "9L39"
+    },
+    {
+      "species": "DRATINI",
+      "move": "AQUA_TAIL",
+      "level": 31,
+      "source": "9L31"
+    },
+    {
+      "species": "DRATINI",
+      "move": "DRAGON_RUSH",
+      "level": 35,
+      "source": "9L35"
+    },
+    {
+      "species": "DROWZEE",
+      "move": "ZEN_HEADBUTT",
+      "level": 29,
+      "source": "9L29"
+    },
+    {
+      "species": "DUNSPARCE",
+      "move": "AIR_SLASH",
+      "level": 41,
+      "source": "7L41"
+    },
+    {
+      "species": "DUNSPARCE",
+      "move": "DRAGON_RUSH",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "DUSTOX",
+      "move": "BUG_BUZZ",
+      "level": 35,
+      "source": "7L35"
+    },
+    {
+      "species": "EELEKTRIK",
+      "move": "WILD_CHARGE",
+      "level": 59,
+      "source": "9L59"
+    },
+    {
+      "species": "EELEKTROSS",
+      "move": "WILD_CHARGE",
+      "level": 5,
+      "source": "9L5"
+    },
+    {
+      "species": "EKANS",
+      "move": "GUNK_SHOT",
+      "level": 49,
+      "source": "9L49"
+    },
+    {
+      "species": "FARFETCHD",
+      "move": "AIR_SLASH",
+      "level": 50,
+      "source": "8L50"
+    },
+    {
+      "species": "FARFETCHD",
+      "move": "POISON_JAB",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "FERALIGATR",
+      "move": "AQUA_TAIL",
+      "level": 59,
+      "source": "9L59"
+    },
+    {
+      "species": "FLAAFFY",
+      "move": "POWER_GEM",
+      "level": 34,
+      "source": "9L34"
+    },
+    {
+      "species": "GALLADE",
+      "move": "PSYCHO_CUT",
+      "level": 42,
+      "source": "9L42"
+    },
+    {
+      "species": "GASTLY",
+      "move": "DARK_PULSE",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "GENGAR",
+      "move": "DARK_PULSE",
+      "level": 42,
+      "source": "9L42"
+    },
+    {
+      "species": "GIRAFARIG",
+      "move": "ZEN_HEADBUTT",
+      "level": 32,
+      "source": "7L32"
+    },
+    {
+      "species": "GLACEON",
+      "move": "ICE_SHARD",
+      "level": 20,
+      "source": "9L20"
+    },
+    {
+      "species": "GLIGAR",
+      "move": "X_SCISSOR",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "GOLBAT",
+      "move": "AIR_SLASH",
+      "level": 62,
+      "source": "8L62"
+    },
+    {
+      "species": "GOLDUCK",
+      "move": "ZEN_HEADBUTT",
+      "level": 18,
+      "source": "9L18"
+    },
+    {
+      "species": "GOLDUCK",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "GOREBYSS",
+      "move": "AQUA_TAIL",
+      "level": 39,
+      "source": "7L39"
+    },
+    {
+      "species": "GRUMPIG",
+      "move": "ZEN_HEADBUTT",
+      "level": 26,
+      "source": "9L26"
+    },
+    {
+      "species": "GRUMPIG",
+      "move": "POWER_GEM",
+      "level": 29,
+      "source": "9L29"
+    },
+    {
+      "species": "GULPIN",
+      "move": "GUNK_SHOT",
+      "level": 49,
+      "source": "9L49"
+    },
+    {
+      "species": "GYARADOS",
+      "move": "AQUA_TAIL",
+      "level": 32,
+      "source": "9L32"
+    },
+    {
+      "species": "HAUNTER",
+      "move": "DARK_PULSE",
+      "level": 42,
+      "source": "9L42"
+    },
+    {
+      "species": "HONCHKROW",
+      "move": "DARK_PULSE",
+      "level": 55,
+      "source": "9L55"
+    },
+    {
+      "species": "HOOTHOOT",
+      "move": "ZEN_HEADBUTT",
+      "level": 16,
+      "source": "7L16"
+    },
+    {
+      "species": "HOOTHOOT",
+      "move": "AIR_SLASH",
+      "level": 18,
+      "source": "9L18"
+    },
+    {
+      "species": "HORSEA",
+      "move": "DRAGON_PULSE",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "HUNTAIL",
+      "move": "AQUA_TAIL",
+      "level": 39,
+      "source": "7L39"
+    },
+    {
+      "species": "HYPNO",
+      "move": "ZEN_HEADBUTT",
+      "level": 32,
+      "source": "9L32"
+    },
+    {
+      "species": "ILLUMISE",
+      "move": "ZEN_HEADBUTT",
+      "level": 33,
+      "source": "9L33"
+    },
+    {
+      "species": "ILLUMISE",
+      "move": "BUG_BUZZ",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "IVYSAUR",
+      "move": "SEED_BOMB",
+      "level": 20,
+      "source": "9L20"
+    },
+    {
+      "species": "KADABRA",
+      "move": "PSYCHO_CUT",
+      "level": 20,
+      "source": "8L20"
+    },
+    {
+      "species": "KINGDRA",
+      "move": "DRAGON_PULSE",
+      "level": 44,
+      "source": "9L44"
+    },
+    {
+      "species": "KRICKETUNE",
+      "move": "X_SCISSOR",
+      "level": 30,
+      "source": "9L30"
+    },
+    {
+      "species": "KRICKETUNE",
+      "move": "BUG_BUZZ",
+      "level": 46,
+      "source": "9L46"
+    },
+    {
+      "species": "LAPRAS",
+      "move": "ICE_SHARD",
+      "level": 20,
+      "source": "9L20"
+    },
+    {
+      "species": "LARVITAR",
+      "move": "DARK_PULSE",
+      "level": 24,
+      "source": "8L24"
+    },
+    {
+      "species": "LEDIAN",
+      "move": "BUG_BUZZ",
+      "level": 38,
+      "source": "7L38"
+    },
+    {
+      "species": "LEDIAN",
+      "move": "AIR_SLASH",
+      "level": 42,
+      "source": "7L42"
+    },
+    {
+      "species": "LEDYBA",
+      "move": "BUG_BUZZ",
+      "level": 33,
+      "source": "7L33"
+    },
+    {
+      "species": "LEDYBA",
+      "move": "AIR_SLASH",
+      "level": 36,
+      "source": "7L36"
+    },
+    {
+      "species": "LUGIA",
+      "move": "DRAGON_RUSH",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "LUNATONE",
+      "move": "POWER_GEM",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "MAGCARGO",
+      "move": "EARTH_POWER",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "MAGNEMITE",
+      "move": "FLASH_CANNON",
+      "level": 32,
+      "source": "9L32"
+    },
+    {
+      "species": "MAGNETON",
+      "move": "FLASH_CANNON",
+      "level": 34,
+      "source": "9L34"
+    },
+    {
+      "species": "MAGNEZONE",
+      "move": "FLASH_CANNON",
+      "level": 34,
+      "source": "9L34"
+    },
+    {
+      "species": "MAMOSWINE",
+      "move": "ICE_SHARD",
+      "level": 15,
+      "source": "9L15"
+    },
+    {
+      "species": "MANTINE",
+      "move": "AIR_SLASH",
+      "level": 32,
+      "source": "8L32"
+    },
+    {
+      "species": "MAREEP",
+      "move": "POWER_GEM",
+      "level": 29,
+      "source": "9L29"
+    },
+    {
+      "species": "MARILL",
+      "move": "AQUA_TAIL",
+      "level": 19,
+      "source": "9L19"
+    },
+    {
+      "species": "MAWILE",
+      "move": "IRON_HEAD",
+      "level": 36,
+      "source": "8L36"
+    },
+    {
+      "species": "MEDICHAM",
+      "move": "ZEN_HEADBUTT",
+      "level": 25,
+      "source": "9L25"
+    },
+    {
+      "species": "MEDITITE",
+      "move": "ZEN_HEADBUTT",
+      "level": 25,
+      "source": "9L25"
+    },
+    {
+      "species": "MEW",
+      "move": "AURA_SPHERE",
+      "level": 90,
+      "source": "9L90"
+    },
+    {
+      "species": "MEWTWO",
+      "move": "AURA_SPHERE",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "MEWTWO",
+      "move": "PSYCHO_CUT",
+      "level": 16,
+      "source": "9L16"
+    },
+    {
+      "species": "MIGHTYENA",
+      "move": "SNARL",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "MILOTIC",
+      "move": "AQUA_TAIL",
+      "level": 32,
+      "source": "9L32"
+    },
+    {
+      "species": "MILTANK",
+      "move": "ZEN_HEADBUTT",
+      "level": 30,
+      "source": "8L30"
+    },
+    {
+      "species": "MISDREAVUS",
+      "move": "POWER_GEM",
+      "level": 50,
+      "source": "9L50"
+    },
+    {
+      "species": "MISMAGIUS",
+      "move": "POWER_GEM",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "MOLTRES",
+      "move": "AIR_SLASH",
+      "level": 35,
+      "source": "9L35"
+    },
+    {
+      "species": "MR_RIME",
+      "move": "ICE_SHARD",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "NIDOKING",
+      "move": "EARTH_POWER",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "NIDOKING",
+      "move": "POISON_JAB",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "NIDOQUEEN",
+      "move": "EARTH_POWER",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "NIDORAN_F",
+      "move": "EARTH_POWER",
+      "level": 55,
+      "source": "8L55"
+    },
+    {
+      "species": "NIDORAN_M",
+      "move": "EARTH_POWER",
+      "level": 55,
+      "source": "8L55"
+    },
+    {
+      "species": "NIDORAN_M",
+      "move": "POISON_JAB",
+      "level": 50,
+      "source": "8L50"
+    },
+    {
+      "species": "NIDORINA",
+      "move": "EARTH_POWER",
+      "level": 71,
+      "source": "8L71"
+    },
+    {
+      "species": "NIDORINO",
+      "move": "EARTH_POWER",
+      "level": 71,
+      "source": "8L71"
+    },
+    {
+      "species": "NIDORINO",
+      "move": "POISON_JAB",
+      "level": 64,
+      "source": "8L64"
+    },
+    {
+      "species": "NINJASK",
+      "move": "X_SCISSOR",
+      "level": 64,
+      "source": "8L64"
+    },
+    {
+      "species": "NOCTOWL",
+      "move": "ZEN_HEADBUTT",
+      "level": 16,
+      "source": "7L16"
+    },
+    {
+      "species": "NOCTOWL",
+      "move": "AIR_SLASH",
+      "level": 18,
+      "source": "9L18"
+    },
+    {
+      "species": "NUMEL",
+      "move": "EARTH_POWER",
+      "level": 26,
+      "source": "9L26"
+    },
+    {
+      "species": "OCTILLERY",
+      "move": "GUNK_SHOT",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "PARAS",
+      "move": "X_SCISSOR",
+      "level": 54,
+      "source": "7L54"
+    },
+    {
+      "species": "PARASECT",
+      "move": "X_SCISSOR",
+      "level": 66,
+      "source": "7L66"
+    },
+    {
+      "species": "PELIPPER",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "PIDGEOT",
+      "move": "AIR_SLASH",
+      "level": 62,
+      "source": "7L62"
+    },
+    {
+      "species": "PIDGEOTTO",
+      "move": "AIR_SLASH",
+      "level": 57,
+      "source": "7L57"
+    },
+    {
+      "species": "PIDGEY",
+      "move": "AIR_SLASH",
+      "level": 49,
+      "source": "7L49"
+    },
+    {
+      "species": "PIKACHU",
+      "move": "WILD_CHARGE",
+      "level": 50,
+      "source": "7L50"
+    },
+    {
+      "species": "PILOSWINE",
+      "move": "ICE_SHARD",
+      "level": 15,
+      "source": "9L15"
+    },
+    {
+      "species": "PINSIR",
+      "move": "X_SCISSOR",
+      "level": 32,
+      "source": "8L32"
+    },
+    {
+      "species": "POLITOED",
+      "move": "EARTH_POWER",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "POLIWAG",
+      "move": "EARTH_POWER",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "POLIWHIRL",
+      "move": "EARTH_POWER",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "POLIWRATH",
+      "move": "EARTH_POWER",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "PSYDUCK",
+      "move": "ZEN_HEADBUTT",
+      "level": 18,
+      "source": "9L18"
+    },
+    {
+      "species": "PSYDUCK",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "PUPITAR",
+      "move": "DARK_PULSE",
+      "level": 24,
+      "source": "8L24"
+    },
+    {
+      "species": "QUAGSIRE",
+      "move": "AQUA_TAIL",
+      "level": 28,
+      "source": "9L28"
+    },
+    {
+      "species": "QWILFISH",
+      "move": "POISON_JAB",
+      "level": 28,
+      "source": "9L28"
+    },
+    {
+      "species": "QWILFISH",
+      "move": "AQUA_TAIL",
+      "level": 48,
+      "source": "9L48"
+    },
+    {
+      "species": "RAPIDASH",
+      "move": "POISON_JAB",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "RELICANTH",
+      "move": "AQUA_TAIL",
+      "level": 30,
+      "source": "8L30"
+    },
+    {
+      "species": "RHYPERIOR",
+      "move": "POISON_JAB",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "SABLEYE",
+      "move": "ZEN_HEADBUTT",
+      "level": 42,
+      "source": "9L42"
+    },
+    {
+      "species": "SABLEYE",
+      "move": "POWER_GEM",
+      "level": 39,
+      "source": "9L39"
+    },
+    {
+      "species": "SABLEYE",
+      "move": "SHADOW_CLAW",
+      "level": 33,
+      "source": "9L33"
+    },
+    {
+      "species": "SCIZOR",
+      "move": "IRON_HEAD",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "SCIZOR",
+      "move": "X_SCISSOR",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "SCIZOR",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "SCYTHER",
+      "move": "X_SCISSOR",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "SCYTHER",
+      "move": "AIR_SLASH",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "SEADRA",
+      "move": "DRAGON_PULSE",
+      "level": 44,
+      "source": "9L44"
+    },
+    {
+      "species": "SEAKING",
+      "move": "POISON_JAB",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "SEEL",
+      "move": "ICE_SHARD",
+      "level": 17,
+      "source": "9L17"
+    },
+    {
+      "species": "SEEL",
+      "move": "AQUA_TAIL",
+      "level": 43,
+      "source": "9L43"
+    },
+    {
+      "species": "SHEDINJA",
+      "move": "SHADOW_CLAW",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "SHELLDER",
+      "move": "ICE_SHARD",
+      "level": 8,
+      "source": "9L8"
+    },
+    {
+      "species": "SHROOMISH",
+      "move": "SEED_BOMB",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "SKARMORY",
+      "move": "AIR_SLASH",
+      "level": 45,
+      "source": "7L45"
+    },
+    {
+      "species": "SLOWBRO",
+      "move": "ZEN_HEADBUTT",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "SLOWKING",
+      "move": "ZEN_HEADBUTT",
+      "level": 24,
+      "source": "8L24"
+    },
+    {
+      "species": "SLOWKING",
+      "move": "POWER_GEM",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "SLOWPOKE",
+      "move": "ZEN_HEADBUTT",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "SLUGMA",
+      "move": "EARTH_POWER",
+      "level": 50,
+      "source": "9L50"
+    },
+    {
+      "species": "SNEASEL",
+      "move": "ICE_SHARD",
+      "level": 47,
+      "source": "7L47"
+    },
+    {
+      "species": "SOLROCK",
+      "move": "ZEN_HEADBUTT",
+      "level": 20,
+      "source": "8L20"
+    },
+    {
+      "species": "SPINARAK",
+      "move": "POISON_JAB",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "SPOINK",
+      "move": "ZEN_HEADBUTT",
+      "level": 26,
+      "source": "7L26"
+    },
+    {
+      "species": "SPOINK",
+      "move": "POWER_GEM",
+      "level": 29,
+      "source": "9L29"
+    },
+    {
+      "species": "SQUIRTLE",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "STANTLER",
+      "move": "ZEN_HEADBUTT",
+      "level": 37,
+      "source": "9L37"
+    },
+    {
+      "species": "STARMIE",
+      "move": "POWER_GEM",
+      "level": 1,
+      "source": "8L1"
+    },
+    {
+      "species": "STARYU",
+      "move": "POWER_GEM",
+      "level": 36,
+      "source": "8L36"
+    },
+    {
+      "species": "SUNKERN",
+      "move": "SEED_BOMB",
+      "level": 39,
+      "source": "9L39"
+    },
+    {
+      "species": "SWABLU",
+      "move": "DRAGON_PULSE",
+      "level": 38,
+      "source": "7L38"
+    },
+    {
+      "species": "SWALOT",
+      "move": "GUNK_SHOT",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "SWELLOW",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "7L1"
+    },
+    {
+      "species": "SWINUB",
+      "move": "ICE_SHARD",
+      "level": 15,
+      "source": "9L15"
+    },
+    {
+      "species": "TAILLOW",
+      "move": "AIR_SLASH",
+      "level": 33,
+      "source": "7L33"
+    },
+    {
+      "species": "TAUROS",
+      "move": "ZEN_HEADBUTT",
+      "level": 30,
+      "source": "9L30"
+    },
+    {
+      "species": "TENTACOOL",
+      "move": "POISON_JAB",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "TENTACRUEL",
+      "move": "POISON_JAB",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "TOTODILE",
+      "move": "AQUA_TAIL",
+      "level": 41,
+      "source": "9L41"
+    },
+    {
+      "species": "TYRANITAR",
+      "move": "DARK_PULSE",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "UMBREON",
+      "move": "DARK_PULSE",
+      "level": 40,
+      "source": "9L40"
+    },
+    {
+      "species": "UMBREON",
+      "move": "SNARL",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "VENOMOTH",
+      "move": "ZEN_HEADBUTT",
+      "level": 41,
+      "source": "9L41"
+    },
+    {
+      "species": "VENOMOTH",
+      "move": "BUG_BUZZ",
+      "level": 25,
+      "source": "9L25"
+    },
+    {
+      "species": "VENOMOTH",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "9L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "VENONAT",
+      "move": "ZEN_HEADBUTT",
+      "level": 37,
+      "source": "9L37"
+    },
+    {
+      "species": "VENONAT",
+      "move": "BUG_BUZZ",
+      "level": 25,
+      "source": "9L25"
+    },
+    {
+      "species": "VENUSAUR",
+      "move": "SEED_BOMB",
+      "level": 20,
+      "source": "9L20"
+    },
+    {
+      "species": "VESPIQUEN",
+      "move": "POWER_GEM",
+      "level": 32,
+      "source": "9L32"
+    },
+    {
+      "species": "VESPIQUEN",
+      "move": "AIR_SLASH",
+      "level": 28,
+      "source": "9L28"
+    },
+    {
+      "species": "VOLBEAT",
+      "move": "ZEN_HEADBUTT",
+      "level": 29,
+      "source": "9L29"
+    },
+    {
+      "species": "VOLBEAT",
+      "move": "BUG_BUZZ",
+      "level": 36,
+      "source": "9L36"
+    },
+    {
+      "species": "WARTORTLE",
+      "move": "AQUA_TAIL",
+      "level": 30,
+      "source": "9L30"
+    },
+    {
+      "species": "WEAVILE",
+      "move": "DARK_PULSE",
+      "level": 66,
+      "source": "9L66"
+    },
+    {
+      "species": "WEAVILE",
+      "move": "ICE_SHARD",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "WEEPINBELL",
+      "move": "POISON_JAB",
+      "level": 47,
+      "source": "9L47"
+    },
+    {
+      "species": "WHISCASH",
+      "move": "ZEN_HEADBUTT",
+      "level": 1,
+      "source": "9L1"
+    },
+    {
+      "species": "WHISCASH",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "WINGULL",
+      "move": "AIR_SLASH",
+      "level": 30,
+      "source": "9L30"
+    },
+    {
+      "species": "WOOPER",
+      "move": "AQUA_TAIL",
+      "level": 24,
+      "source": "9L24"
+    },
+    {
+      "species": "XATU",
+      "move": "AIR_SLASH",
+      "level": 1,
+      "source": "8L0",
+      "note": "Evolution move exposed at level 1 for the move reminder."
+    },
+    {
+      "species": "YANMA",
+      "move": "BUG_BUZZ",
+      "level": 57,
+      "source": "9L57"
+    },
+    {
+      "species": "YANMA",
+      "move": "AIR_SLASH",
+      "level": 54,
+      "source": "9L54"
+    },
+    {
+      "species": "ZUBAT",
+      "move": "AIR_SLASH",
+      "level": 50,
+      "source": "8L50"
+    },
+    {
+      "species": "OMATO",
+      "move": "AQUA_TAIL",
+      "level": 35,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "OMATO",
+      "move": "POWER_GEM",
+      "level": 43,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "OMATOPS",
+      "move": "AQUA_TAIL",
+      "level": 38,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "OMATOPS",
+      "move": "SHADOW_CLAW",
+      "level": 46,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "KABUSTAR",
+      "move": "POWER_GEM",
+      "level": 35,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "KABUKNIGHT",
+      "move": "POWER_GEM",
+      "level": 40,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "KABUKNIGHT",
+      "move": "EARTH_POWER",
+      "level": 48,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "AMUNYTE",
+      "move": "GUNK_SHOT",
+      "level": 43,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "KINKABUTO",
+      "move": "X_SCISSOR",
+      "level": 40,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "KINKABUTO",
+      "move": "AQUA_TAIL",
+      "level": 48,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "AEROPTERYX",
+      "move": "AIR_SLASH",
+      "level": 42,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "AEROPTERYX",
+      "move": "DRAGON_PULSE",
+      "level": 50,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "CINNABAR_MAGIKARP",
+      "move": "AQUA_TAIL",
+      "level": 44,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "CINNABAR_MAGIKARP",
+      "move": "DRAGON_RUSH",
+      "level": 52,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "CINNABAR_FEEBAS",
+      "move": "DRAGON_PULSE",
+      "level": 44,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "OSSCYTHE",
+      "move": "SHADOW_CLAW",
+      "level": 42,
+      "source": "custom design adaptation"
+    },
+    {
+      "species": "MIME_SR",
+      "move": "AURA_SPHERE",
+      "level": 46,
+      "source": "custom design adaptation"
+    }
+  ],
+  "tms": [
+    "FOCUS_BLAST",
+    "DARK_PULSE",
+    "EARTH_POWER",
+    "FLASH_CANNON",
+    "ZEN_HEADBUTT"
+  ],
+  "compatibility": {
+    "ABRA": [
+      "ZEN_HEADBUTT"
+    ],
+    "ABSOL": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "AERODACTYL": [
+      "EARTH_POWER"
+    ],
+    "ALAKAZAM": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "AMPHAROS": [
+      "FOCUS_BLAST"
+    ],
+    "ANNIHILAPE": [
+      "FOCUS_BLAST"
+    ],
+    "ANORITH": [
+      "EARTH_POWER"
+    ],
+    "ARBOK": [
+      "DARK_PULSE"
+    ],
+    "ARMALDO": [
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "AZUMARILL": [
+      "FOCUS_BLAST"
+    ],
+    "BALTOY": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "BARBOACH": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "BLASTOISE": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "ZEN_HEADBUTT",
+      "FLASH_CANNON"
+    ],
+    "BLISSEY": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "BRELOOM": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "BRONZONG": [
+      "ZEN_HEADBUTT",
+      "FLASH_CANNON"
+    ],
+    "BRONZOR": [
+      "ZEN_HEADBUTT",
+      "FLASH_CANNON"
+    ],
+    "CAMERUPT": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "CELEBI": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "CHANSEY": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "CHARIZARD": [
+      "FOCUS_BLAST"
+    ],
+    "CHARMANDER": [
+      "FOCUS_BLAST"
+    ],
+    "CHARMELEON": [
+      "FOCUS_BLAST"
+    ],
+    "CHIMECHO": [
+      "ZEN_HEADBUTT"
+    ],
+    "CHINGLING": [
+      "ZEN_HEADBUTT"
+    ],
+    "CLAYDOL": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "CLEFABLE": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "CLEFAIRY": [
+      "ZEN_HEADBUTT"
+    ],
+    "CLEFFA": [
+      "ZEN_HEADBUTT"
+    ],
+    "CLODSIRE": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "CORSOLA": [
+      "EARTH_POWER"
+    ],
+    "CRADILY": [
+      "EARTH_POWER"
+    ],
+    "CROBAT": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "CUBONE": [
+      "EARTH_POWER"
+    ],
+    "CURSOLA": [
+      "EARTH_POWER"
+    ],
+    "CYNDAQUIL": [
+      "ZEN_HEADBUTT"
+    ],
+    "DIGLETT": [
+      "EARTH_POWER"
+    ],
+    "DONPHAN": [
+      "EARTH_POWER"
+    ],
+    "DRAGONITE": [
+      "FOCUS_BLAST"
+    ],
+    "DROWZEE": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "DUGTRIO": [
+      "EARTH_POWER"
+    ],
+    "DUNSPARCE": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "DUSCLOPS": [
+      "DARK_PULSE"
+    ],
+    "DUSKNOIR": [
+      "FOCUS_BLAST",
+      "DARK_PULSE"
+    ],
+    "DUSKULL": [
+      "DARK_PULSE"
+    ],
+    "EELEKTRIK": [
+      "FLASH_CANNON"
+    ],
+    "EELEKTROSS": [
+      "ZEN_HEADBUTT",
+      "FLASH_CANNON"
+    ],
+    "EKANS": [
+      "DARK_PULSE"
+    ],
+    "ELECTABUZZ": [
+      "FOCUS_BLAST"
+    ],
+    "ELECTIVIRE": [
+      "FOCUS_BLAST"
+    ],
+    "ELEKID": [
+      "FOCUS_BLAST"
+    ],
+    "ESPEON": [
+      "ZEN_HEADBUTT"
+    ],
+    "EXEGGCUTE": [
+      "ZEN_HEADBUTT"
+    ],
+    "EXEGGUTOR": [
+      "ZEN_HEADBUTT"
+    ],
+    "EXPLOUD": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "FERALIGATR": [
+      "FOCUS_BLAST"
+    ],
+    "FORRETRESS": [
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "FURRET": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "GALLADE": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "GARDEVOIR": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "GASTLY": [
+      "DARK_PULSE"
+    ],
+    "GENGAR": [
+      "FOCUS_BLAST",
+      "DARK_PULSE"
+    ],
+    "GEODUDE": [
+      "EARTH_POWER"
+    ],
+    "GIRAFARIG": [
+      "ZEN_HEADBUTT"
+    ],
+    "GLIGAR": [
+      "DARK_PULSE",
+      "EARTH_POWER"
+    ],
+    "GOLBAT": [
+      "ZEN_HEADBUTT"
+    ],
+    "GOLDUCK": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "GOLEM": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "GRANBULL": [
+      "FOCUS_BLAST"
+    ],
+    "GRAVELER": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "GRIMER": [
+      "ZEN_HEADBUTT"
+    ],
+    "GRUMPIG": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "GYARADOS": [
+      "DARK_PULSE"
+    ],
+    "HAPPINY": [
+      "ZEN_HEADBUTT"
+    ],
+    "HARIYAMA": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "HAUNTER": [
+      "FOCUS_BLAST",
+      "DARK_PULSE"
+    ],
+    "HERACROSS": [
+      "FOCUS_BLAST"
+    ],
+    "HITMONCHAN": [
+      "FOCUS_BLAST"
+    ],
+    "HITMONLEE": [
+      "FOCUS_BLAST"
+    ],
+    "HITMONTOP": [
+      "FOCUS_BLAST"
+    ],
+    "HONCHKROW": [
+      "DARK_PULSE"
+    ],
+    "HOOTHOOT": [
+      "ZEN_HEADBUTT"
+    ],
+    "HORSEA": [
+      "FLASH_CANNON"
+    ],
+    "HOUNDOOM": [
+      "DARK_PULSE"
+    ],
+    "HOUNDOUR": [
+      "DARK_PULSE"
+    ],
+    "HO_OH": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "HYPNO": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "ILLUMISE": [
+      "ZEN_HEADBUTT"
+    ],
+    "JIGGLYPUFF": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "JYNX": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "KABUTO": [
+      "EARTH_POWER"
+    ],
+    "KABUTOPS": [
+      "EARTH_POWER"
+    ],
+    "KADABRA": [
+      "ZEN_HEADBUTT"
+    ],
+    "KANGASKHAN": [
+      "FOCUS_BLAST"
+    ],
+    "KINGDRA": [
+      "FLASH_CANNON"
+    ],
+    "KIRLIA": [
+      "ZEN_HEADBUTT"
+    ],
+    "KOFFING": [
+      "DARK_PULSE"
+    ],
+    "LAPRAS": [
+      "ZEN_HEADBUTT"
+    ],
+    "LARVITAR": [
+      "DARK_PULSE",
+      "EARTH_POWER"
+    ],
+    "LEDIAN": [
+      "FOCUS_BLAST"
+    ],
+    "LICKILICKY": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "LICKITUNG": [
+      "ZEN_HEADBUTT"
+    ],
+    "LILEEP": [
+      "EARTH_POWER"
+    ],
+    "LOPUNNY": [
+      "FOCUS_BLAST"
+    ],
+    "LOUDRED": [
+      "ZEN_HEADBUTT"
+    ],
+    "LUGIA": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "LUNATONE": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "MACHAMP": [
+      "FOCUS_BLAST"
+    ],
+    "MACHOKE": [
+      "FOCUS_BLAST"
+    ],
+    "MACHOP": [
+      "FOCUS_BLAST"
+    ],
+    "MAGCARGO": [
+      "EARTH_POWER"
+    ],
+    "MAGMAR": [
+      "FOCUS_BLAST"
+    ],
+    "MAGMORTAR": [
+      "FOCUS_BLAST"
+    ],
+    "MAGNEMITE": [
+      "FLASH_CANNON"
+    ],
+    "MAGNETON": [
+      "FLASH_CANNON"
+    ],
+    "MAGNEZONE": [
+      "FLASH_CANNON"
+    ],
+    "MAKUHITA": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MAMOSWINE": [
+      "EARTH_POWER"
+    ],
+    "MANKEY": [
+      "FOCUS_BLAST"
+    ],
+    "MAROWAK": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "MAWILE": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "FLASH_CANNON"
+    ],
+    "MEDICHAM": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MEDITITE": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MEGANIUM": [
+      "ZEN_HEADBUTT"
+    ],
+    "MEOWTH": [
+      "DARK_PULSE"
+    ],
+    "MEW": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "ZEN_HEADBUTT",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "MEWTWO": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "MIGHTYENA": [
+      "DARK_PULSE"
+    ],
+    "MILTANK": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MISDREAVUS": [
+      "DARK_PULSE"
+    ],
+    "MISMAGIUS": [
+      "DARK_PULSE"
+    ],
+    "MR_MIME": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MR_RIME": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "MUK": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "MURKROW": [
+      "DARK_PULSE"
+    ],
+    "NATU": [
+      "ZEN_HEADBUTT"
+    ],
+    "NIDOKING": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "NIDOQUEEN": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "NIDORAN_F": [
+      "EARTH_POWER"
+    ],
+    "NIDORAN_M": [
+      "EARTH_POWER"
+    ],
+    "NIDORINA": [
+      "EARTH_POWER"
+    ],
+    "NIDORINO": [
+      "EARTH_POWER"
+    ],
+    "NINETALES": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "NOCTOWL": [
+      "ZEN_HEADBUTT"
+    ],
+    "NUMEL": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "NUZLEAF": [
+      "DARK_PULSE"
+    ],
+    "OCTILLERY": [
+      "FLASH_CANNON"
+    ],
+    "OMANYTE": [
+      "EARTH_POWER"
+    ],
+    "OMASTAR": [
+      "EARTH_POWER"
+    ],
+    "ONIX": [
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "PERRSERKER": [
+      "DARK_PULSE",
+      "FLASH_CANNON"
+    ],
+    "PERSIAN": [
+      "DARK_PULSE"
+    ],
+    "PHANPY": [
+      "EARTH_POWER"
+    ],
+    "PILOSWINE": [
+      "EARTH_POWER"
+    ],
+    "PINSIR": [
+      "FOCUS_BLAST"
+    ],
+    "POLITOED": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "POLIWAG": [
+      "EARTH_POWER"
+    ],
+    "POLIWHIRL": [
+      "EARTH_POWER"
+    ],
+    "POLIWRATH": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "POOCHYENA": [
+      "DARK_PULSE"
+    ],
+    "PORYGON": [
+      "ZEN_HEADBUTT"
+    ],
+    "PORYGON2": [
+      "ZEN_HEADBUTT"
+    ],
+    "PORYGON_Z": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "PRIMEAPE": [
+      "FOCUS_BLAST"
+    ],
+    "PSYDUCK": [
+      "ZEN_HEADBUTT"
+    ],
+    "PUPITAR": [
+      "DARK_PULSE",
+      "EARTH_POWER"
+    ],
+    "QUAGSIRE": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "QUILAVA": [
+      "ZEN_HEADBUTT"
+    ],
+    "RAICHU": [
+      "FOCUS_BLAST"
+    ],
+    "RALTS": [
+      "ZEN_HEADBUTT"
+    ],
+    "RELICANTH": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "RHYDON": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "RHYHORN": [
+      "EARTH_POWER"
+    ],
+    "RHYPERIOR": [
+      "FOCUS_BLAST",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "SABLEYE": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "SANDSHREW": [
+      "EARTH_POWER"
+    ],
+    "SANDSLASH": [
+      "FOCUS_BLAST",
+      "EARTH_POWER"
+    ],
+    "SCIZOR": [
+      "FLASH_CANNON"
+    ],
+    "SEADRA": [
+      "FLASH_CANNON"
+    ],
+    "SHIFTRY": [
+      "FOCUS_BLAST",
+      "DARK_PULSE"
+    ],
+    "SHROOMISH": [
+      "ZEN_HEADBUTT"
+    ],
+    "SHUCKLE": [
+      "EARTH_POWER"
+    ],
+    "SKARMORY": [
+      "DARK_PULSE",
+      "FLASH_CANNON"
+    ],
+    "SLAKING": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "SLAKOTH": [
+      "ZEN_HEADBUTT"
+    ],
+    "SLOWBRO": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "SLOWKING": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "SLOWPOKE": [
+      "ZEN_HEADBUTT"
+    ],
+    "SLUGMA": [
+      "EARTH_POWER"
+    ],
+    "SMOOCHUM": [
+      "ZEN_HEADBUTT"
+    ],
+    "SNEASEL": [
+      "DARK_PULSE"
+    ],
+    "SOLROCK": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "SPOINK": [
+      "ZEN_HEADBUTT",
+      "FLASH_CANNON"
+    ],
+    "SQUIRTLE": [
+      "ZEN_HEADBUTT"
+    ],
+    "STANTLER": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "STARMIE": [
+      "FLASH_CANNON"
+    ],
+    "STARYU": [
+      "FLASH_CANNON"
+    ],
+    "STEELIX": [
+      "DARK_PULSE",
+      "EARTH_POWER",
+      "FLASH_CANNON"
+    ],
+    "SUNFLORA": [
+      "EARTH_POWER"
+    ],
+    "SUNKERN": [
+      "EARTH_POWER"
+    ],
+    "SWALOT": [
+      "ZEN_HEADBUTT"
+    ],
+    "SWINUB": [
+      "EARTH_POWER"
+    ],
+    "TANGROWTH": [
+      "FOCUS_BLAST"
+    ],
+    "TAUROS": [
+      "ZEN_HEADBUTT"
+    ],
+    "TOGEPI": [
+      "ZEN_HEADBUTT"
+    ],
+    "TOGETIC": [
+      "ZEN_HEADBUTT"
+    ],
+    "TYPHLOSION": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "TYRANITAR": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "EARTH_POWER"
+    ],
+    "UMBREON": [
+      "DARK_PULSE"
+    ],
+    "URSARING": [
+      "FOCUS_BLAST"
+    ],
+    "VENOMOTH": [
+      "ZEN_HEADBUTT"
+    ],
+    "VENONAT": [
+      "ZEN_HEADBUTT"
+    ],
+    "VENUSAUR": [
+      "EARTH_POWER"
+    ],
+    "VIGOROTH": [
+      "FOCUS_BLAST",
+      "ZEN_HEADBUTT"
+    ],
+    "VOLBEAT": [
+      "ZEN_HEADBUTT"
+    ],
+    "VULPIX": [
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "WARTORTLE": [
+      "ZEN_HEADBUTT"
+    ],
+    "WEAVILE": [
+      "FOCUS_BLAST",
+      "DARK_PULSE"
+    ],
+    "WEEZING": [
+      "DARK_PULSE"
+    ],
+    "WHISCASH": [
+      "ZEN_HEADBUTT",
+      "EARTH_POWER"
+    ],
+    "WHISMUR": [
+      "ZEN_HEADBUTT"
+    ],
+    "WIGGLYTUFF": [
+      "FOCUS_BLAST",
+      "DARK_PULSE",
+      "ZEN_HEADBUTT"
+    ],
+    "WOOPER": [
+      "EARTH_POWER"
+    ],
+    "XATU": [
+      "ZEN_HEADBUTT"
+    ],
+    "ZUBAT": [
+      "ZEN_HEADBUTT"
+    ]
+  },
+  "sources": {
+    "moves": "https://github.com/smogon/pokemon-showdown/blob/master/data/moves.ts",
+    "learnsets": "https://github.com/smogon/pokemon-showdown/blob/master/data/learnsets.ts"
+  },
+  "notes": [
+    "Official-game data transcribed by Pokemon Showdown; level-up additions use latest available generation with level-up evidence.",
+    "TM60-64 are mod numbering; compatibility requires a recorded official machine source.",
+    "Animations reuse thematically appropriate existing effects. No save structure or existing item IDs changed.",
+    "TM pocket retains its existing capacity of 59 distinct items."
+  ],
+  "reference_sha256": {
+    "moves": "43b516fdc01721f53f01de555479dd3d248e5e29d2a6f5072a7bd4a3585a5027",
+    "learnsets": "26969c5e9ca7310b701612da8c9cea217b7d43efb8cd22a7e46783a6ca9b386e"
+  }
+}
