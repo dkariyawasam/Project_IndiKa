@@ -390,4 +390,9 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
 
     [ITEM_GALARICA_WREATH] = {gItemIcon_GalaricaWreath, gItemIconPalette_GalaricaWreath},
 
+    [ITEM_TM60] = {gItemIcon_TMHM, gItemIconPalette_FightingTMHM},
+    [ITEM_TM61] = {gItemIcon_TMHM, gItemIconPalette_DarkTMHM},
+    [ITEM_TM62] = {gItemIcon_TMHM, gItemIconPalette_GroundTMHM},
+    [ITEM_TM63] = {gItemIcon_TMHM, gItemIconPalette_SteelTMHM},
+    [ITEM_TM64] = {gItemIcon_TMHM, gItemIconPalette_PsychicTMHM},
 };

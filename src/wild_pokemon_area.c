@@ -2,6 +2,7 @@
 #include "field_specials.h"
 #include "event_data.h"
 #include "wild_encounter.h"
+#include "wild_pokemon_area.h"
 #include "roamer.h"
 #include "overworld.h"
 #include "pokedex.h"
@@ -180,13 +181,7 @@ static bool32 IsSpeciesOnMap(const struct WildPokemonHeader * data, s32 species)
         return TRUE;
     if (IsSpeciesInEncounterTable(data->waterMonsInfo, species, WATER_WILD_COUNT))
         return TRUE;
-// When searching the fishing encounters, this incorrectly uses the size of the land encounters.
-// As a result it's reading out of bounds of the fishing encounters tables.
-#ifdef BUGFIX
     if (IsSpeciesInEncounterTable(data->fishingMonsInfo, species, FISH_WILD_COUNT))
-#else
-    if (IsSpeciesInEncounterTable(data->fishingMonsInfo, species, LAND_WILD_COUNT))
-#endif
         return TRUE;
     if (IsSpeciesInEncounterTable(data->rockSmashMonsInfo, species, ROCK_WILD_COUNT))
         return TRUE;
@@ -229,4 +224,27 @@ static bool32 FindDexAreaByMapSec(u16 mapSecId, const u16 (*table)[2], s32 count
         }
     }
     return FALSE;
+}
+
+// Consecutive headers for the same map are day then night, just as in wild_encounter.c.
+u8 GetSpeciesPokedexEncounterTimes(u16 species)
+{
+    u16 i;
+    u8 times = 0;
+    for (i = 0; gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED); i++)
+    {
+        const struct WildPokemonHeader *day = &gWildMonHeaders[i];
+        const struct WildPokemonHeader *night = &gWildMonHeaders[i + 1];
+        if (day->mapGroup == night->mapGroup && day->mapNum == night->mapNum)
+        {
+            if (IsSpeciesOnMap(day, species))
+                times |= DEX_ENCOUNTER_DAY;
+            if (IsSpeciesOnMap(night, species))
+                times |= DEX_ENCOUNTER_NIGHT;
+            i++;
+        }
+        else if (IsSpeciesOnMap(day, species))
+            times |= DEX_ENCOUNTER_DAY | DEX_ENCOUNTER_NIGHT;
+    }
+    return times;
 }

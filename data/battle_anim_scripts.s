@@ -387,6 +387,29 @@ gBattleAnims_Moves::
 	.4byte Move_SLAM @ DOUBLE HIT: played for each strike
 	.4byte Move_WATER_PULSE @ SCALDING DIVE
 	.4byte Move_WITHDRAW @ GLACIAL SHELL
+	.4byte Move_WATER_PULSE @ AURA_SPHERE
+	.4byte Move_FOCUS_PUNCH @ FOCUS_BLAST
+	.4byte Move_SHADOW_BALL @ DARK_PULSE
+	.4byte Move_HYPER_VOICE @ SNARL
+	.4byte Move_HEADBUTT @ ZEN_HEADBUTT
+	.4byte Move_SLASH @ PSYCHO_CUT
+	.4byte Move_EARTHQUAKE @ EARTH_POWER
+	.4byte Move_ANCIENT_POWER @ POWER_GEM
+	.4byte Move_LUSTER_PURGE @ FLASH_CANNON
+	.4byte Move_IRON_TAIL @ IRON_HEAD
+	.4byte Move_SLASH @ X_SCISSOR
+	.4byte Move_HYPER_VOICE @ BUG_BUZZ
+	.4byte Move_AIR_CUTTER @ AIR_SLASH
+	.4byte Move_DRAGON_BREATH @ DRAGON_PULSE
+	.4byte Move_POISON_TAIL @ POISON_JAB
+	.4byte Move_SLUDGE_BOMB @ GUNK_SHOT
+	.4byte Move_POWDER_SNOW @ ICE_SHARD
+	.4byte Move_ICICLE_SPEAR @ ICICLE_CRASH
+	.4byte Move_BULLET_SEED @ SEED_BOMB
+	.4byte Move_WATERFALL @ AQUA_TAIL
+	.4byte Move_VOLT_TACKLE @ WILD_CHARGE
+	.4byte Move_SHADOW_PUNCH @ SHADOW_CLAW
+	.4byte Move_DRAGON_CLAW @ DRAGON_RUSH
 	.4byte Move_COUNT @ sentinel after the final move
 
 	.align 2

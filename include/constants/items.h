@@ -442,12 +442,27 @@
 
 #define ITEM_GALARICA_CUFF 367
 #define ITEM_GALARICA_WREATH 368
-#define ITEMS_COUNT 369
+#define ITEM_TM60 369
+#define ITEM_TM60_FOCUS_BLAST ITEM_TM60
+#define ITEM_TM61 370
+#define ITEM_TM61_DARK_PULSE ITEM_TM61
+#define ITEM_TM62 371
+#define ITEM_TM62_EARTH_POWER ITEM_TM62
+#define ITEM_TM63 372
+#define ITEM_TM63_FLASH_CANNON ITEM_TM63
+#define ITEM_TM64 373
+#define ITEM_TM64_ZEN_HEADBUTT ITEM_TM64
+// Preserve legacy item IDs and save layout while extending the TM index space.
+#define IS_TM_ITEM(item) (((item) >= ITEM_TM01 && (item) <= ITEM_TM59) || ((item) >= ITEM_TM60 && (item) <= ITEM_TM64))
+#define ITEM_TO_TM_INDEX(item) ((item) >= ITEM_TM60 ? (item) - ITEM_TM60 + 59 : (item) - ITEM_TM01)
+#define TM_INDEX_TO_ITEM(index) ((index) >= 59 ? (index) - 59 + ITEM_TM60 : (index) + ITEM_TM01)
+
+#define ITEMS_COUNT 374
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF
 
-#define NUM_TECHNICAL_MACHINES 59
+#define NUM_TECHNICAL_MACHINES 64
 #define NUM_HIDDEN_MACHINES     0
 
 // Secondary IDs for rods
