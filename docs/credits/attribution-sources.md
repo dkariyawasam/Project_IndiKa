@@ -27,3 +27,5 @@ The October 12 resource comparison adds individual artist credits for confirmed 
 - [Lopunny and Ambipom replacement back sprites](../lopunny-ambipom-backs/README.md)
 
 - Tangrowth replacement back sprite: source and conversion record — RHH / pokeemerald-expansion asset contributors; individual artist unverified.
+
+- Move category icons (physical, special, status): imported from [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/graphics/interface/category_icons.png), 23 October 2026. Original icon artist attribution remains unverified. Used in battle selection and move summaries.

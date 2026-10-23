@@ -5,6 +5,7 @@ Requires Pillow. Run after front sprite/height changes; --check verifies calibra
 The full visible silhouette represents the listed height (poses/lengths approximate).
 """
 from pathlib import Path
+import math
 import argparse
 import re
 from PIL import Image
@@ -40,19 +41,20 @@ def update(match):
     # Both subjects share pixels/metre; constrain each to its own panel space.
     mh, mw = d-b, c-a
     th = trainer[3]-trainer[1]
-    ppm = min(mh/height, th/1.5, 46/height, 46/1.5, 46*mh/(mw*height), 30*th/(40*1.5))
-    ps = max(256, round(256*mh/(height*ppm)))
-    ts = max(256, round(256*th/(1.5*ppm)))
-    # Ground both at y127; centers are y104. Affine scales are inverse.
-    po = round(23-(d-32)*256/ps)
-    to = round(23-(trainer[3]-32)*256/ts)
+    ppm = min(mh/height, th/1.5, 86/height, 86/1.5, 24*mh/(max(32-a, c-32)*height), 24*th/(max(32-trainer[0], trainer[2]-32)*1.5))
+    ps = max(256, math.ceil(256*mh/(height*ppm)))
+    ts = max(256, math.ceil(256*th/(1.5*ppm)))
+    # Ground both at y136; centers are y112. Affine scales are inverse.
+    # Keep native resolution as the upper limit; do not enlarge pixel silhouettes.
+    po = round(24-(d-32)*256/ps)
+    to = round(24-(trainer[3]-32)*256/ts)
     assert abs((mh/ps)/(th/ts)-height/1.5) <= max(.015, height/1.5*.01), name
-    for box, scale, offset, x in (( (a,b,c,d), ps, po, 40), (trainer, ts, to, 80), (leaf, ts, to, 80)):
+    for box, scale, offset, x in (( (a,b,c,d), ps, po, 40), (trainer, ts, to, 96), (leaf, ts, to, 96)):
         left, top, right, bottom = box
         assert x+(left-32)*256/scale >= 16, name
-        assert x+(right-32)*256/scale <= 96, name
-        assert 104+offset+(top-32)*256/scale >= 80, name
-        assert 104+offset+(bottom-32)*256/scale <= 128, name
+        assert x+(right-32)*256/scale <= 120, name
+        assert 112+offset+(top-32)*256/scale >= 48, name
+        assert 112+offset+(bottom-32)*256/scale <= 144, name
     for key, value in zip(('pokemonScale','pokemonOffset','trainerScale','trainerOffset'), (ps,po,ts,to)):
         body = re.sub(r'(\.'+key+r' = )-?\d+', lambda m: m[1]+str(value), body)
     result = '[NATIONAL_DEX_'+name+'] =\n    {'+body+'\n    }'
