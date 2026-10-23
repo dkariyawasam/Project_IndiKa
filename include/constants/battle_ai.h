@@ -13,6 +13,8 @@
 #define AI_TYPE2_TARGET 2
 #define AI_TYPE2_USER 3
 #define AI_TYPE_MOVE 4
+#define AI_CATEGORY_FROM_RESULT 5
+#define AI_TARGET_ATTACK_CATEGORY 6
 
 // type effectiveness
 #define AI_EFFECTIVENESS_x4     160

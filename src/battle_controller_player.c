@@ -1,4 +1,5 @@
 #include "global.h"
+#include "move_category_icon.h"
 #include "player_appearance.h"
 #include "gflib.h"
 #include "data.h"
@@ -1411,13 +1412,15 @@ static void MoveSelectionDisplayMoveType(void)
     u8 *txtPtr;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
 
-    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+    txtPtr = gDisplayedStringBattle;
     *txtPtr++ = EXT_CTRL_CODE_BEGIN;
     *txtPtr++ = 6;
     *txtPtr++ = 1;
     txtPtr = StringCopy(txtPtr, gText_MoveInterfaceDynamicColors);
-    StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+    txtPtr = StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+    DrawMoveCategoryIcon(B_WIN_MOVE_TYPE, moveInfo->moves[gMoveSelectionCursor[gActiveBattler]], 48, 0, 14);
+    CopyWindowToVram(B_WIN_MOVE_TYPE, COPYWIN_FULL);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 arg1)
