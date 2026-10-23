@@ -106,21 +106,7 @@ static bool8 sSaveDialogIsPrinting;
 
 static const u8 gText_MenuQuest[] = _("LOGBOOK");
 static const u8 sStartMenuDesc_Quest[] = _("Review your FIELD AIDE research,\nrumours, and active assignments.");
-static const u8 sText_StartMenuHeaderHintsLeft[] = _("{L_BUTTON}SAVE {DPAD_LEFT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsRight[] = _("{L_BUTTON}SAVE {DPAD_RIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsUp[] = _("{L_BUTTON}SAVE {DPAD_UP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsDown[] = _("{L_BUTTON}SAVE {DPAD_DOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsAny[] = _("{L_BUTTON}SAVE {DPAD_ANY}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsUpDown[] = _("{L_BUTTON}SAVE {DPAD_UPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
 static const u8 sText_StartMenuHeaderHintsLeftRight[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHT}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsLeftUp[] = _("{L_BUTTON}SAVE {DPAD_LEFTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsRightUp[] = _("{L_BUTTON}SAVE {DPAD_RIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsLeftDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsRightDown[] = _("{L_BUTTON}SAVE {DPAD_RIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsLeftRightDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHTDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsLeftRightUp[] = _("{L_BUTTON}SAVE {DPAD_LEFTRIGHTUP}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsLeftUpDown[] = _("{L_BUTTON}SAVE {DPAD_LEFTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
-static const u8 sText_StartMenuHeaderHintsRightUpDown[] = _("{L_BUTTON}SAVE {DPAD_RIGHTUPDOWN}PICK {A_BUTTON}OK {B_BUTTON}BACK");
 static const u8 sText_MenuCard[] = _("CARD");
 static const u8 sText_MenuMap[] = _("MAP");
 static const u8 sStartMenuDesc_Map[] = _("View the KANTO region map.");
@@ -173,7 +159,6 @@ static void SpriteCB_RadialStartMenuIcon(struct Sprite *sprite);
 static const u8 *GetStartMenuHeaderHints(void);
 static void UpdateRadialStartMenuSelection(u8 newSlot);
 static u8 FindNextRadialStartMenuSlot(s8 step);
-static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy);
 static u8 GetRadialStartMenuWindowLeft(u8 slot);
 static u8 GetRadialStartMenuWindowTop(u8 slot);
 static u8 GetRadialStartMenuWindowWidth(u8 slot);
@@ -307,8 +292,6 @@ static ALIGNED(2) const u8 sTextColor_RadialMenuSelected[] = { TEXT_COLOR_TRANSP
 
 static const s8 sRadialStartMenuWindowXOffsets[] = { -40, -16, -16, -16, -40, -64, -64, -64 };
 static const s8 sRadialStartMenuWindowYOffsets[] = { -20, -10, -6, 20, 32, 20, -6, -10 };
-static const s8 sRadialStartMenuSlotXs[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
-static const s8 sRadialStartMenuSlotYs[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 
 #define TAG_START_MENU_ICONS        0x1250
 #define TAG_START_MENU_BACKDROP     0x1257
@@ -1230,57 +1213,9 @@ static void RefreshStartMenuHelpText(void)
 
 static const u8 *GetStartMenuHeaderHints(void)
 {
-    enum {
-        DIR_LEFT  = 1 << 0,
-        DIR_RIGHT = 1 << 1,
-        DIR_UP    = 1 << 2,
-        DIR_DOWN  = 1 << 3,
-    };
-    u8 dirMask = 0;
-
-    if (FindRadialStartMenuSlotInDirection(-1, 0) != sRadialStartMenuCursorSlot)
-        dirMask |= DIR_LEFT;
-    if (FindRadialStartMenuSlotInDirection(1, 0) != sRadialStartMenuCursorSlot)
-        dirMask |= DIR_RIGHT;
-    if (FindRadialStartMenuSlotInDirection(0, -1) != sRadialStartMenuCursorSlot)
-        dirMask |= DIR_UP;
-    if (FindRadialStartMenuSlotInDirection(0, 1) != sRadialStartMenuCursorSlot)
-        dirMask |= DIR_DOWN;
-
-    switch (dirMask)
-    {
-    case DIR_LEFT:
-        return sText_StartMenuHeaderHintsLeft;
-    case DIR_RIGHT:
-        return sText_StartMenuHeaderHintsRight;
-    case DIR_UP:
-        return sText_StartMenuHeaderHintsUp;
-    case DIR_DOWN:
-        return sText_StartMenuHeaderHintsDown;
-    case DIR_UP | DIR_DOWN:
-        return sText_StartMenuHeaderHintsUpDown;
-    case DIR_LEFT | DIR_RIGHT:
-        return sText_StartMenuHeaderHintsLeftRight;
-    case DIR_LEFT | DIR_UP:
-        return sText_StartMenuHeaderHintsLeftUp;
-    case DIR_RIGHT | DIR_UP:
-        return sText_StartMenuHeaderHintsRightUp;
-    case DIR_LEFT | DIR_DOWN:
-        return sText_StartMenuHeaderHintsLeftDown;
-    case DIR_RIGHT | DIR_DOWN:
-        return sText_StartMenuHeaderHintsRightDown;
-    case DIR_LEFT | DIR_RIGHT | DIR_DOWN:
-        return sText_StartMenuHeaderHintsLeftRightDown;
-    case DIR_LEFT | DIR_RIGHT | DIR_UP:
-        return sText_StartMenuHeaderHintsLeftRightUp;
-    case DIR_LEFT | DIR_UP | DIR_DOWN:
-        return sText_StartMenuHeaderHintsLeftUpDown;
-    case DIR_RIGHT | DIR_UP | DIR_DOWN:
-        return sText_StartMenuHeaderHintsRightUpDown;
-    default:
-        return sText_StartMenuHeaderHintsAny;
-    }
+    return sText_StartMenuHeaderHintsLeftRight;
 }
+
 
 static void UpdateRadialStartMenuSelection(u8 newSlot)
 {
@@ -1315,203 +1250,9 @@ static u8 FindNextRadialStartMenuSlot(s8 step)
     return sRadialStartMenuCursorSlot;
 }
 
-static u8 FindRadialStartMenuSlotByItem(u8 menuItem)
-{
-    u8 i;
 
-    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
-    {
-        if (sRadialStartMenuSlotToItem[i] == menuItem)
-            return i;
-    }
-    return 0xFF;
-}
 
-static u8 FindRadialStartMenuSlotInDirection(s8 dx, s8 dy)
-{
-    u8 i;
-    u8 bestSlot = 0xFF;
-    u8 targetSlot;
-    u8 currentItem = sRadialStartMenuSlotToItem[sRadialStartMenuCursorSlot];
-    s16 bestScore = -32768;
-    s16 fromX = sRadialStartMenuSlotXs[sRadialStartMenuCursorSlot];
-    s16 fromY = sRadialStartMenuSlotYs[sRadialStartMenuCursorSlot];
 
-    if ((currentItem == STARTMENU_POKEDEX && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_SETTINGS && dx == 0 && dy > 0)
-     || (currentItem == STARTMENU_POKEMON && dx < 0 && dy == 0)
-     || (currentItem == STARTMENU_POKEMON && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_QUEST && dx < 0 && dy == 0)
-     || (currentItem == STARTMENU_BAG && dx > 0 && dy == 0)
-     || (currentItem == STARTMENU_BAG && dx == 0 && dy < 0)
-     || (currentItem == STARTMENU_MAP && dx > 0 && dy == 0)
-     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx < 0 && dy == 0)
-     || ((currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2) && dx == 0 && dy > 0)
-     || (currentItem == STARTMENU_OPTION && dx > 0 && dy == 0)
-     || (currentItem == STARTMENU_OPTION && dx == 0 && dy > 0))
-        return sRadialStartMenuCursorSlot;
-
-    if (currentItem == STARTMENU_POKEDEX)
-    {
-        if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
-        else if (dx == 0 && dy > 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_OPTION)
-    {
-        if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
-        else if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_POKEMON)
-    {
-        if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
-        else if (dx == 0 && dy > 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
-            if (targetSlot == 0xFF)
-            {
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-                if (targetSlot == 0xFF)
-                    targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-            }
-        }
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_MAP)
-    {
-        if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_BAG);
-        else if (dx == 0 && dy > 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
-        else if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_BAG)
-    {
-        if (dx < 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
-        else if (dx == 0 && dy > 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
-        }
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_SETTINGS)
-    {
-        if (dx < 0 && dy == 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-        }
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_OPTION);
-        else if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEDEX);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_QUEST)
-    {
-        if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_MAP);
-        else if (dx == 0 && dy < 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
-        else if (dx == 0 && dy > 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_PLAYER2);
-        }
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-    if (currentItem == STARTMENU_PLAYER || currentItem == STARTMENU_PLAYER2)
-    {
-        if (dx == 0 && dy < 0)
-        {
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_QUEST);
-            if (targetSlot == 0xFF)
-                targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_POKEMON);
-        }
-        else if (dx > 0 && dy == 0)
-            targetSlot = FindRadialStartMenuSlotByItem(STARTMENU_SETTINGS);
-        else
-            targetSlot = 0xFF;
-
-        if (targetSlot != 0xFF)
-            return targetSlot;
-    }
-
-    for (i = 0; i < NELEMS(sRadialStartMenuSlotToItem); i++)
-    {
-        s16 relX;
-        s16 relY;
-        s16 projection;
-        s16 perpendicular;
-        s16 score;
-
-        if (i == sRadialStartMenuCursorSlot || !IsSelectableRadialStartMenuSlot(i))
-            continue;
-
-        relX = sRadialStartMenuSlotXs[i] - fromX;
-        relY = sRadialStartMenuSlotYs[i] - fromY;
-        projection = relX * dx + relY * dy;
-        if (projection <= 0)
-            continue;
-
-        perpendicular = relX * dy - relY * dx;
-        if (perpendicular < 0)
-            perpendicular = -perpendicular;
-        score = projection * 4 - perpendicular;
-        if (score > bestScore)
-        {
-            bestScore = score;
-            bestSlot = i;
-        }
-    }
-
-    if (bestSlot == 0xFF)
-        return dx + dy > 0 ? FindNextRadialStartMenuSlot(1) : FindNextRadialStartMenuSlot(-1);
-    return bestSlot;
-}
 
 static s8 DoDrawStartMenu(void)
 {
@@ -1615,25 +1356,16 @@ void ShowStartMenu(void)
 
 static bool8 StartCB_HandleInput(void)
 {
-    if (JOY_NEW(DPAD_UP))
-    {
-        PlaySE(SE_SELECT);
-        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(0, -1));
-    }
-    if (JOY_NEW(DPAD_DOWN))
-    {
-        PlaySE(SE_SELECT);
-        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(0, 1));
-    }
+    // Slot order runs clockwise from the top. Move to the adjacent available item.
     if (JOY_NEW(DPAD_LEFT))
     {
         PlaySE(SE_SELECT);
-        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(-1, 0));
+        UpdateRadialStartMenuSelection(FindNextRadialStartMenuSlot(-1));
     }
-    if (JOY_NEW(DPAD_RIGHT))
+    else if (JOY_NEW(DPAD_RIGHT))
     {
         PlaySE(SE_SELECT);
-        UpdateRadialStartMenuSelection(FindRadialStartMenuSlotInDirection(1, 0));
+        UpdateRadialStartMenuSelection(FindNextRadialStartMenuSlot(1));
     }
     if (JOY_NEW(L_BUTTON))
     {
