@@ -38,25 +38,36 @@ def update(match):
     a,b,c,d = bbox(path)
     height = int(re.search(r'\.height = (\d+)', body)[1]) / 10
     assert height > 0
-    # Both subjects share pixels/metre; constrain each to its own panel space.
+    # Fit the pair together with a six-pixel gap, rather than fixed-width columns.
+    # Double-size affine OBJs permit up to 2x enlargement without clipping.
     mh, mw = d-b, c-a
-    th = trainer[3]-trainer[1]
-    ppm = min(mh/height, th/1.5, 86/height, 86/1.5, 24*mh/(max(32-a, c-32)*height), 24*th/(max(32-trainer[0], trainer[2]-32)*1.5))
-    ps = max(256, math.ceil(256*mh/(height*ppm)))
-    ts = max(256, math.ceil(256*th/(1.5*ppm)))
-    # Ground both at y136; centers are y112. Affine scales are inverse.
-    # Keep native resolution as the upper limit; do not enlarge pixel silhouettes.
+    tl, tr = min(trainer[0], leaf[0]), max(trainer[2], leaf[2])
+    th, tw = trainer[3]-trainer[1], tr-tl
+    ppm = min(86/max(height, 1.5), 98/(mw*height/mh + tw*1.5/th),
+              2*mh/height, 2*th/1.5)
+    ps = max(128, math.ceil(256*mh/(height*ppm)))
+    ts = max(128, math.ceil(256*th/(1.5*ppm)))
+    mon_width, trainer_width = mw*256/ps, tw*256/ts
+    pair_left = 16 + (104-mon_width-trainer_width-6)/2
+    px = round(pair_left-(a-32)*256/ps)
+    tx = round(pair_left+mon_width+6-(tl-32)*256/ts)
+    # Ground both at y136; sprite centers are y112.
     po = round(24-(d-32)*256/ps)
     to = round(24-(trainer[3]-32)*256/ts)
     assert abs((mh/ps)/(th/ts)-height/1.5) <= max(.015, height/1.5*.01), name
-    for box, scale, offset, x in (( (a,b,c,d), ps, po, 40), (trainer, ts, to, 96), (leaf, ts, to, 96)):
+    gap = tx+(tl-32)*256/ts - (px+(c-32)*256/ps)
+    assert 5 <= gap <= 7, (name, gap)
+    for box, scale, offset, x in (((a,b,c,d), ps, po, px), (trainer, ts, to, tx), (leaf, ts, to, tx)):
         left, top, right, bottom = box
-        assert x+(left-32)*256/scale >= 16, name
-        assert x+(right-32)*256/scale <= 120, name
+        assert x+(left-32)*256/scale >= 15.5, name
+        assert x+(right-32)*256/scale <= 120.5, name
         assert 112+offset+(top-32)*256/scale >= 48, name
         assert 112+offset+(bottom-32)*256/scale <= 144, name
-    for key, value in zip(('pokemonScale','pokemonOffset','trainerScale','trainerOffset'), (ps,po,ts,to)):
-        body = re.sub(r'(\.'+key+r' = )-?\d+', lambda m: m[1]+str(value), body)
+    for key, value in zip(('pokemonScale','pokemonOffset','trainerScale','trainerOffset','pokemonX','trainerX'), (ps,po,ts,to,px,tx)):
+        if re.search(r'\.'+key+r' = ', body):
+            body = re.sub(r'(\.'+key+r' = )-?\d+', lambda m: m[1]+str(value), body)
+        else:
+            body += '\n        .'+key+' = '+str(value)+','
     result = '[NATIONAL_DEX_'+name+'] =\n    {'+body+'\n    }'
     if result != match.group(0):
         changed.append(name)

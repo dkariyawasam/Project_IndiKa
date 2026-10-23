@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def read(p): return (ROOT / p).read_text()
 entries = {}
 for name, body in re.findall(r'\[NATIONAL_DEX_(\w+)\]\s*=\s*\{(.*?)\n    \}', read('src/data/pokemon/pokedex_entries.h'), re.S):
-    entries[name] = {k:int(v) for k,v in re.findall(r'\.(height|pokemonScale|pokemonOffset|trainerScale|trainerOffset)\s*=\s*(-?\d+)',body)}
+    entries[name] = {k:int(v) for k,v in re.findall(r'\.(height|pokemonScale|pokemonOffset|trainerScale|trainerOffset|pokemonX|trainerX)\s*=\s*(-?\d+)',body)}
 retired = set(re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{0\}',read('src/data/pokemon/species_info.h')))
 mapbody = read('src/pokemon.c').split('static const u16 sSpeciesToNationalPokedexNum')[1].split('};')[0]
 roster = list(dict.fromkeys(re.findall(r'SPECIES_TO_NATIONAL\((\w+)\)',mapbody)))
@@ -44,27 +44,27 @@ for name in roster:
         else:
             ps,po,ts,to=[e[k] for k in ('pokemonScale','pokemonOffset','trainerScale','trainerOffset')]
             if (ps,po,ts,to)==(256,0,256,-2): issues.append('default calibration: review')
-            mb=bounds(mon,ps,po,40)
+            mb=bounds(mon,ps,po,e.get("pokemonX",40))
             for gender,t in zip(('red','leaf'),trainers):
-                tb=bounds(t,ts,to,96)
+                tb=bounds(t,ts,to,e.get("trainerX",96))
                 row[gender+'_height_ratio']=round((mb[3]-mb[1])/(tb[3]-tb[1]),3)
                 row[gender+'_baseline_gap_px']=round(mb[3]-tb[3],1)
-                if any((b[0]<16 or b[2]>120 or b[1]<48 or b[3]>144) for b in (mb,tb)):
+                if any((b[0]<15.5 or b[2]>120.5 or b[1]<48 or b[3]>144) for b in (mb,tb)):
                     issues.append(gender+' silhouette crosses size panel interior')
-            canvas=Image.new('RGB',(160,112),'#e8e0c8');draw=ImageDraw.Draw(canvas)
+            canvas=Image.new('RGB',(160,160),'#e8e0c8');draw=ImageDraw.Draw(canvas)
             draw.text((2,0),name,fill='black');draw.text((2,12),f'{e["height"]/10:g}m  P:{ps} T:{ts}',fill='black')
-            for m,s,o,x,color in ((mon,ps,po,40,'#454545'),(trainers[0],ts,to,96,'#454545'),(trainers[1],ts,to,124,'#777777')):
-                # Sample inverse affine transformation as GBA does, clipped to normal 64x64 OBJ.
-                transformed=m.transform((64,64),Image.Transform.AFFINE,(s/256,0,32-32*s/256,0,s/256,32-32*s/256),resample=Image.Resampling.NEAREST)
-                canvas.paste(color,(x-32,56+o-32),transformed)
+            for m,s,o,x,color in ((mon,ps,po,e.get('pokemonX',40),'#454545'),(trainers[0],ts,to,e.get('trainerX',96),'#454545')):
+                # Sample inverse affine transformation as GBA does, clipped to double-size 128x128 OBJ.
+                transformed=m.transform((128,128),Image.Transform.AFFINE,(s/256,0,32-64*s/256,0,s/256,32-64*s/256),resample=Image.Resampling.NEAREST)
+                canvas.paste(color,(x-64,112+o-64),transformed)
             images.append(canvas); image_by_species[name]=canvas
     row['issues']='; '.join(issues);rows.append(row)
 keys=list(dict.fromkeys(k for r in rows for k in r))
 with (out/'all-species.csv').open('w') as f:
     w=csv.DictWriter(f,fieldnames=keys);w.writeheader();w.writerows(rows)
 for start in range(0,len(images),60):
-    page=Image.new('RGB',(960,1120),'white')
-    for i,im in enumerate(images[start:start+60]):page.paste(im,((i%6)*160,(i//6)*112))
+    page=Image.new('RGB',(960,1600),'white')
+    for i,im in enumerate(images[start:start+60]):page.paste(im,((i%6)*160,(i//6)*160))
     page.save(out/f'contact-sheet-{start//60+1}.png')
 by_name = {r['species']:r for r in rows}
 missing_active = [n for n in active_names if n not in by_name]
@@ -73,9 +73,9 @@ active_rows = [by_name[n] for n in active_names]
 with (out/'active-pokedex.csv').open('w') as f:
     w=csv.DictWriter(f,fieldnames=keys);w.writeheader();w.writerows(active_rows)
 for start in range(0,len(active_names),60):
-    page=Image.new('RGB',(960,1120),'white')
+    page=Image.new('RGB',(960,1600),'white')
     for i,n in enumerate(active_names[start:start+60]):
-        if n in image_by_species: page.paste(image_by_species[n],((i%6)*160,(i//6)*112))
+        if n in image_by_species: page.paste(image_by_species[n],((i%6)*160,(i//6)*160))
     page.save(out/f'active-contact-sheet-{start//60+1}.png')
 active_defaults = [r for r in active_rows if 'default calibration' in r['issues']]
 active_placeholders = [r for r in active_rows if 'placeholder' in r['issues']]

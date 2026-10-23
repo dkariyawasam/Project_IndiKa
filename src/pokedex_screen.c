@@ -3638,12 +3638,13 @@ u8 DexScreen_DrawMonAreaPage(void)
         if (trainerScale == 0)
             trainerScale = 256;
 
-        spriteId = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, 40, 112, 2, TAG_NONE);
+        spriteId = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, gPokedexEntries[speciesId].pokemonX, 112, 2, TAG_NONE);
         if (spriteId != 0xFFFF)
         {
             sPokedexScreenData->windowIds[14] = spriteId;
             gSprites[spriteId].oam.paletteNum = 2;
-            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+            CalcCenterToCornerVec(&gSprites[spriteId], gSprites[spriteId].oam.shape, gSprites[spriteId].oam.size, gSprites[spriteId].oam.affineMode);
             gSprites[spriteId].oam.matrixNum = 2;
             gSprites[spriteId].oam.priority = 1;
             gSprites[spriteId].y2 = pokemonOffset;
@@ -3654,11 +3655,12 @@ u8 DexScreen_DrawMonAreaPage(void)
             sPokedexScreenData->windowIds[14] = 0xff;
         }
 
-        spriteId = DexScreen_CreateSizeComparisonTrainerPicSprite(96, 112);
+        spriteId = DexScreen_CreateSizeComparisonTrainerPicSprite(gPokedexEntries[speciesId].trainerX, 112);
         if (spriteId != 0xFFFF)
         {
             sPokedexScreenData->windowIds[15] = spriteId;
-            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+            CalcCenterToCornerVec(&gSprites[spriteId], gSprites[spriteId].oam.shape, gSprites[spriteId].oam.size, gSprites[spriteId].oam.affineMode);
             gSprites[spriteId].oam.matrixNum = 1;
             gSprites[spriteId].oam.priority = 1;
             gSprites[spriteId].y2 = trainerOffset;
