@@ -66,6 +66,7 @@ struct PokedexScreenData
     u16 formArrowSpecies;
     u8 categoryMonWindowIds[4];
     u8 categoryMonInfoWindowIds[4];
+    u8 categoryFormDotWindowIds[4];
     u8 categoryApexMarkerSpriteIds[4];
     u8 category;
     u8 firstPageInCategory;
@@ -190,7 +191,7 @@ static bool8 DexScreen_FormFamilyOwned(u16 species);
 static void DexScreen_RemoveFormArrows(void);
 static void DexScreen_UpdateFormArrows(bool8 hidden);
 static bool8 DexScreen_ChangeForm(s8 direction);
-static const u8 *DexScreen_FormLabel(u16 species);
+static void DexScreen_DrawFormDots(u8 slot, u16 species);
 
 #include "data/pokemon_graphics/footprint_table.h"
 
@@ -342,6 +343,7 @@ static const struct PokedexScreenData sDexScreenDataInitialState = {
     .formArrowSpecies = SPECIES_NONE,
     .categoryMonWindowIds = {-1, -1, -1, -1},
     .categoryMonInfoWindowIds = {-1, -1, -1, -1},
+    .categoryFormDotWindowIds = {-1, -1, -1, -1},
     .categoryApexMarkerSpriteIds = {MAX_SPRITES, MAX_SPRITES, MAX_SPRITES, MAX_SPRITES},
     .numericalOrderWindowId = -1,
     .windowIds = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
@@ -1510,27 +1512,49 @@ static bool8 DexScreen_FormFamilyOwned(u16 species)
     return TRUE;
 }
 
-static const u8 *DexScreen_FormLabel(u16 species)
+static void DexScreen_RemoveFormDots(u8 slot)
+{
+    u8 *windowId = &sPokedexScreenData->categoryFormDotWindowIds[slot];
+    if (*windowId != 0xFF)
+    {
+        ClearWindowTilemap(*windowId);
+        CopyWindowToVram(*windowId, COPYWIN_MAP);
+        DexScreen_RemoveWindow(windowId);
+    }
+}
+
+static void DexScreen_DrawFormDots(u8 slot, u16 species)
 {
     const u16 *group = DexScreen_FormGroup(species);
-    static const u8 standard[] = _("STANDARD");
-    static const u8 alolan[] = _("ALOLAN");
-    static const u8 galarian[] = _("GALARIAN");
-    static const u8 deep[] = _("DEEP FORM");
-    static const u8 paldean[] = _("PALDEAN");
+    struct WindowTemplate template = {1, 0, 0, 1, 3, 13, 0};
+    const u8 *coords = sCategoryPageIconCoords[sPokedexScreenData->numMonsOnPage - 1][slot];
+    u16 colors[2];
+    u8 i, count, color, windowId;
     if (group == NULL)
-        return NULL;
-    if (species == group[0])
-        return standard;
-    if (species == SPECIES_CINNABAR_MAGIKARP || species == SPECIES_CINNABAR_FEEBAS)
-        return deep;
-    if (species == SPECIES_WOOPER_PALDEAN)
-        return paldean;
-    if (species == SPECIES_FARFETCHD_GALARIAN || species == SPECIES_MEOWTH_GALARIAN
-     || species == SPECIES_CORSOLA_GALARIAN || species == SPECIES_WEEZING_GALARIAN
-     || (species >= SPECIES_PONYTA_GALARIAN && species <= SPECIES_MR_MIME_GALARIAN))
-        return galarian;
-    return alolan;
+        return;
+    for (count = 0; count < 3 && group[count] != SPECIES_NONE; count++);
+    template.tilemapLeft = coords[0] < coords[2] ? coords[2] + 8 : coords[2] - 1;
+    if (coords[0] == coords[2])
+        template.tilemapLeft = coords[2] + 8;
+    if (template.tilemapLeft >= 30)
+        template.tilemapLeft = coords[2] == 0 ? 8 : coords[2] - 1;
+    template.tilemapTop = coords[3];
+    template.baseBlock = 0x1A8 + slot * 3;
+    windowId = AddWindow(&template);
+    sPokedexScreenData->categoryFormDotWindowIds[slot] = windowId;
+    LoadPalette(&gPlttBufferUnfaded[0], BG_PLTT_ID(13), PLTT_SIZE_4BPP);
+    colors[0] = GetUiHintHeaderColor();
+    colors[1] = RGB(10, 7, 3);
+    LoadPalette(colors, BG_PLTT_ID(13) + 12, sizeof(colors));
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    for (i = 0; i < count; i++)
+    {
+        color = group[i] == species ? 12 : 13;
+        FillWindowPixelRect(windowId, PIXEL_FILL(color), 2, 2 + i * 8, 3, 5);
+        FillWindowPixelRect(windowId, PIXEL_FILL(color), 1, 3 + i * 8, 5, 3);
+    }
+    PutWindowTilemap(windowId);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
 static void DexScreen_RemoveFormArrows(void)
@@ -1582,6 +1606,7 @@ static bool8 DexScreen_ChangeForm(s8 direction)
     DexScreen_RemoveFormArrows();
     DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonWindowIds[slot]);
     DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonInfoWindowIds[slot]);
+    DexScreen_RemoveFormDots(slot);
     sPokedexScreenData->pageSpecies[slot] = next;
     DexScreen_DrawMonPicInCategoryPage(next, slot, sPokedexScreenData->numMonsOnPage);
     DexScreen_UpdatePageHeader();
@@ -2415,8 +2440,7 @@ bool8 DexScreen_DrawMonPicInCategoryPage(u16 species, u8 slot, u8 numSlots)
             CopyToWindowPixelBuffer(sPokedexScreenData->categoryMonInfoWindowIds[slot], sCategoryMonInfoBgTiles, 0, 0);
             DexScreen_PrintMonDexNo(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_SMALL, DexScreen_FormGroup(species) ? DexScreen_FormGroup(species)[0] : species, 12, 0);
             DexScreen_AddTextPrinterParameterized(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_NORMAL, gSpeciesNames[species], 2, 13, 0);
-            if (DexScreen_FormLabel(species) != NULL)
-                DexScreen_AddTextPrinterParameterized(sPokedexScreenData->categoryMonInfoWindowIds[slot], FONT_SMALL, DexScreen_FormLabel(species), 2, 27, 0);
+            DexScreen_DrawFormDots(slot, species);
             if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, TRUE))
                 BlitBitmapRectToWindow(sPokedexScreenData->categoryMonInfoWindowIds[slot], sDexScreen_CaughtIcon, 0, 0, 8, 8, 2, 3, 8, 8);
             if (DexScreen_IsApexSpecies(species))
@@ -2520,6 +2544,7 @@ static void DexScreen_DestroyCategoryPageMonIconAndInfoWindows(void)
     {
         DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonWindowIds[i]);
         DexScreen_RemoveWindow(&sPokedexScreenData->categoryMonInfoWindowIds[i]);
+        DexScreen_RemoveFormDots(i);
         if (sPokedexScreenData->categoryApexMarkerSpriteIds[i] != MAX_SPRITES)
         {
             DestroySprite(&gSprites[sPokedexScreenData->categoryApexMarkerSpriteIds[i]]);

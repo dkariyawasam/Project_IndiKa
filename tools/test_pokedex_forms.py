@@ -5,7 +5,7 @@ import subprocess,tempfile,re
 R=Path(__file__).resolve().parents[1]
 s=(R/'src/pokedex_screen.c').read_text()
 def section(start,end):return s[s.index(start):s.index(end,s.index(start))]
-helpers=section('static const u16 *DexScreen_FormGroup(u16 species)\n{','static const u8 *DexScreen_FormLabel(u16 species)\n{')
+helpers=section('static const u16 *DexScreen_FormGroup(u16 species)\n{','static void DexScreen_RemoveFormDots(u8 slot)\n{')
 arrows=section('static void DexScreen_RemoveFormArrows(void)\n{','static bool8 DexScreen_ChangeForm(s8 direction)\n{')
 code=r'''
 #include <assert.h>
