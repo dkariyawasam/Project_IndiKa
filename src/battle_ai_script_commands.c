@@ -1023,6 +1023,22 @@ static void Cmd_get_type(void)
     case AI_TYPE2_TARGET:
         AI_THINKING_STRUCT->funcResult = gBattleMons[gBattlerTarget].type2;
         break;
+    case AI_CATEGORY_FROM_RESULT:
+        if (AI_THINKING_STRUCT->funcResult < MOVES_COUNT)
+            AI_THINKING_STRUCT->funcResult = gBattleMoves[AI_THINKING_STRUCT->funcResult].category;
+        else
+            AI_THINKING_STRUCT->funcResult = MOVE_CATEGORY_STATUS;
+        break;
+    case AI_TARGET_ATTACK_CATEGORY:
+        // Judge the observed attack, falling back to stats instead of type.
+        if (gLastMoves[gBattlerTarget] != MOVE_NONE
+         && gLastMoves[gBattlerTarget] < MOVES_COUNT
+         && gBattleMoves[gLastMoves[gBattlerTarget]].category != MOVE_CATEGORY_STATUS)
+            AI_THINKING_STRUCT->funcResult = gBattleMoves[gLastMoves[gBattlerTarget]].category;
+        else
+            AI_THINKING_STRUCT->funcResult = gBattleMons[gBattlerTarget].attack >= gBattleMons[gBattlerTarget].spAttack
+                ? MOVE_CATEGORY_PHYSICAL : MOVE_CATEGORY_SPECIAL;
+        break;
     case AI_TYPE_MOVE:
         AI_THINKING_STRUCT->funcResult = gBattleMoves[AI_THINKING_STRUCT->moveConsidered].type;
         break;
