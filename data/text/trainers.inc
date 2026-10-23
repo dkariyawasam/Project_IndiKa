@@ -362,7 +362,8 @@ Route14_Text_LukasRematchIntro::
 	.string "Let's go, let's go, let's go!$"
 
 Route14_Text_IsaacRematchIntro::
-	.string "You came back over this rough road?\p"
+	.string "You came back over this rough\n"
+	.string "road?\p"
 	.string "Fine. Let's see if you still hold\n"
 	.string "steady!$"
 

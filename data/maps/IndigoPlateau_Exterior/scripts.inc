@@ -184,3 +184,21 @@ IndigoPlateau_Exterior_Movement_OakLeave::
 IndigoPlateau_Exterior_Movement_OakExitBuilding::
 	walk_down
 	step_end
+
+IndigoPlateau_Exterior_EventScript_BirdKeeper::
+	lock
+	faceplayer
+	msgbox IndigoPlateau_Exterior_Text_OfferViridianFlight, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ViridianCity_EventScript_FlightDeclined
+	msgbox ViridianCity_Text_TakeFlight
+	closemessage
+	playmoncry SPECIES_PIDGEOT, CRY_MODE_NORMAL
+	waitmoncry
+	warp MAP_VIRIDIAN_CITY, 9, 27
+	waitstate
+	release
+	end
+
+IndigoPlateau_Exterior_Text_OfferViridianFlight::
+	.string "PIDGEOT knows the way home.\n"
+	.string "Fly to VIRIDIAN CITY for free?$"

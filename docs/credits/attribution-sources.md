@@ -25,3 +25,5 @@ The preserved [upstream contributor list](../roserade-alolan-sprites/upstream-cr
 The [October 12 resource comparison](sprite-credit-research-oct12.md) adds individual artist credits for confirmed archived drawings and distinguishes unmatched revisions.
 
 - [Lopunny and Ambipom replacement back sprites](../lopunny-ambipom-backs/README.md)
+
+- [Tangrowth replacement back sprite: source and conversion record](tangrowth-back-source.json) — RHH / pokeemerald-expansion asset contributors; individual artist unverified.

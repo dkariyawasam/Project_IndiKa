@@ -5350,7 +5350,8 @@ EventScript_RouteTrainer_PICNICKER_MISSY_Text_PostBattle::
 EventScript_RouteTrainer_PICNICKER_SOFIA_Text_Intro::
     .string "The UNDERGROUND PATH makes this\n"
     .string "tiny route feel important.\p"
-    .string "A good SCOUT checks every crossing!$"
+    .string "A good SCOUT checks every\n"
+    .string "crossing!$"
 EventScript_RouteTrainer_PICNICKER_SOFIA_Text_RematchIntro::
     .string "You found your way back through\n"
     .string "the tunnel traffic.\p"

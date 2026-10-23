@@ -11,6 +11,8 @@
 #include "decompress.h"
 #include "gpu_regs.h"
 #include "battle_transition.h"
+#include "battle.h"
+#include "constants/opponents.h"
 #include "field_effect.h"
 #include "field_weather.h"
 #include "field_camera.h"
@@ -2142,10 +2144,16 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
 {
     struct Sprite *opponentSprite, *playerSprite;
     s16 mugshotId;
+    u16 trainerPic;
 
     gReservedSpritePaletteCount = 10;
     mugshotId = task->tMugshotId;
-    task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotId],
+    trainerPic = sMugshotsTrainerPicIDsTable[mugshotId];
+    // The champion-style banner is shared by champions and Rocket admins.
+    // Use the actual opponent so Giovanni and the admins keep their own portrait.
+    if (mugshotId == MUGSHOT_BLUE && gTrainerBattleOpponent_A != TRAINER_SECRET_BASE)
+        trainerPic = gTrainers[gTrainerBattleOpponent_A].trainerPic;
+    task->tOpponentSpriteId = CreateTrainerSprite(trainerPic,
                                                   sMugshotsOpponentCoords[mugshotId][0] - 32,
                                                   sMugshotsOpponentCoords[mugshotId][1] + 42,
                                                   0, gDecompressionBuffer);

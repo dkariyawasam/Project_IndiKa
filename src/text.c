@@ -4,6 +4,7 @@
 #include "quest_log.h"
 #include "graphics.h"
 #include "dynamic_placeholder_text_util.h"
+#include "string_util.h"
 #include "constants/songs.h"
 
 #define TAG_CURSOR 0x8000
@@ -634,12 +635,60 @@ void DrawDownArrow(u8 windowId, u16 x, u16 y, u8 bgColor, bool8 drawArrow, u8 *c
     }
 }
 
+// Width of the space and following word in the already-expanded dialogue.
+// Copy complete control tokens so colour/format operands are never read as text.
+static u32 DialogueNextWordWidth(struct TextPrinter *printer, const u8 *src)
+{
+    u8 word[256];
+    u32 n = 0;
+    bool8 started = FALSE;
+    while (*src != EOS && *src != CHAR_NEWLINE
+        && *src != CHAR_PROMPT_CLEAR && *src != CHAR_PROMPT_SCROLL)
+    {
+        u32 length = 1;
+        u32 i;
+        if (*src == CHAR_SPACE && started)
+            break;
+        if (*src == EXT_CTRL_CODE_BEGIN)
+            length += GetExtCtrlCodeLength(src[1]);
+        else if (*src == CHAR_EXTRA_SYMBOL || *src == CHAR_KEYPAD_ICON
+            || *src == PLACEHOLDER_BEGIN)
+            length = 2;
+        else if (*src != CHAR_SPACE)
+            started = TRUE;
+        if (n + length >= sizeof(word))
+            break;
+        for (i = 0; i < length; i++)
+            word[n++] = *src++;
+    }
+    word[n] = EOS;
+    return GetStringWidth(printer->subUnion.sub.glyphId, word,
+        printer->printerTemplate.letterSpacing);
+}
+
+static u16 DialogueNextLine(struct TextPrinter *printer)
+{
+    u32 height = gFonts[printer->printerTemplate.fontId].maxLetterHeight;
+    u32 step = height + printer->printerTemplate.lineSpacing;
+    if (printer->printerTemplate.currentY + step + height
+        > GetWindowAttribute(printer->printerTemplate.windowId, WINDOW_HEIGHT) * 8)
+    {
+        printer->state = RENDER_STATE_SCROLL_START;
+        TextPrinterInitDownArrowCounters(printer);
+        return RENDER_UPDATE;
+    }
+    printer->printerTemplate.currentX = printer->printerTemplate.x;
+    printer->printerTemplate.currentY += step;
+    return RENDER_REPEAT;
+}
+
 u16 RenderText(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = &textPrinter->subUnion.sub;
     u16 currChar;
     s32 width;
     s32 widthHelper;
+    const u8 *glyphStart;
 
     switch (textPrinter->state)
     {
@@ -663,12 +712,26 @@ u16 RenderText(struct TextPrinter *textPrinter)
         else
             textPrinter->delayCounter = textPrinter->textSpeed;
 
+        glyphStart = textPrinter->printerTemplate.currentChar;
+        if ((textPrinter->printerTemplate.unk & TEXT_PRINTER_WORD_WRAP)
+            && *glyphStart == CHAR_SPACE
+            && textPrinter->printerTemplate.currentX > textPrinter->printerTemplate.x
+            && textPrinter->printerTemplate.currentX + DialogueNextWordWidth(textPrinter, glyphStart)
+                > GetWindowAttribute(textPrinter->printerTemplate.windowId, WINDOW_WIDTH) * 8 - 8)
+        {
+            // Consume the separator, not any part of the word.
+            while (*textPrinter->printerTemplate.currentChar == CHAR_SPACE)
+                textPrinter->printerTemplate.currentChar++;
+            return DialogueNextLine(textPrinter);
+        }
         currChar = *textPrinter->printerTemplate.currentChar;
         textPrinter->printerTemplate.currentChar++;
 
         switch (currChar)
         {
         case CHAR_NEWLINE:
+            if (textPrinter->printerTemplate.unk & TEXT_PRINTER_WORD_WRAP)
+                return DialogueNextLine(textPrinter);
             textPrinter->printerTemplate.currentX = textPrinter->printerTemplate.x;
             textPrinter->printerTemplate.currentY += gFonts[textPrinter->printerTemplate.fontId].maxLetterHeight + textPrinter->printerTemplate.lineSpacing;
             return RENDER_REPEAT;
@@ -844,6 +907,15 @@ u16 RenderText(struct TextPrinter *textPrinter)
             break;
         }
 
+        // Long unbroken names still must not draw outside the dialogue box.
+        if ((textPrinter->printerTemplate.unk & TEXT_PRINTER_WORD_WRAP)
+            && textPrinter->printerTemplate.currentX > textPrinter->printerTemplate.x
+            && textPrinter->printerTemplate.currentX + gGlyphInfo.width
+                > GetWindowAttribute(textPrinter->printerTemplate.windowId, WINDOW_WIDTH) * 8 - 8)
+        {
+            textPrinter->printerTemplate.currentChar = glyphStart;
+            return DialogueNextLine(textPrinter);
+        }
         CopyGlyphToWindow(textPrinter);
 
         if (textPrinter->minLetterSpacing)

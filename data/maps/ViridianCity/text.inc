@@ -42,3 +42,22 @@ ViridianCity_Text_GymSign::
 
 ViridianCity_Text_GymDoorsAreLocked::
     .string "VIRIDIAN GYM's doors are locked…$"
+
+ViridianCity_Text_FlightLocked::
+	.string "PIDGEOT and I fly supplies to the\n"
+	.string "INDIGO LEAGUE. Quite a climb!\p"
+	.string "Reach the entrance yourself first.\n"
+	.string "Then we'll fly you back and forth!$"
+
+ViridianCity_Text_OfferLeagueFlight::
+	.string "You've made it to the INDIGO LEAGUE!\n"
+	.string "Fly to the entrance? It's free!$"
+
+ViridianCity_Text_TakeFlight::
+	.string "Hop on! PIDGEOT, take to the skies!$"
+
+ViridianCity_Text_FlightDeclined::
+	.string "We'll be here when your feet get tired!$"
+
+ViridianCity_Text_FlightPidgeot::
+	.string "PIDGEOT spreads its powerful wings.$"

@@ -46,19 +46,24 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_MissingAmber::
     .string "You don't have OLD AMBER.$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmanyte::
-    .string "OMANYTE, the cephalopod mollusk POKéMON!$"
+    .string "OMANYTE, the cephalopod mollusk\n"
+    .string "POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmato::
-    .string "OMATO, the cephalopod crab POKéMON!$"
+    .string "OMATO, the cephalopod crab\n"
+    .string "POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabuto::
-    .string "KABUTO, the horseshoe crab POKéMON!$"
+    .string "KABUTO, the horseshoe crab\n"
+    .string "POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabustar::
-    .string "KABUSTAR, the horseshoe mollusk POKéMON!$"
+    .string "KABUSTAR, the horseshoe mollusk\n"
+    .string "POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl::
-    .string "AERODACTYL, the fossil pterosaur POKéMON!$"
+    .string "AERODACTYL, the fossil pterosaur\n"
+    .string "POKéMON!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
     .string "You late.\n"

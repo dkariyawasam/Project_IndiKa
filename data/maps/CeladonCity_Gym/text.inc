@@ -88,15 +88,16 @@ CeladonCity_Gym_Text_ErikaRoseliaConfirmed::
 
 CeladonCity_Gym_Text_GymGuideErikaAway::
     .string "Excuse me!\p"
-    .string "ERIKA is away from the GYM.\n"
-    .string "She's somewhere in VIRIDIAN\l"
+    .string "ERIKA is away from the GYM. She's\n"
+    .string "somewhere in VIRIDIAN\l"
     .string "FOREST.\p"
     .string "She mentioned searching for an\n"
-    .string "ENERGY ROOT with healing properties.\p"
+    .string "ENERGY ROOT with healing\l"
+    .string "properties.\p"
     .string "She said roots teach how living\n"
     .string "things support each other.\p"
-    .string "She's been gone for some time…\n"
-    .string "I should go find her.$"
+    .string "She's been gone for some time… I\n"
+    .string "should go find her.$"
 
 CeladonCity_Gym_Text_GymGuideErikaStillAway::
     .string "ERIKA is still away from the GYM.\p"

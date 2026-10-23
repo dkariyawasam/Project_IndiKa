@@ -39,8 +39,8 @@ RocketLeague_Arena_Text_ArianaIntro::
     .string "Care to step into it?$"
 
 RocketLeague_Arena_Text_ProtonIntro::
-    .string "PROTON: LORELEI has her ice.\n"
-    .string "I have STEEL and a plan to break it!\p"
+    .string "PROTON: LORELEI has her ice. I\n"
+    .string "have STEEL and a plan to break it!\p"
     .string "Let's see you stop us.$"
 
 RocketLeague_Arena_Text_PetrelDefeat::
@@ -52,8 +52,8 @@ RocketLeague_Arena_Text_ArcherDefeat::
     .string "enough.$"
 
 RocketLeague_Arena_Text_ArianaDefeat::
-    .string "Hmph.\n"
-    .string "You are more polished than you look.$"
+    .string "Hmph. You are more polished than\n"
+    .string "you look.$"
 
 RocketLeague_Arena_Text_ProtonDefeat::
     .string "Tch!\n"

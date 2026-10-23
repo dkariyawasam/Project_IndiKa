@@ -8,8 +8,8 @@ Route13_Text_SebastianDefeat::
 
 Route13_Text_SebastianPostBattle::
     .string "Bird POKéMON love this route.\p"
-    .string "The rough ground keeps people slow,\n"
-    .string "but the sky stays wide open.$"
+    .string "The rough ground keeps people\n"
+    .string "slow, but the sky stays wide open.$"
 
 Route13_Text_SusieIntro::
     .string "I'm told I'm good for a kid.$"
