@@ -5,7 +5,7 @@ import re, subprocess, tempfile
 root = Path(__file__).resolve().parents[1]
 text = (root/'src/data/battle_moves.h').read_text()
 blocks = dict(re.findall(r'\[(MOVE_\w+)\] =\s*\{(.*?)\n    \}', text, re.S))
-assert len(blocks) == 367
+assert len(blocks) == int(re.search(r'#define MOVES_COUNT (\d+)', (root/'include/constants/moves.h').read_text())[1])
 for name, block in blocks.items():
     assert len(re.findall(r'\.category = MOVE_CATEGORY_(?:PHYSICAL|SPECIAL|STATUS)', block)) == 1, name
 for move, cat in {'WATERFALL':'PHYSICAL','SURF':'SPECIAL','FIRE_PUNCH':'PHYSICAL','SHADOW_BALL':'SPECIAL','BITE':'PHYSICAL','HIDDEN_POWER':'SPECIAL','COUNTER':'PHYSICAL','MIRROR_COAT':'SPECIAL','SCALDING_DIVE':'PHYSICAL','GLACIAL_SHELL':'STATUS'}.items():
@@ -70,7 +70,7 @@ int main(void){
  reset();int fire=damage(MOVE_FIRE_PUNCH,0,0);b.ability=ABILITY_THICK_FAT;assert(damage(MOVE_FIRE_PUNCH,0,0)<fire);
  reset();b.ability=ABILITY_INVISIBLE_WALL;assert(damage(MOVE_WATERFALL,0,0)<physical);assert(damage(MOVE_SURF,0,0)==special);
  reset();flags.flags[0]=RESOURCE_FLAG_FLASH_FIRE;assert(damage(MOVE_FIRE_PUNCH,0,0)>fire);
- puts("367 categories verified; production damage category, burn, screens, dynamic type, weather, Thick Fat, Flash Fire and Invisible Wall checks passed.");
+ puts("All move categories verified; production damage category, burn, screens, dynamic type, weather, Thick Fat, Flash Fire and Invisible Wall checks passed.");
 }
 '''
 with tempfile.TemporaryDirectory() as td:

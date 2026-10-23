@@ -20,6 +20,7 @@
 #include "constants/songs.h"
 #include "constants/sound.h"
 #include "pokedex_area_markers.h"
+#include "wild_pokemon_area.h"
 #include "ui_hint_header.h"
 #include "field_specials.h"
 #include "item.h"
@@ -159,6 +160,8 @@ static void DexScreen_SetApexMarkersVisible(bool8 visible);
 static void DexScreen_DrawCategoryPageMonBackdrop(u16 species, u8 slot, u8 numSlots);
 void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale);
 static u8 DexScreen_DrawMonDexPage(bool8 justRegistered);
+static void DexScreen_DrawBaseStatsPage(void);
+static void DexScreen_RemoveBaseStatsPage(void);
 u8 RemoveDexPageWindows(void);
 u8 DexScreen_DrawMonAreaPage(void);
 static bool8 DexScreen_IsPageUnlocked(u8 category, u8 pageNum);
@@ -549,7 +552,7 @@ static const struct WindowTemplate sWindowTemplate_CategoryMonInfo = {
 
 const struct WindowTemplate sWindowTemplate_DexEntry_MonPic = {
     .bg = 1,
-    .tilemapLeft = 19,
+    .tilemapLeft = 16,
     .tilemapTop = 3,
     .width = 8,
     .height = 8,
@@ -572,9 +575,14 @@ const struct WindowTemplate sWindowTemplate_DexEntry_FlavorText = {
     .tilemapLeft = 0,
     .tilemapTop = 11,
     .width = 30,
-    .height = 7,
+    .height = 8,
     .paletteNum = 0,
     .baseBlock = 0x0250
+};
+
+static const struct WindowTemplate sWindowTemplate_DexEntry_Types = {
+    .bg = 1, .tilemapLeft = 25, .tilemapTop = 4,
+    .width = 4, .height = 4, .paletteNum = 11, .baseBlock = 0x0340
 };
 
 const struct WindowTemplate sWindowTemplate_AreaMap_MonIcon = {
@@ -599,12 +607,12 @@ const struct WindowTemplate sWindowTemplate_AreaMap_SpeciesName = {
 
 const struct WindowTemplate sWindowTemplate_AreaMap_Size = {
     .bg = 2,
-    .tilemapLeft = 2,
-    .tilemapTop = 7,
-    .width = 10,
+    .tilemapLeft = 1,
+    .tilemapTop = 3,
+    .width = 15,
     .height = 2,
     .paletteNum = 0,
-    .baseBlock = 0x01d0
+    .baseBlock = 0x01a8
 };
 
 const struct WindowTemplate sWindowTemplate_AreaMap_Area = {
@@ -1796,7 +1804,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         }
         else
         {
-            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(3);
             CopyBgTilemapBufferToVram(2);
             CopyBgTilemapBufferToVram(1);
@@ -1810,7 +1818,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         if (JOY_NEW(A_BUTTON))
         {
             RemoveDexPageWindows();
-            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(1);
             sPokedexScreenData->state = 21;
         }
@@ -1843,7 +1851,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
             if (sPokedexScreenData->data[0])
             {
                 sPokedexScreenData->data[1]--;
-                FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+                FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
                 DexScreen_DexPageZoomEffectFrame(0, sPokedexScreenData->data[1]);
                 CopyBgTilemapBufferToVram(0);
                 sPokedexScreenData->data[0] = 1;
@@ -1853,7 +1861,7 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         }
         else
         {
-            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(0);
             sPokedexScreenData->state = 13;
         }
@@ -1872,9 +1880,9 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
     case 23:
         if (JOY_NEW(B_BUTTON))
         {
-            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(2);
             CopyBgTilemapBufferToVram(1);
             CopyBgTilemapBufferToVram(0);
@@ -1882,9 +1890,9 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         }
         else if (JOY_NEW(A_BUTTON))
         {
-            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(2);
             CopyBgTilemapBufferToVram(1);
             CopyBgTilemapBufferToVram(0);
@@ -1897,7 +1905,8 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         break;
     case 24:
         DexScreen_DestroyAreaScreenResources();
-        sPokedexScreenData->state = 25;
+        DexScreen_DrawBaseStatsPage();
+        sPokedexScreenData->state = 27;
         break;
     case 25:
         DexScreen_DrawMonDexPage(FALSE);
@@ -1911,6 +1920,16 @@ static void Task_DexScreen_CategorySubmenu(u8 taskId)
         DexScreen_DestroyAreaScreenResources();
         sPokedexScreenData->state = 18;
         break;
+    case 27:
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
+        {
+            DexScreen_RemoveBaseStatsPage();
+            sPokedexScreenData->state = JOY_NEW(B_BUTTON) ? 18 : 25;
+        }
+        else
+            DexScreen_InputHandler_StartToCry();
+        break;
+
     }
 }
 
@@ -1970,7 +1989,7 @@ static void Task_DexScreen_ShowMonPage(u8 taskId)
         if (JOY_NEW(A_BUTTON))
         {
             RemoveDexPageWindows();
-            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(1);
             sPokedexScreenData->state = 7;
         }
@@ -2022,9 +2041,9 @@ static void Task_DexScreen_ShowMonPage(u8 taskId)
         }
         else if (JOY_NEW(A_BUTTON))
         {
-            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 16);
-            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(2, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(1, 0x000, 0, 2, 30, 18);
+            FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(2);
             CopyBgTilemapBufferToVram(1);
             CopyBgTilemapBufferToVram(0);
@@ -2037,7 +2056,8 @@ static void Task_DexScreen_ShowMonPage(u8 taskId)
         break;
     case 10:
         DexScreen_DestroyAreaScreenResources();
-        sPokedexScreenData->state = 11;
+        DexScreen_DrawBaseStatsPage();
+        sPokedexScreenData->state = 13;
         break;
     case 11:
         DexScreen_DrawMonDexPage(FALSE);
@@ -2049,10 +2069,26 @@ static void Task_DexScreen_ShowMonPage(u8 taskId)
         break;
     case 12:
         DexScreen_DestroyAreaScreenResources();
-        FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 16);
+        FillBgTilemapBufferRect_Palette0(0, 0x000, 0, 2, 30, 18);
         CopyBgTilemapBufferToVram(0);
         sPokedexScreenData->state = 1;
         break;
+    case 13:
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
+        {
+            DexScreen_RemoveBaseStatsPage();
+            if (JOY_NEW(B_BUTTON))
+            {
+                BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
+                sPokedexScreenData->state = 1;
+            }
+            else
+                sPokedexScreenData->state = 11;
+        }
+        else
+            DexScreen_InputHandler_StartToCry();
+        break;
+
     }
 }
 
@@ -3095,8 +3131,8 @@ void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale)
     height = 3 + (scale * 2);
     if (width >= 28) // Make sure it's not wider than the screen
         width = 28;
-    if (height >= 14) // Make sure it's not taller than the screen
-        height = 14;
+    if (scale == 6)
+        height = 16;
 
     left = tileLeft - ((scale * 4) / 2);
     top = tileTop - ((scale * 2) / 2);
@@ -3104,12 +3140,12 @@ void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale)
         left -= ((left + width + 2) - 30);
     else if (left < 0) // ... left ...
         left = 0;
-    if ((top + height + 2) >= 18) // ... down ...
-        top -= ((top + height + 2) - 18);
+    if ((top + height + 2) >= 20) // ... down ...
+        top -= ((top + height + 2) - 20);
     else if (top < 2) // or up.
         top = 2;
 
-    divY = (top + 1) + ((height / 2) + 1); // The horizontal divider
+    divY = scale == 6 ? 11 : (top + 1) + ((height / 2) + 1); // The horizontal divider
 
     // Top edge
     FillBgTilemapBufferRect_Palette0(bg, 4, left, top, 1, 1);
@@ -3343,7 +3379,7 @@ void DexScreen_PrintMonFlavorText(u8 windowId, u16 species, u8 x, u8 y)
         printerTemplate.bgColor = 0;
         printerTemplate.shadowColor = 2;
 
-        length = GetStringWidth(FONT_NORMAL, gPokedexEntries[species].description, 0);
+        length = GetStringWidth(FONT_NORMAL, gPokedexEntries[species].description, 1);
         xCenter = x + (240 - length) / 2;
 
         if (xCenter > 0)
@@ -3397,7 +3433,7 @@ static u8 DexScreen_DrawMonDexPage(bool8 justRegistered)
     DexScreen_DexPageZoomEffectFrame(3, 6);
     FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 30, 20);
     FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 30, 20);
-    FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 16);
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 18);
 
     sPokedexScreenData->windowIds[0] = AddWindow(&sWindowTemplate_DexEntry_MonPic);
     sPokedexScreenData->windowIds[1] = AddWindow(&sWindowTemplate_DexEntry_SpeciesStats);
@@ -3426,6 +3462,20 @@ static u8 DexScreen_DrawMonDexPage(bool8 justRegistered)
     PutWindowTilemap(sPokedexScreenData->windowIds[2]);
     CopyWindowToVram(sPokedexScreenData->windowIds[2], COPYWIN_GFX);
 
+    sPokedexScreenData->windowIds[3] = AddWindow(&sWindowTemplate_DexEntry_Types);
+    FillWindowPixelBuffer(sPokedexScreenData->windowIds[3], PIXEL_FILL(0));
+    ListMenuLoadStdPalAt(BG_PLTT_ID(11), 1);
+    if (DexScreen_GetSetPokedexFlag(sPokedexScreenData->dexSpecies, FLAG_GET_CAUGHT, TRUE))
+    {
+        u16 species = sPokedexScreenData->dexSpecies;
+        bool8 dualType = gSpeciesInfo[species].types[0] != gSpeciesInfo[species].types[1];
+        BlitMenuInfoIcon(sPokedexScreenData->windowIds[3], 1 + gSpeciesInfo[species].types[0], 0, 0);
+        if (dualType)
+            BlitMenuInfoIcon(sPokedexScreenData->windowIds[3], 1 + gSpeciesInfo[species].types[1], 0, 14);
+    }
+    PutWindowTilemap(sPokedexScreenData->windowIds[3]);
+    CopyWindowToVram(sPokedexScreenData->windowIds[3], COPYWIN_GFX);
+
     // Control info
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
     if (justRegistered == FALSE)
@@ -3443,11 +3493,59 @@ static u8 DexScreen_DrawMonDexPage(bool8 justRegistered)
 
 u8 RemoveDexPageWindows(void)
 {
+    ClearWindowTilemap(sPokedexScreenData->windowIds[3]);
+    CopyWindowToVram(sPokedexScreenData->windowIds[3], COPYWIN_MAP);
+    DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[3]);
     DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[0]);
     DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[1]);
     DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[2]);
 
     return 0;
+}
+
+// Pixel masks keep the availability symbols crisp at native GBA resolution.
+static const u16 sDexSunSymbol[16] = {
+    0x0180, 0x0180, 0x2004, 0x1008, 0x03C0, 0x07E0, 0x0FF0, 0xCFF3,
+    0xCFF3, 0x0FF0, 0x07E0, 0x03C0, 0x1008, 0x2004, 0x0180, 0x0180
+};
+static const u16 sDexMoonSymbol[16] = {
+    0x03C0, 0x0F80, 0x1F00, 0x3E00, 0x3C00, 0x7800, 0x7800, 0x7800,
+    0x7800, 0x7C00, 0x3E00, 0x3F08, 0x1FF8, 0x0FF0, 0x07E0, 0x0180
+};
+static const struct WindowTemplate sWindowTemplate_DexEncounterTimes = {
+    .bg = 2, .tilemapLeft = 17, .tilemapTop = 3,
+    .width = 12, .height = 5, .paletteNum = 12, .baseBlock = 0x0280
+};
+static const u8 sText_DexAvailability[] = _("AVAILABILITY");
+static void DexScreen_DrawEncounterTimes(u16 species)
+{
+    static const u16 palette[] = {RGB_WHITE, RGB(28, 19, 3), RGB(10, 14, 25)};
+    const u8 textColors[] = {0, 3, 4};
+    u8 times = GetSpeciesPokedexEncounterTimes(species);
+    u8 windowId = AddWindow(&sWindowTemplate_DexEncounterTimes);
+    u8 icon, row, col, x;
+    sPokedexScreenData->windowIds[11] = windowId;
+    LoadPalette(palette, BG_PLTT_ID(12), sizeof(palette));
+    LoadPalette(&gPlttBufferUnfaded[1], BG_PLTT_ID(12) + 3, sizeof(u16));
+    LoadPalette(&gPlttBufferUnfaded[3], BG_PLTT_ID(12) + 4, sizeof(u16));
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    AddTextPrinterParameterized3(windowId, FONT_SMALL,
+        (96 - GetStringWidth(FONT_SMALL, sText_DexAvailability, 0)) / 2,
+        0, textColors, TEXT_SKIP_DRAW, sText_DexAvailability);
+    for (icon = 0; icon < 2; icon++)
+    {
+        const u16 *mask = icon == 0 ? sDexSunSymbol : sDexMoonSymbol;
+        if (!(times & (1 << icon)))
+            continue;
+        x = times == (DEX_ENCOUNTER_DAY | DEX_ENCOUNTER_NIGHT) ? 18 + 36 * icon : 36;
+        for (row = 0; row < 16; row++)
+            for (col = 0; col < 16; col++)
+                if (mask[row] & (1 << (15 - col)))
+                    FillWindowPixelRect(windowId, PIXEL_FILL(icon + 1), x + col * 3 / 2, 16 + row * 3 / 2,
+                        (col + 1) * 3 / 2 - col * 3 / 2, (row + 1) * 3 / 2 - row * 3 / 2);
+    }
+    PutWindowTilemap(windowId);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
 u8 DexScreen_DrawMonAreaPage(void)
@@ -3463,7 +3561,7 @@ u8 DexScreen_DrawMonAreaPage(void)
     speciesId = SpeciesToNationalPokedexNum(species);
     monIsCaught = DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, TRUE);
     width = 28;
-    height = 14;
+    height = 16;
     left = 0;
     top = 2;
 
@@ -3476,13 +3574,15 @@ u8 DexScreen_DrawMonAreaPage(void)
     FillBgTilemapBufferRect_Palette0(3, 6, left, top + 1, 1, height);
     FillBgTilemapBufferRect_Palette0(3, BG_TILE_H_FLIP(6), left + 1 + width, top + 1, 1, height);
     FillBgTilemapBufferRect_Palette0(3, 1, left + 1, top + 1, width, height);
-    FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 16);
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 18);
 
-    width = 10;
-    height = 6;
+    FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 30, 20);
+    FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 30, 20);
+
+    width = 13;
+    height = 12;
     left = 1;
-    top = 9;
-
+    top = 5;
     FillBgTilemapBufferRect_Palette0(0, 29, left, top, 1, 1);
     FillBgTilemapBufferRect_Palette0(0, BG_TILE_H_FLIP(29), left + 1 + width, top, 1, 1);
     FillBgTilemapBufferRect_Palette0(0, BG_TILE_V_FLIP(29), left, top + 1 + height, 1, 1);
@@ -3491,34 +3591,22 @@ u8 DexScreen_DrawMonAreaPage(void)
     FillBgTilemapBufferRect_Palette0(0, BG_TILE_V_FLIP(30), left + 1, top + 1 + height, width, 1);
     FillBgTilemapBufferRect_Palette0(0, 31, left, top + 1, 1, height);
     FillBgTilemapBufferRect_Palette0(0, BG_TILE_H_FLIP(31), left + 1 + width, top + 1, 1, height);
-    FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 30, 20);
-    FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 30, 20);
 
-    kantoMapVoff = 4;
+    // Nine map rows end at row 19, aligned with the size panel bottom.
+    kantoMapVoff = 6;
 
     sPokedexScreenData->windowIds[0] = AddWindow(&sWindowTemplate_AreaMap_Kanto);
     CopyToWindowPixelBuffer(sPokedexScreenData->windowIds[0], (void *)sTilemap_AreaMap_Kanto, 0, 0);
     SetWindowAttribute(sPokedexScreenData->windowIds[0], WINDOW_TILEMAP_TOP,
                        GetWindowAttribute(sPokedexScreenData->windowIds[0], WINDOW_TILEMAP_TOP) + kantoMapVoff);
     PutWindowTilemap(sPokedexScreenData->windowIds[0]);
-    sPokedexScreenData->windowIds[8] = AddWindow(&sWindowTemplate_AreaMap_SpeciesName);
     sPokedexScreenData->windowIds[9] = AddWindow(&sWindowTemplate_AreaMap_Size);
     sPokedexScreenData->windowIds[10] = AddWindow(&sWindowTemplate_AreaMap_Area);
-    sPokedexScreenData->windowIds[11] = AddWindow(&sWindowTemplate_AreaMap_MonIcon);
-    sPokedexScreenData->windowIds[12] = AddWindow(&sWindowTemplate_AreaMap_MonTypes);
-
-    // Draw the mon icon
-    FillWindowPixelBuffer(sPokedexScreenData->windowIds[11], PIXEL_FILL(0));
-    ListMenu_LoadMonIconPalette(BG_PLTT_ID(10), species);
-    ListMenu_DrawMonIconGraphics(sPokedexScreenData->windowIds[11], species, DexScreen_GetDefaultPersonality(species), 0, 0);
-    PutWindowTilemap(sPokedexScreenData->windowIds[11]);
-    CopyWindowToVram(sPokedexScreenData->windowIds[11], COPYWIN_GFX);
-
     // Print "Size"
     FillWindowPixelBuffer(sPokedexScreenData->windowIds[9], PIXEL_FILL(0));
     {
         s32 strWidth = GetStringWidth(FONT_SMALL, gText_Size, 0);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[9], FONT_SMALL, gText_Size, (sWindowTemplate_AreaMap_Size.width * 8 - strWidth) / 2, 4, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[9], FONT_SMALL, gText_Size, (sWindowTemplate_AreaMap_Size.width * 8 - strWidth) / 2, 0, 0);
     }
     PutWindowTilemap(sPokedexScreenData->windowIds[9]);
     CopyWindowToVram(sPokedexScreenData->windowIds[9], COPYWIN_GFX);
@@ -3532,26 +3620,6 @@ u8 DexScreen_DrawMonAreaPage(void)
     SetWindowAttribute(sPokedexScreenData->windowIds[10], WINDOW_TILEMAP_TOP, GetWindowAttribute(sPokedexScreenData->windowIds[10], WINDOW_TILEMAP_TOP) + kantoMapVoff);
     PutWindowTilemap(sPokedexScreenData->windowIds[10]);
     CopyWindowToVram(sPokedexScreenData->windowIds[10], COPYWIN_GFX);
-
-    // Print species name
-    FillWindowPixelBuffer(sPokedexScreenData->windowIds[8], PIXEL_FILL(0));
-    DexScreen_PrintMonDexNo(sPokedexScreenData->windowIds[8], FONT_SMALL, species, 0, 0);
-    DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[8], FONT_NORMAL, gSpeciesNames[species], 3, 12, 0);
-    PutWindowTilemap(sPokedexScreenData->windowIds[8]);
-    CopyWindowToVram(sPokedexScreenData->windowIds[8], COPYWIN_GFX);
-
-    // Type icons
-    FillWindowPixelBuffer(sPokedexScreenData->windowIds[12], PIXEL_FILL(0));
-    ListMenuLoadStdPalAt(BG_PLTT_ID(11), 1);
-
-    if (monIsCaught)
-    {
-        BlitMenuInfoIcon(sPokedexScreenData->windowIds[12], 1 + gSpeciesInfo[species].types[0], 0, 1);
-        if (gSpeciesInfo[species].types[0] != gSpeciesInfo[species].types[1])
-            BlitMenuInfoIcon(sPokedexScreenData->windowIds[12], 1 + gSpeciesInfo[species].types[1], 32, 1);
-    }
-    PutWindowTilemap(sPokedexScreenData->windowIds[12]);
-    CopyWindowToVram(sPokedexScreenData->windowIds[12], COPYWIN_GFX);
 
     // Show live size comparison.
     ResetAllPicSprites();
@@ -3570,7 +3638,7 @@ u8 DexScreen_DrawMonAreaPage(void)
         if (trainerScale == 0)
             trainerScale = 256;
 
-        spriteId = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, 40, 104, 2, TAG_NONE);
+        spriteId = CreateMonPicSprite_HandleDeoxys(species, SHINY_ODDS, DexScreen_GetDefaultPersonality(species), TRUE, 40, 112, 2, TAG_NONE);
         if (spriteId != 0xFFFF)
         {
             sPokedexScreenData->windowIds[14] = spriteId;
@@ -3586,7 +3654,7 @@ u8 DexScreen_DrawMonAreaPage(void)
             sPokedexScreenData->windowIds[14] = 0xff;
         }
 
-        spriteId = DexScreen_CreateSizeComparisonTrainerPicSprite(80, 104);
+        spriteId = DexScreen_CreateSizeComparisonTrainerPicSprite(96, 112);
         if (spriteId != 0xFFFF)
         {
             sPokedexScreenData->windowIds[15] = spriteId;
@@ -3621,6 +3689,10 @@ u8 DexScreen_DrawMonAreaPage(void)
         }
     }
     CopyWindowToVram(sPokedexScreenData->windowIds[0], COPYWIN_GFX);
+
+    // Availability is meaningful only when this page has a catchable area.
+    if (GetNumPokedexAreaMarkers(sPokedexScreenData->areaMarkersTaskId) != 0)
+        DexScreen_DrawEncounterTimes(species);
 
     // Draw the control info
     DexScreen_PrintHeaderControlInfo(sText_DexOKBack);
@@ -3958,7 +4030,7 @@ static void Task_DexScreen_RegisterMonToPokedex(u8 taskId)
         }
         else
         {
-            FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 16);
+            FillBgTilemapBufferRect_Palette0(0, 0, 0, 2, 30, 18);
             CopyBgTilemapBufferToVram(3);
             CopyBgTilemapBufferToVram(2);
             CopyBgTilemapBufferToVram(1);
@@ -3995,4 +4067,81 @@ void DexScreen_PrintStringWithAlignment(const u8 * str, s32 mode)
     }
 
     DexScreen_AddTextPrinterParameterized(0, FONT_NORMAL, str, x, 2, 4);
+}
+
+static const struct WindowTemplate sWindowTemplate_DexBaseStats = {
+    .bg = 1, .tilemapLeft = 1, .tilemapTop = 3,
+    .width = 28, .height = 16, .paletteNum = 12, .baseBlock = 0x01a8
+};
+static const u16 sDexBaseStatsPalette[16] = {
+    RGB_WHITE, RGB_BLACK, RGB(22,22,22), RGB_WHITE,
+    RGB(26,9,9), RGB(27,16,5), RGB(25,22,5),
+    RGB(10,16,25), RGB(9,21,13), RGB(23,11,20), RGB(27,28,26)
+};
+static const u8 sText_DexBaseStats[] = _("BASE STATS");
+static const u8 sText_DexTotal[] = _("TOTAL");
+static const u8 sDexStatLabels[][9] = {
+    _("HP"), _("ATTACK"), _("DEFENSE"), _("SP. ATK"), _("SP. DEF"), _("SPEED")
+};
+static const u8 sText_DexUnknownStat[] = _("???");
+
+static void DexScreen_DrawBaseStatsPage(void)
+{
+    u16 species = sPokedexScreenData->dexSpecies;
+    const struct SpeciesInfo *info = &gSpeciesInfo[species];
+    u16 stats[6];
+    u16 total = 0;
+    u8 i, windowId, y;
+    u8 buffer[8];
+    const u8 colors[] = {3, 1, 2};
+    bool8 caught = DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, TRUE);
+
+    stats[0] = info->baseHP;
+    stats[1] = info->baseAttack;
+    stats[2] = info->baseDefense;
+    stats[3] = info->baseSpAttack;
+    stats[4] = info->baseSpDefense;
+    stats[5] = info->baseSpeed;
+    windowId = AddWindow(&sWindowTemplate_DexBaseStats);
+    sPokedexScreenData->windowIds[0] = windowId;
+    LoadPalette(sDexBaseStatsPalette, BG_PLTT_ID(12), sizeof(sDexBaseStatsPalette));
+    // Match the entry page's ink and warm text shadow, retaining coloured bars.
+    LoadPalette(&gPlttBufferUnfaded[1], BG_PLTT_ID(12) + 1, sizeof(u16));
+    LoadPalette(&gPlttBufferUnfaded[3], BG_PLTT_ID(12) + 2, sizeof(u16));
+    LoadPalette(&gPlttBufferUnfaded[5], BG_PLTT_ID(12) + 3, sizeof(u16));
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(3));
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL,
+        (sWindowTemplate_DexBaseStats.width * 8 - GetStringWidth(FONT_NORMAL, sText_DexBaseStats, 0)) / 2,
+        0, colors, TEXT_SKIP_DRAW, sText_DexBaseStats);
+    for (i = 0; i < 6; i++)
+    {
+        total += stats[i];
+        y = 30 + i * 14;
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 4, y, colors, TEXT_SKIP_DRAW, sDexStatLabels[i]);
+        if (caught)
+            ConvertIntToDecimalStringN(buffer, stats[i], STR_CONV_MODE_RIGHT_ALIGN, 3);
+        else
+            StringCopy(buffer, sText_DexUnknownStat);
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 65, y, colors, TEXT_SKIP_DRAW, buffer);
+        FillWindowPixelRect(windowId, PIXEL_FILL(2), 91, y + 3, 128, 9);
+        FillWindowPixelRect(windowId, PIXEL_FILL(10), 92, y + 4, 126, 7);
+        if (caught)
+            FillWindowPixelRect(windowId, PIXEL_FILL(4 + i), 92, y + 4, (stats[i] * 126 + 254) / 255, 7);
+    }
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL, 4, 14, colors, TEXT_SKIP_DRAW, sText_DexTotal);
+    if (caught)
+        ConvertIntToDecimalStringN(buffer, total, STR_CONV_MODE_RIGHT_ALIGN, 4);
+    else
+        StringCopy(buffer, sText_DexUnknownStat);
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL, 43, 14, colors, TEXT_SKIP_DRAW, buffer);
+    PutWindowTilemap(windowId);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+    DexScreen_PrintHeaderControlInfo(sText_DexOKBack);
+}
+
+static void DexScreen_RemoveBaseStatsPage(void)
+{
+    ClearWindowTilemap(sPokedexScreenData->windowIds[0]);
+    CopyWindowToVram(sPokedexScreenData->windowIds[0], COPYWIN_MAP);
+    DexScreen_RemoveWindow(&sPokedexScreenData->windowIds[0]);
 }
