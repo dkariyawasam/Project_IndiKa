@@ -97,6 +97,8 @@ struct PokedexEntry
     /*0x1C*/ u16 pokemonOffset;
     /*0x1E*/ u16 trainerScale;
     /*0x20*/ u16 trainerOffset;
+    /*0x22*/ u8 pokemonX;
+    /*0x23*/ u8 trainerX;
 };  /*size = 0x24*/
 
 void ResetPokedex(void);
