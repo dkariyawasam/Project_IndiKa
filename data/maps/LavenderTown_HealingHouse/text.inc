@@ -1,7 +1,7 @@
 LavenderTown_HealingHouse_Text_RestHere::
 	.string "Welcome, traveler.\p"
-	.string "This is a HEALING HOUSE.\n"
-	.string "Would you like to rest your POKéMON?$"
+	.string "This is a HEALING HOUSE. Would you\n"
+	.string "like to rest your POKéMON?$"
 
 LavenderTown_HealingHouse_Text_Goodbye::
 	.string "Take care on the roads around\n"

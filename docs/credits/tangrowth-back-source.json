@@ -1,0 +1,16 @@
+{
+  "asset": "graphics/pokemon/tangrowth/back.png",
+  "source": "https://github.com/rh-hideout/pokeemerald-expansion/blob/master/graphics/pokemon/tangrowth/back.png",
+  "retrieved": "2026-10-21",
+  "sha256": "361e95b445999b64d67bb4686493fefc46a9bf3b89942a3af895b964bdab4b48",
+  "credit": "RHH / pokeemerald-expansion asset contributors; individual artist unverified",
+  "conversion": "Pixel geometry preserved; indices mapped to existing local normal/shiny palette slots",
+  "index_map": {
+    "0": 0,
+    "4": 5,
+    "5": 8,
+    "6": 9,
+    "7": 6,
+    "8": 3
+  }
+}

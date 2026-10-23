@@ -2946,7 +2946,8 @@ AI_PreferBatonPass_GoForBatonPass::
 AI_PreferBatonPass_End::
 	end
 
-@ Empty. Expanded in Emerald
+@ Friendly-fire scoring runs in BattleAI_ScoreFriendlyFire for all doubles.
+@ This optional script slot remains available for further doubles tactics.
 AI_DoubleBattle::
 	end
 

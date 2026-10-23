@@ -175,7 +175,8 @@ Route24_Text_NellDefeat::
 
 Route24_Text_NellPostBattle::
     .string "NUGGET BRIDGE belongs to the\n"
-    .string "TRAINERS above and the water below.\p"
+    .string "TRAINERS above and the water\l"
+    .string "below.\p"
     .string "You handled both sides well.$"
 
 Route24_Text_NavigationCape::

@@ -25,3 +25,5 @@ The preserved upstream contributor list covers the broader expansion project and
 The October 12 resource comparison adds individual artist credits for confirmed archived drawings and distinguishes unmatched revisions.
 
 - [Lopunny and Ambipom replacement back sprites](../lopunny-ambipom-backs/README.md)
+
+- Tangrowth replacement back sprite: source and conversion record — RHH / pokeemerald-expansion asset contributors; individual artist unverified.

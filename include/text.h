@@ -6,6 +6,9 @@
 
 #define NUM_TEXT_PRINTERS 32
 
+// Opt in only dialogue windows; fixed-layout menu strings remain unchanged.
+#define TEXT_PRINTER_WORD_WRAP 1
+
 #define TEXT_SPEED_INSTANT 0
 
 // Given as a text speed when all the text should be
