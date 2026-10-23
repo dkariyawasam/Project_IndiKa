@@ -94,6 +94,10 @@
 
 // Pokemon types
 #define TYPE_NONE           255
+#define MOVE_CATEGORY_PHYSICAL 0
+#define MOVE_CATEGORY_SPECIAL  1
+#define MOVE_CATEGORY_STATUS   2
+
 #define TYPE_NORMAL         0
 #define TYPE_FIGHTING       1
 #define TYPE_FLYING         2
