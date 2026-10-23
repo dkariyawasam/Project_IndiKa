@@ -362,6 +362,75 @@ void BattleAI_SetupAIData(void)
     AI_THINKING_STRUCT->aiFlags = gTrainers[gTrainerBattleOpponent_A].aiFlags;
 }
 
+// Evaluate friendly fire after every trainer's normal scoring, including trainers
+// without AI_SCRIPT_DOUBLE_BATTLE (the original FRLG script is empty).
+static void BattleAI_ScoreFriendlyFire(void)
+{
+    u8 ally = gBattlerAttacker ^ BIT_FLANK;
+    u8 i;
+    u8 savedTarget = gBattlerTarget;
+    u8 savedCrit = gCritMultiplier;
+    u16 savedMove = gCurrentMove;
+    u16 savedPower = gBattleMovePower;
+    s32 savedDamage = gBattleMoveDamage;
+
+    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        || (gAbsentBattlerFlags & gBitTable[ally])
+        || gBattleMons[ally].hp == 0)
+        return;
+
+    gBattlerTarget = ally;
+    gCritMultiplier = 1;
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        u16 move = gBattleMons[gBattlerAttacker].moves[i];
+        u16 power = 0;
+        u8 flags;
+        s32 penalty;
+
+        if (AI_THINKING_STRUCT->score[i] == 0
+            || gBattleMons[gBattlerAttacker].pp[i] == 0
+            || gBattleMoves[move].target != MOVE_TARGET_FOES_AND_ALLY
+            || gBattleMoves[move].power == 0)
+            continue;
+
+        // Score against inherent immunity, not Protect or a temporary airborne
+        // state: those may end before this move executes.
+        // Magnitude's power is chosen only when it executes. Its mean is 71.
+        if (move == MOVE_MAGNITUDE)
+            power = 71;
+        gCurrentMove = move;
+        gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBattlerAttacker],
+            &gBattleMons[ally], move, gSideStatuses[GetBattlerSide(ally)],
+            power, 0, gBattlerAttacker, ally);
+        flags = TypeCalc(move, gBattlerAttacker, ally);
+        if (flags & MOVE_RESULT_NO_EFFECT)
+            continue;
+        if (gProtectStructs[gBattlerAttacker].helpingHand)
+            gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
+        if ((gStatuses3[ally] & STATUS3_UNDERGROUND)
+            && (move == MOVE_EARTHQUAKE || move == MOVE_MAGNITUDE))
+            gBattleMoveDamage *= 2;
+
+        // Use the maximum ordinary roll: do not gamble a teammate on damage RNG.
+        // Even chip damage matters; a potential ally KO is heavily discouraged.
+        if (gBattleMoveDamage >= gBattleMons[ally].hp)
+            penalty = 80;
+        else
+            penalty = 10 + 30 * gBattleMoveDamage / gBattleMons[ally].hp;
+        // Keep usable moves above disabled moves when every option is harmful.
+        if (AI_THINKING_STRUCT->score[i] > penalty)
+            AI_THINKING_STRUCT->score[i] -= penalty;
+        else
+            AI_THINKING_STRUCT->score[i] = 1;
+    }
+    gBattlerTarget = savedTarget;
+    gCritMultiplier = savedCrit;
+    gCurrentMove = savedMove;
+    gBattleMovePower = savedPower;
+    gBattleMoveDamage = savedDamage;
+}
+
 u8 BattleAI_ChooseMoveOrAction(void)
 {
     u8 currentMoveArray[MAX_MON_MOVES];
@@ -387,6 +456,8 @@ u8 BattleAI_ChooseMoveOrAction(void)
         return AI_CHOICE_FLEE;
     if (AI_THINKING_STRUCT->aiAction & AI_ACTION_WATCH)
         return AI_CHOICE_WATCH;
+
+    BattleAI_ScoreFriendlyFire();
 
     numOfBestMoves = 1;
     currentMoveArray[0] = AI_THINKING_STRUCT->score[0];

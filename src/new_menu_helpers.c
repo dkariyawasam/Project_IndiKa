@@ -412,7 +412,7 @@ u16 AddTextPrinterParameterized2(u8 windowId, u8 fontId, const u8 *str, u8 speed
     printer.currentY = 1;
     printer.letterSpacing = 1;
     printer.lineSpacing = 1;
-    printer.unk = 0;
+    printer.unk = (speed != TEXT_SPEED_INSTANT && speed != TEXT_SKIP_DRAW) ? TEXT_PRINTER_WORD_WRAP : 0;
     printer.fgColor = fgColor;
     printer.bgColor = bgColor;
     printer.shadowColor = shadowColor;
