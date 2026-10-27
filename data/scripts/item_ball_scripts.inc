@@ -415,7 +415,7 @@ CeladonCity_EventScript_ItemEther::
 	end
 
 SafariZone_North_EventScript_ItemQuickClaw::
-	finditem ITEM_QUICK_CLAW
+	finditem ITEM_ULTRA_BALL
 	end
 
 SeafoamIslands_1F_EventScript_ItemIceHeal::

@@ -9,6 +9,8 @@ void RecordRocketLeagueCoins(void);
 void BufferLeagueTerminalStatus(void);
 void ShowLeagueRecords(void);
 
+struct TrainerMonItemCustomMoves;
+const struct TrainerMonItemCustomMoves *GetIndigoGymLeaderParty(u16 trainerId);
 bool8 IsIndigoLeagueTrainerBattle(void);
 void PrepareIndigoLeagueBattle(void);
 void RestoreIndigoLeagueParty(void);
