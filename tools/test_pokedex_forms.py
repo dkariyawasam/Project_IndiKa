@@ -79,11 +79,11 @@ forms=(R/'src/data/pokemon/pokedex_forms.h').read_text()
 slots=re.findall(r'\bSPECIES_(\w+)', categories)
 for group in re.findall(r'\{([^{}]+)\}', forms):
  members=re.findall(r'SPECIES_(\w+)',group)
- if not members or any(m.startswith('CINNABAR_') for m in members):
-  continue # Primeval deep forms retain their deliberately themed sea page.
+ if not members:
+  continue
  assert sum(slots.count(m) for m in members)==1,members
 for species in ('PERRSERKER','CURSOLA','MR_RIME','CLODSIRE'):
  assert slots.count(species)==1,species
 for page in re.findall(r'static const u16 \w+\[\] = \{([^}]+)\}', categories):
  assert 1 <= len(re.findall(r'SPECIES_',page)) <= 4
-print('PASS: regional habitat families have one slot; distinct evolutions retained within four-slot pages')
+print('PASS: all alternate-form habitat families have one slot; distinct evolutions retained within four-slot pages')

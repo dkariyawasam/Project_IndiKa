@@ -52,6 +52,16 @@ PokemonLeague_BrunosRoom_EventScript_ChampionRoomLocked::
 	end
 
 PokemonLeague_BrunosRoom_EventScript_ReadyPrompt::
+	special IsLeagueChallengeActive
+	goto_if_eq VAR_RESULT, 0, PokemonLeague_BrunosRoom_EventScript_ReadyPromptShow
+	special GetLeagueChallengeType
+	goto_if_ne VAR_RESULT, 1, PokemonLeague_BrunosRoom_EventScript_ReadyPromptShow
+	special GetLeagueChallengeRound
+	goto_if_ne VAR_RESULT, 4, PokemonLeague_BrunosRoom_EventScript_ReadyPromptShow
+	@ Four opponents defeated: let the player cross the arena freely.
+	end
+
+PokemonLeague_BrunosRoom_EventScript_ReadyPromptShow::
 	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox PokemonLeague_BrunosRoom_Text_AreYouReady, MSGBOX_YESNO
@@ -135,6 +145,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleLorelei::
 	msgbox PokemonLeague_BrunosRoom_Text_LoreleiIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_LORELEI
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LORELEI, PokemonLeague_BrunosRoom_Text_LoreleiDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_LoreleiPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBruno::
@@ -143,6 +155,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleBruno::
 	msgbox PokemonLeague_BrunosRoom_Text_BrunoIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_BRUNO
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_BRUNO, PokemonLeague_BrunosRoom_Text_BrunoDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_BrunoPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleAgatha::
@@ -151,6 +165,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleAgatha::
 	msgbox PokemonLeague_BrunosRoom_Text_AgathaIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_AGATHA
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_AGATHA, PokemonLeague_BrunosRoom_Text_AgathaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_AgathaPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleLance::
@@ -159,6 +175,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleLance::
 	msgbox PokemonLeague_BrunosRoom_Text_LanceIntro
 	cleartrainerflag TRAINER_ELITE_FOUR_LANCE
 	trainerbattle_no_intro_double TRAINER_ELITE_FOUR_LANCE, PokemonLeague_BrunosRoom_Text_LanceDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_LancePostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBrock::
@@ -167,6 +185,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleBrock::
 	msgbox PokemonLeague_BrunosRoom_Text_BrockIntro
 	cleartrainerflag TRAINER_LEADER_BROCK_7
 	trainerbattle_no_intro_double TRAINER_LEADER_BROCK_7, PokemonLeague_BrunosRoom_Text_BrockDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_BrockPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleMisty::
@@ -175,6 +195,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleMisty::
 	msgbox PokemonLeague_BrunosRoom_Text_MistyIntro
 	cleartrainerflag TRAINER_LEADER_MISTY_7
 	trainerbattle_no_intro_double TRAINER_LEADER_MISTY_7, PokemonLeague_BrunosRoom_Text_MistyDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_MistyPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleLtSurge::
@@ -183,6 +205,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleLtSurge::
 	msgbox PokemonLeague_BrunosRoom_Text_LtSurgeIntro
 	cleartrainerflag TRAINER_LEADER_LT_SURGE_7
 	trainerbattle_no_intro_double TRAINER_LEADER_LT_SURGE_7, PokemonLeague_BrunosRoom_Text_LtSurgeDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_LtSurgePostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleErika::
@@ -191,6 +215,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleErika::
 	msgbox PokemonLeague_BrunosRoom_Text_ErikaIntro
 	cleartrainerflag TRAINER_LEADER_ERIKA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_ERIKA_7, PokemonLeague_BrunosRoom_Text_ErikaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_ErikaPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleKoga::
@@ -199,6 +225,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleKoga::
 	msgbox PokemonLeague_BrunosRoom_Text_KogaIntro
 	cleartrainerflag TRAINER_LEADER_KOGA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_KOGA_7, PokemonLeague_BrunosRoom_Text_KogaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_KogaPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleBlaine::
@@ -207,6 +235,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleBlaine::
 	msgbox PokemonLeague_BrunosRoom_Text_BlaineIntro
 	cleartrainerflag TRAINER_LEADER_BLAINE_7
 	trainerbattle_no_intro_double TRAINER_LEADER_BLAINE_7, PokemonLeague_BrunosRoom_Text_BlaineDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_BlainePostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleSabrina::
@@ -215,6 +245,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleSabrina::
 	msgbox PokemonLeague_BrunosRoom_Text_SabrinaIntro
 	cleartrainerflag TRAINER_LEADER_SABRINA_7
 	trainerbattle_no_intro_double TRAINER_LEADER_SABRINA_7, PokemonLeague_BrunosRoom_Text_SabrinaDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_SabrinaPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_BattleGiovanni::
@@ -223,6 +255,8 @@ PokemonLeague_BrunosRoom_EventScript_BattleGiovanni::
 	msgbox PokemonLeague_BrunosRoom_Text_GiovanniIntro
 	cleartrainerflag TRAINER_LEADER_GIOVANNI
 	trainerbattle_no_intro_double TRAINER_LEADER_GIOVANNI, PokemonLeague_BrunosRoom_Text_GiovanniDefeat, Common_Text_NeedTwoPokemonForDoubleBattle
+	msgbox PokemonLeague_BrunosRoom_Text_GiovanniPostBattle
+	closemessage
 	goto PokemonLeague_BrunosRoom_EventScript_FinishPoolBattle
 
 PokemonLeague_BrunosRoom_EventScript_ChampionAwaits::

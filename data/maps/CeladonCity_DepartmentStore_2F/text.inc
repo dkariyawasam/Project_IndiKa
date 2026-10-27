@@ -4,12 +4,12 @@ CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel::
     .string "Hmm, it's a more powerful REPEL.$"
 
 CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::
-    .string "For long outings, you should buy\n"
-    .string "REVIVE.$"
+    .string "Different BALLS suit different\n"
+    .string "POKéMON. I like NET BALLS!$"
 
 CeladonCity_DepartmentStore_2F_Text_FloorSign::
-    .string "Top-Grade Items for TRAINERS!\p"
-    .string "2F: TRAINER'S MARKET$"
+    .string "A BALL for every outing!\p"
+    .string "2F: POKé BALLS$"
 
 CeladonCity_DepartmentStore_2F_Text_TMCounterClosed::
     .string "The TM counter is closed.$"

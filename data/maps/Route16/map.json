@@ -183,7 +183,7 @@
       "x": 29,
       "y": 18,
       "elevation": 3,
-      "item": "ITEM_LEFTOVERS",
+      "item": "ITEM_MAX_REPEL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE16_LEFTOVERS",
       "quantity": 1,
       "underfoot": true

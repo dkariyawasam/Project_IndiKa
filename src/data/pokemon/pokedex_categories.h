@@ -252,8 +252,6 @@ static const u16 sDexCategory_SeaPkmn_Page3[] = {
 };
 
 static const u16 sDexCategory_SeaPkmn_Page4[] = {
-    SPECIES_CINNABAR_MAGIKARP,
-    SPECIES_CINNABAR_FEEBAS,
     SPECIES_RELICANTH,
 };
 

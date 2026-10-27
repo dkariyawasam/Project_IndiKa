@@ -51,12 +51,45 @@ RocketLeague_ChampionsRoom_EventScript_NotReady::
 
 RocketLeague_ChampionsRoom_EventScript_GiveCoinReward::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
-	addcoins 1000
-	setvar VAR_0x8004, 1000
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 1, RocketLeague_ChampionsRoom_EventScript_GiveTierOneCoinReward
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 2, RocketLeague_ChampionsRoom_EventScript_GiveTierTwoCoinReward
+	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 3, RocketLeague_ChampionsRoom_EventScript_GiveTierThreeCoinReward
+	goto RocketLeague_ChampionsRoom_EventScript_GiveBaseCoinReward
+
+RocketLeague_ChampionsRoom_EventScript_GiveBaseCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 10000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
+	addcoins 10000
+	setvar VAR_0x8004, 10000
 	special RecordRocketLeagueCoins
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox RocketLeague_ChampionsRoom_Text_ReceivedCoins
+	goto RocketLeague_ChampionsRoom_EventScript_FinishCoinReward
+
+RocketLeague_ChampionsRoom_EventScript_GiveTierOneCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 15000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
+	addcoins 15000
+	setvar VAR_0x8004, 15000
+	special RecordRocketLeagueCoins
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_ChampionsRoom_Text_ReceivedTierOneCoins
+	goto RocketLeague_ChampionsRoom_EventScript_FinishCoinReward
+
+RocketLeague_ChampionsRoom_EventScript_GiveTierTwoCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 20000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
+	addcoins 20000
+	setvar VAR_0x8004, 20000
+	special RecordRocketLeagueCoins
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_ChampionsRoom_Text_ReceivedTierTwoCoins
+	goto RocketLeague_ChampionsRoom_EventScript_FinishCoinReward
+
+RocketLeague_ChampionsRoom_EventScript_GiveTierThreeCoinReward::
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 30000, RocketLeague_ChampionsRoom_EventScript_CoinRewardFull
+	addcoins 30000
+	setvar VAR_0x8004, 30000
+	special RecordRocketLeagueCoins
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox RocketLeague_ChampionsRoom_Text_ReceivedTierThreeCoins
 	goto RocketLeague_ChampionsRoom_EventScript_FinishCoinReward
 
 RocketLeague_ChampionsRoom_EventScript_FinishCoinReward::

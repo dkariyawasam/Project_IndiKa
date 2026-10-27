@@ -72,6 +72,8 @@
 
 #define MULTICHOICE_LEAGUE_TERMINAL                           77
 
+#define MULTICHOICE_ROCKET_BOARD                              78
+
 #define MULTICHOICE_NONE                                      255
 
 #define LISTMENU_BADGES                    0

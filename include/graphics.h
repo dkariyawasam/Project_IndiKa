@@ -1929,6 +1929,7 @@ extern const u32 gMonPalette_Feebas[];
 extern const u32 gMonBackPic_Feebas[];
 extern const u32 gMonShinyPalette_Feebas[];
 extern const u8 gMonIcon_Feebas[];
+extern const u8 gMonIcon_CinnabarFeebas[];
 extern const u8 gMonFootprint_Feebas[];
 extern const u32 gMonFrontPic_Milotic[];
 extern const u32 gMonPalette_Milotic[];

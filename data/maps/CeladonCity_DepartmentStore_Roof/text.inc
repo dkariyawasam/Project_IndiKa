@@ -60,9 +60,7 @@ CeladonCity_DepartmentStore_Roof_Text_FloorSign::
 
 CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave::
     .string "A vending machine!\n"
-    .string "What does it have?\p"
-    .string "MOOMOO MILK is imported from\n"
-    .string "the farm in JOHTO.$"
+    .string "What does it have?$"
 
 CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
     .string "Oops, not enough money!$"

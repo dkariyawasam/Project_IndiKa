@@ -100,3 +100,52 @@ PokemonLeague_BrunosRoom_Text_GiovanniIntro::
 PokemonLeague_BrunosRoom_Text_GiovanniDefeat::
 	.string "We have more to learn. A worthy\nresult.$"
 
+
+PokemonLeague_BrunosRoom_Text_LoreleiPostBattle::
+    .string "LORELEI: You kept a cool head.\n"
+    .string "Keep it when the pressure rises.$"
+
+PokemonLeague_BrunosRoom_Text_BrunoPostBattle::
+    .string "BRUNO: Hoo hah! A fine match!\n"
+    .string "Give your partners my thanks!$"
+
+PokemonLeague_BrunosRoom_Text_AgathaPostBattle::
+    .string "AGATHA: Well, that woke me up!\n"
+    .string "Tell OAK I enjoyed myself.$"
+
+PokemonLeague_BrunosRoom_Text_LancePostBattle::
+    .string "LANCE: You trusted your team\n"
+    .string "when it mattered. Hold on to that.$"
+
+PokemonLeague_BrunosRoom_Text_BrockPostBattle::
+    .string "BROCK: Every partner had a part\n"
+    .string "to play. That is a solid team.$"
+
+PokemonLeague_BrunosRoom_Text_MistyPostBattle::
+    .string "MISTY: Now that was a battle!\n"
+    .string "Next time, I set the pace!$"
+
+PokemonLeague_BrunosRoom_Text_LtSurgePostBattle::
+    .string "LT. SURGE: You earned that win!\n"
+    .string "Stand tall, kid. I mean it.$"
+
+PokemonLeague_BrunosRoom_Text_ErikaPostBattle::
+    .string "ERIKA: Even here, you give your\n"
+    .string "partners room to bloom. Thank you.$"
+
+PokemonLeague_BrunosRoom_Text_KogaPostBattle::
+    .string "KOGA: Fwahahaha! You read my\n"
+    .string "feints. I must devise new ones!$"
+
+PokemonLeague_BrunosRoom_Text_BlainePostBattle::
+    .string "BLAINE: Aha! That gives me an\n"
+    .string "idea. Back to my notes!$"
+
+PokemonLeague_BrunosRoom_Text_SabrinaPostBattle::
+    .string "SABRINA: I saw several endings.\n"
+    .string "You and your team chose this one.$"
+
+PokemonLeague_BrunosRoom_Text_GiovanniPostBattle::
+    .string "GIOVANNI: I once demanded more\n"
+    .string "from my team. Now I ask it of\pmyself. You have shown me where\n"
+    .string "to begin.$"

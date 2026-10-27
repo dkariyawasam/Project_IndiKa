@@ -14,7 +14,19 @@ RocketLeague_ChampionsRoom_Text_PostBattle::
     .string "Keep earning that trust.$"
 
 RocketLeague_ChampionsRoom_Text_ReceivedCoins::
-    .string "{PLAYER} received 1,000 COINS\n"
+    .string "{PLAYER} received 10,000 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_ChampionsRoom_Text_ReceivedTierOneCoins::
+    .string "{PLAYER} received 15,000 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_ChampionsRoom_Text_ReceivedTierTwoCoins::
+    .string "{PLAYER} received 20,000 COINS\n"
+    .string "as a ROCKET LEAGUE prize.$"
+
+RocketLeague_ChampionsRoom_Text_ReceivedTierThreeCoins::
+    .string "{PLAYER} received 30,000 COINS\n"
     .string "as a ROCKET LEAGUE prize.$"
 
 RocketLeague_ChampionsRoom_Text_CoinPouchFull::

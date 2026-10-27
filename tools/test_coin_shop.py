@@ -82,6 +82,9 @@ legacy = (ROOT / 'data/maps/CeladonCity_GameCorner_PrizeRoom/scripts.inc').read_
 expected = re.findall(r'setvar VAR_TEMP_1, (ITEM_TM\d+)\n\tsetvar VAR_TEMP_2, (\d+)', legacy)
 items = re.search(r'sRocketCoinTms\[\] = \{(.*?)\n};', s, re.S)[1]
 prices = re.search(r'sRocketCoinPrices\[\] = \{(.*?)\n};', s, re.S)[1]
-assert list(zip(re.findall(r'ITEM_TM\d+', items), re.findall(r'\d+', prices))) == expected
+actual = list(zip(re.findall(r'ITEM_TM\d+', items), map(int, re.findall(r'\d+', prices))))
+assert actual[:59] == [(item, int(price) // 10) for item, price in expected]
+assert len(actual) == 64
+assert [price for _, price in actual[59:]] == [600, 500, 500, 500, 400]
 assert len(expected) == 59
-print('PASS: all 59 TM coin prices match the original clerk.')
+print('PASS: all 64 Rocket TM prices reduced tenfold; legacy clerk prices unchanged.')

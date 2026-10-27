@@ -18,5 +18,6 @@ FuchsiaCity_House2_HerbalistItems::
 	.2byte ITEM_REVIVAL_HERB
 	.2byte ITEM_BRIGHT_POWDER
 	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_MIRACLE_SEED
 	.2byte ITEM_MENTAL_HERB
 	.2byte ITEM_NONE

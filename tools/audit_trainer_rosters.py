@@ -27,7 +27,7 @@ APEX_SPECIES = {
     "SPECIES_ZAPDOS",
 }
 
-# Rival's parallel expedition deliberately includes the non-encounter Apex Ambipom.
+# The later rival has independently discovered Aipom's Apex evolution.
 RIVAL_APEX_TEAMS = {
     "TRAINER_RIVAL_ROUTE23_SQUIRTLE", "TRAINER_RIVAL_ROUTE23_BULBASAUR",
     "TRAINER_RIVAL_ROUTE23_CHARMANDER", "TRAINER_CHAMPION_FIRST_SQUIRTLE",
@@ -35,6 +35,8 @@ RIVAL_APEX_TEAMS = {
 }
 
 REMOVED_SPECIES = {
+    "SPECIES_KINKABUTO",
+    "SPECIES_AMUNYTE",
     "SPECIES_AGGRON",
     "SPECIES_ARON",
     "SPECIES_BLAZIKEN",
@@ -132,6 +134,12 @@ def main() -> int:
     issues: list[str] = []
     total_pokemon = 0
 
+    # Trainer IV quality is scaled from 0..255 to 0..31 in battle_main.c.
+    for path in (PARTIES_PATH, ROOT / "src/data/indigo_gym_parties.h"):
+        for match in re.finditer(r"\.iv\s*=\s*(\d+)", read_text(path)):
+            if int(match.group(1)) * 31 // 255 >= 31:
+                issues.append(f"{path.name} contains a perfect-IV trainer Pokemon")
+
     for trainer in trainers:
         party_name = trainer["party"]
         species = parties.get(party_name)
@@ -149,6 +157,13 @@ def main() -> int:
             if mon in REMOVED_SPECIES:
                 issues.append(f"{trainer_label(trainer)} uses removed {mon} in {party_name}")
 
+    # League-only overrides are not referenced by gTrainers.
+    league_parties = parse_parties(read_text(ROOT / "src/data/indigo_gym_parties.h"))
+    for party_name, species in league_parties.items():
+        for mon in species:
+            if mon in APEX_SPECIES or mon in REMOVED_SPECIES or mon not in species_constants:
+                issues.append(f"{party_name} uses prohibited or unknown {mon}")
+
     orphan_parties = sorted(set(parties) - {trainer["party"] for trainer in trainers})
 
     if issues:
@@ -163,7 +178,7 @@ def main() -> int:
     print(f"- {len(trainers)} trainers with parties checked")
     print(f"- {len(parties)} party blocks parsed")
     print(f"- {total_pokemon} Pokemon entries scanned")
-    print("- No unintended Apex, removed, or unknown species (rival Ambipom is intentional)")
+    print("- No unintended Apex, removed, or unknown species")
     if orphan_parties:
         print(f"- {len(orphan_parties)} unused party blocks present")
     return 0

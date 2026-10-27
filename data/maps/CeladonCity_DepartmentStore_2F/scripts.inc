@@ -34,14 +34,6 @@ CeladonCity_DepartmentStore_2F_Items::
 	.2byte ITEM_LUXURY_BALL
 	.2byte ITEM_DIVE_BALL
 	.2byte ITEM_TIMER_BALL
-	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_NONE
-	release
-	end
-
-CeladonCity_DepartmentStore_2F_EventScript_ClerkTMs::
-	lock
-	faceplayer
-	msgbox CeladonCity_DepartmentStore_2F_Text_TMCounterClosed
 	release
 	end

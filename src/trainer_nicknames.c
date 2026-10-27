@@ -42,6 +42,7 @@ static const struct TrainerNickname sBrockNicknames[] = {
     {SPECIES_GOLEM, _("PEBBLE")},
     {SPECIES_LARVITAR, _("CHIP")},
     {SPECIES_PUPITAR, _("CHIP")},
+    {SPECIES_TYRANITAR, _("CHIP")},
     {SPECIES_SHUCKLE, _("PICKLE")},
     {SPECIES_AERODACTYL, _("FLINT")},
     {SPECIES_OMANYTE, _("SPIRAL")},
@@ -84,6 +85,7 @@ static const struct TrainerNickname sLtSurgeNicknames[] = {
 };
 
 static const struct TrainerNickname sErikaNicknames[] = {
+    {SPECIES_LEAFEON, _("MOMIJI")},
     {SPECIES_ROSERADE, _("BOUQUET")},
     {SPECIES_BELLSPROUT, _("HONEY")},
     {SPECIES_WEEPINBELL, _("HONEY")},
@@ -143,6 +145,7 @@ static const struct TrainerNickname sBlaineNicknames[] = {
 };
 
 static const struct TrainerNickname sGiovanniNicknames[] = {
+    {SPECIES_MAMOSWINE, _("RAMPART")},
     {SPECIES_SANDSLASH, _("SPADE")},
     {SPECIES_DUGTRIO, _("TRIO")},
     {SPECIES_MAROWAK, _("KEEPSAKE")},
