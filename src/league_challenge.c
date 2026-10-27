@@ -10,6 +10,9 @@
 #include "constants/species.h"
 #include "constants/opponents.h"
 #include "constants/vars.h"
+#include "constants/items.h"
+#include "constants/moves.h"
+#include "data/indigo_gym_parties.h"
 
 enum { LEAGUE_RESULT_NONE, LEAGUE_RESULT_ACTIVE, LEAGUE_RESULT_WON, LEAGUE_RESULT_LOST, LEAGUE_RESULT_WITHDRAWN };
 

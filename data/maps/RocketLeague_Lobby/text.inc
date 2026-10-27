@@ -1,14 +1,11 @@
 RocketLeague_Lobby_Text_ExplainEntry::
-    .string "ROCKET LEAGUE uses a single\n"
-    .string "battle format.\p"
-    .string "You will face TEAM ROCKET\n"
-    .string "members and win COINS.\p"
-    .string "Win four consecutive matches,\n"
-    .string "and you'll face the champion\l"
-    .string "of the league.\p"
-    .string "The CHAMPION only accepts those\n"
-    .string "who have beaten VIRIDIAN GYM.\p"
-    .string "Would you like to enter?$"
+    .string "Welcome to the ROCKET LEAGUE!\p"
+    .string "Win four SINGLE BATTLES to\n"
+    .string "challenge the CHAMPION.\p"
+    .string "Beat VIRIDIAN GYM first to\n"
+    .string "challenge him.\p"
+    .string "Win COINS with each victory.\n"
+    .string "Ready to enter?$"
 
 RocketLeague_Lobby_Text_WonderWhatKindsOfTrainers::
     .string "I'm here to see how good I am.\p"
@@ -22,42 +19,34 @@ RocketLeague_Lobby_Text_StairsTougherThanAnyBattle::
     .string "Never mind battling! These stairs…\n"
     .string "They're tougher than any battle…$"
 
-RocketLeague_Lobby_Text_PrizeBoardIntro::
-    .string "ROCKET LEAGUE PRIZE BOARD\p"
-    .string "Base prize multiplier:\n"
-    .string "x1$"
 
 RocketLeague_Lobby_Text_BetForTierOne::
-    .string "Bet 250 COINS to raise your\n"
-    .string "arena prizes for this run to x1.5?$"
+    .string "All prizes this run: x1 > x1.5\n"
+    .string "Pay 250 COINS?$"
 
 RocketLeague_Lobby_Text_BetForTierTwo::
-    .string "Bet 250 COINS to raise your\n"
-    .string "arena prizes for this run to x2?$"
+    .string "All prizes this run: x1.5 > x2\n"
+    .string "Pay 250 COINS?$"
 
 RocketLeague_Lobby_Text_BetForTierThree::
-    .string "Bet 250 COINS to raise your\n"
-    .string "arena prizes for this run to x3?$"
+    .string "All prizes this run: x2 > x3\n"
+    .string "Pay 250 COINS?$"
 
 RocketLeague_Lobby_Text_PrizeTierOneSet::
-    .string "Your arena prize multiplier\n"
-    .string "is x1.5.$"
+    .string "All prizes this run: x1.5!$"
 
 RocketLeague_Lobby_Text_PrizeTierTwoSet::
-    .string "Your arena prize multiplier\n"
-    .string "is x2.$"
+    .string "All prizes this run: x2!$"
 
 RocketLeague_Lobby_Text_PrizeTierThreeSet::
-    .string "Your arena prize multiplier\n"
-    .string "is x3.$"
+    .string "All prizes this run: x3!$"
 
 RocketLeague_Lobby_Text_PrizeBoardMax::
-    .string "Your arena prize multiplier\n"
-    .string "is already x3.$"
+    .string "All prizes this run: x3.\n"
+    .string "Maximum multiplier reached!$"
 
 RocketLeague_Lobby_Text_NotEnoughCoinsForBet::
-    .string "You don't have enough COINS\n"
-    .string "to place that bet.$"
+    .string "You need 250 COINS.$"
 
 RocketLeague_Lobby_Text_NurseAfterHeal::
     .string "Your team is combat-ready.\p"
@@ -72,7 +61,7 @@ RocketLeague_Lobby_Text_Tactician::
 
 RocketLeague_Lobby_Text_PrizeSeeker::
     .string "I'm saving my COINS for a\n"
-    .string "PORYGON. No more impulse buys!\p"
+    .string "EEVEE. No more impulse buys!\p"
     .string "Then I saw the TM counter...\n"
     .string "Maybe one little impulse buy.$"
 

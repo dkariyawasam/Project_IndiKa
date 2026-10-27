@@ -168,14 +168,13 @@ RocketLeague_Lobby_Movement_WalkToArenaDoorFromBelow::
 	step_end
 
 RocketLeague_Lobby_EventScript_ShowRecords::
-	lock
+	lockall
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox RocketLeague_Lobby_Text_PrizeBoardIntro
 	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 0, RocketLeague_Lobby_EventScript_OfferPrizeTierOne
 	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 1, RocketLeague_Lobby_EventScript_OfferPrizeTierTwo
 	goto_if_eq VAR_ROCKET_LEAGUE_PRIZE_TIER, 2, RocketLeague_Lobby_EventScript_OfferPrizeTierThree
 	msgbox RocketLeague_Lobby_Text_PrizeBoardMax
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_OfferPrizeTierOne::
@@ -201,7 +200,7 @@ RocketLeague_Lobby_EventScript_BetForTierOne::
 	msgbox RocketLeague_Lobby_Text_PrizeTierOneSet
 	playse SE_SHOP
 	waitse
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_BetForTierTwo::
@@ -212,7 +211,7 @@ RocketLeague_Lobby_EventScript_BetForTierTwo::
 	msgbox RocketLeague_Lobby_Text_PrizeTierTwoSet
 	playse SE_SHOP
 	waitse
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_BetForTierThree::
@@ -223,16 +222,16 @@ RocketLeague_Lobby_EventScript_BetForTierThree::
 	msgbox RocketLeague_Lobby_Text_PrizeTierThreeSet
 	playse SE_SHOP
 	waitse
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_NotEnoughCoinsForBet::
 	msgbox RocketLeague_Lobby_Text_NotEnoughCoinsForBet
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_PrizeBoardEnd::
-	release
+	releaseall
 	end
 
 RocketLeague_Lobby_EventScript_AceTrainerF::

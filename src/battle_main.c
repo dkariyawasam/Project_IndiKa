@@ -1483,6 +1483,8 @@ static void SpriteCB_UnusedDebugSprite_Step(struct Sprite *sprite)
 
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
+    u8 partyFlags, partySize;
+    const struct TrainerMonItemCustomMoves *indigoParty;
     u32 nameHash = 0;
     u32 personalityValue;
     const u8 *nickname;
@@ -1492,11 +1494,15 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
 
+    indigoParty = GetIndigoGymLeaderParty(trainerNum);
+    partyFlags = indigoParty != NULL ? F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM : gTrainers[trainerNum].partyFlags;
+    partySize = indigoParty != NULL ? PARTY_SIZE : gTrainers[trainerNum].partySize;
+
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER
      && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_EREADER_TRAINER)))
     {
         ZeroEnemyPartyMons();
-        for (i = 0; i < gTrainers[trainerNum].partySize; i++)
+        for (i = 0; i < partySize; i++)
         {
 
             if (gTrainers[trainerNum].doubleBattle == TRUE)
@@ -1509,7 +1515,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerNum].trainerName[j];
 
-            switch (gTrainers[trainerNum].partyFlags)
+            switch (partyFlags)
             {
             case 0:
             {
@@ -1562,7 +1568,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
+                const struct TrainerMonItemCustomMoves *partyData = indigoParty != NULL ? indigoParty : gTrainers[trainerNum].party.ItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -1589,7 +1595,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
 
-    return gTrainers[trainerNum].partySize;
+    return partySize;
 }
 
 // Unused

@@ -853,9 +853,9 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeItem::
 	multichoice 10, 0, MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES, FALSE
 	switch VAR_RESULT
 	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall
-	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_MiracleSeed
-	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Charcoal
-	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_MysticWater
+	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_RareCandy
+	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_PPUp
+	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_MaxRevive
 	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
@@ -866,20 +866,20 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall::
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_MiracleSeed::
-	setvar VAR_TEMP_1, ITEM_MIRACLE_SEED
+CeladonCity_GameCorner_PrizeRoom_EventScript_RareCandy::
+	setvar VAR_TEMP_1, ITEM_RARE_CANDY
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_Charcoal::
-	setvar VAR_TEMP_1, ITEM_CHARCOAL
+CeladonCity_GameCorner_PrizeRoom_EventScript_PPUp::
+	setvar VAR_TEMP_1, ITEM_PP_UP
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_MysticWater::
-	setvar VAR_TEMP_1, ITEM_MYSTIC_WATER
+CeladonCity_GameCorner_PrizeRoom_EventScript_MaxRevive::
+	setvar VAR_TEMP_1, ITEM_MAX_REVIVE
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end

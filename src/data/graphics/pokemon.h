@@ -2981,3 +2981,5 @@ const u32 gMonShinyPalette_Clodsire[] = INCBIN_U32("graphics/pokemon/clodsire/sh
 const u8 gMonIcon_Clodsire[] = INCBIN_U8("graphics/pokemon/clodsire/icon.4bpp");
 
 const u8 gMonFootprint_Clodsire[] = INCBIN_U8("graphics/pokemon/clodsire/footprint.1bpp");
+
+const u8 gMonIcon_CinnabarFeebas[] = INCBIN_U8("graphics/pokemon/cinnabar_feebas/icon.4bpp");
