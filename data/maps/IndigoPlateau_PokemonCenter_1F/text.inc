@@ -15,12 +15,11 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
     .string "your run. Prepare before you go!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
-    .string "The north door leads to the\n"
-    .string "INDIGO LEAGUE battle room.\p"
-    .string "Face four different trainers\n"
-    .string "chosen from the League pool.\p"
-    .string "Win all four, and the north door\n"
-    .string "opens to the CHAMPION!$"
+    .string "Welcome to the INDIGO LEAGUE!\p"
+    .string "Win four DOUBLE BATTLES to\n"
+    .string "challenge the CHAMPION.\p"
+    .string "Both teams battle at Level 50.\n"
+    .string "Ready to enter?$"
 
 IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
     .string "AGATHA's GHOST-type POKéMON are\n"
@@ -40,3 +39,7 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
     .string "From what I've heard, LANCE has\n"
     .string "a cousin who's a GYM LEADER\l"
     .string "somewhere far away.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_HeldItemShop::
+    .string "We stock held items for battle.\n"
+    .string "What does your team need?$"

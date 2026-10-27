@@ -171,7 +171,6 @@ static const struct MenuAction sMultichoiceList_CeladonVendingMachine[] = {
     { gText_FreshWater_200 },
     { gText_SodaPop_300 },
     { gText_Lemonade_350 },
-    { gText_MoomooMilk_500 },
     { gOtherText_Exit }
 };
 
@@ -284,9 +283,9 @@ static const struct MenuAction sMultichoiceList_GameCornerTMPrizes10[] = {
 
 static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
     { gText_SmokeBall_800Coins },
-    { gText_MiracleSeed_1000Coins },
-    { gText_Charcoal_1000Coins },
-    { gText_MysticWater_1000Coins },
+    { gText_RareCandy_1000Coins },
+    { gText_PPUp_1000Coins },
+    { gText_MaxRevive_1000Coins },
     { gText_NoThanks_2 }
 };
 
@@ -475,7 +474,13 @@ static const struct MenuAction sMultichoiceList_LeagueTerminal[] = {
     {sLeagueRules}, {sLeagueCurrent}, {sLeagueRecords}, {sLeagueRewards}, {gOtherText_Exit}
 };
 
+static const u8 sRocketPrizeBoost[] = _("Prize boost");
+static const struct MenuAction sMultichoiceList_RocketBoard[] = {
+    {sRocketPrizeBoost}, {sLeagueRecords}, {sLeagueRules}
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] = {
+    [MULTICHOICE_ROCKET_BOARD] = MULTICHOICE(sMultichoiceList_RocketBoard),
     [MULTICHOICE_LEAGUE_TERMINAL] = MULTICHOICE(sMultichoiceList_LeagueTerminal),
     [MULTICHOICE_YES_NO]                                     = MULTICHOICE(sMultichoiceList_YesNo),
     [MULTICHOICE_EEVEELUTIONS]                               = MULTICHOICE(sMultichoiceList_Eeveelutions),
