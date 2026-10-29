@@ -75,7 +75,7 @@ All {len(rows)} active species checked. This report reflects the current assets;
 
 Reference PNGs come from https://github.com/rh-hideout/pokeemerald-expansion/tree/master/graphics/pokemon ; per-species download URLs/results are in reference-sources.json. Four older-species alternatives were additionally checked against https://github.com/pret/pokefirered/tree/master/graphics/pokemon and matched the project exactly. The expansion reference is community maintained; a match is not independent proof of official provenance for later-generation footprints.
 
-Custom species/forms use deliberate contact-stamp designs generated with the built-in image generation tool, then converted to 16×16 monochrome assets by tools/import_custom_footprints.py. The source atlas is preserved in custom/source.png. These are new adaptations, not official footprints. Failed regional-form reference lookups do not mean that no canonical footprint exists.
+Seven custom species use user-supplied footprints: Aeropteryx, Mime Sr., Osscythe, Amunyte, Kinkabuto, Kabustar and Kabuknight. Omato, Omatops and both Deep Forms have blank footprints. No current custom footprint uses the historical generated atlas. tools/import_custom_footprints.py preserves these replacements; provenance and source images are retained in custom/. Failed regional-form reference lookups do not mean that no canonical footprint exists.
 
 all-species.csv lists every registration and result. contact-sheet-*.png covers every active species; differences.png shows the initial 26 reference differences (including the four subsequently verified FireRed originals). These are static asset checks, not an emulator playtest.
 """

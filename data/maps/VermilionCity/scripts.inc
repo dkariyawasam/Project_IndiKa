@@ -22,12 +22,7 @@ VermilionCity_Movement_ExitSSAnne::
 
 VermilionCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
-	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
 	end
-
-VermilionCity_EventScript_HideOaksAide::
-	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
-	return
 
 VermilionCity_EventScript_Woman::
 	msgbox VermilionCity_Text_GrimerMultipliesInSludge, MSGBOX_NPC
@@ -53,14 +48,6 @@ Vermilion_EventScript_Unused::
 
 VermilionCity_EventScript_Sailor::
 	msgbox VermilionCity_Text_SSAnneVisitsOnceAYear, MSGBOX_NPC
-	end
-
-VermilionCity_EventScript_OaksAide::
-	lock
-	faceplayer
-	setflag FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION
-	msgbox VermilionCity_Text_Route2AideHasPackageForYou
-	release
 	end
 
 VermilionCity_EventScript_OldMan2::

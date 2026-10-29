@@ -319,8 +319,6 @@ gStdScriptsEnd::
 	.include "data/maps/Route4_HealingHouse/scripts.inc"
 	.include "data/maps/Route5_PokemonDayCare/scripts.inc"
 	.include "data/maps/Route10_HealingHouse/scripts.inc"
-	.include "data/maps/Route11_EastEntrance_1F/scripts.inc"
-	.include "data/maps/Route11_EastEntrance_2F/scripts.inc"
 	.include "data/maps/Route12_NorthEntrance_1F/scripts.inc"
 	.include "data/maps/Route12_NorthEntrance_2F/scripts.inc"
 	.include "data/maps/Route15_WestEntrance_1F/scripts.inc"
@@ -534,8 +532,6 @@ gStdScriptsEnd::
 	.include "data/maps/LavenderTown_HealingHouse/text.inc"
 	.include "data/maps/Route4_HealingHouse/text.inc"
 	.include "data/maps/Route10_HealingHouse/text.inc"
-	.include "data/maps/Route11_EastEntrance_1F/text.inc"
-	.include "data/maps/Route11_EastEntrance_2F/text.inc"
 	.include "data/maps/Route12_NorthEntrance_1F/text.inc"
 	.include "data/maps/Route12_NorthEntrance_2F/text.inc"
 	.include "data/maps/Route15_WestEntrance_1F/text.inc"
@@ -797,7 +793,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
 	setflag FLAG_HIDE_LIFT_KEY
 	setflag FLAG_HIDE_CERULEAN_RIVAL
-	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
 	setflag FLAG_HIDE_SAFFRON_CIVILIANS
 	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
 	setflag FLAG_HIDE_CREDITS_RIVAL

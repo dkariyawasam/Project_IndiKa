@@ -17,30 +17,30 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
     .string "There's a long path over water far\n"
     .string "away.$"
 
-Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
-    .string "Hi! Remember me?\n"
-    .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If your POKéDEX has complete data\n"
-    .string "on 40 species, I'm supposed to\l"
-    .string "give you a reward.\p"
-    .string "PROF. OAK entrusted me with an\n"
-    .string "AMULET COIN for you.\p"
-    .string "So, {PLAYER}, let me ask you.\p"
-    .string "Have you gathered data on at least\n"
-    .string "40 kinds of POKéMON?$"
-
-Route16_NorthEntrance_2F_Text_GreatHereYouGo::
-    .string "Great! You have caught or owned\n"
-    .string "{STR_VAR_3} kinds of POKéMON!\p"
-    .string "Congratulations!\n"
-    .string "Here you go!$"
-
-Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide::
-    .string "{PLAYER} received the AMULET COIN\n"
-    .string "from the AIDE.$"
-
 Route16_NorthEntrance_2F_Text_ExplainAmuletCoin::
     .string "An AMULET COIN is an item to be\n"
     .string "held by a POKéMON.\p"
     .string "If the POKéMON appears in a winning\n"
     .string "battle, you will earn more money.$"
+
+Route16_NorthEntrance_2F_Text_ResearchGrant::
+    .string "A fellow FIELD AIDE! PROF. OAK\n"
+    .string "has set aside research support.\p"
+    .string "At 100 species owned, you qualify\n"
+    .string "for a ¥10,000 fieldwork stipend\p"
+    .string "and a AMULET COIN.\n"
+    .string "May I review your POKéDEX?$"
+
+Route16_NorthEntrance_2F_Text_StipendReceived::
+    .string "{PLAYER} received ¥10,000\n"
+    .string "as a fieldwork stipend!\p"
+    .string "Thank you for your continued\n"
+    .string "support of our POKéMON research.$"
+
+Route16_NorthEntrance_2F_Text_ResearchRepeat::
+    .string "Your research award is recorded.\n"
+    .string "Thank you for your fieldwork!$"
+
+Route16_NorthEntrance_2F_Text_WalletFull::
+    .string "You can't carry the full stipend.\n"
+    .string "I'll keep it here for you.$"

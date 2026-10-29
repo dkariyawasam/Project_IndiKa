@@ -132,6 +132,7 @@ enum CreditsString
     CREDITS_STRING_EK_THANKS,
     CREDITS_STRING_EK_ATTRIBUTION,
     CREDITS_STRING_EK_CONTACT,
+    CREDITS_STRING_EK_SPECIAL_THANKS,
 };
 
 enum CreditsMap
@@ -494,6 +495,7 @@ static const struct CreditsScrcmd sExpeditionCreditsScript[] = {
     CREDITS_MAPNEXT(ROUTE21_NORTH, 16),
     CREDITS_PRINT(EK_ATTRIBUTION, 480),
     CREDITS_PRINT(EK_CONTACT, 480),
+    CREDITS_PRINT(EK_SPECIAL_THANKS, 480),
     CREDITS_PRINT(EK_THANKS, 360),
     CREDITS_THEENDGFX(ALLRIGHTSRESERVED, 224),
     CREDITS_THEENDGFX(THEEND, 240),
@@ -740,7 +742,7 @@ static const u8 sNames_EK_SPRITES[] = _("\nROM HACKING HIDEOUT\nPOKEEMERALD-EXPA
 static const u8 sTitle_EK_ARCHIVE[] = _("SPRITE ARCHIVES");
 static const u8 sNames_EK_ARCHIVE[] = _("\nPOKEAPI / SPRITES");
 static const u8 sTitle_EK_TOOLS[] = _("DEVELOPMENT TOOLS");
-static const u8 sNames_EK_TOOLS[] = _("\nDEVKITARM / AGBCC\nPORYMAP\nOPENAI CODEX");
+static const u8 sNames_EK_TOOLS[] = _("\nDEVKITARM / AGBCC\nPORYMAP");
 static const u8 sTitle_EK_ORIGINAL[] = _("ORIGINAL GAME");
 static const u8 sNames_EK_ORIGINAL[] = _("\nPOKEMON FIRERED\nGAME FREAK\nNINTENDO / CREATURES");
 static const u8 sTitle_EK_MUSIC[] = _("ORIGINAL MUSIC & SOUND");
@@ -749,6 +751,8 @@ static const u8 sTitle_EK_ATTRIBUTION[] = _("HELP COMPLETE THE CREDITS");
 static const u8 sNames_EK_ATTRIBUTION[] = _("\nSOME IMPORTED ARTWORK\nSTILL HAS INCOMPLETE\nARTIST ATTRIBUTION.");
 static const u8 sTitle_EK_CONTACT[] = _("RECOGNISE YOUR WORK?");
 static const u8 sNames_EK_CONTACT[] = _("\nHELP IDENTIFY ITS CREATOR.\nCONTACT DEE KARIYAWASAM\nVIA THE PROJECT RELEASE PAGE\nSO WE CAN UPDATE THE CREDITS.");
+static const u8 sTitle_EK_SPECIAL_THANKS[] = _("SPECIAL THANKS");
+static const u8 sNames_EK_SPECIAL_THANKS[] = _("\nTO MY WIFE, HONGMIAO\nFOR YOUR LOVE AND SUPPORT,\nAND FOR MAKING IT POSSIBLE\nFOR ME TO FINISH THIS MOD.");
 static const u8 sTitle_EK_THANKS[] = _("THANK YOU");
 static const u8 sNames_EK_THANKS[] = _("\nTO EVERYONE WHO HELPED\nAND EVERY TRAINER\nEXPLORING KANTO");
 
@@ -813,6 +817,7 @@ static const struct CreditsTextHeader sCreditsTexts[] = {
     { sTitle_EK_THANKS, sNames_EK_THANKS, FALSE },
     { sTitle_EK_ATTRIBUTION, sNames_EK_ATTRIBUTION, FALSE },
     { sTitle_EK_CONTACT, sNames_EK_CONTACT, FALSE },
+    { sTitle_EK_SPECIAL_THANKS, sNames_EK_SPECIAL_THANKS, FALSE },
 
 };
 
@@ -888,6 +893,10 @@ static void DestroyCreditsWindow(void)
 {
     if (sCreditsMgr->windowIsActive)
     {
+        // The field VBlank callback must not read buffers while the next
+        // credits scene frees and replaces them across several frames.
+        SetVBlankCallback(NULL);
+        ClearScheduledBgCopiesToVram();
         RemoveWindow(sCreditsMgr->windowId);
         CleanupOverworldWindowsAndTilemaps();
         sCreditsMgr->windowIsActive = FALSE;

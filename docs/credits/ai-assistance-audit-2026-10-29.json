@@ -1,0 +1,523 @@
+{
+  "date": "2026-10-29",
+  "head": "05cb7c0c76560cb4f1252066c1337735dfc72881",
+  "scope": "Repository-wide text evidence scan, targeted provenance documents and runtime references, recent git history, and available conversation. Not a forensic certification of every asset or line. No AI detector used.",
+  "tracked_paths": 12129,
+  "text_files_scanned": 2165,
+  "findings": [
+    {
+      "category": "Generated artwork",
+      "status": "pixel_verified_current",
+      "scope": "Eleven custom footprints",
+      "evidence": [
+        "docs/footprint-audit/custom/provenance.json",
+        "tools/import_custom_footprints.py"
+      ],
+      "note": "All eleven current masks exactly match a non-writing reconstruction from the generated atlas."
+    },
+    {
+      "category": "Generated artwork",
+      "status": "documented_import_and_current_graphics_reference",
+      "scope": "Boulder Key, Rainbow Key, Thunder Pass, Soul Pass, Marsh Finder",
+      "evidence": [
+        "docs/custom-key-item-icons.md",
+        "output/imagegen/key-items",
+        "src/data/graphics/items.h"
+      ],
+      "note": "Provenance documents generated sources and import. Later pixel-edit ancestry has not been exhaustively reconstructed."
+    },
+    {
+      "category": "Generated artwork",
+      "status": "documented_import_and_current_graphics_reference",
+      "scope": "Kinkabuto, Amunyte, Omato, Omatops back sprites; Deep Magikarp back",
+      "evidence": [
+        "docs/sprite-work/fossil-backs/README.md",
+        "docs/thermikarp-sprites/back-and-icon/README.md",
+        "src/data/graphics/pokemon.h"
+      ],
+      "note": "Generated back-sprite import documented; later human edits may exist. Not a byte-for-byte source-image match claim."
+    },
+    {
+      "category": "Generated artwork edits",
+      "status": "documented_import",
+      "scope": "Tynamo, Eelektrik, Eelektross front/back shading; Swimmer F land/water highlights",
+      "evidence": [
+        "docs/tynamo-sprites/shading-pass/README.md",
+        "docs/sprite-work/swimmer-f-highlights/README.md"
+      ],
+      "note": "Generated lighting/mask pixels were transferred onto existing art, not whole new character designs."
+    },
+    {
+      "category": "Writing",
+      "status": "confirmed_assistance_at_system_level",
+      "scope": "Oak and rival scenes, Giovanni/Mewtwo story, gym and trainer dialogue, research quests, league staff, item/NPC dialogue",
+      "evidence": [
+        "docs/expeditions-kanto-change-log.md",
+        "docs/codex-pokemon-session-merge.md",
+        "data/maps",
+        "src/quests.c",
+        "src/strings.c"
+      ],
+      "note": "Conversation and session records establish substantial drafting/editing assistance. Exact authorship of every line cannot be recovered from git authorship alone; user concepts and direction remain distinct."
+    },
+    {
+      "category": "Writing",
+      "status": "confirmed_assistance_and_review_inventory",
+      "scope": "Pokedex description expansion",
+      "evidence": [
+        "docs/pokedex-entry-review.json",
+        "src/data/pokemon/pokedex_entries.h"
+      ],
+      "note": "Review inventory lists 404 entries, 35 editorial changes. Official-source text and reflow-only entries should not all be labelled generated prose."
+    },
+    {
+      "category": "Public prose",
+      "status": "assistance_recorded_in_conversation",
+      "scope": "Blog posts, feature guide, documentation and credits wording",
+      "evidence": [
+        "docs/blog",
+        "docs/credits",
+        "docs/release-playthrough"
+      ],
+      "note": "Assistant drafting/revision occurred; this is not a claim every sentence is AI-written. Screenshots and deterministic map renders are not generated artwork merely because automation captured/rendered them."
+    },
+    {
+      "category": "Code",
+      "status": "confirmed_substantial_assistance",
+      "scope": "Quest/logbook and habitat systems, menu/UI, evolution logic, leagues, encounters, battle split/AI changes, bug fixes",
+      "evidence": [
+        "docs/expeditions-kanto-change-log.md",
+        "src",
+        "data/maps",
+        "tools"
+      ],
+      "note": "Conversation records extensive implementation, not merely proofreading. Existing pret source and imported upstream code must not be attributed to AI by association."
+    },
+    {
+      "category": "Tools",
+      "status": "confirmed_assistance",
+      "scope": "Dashboard/mobile support, art studio, importers, test/audit scripts",
+      "evidence": [
+        "tools/debug_dashboard",
+        "tools/import_custom_footprints.py",
+        "tools/audit_dialogue_widths.py"
+      ],
+      "note": "Separate development tooling from ROM contents; either can carry AI-written code."
+    },
+    {
+      "category": "Audio",
+      "status": "procedural_adaptation_not_verified_generative_audio",
+      "scope": "Custom cries",
+      "evidence": [
+        "tools/generate_custom_cries.py",
+        "sound/direct_sound_samples/cries"
+      ],
+      "note": "Code manipulates existing cries; do not describe this as neural audio synthesis without further evidence."
+    },
+    {
+      "category": "Superseded artwork",
+      "status": "documented_replacement",
+      "scope": "Psychic F, breeder redesign, generated Slowking front, early Kinkabuto fronts, Deep Magikarp generated icon",
+      "evidence": [
+        "docs/psychic-f-proportions/README.md",
+        "docs/sprite-work/breeder-overworld/README.md",
+        "docs/slowking-sprites/README.md",
+        "docs/sprite-work/kinkabuto/README.md",
+        "docs/thermikarp-sprites/native-menu-icon/README.md"
+      ],
+      "note": "Later notes explicitly replace generated versions. Direct AI-guided pixel edits/palettes are a separate assistance category."
+    },
+    {
+      "category": "Unused draft",
+      "status": "current_table_verified",
+      "scope": "Aeropteryx generated back draft",
+      "evidence": [
+        "output/imagegen/aeropteryx-back-draft.png",
+        "output/imagegen/aeropteryx-back-head-64.png",
+        "src/data/pokemon_graphics/back_pic_table.h:451"
+      ],
+      "note": "Current source still maps AEROPTERYX to DoubleQuestionMark, so do not claim this draft is shipped."
+    },
+    {
+      "category": "Unresolved ancestry",
+      "status": "needs_asset_by_asset_comparison",
+      "scope": "Earlier generated menu icons, fossil concept revisions, title art, other supplied art",
+      "evidence": [
+        "output/imagegen/menu-icons",
+        "output/fossil-concept-refinement",
+        "docs/credits/original-pokemon-designs.md"
+      ],
+      "note": "Presence of drafts does not prove they are active. User-supplied sources have no inferred AI provenance. Original character design authorship is explicitly Dee Kariyawasam, distinct from sprite adaptations."
+    },
+    {
+      "category": "Sourced art",
+      "status": "documented_non_generated_sources",
+      "scope": "Official game sprites and RHH assets, including regional forms",
+      "evidence": [
+        "docs/credits/attribution-sources.md",
+        "docs/galarian-sprites/README.md",
+        "docs/sylveon-sprites/README.md"
+      ],
+      "note": "Importing through an assistant does not turn original source artwork into generated artwork. Recolouring/adaptation and individual artist attribution remain separate questions."
+    }
+  ],
+  "footprint_pixel_verification": [
+    {
+      "path": "graphics/pokemon/mime_sr/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/osscythe/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/omato/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/omatops/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/cinnabar_magikarp/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/cinnabar_feebas/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/kabustar/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/kabuknight/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/amunyte/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/kinkabuto/footprint.png",
+      "matches_generated_atlas": true
+    },
+    {
+      "path": "graphics/pokemon/aeropteryx/footprint.png",
+      "matches_generated_atlas": true
+    }
+  ],
+  "keyword_evidence": [
+    {
+      "path": "docs/apex-icons-footprints/README.md",
+      "line": 1,
+      "text": "Osscythe icon adapted directly from vanilla Marowak icon after built-in image generation failed; uses menu palette1 and preserves two native animation frames, adding tall horns and hooked bone scythe. Annihilape inherits Primeape footprint. Mime Sr. uses a broad shoe sole; Osscythe a heavy three-clawed foot. Both custom footprint masks are original 16x16 1bpp artwork. Preview: icon, Annihilape, Mime Sr., Osscythe."
+    },
+    {
+      "path": "docs/chingling-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/codex-pokemon-session-merge.md",
+      "line": 1,
+      "text": "# Codex Pokemon Mod Session Merge"
+    },
+    {
+      "path": "docs/codex-pokemon-session-merge.md",
+      "line": 3,
+      "text": "This file consolidates the useful context from the local Codex sessions related to this Pokemon FireRed mod. It is not a literal Codex UI session merge; it is the practical merged project memory to use going forward."
+    },
+    {
+      "path": "docs/codex-pokemon-session-merge.md",
+      "line": 177,
+      "text": "When starting a new Codex thread for this project, ask Codex to read:"
+    },
+    {
+      "path": "docs/codex-pokemon-session-merge.md",
+      "line": 179,
+      "text": "`docs/codex-pokemon-session-merge.md`"
+    },
+    {
+      "path": "docs/custom-key-item-icons.md",
+      "line": 11,
+      "text": "Final assets are 24\u00d724 indexed PNGs with transparency at index 0, black contours, and at most 15 opaque colours. Generated sources are retained under output/imagegen/key-items/. Cascade Board remains the reference icon."
+    },
+    {
+      "path": "docs/dusknoir-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/dusknoir-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/eelektrik-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/eelektrik-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/eelektross-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/eelektross-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/evolution-item-icon-sources.md",
+      "line": 3,
+      "text": "Imported 2026-09-29 from the PokeAPI sprite archive (community-hosted game sprite assets, not a Pokemon-owned distribution). Rights to the original designs/artwork remain with the Pokemon rights holders. No AI-generated artwork. Exact originating game versions are not specified by this archive."
+    },
+    {
+      "path": "docs/expeditions-kanto-change-log.md",
+      "line": 5,
+      "text": "This is a living summary of the work done across the Codex Pokemon modding sessions. It tracks the major deltas from vanilla FireRed by system, story beat, map, UI, and asset area. It is meant as a project memory file rather than a patch-by-patch git log."
+    },
+    {
+      "path": "docs/footprint-audit/custom/provenance.json",
+      "line": 2,
+      "text": "  \"method\": \"Built-in image_gen, followed by deterministic crop, resize and 1bpp conversion\","
+    },
+    {
+      "path": "docs/footprint-audit/custom/provenance.json",
+      "line": 6,
+      "text": "  \"footprint_adaptations\": \"AI-generated contact-stamp designs; not official assets\","
+    },
+    {
+      "path": "docs/footprint-audit/report.md",
+      "line": 25,
+      "text": "Custom species/forms use deliberate contact-stamp designs generated with the built-in image generation tool, then converted to 16\u00d716 monochrome assets by tools/import_custom_footprints.py. The source atlas is preserved in custom/source.png. These are new adaptations, not official footprints. Failed regional-form reference lookups do not mean that no canonical footprint exists."
+    },
+    {
+      "path": "docs/froslass-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/froslass-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/gallade-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/gallade-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/glaceon-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/glaceon-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/leafeon-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/leafeon-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/mamoswine-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/mamoswine-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/porygon_z-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/porygon_z-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/psychic-f-proportions/README.md",
+      "line": 5,
+      "text": "Built-in imagegen edit prompt: match the reference female overworld proportions and coarse pixel style, preserve Psychic F identity, produce front/back/left idle and paired walking frames with a consistent scale and baseline. Exported to the indexed 16-colour GBA format, regenerated the matching palette and trainer lineup. Comparison image, left to right: old Psychic F, revised Psychic F, Ace Trainer F, Aroma Lady."
+    },
+    {
+      "path": "docs/psychic-f-proportions/export.cjs",
+      "line": 1,
+      "text": "const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/release-playthrough/october6/story-follow-up.md",
+      "line": 9,
+      "text": "- `/tmp/frigibas-imagegen-venv/bin/python tools/test_trainer_identity_dialogue.py`: passed 446 placed trainer objects, League actors, twenty dedicated IDs and 201 edited texts. The initial system-Python invocation lacked Pillow; rerunning with the existing image environment passed."
+    },
+    {
+      "path": "docs/release-playthrough/october6/story-follow-up.md",
+      "line": 11,
+      "text": "- `/tmp/frigibas-imagegen-venv/bin/python tools/audit_map_collisions.py`: 246 maps, zero hard event findings and zero invalid fixed warp targets. Water, seam and collision-pattern heuristic candidates remain; this is not complete traversal coverage."
+    },
+    {
+      "path": "docs/release-playthrough/tools/export-psychic.cjs",
+      "line": 1,
+      "text": "const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/slowking-sprites/README.md",
+      "line": 3,
+      "text": "The built-in imagegen tool edited the existing front, with Slowbro as a pink-colour reference. Prompt: widen Slowking\u2019s head and torso modestly, preserve crown, collar, pose and classic GBA pixel-art style; single front sprite on transparent background."
+    },
+    {
+      "path": "docs/slowking-sprites/import-front.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/spiritomb-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/spiritomb-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/sprite-work/fossil-backs/README.md",
+      "line": 5,
+      "text": "Created with the built-in image generation tool, one call per species. Prompts requested rear three-quarter views from behind-left facing upper-right, with source anatomy preserved, no rear-facing eyes, 64\u00d764 pixel-art detail and clean contours. Kinkabuto: rear gold armour, two-prong crest, navy bands, cream blades. Amunyte: cream/purple shell, purple plume, blue tentacles. Omato: cream helix shell and two cream stalks, tan claws. Omatops: layered spinning-top shell, triangular rear head, short straight side projections (not curved horns). Solid magenta background requested; Kinkabuto returned real alpha, which was retained. Generated sources archived here; original Omato/Omatops backs backe"
+    },
+    {
+      "path": "docs/sprite-work/fossil-backs/README.md",
+      "line": 13,
+      "text": "Regenerated three backs using built-in image generation from current front references. Prompts specified Kinkabuto as a compact dome-backed arthropod with crest bases occluded behind its shell, Omato as a small external body with thin stalks above a cream helix shell, and Omatops as a distinct small triangular head above its shell collar with straight side projections. Generated source files and earlier backs retained. Converted using current palettes and updated back coordinates. These remain visual revisions for user assessment, not independently established anatomy."
+    },
+    {
+      "path": "docs/sprite-work/fossil-lineup/README.md",
+      "line": 15,
+      "text": "Shell section seams: built-in image edit requested two short curved brown seams, beneath the upper rim and around the lower taper, with highlight breaks. Encoded those accents at native resolution using existing shadow index 10, changing 37 midtone shell pixels only. All other pixels and the palette preserved. Original backed up as omatops-before-section-seams.png; generated guide retained as omatops-section-seam-reference.png. Lineup refreshed and main ROM build passed."
+    },
+    {
+      "path": "docs/sprite-work/fossil-lineup/README.md",
+      "line": 19,
+      "text": "Omatops side blades: built-in image edit requested short tapered blades with cream cutting edges and warm dark undersides at the widest rim, preserving the spinning-top form. Imported only the two side blade regions (x1\u201314 and x49\u201362, y27\u201334) into the original indexed front sprite. All pixels outside these regions verified unchanged. Existing palette retained. Original backed up as omatops-before-blades.png; generated source retained as omatops-blades-generated.png. Main ROM build passed; lineup refreshed. Back artwork remains the previously noted unrelated placeholder."
+    },
+    {
+      "path": "docs/sprite-work/kinkabuto/README.md",
+      "line": 3,
+      "text": "Adapted the supplied Kinkabuto artwork with the built-in image generation tool, then encoded it as a 64\u00d764 indexed GBA sprite. Index zero is transparent; fifteen opaque colours use warm fossil-like gold/brown ramps, ivory greys, navy trim and red eyes. Main ROM build passed; decoded 4bpp indices match the source PNG at every pixel. No live emulator check was performed for this asset."
+    },
+    {
+      "path": "docs/sprite-work/kinkabuto/README.md",
+      "line": 13,
+      "text": "Revision 3: user requested smaller feet to improve eye detail. Built-in image edit prompt: halve the height and width of the two gold feet into tucked claws; use freed lower-body space for a larger skull face and larger red jewel eyes with distinct dark sockets, red shading, pink highlights and ivory glints; preserve the crest, navy jaw trim, armor and side blades. Converted through the same 64\u00d764/16-index pipeline and rebuilt the main ROM. Previous sprite retained as front-v2.png."
+    },
+    {
+      "path": "docs/sprite-work/kinkabuto/README.md",
+      "line": 19,
+      "text": "Silhouette repair: built-in image edit requested continuous one-pixel dark contours around the crest, armor, arms, blades and feet, preserving open gaps and existing design. Integrated the generated silhouette with original overlapping interior pixels and the existing palette. Applied dark border indices when encoding the outer edge. Verified the opaque sprite forms one four-connected component (2,170 pixels), with no isolated fragments. Previous asset saved as front-before-silhouette.png. Main ROM rebuild passed; live appearance not yet tested."
+    },
+    {
+      "path": "docs/sprite-work/swimmer-f-highlights/README.md",
+      "line": 3,
+      "text": "Built-in image edit prompt: add sparse pale golden cream highlights to the crown and upper-left blonde strands; preserve both swimmer sheets, poses, swimsuit and water effects."
+    },
+    {
+      "path": "docs/sylveon-sprites/README.md",
+      "line": 3,
+      "text": "Adapted fan-made pixel sprites from [RHH pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/master/graphics/pokemon/sylveon). Credit Rom Hacking Hideout and its sprite contributors; see the upstream [credits](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CREDITS.md). Original downloaded assets are preserved in `source/`. These are fan-made sprites, not official Nintendo 2D artwork or AI-generated artwork. Generation attempts produced no assets; this sourced set supersedes that incomplete attempt."
+    },
+    {
+      "path": "docs/sylveon-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/thermikarp-sprites/back-and-icon/README.md",
+      "line": 1,
+      "text": "Generated using built-in image_gen with approved front.png as the design reference. Back prompt: FRLG 64x64 rear three-quarter upper-body battle sprite facing upper right, orange-red body, jagged peach dorsal crown, lavender side fins and thin whisker, cropped lower body, pixel art. Icon prompt: whole fish facing left, 32x32 party icon with vacant eye, peach crown, pale fins and thin whiskers. Generated sources retained. Converted to native indexed assets: back uses unchanged shared normal palette, icon uses vanilla palette0 and two frames with one-pixel bob. Back checkerboard removed at logical resolution. Front sprite and battle palettes unchanged."
+    },
+    {
+      "path": "docs/thermikarp-sprites/clarify-face.py",
+      "line": 4,
+      "text": "source=Path('/tmp/codex-remote-attachments/01a08c66-0028-7a82-a332-3f5f716848ef/9363A63E-DA70-4437-A584-05E2F612830A/1-Pasted-Image-1.jpg')"
+    },
+    {
+      "path": "docs/thermikarp-sprites/deep-form-update/README.md",
+      "line": 1,
+      "text": "Updated front sprite imported from the user-provided 64x64 PNG. Exact silhouette and transparency retained; source shade roles mapped to existing shared FRLG-derived normal palette. Back sprite and shared normal/shiny palettes unchanged. The built-in imagegen palette-only attempt was rejected for altering the supplied design; its pixels were not imported. Prompt: preserve every pixel position and recolor using Magikarp reds, FRLG creams and fin greys. comparison.png shows old and new at 4x."
+    },
+    {
+      "path": "docs/tynamo-sprites/import-icon.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/tynamo-sprites/import.cjs",
+      "line": 2,
+      "text": "const fs=require('fs');const sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/tynamo-sprites/reframe-backs.cjs",
+      "line": 1,
+      "text": "const fs=require('fs'),sharp=require('/Users/deekariyawasam/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');"
+    },
+    {
+      "path": "docs/tynamo-sprites/shading-pass/README.md",
+      "line": 3,
+      "text": "The six battle views retain their original 64\u00d764 indexed canvases, silhouettes, transparency and facial feature colours. Built-in image generation supplied a shading reference; `convert.py` transfers only material-compatible interior lighting pixels onto the original assets. Generated glow and altered edges are discarded. Eelektrik and Eelektross gain a restrained teal intermediate highlight in unused palette slots, with corresponding shiny highlights. Tynamo retains its existing palette."
+    },
+    {
+      "path": "output/README.md",
+      "line": 8,
+      "text": "- `imagegen/`: generation prompts and source images, including custom key-item and menu-icon artwork referenced by development notes."
+    },
+    {
+      "path": "release/2026-10-12-preview/docs/credits/README.md",
+      "line": 14,
+      "text": "- Tool credit acknowledges devkitARM, agbcc, Porymap and OpenAI Codex; it does not imply endorsement or authorship of all assets."
+    },
+    {
+      "path": "release/2026-10-12-preview/docs/sylveon-sprites/README.md",
+      "line": 3,
+      "text": "Adapted fan-made pixel sprites from [RHH pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/master/graphics/pokemon/sylveon). Credit Rom Hacking Hideout and its sprite contributors; see the upstream [credits](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CREDITS.md). Original downloaded assets are preserved in `source/`. These are fan-made sprites, not official Nintendo 2D artwork or AI-generated artwork. Generation attempts produced no assets; this sourced set supersedes that incomplete attempt."
+    },
+    {
+      "path": "tools/audit_pokemon_footprints.py",
+      "line": 78,
+      "text": "Custom species/forms use deliberate contact-stamp designs generated with the built-in image generation tool, then converted to 16\u00d716 monochrome assets by tools/import_custom_footprints.py. The source atlas is preserved in custom/source.png. These are new adaptations, not official footprints. Failed regional-form reference lookups do not mean that no canonical footprint exists."
+    },
+    {
+      "path": "tools/debug_dashboard/server.py",
+      "line": 111,
+      "text": "        candidate = Path('/tmp/frigibas-imagegen-venv/bin/python')"
+    }
+  ],
+  "cautions": [
+    "Keyword matches are leads, not proof: runtime paths, battle AI and deterministic generated files are false-positive sources.",
+    "No precise percentage of AI content can be responsibly derived from these records.",
+    "No game assets, provenance records or credits were removed or altered for this audit.",
+    "Community eligibility is a moderator decision; this report documents provenance rather than predictability of detection."
+  ]
+}

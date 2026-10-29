@@ -2609,6 +2609,10 @@ static bool32 SetUpScrollSceneForCredits(u8 *state, u8 unused)
         break;
     case 3:
         gFieldCamera.callback = CameraCB_CreditsPan;
+        // Commit the completed map before VBlank can reveal its new palettes.
+        // Credits load one stage per frame, unlike the normal black-screen
+        // map loader; exposing the intermediate tilemaps scrambles scenery.
+        DoScheduledBgTilemapCopiesToVram();
         SetFieldVBlankCallback();
         *state = 0;
         return TRUE;

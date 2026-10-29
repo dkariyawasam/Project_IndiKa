@@ -546,6 +546,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_ROCKET_ACE_JET 0x1162
 #define OBJ_EVENT_PAL_TAG_ROCKET_ACE_VIPER 0x1163
 #define OBJ_EVENT_PAL_TAG_KOGA 0x1164
+#define OBJ_EVENT_PAL_TAG_BRUNO 0x1165
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -649,6 +650,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Janine,                  OBJ_EVENT_PAL_TAG_JANINE},
     {gObjectEventPal_Misty,                   OBJ_EVENT_PAL_TAG_MISTY},
     {gObjectEventPal_Scout,                   OBJ_EVENT_PAL_TAG_SCOUT},
+    {gObjectEventPal_Bruno, OBJ_EVENT_PAL_TAG_BRUNO},
     {gObjectEventPal_Ninja,                   OBJ_EVENT_PAL_TAG_NINJA},
     {gObjectEventPal_AceTrainerM,             OBJ_EVENT_PAL_TAG_ACE_TRAINER_M},
     {},

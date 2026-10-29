@@ -46,47 +46,29 @@ PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "OAK: That’s enough.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCallPlayerAndRivalOver::
-    .string "OAK: Both of you, over here.\p"
-    .string "There’s something important\n"
-    .string "you need to hear before\l"
-    .string "you begin.$"
+    .string "OAK: Both of you, over here.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
-    .string "{RIVAL}: Heh. Fine by me.\p"
-    .string "I’ll be finished learning\n"
-    .string "everything worth knowing before\l"
-    .string "you’ve even caught up.\p"
-    .string "Try not to fall too far behind.$"
+    .string "{RIVAL}: Let's see whose field report\n"
+    .string "gives Gramps more to talk about!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
-    .string "OAK: We’ll see.\p"
-    .string "Power and understanding\n"
+    .string "OAK: Power and understanding\n"
     .string "rarely arrive at the same time.\p"
-    .string "Off you go, then.\p"
-    .string "Your expedition begins now.$"
+    .string "Off you go!$"
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
-    .string "OAK: Ah, {RIVAL}!\p"
-    .string "Good, you're both here.\p"
-    .string "You have both helped in this LAB\n"
-    .string "for some time.\p"
-    .string "This summer, I need you as\n"
-    .string "field aides.\p"
-    .string "It is time you studied KANTO\n"
-    .string "directly, beyond the LAB.$"
+    .string "OAK: You've both helped in this LAB.\n"
+    .string "Now for a summer exploring KANTO!\p"
+    .string "As FIELD AIDES, your reports earn\n"
+    .string "school research credit.\p"
+    .string "My aides will provide equipment\n"
+    .string "and stipends for your fieldwork.$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "OAK: Exactly, {RIVAL}.\p"
-    .string "Fieldwork cannot be done safely\n"
-    .string "without partners of your own.\p"
-    .string "These 3 were recently sent to me by\n"
-    .string "another researcher in ALOLA.\p"
-    .string "My cousin SAMSON OAK.\p"
-    .string "They're young, but they're\n"
-    .string "bright, adaptable, and well suited\l"
-    .string "for fieldwork.\p"
-    .string "Choose carefully.$"
-
+    .string "OAK: My cousin SAMSON OAK sent\n"
+    .string "these three from ALOLA.\p"
+    .string "Choose your fieldwork partner.$"
 
 PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose::
     .string "OAK: Make your choice.$"
@@ -114,12 +96,8 @@ PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
     .string "the GRASS POKéMON BULBASAUR?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
-    .string "OAK: This partner knows RETREAT.\p"
-    .string "Use it to escape wild POKéMON\n"
-    .string "before they can attack!\p"
-    .string "It works even if you are trapped.\n"
-    .string "Keep some PP for the way home.\p"
-    .string "It cannot end a TRAINER battle.$"
+    .string "OAK: Take care of each other\n"
+    .string "out there.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
     .string "{PLAYER} received the {STR_VAR_1}\n"
@@ -137,55 +115,40 @@ PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
     .string "It has to battle for it to grow.$"
 
 PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
-    .string "OAK: I have a request for you two.$"
+    .string "OAK: I want you to study\n"
+    .string "how POKéMON change.\p"
+    .string "Through bonds with people, life\n"
+    .string "in the wild, and human inventions.\p"
+    .string "There are still things\n"
+    .string "I cannot explain.$"
 
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
-    .string "On the desk here is my\n"
-    .string "invention, the POKéDEX!\p"
-    .string "It records the POKéMON you see\n"
-    .string "and catch.\p"
-    .string "It’ll help us understand how\n"
-    .string "they live across KANTO.$"
+    .string "This is the POKéDEX. It records\n"
+    .string "the POKéMON you see and catch.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
-    .string "OAK: {PLAYER} and {RIVAL}.\n"
-    .string "Take these with you.\p"
-    .string "Record what you find and\n"
-    .string "come back wiser.$"
+    .string "OAK: One for each of you.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
     .string "{PLAYER} received the POKéDEX\n"
     .string "from PROF. OAK.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
-    .string "OAK: Seeing POKéMON is useful,\n"
-    .string "but catching them teaches you more.\p"
-    .string "Travel with them.\n"
-    .string "Battle with them.\p"
-    .string "That is how real understanding\n"
-    .string "begins.\p"
-    .string "Take these POKé BALLS with you.$"
+    .string "OAK: Catching POKéMON lets us\n"
+    .string "study them more closely.\p"
+    .string "Take these POKé BALLS.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
     .string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "OAK: Pay attention to how the\n"
-    .string "GYM LEADERS treat their POKéMON.\p"
-    .string "There is more to learn than\n"
-    .string "strength alone.\p"
-    .string "Even familiar routes can shelter\n"
-    .string "strong, fully grown POKéMON.\p"
-    .string "You can flee ordinary wild\n"
-    .string "battles and return when ready.\p"
-    .string "There are still things about\n"
-    .string "POKéMON I cannot explain.\p"
-    .string "Watch how they live, and listen\n"
-    .string "to the people who know the land.\p"
-    .string "If you find something unexpected,\n"
-    .string "make a note of it.\p"
-    .string "You may discover something\n"
-    .string "I have never seen myself.$"
+    .string "OAK: Learn from the GYM LEADERS\n"
+    .string "and people who know the land.\p"
+    .string "Watch how POKéMON live,\n"
+    .string "and record what you discover.\p"
+    .string "Some wild POKéMON may be too\n"
+    .string "strong for you. There's no shame\l"
+    .string "in coming back later.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
     .string "Now go.\p"
@@ -224,10 +187,6 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
     .string "PROF. OAK, please visit us!\n"
     .string "…$"
 
-PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
-    .string "I study POKéMON as PROF. OAK's\n"
-    .string "AIDE.$"
-
 PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
     .string "Hi, {PLAYER}. I bet you've become\n"
     .string "good friends with your POKéMON.\p"
@@ -239,18 +198,6 @@ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
     .string "a POKéMON for you.\p"
     .string "This is a secret, so please don't\n"
     .string "tell anyone.$"
-
-PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
-    .string "PROF. OAK is going to have his own\n"
-    .string "radio show soon.\p"
-    .string "The program will be called PROF.\n"
-    .string "OAK's POKéMON SEMINAR.$"
-
-PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
-    .string "PROF. OAK may not look like much,\n"
-    .string "but he's the authority on POKéMON.\p"
-    .string "Many POKéMON TRAINERS hold him in\n"
-    .string "high regard.$"
 
 PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
     .string "Ah, now this is excellent!\p"
@@ -405,10 +352,19 @@ PalletTown_ProfessorOaksLab_Text_ExpeditionFinale::
     .string "in their own way.\p"
     .string "That is what I want this expedition\n"
     .string "to stand for.\p"
+    .string "You began this summer helping\n"
+    .string "with my research. Now you have\p"
+    .string "returned with discoveries\n"
+    .string "of your own.\p"
     .string "Thank you, {PLAYER}. I am proud to\n"
     .string "call you a colleague.$"
 
 PalletTown_ProfessorOaksLab_Text_ExpeditionAward::
+    .string "OAK: This certificate recognises\n"
+    .string "your completed field placement.\p"
+    .string "Whatever you choose to do next,\p"
+    .string "you'll always have\n"
+    .string "a place here.\p"
     .string "OAK awarded {PLAYER} an\n"
     .string "EXPEDITION CERTIFICATE!\p"
     .string "It will be displayed on the wall\n"
@@ -421,3 +377,51 @@ PalletTown_ProfessorOaksLab_Text_ExpeditionRepeat::
     .string "we can learn to understand.\p"
     .string "You will always have a place\n"
     .string "on my research team, {PLAYER}.$"
+
+PalletTown_ProfessorOaksLab_Text_PostLeagueResearch::
+    .string "OAK: A LEAGUE Champion!\p"
+    .string "And I thought I was sending you\n"
+    .string "on a summer research placement!\p"
+    .string "Your school credit is well earned,\n"
+    .string "{PLAYER}. I am proud of you.\p"
+    .string "But there are still questions in\n"
+    .string "those field notes worth pursuing.\p"
+    .string "Keep bringing me your findings!$"
+
+PalletTown_ProfessorOaksLab_Text_FieldworkFunding::
+    .string "I coordinate support for our\n"
+    .string "FIELD AIDES out in KANTO.\p"
+    .string "As your POKéDEX records more\n"
+    .string "species owned, funding is available.\p"
+    .string "Visit our aides upstairs in\n"
+    .string "these gatehouses:\p"
+    .string "ROUTE 14: 50 species.\n"
+    .string "SOOTHE BELL and ¥5,000.\p"
+    .string "ROUTE 16: 100 species.\n"
+    .string "AMULET COIN and ¥10,000.\p"
+    .string "ROUTE 15: 200 species.\n"
+    .string "EXP. SHARE and ¥20,000.\p"
+    .string "ROUTE 18: 300 species.\n"
+    .string "LUCKY EGG and ¥30,000.\p"
+    .string "Each is a one-time award to\n"
+    .string "support your continued fieldwork.$"
+
+PalletTown_ProfessorOaksLab_Text_BondResearch::
+    .string "I study relationships between\n"
+    .string "POKéMON and their TRAINERS.\p"
+    .string "Friendship can lead to evolution.\n"
+    .string "So can joining a new TRAINER.\p"
+    .string "Those changes belong in your\n"
+    .string "research into evolution by bond.$"
+
+PalletTown_ProfessorOaksLab_Text_ResearchRecords::
+    .string "I organise the field reports\n"
+    .string "that come back to this LAB.\p"
+    .string "Your summer assignment explores\n"
+    .string "bond, instinct, and design.\p"
+    .string "Your QUEST LOG keeps track of\n"
+    .string "the findings in each category.\p"
+    .string "Two findings in each complete\n"
+    .string "this study. Keep recording more!\p"
+    .string "OAK will contact you when he is\n"
+    .string "ready to discuss your discoveries.$"

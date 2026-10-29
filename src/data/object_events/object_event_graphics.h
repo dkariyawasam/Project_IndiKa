@@ -360,3 +360,5 @@ const u16 gObjectEventPic_RocketAceJet[] = INCBIN_U16("graphics/object_events/pi
 const u16 gObjectEventPal_RocketAceJet[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_jet.gbapal");
 const u16 gObjectEventPic_RocketAceViper[] = INCBIN_U16("graphics/object_events/pics/people/rocket_ace_viper.4bpp");
 const u16 gObjectEventPal_RocketAceViper[] = INCBIN_U16("graphics/object_events/palettes/rocket_ace_viper.gbapal");
+
+const u16 gObjectEventPal_Bruno[] = INCBIN_U16("graphics/object_events/palettes/bruno.gbapal");

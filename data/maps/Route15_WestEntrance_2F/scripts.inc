@@ -1,4 +1,4 @@
-.equ REQUIRED_CAUGHT_MONS, 50
+.equ REQUIRED_CAUGHT_MONS, 200
 
 Route15_WestEntrance_2F_MapScripts::
 	.byte 0
@@ -22,30 +22,39 @@ Route15_WestEntrance_2F_EventScript_RightBinoculars::
 Route15_WestEntrance_2F_EventScript_Aide::
 	lock
 	faceplayer
-	call Route15_WestEntrance_2F_EventScript_GetAideRequestInfo
-	goto_if_set FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE, Route15_WestEntrance_2F_EventScript_AlreadyGotExpShare
-	msgbox Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough, MSGBOX_YESNO
+	buffernumberstring STR_VAR_1, REQUIRED_CAUGHT_MONS
+	bufferitemname STR_VAR_2, ITEM_EXP_SHARE
+	goto_if_set FLAG_RECEIVED_EXP_SHARE_RESEARCH_STIPEND, Route15_WestEntrance_2F_EventScript_ResearchRepeat
+	msgbox Route15_WestEntrance_2F_Text_ResearchGrant, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, GetPokedexCount
 	buffernumberstring STR_VAR_3, VAR_0x8006
-	call Route15_WestEntrance_2F_EventScript_GetAideRequestInfo
 	goto_if_lt VAR_0x8006, REQUIRED_CAUGHT_MONS, Aide_EventScript_HaventCaughtEnough
-	msgbox Route15_WestEntrance_2F_Text_GreatHereYouGo
+	checkmoney 980000
+	goto_if_eq VAR_RESULT, TRUE, Route15_WestEntrance_2F_EventScript_WalletFull
+	goto_if_set FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE, Route15_WestEntrance_2F_EventScript_PayStipend
 	checkitemspace ITEM_EXP_SHARE
 	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
-	giveitem_msg Route15_WestEntrance_2F_Text_ReceivedItemFromAide, ITEM_EXP_SHARE
+	giveitem ITEM_EXP_SHARE
 	setflag FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE
+Route15_WestEntrance_2F_EventScript_PayStipend::
+	addmoney 20000
+	setflag FLAG_RECEIVED_EXP_SHARE_RESEARCH_STIPEND
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route15_WestEntrance_2F_Text_StipendReceived
+	waitfanfare
 	msgbox Route15_WestEntrance_2F_Text_ExplainExpShare
 	release
 	end
 
-Route15_WestEntrance_2F_EventScript_AlreadyGotExpShare::
+Route15_WestEntrance_2F_EventScript_ResearchRepeat::
+	msgbox Route15_WestEntrance_2F_Text_ResearchRepeat
 	msgbox Route15_WestEntrance_2F_Text_ExplainExpShare
 	release
 	end
 
-Route15_WestEntrance_2F_EventScript_GetAideRequestInfo::
-	buffernumberstring STR_VAR_1, REQUIRED_CAUGHT_MONS
-	bufferitemname STR_VAR_2, ITEM_EXP_SHARE
-	return
+Route15_WestEntrance_2F_EventScript_WalletFull::
+	msgbox Route15_WestEntrance_2F_Text_WalletFull
+	release
+	end

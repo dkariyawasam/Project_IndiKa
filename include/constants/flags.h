@@ -165,7 +165,6 @@
 #define FLAG_HIDE_APEX_LOG_ERIKA_JOURNALS              0x09E
 #define FLAG_HIDE_APEX_LOG_KOGA_JOURNAL                0x09F
 #define FLAG_HIDE_APEX_LOG_LT_SURGE_JOURNAL            0x0A0
-#define FLAG_HIDE_VERMILION_CITY_OAKS_AIDE                 0x0A1
 #define FLAG_HIDE_CINNABAR_POKECENTER_BILL                 0x0A2
 #define FLAG_HIDE_CREDITS_RIVAL                            0x0A3
 #define FLAG_HIDE_CREDITS_OAK                              0x0A4
@@ -763,8 +762,7 @@
 #define FLAG_SAW_GIOVANNI_ROUTE7_RAMPAGE              0x2F2
 #define FLAG_OAK_SAW_DEX_COMPLETION                      0x2F4
 #define FLAG_TALKED_TO_TEA_LADY_AFTER_HOF                0x2F8
-#define FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION            0x2F9
-#define FLAG_GOT_EVERSTONE_FROM_OAKS_AIDE                0x2FA
+#define FLAG_GOT_EVERSTONE_FROM_THIRSTY_GIRL                0x2FA
 #define FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER      0x2FB
 #define FLAG_DEFEATED_APEX_MEWTWO                       0x2FC
 #define FLAG_GOT_AMULET_COIN_FROM_OAKS_AIDE              0x2FD
@@ -1199,12 +1197,12 @@
 #define FLAG_HIDDEN_ITEM_VERMILION_HARBOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Free regular flags
-#define FLAG_0x4A7               0x4A7
-#define FLAG_0x4A8               0x4A8
-#define FLAG_0x4A9               0x4A9
-#define FLAG_0x4AA               0x4AA
-#define FLAG_0x4AB               0x4AB
-#define FLAG_0x4AC               0x4AC
+#define FLAG_GOT_SOOTHE_BELL_FROM_OAKS_AIDE               0x4A7
+#define FLAG_GOT_LUCKY_EGG_FROM_OAKS_AIDE               0x4A8
+#define FLAG_RECEIVED_SOOTHE_BELL_RESEARCH_STIPEND               0x4A9
+#define FLAG_RECEIVED_AMULET_COIN_RESEARCH_STIPEND               0x4AA
+#define FLAG_RECEIVED_EXP_SHARE_RESEARCH_STIPEND               0x4AB
+#define FLAG_RECEIVED_LUCKY_EGG_RESEARCH_STIPEND               0x4AC
 #define FLAG_0x4AD               0x4AD
 #define FLAG_0x4AE               0x4AE
 #define FLAG_0x4AF               0x4AF

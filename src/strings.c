@@ -1281,7 +1281,7 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
-const u8 gText_QuestTheNatureOfEvolutionDesc_1[] = _("Record how POKéMON grow through\ntrust, battle, and evolution.");
+const u8 gText_QuestTheNatureOfEvolutionDesc_1[] = _("Summer field study: evolution\nthrough bond, instinct and design.");
 const u8 gText_SideQuestDesc_2[] = _("Observe how KANTO's GYM LEADERS\ntrain and trust their POKéMON.");
 const u8 gText_SideQuestDesc_3[] = _("Record rare Apex POKéMON whose\ninstincts exceed ordinary limits.");
 const u8 gText_SideQuestDesc_4[] = _("Follow GIOVANNI's pursuit of\nabsolute power through MEWTWO.");
@@ -1313,7 +1313,7 @@ const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //completed quest description
-const u8 gText_QuestTheNatureOfEvolutionDoneDesc_1[] = _("Your field notes helped explain\nhow POKéMON and people grow.");
+const u8 gText_QuestTheNatureOfEvolutionDoneDesc_1[] = _("Your summer research study is\ncomplete. Share it with OAK.");
 const u8 gText_SideQuestDoneDesc_2[] = _("You learned from every KANTO GYM\nLEADER and came back wiser.");
 const u8 gText_SideQuestDoneDesc_3[] = _("Your Apex field notes revealed\ninstinct at its wildest edge.");
 const u8 gText_SideQuestDoneDesc_4[] = _("GIOVANNI abandoned absolute power\nand changed TEAM ROCKET's path.");
@@ -1454,7 +1454,7 @@ const u8 gText_SabrinaTrialPhase3[] = _("Challenge SABRINA in\nPOKéMON TOWER.")
 const u8 gText_SabrinaTrialPhase4[] = _("SABRINA returned to SAFFRON GYM.\nVisit her to receive CHINGLING.");
 const u8 gText_SabrinaTrialPhase5[] = _("Raise CHINGLING's friendship, then\nlevel it up at night to evolve\nit into CHIMECHO.");
 
-const u8 gText_SubQuest1_Desc1[] = _("Study evolution shaped by trust\nand friendship.");
+const u8 gText_SubQuest1_Desc1[] = _("Study friendship evolutions\nand evolution through trades.");
 const u8 gText_SubQuest1_Desc2[] = _("Study evolution shaped by habitat,\ninstinct, and survival.");
 const u8 gText_SubQuest1_Desc3[] = _("Study fossil revival, PORYGON,\nand human-made evolution tools.");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");

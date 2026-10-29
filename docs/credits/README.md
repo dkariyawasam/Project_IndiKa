@@ -11,7 +11,7 @@ Current pages: project title; game/art direction (Dee Kariyawasam); assistant di
 - Confirmed: Dee Kariyawasam for game and art direction; Jake Moses for assistant director; Hongmiao Shi for QA tester and editor. Dee Kariyawasam is also credited for writing/story and programming. Eleven original Pokémon designs are confirmed for Dee Kariyawasam; see [the species list](original-pokemon-designs.md). All eleven currently identified original species/form designs are now confirmed for Dee Kariyawasam.
 - Match imported community assets to individual artists where records support it. RHH and PokeAPI are credited as resource projects/archives, not as the authors of all artwork.
 - Confirm any other designers and playtesters before adding their names.
-- Tool credit acknowledges devkitARM, agbcc, Porymap and OpenAI Codex; it does not imply endorsement or authorship of all assets.
+- Tool credit acknowledges devkitARM, agbcc and Porymap; it does not imply endorsement or authorship of all assets.
 - Existing upstream credit records and licenses are retained. This consolidation is not a license audit.
 
 See [attribution source records](attribution-sources.md) and [complete original credits](original-firered.md).
@@ -47,3 +47,7 @@ The in-game project credits include this invitation on two pages before the fina
 See the [Galar asset provenance and implementation notes](../galar-additions/README.md) for the seven new species, Galarica items and imported cries, including upstream credits and source hashes.
 
 See also [Sirfetch’d and the Paldean Wooper line](../regional-evolutions/README.md) for their sprite and cry sources, transformations and remaining attribution research.
+
+## Personal thanks
+
+Special thanks to my wife, Hongmiao, for your love and support, and for making it possible for me to finish this mod. This appears on a dedicated in-game page before the final thank-you, alongside her existing QA tester and editor credits.
