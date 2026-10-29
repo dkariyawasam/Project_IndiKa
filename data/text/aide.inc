@@ -1,15 +1,13 @@
 Aide_Text_HaventCaughtEnoughMonsForItem::
-	.string "Let's see…\n"
-	.string "Uh-oh! You have caught only\l"
-	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "You need {STR_VAR_1} kinds\n"
-	.string "if you want the {STR_VAR_2}.$"
+	.string "Your field notes record {STR_VAR_3}\n"
+	.string "species owned so far.\p"
+	.string "This research award is available\n"
+	.string "at {STR_VAR_1} species. Keep exploring!$"
 
 Aide_Text_GetEnoughMonsComeBackForItem::
-	.string "…Oh. I see.\p"
-	.string "When you get {STR_VAR_1} kinds of POKéMON,\n"
-	.string "come back for the {STR_VAR_2}.$"
+	.string "Come back when you're ready for\n"
+	.string "a review of your field research.$"
 
 Aide_Text_DontHaveAnyRoomForItem::
-	.string "Oh! I see you don't have any\n"
-	.string "room for the {STR_VAR_2}.$"
+	.string "Make room for the {STR_VAR_2}.\n"
+	.string "I'll keep your award here for you.$"

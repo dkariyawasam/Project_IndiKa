@@ -659,10 +659,12 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_set FLAG_OAK_EXPEDITION_COMPLETE, PalletTown_ProfessorOaksLab_EventScript_ExpeditionRepeat
 	specialvar VAR_RESULT, IsOakExpeditionReady
 	goto_if_eq VAR_RESULT, TRUE, PalletTown_ProfessorOaksLab_EventScript_ExpeditionFinale
+	@ The National Dex is already enabled when Oak first gives us the Dex.
+	@ Keep post-League conversations in the expedition research storyline.
+	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_PostLeagueResearch
 	goto_if_set SHOWED_OAK_COMPLETE_DEX, PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
-	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_TryStartNationalDexScene
 	goto_if_eq VAR_MAP_SCENE_CERULEAN_CITY_RIVAL, 1, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
@@ -1282,36 +1284,25 @@ PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
 PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_Aide1GameClear
-	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_Aide1GameClear::
-	apexlog APEX_LOG_PERSON_OAK, 5
-	msgbox PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow
+	msgbox PalletTown_ProfessorOaksLab_Text_FieldworkFunding
 	release
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_Aide2GameClear
-	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_Aide2GameClear::
+	msgbox PalletTown_ProfessorOaksLab_Text_BondResearch
+	goto_if_unset FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_Aide2Done
 	apexlog APEX_LOG_PERSON_DAISY, 0
 	msgbox PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons
+PalletTown_ProfessorOaksLab_EventScript_Aide2Done::
 	release
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_Aide3::
 	lock
 	faceplayer
-	apexlog APEX_LOG_PERSON_OAK, 2
-	msgbox PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons
+	msgbox PalletTown_ProfessorOaksLab_Text_ResearchRecords
 	release
 	end
 
@@ -1485,7 +1476,13 @@ PalletTown_ProfessorOaksLab_EventScript_ExpeditionFinale::
 
 PalletTown_ProfessorOaksLab_EventScript_ExpeditionRepeat::
 	msgbox PalletTown_ProfessorOaksLab_Text_ExpeditionRepeat
-	goto PalletTown_ProfessorOaksLab_EventScript_RatePokedex
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_PostLeagueResearch::
+	msgbox PalletTown_ProfessorOaksLab_Text_PostLeagueResearch
+	release
+	end
 
 PalletTown_ProfessorOaksLab_EventScript_ExpeditionCertificate::
 	closemessage
