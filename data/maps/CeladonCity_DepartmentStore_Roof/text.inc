@@ -15,27 +15,15 @@ Text_ReceivedItemFromLittleGirl::
     .string "{PLAYER} received a {STR_VAR_2}\n"
     .string "from the little girl.$"
 
-CeladonCity_DepartmentStore_Roof_Text_ExplainLightScreen::
-    .string "LIGHT SCREEN weakens the power\n"
-    .string "of special attacks from your foe.$"
-
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
     .string "Yay!\p"
     .string "SODA POP!\p"
     .string "Thank you!$"
 
-CeladonCity_DepartmentStore_Roof_Text_ExplainSafeguard::
-    .string "SAFEGUARD prevents status problems\n"
-    .string "among your POKéMON.$"
-
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
     .string "Yay!\p"
     .string "LEMONADE!\p"
     .string "Thank you!$"
-
-CeladonCity_DepartmentStore_Roof_Text_ExplainReflect::
-    .string "REFLECT weakens the power of\n"
-    .string "physical attacks from your foe.$"
 
 CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis::
     .string "You don't have space for this!$"
@@ -73,3 +61,8 @@ CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff::
 
 CeladonCity_DepartmentStore_Roof_Text_NotThirsty::
     .string "Not thirsty!$"
+
+CeladonCity_DepartmentStore_Roof_Text_ExplainEverstone::
+    .string "Take this EVERSTONE as thanks!\p"
+    .string "If a POKéMON holds it, it stays\n"
+    .string "just the way it is!$"

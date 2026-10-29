@@ -312,10 +312,7 @@
   "gMapGroup_IndoorRoute10": [
     "Route10_HealingHouse"
   ],
-  "gMapGroup_IndoorRoute11": [
-    "Route11_EastEntrance_1F",
-    "Route11_EastEntrance_2F"
-  ],
+  "gMapGroup_IndoorRoute11": [],
   "gMapGroup_IndoorRoute12": [
     "Route12_NorthEntrance_1F",
     "Route12_NorthEntrance_2F",
