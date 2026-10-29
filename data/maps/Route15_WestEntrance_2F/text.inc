@@ -1,25 +1,3 @@
-Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
-    .string "Hi! Remember me?\n"
-    .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If your POKéDEX has complete data\n"
-    .string "on {STR_VAR_1} species, I'm supposed to\l"
-    .string "give you a reward.\p"
-    .string "PROF. OAK entrusted me with the\n"
-    .string "{STR_VAR_2} for you.\p"
-    .string "So, {PLAYER}, let me ask you.\p"
-    .string "Have you gathered data on at least\n"
-    .string "{STR_VAR_1} kinds of POKéMON?$"
-
-Route15_WestEntrance_2F_Text_GreatHereYouGo::
-    .string "Great! You have caught or owned\n"
-    .string "{STR_VAR_3} kinds of POKéMON!\p"
-    .string "Congratulations!\n"
-    .string "Here you go!$"
-
-Route15_WestEntrance_2F_Text_ReceivedItemFromAide::
-    .string "{PLAYER} received the {STR_VAR_2}\n"
-    .string "from the AIDE.$"
-
 Route15_WestEntrance_2F_Text_ExplainExpShare::
     .string "EXP. SHARE is an item to be held\n"
     .string "by a POKéMON.\p"
@@ -39,3 +17,25 @@ Route15_WestEntrance_2F_Text_SmallIslandOnHorizon::
     .string "It looks like a small island on\n"
     .string "the horizon!$"
 
+
+Route15_WestEntrance_2F_Text_ResearchGrant::
+    .string "A fellow FIELD AIDE! PROF. OAK\n"
+    .string "has set aside research support.\p"
+    .string "At 200 species owned, you qualify\n"
+    .string "for a ¥20,000 fieldwork stipend\p"
+    .string "and a EXP SHARE.\n"
+    .string "May I review your POKéDEX?$"
+
+Route15_WestEntrance_2F_Text_StipendReceived::
+    .string "{PLAYER} received ¥20,000\n"
+    .string "as a fieldwork stipend!\p"
+    .string "Thank you for your continued\n"
+    .string "support of our POKéMON research.$"
+
+Route15_WestEntrance_2F_Text_ResearchRepeat::
+    .string "Your research award is recorded.\n"
+    .string "Thank you for your fieldwork!$"
+
+Route15_WestEntrance_2F_Text_WalletFull::
+    .string "You can't carry the full stipend.\n"
+    .string "I'll keep it here for you.$"

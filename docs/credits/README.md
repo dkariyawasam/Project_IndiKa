@@ -47,3 +47,7 @@ The in-game project credits include this invitation on two pages before the fina
 See the [Galar asset provenance and implementation notes](../galar-additions/README.md) for the seven new species, Galarica items and imported cries, including upstream credits and source hashes.
 
 See also [Sirfetch’d and the Paldean Wooper line](../regional-evolutions/README.md) for their sprite and cry sources, transformations and remaining attribution research.
+
+## Personal thanks
+
+Special thanks to my wife, Hongmiao, for your love and support, and for making it possible for me to finish this mod. This appears on a dedicated in-game page before the final thank-you, alongside her existing QA tester and editor credits.

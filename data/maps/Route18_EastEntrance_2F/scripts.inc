@@ -1,3 +1,5 @@
+.equ REQUIRED_CAUGHT_MONS, 300
+
 Route18_EastEntrance_2F_MapScripts::
 	.byte 0
 
@@ -11,4 +13,44 @@ Route18_EastEntrance_2F_EventScript_RightBinoculars::
 
 Route18_EastEntrance_2F_EventScript_Haden::
 	msgbox Route18_EastEntrance_2F_Text_LabTrades, MSGBOX_NPC
+	end
+
+Route18_EastEntrance_2F_EventScript_Aide::
+	lock
+	faceplayer
+	buffernumberstring STR_VAR_1, REQUIRED_CAUGHT_MONS
+	bufferitemname STR_VAR_2, ITEM_LUCKY_EGG
+	goto_if_set FLAG_RECEIVED_LUCKY_EGG_RESEARCH_STIPEND, Route18_EastEntrance_2F_EventScript_ResearchRepeat
+	msgbox Route18_EastEntrance_2F_Text_ResearchGrant, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, GetPokedexCount
+	buffernumberstring STR_VAR_3, VAR_0x8006
+	goto_if_lt VAR_0x8006, REQUIRED_CAUGHT_MONS, Aide_EventScript_HaventCaughtEnough
+	checkmoney 970000
+	goto_if_eq VAR_RESULT, TRUE, Route18_EastEntrance_2F_EventScript_WalletFull
+	goto_if_set FLAG_GOT_LUCKY_EGG_FROM_OAKS_AIDE, Route18_EastEntrance_2F_EventScript_PayStipend
+	checkitemspace ITEM_LUCKY_EGG
+	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	giveitem ITEM_LUCKY_EGG
+	setflag FLAG_GOT_LUCKY_EGG_FROM_OAKS_AIDE
+Route18_EastEntrance_2F_EventScript_PayStipend::
+	addmoney 30000
+	setflag FLAG_RECEIVED_LUCKY_EGG_RESEARCH_STIPEND
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route18_EastEntrance_2F_Text_StipendReceived
+	waitfanfare
+	msgbox Route18_EastEntrance_2F_Text_ExplainLuckyEgg
+	release
+	end
+
+Route18_EastEntrance_2F_EventScript_ResearchRepeat::
+	msgbox Route18_EastEntrance_2F_Text_ResearchRepeat
+	msgbox Route18_EastEntrance_2F_Text_ExplainLuckyEgg
+	release
+	end
+
+Route18_EastEntrance_2F_EventScript_WalletFull::
+	msgbox Route18_EastEntrance_2F_Text_WalletFull
+	release
 	end

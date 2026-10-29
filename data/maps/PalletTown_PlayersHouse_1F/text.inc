@@ -1,7 +1,11 @@
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
-    .string "MOM: PROF. OAK was looking for\n"
-    .string "you.\p"
+    .string "MOM: PROF. OAK is looking for you.\n"
+    .string "Your summer field placement starts!\p"
+    .string "Your first summer working\n"
+    .string "away from home!\p"
+    .string "OAK knows his research, but remind\n"
+    .string "him you need days off, too.\p"
     .string "His LAB is just down the road.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::

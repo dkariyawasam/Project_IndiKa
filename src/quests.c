@@ -295,8 +295,8 @@ static const u8 sText_LogbookRhydonTrade[] = _("RHYDON TRADE");
 static const u8 sText_LogbookBringRhyhornToCinnabarIslandPok[] = _("Bring RHYHORN to CINNABAR ISLAND\nPOKéMON LAB EXPERIMENT ROOM for\nRHYDON.");
 static const u8 sText_LogbookCinnabarIslandPokMonLabExperiment[] = _("CINNABAR ISLAND POKéMON LAB EXPERIMENT ROOM");
 static const u8 sText_LogbookMachokeTrade[] = _("MACHOKE TRADE");
-static const u8 sText_LogbookBringNidorinoToRoute11East[] = _("Bring NIDORINO to ROUTE 11 EAST\nENTRANCE 2F for MACHOKE.");
-static const u8 sText_LogbookRoute11EastEntrance2f[] = _("ROUTE 11 EAST ENTRANCE 2F");
+static const u8 sText_LogbookBringNidorinoToRoute11[] = _("Bring NIDORINO to TURNER on\nROUTE 11 for MACHOKE.");
+static const u8 sText_LogbookRoute11TradeLocation[] = _("ROUTE 11");
 static const u8 sText_LogbookOnixTrade[] = _("ONIX TRADE");
 static const u8 sText_LogbookBringGolduckToCinnabarIslandPok[] = _("Bring GOLDUCK to CINNABAR ISLAND\nPOKéMON LAB LOUNGE for ONIX.");
 static const u8 sText_LogbookCinnabarIslandPokMonLabLounge[] = _("CINNABAR ISLAND POKéMON LAB LOUNGE");
@@ -691,7 +691,7 @@ static const struct SubQuest sPromiseQuests[] = {
     sub_quest(0, sText_LogbookKadabraTrade, sText_LogbookBringHaunterToCeruleanCityHouse, sText_LogbookCeruleanCityHouse3, SPECIES_KADABRA, PKMN, sText_CompletedCaps),
     sub_quest(0, sText_LogbookSlowpokeTrade, sText_LogbookBringNidoranToRoute19For, sText_LogbookRoute19, SPECIES_SLOWPOKE, PKMN, sText_CompletedCaps),
     sub_quest(0, sText_LogbookRhydonTrade, sText_LogbookBringRhyhornToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabExperiment, SPECIES_RHYDON, PKMN, sText_CompletedCaps),
-    sub_quest(0, sText_LogbookMachokeTrade, sText_LogbookBringNidorinoToRoute11East, sText_LogbookRoute11EastEntrance2f, SPECIES_MACHOKE, PKMN, sText_CompletedCaps),
+    sub_quest(0, sText_LogbookMachokeTrade, sText_LogbookBringNidorinoToRoute11, sText_LogbookRoute11TradeLocation, SPECIES_MACHOKE, PKMN, sText_CompletedCaps),
     sub_quest(0, sText_LogbookOnixTrade, sText_LogbookBringGolduckToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabLounge, SPECIES_ONIX, PKMN, sText_CompletedCaps),
     sub_quest(0, sText_LogbookElectabuzzTrade, sText_LogbookBringRaichuToVermilionCityGym, sText_LogbookVermilionCityGym, SPECIES_ELECTABUZZ, PKMN, sText_CompletedCaps),
     sub_quest(0, sText_LogbookScytherTrade, sText_LogbookBringVenonatToCinnabarIslandPok, sText_LogbookCinnabarIslandPokMonLabLounge, SPECIES_SCYTHER, PKMN, sText_CompletedCaps),

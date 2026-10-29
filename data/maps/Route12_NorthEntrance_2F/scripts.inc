@@ -1,3 +1,5 @@
+.equ REQUIRED_CAUGHT_MONS, 50
+
 Route12_NorthEntrance_2F_MapScripts::
 	.byte 0
 
@@ -13,5 +15,45 @@ Route12_NorthEntrance_2F_EventScript_Lass::
 	lock
 	faceplayer
 	msgbox Route12_NorthEntrance_2F_Text_RememberPokemon
+	release
+	end
+
+Route12_NorthEntrance_2F_EventScript_Aide::
+	lock
+	faceplayer
+	buffernumberstring STR_VAR_1, REQUIRED_CAUGHT_MONS
+	bufferitemname STR_VAR_2, ITEM_SOOTHE_BELL
+	goto_if_set FLAG_RECEIVED_SOOTHE_BELL_RESEARCH_STIPEND, Route12_NorthEntrance_2F_EventScript_ResearchRepeat
+	msgbox Route12_NorthEntrance_2F_Text_ResearchGrant, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, GetPokedexCount
+	buffernumberstring STR_VAR_3, VAR_0x8006
+	goto_if_lt VAR_0x8006, REQUIRED_CAUGHT_MONS, Aide_EventScript_HaventCaughtEnough
+	checkmoney 995000
+	goto_if_eq VAR_RESULT, TRUE, Route12_NorthEntrance_2F_EventScript_WalletFull
+	goto_if_set FLAG_GOT_SOOTHE_BELL_FROM_OAKS_AIDE, Route12_NorthEntrance_2F_EventScript_PayStipend
+	checkitemspace ITEM_SOOTHE_BELL
+	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	giveitem ITEM_SOOTHE_BELL
+	setflag FLAG_GOT_SOOTHE_BELL_FROM_OAKS_AIDE
+Route12_NorthEntrance_2F_EventScript_PayStipend::
+	addmoney 5000
+	setflag FLAG_RECEIVED_SOOTHE_BELL_RESEARCH_STIPEND
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route12_NorthEntrance_2F_Text_StipendReceived
+	waitfanfare
+	msgbox Route12_NorthEntrance_2F_Text_ExplainSootheBell
+	release
+	end
+
+Route12_NorthEntrance_2F_EventScript_ResearchRepeat::
+	msgbox Route12_NorthEntrance_2F_Text_ResearchRepeat
+	msgbox Route12_NorthEntrance_2F_Text_ExplainSootheBell
+	release
+	end
+
+Route12_NorthEntrance_2F_EventScript_WalletFull::
+	msgbox Route12_NorthEntrance_2F_Text_WalletFull
 	release
 	end
