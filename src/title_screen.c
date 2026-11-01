@@ -81,14 +81,14 @@ static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4b
 #define TITLE_BACKDROP_DAY_START   (30 * 60)
 #define TITLE_BACKDROP_DAY_END     (34 * 60)
 
-static const u16 sBackdropPal[] = INCBIN_U16("graphics/title_screen/firered/backdrop.gbapal");
-static const u8 sBackdropTiles[] = INCBIN_U8("graphics/title_screen/firered/backdrop.4bpp.lz");
+static const u16 sBackdropPal[] = INCBIN_U16("graphics/title_screen/firered/backdrop_palette.bin");
+static const u8 sBackdropTiles[] = INCBIN_U8("graphics/title_screen/firered/backdrop_tiles.bin.lz");
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/backdrop.bin.lz");
 static const u8 sFooterTiles[] = INCBIN_U8("graphics/title_screen/firered/footer.4bpp.lz");
 static const u8 sCopyrightPressStartTiles[] = INCBIN_U8("graphics/title_screen/copyright_press_start.4bpp");
 static const u8 sCopyrightPressStartTransparentTiles[] = INCBIN_U8("graphics/title_screen/copyright_press_start_transparent.4bpp");
 static const u16 sGrassPal[] = INCBIN_U16("graphics/title_screen/firered/grass.gbapal");
-static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass.4bpp.lz");
+static const u8 sGrassTiles[] = INCBIN_U8("graphics/title_screen/firered/grass_tiles.bin.lz");
 static const u8 sGrassMap[] = INCBIN_U8("graphics/title_screen/firered/grass.bin.lz");
 #elif defined(LEAFGREEN)
 static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/leafgreen/border_bg.bin.lz");
