@@ -759,7 +759,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(56, 56),
         .y_offset = 13,
     },
-    [SPECIES_CINNABAR_MAGIKARP] =
+    [SPECIES_MAGIKARP_KANTONIAN] =
     {
         .size = MON_COORDS_SIZE(56, 56),
         .y_offset = 5,
@@ -2108,7 +2108,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
     },
-    [SPECIES_CINNABAR_FEEBAS] =
+    [SPECIES_FEEBAS_KANTONIAN] =
     {
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,

@@ -72,10 +72,10 @@ def generate():
     x=load('mr_mime')
     add('MIME_SR', ['mr_mime'], 'Lower theatrical call with a short answering phrase.', mix((pitch(x,.88),.85,0),(pitch(x,1.08)[-2600:],.42,len(x)/RATE+.02)))
     x=load('magikarp')
-    add('CINNABAR_MAGIKARP', ['magikarp'], 'Fuller Magikarp call with a low growling undertone.', mix((pitch(x,.93),.8,0),(smooth(pitch(x,.68),1700),.4,.02)))
+    add('MAGIKARP_KANTONIAN', ['magikarp'], 'Fuller Magikarp call with a low growling undertone.', mix((pitch(x,.93),.8,0),(smooth(pitch(x,.68),1700),.4,.02)))
     x=pitch(load('feebas'),.94);t=np.arange(len(x))/RATE
     shimmer=x*np.sin(2*np.pi*850*t)*np.linspace(0,.22,len(x))
-    add('CINNABAR_FEEBAS', ['feebas'], 'Wavering Feebas call with a restrained metallic, icy tail.', mix((x*(.92+.08*np.sin(2*np.pi*7*t)),.9,0),(shimmer,.5,.035)))
+    add('FEEBAS_KANTONIAN', ['feebas'], 'Wavering Feebas call with a restrained metallic, icy tail.', mix((x*(.92+.08*np.sin(2*np.pi*7*t)),.9,0),(shimmer,.5,.035)))
     x=load('porygon2');a,b,c=np.array_split(x,3)
     add('PORYGON3', ['porygon2'], 'Three clean ascending phrases derived from Porygon2.', np.concatenate([smooth(pitch(a,.96),3300),np.zeros(180),smooth(pitch(b,1.06),3300),np.zeros(180),smooth(pitch(c,1.18),3300)]))
     for species,base,factor in [('PICHU_ALOLAN','pichu',1.045),('PIKACHU_ALOLAN','pikachu',.96),('EXEGGCUTE_ALOLAN','exeggcute',.955),('CUBONE_ALOLAN','cubone',.95),('KOFFING_GALARIAN','koffing',.94)]:

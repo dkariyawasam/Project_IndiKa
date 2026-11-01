@@ -502,7 +502,7 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_BREATH,
               MOVE_DRAGON_DANCE),
 
-    egg_moves(CINNABAR_MAGIKARP,
+    egg_moves(MAGIKARP_KANTONIAN,
               MOVE_VINE_WHIP,
               MOVE_LEECH_SEED,
               MOVE_COUNTER,

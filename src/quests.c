@@ -635,8 +635,8 @@ static const struct SubQuest sSubQuests4[QUEST_4_SUB_COUNT] =
 
 // Living Relics is inferred from Pokédex records; it needs no new subquest bits.
 static const u16 sPrimevalSpecies[] = {
-    SPECIES_CINNABAR_MAGIKARP,
-    SPECIES_CINNABAR_FEEBAS,
+    SPECIES_MAGIKARP_KANTONIAN,
+    SPECIES_FEEBAS_KANTONIAN,
     SPECIES_RELICANTH,
     SPECIES_KINKABUTO,
     SPECIES_AMUNYTE,
@@ -654,8 +654,8 @@ static const u8 sText_PrimevalName3[] = _("KINKABUTO");
 static const u8 sText_PrimevalName4[] = _("AMUNYTE");
 static const u8 sText_PrimevalName5[] = _("AEROPTERYX");
 static const struct SubQuest sPrimevalQuests[] = {
-    sub_quest(0, sText_PrimevalName0, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_CINNABAR_MAGIKARP, PKMN, sText_Caught),
-    sub_quest(0, sText_PrimevalName1, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_CINNABAR_FEEBAS, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName0, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_MAGIKARP_KANTONIAN, PKMN, sText_Caught),
+    sub_quest(0, sText_PrimevalName1, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_FEEBAS_KANTONIAN, PKMN, sText_Caught),
     sub_quest(0, sText_PrimevalName2, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_RELICANTH, PKMN, sText_Caught),
     sub_quest(0, sText_PrimevalName3, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_KINKABUTO, PKMN, sText_Caught),
     sub_quest(0, sText_PrimevalName4, sText_LivingRelicsSeen, sText_LogbookKanto, SPECIES_AMUNYTE, PKMN, sText_Caught),

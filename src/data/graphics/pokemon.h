@@ -1118,11 +1118,11 @@ const u32 gMonShinyPalette_Mew[] = INCBIN_U32("graphics/pokemon/mew/shiny.gbapal
 const u8 gMonIcon_Mew[] = INCBIN_U8("graphics/pokemon/mew/icon.4bpp");
 const u8 gMonFootprint_Mew[] = INCBIN_U8("graphics/pokemon/mew/footprint.1bpp");
 
-const u32 gMonFrontPic_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/front.4bpp.lz");
-const u32 gMonPalette_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/normal.gbapal.lz");
-const u32 gMonShinyPalette_CinnabarMagikarp[] = INCBIN_U32("graphics/pokemon/cinnabar_magikarp/shiny.gbapal.lz");
-const u8 gMonIcon_CinnabarMagikarp[] = INCBIN_U8("graphics/pokemon/cinnabar_magikarp/icon.4bpp");
-const u8 gMonFootprint_CinnabarMagikarp[] = INCBIN_U8("graphics/pokemon/cinnabar_magikarp/footprint.1bpp");
+const u32 gMonFrontPic_MagikarpKantonian[] = INCBIN_U32("graphics/pokemon/magikarp_kantonian/front.4bpp.lz");
+const u32 gMonPalette_MagikarpKantonian[] = INCBIN_U32("graphics/pokemon/magikarp_kantonian/normal.gbapal.lz");
+const u32 gMonShinyPalette_MagikarpKantonian[] = INCBIN_U32("graphics/pokemon/magikarp_kantonian/shiny.gbapal.lz");
+const u8 gMonIcon_MagikarpKantonian[] = INCBIN_U8("graphics/pokemon/magikarp_kantonian/icon.4bpp");
+const u8 gMonFootprint_MagikarpKantonian[] = INCBIN_U8("graphics/pokemon/magikarp_kantonian/footprint.1bpp");
 
 const u32 gMonFrontPic_Bayleef[] = INCBIN_U32("graphics/pokemon/bayleef/front.4bpp.lz");
 const u32 gMonPalette_Bayleef[] = INCBIN_U32("graphics/pokemon/bayleef/normal.gbapal.lz");
@@ -2847,7 +2847,7 @@ const u32 gMonPalette_Kabuknight[] = INCBIN_U32("graphics/pokemon/kabuknight/nor
 
 const u8 gMonIcon_Kabuknight[] = INCBIN_U8("graphics/pokemon/kabuknight/icon.4bpp");
 
-const u8 gMonFootprint_CinnabarFeebas[] = INCBIN_U8("graphics/pokemon/cinnabar_feebas/footprint.1bpp");
+const u8 gMonFootprint_FeebasKantonian[] = INCBIN_U8("graphics/pokemon/feebas_kantonian/footprint.1bpp");
 
 const u8 gMonFootprint_Kabustar[] = INCBIN_U8("graphics/pokemon/kabustar/footprint.1bpp");
 
@@ -2859,8 +2859,8 @@ const u8 gMonFootprint_Kinkabuto[] = INCBIN_U8("graphics/pokemon/kinkabuto/footp
 
 const u8 gMonFootprint_Aeropteryx[] = INCBIN_U8("graphics/pokemon/aeropteryx/footprint.1bpp");
 
-const u32 gMonFrontPic_CinnabarFeebas[] = INCBIN_U32("graphics/pokemon/cinnabar_feebas/front.4bpp.lz");
-const u32 gMonPalette_CinnabarFeebas[] = INCBIN_U32("graphics/pokemon/cinnabar_feebas/normal.gbapal.lz");
+const u32 gMonFrontPic_FeebasKantonian[] = INCBIN_U32("graphics/pokemon/feebas_kantonian/front.4bpp.lz");
+const u32 gMonPalette_FeebasKantonian[] = INCBIN_U32("graphics/pokemon/feebas_kantonian/normal.gbapal.lz");
 
 const u32 gMonFrontPic_PonytaGalarian[] = INCBIN_U32("graphics/pokemon/ponyta_galarian/front.4bpp.lz");
 
@@ -2982,4 +2982,4 @@ const u8 gMonIcon_Clodsire[] = INCBIN_U8("graphics/pokemon/clodsire/icon.4bpp");
 
 const u8 gMonFootprint_Clodsire[] = INCBIN_U8("graphics/pokemon/clodsire/footprint.1bpp");
 
-const u8 gMonIcon_CinnabarFeebas[] = INCBIN_U8("graphics/pokemon/cinnabar_feebas/icon.4bpp");
+const u8 gMonIcon_FeebasKantonian[] = INCBIN_U8("graphics/pokemon/feebas_kantonian/icon.4bpp");

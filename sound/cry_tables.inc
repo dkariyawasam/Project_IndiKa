@@ -458,8 +458,8 @@ gCryTable::
 	cry Cry_Custom_AEROPTERYX
 	cry Cry_Custom_OSSCYTHE
 	cry Cry_Custom_MIME_SR
-	cry Cry_Custom_CINNABAR_MAGIKARP
-	cry Cry_Custom_CINNABAR_FEEBAS
+	cry Cry_Custom_MAGIKARP_KANTONIAN
+	cry Cry_Custom_FEEBAS_KANTONIAN
 	cry Cry_Custom_PORYGON3
 	cry Cry_Custom_PICHU_ALOLAN
 	cry Cry_Custom_PIKACHU_ALOLAN
@@ -939,8 +939,8 @@ gCryTable_Reverse::
 	cry_reverse Cry_Custom_AEROPTERYX
 	cry_reverse Cry_Custom_OSSCYTHE
 	cry_reverse Cry_Custom_MIME_SR
-	cry_reverse Cry_Custom_CINNABAR_MAGIKARP
-	cry_reverse Cry_Custom_CINNABAR_FEEBAS
+	cry_reverse Cry_Custom_MAGIKARP_KANTONIAN
+	cry_reverse Cry_Custom_FEEBAS_KANTONIAN
 	cry_reverse Cry_Custom_PORYGON3
 	cry_reverse Cry_Custom_PICHU_ALOLAN
 	cry_reverse Cry_Custom_PIKACHU_ALOLAN

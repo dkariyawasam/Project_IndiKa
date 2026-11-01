@@ -315,9 +315,9 @@ static u16 GetFishingSpeciesForLocation(u16 species)
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE20)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE20))
     {
-        if (species == SPECIES_CINNABAR_MAGIKARP && gSaveBlock1Ptr->pos.x >= 48)
+        if (species == SPECIES_MAGIKARP_KANTONIAN && gSaveBlock1Ptr->pos.x >= 48)
             return SPECIES_MAGIKARP;
-        if (species == SPECIES_CINNABAR_FEEBAS && gSaveBlock1Ptr->pos.x < 48)
+        if (species == SPECIES_FEEBAS_KANTONIAN && gSaveBlock1Ptr->pos.x < 48)
             return SPECIES_FEEBAS;
     }
     return species;

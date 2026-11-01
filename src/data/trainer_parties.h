@@ -3887,7 +3887,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     {
         .iv = 250,
         .lvl = 54,
-        .species = SPECIES_CINNABAR_FEEBAS,
+        .species = SPECIES_FEEBAS_KANTONIAN,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SURF, MOVE_DRAGON_BREATH, MOVE_ICE_BEAM, MOVE_PROTECT},
     },
@@ -3915,7 +3915,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     {
         .iv = 250,
         .lvl = 58,
-        .species = SPECIES_CINNABAR_MAGIKARP,
+        .species = SPECIES_MAGIKARP_KANTONIAN,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_OUTRAGE, MOVE_FLAMETHROWER, MOVE_SURF, MOVE_PROTECT},
     },
