@@ -759,7 +759,7 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 1,
     },
-    [SPECIES_CINNABAR_MAGIKARP] =
+    [SPECIES_MAGIKARP_KANTONIAN] =
     {
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
@@ -2068,7 +2068,7 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
     },
-    [SPECIES_CINNABAR_FEEBAS] =
+    [SPECIES_FEEBAS_KANTONIAN] =
     {
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
@@ -2465,7 +2465,7 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_OMATOPS] =
     {
-        .size = MON_COORDS_SIZE(64, 56),
+        .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
     },
     [SPECIES_STARLY] =

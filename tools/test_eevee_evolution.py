@@ -174,7 +174,7 @@ int main(void){
   assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
   m.data[MON_DATA_HELD_ITEM]=ITEM_NONE;
  }
- m.data[MON_DATA_SPECIES]=SPECIES_CINNABAR_FEEBAS;
+ m.data[MON_DATA_SPECIES]=SPECIES_FEEBAS_KANTONIAN;
  assert(!GetEvolutionTargetSpecies(&m,EVO_MODE_NORMAL,0));
  puts("PASS: Feebas friendship threshold, day/night, Beauty independence, Everstone, and unchanged Deep Form.");
  puts("PASS: 15 restored evolution links; level, gender, night, friendship, move, item, trade and Everstone checks.");

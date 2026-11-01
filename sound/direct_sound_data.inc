@@ -2105,12 +2105,12 @@ Cry_Custom_MIME_SR::
 	.incbin "sound/direct_sound_samples/cries/custom_mime_sr.bin"
 
 	.align 2
-Cry_Custom_CINNABAR_MAGIKARP::
-	.incbin "sound/direct_sound_samples/cries/custom_cinnabar_magikarp.bin"
+Cry_Custom_MAGIKARP_KANTONIAN::
+	.incbin "sound/direct_sound_samples/cries/custom_magikarp_kantonian.bin"
 
 	.align 2
-Cry_Custom_CINNABAR_FEEBAS::
-	.incbin "sound/direct_sound_samples/cries/custom_cinnabar_feebas.bin"
+Cry_Custom_FEEBAS_KANTONIAN::
+	.incbin "sound/direct_sound_samples/cries/custom_feebas_kantonian.bin"
 
 	.align 2
 Cry_Custom_PORYGON3::

@@ -997,11 +997,11 @@ extern const u32 gMonBackPic_Mew[];
 extern const u32 gMonShinyPalette_Mew[];
 extern const u8 gMonIcon_Mew[];
 extern const u8 gMonFootprint_Mew[];
-extern const u32 gMonFrontPic_CinnabarMagikarp[];
-extern const u32 gMonPalette_CinnabarMagikarp[];
-extern const u32 gMonShinyPalette_CinnabarMagikarp[];
-extern const u8 gMonIcon_CinnabarMagikarp[];
-extern const u8 gMonFootprint_CinnabarMagikarp[];
+extern const u32 gMonFrontPic_MagikarpKantonian[];
+extern const u32 gMonPalette_MagikarpKantonian[];
+extern const u32 gMonShinyPalette_MagikarpKantonian[];
+extern const u8 gMonIcon_MagikarpKantonian[];
+extern const u8 gMonFootprint_MagikarpKantonian[];
 extern const u32 gMonFrontPic_Bayleef[];
 extern const u32 gMonPalette_Bayleef[];
 extern const u32 gMonBackPic_Bayleef[];
@@ -1926,7 +1926,7 @@ extern const u32 gMonPalette_Feebas[];
 extern const u32 gMonBackPic_Feebas[];
 extern const u32 gMonShinyPalette_Feebas[];
 extern const u8 gMonIcon_Feebas[];
-extern const u8 gMonIcon_CinnabarFeebas[];
+extern const u8 gMonIcon_FeebasKantonian[];
 extern const u8 gMonFootprint_Feebas[];
 extern const u32 gMonFrontPic_Milotic[];
 extern const u32 gMonPalette_Milotic[];
@@ -4020,7 +4020,7 @@ extern const u8 gMonIcon_Dragonair[];
 extern const u8 gMonIcon_Dragonite[];
 extern const u8 gMonIcon_Mewtwo[];
 extern const u8 gMonIcon_Mew[];
-extern const u8 gMonIcon_CinnabarMagikarp[];
+extern const u8 gMonIcon_MagikarpKantonian[];
 extern const u8 gMonIcon_Bayleef[];
 extern const u8 gMonIcon_Meganium[];
 extern const u8 gMonIcon_Cyndaquil[];
@@ -4759,9 +4759,9 @@ extern const u32 gMonPalette_Kabuknight[];
 
 extern const u8 gMonIcon_Kabuknight[];
 
-extern const u8 gMonFootprint_CinnabarFeebas[];
-extern const u32 gMonFrontPic_CinnabarFeebas[];
-extern const u32 gMonPalette_CinnabarFeebas[];
+extern const u8 gMonFootprint_FeebasKantonian[];
+extern const u32 gMonFrontPic_FeebasKantonian[];
+extern const u32 gMonPalette_FeebasKantonian[];
 
 extern const u8 gMonFootprint_Kabustar[];
 

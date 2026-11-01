@@ -1145,13 +1145,13 @@ const u8 gMewPokedexText[] = _(
 
 const u8 gMewPokedexTextUnused[] = _("");
 
-const u8 gCinnabarMagikarpPokedexText[] = _(
-    "This ancestral dragon thrives in\n"
-    "depths warmed by CINNABAR magma.\n"
-    "It needs no evolution. Hot water\n"
-    "ripples behind its fins.");
+const u8 gMagikarpKantonianPokedexText[] = _(
+    "This vicious fish POKéMON thrives in\n"
+    "the depths warmed by CINNABAR\n"
+    "magma. Having achieved dragonhood,\n"
+    "it needs no evolution.");
 
-const u8 gCinnabarMagikarpPokedexTextUnused[] = _("");
+const u8 gMagikarpKantonianPokedexTextUnused[] = _("");
 
 const u8 gBayleefPokedexText[] = _(
     "A spicy aroma emanates from around\n"
@@ -2772,7 +2772,7 @@ const u8 gStaraptorPokedexTextUnused[] = _("");
 const u8 gOmatoPokedexText[] = _(
     "A HELIX shell shelters a pale body\n"
     "restored from DART fragments. It\n"
-    "probes cracks with its limbs,\n"
+    "probes cracks with its antennae,\n"
     "retreating at the slightest tremor.");
 
 const u8 gOmatoPokedexTextUnused[] = _("");
@@ -2780,7 +2780,7 @@ const u8 gOmatoPokedexTextUnused[] = _("");
 const u8 gOmatopsPokedexText[] = _(
     "It spins on its pointed shell,\n"
     "sweeping small scythes around its\n"
-    "body. They pry shellfish from rocks\n"
+    "body. They pry its prey from rocks\n"
     "for it to eat.");
 
 const u8 gOmatopsPokedexTextUnused[] = _("");
@@ -2889,7 +2889,7 @@ const u8 gMimeJrPokedexText[] = _(
 const u8 gMimeJrPokedexTextUnused[] = _("");
 
 const u8 gMimeSrPokedexText[] = _(
-    "It shelters young mimes behind\n"
+    "It shelters its young behind\n"
     "invisible walls shaped with small\n"
     "gestures. Even at rest, one hand\n"
     "guards the entrance.");
@@ -2916,10 +2916,10 @@ const u8 gDusknoirPokedexText[] = _(
 const u8 gDusknoirPokedexTextUnused[] = _("");
 
 const u8 gOsscythePokedexText[] = _(
-    "Grief binds it to old resting\n"
-    "places. It sharpens its scythe-like\n"
-    "limb on stone and stands watch\n"
-    "after mourners have left.");
+    "Grief binds it to resting places. It\n"
+    "sharpens its scythe-like bone tool\n"
+    "on stone and stands watch after\n"
+    "mourners have left.");
 const u8 gOsscythePokedexTextUnused[] = _("");
 
 const u8 gRhyperiorPokedexText[] = _(
@@ -2928,12 +2928,12 @@ const u8 gRhyperiorPokedexText[] = _(
     "off most ordinary attacks.");
 const u8 gRhyperiorPokedexTextUnused[] = _("");
 
-const u8 gCinnabarFeebasPokedexText[] = _(
-    "This ancestral dragon needs no\n"
-    "evolution. Pale scales hide it in\n"
-    "icy depths along cold currents from\n"
-    "SEAFOAM ISLANDS.");
-const u8 gCinnabarFeebasPokedexTextUnused[] = _("");
+const u8 gFeebasKantonianPokedexText[] = _(
+    "This vicious fish POKéMON hides in\n"
+    "the cold currents around SEAFOAM\n"
+    "ISLANDS. Having achieved\n"
+    "dragonhood, it needs no evolution.");
+const u8 gFeebasKantonianPokedexTextUnused[] = _("");
 
 const u8 gWeavilePokedexText[] = _(
     "It hunts in clever packs. Sharp\n"
@@ -2964,33 +2964,33 @@ const u8 gMagmortarPokedexTextUnused[] = _("");
 const u8 gKabustarPokedexText[] = _(
     "A DOME shell covers a blue body\n"
     "restored from HASTE fragments. Soft\n"
-    "limbs grip wet rocks as waves break\n"
+    "limbs grip rocks as waves break\n"
     "over its shell.");
 const u8 gKabustarPokedexTextUnused[] = _("");
 
 const u8 gKabuknightPokedexText[] = _(
     "Its shell shields a soft blue body.\n"
-    "It braces with its rear limbs,\n"
-    "turning its armored front toward\n"
-    "any approaching threat.");
+    "It stands upright with its rear\n"
+    "limbs, using its hardened front\n"
+    "toward any approaching threat.");
 const u8 gKabuknightPokedexTextUnused[] = _("");
 
 const u8 gAmunytePokedexText[] = _(
     "Long thought extinct, it survives in\n"
-    "flooded caves. Venom seeps from its\n"
-    "purple growths, keeping predators\n"
-    "away from its shell.");
+    "flooded caves. Venom seeps from\n"
+    "the seams in its shell, keeping\n"
+    "predators away from it.");
 const u8 gAmunytePokedexTextUnused[] = _("");
 
 const u8 gKinkabutoPokedexText[] = _(
-    "It waits beneath the silt with its\n"
+    "It waits beneath the soil with its\n"
     "blades folded beside its shell.\n"
     "This ancient hunter strikes when\n"
     "prey stirs the water.");
 const u8 gKinkabutoPokedexTextUnused[] = _("");
 
 const u8 gAeropteryxPokedexText[] = _(
-    "It vaults from cliffs on folded\n"
+    "It leaps from cliffs on folded\n"
     "wings. Warm air lifts this ancient\n"
     "dragon aloft. It returns to rock\n"
     "ledges when the air cools.");

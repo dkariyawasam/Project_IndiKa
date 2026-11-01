@@ -44,7 +44,7 @@ int main(void){
  assert(DexScreen_AdjacentForm(SPECIES_MEOWTH,1)==SPECIES_MEOWTH_GALARIAN);
  assert(DexScreen_FormGroup(SPECIES_MR_RIME)==NULL);
  assert(DexScreen_FormGroup(SPECIES_PERRSERKER)==NULL);
- assert(DexScreen_FormGroup(SPECIES_CINNABAR_FEEBAS)[0]==SPECIES_FEEBAS);
+ assert(DexScreen_FormGroup(SPECIES_FEEBAS_KANTONIAN)[0]==SPECIES_FEEBAS);
  owned[SPECIES_FARFETCHD]=1;
  assert(DexScreen_FormFamilyOwned(SPECIES_FARFETCHD));
  owned[SPECIES_RAICHU]=1;

@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-30",
+  "source": "User supplied current front sprite",
+  "source_sha256": "cd6d13097b1cbc49ab164f8bc181ab7a22a0b3ce19f37031b699bc83ec8c3b03",
+  "import": "Preserved 64x64 indexed pixels and matching existing 16-colour palette without alteration.",
+  "internal_name": "feebas_kantonian",
+  "species_id": 441,
+  "previous_internal_name": "cinnabar_feebas",
+  "historical_records": "Older provenance documents retained under their original names."
+}

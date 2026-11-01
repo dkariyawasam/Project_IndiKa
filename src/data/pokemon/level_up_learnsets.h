@@ -2266,7 +2266,7 @@ static const u16 sMewLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sCinnabarMagikarpLevelUpLearnset[] = {
+static const u16 sMagikarpKantonianLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_SPLASH),
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
     LEVEL_UP_MOVE(5, MOVE_WATER_GUN),
@@ -6052,7 +6052,7 @@ static const u16 sRhyperiorLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sCinnabarFeebasLevelUpLearnset[] = {
+static const u16 sFeebasKantonianLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_SPLASH),
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
     LEVEL_UP_MOVE(5, MOVE_WATER_GUN),

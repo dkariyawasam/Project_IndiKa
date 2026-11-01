@@ -4443,7 +4443,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
-    [SPECIES_CINNABAR_MAGIKARP] =
+    [SPECIES_MAGIKARP_KANTONIAN] =
     {
         .baseHP = 100,
         .baseAttack = 70,
@@ -10274,7 +10274,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
-    [SPECIES_CINNABAR_FEEBAS] =
+    [SPECIES_FEEBAS_KANTONIAN] =
     {
         .baseHP = 115,
         .baseAttack = 50,

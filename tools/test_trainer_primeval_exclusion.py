@@ -10,7 +10,7 @@ assert len(primeval)==6
 for name,body in re.findall(r'static const struct \w+ (\w+)\[\] = \{(.*?)\n\};',parties,re.S):
     found=primeval.intersection(re.findall(r'SPECIES_\w+',body))
     if name=='sParty_EliteFourLance':
-        assert found=={'SPECIES_CINNABAR_FEEBAS','SPECIES_CINNABAR_MAGIKARP','SPECIES_AEROPTERYX'}
+        assert found=={'SPECIES_FEEBAS_KANTONIAN','SPECIES_MAGIKARP_KANTONIAN','SPECIES_AEROPTERYX'}
     else:
         assert not found,name
 for path in (ROOT/'src').glob('*challenge*.c'):

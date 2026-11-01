@@ -8642,7 +8642,7 @@
               {
                 "min_level": 28,
                 "max_level": 32,
-                "species": "SPECIES_CINNABAR_MAGIKARP"
+                "species": "SPECIES_MAGIKARP_KANTONIAN"
               },
               {
                 "min_level": 5,
@@ -8667,7 +8667,7 @@
               {
                 "min_level": 28,
                 "max_level": 32,
-                "species": "SPECIES_CINNABAR_FEEBAS"
+                "species": "SPECIES_FEEBAS_KANTONIAN"
               }
             ]
           }

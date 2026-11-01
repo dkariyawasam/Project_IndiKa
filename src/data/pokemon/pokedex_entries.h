@@ -2308,13 +2308,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerX = 85,
     },
 
-    [NATIONAL_DEX_CINNABAR_MAGIKARP] =
+    [NATIONAL_DEX_MAGIKARP_KANTONIAN] =
     {
         .categoryName = _("DRAGON"),
         .height = 18,
         .weight = 420,
-        .description = gCinnabarMagikarpPokedexText,
-        .unusedDescription = gCinnabarMagikarpPokedexTextUnused,
+        .description = gMagikarpKantonianPokedexText,
+        .unusedDescription = gMagikarpKantonianPokedexTextUnused,
         .pokemonScale = 247,
         .pokemonOffset = -8,
         .trainerScale = 263,
@@ -5350,13 +5350,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerX = 105,
     },
 
-    [NATIONAL_DEX_CINNABAR_FEEBAS] =
+    [NATIONAL_DEX_FEEBAS_KANTONIAN] =
     {
         .categoryName = _("DEEP DRAGON"),
         .height = 16,
         .weight = 360,
-        .description = gCinnabarFeebasPokedexText,
-        .unusedDescription = gCinnabarFeebasPokedexTextUnused,
+        .description = gFeebasKantonianPokedexText,
+        .unusedDescription = gFeebasKantonianPokedexTextUnused,
         .pokemonScale = 244,
         .pokemonOffset = -4,
         .trainerScale = 261,

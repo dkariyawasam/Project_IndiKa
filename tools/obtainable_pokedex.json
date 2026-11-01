@@ -162,11 +162,11 @@
       "Wild: MAP_POKEMON_TOWER_4F",
       "data/maps/SaffronCity_Gym/scripts.inc"
     ],
-    "CINNABAR_FEEBAS": [
+    "FEEBAS_KANTONIAN": [
       "Wild: MAP_ROUTE19",
       "Wild: MAP_ROUTE20"
     ],
-    "CINNABAR_MAGIKARP": [
+    "MAGIKARP_KANTONIAN": [
       "Wild: MAP_ROUTE20",
       "Wild: MAP_ROUTE21_NORTH"
     ],

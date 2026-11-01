@@ -60,7 +60,7 @@ assert 'setmoveeffect MOVE_EFFECT_BURN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_
 freeze = read('src/battle_util.c').split('case CANCELLER_FROZEN:',1)[1].split('case CANCELLER_TRUANT:',1)[0]
 assert freeze.index('gCurrentMove == MOVE_GLACIAL_SHELL') < freeze.index('Random() % 5')
 assert 'MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR' in scripts.split('BattleScript_EffectGlacialShell::')[1]
-for species, move in [('CINNABAR_MAGIKARP','SCALDING_DIVE'),('CINNABAR_FEEBAS','GLACIAL_SHELL')]:
+for species, move in [('MAGIKARP_KANTONIAN','SCALDING_DIVE'),('FEEBAS_KANTONIAN','GLACIAL_SHELL')]:
     block = re.search(r'\[SPECIES_'+species+r'\]\s*=\s*\{.*?\n    \}',read('src/data/pokemon/species_info.h'),re.S)[0]
     assert '{ABILITY_SWIFT_SWIM, ABILITY_MARVEL_SCALE}' in block
     assert f'LEVEL_UP_MOVE(33, MOVE_{move})' in read('src/data/pokemon/level_up_learnsets.h')

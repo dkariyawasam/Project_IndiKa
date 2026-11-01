@@ -13,8 +13,8 @@ PRINTS = [
     ('osscythe', 'Osscythe', (11, 13)),
     ('omato', 'Omato', (8, 8)),
     ('omatops', 'Omatops', (11, 8)),
-    ('cinnabar_magikarp', 'CinnabarMagikarp', (5, 7)),
-    ('cinnabar_feebas', 'CinnabarFeebas', (5, 7)),
+    ('magikarp_kantonian', 'MagikarpKantonian', (5, 7)),
+    ('feebas_kantonian', 'FeebasKantonian', (5, 7)),
     ('kabustar', 'Kabustar', (9, 9)),
     ('kabuknight', 'Kabuknight', (6, 12)),
     ('amunyte', 'Amunyte', (9, 6)),
@@ -34,7 +34,7 @@ def main():
     manifest = {}
     for i, (species, suffix, size) in enumerate(PRINTS):
         # Preserve approved replacements rather than restoring historical generated art.
-        if species in ('cinnabar_magikarp', 'cinnabar_feebas', 'omato', 'omatops'):
+        if species in ('magikarp_kantonian', 'feebas_kantonian', 'omato', 'omatops'):
             footprint = Image.new('1', (16, 16), 1)
         elif species in ('aeropteryx', 'mime_sr', 'osscythe', 'amunyte', 'kinkabuto', 'kabustar', 'kabuknight'):
             footprint = Image.open(OUT / f'{species}-user-source.png').convert('L').point(
@@ -52,7 +52,7 @@ def main():
         if not re.search(r'extern const u8 ' + symbol + r'\[\]', declarations):
             declarations += '\nextern const u8 ' + symbol + '[];\n'
         manifest[species.upper()] = {'path': str(path.relative_to(ROOT)), 'symbol': symbol, 'atlas_cell': None}
-        if species in ('cinnabar_magikarp', 'cinnabar_feebas', 'omato', 'omatops'):
+        if species in ('magikarp_kantonian', 'feebas_kantonian', 'omato', 'omatops'):
             manifest[species.upper()].update(atlas_cell=None, origin='blank: no footprint')
         elif species in ('aeropteryx', 'mime_sr', 'osscythe', 'amunyte', 'kinkabuto', 'kabustar', 'kabuknight'):
             manifest[species.upper()].update(atlas_cell=None, origin='user-supplied footprint', source=f'{species}-user-source.png')
