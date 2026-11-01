@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-30",
+  "species": [
+    "KABUSTAR",
+    "KABUKNIGHT",
+    "AMUNYTE",
+    "KINKABUTO",
+    "AEROPTERYX"
+  ],
+  "active_icon": "gMonIcon_QuestionMark",
+  "palette_index": 0,
+  "reason": "User requested vanilla question-mark menu placeholders for all five species.",
+  "previous_assets": "Retained on disk for historical reference; no longer referenced by these species in the runtime icon table."
+}

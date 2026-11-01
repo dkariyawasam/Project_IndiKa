@@ -5,6 +5,8 @@ ref=Image.open(D/'generated-reference.png').convert('RGB')
 def readpal(p):return [tuple(map(int,l.split())) for l in p.read_text().splitlines()[3:]]
 def writepal(p,c):p.write_text('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,x)) for x in c)+'\n')
 for row,name in enumerate(['tynamo','eelektrik','eelektross']):
+ if name in ('tynamo', 'eelektrik', 'eelektross'):
+  continue  # All three species now have user updates; preserve them.
  root=R/'graphics/pokemon'/name;pal=readpal(root/'normal.pal');shiny=readpal(root/'shiny.pal')
  for kind in ['normal','shiny']:
   p=root/(kind+'.pal');backup=D/'before'/(name+'-'+kind+'.pal')

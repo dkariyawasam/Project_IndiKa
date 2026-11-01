@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-30",
+  "source": "User supplied current front sprite",
+  "source_sha256": "ea92169eaea636cf5d36baeecfe1ed527818c76187e030d418739c6a1253cb84",
+  "import": "Preserved 64x64 indexed pixels and matching existing 16-colour palette without alteration.",
+  "internal_name": "magikarp_kantonian",
+  "species_id": 152,
+  "previous_internal_name": "cinnabar_magikarp",
+  "historical_records": "Older provenance documents retained under their original names."
+}

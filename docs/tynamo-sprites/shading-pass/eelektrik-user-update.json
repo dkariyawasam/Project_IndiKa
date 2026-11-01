@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "origin": "User reported updating front and back sprites directly",
+  "assets": {
+    "front": {
+      "path": "graphics/pokemon/eelektrik/front.png",
+      "sha256": "52ba7a0a27157a2b1cbc1b9e1c1e5d4f24609eb1ebb0e0a21ada76c72e3cc62c"
+    },
+    "back": {
+      "path": "graphics/pokemon/eelektrik/back.png",
+      "sha256": "13a35adea55b9698e23ed89e78477e8973d8c63bd39497df6d2e899c3b0aaf43"
+    }
+  },
+  "validation": "64x64 indexed images, transparency index 0, all used indices below 16 and embedded colours match runtime normal palette. No pixel edits or palette remapping performed.",
+  "provenance_limit": "Records user revision; does not independently establish whether every earlier generated shading pixel was replaced."
+}
