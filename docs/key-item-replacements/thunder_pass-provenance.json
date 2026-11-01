@@ -1,7 +1,0 @@
-{
-  "asset": "graphics/items/icons/thunder_pass.png",
-  "source": "thunder_pass-user-source.png",
-  "origin": "User-supplied replacement artwork",
-  "date": "2026-10-29",
-  "conversion": "Native 24x24; foreground RGBA pixels and alpha mask preserved exactly, mapped to existing palette without recolouring or resizing."
-}

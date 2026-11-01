@@ -1,5 +1,0 @@
-dofile('/tmp/leader-nicknames/harness.lua')
-dofile('/tmp/leader-nicknames/helpers.lua')
-dofile('/tmp/leader-nicknames/common.lua')
-dofile('/tmp/leader-nicknames/symbols.lua')
-qa.run({{kind='press',key=8,frames=60},{kind='text',frames=1800}})
