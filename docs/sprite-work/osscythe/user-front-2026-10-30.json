@@ -1,8 +1,0 @@
-{
-  "date": "2026-10-30",
-  "source": "User supplied current front sprite",
-  "source_sha256": "90e3ec0d59a2e1e0cd28192a6dd4e4cf4703cc65a19a6b32e0274376e92d9f76",
-  "validation": "64x64 indexed sprite; all used colours match existing runtime normal palette. Pixel indices and visible colours preserved.",
-  "format_change": "Marked background index zero transparent and padded unused palette entry.",
-  "provenance_limit": "Records user submission; does not independently establish authorship of every source pixel."
-}

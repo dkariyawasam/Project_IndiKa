@@ -239,11 +239,9 @@ $(ITEMPCGFXDIR)/bg.4bpp: %.4bpp: %.png
 $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
 
-$(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin: $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/firered/grass.pal $(TITLESCREENGFXDIR)/copyright_press_start.bin $(FONTGFXDIR)/latin_small.latfont charmap.txt tools/pack_title_grass.py
-	python3 tools/pack_title_grass.py $(TITLESCREENGFXDIR)/firered/grass.png $(TITLESCREENGFXDIR)/copyright_press_start.bin $(TITLESCREENGFXDIR)/firered/grass.4bpp $(TITLESCREENGFXDIR)/firered/grass.bin
-
-$(TITLESCREENGFXDIR)/firered/backdrop.4bpp $(TITLESCREENGFXDIR)/firered/backdrop.bin $(TITLESCREENGFXDIR)/firered/backdrop.gbapal: $(TITLESCREENGFXDIR)/firered/backdrop.png $(TITLESCREENGFXDIR)/firered/border_bg.bin tools/pack_title_backdrop.py
-	python3 tools/pack_title_backdrop.py $(TITLESCREENGFXDIR)/firered/backdrop.png $(TITLESCREENGFXDIR)/firered/border_bg.bin $(TITLESCREENGFXDIR)/firered/backdrop.4bpp $(TITLESCREENGFXDIR)/firered/backdrop.bin $(TITLESCREENGFXDIR)/firered/backdrop.gbapal
+# Custom title tiles, maps and backdrop palette are permanent .bin assets.
+# src/title_screen.c includes them directly or through the standard .lz rule.
+# PNG reference edits do not regenerate these packed assets.
 
 $(TITLESCREENGFXDIR)/firered/footer.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 60 -Wnum_tiles
@@ -506,12 +504,6 @@ graphics/object_events/pics/people/pokemaniac.4bpp: graphics/object_events/pics/
 # Horizontal 16x32 overworld frames.
 graphics/object_events/pics/people/civilians/rocket_league_dude.4bpp: graphics/object_events/pics/people/civilians/rocket_league_dude.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
-
-graphics/object_events/pics/people/tuber_m_land.4bpp: graphics/object_events/pics/people/tuber_m_land.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
-
-graphics/object_events/pics/people/tuber_m_water.4bpp: graphics/object_events/pics/people/tuber_m_water.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
 
 graphics/object_events/pics/people/psychic_f.4bpp: graphics/object_events/pics/people/psychic_f.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

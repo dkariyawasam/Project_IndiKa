@@ -23,16 +23,10 @@ The local development build has been tested with mGBA 0.10.5. This does not impl
 
 Playthrough and trainer line-of-sight reviews have been accepted. Sprite polish remains unfinished; some imported asset attribution is unresolved. Custom-ability-specific live battle testing is deferred. Patch Disc distribution/Porygon3 acquisition and extra ferry destinations remain deliberately unavailable. These are not promised preview features.
 
-See credits and the asset attribution report. If you can identify missing creators, contact Dee Kariyawasam through the project release page or repository issues. Do not upload ROMs or personal saves with reports.
+If you can identify missing creators, contact Dee Kariyawasam through the project release page or repository issues. Do not upload ROMs or personal saves with reports.
 
 ## Maintainer packaging
 
-Build the mod locally using INSTALL.md and `make COMPARE=0`, review it, and refresh the staging manifest's target hashes to the approved build. Keep the clean base outside Git. With Floating IPS installed:
+Build with `make COMPARE=0` and review the resulting game. Use Floating IPS to create a BPS patch from the required clean base and the reviewed build. Apply the patch to a separate copy of the base and verify that the output matches the reviewed ROM byte-for-byte.
 
-```sh
-python3 tools/package_release.py --base /path/to/clean-firered.gba --output dist/expeditions-kanto-preview
-```
-
-Use `--flips /path/to/flips` if it is not on PATH. The command rejects the wrong base, a stale target manifest and existing output destinations. It generates BPS, reapplies it to the clean base, compares the reconstructed ROM byte-for-byte via SHA-256, and creates a ZIP containing only the patch and documentation. It never publishes anything. Retain the package checksums when uploading an approved release.
-
-Current staging is `release/2026-10-12-preview`. A staging directory without a `.bps` is not an installable release. Source checkout instructions and maintainer tools are not included in the player ZIP.
+Package only the BPS patch, current instructions, checksums and complete credits. Do not include ROMs, saves or emulator states. The previous release staging directory and automated packaging helper have been removed; prepare fresh staging before distributing a release.

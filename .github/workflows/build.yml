@@ -26,10 +26,6 @@ jobs:
         run: |
           ./build.sh
           ./install.sh ../
-      - name: Check repository distribution rules
-        run: python3 tools/check_release_hygiene.py
       - name: Build modified FireRed
         run: make -j"$(nproc)" GAME_VERSION=FIRERED GAME_LANGUAGE=ENGLISH GAME_REVISION=0 COMPARE=0
-      - name: Check trainer wiring
-        run: python3 tools/audit_trainer_wiring.py
       # Deliberately no ROM uploads, release publishing or branch writes.

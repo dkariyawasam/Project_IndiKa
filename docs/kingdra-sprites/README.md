@@ -1,1 +1,0 @@
-Kingdra normal blue slots 2–5 now use Seadra slots 2,3,4,6, preserving a highlight-to-deep-shadow ramp with Kingdra’s four available blue slots. Other colours, pixel indices, and shiny palette are unchanged. Both front and back updated.
