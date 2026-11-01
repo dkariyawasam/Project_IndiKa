@@ -2,7 +2,7 @@
 
 Pokémon Expeditions Kanto is an unofficial fan modification. It is not affiliated with or endorsed by Nintendo, Game Freak, Creatures or The Pokémon Company. Pokémon names, characters and original game material belong to their respective rights holders.
 
-Dee Kariyawasam's project credits describe contributions to this modification, not ownership of the original game or imported community artwork. See project credits, original game credits and asset research.
+Dee Kariyawasam's project credits describe contributions to this modification, not ownership of the original game or imported community artwork.
 
 This repository does not grant a blanket licence over its contents. Existing component licences and upstream notices retain their own scope; tool licences do not license game assets. No new open-source licence is asserted for material owned by others.
 
@@ -14,7 +14,7 @@ Player downloads should contain a BPS patch, instructions, checksums and credits
 
 The source tree contains original game-derived material, including the upstream `data/mb_colosseum.gba` multiboot build dependency. Removing full game builds does not clear rights in the remaining source or artwork.
 
-Two full ROMs were tracked in earlier commits. They have been removed from the current index while retaining local development copies. Earlier Git history still contains them. This working-tree cleanup does not remove historical or already distributed copies. Public source publication requires a separate decision about that history and the remaining rights questions; no history rewrite or remote publication was performed.
+Complete game builds are excluded from the published branch history. Local development builds remain ignored. Rewriting branch history does not recall copies already downloaded or guarantee removal of cached objects held by hosting services.
 
 ## Corrections
 
