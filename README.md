@@ -17,7 +17,7 @@ An unofficial FireRed fan modification about exploration, research and the diffe
 
 ## Development status
 
-This is a development build. Battle-sprite completion and the final release pass remain open. The playthrough and trainer line-of-sight reviews were accepted on October 12. The [playthrough record](docs/release-playthrough/forest-brock-oct12/README.md) and [trainer avoidance review](docs/release-playthrough/trainer-avoidance-oct12/README.md) preserve the actual coverage and limitations. Patch Disc distribution/Porygon3 and additional ferry destinations remain deliberately deferred.
+This is a development build. Battle-sprite completion and the final release pass remain open. Patch Disc distribution/Porygon3 and additional ferry destinations remain deliberately deferred. See [release scope and current limitations](RELEASE.md#preview-scope).
 
 See [project and confirmed asset credits](CREDITS.md). The credits distinguish source-verified artwork from contributor-confirmed adaptations.
 

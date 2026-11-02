@@ -124,6 +124,9 @@ enum CreditsString
     CREDITS_STRING_EK_PROGRAMMING,
     CREDITS_STRING_EK_ORIGINAL_DESIGNS,
     CREDITS_STRING_EK_ENGINE,
+    CREDITS_STRING_EK_QUEST_MENU,
+    CREDITS_STRING_EK_QUEST_HELP_1,
+    CREDITS_STRING_EK_QUEST_HELP_2,
     CREDITS_STRING_EK_SPRITES,
     CREDITS_STRING_EK_ARCHIVE,
     CREDITS_STRING_EK_TOOLS,
@@ -499,6 +502,9 @@ static const struct CreditsScrcmd sExpeditionCreditsScript[] = {
     CREDITS_PRINT(EK_ORIGINAL_DESIGNS, 360),
     CREDITS_MAPNEXT(CERULEAN_CITY, 16),
     CREDITS_PRINT(EK_ENGINE, 360),
+    CREDITS_PRINT(EK_QUEST_MENU, 480),
+    CREDITS_PRINT(EK_QUEST_HELP_1, 480),
+    CREDITS_PRINT(EK_QUEST_HELP_2, 480),
     CREDITS_MAPNEXT(VERMILION_CITY, 16),
     CREDITS_PRINT(EK_SPRITES, 360),
     CREDITS_PRINT(EK_ARTISTS_1, 480),
@@ -770,6 +776,12 @@ static const u8 sTitle_EK_ORIGINAL_DESIGNS[] = _("ORIGINAL POKEMON DESIGNS");
 static const u8 sNames_EK_ORIGINAL_DESIGNS[] = _("\nDEE KARIYAWASAM");
 static const u8 sTitle_EK_ENGINE[] = _("DECOMPILATION");
 static const u8 sNames_EK_ENGINE[] = _("\nPRET / POKEFIRERED\nCONTRIBUTORS");
+static const u8 sTitle_EK_QUEST_MENU[] = _("QUEST MENU");
+static const u8 sNames_EK_QUEST_MENU[] = _("\nPOKEMONSANFRAN / PSF\nGREENPHX9 - FIRERED PORT\nghoulslash\nSkeli");
+static const u8 sTitle_EK_QUEST_HELP_1[] = _("QUEST MENU CONTRIBUTORS");
+static const u8 sNames_EK_QUEST_HELP_1[] = _("\nHN\nKarathan\nMcboy");
+static const u8 sTitle_EK_QUEST_HELP_2[] = _("QUEST MENU CONTRIBUTORS");
+static const u8 sNames_EK_QUEST_HELP_2[] = _("\nBSBob\nMM\nTustin2121");
 static const u8 sTitle_EK_SPRITES[] = _("ADDITIONAL SPRITE RESOURCES");
 static const u8 sNames_EK_SPRITES[] = _("\nROM HACKING HIDEOUT\nPOKEEMERALD-EXPANSION\nSPRITE CONTRIBUTORS");
 static const u8 sTitle_EK_ARCHIVE[] = _("SPRITE ARCHIVES");
@@ -878,6 +890,9 @@ static const struct CreditsTextHeader sCreditsTexts[] = {
     { sTitle_EK_PROGRAMMING, sNames_EK_PROGRAMMING, FALSE },
     { sTitle_EK_ORIGINAL_DESIGNS, sNames_EK_ORIGINAL_DESIGNS, FALSE },
     { sTitle_EK_ENGINE, sNames_EK_ENGINE, FALSE },
+    { sTitle_EK_QUEST_MENU, sNames_EK_QUEST_MENU, FALSE },
+    { sTitle_EK_QUEST_HELP_1, sNames_EK_QUEST_HELP_1, FALSE },
+    { sTitle_EK_QUEST_HELP_2, sNames_EK_QUEST_HELP_2, FALSE },
     { sTitle_EK_SPRITES, sNames_EK_SPRITES, FALSE },
     { sTitle_EK_ARCHIVE, sNames_EK_ARCHIVE, FALSE },
     { sTitle_EK_TOOLS, sNames_EK_TOOLS, FALSE },

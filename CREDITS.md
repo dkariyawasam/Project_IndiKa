@@ -19,6 +19,14 @@ Dee Kariyawasam also confirms editing the palettes for Sylveon, Roserade and Clo
 - PokeAPI / sprites — sprite archive, not blanket authorship of its contents.
 - devkitARM, agbcc and Porymap — development tools.
 
+## Quest menu
+
+The Logbook uses the Unbound Quest Menu recreation from **PokemonSanFran / Psf**, brought to FireRed by **Greenphx9 (Greenphx)**. It builds on **ghoulslash**’s quest menu and **Skeli**’s Unbound menu design.
+
+The original resource also credits **HN, Karathan, Mcboy, BSBob, MM and Tustin2121** for their contributions. These are credits for the shared menu resource; Dee’s project-specific quests and later changes remain separate.
+
+Sources: [original menu documentation and contributor list](https://github.com/PokemonSanFran/pokeemerald/wiki/Unbound-Quest-Menu), [Greenphx9’s FireRed port](https://github.com/Greenphx9/pokefirered/tree/unbound-quest-menu).
+
 ## Confirmed imported sprite artists
 
 The October 12, 2026 comparison matched 50 archived frames across 22 species/forms to credited resource sheets. These credits identify the matched imported drawings, not every asset or later local edit for those species. Front matches refer to frame one. Comparisons preserved geometry and shading regions while allowing palette and padding differences.
