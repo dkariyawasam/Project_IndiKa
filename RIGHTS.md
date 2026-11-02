@@ -6,7 +6,7 @@ Dee Kariyawasam's project credits describe contributions to this modification, n
 
 This repository does not grant a blanket licence over its contents. Existing component licences and upstream notices retain their own scope; tool licences do not license game assets. No new open-source licence is asserted for material owned by others.
 
-Some imported assets still have incomplete attribution. The invitation to identify their creators is a correction mechanism, not permission to use their work. Attribution, free distribution and patch-only packaging do not themselves establish legal clearance. Permission or an applicable exception may still be required. See the [UK Intellectual Property Office guidance](https://www.gov.uk/creative-works-licence).
+See [project and confirmed asset credits](CREDITS.md). The attribution gaps tracked in the credits review have been addressed; the credits distinguish source evidence from contributor confirmations. The invitation to correct credits is not permission to use the artwork. Attribution, free distribution and patch-only packaging do not themselves establish legal clearance. Permission or an applicable exception may still be required. See the [UK Intellectual Property Office guidance](https://www.gov.uk/creative-works-licence).
 
 ## Distribution
 

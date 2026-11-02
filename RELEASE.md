@@ -21,7 +21,7 @@ The local development build has been tested with mGBA 0.10.5. This does not impl
 
 ## Preview scope
 
-Playthrough and trainer line-of-sight reviews have been accepted. Sprite polish remains unfinished; some imported asset attribution is unresolved. Custom-ability-specific live battle testing is deferred. Patch Disc distribution/Porygon3 acquisition and extra ferry destinations remain deliberately unavailable. These are not promised preview features.
+Playthrough and trainer line-of-sight reviews have been accepted. Sprite polish remains unfinished; the attribution gaps tracked in the credits review have been addressed. Custom-ability-specific live battle testing is deferred. Patch Disc distribution/Porygon3 acquisition and extra ferry destinations remain deliberately unavailable. These are not promised preview features.
 
 If you can identify missing creators, contact Dee Kariyawasam through the project release page or repository issues. Do not upload ROMs or personal saves with reports.
 
@@ -29,4 +29,4 @@ If you can identify missing creators, contact Dee Kariyawasam through the projec
 
 Build with `make COMPARE=0` and review the resulting game. Use Floating IPS to create a BPS patch from the required clean base and the reviewed build. Apply the patch to a separate copy of the base and verify that the output matches the reviewed ROM byte-for-byte.
 
-Package only the BPS patch, current instructions, checksums and complete credits. Do not include ROMs, saves or emulator states. The previous release staging directory and automated packaging helper have been removed; prepare fresh staging before distributing a release.
+Package only the BPS patch, current instructions, checksums and complete credits, including [the confirmed asset credits](CREDITS.md). Do not include ROMs, saves or emulator states. The previous release staging directory and automated packaging helper have been removed; prepare fresh staging before distributing a release.

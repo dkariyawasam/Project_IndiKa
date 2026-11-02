@@ -1990,8 +1990,8 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_ROSERADE] =
     {
-        .size = MON_COORDS_SIZE(56, 56),
-        .y_offset = 6,
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
     },
     [SPECIES_MAGNEZONE] =
     {

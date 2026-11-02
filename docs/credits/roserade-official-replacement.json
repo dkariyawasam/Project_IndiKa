@@ -1,0 +1,181 @@
+{
+  "date": "2026-11-02",
+  "artwork_credit": "Game Freak / original Pok\u00e9mon Platinum artwork; Pok\u00e9mon rights held by Nintendo, Game Freak and Creatures",
+  "archive": "PokeAPI/sprites (archive, not artwork author)",
+  "archive_commit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+  "palette_credit": "Dee Kariyawasam; existing normal.pal and shiny.pal preserved unchanged",
+  "colour_mapping": [
+    {
+      "source_rgb": [
+        0,
+        0,
+        0
+      ],
+      "project_palette_index": 6
+    },
+    {
+      "source_rgb": [
+        41,
+        82,
+        82
+      ],
+      "project_palette_index": 4
+    },
+    {
+      "source_rgb": [
+        41,
+        123,
+        82
+      ],
+      "project_palette_index": 5
+    },
+    {
+      "source_rgb": [
+        58,
+        156,
+        99
+      ],
+      "project_palette_index": 7
+    },
+    {
+      "source_rgb": [
+        66,
+        74,
+        132
+      ],
+      "project_palette_index": 13
+    },
+    {
+      "source_rgb": [
+        74,
+        90,
+        189
+      ],
+      "project_palette_index": 15
+    },
+    {
+      "source_rgb": [
+        82,
+        115,
+        239
+      ],
+      "project_palette_index": 14
+    },
+    {
+      "source_rgb": [
+        115,
+        156,
+        140
+      ],
+      "project_palette_index": 1
+    },
+    {
+      "source_rgb": [
+        123,
+        58,
+        90
+      ],
+      "project_palette_index": 10
+    },
+    {
+      "source_rgb": [
+        165,
+        230,
+        173
+      ],
+      "project_palette_index": 12
+    },
+    {
+      "source_rgb": [
+        189,
+        66,
+        107
+      ],
+      "project_palette_index": 9
+    },
+    {
+      "source_rgb": [
+        197,
+        206,
+        206
+      ],
+      "project_palette_index": 3
+    },
+    {
+      "source_rgb": [
+        247,
+        214,
+        74
+      ],
+      "project_palette_index": 8
+    },
+    {
+      "source_rgb": [
+        255,
+        99,
+        132
+      ],
+      "project_palette_index": 11
+    },
+    {
+      "source_rgb": [
+        255,
+        255,
+        255
+      ],
+      "project_palette_index": 2
+    }
+  ],
+  "assets": [
+    {
+      "asset": "graphics/pokemon/roserade/front.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/platinum/407.png",
+      "source_sha256": "1e7b3aab2626f72883ebf00d502e988e5200ef8a5ff12a5d35c7b19436577307",
+      "output_sha256": "10b8104901cb169d89aa7f5ce4761940a199a1c67c99c42ce32df6e1144f29e0",
+      "source_crop": [
+        15,
+        10,
+        61,
+        69
+      ],
+      "cropped_source_size": [
+        46,
+        59
+      ],
+      "output_drawing_size": [
+        46,
+        59
+      ],
+      "canvas_offset": [
+        9,
+        2
+      ],
+      "transform": "Crop transparent padding, map official colours to existing project palette indices, center on 64x64 canvas; no scaling"
+    },
+    {
+      "asset": "graphics/pokemon/roserade/back.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/platinum/back/407.png",
+      "source_sha256": "bbc777b12c9bb07902d09749eb75d992a7e6fd42a49c112fb65865b281b3785c",
+      "output_sha256": "ea1d2fc8dd9b10b0d1c30ac32a02ee0593ec251d22dc418e20fa0a125c05914d",
+      "source_crop": [
+        4,
+        5,
+        70,
+        72
+      ],
+      "cropped_source_size": [
+        66,
+        67
+      ],
+      "output_drawing_size": [
+        63,
+        64
+      ],
+      "canvas_offset": [
+        0,
+        0
+      ],
+      "transform": "Crop transparent padding, map official colours to existing project palette indices, center on 64x64 canvas; nearest-neighbour reduction from 66x67 to 63x64"
+    }
+  ]
+}

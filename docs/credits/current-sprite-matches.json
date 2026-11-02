@@ -1,0 +1,555 @@
+{
+  "date": "2026-11-02",
+  "method": "Exact cropped silhouette and canonical RGB colour-region labels; ignores palette values and padding, no scaling or mirroring.",
+  "artist_source": "https://docs.google.com/spreadsheets/d/1o6-4IIFnyZr2axewnPNGSk3tUEC5bfcb/edit",
+  "matches": [
+    {
+      "local": "graphics/pokemon/ponyta_galarian/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/jadn2alkvux10bi/077-Galar.png?raw=1",
+      "source_sha256": "41f3e31c2968bf5fdffa4f0001927b15aedcb3aa49403a6dcdac2082f9745ab0",
+      "local_sha256": "47b529b70e8683b839150a325fa2c0992927a202f0dbeac294d46c62932e1c73"
+    },
+    {
+      "local": "graphics/pokemon/ponyta_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/jadn2alkvux10bi/077-Galar.png?raw=1",
+      "source_sha256": "41f3e31c2968bf5fdffa4f0001927b15aedcb3aa49403a6dcdac2082f9745ab0",
+      "local_sha256": "775673964a59a9c3c7d0042acb01be4a54ed2e7e0402a27c59b3bf9af082c94f"
+    },
+    {
+      "local": "graphics/pokemon/ponyta_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5cnc22pz66c5u2w/077-Galar.png?raw=1",
+      "source_sha256": "06ce79b511000f4397cb2ee4b68fd9d4d5092dc2deff809029a43b64b93ff6b1",
+      "local_sha256": "c132429ed7e28ae2e44e8c4e483f16e3f75e74ede9b88d64a29794bad6c18fd0"
+    },
+    {
+      "local": "graphics/pokemon/ponyta_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5cnc22pz66c5u2w/077-Galar.png?raw=1",
+      "source_sha256": "06ce79b511000f4397cb2ee4b68fd9d4d5092dc2deff809029a43b64b93ff6b1",
+      "local_sha256": "c132429ed7e28ae2e44e8c4e483f16e3f75e74ede9b88d64a29794bad6c18fd0"
+    },
+    {
+      "local": "graphics/pokemon/rapidash_galarian/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/7h3mxmrj6j4z3jw/078-Galar.png?raw=1",
+      "source_sha256": "bc0155850b29054f8d1f3636b8b27ff091847f06b359411b6c36eb0dff0a60e6",
+      "local_sha256": "5f7c7c3db4264cec30f3842f9546db746f6f6df8ebcafbe883165a0dfa3988fe"
+    },
+    {
+      "local": "graphics/pokemon/rapidash_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/7h3mxmrj6j4z3jw/078-Galar.png?raw=1",
+      "source_sha256": "bc0155850b29054f8d1f3636b8b27ff091847f06b359411b6c36eb0dff0a60e6",
+      "local_sha256": "97d4ec52f270d097ce65225f56e4b386043ad329f855a5e35c136c80704f7e6d"
+    },
+    {
+      "local": "graphics/pokemon/rapidash_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5atezwpe82svy6t/078-Galar.png?raw=1",
+      "source_sha256": "2fac224d11ea7ce6f6c4d082e99a148625b687e0ebd3f362f7ecd045a3949540",
+      "local_sha256": "08f50e2e97fa3ab4a082fe328653b0a1963dc92709415f013b1afa6fc8917986"
+    },
+    {
+      "local": "graphics/pokemon/rapidash_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5atezwpe82svy6t/078-Galar.png?raw=1",
+      "source_sha256": "2fac224d11ea7ce6f6c4d082e99a148625b687e0ebd3f362f7ecd045a3949540",
+      "local_sha256": "08f50e2e97fa3ab4a082fe328653b0a1963dc92709415f013b1afa6fc8917986"
+    },
+    {
+      "local": "graphics/pokemon/slowpoke_galarian/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/3he7arow1zg840y/079-Galar.png?raw=1",
+      "source_sha256": "065df41b200267bf639e4daeba890b3553bab4ca4825ca6cd809325ddade1d0c",
+      "local_sha256": "c16c8338c6c1f391ed6b18e7a846182744e888e80e355923d2c53389408f2bcc"
+    },
+    {
+      "local": "graphics/pokemon/slowpoke_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/3he7arow1zg840y/079-Galar.png?raw=1",
+      "source_sha256": "065df41b200267bf639e4daeba890b3553bab4ca4825ca6cd809325ddade1d0c",
+      "local_sha256": "ecc7fc1edac2c63f780849dd786751f13573a30a12e0ad8a16648a5d7744b20e"
+    },
+    {
+      "local": "graphics/pokemon/slowpoke_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/6a1avokjziuwf84/079-Galar.png?raw=1",
+      "source_sha256": "75caf975d08791170f640735d648ea9c835d842cd516cc27f22089558c892c55",
+      "local_sha256": "e9c6fc1ed92ec6a1e65e6997db77b0157d729df9548be968316213378cb56332"
+    },
+    {
+      "local": "graphics/pokemon/slowpoke_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/6a1avokjziuwf84/079-Galar.png?raw=1",
+      "source_sha256": "75caf975d08791170f640735d648ea9c835d842cd516cc27f22089558c892c55",
+      "local_sha256": "e9c6fc1ed92ec6a1e65e6997db77b0157d729df9548be968316213378cb56332"
+    },
+    {
+      "local": "graphics/pokemon/slowbro_galarian/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/1afbuytccs7olfl/080-Galar.png?raw=1",
+      "source_sha256": "373334a594d9203293b1087f0a822ce99e834529bcf1c66e0afcb7390f26dd34",
+      "local_sha256": "bcae02f7058663912ec30df57b0cf77f2dca276c3942ef979cfb3a00fba91bd8"
+    },
+    {
+      "local": "graphics/pokemon/slowbro_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/1afbuytccs7olfl/080-Galar.png?raw=1",
+      "source_sha256": "373334a594d9203293b1087f0a822ce99e834529bcf1c66e0afcb7390f26dd34",
+      "local_sha256": "294344654ec1b083287183844ba2639afe439d482c4fc1d5d429344f1d72c7e1"
+    },
+    {
+      "local": "graphics/pokemon/slowbro_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/tu8cbpj6w3qwtwt/080-Galar.png?raw=1",
+      "source_sha256": "24fcee48ed8d331d79f4a0745cbe6075d2799772d9f083470116f5cd886a0ae8",
+      "local_sha256": "1d9af70a501fd7753bc93f62e4346ef399116f1010ef41ec41b79374ff50acf0"
+    },
+    {
+      "local": "graphics/pokemon/slowbro_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/tu8cbpj6w3qwtwt/080-Galar.png?raw=1",
+      "source_sha256": "24fcee48ed8d331d79f4a0745cbe6075d2799772d9f083470116f5cd886a0ae8",
+      "local_sha256": "1d9af70a501fd7753bc93f62e4346ef399116f1010ef41ec41b79374ff50acf0"
+    },
+    {
+      "local": "graphics/pokemon/slowking_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/c8t0diqqx518pwk/199-Galar.png?raw=1",
+      "source_sha256": "f1e0d30875de8440dbe6aacb6347675527d8f70d5ab96f5ca42c5cca7742fd26",
+      "local_sha256": "3494140e5b8f092de67b4fa735acbecc531fe8811967d655dad4b164143ea0ac"
+    },
+    {
+      "local": "graphics/pokemon/slowking_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/jt97z07in5f1zvm/199-Galar.png?raw=1",
+      "source_sha256": "e773b395921bc6f84bc0612f7e8ae323eeef597a2828a3214593bf8396453aae",
+      "local_sha256": "7295af458cd78e8285afca7c7abfd05ae08663e4f06b5635ab61781864141f91"
+    },
+    {
+      "local": "graphics/pokemon/slowking_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/jt97z07in5f1zvm/199-Galar.png?raw=1",
+      "source_sha256": "e773b395921bc6f84bc0612f7e8ae323eeef597a2828a3214593bf8396453aae",
+      "local_sha256": "7295af458cd78e8285afca7c7abfd05ae08663e4f06b5635ab61781864141f91"
+    },
+    {
+      "local": "graphics/pokemon/mr_mime_galarian/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/earvr9swwlyd7q9/122-Galar.png?raw=1",
+      "source_sha256": "7ea3dbd1173f75c9a01c0aa0413a29471af53e6aa42bd42b29dd28477a2455fe",
+      "local_sha256": "2204dfdde9f0b6546931f3fcd4a42ebf23824566b4552f4b338fee4883afd275"
+    },
+    {
+      "local": "graphics/pokemon/mr_mime_galarian/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/earvr9swwlyd7q9/122-Galar.png?raw=1",
+      "source_sha256": "7ea3dbd1173f75c9a01c0aa0413a29471af53e6aa42bd42b29dd28477a2455fe",
+      "local_sha256": "4d2cab87f223bae22aea51b4571cbbaca5eb7c3f9cc86963308ac4ab1836556e"
+    },
+    {
+      "local": "graphics/pokemon/mr_mime_galarian/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/8i0g80zfj0ckxjt/122-Galar.png?raw=1",
+      "source_sha256": "4647d0592f1e39f885ff6fa9a391fcdcfdbefb167f28123b192423284fe6f8d6",
+      "local_sha256": "e350de134b1f681856c307c68847d60a232b20905f86c4109eb32b3530ec8ce6"
+    },
+    {
+      "local": "graphics/pokemon/mr_mime_galarian/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/8i0g80zfj0ckxjt/122-Galar.png?raw=1",
+      "source_sha256": "4647d0592f1e39f885ff6fa9a391fcdcfdbefb167f28123b192423284fe6f8d6",
+      "local_sha256": "e350de134b1f681856c307c68847d60a232b20905f86c4109eb32b3530ec8ce6"
+    },
+    {
+      "local": "graphics/pokemon/mr_rime/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5nu59cv5cxk9vaf/866.png?raw=1",
+      "source_sha256": "157853a066b7ed4e0fe16d298054b3c683ee524a443d77a08a7d871694a04527",
+      "local_sha256": "adb87931fc36e73870ece999b7156e1ec27a1dab1bcd924c9db8261c5ff79a5e"
+    },
+    {
+      "local": "graphics/pokemon/mr_rime/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/5nu59cv5cxk9vaf/866.png?raw=1",
+      "source_sha256": "157853a066b7ed4e0fe16d298054b3c683ee524a443d77a08a7d871694a04527",
+      "local_sha256": "0928c263c1692c6479f3b1363228480867cd1d42339c52e745c8a66f17494739"
+    },
+    {
+      "local": "graphics/pokemon/mr_rime/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/nc652p8x8hpznxk/866.png?raw=1",
+      "source_sha256": "06ea5bbf2ff41931f135f92ed1edb76daf9fee38307feed69e662016ccb6e38d",
+      "local_sha256": "df3615756f48d57894a3a2143d4ff5ab4cdc92609aec065b0bf8f1e0d4a84f4f"
+    },
+    {
+      "local": "graphics/pokemon/mr_rime/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/nc652p8x8hpznxk/866.png?raw=1",
+      "source_sha256": "06ea5bbf2ff41931f135f92ed1edb76daf9fee38307feed69e662016ccb6e38d",
+      "local_sha256": "df3615756f48d57894a3a2143d4ff5ab4cdc92609aec065b0bf8f1e0d4a84f4f"
+    },
+    {
+      "local": "graphics/pokemon/sirfetchd/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/q2ltm88bc4nlsvw/865.png?raw=1",
+      "source_sha256": "314c83ab429ea20e1f2d9b0383093a6c9dd2afc76649f9291b94de97a40f95c3",
+      "local_sha256": "72405a8d79f31424c4e65b03ec8063dab7d7ec7ac553b2a66d74396388c329e7"
+    },
+    {
+      "local": "graphics/pokemon/sirfetchd/icon.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/dd4ghx2dpn5srfn/865.png?raw=1",
+      "source_sha256": "a343f16dd454f0c14e05378e65688b3206f27f34c4bc01dc7bc171bccef37264",
+      "local_sha256": "224a41c9eb0cd949e4ec9750fc50d07dc0e829eceded09a6f3cad7ef7cff2dd1"
+    },
+    {
+      "local": "graphics/pokemon/sirfetchd/icon.png",
+      "frame_y": 32,
+      "matches": [
+        [
+          0,
+          32
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/dd4ghx2dpn5srfn/865.png?raw=1",
+      "source_sha256": "a343f16dd454f0c14e05378e65688b3206f27f34c4bc01dc7bc171bccef37264",
+      "local_sha256": "224a41c9eb0cd949e4ec9750fc50d07dc0e829eceded09a6f3cad7ef7cff2dd1"
+    },
+    {
+      "local": "graphics/pokemon/clodsire/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/14od7uu3zkxdeqp/980.png?raw=1",
+      "source_sha256": "4d21c9ebb1856aed1f8caf57d1aff9f00f2f4dbfde328a8f564b7f677a59e9fd",
+      "local_sha256": "f683ac201b69db923bcf110c9b5e2b0d68eb846f69edbfbe7aa41d6c63b48a9a"
+    },
+    {
+      "local": "graphics/pokemon/wooper_paldean/front.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/bywsfsiv5udw5ep/194-Paldea.png?raw=1",
+      "source_sha256": "de2fb8739ede69e298f1636b9b659e5b66564812cf943163c4fc0864a24d7429",
+      "local_sha256": "52d61e3aff8845e65606f3f9596d4c1f2e9d0fcdf8c013cd230a8177f2ef5a62"
+    },
+    {
+      "local": "graphics/pokemon/persian_alolan/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/rp1g3fuquxs8w4v/053-Alola.png?raw=1",
+      "source_sha256": "90162333ee26c825769ea871e15aad29f9bf908fa433cf03bab9606f462b2387",
+      "local_sha256": "417d302c781ec6dd69e3d7f6b516d211a669eaa89a4ff4c8c4ec9083166edb0b"
+    },
+    {
+      "local": "graphics/pokemon/marowak_alolan/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/lg4p3oz9f6x1aj3/105-Alola.png?raw=1",
+      "source_sha256": "5f226a6d755ac2664f4eb195aea8c06452cc1269200d0cee9abf0afafaa6adc4",
+      "local_sha256": "7420a2c27b56fa461373191ed33abb1ca0cab088d69fc641f8276c91586efc06"
+    },
+    {
+      "local": "graphics/pokemon/meowth_alolan/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/as9paoltzfeu21g/052-Alola.png?raw=1",
+      "source_sha256": "420256f29ae9267be790c3e05064eff006579263bffe2453f134e00e779440e3",
+      "local_sha256": "febe9808c77eea631a921307d6df67599c18590267d92aafb60637f002ee5436"
+    },
+    {
+      "local": "graphics/pokemon/cursola/back.png",
+      "frame_y": 0,
+      "matches": [
+        [
+          128,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "source": "https://www.dropbox.com/s/alp4gr3xthp0hyc/864.png?raw=1",
+      "source_sha256": "437e166f1be9a15ddeafd190a6b2c7aa0b961b5c51d264b6172ff7fd472a8149",
+      "local_sha256": "f8df9bc287d5ad74c8cd0d166781c4848a21c2b58fa2fa5afe735e782a879bde"
+    }
+  ]
+}

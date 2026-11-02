@@ -2030,8 +2030,8 @@ const struct MonCoords gMonFrontPicCoords[] =
     },
     [SPECIES_ROSERADE] =
     {
-        .size = MON_COORDS_SIZE(40, 56),
-        .y_offset = 7,
+        .size = MON_COORDS_SIZE(48, 64),
+        .y_offset = 2,
     },
     [SPECIES_MAGNEZONE] =
     {

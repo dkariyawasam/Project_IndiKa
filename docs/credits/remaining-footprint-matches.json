@@ -1,0 +1,29 @@
+{
+  "method": "Exact 16x16 foreground masks, treating the top-left pixel value as background. This normalizes 0/1 indexed pixels versus 0/255 grayscale encoding without moving or changing any pixels.",
+  "matches": [
+    {
+      "local": "graphics/pokemon/clodsire/footprint.png",
+      "local_sha256": "b71e5704b8a57f2048ddd0c8e10125bdffe29aaf6000bfd1a36667870732323d",
+      "source": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/2e07dbb0eeae/graphics/pokemon/clodsire/footprint.png",
+      "source_sha256": "b71e5704b8a57f2048ddd0c8e10125bdffe29aaf6000bfd1a36667870732323d",
+      "artist": "Caruban",
+      "credit_source": "https://github.com/rh-hideout/pokeemerald-expansion/pull/4621"
+    },
+    {
+      "local": "graphics/pokemon/perrserker/footprint.png",
+      "local_sha256": "66c17d08518c9d252b579553dad781242e9194a39d7b4dace791dc7e6fadbc0b",
+      "source": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/614c0ee8d78c/graphics/pokemon/perrserker/footprint.png",
+      "source_sha256": "df5190c9739b08dfd0525b5b7a1cc5ea20ec7a35f9e3b8938c72a883274714fa",
+      "artist": "WolfPP",
+      "credit_source": "https://github.com/rh-hideout/pokeemerald-expansion/pull/2002"
+    },
+    {
+      "local": "graphics/pokemon/mr_rime/footprint.png",
+      "local_sha256": "270a146f67bac6e2867d0a1e9bcc4207fae9cc4b18c65fd5cdfb57bb760bf57d",
+      "source": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/614c0ee8d78c/graphics/pokemon/mr_rime/footprint.png",
+      "source_sha256": "066be860c6adfda251757de5a98747e5a16e807ecbd36d57ff320de3878e6560",
+      "artist": "WolfPP",
+      "credit_source": "https://github.com/rh-hideout/pokeemerald-expansion/pull/2002"
+    }
+  ]
+}

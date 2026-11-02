@@ -133,6 +133,23 @@ enum CreditsString
     CREDITS_STRING_EK_ATTRIBUTION,
     CREDITS_STRING_EK_CONTACT,
     CREDITS_STRING_EK_SPECIAL_THANKS,
+    CREDITS_STRING_EK_ARTISTS_1,
+    CREDITS_STRING_EK_ARTISTS_2,
+    CREDITS_STRING_EK_ARTISTS_3,
+    CREDITS_STRING_EK_ICON_ARTISTS,
+    CREDITS_STRING_EK_SPRITE_FIXES,
+    CREDITS_STRING_EK_SPRITE_IMPORTS,
+    CREDITS_STRING_EK_ARTISTS_4,
+    CREDITS_STRING_EK_ICON_UPDATES,
+    CREDITS_STRING_EK_ART_UPDATES,
+    CREDITS_STRING_EK_ITEM_ARTISTS,
+    CREDITS_STRING_EK_ITEM_IMPORTS,
+    CREDITS_STRING_EK_FOOTPRINTS,
+    CREDITS_STRING_EK_ICON_ARTISTS_2,
+    CREDITS_STRING_EK_ALOLA_REVISIONS,
+    CREDITS_STRING_EK_FOOTPRINT_CONTRIBUTORS,
+
+
 };
 
 enum CreditsMap
@@ -484,6 +501,22 @@ static const struct CreditsScrcmd sExpeditionCreditsScript[] = {
     CREDITS_PRINT(EK_ENGINE, 360),
     CREDITS_MAPNEXT(VERMILION_CITY, 16),
     CREDITS_PRINT(EK_SPRITES, 360),
+    CREDITS_PRINT(EK_ARTISTS_1, 480),
+    CREDITS_PRINT(EK_ARTISTS_2, 480),
+    CREDITS_PRINT(EK_ARTISTS_3, 480),
+    CREDITS_PRINT(EK_ARTISTS_4, 480),
+    CREDITS_PRINT(EK_ICON_ARTISTS, 480),
+    CREDITS_PRINT(EK_ICON_ARTISTS_2, 480),
+    CREDITS_PRINT(EK_FOOTPRINTS, 480),
+    CREDITS_PRINT(EK_FOOTPRINT_CONTRIBUTORS, 480),
+    CREDITS_PRINT(EK_ICON_UPDATES, 480),
+    CREDITS_PRINT(EK_SPRITE_FIXES, 480),
+    CREDITS_PRINT(EK_SPRITE_IMPORTS, 480),
+    CREDITS_PRINT(EK_ART_UPDATES, 480),
+    CREDITS_PRINT(EK_ALOLA_REVISIONS, 480),
+    CREDITS_PRINT(EK_ITEM_ARTISTS, 480),
+    CREDITS_PRINT(EK_ITEM_IMPORTS, 480),
+
     CREDITS_MAPNEXT(CELADON_CITY, 16),
     CREDITS_PRINT(EK_ARCHIVE, 360),
     CREDITS_MAPNEXT(SAFFRON_CITY, 16),
@@ -743,18 +776,54 @@ static const u8 sTitle_EK_ARCHIVE[] = _("SPRITE ARCHIVES");
 static const u8 sNames_EK_ARCHIVE[] = _("\nPOKEAPI / SPRITES");
 static const u8 sTitle_EK_TOOLS[] = _("DEVELOPMENT TOOLS");
 static const u8 sNames_EK_TOOLS[] = _("\nDEVKITARM / AGBCC\nPORYMAP");
-static const u8 sTitle_EK_ORIGINAL[] = _("ORIGINAL GAME");
-static const u8 sNames_EK_ORIGINAL[] = _("\nPOKEMON FIRERED\nGAME FREAK\nNINTENDO / CREATURES");
+static const u8 sTitle_EK_ORIGINAL[] = _("ORIGINAL GAMES & ART");
+static const u8 sNames_EK_ORIGINAL[] = _("\nFIRERED / PLATINUM\nGAME FREAK\nNINTENDO / CREATURES");
 static const u8 sTitle_EK_MUSIC[] = _("ORIGINAL MUSIC & SOUND");
 static const u8 sNames_EK_MUSIC[] = _("\nGO ICHINOSE\nJUNICHI MASUDA");
-static const u8 sTitle_EK_ATTRIBUTION[] = _("HELP COMPLETE THE CREDITS");
-static const u8 sNames_EK_ATTRIBUTION[] = _("\nSOME IMPORTED ARTWORK\nSTILL HAS INCOMPLETE\nARTIST ATTRIBUTION.");
+static const u8 sTitle_EK_ATTRIBUTION[] = _("CREDITS & SOURCES");
+static const u8 sNames_EK_ATTRIBUTION[] = _("\nFULL CREDITS AND SOURCES\nIN THE PROJECT CREDITS.\nCORRECTIONS WELCOME.");
 static const u8 sTitle_EK_CONTACT[] = _("RECOGNISE YOUR WORK?");
 static const u8 sNames_EK_CONTACT[] = _("\nHELP IDENTIFY ITS CREATOR.\nCONTACT DEE KARIYAWASAM\nVIA THE PROJECT RELEASE PAGE\nSO WE CAN UPDATE THE CREDITS.");
 static const u8 sTitle_EK_SPECIAL_THANKS[] = _("SPECIAL THANKS");
 static const u8 sNames_EK_SPECIAL_THANKS[] = _("\nTO MY WIFE, HONGMIAO\nFOR YOUR LOVE AND SUPPORT,\nAND FOR MAKING IT POSSIBLE\nFOR ME TO FINISH THIS MOD.");
 static const u8 sTitle_EK_THANKS[] = _("THANK YOU");
 static const u8 sNames_EK_THANKS[] = _("\nTO EVERYONE WHO HELPED\nAND EVERY TRAINER\nEXPLORING KANTO");
+
+static const u8 sTitle_EK_ARTISTS_1[] = _("BATTLE SPRITE ARTISTS");
+static const u8 sNames_EK_ARTISTS_1[] = _("\nleParagon\nChaos Rush\nMrDollSteak\nZ-nogyroP");
+static const u8 sTitle_EK_ARTISTS_2[] = _("BATTLE SPRITE ARTISTS");
+static const u8 sNames_EK_ARTISTS_2[] = _("\nElazulmax\nVersekr Dark\nxiechayghe\ngoranthegreat");
+static const u8 sTitle_EK_ARTISTS_3[] = _("BATTLE SPRITE ARTISTS");
+static const u8 sNames_EK_ARTISTS_3[] = _("\nOtaKun\nFrench-Cyndaquil\nG.E.Z.\nRed7246");
+static const u8 sTitle_EK_ICON_ARTISTS[] = _("POKEMON ICON ARTISTS");
+static const u8 sNames_EK_ICON_ARTISTS[] = _("\nPercy\nMegax Rocker\nVent\nezerart");
+static const u8 sTitle_EK_SPRITE_FIXES[] = _("SPRITE CORRECTIONS");
+static const u8 sNames_EK_SPRITE_FIXES[] = _("\nCafeei / Cafe\nCURSOLA SHINY FRONT");
+static const u8 sTitle_EK_SPRITE_IMPORTS[] = _("UPSTREAM SPRITE IMPORTS");
+static const u8 sNames_EK_SPRITE_IMPORTS[] = _("\nDizzyEggg\nBlackforest92\nultima-soul");
+
+static const u8 sTitle_EK_ARTISTS_4[] = _("BATTLE SPRITE ARTISTS");
+static const u8 sNames_EK_ARTISTS_4[] = _("\nKatten\nzlolxd");
+static const u8 sTitle_EK_ICON_UPDATES[] = _("ICON UPDATES");
+static const u8 sNames_EK_ICON_UPDATES[] = _("\nkittenchilly\nMOVE CATEGORY ICONS\nCLODSIRE ICON INTEGRATION\nPALDEAN WOOPER ICON");
+
+static const u8 sTitle_EK_ART_UPDATES[] = _("SPRITE UPDATES");
+static const u8 sNames_EK_ART_UPDATES[] = _("\nDat.H A\nCLODSIRE ARTWORK UPDATE");
+static const u8 sTitle_EK_ITEM_ARTISTS[] = _("ITEM SPRITE CONTRIBUTORS");
+static const u8 sNames_EK_ITEM_ARTISTS[] = _("\nBlackforest92\nBuffelSaft\nGALARICA ITEM SPRITES");
+static const u8 sTitle_EK_ITEM_IMPORTS[] = _("ITEM PALETTES & IMPORTS");
+static const u8 sNames_EK_ITEM_IMPORTS[] = _("\nLunos / LOuroboros\nGALARICA ITEM SPRITES");
+
+static const u8 sTitle_EK_FOOTPRINTS[] = _("FOOTPRINT RESOURCE PACK");
+static const u8 sNames_EK_FOOTPRINTS[] = _("\nBhagya Jyoti\nWolfPP\nkomeiji514");
+static const u8 sTitle_EK_ICON_ARTISTS_2[] = _("POKEMON ICON ARTISTS");
+static const u8 sNames_EK_ICON_ARTISTS_2[] = _("\nMrDollSteak\nSYLVEON ICONS");
+
+static const u8 sTitle_EK_ALOLA_REVISIONS[] = _("ALOLAN SPRITE REVISIONS");
+static const u8 sNames_EK_ALOLA_REVISIONS[] = _("\nTacobell24\nARTWORK UPDATES\nAsparagusEduardo\nUPSTREAM INTEGRATION");
+
+static const u8 sTitle_EK_FOOTPRINT_CONTRIBUTORS[] = _("FOOTPRINT CONTRIBUTORS");
+static const u8 sNames_EK_FOOTPRINT_CONTRIBUTORS[] = _("\nCaruban\nCLODSIRE ARTWORK\nJaizu\nGEN VIII RESIZING");
 
 static const struct CreditsTextHeader sCreditsTexts[] = {
     { gCreditsString_Director, gCreditsString_Junichi_Masuda, FALSE },
@@ -818,6 +887,24 @@ static const struct CreditsTextHeader sCreditsTexts[] = {
     { sTitle_EK_ATTRIBUTION, sNames_EK_ATTRIBUTION, FALSE },
     { sTitle_EK_CONTACT, sNames_EK_CONTACT, FALSE },
     { sTitle_EK_SPECIAL_THANKS, sNames_EK_SPECIAL_THANKS, FALSE },
+    { sTitle_EK_ARTISTS_1, sNames_EK_ARTISTS_1, FALSE },
+    { sTitle_EK_ARTISTS_2, sNames_EK_ARTISTS_2, FALSE },
+    { sTitle_EK_ARTISTS_3, sNames_EK_ARTISTS_3, FALSE },
+    { sTitle_EK_ICON_ARTISTS, sNames_EK_ICON_ARTISTS, FALSE },
+    { sTitle_EK_SPRITE_FIXES, sNames_EK_SPRITE_FIXES, FALSE },
+    { sTitle_EK_SPRITE_IMPORTS, sNames_EK_SPRITE_IMPORTS, FALSE },
+    { sTitle_EK_ARTISTS_4, sNames_EK_ARTISTS_4, FALSE },
+    { sTitle_EK_ICON_UPDATES, sNames_EK_ICON_UPDATES, FALSE },
+    { sTitle_EK_ART_UPDATES, sNames_EK_ART_UPDATES, FALSE },
+    { sTitle_EK_ITEM_ARTISTS, sNames_EK_ITEM_ARTISTS, FALSE },
+    { sTitle_EK_ITEM_IMPORTS, sNames_EK_ITEM_IMPORTS, FALSE },
+    { sTitle_EK_FOOTPRINTS, sNames_EK_FOOTPRINTS, FALSE },
+    { sTitle_EK_ICON_ARTISTS_2, sNames_EK_ICON_ARTISTS_2, FALSE },
+    { sTitle_EK_ALOLA_REVISIONS, sNames_EK_ALOLA_REVISIONS, FALSE },
+    { sTitle_EK_FOOTPRINT_CONTRIBUTORS, sNames_EK_FOOTPRINT_CONTRIBUTORS, FALSE },
+
+
+
 
 };
 

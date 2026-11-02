@@ -1,0 +1,10 @@
+{
+  "local": "graphics/pokemon/wooper_paldean/icon.png",
+  "source": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/88ce33c864a8dcd7378eb9f5429bad3083faf084/graphics/pokemon/wooper/wooper_paldean/icon.png",
+  "local_sha256": "96d433765525075f0f0e134c4d0c4ba29692401eebef3835b161e40c9fe10c51",
+  "source_sha256": "0b2a71afb98e5d90598fee8604e179e1f5690c4630e665abc1604746ce778cf3",
+  "comparison": "Identical full 32x64 RGB pixels; PNG alpha metadata differs.",
+  "credit_source": "https://github.com/rh-hideout/pokeemerald-expansion/pull/4413",
+  "drawing": "ezerart",
+  "palette_and_second_frame": "kittenchilly"
+}

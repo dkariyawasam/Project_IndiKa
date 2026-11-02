@@ -1,0 +1,194 @@
+{
+  "date": "2026-11-02",
+  "gen6_pack": {
+    "resource": "https://eeveeexpo.com/resources/200/",
+    "archive_sha256": "933c44c8ceb20682b319e69b4fd3754127482b262ba5b77e673baa0cb285af0e",
+    "archive_actual_format": "RAR",
+    "credit_file": "Gen 6 Sprites - Combined/_Credits/Gen VI DS-style sprites credits.txt",
+    "credit_file_sha256": "46e49c14d9b2e47a99c22fdc3f2238e447607c261ff7b26ad50b238e0f608b6b",
+    "method": "Verified uniform 2x2 RGBA blocks reduced losslessly; exact cropped silhouette with deterministic source-to-local colour mapping; alpha defines transparent source background",
+    "comparisons": [
+      {
+        "local": "graphics/pokemon/sylveon/front.png",
+        "local_frame_y": 0,
+        "source_entry": "Battlers/700.png",
+        "local_sha256": "254b20ae0e1bee8361c0bb15a4f3f3dd0638799d5613ede3bdad7a1e424df52a",
+        "source_sha256": "9e6f2eec40d3a70c616462b42d059bc2fe6aa2506c482fb4fc044e083706596a",
+        "matches": []
+      },
+      {
+        "local": "graphics/pokemon/sylveon/back.png",
+        "local_frame_y": 0,
+        "source_entry": "Battlers/700b.png",
+        "local_sha256": "f6032c001f02919f011df2c5588e6164314a7306edab945084d10972ff3b0757",
+        "source_sha256": "78d2ffd29195309ef3bcedbdb40ba7dfdefd3a2104455575018b8340d5249489",
+        "matches": []
+      },
+      {
+        "local": "graphics/pokemon/sylveon/icon.png",
+        "local_frame_y": 0,
+        "source_entry": "Icons/icon700.png",
+        "local_sha256": "dfe326228c4b167b22cf3455f842b172f2f10ebda556f63746e59edbd82e3f6c",
+        "source_sha256": "3dd707e0dd13c311ecdfb9daea2bf38d238a3d53f9e8c98b30f105f025831110",
+        "matches": [
+          {
+            "xy": [
+              0,
+              0
+            ],
+            "colour_map": [
+              [
+                [
+                  64,
+                  64,
+                  64
+                ],
+                [
+                  65,
+                  65,
+                  65
+                ]
+              ],
+              [
+                [
+                  136,
+                  120,
+                  248
+                ],
+                [
+                  139,
+                  123,
+                  255
+                ]
+              ],
+              [
+                [
+                  232,
+                  112,
+                  152
+                ],
+                [
+                  238,
+                  115,
+                  156
+                ]
+              ],
+              [
+                [
+                  248,
+                  248,
+                  248
+                ],
+                [
+                  255,
+                  255,
+                  255
+                ]
+              ],
+              [
+                [
+                  128,
+                  128,
+                  112
+                ],
+                [
+                  131,
+                  131,
+                  115
+                ]
+              ],
+              [
+                [
+                  96,
+                  96,
+                  88
+                ],
+                [
+                  98,
+                  98,
+                  90
+                ]
+              ],
+              [
+                [
+                  160,
+                  192,
+                  248
+                ],
+                [
+                  164,
+                  197,
+                  255
+                ]
+              ],
+              [
+                [
+                  248,
+                  176,
+                  160
+                ],
+                [
+                  255,
+                  180,
+                  164
+                ]
+              ],
+              [
+                [
+                  184,
+                  184,
+                  184
+                ],
+                [
+                  189,
+                  189,
+                  189
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "local": "graphics/pokemon/sylveon/icon.png",
+        "local_frame_y": 32,
+        "source_entry": "Icons/icon700.png",
+        "local_sha256": "dfe326228c4b167b22cf3455f842b172f2f10ebda556f63746e59edbd82e3f6c",
+        "source_sha256": "3dd707e0dd13c311ecdfb9daea2bf38d238a3d53f9e8c98b30f105f025831110",
+        "matches": []
+      }
+    ]
+  },
+  "footprint_pack": {
+    "resource": "https://eeveeexpo.com/resources/1507/",
+    "archive_sha256": "9eaf3b6bdb785b37c576b6dcd214f256ab12819a2fbfac2a268f7ac3ee47bc6e",
+    "credits": {
+      "sylveon": "भाग्य ज्योति (Bhagya Jyoti)",
+      "cursola": "WolfPP",
+      "sirfetchd": "WolfPP"
+    },
+    "matches": [
+      {
+        "local": "graphics/pokemon/cursola/footprint.png",
+        "local_sha256": "d2acad6b2d45d5e70cae7617db7279c09e82ace52eb68751881b345edc2930d3",
+        "source_entry": "Gen 6~8 Footprints/CURSOLA.png",
+        "source_sha256": "e8e9e579abc329fc14147c2a4d5b816c716f3e0280a1847d7b277b1da079273f",
+        "method": "Exact indexed foreground mask versus source alpha mask after verified uniform 2x2 block reduction"
+      },
+      {
+        "local": "graphics/pokemon/sirfetchd/footprint.png",
+        "local_sha256": "92cf63c4e7b0e27bb3a2b56e35983cfe0a4cdbd8250e3e453d95ffdd7452e62e",
+        "source_entry": "Gen 6~8 Footprints/SIRFETCHD.png",
+        "source_sha256": "a6ce235b1579298935a44a1f88d9c7cb388b5029ccc71e18951c89cbe0bb77a7",
+        "method": "Exact indexed foreground mask versus source alpha mask after verified uniform 2x2 block reduction"
+      },
+      {
+        "local": "graphics/pokemon/sylveon/footprint.png",
+        "local_sha256": "0003c9e813d1e5ca901ceb255e53fa234180ae2f49911398c2e7c2c7c5f0664b",
+        "source_entry": "Gen 6~8 Footprints/SYLVEON.png",
+        "source_sha256": "e21392acc4dbade6410bc7587034f66a2576c74461b158732082c7f0f1182902",
+        "method": "Exact indexed foreground mask versus source alpha mask after verified uniform 2x2 block reduction"
+      }
+    ]
+  }
+}

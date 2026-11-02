@@ -1,0 +1,393 @@
+{
+  "source": "https://veekun.com/static/pokedex/downloads/pokemon-footprints.tar.gz",
+  "source_page": "https://veekun.com/dex/downloads",
+  "archive_sha256": "0f96cee57c4e91f3a684404504090f09e47c67bd5795b783f27242a81ed1c6fe",
+  "method": "Compare complete foreground pixel sets after normalizing background encoding and translation only. No resizing, mirroring or omitted pixels.",
+  "matches": [
+    {
+      "local": "graphics/pokemon/starly/footprint.png",
+      "local_sha256": "fb53219c3d06bf48876414e7593903e206879529e055afac0c617f4c0776e562",
+      "source_entry": "pokemon/footprints/396.png",
+      "source_sha256": "da99963a632d7f5061b978667d40fa19f2f00e1b088d83fb3cff2282ddeaf5cb",
+      "translation_source_to_local": [
+        0,
+        -1
+      ],
+      "foreground_pixels": 39
+    },
+    {
+      "local": "graphics/pokemon/staravia/footprint.png",
+      "local_sha256": "c043cd42e246672a45d08b43e749387b80bd8557b97fc8fc50b5ac05953bc870",
+      "source_entry": "pokemon/footprints/397.png",
+      "source_sha256": "4af06dfad057fd051e289e1280507c0bcc21ac5adf24342b4896fd43982095aa",
+      "translation_source_to_local": [
+        0,
+        -1
+      ],
+      "foreground_pixels": 36
+    },
+    {
+      "local": "graphics/pokemon/staraptor/footprint.png",
+      "local_sha256": "ca0213db2abf9be5677cbdc9fdf6358d0bbfc572a46c2322f2a5510f1df452aa",
+      "source_entry": "pokemon/footprints/398.png",
+      "source_sha256": "82b3107c885049c1f1aa0fee4a9e981833aa716de78e4e471178e9508a3fc078",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 62
+    },
+    {
+      "local": "graphics/pokemon/kricketot/footprint.png",
+      "local_sha256": "83475fc4e4f80f4b752628d46e5d741c44a5cb2a5a159642ae51bae667f5788e",
+      "source_entry": "pokemon/footprints/401.png",
+      "source_sha256": "e931f0a63e22a7fc9bbe1844b97b57f61bda78d38f67d9aa02083d087fa93f50",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 31
+    },
+    {
+      "local": "graphics/pokemon/kricketune/footprint.png",
+      "local_sha256": "7a6aef5f6dac2cc9a6e701be6e2127ef7aaa4e5c1d3759f850919986393b47fc",
+      "source_entry": "pokemon/footprints/402.png",
+      "source_sha256": "a9c2652f32f792799e2789fc04a44b690bba3bb4d9d2808281465465f4959f34",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 4
+    },
+    {
+      "local": "graphics/pokemon/budew/footprint.png",
+      "local_sha256": "bb0b733f5162eb4d030860618398420b39b57219c401293185f0d76d1522131e",
+      "source_entry": "pokemon/footprints/406.png",
+      "source_sha256": "09eb5b38fed26f42cb671d05714b2e1d26027e1c943028cbb0c41dcff153c1ed",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 12
+    },
+    {
+      "local": "graphics/pokemon/roserade/footprint.png",
+      "local_sha256": "f74c9f68486abba7cbc09dedbda58622a7f3b7aa7ef7702615939aa5da9b1b43",
+      "source_entry": "pokemon/footprints/407.png",
+      "source_sha256": "cb38a31b6e283538998434e7a8b85351eb36f7b451eb7475270794440d418371",
+      "translation_source_to_local": [
+        -1,
+        0
+      ],
+      "foreground_pixels": 10
+    },
+    {
+      "local": "graphics/pokemon/combee/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/415.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/vespiquen/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/416.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/ambipom/footprint.png",
+      "local_sha256": "7267d6397914f75b4742a8fbea6dd45c41e04651191e5aadb934d2ade606563c",
+      "source_entry": "pokemon/footprints/424.png",
+      "source_sha256": "a3f8235db58eb5b115334ab78e8f90302e03e10be9e1ac1e51c83305b660fac2",
+      "translation_source_to_local": [
+        -2,
+        -1
+      ],
+      "foreground_pixels": 81
+    },
+    {
+      "local": "graphics/pokemon/buneary/footprint.png",
+      "local_sha256": "de78f6691eeb3109932d0da88a0812d060d37c36770142d0ae94cbf0988957ed",
+      "source_entry": "pokemon/footprints/427.png",
+      "source_sha256": "034fdaf9293e3fd87ac5400b1ce61c5b8af9217c5de849e8a90d83b465fb495a",
+      "translation_source_to_local": [
+        0,
+        1
+      ],
+      "foreground_pixels": 76
+    },
+    {
+      "local": "graphics/pokemon/lopunny/footprint.png",
+      "local_sha256": "b3966a45864cea96600fde82e9a36da864acb23d21a6781572c44ab72118f9c1",
+      "source_entry": "pokemon/footprints/428.png",
+      "source_sha256": "1cd786c835af3ad7c3771740fa27d5e991f2abaa5cba8c13c3592e5b6935843e",
+      "translation_source_to_local": [
+        1,
+        0
+      ],
+      "foreground_pixels": 43
+    },
+    {
+      "local": "graphics/pokemon/mismagius/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/429.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/honchkrow/footprint.png",
+      "local_sha256": "e9e63cd8629647adee007c0864a81e1d37ce8ff09c5b5c1efbe51b50230310e6",
+      "source_entry": "pokemon/footprints/430.png",
+      "source_sha256": "7de761d2e8766718c57abf50352c75880eced02457752ece2925b08e5ee91cf4",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 76
+    },
+    {
+      "local": "graphics/pokemon/chingling/footprint.png",
+      "local_sha256": "d2e866a8fcd25d1c4e314e9473bbcdbd9464f21a997c21fb1d620d083fbc4c90",
+      "source_entry": "pokemon/footprints/433.png",
+      "source_sha256": "7dd385ac0edb2e321f4c73980e694c5cd2900b946674d2516712ab70a661a9da",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 16
+    },
+    {
+      "local": "graphics/pokemon/bronzor/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/436.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/bronzong/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/437.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/mime_jr/footprint.png",
+      "local_sha256": "d2acad6b2d45d5e70cae7617db7279c09e82ace52eb68751881b345edc2930d3",
+      "source_entry": "pokemon/footprints/439.png",
+      "source_sha256": "d25fe348ebb584e583908fc55b545a5b2e8b61e1edc899d9a83b931dfbbd7d9a",
+      "translation_source_to_local": [
+        1,
+        0
+      ],
+      "foreground_pixels": 16
+    },
+    {
+      "local": "graphics/pokemon/happiny/footprint.png",
+      "local_sha256": "9a9d07cbc5ac6db10d45c73cc8bf98d1ec171ee1878c3ab989f377745607d76e",
+      "source_entry": "pokemon/footprints/440.png",
+      "source_sha256": "2b44bc81fc4f7f47a37bb6f2c81b2fd592d57443181a1e15a642c6419bcff0b7",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 44
+    },
+    {
+      "local": "graphics/pokemon/weavile/footprint.png",
+      "local_sha256": "401a3c6ed8770d6bc0db29937cac0d8d48dafda0a96d58b11def77a902ad10a3",
+      "source_entry": "pokemon/footprints/461.png",
+      "source_sha256": "c65ee174d0cebbddd5c457cae2647394e97345747c4264a9118f478015a7d12e",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 76
+    },
+    {
+      "local": "graphics/pokemon/magnezone/footprint.png",
+      "local_sha256": "d54f78dd002aa1c8a5dd50c4e41f9687b2c931ccf53b40bbdd07142cb66dde3e",
+      "source_entry": "pokemon/footprints/462.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/lickilicky/footprint.png",
+      "local_sha256": "bf9ccd4931eba59a24828caad842fdc7f5f08ba08eb4058e1a48637ac93bf0d7",
+      "source_entry": "pokemon/footprints/463.png",
+      "source_sha256": "a52c3017e088d17c18f01bb51051c3e479e1ef505f34b0385ade18e4187f0ce9",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 138
+    },
+    {
+      "local": "graphics/pokemon/rhyperior/footprint.png",
+      "local_sha256": "6465dc48c94db0d314e50f3ab4c5c94bfd2d68b84aa4fb31bd871849b50c385c",
+      "source_entry": "pokemon/footprints/464.png",
+      "source_sha256": "89039f93bec73f7ff201a9dfebfbd548b82f087cbcf8223cac8dfe5a31b0d8fc",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 110
+    },
+    {
+      "local": "graphics/pokemon/tangrowth/footprint.png",
+      "local_sha256": "f401ccdf318da10348047829369951c759d4d729d220cc2cc08d0f2091e0f765",
+      "source_entry": "pokemon/footprints/465.png",
+      "source_sha256": "f485ed044f18b07a80d17e1dac45179baab766a4af8d36aa7f4d89750084eaa2",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 148
+    },
+    {
+      "local": "graphics/pokemon/electivire/footprint.png",
+      "local_sha256": "909a3da52a4687840a6c870b42fe5a342407ee30244d06af12063e76d3a7bc70",
+      "source_entry": "pokemon/footprints/466.png",
+      "source_sha256": "5bc062590a964894c13f11c52c71c87941cb55775af58d562fbe283551a8f127",
+      "translation_source_to_local": [
+        0,
+        1
+      ],
+      "foreground_pixels": 106
+    },
+    {
+      "local": "graphics/pokemon/magmortar/footprint.png",
+      "local_sha256": "8ae7f215d0a3181cfe59ac9a2cc9010712732f5031d776ba6d421b95cd5cf8f2",
+      "source_entry": "pokemon/footprints/467.png",
+      "source_sha256": "9b136696b8c70b1d70484c8d0cc92013484e8c1d3117dde29e977406981d4a49",
+      "translation_source_to_local": [
+        1,
+        1
+      ],
+      "foreground_pixels": 128
+    },
+    {
+      "local": "graphics/pokemon/leafeon/footprint.png",
+      "local_sha256": "40a8282db5c2850329848ec7f9d18684f1327c94f3cf5884f5c8d50db453c680",
+      "source_entry": "pokemon/footprints/470.png",
+      "source_sha256": "f1afbed1f11a11933fac6cc5afe700dee7aa6434c348fbf6c9676c6d030e7c5d",
+      "translation_source_to_local": [
+        0,
+        -1
+      ],
+      "foreground_pixels": 36
+    },
+    {
+      "local": "graphics/pokemon/glaceon/footprint.png",
+      "local_sha256": "40a8282db5c2850329848ec7f9d18684f1327c94f3cf5884f5c8d50db453c680",
+      "source_entry": "pokemon/footprints/471.png",
+      "source_sha256": "f1afbed1f11a11933fac6cc5afe700dee7aa6434c348fbf6c9676c6d030e7c5d",
+      "translation_source_to_local": [
+        0,
+        -1
+      ],
+      "foreground_pixels": 36
+    },
+    {
+      "local": "graphics/pokemon/mamoswine/footprint.png",
+      "local_sha256": "1b9d5e56a36e16022b75c9839180cacd17901a372fbb56b1402cebf68472be44",
+      "source_entry": "pokemon/footprints/473.png",
+      "source_sha256": "03805c114942a863c7f72ddabcc0f742b3c5005a7e6c23f88d0cad10afa6f2eb",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 158
+    },
+    {
+      "local": "graphics/pokemon/porygon_z/footprint.png",
+      "local_sha256": "bb0b733f5162eb4d030860618398420b39b57219c401293185f0d76d1522131e",
+      "source_entry": "pokemon/footprints/474.png",
+      "source_sha256": "09eb5b38fed26f42cb671d05714b2e1d26027e1c943028cbb0c41dcff153c1ed",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 12
+    },
+    {
+      "local": "graphics/pokemon/gallade/footprint.png",
+      "local_sha256": "14c8fe8cf4904bd096e742d9a96149a3a3e98e167063bcb2906c1b8fba66639f",
+      "source_entry": "pokemon/footprints/475.png",
+      "source_sha256": "8000ab8ae451887d6ec4629ccb248c8c6ec5ce22a37519c7f772f5da7d3c6fc9",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 125
+    },
+    {
+      "local": "graphics/pokemon/dusknoir/footprint.png",
+      "local_sha256": "67e4130876b4162cf746d88d0ce2e867133c440f9faece7a950b78802adee135",
+      "source_entry": "pokemon/footprints/477.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/tynamo/footprint.png",
+      "local_sha256": "67e4130876b4162cf746d88d0ce2e867133c440f9faece7a950b78802adee135",
+      "source_entry": "pokemon/footprints/602.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/eelektrik/footprint.png",
+      "local_sha256": "67e4130876b4162cf746d88d0ce2e867133c440f9faece7a950b78802adee135",
+      "source_entry": "pokemon/footprints/603.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    },
+    {
+      "local": "graphics/pokemon/eelektross/footprint.png",
+      "local_sha256": "67e4130876b4162cf746d88d0ce2e867133c440f9faece7a950b78802adee135",
+      "source_entry": "pokemon/footprints/604.png",
+      "source_sha256": "d2973423ea026a39e5203c8a21efd93730a71856c36b805d19493378c2b04360",
+      "translation_source_to_local": [
+        0,
+        0
+      ],
+      "foreground_pixels": 0
+    }
+  ]
+}
