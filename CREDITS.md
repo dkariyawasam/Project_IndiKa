@@ -51,9 +51,9 @@ Sources: [Gen VII and beyond sprite resource](https://www.pokecommunity.com/thre
 | Galarian Weezing | back, front, icon frame 1, icon frame 2 | Battle: French-Cyndaquil; Icons: Megax Rocker | 501 |
 
 
-## Additional current-asset matches — 2 November 2026
+## More confirmed sprite credits
 
-The following current files match the resource sheets linked from the Gen VII+ resource above. Matching compares the cropped silhouette and every colour region, allowing palette changes and padding only; it does not mirror, resize or accept approximate matches. Front and back credits apply only to the listed parts. Both menu-icon frames matched where icons are listed. The artist spreadsheet was retrieved again for this comparison; its row positions have changed since October.
+The sprites below match the credited source sheets when differences in colour and empty space around the image are allowed. The checks did not resize or flip the drawings. Where icons are listed, both frames matched.
 
 | Species | Confirmed current parts | Artists credited by the resource |
 | --- | --- | --- |
@@ -72,20 +72,20 @@ The physical/special/status icon sheet is pixel-identical to the pinned expansio
 
 Clodsire’s current icon is also pixel-identical to the pinned expansion source. **kittenchilly** is credited for the icon update/integration in [PR 4290](https://github.com/rh-hideout/pokeemerald-expansion/pull/4290). That PR describes a mixed source set and occasional local edits; both icon frames are credited to ezerart based on the first-frame source comparison and Dee's confirmation that both frames share the same creator. kittenchilly's update/integration credit is retained.
 
-Pinned source: [pokeemerald-expansion at 803bcb7](https://github.com/rh-hideout/pokeemerald-expansion/tree/803bcb7c58afe73b0831893f383e6ce07fe0bac2). Source URLs, local/source hashes and matching frame coordinates are preserved in [the comparison record](docs/credits/current-sprite-matches.json).
+The comparisons used [this saved version of pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/803bcb7c58afe73b0831893f383e6ce07fe0bac2). Direct image links are listed under [Source images](#source-images).
 
-## Further source tracing — 2 November 2026
+## Further sprite credits
 
-A follow-up comparison allows several source shades to map to one game-palette colour. Every source colour must still map consistently across the entire image, and the cropped silhouette must match exactly. No individual pixels are ignored or approximately matched. This accounts for palette reduction that the earlier colour-region comparison rejected.
+Further checks allowed several source colours to become one colour in the game. The drawing still had to match pixel for pixel. This helped identify sprites whose palettes had been simplified.
 
 | Current assets | Confirmed credit | Evidence |
 | --- | --- | --- |
-| Galarian Slowking and Sirfetch’d fronts | leParagon | Exact silhouette and consistent source-to-game recolouring of the resource sheets |
+| Galarian Slowking and Sirfetch’d fronts | leParagon | Same drawing, with colour changes |
 | Galarian Corsola front/back | leParagon | Same comparison; resolves the earlier current-back gap |
-| Galarian Corsola icon, both frames | Percy | Resource icon sheet matches with palette reduction |
-| Alolan Meowth front | leParagon | Resource sheet matches with palette reduction |
-| Alolan Sandslash front/back | zlolxd (front); Z-nogyroP (back) | Resource sheet matches with palette reduction |
-| Paldean Wooper back | Katten | Resource sheet matches with palette reduction |
+| Galarian Corsola icon, both frames | Percy | Same icon drawing, with fewer colours |
+| Alolan Meowth front | leParagon | Same drawing, with fewer colours |
+| Alolan Sandslash front/back | zlolxd (front); Z-nogyroP (back) | Same drawing, with fewer colours |
+| Paldean Wooper back | Katten | Same drawing, with fewer colours |
 | Alolan icons for all 18 forms, both frames | Megax Rocker | 35 individual icon frames match their resource sheets; Dee confirms the same artist credit applies to Ninetales frame 2 |
 | Cursola front drawing | leParagon | Original upstream import matches the resource sheet; current art matches the later upstream revision with Cafeei / Cafe's shiny-front correction |
 | Clodsire back drawing | leParagon | Pre-update upstream back matches the resource sheet; current back matches the later upstream revision |
@@ -94,13 +94,13 @@ For Cursola, the import is [c675c92](https://github.com/rh-hideout/pokeemerald-e
 
 ### Paldean Wooper icon
 
-Both current icon frames match the RGB pixels of upstream revision `88ce33c864a8dcd7378eb9f5429bad3083faf084`. [PR 4413](https://github.com/rh-hideout/pokeemerald-expansion/pull/4413) explicitly includes Paldean Wooper and credits **ezerart** for the source drawing, with **kittenchilly** assigning the palette and adding the second frame. These credits apply to the current icon, which superseded the earlier icon in PR 4260. PNG transparency metadata differs; the comparison is of the complete RGB pixel array, not file-byte identity. Details are in [the icon comparison record](docs/credits/wooper-icon-match.json).
+Both Paldean Wooper icon frames match the colours and pixels in [this source version](https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/88ce33c864a8dcd7378eb9f5429bad3083faf084/graphics/pokemon/wooper/wooper_paldean/icon.png). [PR 4413](https://github.com/rh-hideout/pokeemerald-expansion/pull/4413) credits **ezerart** for the drawing and **kittenchilly** for the palette and second frame. The PNG files store transparency differently, so they are not identical files.
 
 ### Galarica item artwork
 
 The current Galarica Cuff and Galarica Wreath icons match the pinned expansion files pixel-for-pixel. The [original import discussion](https://github.com/rh-hideout/pokeemerald-expansion/pull/2013#issuecomment-1003445135) explicitly credits **Blackforest92 and BuffelSaft** for the sprite set, and **Lunos / LOuroboros** for palette fixes and integration. These are joint set-level credits; the discussion does not assign each item to one of the two sprite contributors. Original Pokémon item designs remain credited to the original game creators.
 
-Comparison details are in [the follow-up record](docs/credits/followup-sprite-matches.json).
+Direct source links are listed below.
 
 ## Recovered resource-pack matches
 
@@ -114,24 +114,24 @@ Comparison details are in [the follow-up record](docs/credits/followup-sprite-ma
 
 The written and in-game credits acknowledge the pack as a whole, as requested by Dee. The individually verified matches remain documented above. This pack-level acknowledgement does not establish a match for other files or cover Gen IX Clodsire, which is credited separately below; original-game footprints retain their original-game credits.
 
-Footprint comparisons verify that every source 2×2 block has uniform opacity before reducing to the game's 16×16 size; the complete foreground masks then match. File hashes, pack entries and comparison details are in [the recovered-pack record](docs/credits/recovered-pack-matches.json).
+The footprint pack uses images at twice the game’s size. Each block of four pixels was reduced to one, without changing the footprint’s shape. The resulting shapes matched the game’s footprints exactly.
 
 ## Further verified footprint credits
 
 - **Perrserker and Mr. Rime:** **WolfPP** — artwork; **Jaizu and Blackforest92** — resizing; **Lunos / LOuroboros** — conversion and integration. [Original import and explicit credits, PR 2002](https://github.com/rh-hideout/pokeemerald-expansion/pull/2002).
 - **Clodsire:** **Caruban** — artwork from the Gen IX resource pack; **kittenchilly** — integration. [Original import and explicit credits, PR 4621](https://github.com/rh-hideout/pokeemerald-expansion/pull/4621).
 
-All three current 16×16 foreground masks exactly match the credited upstream imports after normalizing indexed versus grayscale background encoding. These are individual verified credits, separate from the earlier Gen 6–8 pack acknowledgement. [Comparison record](docs/credits/remaining-footprint-matches.json).
+The Clodsire, Perrserker and Mr. Rime footprint shapes match the credited imports exactly. Their background colours are stored differently, but no part of the footprint was changed.
 
 ## Official Gen IV/V footprints
 
-All 35 Gen IV/V footprint PNGs present in this project match the official footprint archive from [veekun](https://veekun.com/dex/downloads). Twenty-four match in place; eleven require only a translation within the 16×16 canvas. Every foreground pixel matches, without resizing, mirroring or pixel exceptions. These footprints are credited to **Game Freak, Nintendo and Creatures** as original-game artwork, with **veekun** acknowledged for the comparison archive. This does not claim that the project originally imported through veekun.
+All 35 Gen IV/V footprints checked match the [official-game archive on veekun](https://veekun.com/dex/downloads). Twenty-four match in the same position; eleven are shifted within the image. None needed resizing or changes to the drawing. **Game Freak, Nintendo and Creatures** receive the artwork credit. Veekun supplied the comparison archive; this does not mean the project originally downloaded the files there.
 
-[Per-file matches, hashes and offsets](docs/credits/official-footprint-matches.json).
+The checked species are listed below.
 
 ## Verified Alolan artwork revisions
 
-The current files match the specific upstream revisions below, allowing consistent palette changes. Separately, their original imports in `224a556daa94` match the credited Gen VII resource sheets. These are two distinct comparisons: later redraws are not claimed to be pixel-identical to the original resource artwork.
+The current Alolan sprites match the updated source versions below, allowing colour changes. The older imports were checked separately against the original artists’ sheets. A later redraw is credited separately from the original drawing.
 
 | Current asset | Confirmed credits | Revision evidence |
 | --- | --- | --- |
@@ -139,11 +139,11 @@ The current files match the specific upstream revisions below, allowing consiste
 | Alolan Marowak front | Tacobell24 for the current redraw | Current first frame matches `df30c0b1a254`; [PR 10414](https://github.com/rh-hideout/pokeemerald-expansion/pull/10414) explicitly identifies a complete Marowak redraw. The older imported front was leParagon's work; it is not the current drawing. |
 | Alolan Persian front | leParagon, OtaKun and xiechayghe for the original resource artwork; Tacobell24 for the current revamp | Current first frame matches `df30c0b1a254`; PR 10414 explicitly identifies the Persian revamp. The resource provides a joint species-level artist credit. |
 
-Hashes, source paths, frame coordinates and palette mappings are recorded in [the revision comparisons](docs/credits/alolan-revision-matches.json). Animation frames not used in this project are not claimed as project assets.
+The [source image list](#source-images) links to the exact updated files. Only frames used by this project are covered by these credits.
 
-## Confirmed upstream contribution roles
+## People who added or updated resources
 
-| Contributor | Evidence-backed contribution | Limit |
+| Contributor | Contribution | Limit |
 |---|---|---|
 | Cafeei / Cafe | Cursola shiny-front correction in [PR 5126](https://github.com/rh-hideout/pokeemerald-expansion/pull/5126) | Correction contributor, not proof of original artwork authorship |
 | DizzyEggg | [Gen VI/VII sprite import](https://github.com/rh-hideout/pokeemerald-expansion/commit/431690d1c28f), [Gen IV import](https://github.com/rh-hideout/pokeemerald-expansion/commit/de4722708b99), [icon import](https://github.com/rh-hideout/pokeemerald-expansion/commit/7c6077ef8b98) | Importer, not automatically the artist |
@@ -163,15 +163,15 @@ Dee confirms using the following source drawings and making the small pixel and 
 | Roserade icon, both frames | Game Freak / original Pokémon game artwork, archived by PokeAPI | Dee Kariyawasam — pixel and palette edits |
 | Clodsire icon, both frames | ezerart, as credited by the Gen VII+ resource | Dee Kariyawasam — pixel and palette edits; kittenchilly's upstream integration remains credited |
 
-The comparisons found identical cropped silhouettes with seven, eight and twelve pixel exceptions to a uniform palette mapping, respectively. Dee confirms these are project edits to those originals. Dee additionally confirms that both icon frames share the same creator for each of Sylveon, Roserade and Clodsire. The second-frame credits are based on that confirmation, not an exact source-image match. This does not establish the remaining battle-sprite credits. The later Sylveon resource post's Shiny-Skymint quality-control credit is not assigned to this project without identifying that specific revision.
+Sylveon’s front, Roserade’s icon and Clodsire’s icon have the same outlines as their sources, with seven, eight and twelve small pixel differences respectively. Dee confirms making those edits. Dee also confirms that both icon frames share the same artist for Sylveon, Roserade and Clodsire; those second-frame credits are based on his confirmation. The later Sylveon resource credits Shiny-Skymint for quality checks, but that credit is not assigned here because the project’s use of that version has not been established.
 
 ## Roserade battle sprites — confirmed replacement source
 
 Roserade's current front and back now use **official Pokémon Platinum artwork**, credited to **Game Freak, Nintendo and Creatures**, from the [PokeAPI sprite archive at a pinned revision](https://github.com/PokeAPI/sprites/tree/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/platinum). PokeAPI is the archive provider, not the artist.
 
-The front retains the source pixels without scaling after transparent padding is removed. The back's 66×67 drawing is reduced with nearest-neighbour sampling to 63×64 to fit the game's 64×64 format. Both use Dee Kariyawasam's existing normal and shiny palettes, which were preserved unchanged. Palette-index conversion, padding and battle-coordinate adjustments are project integration work. No new drawing was generated.
+Roserade’s front keeps the original drawing at its original size. The back was reduced from 66×67 to 63×64 pixels to fit the game. Both keep Dee’s existing normal and shiny colours. The conversion also adjusted the empty borders and the position shown in battle.
 
-This replacement resolves attribution for the current battle sprites; the earlier fan adaptation was not positively identified. The icon and footprint are unchanged and retain their separate credits. [Exact source URLs, hashes, colour mapping and conversion details](docs/credits/roserade-official-replacement.json).
+The current Roserade battle sprites have a confirmed source. The earlier fan adaptation was not positively identified. The icon and footprint were kept and have their own credits. Direct links to the replacement artwork are listed below.
 
 ## Attribution status
 
@@ -180,3 +180,127 @@ The attribution gaps tracked in this review are resolved through source comparis
 For Lopunny, Dee confirms resizing official game sprites directly to make the project's front and back. Original artwork is credited to Game Freak, Nintendo and Creatures; resizing/adaptation is credited to Dee Kariyawasam. The earlier resemblance to a community-resource back sprite does not establish that it was imported from that resource, so no fan-artist attribution is assigned on that basis.
 
 Corrections and additional source information remain welcome. No contributors or maintainers have been contacted.
+
+## Source images
+
+These links preserve the sources used in the 2 November 2026 checks. The credit tables above explain who drew the artwork, who updated it and which credits Dee confirmed. A matching picture alone does not identify its artist.
+
+### Battle sprites and menu icons
+
+| Pokémon | Parts checked | Source image |
+| --- | --- | --- |
+| Clodsire | front | [Source sheet](https://www.dropbox.com/s/14od7uu3zkxdeqp/980.png?raw=1) |
+| Galarian Corsola | back, front | [Source sheet](https://www.dropbox.com/s/7dsilrtqnkhqjwo/222-Galar.png?raw=1) |
+| Galarian Corsola | icon | [Source sheet](https://www.dropbox.com/s/boohs4w9o0jwwcp/222-Galar.png?raw=1) |
+| Cursola | back | [Source sheet](https://www.dropbox.com/s/alp4gr3xthp0hyc/864.png?raw=1) |
+| Alolan Diglett | icon | [Source sheet](https://www.dropbox.com/s/lux90ncp8fhxgte/050-Alola.png?raw=1) |
+| Alolan Dugtrio | icon | [Source sheet](https://www.dropbox.com/s/x0fi7qfof5nua35/051-Alola.png?raw=1) |
+| Alolan Exeggutor | icon | [Source sheet](https://www.dropbox.com/s/3lqio8azszhnmr0/103-Alola.png?raw=1) |
+| Alolan Geodude | icon | [Source sheet](https://www.dropbox.com/s/xu2vjkl3iu4jwgg/074-Alola.png?raw=1) |
+| Alolan Golem | icon | [Source sheet](https://www.dropbox.com/s/dc1tdy1fkeuwiih/076-Alola.png?raw=1) |
+| Alolan Graveler | icon | [Source sheet](https://www.dropbox.com/s/hheu8jr72gd5iwu/075-Alola.png?raw=1) |
+| Alolan Grimer | icon | [Source sheet](https://www.dropbox.com/s/8lxh8pfbu01trxh/088-Alola.png?raw=1) |
+| Alolan Marowak | icon | [Source sheet](https://www.dropbox.com/s/2dh6pwvartdjrja/105-Alola.png?raw=1) |
+| Alolan Marowak | back | [Source sheet](https://www.dropbox.com/s/lg4p3oz9f6x1aj3/105-Alola.png?raw=1) |
+| Alolan Meowth | back, front | [Source sheet](https://www.dropbox.com/s/as9paoltzfeu21g/052-Alola.png?raw=1) |
+| Alolan Meowth | icon | [Source sheet](https://www.dropbox.com/s/wvbwcn7rplzp1eu/052-Alola.png?raw=1) |
+| Galarian Mr. Mime | icon | [Source sheet](https://www.dropbox.com/s/8i0g80zfj0ckxjt/122-Galar.png?raw=1) |
+| Galarian Mr. Mime | back, front | [Source sheet](https://www.dropbox.com/s/earvr9swwlyd7q9/122-Galar.png?raw=1) |
+| Mr. Rime | back, front | [Source sheet](https://www.dropbox.com/s/5nu59cv5cxk9vaf/866.png?raw=1) |
+| Mr. Rime | icon | [Source sheet](https://www.dropbox.com/s/nc652p8x8hpznxk/866.png?raw=1) |
+| Alolan Muk | icon | [Source sheet](https://www.dropbox.com/s/tp1qiiy2x0cltlq/089-Alola.png?raw=1) |
+| Alolan Ninetales | icon | [Source sheet](https://www.dropbox.com/s/wlpwhhtzyh4lei7/038-Alola.png?raw=1) |
+| Alolan Persian | icon | [Source sheet](https://www.dropbox.com/s/3xxr5j5ae7i74ox/053-Alola.png?raw=1) |
+| Alolan Persian | back | [Source sheet](https://www.dropbox.com/s/rp1g3fuquxs8w4v/053-Alola.png?raw=1) |
+| Galarian Ponyta | icon | [Source sheet](https://www.dropbox.com/s/5cnc22pz66c5u2w/077-Galar.png?raw=1) |
+| Galarian Ponyta | back, front | [Source sheet](https://www.dropbox.com/s/jadn2alkvux10bi/077-Galar.png?raw=1) |
+| Alolan Raichu | icon | [Source sheet](https://www.dropbox.com/s/98wl65ajvpq75zv/026-Alola.png?raw=1) |
+| Galarian Rapidash | icon | [Source sheet](https://www.dropbox.com/s/5atezwpe82svy6t/078-Galar.png?raw=1) |
+| Galarian Rapidash | back, front | [Source sheet](https://www.dropbox.com/s/7h3mxmrj6j4z3jw/078-Galar.png?raw=1) |
+| Alolan Raticate | icon | [Source sheet](https://www.dropbox.com/s/6n75sidayoa4s66/020-Alola.png?raw=1) |
+| Alolan Rattata | icon | [Source sheet](https://www.dropbox.com/s/16o6mk4ao00mzpq/019-Alola.png?raw=1) |
+| Alolan Sandshrew | icon | [Source sheet](https://www.dropbox.com/s/audw6moy9toxmjv/027-Alola.png?raw=1) |
+| Alolan Sandslash | icon | [Source sheet](https://www.dropbox.com/s/5gvytsok5etv1w8/028-Alola.png?raw=1) |
+| Alolan Sandslash | back, front | [Source sheet](https://www.dropbox.com/s/7kkp47wyc5uef2n/028-Alola.png?raw=1) |
+| Sirfetch’d | icon | [Source sheet](https://www.dropbox.com/s/dd4ghx2dpn5srfn/865.png?raw=1) |
+| Sirfetch’d | back, front | [Source sheet](https://www.dropbox.com/s/q2ltm88bc4nlsvw/865.png?raw=1) |
+| Galarian Slowbro | back, front | [Source sheet](https://www.dropbox.com/s/1afbuytccs7olfl/080-Galar.png?raw=1) |
+| Galarian Slowbro | icon | [Source sheet](https://www.dropbox.com/s/tu8cbpj6w3qwtwt/080-Galar.png?raw=1) |
+| Galarian Slowking | back, front | [Source sheet](https://www.dropbox.com/s/c8t0diqqx518pwk/199-Galar.png?raw=1) |
+| Galarian Slowking | icon | [Source sheet](https://www.dropbox.com/s/jt97z07in5f1zvm/199-Galar.png?raw=1) |
+| Galarian Slowpoke | back, front | [Source sheet](https://www.dropbox.com/s/3he7arow1zg840y/079-Galar.png?raw=1) |
+| Galarian Slowpoke | icon | [Source sheet](https://www.dropbox.com/s/6a1avokjziuwf84/079-Galar.png?raw=1) |
+| Alolan Vulpix | icon | [Source sheet](https://www.dropbox.com/s/wnvx70d4bczus6s/037-Alola.png?raw=1) |
+| Paldean Wooper | back, front | [Source sheet](https://www.dropbox.com/s/bywsfsiv5udw5ep/194-Paldea.png?raw=1) |
+
+For Alolan Ninetales, only the first icon frame matched the source sheet. Dee confirmed the same artist for frame two.
+
+### Updated Alolan sprites
+
+| Pokémon | Part | Exact source version |
+| --- | --- | --- |
+| Alolan Exeggutor | front | [Source image](https://github.com/rh-hideout/pokeemerald-expansion/blob/2100a760ad41/graphics/pokemon/exeggutor/alolan/anim_front.png) |
+| Alolan Exeggutor | back | [Source image](https://github.com/rh-hideout/pokeemerald-expansion/blob/2100a760ad41/graphics/pokemon/exeggutor/alolan/back.png) |
+| Alolan Marowak | front | [Source image](https://github.com/rh-hideout/pokeemerald-expansion/blob/df30c0b1a254/graphics/pokemon/marowak/alola/anim_front.png) |
+| Alolan Persian | front | [Source image](https://github.com/rh-hideout/pokeemerald-expansion/blob/df30c0b1a254/graphics/pokemon/persian/alola/anim_front.png) |
+
+### Resource packs
+
+The [Gen 6 sprite pack](https://eeveeexpo.com/resources/200/) contains the matching first Sylveon icon frame at `Icons/icon700.png`. Its bundled credit list names MrDollSteak. The battle sprites and second icon frame did not pass the same exact-match check; their credits rely on the separate evidence and confirmations above.
+
+The [Gen 6–8 footprint pack](https://eeveeexpo.com/resources/1507/) supplied the matching `CURSOLA.png`, `SIRFETCHD.png` and `SYLVEON.png` images.
+
+### Other footprint sources
+
+| Pokémon | Credited source image |
+| --- | --- |
+| Clodsire | [Source image](https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/2e07dbb0eeae/graphics/pokemon/clodsire/footprint.png) |
+| Perrserker | [Source image](https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/614c0ee8d78c/graphics/pokemon/perrserker/footprint.png) |
+| Mr. Rime | [Source image](https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/614c0ee8d78c/graphics/pokemon/mr_rime/footprint.png) |
+
+### Official-game footprints
+
+The [veekun footprint archive](https://veekun.com/static/pokedex/downloads/pokemon-footprints.tar.gz) supplied these comparisons. “Shifted” means the same drawing sits in a different position within the image.
+
+| Pokémon | File in the archive | Result |
+| --- | --- | --- |
+| Starly | `pokemon/footprints/396.png` | Same drawing, shifted |
+| Staravia | `pokemon/footprints/397.png` | Same drawing, shifted |
+| Staraptor | `pokemon/footprints/398.png` | Same drawing and position |
+| Kricketot | `pokemon/footprints/401.png` | Same drawing and position |
+| Kricketune | `pokemon/footprints/402.png` | Same drawing and position |
+| Budew | `pokemon/footprints/406.png` | Same drawing and position |
+| Roserade | `pokemon/footprints/407.png` | Same drawing, shifted |
+| Combee | `pokemon/footprints/415.png` | Same drawing and position |
+| Vespiquen | `pokemon/footprints/416.png` | Same drawing and position |
+| Ambipom | `pokemon/footprints/424.png` | Same drawing, shifted |
+| Buneary | `pokemon/footprints/427.png` | Same drawing, shifted |
+| Lopunny | `pokemon/footprints/428.png` | Same drawing, shifted |
+| Mismagius | `pokemon/footprints/429.png` | Same drawing and position |
+| Honchkrow | `pokemon/footprints/430.png` | Same drawing and position |
+| Chingling | `pokemon/footprints/433.png` | Same drawing and position |
+| Bronzor | `pokemon/footprints/436.png` | Same drawing and position |
+| Bronzong | `pokemon/footprints/437.png` | Same drawing and position |
+| Mime Jr | `pokemon/footprints/439.png` | Same drawing, shifted |
+| Happiny | `pokemon/footprints/440.png` | Same drawing and position |
+| Weavile | `pokemon/footprints/461.png` | Same drawing and position |
+| Magnezone | `pokemon/footprints/462.png` | Same drawing and position |
+| Lickilicky | `pokemon/footprints/463.png` | Same drawing and position |
+| Rhyperior | `pokemon/footprints/464.png` | Same drawing and position |
+| Tangrowth | `pokemon/footprints/465.png` | Same drawing and position |
+| Electivire | `pokemon/footprints/466.png` | Same drawing, shifted |
+| Magmortar | `pokemon/footprints/467.png` | Same drawing, shifted |
+| Leafeon | `pokemon/footprints/470.png` | Same drawing, shifted |
+| Glaceon | `pokemon/footprints/471.png` | Same drawing, shifted |
+| Mamoswine | `pokemon/footprints/473.png` | Same drawing and position |
+| Porygon Z | `pokemon/footprints/474.png` | Same drawing and position |
+| Gallade | `pokemon/footprints/475.png` | Same drawing and position |
+| Dusknoir | `pokemon/footprints/477.png` | Same drawing and position |
+| Tynamo | `pokemon/footprints/602.png` | Same drawing and position |
+| Eelektrik | `pokemon/footprints/603.png` | Same drawing and position |
+| Eelektross | `pokemon/footprints/604.png` | Same drawing and position |
+
+### Roserade replacement artwork
+
+- [Official Platinum front sprite](https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/platinum/407.png).
+- [Official Platinum back sprite](https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/platinum/back/407.png).
