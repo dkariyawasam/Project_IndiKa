@@ -161,7 +161,7 @@
       "x": 30,
       "y": 36,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -327,7 +327,7 @@
       "x": 38,
       "y": 35,
       "elevation": 3,
-      "var": "VAR_MAP_SCENE_CELADON_RIVAL",
+      "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "CeladonCity_EventScript_RivalEvolutionTrigger38"
     },
@@ -336,7 +336,7 @@
       "x": 39,
       "y": 35,
       "elevation": 3,
-      "var": "VAR_MAP_SCENE_CELADON_RIVAL",
+      "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "CeladonCity_EventScript_RivalEvolutionTrigger39"
     },
@@ -345,7 +345,7 @@
       "x": 40,
       "y": 35,
       "elevation": 3,
-      "var": "VAR_MAP_SCENE_CELADON_RIVAL",
+      "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "CeladonCity_EventScript_RivalEvolutionTrigger40"
     }

@@ -9,17 +9,18 @@ CeladonCity_OnTransition::
 	end
 
 CeladonCity_EventScript_UpdateRivalVisibility::
+	@ Disable coordinate triggers unless the pending encounter is available.
+	setvar VAR_TEMP_2, 1
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CeladonCity_EventScript_HidePendingRival
-	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, CeladonCity_EventScript_HidePendingRival
 	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_CheckRivalGift
-	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
-	addobject LOCALID_CELADON_RIVAL
-	return
+	setvar VAR_TEMP_2, 0
+	goto CeladonCity_EventScript_HidePendingRival
 
 @ Completed saves can collect the new gift without repeating the battle.
 CeladonCity_EventScript_CheckRivalGift::
 	checkitem ITEM_VS_SEEKER
 	goto_if_eq VAR_RESULT, TRUE, CeladonCity_EventScript_HidePendingRival
+	setobjectmovementtype LOCALID_CELADON_RIVAL, MOVEMENT_TYPE_NONE
 	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
 	addobject LOCALID_CELADON_RIVAL
 	return
@@ -42,14 +43,17 @@ CeladonCity_EventScript_RivalEvolutionTrigger40::
 	goto CeladonCity_EventScript_RivalEvolutionTrigger
 
 CeladonCity_EventScript_RivalEvolutionTrigger::
-	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, EventScript_Return
-	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
-	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
+	@ Consume this visit's trigger even when resuming an older save on it.
+	setvar VAR_TEMP_2, 1
+	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_SkipRivalTrigger
+	goto_if_unset FLAG_SYS_POKEDEX_GET, CeladonCity_EventScript_SkipRivalTrigger
 	lockall
-	@ The eastern trigger can be outside the rival's automatic spawn range.
-	@ Recreate him after locking so a half-initialized invisible movement
-	@ cannot stay frozen while the approach waits to take control of him.
+	@ Spawn explicitly: the eastern trigger is outside automatic spawn range.
+	@ Old saves may retain INVISIBLE, whose automatic movement can block
+	@ scripted movement when frozen. This scene controls every rival step.
 	removeobject LOCALID_CELADON_RIVAL
+	setobjectmovementtype LOCALID_CELADON_RIVAL, MOVEMENT_TYPE_NONE
+	setobjectxyperm LOCALID_CELADON_RIVAL, 30, 36
 	clearflag FLAG_HIDE_CELADON_RIVAL_EVOLUTION
 	addobject LOCALID_CELADON_RIVAL
 	playbgm MUS_ENCOUNTER_RIVAL, 0
@@ -68,9 +72,11 @@ CeladonCity_EventScript_RivalEvolutionTrigger::
 	releaseall
 	end
 
+CeladonCity_EventScript_SkipRivalTrigger::
+	end
+
 CeladonCity_EventScript_RivalEvolution::
 	goto_if_ge VAR_MAP_SCENE_CELADON_RIVAL, 1, CeladonCity_EventScript_CollectRivalGift
-	goto_if_lt VAR_ROUTE3_RIVAL_CONVERSATION, 1, EventScript_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, EventScript_Return
 	lock
 	faceplayer

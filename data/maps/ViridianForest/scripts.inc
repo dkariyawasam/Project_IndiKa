@@ -19,9 +19,10 @@ ViridianForest_OnTransition::
 	setobjectxyperm LOCALID_VIRIDIAN_FOREST_GYM_GUIDE, 4, 57
 	call_if_eq VAR_ERIKA_TRIAL_STATE, 3, ViridianForest_EventScript_RestoreGymGuide
 	call ViridianForest_EventScript_HideTangrowth
-	goto_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_CheckErika
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_HideRivalApex
+	goto_if_set FLAG_FOUGHT_TANGROWTH, ViridianForest_EventScript_CheckErika
 	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_ShowTangrowth
 ViridianForest_EventScript_CheckErika::
 	goto_if_ge VAR_ERIKA_TRIAL_STATE, 4, ViridianForest_EventScript_RemoveErika
@@ -339,6 +340,9 @@ ViridianForest_Text_TangrowthApexCry:
 	.string "GREEEAOW!$"
 
 ViridianForest_EventScript_RivalApex::
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_HideRivalApex
 	goto_if_ge VAR_FOREST_RIVAL_APEX, 1, EventScript_Return
 	lockall
 	setvar VAR_LAST_TALKED, LOCALID_FOREST_RIVAL_APEX
@@ -346,13 +350,51 @@ ViridianForest_EventScript_RivalApex::
 	msgbox ViridianForest_Text_RivalApex
 	call EventScript_RivalApexReflection
 	closemessage
-	fadescreen FADE_TO_BLACK
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8005, 35, ViridianForest_EventScript_ClearRivalExit
+	playbgm MUS_RIVAL_EXIT, 0
+	applymovement LOCALID_FOREST_RIVAL_APEX, ViridianForest_Movement_RivalExit
+	waitmovement 0
 	setvar VAR_FOREST_RIVAL_APEX, 1
 	setflag FLAG_HIDE_FOREST_RIVAL_APEX
 	removeobject LOCALID_FOREST_RIVAL_APEX
-	fadescreen FADE_FROM_BLACK
+	fadedefaultbgm
 	releaseall
 	end
+
+ViridianForest_EventScript_ClearRivalExit::
+	call_if_eq VAR_0x8004, 32, ViridianForest_EventScript_StepAsideForRival
+	call_if_le VAR_0x8004, 33, ViridianForest_EventScript_StepAsideForRival
+	return
+
+ViridianForest_EventScript_StepAsideForRival::
+	applymovement LOCALID_PLAYER, ViridianForest_Movement_StepAsideForRival
+	waitmovement 0
+	return
+
+ViridianForest_Movement_StepAsideForRival::
+	walk_right
+	step_end
+
+ViridianForest_Movement_RivalExit::
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+ViridianForest_EventScript_HideRivalApex::
+	setvar VAR_FOREST_RIVAL_APEX, 1
+	setflag FLAG_HIDE_FOREST_RIVAL_APEX
+	removeobject LOCALID_FOREST_RIVAL_APEX
+	return
 
 ViridianForest_Text_RivalApex::
 	.string "{RIVAL}: Listen to this.\n"

@@ -6553,6 +6553,9 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKI::
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 2
 	call EventScript_RecordApexRumorWithFeedback
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_HideRivalApex
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
@@ -6561,6 +6564,9 @@ EventScript_GymAdjacent_AROMA_LADY_NIKKIRematch::
 	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
 	setvar VAR_0x8005, 2
 	call EventScript_RecordApexRumorWithFeedback
+	setvar VAR_0x8004, SUB_QUEST_APEX_TANGROWTH
+	specialvar VAR_RESULT, IsApexRevealed
+	call_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_HideRivalApex
 	end
 
 EventScript_GymAdjacent_AROMA_LADY_VIOLET::
