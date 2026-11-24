@@ -650,6 +650,10 @@ static bool8 LightenSpritePaletteInFog(u8 paletteIndex)
 {
     u16 i;
 
+    // UI palettes must fade normally, without inheriting a field sprite's fog tint.
+    if (sPaletteGammaTypes[paletteIndex] == GAMMA_NONE)
+        return FALSE;
+
     for (i = 0; i < gWeatherPtr->lightenedFogSpritePalsCount; i++)
     {
         if (gWeatherPtr->lightenedFogSpritePals[i] == paletteIndex)

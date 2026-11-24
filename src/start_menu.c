@@ -71,8 +71,7 @@ enum SaveCBReturn
     SAVECB_RETURN_ERROR
 };
 
-#define START_MENU_ICON_OBJ_PAL_SLOT 15
-#define START_MENU_OBJ_PAL_BACKUP_START START_MENU_ICON_OBJ_PAL_SLOT
+#define START_MENU_OBJ_PAL_BACKUP_START sRadialStartMenuPaletteSlot
 #define START_MENU_OBJ_PAL_BACKUP_COUNT 1
 
 static EWRAM_DATA bool8 (*sStartMenuCallback)(void) = NULL;
@@ -87,6 +86,8 @@ static EWRAM_DATA u8 sRadialStartMenuSpriteIds[8] = {};
 static EWRAM_DATA u8 sRadialStartMenuBackdropSpriteId = MAX_SPRITES;
 static EWRAM_DATA u8 sRadialStartMenuCursorSlot = 0;
 static EWRAM_DATA bool8 sRadialStartMenuSpritesLoaded = FALSE;
+static EWRAM_DATA u8 sRadialStartMenuPaletteSlot = 0xFF;
+static EWRAM_DATA bool8 sRadialStartMenuPaletteAllocated = FALSE;
 static EWRAM_DATA bool8 sRadialStartMenuIconsVisible = FALSE;
 static EWRAM_DATA u8 sStartMenuReturnItem = 0xFF;
 static EWRAM_DATA u8 sStartMenuHeaderWindowId = WINDOW_NONE;
@@ -981,6 +982,40 @@ static void RestoreStartMenuBg0TilemapRect(const u16 *src, u8 left, u8 top, u8 w
         CopyBgTilemapBufferToVram(0);
 }
 
+// Borrow an unused fixed overworld palette while objects are frozen. Leave
+// dynamic slots available for grass, weather and other returning field effects.
+static bool8 ChooseRadialStartMenuPalette(void)
+{
+    u16 used = 0;
+    u8 spriteId;
+    s8 slot;
+
+    for (spriteId = 0; spriteId < MAX_SPRITES; spriteId++)
+    {
+        if (gSprites[spriteId].inUse)
+        {
+            u8 palette = gSprites[spriteId].oam.paletteNum;
+            used |= 1 << palette;
+            // A reflection can be created on the first frame after a submenu.
+            used |= 1 << gReflectionEffectPaletteMap[palette];
+        }
+    }
+    sRadialStartMenuPaletteAllocated = FALSE;
+    for (slot = OBJ_PALSLOT_COUNT - 1; slot > PALSLOT_PLAYER_REFLECTION; slot--)
+    {
+        if (!(used & (1 << slot)))
+        {
+            sRadialStartMenuPaletteSlot = slot;
+            return TRUE;
+        }
+    }
+    sRadialStartMenuPaletteSlot = AllocSpritePalette(TAG_START_MENU_ICONS);
+    sRadialStartMenuPaletteAllocated = sRadialStartMenuPaletteSlot != 0xFF;
+    // If every slot is occupied, retain the navigable centre label and controls
+    // rather than overwriting another sprite's colours.
+    return sRadialStartMenuPaletteAllocated;
+}
+
 static void BackupRadialStartMenuObjPalettes(void)
 {
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(START_MENU_OBJ_PAL_BACKUP_START)],
@@ -1009,7 +1044,7 @@ static void LoadRadialStartMenuObjPalettes(void)
         palette[6] = RGB(23, 25, 14);
         palette[13] = RGB(11, 12, 10);
     }
-    LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(START_MENU_ICON_OBJ_PAL_SLOT), PLTT_SIZE_4BPP);
+    LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(sRadialStartMenuPaletteSlot), PLTT_SIZE_4BPP);
 }
 
 static void RestoreRadialStartMenuObjPalettes(void)
@@ -1041,7 +1076,12 @@ static void CreateRadialStartMenuSprites(void)
         return;
 
     sRadialStartMenuLeavingOverworld = FALSE;
+    if (!ChooseRadialStartMenuPalette())
+        return;
     BackupRadialStartMenuObjPalettes();
+    // The return-to-menu fade applies weather after these sprites are created.
+    // Keep UI colours unchanged while still allowing the normal screen fade.
+    PreservePaletteInWeather(16 + sRadialStartMenuPaletteSlot);
     LoadRadialStartMenuObjPalettes();
 
     LoadCompressedSpriteSheet(&sSpriteSheet_RadialStartMenuBackdrop);
@@ -1052,7 +1092,7 @@ static void CreateRadialStartMenuSprites(void)
     sRadialStartMenuBackdropSpriteId = CreateSprite(&sSpriteTemplate_RadialStartMenuBackdrop, DISPLAY_WIDTH / 2, START_MENU_BACKDROP_START_Y, 4);
     if (sRadialStartMenuBackdropSpriteId != MAX_SPRITES)
     {
-        gSprites[sRadialStartMenuBackdropSpriteId].oam.paletteNum = START_MENU_ICON_OBJ_PAL_SLOT;
+        gSprites[sRadialStartMenuBackdropSpriteId].oam.paletteNum = sRadialStartMenuPaletteSlot;
         gSprites[sRadialStartMenuBackdropSpriteId].data[0] = 0;
     }
 
@@ -1068,7 +1108,7 @@ static void CreateRadialStartMenuSprites(void)
             sRadialStartMenuSpriteIds[i] = CreateSprite(&sSpriteTemplate_RadialStartMenuIcon, x, y, 0);
             if (sRadialStartMenuSpriteIds[i] != MAX_SPRITES)
             {
-                gSprites[sRadialStartMenuSpriteIds[i]].oam.paletteNum = START_MENU_ICON_OBJ_PAL_SLOT;
+                gSprites[sRadialStartMenuSpriteIds[i]].oam.paletteNum = sRadialStartMenuPaletteSlot;
                 gSprites[sRadialStartMenuSpriteIds[i]].data[0] = i;
                 gSprites[sRadialStartMenuSpriteIds[i]].data[3] = iconIndex;
             }
@@ -1102,7 +1142,12 @@ static void DestroyRadialStartMenuSprites(void)
     }
     FreeSpriteTilesByTag(TAG_START_MENU_BACKDROP);
     FreeSpriteTilesByTag(TAG_START_MENU_ICONS);
+    ResetPreservedPalettesInWeather();
     RestoreRadialStartMenuObjPalettes();
+    if (sRadialStartMenuPaletteAllocated)
+        FreeSpritePaletteByTag(TAG_START_MENU_ICONS);
+    sRadialStartMenuPaletteSlot = 0xFF;
+    sRadialStartMenuPaletteAllocated = FALSE;
     sRadialStartMenuSpritesLoaded = FALSE;
     sRadialStartMenuIconsVisible = FALSE;
 }
