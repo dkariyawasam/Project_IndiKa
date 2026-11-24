@@ -1529,10 +1529,17 @@ static void DexScreen_DrawFormDots(u8 slot, u16 species)
     struct WindowTemplate template = {1, 0, 0, 1, 3, 13, 0};
     const u8 *coords = sCategoryPageIconCoords[sPokedexScreenData->numMonsOnPage - 1][slot];
     u16 colors[2];
+    u16 knownForms[3];
     u8 i, count, color, windowId;
     if (group == NULL)
         return;
-    for (count = 0; count < 3 && group[count] != SPECIES_NONE; count++);
+    for (i = 0, count = 0; i < 3 && group[i] != SPECIES_NONE; i++)
+        if (DexScreen_GetSetPokedexFlag(group[i], FLAG_GET_SEEN, TRUE)
+         || DexScreen_GetSetPokedexFlag(group[i], FLAG_GET_CAUGHT, TRUE))
+            knownForms[count++] = group[i];
+    // A single known appearance should not reveal that other forms exist.
+    if (count < 2)
+        return;
     template.tilemapLeft = coords[0] < coords[2] ? coords[2] + 8 : coords[2] - 1;
     if (coords[0] == coords[2])
         template.tilemapLeft = coords[2] + 8;
@@ -1549,7 +1556,7 @@ static void DexScreen_DrawFormDots(u8 slot, u16 species)
     FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
     for (i = 0; i < count; i++)
     {
-        color = group[i] == species ? 12 : 13;
+        color = knownForms[i] == species ? 12 : 13;
         FillWindowPixelRect(windowId, PIXEL_FILL(color), 2, 2 + i * 8, 3, 5);
         FillWindowPixelRect(windowId, PIXEL_FILL(color), 1, 3 + i * 8, 5, 3);
     }
