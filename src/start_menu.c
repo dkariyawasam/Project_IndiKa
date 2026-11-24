@@ -1029,22 +1029,22 @@ static void BackupRadialStartMenuObjPalettes(void)
 
 static void LoadRadialStartMenuObjPalettes(void)
 {
+    // Original accent saturation and lightness, hue-shifted to each UI theme.
+    static const u16 accentColors[3][3] = {
+        {RGB(12, 16, 19), RGB(14, 21, 25), RGB(10, 11, 12)},
+        {RGB(19, 12, 12), RGB(25, 14, 15), RGB(12, 10, 10)},
+        {RGB(14, 19, 12), RGB(17, 25, 14), RGB(11, 12, 10)},
+    };
+    u16 *palette = (u16 *)gDecompressionBuffer;
+    u8 theme = gSaveBlock2Ptr->optionsWindowFrameType;
+
+    if (theme >= NELEMS(accentColors))
+        theme = 0;
     LZ77UnCompWram(sRadialStartMenuSettingsIconPal, gDecompressionBuffer);
-    if (gSaveBlock2Ptr->optionsWindowFrameType == 1)
-    {
-        u16 *palette = (u16 *)gDecompressionBuffer;
-        palette[5] = RGB(19, 12, 16);
-        palette[6] = RGB(25, 14, 21);
-        palette[13] = RGB(12, 10, 11);
-    }
-    else if (gSaveBlock2Ptr->optionsWindowFrameType == 2)
-    {
-        u16 *palette = (u16 *)gDecompressionBuffer;
-        palette[5] = RGB(18, 19, 12);
-        palette[6] = RGB(23, 25, 14);
-        palette[13] = RGB(11, 12, 10);
-    }
-    LoadPalette(gDecompressionBuffer, OBJ_PLTT_ID(sRadialStartMenuPaletteSlot), PLTT_SIZE_4BPP);
+    palette[5] = accentColors[theme][0];
+    palette[6] = accentColors[theme][1];
+    palette[13] = accentColors[theme][2];
+    LoadPalette(palette, OBJ_PLTT_ID(sRadialStartMenuPaletteSlot), PLTT_SIZE_4BPP);
 }
 
 static void RestoreRadialStartMenuObjPalettes(void)
