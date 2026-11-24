@@ -5,6 +5,7 @@
 #include "task.h"
 #include "blend_palette.h"
 #include "text_window.h"
+#include "ui_hint_header.h"
 #include "menu.h"
 #include "new_menu_helpers.h"
 #include "event_scripts.h"
@@ -705,6 +706,8 @@ static void Task_NewGameScene(u8 taskId)
     switch (gMain.state)
     {
     case 0:
+        // Start the introduction in blue, even when an existing save uses another theme.
+        gSaveBlock2Ptr->optionsWindowFrameType = 0;
         SetVBlankCallback(NULL);
         SetHBlankCallback(NULL);
         DmaFill16(3, 0, VRAM, VRAM_SIZE);
@@ -1303,7 +1306,8 @@ static void Task_OakSpeech_LoadPlayerPic(u8 taskId)
     gTasks[taskId].func = Task_OakSpeech_ChooseAccent;
 }
 
-static const u8 sText_ChooseAccent[] = _("{DPAD_UPDOWN} PICK  {DPAD_LEFTRIGHT} CHANGE\nCOLOR 2 also sets your menu color.");
+static const u8 sText_AppearanceControls[] = _("{DPAD_UPDOWN} PICK  {DPAD_LEFTRIGHT} CHANGE");
+static const u8 sText_AppearanceDoneControls[] = _("{DPAD_UPDOWN} PICK  {A_BUTTON} CONFIRM");
 static const u8 sText_StyleNames[][8] = {_("STYLE 1"), _("STYLE 2")};
 static const u8 sText_AccentNames[][6] = {_("RED"), _("BLUE"), _("GREEN")};
 static const u8 sText_SecondaryNames[][6] = {_("BLUE"), _("RED"), _("GREEN")};
@@ -1316,6 +1320,8 @@ static void DrawAccentChoice(u8 taskId)
     u8 window = gTasks[taskId].tMenuWindowId;
     const u8 *labels[] = {sText_StyleNames[gSaveBlock2Ptr->playerGender], sText_Color1, sText_Color2, sText_Done};
     u8 row;
+    TopBarWindowPrintString(gTasks[taskId].tAppearanceRow == 3
+        ? sText_AppearanceDoneControls : sText_AppearanceControls, 0, TRUE);
     FillWindowPixelBuffer(window, PIXEL_FILL(1));
     for (row = 0; row < 4; row++)
         AddTextPrinterParameterized3(window, FONT_NORMAL, 8, 1 + row * 16,
@@ -1338,7 +1344,8 @@ static void Task_OakSpeech_ChooseAccent(u8 taskId)
         tTimer--;
         return;
     }
-    OakSpeechPrintMessage(sText_ChooseAccent, sOakSpeechResources->textSpeed);
+    CreateTopBarWindowLoadPalette(0, 30, 0, 13, 0x1C4);
+    LoadUiHintHelpPalette(BG_PLTT_ID(13));
     tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_BOYGIRL]);
     PutWindowTilemap(tMenuWindowId);
     sOakSpeechResources->textColor[0] = 1;
@@ -1360,6 +1367,7 @@ static void Task_OakSpeech_HandleAccent(u8 taskId)
         tAppearanceRow = (tAppearanceRow + (JOY_NEW(DPAD_DOWN) ? 1 : 3)) % 4;
     else if (JOY_NEW(A_BUTTON) && tAppearanceRow == 3)
     {
+        DestroyTopBarWindow();
         ClearStdWindowAndFrameToTransparent(tMenuWindowId, TRUE);
         RemoveWindow(tMenuWindowId);
         tMenuWindowId = WIN_INTRO_TEXTBOX;
@@ -1369,17 +1377,22 @@ static void Task_OakSpeech_HandleAccent(u8 taskId)
         gTasks[taskId].func = Task_OakSpeech_YourNameWhatIsIt;
         return;
     }
-    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT | A_BUTTON) && tAppearanceRow < 3)
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT) && tAppearanceRow < 3)
     {
         value = tAppearanceRow == 0 ? &gSaveBlock2Ptr->playerGender
             : tAppearanceRow == 1 ? &gSaveBlock2Ptr->playerAccent : &gSaveBlock2Ptr->playerSecondaryAccent;
         count = tAppearanceRow == 0 ? 2 : PLAYER_ACCENT_COUNT;
         *value = (*value + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count;
-        gSaveBlock2Ptr->optionsWindowFrameType = gSaveBlock2Ptr->playerSecondaryAccent;
         // Always reload original colours before applying both accents.
         LoadTrainerPic(gSaveBlock2Ptr->playerGender == MALE ? MALE_PLAYER_PIC : FEMALE_PLAYER_PIC, 0);
-        LoadUserWindowGfx(tMenuWindowId, GetStdWindowBaseTileNum(), BG_PLTT_ID(14));
-        LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        // Only COLOR 2 changes the UI theme; style and COLOR 1 affect the player.
+        if (tAppearanceRow == 2)
+        {
+            gSaveBlock2Ptr->optionsWindowFrameType = gSaveBlock2Ptr->playerSecondaryAccent;
+            LoadUiHintHelpPalette(BG_PLTT_ID(13));
+            LoadUserWindowGfx(tMenuWindowId, GetStdWindowBaseTileNum(), BG_PLTT_ID(14));
+            LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        }
     }
     else
         return;
