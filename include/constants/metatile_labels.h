@@ -298,6 +298,10 @@
 #define METATILE_ViridianCity_Door  0x299
 
 // gTileset_ViridianForest
+#define METATILE_ViridianForest_SouthExitLeft             0x2BD
+#define METATILE_ViridianForest_SouthExitRight            0x2BE
+#define METATILE_ViridianForest_ExitTreeTopLeft           0x2BF
+#define METATILE_ViridianForest_ExitTreeTopRight          0x2C0
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Grass  0x284
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
 

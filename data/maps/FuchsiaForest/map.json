@@ -159,24 +159,17 @@
   "warp_events": [
     {
       "x": 44,
-      "y": 40,
+      "y": 41,
       "elevation": 3,
       "dest_map": "MAP_ROUTE15",
       "dest_warp_id": "3"
     },
     {
       "x": 43,
-      "y": 40,
+      "y": 41,
       "elevation": 3,
       "dest_map": "MAP_ROUTE15",
       "dest_warp_id": "2"
-    },
-    {
-      "x": 44,
-      "y": 40,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE15",
-      "dest_warp_id": "3"
     },
     {
       "x": 5,

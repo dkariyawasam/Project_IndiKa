@@ -21,6 +21,8 @@ RockTunnel_B2F_OnTransition::
 	goto_if_ge VAR_MISTY_TRIAL_STATE, 4, RockTunnel_B2F_EventScript_PlaceMistyAtLowerFalls
 	goto_if_eq VAR_MISTY_TRIAL_STATE, 3, RockTunnel_B2F_EventScript_PlaceMistyAtGenerator
 	clearflag FLAG_HIDE_POWER_PLANT_MISTY
+	setobjectxyperm LOCALID_ROCK_TUNNEL_MISTY, 11, 6
+	setobjectxy LOCALID_ROCK_TUNNEL_MISTY, 11, 6
 	setobjectgfx LOCALID_ROCK_TUNNEL_MISTY, OBJ_EVENT_GFX_MISTY_WATER
 	end
 
@@ -467,14 +469,10 @@ RockTunnel_B2F_Movement_MistyReturnFromLeft::
 	walk_right
 	walk_right
 	walk_up
-	walk_up
-	walk_up
 	walk_in_place_faster_down
 	step_end
 
 RockTunnel_B2F_Movement_MistySwimLeft::
-	walk_down
-	walk_down
 	walk_down
 	walk_left
 	walk_left
@@ -622,8 +620,6 @@ RockTunnel_B2F_Movement_MistyLeaveFinalGenerator::
 	step_end
 
 RockTunnel_B2F_Movement_MistySwimRight::
-	walk_down
-	walk_down
 	walk_down
 	walk_right
 	walk_right
