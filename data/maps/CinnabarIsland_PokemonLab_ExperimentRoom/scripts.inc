@@ -65,12 +65,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixHaste::
 	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_Missing
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmanyte, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
-	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
-	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	setvar VAR_TEMP_1, SPECIES_OMANYTE
 	givemon SPECIES_OMANYTE, 5
 	copyvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom
+	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
+	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	setflag FLAG_RESEARCH_REVIVED_OMANYTE
 	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
@@ -83,12 +83,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_HelixDart::
 	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_Missing
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmOmato, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
-	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
-	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	setvar VAR_TEMP_1, SPECIES_OMATO
 	givemon SPECIES_OMATO, 5
 	copyvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom
+	removeitem ITEM_HELIX_FOSSIL_SHARD, 1
+	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	setflag FLAG_RESEARCH_REVIVED_OMATO
 	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
@@ -101,12 +101,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeDart::
 	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_Missing
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabuto, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
-	removeitem ITEM_DOME_FOSSIL_SHARD, 1
-	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	setvar VAR_TEMP_1, SPECIES_KABUTO
 	givemon SPECIES_KABUTO, 5
 	copyvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom
+	removeitem ITEM_DOME_FOSSIL_SHARD, 1
+	removeitem ITEM_DART_FOSSIL_SHARD, 1
 	setflag FLAG_RESEARCH_REVIVED_KABUTO
 	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
@@ -119,12 +119,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DomeHaste::
 	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_Missing
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmKabustar, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
-	removeitem ITEM_DOME_FOSSIL_SHARD, 1
-	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	setvar VAR_TEMP_1, SPECIES_KABUSTAR
 	givemon SPECIES_KABUSTAR, 5
 	copyvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom
+	removeitem ITEM_DOME_FOSSIL_SHARD, 1
+	removeitem ITEM_HASTE_FOSSIL_SHARD, 1
 	setflag FLAG_RESEARCH_REVIVED_KABUSTAR
 	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
 	release
@@ -135,11 +135,11 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_OldAmber::
 	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonLab_ExperimentRoom_MissingAmber
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_ConfirmAerodactyl, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
-	removeitem ITEM_OLD_AMBER, 1
 	setvar VAR_TEMP_1, SPECIES_AERODACTYL
 	givemon SPECIES_AERODACTYL, 5
 	copyvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_End
+	goto_if_eq VAR_RESULT, 2, CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom
+	removeitem ITEM_OLD_AMBER, 1
 	setflag FLAG_REVIVED_AMBER
 	setflag FLAG_RESEARCH_REVIVED_AERODACTYL
 	call CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_RevivalDelivery
@@ -158,6 +158,11 @@ CinnabarIsland_PokemonLab_ExperimentRoom_MissingAmber::
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Cancel::
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_Cancel
+	release
+	end
+
+CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NoRoom::
+	msgbox Text_NoMoreRoomForPokemon
 	release
 	end
 
