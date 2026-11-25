@@ -147,17 +147,7 @@ bool16 HasAllHoennMons(void)
 
 bool16 HasAllKantoMons(void)
 {
-    u16 i;
-
-    // Preserve the existing mythical exception using its ID, not its position.
-    for (i = 1; i <= NATIONAL_DEX_COUNT; i++)
-    {
-        if (i == NATIONAL_DEX_MEW || !IsActivePokedexSpecies(i))
-            continue;
-        if (!GetSetPokedexFlag(i, FLAG_GET_CAUGHT))
-            return FALSE;
-    }
-    return TRUE;
+    return HasAllObtainableMons();
 }
 
 bool16 HasAllMons(void)
@@ -165,7 +155,7 @@ bool16 HasAllMons(void)
     return HasAllKantoMons();
 }
 
-// Card completion is based on acquisition sources, not the trainer-visible Dex.
+// Diploma and card completion require obtainable Pokémon, including Safari forms.
 bool16 HasAllObtainableMons(void)
 {
     u16 i;
