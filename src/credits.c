@@ -1095,7 +1095,8 @@ static s32 RollCredits(void)
             sCreditsScript = sOriginalCreditsScript;
         else if (!JOY_NEW(A_BUTTON))
             return 0;
-        DestroyCreditsWindow();
+        // The first map transition fades out before freeing this window.
+        // Keep VBlank palette transfers running until that fade has finished.
         sCreditsMgr->mainseqno = CREDITSSCENE_EXEC_CMD;
         sCreditsMgr->timer = 0;
         sCreditsMgr->scrcmdidx = 0;
