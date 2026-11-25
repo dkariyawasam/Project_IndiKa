@@ -4,7 +4,7 @@ FuchsiaForest_MapScripts::
 
 FuchsiaForest_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_FOREST
-	setescapewarp MAP_ROUTE15, 44, 19
+	setescapewarp MAP_ROUTE15, 27, 19
 	end
 
 FuchsiaForest_EventScript_WelcomeSign::

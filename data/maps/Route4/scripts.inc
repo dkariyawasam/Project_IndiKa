@@ -41,6 +41,7 @@ Route4_EventScript_WalkInFromCeladonCave::
 
 Route4_EventScript_WarpToCeladonCave::
 	goto_if_unset FLAG_GIOVANNI_ACTIVATED_MEWTWO_SIGNAL, EventScript_Return
+	setescapewarp MAP_ROUTE4, 93, 18
 	warp MAP_CELADON_CAVE, 9, 1
 	waitstate
 	end
