@@ -1,6 +1,8 @@
 #include "global.h"
 #include "event_data.h"
+#include "item.h"
 #include "random.h"
+#include "constants/items.h"
 #include "constants/maps.h"
 
 #define MAX_HIDDEN_ITEMS_PER_GROUP 8
@@ -279,6 +281,20 @@ void TryRegenerateRenewableHiddenItems(void)
         VarSet(VAR_RENEWABLE_ITEM_STEP_COUNTER, 0);
         SetAllRenewableItemFlags();
         SampleRenewableItemFlags();
+    }
+
+    // Brock's first trial must not depend on reaching the renewal step limit.
+    // Also recover saves that reached his search before any fossils spawned.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_MT_MOON_B1F)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_MT_MOON_B1F)
+     && VarGet(VAR_BROCK_TRIAL_STATE) < 3
+     && !CheckBagHasItem(ITEM_HELIX_FOSSIL_SHARD, 1)
+     && !CheckBagHasItem(ITEM_DOME_FOSSIL_SHARD, 1))
+    {
+        FlagClear(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD);
+        FlagClear(FLAG_HIDDEN_ITEM_MT_MOON_B1F_HELIX_FOSSIL_SHARD_2);
+        FlagClear(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD);
+        FlagClear(FLAG_HIDDEN_ITEM_MT_MOON_B1F_DOME_FOSSIL_SHARD_2);
     }
 }
 
