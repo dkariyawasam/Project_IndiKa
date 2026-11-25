@@ -632,6 +632,26 @@ enum {
 // Task data from CycleEvolutionMonSprite
 #define tEvoStopped data[8]
 
+static void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preEvoSpecies, u16 postEvoSpecies)
+{
+    u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
+    u32 i;
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        const struct Evolution *evolution = &gEvolutionTable[preEvoSpecies][i];
+
+        if (evolution->method == EVO_LEVEL_ITEM_NIGHT
+         && evolution->targetSpecies == postEvoSpecies
+         && evolution->param == heldItem)
+        {
+            heldItem = ITEM_NONE;
+            SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+            break;
+        }
+    }
+}
+
 static void Task_EvolutionScene(u8 taskId)
 {
     u32 var;
@@ -777,6 +797,7 @@ static void Task_EvolutionScene(u8 taskId)
             BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
             PlayBGM(MUS_EVOLVED);
             gTasks[taskId].tState++;
+            ConsumeHeldEvolutionItem(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
             SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
             CalculateMonStats(mon);
             EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);

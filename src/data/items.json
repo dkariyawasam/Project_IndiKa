@@ -5884,6 +5884,38 @@
       "secondaryId": 0
     },
     {
+      "english": "GALARICA CUFF",
+      "itemId": "ITEM_GALARICA_CUFF",
+      "price": 2100,
+      "holdEffect": "HOLD_EFFECT_NONE",
+      "holdEffectParam": 0,
+      "description_english": "A cuff that makes GALARIAN\\nSLOWPOKE evolve into\\nGALARIAN SLOWBRO.",
+      "importance": 0,
+      "registrability": 0,
+      "pocket": "POCKET_ITEMS",
+      "type": "ITEM_TYPE_PARTY_MENU",
+      "fieldUseFunc": "FieldUseFunc_EvoItem",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
+    },
+    {
+      "english": "GALAR.WREATH",
+      "itemId": "ITEM_GALARICA_WREATH",
+      "price": 2100,
+      "holdEffect": "HOLD_EFFECT_NONE",
+      "holdEffectParam": 0,
+      "description_english": "A wreath that makes GALARIAN\\nSLOWPOKE evolve into\\nGALARIAN SLOWKING.",
+      "importance": 0,
+      "registrability": 0,
+      "pocket": "POCKET_ITEMS",
+      "type": "ITEM_TYPE_PARTY_MENU",
+      "fieldUseFunc": "FieldUseFunc_EvoItem",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
+    },
+    {
       "english": "TM60",
       "itemId": "ITEM_TM60",
       "price": 6000,
