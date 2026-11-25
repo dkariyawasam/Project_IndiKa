@@ -443,6 +443,8 @@ static void Overworld_ResetStateAfterWhitingOut(void)
 {
     ResetInitialPlayerAvatarState();
     FlagClear(FLAG_SYS_ON_CYCLING_ROAD);
+    FlagClear(FLAG_BIKE_RENTAL_ACTIVE);
+    VarSet(VAR_BIKE_RENTAL_STAGE, 0);
     VarSet(VAR_MAP_SCENE_ROUTE16, 0);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
