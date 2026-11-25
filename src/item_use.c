@@ -290,8 +290,11 @@ static bool8 CanFish(void)
         return FALSE;
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
-        // Match the board's shoreline check, including mapped water barriers.
-        if (CanUseCascadeBoardOnField())
+        // Fishing can reach water beyond a blocked shoreline without boarding it.
+        if (!MetatileBehavior_IsFastWater(behavior)
+         && (IsPlayerFacingSurfableFishableWater()
+          || (MetatileBehavior_IsSurfable(behavior)
+           && !MetatileBehavior_IsSurfable(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))))
             return TRUE;
     }
     else
@@ -741,7 +744,8 @@ bool8 CanUseCascadeBoardOnField(void)
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
     behavior = MapGridGetMetatileBehaviorAt(x, y);
 
-    if (MetatileBehavior_IsFastWater(behavior) == TRUE)
+    if (MapGridGetCollisionAt(x, y) != 0
+     || MetatileBehavior_IsFastWater(behavior) == TRUE)
         return FALSE;
     if (IsPlayerFacingSurfableFishableWater() == TRUE)
         return TRUE;
