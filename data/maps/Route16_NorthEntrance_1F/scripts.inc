@@ -131,11 +131,7 @@ Route16_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	call_if_eq VAR_0x8005, 14, Route16_NorthEntrance_1F_EventScript_ReturnLane14
 	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
 	closemessage
-	setvar VAR_MAP_SCENE_ROUTE16, 0
-	setvar VAR_TEMP_2, 0
-	setvar VAR_TEMP_3, 0
-	releaseall
-	end
+	goto Route16_NorthEntrance_1F_EventScript_TownReturnDone
 
 Route16_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardTop::
 	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_ReturnBikeTopToGuard
@@ -513,6 +509,11 @@ Route16_NorthEntrance_1F_EventScript_TownReturnDone::
 	setvar VAR_TEMP_2, 0
 	setvar VAR_TEMP_3, 0
 	setvar VAR_MAP_SCENE_ROUTE16, 0
+	@ Leave the player east of the entry check before enabling it again.
+	applymovement LOCALID_PLAYER, Route16_NorthEntrance_1F_Movement_WalkRight
+	waitmovement 0
+	setvar VAR_TEMP_1, 0
+	call Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
 	releaseall
 	end
 
