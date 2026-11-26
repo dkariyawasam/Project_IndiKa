@@ -6290,6 +6290,10 @@ static void Cmd_setprotectlike(void)
     if (lastMove != MOVE_PROTECT && lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE)
         gDisableStructs[gBattlerAttacker].protectUses = 0;
 
+    // Longer streaks keep the lowest success rate in the table.
+    if (gDisableStructs[gBattlerAttacker].protectUses >= ARRAY_COUNT(sProtectSuccessRates))
+        gDisableStructs[gBattlerAttacker].protectUses = ARRAY_COUNT(sProtectSuccessRates) - 1;
+
     if (gCurrentTurnActionNumber == (gBattlersCount - 1))
         notLastTurn = FALSE;
 
@@ -6305,7 +6309,8 @@ static void Cmd_setprotectlike(void)
             gProtectStructs[gBattlerAttacker].endured = 1;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BRACED_ITSELF;
         }
-        gDisableStructs[gBattlerAttacker].protectUses++;
+        if (gDisableStructs[gBattlerAttacker].protectUses < ARRAY_COUNT(sProtectSuccessRates) - 1)
+            gDisableStructs[gBattlerAttacker].protectUses++;
     }
     else
     {
