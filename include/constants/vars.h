@@ -98,6 +98,7 @@
 
 #define VAR_0x4034                         0x4034
 #define VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER  0x4035
+#define POKEMON_REQUEST_REWARD_PENDING          0xFFFF
 #define VAR_POKEMON_REQUEST_REWARD_MON           0x4036
 #define VAR_PC_BOX_TO_SEND_MON             0x4037
 #define VAR_FANCLUB_FAN_COUNTER            0x4038

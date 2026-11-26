@@ -38,8 +38,8 @@ CeladonCity_Hotel_Text_BeautyThanks::
 
 CeladonCity_Hotel_Text_BeautyBagFull::
     .string "Oh, your BAG is full.\p"
-    .string "I'll hold on to the thought, then.\n"
-    .string "Thank you for showing me!$"
+    .string "I'll keep your reward for you.\n"
+    .string "Come back when you have room!$"
 
 CeladonCity_Hotel_Text_WhyDidSheBringBrother::
     .string "Why?\n"

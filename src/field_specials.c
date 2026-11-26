@@ -1303,7 +1303,8 @@ static const u16 sPokemonRequestDeluxeRewards[] = {
 void IncrementPokemonRequestRewardStepCounter(void)
 {
     u16 stepCounter = VarGet(VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER);
-    if (VarGet(VAR_POKEMON_REQUEST_REWARD_MON) != SPECIES_NONE)
+    if (VarGet(VAR_POKEMON_REQUEST_REWARD_MON) != SPECIES_NONE
+     && stepCounter != POKEMON_REQUEST_REWARD_PENDING)
     {
         stepCounter++;
         if (stepCounter >= 250)

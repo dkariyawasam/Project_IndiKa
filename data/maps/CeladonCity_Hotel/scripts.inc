@@ -8,6 +8,7 @@ CeladonCity_Hotel_EventScript_Receptionist::
 CeladonCity_Hotel_EventScript_Beauty::
 	lock
 	faceplayer
+	goto_if_eq VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, POKEMON_REQUEST_REWARD_PENDING, CeladonCity_Hotel_EventScript_BeautyReward
 	goto_if_eq VAR_POKEMON_REQUEST_REWARD_MON, 0xFFFF, CeladonCity_Hotel_EventScript_BeautyRequestTookTooLong
 	goto_if_ne VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE, CeladonCity_Hotel_EventScript_BeautyCheckForRequestedMon
 	msgbox CeladonCity_Hotel_Text_BeautyRequestIntro
@@ -40,12 +41,13 @@ CeladonCity_Hotel_EventScript_BeautyReward::
 	giveitem VAR_POKEMON_REQUEST_REWARD_ITEM
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Hotel_EventScript_BeautyBagFull
 	setvar VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE
+	setvar VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, 0
 	release
 	end
 
 CeladonCity_Hotel_EventScript_BeautyBagFull::
 	msgbox CeladonCity_Hotel_Text_BeautyBagFull
-	setvar VAR_POKEMON_REQUEST_REWARD_MON, SPECIES_NONE
+	setvar VAR_POKEMON_REQUEST_REWARD_STEP_COUNTER, POKEMON_REQUEST_REWARD_PENDING
 	release
 	end
 
