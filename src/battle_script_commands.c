@@ -7784,7 +7784,7 @@ static void Cmd_settypetorandomresistance(void)
 
         for (rands = 0; rands < 1000; rands++)
         {
-            while (((i = Random() % 128) > sizeof(gTypeEffectiveness) / 3));
+            while (((i = Random() % 128) >= sizeof(gTypeEffectiveness) / 3));
 
             i *= 3;
 
@@ -7800,7 +7800,7 @@ static void Cmd_settypetorandomresistance(void)
             }
         }
 
-        for (j = 0, rands = 0; rands < sizeof(gTypeEffectiveness); j += 3, rands += 3)
+        for (j = 0; j < sizeof(gTypeEffectiveness); j += 3)
         {
             switch (TYPE_EFFECT_ATK_TYPE(j))
             {
@@ -7809,11 +7809,11 @@ static void Cmd_settypetorandomresistance(void)
                 break;
             default:
                 if (TYPE_EFFECT_ATK_TYPE(j) == gLastHitByType[gBattlerAttacker]
-                 && TYPE_EFFECT_MULTIPLIER(j) <= 5
-                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(i)))
+                 && TYPE_EFFECT_MULTIPLIER(j) <= TYPE_MUL_NOT_EFFECTIVE
+                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(j)))
                 {
-                    SET_BATTLER_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(rands));
-                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_EFFECT_DEF_TYPE(rands))
+                    SET_BATTLER_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(j));
+                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_EFFECT_DEF_TYPE(j))
 
                     gBattlescriptCurrInstr += 5;
                     return;
