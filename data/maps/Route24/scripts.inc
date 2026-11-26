@@ -1,5 +1,12 @@
 Route24_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route24_OnTransition
 	.byte 0
+
+Route24_OnTransition::
+	goto_if_eq VAR_MAP_SCENE_ROUTE24, 1, Route24_OnTransitionEnd
+	clearflag FLAG_HIDE_NUGGET_BRIDGE_REWARD_GIVER
+Route24_OnTransitionEnd::
+	end
 
 Route24_EventScript_FishermanCale::
 	trainerbattle_single TRAINER_ROUTE24_FISHERMAN_CALE, Route24_Text_CaleIntro, Route24_Text_CaleDefeat
