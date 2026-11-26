@@ -37,6 +37,7 @@ VermilionCity_House1_EventScript_CheckMagikarpRecord::
 	waitstate
 	copyvar VAR_RESULT, VAR_0x8004
 	goto_if_ge VAR_RESULT, PARTY_SIZE, VermilionCity_House1_EventScript_CancelShowMon
+	copyvar VAR_TEMP_4, VAR_MAGIKARP_SIZE_RECORD
 	special CompareMagikarpSize
 	goto_if_eq VAR_RESULT, 1, VermilionCity_House1_EventScript_NotMagikarp
 	goto_if_eq VAR_RESULT, 2, VermilionCity_House1_EventScript_NotRecordMagikarp
@@ -70,15 +71,17 @@ VermilionCity_House1_EventScript_TieRecordMagikarp::
 	end
 
 VermilionCity_House1_EventScript_NewRecordMagikarp::
-	setflag FLAG_GOT_RECORD_SETTING_MAGIKARP
 	msgbox VermilionCity_House1_Text_WhoaXInchesTakeThis
 	giveitem ITEM_NET_BALL
 	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForNetBall
+	setflag FLAG_GOT_RECORD_SETTING_MAGIKARP
 	msgbox VermilionCity_House1_Text_LookForwardToGreaterRecords
 	release
 	end
 
 VermilionCity_House1_EventScript_NoRoomForNetBall::
+	@ Keep the previous record so this fish can earn its reward on retry.
+	copyvar VAR_MAGIKARP_SIZE_RECORD, VAR_TEMP_4
 	msgbox VermilionCity_House1_Text_NoRoomForGift
 	release
 	end
