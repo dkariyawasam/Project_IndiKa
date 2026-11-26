@@ -156,11 +156,7 @@ Route12_NorthEntrance_1F_EventScript_ReturnBikeTrigger::
 	call_if_eq VAR_0x8004, 7, Route12_NorthEntrance_1F_EventScript_ReturnLane7
 	msgbox Route16_NorthEntrance_1F_Text_ReturnRentalBike
 	closemessage
-	setvar VAR_MAP_SCENE_ROUTE16, 0
-	setvar VAR_TEMP_2, 0
-	setvar VAR_TEMP_3, 0
-	releaseall
-	end
+	goto Route12_NorthEntrance_1F_EventScript_TownReturnDone
 
 Route12_NorthEntrance_1F_EventScript_ReturnBikeWalkToGuardLeft::
 	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_Movement_ReturnBikeLeftToGuard
@@ -438,6 +434,8 @@ Route12_NorthEntrance_1F_EventScript_TownReturnDone::
 	setvar VAR_TEMP_2, 0
 	setvar VAR_TEMP_3, 0
 	setvar VAR_MAP_SCENE_ROUTE16, 0
+	setvar VAR_TEMP_1, 0
+	call Route12_NorthEntrance_1F_EventScript_DisableNeedBikeTriggerIfOwnBike
 	releaseall
 	end
 
