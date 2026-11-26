@@ -30,7 +30,8 @@ RocketLeague_ChampionsRoom_Text_ReceivedTierThreeCoins::
     .string "as a ROCKET LEAGUE prize.$"
 
 RocketLeague_ChampionsRoom_Text_CoinPouchFull::
-    .string "You can't hold more COINS.\p"
+    .string "Your COIN POUCH is too full\n"
+    .string "to hold this prize.\p"
     .string "You couldn't receive the prize\n"
     .string "COINS.$"
 
