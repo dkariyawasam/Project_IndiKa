@@ -40,6 +40,7 @@
 #include "dynamic_placeholder_text_util.h"
 #include "new_menu_helpers.h"
 #include "constants/songs.h"
+#include "constants/coins.h"
 #include "constants/items.h"
 #include "constants/maps.h"
 #include "constants/map_event_ids.h"
@@ -1363,7 +1364,7 @@ static u16 SamplePokemonRequestReward(void)
 
 bool8 CheckAddCoins(void)
 {
-    if (gSpecialVar_Result + gSpecialVar_0x8006 > 9999)
+    if (gSpecialVar_Result + gSpecialVar_0x8006 > MAX_COINS)
         return FALSE;
     else
         return TRUE;
