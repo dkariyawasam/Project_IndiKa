@@ -4119,7 +4119,8 @@ static void Cmd_moveend(void)
             if (gBattleMons[gBattlerTarget].status1 & STATUS1_FREEZE
                 && gBattleMons[gBattlerTarget].hp != 0
                 && gBattlerAttacker != gBattlerTarget
-                && gSpecialStatuses[gBattlerTarget].specialDmg
+                && (gSpecialStatuses[gBattlerTarget].physicalDmg
+                 || gSpecialStatuses[gBattlerTarget].specialDmg)
                 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                 && moveType == TYPE_FIRE)
             {
