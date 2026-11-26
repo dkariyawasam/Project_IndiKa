@@ -1484,6 +1484,8 @@ void CreatePokemartMenu(const u16 *itemsForSale)
     sCoinShopMode = 0;
     SetShopItemsForSale(itemsForSale);
     sShopData.mainItemList = itemsForSale;
+    // The Thunder Pass greeting opens the menu through the return callback.
+    sShopData.martType = GetMartTypeFromItemList(MART_TYPE_REGULAR);
     SetShopMenuCallback(ScriptContext_Enable);
     DebugFunc_PrintShopMenuHistoryBeforeClearMaybe();
     if (ShopAcceptsThunderPass() && !FlagGet(FLAG_ACKNOWLEDGED_THUNDER_PASS_AT_MART))
