@@ -101,8 +101,11 @@ Route15_WestEntrance_1F_EventScript_NeedBikeTrigger::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	call_if_eq VAR_0x8008, 0, Route15_WestEntrance_1F_EventScript_PlayerWalkToCounterTop
-	call_if_eq VAR_0x8008, 1, Route15_WestEntrance_1F_EventScript_PlayerWalkToCounterBottom
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8005, 5, Route15_WestEntrance_1F_EventScript_AlignRentalLane5
+	call_if_eq VAR_0x8005, 6, Route15_WestEntrance_1F_EventScript_AlignRentalLane6
+	call_if_eq VAR_0x8005, 7, Route15_WestEntrance_1F_EventScript_AlignRentalLane7
+	call_if_eq VAR_0x8005, 8, Route15_WestEntrance_1F_EventScript_AlignRentalLane8
 	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route15_WestEntrance_1F_EventScript_NeedBikeTriggerAllow
 	showmoneybox 0, 0
 	msgbox Route15_WestEntrance_1F_Text_RentBike, MSGBOX_YESNO
@@ -459,3 +462,45 @@ Route15_WestEntrance_1F_EventScript_TownReturnDone::
 Route15_WestEntrance_1F_EventScript_PedestrianExit::
 	releaseall
 	end
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane5::
+	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_EventScript_AlignRentalLane5_Movement
+	waitmovement 0
+	return
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane5_Movement::
+	walk_up
+	step_end
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane6::
+	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_EventScript_AlignRentalLane6_Movement
+	waitmovement 0
+	return
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane6_Movement::
+	walk_up
+	walk_up
+	step_end
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane7::
+	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_EventScript_AlignRentalLane7_Movement
+	waitmovement 0
+	return
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane7_Movement::
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane8::
+	applymovement LOCALID_PLAYER, Route15_WestEntrance_1F_EventScript_AlignRentalLane8_Movement
+	waitmovement 0
+	return
+
+Route15_WestEntrance_1F_EventScript_AlignRentalLane8_Movement::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end

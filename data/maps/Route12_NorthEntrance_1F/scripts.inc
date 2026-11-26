@@ -101,6 +101,11 @@ Route12_NorthEntrance_1F_EventScript_NeedBikeTrigger::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 3, Route12_NorthEntrance_1F_EventScript_AlignRentalLane3
+	call_if_eq VAR_0x8004, 4, Route12_NorthEntrance_1F_EventScript_AlignRentalLane4
+	call_if_eq VAR_0x8004, 6, Route12_NorthEntrance_1F_EventScript_AlignRentalLane6
+	call_if_eq VAR_0x8004, 7, Route12_NorthEntrance_1F_EventScript_AlignRentalLane7
 	goto_if_set FLAG_BIKE_RENTAL_ACTIVE, Route12_NorthEntrance_1F_EventScript_NeedBikeTriggerAllow
 	showmoneybox 0, 0
 	msgbox Route12_NorthEntrance_1F_Text_RentBike, MSGBOX_YESNO
@@ -443,3 +448,41 @@ Route12_NorthEntrance_1F_EventScript_TownReturnDone::
 Route12_NorthEntrance_1F_EventScript_PedestrianExit::
 	releaseall
 	end
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane3::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_AlignRentalLane3_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane3_Movement::
+	walk_right
+	walk_right
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane4::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_AlignRentalLane4_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane4_Movement::
+	walk_right
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane6::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_AlignRentalLane6_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane6_Movement::
+	walk_left
+	step_end
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane7::
+	applymovement LOCALID_PLAYER, Route12_NorthEntrance_1F_EventScript_AlignRentalLane7_Movement
+	waitmovement 0
+	return
+
+Route12_NorthEntrance_1F_EventScript_AlignRentalLane7_Movement::
+	walk_left
+	walk_left
+	step_end

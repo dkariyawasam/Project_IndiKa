@@ -175,6 +175,33 @@
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "Route15_WestEntrance_1F_EventScript_NeedBikeTriggerBottom"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route15_WestEntrance_1F_EventScript_NeedBikeTriggerTop"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route15_WestEntrance_1F_EventScript_NeedBikeTriggerTop"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route15_WestEntrance_1F_EventScript_NeedBikeTriggerTop"
     }
   ],
   "bg_events": []
