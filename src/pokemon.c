@@ -2578,8 +2578,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             damage = 1;
     }
 
-    // Both reconstructed shell shapes cushion contact attacks equally.
-    if ((defender->ability == ABILITY_PLATE_ARMOR
+    // Self-hits use Pound as a damage placeholder, but do not make contact.
+    if (battlerIdAtk != battlerIdDef
+     && (defender->ability == ABILITY_PLATE_ARMOR
       || defender->ability == ABILITY_SPIRAL_ARMOR)
      && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
     {
