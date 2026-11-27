@@ -153,6 +153,7 @@
 #define STATUS3_SEMI_INVULNERABLE       (STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER)
 
 // Not really sure what a "hitmarker" is.
+#define HITMARKER_DELAYED_ATTACK        (1 << 0) // Only while applying a successful future attack's HP update.
 #define HITMARKER_WAKE_UP_CLEAR         (1 << 4) // Cleared when waking up. Never set or checked.
 #define HITMARKER_SKIP_DMG_TRACK        (1 << 5)
 #define HITMARKER_DESTINYBOND           (1 << 6)

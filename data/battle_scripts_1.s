@@ -3486,7 +3486,9 @@ BattleScript_DoFutureAttackHit::
 	hitanimation BS_TARGET
 	waitstate
 	healthbarupdate BS_TARGET
+	orword gHitMarker, HITMARKER_DELAYED_ATTACK
 	datahpupdate BS_TARGET
+	bicword gHitMarker, HITMARKER_DELAYED_ATTACK
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_TARGET

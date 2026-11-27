@@ -1807,9 +1807,11 @@ static void Cmd_datahpupdate(void)
                 if (gBattleMoveDamage > 0 && gBattleMons[gActiveBattler].hp != 0
                  && gBattlescriptCurrInstr[1] == BS_TARGET
                  && gActiveBattler != gBattlerAttacker
-                 && !(gHitMarker & (HITMARKER_PASSIVE_DAMAGE | HITMARKER_SKIP_DMG_TRACK))
-                 && gBattleMoves[gCurrentMove].power != 0
-                 && gCurrentMove != MOVE_PAIN_SPLIT)
+                 && !(gHitMarker & HITMARKER_PASSIVE_DAMAGE)
+                 && ((gHitMarker & HITMARKER_DELAYED_ATTACK)
+                  || (!(gHitMarker & HITMARKER_SKIP_DMG_TRACK)
+                   && gBattleMoves[gCurrentMove].power != 0
+                   && gCurrentMove != MOVE_PAIN_SPLIT)))
                 {
                     u8 *hits = &gBattleStruct->rageFistHits[GetBattlerSide(gActiveBattler)][gBattlerPartyIndexes[gActiveBattler]];
                     if (*hits < 6)
