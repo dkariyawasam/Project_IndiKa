@@ -18,6 +18,8 @@ void ConfigureAndSetUpOneTrainerBattle(u8 trainerEventObjId, const u8 *trainerSc
 bool32 GetTrainerFlagFromScriptPointer(const u8 *data);
 void SetUpTrainerMovement(void);
 u8 GetTrainerBattleMode(void);
+struct Trainer;
+const struct Trainer *BattleSetup_GetTrainerParty(u16 trainerId);
 u16 GetRivalBattleFlags(void);
 void SetBattledTrainerFlag(void);
 bool8 HasTrainerBeenFought(u16 trainerId);
