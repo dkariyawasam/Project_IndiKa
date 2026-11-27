@@ -6102,6 +6102,22 @@ static void Cmd_useitemonopponent(void)
     gBattlescriptCurrInstr++;
 }
 
+static u8 GetPartyMonAbilityInBattle(u8 side, u8 partyIndex, u16 species, u8 abilityNum)
+{
+    u32 battler;
+
+    for (battler = 0; battler < gBattlersCount; battler++)
+    {
+        if (GetBattlerSide(battler) == side
+         && gBattlerPartyIndexes[battler] == partyIndex
+         && !(gAbsentBattlerFlags & gBitTable[battler])
+         && gBattleMons[battler].hp != 0)
+            return gBattleMons[battler].ability;
+    }
+
+    return GetAbilityBySpecies(species, abilityNum);
+}
+
 static void Cmd_various(void)
 {
     u8 side;
@@ -6220,8 +6236,8 @@ static void Cmd_various(void)
             status = GetMonData(&gPlayerParty[i], MON_DATA_STATUS);
             if (species != SPECIES_NONE
              && species != SPECIES_EGG
-             && status & AILMENT_FNT
-             && GetAbilityBySpecies(species, abilityNum) != ABILITY_SOUNDPROOF)
+             && status & STATUS1_SLEEP
+             && GetPartyMonAbilityInBattle(B_SIDE_PLAYER, i, species, abilityNum) != ABILITY_SOUNDPROOF)
                 monToCheck |= (1 << i);
         }
         if (monToCheck)
@@ -6241,8 +6257,8 @@ static void Cmd_various(void)
 
             if (species != SPECIES_NONE
              && species != SPECIES_EGG
-             && status & AILMENT_FNT
-             && GetAbilityBySpecies(species, abilityNum) != ABILITY_SOUNDPROOF)
+             && status & STATUS1_SLEEP
+             && GetPartyMonAbilityInBattle(B_SIDE_OPPONENT, i, species, abilityNum) != ABILITY_SOUNDPROOF)
                 monToCheck |= (1 << i);
         }
         if (monToCheck)
