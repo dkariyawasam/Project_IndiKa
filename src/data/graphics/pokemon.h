@@ -2524,6 +2524,7 @@ const u8 gMonIcon_Lopunny[] = INCBIN_U8("graphics/pokemon/lopunny/icon.4bpp");
 const u8 gMonFootprint_Lopunny[] = INCBIN_U8("graphics/pokemon/lopunny/footprint.1bpp");
 
 const u32 gMonFrontPic_Omato[] = INCBIN_U32("graphics/pokemon/omato/front.4bpp.lz");
+const u32 gMonBackPic_Omato[] = INCBIN_U32("graphics/pokemon/omato/back.4bpp.lz");
 const u32 gMonPalette_Omato[] = INCBIN_U32("graphics/pokemon/omato/normal.gbapal.lz");
 const u32 gMonShinyPalette_Omato[] = INCBIN_U32("graphics/pokemon/omato/shiny.gbapal.lz");
 const u8 gMonIcon_Omato[] = INCBIN_U8("graphics/pokemon/omato/icon.4bpp");

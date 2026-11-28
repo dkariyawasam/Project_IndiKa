@@ -934,6 +934,7 @@ extern const u32 gMonShinyPalette_Kabutops[];
 extern const u8 gMonIcon_Kabutops[];
 extern const u8 gMonFootprint_Kabutops[];
 extern const u32 gMonFrontPic_Omato[];
+extern const u32 gMonBackPic_Omato[];
 extern const u32 gMonPalette_Omato[];
 extern const u32 gMonShinyPalette_Omato[];
 extern const u8 gMonIcon_Omato[];

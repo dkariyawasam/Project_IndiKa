@@ -2460,8 +2460,8 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_OMATO] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .size = MON_COORDS_SIZE(32, 40),
+        .y_offset = 22,
     },
     [SPECIES_OMATOPS] =
     {
